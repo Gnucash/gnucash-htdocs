@@ -9,12 +9,12 @@
 
 <table border=0 cellpadding=1 cellspacing=0 width="100%">
   <tr>
-  <td valign=middle align=center bgcolor=#666699>
-   <table border=0 cellpadding=5 cellspacing=1 bgcolor=#cacaf7 width="100%">
+  <td valign=middle align=center bgcolor="#666699">
+   <table border=0 cellpadding=5 cellspacing=1 bgcolor="#cacaf7" width="100%">
    <tr>
-     <td bgcolor=#666699 width=25%><font color=#ffffff><b>Screenshot</b></td>
-     <td bgcolor=#666699 width=75%><font color=#ffffff><b>Description</b></td>
-     <td bgcolor=#666699 width=75%><font color=#ffffff><b>Thumbnail</b></td>
+     <td bgcolor="#666699" width="25%"><font color="#ffffff"><b>Screenshot</b></td>
+     <td bgcolor="#666699" width="75%"><font color="#ffffff"><b>Description</b></td>
+     <td bgcolor="#666699" width="75%"><font color="#ffffff"><b>Thumbnail</b></td>
    </tr>
 <?php
 	$d = dir($GLOBALS['DOCUMENT_ROOT']."/images/gnome-1.6/");
@@ -28,11 +28,11 @@
 	  $description = implode("", file($GLOBALS['DOCUMENT_ROOT']."/images/gnome-1.6/".$entry.".gif.description")); 
 		$name = implode("", file($GLOBALS['DOCUMENT_ROOT']."/images/gnome-1.6/".$entry.".gif.name"));
 ?>
-   <tr bgcolor=#ececff>
+   <tr bgcolor="#ececff">
      <td valign=top>
        <table border=0 cellpadding=0 cellspacing=0>
        <tr>
-         <td valign=top><a href="/images/gnome-1.6/<?php echo $file_clean[0].".gif"; ?>"><img src=/images/icons/search_icon.gif width=16 height=16 border=0></a>&nbsp;</td>
+         <td valign=top><a href="/images/gnome-1.6/<?php echo $file_clean[0].".gif"; ?>"><img src="/images/icons/search_icon.gif" width=16 height=16 border=0></a>&nbsp;</td>
          <td valign=top><a href="/images/gnome-1.6/<?php echo $file_clean[0].".gif"; ?>"><?php echo $name; ?></a></td>
        </tr>
        </table>
