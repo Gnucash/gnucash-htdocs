@@ -126,7 +126,8 @@ Additional pricing sources are added regularly.
 </LI>
 <BR><BR>
 <LI>
-Keyboard accelerators and transaction auto-completion make
+Keyboard accelerators, check number auto-increment, transaction 
+auto-completion and transaction cut-n-paste make
 entering transactions quick and smooth.
 </LI>
 <BR><BR>
