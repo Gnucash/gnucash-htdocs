@@ -1,0 +1,42 @@
+<?php $title = "Related Financial Software"; ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/header.phtml"); ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-other-main.phtml"); ?>
+
+
+<td valign=top>
+<h1>Related Financial Software</h1>
+<font size=1>
+
+<table>
+<tr><td>
+<b>Select a section:</b></td>
+<td>
+<form method=post>
+<select name=links>
+  <option value=1>General References</option>
+  <option value=2>Utilities</option>
+  <option value=3>Palm Computing</option>
+  <option value=4>Stock Trading & Technical Analysis</option>
+  <option value=5>Quote Sources, Tools</option>
+  <option value=6>Business, ERP Projects</option>
+  <option value=7>XML and Other Data Formats</option>
+  <option value=8>Miscellaneous</option>
+  <option value=9>Historical References</option>
+	<option value=10>Gnucash Review & Rating Sites</option>
+</select>
+<input type=submit value=Go>
+</td>
+</table>
+</form>
+
+<?php
+  if ($links != "") { 
+		include($GLOBALS['DOCUMENT_ROOT']."/en/links/links-".$links.".phtml");
+  }
+?>
+
+</font>
+
+</td>
+
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/footer.phtml"); ?>

@@ -1,0 +1,68 @@
+<?php $title = "Screenshots"; ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/header.phtml"); ?>
+
+<script language=javascript>
+<!--
+  
+  function newWin(url) {
+    newLoc=window.open("","","height=480,width=640,scrollbars=yes")
+    newLoc.location=url
+  }
+
+// -->
+</script>
+
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-general-main.phtml"); ?>
+
+<td valign=top>
+
+<h1>Screenshots</h1>
+
+<font size=1>
+
+<table border=0 cellpadding=1 cellspacing=0 width="100%">
+  <tr>
+  <td valign=middle align=center bgcolor=#666699>
+   <table border=0 cellpadding=5 cellspacing=1 bgcolor=#cacaf7 width="100%">
+   <tr>
+     <td bgcolor=#666699 width=25%><font color=#ffffff><b>Screenshot</b></td>
+     <td bgcolor=#666699 width=75%><font color=#ffffff><b>Description</b></td>
+   </tr>
+<?php
+	$d = dir($GLOBALS['DOCUMENT_ROOT']."/images/gnome-1.4/");
+	while($entry=$d->read()) {
+	  if(ereg("-thumb", $entry)) { continue; }
+	  if(!ereg("png$", $entry)) { continue; }
+
+		$file_clean = explode(".", $entry);
+		$entry = $file_clean[0]."-thumb";
+	  
+	  $description = implode("", file($GLOBALS['DOCUMENT_ROOT']."/images/gnome-1.4/".$entry.".png.description")); 
+		$name = implode("", file($GLOBALS['DOCUMENT_ROOT']."/images/gnome-1.4/".$entry.".png.name"));
+?>
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><a href="javascript:newWin('/images/gnome-1.4/<?php echo $file_clean[0].".png"; ?>')"><img src=/images/icons/search_icon.gif width=16 height=16 border=0></a>&nbsp;</td>
+         <td valign=top><a href="javascript:newWin('/images/gnome-1.4/<?php echo $file_clean[0].".png"; ?>')"><?php echo $name; ?></a></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top><?php echo $description; ?></td>
+   </tr>
+<?php 
+  }
+  $d->close();
+?>
+
+   </table>
+</tr>
+</table>
+
+</font>
+
+</td>
+
+
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/footer.phtml"); ?>
