@@ -66,7 +66,7 @@ Screen shots of the upcoming version (unstable, from code in the CVS tree)
        <A HREF="images/gnome-1.5/help-search.gif"><B>searchable help</B><br>
        <font size=-1>type in the search word</font><br>
        <IMG WIDTH=194 HEIGHT=163 
-       SRC="images/gnome-1.5/help-intro-thumb.gif" ALIGN=TOP></A>
+       SRC="images/gnome-1.5/help-search-thumb.gif" ALIGN=TOP></A>
 </TD>
 <TD ALIGN=RIGHT>
        <A HREF="images/gnome-1.5/finder-date.gif"><B>transaction finder</B><br>
@@ -102,10 +102,10 @@ Screen shots of the upcoming version (unstable, from code in the CVS tree)
        SRC="images/gnome-1.5/report-edit-thumb.gif" ALIGN=TOP></A>
 </TD>
 <TD ALIGN=RIGHT>
-       <A HREF="images/gnome-1.5/report-graph-edit.gif"><B>report graph</B><br>
-       <font size=-1>graphs!</font><br>
-       <IMG WIDTH=150 HEIGHT=142
-       SRC="images/gnome-1.5/report-graph-edit-thumb.gif" ALIGN=TOP></A>
+       <A HREF="images/gnome-1.5/average-balance.gif"><B>report graph</B><br>
+       <font size=-1>average balance graph, table, and report editor</font><br>
+       <IMG WIDTH=187 HEIGHT=144
+       SRC="images/gnome-1.5/average-balance-thumb.gif" ALIGN=TOP></A>
 </TD>
 <TD ALIGN=RIGHT>
        <A HREF="images/gnome-1.5/tip-of-day.gif"><B>tip of the day</B><br>
@@ -118,9 +118,13 @@ Screen shots of the upcoming version (unstable, from code in the CVS tree)
        <A HREF="images/gnome-1.5/style-sheets.gif"><B>report style sheets</B><br>
        <font size=-1>report appearence can be customized!</font><br>
        <IMG WIDTH=166 HEIGHT=76
-       SRC="images/gnome-1.5/report-graph-edit-thumb.gif" ALIGN=TOP></A>
+       SRC="images/gnome-1.5/style-sheets-thumb.gif" ALIGN=TOP></A>
 </TD>
 <TD ALIGN=RIGHT>
+       <A HREF="images/gnome-1.5/guppi-pie-demo.gif"><B>pie chart demo</B><br>
+       <font size=-1>we're still working on it ...</font><br>
+       <IMG WIDTH=166 HEIGHT=149
+       SRC="images/gnome-1.5/guppi-pie-demo-thumb.gif" ALIGN=TOP></A>
 </TD>
 <TD ALIGN=RIGHT>
 </TD>
