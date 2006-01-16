@@ -1,0 +1,28 @@
+<b>Announcement:</b> GnuCash 1.8.6 Release
+
+<br>
+The GnuCash team is pleased to announce the release
+of stable version 1.8.6.<br><br>
+<b><big>What's New in GnuCash 1.8.6?</big></b><br>
+<br>
+ o Updated Spanish, Greek, French, Czech, Slovak translations<br>
+ o Fixed extremely stupid bug in the import value setting workaround.<br>
+ o Fixed problem with SX formula_cell calls<br>
+ o Merge missing part of 2003-05-28 commit.  The log format changes
+   didn't get commited for some reason, making the log replayer
+   completely unusable.<br>
+ o Fixed crash during dialog startup on Solaris.<br>
+ o Turn off scheme garbage collection during query->scm and scm->query
+   conversion.  It shaves about 50% off the test-scm-query-string tests.<br>
+ o Make test-scm-query-string test deterministic by seeding the RNG
+   with a known value.<br>
+ o Add a "slots" parameter to allow for future expansion.  Right now
+   this is completely ignored.<br>
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
