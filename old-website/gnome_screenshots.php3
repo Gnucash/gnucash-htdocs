@@ -12,35 +12,37 @@
 <TABLE>
 <TR>
 <TD ALIGN=RIGHT>
-       <A HREF="images/gnome/window-main.jpg"><B>main window</B>
+       <A HREF="images/gnome/window-main.jpg"><B>main window</B><br>
        <IMG SRC="images/gnome/window-main-thumb.jpg" align=top></A>
 </TD>
 <TD ALIGN=RIGHT>
-       <A HREF="/images/gnome/window-register.jpg"><B>register window</B>
+       <A HREF="images/gnome/window-register.jpg"><B>register window</B><br>
        <IMG SRC="images/gnome/window-register-thumb.jpg" ALIGN=TOP></A>
 </TD>
 <TD ALIGN=RIGHT>
-       <A HREF="images/gnome/window-add.jpg"><B>add account</B>
+       <A HREF="images/gnome/window-add.jpg"><B>add account</B><br>
        <IMG SRC="images/gnome/window-add-thumb.jpg" ALIGN=TOP></A>
 </TD>
 </TR>
 <TR>
 <TD ALIGN=RIGHT>
-       <A HREF="images/gnome/window-edit.jpg"><B>edit account</B>
+       <A HREF="images/gnome/window-edit.jpg"><B>edit account</B><br>
        <IMG SRC="images/gnome/window-edit-thumb.jpg" ALIGN=TOP></A>
 </TD>
 <TD ALIGN=RIGHT>
-       <A HREF="images/gnome/window-reconcile.jpg"><B>reconcile window</B>
+       <A HREF="images/gnome/window-reconcile.jpg"><B>reconcile window</B><br>
        <IMG SRC="images/gnome/window-reconcile-thumb.jpg" ALIGN=TOP></A>
 </TD>
 <TD ALIGN=RIGHT>
-       <A HREF="images/gnome/window-transfer.jpg"><B>transfer window</B>
+       <A HREF="images/gnome/window-transfer.jpg"><B>transfer window</B><br>
        <IMG SRC="images/gnome/window-transfer-thumb.jpg" ALIGN=TOP></A>
 </TD>
 </TR>
 </TABLE>
 
-<B>For the curious:</B> These screen shots were taken using the Enlightenment theme minEguE ( ie mini-gui ).  Also they are of the latest ( 11-18-99) version of Gnucash available only from CVS.
+<B>For the curious:</B> These screen shots were taken using the Enlightenment theme 
+minEguE ( <i>i.e.</i> mini-gui ).  
+They are of an older development version ( 11-18-99) of Gnucash. 
 
       <?php include("include/table_bottom.inc"); ?>
       
