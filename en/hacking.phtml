@@ -73,16 +73,12 @@ cvs -d :pserver:cvs@cvs.gnucash.org:/home/cvs/cvsroot checkout gnucash
 <br>
 A complete set of instructions for building GnuCash from source can be
 found in the 
-<a href="http://www.gnucash.org/lxr/gnucash/source/README"><tt>README</tt></a>
+<a href="https://cvs.gnucash.org/cgi-bin/cvsweb.cgi/gnucash/README"><tt>README</tt></a>
 file in the top-level directory.  For the 
 impatient, the following instructions might help:
 <p>
 Start with a distributed binary version of GnuCash, in order to get 
-dependencies resolved.  For example, Redhat 8.0
-provides <tt>gnome-desktop-devel-2.0.6-4.i386.rpm</tt>, but GnuCash does not 
-currently support gnome2 (as of January 2003).  To find a path through the
-"dependencies hell" this leads to, you could use the following
-procedure:
+dependencies resolved.  GnuCash does not currently support GNOME2.
 
 <ol>
 <li>Try to install the gnucash binary from your distribution.  For
@@ -104,10 +100,10 @@ procedure:
 <p>
 If any of these steps don't make sense to you, you probably need more
 background material.  Start with the 
-<a href="http://www.gnucash.org/lxr/gnucash/source/README"><tt>README</tt></a>
+<a href="https://cvs.gnucash.org/cgi-bin/cvsweb.cgi/gnucash/README"><tt>README</tt></a>
 file in the source tree.
-Note that the GnuCash source code is converted to 
-<a href="http://www.gnucash.org/lxr/">LXR hyperlinked web pages</a> daily.
+Note that the GnuCash source code is 
+<a href="https://cvs.gnucash.org/cgi-bin/cvsweb.cgi/"> browsable via CVSweb.</a>
 However, you may find browsing with <tt>ctags</tt> in your own file system
 to be a bit speedier.
 </p>
@@ -117,14 +113,14 @@ to be a bit speedier.
 <p>
 Older versions and branches can be accessed with tags. 
 The branch containing the latest version of the stable 
-gnucash-1.6.x code is marked 
-with the tag <tt>gnucash-1-6-branch</tt> . Thus, to check out the
-latest in the the gnucash-1.6.x series, do the following:
+gnucash-1.8.x code is marked 
+with the tag <tt>gnucash-1-8-branch</tt> . Thus, to check out the
+latest in the the gnucash-1.8.x series, do the following:
 </p>
 
 <table bgcolor=#000000 cellpadding=10><tr><td>
 <font color=#aaaaaa>
-cvs -d :pserver:cvs@cvs.gnucash.org:/home/cvs/cvsroot checkout -r gnucash-1-6-branch gnucash
+cvs -d :pserver:cvs@cvs.gnucash.org:/home/cvs/cvsroot checkout -r gnucash-1-8-branch gnucash
 </font>
 </td>
 </tr>
@@ -133,11 +129,11 @@ cvs -d :pserver:cvs@cvs.gnucash.org:/home/cvs/cvsroot checkout -r gnucash-1-6-br
 
 <p>
 Released versions are tagged with the number of the release. Thus,
-the tag <tt>gnucash-1-6-0</tt> will get you a copy of the source
-as it was for version 1.6.0.  If you are a developer, you should 
+the tag <tt>gnucash-1-8-0</tt> will get you a copy of the source
+as it was for version 1.8.0.  If you are a developer, you should 
 probably be working either in the head branch (<tt>HEAD</tt>) 
 on the latest beta/development code, or in the 
-<tt>gnucash-1-6-branch</tt>, squashing any remaining bugs in the 
+<tt>gnucash-1-8-branch</tt>, squashing any remaining bugs in the 
 current stable version.
 </p>
 <p>
@@ -160,9 +156,13 @@ Other tags of (mostly historical) interest are:
 <dt><b>patch-124</b>
 <dd>version 1.2.4, one of the last in the 1.2.x series.
 <dt><b>gnucash-1-4-branch</b>
-<dd>the tip of the 1.4.x branch, the tip of the previous stable branch.
+<dd>the tip of the 1.4.x branch, the first gtk/gnome stable branch.
 <dt><b>gnucash-1-6-branch</b>
-<dd>the tip of the 1.6.x branch, which is the current stable branch.
+<dd>the tip of the 1.6.x branch, the previous stable branch.
+<dt><b>gnucash-1-8-branch</b>
+<dd>the tip of the 1.8.x branch, the current stable branch.
+<dt><b>gnucash-gnome2-dev</b>
+<dd>the tip of the GNOME2 branch(currently very unstable) which will be the first GNOME2 version of GnuCash.
 </dl>
 </dl>
 
