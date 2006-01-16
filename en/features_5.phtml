@@ -1,5 +1,6 @@
-<% #ns_adp_include [ns_info pageroot]/en/components/header.adp "Features:Ease of Use" %>
-<% #ns_adp_include [ns_info pageroot]/en/menu/menu-general-main.adp %>
+<?php $title = "Features: Ease of Use"; ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/header.phtml"); ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-general-main.phtml"); ?>
 
 <body bgcolor=#ffffff>
 
@@ -135,7 +136,7 @@ is in development.
 <table border=0 cellspacing=0 cellpadding=0 width=100% align=center>
 <tr>
   <td align=center>
-	  <a href=/en/features_4><img border=0 src=/images/features/features_previous.png></a>
+	  <a href=/en/features_4.phtml><img border=0 src=/images/features/features_previous.png></a>
 		 |
 	  <img border=0 src=/images/features/features_next_disabled.png>
 	</td>
@@ -144,4 +145,4 @@ is in development.
 
 </td>
 
-<% #ns_adp_include [ns_info pageroot]/en/components/footer.adp %>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/footer.phtml"); ?>

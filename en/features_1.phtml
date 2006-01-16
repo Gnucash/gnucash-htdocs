@@ -1,5 +1,6 @@
-<% #ns_adp_include [ns_info pageroot]/en/components/header.adp "Features:Ease of Use" %>
-<% #ns_adp_include [ns_info pageroot]/en/menu/menu-general-main.adp %>
+<?php $title = "Features"; ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/header.phtml"); ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-general-main.phtml"); ?>
 
 <body bgcolor=#ffffff>
 
@@ -45,11 +46,11 @@
   <td align=center>
 	  <img border=0 src=/images/features/features_previous_disabled.png>
 		 |
-	  <a href=/en/features_2><img border=0 src=/images/features/features_next.png></a>
+	  <a href="/en/features_2.html"><img border=0 src=/images/features/features_next.png></a>
 	</td>
 </tr>
 </table>
 
 </td>
 
-<% #ns_adp_include [ns_info pageroot]/en/components/footer.adp %>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/footer.phtml"); ?>
