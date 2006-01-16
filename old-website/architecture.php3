@@ -8,7 +8,25 @@
         architecture overview
       <?php include("include/table_middle.inc"); ?>
         
-<p>GnuCash currently consists of the following modules.
+<h1>Architectural Overview</h1>
+GnuCash is written primarily in two languages: C and Scheme.  
+The engine/server is written in C primarily for speed, 
+portability, stability and historical purposes.  Much of the
+day-to-day workhorse code is written in Scheme, primarily
+for its power, expressiveness and ease of development.
+The user interface is gtk/gnome, some of it done up in C,
+some in scheme, and some with the 
+GUI designer tool <a href="glade.pn.org">glade</a>.
+
+<p>
+GnuCash is modular, thereby allowing separate individuals
+to maintain, develop and enhance certain modules without
+disturbing the overall development.  (Never mind that 
+modules help avoid spaghetti code and nasty, ugly hacks).
+The interfaces between modules are documented, and, for the 
+most part, stable and unchanging.
+
+<p>GnuCash currently consists of the following modules:
 
 <h2>The Engine</h2>
 
@@ -20,7 +38,7 @@ Entries). These three entities are the central data structures of the
 GnuCash financial data model.
 
 <p>The Engine code contains no GUI code whatsoever, and is essentially
-OS-neutral.
+OS-neutral. It is written entirely in C.
 
 <h3>Query</h3>
 
