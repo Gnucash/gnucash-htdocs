@@ -26,8 +26,10 @@
          <!-- &nbsp;- <A HREF="/cgi-bin/bugtrack">Gnucash Bug Tracker</A><BR> -->
          &nbsp;- <A HREF="maillist.php3">Mailing List&nbsp;-&nbsp;Help</A><BR>
          &nbsp;- <A HREF="archives.php3">Mailing List&nbsp;-&nbsp;Archives</A><BR>
-         &nbsp;- <A HREF="ChangeLog-1.4">ChangeLog for version 1.4</A><BR>
+         <!-- &nbsp;- <A HREF="ChangeLog-1.4">ChangeLog for version 1.4</A><BR>
          &nbsp;- <A HREF="ChangeLog-1.5">ChangeLog for version 1.5</A><BR>
+	 -->
+         &nbsp;- <A HREF="http://bugs.gnome.org/db/pa/lgnucash.html">Gnome Trouble Tickets</A><BR>
          &nbsp;- <A HREF="source_code.php3">Getting Source Code</A>
          <P>
       <?php include("include/table_bottom.inc") ?>
