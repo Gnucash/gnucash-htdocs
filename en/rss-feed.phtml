@@ -13,6 +13,8 @@
    // 
    // Created by Linas Vepstas 2003, 2004
 
+   header("Content-Type: text/rss; charset=iso-8859-1");
+
    echo ("<?xml version=\"1.0\" ?>\n");
 ?>
 
@@ -114,9 +116,22 @@
             $line = whack ($line, "<i>");
             $line = whack ($line, "</i>");
             $line = whack ($line, "<br>");
+            $line = whack ($line, "<tt>");
+            $line = whack ($line, "</tt>");
             $line = whack ($line, "<big>");
             $line = whack ($line, "</big>");
+            $line = whack ($line, "</a>");
 
+            $ref = strpos ($line, "<a href");
+            if ($ref !== false) {
+               $start = substr ($line, 0, $ref);
+               print $start;
+               $ref = strpos ($line, ">");
+               $end = substr ($line, $ref+1, strlen ($line));
+               print $end;
+               $i ++;
+               continue;
+            } 
             $non = strspn ($line, " \n");
             if ($non != strlen($line)) {
                print $line;
