@@ -30,7 +30,7 @@ programmers and users.
 <BR>
 <BR>
 
-Features include:
+GnuCash Application Features include:
 <BR>
 <BR>
 <UL>
@@ -43,7 +43,7 @@ complete the transaction.
 <BR><BR>
 <LI>
 A reconcile window with running reconciled and cleared balances 
-makes reconciliation easy. 
+makes balancing against bank statements easy. 
 </LI>
 <BR><BR>
 <LI>
@@ -58,8 +58,16 @@ merged to eliminate duplicate transactions.
 </LI>
 <BR><BR>
 <LI>
+Handles internationalized dates and currencies.  The Gnucash 
+menus and popups have been translated to French, German, Sweedish,
+Italian, Japanese and British English.  Documentation is available 
+in English and French.
+</LI>
+<BR><BR>
+<LI>
 Reports: Display Balance Sheet, Profit & Loss, Portfolio Valuation, 
-or print them as HTML. 
+or print them as HTML.  Work is proceeding on an integrated graphing 
+environment that will allow graphs to be embedded within reports.
 </LI>
 <BR><BR>
 <LI>
@@ -70,8 +78,13 @@ Assets ).
 </LI>
 <BR><BR>
 <LI>
+Transaction Finder: a powerful transaction query dialogue can help
+you quickly locate a needle in a haystack.
+</LI>
+<BR><BR>
+<LI>
 Split Transactions: A single transaction can be split into several 
-pieces to record taxes, fees, and other compound entries. 
+pieces to record taxes, fees, and other journal entries. 
 </LI>
 <BR><BR>
 <LI>
@@ -80,15 +93,15 @@ transaction must debit one account and credit others by an
 equal amount. This ensures that
 the "books balance": that the difference between income and
 outflow exactly equals the sum of
-all assets, be they bank, cash, stock or other. 
+all assets and equity.
 </LI>
 <BR><BR>
 <LI>
-Income/Expense Account Types
-(Categories): These serve not only to categorize your cash flow,
-but when used properly with the
-double-entry feature and equity accounts, these can provide an 
-accurate Profit & Loss statement. 
+Income/Expense Account Types (Categories) allow you to 
+categorize your cash flow.  When used properly with 
+the double-entry feature and equity accounts, these 
+enable you to generate reports, such as Profit & Loss, 
+that plain-vanilla systems cannot handle.
 </LI>
 <BR><BR>
 <LI>
@@ -107,12 +120,50 @@ Additional pricing sources are added regularly.
 </LI>
 <BR><BR>
 <LI>
+Keyboard accelerators and transaction autocompletion make
+entering transactions quick and smooth.
+</LI>
+<BR><BR>
+<LI>
+Tip-of-the-day popups make learning about new GnuCash features
+easy.  Extensive built-in documentation helps answer questions 
+you might have about particular features and accounting practices.
+</LI>
+<BR><BR>
+<LI>
+Check Printing:  Checks may be printed in standard formats
+on common check stocks.  The latest versions of gnome-print 
+must be installed to use this feature.
+</LI>
+<BR><BR>
+<LI>
+Preferences: the appearence and behaviour of the main window
+and the register windows can be thoroughly customized through
+n application preferences dialog.
+</LI>
+<BR><BR>
+<LI>
+Multiple Currencies & Currency Trading: Multiple currencies are supported 
+and can be bought and sold (traded). Currency movements
+between accounts are fully balanced when double-entry is
+enabled.  A simplified interface to multiple-currency handling
+is in development.
+</LI>
+<BR><BR>
+</UL>
+
+GnuCash Technology Features include:
+<BR>
+<BR>
+<UL>
+<LI>
+Architected interfaces. 
 Function is split between a financial engine module, written
 in C, and a Gnome-based GUI.  The engine is designed to 
-function as a generic financial server back-end: for example, 
-wrapped as a perl module for a web-based interface.
-Several GUI's have been developed: KDE, Motif and Gnome.
-Currently, most GUI development efforts are focused on Gnome.
+function as a generic (GUI-independent) financial server back-end, 
+providing extensive support for charts-of-accounts and transactions.
+The front end makes heavy use of Scheme for extensibility and 
+configurability, allowing new features to be easily incorporated.
 </LI>
 <BR><BR>
 <LI>
@@ -122,24 +173,13 @@ even if the file is NFS-mounted.
 </LI>
 <BR><BR>
 <LI>
-Provides a byte-stream format,
-which allows accounts and account groups to be transmitted to
-other processes via pipes or
-sockets. 
+The current binary file-format is being redeveloped as XML,
+thus simplifying storage and network transport questions. 
+Both the old and new formats are byte-stream oriented, and 
+can be parsed concurrently, on the fly: they do not require 
+a completed download before parsing can begin.
 </LI>
 <BR><BR>
-<LI>
-Multiple Currencies & Currency Trading: Multiple currencies are supported 
-and can be bought and sold (traded). Currency movements
-between accounts are fully balanced when double-entry is
-enabled. (Some aspects of multiple currency support are not 
-fully implemented.) 
-</LI>
-<BR><BR>
-<LI>
-Check Printing: a check printing interface is in development,
-based on the gnome-print technology.
-</LI>
 </UL>
 
  <?php include("include/table_bottom.inc"); ?>      
