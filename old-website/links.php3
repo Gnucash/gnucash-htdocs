@@ -12,14 +12,16 @@
     <h2>General References</h2>
     <ul>
       <li><a href="http://www.gldialtone.com/links.htm"><b>
-          GL Dialtione's awseome Links</b></a> provides an extensive
-	  list of link to webledgers, accounting software, 
+          GL Dialtone's awesome Links</b></a> provides an extensive
+	  list of link to web-ledgers, accounting software, 
 	  business/asp services, electronic billing and the 
 	  like. 
 	  <a href="http://www.gldialtone.com/">General Ledger 
 	  Dialtone</a> itself provides an extensive information and 
 	  a discussion forum for forward-thinking accounting ideas.
-      <li>
+      <li><a href="http://www.iasc.org.uk/frame/cen2.htm">
+          International Accounting Standards</a> as specified by 
+	  IASC -- the International Accounting Standards Committee.
       
       <li><a href="http://www.hex.net/~cbbrowne/finances.html"><b>
         CBBrowne's Finances, Linux, and Stuff</b></a> 
@@ -72,7 +74,7 @@
       <li><a href="http://www.freemarket-project.org/"><b>FreeMarket</b></a>
         <!-- <a href="http://freemarket.sourceforge.net/"><b>FreeMarket</b></a> -->
         stock technical analysis and graphing program.  Supports Easy
-        Language TradeStaion scripts.  Server supports Datek live data
+        Language TradeStation scripts.  Server supports Datek live data
         feeds.  This website is quite beautiful, and is aimed at building
 	a whole user community around it.
       </li>
@@ -143,8 +145,8 @@
    <ul>
       <li><a href="http://www.gnue.org/"><b>Gnu Enterprise</b></a> is the
          premier Gnu/GPL project aiming to create an ERP system for
-	 small, medium and large businesses.   This is an ambitous 
-	 project, but its the showstopper of the bunch.
+	 small, medium and large businesses.   This is an ambitious 
+	 project, but its the show-stopper of the bunch.
       </li>
 
       <li><A HREF="http://sql-ledger.com/"><b>SQL Ledger</b></a> is an 
@@ -225,7 +227,7 @@
       </li>
 
       <li><a href="http://www.smbxml.org"><b>Small Business XML</b></a>
-        is an publically-documented XML DTD for conducting small &
+        is an publicly-documented XML DTD for conducting small &
         medium-sized business transactions.
       </li>
 
