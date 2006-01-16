@@ -21,11 +21,21 @@ question-answerers, translators and all-around nice people.
 <td>
 <form method=post>
 <select name=contribute>
-  <option value=programmer>I am a programmer</option>
-  <option value=translator>I am a translator</option>
-  <option value=fan>I am a fan</option>
-  <option value=webmaster>I am a webmaster</option>
-  <option value=writer>I am a writer/reporter</option>
+  <option value=programmer
+   <?php if ($contribute == "programmer") { echo ("selected"); } ?>
+  >I am a programmer</option>
+  <option value=translator
+   <?php if ($contribute == "translator") { echo ("selected"); } ?>
+  >I am a translator</option>
+  <option value=fan
+   <?php if ($contribute == "fan") { echo ("selected"); } ?>
+  >I am a fan</option>
+  <option value=webmaster
+   <?php if ($contribute == "webmaster") { echo ("selected"); } ?>
+  >I am a webmaster</option>
+  <option value=writer
+   <?php if ($contribute == "writer") { echo ("selected"); } ?>
+  >I am a writer/reporter</option>
 </select>
 <input type=submit value=Go>
 </td>
