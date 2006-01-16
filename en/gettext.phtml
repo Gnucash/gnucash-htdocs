@@ -1,0 +1,23 @@
+<?php
+// the following will be common for every page and could be put in a
+// common inclusion file.
+
+// Set language to German. This would obviously be handled by
+// a system for choosing language and/or using the one the
+// browser supplies.
+putenv ("LANG=pt_BR");
+// use all the locale variables. This can be used for printing numbers
+// correctly (decimal points/commas) and so on.
+setlocale(LC_ALL, "");
+// Specify location of translation tables
+bindtextdomain ("gnucashwww", "./gettext/locale");
+// Choose domain
+textdomain ("gnucashwww");
+
+// This is how translations will be used in the pages. _() is a shortcut
+// for gettext() and will show the translated message.
+echo gettext("Welcome to GnuCash")."<BR>";
+echo gettext("This should all be translated. If you see this message in the 
+language you entered, it works");
+?>
+
