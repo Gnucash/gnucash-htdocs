@@ -93,6 +93,27 @@
       </dd>
 
       <dt>
+      <b><a href="http://slashdot.org/articles/00/02/28/0945240.shtml">
+      Gnucash 1.3.0 Beta Released</a></b> 
+      (<a href="/press-archive/slashdot-2000-02/slashdot.org.articles.00.02.28.0945240.html">archival copy</a>)
+      (Slashdot, February 2000)
+      </dt>
+      <dd>
+      Jeremy Collins wrote in to tell us that Gnucash 1.3.0 Beta
+      is out. We keep the software release announcements to a
+      minimum and let more appropriate sites handle them,
+      but this is pretty significant. Gnucash is the best quickenesque program
+      under Linux today, and as we all know: it's those pesky end user apps
+      that we lag behind other OSs. We've already got several word
+      processors, spreadheets and image manipulation coming along nicely,
+      but seeing development happen in the financial package area (also
+      games and video) is important. Anyway, I'd suggest checking this one
+      out: I've been using it since xacc and it's good if you're anal. Check out
+      the ftp.gnucash.org and report bugs if you see 'em. 
+      <br><br>
+      </dd>
+      
+      <dt>
       <b><a href="http://lwn.net/1999/features/GnuCash/">
       A look at GnuCash 1.2.5</a></b>
       (<a href="/press-archive/lwn.net-1999-features/lwn.net,1999,features,GnuCash,index.html">archival copy</a>)
