@@ -22,12 +22,12 @@ else
 <meta name="keywords" content="Financial, Manager, Money, Accounting, Finance, Software, Quicken, MSMoney, Peachtree, Linux, GPL">
 </HEAD>
 
-<BODY BGCOLOR="#ffffff" TEXT="#000000" LINK="#666a1b" VLINK="#b76767">
+<BODY BGCOLOR="#efe4c4" TEXT="#000000" LINK="#666a1b" VLINK="#b76767">
 
 <! END HEADER>
 
 <CENTER>
-<IMG SRC="images/gnucash_white.jpg">
+<IMG SRC="images/gnucash_light.jpg">
 </CENTER>
 
 <BR>
