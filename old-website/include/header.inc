@@ -22,7 +22,7 @@ else
 <meta name="keywords" content="Financial, Money, Accounting, Finance, Software, Quicken, MSMoney, Peachtree, Linux, GPL">
 </HEAD>
 
-<BODY BGCOLOR="#8b7765" TEXT="#000000" LINK="#000000" VLINK="#575757">
+<BODY BGCOLOR="#8b7765" TEXT="#000000" LINK="#666a1b" VLINK="#b76767">
 
 <! END HEADER>
 
