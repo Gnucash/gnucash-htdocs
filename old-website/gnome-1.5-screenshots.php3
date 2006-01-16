@@ -30,17 +30,17 @@ Screen shots of the upcoming version (unstable, from code in the CVS tree)
        SRC="images/gnome-1.5/savings-double-thumb.gif" ALIGN=TOP></A>
 </TD>
 <TD ALIGN=RIGHT>
-       <A HREF="images/gnome-1.5/savings-journal.gif"><B>register window</B><br>
-       <font size=-1>in journal mode</font><br>
-       <IMG WIDTH=202 HEIGHT=142 
-       SRC="images/gnome-1.5/savings-journal-thumb.gif" ALIGN=TOP></A>
+       <A HREF="images/gnome-1.5/account-edit.gif"><B>acount editor</B><br>
+       <IMG WIDTH=87 HEIGHT=115
+       SRC="images/gnome-1.5/account-edit-thumb.gif" ALIGN=TOP></A>
 </TD>
 </TR>
 <TR>
 <TD ALIGN=RIGHT>
-       <A HREF="images/gnome-1.5/account-tree.gif"><B>chart of accounts</B><br>
-       <IMG WIDTH=188 HEIGHT=137 
-       SRC="images/gnome-1.5/account-tree-thumb.gif" ALIGN=TOP></A>
+       <A HREF="images/gnome-1.5/savings-journal.gif"><B>register window</B><br>
+       <font size=-1>in journal mode</font><br>
+       <IMG WIDTH=202 HEIGHT=142 
+       SRC="images/gnome-1.5/savings-journal-thumb.gif" ALIGN=TOP></A>
 </TD>
 <TD ALIGN=RIGHT>
        <A HREF="images/gnome-1.5/stock-journal.gif"><B>stock register</B><br>
@@ -49,38 +49,78 @@ Screen shots of the upcoming version (unstable, from code in the CVS tree)
        SRC="images/gnome-1.5/stock-journal-thumb.gif" ALIGN=TOP></A>
 </TD>
 <TD ALIGN=RIGHT>
-       <A HREF="images/gnome-1.5/account-edit.gif"><B>acount editor</B><br>
-       <IMG WIDTH=87 HEIGHT=115
-       SRC="images/gnome-1.5/account-edit-thumb.gif" ALIGN=TOP></A>
+       <A HREF="images/gnome-1.5/finder-desc.gif"><B>transaction finder</B><br>
+       <font size=-1>for matching the description field</font><br>
+       <IMG WIDTH=118 HEIGHT=145
+       SRC="images/gnome-1.5/finder-desc-thumb.gif" ALIGN=TOP></A>
 </TD>
 </TR>
 <TR>
 <TD ALIGN=RIGHT>
-       <A HREF="images/gnome-1.5/query-window.gif"><B>query finder</B><br>
-       <IMG WIDTH=164 HEIGHT=156
-       SRC="images/gnome-1.5/query-window-thumb.gif" ALIGN=TOP></A>
+       <A HREF="images/gnome-1.5/account-tree.gif"><B>chart of accounts</B><br>
+       <font size=-1>currently the main wndow, but not for long</font><br>
+       <IMG WIDTH=188 HEIGHT=137 
+       SRC="images/gnome-1.5/account-tree-thumb.gif" ALIGN=TOP></A>
 </TD>
 <TD ALIGN=RIGHT>
-       <A HREF="images/gnome-1.5/stock-register-gmc.gif"><B>stock register</B><br>
-       <IMG WIDTH=228 HEIGHT=132
-       SRC="images/gnome-1.5/stock-register-gmc-thumb.gif" ALIGN=TOP></A>
+       <A HREF="images/gnome-1.5/help-search.gif"><B>searchable help</B><br>
+       <font size=-1>type in the search word</font><br>
+       <IMG WIDTH=194 HEIGHT=163 
+       SRC="images/gnome-1.5/help-intro-thumb.gif" ALIGN=TOP></A>
 </TD>
 <TD ALIGN=RIGHT>
-       <A HREF="images/gnome-1.5/tod.gif"><B>tip of the day</B><br>
+       <A HREF="images/gnome-1.5/finder-date.gif"><B>transaction finder</B><br>
+       <font size=-1>date selection panel</font><br>
+       <IMG WIDTH=118 HEIGHT=145
+       SRC="images/gnome-1.5/finder-date-thumb.gif" ALIGN=TOP></A>
+</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT>
+       <A HREF="images/gnome-1.5/help-intro.gif"><B>online help</B><br>
+       <font size=-1>table of contents</font><br>
+       <IMG WIDTH=194 HEIGHT=163 
+       SRC="images/gnome-1.5/help-intro-thumb.gif" ALIGN=TOP></A>
+</TD>
+<TD ALIGN=RIGHT>
+       <A HREF="images/gnome-1.5/help-slashdot.gif"><B>generic web browsing</B><br>
+       <font size=-1>slashdot!</font><br>
+       <IMG WIDTH=194 HEIGHT=163
+       SRC="images/gnome-1.5/help-slashdot-thumb.gif" ALIGN=TOP></A>
+</TD>
+<TD ALIGN=RIGHT>
+       <A HREF="images/gnome-1.5/check-print.gif"><B>check printing</B><br>
+       <IMG WIDTH=101 HEIGHT=74
+       SRC="images/gnome-1.5/check-print-thumb.gif" ALIGN=TOP></A>
+</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT>
+       <A HREF="images/gnome-1.5/report-edit.gif"><B>report editor</B><br>
+       <font size=-1>choose accounts for a generic report</font><br>
+       <IMG WIDTH=200 HEIGHT=131 
+       SRC="images/gnome-1.5/report-edit-thumb.gif" ALIGN=TOP></A>
+</TD>
+<TD ALIGN=RIGHT>
+       <A HREF="images/gnome-1.5/report-graph-edit.gif"><B>report graph</B><br>
+       <font size=-1>graphs!</font><br>
+       <IMG WIDTH=150 HEIGHT=142
+       SRC="images/gnome-1.5/report-graph-edit-thumb.gif" ALIGN=TOP></A>
+</TD>
+<TD ALIGN=RIGHT>
+       <A HREF="images/gnome-1.5/tip-of-day.gif"><B>tip of the day</B><br>
        <IMG WIDTH=112 HEIGHT=81 
-       SRC="images/gnome-1.5/tod-thumb.gif" ALIGN=TOP></A>
+       SRC="images/gnome-1.5/tip-of-day-thumb.gif" ALIGN=TOP></A>
 </TD>
 </TR>
 <TR>
 <TD ALIGN=RIGHT>
-       <A HREF="images/gnome-1.5/pnl-report.gif"><B>profit &amp; loss report</B><br>
-       <IMG WIDTH=171 HEIGHT=106 
-       SRC="images/gnome-1.5/pnl-report-thumb.gif" ALIGN=TOP></A>
+       <A HREF="images/gnome-1.5/style-sheets.gif"><B>report style sheets</B><br>
+       <font size=-1>report appearence can be customized!</font><br>
+       <IMG WIDTH=166 HEIGHT=76
+       SRC="images/gnome-1.5/report-graph-edit-thumb.gif" ALIGN=TOP></A>
 </TD>
 <TD ALIGN=RIGHT>
-       <A HREF="images/gnome-1.5/transaction-report.gif"><B>transaction report</B><br>
-       <IMG WIDTH=210 HEIGHT=161 
-       SRC="images/gnome-1.5/transaction-report-thumb.gif" ALIGN=TOP></A>
 </TD>
 <TD ALIGN=RIGHT>
 </TD>
