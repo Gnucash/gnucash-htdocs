@@ -296,103 +296,127 @@ For now, this is what we have.
     
      number of *c and *.h and *.scm files
      (KLOCS in *.c + KLOCS in *.h + KLOCS in *.scm)
-	  If there are no *.scm files in the directory, then only (KLOCS in *.c + KLOCS in *.h)
-	  are displayed.  If there is only one number in the parenthesis, it is the approriate
-	  KLOC count for that statistic.
+     If there are no *.scm files in the directory, then only (KLOCS in *.c + KLOCS in *.h)
+     are displayed.  If there is only one number in the parenthesis, it is the approriate
+     KLOC count for that statistic.
 
  </P ><P >
  where KLOC == kilo-lines-of-code, as reported by
-   <SPAN CLASS="APPLICATION" >wc</SPAN >.  As noted above, wc is not a terribly good code
-	metric, but its what we have handy.
+   <SPAN CLASS="APPLICATION" >wc</SPAN >.  As noted 
+   above, wc is not a terribly good code
+   metric, but its what we have handy.
 
     <P></P>
 <b>Table Column Legend</b><br><br>
     <P></P>
  <DL>
-	 <DT><B>engine</B></DT>
-	 <DD>Contents of the src/engine and the include directories.
-	     The engine was split out from the motif code in version 1.1.  
-		  The data storage backend (file-io, sql) was split out in the 
-		  course of version 1.5
+    <DT><B>engine</B></DT>
+    <DD>Contents of the src/engine and the include directories.
+        The engine was split out from the motif code in version 1.1.  
+        The data storage backend (file-io, sql) was split out in the 
+        course of version 1.5
+	<P></P>
         </DD>
     <DT><B>backend</B></DT>
-	 <DD>Contents of the src/backend directory (version 1.7 and later)
+    <DD>Contents of the src/backend directory (version 1.7 and later)
         or of src/engine/file, src/engine/sql (version 1.6 and earlier)
-	 </DD>
+	<P></P>
+        </DD>
     <DT><B>register</B></DT>
-	 <DD>Contents of the src/register directory (version 1.6 and earlier)
+    <DD>Contents of the src/register directory (version 1.6 and earlier)
         or src/register/register-core (version 1.7 and later).  The register
-		  was split out as a separate component from the motif code in version 1.1.
-		  As can be seen from the stats, the register code has been fairly stable.
-		  At version 1.7 and later, this cell shows a second count: the number of 
-		  lines of code in src/register/register-gnome (previously counted as part 
-		  of gnome)
-	 </DD>
+        was split out as a separate component from the motif code in version 1.1.
+        As can be seen from the stats, the register code has been fairly stable.
+        At version 1.7 and later, this cell shows a second count: the number of 
+        lines of code in src/register/register-gnome (previously counted as part 
+        of gnome)
+	<P></P>
+        </DD>
     <DT><B>ledger</B></DT>
-	 <DD>*.c, *.h files in the src directory only (version 1.6 and earlier)
+    <DD>*.c, *.h files in the src directory only (version 1.6 and earlier)
           or src/register/ledger-core (version 1.7 and later)
 
+	<P></P>
     </DD>
     <DT><B>motif</B></DT>
     <DD>Contents of the src/motif directory (version 1.2 and earlier).  The motif
-	     version of the code was discontinued after version 1.2, after most of the
-		  non-gui code was moved to either the engine, the register or the ledger.
+        version of the code was discontinued after version 1.2, after most of the
+        non-gui code was moved to either the engine, the register or the ledger.
 
+	<P></P>
     </DD>
     <DT><B>gnome</B></DT>
     <DD>Contents of src/gnome plus src/register/gnome (version 1.6 and earlier).  For
-	     version 1.7 and later, this consists of src/gnome, src/gnome-search and src/gnome-util
+        version 1.7 and later, this consists of src/gnome, src/gnome-search and src/gnome-util
+	<P></P>
     </DD>
 
     <DT><B>misc app</B></DT>
     <DD>Contents of miscellanous application-related directories (version 1.7 and later):
-	     src/app-file, src/app-utils, src/calculation, src/core-utils, src/gnc-module,
-		  src/network-utils, src/tax/us
+        src/app-file, src/app-utils, src/calculation, src/core-utils, src/gnc-module,
+        src/network-utils, src/tax/us
+	<P></P>
     </DD>
 
     <DT><B>import export</B></DT>
-	 <DD>Code to import and export various file formats: contents of the src/import-export
-	     directory.
-	  </DD>
+    <DD>Code to import and export various file formats: contents of the src/import-export
+        directory.
+	<P></P>
+     </DD>
 
     <DT><B>reports</B></DT>
-	 <DD>Code to generate reports and graphs: contents of the src/reports
-	     directory.
-	  </DD>
+    <DD>Code to generate reports and graphs: contents of the src/reports
+        directory.
+	<P></P>
+     </DD>
 
     <DT><B>scheme</B></DT>
     <DD>scheme and guile code in directories src/scm plus src/guile (version 1.6 and earlier).
-	     In version 1.7 and later, much of this code went into reports, import/export, and
-		  into indiovidual modules; thus only miscellaneous code remains.
+        In version 1.7 and later, much of this code went into reports, import/export, and
+        into indiovidual modules; thus only miscellaneous code remains.
+	<P></P>
     </DD>
 
     <DT><B>business</B></DT>
-	 <DD>Code to add small-busines features: contents of the src/business
-	     directory.
-	  </DD>
+    <DD>Code to add small-busines features: contents of the src/business
+        directory.
+	<P></P>
+     </DD>
 
     <DT><B>test</B></DT>
-	 <DD>Code to peform automated regression tests: contents of the src/*/test
-	     directories.
-	  </DD>
+    <DD>Code to peform automated regression tests: contents of the src/*/test
+        directories.
+	<P></P>
+     </DD>
 
     <DT><B>docs</B></DT>
     <DD>English-language-only user documentation, including on-line help and manual
-	     (html, sgml or xml).
-	 </DD>
-	 
+        (html, sgml or xml).
+	<P></P>
+    </DD>
+    
+    <DT><B>internal txt</B></DT>
+    <DD>The number of design documents and README files aimed at developers.
+        This includes *.txt files, *.texinfo files and README.* files
+     in all subdirectories.  For version 1.7 and later, only those in
+     the src subdirectory are counted (leaving out some half-dozen scattered 
+     elsewhere)
+	<P></P>
+     </DD>
+
     <DT><B>Languages</B></DT>
     <DD>The number of languages that the application messages
       have been translated to.  In parenthesis, the number of messages
       in the message files (grep msgstr *.po |wc), in thousands.
-	 </DD>
-    <DT><B>txt</B></DT>
-	 <DD>The number of design documents and README files aimed at developers.
-	     This includes *.txt files, *.texinfo files and README.* files
-		  in all subdirectories.  For version 1.7 and later, only those in
-		  the src subdirectory are counted (leaving out some half-dozen scattered 
-		  elsewhere)
-		  </DD>
+	<P></P>
+    </DD>
+    
+    <DT><B>Author Credits</B></DT>
+    <DD>The number of people credited in the AUTHORS file (version 1.6 and later)
+        or the README file (earlier versions).  These include lead developers,
+	patch submitters and national-language translators.
+	<P></P>
+    </DD>
 </DL>
 
 
