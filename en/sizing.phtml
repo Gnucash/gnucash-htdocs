@@ -12,6 +12,11 @@ a software development project.   Not a surprising interest: its accounting
 afterall.  GnuCash has grown, over the years, from a small handy electronic 
 checkbook to a rather large and multi-featured desktop app.  
 </p>
+<P>
+GnuCash currently consists of nearly a third of a million lines of code 
+spread over nearly a thousand files.  It has been translated into 
+twenty-one languages and credits over 130 authors and contributors.
+</P>
 <p>
 The table below shows some historical lines-of-code and
 number-of-files metrics for the <SPAN CLASS="APPLICATION">GnuCash</SPAN>
@@ -20,18 +25,25 @@ instance, the Makefiles and configure.in and autogen.sh are not counted.
 Also, files that are automatically generated are not counted, nor are
 files that have been 'borrowed' from other projects. Also not counted 
 are experimental files, miscellaneous perl scripts, various converters,
-addons and utilities.  Finally, glade files are not counted, although
-large parts of the overall GUI are described in glade files.
+addons and utilities.  Finally, <tt>glade<tt> files are not counted, 
+although large parts of the overall GUI are described in <tt>glade</tt> 
+files.
 </P>
 <P>
 Note also that KLOC's are not a good metric of programmer productivity,
-nor even that <SPAN CLASS="APPLICATION" >wc</SPAN > is a good way of counting
+nor even that <SPAN CLASS="APPLICATION">wc</SPAN > is a good way of counting
 KLOC's.  Much better measures are complexity metrics, which, for
 example, count the number and size of if-then-else blocks, or the number
-and size of all blocks, or the number of math operators per each
+and size of all blocks, or the number of math operators per 
 statement.  Maybe someday we'll run one of those tools on this code. 
-For now, this is what we have.
-</P><P>
+For now, this is what we have.  On the other hand, we've attempted to
+count only those files that contain human-edited code, that is, files
+that are directly edited by humans.  The point of doing this is to 
+avoid artificially inflating the KLOC counts by counting automatically
+generated code (which is why the glade files are not counted: they
+are large and automatically generated).
+</P>
+<P>
 <DIV CLASS="TABLE">
 <P><B >Table 1.  Historical Development Stats </B></P>
 <TABLE BORDER="1" CLASS="CALSTABLE">
