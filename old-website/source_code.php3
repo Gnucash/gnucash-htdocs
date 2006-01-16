@@ -55,7 +55,13 @@ cvs -d :pserver:cvs@cvs.gnucash.org:/home/cvs/cvsroot checkout -r gnucash-1-4-br
 <p>
 Released versions are tagged with the number of the release. Thus,
 the tag <tt>gnucash-1-4-4</tt> will get you a copy of the source
-as it was for version 1.4.4.
+as it was for version 1.4.4.  If you are a developer, you should 
+probably be working either in the head branch (<tt>HEAD</tt>) 
+on the latest beta/development code, or in the 
+<tt>gnucash-1-4-branch</tt>, squashing any remaining bugs in the 
+current stable version.
+</p>
+<p>
 Other tags of (mostly historical) interest are:
 <dl><dd>
 <dl>
