@@ -1,6 +1,11 @@
-<!-- <xml version="1.0" >  -->
- <rss version="2.0">
+<?php
+   echo ("<?xml version=\"1.0\" ?>\n");
+?>
+<!-- <!DOCTYPE rss PUBLIC "-//Netscape Communications//DTD RSS 0.91//EN" "http://my.netscape.com/publish/formats/rss-0.91.dtd"> -->
+
+ <rss version="2.0" encoding="iso-8859-1">
   <channel>
+  <!-- <channel rdf:about="http://www.xml.com/xml/news.rss"> -->
 
 <?php
     //  change  this  to  the  directory  of  your  news  files 
@@ -38,11 +43,13 @@
         $n=count($fa); 
 	if ($n > 5) { $n = 5; }
 
+        // echo("<item rdf:about=\"http://xml.com/pub/2000/08/09/xslt/xslt.html\">"\n);
+        echo("<item>\n");
         echo("<title>");
 	print $fa[0];
 
 	print  " - (". date( "Y-m-d", $newsfile[$key]) ;
-	print  "&nbsp; &nbsp;".date( "H:i:s",$newsfile[$key]). ")"; 
+	print  date( "H:i:s",$newsfile[$key]). ")"; 
 
         echo("</title>\n");
         echo("<description>");
@@ -55,6 +62,10 @@
         echo("http://www.gnucash.org/#");
 	print $key;
         echo("</link>\n");
+	// print "<pubDate>". date( "Y-m-d", $newsfile[$key]). date( "H:i:s",$newsfile[$key]). " CST</pubDate>\n"
+	// echo("<language>en-us</language>\n");
+	// echo("<copyright>Copyright 2001-2003 The GnuCash Project</copyright>\n");
+        echo("</item>\n");
     }    
     
     $hd->close();  
