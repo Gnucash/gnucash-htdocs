@@ -10,6 +10,7 @@
       <dl>
       <dt>
       <b><a href="http://www.linuxnews.com/news/?1,2">The GNUCash Project: Focusing on Money Management for Linux</a></b>
+      (<a href="/press-archive/linuxmall/linuxmall.com,news,1,2,index.html">archival copy</a>)
       </dt>
       <dd>
       Five years ago, Linas Vepstas was working "with a .com. We were with it, we were hip, we
@@ -17,12 +18,12 @@
       then, NT was the once and future king. It was crazy to bet against Microsoft." Then he
       discovered Linux--and launched the GNUCash Project, aimed at developing stable,
       easy-to-use, flexible financial accounting software for GNU/Linux. 
+      <br><br>
       </dd>
-      </dl>
 
-      <dl>
       <dt>
       <b><a href="http://lwn.net/1999/features/GnuCash/">A look at GnuCash 1.2.5</a></b>
+      (<a href="/press-archive/lwn.net-1999-features/lwn.net,1999,features,GnuCash,index.html">archival copy</a>)
       </dt>
       <dd>
       Here is an unpleasant confession for an LWN author to make: I actually still use Windows. 
@@ -31,12 +32,12 @@
       a free replacement so that I can recover that one last, small partition on my disk. 
       This article is the result of my latest attempt - driven, additionally, by the sinking feeling
       that my current application probably won't handle the next century very well...
+      <br><br>
       </dd>
-      </dl>
 
-      <dl>
       <dt>
       <b><a href="http://www.linuxworld.com/linuxworld/lw-2000-04/f_lw-04-vcontrol_4.html">There's no accounting for Linux</a></b>
+      (<a href="/press-archive/linuxworld-2000-04/f_lw-04-vcontrol_4.html">archival copy</a>)
       </dt>
       <dd>
       Is Linux getting mainstream? Not if you base your conclusion on the search results 
@@ -44,12 +45,12 @@
       packet accounting, multirouting traffic accounting, ISDN monitoring, 
       network traffic accounting meter, and, at the top of the list, a patch for the net 
       accounting daemon. 
+      <br><br>
       </dd>
-      </dl>
  
-      <dl>
       <dt>
       <b><a href="http://www.lwn.net/2000/0504/devel.phtml">Another look at gnucash</a></b>
+      (<a href="/press-archive/lwn.net-2000-0504/devel.html">archival copy</a>)
       </dt>
       <dd>
       Last December we ran a review of gnucash that concluded that the program - a free
@@ -58,6 +59,7 @@
       look at gnucash. Conclusion: it has come a long way.  Your editor is pleased to 
       announce a complete transition to gnucash, thus getting rid of the last Windows
       application on his system. Time to reclaim that partition. 
+      <br><br>
       </dd>
       </dl>
 		
