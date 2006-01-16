@@ -18,30 +18,51 @@
     # $newspath = $GLOBALS['DOCUMENT_ROOT']."/news/
 
     # So we'll just do this for now...
-    $newspath  =  "news/"; 
+    $native_newspath  =  "news/"; 
+    $alt_newspath  =  "../news/"; 
 
-    //  Declare  array  to  hold  filenames 
+    // array of displayed filenames is indexed with filenames, holds timestamps.
     $newsfile  =  array(); 
-    
-    //  Create  handle  to  search  directory  $newspath  for  files 
-    $hd  =  dir($newspath); 
+
+    // ------------------------------------------
+    // array holding native-language news articles.
+    $native_files = array();
+    $hd  =  dir($native_newspath); 
     
     //  Get  all  files  and  store  them  in  array 
     while(  $filename  =  $hd->read()  )  { 
         $s=strtolower($filename); 
         if  (strstr($s, ".txt"))  { 
-            //  Determine  last  modification  date 
-            $lastchanged=filemtime($newspath.$filename); 
-            $newsfile[$filename]  =  $lastchanged; 
+            $native_files[$filename]  =  $native_newspath.$filename;
         }    
     } 
+    $hd->close();  
+
+    // ------------------------------------------
+    
+    //  Create  handle  to  search  directory  $newspath  for  files 
+    $hd  =  dir($alt_newspath); 
+    
+    //  Get  all  files  and  store  them  in  array 
+    while(  $filename  =  $hd->read()  )  { 
+        $s=strtolower($filename); 
+        if  (strstr($s, ".txt"))  { 
+
+	    $display_filename = $alt_newspath.$filename;
+	    
+            //  Determine  last  modification  date 
+            $lastchanged=filemtime($display_filename); 
+            $newsfile[$display_filename]  =  $lastchanged; 
+        }    
+    } 
+    $hd->close();  
     
     //  Sort  files  in  descending  order 
     arsort($newsfile); 
     //  Output  files  to  browser 
     for(reset($newsfile);  $key  =  key($newsfile);  next($newsfile))  
     { 
-        $fa  =  file($newspath.$key); 
+        $fa  =  file($key); 
         $n=count($fa); 
 
         echo("<table border=0 cellpadding=1 cellspacing=0 width=\"100%\">");
@@ -65,5 +86,4 @@
 
     }    
     
-    $hd->close();  
     ?>
