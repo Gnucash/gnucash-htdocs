@@ -27,9 +27,9 @@ the lines of 'most obvious' to 'far out there'.
 <dd>This is probably the #1 most requested 'enhancement' to GnuCash.
     The use of GNU/Linux is sky-rocketing in small businesses; yet there
     are no easy-to-install, easy-to-administer small-business accounting 
-    programs, at least not of the 'open' kind.  The feature list is the 
-    same-old list from half a century ago: payroll, accounts-payable &amp; 
-    receivable, invoicing, billing.   
+    programs, at least not of the 'open' kind.  The list of desired features 
+    dates back to the dawn of computing half a century ago: payroll, 
+    accounts-payable &amp; receivable, invoicing, billing.   
     <p>
     There are some real problems with moving in this direction.
     Not the least of these is alienating GnuCash's core constituency: 
@@ -46,26 +46,29 @@ the lines of 'most obvious' to 'far out there'.
     
 <dt><b>Sophisticated Investor</b>
 <dd>GnuCash downloads stock prices and currency exchange rates from
-    off the net.   The next beta version should have some sophisticated
-    graphing features.  How fancy can one get?  The new GnuCash reporting 
+    off the net.   The current beta version has some sophisticated
+    graphing capabilities.  How fancy should one get?  The new GnuCash reporting 
     structure should make it easy, or at least straightforward, to create 
     a variety of sophisticated graphs, charts and reports.  These might
     range from simple technical analysis such as 90-day moving averages 
-    and beta, to arcane indicators like 'Bolton-Tremblay', 'Zweig Thrust' 
-    or 'McClellan Oscillator'.
+    trading volume and beta, to arcane indicators like 'Bolton-Tremblay', 
+    'Zweig Thrust' or 'McClellan Oscillator'.
     <p>
     Downside?  The 'investor' community is smaller than the home user
     community.  And stock technical analysis doesn't necessarily require
     accounting features.  Thus, such needs may be best served by other
-    systems: and there's a <a href="http://www.gnucash.org/links.php3">
-    variety</a> of these to choose from.
+    systems: and there's a 
+    <a href="http://www.gnucash.org/en/links.phtml?linkpage=stock">
+    variety</a> of these to choose from.  Should GnuCash reject 
+    stock-oriented patches? No. Should core developers focus on stock 
+    trading?  Probably not.
     <p>
 
 <dt><b>The Financial Browser/The Ultimate Home User Experience</b>
 <dd>As the user interface gets slicker, and the druids become more and 
-    more helpful in guiding the novice user through setup, QIF import 
-    and the like, the natural direction would be to create ultimate 
-    home user experience.  That is, build the 'Financial Browser for 
+    more helpful in guiding the novice user, a natural direction for
+    GnuCash would be to become the ultimate home user financial experience. 
+    That is, to build the 'Financial Browser for 
     the Web', the 'Nautilus of Financial Transactions'.   For starters,
     this means using OFX and supporting on-line bill-pay and banking.
     In some distant future, this means integrating with on-line shopping,
@@ -81,7 +84,25 @@ the lines of 'most obvious' to 'far out there'.
     grail of desktop integration.
     <p>
 
-<dt><b>The Financial Browser, Part II: the ASP</b>
+<dt><b>The Financial Browser, Part II: the PDA</b>
+<dd>GnuCash, the Gnome Desktop, and the KDE desktop have been flying in 
+    the face of 'common wisdom': the coming extinction of the 
+    general-purpose PC.  According to this theory, lithe, portable,
+    special-purpose hand-held devices will make PC's irrelevent. 
+    Of course, the theory is flawed:  a large keyboard and a large screen
+    provide convenience that no small palm-top can provide.  None-the-less,
+    one must look over ones shoulder.   Can GnuCash be slimmed down
+    and fit onto one of those Linux hand-helds, e.g. the YOPI?
+    Right now, it depends intimately on a large number of packages for 
+    many features, and so a slimming excercise is hard to imagine. 
+    But then, a financial manger is a cornerstone application for 
+    the desktop, it is equally so for the palm-top.  Someday, not
+    too long from now, wireless, hand-held 'financial browser' will
+    be as ubiquitus as the wallet.
+    <p>
+    
+
+<dt><b>The Financial Browser, Part III: the ASP</b>
 <dd>Gnucash has a built-in web browser.  This browser can not only 
     show standard web pages, but it also understands special markup
     for interactive graphs, and even embedded checkbook registers
@@ -126,7 +147,8 @@ the lines of 'most obvious' to 'far out there'.
     businesses have different business practices: no one does things
     in quite the same way.  And so, there is no 'one-size-fits-all'
     application; instead, one hopes for a framework with extensibility, 
-    easy integration, and rapid-development features.  So that you can 
+    easy integration, and rapid-development features.  The hope is that
+    one can 
     quickly hook up that brand-new ecommerce package to that decades-old
     billing application.  GnuCash doesn't do this.  Nor is GnuCash easy
     to modify, extend, or enhance.  It takes some considerable 
@@ -134,26 +156,39 @@ the lines of 'most obvious' to 'far out there'.
     means that it's hard to integrate GnuCash into your business processes:
     you can't just tell it to suck out financial info from here, and 
     dump it to there.  If you want to do this, go check out 
-    <a href="http://www.gnue.org/">GnuE at http://www.gnue.org/</a>
+    <a href="http://www.gnue.org/">GnuE at http://www.gnue.org/</a>:
+    it was specifically designed for this.
+    <p>
+    On the other hand, the GnuCash infrastructure is becoming general 
+    enough that it wouldn't be hard to mold it into a variety of 
+    related financial tools.  And if GnuCash really is to suceed in the
+    business accounting world, it will have to become savvy in talking to 
+    other systems.
     <p>
     
 <dt><b>Napster for Money</b>
 <dd>If you thought the music industry hated Napster, just wait till 
-    the feds and the banks see its financial equivalent.  Suppose there
+    you see 
+    <a href="http://slashdot.org/article.pl?sid=01/03/30/1953235&mode=thread"
+    how the feds and the banks react to its financial equivalent</a>.  
+    Suppose there
     really were an infrastructure for putting secure, anonymous eCash
     into your eWallet.  Or rather, of giving it to your friend or business
     partner, and they in turn could spend it on real goods and services.
     Now, don't confuse the idea of an eWallet with the idea of eMoney.
     There are any number of efforts underway to create eMoney: some
     with pretend-money, such as flooz, or frequent flyer miles, some with
-    real money, such as pay-pal, or the latest ecommerce scheme from 
+    real money, such as 
+    <a href="http://www.e-gold.com/e-gold.asp?cid=281678">e-Gold</a>,
+    pay-pal, or the latest ecommerce scheme from 
     your credit-card company.  All of these schemes require a centralized 
     server (traditionally called a 'Bank').  This centralized server
     validates your identity, and confirms that you have the money you 
     claim to have.  And actually moves that money around.  And works
     in concert with the IRS to make sure you don't have unreported, 
     taxable income.  And with the DEA, to make sure you're not 
-    money-laundering.  And with... who knows.  
+    money-laundering.  And with... well, that's a matter of 
+    national security.
     <p>
     By contrast, my wallet is a 'bank' in the sense of holding money; 
     it just doesn't charge me a service fee for doing so.  And
@@ -171,9 +206,11 @@ the lines of 'most obvious' to 'far out there'.
     kind of money that banks accept.  And as you may guess, the 
     resulting shadow economy would prompt the Federal Reserve Bank
     to shut down said underwriter faster than Alan Greenspan can say 
-    'the expansion in the M2 Money Supply Index'.  But since we were 
-    dealing with network-enabled accounting, I thought I'd throw in 
-    something fun to think about.
+    'the expansion in the M2 Money Supply Index'.  None-the-less,
+    the cypherpunks made a promise in 1995 that someday, everyone
+    really would have an e-Wallet, and this concept is still fun to 
+    think about even as it remains futuristic.
+    
     <p>
     
 </dl>
