@@ -1,3 +1,15 @@
+<?php
+    
+    // This PHP script automatically scans the news directory
+    // and posts news items on the gnucash home page, using the
+    // gnucash html page style.  This script supports the display
+    // of translated news items by getting news articles from two
+    // directories: 'native' and 'alt'.  A news article from 'alt'
+    // is displayed only if there is'nt a matching news article 
+    // in 'native'.
+    //
+    // originally by Jeremy Collins, heavily modified by Linas Vepstas
+    //
     //  change  this  to  the  directory  of  your  news  files 
     //  they  should  be  plain  ASCII  text  files  with  extension  ".txt" 
 
@@ -54,3 +66,4 @@
     }    
     
     $hd->close();  
+    ?>
