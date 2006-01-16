@@ -9,6 +9,18 @@
         
       <dl>
       <dt>
+      <b><a href="http://www.linuxgram.com/newsitem.phtml?sid=109&aid=10365">
+      Guns along the Gnome</a></b>
+      (<a href="/press-archive/linuxgram-2000-12/newsitem.html">archival copy</a>)
+      (Linuxgram, December 2000)
+      </dt>
+      <dd>
+      Guns along the Gnome: It Ain't Paranoia If They're Really Out To Get You
+      Nautilus (Eazel) = MS Explorer File Manager 
+      <br><br>
+      </dd>
+      
+      <dt>
       <b><a href="http://www.linuxorbit.com/features/newbie10.php3">
       The Newbie test drives GnuCash</a></b>
       (<a href="/press-archive/linuxorbit-2000-12/features-newbie10.php3.html">archival copy</a>)
