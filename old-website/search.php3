@@ -86,25 +86,34 @@ else:
  
     while($i<$rc) 
     {
-
-        # grab the match information
-
-        $title = $result[$i];
-        $url = $result[$i+1];
-        $percent = $result[$i+2];
-        $excerpt = $result[$i+3];
-
-        # output the match information
-        # append session id if necessary!
-
-        echo "<font size=-1><A HREF=\"$url\">$title</A>\n";
-        echo "<font size=-2><b>(" . $percent . "% match)</b></font><BR>\n";
-        echo "<blockquote>" . $excerpt . "</blockquote><BR>\n";
-
-        # move to the next match
-
-        $i = $i + 4;
+        echo $result[$i];
+        $i = $i + 1;
     }
+    
+#this is broken
+#     while($i<$rc) 
+#     {
+# 
+#         # grab the match information
+# 
+#         $title = $result[$i];
+#         $url = $result[$i+1];
+#         $percent = $result[$i+2];
+#         $excerpt = $result[$i+3];
+# 
+#         # output the match information
+#         # append session id if necessary!
+# 
+# echo "<hr>Duude<hr>\n";
+# echo $title . $url . $percent . $excerpt . "\n";
+# #        echo "<font size=-1><A HREF=\"$url\">$title</A>\n";
+# #        echo "<font size=-2><b>(" . $percent . "% match)</b></font><BR>\n";
+# #        echo "<blockquote>" . $excerpt . "</blockquote><BR>\n";
+# 
+#         # move to the next match
+# 
+#         $i = $i + 4;
+#     }
 
 
 
