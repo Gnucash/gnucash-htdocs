@@ -23,6 +23,18 @@
     <A HREF="http://www-cad.eecs.berkeley.edu/~gooch/mymdump.html">http://www-cad.eecs.berkeley.edu/~gooch/mymdump.html</a>
     <BR><BR>
 
+<B>PocketMoney to QIF Converter</B> - a set of perl scripts to convert
+   PocketMoney DB files to QIF files.  PocketMoney is a popular Palm 
+   shareware accounting package.
+    <A HREF="http://sourceforge.net/projects/pm2qif/">
+    http://sourceforge.net/projects/pm2qif/</a>
+    <BR><BR>
+
+<B>PalmCoins</B> - A GPL'ed accounting program for the PalmOS -
+    <A HREF="http://sourceforge.net/projects/palmcoins/">
+    http://sourceforge.net/projects/palmcoins/</a>
+    <BR><BR>
+
 <B>SQL Ledger</B> - An advanced, GPL'ed, web-based business accounting package - 
     <A HREF="http://sql-ledger.com/">http://sql-ledger.com/</a>
     <BR><BR>
