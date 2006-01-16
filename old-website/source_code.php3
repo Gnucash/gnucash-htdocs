@@ -4,11 +4,22 @@
       
       
       <?php include("include/table_top.inc"); ?>
-        getting source code
+        hacking gnucash
       <?php include("include/table_middle.inc"); ?>      
         
         
 <font size="2" face="VERANDA,HELVETICA">
+<b>Hacking gnucash</b><br>
+<br>
+There are a number of steps to go through to hack on gnucash. 
+You will need to install development versions of the packages 
+listed on the <a href="tools.php3">tools page</a>.  The latest
+development versions of gnucash may depend on bleeding edge 
+versions of some gnome tools (e.g. gnome-print).  You may also 
+need to get unusual or special versions of g-wrap and guppi.
+<br><br>
+
+
 <b>Getting the most recent sources via CVS:</b><br>
 <br>
    The latest source code, as well as various older 
