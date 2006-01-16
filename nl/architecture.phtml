@@ -1,0 +1,272 @@
+<?php $title = "Architectuur"; ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/header.phtml"); ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-developer.phtml"); ?>
+
+</td>
+<td valign=top width=75%>
+
+<h1>Overzicht Architectuur</h1>
+
+<font size=-1>
+GnuCash is geschreven in twee programmeertalen: C en Scheme.  
+Voor de snelheid, portabiliteit, en vanwege historische redenen 
+is de engine/server is geschreven in C. 
+Vanwege de kracht, expressiveness@, en gebruikersgemak, 
+zijn de verschillende onderdelen om 
+alles aan elkaar te plakken geschreven in Scheme. 
+De gebruikersinterface maakt gebruik van de GTK/Gnome widget@ set, en 
+is ontworpen met de  
+<a href="http://glade.pn.org">Glade</a>
+GUI designer tool. Het file format is in XML, and multi-user
+support is verkregen middels de Postgres SQL backend.
+Het rapportage subsysteem, geschreven in Scheme, genereerd HTML
+reports.
+
+<p>
+De opbouw van GnuCash is modulair, hetgeen afzonderlijke individuen in staat stelt 
+om bepaalde modules te onderhouden en te verbeteren zonder de algehele ontwikkeling 
+te verstoren. 
+De interfaces tussen de modules zijn gedocumenteerd, en grotendeels stabiel en unchanging@.
+<a href="/images/diagrams/components.png">Dit blockdiagram toont de belangrijkste componenten.</a>
+
+<br><br><b>
+GnuCash bestaat momenteel uit de volgende modules:</b>
+<br><br>
+</font>
+
+<table border=0 cellpadding=1 cellspacing=0 width="100%">
+  <tr>
+  <td valign=middle align=center bgcolor=#666699>
+   <table border=0 cellpadding=5 cellspacing=1 bgcolor=#cccccc width="100%">
+   <tr>
+     <td bgcolor=#666699 width=25%><font color=#ffffff><b>Module</b></td>
+     <td bgcolor=#666699 width=50%><font color=#ffffff><b>Beschrijving</b></td>
+   </tr>
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>Engine</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>De <dfn>Engine</dfn> (te vinden in de <code>src/engine/</code> 
+folder in de
+GnuCash codebase@) zorgt voor een interface om vijf basale financiele entiteiten te creeren, te manipuleren en te verwijderen: Rekeningen, Transacties (boekhoudkundig bekend als Ledger Entries@), Splits (known as Journal
+Entries), Prices@ en Lots@.  Deze vijf entiteiten vormen de centrale datastructuut van het financiele GnuCash data model,
+<a href="/images/diagrams/structures.png">als weergegeven in dit schema.</a>
+
+<p>De Engine code bevat geen GUI code of iets dergelijks en is in essentie 
+OS-neutraal. De code is volledig geschreven in C.
+		 </td>
+   </tr>
+   <tr bgcolor=#ffffff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>Query</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>De <dfn>Query</dfn> module (also in <code>src/engine/</code>) 
+zorgt voor de mogelijkheid om complexe, gestructureerde 
+queries uit te voeren. GnuCash gebruikt bijvoorbeeld  
+queries om transacties te vinden op basis van een set critiria opgegeven door de gebruiker,
+zoals de beschrijving, datum, etc. Eenvoudige 
+queries kunnen gecombineerd worden met standaard boolean operators. Het query
+subsysteem is een generiek object-query systeem, onafhankelijk van de 
+financiele structuur van GnuCash en ontwikkeld zich langzaam aan tot een 
+stand-alone component op 
+<a href="http://qof.sourceforge.net">qof.sourceforge.net</a>.  
+Let op dat Querynauw samenwerkt met de data storage backend, dus dat de 
+lokale verzameling van objecten in GnuCash functioneerd als een 'cache'
+voor mogelijkerwijs vele malen grotere datasets in de SQL backend.  Het idee is om GnuCash 'scalable' te houden: de runtime size kan klein blijven, zonder de performance aan te tasten, zelfs wanneer  
+gebruik gemaakt wordt van grote, remote@ databases.
+
+		 </td>
+   </tr>
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>Data Opslag Backend</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>De <dfn>Data Opslag Backend</dfn> module (<code>src/backend/</code>) 
+definieerd een generieke interface voor de opslag van GnuCash data (in bestanden of databases) 
+of voor communicatie met een remote GnuCash opslag server
+(door gelijkwelk server-gedefineerd protocol).
+Momenteel zijn de volgende backends geimplementeerd en ondersteund: de XML file backend, voor opslag van GnuCash data in het oorspronkelijke XML bestandsformaat en de Postgres SQL
+backend, welke meerdere gebruikers tegelijkertijd met GnuCash laat werken.  
+Daarnaast zijn er een aantal experimentele backends (momenteel  
+broken/unsupported@): een voor de communicatie met een GnuCash data opslag 
+server via RPC, en een andere die, via XML over HTTP, communiceerd met een GnuCash server.
+		 </td>
+   </tr>
+   <tr bgcolor=#ffffff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>Register</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>Het <dfn>Register</dfn> (<code>src/register/</code>) implementeerd een ledger-achtige
+GUI die de gebruiker in staat stelt dynamisch data, prijzen, memo's, omschrijvingen, etc. in te voeren op een intuitieve manier die vanzelfsprekend is voor iedereen bekend is met het kasboek registerr. De code is eenvoudig te configureren,
+laat toe om de ledger kolommen en rijen zonder restricties te modeleren. Zo kan bijvoorbeeld de ene ledger drie velden met datum definieren, een een prijs veld, en vier andere een memo veld. 
+Cell handling objects support and automatically validate date entry, memo entry, 
+prijzen, combo-boxes (pull-down menus), en multi-state check-boxes. Cells can be marked read-write, or
+output-only. Cellen kunnen aangegeven worden met een unieke kleur. Ook het actieve ledger rijenblok kan geaccentueerd worden met een unieke kleur.
+
+<p>De register code is volledig onafhankelijk van de engine code, weet niets van boekhouden of een van de andere GnuCash subsystemen. daarom kan het ook gebruikt worden voor andere projecten die niets met boekhouden te maken hebben.
+		 </td>
+   </tr>
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>Rapporten &amp; Grafieken</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>De <dfn>Raporten &amp Grafieken</dfn> module (<code>src/report/</code>)
+is a schema gebasseerd (guile) systeem om balance tabellen, winst &amp; 
+verlies rekeningen, staafdiagrammen, taartdiagrammen, <i>etc.</i> te produceren. Het maakt gebruik van de Query API om data op te halen en et verwerken, welke vervolgens geconverteerd worden naar  HTML weergegeven worden middels de gtkhtml widget.  Grafieken worden afgebeeld met behulp van Guppi,
+(&lt;<code>http://www.gnome.org/guppi</code>&gt;).
+and en worden direct in html ingebed (als live graphs).
+
+		 </td>
+   </tr>
+   <tr bgcolor=#ffffff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>Prijs Quotes@</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>De <dfn>Prijs Quotes@</dfn> module (<code>src/quotes</code>) is 
+een wrapper@ rond de Finance::Quote Perl module, gebruikt om prijzen van aandelen van Internet binnen te halen naar de GnuCash
+Engine. De Finance::Quote module is beschikbaar op SourceForge (of 
+via CPAN). Deze module kan price quotes binne halen van verschillende bronnen, waaronder Yahoo, Yahoo Europe, en een aantal internationale beurzen. Voordat nieuwe gegevens door GnuCash kunnen worden verwerkt, moeten ze eerst aan Finance::Quote worden toegevoegd.
+
+<p>De Finance::Quote module ondersteund ook het binnenhalen van wisslekoersen. GnuCash zal geschikt gemaakt worden om deze wisselkoersen te kunnen verwerken.
+		 </td>
+   </tr>
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>Gebruikers Instellingen</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>De <dfn>Gebruikers Instellingen</dfn> module (<code>src/app-utils/</code>)
+verschaft een infrastructuur voor de definite van interne, tevens door de gebruiker te definieren instellingen. De instellingen zijn gedefinieerd in een schema met verscheidene standaard instellingen zoals boolean, string, datum, etc. De instellingen worden geeffectueerd via een GUI
+die de gebruiker in staat stelt de instellingen uit te lezen en te wijzigen. Een API, welke aangeroepn wordt wanneer de instellingen wijzigen,
+zoekt de ingestelde waarden en registeerd callbacks.
+
+<p>Instellingen die afwijken van de standaardinstellingen worden opgeslagen 
+in een schematisch formulier in een gebruikers-specifiek bestand 
+(<code>~/.gnucash/config.auto</code>). Dit bestand wordt automatisch geladen tijdens het opstarten.
+		 </td>
+   </tr>
+   <tr bgcolor=#ffffff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>Data Importeren &amp; Exporteren</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>De <dfn>Import</dfn> module (<code>src/import-export/</code>) maakt het importeren
+van QIF (Quicken Interchange Format) bestanden en
+OFX (Open Financial Exchange) bestanden in GnuCash mogelijk. Een van de moeilijke aspenten
+van het importeren van gegevens uit een bestand is wat te doen als het bestand gedeeltelijk gegevens bevat die al in GnuCash aanwezig zijn. dit kan bijvoorbeeld voorkomen wanneer de te importeren gegevens afkomstig zijn uit een bestand van een website die periodiek bijgewerkt wordt: iedere keer dat het binnengehaald wordt kunnen er transacties in zitten die al eerder gerapporteerd waren. 
+Om een bestand correct te importeren moet er daarom een tamelijk goede transactie matcher aanwezig zijn, die dubbele transacties kan detecteren en negeren.
+Een dergelijk matching patroon is algemeen toepasbaar en wordt gebruikt door 
+het HCBI subsystem.  (HCBI is een online banking systeem dat ter beschikking staat tot alle inwoners van Duitsland).
+
+
+		 </td>
+   </tr>
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>Small Business Features@</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>GnuCash kent een aantal implementaties voor het midden- en kleinbedrijf 
+(<code>src/business/</code>).  
+     (Moet nog geschreven worden: Leg uit hoe het werkt.)
+
+
+		 </td>
+   </tr>
+   <tr bgcolor=#ffffff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>Periodieke Transacties</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>Geplande transacties zorgen voor een mechanisme om een set van periodiek financiele 
+transacties te beschrijven, dusdaig dat de GnuCash gegevens automatisch bij het verstrijken van de tijd automatisch bijgewerkt worden.
+     (Moet nog geschreven worden: Leg uit hoe het werkt.)
+
+
+		 </td>
+   </tr>
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>GnuCash</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>De GnuCash module (<code>src/gnome</code> en andere folders)
+is de belangrijkste GUI applicatie. De module bevat een verzameling van 
+miscellaneous GUI code om alle hierboven beschreven delen te bundelen
+tot een coherent, intuitief geheel. Het is bedoeld om eenvoudig te zijn in gebruik voor nieuwe gebruikers, zonder in te boeten aan kracht en flexibiliteit die de professionele gebruiker verwacht. Als men zegt dat GnuCash probeert een "Quicken of MS Money look/work/act-alike" te zijn, dan wordt verwezen naar deze module. 
+Het is bedoeld als persoonlijke financiele manager met voldoende kracht voor de ervaren gebruiker en eenvoudig genoeg voor beginners.
+
+<p>Momenteel is de Gnome interface de enige operationele interface. 
+Een niet-werkende Motif interface kan opgevist worden uit oude CVS;
+maar deze interface is verwijderd uit de huidige CVS.
+		 </td>
+   </tr>
+   </table>
+</tr>
+</table>
+
+
+</td>
+
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/footer.phtml"); ?>

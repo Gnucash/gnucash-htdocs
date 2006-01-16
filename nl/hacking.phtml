@@ -1,0 +1,192 @@
+<?php $title = "Hacking"; ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/header.phtml"); ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-developer.phtml"); ?>
+</td>
+
+<td valign=top>
+<h1>Hacking GnuCash</h1>
+
+Er zijn een aantal stappen die doorlopen moeten worden om gnucash te hacken. 
+U moet de development (<tt>*-devel-*</tt>) 
+versies van de pakketten installeren zolas weergegeven op de <a href="/en/required.phtml">tools page</a>.  De laatste development versies van gnucash kunnen afhankelijk zijn van bleeding edge 
+versies van sommige gnome tools (b.v. <tt>gnome-print</tt>).  Het kan ook nodig zijn om ongebruikelijke of speciale versies van g-wrap en guppi te gebruiken.
+<br><br>
+
+<b>De meest recente bronnen via CVS:</b><br>
+<br>
+   De laatste broncode, alsmede verscheidene oudere
+   versies, worden onderhouden in een publiekelijk toegankelijke 
+   CVS broncode magazijn.  De toegang is eenvoudig,
+   en als u van plan bent actief mede te ontwikkelen, dan is er 
+   geen betere manier om broncode te verkrijgen.  De CVS tree
+   is niet publiekelijk te beschrijven; maakt u patches, 
+   dan moeten die ingezonden worden naar de  
+   <a href=/en/lists.phtml>gnucash-patches@gnucash.org</a>
+   mailing lijst.  Aanpassingen in de documentatie kunnen op dezelfde wijze verstuurd worden.
+<p>
+Als u nieuw bent m.b.t. CVS is het verstandig <a href="http://www.cvshome.org/"> te bezoeken, de
+Concurrent Versions System Home Page</a>, en in het bijzonder de 
+ <a href="http://www.cvshome.org/docs/">documentatie pagina</a>.
+CVS maakt het mogelijk dat meerdere gebruikers de broncode van GnuCash kunnen wijzigen,
+zonder op elkaars tenen te trappen.
+Hoewel CVS in eerste instantie overweldigend lijkt te zijn, is het dat niet:
+het is eenvoudig te leren en gemakkelijk in het gebruik.
+
+</p>
+<p>
+   Voor toegang tot de CVS tree, log eerst als volgt in: 
+</p>
+
+
+<table bgcolor=#000000 cellpadding=10><tr><td>
+<font color=#aaaaaa>
+cvs -d :pserver:cvs@cvs.gnucash.org:/home/cvs/cvsroot login
+</font>
+</td>
+</tr>
+</table>
+
+<p>
+Het wachtwoord is &quot;guest&quot; ; na invoer van het wachtwoord 
+komt u direct bij de commandprompt uit. U 
+kunt nu de CVS commando's gebruiken om de broncode te bekijken.
+
+Om een kopie van de laatste/beta development versie te krijgen, 
+(momenteelwhich versie 1.9.x), type de opfracht: 
+</p>
+
+<table bgcolor=#000000 cellpadding=10><tr><td>
+<font color=#aaaaaa>
+cvs -d :pserver:cvs@cvs.gnucash.org:/home/cvs/cvsroot checkout gnucash 
+</font>
+</td>
+</tr>
+</table>
+
+<br>
+<b>Building GnuCash:</b><br>
+<br>
+Een complete set met instructies voor het builden van GnuCash uit de broncode, kan gevonden worden in het  
+<a href="http://www.gnucash.org/lxr/gnucash/source/README"><tt>README</tt></a>
+bestand in de hoofdfolder. Voor de ongeduldigen onder ons kunnen de volgende instructies behulpzaam zijn:
+<p>
+Start met een gedistribueerde binaire versie van GnuCash, om alle  
+dependencies op te lossen.  Bijvoorbeeld Redhat 8.0
+zorgt voor <tt>gnome-desktop-devel-2.0.6-4.i386.rpm</tt>, maar GnuCash ondersteund momenteel gnome2 nog niet (January 2003).  Om uw weg te vinden door de "dependencies hell" kunt u de volgende procedure volgen:
+
+<ol>
+<li>Probeer de gnucash binary van uw distrbutie te installeren.  Bijvoorbeeld <tt>gnucash-1.6.6-7.i386.rpm</tt>
+<li>Noteer de ontbrekende dependencies.
+<li>Installeer deze dependencies en de geassocieerde -devel pakketten (als die er zijnany).
+<li>Ga naar stap 1.
+<li>Wanneer GnuCash geinstalleerd is, verwijder het. :-)
+<li>Haal de broncode binnen voor de laatste gnucash development versie van
+    CVS.  Alle dependecies behalve voor <tt>g-wrap</tt> zijn identiek voor  
+    GnuCash 1.6.x en 1.8.x
+<li>Verwijder g-wrap, indien nodig.
+<li>Download </tt>g-wrap-1.3.4</tt> van 
+    <a href="http://www.gnucash.org/pub/g-wrap/">http://www.gnucash.org/pub/g-wrap/</a>
+<li>Build g-wrap en gnucash
+<li>Installeer additionele </tt>-devel</tt> pakketten wanneer de configuratie problemen geeft.
+</ol>
+</p>
+<p>
+Als een van deze stappen u niet duidelijk is, heeft u misschien wat meer achtergrond informatie nodig. Begin met het
+<a href="http://www.gnucash.org/lxr/gnucash/source/README"><tt>README</tt></a>
+bestnad in de bron tree.
+N.B. de GnuCash broncode wordt dagelijks geconverteerd naar  
+<a href="http://www.gnucash.org/lxr/">LXR hyperlinked web pages</a>.
+U kunt het echter ook snel tussen uw eigen bestanden terugvinden met <tt>ctags</tt>.
+</p>
+
+<br>
+<b>Oudere Versies van GnuCash in CVS:</b><br>
+<p>
+Toegang tot oudere versies en afleidingen kunt u vinden met tags. 
+De tak met de laatste versie van de stabiele 
+gnucash-1.6.x code is gemarkeerd met de tag <tt>gnucash-1-6-branch</tt> . Dus om de laatste in de 
+gnucash-1.6.x serie te vinden handelt u als volgt:
+</p>
+
+<table bgcolor=#000000 cellpadding=10><tr><td>
+<font color=#aaaaaa>
+cvs -d :pserver:cvs@cvs.gnucash.org:/home/cvs/cvsroot checkout -r gnucash-1-6-branch gnucash
+</font>
+</td>
+</tr>
+</table>
+
+
+<p>
+Uitgebrachte versies zijn getagged met een nummer. Dus de tag
+ <tt>gnucash-1-6-0</tt> levert u een kopie op van de bron zoals die was in 
+ version 1.6.0.  Als programmeur moet u waarschijnlijk werken in  
+of de hoofdtak (<tt>HEAD</tt>) 
+van de laatste beta/development code, or in de 
+<tt>gnucash-1-6-branch</tt>, de overblijvende bugs in de 
+huidige stabiele versie vernietigend.
+</p>
+<p>
+Andere tags die (meestal om historische redenen) interessant zijn, zijn:
+<dl><dd>
+<dl>
+<dt><b>xacc-09a</b>
+<dd>Robin Clark's originele broncode van October 1997.  Voor de historici onder ons.: de broncode is inmiddels volledig herschreven.
+<dt><b>xacc-10b17</b>
+<dd>versie 1.0.17 (een van de laatste stabiele versies van xacc, voordat de naam veranderde in 
+    gnucash).
+<dt><b>xacc-10-patch</b>
+<dd>de top van de tak van de stabiele versie 1.0.x serie.
+<dt><b>xacc-11b6</b>
+<dd>versie 1.1.6 (een instabiele ontwikkelingversie van gnucash)
+<dt><b>xacc-12-patch</b>
+<dd>Het einde van de 1.2 tak. Dit is de laatste tak met 
+    motif code.  Latere versies zijn herschreven in gtk/gnome.
+<dt><b>patch-124</b>
+<dd>versie 1.2.4, een van de laatste in de 1.2.x serie.
+<dt><b>gnucash-1-4-branch</b>
+<dd>de top van de 1.4.x tak, de vorige stabiele tak.
+<dt><b>gnucash-1-6-branch</b>
+<dd>de top van de  1.6.x tak, welke de huidige stabiele tak is.
+</dl>
+</dl>
+
+<p>
+Om CVS snel te laten functioneren, is ouder materiaal verwijderd
+(ouder dan half 2000, en ook wat nieuwer materiaal) en bepaalde takken zijn verwijderd uit de hoofdstam 
+van de CVS tree. Mocht u geinteresseerd zijn in het opgraven van deze historische bestanden uit de CVS tree m te zien hoe het was, dan kunt u simpelweg een oudere tak tag loslaten op:
+<br><br>
+<table bgcolor=#000000 cellpadding=10><tr><td>
+<font color=#aaaaaa>
+cvs -d :pserver:cvs@cvs.gnucash.org:/home/cvs/cvsroot checkout -r &lt;some-tag&gt; gnucash-archive
+</font>
+</td>
+</tr>
+</table>
+</p>
+
+
+<br>
+<br>
+<b>De meest recente broncode via FTP:</b><br>
+<br>
+Ziet u door de CVS takken het bos niet meer, 
+dan is het ook mogelijk via FTP een aantal recente bestanden 
+van de CVS tree binnen te halen.
+N.B. wilt u patches en updates bijdragen aan GnuCash, dan wordt sterk geadviseerd CVS te leren en te gebruiken.
+Wij moedigen dit aan, omdat de FTP bestanden soms wat gedateerd zijn, waardoor het mogelijk is dat u een fout probeert te verbeteren die al verwijderd is.
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.linas.org/pub/gnucash/gnucash/sources/">http://www.linas.org/pub/gnucash/gnucash/sources/</a>
+<br> 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.gnucash.org/pub/gnucash/sources/">http://www.gnucash.org/pub/gnucash/sources/</a>
+<br>
+
+
+
+</td>
+
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/footer.phtml"); ?>
