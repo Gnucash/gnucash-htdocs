@@ -1,0 +1,240 @@
+<?php $title = "Software Requirements"; ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/header.phtml"); ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-general-main.phtml"); ?>
+
+<td valign=top>
+
+<h1>Software Requirements</h1>
+
+<font size=1>
+
+These are the important contributing technologies that GnuCash depends 
+on to implement its major functions.  You will need to install a recent 
+version of these to compile and work with gnucash.
+<br><br>
+
+
+<table border=0 cellpadding=1 cellspacing=0 width="100%">
+  <tr>
+  <td valign=middle align=center bgcolor=#666699>
+   <table border=0 cellpadding=5 cellspacing=1 bgcolor=#cacaf7 width="100%">
+   <tr>
+     <td bgcolor=#666699 width=25%><font color=#ffffff><b>Name</b></td>
+     <td bgcolor=#666699 width=50%><font color=#ffffff><b>Description</b></td>
+     <td bgcolor=#666699 width=25%><font color=#ffffff><b>Link</b></td>
+   </tr>
+   <tr>
+           <td colspan=3>
+<B>GUI Toolkits:</B><BR>
+     </td>
+         </tr>
+
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top>Gtk+</td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>The Gimp Toolkit</td>
+     <td valign=top><a href="http://www.gtk.org/">http://www.gtk.org/</a></td>
+   </tr>
+
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top>Gnome</td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>The application infrastructure</td>
+     <td valign=top><a href="http://www.gnome.org">http://www.gnome.org</a></td>
+   </tr>
+
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top>Glade</td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>GTK+ User Interface Builder - This is how many of the gnucash GUI's are designed.</td>
+     <td valign=top><a href="http://glade.pn.org">http://glade.pn.org</a></td>
+   </tr>
+
+   <tr>
+           <td colspan=3>
+       <B>Scripting Interface:</B><BR>
+     </td>
+         </tr>
+
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top>Guile</td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>A Scheme interpreter with C programming interfaces - This is how gnucash provides 'extension' and rapid implementation capabilities</td>
+     <td valign=top><a href="http://www.gnu.org/software/guile/guile.html">http://www.gnu.org/software/guile/guile.html</a></td>
+   </tr>
+
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top>G-wrap</td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>A tool for autogenerating scheme bindings for C lanugage functions, structures & enums.</td>
+     <td valign=top><a href="NO URL">NO URL</a></td>
+   </tr>
+
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top>Scheme</td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>The Scheme Language</td>
+     <td valign=top><a href="http://www.scheme.org/">http://www.scheme.org/</a></td>
+   </tr>
+
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top>slib</td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>Scheme library - Miscellaneous scheme functions used by GnuCash.</td>
+     <td valign=top><a href="http://www-swiss.ai.mit.edu/~jaffer/SLIB.html">http://www-swiss.ai.mit.edu/~jaffer/SLIB.html</a></td>
+   </tr>
+
+   <tr>
+           <td colspan=3>
+       <B>Web Infrastructure:</B><BR>
+     </td>
+         </tr>
+
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top>GtkHTML</td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>The gtk html layout engine - used by gnucash to display help documentation, reports and graphs.</td>
+     <td valign=top><a href="http://www.advogato.org/proj/GtkHTML/">http://www.advogato.org/proj/GtkHTML/</a></td>
+   </tr>
+
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top>libghttp</td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>The HTTP library - used by gnucash to chat the http protocol to access web servers.</td>
+     <td valign=top><a href="http://www.gnome.org/">http://www.gnome.org/</a></td>
+   </tr>
+
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top>Gnome XML</td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>The XML parsing library - used by gnucash to read its file format.</td>
+     <td valign=top><a href="http://xmlsoft.org/">http://xmlsoft.org/</a></td>
+   </tr>
+
+   <tr>
+           <td colspan=3>
+       <B>Other:</B><BR>
+     </td>
+         </tr>
+
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top>Finance::Quote</td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>A perl module to get stock price quotes and currency exchange rates from off the net - This is how gnucash accesses price data on the net.</td>
+     <td valign=top><a href="http://finance-quote.sourceforge.net/">http://finance-quote.sourceforge.net/</a></td>
+   </tr>
+
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top>Finance::QuoteHist</td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>A perl module to fetch historical stock prices.</td>
+     <td valign=top><a href="http://sourceforge.net/project/?group_id=2403">http://sourceforge.net/project/?group_id=2403</a></td>
+   </tr>
+
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top>Guppi</td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>A graphical plotting and analysis tool - used to generate and display gnucash charts and plots.</td>
+     <td valign=top><a href="http://www.gnome.org/guppi/">http://www.gnome.org/guppi/</a></td>
+   </tr>
+
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top>Gnome Print</td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>gnome printing architecture - used by gnucash for check printing & general printing.</td>
+     <td valign=top><a href="http://www.sourceforge.net/projects/gnome-print/">http://www.sourceforge.net/projects/gnome-print/</a></td>
+   </tr>
+
+   </table>
+</tr>
+</table>
+
+
+
+</td>
+
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/footer.phtml"); ?>
