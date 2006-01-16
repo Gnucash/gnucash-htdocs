@@ -11,6 +11,16 @@
         
     <h2>General References</h2>
     <ul>
+      <li><a href="http://www.gldialtone.com/links.htm"><b>
+          GL Dialtione's awseome Links</b></a> provides an extensive
+	  list of link to webledgers, accounting software, 
+	  business/asp services, electronic billing and the 
+	  like. 
+	  <a href="http://www.gldialtone.com/">General Ledger 
+	  Dialtone</a> itself provides an extensive information and 
+	  a discussion forum for forward-thinking accounting ideas.
+      <li>
+      
       <li><a href="http://www.hex.net/~cbbrowne/finances.html"><b>
         CBBrowne's Finances, Linux, and Stuff</b></a> 
         reviews a number of financial applications for Linux.
@@ -321,6 +331,16 @@
       </li>
     </ul>
 
+    <h2>Gnucash Review &amp; Rating Sites</h2>
+    Sites that rate, review, rank or publicize gnucash.
+
+    <ul>
+    <li>ZD Net <a href="http://www.appwatch.com/Linux/App/571/data.html">
+        AppWatch</a> will email a notification to you when a new version
+	of gnucash is out. Also lists a 'popularity index'.
+    <li><a href="http://www.icewalk.com/softlib/app/app_00056.html">IceWalkers</a>	
+        lists lots of open-source projects.
+    </ul>
 	
 
 
