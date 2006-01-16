@@ -19,7 +19,7 @@ else
 //-->
 </STYLE>
 <meta name="description" content="GnuCash personal financial software for Linux is easy to use and provides powerful features."
-<meta name="keywords" content="Financial, Money, Accounting, Finance, Software, Quicken, MSMoney, Peachtree, Linux, GPL">
+<meta name="keywords" content="Financial, Manager, Money, Accounting, Finance, Software, Quicken, MSMoney, Peachtree, Linux, GPL">
 </HEAD>
 
 <BODY BGCOLOR="#8b7765" TEXT="#000000" LINK="#666a1b" VLINK="#b76767">
