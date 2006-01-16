@@ -7,9 +7,9 @@
         &nbsp;- <A HREF="/">GnuCash Home Page</A><BR>
         &nbsp;- <A HREF="features.php3">Features</A><BR>
         &nbsp;- <A HREF="gnome_screenshots.php3">Screenshots</A><BR>
-        &nbsp;- <A HREF="http://www.multimania.com/yleny/gnucash/">Gnucash en Français</A><BR>
-        &nbsp;- <A HREF="http://www.hthoma.de/projekte/gnucash/index.html">Mitarbeit an GnuCash</A><BR>
-        &nbsp;- <A HREF="http://www.linas.org/pub/">Download</A><BR>
+        &nbsp;- <A HREF="http://www.multimania.com/yleny/gnucash/">GnuCash en Français</A><BR>
+        &nbsp;- <A HREF="http://www.hthoma.de/projekte/gnucash/index.html">GnuCash auf deutsch</A><BR>
+        &nbsp;- <A HREF="http://www.linas.org/pub/gnucash/">Download</A><BR>
         &nbsp;- <A HREF="http://www.gnucash.org/pub/">Download (slow, use above)</A><BR>
         &nbsp;- <A HREF="http://download.sourceforge.net/gnucash/">Download (mirror)</A><BR>
         <P>
@@ -19,7 +19,7 @@
       developer information
       <?php include("include/table_middle.inc") ?>
          &nbsp;- <A HREF="architecture.php3">System Architecture</A><BR>
-         &nbsp;- <A HREF="http://linas.org/linux/xacc/projects.html">Project Goals</A><BR>
+         &nbsp;- <A HREF="http://linas.org/linux/gnucash/projects.html">Project Goals</A><BR>
          <!-- &nbsp;- <A HREF="/cgi-bin/bugtrack">Gnucash Bug Tracker</A><BR> -->
          &nbsp;- <A HREF="maillist.php3">Mailing List&nbsp;-&nbsp;Help</A><BR>
          &nbsp;- <A HREF="archives.php3">Mailing List&nbsp;-&nbsp;Archives</A><BR>
