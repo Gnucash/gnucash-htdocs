@@ -58,14 +58,19 @@ GnuCash currently consists of the following modules:</b>
 <p>The <dfn>Engine</dfn> (located under the <code>src/engine/</code> 
 directory in the
 GnuCash codebase) provides an interface for creating, manipulating, and
-destroying five basic financial entities: Accounts, Transactions (known
-as Ledger Entries in accounting practice), Splits (known as Journal
-Entries), Prices and Lots.  These five entities provide the central data 
+destroying six basic financial entities: Accounts, Transactions (which
+record a sale/purchase on a given date), Splits (which record the balancing
+components of a transaction: the amount, the account involved),
+Lots (which identify that the physical item sold in one transaction 
+is the same one that was bought in another), Prices and 
+Currencies/Commodities.  These six entities provide the central data 
 structures of the GnuCash financial data model,
 <a href="/images/diagrams/structures.png">as illustrated in this diagram.</a>
+Additional structures are created by the business component.
 
 <p>The Engine code contains no GUI code whatsoever, and is essentially
-OS-neutral. It is written entirely in C.
+OS-neutral. It is written entirely in C.  It was designed to be used
+in a stand-alone server; however, it is not currently used as such.
 		 </td>
    </tr>
    <tr bgcolor=#ffffff>
@@ -78,7 +83,7 @@ OS-neutral. It is written entirely in C.
        </table>
      </td>
      <td valign=top>
-<p>The <dfn>Query</dfn> module (also in <code>src/engine/</code>) 
+<p>The <dfn>Query</dfn> module (also in <code>src/engine/</code>)
 provides a generic mechanism for performing complex, structured 
 queries on a collection of objects.  For example, GnuCash uses 
 queries to find transactions based on a set of user-sepecified criteria,
@@ -256,10 +261,14 @@ of Germany).
        </table>
      </td>
      <td valign=top>
-<p>GnuCash provides support for a number of business features 
-(<code>src/business/</code>).  
-     (To Be Written: Explain how it works.)
-
+<p>GnuCash provides support for a number of small business features, including 
+   a business-oriented ledger (which shows additional info that the regular, 
+   'check-book style' ledger does not), Invoicing, Jobs &amp; Order Entry, 
+   Tax Tables, and lists of Vendors, Employees and Customers.  The structural 
+   organization of this code is similar to that of core GnuCash: there is a 
+   set of C objects (<code>src/business/business-core)</code>) that are 
+   saved/restored in the backend. The objects themsleves are manipulated 
+   by various GUI dialog elements (<code>src/business/gnome)</code>). 
 
 		 </td>
    </tr>
@@ -275,10 +284,11 @@ of Germany).
      <td valign=top>
 <p>Scheduled transactions provide a mechanism for describing a set of regularly 
 recurring financial transactions so that the GnuCash dataset can be automatically 
-updated as time passes.
-     (To Be Written: Explain how it works.)
-
-
+updated as time passes.  The core object is the "Frequency Specification", which
+identifies a periodicity (daily, weekly, monthly, etc.).  It is manipulated by
+a GUI widget.  The FreqSpec is used with special "Template Transactions" that
+record info about how future transactions should be made out, and are manipulated
+by a corresponding GUI.
 		 </td>
    </tr>
    <tr bgcolor=#ececff>
