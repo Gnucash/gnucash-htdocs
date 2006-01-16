@@ -1,4 +1,4 @@
-<?php $TITLE = 'Gnucash - Gnome ScreenShots!'; ?>
+<?php $TITLE = 'Gnucash - ScreenShots!'; ?>
 
 <?php include("include/header.inc"); ?>
 
@@ -6,43 +6,76 @@
       
       
       <?php include("include/table_top.inc"); ?>
-        gnome screenshots
+        screenshots
       <?php include("include/table_middle.inc"); ?>      
+
+<center>
+Screen shots of the current stable (version 1.4.3) release
+<br>
+<br>
+</center>
 
 <TABLE>
 <TR>
 <TD ALIGN=RIGHT>
-       <A HREF="images/gnome/window-main.jpg"><B>main window</B><br>
-       <IMG SRC="images/gnome/window-main-thumb.jpg" align=top></A>
+       <A HREF="images/gnome-1.4/chart-of-accounts.png"><B>main window</B><br>
+       <IMG WIDTH=106 HEIGHT=152 
+       SRC="images/gnome-1.4/chart-of-accounts-thumb.png" align=top></A>
 </TD>
 <TD ALIGN=RIGHT>
-       <A HREF="images/gnome/window-register.jpg"><B>register window</B><br>
-       <IMG SRC="images/gnome/window-register-thumb.jpg" ALIGN=TOP></A>
+       <A HREF="images/gnome-1.4/checking-register.png"><B>register window</B><br>
+       <IMG WIDTH=203 HEIGHT=168 
+       SRC="images/gnome-1.4/checking-register-thumb.png" ALIGN=TOP></A>
 </TD>
 <TD ALIGN=RIGHT>
-       <A HREF="images/gnome/window-add.jpg"><B>add account</B><br>
-       <IMG SRC="images/gnome/window-add-thumb.jpg" ALIGN=TOP></A>
+       <A HREF="images/gnome-1.4/account-edit-checking.png"><B>edit account</B><br>
+       <IMG WIDTH=92 HEIGHT=130 
+       SRC="images/gnome-1.4/account-edit-checking-thumb.png" ALIGN=TOP></A>
 </TD>
 </TR>
 <TR>
 <TD ALIGN=RIGHT>
-       <A HREF="images/gnome/window-edit.jpg"><B>edit account</B><br>
-       <IMG SRC="images/gnome/window-edit-thumb.jpg" ALIGN=TOP></A>
+       <A HREF="images/gnome-1.4/help-system.png"><B>documentation</B><br>
+       <IMG WIDTH=131 HEIGHT=154 
+       SRC="images/gnome-1.4/help-system-thumb.png" ALIGN=TOP></A>
 </TD>
 <TD ALIGN=RIGHT>
-       <A HREF="images/gnome/window-reconcile.jpg"><B>reconcile window</B><br>
-       <IMG SRC="images/gnome/window-reconcile-thumb.jpg" ALIGN=TOP></A>
+       <A HREF="images/gnome-1.4/checking-reconcile.png"><B>reconcile window</B><br>
+       <IMG WIDTH=197 HEIGHT=141 
+       SRC="images/gnome-1.4/checking-reconcile-thumb.png" ALIGN=TOP></A>
 </TD>
 <TD ALIGN=RIGHT>
        <A HREF="images/gnome/window-transfer.jpg"><B>transfer window</B><br>
        <IMG SRC="images/gnome/window-transfer-thumb.jpg" ALIGN=TOP></A>
 </TD>
 </TR>
+<TR>
+<TD ALIGN=RIGHT>
+       <A HREF="images/gnome-1.4/tod.png"><B>tip of the day</B><br>
+       <IMG WIDTH=112 HEIGHT=81 
+       SRC="images/gnome-1.4/tod-thumb.png" ALIGN=TOP></A>
+</TD>
+<TD ALIGN=RIGHT>
+       <A HREF="images/gnome-1.4/stock-register-gmc.png"><B>stock register</B><br>
+       <IMG WIDTH=228 HEIGHT=132
+       SRC="images/gnome-1.4/stock-register-gmc-thumb.png" ALIGN=TOP></A>
+</TD>
+<TD ALIGN=RIGHT>
+</TD>
+</TR>
+<TR>
+<TD ALIGN=RIGHT>
+</TD>
+<TD ALIGN=RIGHT>
+       <A HREF="images/gnome-1.4/transaction-report.png"><B>transaction report</B><br>
+       <IMG WIDTH=210 HEIGHT=161 
+       SRC="images/gnome-1.4/transaction-report-thumb.png" ALIGN=TOP></A>
+</TD>
+<TD ALIGN=RIGHT>
+</TD>
+</TR>
 </TABLE>
 
-<B>For the curious:</B> These screen shots were taken using the Enlightenment theme 
-minEguE ( <i>i.e.</i> mini-gui ).  
-They are of an older development version ( 11-18-99) of Gnucash. 
 
       <?php include("include/table_bottom.inc"); ?>
       
