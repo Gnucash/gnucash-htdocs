@@ -59,6 +59,24 @@
       problems with the main link, try this mirror. 
       <br><br>
       </dd>
+
+      <dt>
+      <b><a href="http://linux.davecentral.com/bol_20000612.html">
+      Best of Linux Winner</a></b>
+      (<a href="/press-archive/davecentral-2000-06/bol_20000612.html">archival copy</a>)
+      (Dave Central, June 2000)
+      </dt>
+      <dd>
+      Computer finance management: it isn't just
+      for Quicken anymore. In my continuing effort
+      to move my checkbook balancing routine from
+      disorganized receipts to clean Linux
+      automation, I've enlisted the help of GnuCash.
+      If this program can put my scattered financial
+      house in order, imagine what it can do for an
+      organized individual like you.
+      <br><br>
+      </dd>
       
       <dt>
       <b><a href="http://www.lwn.net/2000/0504/devel.phtml">
@@ -151,6 +169,21 @@
       <br><br>
       </dd>
 
+      <dt>
+      <b><a href="http://www.32bitsonline.com/article.php3?file=issues/199902/lj-19990208&page=1">Personal Finance Software</a></b>
+      (<a href="/press-archive/32bitsonline-1999-02/lj-19990208.html">archival copy</a>)
+      (32BitsOnline.com February 1999)
+      </dt>
+      <dd>
+      Availability of specialized applications is one of the weaknesses of Linux
+      compared to its operating system counterparts. In the realm of personal
+      finance, none of the well-known software packages are available for Linux.
+      Hopefully, Intuit will port their popular Quicken and QuickBooks line of
+      products to the Linux platform someday. Until then, here are a few personal
+      finance applications to get you balancing your checkbooks in the Linux
+      environment.
+      <br><br>
+      </dd>
       </dl>
 		
       <?php include("include/table_bottom.inc"); ?>
