@@ -35,11 +35,11 @@ version of these to compile and work with gnucash.
    <B>Guile</B> - A Scheme interpreter with C programming interfaces -
       This is how gnucash provides 'extension' and rapid implementation 
       capabilities -
-      <a href="http://www.red-bean.com/guile/">
-      http://www.red-bean.com/guile/</A>
+      <a href="http://www.gnu.org/software/guile/guile.html">
+      http://www.gnu.org/software/guile/guile.html</a>
       <BR><BR>
    <B>G-wrap</B> - A tool for autogenerating scheme bindings for 
-      C lanugage runctions, structures & enums -
+      C lanugage functions, structures &amp; enums -
       NO URL YET
       <BR><BR>
    <B>Scheme</B> - The Scheme Language -
@@ -48,7 +48,8 @@ version of these to compile and work with gnucash.
 
    <B>slib</B> - scheme library - 
       miscellaneous scheme functions used by gnucash - 
-      NO URL YET
+      <a href="http://www-swiss.ai.mit.edu/~jaffer/SLIB.html">
+      http://www-swiss.ai.mit.edu/~jaffer/SLIB.html</a>
       <BR><BR>
 <HR>
 <BR><BR>
