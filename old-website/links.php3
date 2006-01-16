@@ -19,6 +19,10 @@
     <A HREF="http://www.linuxlinks.com/Software/Financial/">http://www.linuxlinks.com/Software/Financial/</A>
     <BR><BR>
 
+<B>MYMdump</B> - MYM Managing Your Money to QIF Converter -
+    <A HREF="http://www-cad.eecs.berkeley.edu/~gooch/mymdump.html">http://www-cad.eecs.berkeley.edu/~gooch/mymdump.html</a>
+    <BR><BR>
+
 <B>SQL Ledger</B> - An advanced, GPL'ed, web-based business accounting package - 
     <A HREF="http://sql-ledger.com/">http://sql-ledger.com/</a>
     <BR><BR>
