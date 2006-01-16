@@ -42,7 +42,9 @@
          &nbsp;- <A HREF="links.php3">Related Financial Software</A> <BR>
          &nbsp;- <A HREF="articles.php3" ALT="Articles">Gnucash in the news!</A><BR>
          &nbsp;- <A HREF="/docs/C/index.html">Documentation - English</A> <BR>
+         &nbsp;- <A HREF="/docs/es/">Documentation - Espagnol</A> <BR>
          &nbsp;- <A HREF="/docs/fr/xacc-main.html">Documentation - Français</A> <BR>
+         &nbsp;- <A HREF="/docs/pt_PT/">Documentation - Portuguese</A> <BR>
          &nbsp;- <A HREF="/banners.php3">Banner Ads</A> <BR>
          &nbsp;- <A HREF="developers.php3">History and Credits</A><BR>
          &nbsp;- <A HREF="http://www.gnumatic.com/">Gnumatic - Corporate Support</A> <BR>
