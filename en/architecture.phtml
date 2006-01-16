@@ -50,7 +50,7 @@ GnuCash currently consists of the following modules:</b>
        </table>
      </td>
      <td valign=top>
-<p>The <dfn>Engine</dfn> (located under the <code>src/engine</code> 
+<p>The <dfn>Engine</dfn> (located under the <code>src/engine/</code> 
 directory in the
 GnuCash codebase) provides an interface for creating, manipulating, and
 destroying three basic financial entities: Accounts, Transactions (known
@@ -73,7 +73,7 @@ OS-neutral. It is written entirely in C.
        </table>
      </td>
      <td valign=top>
-<p>The <dfn>Query</dfn> module (<code>src/engine/Query.*</code>) provides an interface
+<p>The <dfn>Query</dfn> module (<code>src/engine/Query*</code>) provides an interface
 into the engine for finding transactions based on a set of criteria,
 such as description, date posted, account membership, etc. Simple
 queries can be combined using standard boolean operators.
@@ -84,16 +84,22 @@ queries can be combined using standard boolean operators.
        <table border=0 cellpadding=0 cellspacing=0>
        <tr>
          <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
-         <td valign=top><b>File I/O</b></td>
+         <td valign=top><b>Storage Backend</b></td>
        </tr>
        </table>
      </td>
      <td valign=top>
-<p>The <dfn>File I/O</dfn> module (<code>src/engine/FileIO.*</code>) provides an
-interface for reading and writing a set of Accounts, Transactions, and
-Splits to a binary file. This module is being deprecated. A text-based
-format using scheme forms is being developed as a replacement. This new
-module will be separate from the Engine.
+<p>The <dfn>Storage Backend</dfn> module (<code>src/backend/</code>) 
+defines a generic interface for storing GnuCash data (into files or 
+databases) or for communicating with a remote GnuCash storage server
+(by any server-defined protocol).
+Currently implemented and supported are the XML file backend, which
+stores GnuCash data in its native XML file format, and the Postgres SQL
+backend, which supports multiple simulataneous users of GnuCash.  
+Additionally, there are several experimental backends (currently 
+broken/unsupported): one for communicating with a GnuCash storage 
+server via RPC, and another that chats, via XML across HTTP, with 
+a GnuCash server.
 		 </td>
    </tr>
    <tr bgcolor=#ffffff>
@@ -106,7 +112,7 @@ module will be separate from the Engine.
        </table>
      </td>
      <td valign=top>
-<p>The <dfn>Register</dfn> (<code>src/register</code>) implements a ledger-like
+<p>The <dfn>Register</dfn> (<code>src/register/</code>) implements a ledger-like
 GUI that allows the user to dynamically enter dates, prices, memos
 descriptions, etc. in an intuitive fashion that should be obvious to
 anyone who's used a checkbook register. The code is highly configurable,
@@ -131,44 +137,22 @@ accounting.
        <table border=0 cellpadding=0 cellspacing=0>
        <tr>
          <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
-         <td valign=top><b>Reports</b></td>
+         <td valign=top><b>Reports &amp; Graphs</b></td>
        </tr>
        </table>
      </td>
      <td valign=top>
-<p>The <dfn>Reports</dfn> module (<code>src/scm/report.scm</code>,
-<code>src/scm/reports</code>) is a scheme (guile) based system to create
-balance sheets, profit &amp; loss statements, etc. by using the engine
-API to fetch and display data formatted in HTML.
+<p>The <dfn>Reports &amp Graphs</dfn> module (<code>src/report/</code>)
+is a scheme (guile) based system to create balance sheets, profit &amp; 
+loss statements, barcharts, piecharts, <i>etc.</i>  It uses the Query
+API to fetch and format data, which is then converted into HTML and 
+displayed with the gtkhtml widget.  Graphs are implemented in Guppi,
+(&lt;<code>http://www.gnome.org/guppi</code>&gt;).
+and are embeded (as live graphs) directly in the HTML.
 
-<p>This module is being redesigned to use the Query API to fetch the engine
-information instead of using the raw engine interface. The new reporting
-design will use Queries to extract the data and assemble it into a
-view-independent format. This data will then be converted to HTML
-reports and/or graphs such as bar and pie charts.
 		 </td>
    </tr>
    <tr bgcolor=#ffffff>
-     <td valign=top>
-       <table border=0 cellpadding=0 cellspacing=0>
-       <tr>
-         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
-         <td valign=top><b>Graphs</b></td>
-       </tr>
-       </table>
-     </td>
-     <td valign=top>
-<p>The <dfn>Graphs</dfn> module will be a future module implementing GUI graphs
-such as bar and pie charts. These graphs will be interactive in that the
-user can, for example, move pie wedges, and 'live' in that the user will
-be able to click on graph subsections to see a detail graph or report of
-that particular subsection.
-
-<p>This module will be implemented using the GUPPI library being developed
-by Jon Trowbridge (&lt;<code>http://www.gnome.org/guppi</code>&gt;).
-		 </td>
-   </tr>
-   <tr bgcolor=#ececff>
      <td valign=top>
        <table border=0 cellpadding=0 cellspacing=0>
        <tr>
@@ -178,19 +162,21 @@ by Jon Trowbridge (&lt;<code>http://www.gnome.org/guppi</code>&gt;).
        </table>
      </td>
      <td valign=top>
-<p>The <dfn>Price Quotes</dfn> module (<code>src/quotes</code>) is a Perl system to
+<p>The <dfn>Price Quotes</dfn> module (<code>src/quotes</code>) is 
+a wrapper around the Finance::Quote Perl module, used to 
 fetch stock price data off the Internet and insert it into the GnuCash
-Engine. This module requires the functionality of the Finance::Quote
-module available at SourceForge. The Finance::Quote module can fetch
+Engine. The Finance::Quote module is available at SourceForge (or 
+through CPAN). This module can fetch
 price quotes from many different sources including Yahoo, Yahoo Europe,
-and some international exchanges.
+and some international exchanges. Before a new data source can be
+added to GnuCash, it must be added to Finance::Quote first.
 
 <p>The Finance::Quote module also supports fetching currency exchange
 rates. GnuCash will be extended to allow the fetching and use of
 currency exchange rates.
 		 </td>
    </tr>
-   <tr bgcolor=#ffffff>
+   <tr bgcolor=#ececff>
      <td valign=top>
        <table border=0 cellpadding=0 cellspacing=0>
        <tr>
@@ -200,8 +186,8 @@ currency exchange rates.
        </table>
      </td>
      <td valign=top>
-<p>The <dfn>User Preferences</dfn> module (<code>src/scm/options.scm</code>,
-<code>src/scm/prefs.scm</code>) provides an infrastructure for defining both
+<p>The <dfn>User Preferences</dfn> module (<code>src/app-utils/</code>)
+provides an infrastructure for defining both
 user-configurable and internal preferences. Preferences are defined in
 scheme using several predefined preference types such as boolean,
 string, date, etc. Preferences are 'implemented' by providing a GUI
@@ -215,22 +201,65 @@ are stored as scheme forms in a user-specific preferences file
 loaded upon startup.
 		 </td>
    </tr>
+   <tr bgcolor=#ffffff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>Data Import &amp; Export</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>The <dfn>Import</dfn> module (<code>src/import-export/</code>) provides
+functionality for importing QIF (Quicken Interchange Format) data files and
+OFX (Open Financial Exchange) files into GnuCash.  One of the difficult 
+aspects of importing data from a file is what to do if the file contains
+some data that has already been entered into GnuCash.  This can happen
+when the imported file is a bank statement obtained periodically
+from a website: each time it is fetched, it might contain transactions 
+that were previously reported.  Thus, to perform file import correctly,
+one must have a fairly sophisticated transaction matcher that can
+detect and properlyt handle (ignore) duplicate transactions.  This
+pattern matching is generically useful, and is used by the HCBI
+subsystem.  (HCBI is an online banking system available to residents
+of Germany).
+
+
+		 </td>
+   </tr>
    <tr bgcolor=#ececff>
      <td valign=top>
        <table border=0 cellpadding=0 cellspacing=0>
        <tr>
          <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
-         <td valign=top><b>QIF Import</b></td>
+         <td valign=top><b>Small Business Features</b></td>
        </tr>
        </table>
      </td>
      <td valign=top>
-<p>The <dfn>QIF Import</dfn> module (<code>src/scm/qif-import</code>) provides
-functionality for importing QIF (Quicken Interchange Format) data
-into GnuCash.
+<p>Business features (<code>src/business/</code>)
+     (To Be Written)
+
+
 		 </td>
    </tr>
    <tr bgcolor=#ffffff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>Recurring Transactions</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+     (To Be Written)
+
+
+		 </td>
+   </tr>
+   <tr bgcolor=#ececff>
      <td valign=top>
        <table border=0 cellpadding=0 cellspacing=0>
        <tr>
@@ -240,8 +269,8 @@ into GnuCash.
        </table>
      </td>
      <td valign=top>
-<p>The GnuCash module (<code>src/gnome</code>, <code>src/register/gnome</code> and
-<code>src/*.[ch]</code>) is the main GUI application. It consists of a
+<p>The GnuCash module (<code>src/gnome</code> and other directories)
+is the main GUI application. It consists of a
 collection of miscellaneous GUI code to glue together all of the pieces
 above into a coherent, point-and-click whole. It is meant to be easy to
 use and intuitive to the novice user without sacrificing the power and
@@ -251,9 +280,9 @@ this is the piece that they are referring to. It really is meant to
 be a personal-finance manager with enough power for the power user
 and the ease of use for the beginner.
 
-<p>Currently, the Gnome interface is the only operational interface. There
-is an obsolete Motif interface which is not maintained. The Qt code
-won't compile, and most/all functions are missing.
+<p>Currently, the Gnome interface is the only operational interface. 
+An obsolete Motif interface can be fished out of historical CVS;
+but this interface has been deleted in the current CVS.
 		 </td>
    </tr>
    </table>
