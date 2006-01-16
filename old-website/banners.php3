@@ -5,6 +5,21 @@
      <! BEGIN CONTENT >
 
  <?php include("include/table_top.inc"); ?>
+icons
+ <?php include("include/table_middle.inc"); ?>
+<BR>
+Desktop icons for GnuCash.  Click on the image to download.
+<BR>
+<BR>
+<a href="/images/icons/gnome-money.png">
+<img src="/images/icons/gnome-money.png"
+     alt="[stack of dollar bills]">
+<br clear>
+Helixcode Gnome Money Icon</a> -- install in <tt>/usr/share/pixmaps/</tt>
+<p>
+
+ <?php include("include/table_bottom.inc"); ?>      
+ <?php include("include/table_top.inc"); ?>
 banner ads
  <?php include("include/table_middle.inc"); ?>
 
