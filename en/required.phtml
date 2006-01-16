@@ -7,18 +7,31 @@
 
 <h1>Software Dependencies</h1>
 
-These are the important contributing technologies that GnuCash depends 
-on to implement its major functions.  You will need to install a recent 
-version of these to compile and work with GnuCash.
+GnuCash depends on a number of important contributing technologies 
+in order to implement its major functions.  If you want to compile
+and work on GnuCash, you will need to install a recent version of 
+these libraries.
+<br><br>
+Without a good package manager (<i>e.g.</i> Debian <tt>apt-get</tt>),
+it can be quite tedious to find, download and install all of the 
+required packages (<i>nightmare</i> is a word that has been used).
+Therefore, if you are not a programmer, and just want to <b>use</b> 
+GnuCash, you should stick to the version supplied by your favorite
+Linux distribution (<i>e.g.</i> by installing from the vendor's CDROM),
+and install using that distribution's standard installation methods.
+If you decide that you cannot live with the version that came with your 
+distro, and you don't have <tt>apt-get</tt> or a similar tool, then 
+be prepared for a rather long and involved install/upgrade proceedure.
+Note that even with <tt>apt-get</tt>, some packages may still need 
+to be installed manually.
 <br><br>
 
-The majority of the GnuCash 1.6.0 dependencies are satisfied by <a
-href="http://www.gnome.org/">Gnome 1.4</a>.  The only ones on top of a
-standard Gnome 1.4 installation are <a href="#guppi">Guppi</a>, <a
+The majority of the GnuCash 1.6.x dependencies are satisfied by installing 
+standard <a href="http://www.gnome.org/">Gnome 1.4</a> core libraries. 
+The only dependencies beyond a standard Gnome 1.4 installation are 
+<a href="#guppi">Guppi</a>, <a
 href="#guile">Guile</a>, <a href="#slib">slib</a> and <a
-href="#gwrap">G-Wrap</a>. You can get RedHat rpms for Gnome 1.4
-from the <a href="http://developer.gnome.org/projects/gpp/">Gnome
-Packaging Project</a>.
+href="#gwrap">G-Wrap</a>. 
 <br><br>
 
 <table border=0 cellpadding=1 cellspacing=0 width="100%">
@@ -212,6 +225,34 @@ mentioned.
      </td>
      <td valign=top>A perl module to fetch historical stock prices.</td>
      <td valign=top><a href="http://sourceforge.net/project/?group_id=2403">http://sourceforge.net/project/?group_id=2403</a></td>
+   </tr>
+
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top>LibOFX</td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>Library for parsing OFX (Open Financial Exchange) data. Used by many American banks.</td>
+     <td valign=top><a href="http://libofx.sourceforge.net/">http://libofx.sourceforge.net/</a> 
+     </td>
+   </tr>
+
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top>OpenHBCI</td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>Library for connecting to German banks that support HBCI.</td>
+     <td valign=top><a href="http://openhbci.sourceforge.net/">http://openhbci.sourceforge.net/</a> 
+     Optional; required only if you want to connect to HBCI banks.</td>
    </tr>
 
    <tr bgcolor=#ececff>
