@@ -78,8 +78,7 @@ programmers and users.
 	print  "<b>".date( "Y-m-d",$newsfile[$key]);
 	print  "&nbsp; &nbsp;".date( "H:i:s",$newsfile[$key]). "</b><BR><br>\n"; 
         for  ($i=0;  $i<$n;  $i=$i+1)  { 
-            $s=chop($fa[$i]); 
-            print  $s; 
+	    print $fa[$i];
         } 
         echo("</UL></LI>");
         echo("<hr>");
