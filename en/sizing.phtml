@@ -1,0 +1,616 @@
+<?php $title = "History"; ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/header.phtml"); ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-other-main.phtml"); ?>
+</td>
+
+<td valign=top>
+<b>Sizing</b><br><br>
+
+The table below shows some historical lines-of-code and
+number-of-files metrics for the <SPAN
+CLASS="APPLICATION"
+>GnuCash</SPAN
+>
+development project.  Note that not all of the code is counted: for
+instance, the Makefiles and configure.in and autogen.sh are not counted. 
+Also, files that are automatically generated are not counted, nor are
+files that have been 'borrowed' from other projects. Also not counted 
+are experimental files, miscellaneous perl scripts, various translators,
+addons and utilities.</P
+><P
+>Note also that KLOC's are not a good metric of programmer productivity,
+nor even that <SPAN
+CLASS="APPLICATION"
+>wc</SPAN
+> is a good way of counting
+KLOC's.  Much better measures are complexity metrics, which, for
+example, count the number and size of if-then-else blocks, or the number
+and size of all blocks, or the number of math operators per each
+statement.  Maybe someday we'll run one of those tools on this code. 
+For now, this is what we have.</P
+><P
+><DIV
+CLASS="TABLE"
+><P
+><B
+>Table 1.  Historical Development Stats </B
+></P
+><TABLE
+BORDER="1"
+CLASS="CALSTABLE"
+><THEAD
+><TR
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Version</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>engine</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>register</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>ledger</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>motif</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>gnome</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>scheme</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>docs</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>txt</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Total</TH
+><TH
+ALIGN="LEFT"
+VALIGN="TOP"
+>Languages</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>xacc-0.9
+         Sept 97</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>34 files
+         (7.5+0.9)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>5 files
+         (0.4)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1 file
+         (0.1)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>40 files
+         (8.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>xacc-0.9w
+         Dec 97</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>51 files
+         (13.8+1.5)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>9 files
+         (0.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1 file
+         (0.1)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>61 files
+         (16.2)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>xacc-1.0.17
+         Feb 98</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>52 files
+         (14.8+1.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>12 files
+         (1.4)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>4 files
+         (0.3)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>68 files
+         (18.3)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>gnucash-1.1.15
+         Aug 98</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>24 files
+         (6.2+1.5)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>31 files
+         (6.1+1.7)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>5 files
+         (1.4+0.4)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>30 files
+         (7.4+0.7)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>17 files
+         (3.4+0.5)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>3 files
+         (0.3)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>16 files
+         (1.9)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>17 files
+         (1.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>159 files
+         (34.7)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>1 (0.17)</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>gnucash-1.2.2
+         Aug 99</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>41 files
+         (10.2+3.6)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>28 files
+         (5.5+1.7)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>14 files
+         (2.4+0.6)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>26 files
+         (8.7+0.5)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>14 files
+         (1.4)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>30 files
+         (2.6)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>15 files
+         (1.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>168 files
+         (39.0)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>3 (0.54)</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>gnucash-1.3.6
+         April 2000</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>41 files
+         (12.9+4.0)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>32 files
+         (6.8+2.1)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>19 files
+         (4.0+0.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>78 files
+         (32.2+3.0)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>74 files
+         (4.0+0.7+12.3)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>33 files
+         (7.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>25 files
+         (4.5)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>302 files
+         (95.1)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>5 (4.3) </TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>gnucash-1.4.6
+         Sept 2000</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>43 files
+         (13.0+3.6)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>27 files
+         (5.9+2.0)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>24 files
+         (5.4+1.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>82 files
+         (33.8+3.0)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>68 files
+         (4.0+0.7+15.5)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>36 files
+         (9.3)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>36 files
+         (4.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>316 files
+         (101.9)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>7 (6.0)</TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>gnucash-1.5.2
+         Sept 2000</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>46 files
+         (14.9+3.7)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>29 files
+         (6.3+2.0)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>25 files
+         (5.7+1.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>-</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>83 files
+         (35.8+2.9)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>73 files
+         (4.6+0.8+16.8)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>37 files
+         (10.7)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>48 files
+         (8.2)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>341 files
+         (114.2)</TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+>8 (7.8)</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+ </P
+><P
+>Each cell displays the following:
+    
+     number of *c and *.h files
+     (KLOCS in *.c + KLOCS in *.h)
+     (or KLOCS of *.txt or KLOCS of *.scm as appropriate)
+
+ </P
+><P
+>where KLOC == kilo-lines-of-code, as reported by
+   <SPAN
+CLASS="APPLICATION"
+>wc</SPAN
+>.
+
+    <P
+></P
+><UL
+><LI
+><P
+>engine -- contents of the src/engine and the include
+      directories
+
+ </P
+></LI
+><LI
+><P
+>register -- contents of the register directory
+
+ </P
+></LI
+><LI
+><P
+>ledger -- *.c, *.h files in the src directory only
+
+ </P
+></LI
+><LI
+><P
+>motif -- contents of src/motif directory
+
+ </P
+></LI
+><LI
+><P
+>gnome -- src/gnome plus src/register/gnome
+
+ </P
+></LI
+><LI
+><P
+>scheme -- scheme and guile code -- src/scm plus
+      src/guile -- in parenthesis is (*.c + *.h + *.scm)
+
+ </P
+></LI
+><LI
+><P
+>docs -- english-only user documentation
+              (html or sgml)
+ </P
+></LI
+><LI
+><P
+>Languages -- the number of languages that the application messages
+      have been translated to.  In parenthesis, the number of messages
+      in the message files (grep msgstr *.po |wc), in thousands.
+ </P
+></LI
+><LI
+><P
+>txt -- internal <TT
+CLASS="FILENAME"
+>README</TT
+>,
+      <TT
+CLASS="FILENAME"
+>*.txt</TT
+> and <TT
+CLASS="FILENAME"
+>*.texinfo</TT
+>
+      documentation files in all subdirectories,
+ </P
+></LI
+></UL>
+
+
+</td>
+
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/footer.phtml"); ?>
+
