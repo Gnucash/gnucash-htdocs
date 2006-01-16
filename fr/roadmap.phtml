@@ -1,0 +1,196 @@
+<?php $title = "Orientations du projet"; ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/fr/components/header.phtml"); ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/fr/menu/menu-main-developer.phtml"); ?>
+
+</td>
+<td valign=top>
+<h1>Orientations du projet</h1>
+Gnucash approche le point où il supportera bientôt la plupart des fonctionnalités
+de base que prévoit une application de comptabilité/finance. Quand il y arrivera,
+bientot si tout va bien, nous devrons contempler le futur. Qu'y a t il devant nous ?
+<p>
+Il y a plusieurs directions dans  lesquelles le projet peut se aller. Ces
+directions sont données par les différents collège de devellopeurs, les différentes
+communautés des utilisateurs.
+Beaucoup de ces dernieres semblent incompatibles,et les tensions doivent être résolues, 
+ou un choix doit être fait. La liste
+ci-dessous est ordonnées selon les lignes directrices 'du plus évident' à 'loin de nous'.
+<p>
+Nous vous avons demandé vos avis sur ces problèmes en 2001 dans le 
+<a href="/en/quiz.phtml">sondage utilisateurs</a>.
+ Les réponses sont <a href="/en/quiz-results/phtml">resumées ici</a>.
+<dl>
+<dt><b>Version Pour Petite Entreprise</b>
+<dd>
+C'est probablement le numero 1, le 'perfectionnement ' le plus demandé pour GnuCash.
+L'utilisation de GNU/Linux monte en flèche dans les petites entreprises; pourtant 
+il y a aucune "facilité-à-installer", ni "facilité-à-administrer" pour les programmes de
+comptabilité de petite entreprise, au moins pas de solution ouverte. La liste des
+fonctionnalités désirées remonte à l'aube du calcul par ordinateur il y a un siècle et demi : 
+livre de paie, compte des revenus &amp; depenses, facturation.
+<p>
+Il y a quelques réels problèmes à aller dans cette direction, et pas des moindres,
+A moins d'oublier les princpaux constituant du noyau Gnucash : les utilisateurs occasionnels/ 
+personnels. Si nous développons des fonctionalités "extra" , l'utilisateur occasionnel 
+peut conclure que l'application est trop complexe, trop dure à utiliser , 
+trop dure à comprendre. Ils iront voir ailleurs, et sans le faire exprès, nous 
+aurons rendu à GNU/Linux (et *BSD) un mauvais service. L'adoption de GNU/Linux 
+par les utilisateurs d'ordinateur moyens (pour une utilisation personnelle) est déclenchée 
+par la disponibilité des applications ayant un rôle de pierres angulaires de bureau. 
+La gestion personnelle des finances est une de ces pierres angulaires. 
+Nous devons avoir un gestionnnaire financier personnel simple,
+facile à installer, facile à utiliser.
+<p>
+<dt><b>Investisseur Sophistiqué</b>
+<dd>
+GnuCash télécharge les cours des actions et les taux de change à partir du réseau. 
+La version courante a quelques capacités graphiques de base. Quelle fantaisie devrait 
+il se permettre ? La nouvelle structure de rapport GnuCash devrait rendre cela plus 
+facile, ou moins compliqué, pour créer une grande variété de graphiques sophistiqués, 
+de diagrammes et de rapports. Ceux-ci pourraient s'étendre de la simple analyse technique 
+telle qu'une moyenne mobile 90-jours du volume d'échange et ainsi que le bêta, aux 
+indicateurs mystérieux comme le 'Bolton-Tremblay ', le 'Zweig poussé 'ou l'oscillateur 
+de McClellan'. 
+<p>
+Un autre point de vue ? La communauté des 'investisseurs' est plus petite que la communauté 
+des utilisateurs personnels. Et le stockage de l'analyse technique n'a pas nécessairement 
+besoin des fonctionnalités comptable. De plus, de tels besoins peuvent être mieux servis 
+par d'autres systèmes: et il en existe 
+<a href="http://www.gnucash.org/en/links.phtml?linkpage=stock">une grande  variété</a>.  
+GnuCash devrait il rejeter les fonctionnalités orientées vers les actions ? Non. 
+Les développeurs du noyau devraient-ils se concentrer sur le trading action? Probablement pas.
+<p>
+<dt><b>Le navigateur financier, L'Expérience ultime de l'utilisateur personnel</b>
+<dd>
+Pendant que l'interface utilisateur devient plus fluide, et les assistants deviennent 
+de plus en plus pratique en guidant l'utilisateur débutant, l'orientation évidente de 
+GnuCash devrait être de devenir l'expérience financière ultime pour l'utilisateur personnel. 
+C'est-à-dire, pour devenir 'le browser financier pour Internet ', le ''Nautilus des 
+transactions financières '. Pour les débutants, ceci signifie utiliser OFX et supporter 
+le paiement et l'encaissement des factures en ligne. Dans un lointain futur, cela signifie 
+l'intégration des achats en ligne, de sorte que vos d'achats apparaissent dans GnuCash 
+sans que vous ayez à saisir manuellement toutes ces transactions. 
+<p>
+Une partie de cette intégration est faisable : par exemple en utilisant un livre de pointage 
+pour montrer les prochaines factures et lignes budgétaires, ou en utilisant un calendrier 
+pour écrire les factures dans GnuCash. Plus largement, fournir un ensemble d'interfaces 
+comptable tels que n'importe quel autre package (par exemple, un package d'analyse technique 
+pour les actions) doit pouvoir intégrer des données, et extraire des données de GnuCash: le 
+saint graal de l'intégration au poste de travail. 
+<p>
+<dt><b> Le Navigateur Financier, Partie II: le PDA</b>
+<dd>
+GnuCash, le bureau Gnome, et le bureau de KDE avaient convolé vers 'un espoir commun': la prochaine 
+extinction du PC "généraliste". Selon cette théorie, les petits PC, les PDA, les portables 
+rendront le PC non adapté. Naturellement, cette théorie n'est pas réaliste : un grand clavier 
+et un grand écran donnent une facilité d'utilisation qu'aucun PDA ne peut fournir. Néanmoins, 
+nous devons regarder au dessus de nos épaules. GnuCash peut-il être aminci et adapté sur 
+un de ces Linux portable, par exemple  YOPI? En ce moment, cela dépend intimement d'un 
+grand nombre de paquets pour beaucoup de fonctionnalités, et ainsi il est difficile d'imaginer 
+un exercice d'amaigrissement. Cependant,si un manager financier est une pierre angulaire d'un poste 
+de travail, il en est également ainsi pour les PDA. Un jour, pas trop lointain, le browser 
+financier sans fil tenu dans la main sera aussi omniprésent qu'un portefeuille.
+<p>
+<dt><b>Le Navigateur Financier, Partie III: ASP</b>
+<dd>
+Gnucash a un navigateur Web intégré. Ce navigateur peut non seulement montrer les pages 
+standard du Web, mais il comprend également des balises spéciales pour les graphiques 
+interactifs, et les registres de comptes améliorés (par exemple, jetez un oeil sur  
+<a href="/surf/guppi-pie-demo.html">cette page</a> créée avec une version récente de GnuCash). 
+GnuCash emploie ces fonctionnalités pour créer et afficher des rapports. Il n'y a aucune 
+raison pour que ces rapport soient locaux à la machine : ils pourraient être sur 'n'importe 
+quel site Web, n'importe quel serveur. 
+<p>
+GnuCash emploie du XML comme format de fichier, mais ce XML pourrait facilement être fourni 
+par un script CGI fonctionnant sur un serveur Web. Il y a un prototype de code de démonstration 
+sur <tt>src/experimental/cgi-bin</tt>,ou vous pouvez essayer de charger 
+<a href="/surf/demo.gml">ce lien</a>avec GnuCash. En d'autres termes, GnuCash peut offrir une 
+intégration Web sympa, fluide, associée à un serveur financier basé sur ASP. 
+Une intégration qui donne une sacrée gifle à n'importe quel autre serveur financier ASP existant. 
+<p>
+Quels sont les problèmes avec des ASP traditionnels? Hum Hum, laissez moi vous les compter. 
+(1)Une Attente Mondiale. Aucune application de bureau, sauf sur quelques vieux 386, n'a jamais 
+pris 15 secondes pour répondre lorsque vous frappez la touche 'entrée'. 
+(2) ces beaux formulaires Web. Ils pourraient être assez beau pour interroger les informations 
+d'une ligne aérienne ou en compléter votre nom et adresse, (oui, le CSS rend les pages Web 
+plus belles), mais elle ne fond pas le poids face a une application de bureau spécifiques. 
+Imaginez pouvoir employer <a href="/images/gnome-1.5/savings-journal.gif">une véritable
+interface</a> de registre de compte pour travailler avec de l'information financière sur un 
+site Web. (3) La déconnection du réseau. Même si votre ASP ne plante jamais, et même si vous 
+ne perdez jamais votre connections au réseau, il est encore concevable que vous vouliez 
+récupérer vos informations financière sur votre portable quelque part où il n'y a aucune 
+possibilité de connections à Internet. Nous pensons savoir comment faire travailler GnuCash 
+en mode 'déconnecté', en utilisant des données en cache , qui peuvent alors être synchronisée 
+avec un serveur on line quand ils reviendra une fois de plus sur le réseau. Et c'est pour cela 
+qu'est conçu le noyau de GnuCash. (Bientôt en Démo?) 
+<p>
+<dt><b>ERP</b>
+<dd>
+De nos jours, il est impossible de parler de comptabilité professionnelle sans mentionner 
+également la communication ERP. GnuCash n'est pas, et ne sera probablement jamais un système 
+d'ERP, mais il pourrait devenir le composant de l'un d'eux. L'idée fondamentale derrière les 
+ERP est que les différentes entreprises ont différentes pratiques de gestion: personne ne fait 
+les choses tout à fait de la même manière. Et donc, il n'existe pas une seule application pour 
+tous ; au lieu de cela, nous espérons un cadre de travail extensible, avec une l'intégration 
+facile, et des fonctionnalités en développement rapide. L'espoir est que l'on puisse rapidement 
+connecter ce tout nouveau package d'e-commerce à cette application de facturation vieille d'une 
+décennie. GnuCash ne le fait pas.GnuCash n'est pas non plus facile à modifier, à étendre, ou à 
+améliorer. Il est considérablement sophistiqué d'ajouter de nouvelles fonctionnalités à GnuCash. 
+En particulier, cela signifie qu'il est difficile d'intégrer GnuCash dans les processus de votre 
+entreprise: vous ne pouvez pas simplement lui dire de pomper l'information financière ici, et 
+de la videz là. Si vous voulez le faire, regardez  <a href="http://www.gnue.org/">GnuE sur 
+http://www.gnue.org/</a> ça a été spécifiquement conçu pour cela. 
+<p>
+D'autre part, l'infrastructure de GnuCash devient suffisamment généraliste pour qu'il ne soit 
+pas difficile de le mouler dans une variété d'autres d'outils financiers. Et si GnuCash doit 
+vraiment réussir dans le monde de la comptabilité d'entreprise, il devra communiquer facilement 
+avec d'autres systèmes. 
+<p>
+<dt><b>Napster pour la finance</b>
+<dd>
+Si vous pensiez l'industrie musicale a détesté Napster, attendez de voir 
+<a href="http://slashdot.org/article.pl?sid=01/03/30/1953235&mode=thread">
+comment la banque fédérale et les banques réagissent a son équivalent financier</a>.  
+Supposez qu'il y ait vraiment une infrastructure sécurisée pour deposer de l'eCash anonymement 
+dans votre portefeuille électronique.Ou plutôt, si vous en donniez à votre ami ou associé, 
+et qu'eux respectivement puissent le dépenser pour de vraies marchandises ou des services. 
+Attention, ne confondez pas l'idée d'un portefeuille électronique avec l'idée d'argent 
+digitale "e-Money". Il y a bon nombre d'efforts en cours pour créer l'e-Money : certains 
+avec du "faux-argent", tel que le flooz, ou les miles (points offert par les compagnie aériennes),
+certains avec du véritable argent, tel que 
+<a href="http://www.e-gold.com/e-gold.asp?cid=281678">l'e-Gold</a>, pay-pal, ou les dernières 
+inventions de commerce électronique de la compagnie s'occupant de votre carte de crédit. 
+Toutes ces offres exigent un serveur centralisé (traditionnellement appelé une 'banque'). 
+Ce serveur centralisé valide votre identité. Et confirme que vous avez l'argent que vous 
+prétendez avoir.Et déplace réellement cet argent pour vous.Et mènent des travaux de concert 
+avec les "IRS"(ndt: le fisc ?) pour s'assurer vous n'avez pas de revenu imposable non déclaré. 
+Et avec le DEA (ndt : encore eux, le fisc ?), ils s'assurent que vous ne blanchissez pas votre 
+argent.Et ils s'assurent que... en fait, c'est une question de sécurité nationale.
+<p>
+En comparaison, mon portefeuille est une "banque" dans le sens où il contient de l'argent; 
+c'est juste qu'il ne me facture pas de frais pour cela. Et lorsque je l'utilise pour quelque 
+échanges anonymes de particulier a particulier comme payer un gosse du quartier pour tondre 
+la pelouse, il n'indique pas au fisc que le gosse leur doit désormais de l'argent pas plus 
+que gnutella ne divulgue à Metallica les téléchargements de leur chanson. 
+Donc, où en étions-nous? Ah oui, essayez maintenant d'imaginer un portefeuille électronique... 
+<p>
+Maintenant, GnuCash ne sera probablement jamais le Gnutella de l'argent. Pour plusieurs raisons. 
+Quoi que ce soit que vous échangiez en ligne, juste du faux-argent , l'équivalent électronique 
+des bons de réduction de supermarchés, tant que vous n'aurez pas un courtier, un garant, un 
+teneur de marché qui garantira l'échange de votre e-Cash contre un autre genre d'argent les 
+banques ne l'accepterons pas. Et comme vous pouvez le deviner, l'économie cachée résultante 
+inciterait la banque centrale (fédérale) à arrêter ledit garant plus rapidement qu'Alan Greenspan 
+peut dire 'l'expansion de l'index de la masse monétaire M2'. Néanmoins, les cyberpunks ont promis 
+en 1995 qu'un jour, chacun aurait  un vrai portefeuille électronique, et ce concept est toujours 
+intéressant et drôle à imaginer même s'il demeure futuriste. 
+<p>
+</dl>
+<br><br>
+<h1>Un dernier mot ?</h1>
+Ce qui est au dessus est juste une suite d'orientation possible pour le futur. Plus réellement, 
+en gardant les pieds sur terre, la liste des projets peu être lue sur la 
+<a href="http://www.linas.org/linux/gnucash/projects.html">page des projets GnuCash</a>.
+<br><br>
+</td>
+
+<?php include($GLOBALS['DOCUMENT_ROOT']."/fr/components/footer.phtml"); ?>

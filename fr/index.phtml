@@ -1,0 +1,117 @@
+<?php $title = "Logiciel de Gestion comptable Open Source"; ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/fr/components/header.phtml"); ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/fr/menu/menu-main.phtml"); ?>
+
+	</td>
+  <td valign="top" width="98%">
+  
+<h1>Bienvenue Sur GnuCash.org</h1>
+  
+<font size=-1>
+
+Si vous recherchez un moyen de gérer vos finances personnelles en utilisant un logiciel gratuit
+Vous l'avez trouvé ! Etudié pour être simple à utiliser, puissant et flexible, GnuCash vous permet
+de suivre vos comptes bancaires, portefeuilles action, revenus et dépenses.
+Aussi rapide et intuitif à utiliser qu'un registre de compte papier, il est basé sur des principes
+de comptabilité professionnelle pour assurer l'équilibre des comptes et des rapports fiables.
+GnuCash est soutenu par une communauté de développement active et s'épanouit dans un véritable plan comptable.
+Développé sous la licence GPL, vous n'avez aucune raison  de vous inquiéter de son l'obsolescence :
+GnuCash sera là pour vous.
+
+Ce site Web est consacré à favoriser le projet de développement de Gnucash.org.
+
+Nous sommes impliqué dans le développement d'outils financiers et de comptabilité au top
+pour les utilisateurs de GNU/Linux et d'Unix.
+Ceci inclut le développement de programmes de gestion des api, des bibliothèques et des composants qui peuvent
+être employés pour créer des applications client ou serveur pour une utilisation personnelle ou professionnelle.
+En se concentrant sur la facilité d'utilisation, la conception modulaire, des interfaces architecturées et
+du code bien documenté, nous espérons que GnuCash et ses bibliothèques financières associées
+seront le choix d'une génération de programmeurs GNU et d'utilisateurs.
+
+<br><br>
+Oui, GnuCash tourne maintenant du MAX OSX aussi bien que sur  GNU/Linux, *BSD, et les
+autres Unix Traditionnels : Solaris, AIX, etc ...
+<br><br><br>
+<b>Cette page est en cours de traduction</b> de l'anglais vers le français.
+Il est possible que certains liens vous emmènent sur le site Anglais de GnuCash,
+cela signifie que nous n'avons pas terminé la traduction complète du site.
+Si vous constatez une erreur ou une omission sur cette page, n'hésitez pas a me
+contacter pour pouvoir la corriger au plus vite. Merci de votre indulgence.
+
+<br><br><br>
+</font>
+
+
+<h1>Actualités</h1>
+
+       
+
+<?php
+    //  change  this  to  the  directory  of  your  news  files 
+    //  they  should  be  plain  ASCII  text  files  with  extension  ".txt" 
+
+    # Perhaps we should be using this, but it won't work until we have
+    # the DocumentRoot set up.
+    # $newspath = $GLOBALS['DOCUMENT_ROOT']."/news/
+
+    # So we'll just do this for now...
+    $newspath  = $GLOBALS['DOCUMENT_ROOT']."/fr/news/"; 
+
+    //  Declare  array  to  hold  filenames 
+    $newsfile  =  array(); 
+    
+    //  Create  handle  to  search  directory  $newspath  for  files 
+    $hd  =  dir($newspath); 
+    
+    //  Get  all  files  and  store  them  in  array 
+    while(  $filename  =  $hd->read()  )  { 
+        $s=strtolower($filename); 
+        if  (strstr($s, ".txt"))  { 
+            //  Determine  last  modification  date 
+            $lastchanged=filemtime($newspath.$filename); 
+            $newsfile[$filename]  =  $lastchanged; 
+        }    
+    } 
+    
+    //  Sort  files  in  descending  order 
+    arsort($newsfile); 
+    //  Output  files  to  browser 
+    for(reset($newsfile);  $key  =  key($newsfile);  next($newsfile))  
+    { 
+        $fa  =  file($newspath.$key); 
+        $n=count($fa); 
+
+        echo("<table border=0 cellpadding=1 cellspacing=0 width=\"100%\">");
+        echo("<tr><td valign=middle align=center bgcolor=\"#666699\">");
+        echo("<table border=0 cellpadding=5 cellspacing=1 bgcolor=\"#cacaf7\" width=\"100%\">");
+        echo("<tr><td valign=top>");
+        echo("<table border=0 cellpadding=0 cellspacing=0>");
+        echo("<tr><td> <img src=\"/images/icons/document.txt.gif\" width=16 height=16 border=0 alt=\"document icon\">&nbsp;</td>");
+       
+        echo("<td>");
+	print $fa[0];
+	print  " - <font size=-1><b>(".date( "Y-m-d",$newsfile[$key]);
+	print  "&nbsp; &nbsp;".date( "H:i:s",$newsfile[$key]). ")</b></font></td>\n"; 
+        echo("</tr> </table> </td> </tr>");
+        echo("<tr bgcolor=\"#ffffff\"> <td valign=\"top\"> <font size=-1>");
+
+        for  ($i=1;  $i<$n;  $i=$i+1)  { 
+	    print $fa[$i];
+        } 
+        echo("</font> </td> </tr> </table> </tr> </table><br><br>");
+
+    }    
+    
+    $hd->close();  
+    ?>  
+
+<font size=-2>
+<a href="/surf/guppi-pie-demo.html">test</a>
+<a href="/surf/short.gml">test2</a>
+<a href="/surf/demo.gml">test3</a>
+</font>
+                  
+
+  </td>
+
+<?php include($GLOBALS['DOCUMENT_ROOT']."/fr/components/footer.phtml"); ?>

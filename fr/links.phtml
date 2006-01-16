@@ -1,0 +1,66 @@
+<?php $title = "Related Financial Software"; ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/fr/components/header.phtml"); ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/fr/menu/menu-main-other.phtml"); ?>
+</td>
+
+
+<td valign=top>
+<h1>Logiciels financier associés</h1>
+
+<table>
+<tr><td>
+<b>Choississez une rubrique :</b></td>
+<td>
+<form method=post>
+<select name=linkpage>
+  <option value=general
+  <?php if ($linkpage == "general") { echo ("selected"); } ?>
+  >References Generales</option>
+  <option value=utilities
+  <?php if ($linkpage == "utilities") { echo ("selected"); } ?>
+  >Utilitaires</option>
+  <option value=palm
+  <?php if ($linkpage == "palm") { echo ("selected"); } ?>
+  >Ordinateur Palm,PDA</option>
+  <option value=stock
+  <?php if ($linkpage == "stock") { echo ("selected"); } ?>
+  >Trading Action & Analyse Technique</option>
+  <option value=quote
+  <?php if ($linkpage == "quote") { echo ("selected"); } ?>
+  >Sources de Cotations, Outils</option>
+  <option value=money
+  <?php if ($linkpage == "money") { echo ("selected"); } ?>
+  >Monnaies Electroniques</option>
+  <option value=erp
+  <?php if ($linkpage == "erp") { echo ("selected"); } ?>
+  >Professionels, projets ERP</option>
+  <option value=xml
+  <?php if ($linkpage == "xml") { echo ("selected"); } ?>
+  >XML et Autre Format de Données </option>
+  <option value=misc
+  <?php if ($linkpage == "misc") { echo ("selected"); } ?>
+  >Divers</option>
+  <option value=obsolete
+  <?php if ($linkpage == "obsolete") { echo ("selected"); } ?>
+  >References Historiques</option>
+  <option value=review
+  <?php if ($linkpage == "review") { echo ("selected"); } ?>
+  >Revue de Gnucash & Sites de notation</option>
+</select>
+<input type=submit value=Go>
+</td>
+</table>
+</form>
+
+<?php
+  if ($linkpage != "") { 
+	include($GLOBALS['DOCUMENT_ROOT']."/fr/links/links-".$linkpage.".phtml");
+  } else {
+	include($GLOBALS['DOCUMENT_ROOT']."/fr/links/links-general.phtml");
+  }
+?>
+
+
+</td>
+
+<?php include($GLOBALS['DOCUMENT_ROOT']."/fr/components/footer.phtml"); ?>
