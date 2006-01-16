@@ -11,7 +11,7 @@
 <font size="2" face="VERANDA,HELVETICA">
 <b>Getting the most recent sources via CVS:</b><br>
 <br>
-   The leatest source code, as well as various older 
+   The latest source code, as well as various older 
    versions, are maintained in a publically readable 
    CVS source code repository.  Accessing it is simple,
    and if you plan to be an active developer, there is
@@ -31,7 +31,7 @@ cvs -d :pserver:cvs@cvs.gnucash.org:/home/cvs/cvsroot login
 <p>
 The password is &quot;guest&quot;. 
 To get a copy of the latest/beta development version 
-(which is curently version 1.5.x), do a 
+(which is currently version 1.5.x), do a 
 </p>
 
 <B>
@@ -92,7 +92,7 @@ Other tags of (mostly historical) interest are:
 If you don't like to bother with CVS you can download recent 
 snapshots of the CVS tree from one of the FTP sites below.
 Note, however, that if you wish to contribute patches and updates
-to GnuCash, it is strongly recommmended that you learn and use CVS.
+to GnuCash, it is strongly recommended that you learn and use CVS.
 We encourage this because the snapshots can sometimes get a bit 
 dated, and you just might be fixing a bug that's already fixed.
 <br>
