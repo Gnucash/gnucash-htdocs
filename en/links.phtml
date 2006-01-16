@@ -13,16 +13,16 @@
 <td>
 <form method=post>
 <select name=links>
-  <option value=1>General References</option>
-  <option value=2>Utilities</option>
-  <option value=3>Palm Computing</option>
-  <option value=4>Stock Trading & Technical Analysis</option>
-  <option value=5>Quote Sources, Tools</option>
-  <option value=6>Business, ERP Projects</option>
-  <option value=7>XML and Other Data Formats</option>
-  <option value=8>Miscellaneous</option>
-  <option value=9>Historical References</option>
-	<option value=10>Gnucash Review & Rating Sites</option>
+  <option value=general>General References</option>
+  <option value=utilities>Utilities</option>
+  <option value=palm>Palm Computing</option>
+  <option value=stock>Stock Trading & Technical Analysis</option>
+  <option value=quote>Quote Sources, Tools</option>
+  <option value=erp>Business, ERP Projects</option>
+  <option value=xml>XML and Other Data Formats</option>
+  <option value=misc>Miscellaneous</option>
+  <option value=obsolete>Historical References</option>
+  <option value=review>Gnucash Review & Rating Sites</option>
 </select>
 <input type=submit value=Go>
 </td>
@@ -31,7 +31,9 @@
 
 <?php
   if ($links != "") { 
-		include($GLOBALS['DOCUMENT_ROOT']."/en/links/links-".$links.".phtml");
+	include($GLOBALS['DOCUMENT_ROOT']."/en/links/links-".$links.".phtml");
+  } else {
+	include($GLOBALS['DOCUMENT_ROOT']."/en/links/links-general.phtml");
   }
 ?>
 
