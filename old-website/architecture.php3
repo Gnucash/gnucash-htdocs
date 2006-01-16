@@ -25,15 +25,18 @@ disturbing the overall development.  (Never mind that
 modules help avoid spaghetti code and nasty, ugly hacks).
 The interfaces between modules are documented, and, for the 
 most part, stable and unchanging.
+<a href="images/diagrams/components.png">This block diagram 
+shows major components.</a>
 
 <p>GnuCash currently consists of the following modules:
 
 <h2>The Engine</h2>
 
-<p>The <dfn>Engine</dfn> (located under the <code>src/engine</code> directory in the
+<p>The <dfn>Engine</dfn> (located under the <code>src/engine</code> 
+directory in the
 GnuCash codebase) provides an interface for creating, manipulating, and
 destroying three basic financial entities: Accounts, Transactions (known
-as Journal Entries in accounting practice), and Splits (known as Ledger
+as Ledger Entries in accounting practice), and Splits (known as Journal
 Entries). These three entities are the central data structures of the
 GnuCash financial data model,
 <a href="images/diagrams/structures.png">as illustraded in this diagram.</a>
