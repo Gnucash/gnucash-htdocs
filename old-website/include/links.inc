@@ -9,7 +9,8 @@
         &nbsp;- <A HREF="gnome_screenshots.php3" ALT="Gnome Screen Shots">Screenshots&nbsp;-&nbsp;[ gnome ]</A><BR>
         &nbsp;- <A HREF="motif_screenshots.php3" ALT="Motif Screen Shots">Screenshots&nbsp;-&nbsp;[ motif ]</A><BR>
         &nbsp;- <A HREF="features.php3" ALT="Features">Features</A><BR>
-        &nbsp;- <A HREF="http://www.gnucash.org/pub/">Download</A><BR>
+        &nbsp;- <A HREF="http://www.linas.org/pub/">Download</A><BR>
+        &nbsp;- <A HREF="http://www.gnucash.org/pub/">Download (slow, use above)</A><BR>
         &nbsp;- <A HREF="http://download.sourceforge.net/gnucash/">Download (mirror)</A><BR>
         <P>
       <?php include("include/table_bottom.inc") ?>
