@@ -65,9 +65,10 @@ merged to eliminate duplicate transactions.
 <BR><BR>
 <LI>
 Handles internationalized dates and currencies.  The Gnucash 
-menus and popups have been translated to French, German, Swedish,
-Italian, Japanese and British English.  Documentation is available 
-in English and French.
+menus and popups have been translated to Brazilian Portuguese,
+Danish, French, German, Italian, Japanese, Norwegian, Spanish,
+Swedish, Russian, Ukranian, and British English.  Documentation 
+is available in English, French, Portuguese, Spanish.
 </LI>
 <BR><BR>
 <LI>
@@ -139,8 +140,7 @@ you might have about particular features and accounting practices.
 <BR><BR>
 <LI>
 Check Printing:  Checks may be printed in standard formats
-on common check stocks.  The latest versions of gnome-print 
-must be installed to use this feature.
+on common check stocks.  
 </LI>
 <BR><BR>
 <LI>
@@ -188,6 +188,28 @@ a completed download before parsing can begin.
 </LI>
 <BR><BR>
 </UL>
+
+The GnuCash menus and fields have been translated to the following languages:
+<BR>
+<BR>
+<UL>
+<LI>Brazilian Portuguese</LI>
+<LI>British English</LI>
+<LI>Danish</LI>
+<LI>French</LI>
+<LI>German</LI>
+<LI>Italian</LI>
+<LI>Japanese</LI>
+<LI>Norwegian</LI>
+<LI>Russian</LI>
+<LI>Spanish</LI>
+<LI>Swedish</LI>
+<LI>Ukranian</LI>
+<LI>US English</LI>
+</LI>
+<BR><BR>
+</UL>
+
 
  <?php include("include/table_bottom.inc"); ?>      
       <! END CONTENT >
