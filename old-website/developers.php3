@@ -30,28 +30,32 @@
   <b>Linas Vepstas</b>
   </dt>
   <dd>
-  liked what he saw: the GUI was slick, the code was documented and well structured, 
-  and it was all GPL'ed. And so he re-wrote it: adding cell-widgets to XbaeMatrix,
-  so that the combobox and arrows would make an even slicker GUI, rewrote the X-Accountant 
-  internals to add double-entry, an account hierarchy, split out a transaction 
-  mini-engine, add support for stocks, and spiff up the help menus. This was version 1.0 as 
-  of January 1998. Since then, for version 1.1, the engine was expanded and refined, 
-  and the register window code completely redesigned and made mostly 
-  Motif-(and GUI-)independent. Did some prototype OFX work. 
+    liked what he saw: the GUI was slick, the code was documented and 
+    well structured, and it was all GPL'ed. And so he re-wrote it: 
+    adding cell-widgets to XbaeMatrix, so that the combobox and arrows 
+    would make an even slicker GUI, rewrote the X-Accountant internals 
+    to add double-entry, an account hierarchy, split out a transaction 
+    mini-engine, added support for stocks, and spiffed up the help
+    menus. This was version 1.0 as of January 1998. For version 1.1 &amp;
+    1.2, the engine was expanded and refined, and the register window 
+    code completely redesigned and made mostly Motif-(and GUI-)independent.
+    Linas is now active with Gnumatic Incorporated, a company formed to 
+    enhance and support GnuCash for everyone, from home desktop users 
+    to commercial and professional accountants.
   </dd>
-</dl>
 
 <BR>
+<BR>
 
-<dl>
   <dt>
   <b>Rob Browning</b>
   </dt>
   <dd>
-  abused everyone for not using Perl, and then after we added Perl support, 
-  dumped Perl in favor of guile/scheme support. Rob maintains the build infrastructure, 
-  is handling the whole guile/Perl extension language thing, and is dealing with 
-  configuration and configurability. 
+    abused everyone for not using Perl, and then after we added Perl support, 
+    dumped Perl in favor of Guile/Scheme support. Rob built the build 
+    infrastructure, hacked the gtk code, and is whacking the file format.
+    Also, the re-write of reports and statement downloading in scheme, 
+    the g-wrap guile wrapper, and the user preferences.
   </dd>
 </dl>
 
@@ -62,47 +66,52 @@
   <b>Jeremy Collins</b> 
   </dt>
   <dd>
-   publicized the GnoMoney project widely and broadly, and then changed its name to GnuCash. 
-   Jeremy created the gnucash.org web site, registered the domain, 
-   got the initial GTK/gnome code working.  He now maintains the GNUcash.org website, FTP site,
-   and all of the other issue related to running your own domain!
+    publicized the GnoMoney project widely and broadly, and then 
+    changed its name to GnuCash.   (Actually, put the selection 
+    of the name up to popular vote.  Democracy is <b>not</b>
+    a good way to pick names.) 
+    Jeremy registered the domain name, and created and maintained 
+    the gnucash.org web site for years,
+    and got the initial GTK/gnome code working.  
   </dd>
-</dl>
 
 <BR>
+<BR>
 
-<dl>
+
   <dt>
   <b>Dave Peticolas</b>
   </dt>
   <dd>
     hacks obsessively on GnuCash. But he can stop anytime he wants to. Really. 
+    (As he is now the gatekeeper of the GnuCash CVS tree, be nice to him,
+    or he may decide to stop hacking in the middle of your patch).
   </dd>
-</dl>
 
 
 <BR>
+<BR>
 
-<dl>
   <dt>
   <b>Rob Clark</b>
   </dt>
   <dd>
-   wrote the original X-Accountant in Motif as a school project, 
-   taking it to version 0.9 by October 1997.
+    wrote the original X-Accountant in Motif as a school project, 
+    taking it to version 0.9 by October 1997.  Although every single 
+    line of his code has been re-written, his name appears as a 
+    credit in almost every file.  Such is the magic of copyrights.
   </dd>
-</dl>
 
 <BR>
+<BR>
 
-<dl>
   <dt>
   <b>Bill Gribble</b>
   </dt>
   <dd>
-  works magic. If your checks print wrong, blame him. If you don't like the amount
-  printed on your checks, blame him. If you don't like your your bank balances, your bank, 
-  or your life, blame him too. 
+    is not shy, or softly spoken.  So don't be shy if you find a bug in 
+    his code: QIF import, query API and transaction search, check-printing,
+    commodity and currency support, gtkhtml integration and report printing.
   </dd>
 </dl>
 
@@ -138,8 +147,9 @@
       <dt> <a href="http://www.hex.net/~cbbrowne"> Christopher B.
       Browne</a></dt>
 
-      <dd>for perl stock scripts, Guile-based QIF import code, lots
-      of changes to English documentation, and lots of guile code</dd>
+      <dd>for perl stock scripts, first draft of Guile-based QIF 
+      import code, lots of changes & maintenance of the English 
+      documentation, and more</dd>
 
       <dt> <a href="mailto:grahamc@zeta.org.au"> Graham
       Chapman</a></dt>
@@ -167,7 +177,10 @@
       <dt> <a href="mailto:pcondon@rackspace.com"> Patrick
       Condron</a></dt>
 
-      <dd>for webserver and T1 connection.</dd>
+      <dd>for setting up a webserver on a T1 connection on 
+          behalf of open source enthusiasts 
+	  <a href="http://www.rackspace.com">
+	  rackspace.com</a></dd>
 
       <dt> <a href="mailto:Ciaran.Deignan@bull.net"> Ciaran
       Deignan</a></dt>
@@ -210,7 +223,7 @@
 
       <dt> <a href="mailto:grib@billgribble.com"> Bill Gribble</a></dt>
 
-      <dd>qif importation code</dd>
+      <dd>QIF import code</dd>
 
       <dt> <a href="mailto:otto@bug.redhat.com"> Otto
       Hammersmith</a></dt>
@@ -294,7 +307,7 @@
 
       <dt> <a href="mailto:brent@baton.phys.lsu.edu"> Brent Neal</a></dt>
 
-      <dd>TIAA-CREF support.</dd>
+      <dd>TIAA-CREF support in the Finance::Quote perl module.</dd>
 
       <dt> <a href="mailto:spacey@inch.com"> Peter Norton</a></dt>
 
@@ -323,7 +336,7 @@
       <dt> <a href="mailto:peter@wuzel.m.isar.de"> Peter
       Pointner</a></dt>
 
-      <dd>motif and configuration patches</dd>
+      <dd>Motif and configuration patches</dd>
 
       <dt> <a href="mailto:maufk@csv.warwick.ac.uk"> Gavin
       Porter</a></dt>
