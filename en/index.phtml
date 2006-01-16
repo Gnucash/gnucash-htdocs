@@ -68,6 +68,9 @@ traditional Unixes: Solaris, AIX, and so on.
         $fa  =  file($newspath.$key); 
         $n=count($fa); 
 
+        echo("\n<a name=\"");
+	print $key;
+	echo("\">");
         echo("<table border=0 cellpadding=1 cellspacing=0 width=\"100%\">");
         echo("<tr><td valign=middle align=center bgcolor=\"#666699\">");
         echo("<table border=0 cellpadding=5 cellspacing=1 bgcolor=\"#cacaf7\" width=\"100%\">");
@@ -76,7 +79,9 @@ traditional Unixes: Solaris, AIX, and so on.
         echo("<tr><td> <img src=\"/images/icons/document.txt.gif\" width=16 height=16 border=0 alt=\"document icon\">&nbsp;</td>");
        
         echo("<td>");
+        echo("<span class=\"rss:item\">");
 	print $fa[0];
+        echo("</span>");
 	print  " - <font size=-1><b>(".date( "Y-m-d",$newsfile[$key]);
 	print  "&nbsp; &nbsp;".date( "H:i:s",$newsfile[$key]). ")</b></font></td>\n"; 
         echo("</tr> </table> </td> </tr>");
@@ -86,6 +91,7 @@ traditional Unixes: Solaris, AIX, and so on.
 	    print $fa[$i];
         } 
         echo("</font> </td> </tr> </table> </tr> </table><br><br>");
+	echo ("</a>\n");
 
     }    
     
