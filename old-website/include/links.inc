@@ -11,7 +11,9 @@
         &nbsp;- <A HREF="http://www.hthoma.de/projekte/gnucash/index.html">GnuCash auf deutsch</A><BR>
         &nbsp;- <A HREF="http://www.linas.org/pub/gnucash/">Download</A><BR>
         &nbsp;- <A HREF="http://www.gnucash.org/pub/">Download (mirror)</A><BR>
+	<!--
         &nbsp;- <A HREF="http://download.sourceforge.net/gnucash/">Download (incomplete mirror)</A><BR>
+	-->
         <P>
       <?php include("include/table_bottom.inc") ?>
 
