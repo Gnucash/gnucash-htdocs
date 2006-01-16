@@ -88,17 +88,17 @@ the lines of 'most obvious' to 'far out there'.
 <dd>GnuCash, the Gnome Desktop, and the KDE desktop have been flying in 
     the face of 'common wisdom': the coming extinction of the 
     general-purpose PC.  According to this theory, lithe, portable,
-    special-purpose hand-held devices will make PC's irrelevent. 
+    special-purpose hand-held devices will make PC's irrelevant. 
     Of course, the theory is flawed:  a large keyboard and a large screen
     provide convenience that no small palm-top can provide.  None-the-less,
-    one must look over ones shoulder.   Can GnuCash be slimmed down
+    one must look over ones shoulder.   Can GnuCash be slimed down
     and fit onto one of those Linux hand-helds, e.g. the YOPI?
     Right now, it depends intimately on a large number of packages for 
-    many features, and so a slimming excercise is hard to imagine. 
+    many features, and so a sliming exercise is hard to imagine. 
     But then, a financial manger is a cornerstone application for 
     the desktop, it is equally so for the palm-top.  Someday, not
     too long from now, wireless, hand-held 'financial browser' will
-    be as ubiquitus as the wallet.
+    be as ubiquitous as the wallet.
     <p>
     
 
@@ -161,7 +161,7 @@ the lines of 'most obvious' to 'far out there'.
     <p>
     On the other hand, the GnuCash infrastructure is becoming general 
     enough that it wouldn't be hard to mold it into a variety of 
-    related financial tools.  And if GnuCash really is to suceed in the
+    related financial tools.  And if GnuCash really is to succeed in the
     business accounting world, it will have to become savvy in talking to 
     other systems.
     <p>
