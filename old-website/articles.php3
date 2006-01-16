@@ -9,6 +9,21 @@
         
       <dl>
       <dt>
+      <b><a href="http://www.linuxnews.com/stories.php?story=526">What's New with GnuCash</a></b>
+      (<a href="/press-archive/linuxnews-2000-10/stories.html">archival copy</a>)
+      </dt>
+      <dd>GnuCash, the open source accounting and finance system, is gearing up to become the
+      premier accounting package on Linux--and is rapidly finding the means to do it. 
+      <p>
+
+      Rob Browning, one of GnuCash's developers, explained that the project has been expanding of
+      late. "Right now we have four full-time developers, and we're about to hire a few more," he said,
+      attributing the growth of the staff--and the project--to financial backing from Gnumatic
+      Incorporated, announced August 14, 2000. 
+      <br><br>
+      </dd>
+
+      <dt>
       <b><a href="http://www.linuxnews.com/news/?1,2">The GNUCash Project: Focusing on Money Management for Linux</a></b>
       (<a href="/press-archive/linuxmall/linuxmall.com,news,1,2,index.html">archival copy</a>)
       </dt>
