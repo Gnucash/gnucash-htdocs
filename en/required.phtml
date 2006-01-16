@@ -12,6 +12,12 @@ on to implement its major functions.  You will need to install a recent
 version of these to compile and work with gnucash.
 <br><br>
 
+The majority of the GnuCash 1.6.0 dependencies are satisfied by <a
+href="http://www.gnome.org/">Gnome 1.4</a>.  The only ones on top of a
+standard Gnome 1.4 installation are <a href="#guppi">Guppi</a>, <a
+href="#guile">Guile</a>, <a href="#slib">slib</a> and <a
+href="#gwrap">G-Wrap</a>.
+<br><br>
 
 <table border=0 cellpadding=1 cellspacing=0 width="100%">
   <tr>
@@ -78,12 +84,12 @@ version of these to compile and work with gnucash.
        <table border=0 cellpadding=0 cellspacing=0>
        <tr>
          <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
-         <td valign=top>Guile</td>
+         <td valign=top><a name="guile">Guile</a></td>
        </tr>
        </table>
      </td>
-     <td valign=top>A Scheme interpreter with C programming interfaces - This is how gnucash provides 'extension' and rapid implementation capabilities</td>
-     <td valign=top><a href="http://www.gnu.org/software/guile/guile.html">http://www.gnu.org/software/guile/guile.html</a></td>
+     <td valign=top>A Scheme interpreter with C programming interfaces - This is how gnucash provides 'extension' and rapid implementation capabilities.</td>
+     <td valign=top><a href="http://www.gnu.org/software/guile/guile.html">http://www.gnu.org/software/guile/guile.html</a> -   You'll need at least 1.3, but 1.4 is consierably improved.</td>
    </tr>
 
    <tr bgcolor=#ececff>
@@ -91,15 +97,19 @@ version of these to compile and work with gnucash.
        <table border=0 cellpadding=0 cellspacing=0>
        <tr>
          <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
-         <td valign=top>G-wrap</td>
+         <td valign=top><a name="gwrap">G-wrap</a></td>
        </tr>
        </table>
      </td>
      <td valign=top>A tool for autogenerating scheme bindings for C lanugage functions, structures & enums.</td>
-     <td valign=top><a href="NO URL">NO URL</a></td>
+     <td valign=top><a href="ftp://ftp.gnucash.org/pub/g-wrap/">ftp://ftp.gnucash.org/pub/g-wrap/</a> - You'll want the latest in the 1.1 series.</td>
    </tr>
 
-   <tr bgcolor=#ececff>
+<!-- Scheme isn't really a dependency, like ... there's nothing to
+download and install for end-users, except guile, which is seperately
+mentioned.
+		-- jsled, 2001.06.11. -->
+   <!-- tr bgcolor=#ececff>
      <td valign=top>
        <table border=0 cellpadding=0 cellspacing=0>
        <tr>
@@ -110,14 +120,14 @@ version of these to compile and work with gnucash.
      </td>
      <td valign=top>The Scheme Language</td>
      <td valign=top><a href="http://www.scheme.org/">http://www.scheme.org/</a></td>
-   </tr>
+   </tr -->
 
    <tr bgcolor=#ececff>
      <td valign=top>
        <table border=0 cellpadding=0 cellspacing=0>
        <tr>
          <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
-         <td valign=top>slib</td>
+         <td valign=top><a name="slib">slib</a></td>
        </tr>
        </table>
      </td>
@@ -185,7 +195,7 @@ version of these to compile and work with gnucash.
        </tr>
        </table>
      </td>
-     <td valign=top>A perl module to get stock price quotes and currency exchange rates from off the net - This is how gnucash accesses price data on the net.</td>
+     <td valign=top>A perl module to get stock price quotes and currency exchange rates from off the net - This is how gnucash accesses price data on the net. You can use the 'update-finance-quote' script included with the distribution to obtain a recent version (CPAN is required).</td>
      <td valign=top><a href="http://finance-quote.sourceforge.net/">http://finance-quote.sourceforge.net/</a></td>
    </tr>
 
@@ -207,12 +217,12 @@ version of these to compile and work with gnucash.
        <table border=0 cellpadding=0 cellspacing=0>
        <tr>
          <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
-         <td valign=top>Guppi</td>
+         <td valign=top><a name="guppi">Guppi</a></td>
        </tr>
        </table>
      </td>
      <td valign=top>A graphical plotting and analysis tool - used to generate and display gnucash charts and plots.</td>
-     <td valign=top><a href="http://www.gnome.org/guppi/">http://www.gnome.org/guppi/</a></td>
+     <td valign=top><a href="http://www.gnome.org/guppi/">http://www.gnome.org/guppi/</a> - Any recent version will work, but 0.35.5 or later is required for full functionality.</td>
    </tr>
 
    <tr bgcolor=#ececff>
