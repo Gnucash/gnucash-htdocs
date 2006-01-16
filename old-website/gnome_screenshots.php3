@@ -12,6 +12,10 @@
 <center>
 Screen shots of the current stable (version 1.4.3) release
 <br>
+Be sure to checkout the 
+<a href="gnome-1.5-screenshots.php3">screenshots</a> for the new unstable
+1.5.x beta version of gnucash.
+<br>
 <br>
 </center>
 
