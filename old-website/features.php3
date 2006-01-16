@@ -19,7 +19,7 @@ as a checkbook register, yet backed by professional
 accounting principles to ensure balanced books and accurate reports.
 GnuCash is backed by an active development community and is blossoming
 into a full-fledged accounting system.  Developed under the GPL, 
-you have no need to worry about obsolesence: GnuCash will be there 
+you have no need to worry about obsolescence: GnuCash will be there 
 for you.
 <BR>
 <BR>
@@ -65,7 +65,7 @@ merged to eliminate duplicate transactions.
 <BR><BR>
 <LI>
 Handles internationalized dates and currencies.  The Gnucash 
-menus and popups have been translated to French, German, Sweedish,
+menus and popups have been translated to French, German, Swedish,
 Italian, Japanese and British English.  Documentation is available 
 in English and French.
 </LI>
@@ -126,7 +126,7 @@ Additional pricing sources are added regularly.
 </LI>
 <BR><BR>
 <LI>
-Keyboard accelerators and transaction autocompletion make
+Keyboard accelerators and transaction auto-completion make
 entering transactions quick and smooth.
 </LI>
 <BR><BR>
@@ -143,7 +143,7 @@ must be installed to use this feature.
 </LI>
 <BR><BR>
 <LI>
-Preferences: the appearence and behaviour of the main window
+Preferences: the appearance and behavior of the main window
 and the register windows can be thoroughly customized through
 n application preferences dialog.
 </LI>
