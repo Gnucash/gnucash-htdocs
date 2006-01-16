@@ -12,7 +12,7 @@
 <BR>
 
 <B>GNU Enterprise</B> - A project to create an ERP system for small, 
-    medium and large busnisses -
+    medium and large businesses -
     <A HREF="http://www.gnue.org/">http://www.gnue.org/</a>
     <BR><BR>
 
