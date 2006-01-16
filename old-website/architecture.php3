@@ -16,7 +16,7 @@ day-to-day workhorse code is written in Scheme, primarily
 for its power, expressiveness and ease of development.
 The user interface is gtk/gnome, some of it done up in C,
 some in scheme, and some with the 
-GUI designer tool <a href="glade.pn.org">glade</a>.
+GUI designer tool <a href="http://glade.pn.org">glade</a>.
 
 <p>
 GnuCash is modular, thereby allowing separate individuals
@@ -35,7 +35,8 @@ GnuCash codebase) provides an interface for creating, manipulating, and
 destroying three basic financial entities: Accounts, Transactions (known
 as Journal Entries in accounting practice), and Splits (known as Ledger
 Entries). These three entities are the central data structures of the
-GnuCash financial data model.
+GnuCash financial data model,
+<a href="images/diagrams/structures.png">as illustraded in this diagram.</a>
 
 <p>The Engine code contains no GUI code whatsoever, and is essentially
 OS-neutral. It is written entirely in C.
