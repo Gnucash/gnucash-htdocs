@@ -50,6 +50,13 @@ banners on your site.
 470 x 62 pixels</a>
 <p>
 
+<a href="/images/banners/gnu_bill.gif">
+<img src="/images/banners/gnu_bill.gif"
+     alt="[US. Dollar Bill w/Stallman's Gnu]">
+<br clear>
+350 x 147 pixels</a>
+<p>
+
 
 
 
