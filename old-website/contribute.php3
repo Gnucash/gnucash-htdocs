@@ -34,18 +34,18 @@ Here's how you might fit in:
 <dl>
 <dt><b>If you are a programmer:</b>
 <dd>Get on the <a href="maillist.php3">gnucash-devel</a>
-    mailing list.  Set up cvs on your machine, and check 
+    mailing list.  Set up CVS on your machine, and check 
     out the <a href="source_code.php3">source code</a>.
     Take a look at the build readme's in the doc subdirectory
     and get hacking.  On the other hand, depending on your 
-    temperment, you'll probably want to discuss your hacks
+    temperament, you'll probably want to discuss your hacks
     on the mailing list: this will avoid devolution and 
     other unpleasentries of finding out that not everyone 
     thinks your patch is the greatest.  To get a better
     idea of what's going on, study the 
     <a href="architecture.php3">architectural overview</a>.
     To get an idea of what's in store, and who's doing what,
-    lokk over the 
+    look over the 
     <a href="http://www.linas.org/linux/gnucash/projects.html">
     projects list</a>.  Its long, but it should help orient
     and give an idea of the status of various components.
@@ -63,7 +63,7 @@ Here's how you might fit in:
     currencies.  If not, either there's a bug, your machine
     is misconfigured, or your native language is not 
     Danish, English, French, German, Italian, Japanese, 
-    Russian or Sweedish.  
+    Russian or Swedish.  
     <p>
     This does not mean that the translation is perfect: if 
     the wrong phrase or word is used in menus or dialogues, 
@@ -72,13 +72,13 @@ Here's how you might fit in:
     is displayed, or there are other localization problems, 
     you should contact the 
     <a href="maillist.php3">gnucash-devel</a> mailing list.
-    Note that the input methods for asian (Japanese, Chinese, 
+    Note that the input methods for Asian (Japanese, Chinese, 
     etc.) and right-to-left languages are partially broken:
-    we are looking for programmers who are knowledgable enough 
+    we are looking for programmers who are knowledgeable enough 
     to fix in input method problems in the gnome input widgets 
-    that we use.  Also: I'd personally like an 'asian-howto'
-    written in english so that I (actually, we, the 
-    english-speaking developers) could set up our boxes here 
+    that we use.  Also: I'd personally like an 'Asian-howto'
+    written in English so that I (actually, we, the 
+    English-speaking developers) could set up our boxes here 
     for a demo.  Write <a href="linas@linas.org>linas at linas.org</a>
     if you can help me set up my machine for Japanese or Chinese.
     </p>
@@ -89,10 +89,10 @@ Here's how you might fit in:
     look at the translation file in the <tt>po</tt> directory.
     </p>
     <p>
-    We also need non-english translations of the website.
+    We also need non-English translations of the website.
     If you've got one of these, write
     <a href="mailto:webmaster@gnucash.org">webmaster at gnucash.org</a>.
-    Non-english translations of the documentation are also needed.
+    Non-English translations of the documentation are also needed.
     The sticky part is, of course, that the documentation is quite
     rough, and is currently being re-written.  If you are a 
     great writer, contact us.
@@ -128,7 +128,7 @@ Here's how you might fit in:
 <dd>The documentation needs an overhaul. Some people may think 
     that accounting is boring, but that doesn't mean that the 
     documentation should put you to sleep.  And having the 
-    latest in finacial news, creating something along the lines 
+    latest in financial news, creating something along the lines 
     of advogato for financial topics, might not be a bad idea.
 </dl>
 
