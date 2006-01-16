@@ -12,7 +12,7 @@
       <b><a href="http://www.linuxorbit.com/features/newbie10.php3">
       The Newbie test drives GnuCash</a></b>
       (<a href="/press-archive/linuxorbit-2000-12/features-newbie10.php3.html">archival copy</a>)
-      (December 2000)
+      (Linux Orbit, December 2000)
       </dt>
       <dd>
       I'd been looking around for something that might interest a 
@@ -28,7 +28,7 @@
       <b><a href="http://www.linuxnews.com/stories.php?story=526">
       What's New with GnuCash</a></b>
       (<a href="/press-archive/linuxnews-2000-10/stories.html">archival copy</a>)
-      (October 2000)
+      (LinuxNews, October 2000)
       </dt>
       <dd>GnuCash, the open source accounting and finance system, is 
       gearing up to become the premier accounting package on Linux--and 
@@ -45,7 +45,7 @@
       <b><a href="http://www.lwn.net/2000/0504/devel.phtml">
       Another look at gnucash</a></b>
       (<a href="/press-archive/lwn.net-2000-0504/devel.html">archival copy</a>)
-      (May 2000)
+      (LWN.net, May 2000)
       </dt>
       <dd>
       Last December we ran a review of gnucash that concluded 
@@ -63,7 +63,7 @@
       <b><a href="http://www.linuxworld.com/linuxworld/lw-2000-04/f_lw-04-vcontrol_4.html">
       There's no accounting for Linux</a></b>
       (<a href="/press-archive/linuxworld-2000-04/f_lw-04-vcontrol_4.html">archival copy</a>)
-      (April 2000)
+      (LinuxWorld, April 2000)
       </dt>
       <dd>
       Is Linux getting mainstream? Not if you base your conclusion 
@@ -76,10 +76,10 @@
       </dd>
  
       <dt>
-      <b><a href="http://www.linuxnews.com/news/?1,2">
+      <b><a href="http://www.linuxmall.com/news/?1,2">
       The GNUCash Project: Focusing on Money Management for Linux</a></b>
       (<a href="/press-archive/linuxmall/linuxmall.com,news,1,2,index.html">archival copy</a>) 
-      (March 2000)
+      (LinuxMall, March 2000)
       </dt>
       <dd>
       Five years ago, Linas Vepstas was working "with a .com. We were with 
@@ -96,7 +96,7 @@
       <b><a href="http://lwn.net/1999/features/GnuCash/">
       A look at GnuCash 1.2.5</a></b>
       (<a href="/press-archive/lwn.net-1999-features/lwn.net,1999,features,GnuCash,index.html">archival copy</a>)
-      (December 1999)
+      (LWN.net, December 1999)
       </dt>
       <dd>
       Here is an unpleasant confession for an LWN author to make: 
