@@ -46,7 +46,6 @@ software used in gnucash
 <HR>
 <B>Gtk+</B> - <a href="http://www.gtk.org/">http://www.gtk.org</a><BR>
 <B>GNOME</B> - <a href="http://www.gnome.org">http://www.gnome.org</a><BR>
-<B>GtkSheet</B> - <a href="http://www.ifir.edu.ar/grupos/gtk/index.html">http://www.ifir.edu.ar/grupos/gtk/index.html</A><BR>
 <HR>
 <BR><BR>
 <B>Scripting Interface:</B><BR>
