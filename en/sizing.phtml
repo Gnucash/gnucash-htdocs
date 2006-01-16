@@ -8,425 +8,392 @@
 
 <p>
 It can often be quite interesting to study the source code metrics behind
-a software development project.  GnuCash has grown, over the years, from
-a small handy electronic checkbook to a rather large and multi-featured
-desktop app.  
+a software development project.   Not a surprising interest: its accounting
+afterall.  GnuCash has grown, over the years, from a small handy electronic 
+checkbook to a rather large and multi-featured desktop app.  
 </p>
 <p>
 The table below shows some historical lines-of-code and
-number-of-files metrics for the <SPAN
-CLASS="APPLICATION"
->GnuCash</SPAN
->
+number-of-files metrics for the <SPAN CLASS="APPLICATION">GnuCash</SPAN>
 development project.  Note that not all of the code is counted: for
 instance, the Makefiles and configure.in and autogen.sh are not counted. 
 Also, files that are automatically generated are not counted, nor are
 files that have been 'borrowed' from other projects. Also not counted 
-are experimental files, miscellaneous perl scripts, various translators,
-addons and utilities.</P
-><P
->Note also that KLOC's are not a good metric of programmer productivity,
-nor even that <SPAN
-CLASS="APPLICATION"
->wc</SPAN
-> is a good way of counting
+are experimental files, miscellaneous perl scripts, various converters,
+addons and utilities.  Finally, glade files are not counted, although
+large parts of the overall GUI are described in glade files.
+</P>
+<P>
+Note also that KLOC's are not a good metric of programmer productivity,
+nor even that <SPAN CLASS="APPLICATION" >wc</SPAN > is a good way of counting
 KLOC's.  Much better measures are complexity metrics, which, for
 example, count the number and size of if-then-else blocks, or the number
 and size of all blocks, or the number of math operators per each
 statement.  Maybe someday we'll run one of those tools on this code. 
-For now, this is what we have.</P
-><P
-><DIV
-CLASS="TABLE"
-><P
-><B
->Table 1.  Historical Development Stats </B
-></P
-><TABLE
-BORDER="1"
-CLASS="CALSTABLE"
-><THEAD
-><TR
-><TH
-ALIGN="LEFT"
-VALIGN="TOP"
->Version</TH
-><TH
-ALIGN="LEFT"
-VALIGN="TOP"
->engine</TH
-><TH
-ALIGN="LEFT"
-VALIGN="TOP"
->register</TH
-><TH
-ALIGN="LEFT"
-VALIGN="TOP"
->ledger</TH
-><TH
-ALIGN="LEFT"
-VALIGN="TOP"
->motif</TH
-><TH
-ALIGN="LEFT"
-VALIGN="TOP"
->gnome</TH
-><TH
-ALIGN="LEFT"
-VALIGN="TOP"
->scheme</TH
-><TH
-ALIGN="LEFT"
-VALIGN="TOP"
->docs</TH
-><TH
-ALIGN="LEFT"
-VALIGN="TOP"
->txt</TH
-><TH
-ALIGN="LEFT"
-VALIGN="TOP"
->Total</TH>
+For now, this is what we have.
+</P><P>
+<DIV CLASS="TABLE">
+<P><B >Table 1.  Historical Development Stats </B></P>
+<TABLE BORDER="1" CLASS="CALSTABLE">
+<THEAD>
+<TR
+><TH ALIGN="LEFT" VALIGN="TOP" >Version</TH
+><TH ALIGN="LEFT" VALIGN="TOP" >engine</TH
+><TH ALIGN="LEFT" VALIGN="TOP" >backend</TH
+><TH ALIGN="LEFT" VALIGN="TOP" >register</TH
+><TH ALIGN="LEFT" VALIGN="TOP" >ledger</TH
+><TH ALIGN="LEFT" VALIGN="TOP" >motif</TH
+><TH ALIGN="LEFT" VALIGN="TOP" >gnome</TH
+><TH ALIGN="LEFT" VALIGN="TOP" >misc app</TH
+><TH ALIGN="LEFT" VALIGN="TOP" >import export</TH
+><TH ALIGN="LEFT" VALIGN="TOP" >reports</TH
+><TH ALIGN="LEFT" VALIGN="TOP" >scheme (misc)</TH
+><TH ALIGN="LEFT" VALIGN="TOP" >business</TH
+><TH ALIGN="LEFT" VALIGN="TOP" >test</TH
+><TH ALIGN="LEFT" VALIGN="TOP" >user docs</TH
+><TH ALIGN="LEFT" VALIGN="TOP" >internal txt</TH
+><TH ALIGN="LEFT" VALIGN="TOP" >Total</TH>
 <TH ALIGN="LEFT" VALIGN="TOP" >Languages</TH >
 <TH ALIGN="LEFT" VALIGN="TOP" >Author Credits</TH >
-</TR
-></THEAD
-><TBODY>
+</TR>
+</THEAD><TBODY>
 
+<!-------------------------------------------------->
 <tr>
-<td>xacc-0.9
-         Sept 97</td>
+<td>xacc-0.9 Sept 97</td>
 <td>-</td>
 <td>-</td>
 <td>-</td>
-<td>34 files
-         (7.5+0.9)</td>
+<td>-</td>
+<td>34 files (7.5+0.9)</td>
 <td>-</td>
 <td>-</td>
-<td>5 files
-         (0.4)</td>
-<td>1 file
-         (0.1)</td>
-<td>40 files
-         (8.8)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>5 files (0.4)</td>
+<td>1 file (0.1)</td>
+<td>40 files (8.8)</td>
 <td>1</td>
 <td>1</td>
 </tr>
+<!-------------------------------------------------->
 <tr>
-<td>xacc-0.9w
-         Dec 97</td>
+<td>xacc-0.9w Dec 97</td>
 <td>-</td>
 <td>-</td>
 <td>-</td>
-<td>51 files
-         (13.8+1.5)</td>
+<td>-</td>
+<td>51 files (13.8+1.5)</td>
 <td>-</td>
 <td>-</td>
-<td>9 files
-         (0.8)</td>
-<td>1 file
-         (0.1)</td>
-<td>61 files
-         (16.2)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>9 files (0.8)</td>
+<td>1 file (0.1)</td>
+<td>61 files (16.2)</td>
 <td>1</td>
 <td>2</td>
 </tr>
+<!-------------------------------------------------->
 <tr>
-<td>xacc-1.0.17
-         Feb 98</td>
+<td>xacc-1.0.17 Feb 98</td>
 <td>-</td>
 <td>-</td>
 <td>-</td>
-<td>52 files
-         (14.8+1.8)</td>
+<td>-</td>
+<td>52 files (14.8+1.8)</td>
 <td>-</td>
 <td>-</td>
-<td>12 files
-         (1.4)</td>
-<td>4 files
-         (0.3)</td>
-<td>68 files
-         (18.3)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>12 files (1.4)</td>
+<td>4 files (0.3)</td>
+<td>68 files (18.3)</td>
 <td>1</td>
 <td>7</td>
 </tr>
+<!-------------------------------------------------->
 <tr>
-<td>gnucash-1.1.15
-         Aug 98</td>
-<td>24 files
-         (6.2+1.5)</td>
-<td>31 files
-         (6.1+1.7)</td>
-<td>5 files
-         (1.4+0.4)</td>
-<td>30 files
-         (7.4+0.7)</td>
-<td>17 files
-         (3.4+0.5)</td>
-<td>3 files
-         (0.3)</td>
-<td>16 files
-         (1.9)</td>
-<td>17 files
-         (1.8)</td>
-<td>159 files
-         (34.7)</td>
+<td>gnucash-1.1.15 Aug 98</td>
+<td>24 files (6.2+1.5)</td>
+<td>-</td>
+<td>31 files (6.1+1.7)</td>
+<td>5 files (1.4+0.4)</td>
+<td>30 files (7.4+0.7)</td>
+<td>17 files (3.4+0.5)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>3 files (0.3)</td>
+<td>-</td>
+<td>-</td>
+<td>16 files (1.9)</td>
+<td>17 files (1.8)</td>
+<td>159 files (34.7)</td>
 <td>1 (0.17)</td>
 <td>25</td>
 </tr>
+<!-------------------------------------------------->
 <tr>
-<td>gnucash-1.2.2
-         Aug 99</td>
-<td>41 files
-         (10.2+3.6)</td>
-<td>28 files
-         (5.5+1.7)</td>
-<td>14 files
-         (2.4+0.6)</td>
-<td>26 files
-         (8.7+0.5)</td>
+<td>gnucash-1.2.2 Aug 99</td>
+<td>41 files (10.2+3.6)</td>
 <td>-</td>
-<td>14 files
-         (1.4)</td>
-<td>30 files
-         (2.6)</td>
-<td>15 files
-         (1.8)</td>
-<td>168 files
-         (39.0)</td>
+<td>28 files (5.5+1.7)</td>
+<td>14 files (2.4+0.6)</td>
+<td>26 files (8.7+0.5)</td>
+<td>-</td> 
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>14 files (1.4)</td>
+<td>-</td>
+<td>-</td>
+<td>30 files (2.6)</td>
+<td>15 files (1.8)</td>
+<td>168 files (39.0)</td>
 <td>3 (0.54)</td>
 <td>41</td>
 </tr>
+<!-------------------------------------------------->
 <tr>
-<td>gnucash-1.3.6
-         April 2000</td>
-<td>41 files
-         (12.9+4.0)</td>
-<td>32 files
-         (6.8+2.1)</td>
-<td>19 files
-         (4.0+0.8)</td>
+<td>gnucash-1.3.6 April 2000</td>
+<td>41 files (12.9+4.0)</td>
 <td>-</td>
-<td>78 files
-         (32.2+3.0)</td>
-<td>74 files
-         (4.0+0.7+12.3)</td>
-<td>33 files
-         (7.8)</td>
-<td>25 files
-         (4.5)</td>
-<td>302 files
-         (95.1)</td>
+<td>32 files (6.8+2.1)</td>
+<td>19 files (4.0+0.8)</td>
+<td>-</td> 
+<td>78 files (32.2+3.0)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>74 files (4.0+0.7+12.3)</td>
+<td>-</td>
+<td>-</td>
+<td>33 files (7.8)</td>
+<td>25 files (4.5)</td>
+<td>302 files (95.1)</td>
 <td>5 (4.3) </td>
 <td>61</td>
 </tr>
+<!-------------------------------------------------->
 <tr>
-<td>gnucash-1.4.6
-         Sept 2000</td>
-<td>43 files
-         (13.0+3.6)</td>
-<td>27 files
-         (5.9+2.0)</td>
-<td>24 files
-         (5.4+1.8)</td>
+<td>gnucash-1.4.6 Sept 2000</td>
+<td>43 files (13.0+3.6)</td>
 <td>-</td>
-<td>82 files
-         (33.8+3.0)</td>
-<td>68 files
-         (4.0+0.7+15.5)</td>
-<td>36 files
-         (9.3)</td>
-<td>36 files
-         (4.8)</td>
-<td>316 files
-         (101.9)</td>
+<td>27 files (5.9+2.0)</td>
+<td>24 files (5.4+1.8)</td>
+<td>-</td>
+<td>82 files (33.8+3.0)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>68 files (4.0+0.7+15.5)</td>
+<td>-</td>
+<td>-</td>
+<td>36 files (9.3)</td>
+<td>36 files (4.8)</td>
+<td>316 files (101.9)</td>
 <td>7 (6.0)</td>
 <td>82</td>
 </tr>
+<!-------------------------------------------------->
 <tr>
-<td>gnucash-1.4.12
-         April 2001</td>
-<td>43 files
-         (13.1+3.6)</td>
-<td>27 files
-         (5.9+2.0)</td>
-<td>24 files
-         (5.4+1.8)</td>
+<td>gnucash-1.4.12 April 2001</td>
+<td>43 files (13.1+3.6)</td>
 <td>-</td>
-<td>82 files
-         (33.5+3.0)</td>
-<td>73 files
-         (4.0+0.7+17.7)</td>
-<td>43 files
-         (11.5)</td>
-<td>39 files
-         (6.0)</td>
-<td>331 files
-         (108.2)</td>
+<td>27 files (5.9+2.0)</td>
+<td>24 files (5.4+1.8)</td>
+<td>-</td>
+<td>82 files (33.5+3.0)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>73 files (4.0+0.7+17.7)</td>
+<td>-</td>
+<td>-</td>
+<td>43 files (11.5)</td>
+<td>39 files (6.0)</td>
+<td>331 files (108.2)</td>
 <td>12 (17.8)</td>
 <td>97</td>
 </tr>
+<!-------------------------------------------------->
 <tr>
-<td>gnucash-1.5.2
-         Sept 2000</td>
-<td>46 files
-         (14.9+3.7)</td>
-<td>29 files
-         (6.3+2.0)</td>
-<td>25 files
-         (5.7+1.8)</td>
+<td>gnucash-1.5.2 Sept 2000</td>
+<td>46 files (14.9+3.7)</td>
 <td>-</td>
-<td>83 files
-         (35.8+2.9)</td>
-<td>73 files
-         (4.6+0.8+16.8)</td>
-<td>37 files
-         (10.7)</td>
-<td>48 files
-         (8.2)</td>
-<td>341 files
-         (114.2)</td>
+<td>29 files (6.3+2.0)</td>
+<td>25 files (5.7+1.8)</td>
+<td>-</td>
+<td>83 files (35.8+2.9)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>73 files (4.6+0.8+16.8)</td>
+<td>-</td>
+<td>-</td>
+<td>37 files (10.7)</td>
+<td>48 files (8.2)</td>
+<td>341 files (114.2)</td>
 <td>8 (7.8)</td>
 <td>89</td>
 </tr>
+<!-------------------------------------------------->
 <tr>
-<td>gnucash-1.6.0
-         June 2001</td>
-<td>139 files
-         (42.8+8.3)</td>
-<td>28 files
-         (5.7+2.0)</td>
-<td>23 files
-         (10.1+1.5)</td>
+<td>gnucash-1.6.0 June 2001</td>
+<td>139 files (42.8+8.3)</td>
 <td>-</td>
-<td>132 files
-         (60.0+4.2)</td>
-<td>102 files
-         (6.2+0.8+27.3)</td>
-<td>64 files
-         (12.1)</td>
-<td>69 files
-         (12.9)</td>
-<td>455 files
-         (193.9)</td>
+<td>28 files (5.7+2.0) </td>
+<td>23 files (10.1+1.5)</td>
+<td>-</td>
+<td>132 files (60.0+4.2)</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>102 files (6.2+0.8+27.3)</td>
+<td>-</td>
+<td>-</td>
+<td>64 files (12.1)</td>
+<td>69 files (12.9)</td>
+<td>455 files (193.9)</td>
 <td>11 (18.7)</td>
 <td>123</td>
 </tr>
-<!--
-not all columns filled in yet
+<!-------------------------------------------------->
 <tr>
-<td>gnucash-1.7.2
-         November 2002</td>
-<td>xxx139 files
-         (42.8+8.3)</td>
-<td>xxx28 files
-         (5.7+2.0)</td>
-<td>xx23 files
-         (10.1+1.5)</td>
+<td>gnucash-1.7.2 November 2002</td>
+<td>104 files (28.7+7.8+3.3)</td>
+<td>89 files (30.0+3.3)</td>
+<td>34 files (5.2+2.0) <hr> 29 files (10.5+1.2)</td>
+<td>17 files (9.4+0.7)</td>
 <td>-</td>
-<td>xx132 files
-         (60.0+4.2)</td>
-<td>xx102 files
-         (6.2+0.8+27.3)</td>
-<td>xx64 files
-         (12.1)</td>
-<td>xx69 files
-         (12.9)</td>
-<td>xx455 files
-         (193.9)</td>
-<td>xx11 (18.7)</td>
+<td>143 files (56.0+4.7+0.9)</td>
+<td>75 files (17.0+2.5+5.1)</td>
+<td>78 files (11.1+1.5+7.3)</td>
+<td>38 files (2.4+0.1+14.2)</td>
+<td>17 files (3.4)</td>
+<td>94 files (19.9+1.9+4.5)</td>
+<td>72 files (7.9+0.1+0.7)</td>
+<td>83 files (22.2)</td>
+<td>62 files (11.6)</td>
+<td>935 files (297.1)</td>
+<td>21 (56.1)</td>
 <td>130</td>
 </tr>
--->
 </TBODY ></TABLE ></DIV >
 
- </P
-><P
->Each cell displays the following:
+ </P ><P >
+ Each cell displays the following:
     
-     number of *c and *.h files
-     (KLOCS in *.c + KLOCS in *.h)
-     (or KLOCS of *.txt or KLOCS of *.scm as appropriate)
+     number of *c and *.h and *.scm files
+     (KLOCS in *.c + KLOCS in *.h + KLOCS in *.scm)
+	  If there are no *.scm files in the directory, then only (KLOCS in *.c + KLOCS in *.h)
+	  are displayed.  If there is only one number in the parenthesis, it is the approriate
+	  KLOC count for that statistic.
 
- </P
-><P
->where KLOC == kilo-lines-of-code, as reported by
-   <SPAN
-CLASS="APPLICATION"
->wc</SPAN
->.
+ </P ><P >
+ where KLOC == kilo-lines-of-code, as reported by
+   <SPAN CLASS="APPLICATION" >wc</SPAN >.  As noted above, wc is not a terribly good code
+	metric, but its what we have handy.
 
-    <P
-></P
-><UL
-><LI
-><P
->engine -- contents of the src/engine and the include
-      directories
+    <P></P>
+<b>Table Column Legend</b><br><br>
+    <P></P>
+ <DL>
+	 <DT><B>engine</B></DT>
+	 <DD>Contents of the src/engine and the include directories.
+	     The engine was split out from the motif code in version 1.1.  
+		  The data storage backend (file-io, sql) was split out in the 
+		  course of version 1.5
+        </DD>
+    <DT><B>backend</B></DT>
+	 <DD>Contents of the src/backend directory (version 1.7 and later)
+        or of src/engine/file, src/engine/sql (version 1.6 and earlier)
+	 </DD>
+    <DT><B>register</B></DT>
+	 <DD>Contents of the src/register directory (version 1.6 and earlier)
+        or src/register/register-core (version 1.7 and later).  The register
+		  was split out as a separate component from the motif code in version 1.1.
+		  As can be seen from the stats, the register code has been fairly stable.
+		  At version 1.7 and later, this cell shows a second count: the number of 
+		  lines of code in src/register/register-gnome (previously counted as part 
+		  of gnome)
+	 </DD>
+    <DT><B>ledger</B></DT>
+	 <DD>*.c, *.h files in the src directory only (version 1.6 and earlier)
+          or src/register/ledger-core (version 1.7 and later)
 
- </P
-></LI
-><LI
-><P
->register -- contents of the register directory
+    </DD>
+    <DT><B>motif</B></DT>
+    <DD>Contents of the src/motif directory (version 1.2 and earlier).  The motif
+	     version of the code was discontinued after version 1.2, after most of the
+		  non-gui code was moved to either the engine, the register or the ledger.
 
- </P
-></LI
-><LI
-><P
->ledger -- *.c, *.h files in the src directory only
+    </DD>
+    <DT><B>gnome</B></DT>
+    <DD>Contents of src/gnome plus src/register/gnome (version 1.6 and earlier).  For
+	     version 1.7 and later, this consists of src/gnome, src/gnome-search and src/gnome-util
+    </DD>
 
- </P
-></LI
-><LI
-><P
->motif -- contents of src/motif directory
+    <DT><B>misc app</B></DT>
+    <DD>Contents of miscellanous application-related directories (version 1.7 and later):
+	     src/app-file, src/app-utils, src/calculation, src/core-utils, src/gnc-module,
+		  src/network-utils, src/tax/us
+    </DD>
 
- </P
-></LI
-><LI
-><P
->gnome -- src/gnome plus src/register/gnome
+    <DT><B>import export</B></DT>
+	 <DD>Code to import and export various file formats: contents of the src/import-export
+	     directory.
+	  </DD>
 
- </P
-></LI
-><LI
-><P
->scheme -- scheme and guile code -- src/scm plus
-      src/guile -- in parenthesis is (*.c + *.h + *.scm)
+    <DT><B>reports</B></DT>
+	 <DD>Code to generate reports and graphs: contents of the src/reports
+	     directory.
+	  </DD>
 
- </P
-></LI
-><LI
-><P
->docs -- english-only user documentation
-              (html or sgml)
- </P
-></LI
-><LI
-><P
->Languages -- the number of languages that the application messages
+    <DT><B>scheme</B></DT>
+    <DD>scheme and guile code in directories src/scm plus src/guile (version 1.6 and earlier).
+	     In version 1.7 and later, much of this code went into reports, import/export, and
+		  into indiovidual modules; thus only miscellaneous code remains.
+    </DD>
+
+    <DT><B>business</B></DT>
+	 <DD>Code to add small-busines features: contents of the src/business
+	     directory.
+	  </DD>
+
+    <DT><B>test</B></DT>
+	 <DD>Code to peform automated regression tests: contents of the src/*/test
+	     directories.
+	  </DD>
+
+    <DT><B>docs</B></DT>
+    <DD>English-language-only user documentation, including on-line help and manual
+	     (html, sgml or xml).
+	 </DD>
+	 
+    <DT><B>Languages</B></DT>
+    <DD>The number of languages that the application messages
       have been translated to.  In parenthesis, the number of messages
       in the message files (grep msgstr *.po |wc), in thousands.
- </P
-></LI
-><LI
-><P
->txt -- internal <TT
-CLASS="FILENAME"
->README</TT
->,
-      <TT
-CLASS="FILENAME"
->*.txt</TT
-> and <TT
-CLASS="FILENAME"
->*.texinfo</TT
->
-      documentation files in all subdirectories,
- </P
-></LI
-></UL>
+	 </DD>
+    <DT><B>txt</B></DT>
+	 <DD>The number of design documents and README files aimed at developers.
+	     This includes *.txt files, *.texinfo files and README.* files
+		  in all subdirectories.  For version 1.7 and later, only those in
+		  the src subdirectory are counted (leaving out some half-dozen scattered 
+		  elsewhere)
+		  </DD>
+</DL>
 
 
 </td>
