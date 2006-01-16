@@ -21,8 +21,8 @@
       developer information
       <?php include("include/table_middle.inc") ?>
          &nbsp;- <A HREF="architecture.php3">System Architecture</A><BR>
-         &nbsp;- <A HREF="tools.php3">Required Toolkits</A><BR>
-         &nbsp;- <A HREF="http://linas.org/linux/gnucash/projects.html">Project Goals</A><BR>
+         &nbsp;- <A HREF="roadmap.php3">Project Roadmap</A><BR>
+         &nbsp;- <A HREF="http://linas.org/linux/gnucash/projects.html">Project Status</A><BR>
          &nbsp;- <A HREF="contribute.php3">How to Contribute</A><BR>
          <!-- &nbsp;- <A HREF="/cgi-bin/bugtrack">Gnucash Bug Tracker</A><BR> -->
          &nbsp;- <A HREF="maillist.php3">Mailing List&nbsp;-&nbsp;Help</A><BR>
@@ -33,6 +33,7 @@
          &nbsp;- <A HREF="http://bugs.gnome.org/db/pa/lgnucash.html">Gnome Trouble Tickets</A><BR>
          &nbsp;- <A HREF="/lxr/">LXR source code browser</A><BR>
          &nbsp;- <A HREF="source_code.php3">Hacking GnuCash</A>
+         &nbsp;- <A HREF="tools.php3">Required Toolkits</A><BR>
          <P>
       <?php include("include/table_bottom.inc") ?>
 
