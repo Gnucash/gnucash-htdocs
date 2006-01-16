@@ -9,7 +9,6 @@ features
  <?php include("include/table_middle.inc"); ?>
 
 
-
 <BR>
 If you've been looking for a way to manage your personal finances 
 under Linux, you've found it!  Designed to be easy to use,
