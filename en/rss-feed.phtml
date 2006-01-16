@@ -1,0 +1,63 @@
+<!-- <xml version="1.0" >  -->
+ <rss version="2.0">
+  <channel>
+
+<?php
+    //  change  this  to  the  directory  of  your  news  files 
+    //  they  should  be  plain  ASCII  text  files  with  extension  ".txt" 
+
+    # Perhaps we should be using this, but it won't work until we have
+    # the DocumentRoot set up.
+    # $newspath = $GLOBALS['DOCUMENT_ROOT']."/news/
+
+    # So we'll just do this for now...
+    $newspath  =  "news/"; 
+
+    //  Declare  array  to  hold  filenames 
+    $newsfile  =  array(); 
+    
+    //  Create  handle  to  search  directory  $newspath  for  files 
+    $hd  =  dir($newspath); 
+    
+    //  Get  all  files  and  store  them  in  array 
+    while(  $filename  =  $hd->read()  )  { 
+        $s=strtolower($filename); 
+        if  (strstr($s, ".txt"))  { 
+            //  Determine  last  modification  date 
+            $lastchanged=filemtime($newspath.$filename); 
+            $newsfile[$filename]  =  $lastchanged; 
+        }    
+    } 
+    
+    //  Sort  files  in  descending  order 
+    arsort($newsfile); 
+    //  Output  files  to  browser 
+    for(reset($newsfile);  $key  =  key($newsfile);  next($newsfile))  
+    { 
+        $fa  =  file($newspath.$key); 
+        $n=count($fa); 
+	if ($n > 5) { $n = 5; }
+
+        echo("<title>");
+	print $fa[0];
+
+	print  " - (". date( "Y-m-d", $newsfile[$key]) ;
+	print  "&nbsp; &nbsp;".date( "H:i:s",$newsfile[$key]). ")"; 
+
+        echo("</title>\n");
+        echo("<description>");
+
+        for  ($i=2;  $i<$n;  $i=$i+1)  { 
+	    print $fa[$i];
+        } 
+        echo("</description>\n");
+        echo("<link>");
+        echo("http://www.gnucash.org/#");
+	print $key;
+        echo("</link>\n");
+    }    
+    
+    $hd->close();  
+    ?>  
+ </channel>
+</rss>
