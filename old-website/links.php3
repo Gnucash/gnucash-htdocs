@@ -153,6 +153,12 @@
          advanced, GPL'ed, web-based business accounting package.
       </li>
 
+      <li><a href="http://www.openadaptor.org/">Open Adaptor</a> is a 
+         Java/XML based set of utilities to access and convert between 
+	 many different (financial & business) data formats.  Support
+	 for Oracle, Sybase, TIBCO, XML, Fix, Swift, and HTML. 
+      </li>
+
       <!-- <li><a href="http://sourceforge.net/project/?group_id=3522"><b>
         Linux Accountant and Library Tools</b></a> is totally dead
       -->
