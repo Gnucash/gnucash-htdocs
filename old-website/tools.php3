@@ -44,6 +44,10 @@ version of these to compile and work with gnucash.
       <BR><BR>
    <B>Scheme</B> - The Scheme Language -
       <a href="http://www.scheme.org/">http://www.scheme.org/</a>
+      <BR>
+      <a href= "http://www.scheme.com/tspl2d/index.html"> The Scheme
+      Programming Language, 2nd Edition (Online copy of Kent Dybvig's book)
+      </a>
       <BR><BR>
 
    <B>slib</B> - scheme library - 
