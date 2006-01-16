@@ -214,6 +214,13 @@ the lines of 'most obvious' to 'far out there'.
     <p>
     
 </dl>
+<br><br>
+<h2>The last word?</h2>
+The above is just a sketch of possible future
+directions.  A more practical, down-to-earth, detailed list
+of planned work items can be reviewed on the 
+<a href="http://www.linas.org/linux/gnucash/projects.html">
+GnuCash Projects</a> page.
 
  <?php include("include/table_bottom.inc"); ?>      
       <! END CONTENT >
