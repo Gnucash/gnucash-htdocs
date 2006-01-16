@@ -87,6 +87,9 @@ programmers and users.
     $hd->close();  
     ?>  
 
+<a href="surf/guppi-pie-demo.html">test</a>
+<a href="surf/short.gml">test2</a>
+<a href="surf/demo.gml">test3</a>
                   
 <?php include("include/table_bottom.inc"); ?>
 
