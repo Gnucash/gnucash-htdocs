@@ -30,7 +30,7 @@
          <!-- &nbsp;- <A HREF="ChangeLog-1.4">ChangeLog for version 1.4</A><BR>
          &nbsp;- <A HREF="ChangeLog-1.5">ChangeLog for version 1.5</A><BR>
 	 -->
-         &nbsp;- <A HREF="http://bugs.gnome.org/db/pa/lgnucash.html">Gnome Trouble Tickets</A><BR>
+         &nbsp;- <A HREF="http://www.gnumatic.com/bugs">GnuCash Bug Tracker</A><BR>
          &nbsp;- <A HREF="/lxr/">LXR source code browser</A><BR>
          &nbsp;- <A HREF="source_code.php3">Hacking GnuCash</A>
          &nbsp;- <A HREF="tools.php3">Required Toolkits</A><BR>
