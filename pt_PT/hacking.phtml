@@ -1,0 +1,126 @@
+<?php $title = "Programar"; ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/pt_PT/components/header.phtml"); ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/pt_PT/menu/menu-developer-main.phtml"); ?>
+</td>
+
+<td valign=top>
+<h1>Programar o GnuCash</h1>
+
+Existe um número de passos a dar para programar para o gnucash. 
+Terá de instalar versões de desenvolvimento dos pacotes indicados 
+na <a href="/pt_PT/required.phtml">página de ferramentas</a>.  As últimas 
+versões de desenvolvimento do gnucash poderão depender das mais recentes 
+versões de algumas ferramentas gnome (por ex. gnome-print).  Você poderá 
+ter também de obter versões não usuais ou especiais do g-wrap e guppi.
+<br><br>
+
+<b>Obter o código mais recente através do CVS:</b><br>
+<br>
+   O mais recente código fonte, bem como várias versões 
+   antigas, são mantidas num repositório CVS de código 
+   fonte de acesso de leitura público.  Aceder-lhe é simples,
+   e se planeia ser um programador activo, não existe melhor 
+   forma de obter o código fonte.  A árvore de CVS não é de 
+   acesso de escrita público; uma vez você tendo modificações, 
+   deverá submete-las para a lista de e-mail 
+   <a href=/pt_PT/lists.phtml>gnucash-patches</a>.
+<p>
+   Para aceder à árvore de CVS, primeiro, autentique-se, fazendo: 
+</p>
+
+
+<table bgcolor=#000000 cellpadding=10><tr><td>
+<font color=#aaaaaa>
+cvs -d :pserver:cvs@cvs.gnucash.org:/home/cvs/cvsroot login
+</font>
+</td>
+</tr>
+</table>
+
+<p>
+A palavra-chave (<i>password</i>) é &quot;guest&quot;. 
+Para obter uma cópia da mais recente versão de desenvolvimento/beta 
+(que actualmente é a versão 1.5.x), faça um 
+</p>
+
+<table bgcolor=#000000 cellpadding=10><tr><td>
+<font color=#aaaaaa>
+cvs -d :pserver:cvs@cvs.gnucash.org:/home/cvs/cvsroot checkout gnucash 
+</font>
+</td>
+</tr>
+</table>
+
+<p>
+Versões anteriores e outros ramos podem ser acedidos com etiquetas. 
+O ramo que contém a última versão estável do código do gnucash-1.4.x 
+está marcada com a etiqueta <tt>gnucash-1-4-branch</tt> . Assim, para 
+obter o mais recente da série gnucash-1.4.x, faça o seguinte:
+</p>
+
+<table bgcolor=#000000 cellpadding=10><tr><td>
+<font color=#aaaaaa>
+cvs -d :pserver:cvs@cvs.gnucash.org:/home/cvs/cvsroot checkout -r gnucash-1-4-branch gnucash
+</font>
+</td>
+</tr>
+</table>
+
+
+<p>
+Versões distribuidas estão marcadas com o número da distribuição. Assim,
+a etiqueta <tt>gnucash-1-4-4</tt> dar-lhe-á uma cópia do código tal como 
+ele era na versão 1.4.4.  Se você for um programador, deverá trabalhar 
+provavelmente sobre o ramo principal (<tt>HEAD</tt>) no mais recente código 
+beta/de desenvolvimento, ou no ramo <tt>gnucash-1-4-branch</tt>, eliminando 
+os erros ainda existentes na versão estável actual.
+</p>
+<p>
+Outras etiquetas de interesse (principalmente histórico) são:
+<dl><dd>
+<dl>
+<dt><b>xacc-09a</b>
+<dd>Código original do Robin Clark em Outubro de 1997.  Apenas para 
+    histórico: o código foi completamente re-escrito desde então.
+<dt><b>xacc-10b17</b>
+<dd>Versão 1.0.17 (uma das últimas versões estáveis do xacc, antes 
+    de o nome ter sido alterado para gnucash).
+<dt><b>xacc-10-patch</b>
+<dd>O topo do ramo de versões estáveis da série 1.0.x.
+<dt><b>xacc-11b6</b>
+<dd>Versão 1.1.6 (uma versão instável, de desenvolvimento, do gnucash)
+<dt><b>xacc-12-patch</b>
+<dd>O topo do ramo 1.2. Este é o último ramo que contém código 
+    motif.  Versões posteriores foram re-escritas em gtk/gnome.
+<dt><b>patch-124</b>
+<dd>Versão 1.2.4, uma das últimas na série 1.2.x.
+<dt><b>gnucash-1-4-branch</b>
+<dd>O topo do ramo 1.4.x, que é o actual ramo estável.
+</dl>
+</dl>
+
+<br>
+<br>
+<b>Obter o código fonte mais recente através de FTP:</b><br>
+<br>
+Se você não deseja incomodar-se com o CVS pode descarregar versões 
+recentes da árvore de CVS a partir de um dos servidores FTP abaixo.
+Note, no entanto, que se deseja contribuir com modificações e actualizações 
+ao GnuCash, é extremamente recomendado que aprenda e utilize o CVS.
+Nós encorajamo-lo pois os ficheiros em FTP podem por vezes ficar um 
+pouco desactualizados, e você poderá estar a corrigir um erro que já foi corrigido.
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.linas.org/pub/gnucash/gnucash/sources/">http://www.linas.org/pub/gnucash/gnucash/sources/</a>
+<br> 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.gnucash.org/pub/gnucash/sources/">http://www.gnucash.org/pub/gnucash/sources/</a>
+<br>
+
+
+
+</td>
+
+<?php include($GLOBALS['DOCUMENT_ROOT']."/pt_PT/components/footer.phtml"); ?>

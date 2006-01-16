@@ -1,0 +1,220 @@
+<?php $title = "O Caminho em Frente"; ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/pt_PT/components/header.phtml"); ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/pt_PT/menu/menu-general-main.phtml"); ?>
+
+</td>
+<td valign=top>
+
+<h1>O Caminho em Frente</h1>
+
+
+O Gnucash está-se a aproximar do ponto em que irá suportar a maioria das 
+funcionalidades básicas que alguém pode esperar de uma aplicação 
+financeira/contabilística.  Quando lá chegar, espera-se em breve, teremos 
+de equacionar o futuro. O que nos espera ao fundo da estrada?
+<p>
+
+Existem várias direcções que um projecto pode tomar.  Estas direcções 
+servem diferentes "eleitorados", diferentes comunidades de utilizadores. 
+Muitas destas parecem ser incompatíveis, e assim a tensão tem de ser 
+resolvida, ou uma escolha realizada.  A seguinte lista encontra-se 
+ordenada na linha do 'praticamente óbvio' para o 'muito no futuro'.
+
+<dl>
+<dt><b>Versão para Pequenas Empresas</b>
+<dd>Este é provavelmente a mais pedida modificação ao GnuCash. A utilização 
+    de GNU/Linux cresce exponencialmente nas pequenas empresas; no entanto 
+    não existem aplicações de contabilidade para pequenas empresas fáceis de 
+    instalar e fáceis de administrar, pelo menos não do tipo 'livre'.  A 
+    lista de funcionalidades desejadas data desde o nascimento da informática 
+    na metade do século: ordenados, contas a pagar &amp; receber, facturas, cobranças.   
+    <p>
+    Existem alguns verdadeiros problemas em avançar nesta direcção. O maior 
+    de todos é não alienar os principais visados do GnuCash: o utilizador 
+    casual/caseiro.  Se construirmos algo com funcionalidades demasiado 
+    específicas, o utilizador caseiro poderá concluir que esta aplicação é 
+    demasiado complexa,  dificil de utilizar, dificil de entender.   Irão 
+    procurar noutro lado, e entretanto, teremos feito um mau serviço para com 
+    o GNU/Linux (e *BSD).  A adopção do GNU/Linux pelo utilizador (caseiro) 
+    médio é possível graças a aplicações que constituem pedras basilares.
+    Gestão de Finanças Pessoais é uma dessas pedras basilares. Temos de ter um 
+    gestor de finanças pessoais simples, de fácil instalação e utilização.
+    <p>
+    
+<dt><b>Investidor Sofisticado</b>
+<dd>O GnuCash descarrega da internet cotações de acções e câmbios de moedas. 
+    A actual versão beta tem algumas capacidades gráficas avançadas. Quão 
+    sofisticados deveremos ser?  A nova estrutura de relatórios do GnuCash 
+    deverá tornar fácil, ou pelo menos simples, implementar uma variedade 
+    de gráficos sofisticados, tabelas e relatórios.  Estes podem ir desde 
+    simples análises técnicas tais como médias móveis de 90 dias, volumes 
+    transaccionados e beta, até indicadores avançados tais como o 'Bolton-Tremblay', 
+    'Zweig Thrust' ou 'McClellan Oscillator'.
+    <p>
+    O lado negativo?  A comunidade de 'investidores' é muito menor que a 
+    de utilizadores caseiros.  E a análise de acções não requer necessariamente 
+    funcionalidades contabilísticas.  Assim, tais necessidades poderão ser 
+    melhor servidas por outros sistemas: e existe uma 
+    <a href="http://www.gnucash.org/pt_PT/links.phtml?linkpage=stock">
+    variedade</a> destes por onde escolher.  Deverá o GnuCash rejeitar 
+    modificações orientadas para acções? Não. Deverão os programadores principais 
+    focar-se nos assuntos relacionados com a corretagem?  Provavelmente não.
+    <p>
+
+<dt><b>O Browser Financeiro/A Melhor Experiência Financeira Para o Utilizador Caseiro</b>
+<dd>À medida que o interface com o utilizador se torna mais bonito, e os druidas 
+    cada vez um melhor auxílio na orientação de um utilizador novato, uma direcção 
+    natural para o GnuCash seria a de se tornar na melhor experiência financeira para 
+    o utilizador caseiro. Isto é, construir o 'Browser Financeiro para a Web', o 
+    'Nautilus das Transacções Financeiras'.   Para começar, isto significa utilizar 
+    OFX e suportar o pagamento de facturas e a banca on-line. Num futuro distante, 
+    significará a integração com as compras on-line, por forma a que as suas compras 
+    surjam no GnuCash sem que você tenha de introduzir manualmente as transacções. 
+    <p>
+    Alguma desta ntegração é simples: por ex. utilizar uma agenda (por exemplo, 
+    o calendário no Ximian's Evolution) para mostrar dívidas que vão vencer e 
+    itens orçamentados.  Ou até mesmo utilizar o calendário para introduzir 
+    contas no GnuCash.  Mais alargadamente, disponibilizar um conjunto de 
+    interfaces contabilísticos para que qualquer outro pacote (por exemplo, um 
+    pacote de análise técnica de acções) possa enviar ou obter dados do GnuCash: 
+    o santo graal da integração no ambiente de trabalho.
+    <p>
+
+<dt><b>O Browser Financeiro, Parte II: o PDA</b>
+<dd>O GnuCash, o Gnome Desktop, e o KDE desktop têm estado a crescer 
+    nas barbas da 'sabedoria comum': a eminente extinção do PC de 
+    propósito genérico.  De acordo com esta teoria, dispositivos de mão 
+    com funcionalidades especializadas, leves e portáveis, tornarão o PC 
+    irrelevante. Claro, a teoria tem falhas:  um teclado e monitor grandes 
+    permitem coisas que nunhuma aplicação de mão pode disponibilizar.  
+    Ainda assim, temos de olhar por cima do ombro.   Pode o GnuCash ser 
+    emagrecido e caber num daquels dispositivos de mão em Linux, por ex. 
+    o YOPI? De momento, ele depende intimamente de um largo número de pacotes 
+    para muitas funcionalidades, e assim um exercício de emagrecimento é dificil 
+    de imaginar. No entanto, um gestor financeiro é uma pedra basilar do ambiente 
+    de trabalho, sendo-o igualmente para os dispositivos de mão.  Um dia, não 
+    muito distante, 'browsers financeiros' de mão, com conecções sem fios (wireless), 
+    serão tão omni-presentes como a carteira.
+    <p>
+    
+
+<dt><b>O Browser Financeiro, Parte III: os ASP</b>
+<dd>O Gnucash tem um browser web integrado.  Este browser pode não só 
+    mostrar páginas web normais, como também compreende etiquetas especiais 
+    para gráficos interactivos, e até registos de livros de cheques embebidos 
+    (por exemplo, observe <a href="/surf/guppi-pie-demo.html">
+    esta página</a> com um binário recente do GnuCash).  GnuCash utiliza 
+    estas características para criar e apresentar relatórios.  Não existe 
+    qualquer razão para que estes relatórios sejam locais à máquina: eles 
+    poderiam estar em qualquer 'sitio' web, em qualquer servidor.
+    <p>
+    O GnuCash utiliza o XML como formato de ficheiro, mas este XML poderia 
+    facilmente ser fornecido por um cgi-bin a correr num servidor web.  
+    Existe algum código protótipo de demonstração em <tt>src/experimental/cgi-bin</tt>,
+    ou pode tentar ir a <a href="/surf/demo.gml">este endereço</a>
+    com o GnuCash.  Por outras palavras, o GnuCash pode oferecer um interface 
+    bom, bonito e integrado com a web para um servidor ASP (Servidor Aplicacional) 
+    financeiro. Um interface que bate qualquer outro ASP financeiro existente.
+    <p>
+    Que esta errado nos ASPs tradicionais?  Hmm, deixem-me enumerar.
+    (1) Grande Espera Mundial (World Wide Wait).  Nenhuma aplicação num velho 
+    386 alguma vez demorou 15 segundos a responder quando se primia a tecla 'enter'.  
+    (2) Aqueles 'lindos' formulários web.  Podem ser o suficiente para lhe perguntarem
+    informações sobre a companhia aérea ou para preencher o seu nome e morada, 
+    (sim, CSS torna as páginas web mais bonitas), mas eles ainda não são adversário 
+    para aplicações específicas de ambiente trabalho.  Imagine ser capaz de utilizar 
+    <a href="/images/gnome-1.5/savings-journal.gif">um verdadeiro interface de 
+    registo</a> para rabalhar informação financeira num sitio web. 
+    (3) Desligar-se da net.  Mesmo que o seu ASP nunca tenha quebras de serviço, 
+    e você nunca perca a sua ligação à rede, é ainda concebível que você possa 
+    querer mexer na sua informação financeira no seu portátil num lugar qualquer 
+    onde não haja disponível uma ligação à Internet. Nós pensamos saber como fazer o 
+    GnuCash trabalhar em modo 'desligado', utilizando dados em cache, que podem depois 
+    ser sincronizados com o servidor quando voltar a estar ligado à net. Isto é o que 
+    o motor do GnuCash esta desenhado para fazer.  (Demonstração para breve?)
+    <p>
+
+<dt><b>ERP</b>
+<dd>Hoje em dia, não é apropriado falar de contabilidade empresarial 
+    sem mencionar ERP no meio da conversa.   GnuCash não é, e provavelmente 
+    nunca será um sistema ERP, mas poderá tornar-se num componente de um. 
+    A ideia básica por trás do ERP é a de que diferentes empresas têm 
+    diferentes processos de negócio: ninguem faz as coisas exactamente da 
+    mesma forma.  E assim, não existe uma aplicação do tipo 'um tamanho 
+    serve todos'; em vez disso, espera-se uma estrutura com capacidade de 
+    extenção, facilidade de integração, e características dedesenvolvimento 
+    rápido.  A esperança é a de que se possa ligar aquele pacote de 
+    ecommerce novinho em folha àquela aplicação de facturação com mais de 
+    uma década.  O GnuCash não faz isto.  Nem é o GnuCash fácil de modificar, 
+    expandir, ou melhorar.  É necessário algum nível de sofisticação para 
+    adicionar novas funcionalidades ao GnuCash.  Em particular, isto significa 
+    que é dificil integrar o GnuCash nos seus processos de negócio: você não 
+    lhe pode dizer para simplesmente obter informação financeira daqui, e para 
+    a despejar ali.  Se deseja fazer isto, vá analisar o 
+    <a href="http://www.gnue.org/">GnuE em http://www.gnue.org/</a>:
+    ele foi especificamente desenhado para isto.
+    <p>
+    Por outro lado, a infraestrutura do GnuCash está a tornar-se genérica o 
+    suficiente ao ponto de que não seria dificil molda-la numa variedade de 
+    ferramenteas financeiras relacionadas.  E se o GnuCash for mesmo vencer 
+    no mundo contabilístico empresarial, terá de se tornar inteligente para 
+    falar com outros sistemas.
+    <p>
+    
+<dt><b>Napster por Dinheiro</b>
+<dd>Se você pensava que a industria musical odiava o Napster, espera até ver 
+    <a href="http://slashdot.org/article.pl?sid=01/03/30/1953235&mode=thread">
+    como o fisco e os bancos reagem ao seu equivalente financeiro</a>.  
+    Suponha que existia mesmo uma infraestrutura para colocar eDinheiro, 
+    segura e anonimamente, na sua eCarteira. Ou antes, de o dar ao seu 
+    amigo ou colega de negócios, e eles poderem gasta-lo em bens e serviços 
+    reais. Bem, não confunda a ideia de uma eCarteira com a ideia do 
+    eDinheiro. Existem vários esforços para criar eDinheiro: alguns com 
+    dinheiro a fingir, como o flooz, ou milhas de passageiro frequente, alguns 
+    com dinheiro real, tais como a 
+    <a href="http://www.e-gold.com/e-gold.asp?cid=281678">e-Gold</a>,
+    pay-pal, ou o último esquema de ecommerce da sua empresa de cartão de 
+    crédito.  Todos estes esquemas requerem um servidor centralizado 
+    (tradicionalmente chamado de 'Banco').  Este servidor centralizado 
+    valida a sua identidade, e confirma que você tem o dinheiro que afirma 
+    possuir.  E na realidade move esse dinheiro.  E trabalha em sintonia com 
+    o IRS para se certificar que você não tem receitas tributáveis por 
+    declarar.  E com o Departamento Anti Droga (DEA), para se certificar de 
+    que você não está a fazer branqueamento de dinheiro.  E com... bem, esse 
+    é um assunto de segurança nacional.
+    <p>
+    Por contraste, a minha carteira é um 'banco' no sentido em que armazena 
+    dinheiro; apenas não me cobra um custo de serviço por o fazer.  E quando 
+    o utilizo para uma partilha de dinheiro anónima face a face, tal como 
+    pagar ao miudo do fim da rua para me aparar a relva, não diz ao IRS que 
+    o miudo lhes deve dinheiro, tal como o gnutella não diz aos Metallica 
+    sobre músicas que foram descarregadas.  Assim, onde iamos nós? Ah, sim, 
+    agora tente imaginar uma 'eCarteira'.   
+    <p>
+    Agora, o GnuCash provavelmente nunca irá ser o Gnutella para dinheiro.  
+    Por várias razões.  O que quer que seja que transaccionar on-line, é 
+    apenas dinheiro de brincar, o equivalente electrónico dos vales de 
+    desconto das grandes cadeias de supermercados, até que você tenha um 
+    mediador, um fiador e um criador de mercado que garanta a troca do seu 
+    eDinheiro pelo outro tipo de dinheiro que os bancos aceitam.  E tal como 
+    pode adivinhar, a economia-sombra resultante iria levar à falência o 
+    Banco da reserva Federal mais depressa do que o Alan Greenspan consegue 
+    dizer 'a expansão no Índice de Oferta Monetária M2'.  No entanto, os 
+    punks das cifras fizeram em 1995 a promessa de que um dia, toda a gente 
+    teria realmente uma eCarteira, e é ainda engraçado pensar neste conceito 
+    mesmo que seja algo futurístico.
+    
+    <p>
+    
+</dl>
+<br><br>
+<h1>A Última Palavra?</h1>
+O acima escrito é apenas um esboço de possíveis direcções 
+futuras.  Uma lista de itens de trabalho planeados, mais 
+prática, terra-a-terra e detalhada, pode ser consultada na
+página dos <a href="http://www.linas.org/linux/gnucash/projects.html">
+Projectos GnuCash</a>.
+
+</td>
+
+<?php include($GLOBALS['DOCUMENT_ROOT']."/pt_PT/components/footer.phtml"); ?>

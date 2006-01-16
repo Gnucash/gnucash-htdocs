@@ -1,0 +1,261 @@
+<?php $title = "Arquitectura"; ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/pt_PT/components/header.phtml"); ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/pt_PT/menu/menu-developer-main.phtml"); ?>
+
+</td>
+<td valign=top width=75%>
+
+<h1>Visão Genérica da Arquitectura</h1>
+
+<font size=-1>
+GnuCash está escrito principalmente em duas linguagens: C e Scheme.  
+O servidor/motor está escrito em C principalmente para maior velocidade, 
+portabilidade, estabilidade e motivos históricos.  A maioria do código 
+de trabalho no dia-a-dia é escrito em Scheme, principalmente pelo seu 
+poder, expressividade e facilidade de desenvolvimento. O interface de 
+utilizador é gtk/gnome, algum dele feito em C, algum em scheme, e outro 
+na ferramenta de desenvolvimento gráfico 
+<a href="http://glade.pn.org">glade</a>.
+
+<p>
+O GnuCash é modular, permitindo assim que vários indivíduos 
+mantenham, desenvolvam e melhorem alguns módulos sem perturbarem 
+a totalidade do desenvolvimento.  (Nunca se esqueça que os módulos 
+ajudam a evitar código spaghetti e feias modificações marteladas).
+Os interfaces entre módulos estão documentados, e, na sua maioria, 
+estáveis e imutáveis.
+<a href="/images/diagrams/components.png">Este diagrama de blocos 
+mostra as suas principais componentes.</a>
+
+<br><br><b>
+O GnuCash consiste actualmente nos seguintes módulos:</b>
+<br><br>
+</font>
+
+<table border=0 cellpadding=1 cellspacing=0 width="100%">
+  <tr>
+  <td valign=middle align=center bgcolor=#666699>
+   <table border=0 cellpadding=5 cellspacing=1 bgcolor=#cccccc width="100%">
+   <tr>
+     <td bgcolor=#666699 width=25%><font color=#ffffff><b>Módulo</b></td>
+     <td bgcolor=#666699 width=50%><font color=#ffffff><b>Descrição</b></td>
+   </tr>
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>Motor</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>O <dfn>Motor</dfn> (localizado debaixo do directório <code>src/engine</code> 
+na estrutura de código do GnuCash) disponibiliza um interface para criar, 
+manipular, e destruir três entidades financeiras básicas: Contas, Transacções 
+(conhecidas como Entradas de Registo na contabilidade profissional), e Parcelas 
+(conhecidas como Detalhes de Registo). Estas três entidades são as estruturas de 
+dados centrais do modelo de dados financeiro do GnuCash,
+<a href="/images/diagrams/structures.png">tal como ilustrado neste diagrama.</a>
+
+<p>O código do Motor não possui qualquer código de Interface Gráfico, e é essencialmente 
+neutral ao nível do SO. Está escrito na sua totalidade em C.
+		 </td>
+   </tr>
+   <tr bgcolor=#ffffff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>Consulta</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>O módulo de <dfn>Consulta</dfn> (<code>src/engine/Query.*</code>) disponibiliza um interface
+para o motor para encontrar transacções baseadas num conjunto de critérios,
+tais como a descrição, data de entrada, filiação de conta, etc. Consultas simples 
+podem ser combinadas utilizando operadores boleanos standard.
+		 </td>
+   </tr>
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>I/O (Leitura/Escrita) de Ficheiros</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>O módulo de <dfn>I/O de Ficheiros</dfn> (<code>src/engine/FileIO.*</code>) disponibiliza 
+um interface para ler e escrever um conjunto de Contas, Transacções, e 
+Parcelas para um ficheiro binário. Este módulo irá ser abandonado. Um formato baseado 
+em texto utilizando formulários scheme está a ser desenvolvido em sua substituição. Este 
+novo módulo será separado do motor.
+		 </td>
+   </tr>
+   <tr bgcolor=#ffffff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>Registo</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>O <dfn>Registo</dfn> (<code>src/register</code>) implementa um interface 
+tipo livro de entrada que permite ao utilizador introduzir dinamicamente datas, 
+preços, anotações, etc. de uma forma intuitiva que deverá ser óbvia para qualquer 
+um que esteja habituado a utilizar o registo de um livro de cheques. O código é 
+muito configurável, permitindo que as linhas e colunas do registo sejam dispostas 
+de qualquer forma, sem restrições à função, tipo e número de colunas/linhas. Por 
+exemplo, pode-se definir uma folha de registo com três campos de data, um campo 
+de preço, e quatro campos de anotações de uma forma simples. Objectos de gestão 
+de células suportam e validam os dados introduzidos automaticamente, sejam datas, 
+anotações (que se completam automaticamente), preços, caixas de combo (menus de 
+selecção), e caixas de selecção multi-estado. As células podem ser marcadas para 
+leitura e escrita, ou apenas leitura. Pode-se assignar cores exclusivas às células. 
+A linha de registo actualmente seleccionada pode ser destacada com uma cor única.
+
+<p>O código do registo é completamente independente do código do motor, não sabe 
+nada sobre contabilidade ou qualquer dos outros sub-sistemas do GnuCash. Pode ser 
+utilizado em projectos independentes que não tenham nada a ver com contabilidade.
+		 </td>
+   </tr>
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>Relatórios</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>O módulo de <dfn>Relatórios</dfn> (<code>src/scm/report.scm</code>,
+<code>src/scm/reports</code>) é um sistema baseado em scheme (guile) para criar 
+folhas de balanço, demonstrações de lucors &amp; prejuizos, etc. utilizando a API 
+do motor para obter e apresentar dados formatados em HTML.
+
+<p>Este módulo está a ser redesenhado para utilizar a API de Consultas para obter 
+a informação do motor em vez de utilizar directamente o interface do motor. O novo 
+desenho de relatórios irá utilizar as Consultas para extrair dados e agrega-los num 
+formato independente da visualização. Estes dados serão então convertidos para 
+relatórios em HTML e/ou gráficos tais como gráficos de barras ou circulares.
+		 </td>
+   </tr>
+   <tr bgcolor=#ffffff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>Gráficos</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>O módulo de <dfn>Gráficos</dfn> irá ser futuramente um módulo que implementa 
+gráficos tais como barras e circulares. Estes gráficos serão interactivos pelo 
+que o utilizador poderá , por exemplo, mover as margens do círculo, e 'vivos' no 
+sentido em que o utilizador poderá clicar numa subsecção do gráfico para ver um 
+gráfico detalhado ou relatório dessa subsecção em particular.
+
+<p>Este módulo será implementado utilizando a biblioteca GUPPI que se encontra em 
+desenvolvimento pelo Jon Trowbridge (&lt;<code>http://www.gnome.org/guppi</code>&gt;).
+		 </td>
+   </tr>
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>Cotações</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>O módulo de <dfn>Cotações</dfn> (<code>src/quotes</code>) é um sistema em Perl 
+para obter cotações de acções da Internet e inseri-las no Motor do GnuCash. Este 
+módulo requer as funcionalidades do módulo Finance::Quote disponível no SourceForge. 
+O módulo Finance::Quote module pode obter cotações de vários locais diferentes 
+incluindo o Yahoo, Yahoo Europe, e algumas bolsas de valores internacionais.
+
+<p>O módulo Finance::Quote também suporta a obtenção de taxas de câmbio monetárias. 
+O GnuCash será extendido para permitir a obtenção e utilização de taxas de câmbio monetárias.
+		 </td>
+   </tr>
+   <tr bgcolor=#ffffff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>Preferências do Utilizador</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>O módulo de <dfn>Preferências do Utilizador</dfn> (<code>src/scm/options.scm</code>,
+<code>src/scm/prefs.scm</code>) disponibiliza uma infraestrutura para definir as 
+preferênicas configuráveis pelo utilizador e internas. As preferências são definidas 
+em scheme utilizando vários tipos de preferências pré-definidas tais como boleana, 
+texto, data, etc. As preferências são 'implementadas' disponibilizando um interface gráfico 
+que permite ao utilizador ver e modificar os valores das preferências. Uma API é 
+disponibilizada para consultar os valores das preferências e para registar chamadas 
+de alerta (callbacks) que serão invocadas quando as preferências forem alteradas.
+
+<p>Os valores das preferências que diferem dos valores de defeito são armazendos como 
+formulários scheme em ficheiros de preferências específicos ao utilizador 
+(<code>~/.gnucash/config.auto</code>). Este ficheiro é carregado automaticamente 
+durante o arranque.
+		 </td>
+   </tr>
+   <tr bgcolor=#ececff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>Importação QIF</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>O módulo de <dfn>Importação QIF</dfn> (<code>src/scm/qif-import</code>) disponibiliza 
+funcionalidades para importar dados QIF (Quicken Interchange Format - Formato de Troca 
+Quicken) para o GnuCash.
+		 </td>
+   </tr>
+   <tr bgcolor=#ffffff>
+     <td valign=top>
+       <table border=0 cellpadding=0 cellspacing=0>
+       <tr>
+         <td valign=top><img src=/images/icons/document.txt.gif width=16 height=16 border=0>&nbsp;</td>
+         <td valign=top><b>GnuCash</b></td>
+       </tr>
+       </table>
+     </td>
+     <td valign=top>
+<p>O módulo GnuCash (<code>src/gnome</code>, <code>src/register/gnome</code> e 
+<code>src/*.[ch]</code>) é o interface gráfico principal da aplicação. Consiste 
+numa colecção de vário código de interface gráfico para juntar todas peças acima 
+num todo coerente. Espera-se que seja fácil de utilizar e intuitivo para o 
+utilizador novato sem sacrificar o poder e flexibilidade que um profissional 
+deverá esperar. Quando as pessoas dizem que o GnuCash está a tentar ser semelhante 
+em "aspecto/funcionalidades/comportamento ao Quicken ou MS Money", é a esta peça 
+que se referem. Está realmente desenhado para ser um gestor de finanças pessoais 
+com poder suficiente para o utilizador experiente e simples de utilizar para o novato.
+
+<p>Actualmente, o interface Gnome é o único interface operacional. Existe um interface 
+obsoleto em Motif que não está a ser mantido. O código Qt não compilará, e a maioria/
+todas as funcionalidades estão por implementar.
+		 </td>
+   </tr>
+   </table>
+</tr>
+</table>
+
+
+</td>
+
+<?php include($GLOBALS['DOCUMENT_ROOT']."/pt_PT/components/footer.phtml"); ?>
