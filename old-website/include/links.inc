@@ -21,7 +21,6 @@
          &nbsp;- <A HREF="architecture.php3">System Architecture</A><BR>
          &nbsp;- <A HREF="http://linas.org/linux/xacc/projects.html">Project Goals</A><BR>
          <!-- &nbsp;- <A HREF="/cgi-bin/bugtrack">Gnucash Bug Tracker</A><BR> -->
-         &nbsp;- <A HREF="developers.php3">Developers</A><BR>
          &nbsp;- <A HREF="maillist.php3">Mailing List&nbsp;-&nbsp;Help</A><BR>
          &nbsp;- <A HREF="archives.php3">Mailing List&nbsp;-&nbsp;Archives</A><BR>
          &nbsp;- <A HREF="ChangeLog-1.4">ChangeLog for version 1.4</A><BR>
@@ -38,6 +37,7 @@
          &nbsp;- <A HREF="/docs/C/xacc-main.html">Documentation - English</A> <BR>
          &nbsp;- <A HREF="/docs/fr/xacc-main.html">Documentation - Français</A> <BR>
          &nbsp;- <A HREF="/banners.php3">Banner Ads</A> <BR>
+         &nbsp;- <A HREF="developers.php3">History and Credits</A><BR>
          &nbsp;- <A HREF="http://www.gnumatic.com/">Gnumatic - Corporate Support</A> <BR>
          <P>
       <?php include("include/table_bottom.inc") ?>
