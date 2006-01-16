@@ -1,0 +1,107 @@
+<b>Announcement:</b> GnuCash 1.7.8 Release Candidate 3: "Lil Devil"
+
+<br>
+The GnuCash team is pleased to announce Release Candidate 2
+version 1.7.8: "Lil Devil".<br><br>
+<b><big>What's New in GnuCash 1.7.8?</big></b><br>
+<br>
+<b>- Scheduled Transactions:</b> <br>
+&nbsp;&nbsp; &nbsp;GnuCash now has the ability to automatically create and
+enter transactions, remind<br>
+&nbsp;&nbsp; &nbsp;when a transaction is due, give a choice of entering a
+transaction or postponing it<br>
+&nbsp;&nbsp; &nbsp;and remove an automated transaction after a certain period.<br>
+<b>- Mortgage &amp; Loan Repayment Druid:</b><br>
+&nbsp;&nbsp; &nbsp;Used to setup a variable payment loan scheduled transaction.<br>
+<b>- Small Business Accounting Features: </b><br>
+&nbsp;&nbsp; &nbsp;GnuCash now can be used for Customer and Vendor tracking,
+Invoicing and Bill Payment,<br>
+&nbsp;&nbsp; &nbsp;and using different Tax and Billing Terms in a small business.<br>
+<b>- OFX Import:</b><br>
+&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+the Open Financial Exchange<br>
+&nbsp;&nbsp; &nbsp;protocol that many banks and financial services are moving
+to use. The development of<br>
+&nbsp;&nbsp; &nbsp;OFX and HBCI support has also resulted in an improved
+transaction matching system that<br>
+&nbsp;&nbsp; &nbsp;more accurately picks duplicate transactions.<br>
+<b>- HBCI Support:</b> <br>
+&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+the German Home Banking <br>
+&nbsp;&nbsp; &nbsp;Computer Information protocol which includes statement
+download, initiate bank <br>
+&nbsp;&nbsp; &nbsp;transfers and direct debits.<br>
+<b>- New User Manual and Help:</b><br>
+&nbsp;&nbsp; &nbsp;A brand new user help has been written which focuses on
+how to do tasks in <br>
+&nbsp;&nbsp; &nbsp;conjunction with a Tutorial and Concepts guide that gives
+the user background<br>
+&nbsp;&nbsp; &nbsp;information on using GnuCash.<br>
+<b>- New Multi-Currency Transaction Handling:</b><br>
+&nbsp;&nbsp; &nbsp;GnuCash no longer requires separate currency exchange
+accounts to handle multiple<br>
+&nbsp;&nbsp; &nbsp;currency transfers.<br>
+<b>- Redesigned Menu's</b><br>
+&nbsp;&nbsp; &nbsp;The GnuCash menu's have been redesigned to conform more
+with the new GNOME <br>
+&nbsp;&nbsp; &nbsp;Human Interface Guidelines.<br>
+<br>
+<big><b>Specifically updated in this version;</b></big><br>
+<br>
+ o Welcome to Release Candidate 3<br>
+ o Fixed build issues introduced in last release<br>
+ o Fix compile errors on SuSE 8.0 + 8.1<br>
+ o Update translations, po/ru.po by Vitaly Lipatov, po/el.po by
+   ta_panta_rei@flashmail.com<br>
+ o Ignore certain splits with an "amount" of zero.<br>
+ o Convert from the old to new symbols for Russian Roubles.<br>
+ o Invoices change a couple of columns.  Enable viewing the "taxable"
+   entry.  Enable viewing all the tax accounts individually.<br>
+ o Scrub hbci include paths to prevent gcc 3.x compile errors.<br>
+ o Default the OFX import directory to the directory of the last OFX
+   file imported, or the user's home dir for the first export.
+   Remembered across invocations of gnucash.<br>
+ o Default the save directory to the directory of the last file used.
+   Default the exports directory to the directory of the last file
+   exported, or the user's home dir for the first export. Remembered
+   across invocations of gnucash.<br>
+ o Correctly handle the case where no stocks have been defined and the
+   user asks gnucash to get price quotes.<br>
+ o Work around bug in ghttp library so that intl users whose whole
+   units/fractions separator is a comma can request web pages.<br>
+ o Add "Default Report Currency" preference.<br>
+ o Set invoice currency based on owner's currency.<br>
+ o Use invoice's currency for printing the invoice.<br>
+ o Make the progress bar argument a double instead of an int.  This
+   gets around an issue with guile 1.6.<br>
+ o Add a checkbox to search-for-all<br>
+ o Changes to make the build system work on multiple architectures and
+   with multiple versions of the autotools suite.  Make generated g-wrap
+   sources depend on config.status.<br>
+ o Remove restriction on guile versions > 1.4 Provide a version
+   dependant load path variable for the SRFI location. (Empty in 1.6
+   since they're bundled with guile.)<br>
+ o Limit QIF matches against only the accounts in the old group, so we
+   don't match against ourselves.  This should limit the matches to only
+   "reasonable" matches.<br>
+ o Remove "user name" and "user address" preferences, as they are no
+   longer used by anything.<br>
+ o Create a taxtable option type using the new generic optionmenu code
+ o Create a default customer and default vendor taxtable option for
+   the "File Properties" option menu.<br>
+ o Reset the search-type to "New Search" if we end up displaying no
+   results.<br>
+ o Use the "New Search Limit" pref to decide when to start a new
+   search vs. when refine the search.<br>
+ o Create two new global preferences: "Notify Bills Due?" and "Bills
+   Due Days"<br>
+ o Added sources needed for OS X to dist.<br>
+ o Lots more bugfixes<br>
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
