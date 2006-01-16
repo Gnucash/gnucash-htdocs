@@ -10,15 +10,20 @@
 <font size=-1>
 GnuCash is written primarily in two languages: C and Scheme.  
 The engine/server is written in C primarily for speed, 
-portability, stability and historical purposes.  Much of the
-day-to-day workhorse code is written in Scheme, primarily
-for its power, expressiveness and ease of development.
-The user interface is GTK/gnome, some of it done up in C,
-some in scheme, and some with the 
-GUI designer tool <a href="http://glade.pn.org">glade</a>.
+portability, stability and historical reasons.  Various 
+bits and peices that help glue together the various
+components are written in Scheme. Scheme was choosen for
+its power, expressiveness and ease of development.
+The user interface uses the GTK/Gnome widget set, and 
+is designed primarily with the 
+<a href="http://glade.pn.org">Glade</a>
+GUI designer tool. The file format is in XML, and multi-user
+support is provided through the Postgres SQL backend.
+The reporting subsystem, written in Scheme, generates HTML
+reports.
 
 <p>
-GnuCash is modular, thereby allowing separate individuals
+GnuCash aims to be modular, thereby allowing separate individuals
 to maintain, develop and enhance certain modules without
 disturbing the overall development.  (Never mind that 
 modules help avoid spaghetti code and nasty, ugly hacks).
@@ -53,10 +58,10 @@ GnuCash currently consists of the following modules:</b>
 <p>The <dfn>Engine</dfn> (located under the <code>src/engine/</code> 
 directory in the
 GnuCash codebase) provides an interface for creating, manipulating, and
-destroying three basic financial entities: Accounts, Transactions (known
-as Ledger Entries in accounting practice), and Splits (known as Journal
-Entries). These three entities are the central data structures of the
-GnuCash financial data model,
+destroying five basic financial entities: Accounts, Transactions (known
+as Ledger Entries in accounting practice), Splits (known as Journal
+Entries), Prices and Lots.  These five entities provide the central data 
+structures of the GnuCash financial data model,
 <a href="/images/diagrams/structures.png">as illustrated in this diagram.</a>
 
 <p>The Engine code contains no GUI code whatsoever, and is essentially
@@ -73,10 +78,23 @@ OS-neutral. It is written entirely in C.
        </table>
      </td>
      <td valign=top>
-<p>The <dfn>Query</dfn> module (<code>src/engine/Query*</code>) provides an interface
-into the engine for finding transactions based on a set of criteria,
+<p>The <dfn>Query</dfn> module (also in <code>src/engine/</code>) 
+provides a generic mechanism for performing complex, structured 
+queries on a collection of objects.  For example, GnuCash uses 
+queries to find transactions based on a set of user-sepecified criteria,
 such as description, date posted, account membership, etc. Simple
-queries can be combined using standard boolean operators.
+queries can be combined using standard boolean operators.  The query
+subsystem is a true generic object-query system, independent of the 
+financial structure in GnuCash, and is slowly being spun-out as a
+stand-alone component at 
+<a href="http://qof.sourceforge.net">qof.sourceforge.net</a>.  
+Note that Query works closely with the data storage backend, so that
+the local collection of objects in the GnuCash engine acts as a 'cache'
+for a possibly much larger set of data in the SQL backend.  The idea
+is to keep GnuCash 'scalable': the runtime size can stay small, while
+still having high-performance interactions, even when dealing with large,
+remote databases.
+
 		 </td>
    </tr>
    <tr bgcolor=#ececff>
@@ -238,8 +256,9 @@ of Germany).
        </table>
      </td>
      <td valign=top>
-<p>Business features (<code>src/business/</code>)
-     (To Be Written)
+<p>GnuCash provides support for a number of business features 
+(<code>src/business/</code>).  
+     (To Be Written: Explain how it works.)
 
 
 		 </td>
@@ -254,7 +273,10 @@ of Germany).
        </table>
      </td>
      <td valign=top>
-     (To Be Written)
+<p>Scheduled transactions provide a mechanism for describing a set of regularly 
+recurring financial transactions so that the GnuCash dataset can be automatically 
+updated as time passes.
+     (To Be Written: Explain how it works.)
 
 
 		 </td>
