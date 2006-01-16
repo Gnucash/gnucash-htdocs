@@ -1,0 +1,46 @@
+<% ns_adp_include [ns_info pageroot]/en/components/header.adp "How to Contribute" %>
+<% ns_adp_include [ns_info pageroot]/en/menu/menu-developer-main.adp %>
+<% prepare_form_variables %>
+
+<td valign=top>
+<h1>How to Contribute</h1>
+<font size=1>
+
+<p>
+GnuCash is an Free Software development project and the 
+dynamics of contributing to it is much like any other.
+What you contribute to it depends very much on your skill, 
+the time you have available, and what you enjoy doing.
+GnuCash is looking for beta-testers, programmers, writers, 
+question-answerers, translators and all-around nice people.   
+
+<br><br>
+<table>
+<tr><td>
+<b>Select your talent to see where you might fit in:</b></td>
+<td>
+<form method=post>
+<select name=contribute>
+  <option value=1>I am a programmer</option>
+  <option value=2>I am a translator</option>
+  <option value=3>I am a fan</option>
+  <option value=4>I am a webmaster</option>
+  <option value=5>I am a writer/reporter</option>
+</select>
+<input type=submit value=Go>
+</td>
+</table>
+</form>
+
+<% 
+  if [info exists ::contribute] {
+    ns_adp_include [ns_info pageroot]/en/contribute/contribute-${::contribute}.adp
+  }
+%>
+
+</font>
+
+</td>
+
+
+<% ns_adp_include [ns_info pageroot]/en/components/footer.adp %>
