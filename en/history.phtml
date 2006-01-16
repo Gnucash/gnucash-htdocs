@@ -39,10 +39,12 @@
   </dt>
   <dd>
     abused everyone for not using Perl, and then after we added Perl support, 
-    dumped Perl in favor of Guile/Scheme support. Rob built the build 
-    infrastructure, hacked the gtk code, and is whacking the file format.
-    Also, the re-write of reports and statement downloading in scheme, 
-    the g-wrap guile wrapper, and the user preferences.
+    dumped Perl in favor of Guile/Scheme support. Rob maintined the 
+    build infrastructure for a while, added user preferences, 
+    and re-wrote the reports in scheme. One of Rob's recent 
+    contribtions is the change-over of the file-format to XML.
+    He is now concentrating on scheme performance.  He is the g-wrap
+    guile wrapper maintainer.
   </dd>
 </dl>
 
@@ -60,6 +62,7 @@
     Jeremy registered the domain name, and created and maintained 
     the gnucash.org web site for years,
     and got the initial GTK/gnome code working.  
+    The newest website design is Jeremy's as well.
   </dd>
 
 <BR>
@@ -73,6 +76,19 @@
     hacks obsessively on GnuCash. But he can stop anytime he wants to. Really. 
     (As he is now the gatekeeper of the GnuCash CVS tree, be nice to him,
     or he may decide to stop hacking in the middle of your patch).
+  </dd>
+
+<BR>
+<BR>
+
+  <dt>
+  <b>Bill Gribble</b>
+  </dt>
+  <dd>
+    is not shy, or softly spoken.  So don't be shy if you find a bug in 
+    his code: QIF import, query API and transaction search, check-printing,
+    commodity and currency support, gtkhtml integration and report printing,
+    pgp support, guppi integration, and the new main window layout.
   </dd>
 
 
@@ -93,307 +109,156 @@
 <BR>
 
   <dt>
-  <b>Bill Gribble</b>
+  <b>Christian Stimming</b>
   </dt>
   <dd>
-    is not shy, or softly spoken.  So don't be shy if you find a bug in 
-    his code: QIF import, query API and transaction search, check-printing,
-    commodity and currency support, gtkhtml integration and report printing.
+    is a report-generating monster.  He's been on of the largest contributors
+    to the current report infrastructure, creating many of the important 
+    reports.
+  </dd>
+
+<BR>
+<BR>
+
+  <dt>
+  <b>James LewisMoss</b>
+  </dt>
+  <dd>
+    XML Refactoring.  Automated test suite.
+  </dd>
+
+
+<BR>
+<BR>
+
+  <dt>
+  <b>Robert Graham Merkel</b>
+  </dt>
+  <dd>
+    Reporting, gnome, and config patches
+  </dd>
+
+<BR>
+<BR>
+
+  <dt>
+  <b>Yannick Le Ny</b>
+  </dt>
+  <dd>
+    Our French translator.
+    He has translated the menus, messages, README and the documentation to French.
+    He strung up the French translation to the GnuCash website, working hard 
+    to keep it up to date.
+    Patches for Yahoo Europe to get stocks quotes.
   </dd>
 </dl>
 
 <BR>
 
+
 <font size="+2"><b>Fixers and Patchers</b></font>
 <hr>
 
 <dl>
-      <dt> <a href="mailto:arensb@cfar.umd.edu"> Andrew
-      Arensburger</a></dt>
 
-      <dd>for FreeBSD and other patches</dd>
-
-      <dt> <a href="mailto:matt_armstrong@bigfoot.com"> Matt
-      Armstrong</a></dt>
-
-      <dd>for misc fixes</dd>
-
-      <dt> <a href="mailto:fred@moremagic.com"> Fred Baube</a></dt>
-
-      <dd>for attempted Java port/MoneyDance</dd>
-
-      <dt> <a href="mailto:dennisb@cs.chalmers.se"> Dennis
-      Björklund</a></dt>
-
-      <dd>Swedish translation</dd>
-
-      <dt> <a href="mailto:bojsen@worldnet.att.net"> Per Bojsen</a></dt>
-
-      <dd>several core dump fixes</dd>
-
-      <dt> <a href="http://www.hex.net/~cbbrowne"> Christopher B.
-      Browne</a></dt>
-
-      <dd>for perl stock scripts, first draft of Guile-based QIF 
-      import code, lots of changes & maintenance of the English 
-      documentation, and more</dd>
-
-      <dt> <a href="mailto:grahamc@zeta.org.au"> Graham
-      Chapman</a></dt>
-
-      <dd>for the xacc-rpts addon package</dd>
-
-      <dt> <a href="mailto:georgec@sco.com"> George Chen</a></dt>
-
-      <dd>for MS-Money QIF support</dd>
-
-      <dt> <a href="mailtochina@thewrittenword.com">Albert
-      Chin-A-Young</a></dt>
-
-      <dd>configure.in patch</dd>
-
-      <dt> <a href="mailto:jcollins@gnucash.org"> Jeremy
-      Collins</a></dt>
-
-      <dd>for GnoMoney and GTK port</dd>
-
-      <dt> <a href="mailto:mcondell@bbn.com"> Matthew Condell</a></dt>
-
-      <dd>FreeBSD patch</dd>
-
-      <dt> <a href="mailto:pcondon@rackspace.com"> Patrick
-      Condron</a></dt>
-
-      <dd>for setting up a webserver on a T1 connection on 
-          behalf of open source enthusiasts 
-          <a href="http://www.rackspace.com">
-          rackspace.com</a></dd>
-
-      <dt> <a href="mailto:Ciaran.Deignan@bull.net"> Ciaran
-      Deignan</a></dt>
-
-      <dd>for AIX binary version</dd>
-
-      <dt> <a href="mailto:tyson@tyse.net"> Tyson Dowd</a></dt>
-
-      <dd>for config/make patches and debian maintenance</dd>
-
-      <dt> <a href="mailto:ripley@xs4all.nl"> Koen D'Hondt</a></dt>
-
-      <dd>for Solaris patches to XmHTML</dd>
-
-      <dt> <a href="mailto:bob@mostly.com"> Bob Drzyzgula</a></dt>
-
-      <dd>for budgeting design notes</dd>
-
-      <dt> <a href="mailto:pjf@schools.net.au"> Paul Fenwick</a></dt>
-
-      <dd>ASX support</dd>
-
-      <dt> <a href="mailto:hfiguiere@teaser.fr"> Hubert Figuiere</a></dt>
-
-      <dd>patch to gnc-prices</dd>
-
-      <dt> <a href="mailto:ju_finck@mail.netwave.de"> Jan-Uwe
-      Finck</a></dt>
-
-      <dd>for German message translation</dd>
-
-      <dt> <a href="mailto:rjf@aracnet.com"> Ron Forrester</a></dt>
-
-      <dd>for gnome patches</dd>
-
-      <dt> <a href="mailto:DFreese@osc.uscg.mil"> Dave
-      Freese</a></dt>
-
-      <dd>for leap-year fix</dd>
-
-      <dt> <a href="mailto:grib@billgribble.com"> Bill Gribble</a></dt>
-
-      <dd>QIF import code</dd>
-
-      <dt> <a href="mailto:otto@bug.redhat.com"> Otto
-      Hammersmith</a></dt>
-
-      <dd>for RedHat RPM packaging</dd>
-
-      <dt> <a href="mailto:offby1@blarg.net"> Eric Hanchrow</a></dt>
-
-      <dd>updated currency documentation</dd>
-
-      <dt> <a href="mailto:haral@codec.ro"> Alexandru
-      Harsanyi</a></dt>
-
-      <dd>for fixing miscellaneous core dumps and lockups.</dd>
-
-      <dt> <a href="mailto:john@dhh.gt.org"> John Hasler</a></dt>
-
-      <dd>engine patch</dd>
-
-      <dt> <a href="mailto:jk@isdn-a33.itea.ntnu.no"> Jon K}re
-      Hellan</a></dt>
-
-      <dd>for fixing miscellaneous core dumps and lockups.</dd>
-
-      <dt> <a href="mailto:PrakashK@bigfoot.com"> Prakash
-      Kailasa</a></dt>
-
-      <dd>for gnome build fixes</dd>
-
-      <dt> <a href="mailto:tkludy@csd.sgi.com"> Tom Kludy</a></dt>
-
-      <dd>for SGI Irix port</dd>
-
-      <dt> <a href="mailto:sk@xgm.de"> Sven Kuenzler</a></dt>
-
-      <dd>for SuSE README file</dd>
-
-      <dt><a href="mailto:blarsen@ada-works.com"> Bryan Larsen</a></dt>
-
-      <dd>guile budget report</dd>
-
-      <dt> <a href="mailto:mellon@andare.fugue.com"> Ted
-      Lemon</a></dt>
-
-      <dd>for NetBSD port</dd>
-
-      <dt> <a href="mailto:y-le-ny@ifrance.com"> Yannick Le
-      Ny</a></dt>
-
-      <dd>pour la traduction en Fran&ccedil;ais</dd>
-
-      <dt> <a href="mailto:glikely@nortelnetworks.com"> Grant
-      Likely</a></dt>
-
-      <dd>gnome and engine patches</dd>
-
-      <dt> <a href="mailto:martinh@pegasus.cc.ucf.edu"> Heath
-      Martin</a></dt>
-
-      <dd>major work on the gnome register</dd>
-
-      <dt> <a href="mailto:mgmartin@abacusnet.net"> Matt
-      Martin</a></dt>
-
-      <dd>guile error handling code</dd>
-
-      <dt> <a href="mailto:rgmerk@mira.net"> Robert Graham
-      Merkel</a></dt>
-
-      <dd>reporting, gnome, and configuration patches.</dd>
-
-      <dt> <a href="mailto:mooney@dogbert.cc.ndsu.NoDak.edu"> Tim
-      Mooney</a></dt>
-
-      <dd>port to alpha-dec-osf4.0f</dd>
-
-      <dt> <a href="mailto:gam3@ann.softgams.com"> G. Allen Morris
-      III</a></dt>
-
-      <dd>for QIF core dump fix</dd>
-
-      <dt> <a href="mailto:brent@baton.phys.lsu.edu"> Brent Neal</a></dt>
-
-      <dd>TIAA-CREF support in the Finance::Quote perl module.</dd>
-
-      <dt> <a href="mailto:spacey@inch.com"> Peter Norton</a></dt>
-
-      <dd>for a valiant attempt at a GTK port</dd>
-
-      <dt> <a href="mailto:webmaster@obsidian.uia.net">
-      OmNiBuS</a></dt>
-
-      <dd>web site graphics and content</dd>
-
-      <dt> <a href="mailto:mopyr@IPM.Lviv.UA"> Myroslav
-      Opyr</a></dt>
-
-      <dd>for misc patches</dd>
-
-      <dt> <a href="mailto:laurent.pelecq@wanadoo.fr"> Laurent
-      P{'e}lecq</a></dt>
-
-      <dd>i18n patches with gettext</dd>
-
-      <dt> <a href="mailto:Alain.Peyrat@nmu.alcatel.fr"> Alain
-      Peyrat</a></dt>
-
-      <dd>for <tt>configure.in</tt> patches</dd>
-
-      <dt> <a href="mailto:peter@wuzel.m.isar.de"> Peter
-      Pointner</a></dt>
-
-      <dd>Motif and configuration patches</dd>
-
-      <dt> <a href="mailto:maufk@csv.warwick.ac.uk"> Gavin
-      Porter</a></dt>
-
-      <dd>for euro style dates</dd>
-
-      <dt> <a href="mailto:rr@sco.com"> Ron Record</a></dt>
-
-      <dd>for SCO Unixware and OpenServer binaries</dd>
-
-      <dt> <a href="mailto:schoenberger@signsoft.com"> Dirk
-      Schoenberger</a></dt>
-
-      <dd>began the Qt/KDE port</dd>
-
-      <dt> <a href="mailto:jan.schrage@urz.uni-heidelberg.de"> Jan
-      Schrage</a></dt>
-
-      <dd>documentation patches</dd>
-
-      <dt> <a href="mailto:cls@seawood.org"> Christopher
-      Seawood</a></dt>
-
-      <dd>for XbaeMatrix core dump</dd>
-
-      <dt> <a href="mailto:msimons@fsimons01.erols.com"> Mike
-      Simons</a></dt>
-
-      <dd>misc <tt> configure.in</tt> patches</dd>
-
-      <dt> <a href="mailto:rich@brake.demon.co.uk"> Richard
-      Skelton</a></dt>
-
-      <dd>for Solaris cleanup</dd>
-
-      <dt> <a href="mailto:spruth@bigfoot.com"> Henning
-      Spruth</a></dt>
-
-      <dd>for German text and euro date rework</dd>
-
-      <dt> <a href="mailto:parys@freewwweb.com"> Robby Stephenson</a></dt>
-
-      <dd>register patch</dd>
-
-      <dt> <a href="mailto:tma@iis.fhg.de"> Herbert Thoma</a></dt>
-
-      <dd>gnome register & euro support patches</dd>
-
-      <dt> <a href="mailto:detrout@earthlink.net"> Diane
-      Trout</a></dt>
-
-      <dd>scheme qif import patch</dd>
-
-      <dt> <a href="mailto:rkw@dataplex.net"> Richard Wackerbarth</a></dt>
-
-      <dd>patch to gnc-prices</dd>
-
-      <dt> <a href="mailto:rob@valinux.com"> Rob Walker</a></dt>
-
-      <dd>guile and register patches</dd>
-
-      <dt> <a href="mailto:dwmw2@infradead.org"> David Woodhouse</a></dt>
-
-      <dd>Great Britain translations</dd>
-
-      <dt> <a href="mailto:gooch@ic.EECS.Berkeley.EDU"> Ken
-      Yamaguchi</a></dt>
-
-      <dd>QIF import fixes; MYM import</dd>
-    </dl>
+<dt><b>Andrew Arensburger</b> &lt;<i>arensb@cfar.umd.edu</i>&gt; </dt><dd> for FreeBSD &amp; other patches</dd>
+<dt><b>Matt Armstrong</b> &lt;<i>matt_armstrong@bigfoot.com</i>&gt; </dt><dd> for misc fixes</dd>
+<dt><b>Derek Atkins</b> &lt;<i>warlord@MIT.EDU</i>&gt; </dt><dd> build system patch, rpc backend</dd>
+<dt><b>Fred Baube</b> &lt;<i>fred@moremagic.com</i>&gt; </dt><dd> for attempted Java port/MoneyDance</dd>
+<dt><b>Dennis Björklund</b> &lt;<i>dennisb@cs.chalmers.se</i>&gt; </dt><dd> Swedish translation</dd>
+<dt><b>Per Bojsen</b> &lt;<i>bojsen@worldnet.att.net</i>&gt; </dt><dd> several core dump fixes</dd>
+<dt><b>Terry Boldt</b> &lt;<i>tboldt@attglobal.net</i>&gt; </dt><dd> financial calculator and expression parser</dd>
+<dt><b>Simon Britnell</b> &lt;<i>simon.britnell@peace.com</i>&gt; </dt><dd> patch to RPM spec</dd>
+<dt><b>Christopher B. Browne</b> &lt;<i>cbbrowne@hex.net</i>&gt; </dt><dd> for perl, lots of scheme and documentation</dd>
+<dt><b>Conrad Canterford</b> &lt;<i>conrad@mail.watersprite.com.au</i>&gt; </dt><dd> register bug fix</dd>
+<dt><b>Bill Carlson</b> &lt;<i>wwc@wwcnet.nu</i>&gt; </dt><dd> performance improvements</dd>
+<dt><b>Carol Champagne</b> &lt;<i>carol@gnumatic.com</i>&gt; </dt><dd> documentation</dd>
+<dt><b>Graham Chapman</b> &lt;<i>grahamc@zeta.org.au</i>&gt; </dt><dd> for the xacc-rpts addon package</dd>
+<dt><b>George Chen</b> &lt;<i>georgec@sco.com</i>&gt; </dt><dd> for MS-Money QIF's &amp; fixes</dd>
+<dt><b>Albert Chin-A-Young</b> &lt;<i>china@thewrittenword.com</i>&gt; </dt><dd> configure.in patch</dd>
+<dt><b>Kenneth Christiansen</b> &lt;<i>kenneth@gnome.org</i>&gt; </dt><dd> Danish translation</dd>
+<dt><b>Jeremey Collins</b> &lt;<i>jcollins@gnucash.org</i>&gt; </dt><dd> for GnoMoney &amp; GTK port</dd>
+<dt><b>Matthew Condell</b> &lt;<i>mcondell@bbn.com</i>&gt; </dt><dd> FreeBSD patch</dd>
+<dt><b>Patrick Condron</b> &lt;<i>pcondon@rackspace.com</i>&gt; </dt><dd> for webserver and T1 connection from rackspace.com</dd>
+<dt><b>Raphael Dechenaux</b> &lt;<i>raphael.dechenaux@worldonline.fr</i>&gt; </dt><dd> register patch</dd>
+<dt><b>Ciaran Deignan</b> &lt;<i>Ciaran.Deignan@bull.net</i>&gt; </dt><dd> for AIX binary version</dd>
+<dt><b>Glen Ditchfield</b> &lt;<i>gjditchfield@acm.org</i>&gt; </dt><dd> updated documentation</dd>
+<dt><b>Tyson Dowd</b> &lt;<i>tyson@tyse.net</i>&gt; </dt><dd> for config/make patches &amp; debian maint</dd>
+<dt><b>Koen D'Hondt</b> &lt;<i>ripley@xs4all.nl</i>&gt; </dt><dd> for Solaris patches to XmHTML</dd>
+<dt><b>Bob Drzyzgula</b> &lt;<i>bob@mostly.com</i>&gt; </dt><dd> for budgeting design notes</dd>
+<dt><b>Paul Fenwick</b> &lt;<i>pjf@schools.net.au</i>&gt; </dt><dd> ASX support, Finance::Quote</dd>
+<dt><b>Hubert Figuiere</b> &lt;<i>hfiguiere@teaser.fr</i>&gt; </dt><dd> patch to gnc-prices</dd>
+<dt><b>Valek Filippov</b> &lt;<i>frob@df.ru</i>&gt; </dt><dd> Russian translation</dd>
+<dt><b>Jan-Uwe Finck</b> &lt;<i>jufi@nerdnet.de</i>&gt; </dt><dd> for German message translation</dd>
+<dt><b>Kevin Finn</b> &lt;<i>kevinfinn@mediaone.net</i>&gt; </dt><dd> auto-decimal point patch, options patch</dd>
+<dt><b>Ron Forrester</b> &lt;<i>rjf@aracnet.com</i>&gt; </dt><dd> for gnome patches</dd>
+<dt><b>Dave Freese</b> &lt;<i>DFreese@osc.uscg.mil</i>&gt; </dt><dd> for leap-year fix</dd>
+<dt><b>John Goerzen</b> &lt;<i>jgoerzen@complete.org</i>&gt; </dt><dd> file i/o fix for 64-bit architectures</dd>
+<dt><b>Hans de Graaff</b> &lt;<i>hans@degraaff.org</i>&gt; </dt><dd> xml patches</dd>
+<dt><b>Bill Gribble</b> &lt;<i>grib@billgribble.com</i>&gt; </dt><dd> qif importation code</dd>
+<dt><b>Mitsuo Hamada</b> &lt;<i>mhamada@redhat.com</i>&gt; </dt><dd> Japanese translations</dd>
+<dt><b>Otto Hammersmith</b> &lt;<i>otto@bug.redhat.com</i>&gt; </dt><dd> for RedHat RPM version</dd>
+<dt><b>Eric Hanchrow</b> &lt;<i>offby1@blarg.net</i>&gt; </dt><dd> updated currency documentation</dd>
+<dt><b>Alexandru Harsanyi</b> &lt;<i>haral@codec.ro</i>&gt; </dt><dd> for core dumps, lockups, gtk work</dd>
+<dt><b>John Hasler</b> &lt;<i>john@dhh.gt.org</i>&gt; </dt><dd> engine patch</dd>
+<dt><b>Jon Kåre Hellan</b> &lt;<i>hellan@acm.org</i>&gt; </dt><dd> misc core dump fixes</dd>
+<dt><b>Claus Hindsgaul</b> &lt;<i>claus_h@image.dk</i>&gt; </dt><dd> Danish translation</dd>
+<dt><b>Miquel Jordana Vilamitjana</b> &lt;<i>jjvmjv@mundomail.net</i>&gt; </dt><dd> Spanish translation of manual</dd>
+<dt><b>Prakash Kailasa</b> &lt;<i>PrakashK@bigfoot.com</i>&gt; </dt><dd> for gnome build fixes</dd>
+<dt><b>Alexey Kakunin</b> &lt;<i>small@arcadia.spb.ru</i>&gt; </dt><dd> quickfill patch for cyrillic</dd>
+<dt><b>Ben Kelly</b> &lt;<i>ben.kelly@ieee.org</i>&gt; </dt><dd> for motif menu bug fix, core dump fixes</dd>
+<dt><b>Tom Kludy</b> &lt;<i>tkludy@csd.sgi.com</i>&gt; </dt><dd> for SGI Irix port</dd>
+<dt><b>Sven Kuenzler</b> &lt;<i>sk@xgm.de</i>&gt; </dt><dd> for SuSE README file</dd>
+<dt><b>Bryan Larsen</b> &lt;<i>blarsen@ada-works.com</i>&gt; </dt><dd> guile budget report</dd>
+<dt><b>Graham Leggett</b> &lt;<i>minfrin@sharp.fm</i>&gt; </dt><dd> for fixing a hang</dd>
+<dt><b>Ted Lemon</b> &lt;<i>mellon@andare.fugue.com</i>&gt; </dt><dd> for NetBSD port</dd>
+<dt><b>Grant Likely</b> &lt;<i>glikely@nortelnetworks.com</i>&gt; </dt><dd> gnome and engine patches</dd>
+<dt><b>Duarte Loreto</b> &lt;<i>happyguy_pt@hotmail.com</i>&gt; </dt><dd> Portuguese translations</dd>
+<dt><b>Heath Martin</b> &lt;<i>martinh@pegasus.cc.ucf.edu</i>&gt; </dt><dd> gnome patches, major register work</dd>
+<dt><b>Matt Martin</b> &lt;<i>mgmartin@abacusnet.net</i>&gt; </dt><dd> guile error handling code</dd>
+<dt><b>Robert Graham Merkel</b> &lt;<i>rgmerk@mira.net</i>&gt; </dt><dd> reporting, gnome, and config patches</dd>
+<dt><b>Juan Manuel García Molina</b> &lt;<i>juanmagm@mail.com</i>&gt; </dt><dd> spanish translation</dd>
+<dt><b>Christopher Molnar</b> &lt;<i>molnarc@mandrakesoft.com</i>&gt; </dt><dd> build system patch</dd>
+<dt><b>Tim Mooney</b> &lt;<i>mooney@dogbert.cc.ndsu.NoDak.edu</i>&gt; </dt><dd> port to alpha-dec-osf4.0f</dd>
+<dt><b>G. Allen Morris III</b> &lt;<i>gam3@ann.softgams.com</i>&gt; </dt><dd> for QIF core dump</dd>
+<dt><b>James LewisMoss</b> &lt;<i>dres@debian.org</i>&gt; </dt><dd> design doc patches, xml, test suite</dd>
+<dt><b>Steven Murdoch</b> &lt;<i>sjmurdoch@linuxfan.com</i>&gt; </dt><dd> gnc-prices fix for London exchange</dd>
+<dt><b>Brent Neal</b> &lt;<i>brent@baton.phys.lsu.edu</i>&gt; </dt><dd> TIAA-CREF support.</dd>
+<dt><b>Johnny Ernst Nielsen</b> &lt;<i>j.e.nielsen@iname.com</i>&gt; </dt><dd> Danish translation</dd>
+<dt><b>Stefan Nobis</b> &lt;<i>stefan-ml@snobis.de</i>&gt; </dt><dd> German translation patch</dd>
+<dt><b>Peter Norton</b> &lt;<i>spacey@inch.com</i>&gt; </dt><dd> for a valiant attempt at a GTK port</dd>
+<dt><b>OmNiBuS</b> &lt;<i>webmaster@obsidian.uia.net</i>&gt; </dt><dd> web site graphics &amp; content</dd>
+<dt><b>Gordon Oliver</b> &lt;<i>gordo@pincoya.com</i>&gt; </dt><dd> multiple currency status line patch</dd>
+<dt><b>Myroslav Opyr</b> &lt;<i>mopyr@IPM.Lviv.UA</i>&gt; </dt><dd> for misc patches</dd>
+<dt><b>Dave Peticolas</b> &lt;<i>dave@krondo.com</i>&gt; </dt><dd> extensive intelligent patches</dd>
+<dt><b>Laurent P'elecq</b> &lt;<i>laurent.pelecq@wanadoo.fr</i>&gt; </dt><dd> i18n patches with gettext</dd>
+<dt><b>Alain Peyrat</b> &lt;<i>Alain.Peyrat@nmu.alcatel.fr</i>&gt; </dt><dd> for configure.in patches</dd>
+<dt><b>Peter Pointner</b> &lt;<i>peter@wuzel.m.isar.de</i>&gt; </dt><dd> QIF import fixes, Qt patches</dd>
+<dt><b>Gavin Porter</b> &lt;<i>maufk@csv.warwick.ac.uk</i>&gt; </dt><dd> for euro style dates</dd>
+<dt><b>Tomas Pospisek</b> &lt;<i>tpo@spin.ch</i>&gt; </dt><dd> debian patches</dd>
+<dt><b>Ron Record</b> &lt;<i>rr@sco.com</i>&gt; </dt><dd> for SCO Unixware &amp; OpenServer binaries</dd>
+<dt><b>Keith Refson</b> &lt;<i>Keith.Refson@earth.ox.ac.uk</i>&gt; </dt><dd> Solaris fixes</dd>
+<dt><b>Dirk Schoenberger</b> &lt;<i>schoenberger@signsoft.com</i>&gt; </dt><dd> Qt/KDE work</dd>
+<dt><b>Jan Schrage</b> &lt;<i>jan.schrage@urz.uni-heidelberg.de</i>&gt; </dt><dd> documentation patches</dd>
+<dt><b>Christopher Seawood</b> &lt;<i>cls@seawood.org</i>&gt; </dt><dd> for XbaeMatrix core dump</dd>
+<dt><b>Alessandro Seveso</b> &lt;<i>aleseveso@tiscalinet.it</i>&gt; </dt><dd> Italian translations</dd>
+<dt><b>Mike Simons</b> &lt;<i>msimons@fsimons01.erols.com</i>&gt; </dt><dd> misc configure.in patches</dd>
+<dt><b>Keld Simonsen</b> &lt;<i>keld@dkuug.dk</i>&gt; </dt><dd> Danish translation</dd>
+<dt><b>Richard Skelton</b> &lt;<i>rich@brake.demon.co.uk</i>&gt; </dt><dd> for Solaris cleanup</dd>
+<dt><b>Henning Spruth</b> &lt;<i>spruth@bigfoot.com</i>&gt; </dt><dd> for German text &amp; euro date rework</dd>
+<dt><b>Ben Stanley</b> &lt;<i>bds02@uow.edu.au</i>&gt; </dt><dd> test infrastructure</dd>
+<dt><b>Robby Stephenson</b> &lt;<i>robby.stephenson@usa.net</i>&gt; </dt><dd> register &amp; file history patches</dd>
+<dt><b>Christian Stimming</b> &lt;<i>stimming@uclink.berkeley.edu</i>&gt; </dt><dd> report patch</dd>
+<dt><b>Bartek Szady</b> &lt;<i>bszx@bszxdomain.edu.eu.org</i>&gt; </dt><dd> engine and build system patches</dd>
+<dt><b>Herbert Thoma</b> &lt;<i>tma@iis.fhg.de</i>&gt; </dt><dd> gnome register &amp; euro support patches</dd>
+<dt><b>Diane Trout</b> &lt;<i>detrout@earthlink.net</i>&gt; </dt><dd> scheme qif import patch</dd>
+<dt><b>Richard -Gilligan- Uschold</b> &lt;<i>uschold@cs.ucf.edu</i>&gt; </dt><dd> tax report &amp; txf export</dd>
+<dt><b>Richard Wackerbarth</b> &lt;<i>rkw@dataplex.net</i>&gt; </dt><dd> patch to gnc-prices, qif import fixes</dd>
+<dt><b>Rob Walker</b> &lt;<i>rob@valinux.com</i>&gt; </dt><dd> guile and register patches</dd>
+<dt><b>David Woodhouse</b> &lt;<i>dwmw2@infradead.org</i>&gt; </dt><dd> Great Britain translations</dd>
+<dt><b>Ken Yamaguchi</b> &lt;<i>gooch@ic.EECS.Berkeley.EDU</i>&gt; </dt><dd> QIF import fixes; MYM import</dd>
+<dt><b>Shimpei Yamashita</b> &lt;<i>shimpei@gol.com</i>&gt; </dt><dd> Japanese translation</dd>
+</dl>
 
 
 </td>
