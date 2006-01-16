@@ -5,16 +5,17 @@
 	</td>
   <td valign=top width=98%>
   
-<h1>XXX</h1>
+<h1>XXX SEARCH IS BROKEN</h1>
+Yes, we know, we are working to fix it now.
        
 
 
 <?php
 
 
-include("../include/table_top.inc");
+include($GLOBALS['DOCUMENT_ROOT']."/en/components/table_top.phtml");
 print "Search results for $words";
-include("../include/table_middle.inc");
+include($GLOBALS['DOCUMENT_ROOT']."/en/components/table_middle.phtml");
 
 $HTSEARCH_PROG = "./htdig.sh";
 # $swords = $words;
@@ -136,7 +137,7 @@ $rc = count($result);
 
 # page_list($page, $matches);
 
-include("../include/table_bottom.inc");
+include($GLOBALS['DOCUMENT_ROOT']."/en/components/table_bottom.phtml");
 
 ?>
   </td>
