@@ -97,10 +97,44 @@ Here's how you might fit in:
     rough, and is currently being re-written.  If you are a 
     great writer, contact us.
     </p>
+    <p></p>
+<dt><b>If you are a fan but have few programming talents:</b>
+<dd>There are many novice and intermediate users of GnuCash
+    who need occasional help using GnuCash.  Hang out on the 
+    <a href="maillist.php3">gnucash-user</a> mailing list,
+    and help answer questions, or at least guide the discussion
+    there.  If you have formal training in accounting, or 
+    considerable experience in finance, and you want to help
+    the developers implement the features correctly, then
+    you should join the rather technical discussions that 
+    occur on <a href="maillist.php3">gnucash-devel</a>.
+    Courageous beta-testers are always needed for the latest
+    version.  That's because the latest version is frequently 
+    broken, and we need someone to tell us where the bugs are.
+    If you are an artist: well, a new logo, a better icon,
+    more graphics: these things sure don't hurt.
+    If you like to promote free software projects, write to us:
+    we like promoters.
+    <p></p>
+<dt><b>If you are a webmaster:</b>
+<dd>We'd like somebody to help set up and maintain all those
+    neat development tools that a 'real' project should have,
+    such as lxr and bonsai, and maybe a bug-tracking tool,
+    or other bits &amp; pieces.  We even need someone to make 
+    sure that the mail archives are running correctly, and that
+    recent mail is getting indexed &amp; is searchable.
+    <p></p>
+<dt><b>If you are a writer/reporter:</b>
+<dd>The documentation needs an overhaul. Some people may think 
+    that accounting is boring, but that doesn't mean that the 
+    documentation should put you to sleep.  And having the 
+    latest in finacial news, creating something along the lines 
+    of advogato for financial topics, might not be a bad idea.
 </dl>
 
 </FONT>
 
+<br><br>
 
 <! ************************** >                        
 <! Developer Content - FINISH >
