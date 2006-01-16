@@ -11,6 +11,11 @@
         
 <BR>
 
+<B>GNU Enterprise</B> - A project to create an ERP system for small, 
+    medium and large busnisses -
+    <A HREF="http://www.gnue.org/">http://www.gnue.org/</a>
+    <BR><BR>
+
 <B>CBBrowne's Finances, Linux, and Stuff</B> - Reviews financial software and technology - 
     <A HREF="http://www.hex.net/~cbbrowne/finances.html">http://www.hex.net/~cbbrowne/finances.html</a>
     <BR><BR>
