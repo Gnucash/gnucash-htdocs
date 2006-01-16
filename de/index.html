@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" 
+ "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+<head>
+<title>GnuCash</title>
+<!-- index, noindex, follow, nofollow -->
+<meta name="robots" content="index, follow">
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#AA5522" 
+vlink="#772200" alink="#000000">
+
+<nobr><a href="../../index.html">HOME</a>-&gt;<a 
+href="../index.html">Projekte</a>-&gt;GnuCash</nobr>
+<hr>
+
+<a href="http://www.gnucash.org">
+<img src="gnu_bill.gif" alt="Gnu bill" width=350 height=147
+ border=0 align=right></a>
+
+<h1><a href="http://www.gnucash.org">GnuCash</a></h1>
+
+<p>GnuCash ist ein Programm zur Verwaltung pers&ouml;nlicher Finanzen.
+Eine scheckbuch&auml;hnliche Oberfl&auml;che erlaubt die Eingabe und
+das Verfolgen von Bankkonten, Aktien und sogar W&auml;hrungshandel.
+Die Oberfl&auml;che ist einfach und leicht zu bedienen, verwendet aber
+das Prinzip der doppelten Buchf&uuml;hrung.</p>
+
+<h2>Funktionen von GnuCash sind:</h2>
+
+<ul>
+  <li>
+    Ein einfaches Benutzerinterface: Wer einen Kontoauszug
+    versteht, kann GnuCash verwenden.
+  </li>
+  <li>
+    QuickFill: wenn ein Beschreibungstext für eine Buchung
+    mit einem vorangehenden Text identisch ist, kann er
+    mit &lt;TAB&gt; automatisch komplettiert werden (z.B. f&uuml;r
+    regelm&auml;&szlig;ige Buchungen wie das Gehalt).
+  </li>
+  <li>
+    Handhabung von Aktien- und Fondsportfolios: der
+    aktuelle Stand kann einzeln (eine Aktie = ein Konto)
+    oder als Portfolio (alle Aktien = ein Konto)
+    verwaltet werden.
+  </li>
+  <li>
+    Verschiedene W&auml;hrungen und Devisenhandel:
+    Mehrere W&auml;hrungen werden unterst&uuml;tzt und k&ouml;nnen
+    ge- und verkauft werden. W&auml;hrungsbewegungen auf
+    den Konten werden ausgeglichen.(Einige Teile von
+    Devisenhandel sind aber noch nicht vollst&auml;ndig
+    implementiert.)
+  </li>
+  <li>
+    Import von Dateien im Quicken Interchange Format
+    (QIF).
+  </li>
+  <li>
+    Berichte: Anzeigen von Gewinn &amp; Verlust oder Portfolios, auch in HTML
+  </li>
+  <li>
+    Hierarchie von Konten: Ein Haupt-Konto kann eine Hierarchie
+    von Unter-Konten haben. Das macht es m&ouml;glich, &auml;hnliche
+    Konten (Bargeld, Spar-, Aktien-Konten) in einem Hauptkonto
+    zusammenzufassen.
+  </li>
+  <li>
+    Split-Buchungen: Eine einzelne Buchung kann in mehrere Teile
+    zerlegt werden, wie z.B. Steuern, Geb&uuml;hren, usw.
+  </li>
+  <li>
+    Erlaubt das Aktualisieren von Aktien- und Fonds-Kursen &uuml;ber das
+    Internet, auch automatisch.
+  </li>
+  <li>
+    Geschrieben in "C" mit eingebetteter Unterst&uuml;tzung von Scheme
+    durch "guile".
+  </li>
+  <li>
+    GnuCash steht unter der <a href="http://www.gnu.org/copyleft/gpl.html">GPL 
+    (GNU General Public License)</a>
+  </li>
+</ul>
+
+<a href="http://www.gnu.org/philosophy/free-software-for-freedom.html">
+<img src="mtsbwy.jpg" alt="May the Source be with you" width=178 height=180
+ border=0 align=right></a>
+
+<h2><a name="gnc_links">Links</a></h2>
+
+<h3>GnuCash Homepage</h3>
+<ul>
+  <li><a href="http://www.gnucash.org">http://www.gnucash.org</a></li>
+</ul>
+
+<h3>Download</h3>
+<p>Quelltext- und ausf&uuml;hrbare Programmpakete sind unter
+folgenden URLs erh&auml;ltlich. Die derzeitigen stabilen
+Versionen haben Versionsnummern 1.4.x, die Entwicklungsversionen
+haben Versionsnummern 1.5.x.</p>
+<ul>
+  <li><a href="ftp://ftp.gnucash.org/pub/gnucash/">
+      ftp://ftp.gnucash.org/pub/gnucash/</a></li>
+  <li><a href="http://download.sourceforge.net/gnucash/">
+       http://download.sourceforge.net/gnucash/</a></li>
+</ul>
+<p>Die jeweils aktuellste Entwicklungsversion kann vom 
+GnuCash CVS Server bezogen werden. Dazu mu&szlig; man sich
+zuerst am CVS Server anmelden:</p>
+<ul>
+  <li>cvs -d :pserver:cvs@cvs.gnucash.org:/home/cvs/cvsroot login</li>
+</ul>
+<p>Das Passwort ist 'guest'. Den Quellcode bekommt man dann mit:</p>
+<ul>
+  <li>cvs -d :pserver:cvs@cvs.gnucash.org:/home/cvs/cvsroot checkout 
+      gnucash</li>
+</ul>
+<p>Eine einmal ausgecheckte Version von GnuCash bringt man
+folgenderma&szlig;en auf den neuesten Stand:</p>
+<ul>
+  <li>cd &lt;GnuCash-Verzeichnis&gt;</li>
+  <li>cvs up -Pd</li>
+</ul>
+
+<h3>Mailinglisten</h3>
+<p>F&uuml;r GnuCash existieren die folgenden Mailinglisten:</p>
+<ul>
+  <li><a href="mailto:gnucash-announce@gnucash.org">
+       gnucash-announce@gnucash.org</a></li>
+  <li><a href="mailto:gnucash-user@gnucash.org">
+       gnucash-user@gnucash.org</a></li>
+  <li><a href="mailto:gnucash-devel@gnucash.org">
+       gnucash-devel@gnucash.org</a></li>
+  <li><a href="mailto:gnucash-patches@gnucash.org">
+       gnucash-patches@gnucash.org</a></li>
+</ul>
+<p>N&auml;here Informationen zu den Listen und wie man sie
+abonniert gibt es unter:</p>
+<ul>
+  <li><a href="http://www.gnucash.org/maillist.php3">
+       http://www.gnucash.org/maillist.php3</a></li>
+</ul>
+
+<h3>Gnome</h3>
+<p>GnuCash ist eine Gnome Applikation, l&auml;uft aber selbstverst&auml;ndlich
+auch unter KDE oder jedem anderen Windowmanager. N&auml;here Informationen
+zu Gnome unter folgenden Links.</p>
+<ul>
+  <li><a href="http://www.gnome.org">http://www.gnome.org</a></li>
+  <li><a href="http://developer.gnome.org">http://developer.gnome.org</a></li>
+  <li><a href="http://www.gtk.org">http://www.gtk.org</a></li>
+  <li><a href="http://glade.pn.org">http://glade.pn.org</a></li>
+</ul>
+<p>Neueste Versionen der Gnome Pakete k&ouml;nnen von Helixcode
+bezogen werden.</p>
+<ul>
+  <li><a href="http://www.helixcode.com">http://www.helixcode.com</a></li>
+</ul>
+
+<h3>Scheme / guile</h3>
+<p>Die Erweiterungs- / Konfigurations- / Scriptsprache von GnuCash ist
+Scheme realisiert durch guile.</p>
+<ul>
+  <li><a href="http://www.schemers.org">http://www.schemers.org</a></li>
+  <li><a href="http://www.gnu.ai.mit.edu/software/guile/guile.html">
+       http://www.gnu.ai.mit.edu/software/guile/guile.html</a></li>
+  <li><a href="http://swissnet.ai.mit.edu/~jaffer/SLIB.html">
+       http://swissnet.ai.mit.edu/~jaffer/SLIB.html</a></li>
+</ul>
+
+<h3>Gnumatic</h3>
+<p>Eine junge Firma, die die GnuCash Entwicklung vorantreibt.</p>
+<ul>
+  <li><a href="http://www.gnumatic.com">http://www.gnumatic.com</a></li>
+</ul>
+
+<hr>
+<nobr><a href="../../index.html">HOME</a>-&gt;<a 
+href="../index.html">Projekte</a>-&gt;GnuCash</nobr>
+<hr>
+<nobr>&copy; 2000 <a href="mailto:herbie@hthoma.de">Herbert Thoma, 
+herbie@thtoma.de</a>, last changed 22. Oct. 2000</nobr>
+</body>
+</html>
