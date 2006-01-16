@@ -13,10 +13,6 @@
     //  change  this  to  the  directory  of  your  news  files 
     //  they  should  be  plain  ASCII  text  files  with  extension  ".txt" 
 
-    # Perhaps we should be using this, but it won't work until we have
-    # the DocumentRoot set up.
-    # $newspath = $GLOBALS['DOCUMENT_ROOT']."/news/
-
     # So we'll just do this for now...
     $native_newspath  =  "news/"; 
     $alt_newspath  =  "../news/"; 
@@ -29,26 +25,14 @@
     $native_files = array();
     $hd  =  dir($native_newspath); 
     
-    //  Get  all  files  and  store  them  in  array 
+    //  Get  all  files in the native directory; these will
+    // always be displayed.
     while(  $filename  =  $hd->read()  )  { 
         $s=strtolower($filename); 
         if  (strstr($s, ".txt"))  { 
             $native_files[$filename]  =  $native_newspath.$filename;
-        }    
-    } 
-    $hd->close();  
-
-    // ------------------------------------------
-    
-    //  Create  handle  to  search  directory  $newspath  for  files 
-    $hd  =  dir($alt_newspath); 
-    
-    //  Get  all  files  and  store  them  in  array 
-    while(  $filename  =  $hd->read()  )  { 
-        $s=strtolower($filename); 
-        if  (strstr($s, ".txt"))  { 
-
-	    $display_filename = $alt_newspath.$filename;
+	    
+	    $display_filename = $native_newspath.$filename;
 	    
             //  Determine  last  modification  date 
             $lastchanged=filemtime($display_filename); 
@@ -56,9 +40,32 @@
         }    
     } 
     $hd->close();  
+
+    // ------------------------------------------
+    // Are there alternate language articles to display?
+    $hd  =  dir($alt_newspath); 
     
-    //  Sort  files  in  descending  order 
+    //  Get all the alternate-language files, and display them
+    // only if there isn't a matching native language article.
+    while(  $filename  =  $hd->read()  )  { 
+        $s=strtolower($filename); 
+        if  (strstr($s, ".txt"))  { 
+	    
+	    // display laternate only if there isn't a native !
+	    if (!$native_files[$filename]) {
+	       $display_filename = $alt_newspath.$filename;
+               //  Determine  last  modification  date 
+               $lastchanged=filemtime($display_filename); 
+               $newsfile[$display_filename]  =  $lastchanged; 
+	    }
+        }    
+    } 
+    $hd->close();  
+    
+    // ------------------------------------------
+    //  Sort  files  in  descending  date order 
     arsort($newsfile); 
+
     //  Output  files  to  browser 
     for(reset($newsfile);  $key  =  key($newsfile);  next($newsfile))  
     { 
