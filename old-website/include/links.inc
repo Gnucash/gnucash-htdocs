@@ -41,7 +41,7 @@
       <?php include("include/table_middle.inc") ?>
        <center>
        <form action="/search.php3" method="get">
-       <input type=text name=search size=15>
+       <input type=text name=words size=15>
        <br><font size="-2">Sort method:</font>
        <select name="sort">
        <option value="sort">Standard
