@@ -7,19 +7,22 @@
 <h1>How to Contribute</h1>
 
 <p>
+<div class='text' align='justify'>
 GnuCash is an Free Software development project and the 
 dynamics of contributing to it is much like any other.
 What you contribute to it depends very much on your skill, 
 the time you have available, and what you enjoy doing.
 GnuCash is looking for beta-testers, programmers, writers, 
 question-answerers, translators and all-around nice people.   
+</div>
 
-<br><br>
+<p>
+
 <table>
 <tr><td>
 <b>Select your talent to see where you might fit in:</b></td>
 <td>
-<form method=post>
+<form method="post" action="/en/contribute.phtml">
 <select name=contribute>
   <option value=programmer
    <?php if ($contribute == "programmer") { echo ("selected"); } ?>
@@ -38,10 +41,12 @@ question-answerers, translators and all-around nice people.
   >I am a writer/reporter</option>
 </select>
 <input type=submit value=Go>
-</td>
-</table>
 </form>
 
+</td>
+</table>
+
+<hr noshade>
 <?php
   if ($contribute != "") { 
 		include($GLOBALS['DOCUMENT_ROOT']."/en/contribute/contribute-".$contribute.".phtml");
