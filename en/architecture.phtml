@@ -13,7 +13,7 @@ The engine/server is written in C primarily for speed,
 portability, stability and historical purposes.  Much of the
 day-to-day workhorse code is written in Scheme, primarily
 for its power, expressiveness and ease of development.
-The user interface is gtk/gnome, some of it done up in C,
+The user interface is GTK/gnome, some of it done up in C,
 some in scheme, and some with the 
 GUI designer tool <a href="http://glade.pn.org">glade</a>.
 
@@ -57,7 +57,7 @@ destroying three basic financial entities: Accounts, Transactions (known
 as Ledger Entries in accounting practice), and Splits (known as Journal
 Entries). These three entities are the central data structures of the
 GnuCash financial data model,
-<a href="/images/diagrams/structures.png">as illustraded in this diagram.</a>
+<a href="/images/diagrams/structures.png">as illustrated in this diagram.</a>
 
 <p>The Engine code contains no GUI code whatsoever, and is essentially
 OS-neutral. It is written entirely in C.
@@ -95,7 +95,7 @@ databases) or for communicating with a remote GnuCash storage server
 (by any server-defined protocol).
 Currently implemented and supported are the XML file backend, which
 stores GnuCash data in its native XML file format, and the Postgres SQL
-backend, which supports multiple simulataneous users of GnuCash.  
+backend, which supports multiple simultaneous users of GnuCash.  
 Additionally, there are several experimental backends (currently 
 broken/unsupported): one for communicating with a GnuCash storage 
 server via RPC, and another that chats, via XML across HTTP, with 
@@ -148,7 +148,7 @@ loss statements, barcharts, piecharts, <i>etc.</i>  It uses the Query
 API to fetch and format data, which is then converted into HTML and 
 displayed with the gtkhtml widget.  Graphs are implemented in Guppi,
 (&lt;<code>http://www.gnome.org/guppi</code>&gt;).
-and are embeded (as live graphs) directly in the HTML.
+and are embedded (as live graphs) directly in the HTML.
 
 		 </td>
    </tr>
@@ -220,7 +220,7 @@ when the imported file is a bank statement obtained periodically
 from a website: each time it is fetched, it might contain transactions 
 that were previously reported.  Thus, to perform file import correctly,
 one must have a fairly sophisticated transaction matcher that can
-detect and properlyt handle (ignore) duplicate transactions.  This
+detect and properly handle (ignore) duplicate transactions.  This
 pattern matching is generically useful, and is used by the HCBI
 subsystem.  (HCBI is an online banking system available to residents
 of Germany).
