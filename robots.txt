@@ -5,6 +5,7 @@
 #
 # For more info, see 
 # http://web.nexor.co.uk/users/mak/doc/robots/norobots.html
+# http://info.webcrawler.com/mak/projects/robots/norobots.html
 #
 
 # Wild card is *, these directives apply to all robots
@@ -13,5 +14,6 @@ User-agent: *
 
 # We don't want robots walking through the executables
 
-Disallow: /cgi-bin
+Disallow: /cgi-bin/
+Disallow: /lxr/
 
