@@ -12,7 +12,7 @@
 face="VERANDA,HELVETICA">
 <b>Getting the most recent sources via CVS:</b><br>
 <br>
-   A read-only version of the cvs tree is
+   A read-only version of the CVS tree is
    available on the net. To access it,
    first, login, as so: </font>
 <BR><BR>
@@ -39,7 +39,7 @@ original source from October 1997 at <tt>xacc-09a</tt>.  Things have changed a *
 <br>
 <b>Getting the most recent sources via FTP:</b><br>
 <br>
-If you don't want to bother with CVS you can just download the lastest snapshot of
+If you don't want to bother with CVS you can just download the latest snapshot of
 the CVS tree from one of several FTP sites: 
 <br>
 <a href="http://www.linas.org/pub/">http://www.linas.org/pub/</a>

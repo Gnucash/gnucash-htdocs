@@ -13,7 +13,7 @@
       <A HREF="/images/motif/regwin-single.gif">register window ( Single ):</A><BR>
       <A HREF="/images/motif/regwin-double.gif">register window ( Double ):</A><BR>
       <A HREF="/images/motif/regwin-multi.gif">register window ( Multi ):</A><BR>
-      <A HREF="/images/motif/recnwin.gif">reconile window</A><BR>
+      <A HREF="/images/motif/recnwin.gif">reconcile window</A><BR>
       <A HREF="/images/motif/newaccwin-trade.gif">add account dialog:</A><BR>
       <A HREF="/images/motif/report-baln.gif">balance sheet report:</A><BR>
       <A HREF="/images/motif/report-folio.gif">portfolio valuation report:</A><BR>

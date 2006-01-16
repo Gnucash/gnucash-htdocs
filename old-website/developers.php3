@@ -48,9 +48,9 @@
   <b>Rob Browning</b>
   </dt>
   <dd>
-  abused everyone for not using perl, and then after we added perl support, 
-  dumped perl in favor of guile/scheme support. Rob maintains the build infrastructure, 
-  is handling the whole guile/perl extension language thing, and is dealing with 
+  abused everyone for not using Perl, and then after we added Perl support, 
+  dumped Perl in favor of guile/scheme support. Rob maintains the build infrastructure, 
+  is handling the whole guile/Perl extension language thing, and is dealing with 
   configuration and configurability. 
   </dd>
 </dl>
@@ -155,7 +155,7 @@
 
       <dd>configure.in patch</dd>
 
-      <dt> <a href="mailto:jcollins@gnucash.org"> Jeremey
+      <dt> <a href="mailto:jcollins@gnucash.org"> Jeremy
       Collins</a></dt>
 
       <dd>for GnoMoney and GTK port</dd>
