@@ -15,7 +15,7 @@ If you've been looking for a way to manage your personal finances
 under Linux, you've found it!  Designed to be easy to use,
 yet powerful and flexible, GnuCash allows you to track
 bank accounts, stocks, income and expenses.   As quick and intuitive
-as a checkbook register, yet backed by professional
+to use as a checkbook register, it is based on professional
 accounting principles to ensure balanced books and accurate reports.
 GnuCash is backed by an active development community and is blossoming
 into a full-fledged accounting system.  Developed under the GPL, 
