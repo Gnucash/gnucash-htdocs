@@ -42,6 +42,25 @@
       </dd>
 
       <dt>
+      <b>
+      <a href="http://slashdot.org/articles/00/06/19/1721237.shtml">
+      Gnucash v1.4.0 Released</a></b>
+      (<a href="/press-archive/slashdot-2000-06/slashdot.org.articles.00.06.19.1721237.html">archival copy</a>)
+      (Slashdot, June 2000)
+      </dt>
+      <dd>
+      Ur@eus writes: "The Gnucash team has released the
+      1.4.0 version of their wonderful Quicken-like personal
+      finance manager. This is the first stable release since the move from
+      Motif to GNOME. You find Gnucash 1.4.0 at Gnucash.org" This plugs
+      a major gaping hole in Linux software: I've been using gnucash for a
+      year now, and it's made great leaps in terms of features and stability. It
+      isn't quicken, but its close enough for most of us. If you're having
+      problems with the main link, try this mirror. 
+      <br><br>
+      </dd>
+      
+      <dt>
       <b><a href="http://www.lwn.net/2000/0504/devel.phtml">
       Another look at gnucash</a></b>
       (<a href="/press-archive/lwn.net-2000-0504/devel.html">archival copy</a>)
