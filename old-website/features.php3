@@ -11,21 +11,27 @@ features
 
 
 <BR>
-GnuCash is a program to help you manage your personal finances.
-A check-book like register GUI
-allows you to enter and track bank accounts, stocks, income and
-expenses.  The interface is designed to be simple and easy to use,
-but is backed with double-entry accounting principles to ensure 
-balanced books.
+If you've been looking for a way to manage your personal finances 
+under Linux, you've found it!  Designed to be easy to use,
+yet powerful and flexible, GnuCash allows you to track
+bank accounts, stocks, income and expenses.   As quick and intuitive
+as a checkbook register, yet backed by professional
+accounting principles to ensure balanced books and accurate reports.
+GnuCash is backed by an active development community and is blossoming
+into a full-fledged accounting system.  Developed under the GPL, 
+you have no need to worry about obsolesence: GnuCash will be there 
+for you.
 <BR>
 <BR>
-
-Gnucash.org is a project that is committed to developing top-notch 
+This web site is devoted to promoting the Gnucash.org software
+development project.
+We are committed to developing top-notch 
 financial tools for Linux and Unix users.  This includes the 
 development of programming API's and components that can be used 
 to create both server and personal applications for home and business use.
-By focusing on ease-of-use, modular design and well-documented code, 
-we hope that GnuCash becomes the the choice of the GNU Generation of
+By focusing on ease-of-use, modular design, architected interfaces
+and well-documented code, we hope that GnuCash and its associated 
+financial libraries become the choice of a GNU generation of
 programmers and users.
 <BR>
 <BR>
