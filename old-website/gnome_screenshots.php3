@@ -51,9 +51,9 @@ Screen shots of the current stable (version 1.4.3) release
 </TR>
 <TR>
 <TD ALIGN=RIGHT>
-       <A HREF="images/gnome-1.4/tod.png"><B>tip of the day</B><br>
-       <IMG WIDTH=112 HEIGHT=81 
-       SRC="images/gnome-1.4/tod-thumb.png" ALIGN=TOP></A>
+       <A HREF="images/gnome-1.4/query-window.png"><B>query finder</B><br>
+       <IMG WIDTH=164 HEIGHT=156
+       SRC="images/gnome-1.4/query-window-thumb.png" ALIGN=TOP></A>
 </TD>
 <TD ALIGN=RIGHT>
        <A HREF="images/gnome-1.4/stock-register-gmc.png"><B>stock register</B><br>
@@ -61,10 +61,16 @@ Screen shots of the current stable (version 1.4.3) release
        SRC="images/gnome-1.4/stock-register-gmc-thumb.png" ALIGN=TOP></A>
 </TD>
 <TD ALIGN=RIGHT>
+       <A HREF="images/gnome-1.4/tod.png"><B>tip of the day</B><br>
+       <IMG WIDTH=112 HEIGHT=81 
+       SRC="images/gnome-1.4/tod-thumb.png" ALIGN=TOP></A>
 </TD>
 </TR>
 <TR>
 <TD ALIGN=RIGHT>
+       <A HREF="images/gnome-1.4/pnl-report.png"><B>profit &amp; loss report</B><br>
+       <IMG WIDTH=171 HEIGHT=106 
+       SRC="images/gnome-1.4/pnl-report-thumb.png" ALIGN=TOP></A>
 </TD>
 <TD ALIGN=RIGHT>
        <A HREF="images/gnome-1.4/transaction-report.png"><B>transaction report</B><br>
