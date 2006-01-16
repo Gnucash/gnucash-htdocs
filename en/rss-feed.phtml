@@ -1,4 +1,18 @@
 <?php
+   // This file reads the news items in the /news directory and turns
+   // them into Dave Winer RSS-2.0 specification news items.
+   // 
+   // The only tricky bits are that you can't embed html in the RSS feed,
+   // and our news posts have html in them. So I've gotta strip that out.
+   // the other tricky part is that I strip out blank lines in the feed.
+   // so that people who write stories with lots of blank lines at the 
+   // begining aren't screwd.
+   //
+   // tested, works with straw-0.22
+   // tested, does not work with evolution-1.4 (because it wants RSS-1.0 maybe ??)
+   // 
+   // Created by Linas Vepstas 2003, 2004
+
    echo ("<?xml version=\"1.0\" ?>\n");
 ?>
 
@@ -9,6 +23,19 @@
   <description>News and Announces concerning the GnuCash Project</description>
 
 <?php
+    function whack ($line, $item) {
+        $n = strlen ($item);
+        $s = strstr ($line, $item);
+        while ($s) {
+            $pos = strpos ($line, $item);
+            for ($i=0; $i<$n; $i++) {
+                $line[$pos+$i] = ' ';
+            }
+            $s = strstr ($line, $item);
+        }
+        return $line;
+    }
+
     //  change  this  to  the  directory  of  your  news  files 
     //  they  should  be  plain  ASCII  text  files  with  extension  ".txt" 
 
@@ -37,35 +64,64 @@
     
     //  Sort  files  in  descending  order 
     arsort($newsfile); 
+
     //  Output  files  to  browser 
     for(reset($newsfile);  $key  =  key($newsfile);  next($newsfile))  
     { 
         $fa  =  file($newspath.$key); 
-        $n=count($fa); 
-	if ($n > 5) { $n = 5; }
 
         // echo("<item rdf:about=\"http://xml.com/pub/2000/08/09/xslt/xslt.html\">"\n);
         echo("<item>\n");
         echo("<title>");
-	print $fa[0];
 
-	print  " - (". date( "Y-m-d", $newsfile[$key]) ;
-	print  date( "H:i:s",$newsfile[$key]). ")"; 
+        // Straw won't take <b> tags in the title, and they get into 
+        // the news by default.  We've got to eliminate them.
+        // do this with ultra-low-brow hack: over-write with blanks
+        $line = $fa[0];
+        $line = whack ($line, "<b>");
+        $line = whack ($line, "</b>");
+
+        print $line;
+
+        print  " - (". date( "Y-m-d", $newsfile[$key]) ;
+        print  date( "H:i:s",$newsfile[$key]). ")"; 
 
         echo("</title>\n");
         echo("<description>");
 
-        for  ($i=2;  $i<$n;  $i=$i+1)  { 
-	    print $fa[$i];
+        // count number of lines, limit to first 5 ... 
+        // which means we have to find and skip blank lines
+        $n=count($fa); 
+
+        $i=1;
+        $nonblank=0;
+        while (($i<$n) && ($nonblank < 5))  { 
+            // dammit agreagators are real picky We have to strip out all the html
+            $line = $fa[$i];
+            $line = whack ($line, "<p>");
+            $line = whack ($line, "<b>");
+            $line = whack ($line, "</b>");
+            $line = whack ($line, "<i>");
+            $line = whack ($line, "</i>");
+            $line = whack ($line, "<br>");
+            $line = whack ($line, "<big>");
+            $line = whack ($line, "</big>");
+
+            $non = strspn ($line, " \n");
+            if ($non != strlen($line)) {
+               print $line;
+               $nonblank ++;
+            }
+            $i ++;
         } 
         echo("</description>\n");
         echo("<link>");
         echo("http://www.gnucash.org/#");
-	print $key;
+        print $key;
         echo("</link>\n");
-	// print "<pubDate>". date( "Y-m-d", $newsfile[$key]). date( "H:i:s",$newsfile[$key]). " CST</pubDate>\n"
-	// echo("<language>en-us</language>\n");
-	// echo("<copyright>Copyright 2001-2003 The GnuCash Project</copyright>\n");
+        // print "<pubDate>". date( "Y-m-d", $newsfile[$key]). date( "H:i:s",$newsfile[$key]). " CST</pubDate>\n"
+        // echo("<language>en-us</language>\n");
+        // echo("<copyright>Copyright 2001-2003 The GnuCash Project</copyright>\n");
         echo("</item>\n");
     }    
     
