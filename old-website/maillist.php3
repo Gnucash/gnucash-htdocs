@@ -72,7 +72,7 @@ the bold type for instructions on how to subscribe and unsubscribe.
     and notifications of CVS tree updates.  
     Patches should be in <tt>makepatch</tt> format.
     Patches may be against source code, documentation, or foreign
-    language transalations.
+    language translations.
     This is occasionally a high-volume mailing list (2 to 30 messages a day).
     </font>
     </td>
