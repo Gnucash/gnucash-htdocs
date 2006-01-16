@@ -25,7 +25,11 @@
 
     <ul>
       <li><A HREF="http://www-cad.eecs.berkeley.edu/~gooch/mymdump.html"><b>
-         MYMdump</b></a> - MYM Managing Your Money to QIF Converter 
+         MYMdump</b></a> is an MYM Managing Your Money to QIF Converter. 
+      </li>
+
+      <li><a href="http://www.snaught.com/gbonds/"><b>GBonds</b></a>
+        is a Gnome desktop tool for tracking U.S. Savings Bonds.
       </li>
     </ul>
 
@@ -63,13 +67,21 @@
 	a whole user community around it.
       </li>
 
+      <li><a href="http://gchartman.sourceforge.net/"><b>gChartman</b></a>
+        a gtk/gnome program for technical stock charting.
+      </li>
+
+      <li><a href="http://prope.insa-lyon.fr/~rhertzog/geniustrader/"><b>
+        Genius Trader</b></a> stock graphing tool. Based on Perl and Tk.
+      </li>
+
       <li><a href="http://gstalker.sourceforge.net/"><b>gstalker</b></a>
         <!-- <a href="http://www.pathcom.com/~sstratos/"><b>gstalker</b></a> -->
         GTK/Gnome stock grapher.
       </li>
 
-      <li><a href="http://prope.insa-lyon.fr/~rhertzog/geniustrader/"><b>
-        Genius Trader</b></a> stock graphing tool. Based on Perl and Tk.
+      <li><a href="http://www.centercube.com/GtkPortfolio/news.html">
+        <b>GtkPortfolio</b></a> is a portfolio tracking tool.
       </li>
 
       <li><a href="http://kstocks.sourceforge.net/"><b>KStocks</b></a>
@@ -103,6 +115,18 @@
         command-line tool for getting stock quotes. Implemented in C.
       </li>
 
+      <li><a href="http://www.datek.com/"><b>Datek</b></a> offers
+        free data streaming.
+      </li>
+
+      <li><a href="http://freerealtime.com"><b>FreeRealTime</b></a> 
+        data streaming.
+      </li>
+
+      <li><a href="http://www.money.net"><b>MoneyNet</b></a>
+         free data streaming.
+      </li>
+      
    </ul>
 
    <h2>Business, ERP Projects</h2>
