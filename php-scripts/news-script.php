@@ -13,9 +13,9 @@
     //  change  this  to  the  directory  of  your  news  files 
     //  they  should  be  plain  ASCII  text  files  with  extension  ".txt" 
 
-    # So we'll just do this for now...
-    $native_newspath  =  "news/"; 
-    $alt_newspath  =  "../news/"; 
+    # Be sure to define the following patch to newsdirs
+    if (!$native_newspath) { $native_newspath  =  "news/";  }
+    if (!$alt_newspath) { $alt_newspath =  "../news/";  }
 
     // array of displayed filenames is indexed with filenames, holds timestamps.
     $newsfile  =  array(); 
