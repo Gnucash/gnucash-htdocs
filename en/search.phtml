@@ -1,10 +1,20 @@
+<?php $title = "Accounting Software for Linux"; ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/header.phtml"); ?>
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main.phtml"); ?>
+
+	</td>
+  <td valign=top width=98%>
+  
+<h1>XXX</h1>
+       
+
+
 <?php
 
-include("include/header.inc");
 
-include("include/table_top.inc");
+include("../include/table_top.inc");
 print "Search results for $words";
-include("include/table_middle.inc");
+include("../include/table_middle.inc");
 
 $HTSEARCH_PROG = "./htdig.sh";
 # $swords = $words;
@@ -126,8 +136,9 @@ $rc = count($result);
 
 # page_list($page, $matches);
 
-include("include/table_bottom.inc");
-
-include("include/footer.inc");
+include("../include/table_bottom.inc");
 
 ?>
+  </td>
+
+<?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/footer.phtml"); ?>
