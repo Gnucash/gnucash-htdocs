@@ -20,7 +20,17 @@
   <channel>
   <!-- <channel rdf:about="http://www.xml.com/xml/news.rss"> -->
   <title>GnuCash News</title>
+  <link>http://www.gnucash.org/</link>
   <description>News and Announces concerning the GnuCash Project</description>
+  <language>en-us</language>
+  <ttl>360</ttl>
+  <generator>Why, exactly, do you think this field is interesting? version 99</generator>
+  <copyright>Copyright 2001-2004, The GnuCash Project</copyright>
+  <image>
+  <url>http://www.gnucash.org/favicon.png</url>
+  <title>GnuCash News</title>
+  <link>http://www.gnucash.org/</link>
+  </image>
 
 <?php
     function whack ($line, $item) {
@@ -83,8 +93,8 @@
 
         print $line;
 
-        print  " - (". date( "Y-m-d", $newsfile[$key]) ;
-        print  date( "H:i:s",$newsfile[$key]). ")"; 
+        // print  " - (". date( "Y-m-d ", $newsfile[$key]) ;
+        // print  date( "H:i:s",$newsfile[$key]). ")"; 
 
         echo("</title>\n");
         echo("<description>");
@@ -119,9 +129,8 @@
         echo("http://www.gnucash.org/#");
         print $key;
         echo("</link>\n");
-        // print "<pubDate>". date( "Y-m-d", $newsfile[$key]). date( "H:i:s",$newsfile[$key]). " CST</pubDate>\n"
-        // echo("<language>en-us</language>\n");
-        // echo("<copyright>Copyright 2001-2003 The GnuCash Project</copyright>\n");
+        // print "<pubDate>". date( "Y m d ", $newsfile[$key]). date( "H:i:s",$newsfile[$key]). " CST</pubDate>\n";
+        print "<pubDate>". date( "r", $newsfile[$key]). "</pubDate>\n";
         echo("</item>\n");
     }    
     
