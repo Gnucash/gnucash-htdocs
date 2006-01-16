@@ -20,6 +20,7 @@
       <?php include("include/table_middle.inc") ?>
          &nbsp;- <A HREF="architecture.php3">System Architecture</A><BR>
          &nbsp;- <A HREF="http://linas.org/linux/gnucash/projects.html">Project Goals</A><BR>
+         &nbsp;- <A HREF="contribute.php3">How to Contribute</A><BR>
          <!-- &nbsp;- <A HREF="/cgi-bin/bugtrack">Gnucash Bug Tracker</A><BR> -->
          &nbsp;- <A HREF="maillist.php3">Mailing List&nbsp;-&nbsp;Help</A><BR>
          &nbsp;- <A HREF="archives.php3">Mailing List&nbsp;-&nbsp;Archives</A><BR>
