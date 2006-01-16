@@ -35,7 +35,7 @@
       <?php include("include/table_middle.inc") ?>
          &nbsp;- <A HREF="links.php3">Links</A> <BR>
          &nbsp;- <A HREF="articles.php3" ALT="Articles">Gnucash in the news!</A><BR>
-         &nbsp;- <A HREF="/docs/C/xacc-main.html">Documentation - English</A> <BR>
+         &nbsp;- <A HREF="/docs/C/index.html">Documentation - English</A> <BR>
          &nbsp;- <A HREF="/docs/fr/xacc-main.html">Documentation - Français</A> <BR>
          &nbsp;- <A HREF="/banners.php3">Banner Ads</A> <BR>
          &nbsp;- <A HREF="developers.php3">History and Credits</A><BR>
