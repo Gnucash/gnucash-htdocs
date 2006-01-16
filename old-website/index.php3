@@ -9,7 +9,7 @@
       <?php include("include/table_middle.inc"); ?>
 
 If you've been looking for a way to manage your personal finances 
-under Linux, you've found it!  Designed to be easy to use,
+under GNU/Linux, you've found it!  Designed to be easy to use,
 yet powerful and flexible, GnuCash allows you to track
 bank accounts, stocks, income and expenses.   As quick and intuitive
 to use as a checkbook register, it is based on professional
@@ -23,7 +23,7 @@ for you.
 This web site is devoted to promoting the Gnucash.org software
 development project.
 We are committed to developing top-notch 
-financial tools for Linux and Unix users.  This includes the 
+financial tools for GNU/Linux and Unix users.  This includes the 
 development of programming API's and components that can be used 
 to create both server and personal applications for home and business use.
 By focusing on ease-of-use, modular design, architected interfaces
