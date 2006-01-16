@@ -41,14 +41,11 @@ original source from October 1997 at <tt>xacc-09a</tt>.  Things have changed a *
 <br>
 If you don't want to bother with CVS you can just download the lastest snapshot of
 the CVS tree from one of several FTP sites: 
-<!--
-<a href="ftp://ftp.gnucash.org/pub/">
-<font size="2" face="VERANDA,HELVETICA">ftp://ftp.gnucash.org/pub/</font></a>
--->
-<a href="http://www.linas.org/pub/">
-<font size="2" face="VERANDA,HELVETICA">http://www.linas.org/pub/</font></a>
-<a href="ftp://ftp.gnucash.org/pub/">
-<font size="2" face="VERANDA,HELVETICA">ftp://ftp.gnucash.org/pub/</font></a>
+<br>
+<a href="http://www.linas.org/pub/">http://www.linas.org/pub/</a>
+<br> 
+<a href="http://www.gnucash.org/pub/">http://www.gnucash.org/pub/</a>
+<br>
 </font>
 </p> 
 		
