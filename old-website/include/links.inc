@@ -31,7 +31,8 @@
          &nbsp;- <A HREF="ChangeLog-1.5">ChangeLog for version 1.5</A><BR>
 	 -->
          &nbsp;- <A HREF="http://bugs.gnome.org/db/pa/lgnucash.html">Gnome Trouble Tickets</A><BR>
-         &nbsp;- <A HREF="source_code.php3">Getting Source Code</A>
+         &nbsp;- <A HREF="/lxr/">LXR source code broswer</A><BR>
+         &nbsp;- <A HREF="source_code.php3">Hacking GnuCash</A>
          <P>
       <?php include("include/table_bottom.inc") ?>
 
