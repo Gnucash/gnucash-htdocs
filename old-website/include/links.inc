@@ -6,6 +6,7 @@
       
         &nbsp;- <A HREF="/">About GnuCash</A><BR>
         &nbsp;- <A HREF="http://www.multimania.com/yleny/gnucash/" ALT="En Francais">Gnucash en Français</A><BR>
+        &nbsp;- <A HREF="http://www.hthoma.de/projekte/gnucash/index.html">Gnucash in German</A><BR>
         &nbsp;- <A HREF="gnome_screenshots.php3" ALT="Screen Shots">Screenshots</A><BR>
         &nbsp;- <A HREF="features.php3" ALT="Features">Features</A><BR>
         &nbsp;- <A HREF="http://www.linas.org/pub/">Download</A><BR>
