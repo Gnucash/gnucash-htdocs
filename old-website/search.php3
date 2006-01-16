@@ -3,11 +3,13 @@
 include("include/header.inc");
 
 include("include/table_top.inc");
-print "Search results for $search";
+print "Search results for $words";
 include("include/table_middle.inc");
 
 $HTSEARCH_PROG = "./htdig.sh";
-$words = EscapeShellCmd(UrlEncode($search));
+# $swords = $words;
+$swords = EscapeShellCmd(UrlEncode($words));
+# $swords = UrlEncode(EscapeShellCmd($words));
 # $config = "htdig";
 # $format = "htdig";
 $matchesperpage = 10;
@@ -15,21 +17,21 @@ $matchesperpage = 10;
 
 if(!$page)
 {
-#   $query = "config=$config&format=$format&words=$words&restrict=$restrict&matchesperpage=$matchesperpage&sort=$sort&exclude=$exclude";
-#    $query = "words=$words&restrict=$restrict&matchesperpage=$matchesperpage&sort=$sort&exclude=$exclude";
-    $query = "words=$words&matchesperpage=$matchesperpage";
+#   $query = "config=$config&format=$format&words=$swords&restrict=$restrict&matchesperpage=$matchesperpage&sort=$sort&exclude=$exclude";
+    $query = "words=$swords&restrict=$restrict&matchesperpage=$matchesperpage&sort=$sort&exclude=$exclude";
+#    $query = "words=$swords&matchesperpage=$matchesperpage";
     $page = 1; 
 }
 else
-#    $query = "config=$config&format=$format&words=$words&restrict=$restrict&matchesperpage=$matchesperpage&page=$page&sort=$sort&exclude=$exclude";
-#    $query = "words=$words&restrict=$restrict&matchesperpage=$matchesperpage&page=$page&sort=$sort&exclude=$exclude";
-    $query = "words=$words&matchesperpage=$matchesperpage&page=$page";
+#    $query = "config=$config&format=$format&words=$swords&restrict=$restrict&matchesperpage=$matchesperpage&page=$page&sort=$sort&exclude=$exclude";
+    $query = "words=$swords&restrict=$restrict&matchesperpage=$matchesperpage&page=$page&sort=$sort&exclude=$exclude";
+#    $query = "words=$swords&matchesperpage=$matchesperpage&page=$page";
 
 /**** FUNCTIONS ****/
 
 # function page_list($page, $matches)
 # {
-#    global $matchesperpage, $restrict, $search;
+#    global $matchesperpage, $restrict, $words;
 # 
 #    $TotalPages = (int)($matches / $matchesperpage);
 # 
@@ -39,7 +41,7 @@ else
 # 
 #    if($page > 1)
 #    {
-#        print "<a href=\"/search.php3?restrict=".urlencode($restrict)."&search=".urlencode($search)."";
+#        print "<a href=\"/search.php3?restrict=".urlencode($restrict)."&words=".urlencode($words)."";
 #        print "&page=".($page-1)."\">"; 
 #        print "<img src=\"/images/prev-yes.jpg\" border=\"0\"></a>\n";
 #    }
@@ -48,7 +50,7 @@ else
 #     
 #    if($page < $TotalPages)
 #    {
-#        print "<a href=\"/search.php3?restrict=".urlencode($restrict)."&search=".urlencode($search)."";
+#        print "<a href=\"/search.php3?restrict=".urlencode($restrict)."&words=".urlencode($words)."";
 #        print "&page=".($page+1)."\">";
 #        print "<img src=\"/images/next-yes.jpg\" border=\"0\"></a>\n";
 #    }
@@ -66,10 +68,10 @@ $rc = count($result);
 # if ($rc<3):
 #     echo "There was an error executing this query.  Please try later.\n";
 # elseif ($result[2]=="NOMATCH"):
-#     echo "There were no matches for <B>$search</B> found on the website.<P>&nbsp;";
+#     echo "There were no matches for <B>$words</B> found on the website.<P>&nbsp;";
 #     echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n";
 # elseif ($result[2]=="SYNTAXERROR"):
-#     echo "There is a syntax error in your search for <B>$search</B>:<BR>";
+#     echo "There is a syntax error in your search for <B>$words</B>:<BR>";
 #     echo "<PRE>" . $result[3] . "</PRE>\n";
 # else:
 #     $matches = $result[2];
@@ -78,7 +80,7 @@ $rc = count($result);
 #     $words = $result[5];
 #     $pagelist = $result[6];
 # 
-#     echo "<center><h3>Search for <B>'$search'</B> returned <B>$matches</B> match";
+#     echo "<center><h3>Search for <B>'$words'</B> returned <B>$matches</B> match";
 #     echo ($matches==1) ? "" : "es";
 #     echo "</h3></center>";
 # 
