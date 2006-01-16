@@ -21,6 +21,7 @@
       developer information
       <?php include("include/table_middle.inc") ?>
          &nbsp;- <A HREF="architecture.php3">System Architecture</A><BR>
+         &nbsp;- <A HREF="tools.php3">Required Toolkits</A><BR>
          &nbsp;- <A HREF="http://linas.org/linux/gnucash/projects.html">Project Goals</A><BR>
          &nbsp;- <A HREF="contribute.php3">How to Contribute</A><BR>
          <!-- &nbsp;- <A HREF="/cgi-bin/bugtrack">Gnucash Bug Tracker</A><BR> -->
@@ -37,7 +38,7 @@
       <?php include("include/table_top.inc") ?>
        other information
       <?php include("include/table_middle.inc") ?>
-         &nbsp;- <A HREF="links.php3">Links</A> <BR>
+         &nbsp;- <A HREF="links.php3">Related Financial Software</A> <BR>
          &nbsp;- <A HREF="articles.php3" ALT="Articles">Gnucash in the news!</A><BR>
          &nbsp;- <A HREF="/docs/C/index.html">Documentation - English</A> <BR>
          &nbsp;- <A HREF="/docs/fr/xacc-main.html">Documentation - Français</A> <BR>
