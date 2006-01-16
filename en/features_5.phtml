@@ -24,11 +24,11 @@
   <img src=/images/features/features_5_text.png><br><br>
 
 
-<b>What's New in GnuCash 1.7.5?</b><br>
-<br>
+<h2>What's New in GnuCash 1.7.5?</h2>
 Version 1.7.x is the beta for the next 1.8.x stable release series,
 and includes many new major features:
 
+    <br><br>
 <dl>
 <dt><b>Scheduled Transactions</b>
 <dd>You can now create recurring 
@@ -48,10 +48,7 @@ and includes many new major features:
 <dt><b>OFX Import</b>
 <dd>GnuCash is the first free software application to support
     the Open Financial Exchange protocol that many banks and 
-    financial services are moving to use. The development of
-    OFX and HBCI support has also resulted in an improved
-    transaction matching system that more accurately picks 
-    duplicate transactions.
+    financial services are moving to use. 
     <br><br>
 <dt><b>HBCI Support</b>
 <dd>GnuCash is the first free software application to support
@@ -59,15 +56,22 @@ and includes many new major features:
     allowing German users to perform statement download and
     initiate bank transfers and direct debits.
     <br><br>
+<dt><b>Improved Import Transaction Matching</b>
+<dd>The development of OFX and HBCI support has also resulted 
+    in an improved transaction matching system that more 
+    accurately recognizes duplicate transactions during file import.
+    <br><br>
 <dt><b>New User Manual and Help</b>
-<dd>A brand new user help has been written which focuses on
-    how to do tasks in conjunction with a Tutorial and Concepts
-    guide that gives the user background information on using 
-    GnuCash.
+<dd>A new help subsystem that focuses on how to do tasks is now available,
+    in addition to a Tutorial and Concepts guide that gives the 
+    user background information on accounting principles and how
+    they are reflected in GnuCash.
     <br><br>
 <dt><b>New Multi-Currency Transaction Handling</b>
 <dd>GnuCash no longer requires separate currency exchange
-    accounts to handle multiple currency transfers.
+    accounts to handle multiple currency transfers.  Transactions
+    can be made directly between accounts denominated in different 
+    currencies.
     <br><br>
 <dt><b>Redesigned Menus</b>
 <dd>The GnuCash menus have been redesigned to conform more
@@ -75,99 +79,94 @@ and includes many new major features:
     <br><br>
 </dl>
 
-And of course, some favorite features earlier versions:
+<h2>Old Favorites</h2>
+And of course, some favorite features from earlier versions:
 
 	<br><br>
-<UL>
-<LI>
-A reconcile window with running reconciled and cleared balances 
-makes balancing against bank statements easy. 
-</LI>
-<BR><BR>
-<LI>
-Stock/Mutual Fund Portfolios: Track stocks individually (one per 
-account) or in portfolio of accounts (a group of accounts
-that can be displayed together). 
-</LI>
-<BR><BR>
-<LI>
-Intuit&reg; Quicken&reg; QIF files can be imported, and are automatically
-merged to eliminate duplicate transactions. 
-</LI>
-<BR><BR>
-<LI>
-Handles internationalized dates and currencies.  The Gnucash 
-menus and popups have been translated to 
-Danish, French, German, Italian, Japanese, Norwegian, Portuguese, 
-Russian, Spanish, Swedish, Turkish, Ukranian, and British English.  
-Documentation is available in English, French, Portuguese and Spanish.
-</LI>
-<BR><BR>
-<LI>
-Reports: Display Balance Sheet, Profit & Loss, Portfolio Valuation, 
-iand others. Reports can be saved as HTML or postscript, or printed.
-(Upcoming beta version includes a new integrated graphing 
-infrastructure that will add considerable power & beauty to the 
-reports.)
-</LI>
-<BR><BR>
-<LI>
-Transaction Finder: a powerful transaction query dialogue can help
-you quickly locate a needle in a haystack.
-</LI>
-<BR><BR>
-<LI>
-Double Entry: When enabled, every
-transaction must debit one account and credit others by an
-equal amount. This ensures that
-the "books balance": that the difference between income and
-outflow exactly equals the sum of
-all assets and equity.
-</LI>
-<BR><BR>
-<LI>
-Income/Expense Account Types (Categories) allow you to 
-categorize your cash flow.  When used properly with 
-the double-entry feature and equity accounts, these 
-enable you to generate reports, such as Profit & Loss, 
-that plain-vanilla systems cannot handle.
-</LI>
-<BR><BR>
-<LI>
-General Ledger: Multiple accounts
-can be displayed in one register window at the same time. This
-can ease the trouble of tracking
-down typing/entry errors. It also provides a convenient way of
-viewing a portfolio of many
-stocks, by showing all transactions in that portfolio. 
-</LI>
-<BR><BR>
-<LI>
-Get Stock & Mutual Fund quotes
-from various web sites, update portfolio automatically. 
-Additional pricing sources are added regularly.
-</LI>
-<BR><BR>
-<LI>
-Check Printing:  Checks may be printed in standard formats
-on common check stocks.  A customization GUI allows custom
-check layouts to be developed.
-</LI>
-<BR><BR>
-<LI>
-Multiple Currencies &amp; Currency Trading: Multiple currencies are supported 
-and can be bought and sold (traded). Currency movements
-between accounts are fully balanced when double-entry is
-enabled.  
-</LI>
-<BR><BR>
-<LI>
-Multi-User SQL support: Multiple users can now simultaneously
-access and update GnuCash data stoed in a Postgres SQL backend.
-Postgres must be installed and configured to use this option.
-</LI>
-<BR><BR>
-</UL>
+<dl>
+<dt><b>Statement Reconciliation</b>
+<dd>A reconcile window with running reconciled and cleared balances 
+    makes balancing against bank statements easy. 
+</dd>
+<br><br>
+<dt><b>Stock/Mutual Fund Portfolios</b> 
+<dd>Track stocks individually (one per account) or in portfolio 
+    of accounts (a group of accounts that can be displayed together). 
+</dd>
+<br><br>
+<dt><b>QIF Import</b>
+<dd>Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup>
+    QIF files can be imported, and are automatically
+    merged to eliminate duplicate transactions. 
+</dd>
+<br><br>
+<dt><b>Localization</b>
+<dd>Handles internationalized dates and currencies.  The Gnucash 
+    menus and popups have been translated to 21 languages, including
+    Chinese, Danish, French, German, Hungarian, Italian, Japanese, 
+    Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, 
+    Turkish, Ukranian, and British English.  
+    Documentation is available in English, French, Portuguese and Spanish.
+</dd>
+<br><br>
+<dt><b>Reports</b>
+<dd>Display Balance Sheet, Profit & Loss, Portfolio Valuation, 
+    and others. Reports can be saved as HTML or postscript, or printed.
+</dd>
+<br><br>
+<dt><b>Transaction Finder</b>
+<dd>A powerful transaction query dialogue can help you quickly locate 
+    a needle in a haystack.
+</dd>
+<br><br>
+<dt><b>Double Entry</b>
+<dd>When enabled, every transaction must debit one account and 
+    credit others by an equal amount. This ensures that
+    the "books balance": that the difference between income and
+    outflow exactly equals the sum of all assets and equity.
+</dd>
+<br><br>
+<dt><b>Income/Expense Account Types</b>
+<dd>Income/Expense Account Types (Categories) allow you to 
+    categorize your cash flow.  When used properly with 
+    the double-entry feature and equity accounts, these 
+    enable you to generate reports, such as Profit & Loss, 
+    that plain-vanilla systems cannot handle.
+</dd>
+<br><br>
+<dt><b>General Ledger</b>
+<dd>Multiple accounts can be displayed in one register window 
+    at the same time. This can ease the trouble of tracking
+    down typing/entry errors. It also provides a convenient way of
+    viewing a portfolio of many
+    stocks, by showing all transactions in that portfolio. 
+</dd>
+<br><br>
+<dt><b>Online Stock &amp; Mutual Fund Quotes</b>
+<dd>Get Stock & Mutual Fund quotes
+    from various web sites, update portfolio automatically. 
+    Additional pricing sources are added regularly.
+</dd>
+<br><br>
+<dt><b>Check Printing</b>
+<dd>Checks may be printed in standard formats
+    on common check stocks.  A customization GUI allows custom
+    check layouts to be developed.
+</dd>
+<br><br>
+<dt><b>Multiple Currencies</b>
+<dd>Different accounts can be denominated in different currencies.
+    Currency movements between accounts are fully balanced when 
+    double-entry is enabled.  
+</dd>
+<br><br>
+<dt><b>Multi-User SQL Support</b>
+<dd>Multiple users can now simultaneously
+    access and update GnuCash data stoed in a Postgres SQL backend.
+    Postgres must be installed and configured to use this option.
+</dd>
+<br><br>
+</dl>
 
 
 </td>
