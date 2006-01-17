@@ -1,5 +1,9 @@
 
 <?php $title = "Accounting Software for Linux"; ?>
+<?php if (!ini_get('register_globals')) {
+ include("../emulate_globals_on.php");
+}
+?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/pt_PT/components/header.phtml"); ?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/pt_PT/menu/menu-main.phtml"); ?>
 
