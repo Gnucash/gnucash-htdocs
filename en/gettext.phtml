@@ -20,4 +20,8 @@ echo gettext("Welcome to GnuCash")."<BR>";
 echo gettext("This should all be translated. If you see this message in the 
 language you entered, it works");
 ?>
+<?php if (!ini_get('register_globals')) {
+ include("../emulate_globals_on.php");
+}
+?>
 

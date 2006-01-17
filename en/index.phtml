@@ -1,4 +1,8 @@
 <?php $title = "Open Source Accounting Software"; ?>
+<?php if (!ini_get('register_globals')) {
+ include("../emulate_globals_on.php"); 
+}
+?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/header.phtml"); ?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main.phtml"); ?>
 	</td>
@@ -33,7 +37,7 @@ traditional Unixes: Solaris, AIX, and so on.
 <h1>News</h1>
 
 <?php 
-  # for englsih, the antive and lat newspatch are identical
+  # for english, the native and alt news path are identical
   $native_newspath  =  "news/";
   $alt_newspath  =  "news/";
   include($GLOBALS['DOCUMENT_ROOT']."/php-scripts/news-script.php"); ?>

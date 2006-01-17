@@ -1,4 +1,8 @@
 <?php $title = "Sizing"; ?>
+<?php if (!ini_get('register_globals')) {
+ include("../emulate_globals_on.php");
+}
+?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/header.phtml"); ?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-other.phtml"); ?>
 </td>
@@ -18,7 +22,7 @@ spread over more than a thousand files.  It has been translated into
 twenty-three languages and credits over 139 authors and contributors.
 </P>
 <p>
-<img src="sizing-graph.png">
+<img src="../images/sizing-graph.png">
 </p>
 <p>
 If you've had trouble swimming through that mass of source code,

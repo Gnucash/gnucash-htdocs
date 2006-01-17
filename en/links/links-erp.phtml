@@ -1,3 +1,7 @@
+<?php if (!ini_get('register_globals')) {
+ include("../emulate_globals_on.php");
+}
+?>
 
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/links-header.phtml"); ?>
    <tr> <td colspan=2>

@@ -1,4 +1,8 @@
 <?php $title = "Features: Ease of Use"; ?>
+<?php if (!ini_get('register_globals')) {
+ include("../emulate_globals_on.php");
+}
+?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/header.phtml"); ?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-general.phtml"); ?>
 </td>
