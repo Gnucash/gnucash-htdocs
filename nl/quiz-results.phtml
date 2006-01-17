@@ -1,4 +1,8 @@
 <?php $title = "Survey"; ?>
+<?php if (!ini_get('register_globals')) {
+ include("../emulate_globals_on.php");
+}
+?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/nl/components/header.phtml"); ?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/nl/menu/menu-main-other.phtml"); ?>
 </td>
