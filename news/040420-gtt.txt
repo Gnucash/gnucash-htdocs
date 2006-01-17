@@ -1,0 +1,35 @@
+<b>Gnome Time Tracker</b>
+
+The Gnome Time Tracker is a to-do list/diary/journal tool that can track
+the amount of time spent on projects, and, among other things, generate
+reports and invoices based on that time. I've used it to keep shopping
+lists, organize ideas, track bug reports, keep a diary of activities,
+provide weekly status reports to management, and even as a consultant
+billing system.
+<br><br>
+Version 2.1.9 is now available; it fixes a number of bugs from 2.1.8 and
+earlier versions:
+<ul>
+<li> Keyboard events were not resetting the timeout
+<li> Fix Help system so that help actually starts up.
+<li> Fix old, multiple scheme bugs affecting billing reports.
+<li> Provides 'infinite undo' for cut projects.
+<li> Keyboard cut (ctrl-x) fixed so that it cuts only if project
+   window has focus.
+<li> Can now specify day-of-week for the start of a new week.
+   Also, end-of-day need not be midnight - its now configurable.
+<li> Remove obsolete menu entries (clear daily counters)
+<li> Fix flyover help on HTML reports
+<li> Fix order of yesterday/today columns.
+<li> Improve checks for Guile during builds
+<li> New whiz-bang SQL for reports.
+</ul>
+The 
+<a href="http://gttr.sourceforge.net">GnoTime website is here</a> 
+and is 
+<a href="http://www.linas.org/linux/gtt/gtt.html">mirrored here</a>.
+Sources and CVS access is at the 
+<a href="http://sourceforge.net/projects/gttr/">
+sourceforge project site</a>.  Most major distributions now carry
+GnoTime, so look to your distro first for a binary.  
+

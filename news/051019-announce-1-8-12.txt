@@ -1,0 +1,44 @@
+<b>Announcement:</b> GnuCash 1.8.12 Release
+
+<br>The GnuCash development team proudly announces a new stable release of 
+the GnuCash Open Source Accounting Software version 1.8.12, which is 
+expected to be the very last release of the gtk1-based gnucash-1.8.x 
+series. The next release series of gnucash will be based on gtk2/gnome2, 
+and the first pre-release packages are expected to be released 
+this December.<br><br>
+<br>
+<br>
+
+
+FAQ: "Is this a gnome2 application?" A: "No." This release still belongs
+to GnuCash's 1.8.x series which is not yet ported to gtk2/gnome2. Read
+more below.<br>
+
+<b><big>What's New in GnuCash 1.8.12?</big></b><br>
+
+o Online Banking/HBCI improvements: Debit notes are fixed again; 
+Bank-internal money transfers are now supported, if the HBCI bank offers 
+them; Setup wizard can now works with HBCI, OFX-Connect, and other 
+AqBanking backends; Fix character encoding issues in utf-8 locales; Fix 
+date interval in the import transaction matcher for OFX and HBCI import; 
+Fix PIN entry bug.<br>
+o New currencies added: Romanian Leu, Bulgarian Lev, Malagasy Ariary<br>
+o Fix problem with long date formats in some locales<br>
+o Add configure macros for mips, mipsel, arm, and m68k; Fix compilation 
+on OpenBSD 64bit architectures<br>
+o Updated translations: German, Italian, Kinyarwanda<br>
+
+
+FAQ: "Is this a gnome2 application?"<br>
+A: "No." This release still belongs to GnuCash's 1.8.x series which is not yet ported to gtk2/gnome2. In other words, this release is still based on gtk1.2/gnome1. The developers are working on a gtk2/gnome2 version of GnuCash, but it still
+takes a lot of time.<br>
+See http://gnomesupport.org/wiki/index.php/GnuCashPortingStatus for the status of the Gtk2 port. GnuCash makes use of several custom widgets as well as the Guppi graphing library. To port to gtk2 involves rewriting those widgets (e.g. the ledger, or the account hierarchy which uses GtkCTree) into the appropriate GTK2 widgets and would require the changing of the graphing code to probably use Jody's new gnome-office-graph code in Gnumeric (Guppi was never ported to gtk2 and is a dead project). But given that the GnuCash team is extremely short on programmers, the process has to exist in parallel to existing product improvements, resulting in a very gradual porting process.<br>
+If you can code C, by all means, volunteer your time, see http://gnomesupport.org/wiki/index.php/GnuCashDevelopment
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
