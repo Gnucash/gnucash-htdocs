@@ -5,33 +5,34 @@
 ?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/header.phtml"); ?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-developer.phtml"); ?>
-</td>
 
-<td valign=top>
+</div>
+<div id="content">
+
 <h1>Hacking GnuCash</h1>
 
-There are a number of steps to go through to hack on gnucash. 
+<p>There are a number of steps to go through to hack on gnucash. 
 You will need to install development (<tt>*-devel-*</tt>) 
 versions of the packages 
 listed on the <a href="/en/required.phtml">tools page</a>.  The latest
 development versions of gnucash may depend on bleeding edge 
 versions of some gnome tools (e.g. <tt>gnome-print</tt>).  You may also 
 need to get unusual or special versions of g-wrap and guppi.
-<br><br>
-
-<b>Getting the most recent sources via CVS:</b><br>
-<br>
-   The latest source code, as well as various older 
-   versions, are maintained in a publically readable 
-   CVS source code repository.  Accessing it is simple,
+</p>
+<p><b>Getting the most recent sources via SVN:</b></p>
+<p>
+   The latest source code is maintained in a publically readable 
+   SVN source code repository.  Accessing it is simple,
    and if you plan to be an active developer, there is
-   no better way of getting the source.  The CVS tree
+   no better way of getting the source.  The SVN tree
    is not publically writable; once you have patches, 
    you should submit them to the 
    <a href=/en/lists.phtml>gnucash-patches@gnucash.org</a>
    mailing list.  Documentation changes can be sent to the
-   same place.
+   same place.</p>
 <p>
+<b>Update for SVN!</b>
+<!--
 If you are new to CVS, you may want to take a moment
 and visit the <a href="http://www.cvshome.org/">
 Concurrent Versions System Home Page</a>, and in particular,
@@ -40,7 +41,7 @@ CVS allows multiple users to modify the source code for GnuCash,
 each without stepping on the toes (and changes) made by others.
 If CVS seems at first overwhelming, don't let it be so:
 its quite easy to learn and use.
-
+-->
 </p>
 <p>
    To access the CVS tree, first, login, as so: 
@@ -186,29 +187,24 @@ cvs -d :pserver:cvs@cvs.gnucash.org:/home/cvs/cvsroot checkout -r &lt;some-tag&g
 </table>
 </p>
 
-
-<br>
-<br>
-<b>Getting the most recent sources via FTP:</b><br>
-<br>
+<p>
+<b>Getting the most recent sources via FTP:</b></p>
+<p>
 If you don't like to bother with CVS you can download recent 
 snapshots of the CVS tree from one of the FTP sites below.
 Note, however, that if you wish to contribute patches and updates
 to GnuCash, it is strongly recommended that you learn and use CVS.
 We encourage this because the snapshots can sometimes get a bit 
 dated, and you just might be fixing a bug that's already fixed.
-<br>
-<br>
+</p>
+<p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="http://www.linas.org/pub/gnucash/gnucash/sources/">http://www.linas.org/pub/gnucash/gnucash/sources/</a>
-<br> 
-<br>
+</p> 
+<p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="http://www.gnucash.org/pub/gnucash/sources/">http://www.gnucash.org/pub/gnucash/sources/</a>
-<br>
+</p>
 
-
-
-</td>
 
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/footer.phtml"); ?>

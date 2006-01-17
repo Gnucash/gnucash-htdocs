@@ -1,8 +1,8 @@
-<!DOCTYPE html
-	PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
 <head>
 <link rel="stylesheet" href="/en/gnucash.css" type="text/css">
+<link rel="stylesheet" href="/gnucash2.css" type="text/css">
 <link rel="icon" href="favicon.ico" type="image/x-icon"> 
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
 
@@ -11,38 +11,26 @@
 <title>GnuCash - <?php echo $title; ?></title>
 </head>
 
-<body bgcolor="#ffffff"> 
+<body> 
+<div id="head">
+<img src="/images/gnucash_logo1.png" alt="GnuCash Logo" id="gnclogo">
+<br/>
+<span id="language">
+ Language:
+<b>English</b>
+<!-- <a class="nav" href="/fr-y-le-ny-old/">Fran&ccedil;ais</a> -->
+| <a class="nav" href="/fr/">Fran&ccedil;ais</a>
+| <a class="nav" href="http://www.hthoma.de/projekte/gnucash/index.html">Deutsch</a>
+ (<a class="nav" href="/de/">mirror</a>)
+| <a class="nav" href="/nl/">Nederlands</a>
+| <a class="nav" href="/pt_PT/">Portugu&ecirc;s</a>
+</span>
+<span id="location">Continent:
+ <!-- (<a class="nav" href="http://gnucash.planetmirror.com/">AU mirror</a>) -->
+ (<a class="nav" href="http://www.gnucash.org/">US</a>)
+ (<a class="nav" href="http://www.at.gnucash.org/">EU</a>)
+ (<a class="nav" href="http://www.au.gnucash.org/">AU</a>)
+</span>
+</div>
 
-<table border=0 cellpadding=3 cellspacing=0 width="100%">
-<tr>
-<td valign="bottom" colspan="1" bgcolor="#666699"><img src="/images/gnucash_logo1.png" alt="GnuCash Logo"></td>
-<td align="right" valign="bottom" bgcolor="#666699" width="65%"><font size="-1" color="#ffffff"></td>
-</tr>
-<tr>
-<td valign="bottom" colspan="1" bgcolor="#666699">
-<font size="-1" color="#ffffff">
-Continent:
- <!-- (<a class=nav href=http://gnucash.planetmirror.com/>AU mirror</a>) -->
- (<a class=nav href="http://www.gnucash.org/">US</a>)
- (<a class=nav href="http://www.at.gnucash.org/">EU</a>)
- (<a class=nav href="http://www.au.gnucash.org/">AU</a>)
- </font>
-</td>
-<td align="right" valign="bottom" bgcolor="#666699" width="65%">
-<font size="-1" color="#ffffff">
-Language: 
-<b>English</b> 
-<!-- <a class=nav href="/fr-y-le-ny-old/">Français</a> -->
-| <a class=nav href="/fr/">Français</a>
-| <a class=nav href="http://www.hthoma.de/projekte/gnucash/index.html">Deutsch</a>
- (<a class=nav href="/de/">mirror</a>)
-| <a class=nav href="/nl/">Nederlands</a>
-| <a class=nav href="/pt_PT/">Português</a>
-&nbsp;</font></td>
-</tr>
-</table>
-
-<table border="0" cellpadding="3" cellspacing="0" width="90%">
-<tr>
-<td valign="top" width="1%" bgcolor="#ffffff">
-<img src="/images/spacer.gif" width="200" height="1" alt="spacer"><br>
+<div id="news">

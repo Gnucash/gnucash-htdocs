@@ -6,8 +6,9 @@
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/header.phtml"); ?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-general.phtml"); ?>
 </td>
+</div>
+<div id="content">
 
-<td valign=top>
 <h1>How to Contribute</h1>
 
 <p>
@@ -29,10 +30,10 @@ And, if you'd like to make a cash donation, please visit our
 
 <p>
 
-<table>
-<tr><td>
-<b>Select your talent to see where you might fit in:</b></td>
-<td>
+<div>
+<p>
+<b>Select your talent to see where you might fit in:</b>
+</p>
 <form method="post" action="/en/contribute.phtml">
 <select name=contribute>
   <option value=programmer
@@ -53,18 +54,14 @@ And, if you'd like to make a cash donation, please visit our
 </select>
 <input type=submit value=Go>
 </form>
+</div>
 
-</td>
-</table>
-
-<hr noshade>
+<hr>
 <?php
   if ($contribute != "") { 
 		include($GLOBALS['DOCUMENT_ROOT']."/en/contribute/contribute-".$contribute.".phtml");
   }
 ?>
 
-
-</td>
 
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/footer.phtml"); ?>

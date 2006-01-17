@@ -5,17 +5,16 @@
 ?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/header.phtml"); ?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-general.phtml"); ?>
-</td>
-
-<td valign=top>
+</div>
+<div id="content">
 
 <h1>Software Dependencies</h1>
 
-GnuCash depends on a number of important contributing technologies 
+<p>GnuCash depends on a number of important contributing technologies 
 in order to implement its major functions.  If you want to compile
 and work on GnuCash, you will need to install a recent version of 
 these libraries.
-<br><br>
+</p><p>
 Without a good package manager (<i>e.g.</i> Debian <tt>apt-get</tt>),
 it can be quite tedious to find, download and install all of the 
 required packages (<i>nightmare</i> is a word that has been used).
@@ -28,8 +27,8 @@ distro, and you don't have <tt>apt-get</tt> or a similar tool, then
 be prepared for a rather long and involved install/upgrade proceedure.
 Note that even with <tt>apt-get</tt>, some packages may still need 
 to be installed manually.
-<br><br>
-
+</p>
+<p>
 The majority of the GnuCash 1.6.x dependencies are satisfied by installing 
 standard <a href="http://www.gnome.org/">Gnome 1.4</a> core libraries. 
 The only dependencies beyond a standard Gnome 1.4 installation are 
@@ -289,8 +288,5 @@ mentioned.
 </tr>
 </table>
 
-
-
-</td>
 
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/footer.phtml"); ?>

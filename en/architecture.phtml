@@ -5,13 +5,12 @@
 ?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/header.phtml"); ?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-developer.phtml"); ?>
-
-</td>
-<td valign=top width=75%>
+</div>
+<div id="content">
 
 <h1>Architectural Overview</h1>
 
-<font size=-1>
+<p>
 GnuCash is written primarily in two languages: C and Scheme.  
 The engine/server is written in C primarily for speed, 
 portability, stability and historical reasons.  Various 
@@ -24,7 +23,7 @@ is designed primarily with the
 GUI designer tool. The file format is in XML, and multi-user
 support is provided through the Postgres SQL backend.
 The reporting subsystem, written in Scheme, generates HTML
-reports.
+reports.</p>
 
 <p>
 GnuCash aims to be modular, thereby allowing separate individuals
@@ -34,12 +33,11 @@ modules help avoid spaghetti code and nasty, ugly hacks).
 The interfaces between modules are documented, and, for the 
 most part, stable and unchanging.
 <a href="/images/diagrams/components.png">This block diagram 
-shows major components.</a>
+shows major components.</a></p>
 
-<br><br><b>
+<p><b>
 GnuCash currently consists of the following modules:</b>
-<br><br>
-</font>
+</p>
 
 <table border=0 cellpadding=1 cellspacing=0 width="100%">
   <tr>
@@ -325,7 +323,5 @@ but this interface has been deleted in the current CVS.
 </tr>
 </table>
 
-
-</td>
 
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/footer.phtml"); ?>

@@ -6,18 +6,15 @@
 ?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/header.phtml"); ?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main.phtml"); ?>
-
-	</td>
-  <td valign=top width=98%>
-  
+</div>
+<div id="content">
 
 <h1>Older Announcements</h1>
 
-<font size=-1>
+<p>
 This is an archive of announcements that once appeared on the 
 GnuCash home page.
-<br><br>
-</font>
+</p>
 
 <?php
     # indicate where to get translated news from ... 
@@ -25,8 +22,6 @@ GnuCash home page.
     $alt_newspath  =  "../news/old/";
     include($GLOBALS['DOCUMENT_ROOT']."/php-scripts/news-script.php");
     ?>  
-
-  </td>
 
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/footer.phtml"); ?>
 
