@@ -3,6 +3,13 @@
 <?php if (!ini_get('register_globals')) {
  include("../emulate_globals_on.php");
 }
+$self = $_SERVER["HTTP_HOST"];
+if(ereg("lists.gnucash.org",$self)) {
+	$home = "http://www.gnucash.org";
+}
+else {
+$home = "";
+}
 
 echo "<div id=\"news\"><div class=\"othernews\">";
 include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-general.phtml");
