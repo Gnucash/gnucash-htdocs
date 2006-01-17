@@ -1,5 +1,9 @@
 
 <?php $title = "GnuCash on IRC"; ?>
+<?php if (!ini_get('register_globals')) {
+ include("../emulate_globals_on.php");
+}
+?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/fr/components/header.phtml"); ?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/fr/menu/menu-main-help.phtml"); ?>
 </td>

@@ -1,4 +1,8 @@
 <?php $title = "Logiciels/Package requis"; ?>
+<?php if (!ini_get('register_globals')) {
+ include("../emulate_globals_on.php");
+}
+?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/fr/components/header.phtml"); ?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/fr/menu/menu-main-general.phtml"); ?>
 </td>
