@@ -1,34 +1,25 @@
 <!-- MENU:START -->
 
-<table border=0 cellpadding=4 cellspacing=0 width="100%">
-<tr><td>
-  <img border=0 src="/images/webding.png" alt="dot"> <b>General Information</b>
-  <?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-general.phtml"); ?>
-  </td></tr>
-<tr><td bgcolor="#cacaf7">
-  <img border=0 src="/images/webding.png" alt="dot"> <b>Documentation</b>
-  <?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-documentation.phtml"); ?>
-  </td></tr>
-<tr><td>
-  <img border=0 src="/images/webding.png" alt="dot"> <b>Help</b>
-  <?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-help.phtml"); ?>
-  </td></tr>
-<tr><td>
-  <img border=0 src="/images/webding.png" alt="dot"> <b>Downloads</b>
-  <?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-downloads.phtml"); ?>
-  </td> </tr>
-<tr><td>
-  <img border=0 src="/images/webding.png" alt="dot"> <b>Developer Information</b>
-  <?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-developer.phtml"); ?>
-  </td></tr>
-<tr><td>
-  <img border=0 src="/images/webding.png" alt="dot"> <b>Other Information</b>
-  <?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-other.phtml"); ?>
-  </td></tr>
-<tr><td>
-  <img border=0 src="/images/webding.png" alt="dot"> <b>Search</b>
-  <?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-search.phtml"); ?>
-  </td></tr>
-</table>
+<?php if (!ini_get('register_globals')) {
+ include("../emulate_globals_on.php");
+}
+
+echo "<div id=\"news\"><div class=\"othernews\">";
+include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-general.phtml");
+# highlighted menu entry:
+echo "</div>\n<div class=\"highlight\">\n";
+include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-documentation.phtml");
+echo "</div>\n<div class=\"othernews\">\n";
+include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-help.phtml");
+echo "</div>\n<div class=\"othernews\">\n";
+include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-downloads.phtml");
+echo "</div>\n<div class=\"othernews\">\n";
+include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-developer.phtml");
+echo "</div>\n<div class=\"othernews\">\n";
+include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-other.phtml");
+echo "</div>\n<div class=\"othernews\">\n";
+include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-search.phtml");
+echo "</div>\n</div>\n";
+?>
 
 <!-- MENU:END -->
