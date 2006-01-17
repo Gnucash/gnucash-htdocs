@@ -5,27 +5,26 @@
 ?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/header.phtml"); ?>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-general.phtml"); ?>
-</td>
-</div>
+
 <div id="content">
 
 <h1>How to Contribute</h1>
 
 <p>
-<div class='text' align='justify'>
+<div><p>
 GnuCash is an Free Software development project that depends
-on volunteer efforts for its survival and growth.  We need 
-your help to foster the community, promote the project, 
+on volunteer efforts for its survival and growth.  We need
+your help to foster the community, promote the project,
 write the documentation and the source code, and translate
 it into dozens of languages.  The dynamics of participating
 in the GnuCash community are much like that for other projects:
 What you contribute depends one your skill and motivation,
 the time you have available, and how much you enjoy doing it.
-The GnuCash Project is looking for promoters, writers, artists, 
-beta-testers, programmers,  accountants, financial advisors, 
-question-answerers, translators and all-around nice people.   
+The GnuCash Project is looking for promoters, writers, artists,
+beta-testers, programmers,  accountants, financial advisors,
+question-answerers, translators and all-around nice people.
 And, if you'd like to make a cash donation, please visit our
-<a href="donations.phtml">donations webpage</a>.
+<a href="donations.phtml">donations webpage</a>.</p>
 </div>
 
 <p>
@@ -35,33 +34,35 @@ And, if you'd like to make a cash donation, please visit our
 <b>Select your talent to see where you might fit in:</b>
 </p>
 <form method="post" action="/en/contribute.phtml">
-<select name=contribute>
-  <option value=programmer
+<div>
+<select name="contribute">
+  <option value="programmer"
    <?php if ($contribute == "programmer") { echo ("selected"); } ?>
   >I am a programmer</option>
-  <option value=translator
+  <option value="translator"
    <?php if ($contribute == "translator") { echo ("selected"); } ?>
   >I am a translator</option>
-  <option value=fan
+  <option value="fan"
    <?php if ($contribute == "fan") { echo ("selected"); } ?>
   >I am a fan</option>
-  <option value=webmaster
+  <option value="webmaster"
    <?php if ($contribute == "webmaster") { echo ("selected"); } ?>
   >I am a webmaster</option>
-  <option value=writer
+  <option value="writer"
    <?php if ($contribute == "writer") { echo ("selected"); } ?>
   >I am a writer</option>
 </select>
-<input type=submit value=Go>
+<input type="submit" value="Go">
+</div>
 </form>
 </div>
 
 <hr>
 <?php
-  if ($contribute != "") { 
+  if ($contribute != "") {
 		include($GLOBALS['DOCUMENT_ROOT']."/en/contribute/contribute-".$contribute.".phtml");
   }
 ?>
 
-
+</div>
 <?php include($GLOBALS['DOCUMENT_ROOT']."/en/components/footer.phtml"); ?>
