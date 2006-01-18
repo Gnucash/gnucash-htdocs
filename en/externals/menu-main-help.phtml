@@ -1,0 +1,33 @@
+<!-- MENU:START -->
+<?php if (!ini_get('register_globals')) {
+ include("../emulate_globals_on.php");
+}
+$self = $_SERVER["HTTP_HOST"];
+if(ereg("lists.gnucash.org",$self)) {
+	$home = "http://www.gnucash.org";
+}
+else {
+$home = "";
+}
+
+echo "<div id=\"news\"><div class=\"othernews\">";
+include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-general.phtml");
+echo "</div>\n<div class=\"othernews\">\n";
+include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-documentation.phtml");
+# highlighted menu entry:
+echo "</div>\n<div class=\"highlight\">\n";
+include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-help.phtml");
+echo "</div>\n<div class=\"othernews\">\n";
+include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-downloads.phtml");
+echo "</div>\n<div class=\"othernews\">\n";
+include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-developer.phtml");
+echo "</div>\n<div class=\"othernews\">\n";
+include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-other.phtml");
+echo "</div>\n<div class=\"othernews\">\n";
+include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-search.phtml");
+echo "</div>\n";
+echo "</div>\n";
+?>
+
+
+<!-- MENU:END -->
