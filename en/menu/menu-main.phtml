@@ -1,7 +1,5 @@
 <!-- MENU:START -->
-<?php if (!ini_get('register_globals')) {
- include("../emulate_globals_on.php");
-}
+<?php
 $self = $_SERVER["HTTP_HOST"];
 if(ereg("lists.gnucash.org",$self)) {
 	$home = "http://www.gnucash.org";
@@ -13,19 +11,19 @@ $home = "";
 echo "<div id=\"news\">\n";
 # highlighted menu entry:
 echo "<div class=\"highlight\">";
-include($GLOBALS['DOCUMENT_ROOT']."/externals/en/menu-general.phtml");
+include($toppath."/externals/en/menu-general.phtml");
 echo "</div>\n<div class=\"othernews\">\n";
-include($GLOBALS['DOCUMENT_ROOT']."/externals/en/menu-documentation.phtml");
+include($toppath."/externals/en/menu-documentation.phtml");
 echo "</div>\n<div class=\"othernews\">\n";
-include($GLOBALS['DOCUMENT_ROOT']."/externals/en/menu-help.phtml");
+include($toppath."/externals/en/menu-help.phtml");
 echo "</div>\n<div class=\"othernews\">\n";
-include($GLOBALS['DOCUMENT_ROOT']."/externals/en/menu-downloads.phtml");
+include($toppath."/externals/en/menu-downloads.phtml");
 echo "</div>\n<div class=\"othernews\">\n";
-include($GLOBALS['DOCUMENT_ROOT']."/externals/en/menu-developer.phtml");
+include($toppath."/externals/en/menu-developer.phtml");
 echo "</div>\n<div class=\"othernews\">\n";
-include($GLOBALS['DOCUMENT_ROOT']."/externals/en/menu-other.phtml");
+include($toppath."/externals/en/menu-other.phtml");
 echo "</div>\n<div class=\"othernews\">\n";
-include($GLOBALS['DOCUMENT_ROOT']."/externals/en/menu-search.phtml");
+include($toppath."/externals/en/menu-search.phtml");
 echo "</div>\n";
 echo "</div>\n";
 ?>
