@@ -13,7 +13,7 @@
     //  change  this  to  the  directory  of  your  news  files
     //  they  should  be  plain  ASCII  text  files  with  extension  ".txt"
 
-    # Be sure to define the following patch to newsdirs
+    # Be sure to define the following path to newsdirs
     if (!$native_newspath) { $native_newspath  =  "news/";  }
     if (!$alt_newspath) { $alt_newspath =  "../news/";  }
 
@@ -73,7 +73,7 @@
         $n=count($fa);
 
         echo ("<div class=\"news1\">");
-        echo("<img alt=\"\" src=\"/images/icons/document.txt.gif\">&nbsp;");
+        echo("<img alt=\"\" src=\"$topdir/images/icons/document.txt.gif\">&nbsp;");
 	print $fa[0];
 	print  " - <b>(".date( "Y-m-d",$newsfile[$key]);
 	print  "&nbsp; &nbsp;".date( "H:i:s",$newsfile[$key]). ")</b>\n";
