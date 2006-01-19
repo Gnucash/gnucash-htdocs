@@ -1,10 +1,8 @@
-<?php $title = "GnuCash Bug Reports"; ?>
-<?php if (!ini_get('register_globals')) {
- include("../emulate_globals_on.php");
-}
+<?php $title = "GnuCash Bug Reports";
+include("../emulate_globals_on.php");
+include($toppath."/externals/en/header.phtml");
+include($toppath."/externals/en/menu-main-help.phtml");
 ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/header.phtml"); ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/menu-main-help.phtml"); ?>
 
 <div id="content">
 <h1>GnuCash Bugs at GNOME Bugzilla</h1>
@@ -21,10 +19,10 @@ please go to <a href="http://bugzilla.gnome.org">bugzilla.gnome.org</a>
 and use the forms there to enter your report.<br>
 </p>
 
-<p>
+<div>
 <ul>
 <li><p>
-    <a href="http://bugzilla.gnome.org/buglist.cgi?product=GnuCash&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=NEEDINFO&bug_status=REOPENED&chfieldto=Now&cmdtype=doit&namedcmd=nautilus-backgrounds&order=Reuse+same+sort+as+last+time&form_name=query">Click Here</a>
+    <a href="http://bugzilla.gnome.org/buglist.cgi?product=GnuCash&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;chfieldto=Now&amp;cmdtype=doit&amp;namedcmd=nautilus-backgrounds&amp;order=Reuse+same+sort+as+last+time&amp;form_name=query">Click Here</a>
    to see the list of bugs that have been reported but haven't yet
    been fixed.
    </p>
@@ -37,14 +35,14 @@ and use the forms there to enter your report.<br>
    Please volunteer your time!)
    </p>
    </li>
-   <p>
-   
-<li><a href="http://bugzilla.gnome.org/buglist.cgi?product=GnuCash">Click here</a> 
-   to see a complete list of all GnuCash bug reports (including old, fixed bugs)</li>
-   <p>
+      
+<li><p>
+<a href="http://bugzilla.gnome.org/buglist.cgi?product=GnuCash">Click here</a> 
+   to see a complete list of all GnuCash bug reports (including old, fixed bugs)
+</p></li>
 </ul>
-
-</p>
 </div>
 
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/footer.phtml"); ?>
+</div>
+
+<?php include($toppath."/externals/en/footer.phtml"); ?>

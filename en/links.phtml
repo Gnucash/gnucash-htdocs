@@ -1,20 +1,19 @@
-<?php $title = "Related Financial Software"; ?>
-<?php if (!ini_get('register_globals')) {
- include("../emulate_globals_on.php");
-}
+<?php 
+$title = "Related Financial Software";
+include("../emulate_globals_on.php");
+include($toppath."/externals/en/header.phtml");
+include($toppath."/en/menu/menu-main-other.phtml");
 ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/header.phtml"); ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-other.phtml"); ?>
 
 <div id="content">
 
 <h1>Related Financial Software</h1>
 
-<table>
-<tr><td>
-<b>Select a section:</b></td>
-<td>
+<div>
+<p><b>Select a section:</b>
+</p>
 <form method=post>
+<div>
 <select name=linkpage>
   <option value=general
   <?php if ($linkpage == "general") { echo ("selected"); } ?>
@@ -27,7 +26,7 @@
   >Palm Computing</option>
   <option value=stock
   <?php if ($linkpage == "stock") { echo ("selected"); } ?>
-  >Stock Trading & Technical Analysis</option>
+  >Stock Trading &amp; Technical Analysis</option>
   <option value=quote
   <?php if ($linkpage == "quote") { echo ("selected"); } ?>
   >Quote Sources, Tools</option>
@@ -48,20 +47,20 @@
   >Historical References</option>
   <option value=review
   <?php if ($linkpage == "review") { echo ("selected"); } ?>
-  >Gnucash Review & Rating Sites</option>
+  >Gnucash Review &amp; Rating Sites</option>
 </select>
 <input type=submit value=Go>
-</td>
-</table>
+</div>
 </form>
+</div>
 
 <?php
   if ($linkpage != "") { 
-	include($GLOBALS['DOCUMENT_ROOT']."/en/links/links-".$linkpage.".phtml");
+	include($toppath."/en/links/links-".$linkpage.".phtml");
   } else {
-	include($GLOBALS['DOCUMENT_ROOT']."/en/links/links-general.phtml");
+	include($toppath."/en/links/links-general.phtml");
   }
 ?>
 
 </div>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/footer.phtml"); ?>
+<?php include($toppath."/externals/en/footer.phtml"); ?>

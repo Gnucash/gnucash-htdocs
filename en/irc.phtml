@@ -1,11 +1,9 @@
-
-<?php $title = "GnuCash on IRC"; ?>
-<?php if (!ini_get('register_globals')) {
- include("../emulate_globals_on.php");
-}
+<?php 
+$title = "GnuCash on IRC";
+include("../emulate_globals_on.php");
+include($toppath."/externals/en/header.phtml");
+include($toppath."/externals/en/menu-main-help.phtml");
 ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/header.phtml"); ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/menu-main-help.phtml"); ?>
 
 <div id="content">
 
@@ -16,4 +14,4 @@ by discussing GnuCash development with developers and users alike,
 on IRC.  Join the #gnucash channel at irc.gnome.org.
 </div>
 
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/footer.phtml"); ?>
+<?php include($toppath."/externals/en/footer.phtml"); ?>

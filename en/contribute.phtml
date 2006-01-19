@@ -1,10 +1,9 @@
-<?php $title = "Contribute"; ?>
-<?php if (!ini_get('register_globals')) {
- include("../emulate_globals_on.php");
-}
+<?php 
+$title = "Contribute";
+include("../emulate_globals_on.php");
+include($toppath."/externals/en/header.phtml");
+include($toppath."/en/menu/menu-main-general.phtml");
 ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/header.phtml"); ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-general.phtml"); ?>
 
 <div id="content">
 
@@ -60,9 +59,9 @@ And, if you'd like to make a cash donation, please visit our
 <hr>
 <?php
   if ($contribute != "") {
-		include($GLOBALS['DOCUMENT_ROOT']."/en/contribute/contribute-".$contribute.".phtml");
+		include($toppath."/en/contribute/contribute-".$contribute.".phtml");
   }
 ?>
 
 </div>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/footer.phtml"); ?>
+<?php include($toppath."/externals/en/footer.phtml"); ?>

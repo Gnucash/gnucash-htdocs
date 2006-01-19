@@ -1,10 +1,10 @@
-<?php $title = "Open Source Accounting Software"; ?>
-<?php if (!ini_get('register_globals')) {
- include("../emulate_globals_on.php");
-}
+<?php 
+$title = "Open Source Accounting Software";
+$homepage=true;
+include("../emulate_globals_on.php");
+include($toppath."/externals/en/header.phtml");
+include($toppath."/en/menu/menu-main.phtml"); 
 ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/header.phtml"); ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main.phtml"); ?>
 
 <div id="content">
 
@@ -39,8 +39,8 @@ traditional Unixes: Solaris, AIX, and so on.
   # for english, the native and alt news path are identical
   $native_newspath  =  "news/";
   $alt_newspath  =  "news/";
-  include($GLOBALS['DOCUMENT_ROOT']."/php-scripts/news-script.php"); ?>
+  include($toppath."/php-scripts/news-script.php"); ?>
 
 </div>
 
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/footer.phtml"); ?>
+<?php include($toppath."/externals/en/footer.phtml"); ?>

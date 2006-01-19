@@ -1,10 +1,9 @@
-<?php $title = "Documentation Project"; ?>
-<?php if (!ini_get('register_globals')) {
- include("../emulate_globals_on.php");
-}
+<?php 
+$title = "Documentation Project";
+include("../emulate_globals_on.php");
+include($GLOBALS['DOCUMENT_ROOT']."/externals/en/header.phtml");
+include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-documentation.phtml");
 ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/header.phtml"); ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-documentation.phtml"); ?>
 <div id="content">
 
 <h1>GnuCash Documentation Project</h1>
@@ -246,5 +245,5 @@ which hasn't been transferred to the new docs<br>
 
 </div>
 
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/footer.phtml"); ?>
+<?php include($toppath."/externals/en/footer.phtml"); ?>
 

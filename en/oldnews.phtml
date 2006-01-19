@@ -1,11 +1,9 @@
-
-<?php $title = "Accounting Software for Linux"; ?>
-<?php if (!ini_get('register_globals')) {
- include("../emulate_globals_on.php");
-}
+<?php 
+$title = "Accounting Software for Linux";
+include("../emulate_globals_on.php");
+include($toppath."/externals/en/header.phtml");
+include($toppath."/en/menu/menu-main.phtml");
 ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/header.phtml"); ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main.phtml"); ?>
 <div id="content">
 
 <h1>Older Announcements</h1>
@@ -19,9 +17,9 @@ GnuCash home page.
     # indicate where to get translated news from ... 
     $native_newspath  =  "../news/old/";
     $alt_newspath  =  "../news/old/";
-    include($GLOBALS['DOCUMENT_ROOT']."/php-scripts/news-script.php");
+    include($toppath."/php-scripts/news-script.php");
     ?>  
 </div>
 
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/footer.phtml"); ?>
+<?php include($toppath."/externals/en/footer.phtml"); ?>
 

@@ -1,10 +1,9 @@
-<?php $title = "Promote GnuCash"; ?>
-<?php if (!ini_get('register_globals')) {
- include("../emulate_globals_on.php");
-}
+<?php 
+$title = "Promote GnuCash"; 
+include("../emulate_globals_on.php");
+include($toppath."/externals/en/header.phtml");
+include($toppath."/en/menu/menu-main-other.phtml");
 ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/header.phtml"); ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-other.phtml"); ?>
 <div id="content">
 
 <p><b>Promote GnuCash</b></p>
@@ -105,5 +104,5 @@ banners on your site.
 </p>
 
 </div>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/footer.phtml"); ?>
+<?php include($toppath."/externals/en/footer.phtml"); ?>
 

@@ -1,10 +1,9 @@
 <?php $title = "Software Requirements"; ?>
-<?php if (!ini_get('register_globals')) {
- include("../emulate_globals_on.php");
-}
+<?php
+include("../emulate_globals_on.php");
+include($toppath."/externals/en/header.phtml");
+include($toppath."/en/menu/menu-main-general.phtml");
 ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/header.phtml"); ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-general.phtml"); ?>
 
 <div id="content">
 
@@ -37,10 +36,7 @@ href="#guile">Guile</a>, <a href="#slib">slib</a> and <a
 href="#gwrap">G-Wrap</a>.
 <br><br>
 
-<table border="0" cellpadding=1 cellspacing=0 width="100%">
-<colgroup><col></colgroup>
-  <tr>
-  <td style="background-color:#666699;text-align:center">
+<div class="tblborder">
    <table border=0 cellpadding=5 cellspacing=1
     style="background-color:#cacaf7" width="100%">
 <colgroup><col width="20%">
@@ -347,8 +343,7 @@ href="#gwrap">G-Wrap</a>.
    </tr>
 
    </table>
-</tr>
-</table>
+</div>
 
 </div>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/footer.phtml"); ?>
+<?php include($toppath."/externals/en/footer.phtml"); ?>

@@ -1,10 +1,9 @@
 <?php $title = "Roadmap"; ?>
-<?php if (!ini_get('register_globals')) {
- include("../emulate_globals_on.php");
-}
+<?php
+include("../emulate_globals_on.php");
+include($toppath."/externals/en/header.phtml");
+include($toppath."/en/menu/menu-main-developer.phtml");
 ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/header.phtml"); ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-developer.phtml"); ?>
 <div id="content">
 
 <h1>The Road Ahead</h1>
@@ -172,7 +171,7 @@ are <a href="/en/quiz-results/phtml">tabulated  here</a>.</p>
 <dt><b>Napster for Money</b>
 <dd>If you thought the music industry hated Napster, just wait till 
     you see 
-    <a href="http://slashdot.org/article.pl?sid=01/03/30/1953235&mode=thread">
+    <a href="http://slashdot.org/article.pl?sid=01/03/30/1953235&amp;mode=thread">
     how the feds and the banks react to its financial equivalent</a>.  
     Suppose there
     really were an infrastructure for putting secure, anonymous eCash
@@ -228,4 +227,4 @@ GnuCash Projects</a> page.
 
 </div>
 
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/footer.phtml"); ?>
+<?php include($toppath."/externals/en/footer.phtml"); ?>

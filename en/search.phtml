@@ -1,21 +1,18 @@
-<?php $title = "Accounting Software for Linux"; ?>
-<?php if (!ini_get('register_globals')) {
- include("../emulate_globals_on.php");
-}
+<?php 
+$title = "Accounting Software for Linux";
+include("../emulate_globals_on.php");
+include($toppath."/externals/en/header.phtml");
+include($toppath."/en/menu/menu-main-search.phtml");
 ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/header.phtml"); ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-search.phtml"); ?>
-</div>
 <div id="content">
 
 <?php
 
-
-include($GLOBALS['DOCUMENT_ROOT']."/en/components/table_top.phtml");
+include($toppath."/en/components/table_top.phtml");
 print "Search results for <b>$words</b>";
-include($GLOBALS['DOCUMENT_ROOT']."/en/components/table_middle.phtml");
+include($toppath."/en/components/table_middle.phtml");
 
-$HTSEARCH_PROG = "./htdig.sh";
+$HTSEARCH_PROG = "$toppath/htdig.sh";
 # $swords = $words;
 $swords = EscapeShellCmd(UrlEncode($words));
 # $swords = UrlEncode(EscapeShellCmd($words));
@@ -135,8 +132,9 @@ $rc = count($result);
 
 # page_list($page, $matches);
 
-include($GLOBALS['DOCUMENT_ROOT']."/en/components/table_bottom.phtml");
+include($toppath."/en/components/table_bottom.phtml");
 
 ?>
+</div>
 
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/footer.phtml"); ?>
+<?php include($toppath."/externals/en/footer.phtml"); ?>

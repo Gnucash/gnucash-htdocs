@@ -1,17 +1,14 @@
 <?php $title = "Screenshots"; ?>
-<?php if (!ini_get('register_globals')) {
- include("../emulate_globals_on.php");
-}
+<?php
+include("../emulate_globals_on.php");
+include($toppath."/externals/en/header.phtml");
+include($toppath."/en/menu/menu-main-general.phtml");
 ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/header.phtml"); ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-general.phtml"); ?>
 <div id="content">
 
 <h1>Screenshots</h1>
 
-<table border=0 cellpadding=1 cellspacing=0 width="100%">
-  <tr>
-  <td valign=middle align=center bgcolor="#666699">
+<div class="tblborder">
    <table border=0 cellpadding=5 cellspacing=1 bgcolor="#cacaf7" width="100%">
    <tr>
      <td bgcolor="#666699" width="25%"><font color="#ffffff"><b>Screenshot</b></td>
@@ -19,7 +16,7 @@
      <td bgcolor="#666699" width="75%"><font color="#ffffff"><b>Thumbnail</b></td>
    </tr>
 <?php
-	$d = dir($GLOBALS['DOCUMENT_ROOT']."/images/gnome-1.6/");
+	$d = dir($toppath."/images/gnome-1.6/");
 	while($entry=$d->read()) {
 	  if(ereg("-thumb", $entry)) { continue; }
 	  if(!ereg("gif$", $entry)) { continue; }
@@ -27,8 +24,8 @@
 		$file_clean = explode(".", $entry);
 		$entry = $file_clean[0]."-thumb";
 	  
-	  $description = implode("", file($GLOBALS['DOCUMENT_ROOT']."/images/gnome-1.6/".$entry.".gif.description")); 
-		$name = implode("", file($GLOBALS['DOCUMENT_ROOT']."/images/gnome-1.6/".$entry.".gif.name"));
+	  $description = implode("", file($toppath."/images/gnome-1.6/".$entry.".gif.description")); 
+		$name = implode("", file($toppath."/images/gnome-1.6/".$entry.".gif.name"));
 ?>
    <tr bgcolor="#ececff">
      <td valign=top>
@@ -48,8 +45,7 @@
 ?>
 
    </table>
-</tr>
-</table>
+</div>
 
 </div>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/footer.phtml"); ?>
+<?php include($toppath."/externals/en/footer.phtml"); ?>

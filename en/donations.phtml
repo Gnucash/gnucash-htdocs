@@ -2,9 +2,9 @@
 <?php if (!ini_get('register_globals')) {
  include("../emulate_globals_on.php");
 }
+include($toppath."/externals/en/header.phtml");
+include($toppath."/en/menu/menu-main.phtml");
 ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/header.phtml"); ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main.phtml"); ?>
 
 <div id="content">
 
@@ -37,10 +37,7 @@ donation website</a>.  Amounts are not shown.</p>
 of current finances below.  Announcements will be made when funds are
 disbursed; we will keep this web page updated periodically.</p>
 
-<table border="0" cellpadding=1 cellspacing="0" width="100%">
-<colgroup><col></colgroup>
-<tr>
-  <td style="text-align:center;background-color:#666699;">
+<div class="tblborder">
    <table style="border:none;background-color:#cacaf7;"
     cellpadding=5 cellspacing=1 width="100%">
 <colgroup><col width="15%">
@@ -69,8 +66,7 @@ disbursed; we will keep this web page updated periodically.</p>
      <td valign="top">$525.95</td>
    </tr>
    </table>
-</tr>
-</table>
+</div>
 
 </div>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/footer.phtml"); ?>
+<?php include($toppath."/externals/en/footer.phtml"); ?>

@@ -1,10 +1,9 @@
-<?php $title = "Survey"; ?>
-<?php if (!ini_get('register_globals')) {
- include("../emulate_globals_on.php");
-}
+<?php 
+$title = "Survey"; 
+include("../emulate_globals_on.php");
+include($toppath."/externals/en/header.phtml");
+include($toppath."/en/menu/menu-main-general.phtml");
 ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/header.phtml"); ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-general.phtml"); ?>
 
 </div>
 <div id="content">
@@ -57,4 +56,4 @@ But please: one vote per person, and no ballot-stuffing.
 <?php $sid=2;
        include("/home/httpd/tools/phpESP-1.2beta3/public/handler.php");?> 
 
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/footer.phtml"); ?>
+<?php include($toppath."/externals/en/footer.phtml"); ?>

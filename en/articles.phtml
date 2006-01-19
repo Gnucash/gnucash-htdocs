@@ -1,10 +1,9 @@
 <?php $title = "GnuCash in the News"; ?>
-<?php if (!ini_get('register_globals')) {
- include("../emulate_globals_on.php");
-}
+<?php
+include("../emulate_globals_on.php");
+include($toppath."/externals/en/header.phtml");
+include($toppath."/en/menu/menu-main-other.phtml");
 ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/header.phtml"); ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-other.phtml"); ?>
 
 <div id="content">
 
@@ -69,7 +68,7 @@ A collection of press clippings from around the world.
       </dd>
       <dt>
       <b>
-      <a href="http://www.linuxjournal.com/article.php?sid=5669&mode=thread&order=0">
+      <a href="http://www.linuxjournal.com/article.php?sid=5669&amp;mode=thread&amp;order=0">
       Keep Track of Your Money</a></b>
       (<a href="/press-archive/linuxjournal-2002-06/article.php?sid=6559">archival copy</a>)
       (Linux Journal, 8 June 2002)
@@ -136,7 +135,7 @@ A collection of press clippings from around the world.
       </dd>
       
       <dt>
-      <b><a href="http://www.linuxgram.com/newsitem.phtml?sid=109&aid=10365">
+      <b><a href="http://www.linuxgram.com/newsitem.phtml?sid=109&amp;aid=10365">
       Guns along the Gnome</a></b>
       (<a href="/press-archive/linuxgram-2000-12/newsitem.html">archival copy</a>)
       (Linuxgram, December 2000)
@@ -325,7 +324,7 @@ A collection of press clippings from around the world.
       </dd>
 
       <dt>
-      <b><a href="http://www.32bitsonline.com/article.php3?file=issues/199902/lj-19990208&page=1">Personal Finance Software</a></b>
+      <b><a href="http://www.32bitsonline.com/article.php3?file=issues/199902/lj-19990208&amp;page=1">Personal Finance Software</a></b>
       (<a href="/press-archive/32bitsonline-1999-02/lj-19990208.html">archival copy</a>)
       (32BitsOnline.com February 1999)
       </dt>
@@ -342,4 +341,4 @@ A collection of press clippings from around the world.
       </dl>
 
 </div>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/footer.phtml"); ?>
+<?php include($toppath."/externals/en/footer.phtml"); ?>

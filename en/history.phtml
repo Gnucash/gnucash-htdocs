@@ -1,10 +1,9 @@
-<?php $title = "History"; ?>
-<?php if (!ini_get('register_globals')) {
- include("../emulate_globals_on.php");
-}
+<?php 
+$title = "History"; 
+include("../emulate_globals_on.php");
+include($toppath."/externals/en/header.phtml");
+include($toppath."/en/menu/menu-main-other.phtml");
 ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/header.phtml"); ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-other.phtml"); ?>
 
 <div id="content">
 
@@ -23,6 +22,7 @@
   <b>Robin Clark</b>
   </dt>
   <dd>
+<div class="history">
     wrote the original 
     <a href="http://www.cs.hmc.edu/~rclark/xacc/">X-Accountant</a>
     (<a href="http://www.gnucash.org/mirrors/www.cs.hmc.edu/~rclark/xacc/">mirror</a>)
@@ -30,15 +30,15 @@
     taking it to version 0.9 by October 1997.  Although every single 
     line of his code has been re-written, his name appears as a 
     credit in almost every file.  Such is the magic of copyrights.
-  </dd>
+</div>
 
-<BR>
-<BR>
+  </dd>
 
   <dt>
   <b>Linas Vepstas</b> (<a href="/images/people/linas-at-kims.jpg">photo</a>)
   </dt>
   <dd>
+<div class="history">
     liked what he saw: the GUI was slick, the code was documented and 
     well structured, and it was all GPL'ed. And so he re-wrote it: 
     adding cell-widgets to XbaeMatrix, so that the combobox and arrows 
@@ -51,15 +51,15 @@
     Linas is now active with Gnumatic Incorporated, a company formed to 
     enhance and support GnuCash for everyone, from home desktop users 
     to commercial and professional accountants.
+</div>
   </dd>
 
-<BR>
-<BR>
 
   <dt>
   <b>Jeremy Collins</b> 
   </dt>
   <dd>
+<div class="history">
     publicized the GnoMoney project widely and broadly, and then 
     changed its name to GnuCash.   (Actually, put the selection 
     of the name up to popular vote.  Democracy is <b>not</b>
@@ -68,15 +68,15 @@
     the gnucash.org web site for years,
     and got the initial GTK/gnome code working.  
     The newest website design is Jeremy's as well.
+</div>
   </dd>
 
-<BR>
-<BR>
 
   <dt>
   <b>Rob Browning</b> (<a href="/images/people/browning.srl.jpg">photo</a>)
   </dt>
   <dd>
+<div class="history">
     abused everyone for not using Perl, and then after we added Perl support, 
     dumped Perl in favor of Guile/Scheme support. Rob maintined the 
     build infrastructure for a while, added user preferences, 
@@ -90,80 +90,82 @@
     specialized in robotics and computer vision. 
     The photo shows him as a volunteer, putting up
     the microwave link for SRL's exploding circus.
+</div>
   </dd>
 
-<BR>
-<BR>
 
   <dt>
   <b>Yannick Le Ny</b>
   </dt>
   <dd>
+<div class="history">
     Our French translator.
     He has translated the menus, messages, README and the documentation to French.
     He strung up the French translation to the GnuCash website, working hard 
     to keep it up to date.
     Patches for Yahoo Europe to get stocks quotes.
+</div>
   </dd>
 
-<BR>
-<BR>
 
   <dt>
   <b>Dave Peticolas</b> (<a href="/images/people/peticolas.jpg">photo</a>)
   </dt>
   <dd>
+<div class="history">
     hacks obsessively on GnuCash. But he can stop anytime he wants to. Really. 
     (As he is now the gatekeeper of the GnuCash CVS tree, be nice to him,
     or he may decide to stop hacking in the middle of your patch).
+</div>
   </dd>
 
-<BR>
-<BR>
 
   <dt>
   <b>Bill Gribble</b>
   </dt>
   <dd>
+<div class="history">
     is not shy, or softly spoken.  So don't be shy if you find a bug in 
     his code: QIF import, query API and transaction search, check-printing,
     commodity and currency support, gtkhtml integration and report printing,
     pgp support, guppi integration, and the new main window layout.
+</div>
   </dd>
 
-
-<BR>
-<BR>
 
   <dt>
   <b>Robert Graham Merkel</b>
   </dt>
   <dd>
+<div class="history">
     Reporting, gnome, and config patches
+</div>
   </dd>
 
-<BR>
-<BR>
 
   <dt>
   <b>James LewisMoss</b>
   </dt>
   <dd>
+<div class="history">
     XML Refactoring.  Automated test suite.
+</div>
   </dd>
 
 
-<BR>
-<BR>
 <dt><b>Carol Champagne</b></dt>
-<dd>First draft of the GnuCash User's Guide</dd>
-<BR>
-<BR>
+<dd>
+<div class="history">
+First draft of the GnuCash User's Guide
+</div>
+</dd>
+
 
   <dt>
   <b>Christian Stimming</b> (<a href="/images/people/cstim2.jpg">photo</a>)
   </dt>
   <dd>
+<div class="history">
     used to be the report-generating monster, when he
     created most of the graphical reports and added multi-currency support
     to the reports in general. Lately he implemented support of HBCI, the
@@ -171,49 +173,64 @@
     Germany. Currently he is the internationalization guru, overseeing the
     translation of gnucash into as many languages as there are translators
     around.
+</div>
   </dd>
 
-<BR>
-<BR>
+
 <dt><b>Derek Atkins</b> (<a href="/images/people/warlord8.tif">photo</a>) 
     (<a href="/images/people/warlord.jpg">photo</a>) </dt>
-<dd>Warlord created the RPC backend for starters, and has been the 
-    lead developer of the small business features.</dd>
-<BR>
-<BR>
+<dd>
+<div class="history">
+Warlord created the RPC backend for starters, and has been the 
+    lead developer of the small business features.
+</div>
+</dd>
+
+
 <dt><strong>Joshua Sled</strong> 
     (<a href="/images/people/jsled-me-best.jpg">photo</a>)</dt>
-<dd>jsled got really excited about adding budgeting support and a
+<dd>
+<div class="history">
+    jsled got really excited about adding budgeting support and a
     financial-planning workbench into GnuCash, and realized how poor his
     time-estimation skills were while adding Scheduled Transactions support
     into GnuCash 1.8.0.  Currently in a high-time-commitment startup job,
     he hopes to return to Budgeting in a FutureRelease, he hopes that enough
     people will add scheduled transactions into their data files to be a good
     initial data-set for budgeting/analysis when it's available.
+</div>
 </dd>
 
-<BR>
-<BR>
+
 <dt><b>Chris Lyttle</b> (<a href="/images/people/wilddev.jpg">photo</a>) </dt>
-<dd>wilddev</dd>
-<BR>
-<BR>
+<dd>
+<div class="history">
+wilddev
+</div></dd>
+
+
 <dt><b>David Hampton</b> (<a href="/images/people/hampton.jpg">photo</a>) </dt>
-<dd></dd>
-<BR>
-<BR>
+<dd>
+<div class="history">
+
+</div>
+</dd>
+
+
 <dt><b>Benoit Gregoire</b></dt>
-<dd>created libOFX, thereby enabling GnuCash to understand the
-    OFX (Open Financial Exchange) protocol and file format.</dd>
-<BR>
-<BR>
+<dd>
+<div class="history">
+    created libOFX, thereby enabling GnuCash to understand the
+    OFX (Open Financial Exchange) protocol and file format.
+</div>
+</dd>
 
 </dl>
 
 <BR>
 
 
-<font size="+2"><b>Fixers and Patchers</b></font>
+<h2>Fixers and Patchers</h2>
 <hr>
 (In Alphabetical Order)
 
@@ -318,4 +335,4 @@
 </dl>
 
 </div>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/footer.phtml"); ?>
+<?php include($toppath."/externals/en/footer.phtml"); ?>

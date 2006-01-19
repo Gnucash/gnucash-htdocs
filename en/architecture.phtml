@@ -1,10 +1,8 @@
 <?php $title = "Architecture"; ?>
-<?php if (!ini_get('register_globals')) {
- include("../emulate_globals_on.php");
-}
-?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/header.phtml"); ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/en/menu/menu-main-developer.phtml"); ?>
+<?php
+include("../emulate_globals_on.php");
+include($toppath."/externals/en/header.phtml");
+include($toppath."/en/menu/menu-main-developer.phtml"); ?>
 <div id="content">
 
 <h1>Architectural Overview</h1>
@@ -38,9 +36,7 @@ shows major components.</a></p>
 GnuCash currently consists of the following modules:</b>
 </p>
 
-<table border=0 cellpadding=1 cellspacing=0 width="100%">
-  <tr>
-  <td valign=middle align=center bgcolor="#666699">
+<div class="tblborder">
    <table border=0 cellpadding=5 cellspacing=1 bgcolor="#cccccc" width="100%">
    <tr>
      <td bgcolor="#666699" width=25%><font color="#ffffff"><b>Module</b></td>
@@ -319,9 +315,8 @@ but this interface has been deleted in the current CVS.
 		 </td>
    </tr>
    </table>
-</tr>
-</table>
+</div>
 
 </div>
 
-<?php include($GLOBALS['DOCUMENT_ROOT']."/externals/en/footer.phtml"); ?>
+<?php include($toppath."/externals/en/footer.phtml"); ?>

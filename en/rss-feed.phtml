@@ -1,7 +1,4 @@
-<?php if (!ini_get('register_globals')) {
- include("../emulate_globals_on.php");
-}
-?>
+<?php include("../emulate_globals_on.php"); ?>
 <?php
    // This file reads the news items in the /news directory and turns
    // them into Dave Winer RSS-2.0 specification news items.
@@ -52,15 +49,7 @@
         return $line;
     }
 
-    //  change  this  to  the  directory  of  your  news  files 
-    //  they  should  be  plain  ASCII  text  files  with  extension  ".txt" 
-
-    # Perhaps we should be using this, but it won't work until we have
-    # the DocumentRoot set up.
-    # $newspath = $GLOBALS['DOCUMENT_ROOT']."/news/
-
-    # So we'll just do this for now...
-    $newspath  =  "news/"; 
+    $newspath  =  "$topdir/news/"; 
 
     //  Declare  array  to  hold  filenames 
     $newsfile  =  array(); 
