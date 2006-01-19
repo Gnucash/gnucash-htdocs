@@ -10,4 +10,10 @@
         extract($superglobal, EXTR_SKIP);
     }
  }
+$fullname = $_SERVER["PHP_SELF"];
+$topdir= dirname($fullname)."/";
+$toppath= getcwd()."/";
+unset($fullname);
+$topdir.="../";
+$toppath.="../";
 ?>
