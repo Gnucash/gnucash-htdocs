@@ -30,9 +30,14 @@ IMG {
     background-color:black;
 }
 .divider {
-    background-color:#ececff
+    background-color:#ececff;
 }
-
+TR {
+	background-color:white;
+}
+.tblbanner {
+	background-color:#cacaf7;
+}
 .featureplay {
     text-align:center;
 }
@@ -49,17 +54,17 @@ IMG {
 #head a:link {
 	color:white;
 	background-color:transparent;
-	}
+}
 
 #head a:visited {
 	color:white;
 	background-color:transparent;
-	}
+}
 
 #head a:active {
 	color:white;
 	background-color:transparent;
-	}
+}
 #tail {
 	font-size:0.8em;
 	clear:both;
@@ -68,6 +73,21 @@ IMG {
 	color: white;
 	margin-left:0;
 	margin-right:0;
+}
+.tblborder {
+	border-style:ridge;
+	border-color:silver;
+	border-width:1px;
+	background-color:#666699;
+}
+.tblheader {
+	background-color:#666699;
+	color:white;
+}
+.tbllimit {
+	border-style:none;
+	background-color:#cacaf7;
+	width:100%;
 }
 #gnclogo {
 	border-style: none;
@@ -100,13 +120,10 @@ IMG {
 #content {
 	float:left;
 	width:65%;
-	margin-right: 2em;
-	padding-right: 1em;
+	margin-right:1em;
+	padding-right:1em;
 	margin-left:2em;
 	text-align:justify;
-}
-#news LI	{
-	list-style-image:url(/images/webding.png);
 }
 #location {
 	padding-left:0.3em;
@@ -119,3 +136,7 @@ IMG {
 	position:relative;
 	top:0.5em;
 }
+.history {
+	margin-bottom:2em;
+}
+
