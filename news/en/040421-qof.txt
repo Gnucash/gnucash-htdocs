@@ -1,0 +1,34 @@
+<b>QOF-0.4.1:</b> The Query Object Framework
+2004-04-21 03:40:57
+
+Version 0.4.1 of QOF is now available.  
+QOF allows C programmers to perform SQL searches on a collection
+of objects without having to use an SQL database to get the 
+results.  This is nice in several ways: first, there's
+a lot of work needed to take a plain-old app and make
+it into a database app; QOF helps avoid that work.
+Secondly, even if one did have an SQL app, the 
+query is happening at 'the wrong place': most programmers
+want to get back pointers to thier own objects, rather
+than lists of raw data from the database.  QOF solves
+this second problem very well, making it a lot easier 
+for aps to include search and report abilities in thier 
+applications.
+QOF consists of a number of other features as well:
+basically, QOF consists of all of those parts of 
+the GnuCash engine that aren't about accounting.
+<br><br>
+QOF-0.4.1 features several improvements over 
+earlier versions:
+<ul>
+<li>A real SQL parser.
+<li>An example demo of using QOF with GLib GObjects (the
+    example finds a particular Gtk Widget out of a 
+    collection).
+<li>Support for pkg-config makes using QOF in your app
+    just a little bit easier.
+</ul>
+<a href="http://qof.sourceforge.net">qof.sourceforge.net</a>
+<br><br>
+
+--linas
