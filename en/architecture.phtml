@@ -37,21 +37,19 @@ GnuCash currently consists of the following modules:</b>
 </p>
 
 <div class="tblborder">
-   <table border=0 cellpadding=5 cellspacing=1 bgcolor="#cccccc" width="100%">
+   <table cellpadding=5 cellspacing=1 width="100%">
+   <colgroup><col width="25%"><col width="50%"></colgroup>
    <tr>
-     <td bgcolor="#666699" width=25%><font color="#ffffff"><b>Module</b></td>
-     <td bgcolor="#666699" width=50%><font color="#ffffff"><b>Description</b></td>
+     <td class="tblheader"><b>Module</b></td>
+     <td class="tblheader"><b>Description</b></td>
    </tr>
-   <tr bgcolor="#ececff">
-     <td valign=top>
-       <table border=0 cellpadding=0 cellspacing=0>
-       <tr>
-         <td valign=top><img src="/images/icons/document.txt.gif" width=16 height=16 border=0>&nbsp;</td>
-         <td valign=top><b>Engine</b></td>
-       </tr>
-       </table>
+   <tr>
+     <td>
+        <img src="/images/icons/document.txt.gif" width=16 height=16 
+	alt="document icon">
+        <b>Engine</b>
      </td>
-     <td valign=top>
+     <td>
 <p>The <dfn>Engine</dfn> (located under the <code>src/engine/</code> 
 directory in the
 GnuCash codebase) provides an interface for creating, manipulating, and
@@ -63,23 +61,19 @@ is the same one that was bought in another), Prices and
 Currencies/Commodities.  These six entities provide the central data 
 structures of the GnuCash financial data model,
 <a href="/images/diagrams/structures.png">as illustrated in this diagram.</a>
-Additional structures are created by the business component.
-
+Additional structures are created by the business component.</p>
 <p>The Engine code contains no GUI code whatsoever, and is essentially
 OS-neutral. It is written entirely in C.  It was designed to be used
-in a stand-alone server; however, it is not currently used as such.
-		 </td>
+in a stand-alone server; however, it is not currently used as such.</p>
+   </td>
    </tr>
-   <tr bgcolor="#ffffff">
-     <td valign=top>
-       <table border=0 cellpadding=0 cellspacing=0>
-       <tr>
-         <td valign=top><img src="/images/icons/document.txt.gif" width=16 height=16 border=0>&nbsp;</td>
-         <td valign=top><b>Query</b></td>
-       </tr>
-       </table>
+   <tr class="divider">
+     <td>
+        <img src="/images/icons/document.txt.gif" width=16 height=16 
+	alt="document icon">
+        <b>Query</b>
      </td>
-     <td valign=top>
+     <td>
 <p>The <dfn>Query</dfn> module (also in <code>src/engine/</code>)
 provides a generic mechanism for performing complex, structured 
 queries on a collection of objects.  For example, GnuCash uses 
@@ -95,20 +89,16 @@ the local collection of objects in the GnuCash engine acts as a 'cache'
 for a possibly much larger set of data in the SQL backend.  The idea
 is to keep GnuCash 'scalable': the runtime size can stay small, while
 still having high-performance interactions, even when dealing with large,
-remote databases.
-
-		 </td>
+remote databases.</p>
+   </td>
    </tr>
-   <tr bgcolor="#ececff">
-     <td valign=top>
-       <table border=0 cellpadding=0 cellspacing=0>
-       <tr>
-         <td valign=top><img src="/images/icons/document.txt.gif" width=16 height=16 border=0>&nbsp;</td>
-         <td valign=top><b>Storage Backend</b></td>
-       </tr>
-       </table>
+   <tr>
+     <td>
+       <img src="/images/icons/document.txt.gif" width=16 height=16 
+	alt="document icon">
+        <b>Storage Backend</b>
      </td>
-     <td valign=top>
+     <td>
 <p>The <dfn>Storage Backend</dfn> module (<code>src/backend/</code>) 
 defines a generic interface for storing GnuCash data (into files or 
 databases) or for communicating with a remote GnuCash storage server
@@ -120,18 +110,15 @@ Additionally, there are several experimental backends (currently
 broken/unsupported): one for communicating with a GnuCash storage 
 server via RPC, and another that chats, via XML across HTTP, with 
 a GnuCash server.
-		 </td>
+    </td>
    </tr>
-   <tr bgcolor="#ffffff">
-     <td valign=top>
-       <table border=0 cellpadding=0 cellspacing=0>
-       <tr>
-         <td valign=top><img src="/images/icons/document.txt.gif" width=16 height=16 border=0>&nbsp;</td>
-         <td valign=top><b>Register</b></td>
-       </tr>
-       </table>
+   <tr class="divider">
+     <td>
+       <img src="/images/icons/document.txt.gif" width=16 height=16 
+	alt="document icon">
+        <b>Register</b>
      </td>
-     <td valign=top>
+     <td>
 <p>The <dfn>Register</dfn> (<code>src/register/</code>) implements a ledger-like
 GUI that allows the user to dynamically enter dates, prices, memos
 descriptions, etc. in an intuitive fashion that should be obvious to
@@ -144,44 +131,36 @@ objects support and automatically validate date entry, memo entry
 (w/auto-completion), prices, combo-boxes (pull-down menus), and
 multi-state check-boxes. Cells can be marked read-write, or
 output-only. Cells can be assigned unique colors. The currently
-active ledger row-block can be highlighted with a unique color.
-
+active ledger row-block can be highlighted with a unique color.</p>
 <p>The register code is completely independent of the engine code, knows
 nothing about accounting or any of the other GnuCash subsystems. It
 can be used in independent projects that have nothing to do with
-accounting.
-		 </td>
+accounting.</p>
+    </td>
    </tr>
-   <tr bgcolor="#ececff">
-     <td valign=top>
-       <table border=0 cellpadding=0 cellspacing=0>
-       <tr>
-         <td valign=top><img src="/images/icons/document.txt.gif" width=16 height=16 border=0>&nbsp;</td>
-         <td valign=top><b>Reports &amp; Graphs</b></td>
-       </tr>
-       </table>
+   <tr>
+     <td>
+       <img src="/images/icons/document.txt.gif" width=16 height=16 
+	alt="document icon">
+        <b>Reports &amp; Graphs</b>
      </td>
-     <td valign=top>
-<p>The <dfn>Reports &amp Graphs</dfn> module (<code>src/report/</code>)
+     <td>
+<p>The <dfn>Reports &amp; Graphs</dfn> module (<code>src/report/</code>)
 is a scheme (guile) based system to create balance sheets, profit &amp; 
 loss statements, barcharts, piecharts, <i>etc.</i>  It uses the Query
 API to fetch and format data, which is then converted into HTML and 
 displayed with the gtkhtml widget.  Graphs are implemented in Guppi,
 (&lt;<code>http://www.gnome.org/guppi</code>&gt;).
-and are embedded (as live graphs) directly in the HTML.
-
-		 </td>
+and are embedded (as live graphs) directly in the HTML.</p>
+    </td>
    </tr>
-   <tr bgcolor="#ffffff">
-     <td valign=top>
-       <table border=0 cellpadding=0 cellspacing=0>
-       <tr>
-         <td valign=top><img src="/images/icons/document.txt.gif" width=16 height=16 border=0>&nbsp;</td>
-         <td valign=top><b>Price Quotes</b></td>
-       </tr>
-       </table>
+   <tr class="divider">
+     <td>
+       <img src="/images/icons/document.txt.gif" width=16 height=16 
+	alt="document icon">
+        <b>Price Quotes</b>
      </td>
-     <td valign=top>
+     <td>
 <p>The <dfn>Price Quotes</dfn> module (<code>src/quotes</code>) is 
 a wrapper around the Finance::Quote Perl module, used to 
 fetch stock price data off the Internet and insert it into the GnuCash
@@ -189,23 +168,19 @@ Engine. The Finance::Quote module is available at SourceForge (or
 through CPAN). This module can fetch
 price quotes from many different sources including Yahoo, Yahoo Europe,
 and some international exchanges. Before a new data source can be
-added to GnuCash, it must be added to Finance::Quote first.
-
+added to GnuCash, it must be added to Finance::Quote first.</p>
 <p>The Finance::Quote module also supports fetching currency exchange
 rates. GnuCash will be extended to allow the fetching and use of
-currency exchange rates.
-		 </td>
+currency exchange rates.</p>
+   </td>
    </tr>
-   <tr bgcolor="#ececff">
-     <td valign=top>
-       <table border=0 cellpadding=0 cellspacing=0>
-       <tr>
-         <td valign=top><img src="/images/icons/document.txt.gif" width=16 height=16 border=0>&nbsp;</td>
-         <td valign=top><b>User Preferences</b></td>
-       </tr>
-       </table>
+   <tr>
+     <td>
+       <img src="/images/icons/document.txt.gif" width=16 height=16 
+	alt="document icon">
+        <b>User Preferences</b>
      </td>
-     <td valign=top>
+     <td>
 <p>The <dfn>User Preferences</dfn> module (<code>src/app-utils/</code>)
 provides an infrastructure for defining both
 user-configurable and internal preferences. Preferences are defined in
@@ -213,24 +188,20 @@ scheme using several predefined preference types such as boolean,
 string, date, etc. Preferences are 'implemented' by providing a GUI
 which allows the user to see and change preference values. An API
 is provided to query preference values and to register callbacks
-which will be invoked when preferences change.
-
+which will be invoked when preferences change.</p>
 <p>Preference values which are different from the default values
 are stored as scheme forms in a user-specific preferences file
 (<code>~/.gnucash/config.auto</code>). This file is automatically
-loaded upon startup.
-		 </td>
+loaded upon startup.</p>
+   </td>
    </tr>
-   <tr bgcolor="#ffffff">
-     <td valign=top>
-       <table border=0 cellpadding=0 cellspacing=0>
-       <tr>
-         <td valign=top><img src="/images/icons/document.txt.gif" width=16 height=16 border=0>&nbsp;</td>
-         <td valign=top><b>Data Import &amp; Export</b></td>
-       </tr>
-       </table>
+   <tr class="divider">
+     <td>
+       <img src="/images/icons/document.txt.gif" width=16 height=16 
+	alt="document icon">
+        <b>Data Import &amp; Export</b>
      </td>
-     <td valign=top>
+     <td>
 <p>The <dfn>Import</dfn> module (<code>src/import-export/</code>) provides
 functionality for importing QIF (Quicken Interchange Format) data files and
 OFX (Open Financial Exchange) files into GnuCash.  One of the difficult 
@@ -243,21 +214,16 @@ one must have a fairly sophisticated transaction matcher that can
 detect and properly handle (ignore) duplicate transactions.  This
 pattern matching is generically useful, and is used by the HCBI
 subsystem.  (HCBI is an online banking system available to residents
-of Germany).
-
-
-		 </td>
+of Germany).</p>
+   </td>
    </tr>
-   <tr bgcolor="#ececff">
-     <td valign=top>
-       <table border=0 cellpadding=0 cellspacing=0>
-       <tr>
-         <td valign=top><img src="/images/icons/document.txt.gif" width=16 height=16 border=0>&nbsp;</td>
-         <td valign=top><b>Small Business Features</b></td>
-       </tr>
-       </table>
+   <tr>
+     <td>
+       <img src="/images/icons/document.txt.gif" width=16 height=16 
+	alt="document icon">
+        <b>Small Business Features</b>
      </td>
-     <td valign=top>
+     <td>
 <p>GnuCash provides support for a number of small business features, including 
    a business-oriented ledger (which shows additional info that the regular, 
    'check-book style' ledger does not), Invoicing, Jobs &amp; Order Entry, 
@@ -265,39 +231,32 @@ of Germany).
    organization of this code is similar to that of core GnuCash: there is a 
    set of C objects (<code>src/business/business-core)</code>) that are 
    saved/restored in the backend. The objects themsleves are manipulated 
-   by various GUI dialog elements (<code>src/business/gnome)</code>). 
-
-		 </td>
+   by various GUI dialog elements (<code>src/business/gnome)</code>).</p>
+   </td>
    </tr>
-   <tr bgcolor="#ffffff">
-     <td valign=top>
-       <table border=0 cellpadding=0 cellspacing=0>
-       <tr>
-         <td valign=top><img src="/images/icons/document.txt.gif" width=16 height=16 border=0>&nbsp;</td>
-         <td valign=top><b>Recurring Transactions</b></td>
-       </tr>
-       </table>
+   <tr class="divider">
+     <td>
+       <img src="/images/icons/document.txt.gif" width=16 height=16 
+	alt="document icon">
+        <b>Recurring Transactions</b>
      </td>
-     <td valign=top>
+     <td>
 <p>Scheduled transactions provide a mechanism for describing a set of regularly 
 recurring financial transactions so that the GnuCash dataset can be automatically 
 updated as time passes.  The core object is the "Frequency Specification", which
 identifies a periodicity (daily, weekly, monthly, etc.).  It is manipulated by
 a GUI widget.  The FreqSpec is used with special "Template Transactions" that
 record info about how future transactions should be made out, and are manipulated
-by a corresponding GUI.
-		 </td>
+by a corresponding GUI.</p>
+    </td>
    </tr>
-   <tr bgcolor="#ececff">
-     <td valign=top>
-       <table border=0 cellpadding=0 cellspacing=0>
-       <tr>
-         <td valign=top><img src="/images/icons/document.txt.gif" width=16 height=16 border=0>&nbsp;</td>
-         <td valign=top><b>GnuCash</b></td>
-       </tr>
-       </table>
+   <tr>
+     <td>
+      <img src="/images/icons/document.txt.gif" width=16 height=16 
+	alt="document icon">
+        <b>GnuCash</b>
      </td>
-     <td valign=top>
+     <td>
 <p>The GnuCash module (<code>src/gnome</code> and other directories)
 is the main GUI application. It consists of a
 collection of miscellaneous GUI code to glue together all of the pieces
@@ -307,12 +266,11 @@ flexibility that a professional might expect. When people say that
 GnuCash is trying to be a "Quicken or MS Money look/work/act-alike",
 this is the piece that they are referring to. It really is meant to
 be a personal-finance manager with enough power for the power user
-and the ease of use for the beginner.
-
+and the ease of use for the beginner.</p>
 <p>Currently, the Gnome interface is the only operational interface. 
 An obsolete Motif interface can be fished out of historical CVS;
-but this interface has been deleted in the current CVS.
-		 </td>
+but this interface has been deleted in the current CVS.</p>
+   </td>
    </tr>
    </table>
 </div>

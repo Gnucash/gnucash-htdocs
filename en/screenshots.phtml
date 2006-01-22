@@ -9,35 +9,42 @@ include($toppath."/en/menu/menu-main-general.phtml");
 <h1>Screenshots</h1>
 
 <div class="tblborder">
-   <table border=0 cellpadding=5 cellspacing=1 bgcolor="#cacaf7" width="100%">
+   <table cellpadding=5 cellspacing=1 width="100%">
+   <colgroup><col width="25%"><col width="45%"><col width="30%"></colgroup>
    <tr>
-     <td bgcolor="#666699" width="25%"><font color="#ffffff"><b>Screenshot</b></td>
-     <td bgcolor="#666699" width="75%"><font color="#ffffff"><b>Description</b></td>
-     <td bgcolor="#666699" width="75%"><font color="#ffffff"><b>Thumbnail</b></td>
+     <td class="tblheader"><b>Screenshot</b></td>
+     <td class="tblheader"><b>Description</b></td>
+     <td class="tblheader"><b>Thumbnail</b></td>
    </tr>
 <?php
-	$d = dir($toppath."/images/gnome-1.6/");
+
+	$screenshotpath = "/images/gnome-1.6/";
+	$imagesrc = $topdir . $screenshotpath;
+	$imagepath = $toppath . $screenshotpath;
+
+	$d = dir($imagepath);
 	while($entry=$d->read()) {
 	  if(ereg("-thumb", $entry)) { continue; }
 	  if(!ereg("gif$", $entry)) { continue; }
 
-		$file_clean = explode(".", $entry);
-		$entry = $file_clean[0]."-thumb";
+	$file_clean = explode(".", $entry);
+	$entry = $file_clean[0]."-thumb";
 	  
-	  $description = implode("", file($toppath."/images/gnome-1.6/".$entry.".gif.description")); 
-		$name = implode("", file($toppath."/images/gnome-1.6/".$entry.".gif.name"));
+	$description = implode("", file($imagepath.$entry.".gif.description")); 
+	$name = implode("", file($imagepath.$entry.".gif.name"));
 ?>
-   <tr bgcolor="#ececff">
-     <td valign=top>
-       <table border=0 cellpadding=0 cellspacing=0>
-       <tr>
-         <td valign=top><a href="/images/gnome-1.6/<?php echo $file_clean[0].".gif"; ?>"><img src="/images/icons/search_icon.gif" width=16 height=16 border=0></a>&nbsp;</td>
-         <td valign=top><a href="/images/gnome-1.6/<?php echo $file_clean[0].".gif"; ?>"><?php echo $name; ?></a></td>
-       </tr>
-       </table>
+   <tr>
+     <td style="text-align:left">
+	<img src="<?php echo $topdir; ?>/images/icons/search_icon.gif" 
+	width=16 height=16 alt="screenshot icon">&nbsp;<a 
+	href="<?php echo $imagesrc.$file_clean[0].".gif"; ?>"><?php 
+	echo $name; ?></a>
      </td>
-     <td valign=top><?php echo $description; ?></td>
-     <td valign=top><a href="/images/gnome-1.6/<?php echo $file_clean[0].".gif"; ?>"><img border=0 src="/images/gnome-1.6/<?php echo $file_clean[0]."-thumb.gif"; ?>"></a></td>
+     <td><?php echo $description; ?></td>
+     <td><a href="<?php echo $imagesrc.$file_clean[0].".gif"; ?>"><img 
+	alt="<?php echo $file_clean[0]; ?>"
+	src="<?php echo $imagesrc.$file_clean[0]."-thumb.gif"; ?>"></a>
+    </td>
    </tr>
 <?php 
   }
