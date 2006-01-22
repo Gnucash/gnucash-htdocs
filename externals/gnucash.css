@@ -9,14 +9,17 @@ BODY {
 IMG {
     border-style:none;
 }
-.news1 {
+.newsborder {
     background-color:#cacaf7;
     border:2px;
     border-color:silver;
     border-style:ridge;
-    margin:1em;
     padding:2px;
+    margin-bottom:2em;
+}
+.newsheader {
     line-height:2em;
+    font-size:1.4em;
     text-align:top;
 }
 .featurepanel {
@@ -31,12 +34,19 @@ IMG {
 }
 .divider {
     background-color:#ececff;
+    text-align:left;
 }
+TABLE {
+	border-width:2px;
+	border-style:ridge;
+	border-color:silver;
+} 
 TR {
 	background-color:white;
 }
 .tblbanner {
 	background-color:#cacaf7;
+	border-style:none;
 }
 .featureplay {
     text-align:center;
@@ -83,11 +93,22 @@ TR {
 .tblheader {
 	background-color:#666699;
 	color:white;
+	border-width:1px;
+	border-color:silver;
+	border-style:ridge;
 }
 .tbllimit {
 	border-style:none;
 	background-color:#cacaf7;
 	width:100%;
+}
+.frametitle {
+	background-color:#666699;
+	color:white;
+	padding:5px;
+	border-width:2px;
+	border-style:ridge;
+	border-color:silver;
 }
 #gnclogo {
 	border-style: none;
