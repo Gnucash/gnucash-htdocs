@@ -27,7 +27,10 @@ traditionele Unixes: Solaris, AIX, en andere.
 
        
 
-<?php include($GLOBALS['DOCUMENT_ROOT']."/php-scripts/news-script.php"); ?>
+<?php 
+$en_newspath = $toppath . "/news/en/";
+$lang_newspath = $toppath . "/news/nl/";
+include($toppath."/news/news-script.php"); ?>
 
 <font size=-2>
 <a href="/surf/guppi-pie-demo.html">test</a>

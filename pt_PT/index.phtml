@@ -3,8 +3,8 @@
  include("../emulate_globals_on.php");
 }
 ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/pt_PT/components/header.phtml"); ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/pt_PT/menu/menu-main.phtml"); ?>
+<?php include($toppath."/pt_PT/components/header.phtml"); ?>
+<?php include($toppath."/pt_PT/menu/menu-main.phtml"); ?>
 
 	</td>
   <td valign=top width=98%>
@@ -33,7 +33,10 @@ e as bibliotecas financeiras associadas se tornem na escolha de uma geração de u
 
        
 
-<?php include ($GLOBALS['DOCUMENT_ROOT']."/php-scripts/news-script.php"); ?>
+<?php 
+$en_newspath = $toppath . "/news/en/";
+$lang_newspath = $toppath . "/news/pt_PT/";
+include ($toppath."/news/news-script.php"); ?>
 
 <font size=-2>
 <a href="/surf/guppi-pie-demo.html">teste</a>

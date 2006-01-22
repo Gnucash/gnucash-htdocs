@@ -48,7 +48,11 @@ contacter pour pouvoir la corriger au plus vite. Merci de votre indulgence.
 
 <h1>Actualités</h1>
 
-<?php include($GLOBALS['DOCUMENT_ROOT']."/php-scripts/news-script.php"); ?>
+<?php 
+$lang_newspath = $toppath . "/news/fr/";
+$en_newspath = $toppath . "/news/en/";
+include($toppath."/news/news-script.php"); 
+?>
 
 <font size=-2>
 <a href="/surf/guppi-pie-demo.html">test</a>
@@ -59,4 +63,4 @@ contacter pour pouvoir la corriger au plus vite. Merci de votre indulgence.
 
   </td>
 
-<?php include($GLOBALS['DOCUMENT_ROOT']."/fr/components/footer.phtml"); ?>
+<?php include($toppath."/fr/components/footer.phtml"); ?>
