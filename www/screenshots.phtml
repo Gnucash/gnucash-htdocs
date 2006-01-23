@@ -18,9 +18,9 @@ include($toppath."/en/menu/menu-main-general.phtml");
    </tr>
 <?php
 
-	$screenshotpath = "/images/gnome-1.6/";
-	$imagesrc = $topdir . $screenshotpath;
-	$imagepath = $toppath . $screenshotpath;
+	$screenshotpath = "images/gnome-1.6/";
+	$imagesrc =  $screenshotpath;
+	$imagepath = $screenshotpath;
 
 	$d = dir($imagepath);
 	while($entry=$d->read()) {

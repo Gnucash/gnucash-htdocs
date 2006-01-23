@@ -32,7 +32,7 @@ And, if you'd like to make a cash donation, please visit our
 <p>
 <b>Select your talent to see where you might fit in:</b>
 </p>
-<form method="post" action="/en/contribute.phtml">
+<form method="get" action="contribute.phtml">
 <div>
 <select name="contribute">
   <option value="programmer"
@@ -59,7 +59,7 @@ And, if you'd like to make a cash donation, please visit our
 <hr>
 <?php
   if ($contribute != "") {
-		include($toppath."/en/contribute/contribute-".$contribute.".phtml");
+		include("contribute/contribute-".$contribute.".phtml");
   }
 ?>
 
