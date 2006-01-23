@@ -1,0 +1,44 @@
+<?php 
+$title = _("Open Source Accounting Software");
+$homepage=true;
+include("../emulate_globals_on.php");
+include($toppath."/externals/en/header.phtml");
+include($toppath."/en/menu/menu-main.phtml"); 
+?>
+<?php
+# test gettext support
+# Set the language as 'en_GB' for testing
+# note that gettext in php requires the entire
+# string in one line, one quote.
+$language = 'en_GB';
+putenv("LANG=$language");
+setlocale(LC_MESSAGES, $language);
+$domain = "gnucash-htdocs";
+bindtextdomain("$domain", "$toppath");
+textdomain("$domain");
+?>
+
+<div id="content">
+
+<h1><?php echo _("Welcome to GnuCash.org")?></h1>
+
+<p><?php echo _("If you've been looking for a way to manage your personal or business finances using Free Software, you've found it! Designed to be easy to use, yet powerful and flexible, GnuCash allows you to track bank accounts, stocks, income and expenses.  As quick and intuitive to use as a checkbook register, it is based on professional accounting principles to ensure balanced books and accurate reports.  GnuCash is backed by an active development community and is blossoming into a full-fledged accounting system. Developed under the GPL, you have no need to worry about obsolescence: GnuCash will always be there for you. "); ?>
+</p>
+<p><?php echo _("This web site is devoted to promoting the Gnucash.org software development  project. We are committed to developing top-notch accounting and financial tools for GNU/Linux and Unix users. This includes the development of programming API's, libraries and components that can be used to create both server and personal applications for home and business use. By focusing on ease-of-use, modular design, architected interfaces and well-documented code, we hope that GnuCash and its associated financial libraries become the choice of a GNU generation of programmers and users."); ?>
+</p>
+<p><?php echo _("Yes, GnuCash now runs on Mac OSX, as well as GNU/Linux, *BSD, and the traditional Unixes: Solaris, AIX, and so on."); ?>
+</p>
+
+<h1><?php echo _("News"); ?></h1>
+
+<?php
+# THIS IS OUT OF DATE - once gettext is running properly, all news will
+# be translated with only one news directory.
+  # for english, the lang and en news path are identical
+  $en_newspath  =  $toppath."news/en/";
+  $lang_newspath  =  $toppath."news/en/";
+  include($toppath."/news/news-script.php"); ?>
+
+</div>
+
+<?php include($toppath."/externals/en/footer.phtml"); ?>

@@ -1,0 +1,24 @@
+<!-- MENU:START -->
+<?php
+
+echo "<div id=\"news\"><div class=\"othernews\">";
+include($toppath."/externals/en/menu-general.phtml");
+echo "</div>\n<div class=\"othernews\">\n";
+include($toppath."/externals/en/menu-documentation.phtml");
+# highlighted menu entry:
+echo "</div>\n<div class=\"highlight\">\n";
+include($toppath."/externals/en/menu-help.phtml");
+echo "</div>\n<div class=\"othernews\">\n";
+include($toppath."/externals/en/menu-downloads.phtml");
+echo "</div>\n<div class=\"othernews\">\n";
+include($toppath."/externals/en/menu-developer.phtml");
+echo "</div>\n<div class=\"othernews\">\n";
+include($toppath."/externals/en/menu-other.phtml");
+echo "</div>\n<div class=\"othernews\">\n";
+include($toppath."/externals/en/menu-search.phtml");
+echo "</div>\n";
+echo "</div>\n";
+?>
+
+
+<!-- MENU:END -->
