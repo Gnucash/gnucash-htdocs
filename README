@@ -1,0 +1,35 @@
+# Notes for those editing these pages.
+#
+# all pages must call emulate_globals_on.php
+# Two variables then become available on all systems:
+# $toppath is for filesystem paths, generally include files.
+# $topdir is for http paths e.g. images and other user-facing resources.
+# To make your pages portable, always precede a local href or src
+# location with $topdir:
+# src="<?php echo $topdir; ?>/path"
+# this allows mirrors to install the site in a sub-directory.
+#
+# Within content, the absolute rules are:
+# 1. If you OPEN a tag, YOU are responsible for closing it
+# 2. Escape all entities: use &amp; &lt; &gt; - watch those
+# Bugzilla or SourceForge URL links: all query strings need to
+# use &amp;
+
+# i18n and l10n:
+# =============
+# 
+# The server needs to be configured for the underlying locales
+# before PHP can use gettext to translate them. On Debian,
+# install and configure 'locales' for each supported language
+# and use 'dpkg-reconfigure locales' to add new ones later.
+# 
+# The test server at http://gnucash.neil.williamsleesmill.me.uk/
+# supports: C POSIX de_DE de_DE.iso88591 de_DE.utf8 deutsch dutch
+# en_AU en_AU.iso88591 en_AU.utf8 en_BW en_BW.iso88591 en_BW.utf8
+# en_CA en_CA.iso88591 en_CA.utf8 en_GB en_GB.iso88591 en_GB.utf8
+# en_US en_US.iso88591 en_US.utf8 es_ES es_ES.iso88591 es_ES.utf8
+# fr_FR fr_FR.iso88591 fr_FR.utf8 français french german it_IT
+# it_IT.iso88591 it_IT.utf8 italian nl_NL nl_NL.iso88591 nl_NL.utf8
+# portuguese pt_BR pt_BR.iso88591 pt_BR.utf8 pt_PT pt_PT.iso88591
+# pt_PT.utf8 spanish
+

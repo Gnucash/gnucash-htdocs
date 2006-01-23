@@ -10,8 +10,11 @@ use strict;
 
 use File::Basename;
 
-my @cvsignores = `find . -name '.svn'`;
-my @possible_files = `find www -name '*.php' -o -name '*.phtml'`;
+my @cvsignores = `find . -name '.cvsignore'`;
+my @phtml_files = `find www -name '*.php' -o -name '*.phtml'`;
+#my @news_files = `find news -regextype posix-egrep  -regex '[a-z0-9\/\-]*\.txt'`;
+my @news_files = ();
+my @possible_files = (@phtml_files, @news_files);
 
 chomp(my $cwd = `pwd`);
 

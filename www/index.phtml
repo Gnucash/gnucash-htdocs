@@ -5,18 +5,6 @@ include("../emulate_globals_on.php");
 include($toppath."/externals/en/header.phtml");
 include($toppath."/en/menu/menu-main.phtml"); 
 ?>
-<?php
-# test gettext support
-# Set the language as 'en_GB' for testing
-# note that gettext in php requires the entire
-# string in one line, one quote.
-$language = 'en_GB';
-putenv("LANG=$language");
-setlocale(LC_MESSAGES, $language);
-$domain = "gnucash-htdocs";
-bindtextdomain("$domain", "$toppath");
-textdomain("$domain");
-?>
 
 <div id="content">
 
@@ -32,8 +20,8 @@ textdomain("$domain");
 <h1><?php echo _("News"); ?></h1>
 
 <?php
-# THIS IS OUT OF DATE - once gettext is running properly, all news will
-# be translated with only one news directory.
+# News will continue to be translated separately because 
+# of the .txt format. 
   # for english, the lang and en news path are identical
   $en_newspath  =  $toppath."news/en/";
   $lang_newspath  =  $toppath."news/en/";

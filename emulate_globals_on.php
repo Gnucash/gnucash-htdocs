@@ -16,4 +16,20 @@ $toppath= getcwd()."/";
 unset($fullname);
 $topdir.="../";
 $toppath.="../";
+include($toppath."/accept-to-gettext.inc");
+# test gettext support
+# Set the language as 'en_GB' for testing
+# note that gettext in php requires the entire
+# string in one line, one quote.
+$langs=array('nl_BE.ISO-8859-15','nl_BE.UTF-8','en_GB.UTF-8','en_GB','en_US.UTF-8');
+$locale=al2gt($langs, 'text/html');
+# allow user override.
+$language = $_GET["lang"];
+if(isset($language)) { $locale = $language; }
+if($locale == "") { $locale = 'en_GB'; }
+putenv("LANG=$locale");
+setlocale(LC_MESSAGES, $locale);
+$domain = "gnucash-htdocs";
+bindtextdomain("$domain", "$toppath");
+textdomain("$domain");
 ?>

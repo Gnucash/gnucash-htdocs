@@ -92,7 +92,7 @@
         $n=count($fa);
 
         echo ("<div class=\"newsborder\"><div class=\"newsheader\">");
-        echo("<img alt=\"news panel\" src=\"$topdir/images/icons/document.txt.gif\">&nbsp;");
+        echo("<img alt=\"news panel\" src=\"images/icons/document.txt.gif\">&nbsp;");
 	print $fa[0];
 	print  " - <b>" . $newsfile[$key] . "</b>\n</div>";
 
