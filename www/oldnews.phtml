@@ -364,255 +364,187 @@ echo _("<b>Announcement:</b> GnuCash Docs 1.8.3 Release");?>
 </b>
 </div><div class="newsinner">
 <br>
-The GnuCash Docs team is pleased to announce the release
-of the docs version 1.8.3.<br><br>
-<b><big>What's New in GnuCash Docs 1.8.3?</big></b><br>
-<br>
- o Fix xmllint errors<br>
- o Add new credit card chapter images<br>
- o Remove unused images<br>
- o Updates to guide<br>
- o Michael Rensing's FAQ updates<br>
- o Fix reconcile column in cc payment image<br>
+<?php echo _("The GnuCash Docs team is pleased to announce the release of the docs version 1.8.3.")?><br><br>
+<b><big><?php echo _("What's New in GnuCash Docs 1.8.3?")?></big></b><br>
+<br><?php
+echo " o " . _("Fix xmllint errors") . "<br>";
+echo " o " . _("Add new credit card chapter images") . "<br>";
+echo " o " . _("Remove unused images") . "<br>";
+echo " o " . _("Updates to guide") . "<br>";
+echo " o " . _("Michael Rensing's FAQ updates") . "<br>";
+echo " o " . _("Fix reconcile column in cc payment image") . "<br>";?>
 <br><br>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
 
 <br><br>
 <b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
-</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash Docs 1.8.2 Release
+</div></div>
+
+<div class="newsborder"><div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;<?php
+echo _("<b>Announcement:</b> GnuCash Docs 1.8.2 Release");?>
+ - <b>2003-08-20   05:05:10
+</b>
+</div><div class="newsinner">
+<br><?php
+echo _("The GnuCash team is pleased to announce the release of the docs version 1.8.2.");
+?><br><br>
+<b><big><?php echo _("What's New in GnuCash Docs 1.8.2?");?></big></b><br>
+<br><?php
+echo " o " . _("Jon Lapham now primary author of Guide") . "<br>";
+echo " o " . _("Moved convert-html to make all so html gets built during 'make'") . "<br>";
+echo " o " . _("Many, many, many changes to the Guide by Jon (see changelog)") . "<br>";
+echo " o " . _("If you can't find it in the Help, look in the Guide (hint)") . "<br>";?>
+<br><br>
+<?php echo _("Available at the usual places!");?>
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div>
+
+<div class="newsborder"><div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;<?php
+echo _("<b>Announcement:</b> GnuCash 1.8.2 Release");?>
  - <b>2003-08-20   05:05:10
 </b>
 </div><div class="newsinner">
 <br>
-The GnuCash team is pleased to announce the release
-of the docs version 1.8.2.<br><br>
-<b><big>What's New in GnuCash Docs 1.8.2?</big></b><br>
+<?php echo _("The GnuCash team is pleased to announce the release of stable version 1.8.2.");
+?><br><br>
+<b><big><?php echo _("What's New in GnuCash 1.8.2?");?></big></b><br>
 <br>
- o Jon Lapham now primary author of Guide<br>
- o Moved convert-html to make all so html gets built during 'make'<br>
- o Many, many, many changes to the Guide by Jon (see changelog)<br>
- o If you can't find it in the Help, look in the Guide (hint)<br>
+<b>- <?php echo _("Scheduled Transactions")?>:</b> <br>
+<?php
+echo _("GnuCash now has the ability to automatically create and enter transactions, remind 
+when a transaction is due, give a choice of entering a transaction or postponing it and remove an automated transaction after a certain period.") . "<br>";
+echo "<b>- " . _("Mortgage &amp; Loan Repayment Druid") . ":</b><br>";
+echo _("Used to setup a variable payment loan scheduled transaction.") . "<br>";
+echo "<b>- " . _("Small Business Accounting Features") . ": </b><br>";
+echo _("GnuCash now can be used for Customer and Vendor tracking, Invoicing and Bill Payment, and using different Tax and Billing Terms in a small business.") . "<br>";
+echo "<b>- " . _("OFX Import") . ":</b><br>";
+echo _("GnuCash is the first free software application to support the Open Financial Exchange protocol that many banks and financial services are moving to use. The development of OFX and HBCI support has also resulted in an improved transaction matching system that more accurately picks duplicate transactions.") . "<br>";
+echo "<b>- " . _("HBCI Support") . ":</b> <br>";
+echo _("GnuCash is the first free software application to support the German Home Banking Computer Information protocol which includes statement download, initiate bank transfers and direct debits.") . "<br>";
+echo "<b>- " . _("New User Manual and Help") . ":</b><br>";
+echo _("A brand new user help has been written which focuses on how to do tasks in conjunction with a Tutorial and Concepts guide that gives the user background information on using GnuCash.") . "<br>";
+echo "<b>- " . _("New Multi-Currency Transaction Handling") . ":</b><br>";
+echo _("GnuCash no longer requires separate currency exchange accounts to handle multiple currency transfers.") . "<br>";
+echo "<b>- " . _("Redesigned Menus") . "</b><br>";
+echo _("The GnuCash menu's have been redesigned to conform more with the new GNOME Human Interface Guidelines.") . "<br>";?>
+<br>
+<big><b><?php echo _("Specifically updated in this version");?></b></big><br>
+<br><?php
+echo " o " . _("Release of new stable version 1.8.2") . "<br>";
+echo " o " . _("Updated translations: German, Slovak, Spanish") . "<br>";
+echo " o " . _("Updated HBCI requirement to 0.9.6") . "<br>";
+echo " o " . _("Postgres fix for PG-7.3.x") . "<br>";
+echo " o " . _("More fixes for guile-1.6 support") . "<br>";
+echo " o " . _("Fix QIF Import for split transactions (#105139)") . "<br>";
+echo " o " . _("Remove &quot;display balance in Euro&quot; columns from the main window") . "<br>";
+echo " o " . _("Add &quot;display balance in Report Currency&quot; columns to the main window") . "<br>";
+echo " o " . _("Fix the transfer dialog / exchange-rate dialog so it doesn't round the values input by the user. (#106332)") . "<br>";
+echo " o " . _("Fix configure so tests won't fail on GCC 3.2.2") . "<br>";
+echo " o " . _("HBCI: avoid sending online transfers twice") . "<br>";
+echo " o " . _("Don't override the user's toolbar style (#102041)") . "<br>";
+echo " o " . _("Import: don't punish transactions with an online ID") . "<br>";
+echo " o " . _("Add engine support for employee expense vouchers") . "<br>";?>
+
 <br><br>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
 
 <br><br>
 <b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
-</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.8.2 Release
- - <b>2003-08-20   05:05:10
-</b>
-</div><div class="newsinner">
-<br>
-The GnuCash team is pleased to announce the release
-of stable version 1.8.2.<br><br>
-<b><big>What's New in GnuCash 1.8.2?</big></b><br>
-<br>
-<b>- Scheduled Transactions:</b> <br>
-&nbsp;&nbsp; &nbsp;GnuCash now has the ability to automatically create and
-enter transactions, remind<br>
-&nbsp;&nbsp; &nbsp;when a transaction is due, give a choice of entering a
-transaction or postponing it<br>
-&nbsp;&nbsp; &nbsp;and remove an automated transaction after a certain period.<br>
-<b>- Mortgage &amp; Loan Repayment Druid:</b><br>
-&nbsp;&nbsp; &nbsp;Used to setup a variable payment loan scheduled transaction.<br>
-<b>- Small Business Accounting Features: </b><br>
-&nbsp;&nbsp; &nbsp;GnuCash now can be used for Customer and Vendor tracking,
-Invoicing and Bill Payment,<br>
-&nbsp;&nbsp; &nbsp;and using different Tax and Billing Terms in a small business.<br>
-<b>- OFX Import:</b><br>
-&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
-the Open Financial Exchange<br>
-&nbsp;&nbsp; &nbsp;protocol that many banks and financial services are moving
-to use. The development of<br>
-&nbsp;&nbsp; &nbsp;OFX and HBCI support has also resulted in an improved
-transaction matching system that<br>
-&nbsp;&nbsp; &nbsp;more accurately picks duplicate transactions.<br>
-<b>- HBCI Support:</b> <br>
-&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
-the German Home Banking <br>
-&nbsp;&nbsp; &nbsp;Computer Information protocol which includes statement
-download, initiate bank <br>
-&nbsp;&nbsp; &nbsp;transfers and direct debits.<br>
-<b>- New User Manual and Help:</b><br>
-&nbsp;&nbsp; &nbsp;A brand new user help has been written which focuses on
-how to do tasks in <br>
-&nbsp;&nbsp; &nbsp;conjunction with a Tutorial and Concepts guide that gives
-the user background<br>
-&nbsp;&nbsp; &nbsp;information on using GnuCash.<br>
-<b>- New Multi-Currency Transaction Handling:</b><br>
-&nbsp;&nbsp; &nbsp;GnuCash no longer requires separate currency exchange
-accounts to handle multiple<br>
-&nbsp;&nbsp; &nbsp;currency transfers.<br>
-<b>- Redesigned Menu's</b><br>
-&nbsp;&nbsp; &nbsp;The GnuCash menu's have been redesigned to conform more
-with the new GNOME <br>
-&nbsp;&nbsp; &nbsp;Human Interface Guidelines.<br>
-<br>
-<big><b>Specifically updated in this version;</b></big><br>
-<br>
- o Release of new stable version 1.8.2<br>
- o Updated translations: German, Slovak, Spanish<br>
- o Updated HBCI requirement to 0.9.6<br>
- o Postgres fix for PG-7.3.x<br>
- o More fixes for guile-1.6 support<br>
- o Fix QIF Import for split transactions (#105139)<br>
- o Remove "display balance in Euro" columns from the main window<br>
- o Add "display balance in Report Currency" columns to the main window<br>
- o Fix the transfer dialog / exchange-rate dialog so it doesn't round<br>
-   the values input by the user. (#106332)<br>
- o Fix configure so tests wont fail on GCC 3.2.2<br>
- o HBCI: avoid sending online transfers twice<br>
- o Dont override the user's toolbar style (#102041)<br>
- o Import: don't punish transactions with an online ID<br>
- o Add engine support for employee expense vouchers<br>
+</div></div>
 
-<br><br>
-Available at the usual places! 
-
-<br><br>
-<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
-
-<br><br>
-<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
-</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.8.5 Release
+<div class="newsborder"><div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;<?php
+echo _("<b>Announcement:</b> GnuCash 1.8.5 Release");?>
  - <b>2003-08-20   03:45:09
 </b>
 </div><div class="newsinner">
 <br>
-The GnuCash team is pleased to announce the release
-of stable version 1.8.5.<br><br>
-<b><big>What's New in GnuCash 1.8.5?</big></b><br>
-<br>
- o Add IS_PAID column and the ability to search for paid/not-paid
-   invoices.<br>
- o Add HBCI online transfer templates and make usable<br>
- o Fix a bug where if you unpost an invoice and don't bring the
-   TaxTables up to date, the total value shown in the register is
-   different depending on whether the cursor is on the current line
-   or not.<br>
- o Don't constantly resize the invoice window every time we update
-   ourselves.<br>
- o Updated Italian, Brazilian Portugese, German, Czech, Dutch and
-   British English translation.<br>
- o Add Subtotal and Tax labels in the summary bar to print the
-   Invoice's total amounts.<br>
- o Change the log format to use GUID instead of C pointers, use
-   ISO8601 instead of proprietary form and log the Notes field.<br>
- o Port new log replay module from HEAD.<br>
- o Re-enable reversed legend in stacked barcharts. Needs Guppi 0.40.4
-   a.k.a. Guppi CVS, though, to actually work.<br>
- o Update the Polish Zloty for its new ISO currency code.<br>
- o Add ability to sort by Action and Notes.<br>
- o Fix the vendor window title to use the company name, not the
-   contact name. Change the message when the company name is left blank.<br>
- o Create a new "date format" widget to let the user choose a date
-   format (and see the results of what the date would look like).<br>
- o Add "Deluxe Personal Check" type. Add support for printing to
-   "deluxe" personal checks.  This prints the check "sideways" on a
-   US-Letter configuration.<br>
- o Backport the QueryList widget and associated usage (this allows
-   more places to have sortable column displays for query results)<br>
- o Improve HBCI error handling. Add more user feedback functions.<br>
- o Add support for KtoBlzCheck, a small checking package for
-   destination account numbers for German banks. Very small, very useful
-   http://sourceforge.net/projects/ktoblzcheck<br>
- o TRANSLATION_HOWTO: Added, by Jon Lapham<br>
- o Add API to the plugin modules to allow post-processing (scrubbing)
-   of the book after it is loaded from XML.  This allows a plug-in to
-   post-process the complete book.<br>
- o Create a scrub function to clear up bogus tax tables due to a bug
-   which could cause tax tables to get created ad-nausium if you post
-   and then unpost an invoice.<br>
- o Create a scrub function to clear up bogus bill terms due to a bug
-   which could cause bill terms to get created due to post/unpost of
-   invoices.<br>
- o Enable the exchange-rate dialog on "search ledger" registers.<br>
- o Raise the import window after choosing a file.<br>
- o Change dialog statements to allow for embedded percent signs in the
-   messages.  In other words, don't allow user input into the format
-   string of a printf.<br>
- o Change how the billterms option menu is used so it will change
-   properly if you change the invoice's owner.<br>
- o Don't use gnc:reverse-account-balance? to determine whether to
-   reverse the balance -- base it purely on the report type.<br>
- o Fix gncBillTermCopy() so it PROPERLY copies the bill term.<br>
- o Tolerate some HBCI banks failure of the GetSystemId-job.<br>
- o Don't allow selection of directory for save file.<br>
- o Add fancy-invoice report, to show what else is possible.  It's not
-   really useful per se, but it is another example for users.  To be
-   useful it requires some custom editing.<br>
- o Limit the commodity choices based upon the current account type.<br>
- o Add a new argument to the dialog creation functions to specify what
-   types of commodities should be presented.Also tweak the title of the
-   dialog based upon this argument.  Remove the "new" button when the
-   dialog is limited strictly to currencies.<br>
- o Show the running balance column by default in the register report.<br>
- o Annotate the window title to indicate whether a register is for a
-   single account or it includes all subaccounts.<br>
- o Change the register close dialog to include a cancel option.<br>
- o Don't close the register if the user cancelled.<br>
- o If the user has manually entered an amount, then stop automatically
-   updated the amount when the date is changed.<br>
- o Refactor many HBCI functions to eventually enable queued processing
-   of several HBCI jobs.<br>
- o Add a "retained earnings" item under equity, and change the title
-   to include the start date (Balance Sheet report).<br>
- o Don't print the "handling-request" messages when getting stock
-   quotes.<br>
- o Display selected pixmap when opening an options window.<br>
- o Fix 'Save As' so it can write to non-existing files.<br>
- o New data file should have same uid/gids original file.<br>
- o Added Italian account templates by Lorenzo Cappelletti<br>
- o Change HBCI online transfer action so that first the gnucash
-   Transaction is created and only after that the HBCI connection is
-   started. Necessary for later implementation of offline queueing and
-   multi-job execution.<br>
- o Clarify the part of the HBCI setup about potentially adding HBCI
-   accounts manually.<br>
- o Add a couple of extra checks to prevent crashing if the commodity
-   attached to a price quote has disappeared.<br>
- o Provide a new warning message before deletion if a commodity has
-   any price quotes.  If the user deletes the commodity anyway, removed
-   any quotes are based on the commodity<br>
- o Enhance the get prices routine to handle a request with a NULL
-   currency.<br>
- o Fix a crash where removing items in the wrong order could cause
-   "Bad Things" to happen<br>
- o Sort the bills before displaying them, so they appear in a
-   consistent order (by date due).<br>
- o Fix a bunch more rounding errors, and add more precision to the
-   price.<br>
- o Change the description and action of Invoice and Payement
-   Transactions/Splits, to make it easier to print a check off the
-   posted transactions.<br>
- o Add Debit and Credit totals to Register report.<br>
- o Differentiate between "file is already locked" and "we can't create
-   the lockfile" so we can let the user know.<br>
- o Fix the message to be more appropriate when we hit a READONLY
-   error.<br>
- o Various Postgres backend fixes<br>
- o Add button for manual adding of HBCI accounts. Requires latest
-   OpenHBCI 0.9.13<br>
- o Add saving of the HBCI_API so that bank's status changes will now
-   be remembered immediately.<br>
- o Add "(Report)" strings to the various columns displayed in the
-   report currency.<br>
- o Set the date-entered on invoice transactions to "now" instead of
-   the post date.  Thi lets us know when an invoice was actually posted,
-   or a payment was actually made.<br>
- o Support "gain/loss" balancing splits on stocks<br>
- o Apply patch to fix a number of off-by-one bugs in the loan druid.<br>
- o Adapted to latest gnucash-docs changes, by Jon Lapham<br>
- o Add code to read XML files with real namespace declarations.<br>
- o Make sure we define PWD, as not all shells define it properly.<br>
- o Workaround for multi-currency importing bug.
+<?php echo _("The GnuCash team is pleased to announce the release of stable version 1.8.5.");
+?><br><br>
+<b><big><?php echo _("What's New in GnuCash 1.8.5?");?></big></b><br>
+<br><?php
+echo " o " . _("Add IS_PAID column and the ability to search for paid/not-paid invoices.") . "<br>";
+echo " o " . _("Add HBCI online transfer templates and make usable") . "<br>";
+echo " o " . _("Fix a bug where if you unpost an invoice and don't bring the TaxTables up to date, the total value shown in the register is different depending on whether the cursor is on the current line or not.") . "<br>";
+echo " o " . _("Don't constantly resize the invoice window every time we update ourselves.") . "<br>";
+echo " o " . _("Updated Italian, Brazilian Portugese, German, Czech, Dutch and British English translation.") . "<br>";
+echo " o " . _("Add Subtotal and Tax labels in the summary bar to print the Invoice's total amounts.") . "<br>";
+echo " o " . _("Change the log format to use GUID instead of C pointers, use ISO8601 instead of proprietary form and log the Notes field.") . "<br>";
+echo " o " . _("Port new log replay module from HEAD.") . "<br>";
+echo " o " . _("Re-enable reversed legend in stacked barcharts. Needs Guppi 0.40.4 a.k.a. Guppi CVS, though, to actually work.") . "<br>";
+echo " o " . _("Update the Polish Zloty for its new ISO currency code.") . "<br>";
+echo " o " . _("Add ability to sort by Action and Notes.") . "<br>";
+echo " o " . _("Fix the vendor window title to use the company name, not the contact name. Change the message when the company name is left blank.") . "<br>";
+echo " o " . _("Create a new &quot;date format&quot; widget to let the user choose a date   format (and see the results of what the date would look like).") . "<br>";
+echo " o " . _("Add &quot;Deluxe Personal Check&quot; type. Add support for printing to &quot;deluxe&quot; personal checks. This prints the check &quot;sideways&quot; on a US-Letter configuration.") . "<br>";
+echo " o " . _("Backport the QueryList widget and associated usage (this allows more places to have sortable column displays for query results)") . "<br>";
+echo " o " . _("Improve HBCI error handling. Add more user feedback functions.") . "<br>";
+echo " o " . _("Add support for KtoBlzCheck, a small checking package for destination account numbers for German banks. Very small, very useful http://sourceforge.net/projects/ktoblzcheck") . "<br>";
+echo " o " . _("TRANSLATION_HOWTO: Added, by Jon Lapham") . "<br>";
+echo " o " . _("Add API to the plugin modules to allow post-processing (scrubbing) of the book after it is loaded from XML.  This allows a plug-in to post-process the complete book.") . "<br>";
+echo " o " . _("Create a scrub function to clear up bogus tax tables due to a bug which could cause tax tables to get created ad-nausium if you post and then unpost an invoice.") . "<br>";
+echo " o " . _("Create a scrub function to clear up bogus bill terms due to a bug which could cause bill terms to get created due to post/unpost of invoices.") . "<br>";
+echo " o " . _("Enable the exchange-rate dialog on &quot;search ledger&quot; registers.") . "<br>";
+echo " o " . _("Raise the import window after choosing a file.") . "<br>";
+echo " o " . _("Change dialog statements to allow for embedded percent signs in the messages. In other words, don't allow user input into the format string of a printf.") . "<br>";
+echo " o " . _("Change how the billterms option menu is used so it will change properly if you change the invoice's owner.") . "<br>";
+echo " o " . _("Don't use gnc:reverse-account-balance? to determine whether to reverse the balance -- base it purely on the report type.") . "<br>";
+echo " o " . _("Fix gncBillTermCopy() so it PROPERLY copies the bill term.") . "<br>";
+echo " o " . _("Tolerate some HBCI banks failure of the GetSystemId-job.") . "<br>";
+echo " o " . _("Don't allow selection of directory for save file.") . "<br>";
+echo " o " . _("Add fancy-invoice report, to show what else is possible.  It's not really useful per se, but it is another example for users. To be useful it requires some custom editing.") . "<br>";
+echo " o " . _("Limit the commodity choices based upon the current account type.") . "<br>";
+echo " o " . _("Add a new argument to the dialog creation functions to specify what types of commodities should be presented.Also tweak the title of the dialog based upon this argument.  Remove the &quot;new&quot; button when the dialog is limited strictly to currencies.") . "<br>";
+echo " o " . _("Show the running balance column by default in the register report.") . "<br>";
+echo " o " . _("Annotate the window title to indicate whether a register is for a single account or it includes all subaccounts.") . "<br>";
+echo " o " . _("Change the register close dialog to include a cancel option.") . "<br>";
+echo " o " . _("Don't close the register if the user cancelled.") . "<br>";
+echo " o " . _("If the user has manually entered an amount, then stop automatically updated the amount when the date is changed.") . "<br>";
+echo " o " . _("Refactor many HBCI functions to eventually enable queued processing of several HBCI jobs.") . "<br>";
+echo " o " . _("Add a &quot;retained earnings&quot; item under equity, and change the title to include the start date (Balance Sheet report).") . "<br>";
+echo " o " . _("Don't print the &quot;handling-request&quot; messages when getting stock quotes.") . "<br>";
+echo " o " . _("Display selected pixmap when opening an options window.") . "<br>";
+echo " o " . _("Fix 'Save As' so it can write to non-existing files.") . "<br>";
+echo " o " . _("New data file should have same uid/gids original file.") . "<br>";
+echo " o " . _("Added Italian account templates by Lorenzo Cappelletti") . "<br>";
+echo " o " . _("Change HBCI online transfer action so that first the gnucash Transaction is created and only after that the HBCI connection is started. Necessary for later implementation of offline queueing and multi-job execution.") . "<br>";
+echo " o " . _("Clarify the part of the HBCI setup about potentially adding HBCI accounts manually.") . "<br>";
+echo " o " . _("Add a couple of extra checks to prevent crashing if the commodity attached to a price quote has disappeared.") . "<br>";
+echo " o " . _("Provide a new warning message before deletion if a commodity has any price quotes.  If the user deletes the commodity anyway, removed any quotes are based on the commodity") . "<br>";
+echo " o " . _("Enhance the get prices routine to handle a request with a NULL currency.") . "<br>";
+echo " o " . _("Fix a crash where removing items in the wrong order could cause &quot;Bad Things&quot; to happen") . "<br>";
+echo " o " . _("Sort the bills before displaying them, so they appear in a consistent order (by date due).") . "<br>";
+echo " o " . _("Fix a bunch more rounding errors, and add more precision to the price.") . "<br>";
+echo " o " . _("Change the description and action of Invoice and Payment Transactions/Splits, to make it easier to print a check off the posted transactions.") . "<br>";
+echo " o " . _("Add Debit and Credit totals to Register report.") . "<br>";
+echo " o " . _("Differentiate between &quot;file is already locked&quot; and &quot;we can't create the lockfile&quot; so we can let the user know.") . "<br>";
+echo " o " . _("Fix the message to be more appropriate when we hit a READONLY error.") . "<br>";
+echo " o " . _("Various Postgres backend fixes") . "<br>";
+echo " o " . _("Add button for manual adding of HBCI accounts. Requires latest OpenHBCI 0.9.13") . "<br>";
+echo " o " . _("Add saving of the HBCI_API so that bank's status changes will now be remembered immediately.") . "<br>";
+echo " o " . _("Add &quot;(Report)&quot; strings to the various columns displayed in the report currency.") . "<br>";
+echo " o " . _("Set the date-entered on invoice transactions to &quot;now&quot; instead of the post date.  This lets us know when an invoice was actually posted, or a payment was actually made.") . "<br>";
+echo " o " . _("Support &quot;gain/loss&quot; balancing splits on stocks") . "<br>";
+echo " o " . _("Apply patch to fix a number of off-by-one bugs in the loan druid.") . "<br>";
+echo " o " . _("Adapted to latest gnucash-docs changes, by Jon Lapham") . "<br>";
+echo " o " . _("Add code to read XML files with real namespace declarations.") . "<br>";
+echo " o " . _("Make sure we define PWD, as not all shells define it properly.") . "<br>";
+echo " o " . _("Workaround for multi-currency importing bug.");?>
 <br><br>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
