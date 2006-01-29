@@ -774,116 +774,75 @@ echo _("Mistake five: turns out the backup machine had overflowed, and stopped m
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>SERVER OUTAGE:</b> Continuing File System Problems
+src="images/icons/document.txt.gif">&nbsp;<?php
+echo _("<b>SERVER OUTAGE:</b> Continuing File System Problems");?>
  - <b>2003-04-29   04:10:54
 </b>
 </div><div class="newsinner">
 <br>
-The GnuCash Server is continuing to experience an assortment of problems,
-whose root cause is a set of failing hard drives and is masked by a faulty
-ide controller and/or ribbon cables.  
-The drives have been replaced, and the ide controller has been replaced.
-However, in the process, data has been corrupted, and has not yet 
-been restored.
+<?php echo _("The GnuCash Server is continuing to experience an assortment of problems, whose root cause is a set of failing hard drives and is masked by a faulty ide controller and/or ribbon cables. The drives have been replaced, and the ide controller has been replaced. However, in the process, data has been corrupted, and has not yet been restored.");?>
 <br><br>
-The mailing lists appear to be broken,
-and I am attempting to fix this.  If you subscribed since April 4th,
-it is possible that your subscription is lost, and you may have to 
-resubscribe.  Some of the mail archives got corrputed, and are 
-permanantly lost (they were'nt being backed up due to backup 
-configuration error).  Some of the ftp site may possibly be corrupted,
-I haven't yet had the time to restore the ftp site.  its possible that
-parts of the web site may be corrupted; I haven't yet restored
-the web site.  Please bear with, things should get fixed in a few days.
-If you are curious about the agony of dealing with this, see
+<?php echo _("The mailing lists appear to be broken, and I am attempting to fix this.  If you subscribed since April 4th, it is possible that your subscription is lost, and you may have to resubscribe.  Some of the mail archives got corrputed, and are permanantly lost (they were'nt being backed up due to backup configuration error).  Some of the ftp site may possibly be corrupted, I haven't yet had the time to restore the ftp site.  its possible that parts of the web site may be corrupted; I haven't yet restored the web site.  Please bear with, things should get fixed in a few days. If you are curious about the agony of dealing with this, see");?>
 <a href="http://www.linas.org/linux/peeves.html">http://www.linas.org/linux/peeves.html</a>
 
-</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>SERVER OUTAGE:</b> Continuing File System Problems
+</div></div>
+
+<div class="newsborder"><div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;<?php
+echo _("<b>SERVER OUTAGE:</b> Continuing File System Problems");?>
  - <b>2003-04-24   05:50:14
 </b>
 </div><div class="newsinner">
 <br>
-The GnuCash Server is continuing to experience an assortment of problems,
-whose root cause is a set of failing hard drives.  The drives have been
-replaced, but problems remain.   The mailing lists appear to be broken,
-and I am attempting to fix this.  If you subscribed since April 4th,
-it is possible that your subscription is lost, and you may have to 
-resubscribe.  Some of the mail archives got corrputed, and are 
-permanantly lost (they were'nt being backed up due to backup 
-configuration error).  Some of the ftp site may possibly be corrupted,
-I haven't yet had the time to restore the ftp site.  its possible that
-parts of the web site may be corrupted; I haven't yet restored
-the web site.  Please bear with, things should get fixed in a few days.
-If you are curious about the agony of dealing with this, see
+<?php echo _("The GnuCash Server is continuing to experience an assortment of problems, whose root cause is a set of failing hard drives.  The drives have been replaced, but problems remain.   The mailing lists appear to be broken, and I am attempting to fix this.  If you subscribed since April 4th, it is possible that your subscription is lost, and you may have to resubscribe.  Some of the mail archives got corrputed, and are permanantly lost (they were'nt being backed up due to backup configuration error).  Some of the ftp site may possibly be corrupted, I haven't yet had the time to restore the ftp site.  its possible that
+parts of the web site may be corrupted; I haven't yet restored the web site.  Please bear with, things should get fixed in a few days. If you are curious about the agony of dealing with this, see");?>
 <a href="http://www.linas.org/linux/peeves.html">http://www.linas.org/linux/peeves.html</a>
 
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.8.1 Release
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<b>Announcement:</b> GnuCash 1.8.1 Release");?>
  - <b>2003-02-11   04:58:51
 </b>
 </div><div class="newsinner">
 <br>
-The GnuCash team is pleased to announce the release
-of stable version 1.8.1.<br><br>
-<b><big>What's New in GnuCash 1.8.1?</big></b><br>
+<?php echo _("The GnuCash team is pleased to announce the release of stable version 1.8.1.");
+?><br><br>
+<b><big><?php echo _("What's New in GnuCash 1.8.1?");?></big></b><br>
 <br>
-<b>- Scheduled Transactions:</b> <br>
-&nbsp;&nbsp; &nbsp;GnuCash now has the ability to automatically create and
-enter transactions, remind<br>
-&nbsp;&nbsp; &nbsp;when a transaction is due, give a choice of entering a
-transaction or postponing it<br>
-&nbsp;&nbsp; &nbsp;and remove an automated transaction after a certain period.<br>
-<b>- Mortgage &amp; Loan Repayment Druid:</b><br>
-&nbsp;&nbsp; &nbsp;Used to setup a variable payment loan scheduled transaction.<br>
-<b>- Small Business Accounting Features: </b><br>
-&nbsp;&nbsp; &nbsp;GnuCash now can be used for Customer and Vendor tracking,
-Invoicing and Bill Payment,<br>
-&nbsp;&nbsp; &nbsp;and using different Tax and Billing Terms in a small business.<br>
-<b>- OFX Import:</b><br>
-&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
-the Open Financial Exchange<br>
-&nbsp;&nbsp; &nbsp;protocol that many banks and financial services are moving
-to use. The development of<br>
-&nbsp;&nbsp; &nbsp;OFX and HBCI support has also resulted in an improved
-transaction matching system that<br>
-&nbsp;&nbsp; &nbsp;more accurately picks duplicate transactions.<br>
-<b>- HBCI Support:</b> <br>
-&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
-the German Home Banking <br>
-&nbsp;&nbsp; &nbsp;Computer Information protocol which includes statement
-download, initiate bank <br>
-&nbsp;&nbsp; &nbsp;transfers and direct debits.<br>
-<b>- New User Manual and Help:</b><br>
-&nbsp;&nbsp; &nbsp;A brand new user help has been written which focuses on
-how to do tasks in <br>
-&nbsp;&nbsp; &nbsp;conjunction with a Tutorial and Concepts guide that gives
-the user background<br>
-&nbsp;&nbsp; &nbsp;information on using GnuCash.<br>
-<b>- New Multi-Currency Transaction Handling:</b><br>
-&nbsp;&nbsp; &nbsp;GnuCash no longer requires separate currency exchange
-accounts to handle multiple<br>
-&nbsp;&nbsp; &nbsp;currency transfers.<br>
-<b>- Redesigned Menu's</b><br>
-&nbsp;&nbsp; &nbsp;The GnuCash menu's have been redesigned to conform more
-with the new GNOME <br>
-&nbsp;&nbsp; &nbsp;Human Interface Guidelines.<br>
+<b>- <?php echo _("Scheduled Transactions");?>:</b> <br>
+<?php echo _("GnuCash now has the ability to automatically create and enter transactions, remind when a transaction is due, give a choice of entering a transaction or postponing it and remove an automated transaction after a certain period.");?>
 <br>
-<big><b>Specifically updated in this version;</b></big><br>
+<b>- <?php echo _("Mortgage &amp; Loan Repayment Druid");?>:</b><br>
+<?php echo _("Used to setup a variable payment loan scheduled transaction.");?>
 <br>
- o Release of new stable version 1.8.1<br>
- o Fixes for qif import crashes
- o Update translation po/it.po by Lorenzo Cappelletti<br>
- o Remove the tip that says that this is a development version.<br>
- o Remove the "development version" string when running "gnucash
-   --version"<br>
- o Add heuristic for duplicate matching by check number.<br>
- o Various bug fixes, remove Finance::Quote requirement for rpms
-   built on RH 8.0<br>
+<b>- <?php echo _("Small Business Accounting Features");?>: </b><br>
+<?php echo _("GnuCash now can be used for Customer and Vendor tracking, Invoicing and Bill Payment, and using different Tax and Billing Terms in a small business.");?>
+<br>
+<b>- <?php echo _("OFX Import");?>:</b><br>
+<?php echo _("GnuCash is the first free software application to support the Open Financial Exchange protocol that many banks and financial services are moving to use. The development of OFX and HBCI support has also resulted in an improved transaction matching system that more accurately picks duplicate transactions.");?>
+<b>- <?php echo _("HBCI Support");?>:</b> <br>
+<?php echo _("GnuCash is the first free software application to support the German Home Banking Computer Information protocol which includes statement download, initiate bank  transfers and direct debits.");?><br>
+<b>- <?php echo _("New User Manual and Help");?>:</b><br>
+<?php echo _("A brand new user help has been written which focuses on how to do tasks in  conjunction with a Tutorial and Concepts guide that gives the user background information on using GnuCash.");?><br>
+<b>- <?php echo _("New Multi-Currency Transaction Handling");?>:</b><br>
+<?php echo _("GnuCash no longer requires separate currency exchange accounts to handle multiple currency transfers.");?><br>
+<b>- <?php echo _("Redesigned Menus");?></b><br>
+<?php echo _("The GnuCash menu's have been redesigned to conform more with the new GNOME  Human Interface Guidelines.");?><br>
+<br>
+<big><b><?php echo _("Specifically updated in this version");?>;</b></big><br>
+<br><?php
+echo " o " . _("Release of new stable version 1.8.1") . "<br>";
+echo " o " . _("Fixes for qif import crashes");
+echo " o " . _("Update translation po/it.po by Lorenzo Cappelletti") . "<br>";
+echo " o " . _("Remove the tip that says that this is a development version.") . "<br>";
+echo " o " . _("Remove the &quot;development version&quot; string when running &quot;gnucash  --version&quot;") . "<br>";
+echo " o " . _("Add heuristic for duplicate matching by check number.") . "<br>";
+echo " o " . _("Various bug fixes, remove Finance::Quote requirement for rpms built on RH 8.0") . "<br>";?>
 
 <br><br>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
@@ -893,87 +852,56 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.8.0 Release
+src="images/icons/document.txt.gif">&nbsp;<?php
+echo _("<b>Announcement:</b> GnuCash 1.8.0 Release");?>
  - <b>2003-02-03   08:41:27
 </b>
 </div><div class="newsinner">
 <br>
-The GnuCash team is pleased to announce the release
-of stable version 1.8.0.<br><br>
-<b><big>What's New in GnuCash 1.8.0?</big></b><br>
+<?php echo _("The GnuCash team is pleased to announce the release of stable version 1.8.0.");
+?><br><br>
+<b><big><?php echo _("What's New in GnuCash 1.8.0?");?></big></b><br>
 <br>
-<b>- Scheduled Transactions:</b> <br>
-&nbsp;&nbsp; &nbsp;GnuCash now has the ability to automatically create and
-enter transactions, remind<br>
-&nbsp;&nbsp; &nbsp;when a transaction is due, give a choice of entering a
-transaction or postponing it<br>
-&nbsp;&nbsp; &nbsp;and remove an automated transaction after a certain period.<br>
-<b>- Mortgage &amp; Loan Repayment Druid:</b><br>
-&nbsp;&nbsp; &nbsp;Used to setup a variable payment loan scheduled transaction.<br>
-<b>- Small Business Accounting Features: </b><br>
-&nbsp;&nbsp; &nbsp;GnuCash now can be used for Customer and Vendor tracking,
-Invoicing and Bill Payment,<br>
-&nbsp;&nbsp; &nbsp;and using different Tax and Billing Terms in a small business.<br>
-<b>- OFX Import:</b><br>
-&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
-the Open Financial Exchange<br>
-&nbsp;&nbsp; &nbsp;protocol that many banks and financial services are moving
-to use. The development of<br>
-&nbsp;&nbsp; &nbsp;OFX and HBCI support has also resulted in an improved
-transaction matching system that<br>
-&nbsp;&nbsp; &nbsp;more accurately picks duplicate transactions.<br>
-<b>- HBCI Support:</b> <br>
-&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
-the German Home Banking <br>
-&nbsp;&nbsp; &nbsp;Computer Information protocol which includes statement
-download, initiate bank <br>
-&nbsp;&nbsp; &nbsp;transfers and direct debits.<br>
-<b>- New User Manual and Help:</b><br>
-&nbsp;&nbsp; &nbsp;A brand new user help has been written which focuses on
-how to do tasks in <br>
-&nbsp;&nbsp; &nbsp;conjunction with a Tutorial and Concepts guide that gives
-the user background<br>
-&nbsp;&nbsp; &nbsp;information on using GnuCash.<br>
-<b>- New Multi-Currency Transaction Handling:</b><br>
-&nbsp;&nbsp; &nbsp;GnuCash no longer requires separate currency exchange
-accounts to handle multiple<br>
-&nbsp;&nbsp; &nbsp;currency transfers.<br>
-<b>- Redesigned Menu's</b><br>
-&nbsp;&nbsp; &nbsp;The GnuCash menu's have been redesigned to conform more
-with the new GNOME <br>
-&nbsp;&nbsp; &nbsp;Human Interface Guidelines.<br>
+<b>- <?php echo _("Scheduled Transactions")?>:</b> <br>
+<?php echo _("GnuCash now has the ability to automatically create and enter transactions, remind when a transaction is due, give a choice of entering a transaction or postponing it and remove an automated transaction after a certain period.") . "<br>";?>
+<b>- <?php echo _("Mortgage &amp; Loan Repayment Druid");?>:</b><br>
+<?php echo _("Used to setup a variable payment loan scheduled transaction.");?><br>
+<b>- <?php echo _("Small Business Accounting Features");?>: </b><br>
+<?php echo _("GnuCash now can be used for Customer and Vendor tracking, Invoicing and Bill Payment, and using different Tax and Billing Terms in a small business.");?><br>
+<b>- <?php echo _("OFX Import");?>:</b><br>
+<?php echo _("GnuCash is the first free software application to support the Open Financial Exchange protocol that many banks and financial services are moving to use. The development of OFX and HBCI support has also resulted in an improved transaction matching system that more accurately picks duplicate transactions.");?><br>
+<b>- <?php echo _("HBCI Support");?>:</b> <br>
+<?php echo _("GnuCash is the first free software application to support the German Home Banking Computer Information protocol which includes statement download, initiate bank  transfers and direct debits.");?><br>
+<b>- <?php echo _("New User Manual and Help");?>:</b><br>
+<?php echo _("A brand new user help has been written which focuses on how to do tasks in  conjunction with a Tutorial and Concepts guide that gives the user background information on using GnuCash.");?><br>
+<b>- <?php echo _("New Multi-Currency Transaction Handling");?>:</b><br>
+<?php echo _("GnuCash no longer requires separate currency exchange accounts to handle multiple currency transfers.");?><br>
+<b>- <?php echo _("Redesigned Menus");?></b><br>
+<?php echo _("The GnuCash menu's have been redesigned to conform more with the new GNOME  Human Interface Guidelines.");?><br>
 <br>
-<big><b>Specifically updated in this version;</b></big><br>
-<br>
- o Release of new stable version 1.8.0<br>
- o Fix problem getting quotes from trustnet.<br>
- o Add new script that dumps all the data returned by F::Q for a
-   stock.<br>
- o Apply Bill Nottingham's patch to use db4/db_185.h<br>
- o Updated translations, po/en_GB.po by Nigel Titley, po/it.po by
-   Lorenzo Cappelletti<br>
- o Fix HBCI problem with negative account balances.<br>
- o Add preference (on advanced tab) to enable HBCI debug messages.<br>
- o Fix the Recurrence-Frequency example-calendar date calculation to
-   show upcoming instances correctly.<br>
- o Add HBCI user messages about what is supported by the bank.<br>
- o Fixes for gcc 3.x build problems with postgresql backend<br>
- o Many more fixes for the postgresql backend<br>
- o Fix the "bill reminder" so it doesn't create a query if there are
-   no payables accounts.<br>
- o Fix some of the accounts in the tree to be more accurate to the
-   real world.<br>
- o Only set ReadOnly status for Invoices, not Payments.<br>
- o Fix several bugs in QIF importer<br>
- o Recognize even more error codes from OpenHBCI.<br>
- o No longer assume that transaction with type OFX_OTHER are
-   investment transactions.<br>
- o Don't add income accounts to bills, or expense accounts to
-   invoices.  This should help further reduce user confusion with what
-   to do when entering invoices.<br>
- o Lots more bugfixes<br>
+<big><b><?php echo _("Specifically updated in this version");?>;</b></big><br>
+<br><?php
+echo " o " . _("Release of new stable version 1.8.0") . "<br>";
+echo " o " . _("Fix problem getting quotes from trustnet.") . "<br>";
+echo " o " . _("Add new script that dumps all the data returned by F::Q for a stock.") . "<br>";
+echo " o " . _("Apply Bill Nottingham's patch to use db4/db_185.h") . "<br>";
+echo " o " . _("Updated translations, po/en_GB.po by Nigel Titley, po/it.po by Lorenzo Cappelletti") . "<br>";
+echo " o " . _("Fix HBCI problem with negative account balances.") . "<br>";
+echo " o " . _("Add preference (on advanced tab) to enable HBCI debug messages.") . "<br>";
+echo " o " . _("Fix the Recurrence-Frequency example-calendar date calculation to show upcoming instances correctly.") . "<br>";
+echo " o " . _("Add HBCI user messages about what is supported by the bank.") . "<br>";
+echo " o " . _("Fixes for gcc 3.x build problems with postgresql backend") . "<br>";
+echo " o " . _("Many more fixes for the postgresql backend") . "<br>";
+echo " o " . _("Fix the &quot;bill reminder&quot; so it doesn't create a query if there are   no payables accounts.") . "<br>";
+echo " o " . _("Fix some of the accounts in the tree to be more accurate to the real world.") . "<br>";
+echo " o " . _("Only set ReadOnly status for Invoices, not Payments.") . "<br>";
+echo " o " . _("Fix several bugs in QIF importer") . "<br>";
+echo " o " . _("Recognize even more error codes from OpenHBCI.") . "<br>";
+echo " o " . _("No longer assume that transaction with type OFX_OTHER are investment transactions.") . "<br>";
+echo " o " . _("Don't add income accounts to bills, or expense accounts to invoices.  This should help further reduce user confusion with what to do when entering invoices.") . "<br>";
+echo " o " . _("Lots more bugfixes") . "<br>";?>
 <br><br>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
@@ -983,24 +911,22 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash Docs 1.7.8
+src="images/icons/document.txt.gif">&nbsp;<?php
+echo _("<b>Announcement:</b> GnuCash Docs 1.7.8"); ?>
  - <b>2003-01-28   01:46:46
 </b>
 </div><div class="newsinner">
 <br>
-The GnuCash team is pleased to announce GnuCash Docs
-version 1.7.8.<br><br>
-
-<big><b>Updated in this version;</b></big><br>
-<br>
- o Add patch from RedHat for db4 support<br>
- o Copy of required portions of docbook-xsl 1.45<br>
- o Change to point at internal version of docbook-xsl 1.45
-   stylesheets.<br>
- o This fixes the problem of the stylesheets needing to go online to
-   do the conversion from XML to HTML.<br>
+<?php echo _("The GnuCash team is pleased to announce GnuCash Docs version 1.7.8.");?>
 <br><br>
-Available at the usual places! 
+
+<big><b><?php echo _("Updated in this version");?>;</b></big><br>
+<br><?php
+echo " o " . _("Add patch from RedHat for db4 support") . "<br>";
+echo " o " . _("Copy of required portions of docbook-xsl 1.45") . "<br>";
+echo " o " . _("Change to point at internal version of docbook-xsl 1.45 stylesheets. This fixes the problem of the stylesheets needing to go online to do the conversion from XML to HTML.") . "<br>";?>
+<br><br>
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
@@ -1010,21 +936,14 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>gnucash-de@gnucash.org</b> German / Deutsch Mailing List 
+src="images/icons/document.txt.gif">&nbsp;<b>gnucash-de@gnucash.org</b> <?php
+echo _("German / Deutsch Mailing List");?>
  - <b>2003-01-27   16:29:05
 </b>
 </div><div class="newsinner">
-A new mailing list for German speaking GnuCash users has been created:
-gnucash-de@gnucash.org. To subscribe, visit
-<a href="http://www.gnucash.org/cgi-bin/mailman/listinfo/gnucash-de">
-http://www.gnucash.org/cgi-bin/mailman/listinfo/gnucash-de</a> and enter
-your email address there. You can choose whether you would like to
-receive the administrative emails in German or in English language.
+<?php echo _("A new mailing list for German speaking GnuCash users has been created: gnucash-de@gnucash.org. To subscribe, visit <a href=&quot;http://www.gnucash.org/cgi-bin/mailman/listinfo/gnucash-de&quot;>http://www.gnucash.org/cgi-bin/mailman/listinfo/gnucash-de</a> and enter your email address there. You can choose whether you would like to receive the administrative emails in German or in English language.");?>
 <br><br>
-
-This list is meant for discussions in German language about the general
-usage of GnuCash, as well as specific topics only relevant to German 
-users (e.g. HBCI or German tax system).
+<?php echo _("This list is meant for discussions in German language about the general usage of GnuCash, as well as specific topics only relevant to German users (e.g. HBCI or German tax system).");?>
 <br><br>
 
 Ab sofort existiert eine neue Mailingliste für die deutschsprachigen 
@@ -1043,109 +962,65 @@ von GnuCash diskutiert werden (z.B. HBCI oder deutsches Steuerrecht).
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.7.8 Release Candidate 3: "Lil Devil"
+src="images/icons/document.txt.gif">&nbsp;<?php
+echo _("<b>Announcement:</b> GnuCash 1.7.8 Release Candidate 3: &quot;Lil Devi&quot;");?>
  - <b>2003-01-21   10:58:40
 </b>
 </div><div class="newsinner">
 <br>
-The GnuCash team is pleased to announce Release Candidate 2
-version 1.7.8: "Lil Devil".<br><br>
-<b><big>What's New in GnuCash 1.7.8?</big></b><br>
+<?php echo _("The GnuCash team is pleased to announce Release Candidate 2 version 1.7.8: &quot;Lil Devil&quot;.");?><br><br>
+<b><big><?php echo _("What's New in GnuCash 1.7.8?");?></big></b><br>
 <br>
-<b>- Scheduled Transactions:</b> <br>
-&nbsp;&nbsp; &nbsp;GnuCash now has the ability to automatically create and
-enter transactions, remind<br>
-&nbsp;&nbsp; &nbsp;when a transaction is due, give a choice of entering a
-transaction or postponing it<br>
-&nbsp;&nbsp; &nbsp;and remove an automated transaction after a certain period.<br>
-<b>- Mortgage &amp; Loan Repayment Druid:</b><br>
-&nbsp;&nbsp; &nbsp;Used to setup a variable payment loan scheduled transaction.<br>
-<b>- Small Business Accounting Features: </b><br>
-&nbsp;&nbsp; &nbsp;GnuCash now can be used for Customer and Vendor tracking,
-Invoicing and Bill Payment,<br>
-&nbsp;&nbsp; &nbsp;and using different Tax and Billing Terms in a small business.<br>
-<b>- OFX Import:</b><br>
-&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
-the Open Financial Exchange<br>
-&nbsp;&nbsp; &nbsp;protocol that many banks and financial services are moving
-to use. The development of<br>
-&nbsp;&nbsp; &nbsp;OFX and HBCI support has also resulted in an improved
-transaction matching system that<br>
-&nbsp;&nbsp; &nbsp;more accurately picks duplicate transactions.<br>
-<b>- HBCI Support:</b> <br>
-&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
-the German Home Banking <br>
-&nbsp;&nbsp; &nbsp;Computer Information protocol which includes statement
-download, initiate bank <br>
-&nbsp;&nbsp; &nbsp;transfers and direct debits.<br>
-<b>- New User Manual and Help:</b><br>
-&nbsp;&nbsp; &nbsp;A brand new user help has been written which focuses on
-how to do tasks in <br>
-&nbsp;&nbsp; &nbsp;conjunction with a Tutorial and Concepts guide that gives
-the user background<br>
-&nbsp;&nbsp; &nbsp;information on using GnuCash.<br>
-<b>- New Multi-Currency Transaction Handling:</b><br>
-&nbsp;&nbsp; &nbsp;GnuCash no longer requires separate currency exchange
-accounts to handle multiple<br>
-&nbsp;&nbsp; &nbsp;currency transfers.<br>
-<b>- Redesigned Menu's</b><br>
-&nbsp;&nbsp; &nbsp;The GnuCash menu's have been redesigned to conform more
-with the new GNOME <br>
-&nbsp;&nbsp; &nbsp;Human Interface Guidelines.<br>
+<b>- <?php echo _("Scheduled Transactions");?>:</b> <br>
+<?php echo _("GnuCash now has the ability to automatically create and enter transactions, remind when a transaction is due, give a choice of entering a transaction or postponing it and remove an automated transaction after a certain period.") . "<br>";
+echo "<b>- " . _("Mortgage &amp; Loan Repayment Druid:") . "</b><br>";
+echo _("Used to setup a variable payment loan scheduled transaction.") . "<br>";
+echo "<b>- " . _("Small Business Accounting Features") . ": </b><br>";
+echo _("GnuCash now can be used for Customer and Vendor tracking, Invoicing and Bill Payment, and using different Tax and Billing Terms in a small business.") . "<br>";
+echo "<b>- " . _("OFX Import") . ":</b><br>";
+echo _("GnuCash is the first free software application to support the Open Financial Exchange protocol that many banks and financial services are moving to use. The development of OFX and HBCI support has also resulted in an improved transaction matching system that more accurately picks duplicate transactions.") . "<br>";
+echo "<b>- " . _("HBCI Support") . ":</b> <br>";
+echo _("GnuCash is the first free software application to support the German Home Banking Computer Information protocol which includes statement download, initiate bank transfers and direct debits.") . "<br>";
+echo "<b>- " . _("New User Manual and Help") . ":</b><br>";
+echo _("A brand new user help has been written which focuses on how to do tasks in  conjunction with a Tutorial and Concepts guide that gives the user background information on using GnuCash.") . "<br>";
+echo "<b>- " . _("New Multi-Currency Transaction Handling") . ":</b><br>";
+echo _("GnuCash no longer requires separate currency exchange accounts to handle multiple currency transfers.") . "<br>";
+echo "<b>- " . _("Redesigned Menus") . "</b><br>";
+echo _("The GnuCash menu's have been redesigned to conform more with the new GNOME Human Interface Guidelines.") . "<br>";?>
 <br>
-<big><b>Specifically updated in this version;</b></big><br>
-<br>
- o Welcome to Release Candidate 3<br>
- o Fixed build issues introduced in last release<br>
- o Fix compile errors on SuSE 8.0 + 8.1<br>
- o Update translations, po/ru.po by Vitaly Lipatov, po/el.po by
-   ta_panta_rei@flashmail.com<br>
- o Ignore certain splits with an "amount" of zero.<br>
- o Convert from the old to new symbols for Russian Roubles.<br>
- o Invoices change a couple of columns.  Enable viewing the "taxable"
-   entry.  Enable viewing all the tax accounts individually.<br>
- o Scrub hbci include paths to prevent gcc 3.x compile errors.<br>
- o Default the OFX import directory to the directory of the last OFX
-   file imported, or the user's home dir for the first export.
-   Remembered across invocations of gnucash.<br>
- o Default the save directory to the directory of the last file used.
-   Default the exports directory to the directory of the last file
-   exported, or the user's home dir for the first export. Remembered
-   across invocations of gnucash.<br>
- o Correctly handle the case where no stocks have been defined and the
-   user asks gnucash to get price quotes.<br>
- o Work around bug in ghttp library so that intl users whose whole
-   units/fractions separator is a comma can request web pages.<br>
- o Add "Default Report Currency" preference.<br>
- o Set invoice currency based on owner's currency.<br>
- o Use invoice's currency for printing the invoice.<br>
- o Make the progress bar argument a double instead of an int.  This
-   gets around an issue with guile 1.6.<br>
- o Add a checkbox to search-for-all<br>
- o Changes to make the build system work on multiple architectures and
-   with multiple versions of the autotools suite.  Make generated g-wrap
-   sources depend on config.status.<br>
- o Remove restriction on guile versions > 1.4 Provide a version
-   dependant load path variable for the SRFI location. (Empty in 1.6
-   since they're bundled with guile.)<br>
- o Limit QIF matches against only the accounts in the old group, so we
-   don't match against ourselves.  This should limit the matches to only
-   "reasonable" matches.<br>
- o Remove "user name" and "user address" preferences, as they are no
-   longer used by anything.<br>
- o Create a taxtable option type using the new generic optionmenu code
- o Create a default customer and default vendor taxtable option for
-   the "File Properties" option menu.<br>
- o Reset the search-type to "New Search" if we end up displaying no
-   results.<br>
- o Use the "New Search Limit" pref to decide when to start a new
-   search vs. when refine the search.<br>
- o Create two new global preferences: "Notify Bills Due?" and "Bills
-   Due Days"<br>
- o Added sources needed for OS X to dist.<br>
- o Lots more bugfixes<br>
+<big><b><?php echo _("Specifically updated in this version");?>;</b></big><br>
+<br><?php
+echo " o " . _("Welcome to Release Candidate 3") . "<br>";
+echo " o " . _("Fixed build issues introduced in last release") . "<br>";
+echo " o " . _("Fix compile errors on SuSE 8.0 + 8.1") . "<br>";
+echo " o " . _("Update translations, po/ru.po by Vitaly Lipatov, po/el.po by   ta_panta_rei@flashmail.com") . "<br>";
+echo " o " . _("Ignore certain splits with an &quot;amount&quot; of zero.") . "<br>";
+echo " o " . _("Convert from the old to new symbols for Russian Roubles.") . "<br>";
+echo " o " . _("Invoices change a couple of columns.  Enable viewing the &quot;taxable&quot; entry. Enable viewing all the tax accounts individually.") . "<br>";
+echo " o " . _("Scrub hbci include paths to prevent gcc 3.x compile errors.") . "<br>";
+echo " o " . _("Default the OFX import directory to the directory of the last OFX file imported, or the user's home dir for the first export. Remembered across invocations of gnucash.") . "<br>";
+echo " o " . _("Default the save directory to the directory of the last file used. Default the exports directory to the directory of the last file exported, or the user's home dir for the first export. Remembered across invocations of gnucash.") . "<br>";
+echo " o " . _("Correctly handle the case where no stocks have been defined and the user asks gnucash to get price quotes.") . "<br>";
+echo " o " . _("Work around bug in ghttp library so that intl users whose whole units/fractions separator is a comma can request web pages.") . "<br>";
+echo " o " . _("Add &quot;Default Report Currency&quot; preference.") . "<br>";
+echo " o " . _("Set invoice currency based on owner's currency.") . "<br>";
+echo " o " . _("Use invoice's currency for printing the invoice.") . "<br>";
+echo " o " . _("Make the progress bar argument a double instead of an int. This gets around an issue with guile 1.6.") . "<br>";
+echo " o " . _("Add a checkbox to search-for-all") . "<br>";
+echo " o " . _("Changes to make the build system work on multiple architectures and with multiple versions of the autotools suite.  Make generated g-wrap sources depend on config.status.") . "<br>";
+echo " o " . _("Remove restriction on guile versions &gt; 1.4 Provide a version dependent load path variable for the SRFI location. (Empty in 1.6 since they're bundled with guile.)") . "<br>";
+echo " o " . _("Limit QIF matches against only the accounts in the old group, so we don't match against ourselves.  This should limit the matches to only &quot;reasonable&quot; matches.") . "<br>";
+echo " o " . _("Remove &quot;user name&quot; and &quot;user address&quot; preferences, as they are no longer used by anything.") . "<br>";
+echo " o " . _("Create a taxtable option type using the new generic optionmenu code");
+echo " o " . _("Create a default customer and default vendor taxtable option for the &quot;File Properties&quot; option menu.") . "<br>";
+echo " o " . _("Reset the search-type to &quot;New Search&quot; if we end up displaying no
+   results.") . "<br>";
+echo " o " . _("Use the &quot;New Search Limit&quot; pref to decide when to start a new search vs. when refine the search.") . "<br>";
+echo " o " . _("Create two new global preferences: &quot;Notify Bills Due?&quot; and &quot;Bills Due Days&quot;") . "<br>";
+echo " o " . _("Added sources needed for OS X to dist.") . "<br>";
+echo " o " . _("Lots more bugfixes") . "<br>";?>
 <br><br>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
@@ -1155,109 +1030,63 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.7.7 Release Candidate 2: "It ain't easy, livin free"
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<b>Announcement:</b> GnuCash 1.7.7 Release Candidate 2: &quot;It ain't easy, livin free&quot;");?>
  - <b>2003-01-06   11:40:34
 </b>
 </div><div class="newsinner">
-The GnuCash team is pleased to announce Release Candidate 2
-version 1.7.7: "It ain't easy, livin free".<br><br>
-<b><big>What's New in GnuCash 1.7.7?</big></b><br>
+<?php echo _("The GnuCash team is pleased to announce Release Candidate 2 version 1.7.7: &quot;It ain't easy, livin free&quot;");?>.<br><br>
+<b><big><?php echo _("What's New in GnuCash 1.7.7?");?></big></b><br>
 <br>
-<b>- Scheduled Transactions:</b> <br>
-&nbsp;&nbsp; &nbsp;GnuCash now has the ability to automatically create and
-enter transactions, remind<br>
-&nbsp;&nbsp; &nbsp;when a transaction is due, give a choice of entering a
-transaction or postponing it<br>
-&nbsp;&nbsp; &nbsp;and remove an automated transaction after a certain period.<br>
-<b>- Mortgage &amp; Loan Repayment Druid:</b><br>
-&nbsp;&nbsp; &nbsp;Used to setup a variable payment loan scheduled transaction.<br>
-<b>- Small Business Accounting Features: </b><br>
-&nbsp;&nbsp; &nbsp;GnuCash now can be used for Customer and Vendor tracking,
-Invoicing and Bill Payment,<br>
-&nbsp;&nbsp; &nbsp;and using different Tax and Billing Terms in a small business.<br>
-<b>- OFX Import:</b><br>
-&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
-the Open Financial Exchange<br>
-&nbsp;&nbsp; &nbsp;protocol that many banks and financial services are moving
-to use. The development of<br>
-&nbsp;&nbsp; &nbsp;OFX and HBCI support has also resulted in an improved
-transaction matching system that<br>
-&nbsp;&nbsp; &nbsp;more accurately picks duplicate transactions.<br>
-<b>- HBCI Support:</b> <br>
-&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
-the German Home Banking <br>
-&nbsp;&nbsp; &nbsp;Computer Information protocol which includes statement
-download, initiate bank <br>
-&nbsp;&nbsp; &nbsp;transfers and direct debits.<br>
-<b>- New User Manual and Help:</b><br>
-&nbsp;&nbsp; &nbsp;A brand new user help has been written which focuses on
-how to do tasks in <br>
-&nbsp;&nbsp; &nbsp;conjunction with a Tutorial and Concepts guide that gives
-the user background<br>
-&nbsp;&nbsp; &nbsp;information on using GnuCash.<br>
-<b>- New Multi-Currency Transaction Handling:</b><br>
-&nbsp;&nbsp; &nbsp;GnuCash no longer requires separate currency exchange
-accounts to handle multiple<br>
-&nbsp;&nbsp; &nbsp;currency transfers.<br>
-<b>- Redesigned Menu's</b><br>
-&nbsp;&nbsp; &nbsp;The GnuCash menu's have been redesigned to conform more
-with the new GNOME <br>
-&nbsp;&nbsp; &nbsp;Human Interface Guidelines.<br>
+<b>- <?php echo _("Scheduled Transactions");?>:</b> <br>
+<?php echo _("GnuCash now has the ability to automatically create and enter transactions, remind when a transaction is due, give a choice of entering a transaction or postponing it and remove an automated transaction after a certain period.") . "<br>";
+echo "<b>- " . _("Mortgage &amp; Loan Repayment Druid") . ":</b><br>";
+echo _("Used to setup a variable payment loan scheduled transaction.") . "<br>";
+echo "<b>- " . _("Small Business Accounting Features") . ": </b><br>";
+echo _("GnuCash now can be used for Customer and Vendor tracking, Invoicing and Bill Payment,
+ and using different Tax and Billing Terms in a small business.") . "<br>";
+echo "<b>- " . _("OFX Import") . ":</b><br>";
+echo _("GnuCash is the first free software application to support the Open Financial Exchange protocol that many banks and financial services are moving to use. The development of OFX and HBCI support has also resulted in an improved transaction matching system that more accurately picks duplicate transactions.") . "<br>";
+echo "<b>- " . _("HBCI Support") . ":</b> <br>";
+echo _("GnuCash is the first free software application to support the German Home Banking Computer Information protocol which includes statement download, initiate bank transfers and direct debits.") . "<br>";
+echo "<b>- " . _("New User Manual and Help") . ":</b><br>";
+echo _("A brand new user help has been written which focuses on how to do tasks in  conjunction with a Tutorial and Concepts guide that gives the user background information on using GnuCash.") . "<br>";
+echo "<b>- " . _("New Multi-Currency Transaction Handling") . ":</b><br>";
+echo _("GnuCash no longer requires separate currency exchange accounts to handle multiple currency transfers.") . "<br>";
+echo "<b>- " . _("Redesigned Menus") . "</b><br>";
+echo _("The GnuCash menu's have been redesigned to conform more with the new GNOME Human Interface Guidelines.") . "<br>";?>
 <br>
-<big><b>Specifically updated in this version;</b></big><br>
-<br>
- o Welcome to Release Candidate 2<br>
- o Give the user better feedback on exactly what the exchange rate
-   means.<br>
- o Better handling of corrupt XML data files.  Print better error
-   messages for unknown tags, or mismatched start/end tags.<br>
- o When checking for gtkhtml-1.1, make the lack of pkg-config a fatal
-   error. Also check for pkgconfig<br>
- o Updated translations, po/de.po <br>
- o Fix HBCI reparent warnings. Make the PIN dialog a bit nicer.<br>
- o Fixes to Postgresql backend.<br>
- o Changed the "ALTER TABLE table ADD COLUMN..." statements to conform
-   to the current Postgres implementation (and SQL 92) standard by
-   putting the DEFAULT modifier in a separate ALTER statement.  This was
-   reported by Christopher B. Browne.<br>
- o Implement unpost function in invoices.<br>
- o Correctly open a help window when the initial URL contains a label
-   component to it.<br>
- o Make the reconciliation window respect the 'include subaccount'
-   flag any time it opens a register.  Consolidate logic for opening a
-   new register. Enhance the reconciliation start window to update the
-   ending value when this flag is changed.<br>
- o If the amount is monetary, map the keypad decimal key to the
-   correct decimal character for the locale.<br>
- o Fix malformed URLs for bringing up a report options window.<br>
- o Add new option for specifying sort critera for piecharts and
-   barcharts.<br>
- o The report title should change when the report name field is
-   changed in the options.<br>
- o Add a smart function for going "back" from the "load a file" page.
-   If there are any files loaded it returns to the "loaded files" page
-   instead of the initial druid page.<br>
- o Add support for i18n of price source strings.<br>
- o Add icons to gtk only windows.<br>
- o Search on NOTES add code to prevent searching on template-txn
-   accounts so SXes don't show up in find results.<br>
- o Create a 'file compression' option and pass the data into the
-   backend. This is an option in the preferences.<br>
- o Provide a simple checkbook set of accounts<br>
- o When editing an exchange rate, always change the _VALUE_ of the
-   split, not the amount.  This has the affect of keeping the visible
-   number the same and changing the "other" account.<br>
- o Add a set of business accounts to the account setup<br>
- o Give a much higher importance to the date heuristics in the OFX
-   import. <br>
- o Disable skipping transactions which already have an online id
-   during matching, untill a fix for the "transfer between two accounts"
-   bug is properly fixed.<br>
- o Large set of fixes to the build system by John H. Pierce
-   &lt;john@killterm.org&gt;<br>
- o Lots more bugfixes<br>
+<big><b><?php echo _("Specifically updated in this version");?>;</b></big><br>
+<br><?php
+echo " o " . _("Welcome to Release Candidate 2") . "<br>";
+echo " o " . _("Give the user better feedback on exactly what the exchange rate means.") . "<br>";
+echo " o " . _("Better handling of corrupt XML data files. Print better error messages for unknown tags, or mismatched start/end tags.") . "<br>";
+echo " o " . _("When checking for gtkhtml-1.1, make the lack of pkg-config a fatal error. Also check for pkgconfig") . "<br>";
+echo " o " . _("Updated translations, po/de.po") . "<br>";
+echo " o " . _("Fix HBCI reparent warnings. Make the PIN dialog a bit nicer.") . "<br>";
+echo " o " . _("Fixes to Postgresql backend.") . "<br>";
+echo " o " . _("Changed the &quot;ALTER TABLE table ADD COLUMN...&quot; statements to conform to the current Postgres implementation (and SQL 92) standard by putting the DEFAULT modifier in a separate ALTER statement. This was reported by Christopher B. Browne.") . "<br>";
+echo " o " . _("Implement unpost function in invoices.") . "<br>";
+echo " o " . _("Correctly open a help window when the initial URL contains a label component to it.") . "<br>";
+echo " o " . _("Make the reconciliation window respect the 'include subaccount' flag any time it opens a register.  Consolidate logic for opening a new register. Enhance the reconciliation start window to update the ending value when this flag is changed.") . "<br>";
+echo " o " . _("If the amount is monetary, map the keypad decimal key to the correct decimal character for the locale.") . "<br>";
+echo " o " . _("Fix malformed URLs for bringing up a report options window.") . "<br>";
+echo " o " . _("Add new option for specifying sort critera for piecharts and barcharts.") . "<br>";
+echo " o " . _("The report title should change when the report name field is changed in the options.") . "<br>";
+echo " o " . _("Add a smart function for going &quot;back&quot; from the &quot;load a file&quot; page. If there are any files loaded it returns to the &quot;loaded files&quot; page instead of the initial druid page.") . "<br>";
+echo " o " . _("Add support for i18n of price source strings.") . "<br>";
+echo " o " . _("Add icons to gtk only windows.") . "<br>";
+echo " o " . _("Search on NOTES add code to prevent searching on template-txn accounts so SXes don't show up in find results.") . "<br>";
+echo " o " . _("Create a 'file compression' option and pass the data into the backend. This is an option in the preferences.") . "<br>";
+echo " o " . _("Provide a simple checkbook set of accounts") . "<br>";
+echo " o " . _("When editing an exchange rate, always change the _VALUE_ of the split, not the amount.  This has the affect of keeping the visible number the same and changing the &quot;other&quot; account.") . "<br>";
+echo " o " . _("Add a set of business accounts to the account setup") . "<br>";
+echo " o " . _("Give a much higher importance to the date heuristics in the OFX import.") . "<br>";
+echo " o " . _("Disable skipping transactions which already have an online id during matching, untill a fix for the &quot;transfer between two accounts&quot; bug is properly fixed.") . "<br>";
+echo " o " . _("Large set of fixes to the build system by John H. Pierce") . "&lt;john@killterm.org&gt;" . "<br>";
+echo " o " . _("Lots more bugfixes") . "<br>";?>
 <br><br>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
@@ -1308,45 +1137,45 @@ version 1.7.6: "Santa's got a brand new bag".<br><br>
 <b><big>What's New in GnuCash 1.7.6?</big></b><br>
 <br>
 <b>- Scheduled Transactions:</b> <br>
-&nbsp;&nbsp; &nbsp;GnuCash now has the ability to automatically create and
+ GnuCash now has the ability to automatically create and
 enter transactions, remind<br>
-&nbsp;&nbsp; &nbsp;when a transaction is due, give a choice of entering a
+ when a transaction is due, give a choice of entering a
 transaction or postponing it<br>
-&nbsp;&nbsp; &nbsp;and remove an automated transaction after a certain period.<br>
+ and remove an automated transaction after a certain period.<br>
 <b>- Mortgage &amp; Loan Repayment Druid:</b><br>
-&nbsp;&nbsp; &nbsp;Used to setup a variable payment loan scheduled transaction.<br>
+ Used to setup a variable payment loan scheduled transaction.<br>
 <b>- Small Business Accounting Features: </b><br>
-&nbsp;&nbsp; &nbsp;GnuCash now can be used for Customer and Vendor tracking,
+ GnuCash now can be used for Customer and Vendor tracking,
 Invoicing and Bill Payment,<br>
-&nbsp;&nbsp; &nbsp;and using different Tax and Billing Terms in a small business.<br>
+ and using different Tax and Billing Terms in a small business.<br>
 <b>- OFX Import:</b><br>
-&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+ GnuCash is the first free software application to support
 the Open Financial Exchange<br>
-&nbsp;&nbsp; &nbsp;protocol that many banks and financial services are moving
+ protocol that many banks and financial services are moving
 to use. The development of<br>
-&nbsp;&nbsp; &nbsp;OFX and HBCI support has also resulted in an improved
+ OFX and HBCI support has also resulted in an improved
 transaction matching system that<br>
-&nbsp;&nbsp; &nbsp;more accurately picks duplicate transactions.<br>
+ more accurately picks duplicate transactions.<br>
 <b>- HBCI Support:</b> <br>
-&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+ GnuCash is the first free software application to support
 the German Home Banking <br>
-&nbsp;&nbsp; &nbsp;Computer Information protocol which includes statement
+ Computer Information protocol which includes statement
 download, initiate bank <br>
-&nbsp;&nbsp; &nbsp;transfers and direct debits.<br>
+ transfers and direct debits.<br>
 <b>- New User Manual and Help:</b><br>
-&nbsp;&nbsp; &nbsp;A brand new user help has been written which focuses on
+ A brand new user help has been written which focuses on
 how to do tasks in <br>
-&nbsp;&nbsp; &nbsp;conjunction with a Tutorial and Concepts guide that gives
+ conjunction with a Tutorial and Concepts guide that gives
 the user background<br>
-&nbsp;&nbsp; &nbsp;information on using GnuCash.<br>
+ information on using GnuCash.<br>
 <b>- New Multi-Currency Transaction Handling:</b><br>
-&nbsp;&nbsp; &nbsp;GnuCash no longer requires separate currency exchange
+ GnuCash no longer requires separate currency exchange
 accounts to handle multiple<br>
-&nbsp;&nbsp; &nbsp;currency transfers.<br>
+ currency transfers.<br>
 <b>- Redesigned Menu's</b><br>
-&nbsp;&nbsp; &nbsp;The GnuCash menu's have been redesigned to conform more
+ The GnuCash menu's have been redesigned to conform more
 with the new GNOME <br>
-&nbsp;&nbsp; &nbsp;Human Interface Guidelines.<br>
+ Human Interface Guidelines.<br>
 <br>
 <big><b>Specifically updated in this version;</b></big><br>
 <br>
@@ -1466,50 +1295,50 @@ version 1.7.5: "Nowhere".<br><br>
 <b><big>What's New in GnuCash 1.7.5?</big></b><br>
 <br>
 <b>- Scheduled Transactions:</b> <br>
-&nbsp;&nbsp; &nbsp;GnuCash now has the ability to automatically create and
+ GnuCash now has the ability to automatically create and
 enter transactions, remind<br>
-&nbsp;&nbsp; &nbsp;when a transaction is due, give a choice of entering a
+ when a transaction is due, give a choice of entering a
 transaction or postponing it<br>
-&nbsp;&nbsp; &nbsp;and remove an automated transaction after a certain period.<br>
+ and remove an automated transaction after a certain period.<br>
 <b>- Mortgage &amp; Loan Repayment Druid:</b><br>
-&nbsp;&nbsp; &nbsp;Used to setup a variable payment loan scheduled transaction.<br>
+ &nbsp;Used to setup a variable payment loan scheduled transaction.<br>
 <b>- Small Business Accounting Features: </b><br>
-&nbsp;&nbsp; &nbsp;GnuCash now can be used for Customer and Vendor tracking,
+ GnuCash now can be used for Customer and Vendor tracking,
 Invoicing and Bill Payment,<br>
-&nbsp;&nbsp; &nbsp;and using different Tax and Billing Terms in a small business.<br>
+ and using different Tax and Billing Terms in a small business.<br>
 <b>- OFX Import:</b><br>
-&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+ GnuCash is the first free software application to support
 the Open Financial Exchange<br>
-&nbsp;&nbsp; &nbsp;protocol that many banks and financial services are moving
+ protocol that many banks and financial services are moving
 to use. The development of<br>
-&nbsp;&nbsp; &nbsp;OFX and HBCI support has also resulted in an improved
+ OFX and HBCI support has also resulted in an improved
 transaction matching system that<br>
-&nbsp;&nbsp; &nbsp;more accurately picks duplicate transactions.<br>
+&nbsp; more accurately picks duplicate transactions.<br>
 <b>- HBCI Support:</b> <br>
-&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+ GnuCash is the first free software application to support
 the German Home Banking <br>
-&nbsp;&nbsp; &nbsp;Computer Information protocol which includes statement
+ Computer Information protocol which includes statement
 download, initiate bank <br>
-&nbsp;&nbsp; &nbsp;transfers and direct debits.<br>
+ transfers and direct debits.<br>
 <b>- New User Manual and Help:</b><br>
-&nbsp;&nbsp; &nbsp;A brand new user help has been written which focuses on
+ A brand new user help has been written which focuses on
 how to do tasks in <br>
-&nbsp;&nbsp; &nbsp;conjunction with a Tutorial and Concepts guide that gives
+ conjunction with a Tutorial and Concepts guide that gives
 the user background<br>
-&nbsp;&nbsp; &nbsp;information on using GnuCash.<br>
+ information on using GnuCash.<br>
 <b>- New Multi-Currency Transaction Handling:</b><br>
-&nbsp;&nbsp; &nbsp;GnuCash no longer requires separate currency exchange
+ GnuCash no longer requires separate currency exchange
 accounts to handle multiple<br>
-&nbsp;&nbsp; &nbsp;currency transfers.<br>
+ currency transfers.<br>
 <b>- Redesigned Menu's</b><br>
-&nbsp;&nbsp; &nbsp;The GnuCash menu's have been redesigned to conform more
+ The GnuCash menu's have been redesigned to conform more
 with the new GNOME <br>
-&nbsp;&nbsp; &nbsp;Human Interface Guidelines.<br>
+ Human Interface Guidelines.<br>
 <br>
 <big><b>Specifically updated in this version;</b></big><br>
 <br>
-&nbsp;&nbsp; &nbsp; o Third beta release<br>
-&nbsp;&nbsp; &nbsp; o Fix for a possible corruption bug in 1.7.4 currency support<br>
+  o Third beta release<br>
+  o Fix for a possible corruption bug in 1.7.4 currency support<br>
 <br><br>
 Available at the usual places! 
 
@@ -1531,45 +1360,45 @@ version 1.7.4: "The water of life".<br><br>
 <b><big>What's New in GnuCash 1.7.4?</big></b><br>
 <br>
 <b>- Scheduled Transactions:</b> <br>
-&nbsp;&nbsp; &nbsp;GnuCash now has the ability to automatically create and
+ GnuCash now has the ability to automatically create and
 enter transactions, remind<br>
-&nbsp;&nbsp; &nbsp;when a transaction is due, give a choice of entering a
+ when a transaction is due, give a choice of entering a
 transaction or postponing it<br>
-&nbsp;&nbsp; &nbsp;and remove an automated transaction after a certain period.<br>
+ and remove an automated transaction after a certain period.<br>
 <b>- Mortgage &amp; Loan Repayment Druid:</b><br>
-&nbsp;&nbsp; &nbsp;Used to setup a variable payment loan scheduled transaction.<br>
+ Used to setup a variable payment loan scheduled transaction.<br>
 <b>- Small Business Accounting Features: </b><br>
-&nbsp;&nbsp; &nbsp;GnuCash now can be used for Customer and Vendor tracking,
+ GnuCash now can be used for Customer and Vendor tracking,
 Invoicing and Bill Payment,<br>
-&nbsp;&nbsp; &nbsp;and using different Tax and Billing Terms in a small business.<br>
+ and using different Tax and Billing Terms in a small business.<br>
 <b>- OFX Import:</b><br>
-&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+ GnuCash is the first free software application to support
 the Open Financial Exchange<br>
-&nbsp;&nbsp; &nbsp;protocol that many banks and financial services are moving
+ protocol that many banks and financial services are moving
 to use. The development of<br>
-&nbsp;&nbsp; &nbsp;OFX and HBCI support has also resulted in an improved
+ OFX and HBCI support has also resulted in an improved
 transaction matching system that<br>
-&nbsp;&nbsp; &nbsp;more accurately picks duplicate transactions.<br>
+ more accurately picks duplicate transactions.<br>
 <b>- HBCI Support:</b> <br>
-&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+ GnuCash is the first free software application to support
 the German Home Banking <br>
-&nbsp;&nbsp; &nbsp;Computer Information protocol which includes statement
+&nbsp; Computer Information protocol which includes statement
 download, initiate bank <br>
-&nbsp;&nbsp; &nbsp;transfers and direct debits.<br>
+ transfers and direct debits.<br>
 <b>- New User Manual and Help:</b><br>
-&nbsp;&nbsp; &nbsp;A brand new user help has been written which focuses on
+ A brand new user help has been written which focuses on
 how to do tasks in <br>
-&nbsp;&nbsp; &nbsp;conjunction with a Tutorial and Concepts guide that gives
+ conjunction with a Tutorial and Concepts guide that gives
 the user background<br>
-&nbsp;&nbsp; &nbsp;information on using GnuCash.<br>
+ information on using GnuCash.<br>
 <b>- New Multi-Currency Transaction Handling:</b><br>
-&nbsp;&nbsp; &nbsp;GnuCash no longer requires separate currency exchange
+ GnuCash no longer requires separate currency exchange
 accounts to handle multiple<br>
-&nbsp;&nbsp; &nbsp;currency transfers.<br>
+ currency transfers.<br>
 <b>- Redesigned Menu's</b><br>
-&nbsp;&nbsp; &nbsp;The GnuCash menu's have been redesigned to conform more
+ The GnuCash menu's have been redesigned to conform more
 with the new GNOME <br>
-&nbsp;&nbsp; &nbsp;Human Interface Guidelines.<br>
+ Human Interface Guidelines.<br>
 <br>
 <big><b>Specifically updated in this version;</b></big><br>
 <br>
