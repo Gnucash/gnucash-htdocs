@@ -6,20 +6,3334 @@ include($toppath."/en/menu/menu-main.phtml");
 ?>
 <div id="content">
 
-<h1>Older Announcements</h1>
+<h1><?php echo _("Older Announcements");?></h1>
 
 <p>
-This is an archive of announcements that once appeared on the 
-GnuCash home page.
+<?php echo _("This is an archive of announcements that once appeared on the GnuCash home page.");?>
 </p>
 
-<?php
-    # indicate where to get translated news from ... 
-    $en_newspath  =  "../news/en/old/";
-    $lang_newspath  =  "../news/en/old/";
-    include($toppath."/news/news-script.php");
-    ?>  
+<div class="newsborder">
+<div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;<b><?php echo _("How to Install GnuCash on OSX");?></b>
+ - <b>2004-07-22   05:23:15
+</b>
+</div><div class="newsinner">
+<?php echo _("A very nice site &amp set of instructions for Mac OSX can be found at");?>
+<br>
+<a href="http://homepage.mac.com/elliottmce/gnucash_guide/">
+http://homepage.mac.com/elliottmce/gnucash_guide/</a>
+</div></div>
+
+<div class="newsborder">
+<div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;<b><?php echo _("New Support Links");?></b>
+ - <b>2004-07-17   02:48:20
+</b>
+</div><div class="newsinner">
+<?php echo _("I've added two new links to the GnuCash website menus: The <a href=&quot;http://gnomesupport.org/wiki/index.php/GnuCash&quot;>User Wiki</a> and the <a href=&quot;http://linuxwiki.de/GnuCash_2fDevelTexts&quot;>Devel Wiki</a>. If you have questions about how to use GnuCash, including problems with installation, using, or general accounting questions, please review the <a href=&quot;http://gnomesupport.org/wiki/index.php/GnuCash&quot;>User Wiki</a> before posting to the mailing lists.  If you figure out the answer to your questions, then please <b>edit</b> the <a href=&quot;http://gnomesupport.org/wiki/index.php/GnuCash&quot;>User Wiki</a> to add the answer.  Yes, that's right, edit: that's what a Wiki does; it allows anyone to add, update and correct the content.  If you like GnuCash, and want to help, but don't know how, then please consider helping others by updating the Wiki.");?>
+<p>
+<?php echo _("The <a href=&quot;http://linuxwiki.de/GnuCash_2fDevelTexts&quot;>Devel Wiki</a> contains various development notes and status.  Some developers use it, and some don't.  Tough development questions?  This is one place to look.");?>
+</div></div>
+
+<div class="newsborder">
+<div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;<b>Linuxtag in Karlsruhe</b>
+ - <b>2004-06-22   13:57:47
+</b>
+</div><div class="newsinner">
+<i><?php echo _("Christian Stimming writes:");?></i>
+
+<p><?php echo _("I am happy to announce a presentation about GnuCash that will be held this weekend by myself at the German Linuxtag in Karlsruhe");?>.
+<a href="http://www.linuxtag.org/2004/index.html">http://www.linuxtag.org/2004/index.html</a>
+</p><p>                                                                                
+<?php echo _("The presentation is scheduled for this saturday (2004-06-26) 4pm MEST,");?>
+<a href="http://www.linuxtag.org/2004/talk.do?id=e047">
+http://www.linuxtag.org/2004/talk.do?id=e047</a>
+<?php echo _("The language of this presentation will be German. I will put the slides online shortly after the event, but they will be in German, too. :-)");?>
+</p>
+</div></div>
+
+<div class="newsborder">
+<div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;
+<?php echo _("<b>Announcement:</b> GnuCash 1.8.9 Release");?>
+ - <b>2004-04-13   06:13:39
+</b>
+</div><div class="newsinner">
+<br>
+<?php echo _("The GnuCash team is pleased to announce the release of stable version 1.8.9.");?><br><br>
+<b><big><?php echo _("What's New in GnuCash 1.8.9?");?></big></b><br>
+<br>
+<br>
+<?php echo _(" o Updated Polish translation by GNOME PL Team, updated French, Czech,   Spanish, Russian, Dutch, German and Italian translations.<br>");
+echo " o " . _("dump-finance-quote - Be more explicit when a lookup fails.") . "<br>";
+echo " o " . _("log-replay - Increase read buffer size.") . "<br>";
+echo " o " . _("Make sure to verify that the items in the reconcile hash are still around after a refresh.") . "<br>";
+echo " o " . _("When the commodity is changed, then set the currency to the currency of the last price entered for this commodity.") . "<br>";
+echo " o " . _("Add Hungarian account templates by Sulyok Peter") . "<br>";
+echo " o " . _("Patch by Geoff Kassel to work on OpenBSD (allow user to set diffcmd).") . "<br>";
+echo " o " . _("Don't test double KVPs, on the theory that they will soon be deprecated.") . "<br>";
+echo " o  " . _("When computing the aging report, ignore splits that belong to closed lots.  This way we wont get the wrong values when the invoice falls outside the 360-day window but its payment falls inside the window.") . "<br>";
+echo " o " . _("Add gnc_getline() function to read an unlimited line-length from a file (so you're not limited to a buffer size with fgets() and the like). It is similar to the getline(3) on Linux except the API is different and it will always set the return string.") . "<br>";
+echo " o " . _("Add workaround code for openhbci/chipcard problem.") . "<br>";
+echo " o " . _("Add gnc_lookup_date_option() function.") . "<br>";
+echo " o " . _("Add gnc_ui_account_get_balance_in_currency() function.") . "<br>";
+echo " o " . _("Add preferences for summarybar.") . "<br>";
+echo " o " . _("Add xaccAccountConvertBalanceToCurrencyAsOfDate() function") . "<br>";
+echo " o " . _("Summarybar can now display a grand total of all commodities, profits of a period of time and net assets at the end of the period; summarybar can be configured with some options under edit->preferences.") . "<br>";
+echo " o " . _("Create two new functions to centralize date-selection option creation.") . "<br>";
+echo " o " . _("Export the new scheme functions.") . "<br>";
+echo " o " . _("Modify Herbert's patch to centralize the date-selection option code.") . "<br>";
+echo " o " . _("Use the new centralized date-selection option-creation code.") . "<br>";
+echo " o " . _("Fix a typo in the help (was --diable-gui).") . "<br>";
+echo " o " . _("Add db-4.2 to the list of databases we search.") . "<br>";
+echo " o " . _("Fix a problem with opt style installs.") . "<br>";
+echo " o " . _("Rename from_xxx and to_xxx account tree widgets to left_xxx and right_xxx.") . "<br>";
+echo " o " . _("If in &quot;accountant mode&quot; call &quot;transfer from&quot; &quot;credit account&quot; and &quot;transfer to&quot; &quot;debit account&quot; and interchange account trees.") . "<br>";
+echo " o " . _("Remove the RECN cell from payable/receivable to stop confusing people.") . "<br>";
+echo " o " . _("Change Ukrainian &quot;UAG&quot; into &quot;UAH&quot;") . "<br>";
+echo " o " . _("Commented out setting the memo always to &quot;Auto-created split&quot; due
+   to popular request.") . "<br>";
+echo " o " . _("Fix for part of bug only allow auto-create SXes which have splits to be created.") . "<br>";
+echo " o " . _("HBCI transfer template management GUI added by Bernd Wagner.") . "<br>";
+echo " o " . _("Added instructions about running under valgrind.") . "<br>";
+echo " o " . _("Added a large set of valgrind suppressions for both guile and gnucash.") . "<br>";
+echo " o " . _("Change the reg_type to SEARCH_LEDGER so all the 'action' types appear.") . "<br>";
+echo " o " . _("Remove unused 'ledger_status' widget.") . "<br>";
+echo " o " . _("At least be consistent about the background coloring of the month labels, even if we're still not using GTK themeage correctly.") . "<br>";
+echo " o " . _("Destroy the transient window when the widget is destroyed.") . "<br>";
+echo " o " . _("Make the advance and remind spin-buttons editable.") . "<br>";
+echo " o " . _("Change the upper bound on the advance and remind spins to 365 [days], with a page-size of 30 [days].") . "<br>";
+echo " o " . _("Disallow the Scheduling of being-editing transactions in the Register, preventing a class of unbalanced SX template transactions from being entered and propogated through the system.") . "<br>";
+echo " o " . _("Fix nasty memory-corruption issue; insufficent bounds checking on array index.") . "<br>";
+echo " o " . _("Better handling of various error cases in transaction-creation.") . "<br>";
+echo " o " . _("When we have a problem parsing a credit/debit cell, indicate to the user what occurred.") . "<br>";
+echo " o " . _("Use the account-list filtering capability of the GncAccountSel to only show/allow-creation-of valid account-types in the loan-druid.") . "<br>";
+echo " o " . _("Add ':' to the token list of allowable characters in the formula cell.") . "<br>";
+echo " o " . _("Fix precedence bug screwing up loan review page.") . "<br>";
+echo " o " . _("Don't need to require format; main.scm handles it, and the default &quot;format&quot; (simple-format) is sufficient to handle everything we need. This allows gnucash to work with slib3.") . "<br>";
+echo " o " . _("Add code to remove &quot;intl/Makefile po/Makefile&quot; from AC_OUTPUT in   configure.in prior to calling gettextize to make sure that you can build from CVS with recent versions of gettextize.  Tested with both RH9 and RH7.3 to make sure it works with both old and new.") . "<br>";
+echo " o " . _("Move variable declaration to the top of the block.") . "<br>";
+echo " o " . _("Make sure we always have intl and po Makefiles in the configure script.  Sometimes it was ripped out without being replaced.") . "<br>";
+echo "<br><br>";
+echo _("Available at the usual places!");
+?>
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Gnome Time Tracker</b>
+ - <b>2004-04-06   06:22:15
+</b>
+</div><div class="newsinner">
+GnoTime, the Gnome Time Tracker, is a desktop utility for 
+tracking the amount of time spent on projects, and generating 
+configurable reports and invoices based on that time. It also 
+makes for a good to-to list tracker and idea organizer, allowing 
+to-do list items to be sorted even while providing ample 
+notes-taking area associated with each item. 
+<br><br>
+Version 2.1.8 is now available.  This version includes a 
+simple search interface, for generating reports for projects 
+that occured in a given time period.  This new feature is built
+using <a href="http://qof.sourceforge.net">QOF</a>, a gnucash
+spin-off technology.  Version 2.1.7 introduced an easier way
+of allowing users to create and manage custom reports.
+Version 2.1.6 introduced a 'daily report' for summarizing hours
+worked on a day-by-day basis.  Version 2.1.5 introduced a
+vastly improved diary/note-taking/blogging interface.  Version
+2.1.4 was the first version to introduce user-customizable
+reports, using a simple scheme-embedded-in-html system.
+<br><br>
+The 
+<a href="http://gttr.sourceforge.net">GnoTime website is here</a> 
+and is 
+<a href="http://www.linas.org/linux/gtt/gtt.html">mirrored here</a>.
+Sources and CVS access is at the 
+<a href="http://sourceforge.net/projects/gttr/">
+sourceforge project site</a>.  Most major distributions now carry
+GnoTime, so look to your distro first for a binary.   Runs 
+on Apple Macintosh OSX under Fink, too.
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Christian Stimming Screibe:</b>
+ - <b>2004-03-11   14:14:49
+</b>
+</div><div class="newsinner">
+Der angekündigte Vortrag über GnuCash und HBCI bei dem GNU/Linux
+Informationstagen Wilhelmshaven lief ganz klasse. Der Vortrag lief gut, 
+eskamen ein Haufen interessierte Fragen (hauptsächlich über HBCI-Fragen),
+und das ganze hat großen Spaß gemacht. 
+<br><br>
+Die Folien gibts auf
+<br>
+<a href="http://www.tu-harburg.de/~et2cs/gnc-whv/gnucash-whv.html">
+http://www.tu-harburg.de/~et2cs/gnc-whv/gnucash-whv.html</a>
+<br>und PDF hab ich auch
+<br>
+<a href="http://www.tu-harburg.de/~et2cs/gnc-whv/gnucash-whv.pdf">
+http://www.tu-harburg.de/~et2cs/gnc-whv/gnucash-whv.pdf</a>
+<br><br>
+Gruß, Christian
+<br><br>
+
+(As noted earlier I had the opportunity to give a presentation at a local Linux
+day about GnuCash and HBCI online banking. This presentation went really
+nice, there were a number interesting questions (mostly about the German
+online banking HBCI) and overall it was a good experience.)
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Alternative Mail Archives</b>
+ - <b>2004-02-01   07:09:28
+</b>
+</div><div class="newsinner">
+<p>
+An alternative to the mailing list archive hosted on the GnuCash website is now available. We are currently having some technical difficulties with the archive on the GnuCash website so this alternate can be used to access the archives. 
+Please try the following url's to access the archive;<br>
+<a href="http://news.gmane.org/gmane.comp.gnome.apps.gnucash.user">gnucash-user</a><br>
+<a href="http://news.gmane.org/gmane.comp.gnome.apps.gnucash.devel">gnucash-devel</a><br>
+<a href="http://news.gmane.org/gmane.comp.gnome.apps.gnucash.german">gnucash-de</a><br>
+</p>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.8.8 Release
+ - <b>2003-11-19   04:48:47
+</b>
+</div><div class="newsinner">
+<br>
+The GnuCash team is pleased to announce the release
+of stable version 1.8.8.<br><br>
+<b><big>What's New in GnuCash 1.8.8?</big></b><br>
+<br>
+ o HBCI - Improve error message when receiving zero balance from bank.<br>
+ o Add account template for Swiss German businesses "KMU" by Tom
+   Winterhalder<br>
+ o Add *big* account template for German businesses "SKR04" by Betina
+   Schmidt<br>
+ o Add Catalan and Turkish translation, Updated German, Italian,
+   Czech, Greek and Dutch translations.<br>
+ o Add Turkish account template. Updated Greek account templates.<br>
+ o Remove debian scripts<br>
+ o Add a comment about minimum string length<br>
+ o Fix the ISO_DATELEN to be "long enough"<br>
+ o Fix handling of HBCI direct debits (fix wrong textkey). Fix and
+   initially implement handling of multiple banks/users/customers.<br>
+ o Fixed extremly stupid, old bug that causes weird HBCI errors.
+   Improved user messages.<br>
+ o Refactor some GUI code. Improve user messages.<br>
+ o BillTermDecRef should have been BillTermIncRef when setting new
+   bill term.<br>
+ o Applied Frank Pavageau's patch regarding capital gains to handle
+   split transactions.<br>
+ o Don't make a timespec with tv_sec == 0.  Fixes some tests on the
+   alpha platform.<br>
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>European GnuCash.org Mirror</b>
+ - <b>2003-11-07   23:26:55
+</b>
+</div><div class="newsinner">
+<p>
+A European mirror of the GnuCash website is now operational. If you 
+are located in Europe, Eastern Europe or Africa, and are having 
+poor web or download response times accessing the US website, please 
+try the <a href="http://www.at.gnucash.org">European Mirror</a>.  
+This mirror includes a copy of the download area and the mailing list 
+archives as well. 
+(Thanks to <a href="http://sts.tuwien.ac.at/staff/Sprinzl.html">Antonin Sprinzl</a> 
+of the Technical University of Vienna for this service).
+<p><p>
+Older News: Australian and Asian users are encouraged to use the 
+<a href="http://www.au.gnucash.org">Australian Mirror</a>.  Note
+that at this time the Australian Mirror does not include the mailing
+list archives.
+(Thanks to <a href="http://public.www.planetmirror.com/">PlanetMirror</a>
+for this service).
+</p>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Update Debian Woody GnuCash Package</b>
+ - <b>2003-11-06   19:01:55
+</b>
+</div><div class="newsinner">
+<p>
+James A. Treacy writes:
+<p>
+<i>
+I have just updated the gnucash package on people.debian.org.
+All dependencies should work now and after upgrading it should work
+'out of the box'.
+<br><br>
+Edit <tt>/etc/apt/sources.list</tt> and add <br>
+<tt>
+deb http://people.debian.org/~treacy/gnucash.woody ./
+</tt>
+<br>
+then<br>
+<tt>apt-get update ; apt-get install gnucash</tt>
+</i>
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Vote for GnuCash to go to Comdex!</b>
+ - <b>2003-10-19   16:17:31
+</b>
+</div><div class="newsinner">
+<p>
+Your vote in the 
+<a href="http://www.oreillynet.com/contest/comdex/">
+O'Reilly "Open Source Goes to COMDEX" Contest</a>
+could send one of the GnuCash developers to Comdex to
+show off our wares!  Take a moment to vote, as the 
+increased exposure of GnuCash will help attract 
+more developers, more translators, and more
+accountants to help answer your questions 
+on the mailing lists!
+</p>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>System Outage</b>  FIXED
+ - <b>2003-10-11   03:09:52
+</b>
+</div><div class="newsinner">
+<p>
+Yes, the www.gnucash.org server was down most of today.  
+Problem was a failed IDE controller.
+Please remember that the gnucash website &amp; ftp site
+are mirrored in Australia, at
+<a href="http://www.au.gnucash.org">http://www.au.gnucash.org</a>.
+(A European mirror coming soon).
+If you know of a technology to mirror mailman mailing lists,
+let us know.
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>DWI</b>:  Data With Interaction
+ - <b>2003-10-02   15:21:14
+</b>
+</div><div class="newsinner">
+<p>
+Linas Vepstas writes:
+<p>
+<i>
+I'm currently tearing up the guts of "DWI" 
+<a href="http://dwi.sourceforge.net"> http://dwi.sourceforge.net</a>
+DWI was originally (and still is) a way of 'quickly' developing glade
+apps that are hooked to an SQL db.  I wrote a kind of tracking tool
+using the thing for a client (tracking maintenance of pipes & pumps),
+so DWI has been vetted with a 'real life' project.  I've been planning
+on creating a whiz-bang open source bug tracker & etc with it, but
+never got around to it.
+</i></p><p><i>
+My tear-up of the guts of DWI is turning it into a generic 'data pump'.
+It can suck data out of one place and stick it in somewhere else.
+Originally, the two places it worked with are sql tables and gnome
+widgets, but its in fact far more general than that.  In particular,
+I'm planning on prototyping a hookup to the GnuCash objects (aka qof
+objects) real soon now.  (which is why the qof objects get setters as
+well as getters in the CVS tree).
+</i></p><p><i>
+Part of the beauty of the thing is it does not force a 1-to-1 mapping
+between SQL tables and objects.  The mappings can go any which way:
+data from different sql tables can be joined and pushed out to various
+assortments of widgets (including columned widgets such as ctree/clist).
+So its kind of a realization of my long standing complaint that I should
+be able to press a button, and bingo, some object turns into an SQL
+record(s), and back.
+</i></p><p><i>
+I'm not done with the DWI internal tearup yet, but soon ... After that,
+I'll start prototyping integration with the qof objects (probably within
+the DWI cvs tree).  When I'm done with that, I'm going to try to unleash
+the thing to create teh backend for the GnuCash business Objects.  My
+goal is to have very very little code for this: mostly, a specification
+of the SQL tables, and a mapping: 'this business object field goes into
+that sql field', and that's that.  The goal/side effect is that this
+should make adding new objects to GnuCash backend 'real easy'.
+Depending on how the above goes, I may or may not convert the existing
+sql backend to use this new system.  Although not in my current set of
+plans, note that DWI also offers a way of maybe simplifying the GUI
+design as well, providing a way of hooking glade dialogs straight to
+engine objects (and/or god forbid straight to sql). But that's really
+not something I'm planning for right now.
+</i></p>
+
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Mini-Announce:</b> Auto Cap-Gains Beta
+ - <b>2003-09-23   03:46:36
+</b>
+</div><div class="newsinner">
+<br>
+Code to automatically compute and handle capital gains on stock
+accounts is more-or-less done, in the CVS HEAD branch.  There's
+a simple GUI called "View Lots" .  If you bring that up, and then
+"Scrub Account", it will automatically compute cap gains for
+all stock purchases/sales.  If you edit prices, dates, amounts,
+values, etc. in the register window, the cap gains will be 
+automatically kept in sync, i.e. should always be 'correct'.
+<br><br>
+Sometime after the gnome2 port, the 'Lot Viewer' GUI will get
+a minor extension to allow one to manually construct lots (so that
+one can have 'designated' trading lots).  The current default
+uses a FIFO policy to figure out the cap gains.
+<br><br>
+To try out this feature, you will have to get the CVS code
+and compile it yourself.  Remember, this code is still beta:
+it may be buggy (although I think I fixed them all), and is subject
+to change before the final version.
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.8.7 Release
+ - <b>2003-09-15   03:16:00
+</b>
+</div><div class="newsinner">
+<br>
+The GnuCash team is pleased to announce the release
+of stable version 1.8.7.<br><br>
+<b><big>What's New in GnuCash 1.8.7?</big></b><br>
+<br>
+ o Use &lt;libofx/libofx.h&gt; instead of "libofx/libofx.h" as it's not part
+   of our system. Fixes a dependency problem in 1.8.6 release.<br>
+ o Small fix from hawkfan to get tests to work when building outside
+   srcdir.<br>
+ o Fix a bug introduced by Matthew -- ANSI C does not allow you to
+   declare a variable in the middle of an expression.  Move the
+   declaration to the top of the function.<br>
+ o We don't need the trailing semi-colon because the #include adds
+   one.  The double semi-colon causes build failures in some cases.<br>
+
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.8.6 Release
+ - <b>2003-09-12   06:45:39
+</b>
+</div><div class="newsinner">
+<br>
+The GnuCash team is pleased to announce the release
+of stable version 1.8.6.<br><br>
+<b><big>What's New in GnuCash 1.8.6?</big></b><br>
+<br>
+ o Updated Spanish, Greek, French, Czech, Slovak translations<br>
+ o Fixed extremely stupid bug in the import value setting workaround.<br>
+ o Fixed problem with SX formula_cell calls<br>
+ o Merge missing part of 2003-05-28 commit.  The log format changes
+   didn't get commited for some reason, making the log replayer
+   completely unusable.<br>
+ o Fixed crash during dialog startup on Solaris.<br>
+ o Turn off scheme garbage collection during query->scm and scm->query
+   conversion.  It shaves about 50% off the test-scm-query-string tests.<br>
+ o Make test-scm-query-string test deterministic by seeding the RNG
+   with a known value.<br>
+ o Add a "slots" parameter to allow for future expansion.  Right now
+   this is completely ignored.<br>
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash Docs 1.8.3 Release
+ - <b>2003-09-01   03:42:02
+</b>
+</div><div class="newsinner">
+<br>
+The GnuCash Docs team is pleased to announce the release
+of the docs version 1.8.3.<br><br>
+<b><big>What's New in GnuCash Docs 1.8.3?</big></b><br>
+<br>
+ o Fix xmllint errors<br>
+ o Add new credit card chapter images<br>
+ o Remove unused images<br>
+ o Updates to guide<br>
+ o Michael Rensing's FAQ updates<br>
+ o Fix reconcile column in cc payment image<br>
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash Docs 1.8.2 Release
+ - <b>2003-08-20   05:05:10
+</b>
+</div><div class="newsinner">
+<br>
+The GnuCash team is pleased to announce the release
+of the docs version 1.8.2.<br><br>
+<b><big>What's New in GnuCash Docs 1.8.2?</big></b><br>
+<br>
+ o Jon Lapham now primary author of Guide<br>
+ o Moved convert-html to make all so html gets built during 'make'<br>
+ o Many, many, many changes to the Guide by Jon (see changelog)<br>
+ o If you can't find it in the Help, look in the Guide (hint)<br>
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.8.2 Release
+ - <b>2003-08-20   05:05:10
+</b>
+</div><div class="newsinner">
+<br>
+The GnuCash team is pleased to announce the release
+of stable version 1.8.2.<br><br>
+<b><big>What's New in GnuCash 1.8.2?</big></b><br>
+<br>
+<b>- Scheduled Transactions:</b> <br>
+&nbsp;&nbsp; &nbsp;GnuCash now has the ability to automatically create and
+enter transactions, remind<br>
+&nbsp;&nbsp; &nbsp;when a transaction is due, give a choice of entering a
+transaction or postponing it<br>
+&nbsp;&nbsp; &nbsp;and remove an automated transaction after a certain period.<br>
+<b>- Mortgage &amp; Loan Repayment Druid:</b><br>
+&nbsp;&nbsp; &nbsp;Used to setup a variable payment loan scheduled transaction.<br>
+<b>- Small Business Accounting Features: </b><br>
+&nbsp;&nbsp; &nbsp;GnuCash now can be used for Customer and Vendor tracking,
+Invoicing and Bill Payment,<br>
+&nbsp;&nbsp; &nbsp;and using different Tax and Billing Terms in a small business.<br>
+<b>- OFX Import:</b><br>
+&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+the Open Financial Exchange<br>
+&nbsp;&nbsp; &nbsp;protocol that many banks and financial services are moving
+to use. The development of<br>
+&nbsp;&nbsp; &nbsp;OFX and HBCI support has also resulted in an improved
+transaction matching system that<br>
+&nbsp;&nbsp; &nbsp;more accurately picks duplicate transactions.<br>
+<b>- HBCI Support:</b> <br>
+&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+the German Home Banking <br>
+&nbsp;&nbsp; &nbsp;Computer Information protocol which includes statement
+download, initiate bank <br>
+&nbsp;&nbsp; &nbsp;transfers and direct debits.<br>
+<b>- New User Manual and Help:</b><br>
+&nbsp;&nbsp; &nbsp;A brand new user help has been written which focuses on
+how to do tasks in <br>
+&nbsp;&nbsp; &nbsp;conjunction with a Tutorial and Concepts guide that gives
+the user background<br>
+&nbsp;&nbsp; &nbsp;information on using GnuCash.<br>
+<b>- New Multi-Currency Transaction Handling:</b><br>
+&nbsp;&nbsp; &nbsp;GnuCash no longer requires separate currency exchange
+accounts to handle multiple<br>
+&nbsp;&nbsp; &nbsp;currency transfers.<br>
+<b>- Redesigned Menu's</b><br>
+&nbsp;&nbsp; &nbsp;The GnuCash menu's have been redesigned to conform more
+with the new GNOME <br>
+&nbsp;&nbsp; &nbsp;Human Interface Guidelines.<br>
+<br>
+<big><b>Specifically updated in this version;</b></big><br>
+<br>
+ o Release of new stable version 1.8.2<br>
+ o Updated translations: German, Slovak, Spanish<br>
+ o Updated HBCI requirement to 0.9.6<br>
+ o Postgres fix for PG-7.3.x<br>
+ o More fixes for guile-1.6 support<br>
+ o Fix QIF Import for split transactions (#105139)<br>
+ o Remove "display balance in Euro" columns from the main window<br>
+ o Add "display balance in Report Currency" columns to the main window<br>
+ o Fix the transfer dialog / exchange-rate dialog so it doesn't round<br>
+   the values input by the user. (#106332)<br>
+ o Fix configure so tests wont fail on GCC 3.2.2<br>
+ o HBCI: avoid sending online transfers twice<br>
+ o Dont override the user's toolbar style (#102041)<br>
+ o Import: don't punish transactions with an online ID<br>
+ o Add engine support for employee expense vouchers<br>
+
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.8.5 Release
+ - <b>2003-08-20   03:45:09
+</b>
+</div><div class="newsinner">
+<br>
+The GnuCash team is pleased to announce the release
+of stable version 1.8.5.<br><br>
+<b><big>What's New in GnuCash 1.8.5?</big></b><br>
+<br>
+ o Add IS_PAID column and the ability to search for paid/not-paid
+   invoices.<br>
+ o Add HBCI online transfer templates and make usable<br>
+ o Fix a bug where if you unpost an invoice and don't bring the
+   TaxTables up to date, the total value shown in the register is
+   different depending on whether the cursor is on the current line
+   or not.<br>
+ o Don't constantly resize the invoice window every time we update
+   ourselves.<br>
+ o Updated Italian, Brazilian Portugese, German, Czech, Dutch and
+   British English translation.<br>
+ o Add Subtotal and Tax labels in the summary bar to print the
+   Invoice's total amounts.<br>
+ o Change the log format to use GUID instead of C pointers, use
+   ISO8601 instead of proprietary form and log the Notes field.<br>
+ o Port new log replay module from HEAD.<br>
+ o Re-enable reversed legend in stacked barcharts. Needs Guppi 0.40.4
+   a.k.a. Guppi CVS, though, to actually work.<br>
+ o Update the Polish Zloty for its new ISO currency code.<br>
+ o Add ability to sort by Action and Notes.<br>
+ o Fix the vendor window title to use the company name, not the
+   contact name. Change the message when the company name is left blank.<br>
+ o Create a new "date format" widget to let the user choose a date
+   format (and see the results of what the date would look like).<br>
+ o Add "Deluxe Personal Check" type. Add support for printing to
+   "deluxe" personal checks.  This prints the check "sideways" on a
+   US-Letter configuration.<br>
+ o Backport the QueryList widget and associated usage (this allows
+   more places to have sortable column displays for query results)<br>
+ o Improve HBCI error handling. Add more user feedback functions.<br>
+ o Add support for KtoBlzCheck, a small checking package for
+   destination account numbers for German banks. Very small, very useful
+   http://sourceforge.net/projects/ktoblzcheck<br>
+ o TRANSLATION_HOWTO: Added, by Jon Lapham<br>
+ o Add API to the plugin modules to allow post-processing (scrubbing)
+   of the book after it is loaded from XML.  This allows a plug-in to
+   post-process the complete book.<br>
+ o Create a scrub function to clear up bogus tax tables due to a bug
+   which could cause tax tables to get created ad-nausium if you post
+   and then unpost an invoice.<br>
+ o Create a scrub function to clear up bogus bill terms due to a bug
+   which could cause bill terms to get created due to post/unpost of
+   invoices.<br>
+ o Enable the exchange-rate dialog on "search ledger" registers.<br>
+ o Raise the import window after choosing a file.<br>
+ o Change dialog statements to allow for embedded percent signs in the
+   messages.  In other words, don't allow user input into the format
+   string of a printf.<br>
+ o Change how the billterms option menu is used so it will change
+   properly if you change the invoice's owner.<br>
+ o Don't use gnc:reverse-account-balance? to determine whether to
+   reverse the balance -- base it purely on the report type.<br>
+ o Fix gncBillTermCopy() so it PROPERLY copies the bill term.<br>
+ o Tolerate some HBCI banks failure of the GetSystemId-job.<br>
+ o Don't allow selection of directory for save file.<br>
+ o Add fancy-invoice report, to show what else is possible.  It's not
+   really useful per se, but it is another example for users.  To be
+   useful it requires some custom editing.<br>
+ o Limit the commodity choices based upon the current account type.<br>
+ o Add a new argument to the dialog creation functions to specify what
+   types of commodities should be presented.Also tweak the title of the
+   dialog based upon this argument.  Remove the "new" button when the
+   dialog is limited strictly to currencies.<br>
+ o Show the running balance column by default in the register report.<br>
+ o Annotate the window title to indicate whether a register is for a
+   single account or it includes all subaccounts.<br>
+ o Change the register close dialog to include a cancel option.<br>
+ o Don't close the register if the user cancelled.<br>
+ o If the user has manually entered an amount, then stop automatically
+   updated the amount when the date is changed.<br>
+ o Refactor many HBCI functions to eventually enable queued processing
+   of several HBCI jobs.<br>
+ o Add a "retained earnings" item under equity, and change the title
+   to include the start date (Balance Sheet report).<br>
+ o Don't print the "handling-request" messages when getting stock
+   quotes.<br>
+ o Display selected pixmap when opening an options window.<br>
+ o Fix 'Save As' so it can write to non-existing files.<br>
+ o New data file should have same uid/gids original file.<br>
+ o Added Italian account templates by Lorenzo Cappelletti<br>
+ o Change HBCI online transfer action so that first the gnucash
+   Transaction is created and only after that the HBCI connection is
+   started. Necessary for later implementation of offline queueing and
+   multi-job execution.<br>
+ o Clarify the part of the HBCI setup about potentially adding HBCI
+   accounts manually.<br>
+ o Add a couple of extra checks to prevent crashing if the commodity
+   attached to a price quote has disappeared.<br>
+ o Provide a new warning message before deletion if a commodity has
+   any price quotes.  If the user deletes the commodity anyway, removed
+   any quotes are based on the commodity<br>
+ o Enhance the get prices routine to handle a request with a NULL
+   currency.<br>
+ o Fix a crash where removing items in the wrong order could cause
+   "Bad Things" to happen<br>
+ o Sort the bills before displaying them, so they appear in a
+   consistent order (by date due).<br>
+ o Fix a bunch more rounding errors, and add more precision to the
+   price.<br>
+ o Change the description and action of Invoice and Payement
+   Transactions/Splits, to make it easier to print a check off the
+   posted transactions.<br>
+ o Add Debit and Credit totals to Register report.<br>
+ o Differentiate between "file is already locked" and "we can't create
+   the lockfile" so we can let the user know.<br>
+ o Fix the message to be more appropriate when we hit a READONLY
+   error.<br>
+ o Various Postgres backend fixes<br>
+ o Add button for manual adding of HBCI accounts. Requires latest
+   OpenHBCI 0.9.13<br>
+ o Add saving of the HBCI_API so that bank's status changes will now
+   be remembered immediately.<br>
+ o Add "(Report)" strings to the various columns displayed in the
+   report currency.<br>
+ o Set the date-entered on invoice transactions to "now" instead of
+   the post date.  Thi lets us know when an invoice was actually posted,
+   or a payment was actually made.<br>
+ o Support "gain/loss" balancing splits on stocks<br>
+ o Apply patch to fix a number of off-by-one bugs in the loan druid.<br>
+ o Adapted to latest gnucash-docs changes, by Jon Lapham<br>
+ o Add code to read XML files with real namespace declarations.<br>
+ o Make sure we define PWD, as not all shells define it properly.<br>
+ o Workaround for multi-currency importing bug.
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Network Upgrade</b>
+ - <b>2003-08-13   02:43:14
+</b>
+</div><div class="newsinner">
+The internet connection on which www.gnucash.org and the 
+gnucash.org mail servers sit is being upgraded right now.
+The new line will have more bandwidth, which should speed 
+transfers.  Note that
+the IP address of the website will be changing.  This change
+should be transparent to everyone; however, if you have trouble
+accessing this site after that date, you may want to try to flush 
+your domain name cache.  If problems persist, please contact 
+the mailing lists.
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>State of the GnuCash project,</b> a call for help
+ - <b>2003-08-11   05:41:39
+</b>
+</div><div class="newsinner">
+<br><a href="mailto:bock@step.polymtl.ca">Benoit Gr&eacute;goire</a>
+has written an important document outlining some of the major issues 
+for the GnuCash project<br><br>
+<b>Please spend some time to read this document and contribute to the discussion</b><br>
+<br>
+
+<br><br>
+<b><a href="/en/state_of_the_gnucash_project.phtml">State of the GnuCash project</a></b>
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Network Upgrade</b>
+ - <b>2003-07-18   14:52:53
+</b>
+</div><div class="newsinner">
+The internet connection on which www.gnucash.org and the 
+gnucash.org mail servers sit will be upgraded sometime after 
+the week of July 23. The new line will have 
+more bandwidth, which should speed transfers.  Note that
+the IP address of the website will be changing.  This change
+should be transparent to everyone; however, if you have trouble
+accessing this site after that date, you may want to try to flush 
+your domain name cache.
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>GnuCash on Slackware</b> Installation HOWTO
+ - <b>2003-06-28   17:57:04
+</b>
+</div><div class="newsinner">
+RJ marquette writes:
+<br><br>
+<i>
+I've written a web page that may be helpful to Slackware users who want to
+install GnuCash, and I thought you might want to link to it on the GnuCash
+website. 
+The URL is <a href="http://rjmarq.org/gnucash.html">http://rjmarq.org/gnucash.html</a>.
+</i>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> QOF: the Query Object Framework
+ - <b>2003-06-15   16:41:23
+</b>
+</div><div class="newsinner">
+I've just started the QOF "Query Object Framework" project on
+sourceforge.  QOF consists of that part of the GnuCash engine
+that isn't about accounting.  I started the project because 
+I want to use the GnuCash query framework in another project
+of mine (GnoTime), and after thinking about it a bit, it seemed
+good to split it out into its own component.
+<br><br>
+
+QOF consists of Derek Atkin's Query objects, Rob Browning's
+KVP trees, Bill Gribble's Numeric classes, Dave Peticolas'
+GUID's & events, and my own fractured Backend, books, & sessions.
+For now, I plan to keep the code in sync with GnuCash by hand.
+I'm not sure how things will play out in the future; I have
+no immediate plans.
+<br><br>
+
+The really big deal in QOF is the query framework.  I think its
+unique: there is no code out there that I can google that provides
+generic structured query functions for generic objects, without
+forcing you to use SQL.  I think QOF can fill an important need 
+for programmers who write apps that need to have reports, and 
+are sophisticated enough to realize they need queries, and yet 
+are not ready to convert thier app to an SQL app.
+<br><br>
+
+The other big part of QOF is that it can act as a cache for an
+SQL backend.  Note, however, that this part is 'under construcion'.
+Done right, it should make it easy to add SQL support for the 
+Business Objects in GnuCash.  However, this work hasn't been 
+started, and needs volunteers.  In particular, I'm hoping
+that anyone who has contemplated the SQL re-write for GnuCash
+can help in this area.
+<br><br>
+
+QOF compiles on my box, but I haven't yet checked in all the
+Makefile.am & configure.in into CVS.  Hopefully, I'll have a 
+version 0.1 out shortly. If any of the regular GnuCash developers
+want developer access on sourceforge, let me know. 
+<br><br>
+
+<a href="http://qof.sourceforge.net">qof.sourceforge.net</a>
+<br><br>
+
+--linas
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.8.4 Release
+ - <b>2003-05-26   17:44:57
+</b>
+</div><div class="newsinner">
+<br>
+The GnuCash team is pleased to announce the release
+of stable version 1.8.4.<br><br>
+<b><big>What's New in GnuCash 1.8.4?</big></b><br>
+<br>
+ o Fix transfer dialog to not hang if OK button is clicked w/o filling
+   in dialog properly.<br>
+ o Add HTML::Parser to the list of items checked/installed.<br>
+ o Updated translations:  Brazilian Portugese, Czech, Italian, German<br>
+ o Fix the "View xxxbar" menu items to track properly when a new data
+   file is opened. Consolidate the code for manipulating the
+   View/Statusbar and View/Summarybar menu items.  Work around a Gnome
+   MDI bug as best as possible.<br>
+ o The numeric test regex was broken and would fail on ALL numerics,
+   causing all imports to be of value zero.<br>
+ o Fix for creating new template transactions [from Scheduling
+   existing transactions], such that they have valid Posted dates.<br>
+ o Fix for existing/old data without posted dates.  If we encounter
+   the condition, fixup the transaction's Posted date to that of the
+   Entered date.<br>
+ o Add LOT_IS_CLOSED and LOT_BALANCE query parameter methods<br>
+ o Fixes for 64-bit architectures.<br>
+ o Add gncQueryGetBooks() API to return list of books in a query.<br>
+ o Add INVOICE_POST_LOT query parameter methods<br>
+ o Add an api to force an event even when events are suspended.
+   Without such an API, events can be lost if the event system is
+   suspended when the event comes in.<br>
+ o Added gnucash wrappers around gnome-print's rotate, translate,
+   gsave, and grestore APIs.  All to allow sideways printing (by
+   rotating the image).<br>
+ o Wrap the new print-session apis.<br>
+ o Modify the AC_GWRAP_CHECK_GUILE() macro to take an argument, the
+   g-wrap module directory.  Then actually test that the g-wrap module
+   loads.  This should detect systems without slib installed.<br>
+ o New gwrap check macro<br>
+ o Deal properly when there are no prices for a commodity.<br>
+ o Supply a start date (as well as an end date) and don't print
+   invoices that occur prior to the start date or after the end date.
+   The aging information ignores the start date, but not the end date.
+   This means the aging information will always be acurate through the
+   end date (even if all the invoices and payments are not displayed).<br>
+ o Limit the itemized invoices/payments to the start/end date range,
+   but print out a "Balance" line if there is a non-zero balance as of
+   the start date.<br>
+ o Nikos Charonitakis's account chart updates: added new carloan
+   account chart, updated account chart.<br>
+ o Use the correct columns when printing the Gain column, don't reuse
+   the same column as profit; we want to report different values.<br>
+ o Don't let the user do anything with the options dialog until
+   Apply() finishes.<br>
+ o Had the wrong number of arguments in gnc:account-get-balance-at-date<br>
+ o Add some (commented out) code to support a start date for computing
+   the Net Income (aka Net Profit) in the Balance Sheet.<br>
+ o Move the instantiation of File -> Properties into main-window.scm
+   (out of business-gnome.scm) for future cases where we might decide to
+   ship the business modules separately.<br>
+ o Fix the ofx test program to make sure it links on many weird
+   platforms.<br>
+ o When we are asked to reload the report, queue the request, queue a
+   draw event, and then return immediately.  When the draw event
+   happens, load the report then.  This lets you hit Apply and then OK
+   before the report finishes loading.<br>
+ o Make sure we can find libofx/libofx.h<br>
+ o Include split transactions in the filtering of the transaction
+   report.<br>
+ o Use a 'from' date to better compute the Net Income on the report.<br>
+ o Change the default Search Operation for numerics from "less than"
+   to "equals" -- so by default you would search for an exact value.<br>
+ o "eval" changed API on guile-1.6.  Use the existing API to convert a
+   delta symbol to a delta time.<br>
+ o Call eval with the right number of arguments based on early or late
+   versions.<br>
+ o Change the date format string to be consistent with other places
+   (e.g. the check print dialog) and use '%' instead of '~'.<br>
+ o Make the Bill Due Days option selectable based on the setting of
+   Notify Bills Due?<br>
+ o Don't crash if you remove the last entry and then add another one.<br>
+ o Deal with the case where the first transaction found for a
+   particular company is a payment<br>
+ o Also print out any overpayment in the total column.<br>
+ o Catch errors when running the child reports so we display the
+   failed report backtrace but also display an error and continue with
+   the multicolumn report.<br>
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.8.3 Release
+ - <b>2003-05-13   03:15:11
+</b>
+</div><div class="newsinner">
+<br>
+The GnuCash team is pleased to announce the release
+of stable version 1.8.3.<br><br>
+<b><big>What's New in GnuCash 1.8.3?</big></b><br>
+<br>
+ o Updated translations: Italian, Swedish, Danish, British,
+   Traditional Chinese, French, German, Tamil, Brazilian Portugese.<br>
+ o Turn off the report-total by default<br>
+ o The Euroland currency rates were inverted in the transfer dialog.<br>
+ o Chris Morgan's Baysian Matching code, to match transactions based
+   on Bayesian filtering of previously matched transactions.<br>
+ o Fix a bug in the account name list when you you filtered down to no
+   accounts it would ignore the filter.<br>
+ o The Account Separator option was moved to the Accounts page,
+   reference correctly.<br>
+ o Fix the keypress handlers so they work properly for both the text
+   entry widget and the calendar popup widget.<br>
+ o Force the cursor to the first line of a transaction split before
+   disabling "double line" mode in the register.  This prevents the
+   register refresh code from trying to update a cell that is no longer
+   visible.<br>
+ o Fix HBCI close-on-finished checkbutton.<br>
+ o Add descriptions of new HBCI actions.<br>
+ o OpenBSD fixes by Todd T. Fries<br>
+ o New report "income vs. day of week" by Andy Wingo<br>
+ o Fix a couple strings to improve comments when owners and accounts
+   are missing.  Direct the user to select them in the report options.<br>
+ o When building the "name + address" string, check if the company
+   name and contact name are the same and, if so, only print one of
+   them.<br>
+ o Fix the glade settings so resizing the window will properly resize
+   the widgets.<br>
+ o Save the entry cells before adding an it to the invoice, otherwise
+   it wont get sorted properly.<br>
+ o Add support in business code for the to-charge amount.<br>
+ o Don't ask the user in the general case when making changes to
+   entries.  Generally the user should be allowed to make whatever
+   changes they want without being pestered.<br>
+ o Guile-1.6 requires empty lists to be quoted.<br>
+ o Symbols are not strings in guile-1.6.<br>
+ o Fix "WeekDelta" and add TwoWeekDelta.<br>
+ o Pop up a dialog if the user tries to transfer from a non-currency
+   account, and don't let them do it.<br>
+ o Evaluate the date during get_predicate() in case the user just "hit
+   return" (and the auto-evaluate didn't happen).<br>
+ o Fix crash during import of investment accounts.<br>
+ o Fixes for GCC 3.3 warnings<br>
+ o Fix HBCI user messages where chip cards were confused with key
+   files.<br>
+ o Adapt to latest changes in OpenHBCI CVS.<br>
+ o Applied Tomas Pospisek's patch to the transaction report.<br>
+ o Fix the description of gnc:mdi-show-progress.<br>
+ o Enable changing the "ID" for different business objects.<br>
+ o Fix the percentage calculations so we don't get GtkCritical
+   warnings.<br>
+ o Disable the test-scm-query-import test, since it breaks on
+   guile-1.6<br>
+ o Move currency conversion to gnc-pricedb.c<br>
+ o Improve report for stocks and funds not denominated in report
+   currency.<br>
+ o QIF imports don't assume that a date of the form XXXXXXXX is always
+   YYYYMMDD. Make sure a 4-digit year "makes sense"<br>
+ o Fix hbci and ofx test for handling --disable correctly.<br>
+ o Fix openhbci macro again so that it uses a C check program.<br>
+ o New gnucash-docs release (1.8.1)<br>
+
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>SERVER BACK ONLINE, SOME DATA LOSS</b>
+ - <b>2003-04-30   04:59:36
+</b>
+</div><div class="newsinner">
+<br>
+The GnuCash.org Server is back online, and should now be fully operational.
+However, there has been some data loss: if you subscribed (or unsubscribed)
+to any mailing list, between 12 December 2002 and 28 April 2003, your 
+membership info has been lost.  Furthermore, <b>all</b> configuration
+info for the German <tt>gnucash-de</tt> mailing list has been lost.
+(My sincerest apologies, Christian).  However, most of the mailing list 
+archives should be intact (possibly excepting Jan-April 2003, which might
+be damaged).  All web pages should work at least as well as before,
+and all FTP site contents have been restored and should be fine.
+If you experience problems, please report them to me.
+<b>Mail is still not being delivered; investigating</b>
+<br><br>
+<b><i>So what happened?</i></b>  
+It was the classic server-failure triple-whammy.
+This server has RAID disk mirrors to minimize down-time due to a 
+failed disk, and is backed up nightly in order to safeguard against 
+catastrophic data loss.  Hard-drive status was monitored with 
+<tt>smartmontools</tt> and reported regularly with <tt>logcheck</tt>.
+So how could this belt-and-suspenders system be down so long, and
+result in lost data before its all over?
+<br><br>
+Over the last few months, <tt>smartmontools</tt> was reporting occasional
+disk status changes,  but none of these seemed to be in the form of warnings,
+or had any hint of being dire.  At the same time, there were increasing
+numbers of <tt>status error: status=0x58 { DriveReady SeekComplete DataRequest }</tt> 
+messages showing up in the system log.  In mid-April, these messages started
+showing up at least hourly, and were coupled with the cryptic S.M.A.R.T. messages
+(it didn't help that I was running the older, more cryptic <tt>smartsuite</tt>,
+not the new, improved <tt>smartmontools</tt>).  Finally, the server locked
+up, waiting for a DMA to complete, that never would.  Reboot. Locks up.
+Reboot again, locks up (warlord calls by phone to point this out).  
+I disabled DMA, went to PIO-mode for the disk in question, and things 
+cleared up.  I then made my first thinko:  I concluded that one of my hard
+drives was on the verge of failing completely (the DMA should have clue-trained 
+me in).  I procured a replacement disk, and then made my second 
+'operator error':  I replaced the failing disk.
+My logic was this:  there are two disks in the raid array; both are exact
+duplicates of each other.  Therefore, if I replace the failed disk, the 
+contents of the good disk will be restored onto the blank disk automatically.
+Easy as pie.  I've done it many times before.   It didn't work this time.
+Upon reboot, I got a gazillion <tt>fsck</tt>'ing errors, the file system was corrupted. 
+In addition, I was getting a <i>lot</i> of <tt>status error: status=0x58 
+{ DriveReady SeekComplete DataRequest }</tt> from what used to be the 'good' disk.
+I plowed on.  At this time, I assumed that maybe both disks were bad, 
+a reasonable assumption; these were the infamous IBM-lawsuit drives.
+I guessed that the raid array was hiding the badness from me: 
+whenever one disk had trouble, the RAID would go to 
+the other disk, and all was well in the kingdom, even though anarchy seethed
+just below the surface.  Oh well.  I procured a second hard drive, and 
+replaced that.  With more <tt>fsck</tt>'ing error in the process.  Then I notice
+that I'm still getting SeekComplete's in the syslog, even with the new 
+disks. Now, the replacement disks are the same lawsuit-brand and model number 
+as the old disks, so woe is me, this is my third mistake, I assume, incorrectly, 
+that its the brand and model number, and get a new third disk.  When the errors 
+don't abate, it suddenly becomes clear that its not the drives, its the 
+controller or cable).
+<br><br>
+Now the fun and hacking begin.  Stay up til three AM playing the 
+swap-the-cables-and-reboot game.  The failing controller was on the
+system planar ('motherboard'), so there is no way to remove it; one
+can only play with BIOS settings.   But BIOS (and the Linux kernel 
+shares the blame) has this magic way of renumbering IDE drives when
+one plugs in or removes controllers, enables or disables controller
+ports, etc.  This can be overcome, but is a provides a steady stream
+of hurdles to jump: one must boot a rescue diskette first, then
+mount, then re-write the boot sector, then reboot, then edit 
+<tt>/etc/fstab</tt>, and then try again. Over and over and over.
+It didn't help that my rescue diskette didn't have RAID on it:
+so that was one more thing to hack around.   Finally build
+a stable system, and now it comes time to restore the data
+files that were <tt>fsck</tt>'ed out of existence.  To restore 
+<tt>/usr</tt>, I decide that reinstall of the OS is appropriate.
+I then restore the FTP site, which was badly corrupted.  Restore
+the mailing lists; no problems, only October 1998 was lost and 
+restored.  Restore the website; only minor damage there. 
+Then restore the mailing list subscriber info in 
+<tt>/var/lib/mailman/lists</tt> ... Uhh ... whoops.  That directory
+was <i>not</i> backed up nightly.   I had falsely assumed that 
+everything in <tt>/var/lib/mailman/lists</tt> was stuff that could
+be recovered by re-installing <tt>mailman</tt>.  I had no idea that it
+kept subscriber info there.  Mistake number four (number zero?):
+this critical directory was not one that was backed up nightly.
+I was lucky to find a December 2002 backup of it;  it could 
+have easily been December 2001 and then I really would have felt 
+sorry.  Mistake five: turns out the backup machine had overflowed,
+and stopped making backups on 5 April.  Fortunately for me, not
+much has happened since 5 April.   I hope this little story makes
+it clear that running a public web site in a professional manner
+can sometimes be a walk in the park, and sometimes guerilla warfare.
+BTW, yes, every now and then, this server is backed up to an
+off-site location, so that if the machine is stolen, or the house 
+burns down, all is not lost.  
+<br><br>
+Also, BTW, my 'failed' disks are fine: once they were off the bad 
+controller, the errors stopped. I am still eyeing them with suspicion,
+but ... 
+
+<br><br>
+Some lessons drawn from this, or rather some complaints, are 
+documented at
+<a href="http://www.linas.org/linux/peeves.html">http://www.linas.org/linux/peeves.html</a>
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>SERVER OUTAGE:</b> Continuing File System Problems
+ - <b>2003-04-29   04:10:54
+</b>
+</div><div class="newsinner">
+<br>
+The GnuCash Server is continuing to experience an assortment of problems,
+whose root cause is a set of failing hard drives and is masked by a faulty
+ide controller and/or ribbon cables.  
+The drives have been replaced, and the ide controller has been replaced.
+However, in the process, data has been corrupted, and has not yet 
+been restored.
+<br><br>
+The mailing lists appear to be broken,
+and I am attempting to fix this.  If you subscribed since April 4th,
+it is possible that your subscription is lost, and you may have to 
+resubscribe.  Some of the mail archives got corrputed, and are 
+permanantly lost (they were'nt being backed up due to backup 
+configuration error).  Some of the ftp site may possibly be corrupted,
+I haven't yet had the time to restore the ftp site.  its possible that
+parts of the web site may be corrupted; I haven't yet restored
+the web site.  Please bear with, things should get fixed in a few days.
+If you are curious about the agony of dealing with this, see
+<a href="http://www.linas.org/linux/peeves.html">http://www.linas.org/linux/peeves.html</a>
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>SERVER OUTAGE:</b> Continuing File System Problems
+ - <b>2003-04-24   05:50:14
+</b>
+</div><div class="newsinner">
+<br>
+The GnuCash Server is continuing to experience an assortment of problems,
+whose root cause is a set of failing hard drives.  The drives have been
+replaced, but problems remain.   The mailing lists appear to be broken,
+and I am attempting to fix this.  If you subscribed since April 4th,
+it is possible that your subscription is lost, and you may have to 
+resubscribe.  Some of the mail archives got corrputed, and are 
+permanantly lost (they were'nt being backed up due to backup 
+configuration error).  Some of the ftp site may possibly be corrupted,
+I haven't yet had the time to restore the ftp site.  its possible that
+parts of the web site may be corrupted; I haven't yet restored
+the web site.  Please bear with, things should get fixed in a few days.
+If you are curious about the agony of dealing with this, see
+<a href="http://www.linas.org/linux/peeves.html">http://www.linas.org/linux/peeves.html</a>
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.8.1 Release
+ - <b>2003-02-11   04:58:51
+</b>
+</div><div class="newsinner">
+<br>
+The GnuCash team is pleased to announce the release
+of stable version 1.8.1.<br><br>
+<b><big>What's New in GnuCash 1.8.1?</big></b><br>
+<br>
+<b>- Scheduled Transactions:</b> <br>
+&nbsp;&nbsp; &nbsp;GnuCash now has the ability to automatically create and
+enter transactions, remind<br>
+&nbsp;&nbsp; &nbsp;when a transaction is due, give a choice of entering a
+transaction or postponing it<br>
+&nbsp;&nbsp; &nbsp;and remove an automated transaction after a certain period.<br>
+<b>- Mortgage &amp; Loan Repayment Druid:</b><br>
+&nbsp;&nbsp; &nbsp;Used to setup a variable payment loan scheduled transaction.<br>
+<b>- Small Business Accounting Features: </b><br>
+&nbsp;&nbsp; &nbsp;GnuCash now can be used for Customer and Vendor tracking,
+Invoicing and Bill Payment,<br>
+&nbsp;&nbsp; &nbsp;and using different Tax and Billing Terms in a small business.<br>
+<b>- OFX Import:</b><br>
+&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+the Open Financial Exchange<br>
+&nbsp;&nbsp; &nbsp;protocol that many banks and financial services are moving
+to use. The development of<br>
+&nbsp;&nbsp; &nbsp;OFX and HBCI support has also resulted in an improved
+transaction matching system that<br>
+&nbsp;&nbsp; &nbsp;more accurately picks duplicate transactions.<br>
+<b>- HBCI Support:</b> <br>
+&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+the German Home Banking <br>
+&nbsp;&nbsp; &nbsp;Computer Information protocol which includes statement
+download, initiate bank <br>
+&nbsp;&nbsp; &nbsp;transfers and direct debits.<br>
+<b>- New User Manual and Help:</b><br>
+&nbsp;&nbsp; &nbsp;A brand new user help has been written which focuses on
+how to do tasks in <br>
+&nbsp;&nbsp; &nbsp;conjunction with a Tutorial and Concepts guide that gives
+the user background<br>
+&nbsp;&nbsp; &nbsp;information on using GnuCash.<br>
+<b>- New Multi-Currency Transaction Handling:</b><br>
+&nbsp;&nbsp; &nbsp;GnuCash no longer requires separate currency exchange
+accounts to handle multiple<br>
+&nbsp;&nbsp; &nbsp;currency transfers.<br>
+<b>- Redesigned Menu's</b><br>
+&nbsp;&nbsp; &nbsp;The GnuCash menu's have been redesigned to conform more
+with the new GNOME <br>
+&nbsp;&nbsp; &nbsp;Human Interface Guidelines.<br>
+<br>
+<big><b>Specifically updated in this version;</b></big><br>
+<br>
+ o Release of new stable version 1.8.1<br>
+ o Fixes for qif import crashes
+ o Update translation po/it.po by Lorenzo Cappelletti<br>
+ o Remove the tip that says that this is a development version.<br>
+ o Remove the "development version" string when running "gnucash
+   --version"<br>
+ o Add heuristic for duplicate matching by check number.<br>
+ o Various bug fixes, remove Finance::Quote requirement for rpms
+   built on RH 8.0<br>
+
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.8.0 Release
+ - <b>2003-02-03   08:41:27
+</b>
+</div><div class="newsinner">
+<br>
+The GnuCash team is pleased to announce the release
+of stable version 1.8.0.<br><br>
+<b><big>What's New in GnuCash 1.8.0?</big></b><br>
+<br>
+<b>- Scheduled Transactions:</b> <br>
+&nbsp;&nbsp; &nbsp;GnuCash now has the ability to automatically create and
+enter transactions, remind<br>
+&nbsp;&nbsp; &nbsp;when a transaction is due, give a choice of entering a
+transaction or postponing it<br>
+&nbsp;&nbsp; &nbsp;and remove an automated transaction after a certain period.<br>
+<b>- Mortgage &amp; Loan Repayment Druid:</b><br>
+&nbsp;&nbsp; &nbsp;Used to setup a variable payment loan scheduled transaction.<br>
+<b>- Small Business Accounting Features: </b><br>
+&nbsp;&nbsp; &nbsp;GnuCash now can be used for Customer and Vendor tracking,
+Invoicing and Bill Payment,<br>
+&nbsp;&nbsp; &nbsp;and using different Tax and Billing Terms in a small business.<br>
+<b>- OFX Import:</b><br>
+&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+the Open Financial Exchange<br>
+&nbsp;&nbsp; &nbsp;protocol that many banks and financial services are moving
+to use. The development of<br>
+&nbsp;&nbsp; &nbsp;OFX and HBCI support has also resulted in an improved
+transaction matching system that<br>
+&nbsp;&nbsp; &nbsp;more accurately picks duplicate transactions.<br>
+<b>- HBCI Support:</b> <br>
+&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+the German Home Banking <br>
+&nbsp;&nbsp; &nbsp;Computer Information protocol which includes statement
+download, initiate bank <br>
+&nbsp;&nbsp; &nbsp;transfers and direct debits.<br>
+<b>- New User Manual and Help:</b><br>
+&nbsp;&nbsp; &nbsp;A brand new user help has been written which focuses on
+how to do tasks in <br>
+&nbsp;&nbsp; &nbsp;conjunction with a Tutorial and Concepts guide that gives
+the user background<br>
+&nbsp;&nbsp; &nbsp;information on using GnuCash.<br>
+<b>- New Multi-Currency Transaction Handling:</b><br>
+&nbsp;&nbsp; &nbsp;GnuCash no longer requires separate currency exchange
+accounts to handle multiple<br>
+&nbsp;&nbsp; &nbsp;currency transfers.<br>
+<b>- Redesigned Menu's</b><br>
+&nbsp;&nbsp; &nbsp;The GnuCash menu's have been redesigned to conform more
+with the new GNOME <br>
+&nbsp;&nbsp; &nbsp;Human Interface Guidelines.<br>
+<br>
+<big><b>Specifically updated in this version;</b></big><br>
+<br>
+ o Release of new stable version 1.8.0<br>
+ o Fix problem getting quotes from trustnet.<br>
+ o Add new script that dumps all the data returned by F::Q for a
+   stock.<br>
+ o Apply Bill Nottingham's patch to use db4/db_185.h<br>
+ o Updated translations, po/en_GB.po by Nigel Titley, po/it.po by
+   Lorenzo Cappelletti<br>
+ o Fix HBCI problem with negative account balances.<br>
+ o Add preference (on advanced tab) to enable HBCI debug messages.<br>
+ o Fix the Recurrence-Frequency example-calendar date calculation to
+   show upcoming instances correctly.<br>
+ o Add HBCI user messages about what is supported by the bank.<br>
+ o Fixes for gcc 3.x build problems with postgresql backend<br>
+ o Many more fixes for the postgresql backend<br>
+ o Fix the "bill reminder" so it doesn't create a query if there are
+   no payables accounts.<br>
+ o Fix some of the accounts in the tree to be more accurate to the
+   real world.<br>
+ o Only set ReadOnly status for Invoices, not Payments.<br>
+ o Fix several bugs in QIF importer<br>
+ o Recognize even more error codes from OpenHBCI.<br>
+ o No longer assume that transaction with type OFX_OTHER are
+   investment transactions.<br>
+ o Don't add income accounts to bills, or expense accounts to
+   invoices.  This should help further reduce user confusion with what
+   to do when entering invoices.<br>
+ o Lots more bugfixes<br>
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash Docs 1.7.8
+ - <b>2003-01-28   01:46:46
+</b>
+</div><div class="newsinner">
+<br>
+The GnuCash team is pleased to announce GnuCash Docs
+version 1.7.8.<br><br>
+
+<big><b>Updated in this version;</b></big><br>
+<br>
+ o Add patch from RedHat for db4 support<br>
+ o Copy of required portions of docbook-xsl 1.45<br>
+ o Change to point at internal version of docbook-xsl 1.45
+   stylesheets.<br>
+ o This fixes the problem of the stylesheets needing to go online to
+   do the conversion from XML to HTML.<br>
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>gnucash-de@gnucash.org</b> German / Deutsch Mailing List 
+ - <b>2003-01-27   16:29:05
+</b>
+</div><div class="newsinner">
+A new mailing list for German speaking GnuCash users has been created:
+gnucash-de@gnucash.org. To subscribe, visit
+<a href="http://www.gnucash.org/cgi-bin/mailman/listinfo/gnucash-de">
+http://www.gnucash.org/cgi-bin/mailman/listinfo/gnucash-de</a> and enter
+your email address there. You can choose whether you would like to
+receive the administrative emails in German or in English language.
+<br><br>
+
+This list is meant for discussions in German language about the general
+usage of GnuCash, as well as specific topics only relevant to German 
+users (e.g. HBCI or German tax system).
+<br><br>
+
+Ab sofort existiert eine neue Mailingliste für die deutschsprachigen 
+Benutzer von GnuCash. Um sie zu abonnieren, trage man auf 
+<a href="http://www.gnucash.org/cgi-bin/mailman/listinfo/gnucash-de">
+http://www.gnucash.org/cgi-bin/mailman/listinfo/gnucash-de</a> seine 
+E-Mail-Adresse ein. Man kann dort außerdem wählen, ob man 
+administrativen E-Mails lieber auf Deutsch oder auf Englisch erhalten 
+möchte.
+<br><br>
+
+Diese Liste ist zur deutschsprachigen Diskussion der GnuCash-Benutzung 
+gedacht. Gleichzeitig können dort die Deutschland-spezifischen Features 
+von GnuCash diskutiert werden (z.B. HBCI oder deutsches Steuerrecht).
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.7.8 Release Candidate 3: "Lil Devil"
+ - <b>2003-01-21   10:58:40
+</b>
+</div><div class="newsinner">
+<br>
+The GnuCash team is pleased to announce Release Candidate 2
+version 1.7.8: "Lil Devil".<br><br>
+<b><big>What's New in GnuCash 1.7.8?</big></b><br>
+<br>
+<b>- Scheduled Transactions:</b> <br>
+&nbsp;&nbsp; &nbsp;GnuCash now has the ability to automatically create and
+enter transactions, remind<br>
+&nbsp;&nbsp; &nbsp;when a transaction is due, give a choice of entering a
+transaction or postponing it<br>
+&nbsp;&nbsp; &nbsp;and remove an automated transaction after a certain period.<br>
+<b>- Mortgage &amp; Loan Repayment Druid:</b><br>
+&nbsp;&nbsp; &nbsp;Used to setup a variable payment loan scheduled transaction.<br>
+<b>- Small Business Accounting Features: </b><br>
+&nbsp;&nbsp; &nbsp;GnuCash now can be used for Customer and Vendor tracking,
+Invoicing and Bill Payment,<br>
+&nbsp;&nbsp; &nbsp;and using different Tax and Billing Terms in a small business.<br>
+<b>- OFX Import:</b><br>
+&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+the Open Financial Exchange<br>
+&nbsp;&nbsp; &nbsp;protocol that many banks and financial services are moving
+to use. The development of<br>
+&nbsp;&nbsp; &nbsp;OFX and HBCI support has also resulted in an improved
+transaction matching system that<br>
+&nbsp;&nbsp; &nbsp;more accurately picks duplicate transactions.<br>
+<b>- HBCI Support:</b> <br>
+&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+the German Home Banking <br>
+&nbsp;&nbsp; &nbsp;Computer Information protocol which includes statement
+download, initiate bank <br>
+&nbsp;&nbsp; &nbsp;transfers and direct debits.<br>
+<b>- New User Manual and Help:</b><br>
+&nbsp;&nbsp; &nbsp;A brand new user help has been written which focuses on
+how to do tasks in <br>
+&nbsp;&nbsp; &nbsp;conjunction with a Tutorial and Concepts guide that gives
+the user background<br>
+&nbsp;&nbsp; &nbsp;information on using GnuCash.<br>
+<b>- New Multi-Currency Transaction Handling:</b><br>
+&nbsp;&nbsp; &nbsp;GnuCash no longer requires separate currency exchange
+accounts to handle multiple<br>
+&nbsp;&nbsp; &nbsp;currency transfers.<br>
+<b>- Redesigned Menu's</b><br>
+&nbsp;&nbsp; &nbsp;The GnuCash menu's have been redesigned to conform more
+with the new GNOME <br>
+&nbsp;&nbsp; &nbsp;Human Interface Guidelines.<br>
+<br>
+<big><b>Specifically updated in this version;</b></big><br>
+<br>
+ o Welcome to Release Candidate 3<br>
+ o Fixed build issues introduced in last release<br>
+ o Fix compile errors on SuSE 8.0 + 8.1<br>
+ o Update translations, po/ru.po by Vitaly Lipatov, po/el.po by
+   ta_panta_rei@flashmail.com<br>
+ o Ignore certain splits with an "amount" of zero.<br>
+ o Convert from the old to new symbols for Russian Roubles.<br>
+ o Invoices change a couple of columns.  Enable viewing the "taxable"
+   entry.  Enable viewing all the tax accounts individually.<br>
+ o Scrub hbci include paths to prevent gcc 3.x compile errors.<br>
+ o Default the OFX import directory to the directory of the last OFX
+   file imported, or the user's home dir for the first export.
+   Remembered across invocations of gnucash.<br>
+ o Default the save directory to the directory of the last file used.
+   Default the exports directory to the directory of the last file
+   exported, or the user's home dir for the first export. Remembered
+   across invocations of gnucash.<br>
+ o Correctly handle the case where no stocks have been defined and the
+   user asks gnucash to get price quotes.<br>
+ o Work around bug in ghttp library so that intl users whose whole
+   units/fractions separator is a comma can request web pages.<br>
+ o Add "Default Report Currency" preference.<br>
+ o Set invoice currency based on owner's currency.<br>
+ o Use invoice's currency for printing the invoice.<br>
+ o Make the progress bar argument a double instead of an int.  This
+   gets around an issue with guile 1.6.<br>
+ o Add a checkbox to search-for-all<br>
+ o Changes to make the build system work on multiple architectures and
+   with multiple versions of the autotools suite.  Make generated g-wrap
+   sources depend on config.status.<br>
+ o Remove restriction on guile versions > 1.4 Provide a version
+   dependant load path variable for the SRFI location. (Empty in 1.6
+   since they're bundled with guile.)<br>
+ o Limit QIF matches against only the accounts in the old group, so we
+   don't match against ourselves.  This should limit the matches to only
+   "reasonable" matches.<br>
+ o Remove "user name" and "user address" preferences, as they are no
+   longer used by anything.<br>
+ o Create a taxtable option type using the new generic optionmenu code
+ o Create a default customer and default vendor taxtable option for
+   the "File Properties" option menu.<br>
+ o Reset the search-type to "New Search" if we end up displaying no
+   results.<br>
+ o Use the "New Search Limit" pref to decide when to start a new
+   search vs. when refine the search.<br>
+ o Create two new global preferences: "Notify Bills Due?" and "Bills
+   Due Days"<br>
+ o Added sources needed for OS X to dist.<br>
+ o Lots more bugfixes<br>
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.7.7 Release Candidate 2: "It ain't easy, livin free"
+ - <b>2003-01-06   11:40:34
+</b>
+</div><div class="newsinner">
+The GnuCash team is pleased to announce Release Candidate 2
+version 1.7.7: "It ain't easy, livin free".<br><br>
+<b><big>What's New in GnuCash 1.7.7?</big></b><br>
+<br>
+<b>- Scheduled Transactions:</b> <br>
+&nbsp;&nbsp; &nbsp;GnuCash now has the ability to automatically create and
+enter transactions, remind<br>
+&nbsp;&nbsp; &nbsp;when a transaction is due, give a choice of entering a
+transaction or postponing it<br>
+&nbsp;&nbsp; &nbsp;and remove an automated transaction after a certain period.<br>
+<b>- Mortgage &amp; Loan Repayment Druid:</b><br>
+&nbsp;&nbsp; &nbsp;Used to setup a variable payment loan scheduled transaction.<br>
+<b>- Small Business Accounting Features: </b><br>
+&nbsp;&nbsp; &nbsp;GnuCash now can be used for Customer and Vendor tracking,
+Invoicing and Bill Payment,<br>
+&nbsp;&nbsp; &nbsp;and using different Tax and Billing Terms in a small business.<br>
+<b>- OFX Import:</b><br>
+&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+the Open Financial Exchange<br>
+&nbsp;&nbsp; &nbsp;protocol that many banks and financial services are moving
+to use. The development of<br>
+&nbsp;&nbsp; &nbsp;OFX and HBCI support has also resulted in an improved
+transaction matching system that<br>
+&nbsp;&nbsp; &nbsp;more accurately picks duplicate transactions.<br>
+<b>- HBCI Support:</b> <br>
+&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+the German Home Banking <br>
+&nbsp;&nbsp; &nbsp;Computer Information protocol which includes statement
+download, initiate bank <br>
+&nbsp;&nbsp; &nbsp;transfers and direct debits.<br>
+<b>- New User Manual and Help:</b><br>
+&nbsp;&nbsp; &nbsp;A brand new user help has been written which focuses on
+how to do tasks in <br>
+&nbsp;&nbsp; &nbsp;conjunction with a Tutorial and Concepts guide that gives
+the user background<br>
+&nbsp;&nbsp; &nbsp;information on using GnuCash.<br>
+<b>- New Multi-Currency Transaction Handling:</b><br>
+&nbsp;&nbsp; &nbsp;GnuCash no longer requires separate currency exchange
+accounts to handle multiple<br>
+&nbsp;&nbsp; &nbsp;currency transfers.<br>
+<b>- Redesigned Menu's</b><br>
+&nbsp;&nbsp; &nbsp;The GnuCash menu's have been redesigned to conform more
+with the new GNOME <br>
+&nbsp;&nbsp; &nbsp;Human Interface Guidelines.<br>
+<br>
+<big><b>Specifically updated in this version;</b></big><br>
+<br>
+ o Welcome to Release Candidate 2<br>
+ o Give the user better feedback on exactly what the exchange rate
+   means.<br>
+ o Better handling of corrupt XML data files.  Print better error
+   messages for unknown tags, or mismatched start/end tags.<br>
+ o When checking for gtkhtml-1.1, make the lack of pkg-config a fatal
+   error. Also check for pkgconfig<br>
+ o Updated translations, po/de.po <br>
+ o Fix HBCI reparent warnings. Make the PIN dialog a bit nicer.<br>
+ o Fixes to Postgresql backend.<br>
+ o Changed the "ALTER TABLE table ADD COLUMN..." statements to conform
+   to the current Postgres implementation (and SQL 92) standard by
+   putting the DEFAULT modifier in a separate ALTER statement.  This was
+   reported by Christopher B. Browne.<br>
+ o Implement unpost function in invoices.<br>
+ o Correctly open a help window when the initial URL contains a label
+   component to it.<br>
+ o Make the reconciliation window respect the 'include subaccount'
+   flag any time it opens a register.  Consolidate logic for opening a
+   new register. Enhance the reconciliation start window to update the
+   ending value when this flag is changed.<br>
+ o If the amount is monetary, map the keypad decimal key to the
+   correct decimal character for the locale.<br>
+ o Fix malformed URLs for bringing up a report options window.<br>
+ o Add new option for specifying sort critera for piecharts and
+   barcharts.<br>
+ o The report title should change when the report name field is
+   changed in the options.<br>
+ o Add a smart function for going "back" from the "load a file" page.
+   If there are any files loaded it returns to the "loaded files" page
+   instead of the initial druid page.<br>
+ o Add support for i18n of price source strings.<br>
+ o Add icons to gtk only windows.<br>
+ o Search on NOTES add code to prevent searching on template-txn
+   accounts so SXes don't show up in find results.<br>
+ o Create a 'file compression' option and pass the data into the
+   backend. This is an option in the preferences.<br>
+ o Provide a simple checkbook set of accounts<br>
+ o When editing an exchange rate, always change the _VALUE_ of the
+   split, not the amount.  This has the affect of keeping the visible
+   number the same and changing the "other" account.<br>
+ o Add a set of business accounts to the account setup<br>
+ o Give a much higher importance to the date heuristics in the OFX
+   import. <br>
+ o Disable skipping transactions which already have an online id
+   during matching, untill a fix for the "transfer between two accounts"
+   bug is properly fixed.<br>
+ o Large set of fixes to the build system by John H. Pierce
+   &lt;john@killterm.org&gt;<br>
+ o Lots more bugfixes<br>
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Gnome Time Tracker</b>
+ - <b>2002-12-27   16:54:56
+</b>
+</div><div class="newsinner">
+<br><br>
+GnoTime, the Gnome Time Tracker, is a to-do list
+manager.  It has a built in project timer to keep 
+track of the time spent on a project, and an invoicing
+system for billing time &amp; services.
+
+GnoTime is the Gnome2 port of GTT from the 
+gnome-utils package.  
+
+It now has its own dedicated
+<a href="http://gttr.sourceforge.net">
+web page</a> and 
+<a href="http://sourceforge.net/projects/gttr/">
+sourceforge project site</a>.
+<br><br>
+We are proud to announce the first 'stable'
+release of Gnotime: version 2.1.1.  It
+is available for download at the above sites.
+
+This version does everything that the 
+gnome-utils-1.4 version did, except that
+it has a few more features and a few less bugs.
+In particular, the crash problems that plagued
+the earlier version are now fixed.
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.7.6 Release Candidate 1: "Santa's got a brand new bag"
+ - <b>2002-12-23   12:14:14
+</b>
+</div><div class="newsinner">
+The GnuCash team is pleased to announce Release Candidate 1
+version 1.7.6: "Santa's got a brand new bag".<br><br>
+<b><big>What's New in GnuCash 1.7.6?</big></b><br>
+<br>
+<b>- Scheduled Transactions:</b> <br>
+&nbsp;&nbsp; &nbsp;GnuCash now has the ability to automatically create and
+enter transactions, remind<br>
+&nbsp;&nbsp; &nbsp;when a transaction is due, give a choice of entering a
+transaction or postponing it<br>
+&nbsp;&nbsp; &nbsp;and remove an automated transaction after a certain period.<br>
+<b>- Mortgage &amp; Loan Repayment Druid:</b><br>
+&nbsp;&nbsp; &nbsp;Used to setup a variable payment loan scheduled transaction.<br>
+<b>- Small Business Accounting Features: </b><br>
+&nbsp;&nbsp; &nbsp;GnuCash now can be used for Customer and Vendor tracking,
+Invoicing and Bill Payment,<br>
+&nbsp;&nbsp; &nbsp;and using different Tax and Billing Terms in a small business.<br>
+<b>- OFX Import:</b><br>
+&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+the Open Financial Exchange<br>
+&nbsp;&nbsp; &nbsp;protocol that many banks and financial services are moving
+to use. The development of<br>
+&nbsp;&nbsp; &nbsp;OFX and HBCI support has also resulted in an improved
+transaction matching system that<br>
+&nbsp;&nbsp; &nbsp;more accurately picks duplicate transactions.<br>
+<b>- HBCI Support:</b> <br>
+&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+the German Home Banking <br>
+&nbsp;&nbsp; &nbsp;Computer Information protocol which includes statement
+download, initiate bank <br>
+&nbsp;&nbsp; &nbsp;transfers and direct debits.<br>
+<b>- New User Manual and Help:</b><br>
+&nbsp;&nbsp; &nbsp;A brand new user help has been written which focuses on
+how to do tasks in <br>
+&nbsp;&nbsp; &nbsp;conjunction with a Tutorial and Concepts guide that gives
+the user background<br>
+&nbsp;&nbsp; &nbsp;information on using GnuCash.<br>
+<b>- New Multi-Currency Transaction Handling:</b><br>
+&nbsp;&nbsp; &nbsp;GnuCash no longer requires separate currency exchange
+accounts to handle multiple<br>
+&nbsp;&nbsp; &nbsp;currency transfers.<br>
+<b>- Redesigned Menu's</b><br>
+&nbsp;&nbsp; &nbsp;The GnuCash menu's have been redesigned to conform more
+with the new GNOME <br>
+&nbsp;&nbsp; &nbsp;Human Interface Guidelines.<br>
+<br>
+<big><b>Specifically updated in this version;</b></big><br>
+<br>
+ o Welcome to Release Candidate 1<br>
+ o Put the build date into the about box for development versions<br>
+ o Deal with broken QIF files that give broken bang-fields. In
+   particular, handle the case where it supplies "!Type Bank"
+   instead of "!Type:Bank"<br>
+ o Fix g-wrap test to fail properly if it cannot find g-wrap-config<br>
+ o Add "Edit Exchange Rate" menu items to the Actions menu and the
+    context menu<br>
+ o Fix the amount display so that the exchange dialog always shows the
+    "amount" in the the local (register) currency.<br>
+ o Add an additional module to check for (LWP aka libwww-perl)
+    before attempting to call Finance::Quote.<br>
+ o Updated translations, po/nl.po by Hendrik-Jan Heins &lt;hjh@passys.nl&gt;,
+    po/uk.po by Volodymyr M. Lisivka &lt;lvm@mystery.lviv.net&gt;, po/el.po,
+       accounts/el_GR by Nikos Charonitakis &lt;charosn@her.forthnet.gr&gt;<br>
+ o Major update to generic import architecture/transaction matcher.<br>
+ o Change HBCI to using new Transaction Matcher GUI<br>
+ o Require openhbci 0.9.4 for HBCI version choosing.<br>
+ o When not retrieving stock quotes for an account, dim the price
+    source labels as well as the option menus.<br>
+ o Consolidate all knowledge about Finance::Quote sources into one
+    place. Functions to record whether or not F::Q is installed
+       properly, and if so, whether a particular source is available.<br>
+ o Change default new SX frequency to monthly<br>
+ o Filled in a long-thought of idea for a formula cell: can contain
+    text unlike a pricecell, but doesn't really want to do
+       auto-complete like a quickfill cell [what we had been using].  This
+          allows us to provide the gnome formula cell which can remap the
+	     keypad '.' character based on locale<br>
+ o Disallow the deletion of accounts with ReadOnly Transacation in
+    them. You must first "delete" the RO Txns before you delete the
+       account.<br>
+ o NOTE: As of now you ABSOLUTELY REQUIRE G-WRAP >= 1.3.3<br>
+ o Loan Druid re-written<br>
+ o Add menu items and code so a user can limit transactions in a
+    register to any combination of the
+       Reconciled/Cleared/Voided/Unreconciled states.<br>
+ o Give user feedback during the rendering of a report.<br>
+ o Remove old user docs and tools that are now in gnucash-docs<br>
+ o Fix for large accounts overflowing the data types used in the
+    register code which are causing crashes.<br>
+ o Add support for new GnuCash icon made by Jakub Steiner
+    &lt;jimmac@ximian.com&gt;<br>
+ o Connect up help buttons in dialog's to help files<br>
+ o Lots more bugfixes<br>
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Search Now Works! (Part Two)</b>
+ - <b>2002-12-18   00:12:23
+</b>
+</div><div class="newsinner">
+<br>
+The search feature has been fixed (again), and should now work.
+Unfortunately, the ranking/relevence of search results
+is not very good; we will be looking at other search engines
+to see if we can improve this.  If you know of any spiders/
+search engines with good ranking algorithms, so that e.g. they
+will return main site pages before mailing list archives, 
+and will rank mailing list archives by date as well as relevence,
+please let me know. 
+<a href="sendto:linas@linas.org">&lt;linas@linas.org&gt;</a>.
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Translators Needed!</B> 
+ - <b>2002-12-17   20:00:41
+</b>
+</div><div class="newsinner">
+<BR><BR>
+The next stable release, 1.8.0, is rapidly approaching, and we need
+all language translators to update the message catalogs. 
+Version 1.8.0 will be based on the development versions 1.7.x,
+which contain many new features not in 1.6.x, and thus many
+new strings that need translation.
+If these translations are not brought up to date, version 1.8.0
+will come out with broken or missing translations for many languages.
+Now is really the best time to bring translations up to date.
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Search Now Works!</b>
+ - <b>2002-12-08   22:56:37
+</b>
+</div><div class="newsinner">
+<br>
+The search feature has been fixed, and should now work.
+Unfortunately, the ranking/relevence of search results
+is not very good; we will be looking at other search engines
+to see if we can improve this.  If you know of any spiders/
+search engines with good ranking algorithms, so that e.g. they
+will return main site pages before mailing list archives, 
+and will rank mailing list archives by date as well as relevence,
+please let me know. 
+<a href="sendto:linas@linas.org">&lt;linas@linas.org&gt;</a>.
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.7.5 beta: "Nowhere"
+ - <b>2002-12-03   10:09:32
+</b>
+</div><div class="newsinner">
+<br>
+The GnuCash team is pleased to announce the release of the beta
+version 1.7.5: "Nowhere".<br><br>
+<b><big>What's New in GnuCash 1.7.5?</big></b><br>
+<br>
+<b>- Scheduled Transactions:</b> <br>
+&nbsp;&nbsp; &nbsp;GnuCash now has the ability to automatically create and
+enter transactions, remind<br>
+&nbsp;&nbsp; &nbsp;when a transaction is due, give a choice of entering a
+transaction or postponing it<br>
+&nbsp;&nbsp; &nbsp;and remove an automated transaction after a certain period.<br>
+<b>- Mortgage &amp; Loan Repayment Druid:</b><br>
+&nbsp;&nbsp; &nbsp;Used to setup a variable payment loan scheduled transaction.<br>
+<b>- Small Business Accounting Features: </b><br>
+&nbsp;&nbsp; &nbsp;GnuCash now can be used for Customer and Vendor tracking,
+Invoicing and Bill Payment,<br>
+&nbsp;&nbsp; &nbsp;and using different Tax and Billing Terms in a small business.<br>
+<b>- OFX Import:</b><br>
+&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+the Open Financial Exchange<br>
+&nbsp;&nbsp; &nbsp;protocol that many banks and financial services are moving
+to use. The development of<br>
+&nbsp;&nbsp; &nbsp;OFX and HBCI support has also resulted in an improved
+transaction matching system that<br>
+&nbsp;&nbsp; &nbsp;more accurately picks duplicate transactions.<br>
+<b>- HBCI Support:</b> <br>
+&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+the German Home Banking <br>
+&nbsp;&nbsp; &nbsp;Computer Information protocol which includes statement
+download, initiate bank <br>
+&nbsp;&nbsp; &nbsp;transfers and direct debits.<br>
+<b>- New User Manual and Help:</b><br>
+&nbsp;&nbsp; &nbsp;A brand new user help has been written which focuses on
+how to do tasks in <br>
+&nbsp;&nbsp; &nbsp;conjunction with a Tutorial and Concepts guide that gives
+the user background<br>
+&nbsp;&nbsp; &nbsp;information on using GnuCash.<br>
+<b>- New Multi-Currency Transaction Handling:</b><br>
+&nbsp;&nbsp; &nbsp;GnuCash no longer requires separate currency exchange
+accounts to handle multiple<br>
+&nbsp;&nbsp; &nbsp;currency transfers.<br>
+<b>- Redesigned Menu's</b><br>
+&nbsp;&nbsp; &nbsp;The GnuCash menu's have been redesigned to conform more
+with the new GNOME <br>
+&nbsp;&nbsp; &nbsp;Human Interface Guidelines.<br>
+<br>
+<big><b>Specifically updated in this version;</b></big><br>
+<br>
+&nbsp;&nbsp; &nbsp; o Third beta release<br>
+&nbsp;&nbsp; &nbsp; o Fix for a possible corruption bug in 1.7.4 currency support<br>
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.7.4 beta: "The water of life"
+ - <b>2002-12-02   11:23:47
+</b>
+</div><div class="newsinner">
+<br>
+The GnuCash team is pleased to announce the release of the second beta
+version 1.7.4: "The water of life".<br><br>
+<b><big>What's New in GnuCash 1.7.4?</big></b><br>
+<br>
+<b>- Scheduled Transactions:</b> <br>
+&nbsp;&nbsp; &nbsp;GnuCash now has the ability to automatically create and
+enter transactions, remind<br>
+&nbsp;&nbsp; &nbsp;when a transaction is due, give a choice of entering a
+transaction or postponing it<br>
+&nbsp;&nbsp; &nbsp;and remove an automated transaction after a certain period.<br>
+<b>- Mortgage &amp; Loan Repayment Druid:</b><br>
+&nbsp;&nbsp; &nbsp;Used to setup a variable payment loan scheduled transaction.<br>
+<b>- Small Business Accounting Features: </b><br>
+&nbsp;&nbsp; &nbsp;GnuCash now can be used for Customer and Vendor tracking,
+Invoicing and Bill Payment,<br>
+&nbsp;&nbsp; &nbsp;and using different Tax and Billing Terms in a small business.<br>
+<b>- OFX Import:</b><br>
+&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+the Open Financial Exchange<br>
+&nbsp;&nbsp; &nbsp;protocol that many banks and financial services are moving
+to use. The development of<br>
+&nbsp;&nbsp; &nbsp;OFX and HBCI support has also resulted in an improved
+transaction matching system that<br>
+&nbsp;&nbsp; &nbsp;more accurately picks duplicate transactions.<br>
+<b>- HBCI Support:</b> <br>
+&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+the German Home Banking <br>
+&nbsp;&nbsp; &nbsp;Computer Information protocol which includes statement
+download, initiate bank <br>
+&nbsp;&nbsp; &nbsp;transfers and direct debits.<br>
+<b>- New User Manual and Help:</b><br>
+&nbsp;&nbsp; &nbsp;A brand new user help has been written which focuses on
+how to do tasks in <br>
+&nbsp;&nbsp; &nbsp;conjunction with a Tutorial and Concepts guide that gives
+the user background<br>
+&nbsp;&nbsp; &nbsp;information on using GnuCash.<br>
+<b>- New Multi-Currency Transaction Handling:</b><br>
+&nbsp;&nbsp; &nbsp;GnuCash no longer requires separate currency exchange
+accounts to handle multiple<br>
+&nbsp;&nbsp; &nbsp;currency transfers.<br>
+<b>- Redesigned Menu's</b><br>
+&nbsp;&nbsp; &nbsp;The GnuCash menu's have been redesigned to conform more
+with the new GNOME <br>
+&nbsp;&nbsp; &nbsp;Human Interface Guidelines.<br>
+<br>
+<big><b>Specifically updated in this version;</b></big><br>
+<br>
+&nbsp;&nbsp; &nbsp; o Second beta release<br>
+&nbsp;&nbsp; &nbsp; o Problems with importing 1.6 data files fixed<br>
+&nbsp;&nbsp; &nbsp; o Updates to generic transaction matching<br>
+&nbsp;&nbsp; &nbsp; o More postgres backend fixes<br>
+&nbsp;&nbsp; &nbsp; o New progress bar when making reports<br>
+&nbsp;&nbsp; &nbsp; o Payment schedule review page added to loan druid<br>
+&nbsp;&nbsp; &nbsp; o Fixes to multi-currency support<br>
+&nbsp;&nbsp; &nbsp; o Added Brazilian Portugese account templates by Lucimar
+Moresco<br>
+&nbsp;&nbsp; &nbsp; o Added doxygen documentation support, and integrated
+it into the<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; build system. There is a new target, make
+doc, that can be used to<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; build the documentation if you have doxygen
+installed.<br>
+&nbsp;&nbsp; &nbsp; o Catch the condition gracefully when OpenHBCI config
+file does not<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; exist.<br>
+&nbsp;&nbsp; &nbsp; o Compute the implicit exchange rates for ALL transactions
+when<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; necessary. No longer requires the pricedb
+for printing split values.<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; This will display all transactions in the
+currency of the current<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; account, regardless of the number of splits
+in the transaction.<br>
+&nbsp;&nbsp; &nbsp; o First pass at getting multi-currency transactions to
+work from the<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; register.<br>
+&nbsp;&nbsp; &nbsp; o Lots more bugfixes
+
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>CVS Cleanup; Server Outage</b>
+ - <b>2002-11-26   20:20:31
+</b>
+</div><div class="newsinner">
+<br>
+The CVS tree was pruned to remove some old and dead directories.  This 
+should improve cvs update times a little bit.  A historical archive is still
+available by checking out the source from a different repository: the
+"gnucash-archive" repository.
+<br><br>
+The cvs server and the web site will be down for a few hours during the 
+evening of 27 November or morning ov 28 November, as the servers are 
+relocated to a new location.
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.7.3 beta: "This rose is priceless"
+ - <b>2002-11-18   09:20:06
+</b>
+</div><div class="newsinner">
+<p>The GnuCash team is pleased to announce the release of the first beta
+version 1.7.3: "This rose is priceless".
+</p>
+<ul>
+<li>New Features in this version!</li>
+<li>Improved libofx configure support.  Add --with-ofx-prefix so users can define where to look for libofx.</li>
+<li>Fixed missing OFX files in tarball.</li>
+<li>MAJOR improvement to OFX investment support.  All transactions created from an investment account are now already balanced. Explicitely support Dividend Reinvestment transactions which will now directly create a income account -> stock account transaction, and Income transactions which will directly create a income account -> cash account transaction. Support memorising the income account association. Several stock account can use the same income account if desired.</li>
+<li>Updated gnucash.spec file to work with rh8.</li>
+<li>Added new cashflow report contributed by Herbert Thoma.</li>
+<li>New functions to get/set read-only status on a transaction, and to print a warning message if a 
+transaction is read-only.</li>
+<li>Added a bunch of currencies.</li>
+<li>Updated translations (merged from 1.6 branch plus updates from the Translation Project).</li>
+<li>Matthew Vanecek added some bug fixes for the SQL back end.</li>
+<li>Add support for gtkhtml 1.1</li>
+<li>Added calculate the number of remaining payments based on the start date, loan length and current 
+date to Mortgage druid.</li>
+<li>Loads of bugfixes, keep those bugs coming!</li>
+<li>NOTE: Report bugs to bugzilla.gnome.org</li>
+</ul><p>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</p>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.7.2 alpha: "Antipodean Nightmare"
+ - <b>2002-10-28   13:50:59
+</b>
+</div><div class="newsinner">
+The GnuCash team is pleased to announce the release of the second alpha
+version 1.7.2: "Antipodean Nightmare".
+This release is the result of the development team working so hard the
+GnuCash developers topped the GNOME Summary commits list last week.
+<ul>
+<li>New Features in this version!</li>
+<li>You can now search by reconcile flag for transactions</li>
+<li>Ability to set posted invoices and payments read-only in the small   
+business module.</li>
+<li>New commodity matcher for OFX generic import.</li>
+<li>Latest libofx is needed for OFX support</li>
+<li>Investment transactions now create two accounts, one is for the
+stock, the other is the account defined by the FI, where the
+cash is swapped.</li>
+<li>Updated glossary</li>
+<li>HBCI improvements to transaction retrieval</li>
+<li>Add Direct Debit HBCI action and add caching of the
+PIN to user preferences.</li>
+<li>HBCI suport requires OpenHBCI 0.9.3 or current OpenHBCI CVS</li>
+<li>Loads of bugfixes, keep those bugs coming!</li>
+<li>NOTE: Report bugs to bugzilla.gnome.org</li>
+</ul><p>
+This release features HBCI online banking support. This makes it the
+world's first *free* HBCI-enabled personal finance manager.
+</p><p>
+HBCI (Home Banking Computer Interface) is a standard used by German
+banks for offering online banking service. Through this standard,
+business actions like statement retrieval, bank transfer, or direct
+debits can be invoked by any HBCI-compliant client application, i.e. now
+also from GnuCash. Authentification and encryption is done through a
+bank-issued chip card or a self-generated file-based RSA key pair. (In
+the latter case, the user prints out his public key finger print on
+paper, signs it, and sends it to his bank.)
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</p>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.7.1 alpha release!
+ - <b>2002-10-14   22:11:04
+</b>
+</div><div class="newsinner">
+The GnuCash team is pleased to announce the release of alpha version
+1.7.1. This is the first release as we begin the journey to stable version
+1.8.0. We have lots of bugfixes and new features in this release and
+would like as much testing and bug reporting as possible.
+Please report problems to bugzilla.gnome.org. If you feel the need to
+speak to us or even just to encourage us to move forward on the next
+major version please either join the mailing list or come on irc.gnome.org 
+and chat with us in the #gnucash channel.
+<ul>
+<li>New Features in this version!</li>
+<li>Scheduled Transactions</li>
+<li>Small Business Customer and Vendor tracking and Invoicing</li>
+<li>OFX and HBCI (Germany) Support</li>
+<li>Improved Menu layout</li>
+</ul><p>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</p>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.6.8 stable release!
+ - <b>2002-08-22   09:16:14
+</b>
+</div><div class="newsinner">
+The GnuCash team is pleased to announce the release of stable version
+1.6.8. This is to fix some minor bugs that prevented the last release
+being easy to compile from source. Please continue to report problems to
+our new module in bugzilla.gnome.org. As usual, if you feel the need to
+speak to us or even just to encourage us to move forward on the next
+major version please either join the mailing list
+or come on irc.gnome.org and chat
+with us in the #gnucash channel.
+<ul>
+<li>Fix for acinclude.m4 problem with guile-config</li>
+<li>Removed rpm spec file depenedncy on Postgresql</li>
+</ul>
+<p>
+Available at the usual places! 
+
+<br><br>
+<b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.6.7 stable release!
+ - <b>2002-08-22   09:14:59
+</b>
+</div><div class="newsinner">
+The GnuCash team is pleased to announce the release of stable version
+1.6.7. This is mainly to fix some important bugs that have cropped up
+and add some additional translations to the stable series. Please
+continue to report problems to our new module in bugzilla.gnome.org. As
+usual, if you feel the need to speak to us or even just to encourage us
+to move forward on the next major version please either join the mailing
+list or come on irc.gnome.org
+and chat with us in the #gnucash channel<ul>
+<li>Updated or new translations for Japanese, Italian, Traditional Chinese, 
+Simplified Chinese, Russian, French, German, Swedish, Portuguese, Brasilian Portugese.</li>
+<li>Add French account hierarchy template.</li>
+<li>Back-ported fix for locale of new accounts.</li>
+<li>File permission fix.</li>
+<li>Changed "Opening Balances" to "Opening Balance" to unify the account name.</li>
+<li>Tweak for newer versions of db2html.</li>
+<li>Fix a common crash (Gnome Bug #78132 et. al.) caused by a dangling pointer reference.</li>
+<li>Add upper bounds checking on the versions of guile and g-wrap.</li>
+<li>Fix for guile-1.4.1 srfi problem.</li>
+<li>Added support for VWD as a quote source (Joachim Breitner).</li>
+</ul><p>
+Available at the usual places! 
+
+<br><br>
+<b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</p>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>GnuCash Bugs now at the GNOME Bugzilla</B>
+ - <b>2002-07-07   02:49:43
+</b>
+</div><div class="newsinner">
+<br>
+GnuCash has now moved its bug reporting system into the central GNOME bugzilla. This will give the GnuCash project the ability to receive bug reports generated by Bug Buddy as well as take advantage of the GNOME bug team in their overall administration of GNOME bugs.
+<br>
+If you wish to use the GNOME bug system to report a GnuCash bug please go to <a href="http://bugzilla.gnome.org">bugzilla.gnome.org</a> and use the forms there to enter your report.<br>
+You can also see a complete list of GnuCash bugs by following this link, <a href="http://bugzilla.gnome.org/buglist.cgi?product=GnuCash">"Complete"</a> and this link <a href="http://bugzilla.gnome.org/buglist.cgi?product=GnuCash&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;changedin=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=&amp;keywords_type=anywords&amp;op_sys_details=&amp;op_sys_details_type=substring&amp;version_details=&amp;version_details_type=substring&amp;cmdtype=doit&amp;namedcmd=nautilus-backgrounds&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time&amp;form_name=query">"Open"</a> if you wish to just see any open bugs.
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>New GnuCash features in development</B>
+ - <b>2002-06-20   07:55:41
+</b>
+</div><div class="newsinner">
+<br>
+The GnuCash team has been hard at work developing new requested features for 
+the next version of GnuCash which is slated for beta testing and release in the late summer and fall of 2002.
+<br>
+New features;
+<ul>
+<li>Small Business functions</li>
+<li>Scheduled Transactions</li>
+<li>OFX support</li>
+<li>Improved User Interface</li>
+<li>Updated Users Guide</li>
+</ul>
+
+<p>
+The development team would appreciate greatly any feedback from persons testing these 
+features by compiling the CVS version of GnuCash. You can either join us on 
+irc.gnome.org #gnucash or email the developers list gnucash-devel@gnucash.org
+</p>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.6.6 stable release!
+ - <b>2002-03-11   18:18:31
+</b>
+</div><div class="newsinner">
+<ul>
+<li>Updated or new translations for Dutch, Norwegian, Russian,
+	   Greek, French, German, Portuguese, Azerbaijani Turkic,
+	   	   and Slovak.</li>
+<li>Tweaked the exchange rate calculation so that it will work
+	   in even more complicated cases, involving different 
+	   	   Euroland and other currencies.</li>
+<li>Added Edit Report Options hyperlink to warnings in reports.</li>
+<li>Added workaround for Guppi barchart legend sorting
+	   (broken in Guppi 0.40.0 - 0.40.3)</li>
+<li>Bug fixes</li>
+</ul>
+<p>
+Available at the usual places! 
+
+<br><br>
+<b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.6.5 stable release!
+ - <b>2001-12-17   11:12:18
+</b>
+</div><div class="newsinner">
+<ul>
+<li>Euro conversion druid</li>
+<li>Updated or new translations for Brazilian Portuguese,
+           Danish, German, Nicaraguan Spanish, Norwegian, Portuguese,
+	              Slovak, Spanish, and Swedish</li>
+<li>minor bug fixes</li>
+</ul>
+<p>
+Available at the usual places! 
+
+<br><br>
+<b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>GnomeChart 0.1</b>
+ - <b>2001-11-22   16:17:01
+</b>
+</div><div class="newsinner">
+<br><br>
+GnomeChart 0.1 is now available.
+<br><br>
+GnomeChart is a small application for viewing stock charts.  It uses
+libguppi for the graphics, so you'll need to have Guppi 0.40.1 or
+better installed.
+<br><br>
+You can download GnomeChart from:
+<br><br>
+http://download.gnome.org/GNOME/unstable/sources/gnome-chart
+<br><br>
+-JT
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.6.4 stable release!
+ - <b>2001-10-01   07:50:27
+</b>
+</div><div class="newsinner">
+<ul>
+<li>fix bug loading GnuCash 1.4 files</li>
+</ul>
+<p>
+Available at the usual places! 
+<br><br>
+<b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.6.3 stable release!
+ - <b>2001-09-24   08:41:22
+</b>
+</div><div class="newsinner">
+<ul>
+<li>new Polish translation</li>
+<li>Danish and Spanish translation of new account files</li>
+<li>updated Swedish, German, and Portuguese translations</li>
+<li>child accounts can be reconciled with the parent</li>
+<li>support for TrustNet online quotes</li>
+<li>support for precious metal currencies</li>
+<li>bug fixes</li>
+</ul>
+<p>
+Available at the usual places! 
+
+<br><br>
+<b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Gnome Time Tracker</b>
+ - <b>2001-09-15   00:43:08
+</b>
+</div><div class="newsinner">
+<br><br>
+Screenshorts showing the latest version of the 
+Gnome Time Tracker have been put up at a 
+<a href="http://www.linas.org/linux/gtt/gtt.html">
+temporary web site</a>.  Voluneteers are needed
+to provide a module to export gtt billing data 
+into gnucash, as well as to update the gtt 
+documentation.
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Final Survey Results</b>
+ - <b>2001-09-07   00:42:42
+</b>
+</div><div class="newsinner">
+<br><br>
+The First Gnucash User/Features Survey is now closed.
+There were 828 survey respondents. 
+The responses and the averages changed almost not at all 
+from the early snapshot posted here earlier.
+The majority of respondants
+are home users interested in more home-user features.  You can view
+an executive summary and the detailed responses 
+<a href="/en/quiz-results.phtml">here</a>.  
+We hope to do a bit of data mining later, and present 
+a more detailed breakdown according to the types of users.
+Let us know if you have interest in this dataset.
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.6.2 stable release!
+ - <b>2001-08-13   08:51:53
+</b>
+</div><div class="newsinner">
+<ul>
+<li>Updated Danish and German translations</li>
+<li>SQL backend performance improvements</li>
+<li>bug fixes</li>
+</ul>
+
+<p>
+Available at the usual places! 
+
+<br><br>
+<b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Preliminary Survey Results</b>
+ - <b>2001-07-12   19:01:35
+</b>
+</div><div class="newsinner">
+<br><br>
+There have been 415 survey takers to-date. The majority of respondants
+are home users interested in more home-user features.  You can view
+an executive summary and the detailed responses 
+<a href="/en/quiz-results.phtml">here</a>.  The survey itself
+continues, and we hope to have a more detailed breakdown according
+to the types of users later.
+
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>GnuCash Tutorial</B>
+ - <b>2001-07-12   02:21:18
+</b>
+</div><div class="newsinner">
+<br>
+Joseph Mack has created an online <a href="http://www.ncsysadmin.org/july2001/ncsa-gnucash-talk.html">tutorial</a> as part of a GnuCash talk given to the
+North Carolina Systems Administrators on July 11. The tutorial is about
+how to do small-business accounting using GnuCash.
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>RedHat 7.1 GnuCash Packages</b>
+ - <b>2001-07-09   21:17:05
+</b>
+</div><div class="newsinner">
+RedHat 7.1 packages of GnuCash-1.6.1 for guile-1.3.4 are now available
+<a href="ftp://ftp.gnucash.org/pub/gnucash/redhat-7.x/">here</a>, courtesy of 
+Ben Stanley.
+
+<br><br>
+Thanks Ben!
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.6.1 stable release!
+ - <b>2001-07-07   09:01:57
+</b>
+</div><div class="newsinner">
+<ul>
+<li>Updated documentation</li>
+<li>Updated French, German, Japanese, and Portuguese translations</li>
+<li>Improved startup time</li>
+<li>Many bug fixes</li>
+</ul>
+<p>
+Available at the usual places! 
+
+<br><br>
+<b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Features Survey</b>
+ - <b>2001-06-30   08:08:52
+</b>
+</div><div class="newsinner">
+Let us know what your opinions about the future of GnuCash.  There is a rather long,
+detailed survey that asks for your opinion about the future of GnuCash.  You can rate
+the importance of a big list of features and possible future directions for gnucash.
+You can <a href="/en/quiz.phtml"> take the survey</a>, or study up on our thoughts 
+for the possible future directions for GnuCash by reading the 
+<a href="/en/roadmap.phtml">roadmap</a>.
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>SuSE 7.1 GnuCash Packages</b>
+ - <b>2001-06-27   16:09:19
+</b>
+</div><div class="newsinner">
+SuSE 7.1 packages for GnuCash-1.6.0, Guppi ad g-wrap are now available
+<a href="ftp://ftp.gnucash.org/pub/gnucash/suse-7.x/">here</a>, courtesy of 
+Stephan Kahnt.
+
+<br><br>
+Thanks Stephan!
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Yellowdog PowerPC GnuCash Packages</b>
+ - <b>2001-06-26   17:38:59
+</b>
+</div><div class="newsinner">
+Yellowdog PowerPC packages of GnuCash-1.6.0, Guppi ad g-wrap are now available
+<a href="ftp://ftp.gnucash.org/pub/gnucash/yellowdog-2.x/">here</a>, courtesy of 
+Martin Hill.
+
+<br><br>
+Thanks Martin!
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Mandrake GnuCash packages</B>
+ - <b>2001-06-17   08:34:00
+</b>
+</div><div class="newsinner">
+A Mandrake 8 package of GnuCash 1.6.0 is now available
+<a href="ftp://ftp.gnucash.org/pub/gnucash/mandrake-8.x/gnucash-1.6.0-1.i586.rpm">here</a>, courtesy of Arnold Troeger.
+A mandrake version of guppi, required by gnucash, is in the same directory.
+
+<br><br>
+Thanks Arnold!
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>GnuCash T-Shirts!</b>
+ - <b>2001-06-15   05:00:31
+</b>
+</div><div class="newsinner">
+<br>
+We have a limited number of <a href="/en/t-shirt/">t-shirts 
+left over from a trade show</a>.  They're $15 a pop. 
+Show your colors!
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>New GnuCash packages</B>
+ - <b>2001-06-13   06:42:35
+</b>
+</div><div class="newsinner">
+A Solaris 8 package of GnuCash 1.6.0 is now available
+<a href="ftp://ftp.gnucash.org/pub/gnucash/solaris-8/GNUcash.1.6.0.Solaris.8.Sparc.pkg.gz">here</a>, courtesy of Alan Orndorff.
+
+<br><br>
+A debian package of GnuCash 1.6.0 is now available
+<a href="gopher://quux.org/11/devel/debian/gnucash">here</a>,
+courtesy of John Goerzen.
+
+<br><br>
+Thanks guys!
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.6.0 stable release!
+ - <b>2001-06-11   00:48:27
+</b>
+</div><div class="newsinner">
+<br>
+The GnuCash Development Team &lt;http://www.gnucash.org&gt; proudly
+announces the release of GnuCash 1.6.0, the GNU personal finance
+manager.
+
+<br><br>
+GnuCash features an account hierarchy creation tool, a checkbook-like
+register GUI to enter transactions, and a full set of reports to
+visualize the state of your finances. The new release comes with a
+configurable main window, a much improved checking and general ledger
+entry window, and over ten completely new graphical reports including
+pie charts and bar charts using the GNU plot program 
+<a href="http://www.gnome.org/guppi">Guppi</a>.
+
+<br><br>
+Thanks go to all the translators, testers, bug reporters, artists,
+and programmers who made this release possible. And thanks to all
+our users for choosing GnuCash!
+
+<br><br>
+The new release of GnuCash contains many new features including:
+
+<ul>
+<li>Printable, persistent reports (reports are saved between sessions)</li>
+<li>XML file format (old binary files are converted automatically)</li>
+<li>Account hierarchy creation druid, account hierarchy export</li>
+<li>Much improved QIF importing</li>
+<li>Financial calculator</li>
+<li>Better support for multiple currencies, special support for the Euro</li>
+<li>Online stock quotes integrated with the GUI</li>
+<li>Expression evaluation (you can type in 40.45 + 31.23)</li>
+<li>PostgreSQL back-end supports multiple simultaneous users (beta, disabled by default)</li>
+<li>Menus translated to 12 languages, users guide to 3 (French, Spanish, Portuguese)</li>
+</ul>
+Available at the usual places! 
+
+<br><br>
+<b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.98 release!
+ - <b>2001-06-05   01:13:07
+</b>
+</div><div class="newsinner">
+<BR><BR>
+<b>Note: this is an unstable development release and may be buggy!</b>  
+Most users should probably stick to version 1.4.12 for day-to-day use.  
+(All 1.5.x releases will be unstable/buggy. The next stable version 
+will be 1.6.0).
+<BR><BR>
+This is a beta release. GnuCash is now in feature freeze for 1.6.0.
+<ul>
+<li>updated documentation (English &amp; Portuguese)</li>
+<li>updated German and Portuguese translations</li>
+<li>more work on sql backend</li>
+<li>fixes for FreeBSD</li>
+<li>bug fixes</li>
+</ul>
+
+Available at the usual places! 
+
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Translators Needed!</B> 
+ - <b>2001-05-31   15:55:25
+</b>
+</div><div class="newsinner">
+<BR><BR>
+The next stable release, 1.6.0, is rapidly approaching, and we need
+all language translators to update the message catalogs. 
+The translatable text strings in 1.5.x have been frozen, we don't 
+expect any new strings in 1.6.0.  However, the text strings in 
+the current 1.5.x are completely different from those in 1.4.12,
+and many new strings have been added since he earlier days of 1.5.x.
+If these translations are not brought up to date, version 1.6.0
+will come out with broken or missing translations for many languages.
+Now is really the best time to bring translations up to date.
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.97 release!
+ - <b>2001-05-28   08:41:20
+</b>
+</div><div class="newsinner">
+<BR><BR>
+<b>Note: this is an unstable development release and may be buggy!</b>  
+Most users should probably stick to version 1.4.10 for day-to-day use.  
+(All 1.5.x releases will be unstable/buggy. The next stable version 
+will be 1.6.0).
+<BR><BR>
+This is a beta release. GnuCash is now in feature freeze for 1.6.0.
+<ul>
+<li>updated documentation</li>
+<li>updated Norwegian and Portuguese translations</li>
+<li>prices now stored in sql backend</li>
+<li>bug fixes</li>
+</ul>
+
+Available at the usual places! 
+
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.96 release!
+ - <b>2001-05-21   09:05:50
+</b>
+</div><div class="newsinner">
+<BR><BR>
+<b>Note: this is an unstable development release and may be buggy!</b>  
+Most users should probably stick to version 1.4.10 for day-to-day use.  
+(All 1.5.x releases will be unstable/buggy. The next stable version 
+will be 1.6.0).
+<BR><BR>
+This is an alpha release.
+<ul>
+<li>updated user documentation</li>
+<li>updated api documentation</li>
+<li>bug fixes</li>
+</ul>
+
+Available at the usual places! 
+
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.95 release!
+ - <b>2001-05-14   03:35:04
+</b>
+</div><div class="newsinner">
+<BR><BR>
+<b>Note: this is an unstable development release and may be buggy!</b>  
+Most users should probably stick to version 1.4.10 for day-to-day use.  
+(All 1.5.x releases will be unstable/buggy. The next stable version 
+will be 1.6.0).
+<p>
+This is an alpha release and a string freeze release.
+</p>
+<ul>
+<li>new user account hierarchy wizard</li>
+<li>account hierarchy export</li>
+<li>reporting improvements</li>
+<li>transfer dialog auto-completion</li>
+<li>many bug fixes</li>
+</ul>
+<p>
+Available at the usual places! 
+
+<br><br><b><a href="http://www.linas.org/pub/gnucash/">(fast mirror)</a></b>
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</p>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Server Move</b>
+ - <b>2001-05-09   20:10:35
+</b>
+</div><div class="newsinner">
+There will be sporadic outages next week as the gnucash.org server
+is moved to a new location sometime next week.
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.12 release!
+ - <b>2001-05-01   01:56:35
+</b>
+</div><div class="newsinner">
+<ul>
+<li>Turkish translation</li>
+<li>minor bug fix</li>
+</ul><p>
+Available at the usual places! 
+
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>I18N: The GnuCash Portuguese Web Site Goes On-line!</B>
+ - <b>2001-04-24   21:00:54
+</b>
+</div><div class="newsinner">
+<BR>
+The new <a href="/pt_PT/">Portuguese</a> website is up!
+Many thanks to Duarte Loreto for the fantastic job setting
+up the site, as well as for the translations of the GnuCash 
+menus <i>and</i> the documentation!  Outstanding job Duarte!
+<BR>
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.6 release!
+ - <b>2001-04-23   09:37:07
+</b>
+</div><div class="newsinner">
+<BR><BR>
+<b>Note: this is an unstable development release and may be buggy!</b>  
+Most users should probably stick to version 1.4.10 for day-to-day use.  
+(All 1.5.x releases will be unstable/buggy. The next stable version 
+will be 1.6.0).
+<BR><BR>
+This is a feature freeze release.
+
+<ul>
+<li>reporting improvements</li>
+<li>many misc GUI improvements</li>
+<li>updated German and Portuguese translations</li>
+<li>fixes for Solaris</li>
+<li>bug fixes</li>
+</ul>
+<p>
+Available at the usual places! 
+
+<br><br><b><a href="http://www.linas.org/pub/gnucash/">(fast mirror)</a></b>
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.5 release!
+ - <b>2001-04-16   01:50:06
+</b>
+</div><div class="newsinner">
+<BR><BR>
+<b>Note: this is an unstable development release and may be buggy!</b>  
+Most users should probably stick to version 1.4.10 for day-to-day use.  
+(All 1.5.x releases will be unstable/buggy. The next stable version 
+will be 1.6.0).  
+
+<ul>
+<li>more new &amp; improved reports</li>
+<li>use of gnome MDI for main window</li>
+<li>GUI improvements</li>
+<li>bug fixes</li>
+</ul>
+<p>
+Available at the usual places! 
+
+<br><br><b><a href="http://www.linas.org/pub/gnucash/">(fast mirror)</a></b>
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.4 release!
+ - <b>2001-04-02   04:23:48
+</b>
+</div><div class="newsinner">
+<BR><BR>
+<b>Note: this is an unstable development release and may be buggy!</b>  
+Most users should probably stick to version 1.4.10 for day-to-day use.  
+(All 1.5.x releases will be unstable/buggy. The next stable version 
+will be 1.6.0).  
+<ul>
+<li>several new &amp; improved reports/graphs</li>
+<li>online price quotes now work</li>
+<li>new main window display</li>
+<li>Spanish & Portuguese translations of the manual</li>
+<li>many bug fixes</li>
+</ul>
+Available at the usual places! 
+
+<br><br><b><a href="http://www.linas.org/pub/gnucash/">(fast mirror)</a></b>
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;GnuCash Website Redesigned!
+ - <b>2001-03-27   18:20:13
+</b>
+</div><div class="newsinner">
+<p>
+Jeremy Collins has 
+<a href="/en/">
+updated & modernized the GnuCash website 
+layout for a cleaner, fresher feel.</a>  
+Please test it out, and let us know about 
+any bugs, layout problems, dead links, etc.
+</p><p>
+Note also: we now have a full backup copy of 
+the French translation of the GnuCash site
+<a href="/fr/">hosted on this server</a>. 
+We are looking for volunteers to help 
+Yannick Le-Ny bring it in sync with the 
+new site layout.
+</p>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Five Stars!</b> -- Editors Choice
+ - <b>2001-03-27   00:46:19
+</b>
+</div><div class="newsinner">
+Five stars and the editors' choice award is what GnuCash-1.4.8
+received in the December 2000 edition of Maximum Linux France.
+Hurrah!  We've scanned in the article: read it 
+<a href="/press-archive/maximum-linux-2000-12/p1.jpg">here, page 1</a>,
+<a href="/press-archive/maximum-linux-2000-12/p2.jpg">page 2</a>,
+<a href="/press-archive/maximum-linux-2000-12/p3.jpg">page 3</a>,
+<a href="/press-archive/maximum-linux-2000-12/p4.jpg">page 4</a>.
+<br><br>
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.11 release!
+ - <b>2001-03-19   01:22:12
+</b>
+</div><div class="newsinner">
+<ul>
+<li>Brazilian Portuguese, Danish, Norwegian, and Ukranian translations</li>
+<li>bug fixes</li>
+</ul><p>
+Available at the usual places! 
+
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.3 release!
+ - <b>2001-02-27   02:28:45
+</b>
+</div><div class="newsinner">
+<BR><BR>
+<b>Note: this is an unstable development release and may be buggy!</b>  
+Most users should probably stick to version 1.4.10 for day-to-day use.  
+(All 1.5.x releases will be unstable/buggy. The next stable version 
+will be 1.6.0).  
+<ul>
+<li>new XML file format</li>
+<li>better support for importing qifs from online banks</li>
+<li>improved checking register</li>
+<li>support for charts & graphs</li>
+<li>financial calculator</li>
+<li>new user account hierarchy wizard</li>
+<li>many UI improvements</li>
+<li>beta support for postgresql -- see src/engine/sql/README</li>
+</ul>
+Available at the usual places! 
+
+<br><br><b><a href="http://www.linas.org/pub/gnucash/">(fast mirror)</a></b>
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;CVS snapshots 
+ - <b>2001-02-26   08:16:15
+</b>
+</div><div class="newsinner">
+<p>
+CVS snapshots with tarballs and RPMs for Redhat 6.x and 7.x
+are now available on ftp.gnucash.org. Thanks to Chris Lyttle
+for making these available!
+</p>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>CVS server failure</b>
+ - <b>2001-02-19   22:07:51
+</b>
+</div><div class="newsinner">
+The CVS server has fallen off the net because the 
+DSL line to the CVS server has a shorting clip on it somewhere.
+We are waiting for Southwestern Bell (SBC) technicians to remove 
+the clip.   This is the second time in 4 months that SBC has 
+sabotaged the line.  Estimated up time: 2 or 3 days.  In the meanwhile, 
+please study up on CVSUP.
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.10 release!
+ - <b>2001-01-29   21:19:45
+</b>
+</div><div class="newsinner">
+<ul>
+<li>updated translations</li>
+<li>support for Greek Drachma as Euro currency</li>
+<li>updated tax report</li>
+<li>bug fixes</li>
+</ul><p>
+Available at the usual places! 
+
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;Beta Screenshots
+ - <b>2001-01-18   21:50:41
+</b>
+</div><div class="newsinner">
+<p>
+<a href="/gnome-1.5-screenshots.php3">Screenshots</a> from the unstable 
+development version of gnucash are now online!
+</p>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;g-wrap RPMS
+ - <b>2000-12-29   06:44:00
+</b>
+</div><div class="newsinner">
+<p>
+RPMS for g-wrap-1.1.4 for Redhat-6.2 are now available on the ftp 
+site.  <b>NOTE:</b>This version of g-wrap can only be used to build the 
+gnucash-1.5.x series.  You <b>MUST</b> use the older, g-wrap-0.9.x 
+for building gnucash-1.4.x
+</p>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Links page updated</b>
+ - <b>2000-12-13   00:37:59
+</b>
+</div><div class="newsinner">
+The '<a href="links.php3">links</a>' page has been updated with
+a wealth of new links to stock-tracking tools, business accounting 
+packages (including our favorite, 
+<a href="http://www.gnue.org">GnuE</a>), and XML format standards.
+We didn't get around to listing any of the competitors to gnucash, 
+mostly because we got lazy. 
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.9 release!
+ - <b>2000-12-06   06:56:07
+</b>
+</div><div class="newsinner">
+<ul>
+<li>tax report</li>
+<li>txf export</li>
+<li>bug fixes</li>
+</ul><p>
+Available at the usual places! 
+
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;IRC #gnucash
+ - <b>2000-11-21   02:16:18
+</b>
+</div><div class="newsinner">
+<p>
+Email got you down?  Tired of leaving a bit-trail on 
+your hard drive that your boss, the IRS, the CIA or the NSA 
+use against you?  Or do you merely want to flame the gnucash
+developers in the most ephemeral possible way?  Then IRC
+is for you: check out <b>#gnucash at irc.gnome.org</b>, where
+the conversations are monitored only by the gnucash developers.
+</p>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Overview diagrams</b>
+ - <b>2000-10-30   07:54:20
+</b>
+</div><div class="newsinner">
+Of interest to current & future GnuCash developers might be two
+overview diagrams: the
+<a href="images/diagrams/components.png"><b> system block diagram</b></a> 
+which shows the arrangement of the major components, and the 
+<a href="images/diagrams/structures.png"><b> accounting structures</b></a>
+diagram, which shows the relationships between accounts, transactions, 
+splits and currencies.  Both of these diagrams are linked from the
+<a href="architecture.php3"><b>architecture overview</b></a> page.
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>CVS back up</b>
+ - <b>2000-10-27   15:14:54
+</b>
+</div><div class="newsinner">
+CVS is back up.  The problem was
+due to SBC/SWBT 'backhoe fade' (actually, a technician
+with wireclippers and something against Covad).  
+DSL is great when it works, but when its down, its a 
+nightmare to restore service: there are an incredible number 
+of layers that get involved with line testing.
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.8 release!
+ - <b>2000-10-23   00:53:53
+</b>
+</div><div class="newsinner">
+<ul>
+<li>bug fixes</li>
+</ul><p>
+Available at the usual places! 
+
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.7 release!
+ - <b>2000-10-02   11:35:31
+</b>
+</div><div class="newsinner">
+<ul>
+<li>updated translations</li>
+<li>updated documentation</li>
+<li>a few bug fixes</li>
+</ul><p>
+Available at the usual places! 
+
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.2 release!
+ - <b>2000-09-26   06:25:16
+</b>
+</div><div class="newsinner">
+<br><BR>
+<b>Note: this is an unstable development release and may be buggy!</b>  
+Most users should probably stick to version 1.4.6 for day-to-day use.  
+(All 1.5.x releases will be unstable/buggy. The next stable version 
+will be 2.0.0).  
+<ul>
+<li>fixes for Solaris</li>
+<li>fixes for gnome-print 0.23</li>
+<li>misc bug fixes</li>
+</ul>
+Available at the usual places! 
+
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.1 release!
+ - <b>2000-09-18   19:13:26
+</b>
+</div><div class="newsinner">
+<br><br>
+<b>Note: this is an unstable development release and may be buggy!</b>  
+  Most users should probably stick to version 1.4.6 for day-to-day use.  
+  (All 1.5.x releases will be unstable/buggy. The next stable version 
+will be 2.0.0).  
+<ul>
+<li>New translations</li>
+<li>Updated documentation</li>
+<li>Lots of bug fixes</li>
+</ul>
+Available at the usual places! 
+
+<br><br>
+<b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.6 release!
+ - <b>2000-09-11   10:42:14
+</b>
+</div><div class="newsinner">
+<ul>
+<li>New Spanish translation.</li>
+<li>Several bug fixes.</li>
+</ul><p>
+Available at the usual places! 
+
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.5 release!
+ - <b>2000-08-29   05:36:01
+</b>
+</div><div class="newsinner">
+<ul>
+<li>A few bug fixes.</li>
+</ul><p>
+Available at the usual places! 
+
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash has a Corporate Backer!
+ - <b>2000-08-14   08:16:00
+</b>
+</div><div class="newsinner">
+<BR><BR>
+<a href="http://www.gnumatic.com">Gnumatic Incorporated</a> 
+ is pleased to announce its formal support for GnuCash!
+ Gnumatic is a company that was created expressly to 
+ further develop and enhance GnuCash, to broaden its 
+ availability, and to provide formal, for-fee support
+ to customers that need a strong corporate backer.
+ <br><br>
+ Who's Gnumatic, you may ask?  Well, some of the voices
+ you already know from the mailing list are a part of 
+ Gnumatic: rlb, grib, dave@krondo, rgmerk, linas, and,
+ hopefully, soon, others. 
+ <br><br>
+ What does corporate support mean?  Well, we hope that
+ it means only positive things: more features, more 
+ functions, faster and with less bugs.  We hope that
+ it means that GnuCash will have a rosy long-term 
+ future to become the premier accounting package on 
+ Linux.  We hope that it establishes the GPL as the
+ only viable long-term licensing model for desktop 
+ software.  And finally, we hope that GnuCash can 
+ spin off and excite a number of
+ projects that will further enhance the state of 
+ financial software on Linux.
+ <br><br>
+ We're pretty excited, and we hope that you will be too!
+
+
+
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.4 release! 
+ - <b>2000-08-14   04:40:00
+</b>
+</div><div class="newsinner">
+<ul>
+<li>new Russian translation</li>
+<li>a few bug fixes</li>
+</ul><p>
+Available at the usual places! 
+
+<br><br><b><a href="http://www.linas.org/pub/gnucash/">HTTP download</a></b>
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">FTP download</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.3 release! 
+ - <b>2000-07-27   19:02:27
+</b>
+</div><div class="newsinner">
+<ul>
+<li>fix for stock quotes from the London exchange</li>
+<li>updated French translation</li>
+<li>a few bug fixes</li>
+</ul><p>
+Available at the usual places! 
+
+<br><br><b><a href="http://www.linas.org/pub/gnucash/">HTTP download</a></b>
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">FTP download</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Information:</B> Version Numbers<br><br>
+ - <b>2000-07-15   21:07:21
+</b>
+</div><div class="newsinner">
+Please be aware that the 1.5 series of GnuCash is a
+<em> development</em> release. This means you can expect instabilities and dependency problems as we add features and use newer libraries.  If you just want to use GnuCash and not worry about having the latest features and bugs, you should use the 1.4 series.
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash has a booth at COMDEX Toronto.
+ - <b>2000-07-12   17:43:49
+</b>
+</div><div class="newsinner">
+<br><br>
+The GnuCash project has a booth at COMDEX Toronto, graciously donated by LinuxMall, and Linas, Bill, and Rob (rlb), are there.  If you're in the area, come by and visit.
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash for Solaris<br><br>
+ - <b>2000-07-12   07:44:21
+</b>
+</div><div class="newsinner">
+You can obtain a Solaris package for GnuCash 1.4.2 from &nbsp;
+<b><a href="ftp://ftp.gnucash.org/pub/gnucash/gnucash/solaris-8">ftp.gnucash.org</a></b> and <b><a href="ftp://ftp.krondo.com">ftp.krondo.com</a></b>.<br>
+This package was created by Alan Orndorff and contains all the needed libraries
+(that's why it's so big).
+
+<br><br>
+
+Charles Gagnon has also created Solaris packages for GnuCash, for both
+&nbsp; the stable and development series. They are available at
+<b><a href="http://www.unixrealm.com/downloads/"> www.unixrealm.com/downloads</a></b>.
+
+<br><br>
+
+Enjoy!
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> Alternative download sites<br><br>
+ - <b>2000-07-11   07:53:26
+</b>
+</div><div class="newsinner">
+You can download the latest gnucash releases from &nbsp;
+<b><a href="ftp://ftp.krondo.com">ftp.krondo.com</a></b>.<br><br>
+
+Mandrake users can download a Mandrake rpm from Mandrake Cooker sites.
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.0 release! 
+ - <b>2000-07-10   19:08:25
+</b>
+</div><div class="newsinner">
+<ul>
+<li>switch to using the gtkhtml widget</li>
+<li>all the fixes in 1.4.2</li>
+</ul><p>
+This release requires the gnome-print and gtkhtml libraries.<br>
+
+Available at the usual places! 
+
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.2 release! 
+ - <b>2000-07-10   19:03:02
+</b>
+</div><div class="newsinner">
+<ul>
+<li>updated French translations</li>
+<li>improved qif importing</li>
+<li>fix for g-wrap 0.9.4</li>
+<li>misc bug fixes</li>
+</ul>
+<p>
+Available at the usual places! 
+
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash services are migrating.
+ - <b>2000-07-09   21:18:05
+</b>
+</div><div class="newsinner">
+<BR><BR> The GnuCash web, ftp, and mail services are migrating to a new home.  This may cause some temporary inconveniences.  Please bear with us.
+
+<BR><BR>
+In the interim, ftp service should be available at <a href="ftp://ftp.gnucash.net/">ftp://ftp.gnucash.net/</a>, and web services should be available from <a href="ftp://www.gnucash.net/">ftp://www.gnucash.net/</a>.
+
+<BR><BR> Things should be back to normal in a week or so, once DNS finishes propagating.
+
+<BR><BR>
+Thanks
+
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.1 release! 
+ - <b>2000-06-26   13:08:51
+</b>
+</div><div class="newsinner">
+<ul>
+<li>translations are loaded correctly</li>
+<li>improved qif importing</li>
+<li>bug fixes</li>
+</ul><p>
+Available at the usual places! 
+
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.0 is released!
+ - <b>2000-06-20   03:33:56
+</b>
+</div><div class="newsinner">
+<BR><BR>
+The GnuCash developers are proud to announce GnuCash 1.4.  This new stable release marks the transition from Motif to GNOME.
+<BR><BR>
+Some of the many new and improved features include:
+<BR><BR>
+<ul>
+<li>Totally revamped interface, customizable from within the GUI.
+<li>This includes transaction auto-completion.
+<li>New reporting system, including several new reports and much improved existing ones.
+<li>Internationalisation.
+</ul>
+<br>
+You can download this release from 
+<BR><BR>
+<a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp://ftp.gnucash.org/pub/gnucash/</a>
+<BR><BR>
+or, alternatively, you can try the Sourceforge mirror:
+<BR><BR>
+<a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash/</a>
+<BR><BR>
+Please read the README before compiling GnuCash, as there are several other packages that must be installed first.
+<BR><BR>
+We hope you enjoy the new release.
+<BR><BR>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash moves closer to stability with 1.3.100 release! 
+ - <b>2000-06-12   13:18:50
+</b>
+</div><div class="newsinner">
+<ul>
+<li>bug fixes</li>
+<li>updated documentation</li>
+<li>updated translations</li>
+</ul><p>
+Please note that the RPM does not contain the checking printing feature.  You will have
+to compile it yourself.
+
+<BR><BR>
+This release is the last in the 1.3 development series.
+
+<BR><BR>
+Available at the usual place! <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash moves closer to stability with 1.3.99 release! 
+ - <b>2000-06-05   12:19:55
+</b>
+</div><div class="newsinner">
+<ul>
+<li>transaction auto-completion</li> 
+<li>improved qif importing</li>
+<li>fixes for 64-bit architectures</li>
+<li>updated translations</li>
+<li>automaked build system</li>
+<li>bug fixes and ui improvements</li>
+</ul><p>
+Please note that the RPM does not contain the checking printing feature.  You will have
+to compile it yourself.
+
+<BR><BR>
+This release is one of (and maybe) the last in the 1.3 development series.
+
+<BR><BR>
+Available at the usual place! <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Mailing Lists</B>
+ - <b>2000-05-26   13:07:41
+</b>
+</div><div class="newsinner">
+ Due to recent switch of the servers that house the mailing lists many people seem to have
+ been unsubscribed, or resubscribed to the lists.  Please just take the appropriate action
+ by unsubscribing, or resubscribing.  Sorry for the inconvience.
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.3.8 Released!
+ - <b>2000-05-26   13:05:16
+</b>
+</div><div class="newsinner">
+<ul>
+<li>transaction cut/copy/paste</li>
+<li>new Japanese translations</li>
+<li>user interface improvements</li>
+<li>bug fixes</li>
+</ul><p>
+Please note that the RPM does not contain the checking printing feature.  You will have
+to compile it yourself.
+
+<BR><BR>
+Available at the usual place! <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.3.7 Released!
+ - <b>2000-05-08   10:20:53
+</b>
+</div><div class="newsinner">
+<ul>
+<li>better printing of multiple currencies</li>
+<li>user interface improvements</li>
+<li>bug fixes</li>
+</ul>
+<p>
+Please note that the RPM does not contain the checking printing feature.  You will have
+to compile it yourself.
+
+<BR><BR>
+Available at the usual place! <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>LWN review</b>
+ - <b>2000-05-06   02:42:40
+</b>
+</div><div class="newsinner">
+LWN gave GNUcash another whirl after visiting our booth at Comdex.  Read
+ what that had to say!
+<BR><BR>
+<a href="http://www.lwn.net/2000/0504/devel.phtml">Another look at Gnucash</a>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.3.4 Released!
+ - <b>2000-04-27   07:16:48
+</b>
+</div><div class="newsinner">
+<ul>
+<li>alpha code for check printing (requires gnome-print)</li>
+<li>more i18n of reports</li>
+<li>auto check numbering</li>
+<li>bug fixes and GUI improvements</li>
+</ul>
+
+<p>
+Please note that the RPM does not contain the checking printing feature.  
+You will have
+to compile it yourself.
+</p>
+<p>
+Available at the usual place! <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.3.6 Released!
+ - <b>2000-04-27   07:16:47
+</b>
+</div><div class="newsinner">
+<ul>
+<li>transaction finder dialog</li>
+<li>even better qif importing</li>
+<li>some support for the euro</li>
+<li>bug fixes</li>
+</ul>
+<p>
+Please note that the RPM does not contain the checking printing feature.  
+You will have
+to compile it yourself.
+</p>
+<p>
+Available at the usual place! 
+<b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.3.5 Released!
+ - <b>2000-04-27   07:16:47
+</b>
+</div><div class="newsinner">
+<ul>
+<li>more work on reports and check-printing</li>
+<li>fixes to qif importing</li>
+<li>misc bug fixes</li>
+</ul>
+<p>
+Please note that the RPM does not contain the checking printing feature.  
+You will have
+to compile it yourself.
+</p>
+<p>
+Available at the usual place! 
+<b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.3.2 Released!
+ - <b>2000-04-27   07:16:47
+</b>
+</div><div class="newsinner">
+<ul>
+<li>new French and German translations</li>
+<li>new French documentation</li>
+<li>speed and other improvements in the register</li>
+<li>more work on reports</li>
+</ul>
+<p>
+Available at the usual place! <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+</p>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Update:</b> Archives are up to date.
+ - <b>2000-04-27   07:16:46
+</b>
+</div><div class="newsinner">
+They are automatically updated again every night.<BR><BR>
+We also added a new list, gnucash-patches@gnucash.org.  This list is strictly for posting patches to Gnucash.
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Screenshots</b>
+ - <b>2000-04-27   07:16:46
+</b>
+</div><div class="newsinner">
+For the "I won't compile it until I have seen it" crowd I have updated the screenshots for the Gnome/Gtk+ version of Gnucash.  I hope waves of people will checkout the latest source from CVS and go absolutely nutz debugging it! =)
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.3.1 Released!
+ - <b>2000-04-27   07:16:46
+</b>
+</div><div class="newsinner">
+<ul>
+<li>Includes documentation in French.</li>
+<li>QIF importing fixes.</li>
+<li>Various GUI improvements.</li>
+</ul>
+<p>
+This release also requires gnome-libs >= 1.0.40.
+</p>
+<p>Available at the usual place! <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+</p>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>V-One</b>
+ - <b>2000-04-27   07:16:46
+</b>
+</div><div class="newsinner">
+Has anyone heard of this company?  V-One. 
+Apparently their shares tripled because they made a Linux 
+port of their software available.  <BR><BR>
+
+<a href="http://news.cnet.com/news/0-1003-200-1474480.html?pt.athome..ticker.ne">http://news.cnet.com/news/0-1003-200-1474480.html?pt.athome..ticker.ne</a>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Intuit</b>
+ - <b>2000-04-27   07:16:45
+</b>
+</div><div class="newsinner"> 
+Here is an interesting tidbit about a certain company that should 
+listen to a certain community.<BR>
+<BR>
+<a href="http://news.cnet.com/news/0-1007-200-1463213.html?pt.athome..ticker.ne">
+http://news.cnet.com/news/0-1007-200-1463213.html?pt.athome..ticker.ne</A>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>New server</b>
+ - <b>2000-04-27   07:16:45
+</b>
+</div><div class="newsinner">
+After over a month of server problems I think we have things worked out.  I still need to setup mailing list archives.  Also ftp.gnucash.org points to the wrong IP, this is already fixed and just needs to get refreshed in your DNS! =)
+
+<BR><BR>
+In addition anyone who was having difficulty subscribing to the mailing list should try again.  Keep in mind that we have change mailing list managers and the process for subscribing is different.  Read the section "Mailing List - Help" for more information!
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>ANNOUNCEMENT:</B> Gnucash 1.2.1 is now available.
+ - <b>2000-04-27   07:16:45
+</b>
+</div><div class="newsinner">
+  This is now the latest stable release of Gnucash.  Enjoy!
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>New screenshots</b>
+ - <b>2000-04-27   07:16:45
+</b>
+</div><div class="newsinner">
+A lot has changed in the last month... so what do you do when things change? 
+You take screenshots!!!!  Enjoy!<BR>
+<BR>
+<B>these are of the lastest CVS version!</B>
+
+<BR>
+<a href="gnome_screenshots.php3">gnome screenshots</a>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;gnucash-1.2.2 is out at the usual places.
+ - <b>2000-04-27   07:16:44
+</b>
+</div><div class="newsinner">
+<BR><BR>
+This release includes misc bug fixes, update README files, updated german &amp;
+french message translations.  I hope that I've touched the timestamps on some 
+certain files so that the LIBTOOL irritation goes away.
+<BR><BR>
+The 1.2.2 release is meant to be a stable release for general use.
+<BR><BR>
+The latest experimental version is available via cvs and includes a new large 
+patch to gnome from Heath Martin. 
+
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>ANNOUNCEMENT</B>: GNUcash 1.3.0 beta has been released!<BR><BR>
+ - <b>2000-04-27   07:16:44
+</b>
+</div><div class="newsinner">
+After months of intensive development by some really awesome people we are proud to announce the release of GNUcash 1.3.0.  This is a beta quality development release.  RPMS, and source tarballs are available at <a href="ftp://ftp.gnucash.org/gnucash/">ftp.gnucash.org</a>.  Please test them and report all bugs back to our <a href="/cgi-bin/bugtrack">bug tracking system</a>, or our <a href="/maillist.php3">developers mailing list</a>. <BR><BR>
+
+Now for the details.  This release signifies the switch from Motif to Gnome as our GUI toolkit.  The build process should also be a lot easier.<BR><BR>
+
+<B>Key Features:</B>
+<BR><BR>
+<ul>
+<li>Gnome/Gtk based</li>
+<li>Canvas based register</li>
+<li>New reporting engine based on scheme</li>
+<li>Lots of options are now configurable</li>
+<li>Ability to reparent accounts</li>
+<li>A really slick/polished interface</li>
+</ul>
+
+<BR><BR>
+I will post screenshots of the new development release in a bit.  In the meantime just downloaded, install, and go wild with it! =) 
+
+<BR><BR>
+<B>MIRROR AT SOURCEFORGE.NET</B><BR><BR>
+
+<a href="http://download.sourceforge.net/gnucash/gnucash-1.3.0-1.i386.rpm">http://download.sourceforge.net/gnucash/gnucash-1.3.0-1.i386.rpm</a>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>ANNOUNCEMENT</B>: Gnucash 1.2.5 is released!
+ - <b>2000-04-27   07:16:44
+</b>
+</div><div class="newsinner">
+<BR><BR>
+All those who downloaded 1.2.4 can go right back and get the new version! =)
+<BR>
+<BR>
+It fixes a rounding bug which caused 0.999 to be printed as 0.0
+   instead of 1.0.  (The math was done right, it just the printing was
+   broken).<BR>
+<BR>
+And checks & returns error when you try to save to a disk that is
+   over-full. 
+
+<BR><BR>
+You can get it at: <a href="/pub/gnucash/sources/stable/">http://www.gnucash.org/pub/gnucash/sources/stable/</a>
+<BR><BR>
+<B>UPDATE:</B> Binaries are now available at:<BR><BR>
+<a href="/pub/gnucash/">http://www.gnucash.org/pub/gnucash/</a>
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>ANNOUNCEMENT</B>: Gnucash 1.2.4 is released!
+ - <b>2000-04-27   07:16:43
+</b>
+</div><div class="newsinner">
+<BR><BR>
+-- Is supposed to be 'stable' i.e. usable, crash-proof, not subject to
+   frequent or radical change.<BR>
+-- Motif-only source code. No gnome.  This should simplify builds.<BR>
+-- Fixes some core dumps that 1.2.3 had.<BR>
+-- Is maintained in a separate cvs branch; if you send patches to
+   fix problems with this code, indicate that its for this release.<BR>
+
+<BR><BR>
+You can get it at: <a href="/pub/gnucash/sources/stable/">http://www.gnucash.org/pub/gnucash/sources/stable/</a>
+<BR><BR>
+<B>UPDATE:</B> Binaries are now available at:<BR><BR>
+<a href="/pub/gnucash/">http://www.gnucash.org/pub/gnucash/</a>
+</div></div>  
 </div>
+
 
 <?php include($toppath."/externals/en/footer.phtml"); ?>
 
