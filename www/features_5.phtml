@@ -16,10 +16,10 @@ include($toppath."/en/menu/menu-main-general.phtml");
 </div>
 
 
-<h2>What's New in GnuCash 1.8.0?</h2>
-<p>The 1.8.x series of stable releases introduce many new features not found
-in the older gnucash-1.6.8:</p>
-
+<h2><?php echo _("What's New in GnuCash 1.8.0?");?></h2>
+<p><?php echo _("The 1.8.x series of stable releases introduce many new features not found in the older gnucash-1.6.8.");?></p>
+<?php # mark the updated features for translating when editing
+?>
 <dl>
 <dt><b>Scheduled Transactions</b>
 <dd>You can now create recurring
@@ -170,15 +170,12 @@ And of course, some favorite features from earlier versions:
 
 <br>
 
-<table border=0 cellspacing=0 cellpadding=0 width=100% align=center>
-<tr>
-  <td align=center>
-	  <a href=features_4.phtml><img border=0 src="/images/features/features_previous.png"></a>
+<div class="featureplay">
+  <a href=features_4.phtml><img alt="<?php echo _("back to slide 4");?>" 
+src="/images/features/features_previous.png"></a>
 		 |
-	  <img border=0 src="/images/features/features_next_disabled.png">
-	</td>
-</tr>
-</table>
+  <img border=0 src="/images/features/features_next_disabled.png">
+</div>
 </div>
 
 <?php include($toppath."/externals/en/footer.phtml"); ?>
