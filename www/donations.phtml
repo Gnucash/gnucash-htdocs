@@ -1,9 +1,7 @@
-<?php $title = _("Donations"); ?>
-<?php if (!ini_get('register_globals')) {
- include("../emulate_globals_on.php");
-}
-include($toppath."/externals/en/header.phtml");
-include($toppath."/en/menu/menu-main.phtml");
+<?php $title = _("Donations");
+include("../emulate_globals_on.php");
+include("externals/header.phtml");
+include("externals/menu-main-documentation.phtml");
 ?>
 
 <div id="content">
@@ -51,4 +49,4 @@ echo _("GnuCash donation website"); ?></a>. <?php echo _("Amounts are not shown.
 </div>
 
 </div>
-<?php include($toppath."/externals/en/footer.phtml"); ?>
+<?php include("externals/footer.phtml"); ?>

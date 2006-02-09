@@ -1,8 +1,8 @@
 <?php 
 $title = "Accounting Software for Linux";
 include("../emulate_globals_on.php");
-include($toppath."/externals/en/header.phtml");
-include($toppath."/en/menu/menu-main.phtml");
+include("externals/header.phtml");
+include("externals/menu-main.phtml");
 ?>
 <div id="content">
 
@@ -11,6 +11,298 @@ include($toppath."/en/menu/menu-main.phtml");
 <p>
 <?php echo _("This is an archive of announcements that once appeared on the GnuCash home page.");?>
 </p>
+
+<div class="newsborder">
+<div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;
+<?php echo _("<b>Announcement:</b> GnuCash 1.8.12 Release");?>
+ - <b>(2005-10-20 02:07:49)</b>
+</div><div class="newsinner">
+<?php echo _("The GnuCash development team proudly announces a new stable release of the GnuCash Open Source Accounting Software version 1.8.12, which is expected to be the very last release of the gtk1-based gnucash-1.8.x series. The next release series of gnucash will be based on gtk2/gnome2, and the first pre-release packages are expected to be released this December.");?>
+<br>
+<br>
+
+<?php echo _("FAQ: \"Is this a gnome2 application?\" A: \"No.\" This release still belongs to GnuCash's 1.8.x series which is not yet ported to gtk2/gnome2. Read more below.");?><br>
+
+<b><big><?php echo _("What's New in GnuCash 1.8.12?");?></big></b><br>
+
+<?php echo " o " . _("Online Banking/HBCI improvements: Debit notes are fixed again; Bank-internal money transfers are now supported, if the HBCI bank offers them; Setup wizard can now works with HBCI, OFX-Connect, and other AqBanking backends; Fix character encoding issues in utf-8 locales; Fix date interval in the import transaction matcher for OFX and HBCI import; Fix PIN entry bug.") . "<br>";
+echo " o " . _("New currencies added: Romanian Leu, Bulgarian Lev, Malagasy Ariary") . "<br>";
+echo "o " . _("Fix problem with long date formats in some locales") . "<br>";
+echo "o " . _("Add configure macros for mips, mipsel, arm, and m68k; Fix compilation on OpenBSD 64bit architectures") . "<br>";
+echo "o " . _("Updated translations: German, Italian, Kinyarwanda") . "<br>";
+
+echo _("FAQ: \"Is this a gnome2 application?\"") . "<br>";
+echo _("A: \"No.\" This release still belongs to GnuCash's 1.8.x series which is not yet ported to gtk2/gnome2. In other words, this release is still based on gtk1.2/gnome1. The developers are working on a gtk2/gnome2 version of GnuCash, but it still takes a lot of time.") . "<br>";
+echo _("See http://gnomesupport.org/wiki/index.php/GnuCashPortingStatus for the status of the Gtk2 port. GnuCash makes use of several custom widgets as well as the Guppi graphing library. To port to gtk2 involves rewriting those widgets (e.g. the ledger, or the account hierarchy which uses GtkCTree) into the appropriate GTK2 widgets and would require the changing of the graphing code to probably use Jody's new gnome-office-graph code in Gnumeric (Guppi was never ported to gtk2 and is a dead project). But given that the GnuCash team is extremely short on programmers, the process has to exist in parallel to existing product improvements, resulting in a very gradual porting process.") . "<br>";
+echo _("If you can code C, by all means, volunteer your time, see http://gnomesupport.org/wiki/index.php/GnuCashDevelopment");?>
+<br><br>
+<?php echo _("Available at the usual places!");?>
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div>
+
+<div class="newsborder">
+<div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;
+<?php echo _("<b>Announcement:</b> GnuCash 1.8.11 Release");?>
+<b>(2005-02-07 01:51:04)</b>
+</div><div class="newsinner">
+<br>
+<?php echo _("The GnuCash development team proudly announces a new stable release of the GnuCash Open Source Accounting Software version 1.8.11.");?><br><br>
+<br>
+<br>
+
+<?php echo _("FAQ: \"Is this a gnome2 application?\" A: \"No.\" This release still belongs to GnuCash's 1.8.x series which is not yet ported to gtk2/gnome2. Read more below.") . "<br>";?>
+
+<b><big><?php echo _("What's New in GnuCash 1.8.11?");?></big></b><br>
+<?php
+echo " o " . _("Business invoices: Properly accumulate splits (bug #165053)") . "<br>";
+echo " o " . _("Fix backup file naming; now existing files will no longer be accidentally overwritten (bug #164875)") . "<br>";
+echo " o " . _("HBCI: enable debit notes again") . "<br>";
+echo " o " . _("HBCI initialization problems fixed") . "<br>";
+echo " o " . _("Fix the last-day-of-month computation for leap years.") . "<br>";
+
+echo _("FAQ: \"Is this a gnome2 application?\"") . "<br>";
+echo _("A: \"No.\" This release still belongs to GnuCash's 1.8.x series which is not yet ported to gtk2/gnome2. In other words, this release is still based on gtk1.2/gnome1. The developers are working on a gtk2/gnome2 version of GnuCash, but it still takes a lot of time.") . "<br>";
+echo _("See http://gnomesupport.org/wiki/index.php/GnuCashPortingStatus for the status of the Gtk2 port. GnuCash makes use of several custom widgets as well as the Guppi graphing library. To port to gtk2 involves rewriting those widgets (e.g. the ledger, or the account hierarchy which uses GtkCTree) into the appropriate GTK2 widgets and would require the changing of the graphing code to probably use Jody's new gnome-office-graph code in Gnumeric (Guppi was never ported to gtk2 and is a dead project). But given that the GnuCash team is extremely short on programmers, the process has to exist in parallel to existing product improvements, resulting in a very gradual porting process.") . "<br>";
+echo _("If you can code C, by all means, volunteer your time, see http://gnomesupport.org/wiki/index.php/GnuCashDevelopment");?>
+<br><br>
+<?php echo _("Available at the usual places!");?>
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div>
+
+<div class="newsborder">
+<div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;
+<?php echo _("<b>Announcement:</b> GnuCash 1.8.10 Release");?>
+<b>(2004-12-13 03:12:34)</b>
+</div><div class="newsinner">
+
+<br>
+<?php echo _("The GnuCash team is pleased to announce the release of stable version 1.8.10.");?>
+<br><br>
+<b><big><?php echo _("What's New in GnuCash 1.8.10?");?></big></b><br>
+<br>
+<br><?php
+echo " o " . _("Don't use C++/C99 declarations.  Declare variables at the top of the function.") . "<br>";
+echo " o " . _("Updated British English, Czech, Italian, Russian, German, Brazilian Portugese, Dutch, French, Spanish, translations.") . "<br>";
+echo " o " . _("Fabien COELHO's zero-balance patch to remove accounts of zero balance from the report.") . "<br>";
+echo " o " . _("Fix a broken recursion problem.  Don't call show-acct? from use-acct? so we don't recurse ad flictum.  This recursive call isn't necessary, just have use-acct? recurse unto itself.") . "<br>";
+echo " o " . _("look in \${srcdir} for build-config.scm.in") . "<br>";
+echo " o " . _("Work around problems with libltdl3.") . "<br>";
+echo " o " . _("don't automatically try to (require 'format), so gnucash will build on an slib-3 system.") . "<br>";
+echo " o " . _("Added quote sources for Indian Mutual Funds.") . "<br>";
+echo " o " . _("Skip the case when a token is the empty string. This caused many warnings about a NULL kvp_frame lookup.") . "<br>";
+echo " o " . _("Luigi Ballabio's automake patch to gnucash.m4") . "<br>";
+echo " o " . _("guile-1.6 complains about string-&gt;symbol when passed a symbol.") . "<br>";
+echo " o " . _("applied Vasil's patch to improve the transaction report for HTML export purposes.") . "<br>";
+echo " o " . _("Backport of CVS-head changes to improve register open performance when working with large account trees (&gt;500 accounts).  The new code caches the quickfill tree so that it is shared by all register windows.") . "<br>";
+echo " o " . _("create gnc:current-saved-reports, as the file to store saved reports from cstim.  Autoload the saved-reports file at startup (after config.user/config.auto is loaded).") . "<br>";
+echo " o " . _("Added gnc:report-generate-saved-forms that will generate the scheme code necessary to create a new report from the saved options of an old report.") . "<br>";
+echo " o " . _("Added example Menu item \"File -&gt; Save all reports\" that will call the new report saving function for all reports. This would need more work so that not all reports are saved but only the currently selected one -- any volunteer may feel free to add that.") . "<br>";
+echo " o " . _("Fix saving of report: It now appends to ~/.gnucash/saved-reports-1.8 Statusbar tip is now more verbose.") . "<br>";
+echo " o " . _("Add toolbar element for saving the current report.") . "<br>";
+echo " o " . _("Add function for saving one particular report to the ~/.gnucash/saved-reports-1.8 file. Add extra menu only for customized reports.") . "<br>";
+echo " o " . _("Remove the previous function for saving all reports since it is no longer necessary.") . "<br>";
+echo " o " . _("Apply David Reiser's patch for Quicken(tm) cheques with stub.") . "<br>";
+echo " o " . _("Apply David Grant's patch to add TD Efunds.") . "<br>";
+echo " o " . _("make the desktop file HIG compliant.") . "<br>";
+echo " o " . _("change the gtkhtml order to search for >= 1.1 before < 1.1, in order to try to fix #84707 on systems with multiple versions of gtkhtml.") . "<br>";
+echo " o " . _("Perry Smith's Null Account Patch.  Make sure the security is a real string before appending an account separator, so we don't try to create a \"null\" account.") . "<br>";
+echo " o " . _("Add option to include zero-amount splits in computations.") . "<br>";
+echo " o " . _("fix xaccAccountGetBalanceAsOfDate() to properly compute the balance at the end of the split list.") . "<br>";
+echo " o " . _("Major change for HBCI, back-ported from HEAD. The HBCI online banking is no longer based on the openhbci library but instead on the aqbanking library http://sf.net/projects/aqbanking which is Martin Preuss' successor of openhbci. This means that now aqbanking-0.9.5 is required instead of any openhbci package.") . "<br>";
+echo " o " . _("Fixes for x86_64") . "<br>";
+echo " o " . _("Update for new LibOfx, this among other things, gives gnucash Microsoft OFC support.") . "<br>";
+echo " o " . _("Duplicate match tweaks in import code") . "<br>";
+echo " o " . _("Andreas Rottmann's patch to support g-wrap 1.9.") . "<br>";
+echo " o " . _("provide a default account name so we don't crash when someone imports a broken QIF that has a !Account without an account name.") . "<br>";
+echo " o " . _("Daniel Lindenaar's patch to implement a check-box in the Invoice Post Dialog (with a default in the File Preferences) to choose to accumulate splits when posting an invoice, or post a 1:1 mapping.") . "<br>";
+echo " o " . _("Phil Longstaff's patch to prevent duplicate pricedb entries.") . "<br>";
+echo " o " . _("Heath Martin's x86_64 patch") . "<br>";
+echo " o " . _("Mark search criteria for translation -- somehow this had been missed all the time.") . "<br>";
+echo " o " . _("Change currency mnemonic for \"New Israeli Shekel\" from \"ILS\" to \"NIS\".") . "<br>";
+echo " o " . _("Identified and fixed several places with untranslated strings.") . "<br>";
+echo " o " . _("Add configure check for libofx version 0.7.0 and respective error message. Update docs.") . "<br>";
+echo " o " . _("Improve importer performance by matching imported transactions only against transactions in the proper time interval.") . "<br>";
+echo " o " . _("send an event when a payment is processed so the invoice gets updated as \"paid\" in the search window.") . "<br>";
+echo " o " . _("Make sure we set the proper search-type when we create the query, otherwise the search will fail later.");?><br>
+
+<br><br>
+<?php echo _("Available at the usual places!");?>
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
+</div></div>
+
+<div class="newsborder">
+<div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;
+<?php echo _("<b>DWI</b>:  Data With Interaction");?>
+<b>(2004-07-25 22:11:54)</b>
+</div><div class="newsinner">
+
+<p>
+<?php echo _("DWI, at <a href=\"http://dwi.sourceforge.net\"> http://dwi.sourceforge.net</a>, is a framework for simplifying the developement of data-driven SQL applications for the Gnome/Gtk GUI system.  DWI should be interesting to GnuCash developers for the following reason: DWI includes a simple Object-to-Relational Mapping (ORM) that is being integrated into <a href=\"http://qof.sourceforge.net\">QOF</a>, so as to form a full-featured QOF backend.  QOF is in turn the object system underlying GnuCash, so what this really means is that work is continuing on one of the core pieces of GnuCash.");?>
+<p>
+<?php echo _("DWI-0.6.0 includes a restructuring of teh makefile system to use automake, which makes DWI easy to install for the first time. This version also includes a new QOF integration layer, and several new QOF example programs.");?>
+</div></div>
+
+<div class="newsborder">
+<div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;
+<b><?php echo _("Convert GnuCash Data Files to QIF");?></b>
+<b>(2004-06-25 14:39:05)</b>
+</div><div class="newsinner">
+
+<?php echo _("If you have to convert all your GnuCash data to QIF, then try the <a href=\"http://gnucashtoqif.sourceforge.net/\">GnuCash to QIF</a> Java Applet.  It handles all GnuCash file formats from 1.6.0 onwards (excluding business features).");?>
+<a href="http://gnucashtoqif.sourceforge.net/">http://gnucashtoqif.sourceforge.net/</a>
+</div></div>
+
+<div class="newsborder">
+<div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;
+<b><?php echo _("Source Code Documentation");?></b> 
+<b>(2004-05-07 13:22:28)</b>
+</div><div class="newsinner">
+
+<?php echo _("A decent set of source code documentation can be generated by using <a href=\"http://www.stack.nl/~dimitri/doxygen/\">Doxygen</a>. We've cleaned up the core engine documentation <a href=\"https://cvs.gnucash.org/docs/HEAD/modules.html\"> and put it online</a>.  We hope you are sutably impressed.");?>
+<br><br>
+<?php echo _("(Note there are additional developer docs in plain text and in texinfo formats.  What's online are just the Doxygen docs generated from what's embedded in the source.)");?>
+<br><br>
+
+--linas
+</div></div>
+
+<div class="newsborder">
+<div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;
+<b><?php echo _("Gnome Time Tracker");?></b>
+<b>(2004-04-21&nbsp; &nbsp;04:58:00)</b>
+</div><div class="newsinner">
+
+<?php echo _("The Gnome Time Tracker is a to-do list/diary/journal tool that can track the amount of time spent on projects, and, among other things, generate reports and invoices based on that time. I've used it to keep shopping lists, organize ideas, track bug reports, keep a diary of activities, provide weekly status reports to management, and even as a consultant billing system.");?>
+<br><br>
+<?php echo _("Version 2.1.9 is now available; it fixes a number of bugs from 2.1.8 and earlier versions:");?>
+<ul>
+<li><?php echo _("Keyboard events were not resetting the timeout")?></li>
+<li><?php echo _("Fix Help system so that help actually starts up.");?></li>
+<li><?php echo _("Fix old, multiple scheme bugs affecting billing reports.");?></li>
+<li><?php echo _("Provides 'infinite undo' for cut projects.");?></li>
+<li><?php echo _("Keyboard cut (ctrl-x) fixed so that it cuts only if project window has focus.");?></li>
+<li><?php echo _("Can now specify day-of-week for the start of a new week. Also, end-of-day need not be midnight - its now configurable.");?></li>
+<li><?php echo _("Remove obsolete menu entries (clear daily counters)");?></li>
+<li><?php echo _("Fix flyover help on HTML reports");?></li>
+<li><?php echo _("Fix order of yesterday/today columns.");?></li>
+<li><?php echo _("Improve checks for Guile during builds");?></li>
+<li><?php echo _("New whiz-bang SQL for reports.");?></li>
+</ul>
+<?php echo _("The <a href=\"http://gttr.sourceforge.net\">GnoTime website is here</a> and is 
+<a href=\"http://www.linas.org/linux/gtt/gtt.html\">mirrored here</a>. Sources and CVS access is at the <a href=\"http://sourceforge.net/projects/gttr/\">sourceforge project site</a>. Most major distributions now carry GnoTime, so look to your distro first for a binary.");?>
+</div></div>
+
+<div class="newsborder">
+<div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;
+<?php echo _("<b>QOF-0.4.1:</b> The Query Object Framework");?>
+<b>(2004-04-21&nbsp; &nbsp;03:40:57)</b>
+</div><div class="newsinner">
+<?php echo _("Version 0.4.1 of QOF is now available. QOF allows C programmers to perform SQL searches on a collection of objects without having to use an SQL database to get the results.  This is nice in several ways: first, there's a lot of work needed to take a plain-old app and make it into a database app; QOF helps avoid that work. Secondly, even if one did have an SQL app, the query is happening at 'the wrong place': most programmers want to get back pointers to thier own objects, rather than lists of raw data from the database.  QOF solves this second problem very well, making it a lot easier for aps to include search and report abilities in their applications. QOF consists of a number of other features as well: basically, QOF consists of all of those parts of the GnuCash engine that aren't about accounting.");?>
+<br><br>
+<?php echo _("QOF-0.4.1 features several improvements over earlier versions:");?>
+<ul>
+<li><?php echo _("A real SQL parser.");?></li>
+<li><?php echo _("An example demo of using QOF with GLib GObjects (the example finds a particular Gtk Widget out of a collection).");?></li>
+<li><?php echo _("Support for pkg-config makes using QOF in your app just a little bit easier.");?></li>
+</ul>
+<a href="http://qof.sourceforge.net">qof.sourceforge.net</a>
+<br><br>
+
+--linas
+</div></div>
+
+<div class="newsborder">
+<div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;
+<b>gnucash-es Nueva lista de distribución en español.</b>
+<b>(2003-11-08&nbsp; &nbsp;00:32:31)</b>
+</div><div class="newsinner">
+
+Como respuesta a la creciente comunidad hispanoparlante de gnucash se ha
+creado la lista gnucash-es, cuyo objetivo es permitir el contacto entre
+usuarios, traductores y desarrolladores de GnuCash de habla hispana.
+<p>
+Para inscribirse a la lista visite la página 
+<a href="https://lists.gnucash.org/mailman/listinfo/gnucash-es">
+https://lists.gnucash.org/mailman/listinfo/gnucash-es
+</a>
+</div></div>
+
+<div class="newsborder">
+<div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;
+<b>gnucash-fr</b>:  nouvelle liste de diffusion en français
+<b>(2003-09-24&nbsp; &nbsp;21:44:46)</b>
+</div><div class="newsinner">
+<p>
+Vous avez essayé GnuCash. Cela vous plaît vraiment mais vous aimeriez
+obtenir de l'aide dans votre langue pour encore plus de simplicité pour
+pouvoir poser des questions et comprendre les réponses.
+Cette mailing liste est faite pour vous. Elle va permettre de rester en
+contact avec des personnes francophones utilisant GnuCash qui pourront vous
+guider dans son utilisation quotidienne aussi bien que pour une utilisation
+professionnelle. Elle permettra aussi aux personnes réfractaire à la langue
+de shakespeare de rester au courant des derniers développements du
+logiciels.
+Grâce a cela nous allons pouvoir améliorer l'internationalisation du
+logiciel, établir un réseau fiable d'utilisateurs francophone et ainsi faire
+progresser toute la communauté.
+
+</p>
+<p>
+Pour vous inscrire à la liste visitez la page suivante :
+<a href="https://lists.gnucash.org/mailman/listinfo/gnucash-fr">https://lists.gnucash.org/mailman/listinfo/gnucash-fr</a>
+</p>
+</div></div>
+
+<div class="newsborder">
+<div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;
+<b>gnucash-it</b>: nuova lista di distribuzione in italiano
+<b>(2003-09-23&nbsp; &nbsp;16:51:52)</b>
+</div><div class="newsinner">
+
+<p>
+GnuCash sta guadagnando sempre pi&ugrave; interesse anche da parte
+della realt&agrave; italiana. Per questo motivo si &egrave; deciso di
+creare una nuova lista di distribuzione, 
+<a href="http://www.gnucash.org/cgi-bin/mailman/listinfo/gnucash-it">gnucash-it</a>,
+tutta in italiano, al fine di permettere, in una prima fase, il
+coordinamento della localizzazione (l10n) ed internazionalizzazione
+(i18n) italiana del programma e, successivamente, la traduzione del
+sito. In questo modo si spera di ampliare ulteriormente la base degli
+utenti così da poter dar vita alla seconda fase di questo progetto:
+creare una nutrita comunità di utenti che siano in grado di aiutarsi
+reciprocamente.
+</p>
+<p>
+Per iscriversi alla lista, visitare la pagina
+<a href="https://lists.gnucash.org/mailman/listinfo/gnucash-it">https://lists.gnucash.org/mailman/listinfo/gnucash-it</a>
+</p>
+</div></div>
 
 <div class="newsborder">
 <div class="newsheader"><img alt="news panel" 
@@ -1096,136 +1388,72 @@ echo " o " . _("Lots more bugfixes") . "<br>";?>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Gnome Time Tracker</b>
+src="images/icons/document.txt.gif">&nbsp;<b><?php 
+echo _("Gnome Time Tracker");?></b>
  - <b>2002-12-27   16:54:56
 </b>
 </div><div class="newsinner">
 <br><br>
-GnoTime, the Gnome Time Tracker, is a to-do list
-manager.  It has a built in project timer to keep 
-track of the time spent on a project, and an invoicing
-system for billing time &amp; services.
-
-GnoTime is the Gnome2 port of GTT from the 
-gnome-utils package.  
-
-It now has its own dedicated
-<a href="http://gttr.sourceforge.net">
-web page</a> and 
-<a href="http://sourceforge.net/projects/gttr/">
-sourceforge project site</a>.
-<br><br>
-We are proud to announce the first 'stable'
-release of Gnotime: version 2.1.1.  It
-is available for download at the above sites.
-
-This version does everything that the 
-gnome-utils-1.4 version did, except that
-it has a few more features and a few less bugs.
-In particular, the crash problems that plagued
-the earlier version are now fixed.
+<?php echo _("GnoTime, the Gnome Time Tracker, is a to-do list manager. It has a built in project timer to keep track of the time spent on a project, and an invoicing system for billing time &amp; services. GnoTime is the Gnome2 port of GTT from the gnome-utils package. It now has its own dedicated <a href=\"http://gttr.sourceforge.net\">web page</a> and <a href=\"http://sourceforge.net/projects/gttr/\">sourceforge project site</a>.");
+echo "<br><br>\n";
+echo _("We are proud to announce the first 'stable' release of Gnotime: version 2.1.1. It is available for download at the above sites. This version does everything that the gnome-utils-1.4 version did, except that it has a few more features and a few less bugs. In particular, the crash problems that plagued the earlier version are now fixed.");?>
 
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.7.6 Release Candidate 1: "Santa's got a brand new bag"
- - <b>2002-12-23   12:14:14
+src="images/icons/document.txt.gif">&nbsp;<?php
+echo _("<b>Announcement:</b> GnuCash 1.7.6 Release Candidate 1: \"Santa's got a brand new bag\"");?> - <b>2002-12-23   12:14:14
 </b>
 </div><div class="newsinner">
-The GnuCash team is pleased to announce Release Candidate 1
-version 1.7.6: "Santa's got a brand new bag".<br><br>
-<b><big>What's New in GnuCash 1.7.6?</big></b><br>
+<?php echo _("The GnuCash team is pleased to announce Release Candidate 1 version 1.7.6: \"Santa's got a brand new bag\".");?><br><br>
+<b><big><?php echo _("What's New in GnuCash 1.7.6?");?></big></b><br>
 <br>
-<b>- Scheduled Transactions:</b> <br>
- GnuCash now has the ability to automatically create and
-enter transactions, remind<br>
- when a transaction is due, give a choice of entering a
-transaction or postponing it<br>
- and remove an automated transaction after a certain period.<br>
-<b>- Mortgage &amp; Loan Repayment Druid:</b><br>
- Used to setup a variable payment loan scheduled transaction.<br>
-<b>- Small Business Accounting Features: </b><br>
- GnuCash now can be used for Customer and Vendor tracking,
-Invoicing and Bill Payment,<br>
- and using different Tax and Billing Terms in a small business.<br>
-<b>- OFX Import:</b><br>
- GnuCash is the first free software application to support
-the Open Financial Exchange<br>
- protocol that many banks and financial services are moving
-to use. The development of<br>
- OFX and HBCI support has also resulted in an improved
-transaction matching system that<br>
- more accurately picks duplicate transactions.<br>
-<b>- HBCI Support:</b> <br>
- GnuCash is the first free software application to support
-the German Home Banking <br>
- Computer Information protocol which includes statement
-download, initiate bank <br>
- transfers and direct debits.<br>
-<b>- New User Manual and Help:</b><br>
- A brand new user help has been written which focuses on
-how to do tasks in <br>
- conjunction with a Tutorial and Concepts guide that gives
-the user background<br>
- information on using GnuCash.<br>
-<b>- New Multi-Currency Transaction Handling:</b><br>
- GnuCash no longer requires separate currency exchange
-accounts to handle multiple<br>
- currency transfers.<br>
-<b>- Redesigned Menu's</b><br>
- The GnuCash menu's have been redesigned to conform more
-with the new GNOME <br>
- Human Interface Guidelines.<br>
+<b>- <?php echo _("Scheduled Transactions");?>:</b> <br>
+<?php echo _("GnuCash now has the ability to automatically create and enter transactions, remind when a transaction is due, give a choice of entering a transaction or postponing it and remove an automated transaction after a certain period.");?>
+<b>- <?php echo _("Mortgage &amp; Loan Repayment Druid");?>:</b><br>
+<?php echo _(" Used to setup a variable payment loan scheduled transaction.");?><br>
+<b>- <?php echo _("Small Business Accounting Features");?>: </b><br>
+<?php echo _("GnuCash now can be used for Customer and Vendor tracking, Invoicing and Bill Payment, and using different Tax and Billing Terms in a small business.");?>
+<b>- <?php echo _("OFX Import");?>:</b><br>
+<?php echo _("GnuCash is the first free software application to support the Open Financial Exchange protocol that many banks and financial services are moving to use. The development of OFX and HBCI support has also resulted in an improved transaction matching system that more accurately picks duplicate transactions.");?><br>
+<b>- <?php echo _("HBCI Support");?>:</b> <br>
+<?php echo _("GnuCash is the first free software application to support the German Home Banking Computer Information protocol which includes statement download, initiate bank  transfers and direct debits.");?><br>
+<b>- <?php echo _("New User Manual and Help");?>:</b><br>
+<?php echo _("A brand new user help has been written which focuses on how to do tasks in  conjunction with a Tutorial and Concepts guide that gives the user background information on using GnuCash.");?><br>
+<b>- <?php echo _("New Multi-Currency Transaction Handling");?>:</b><br>
+<?php echo _("GnuCash no longer requires separate currency exchange accounts to handle multiple currency transfers.");?><br>
+<b>- <?php echo _("Redesigned Menus");?></b><br>
+<?php echo _("The GnuCash menu's have been redesigned to conform more with the new GNOME  Human Interface Guidelines.");?><br>
 <br>
-<big><b>Specifically updated in this version;</b></big><br>
-<br>
- o Welcome to Release Candidate 1<br>
- o Put the build date into the about box for development versions<br>
- o Deal with broken QIF files that give broken bang-fields. In
-   particular, handle the case where it supplies "!Type Bank"
-   instead of "!Type:Bank"<br>
- o Fix g-wrap test to fail properly if it cannot find g-wrap-config<br>
- o Add "Edit Exchange Rate" menu items to the Actions menu and the
-    context menu<br>
- o Fix the amount display so that the exchange dialog always shows the
-    "amount" in the the local (register) currency.<br>
- o Add an additional module to check for (LWP aka libwww-perl)
-    before attempting to call Finance::Quote.<br>
- o Updated translations, po/nl.po by Hendrik-Jan Heins &lt;hjh@passys.nl&gt;,
-    po/uk.po by Volodymyr M. Lisivka &lt;lvm@mystery.lviv.net&gt;, po/el.po,
-       accounts/el_GR by Nikos Charonitakis &lt;charosn@her.forthnet.gr&gt;<br>
- o Major update to generic import architecture/transaction matcher.<br>
- o Change HBCI to using new Transaction Matcher GUI<br>
- o Require openhbci 0.9.4 for HBCI version choosing.<br>
- o When not retrieving stock quotes for an account, dim the price
-    source labels as well as the option menus.<br>
- o Consolidate all knowledge about Finance::Quote sources into one
-    place. Functions to record whether or not F::Q is installed
-       properly, and if so, whether a particular source is available.<br>
- o Change default new SX frequency to monthly<br>
- o Filled in a long-thought of idea for a formula cell: can contain
-    text unlike a pricecell, but doesn't really want to do
-       auto-complete like a quickfill cell [what we had been using].  This
-          allows us to provide the gnome formula cell which can remap the
-	     keypad '.' character based on locale<br>
- o Disallow the deletion of accounts with ReadOnly Transacation in
-    them. You must first "delete" the RO Txns before you delete the
-       account.<br>
- o NOTE: As of now you ABSOLUTELY REQUIRE G-WRAP >= 1.3.3<br>
- o Loan Druid re-written<br>
- o Add menu items and code so a user can limit transactions in a
-    register to any combination of the
-       Reconciled/Cleared/Voided/Unreconciled states.<br>
- o Give user feedback during the rendering of a report.<br>
- o Remove old user docs and tools that are now in gnucash-docs<br>
- o Fix for large accounts overflowing the data types used in the
-    register code which are causing crashes.<br>
- o Add support for new GnuCash icon made by Jakub Steiner
-    &lt;jimmac@ximian.com&gt;<br>
- o Connect up help buttons in dialog's to help files<br>
- o Lots more bugfixes<br>
+<big><b><?php echo _("Specifically updated in this version");?>;</b></big><br>
+<br><?php
+echo " o " . _("Welcome to Release Candidate 1") . "<br>";
+echo " o " . _("Put the build date into the about box for development versions") . "<br>";
+echo " o " . _("Deal with broken QIF files that give broken bang-fields. In particular, handle the case where it supplies \"!Type Bank\" instead of \"!Type:Bank\"") . "<br>";
+echo " o " . _("Fix g-wrap test to fail properly if it cannot find g-wrap-config") . "<br>";
+echo " o " . _("Add \"Edit Exchange Rate\" menu items to the Actions menu and the context menu") . "<br>";
+echo " o " . _("Fix the amount display so that the exchange dialog always shows the \"amount\" in the the local (register) currency.") . "<br>";
+echo " o " . _("Add an additional module to check for (LWP aka libwww-perl) before attempting to call Finance::Quote.") . "<br>";
+echo " o " . _("Updated translations, po/nl.po by Hendrik-Jan Heins &lt;hjh@passys.nl&gt;,    po/uk.po by Volodymyr M. Lisivka &lt;lvm@mystery.lviv.net&gt;, po/el.po, accounts/el_GR by Nikos Charonitakis &lt;charosn@her.forthnet.gr&gt;") . "<br>";
+echo " o " . _("Major update to generic import architecture/transaction matcher.") . "<br>";
+echo " o " . _("Change HBCI to using new Transaction Matcher GUI") . "<br>";
+echo " o " . _("Require openhbci 0.9.4 for HBCI version choosing.") . "<br>";
+echo " o " . _("When not retrieving stock quotes for an account, dim the price source labels as well as the option menus.") . "<br>";
+echo " o " . _("Consolidate all knowledge about Finance::Quote sources into one place. Functions to record whether or not F::Q is installed properly, and if so, whether a particular source is available.") . "<br>";
+echo " o " . _("Change default new SX frequency to monthly") . "<br>";
+echo " o " . _("Filled in a long-thought of idea for a formula cell: can contain text unlike a pricecell, but doesn't really want to do auto-complete like a quickfill cell [what we had been using]. This allows us to provide the gnome formula cell which can remap the keypad '.' character based on locale") . "<br>";
+echo " o " . _("Disallow the deletion of accounts with ReadOnly Transacation in them. You must first \"delete\" the RO Txns before you delete the account.") . "<br>";
+echo " o " . _("NOTE: As of now you ABSOLUTELY REQUIRE G-WRAP >= 1.3.3") . "<br>";
+echo " o " . _("Loan Druid re-written") . "<br>";
+echo " o " . _("Add menu items and code so a user can limit transactions in a register to any combination of the Reconciled/Cleared/Voided/Unreconciled states.") . "<br>";
+echo " o " . _("Give user feedback during the rendering of a report.") . "<br>";
+echo " o " . _("Remove old user docs and tools that are now in gnucash-docs") . "<br>";
+echo " o " . _("Fix for large accounts overflowing the data types used in the register code which are causing crashes.") . "<br>";
+echo " o " . _("Add support for new GnuCash icon made by Jakub Steiner &lt;jimmac@ximian.com&gt;") . "<br>";
+echo " o " . _("Connect up help buttons in dialog's to help files") . "<br>";
+echo " o " . _("Lots more bugfixes") . "<br>";?>
 <br><br>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
@@ -1235,112 +1463,72 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Search Now Works! (Part Two)</b>
+src="images/icons/document.txt.gif">&nbsp;<b><?php 
+echo _("Search Now Works! (Part Two)");?></b>
  - <b>2002-12-18   00:12:23
 </b>
 </div><div class="newsinner">
 <br>
-The search feature has been fixed (again), and should now work.
-Unfortunately, the ranking/relevence of search results
-is not very good; we will be looking at other search engines
-to see if we can improve this.  If you know of any spiders/
-search engines with good ranking algorithms, so that e.g. they
-will return main site pages before mailing list archives, 
-and will rank mailing list archives by date as well as relevence,
-please let me know. 
+<?php echo _("The search feature has been fixed (again), and should now work. Unfortunately, the ranking/relevence of search results is not very good; we will be looking at other search engines to see if we can improve this.  If you know of any spiders/search engines with good ranking algorithms, so that e.g. they will return main site pages before mailing list archives, and will rank mailing list archives by date as well as relevence,please let me know. ");?>
 <a href="sendto:linas@linas.org">&lt;linas@linas.org&gt;</a>.
 
-</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Translators Needed!</B> 
+</div></div>
+
+<div class="newsborder"><div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;<B><?php
+echo _("Translators Needed!");?></B> 
  - <b>2002-12-17   20:00:41
 </b>
 </div><div class="newsinner">
 <BR><BR>
-The next stable release, 1.8.0, is rapidly approaching, and we need
-all language translators to update the message catalogs. 
-Version 1.8.0 will be based on the development versions 1.7.x,
-which contain many new features not in 1.6.x, and thus many
-new strings that need translation.
-If these translations are not brought up to date, version 1.8.0
-will come out with broken or missing translations for many languages.
-Now is really the best time to bring translations up to date.
+<?php echo _("The next stable release, 1.8.0, is rapidly approaching, and we need all language translators to update the message catalogs. Version 1.8.0 will be based on the development versions 1.7.x, which contain many new features not in 1.6.x, and thus many new strings that need translation. If these translations are not brought up to date, version 1.8.0 will come out with broken or missing translations for many languages. Now is really the best time to bring translations up to date.");?>
 
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Search Now Works!</b>
+src="images/icons/document.txt.gif">&nbsp;<b><?php echo _("Search Now Works!");?></b>
  - <b>2002-12-08   22:56:37
 </b>
 </div><div class="newsinner">
 <br>
-The search feature has been fixed, and should now work.
-Unfortunately, the ranking/relevence of search results
-is not very good; we will be looking at other search engines
-to see if we can improve this.  If you know of any spiders/
-search engines with good ranking algorithms, so that e.g. they
-will return main site pages before mailing list archives, 
-and will rank mailing list archives by date as well as relevence,
-please let me know. 
+<?php echo _("The search feature has been fixed, and should now work. Unfortunately, the ranking/relevence of search results is not very good; we will be looking at other search engines to see if we can improve this.  If you know of any spiders/search engines with good ranking algorithms, so that e.g. they will return main site pages before mailing list archives, and will rank mailing list archives by date as well as relevence, please let me know. ");?>
 <a href="sendto:linas@linas.org">&lt;linas@linas.org&gt;</a>.
 
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.7.5 beta: "Nowhere"
+src="images/icons/document.txt.gif">&nbsp;<b><?php
+echo _("Announcement:</b> GnuCash 1.7.5 beta: \"Nowhere\"");?>
  - <b>2002-12-03   10:09:32
 </b>
 </div><div class="newsinner">
 <br>
-The GnuCash team is pleased to announce the release of the beta
-version 1.7.5: "Nowhere".<br><br>
-<b><big>What's New in GnuCash 1.7.5?</big></b><br>
+<?php echo _("The GnuCash team is pleased to announce the release of the beta version 1.7.5: \"Nowhere\".");?><br><br>
+<b><big><?php echo _("What's New in GnuCash 1.7.5?");?></big></b><br>
 <br>
-<b>- Scheduled Transactions:</b> <br>
- GnuCash now has the ability to automatically create and
-enter transactions, remind<br>
- when a transaction is due, give a choice of entering a
-transaction or postponing it<br>
- and remove an automated transaction after a certain period.<br>
-<b>- Mortgage &amp; Loan Repayment Druid:</b><br>
- &nbsp;Used to setup a variable payment loan scheduled transaction.<br>
-<b>- Small Business Accounting Features: </b><br>
- GnuCash now can be used for Customer and Vendor tracking,
-Invoicing and Bill Payment,<br>
- and using different Tax and Billing Terms in a small business.<br>
-<b>- OFX Import:</b><br>
- GnuCash is the first free software application to support
-the Open Financial Exchange<br>
- protocol that many banks and financial services are moving
-to use. The development of<br>
- OFX and HBCI support has also resulted in an improved
-transaction matching system that<br>
-&nbsp; more accurately picks duplicate transactions.<br>
-<b>- HBCI Support:</b> <br>
- GnuCash is the first free software application to support
-the German Home Banking <br>
- Computer Information protocol which includes statement
-download, initiate bank <br>
- transfers and direct debits.<br>
-<b>- New User Manual and Help:</b><br>
- A brand new user help has been written which focuses on
-how to do tasks in <br>
- conjunction with a Tutorial and Concepts guide that gives
-the user background<br>
- information on using GnuCash.<br>
-<b>- New Multi-Currency Transaction Handling:</b><br>
- GnuCash no longer requires separate currency exchange
-accounts to handle multiple<br>
- currency transfers.<br>
-<b>- Redesigned Menu's</b><br>
- The GnuCash menu's have been redesigned to conform more
-with the new GNOME <br>
- Human Interface Guidelines.<br>
+<b>- <?php echo _("Scheduled Transactions");?>:</b> <br>
+<?php echo _("GnuCash now has the ability to automatically create and enter transactions, remind when a transaction is due, give a choice of entering a transaction or postponing it and remove an automated transaction after a certain period.") . "<br>";?>
+<b>- <?php echo _("Mortgage &amp; Loan Repayment Druid");?>:</b><br>
+<?php echo _("Used to setup a variable payment loan scheduled transaction."); ?><br>
+<b>- <?php echo _("Small Business Accounting Features");?>: </b><br>
+<?php echo _("GnuCash now can be used for Customer and Vendor tracking, Invoicing and Bill Payment, and using different Tax and Billing Terms in a small business.") . "<br>";?>
+<b>- <?php echo _("OFX Import");?>:</b><br>
+<?php echo _("GnuCash is the first free software application to support the Open Financial Exchange protocol that many banks and financial services are moving to use. The development of OFX and HBCI support has also resulted in an improved transaction matching system that more accurately picks duplicate transactions.");?><br>
+<b>- <?php echo _("HBCI Support");?>:</b> <br>
+<?php echo _("GnuCash is the first free software application to support the German Home Banking Computer Information protocol which includes statement download, initiate bank transfers and direct debits.");?> <br>
+<b>- <?php echo _("New User Manual and Help");?>:</b><br>
+<?php echo _("A brand new user help has been written which focuses on how to do tasks in conjunction with a Tutorial and Concepts guide that gives the user background information on using GnuCash.");?><br>
+<b>- <?php echo _("New Multi-Currency Transaction Handling");?>:</b><br>
+<?php echo _("GnuCash no longer requires separate currency exchange accounts to handle multiple currency transfers.");?><br>
+<b>- <?php echo _("Redesigned Menus");?></b><br>
+<?php echo _("The GnuCash menu's have been redesigned to conform more with the new GNOME  Human Interface Guidelines.");?><br>
 <br>
-<big><b>Specifically updated in this version;</b></big><br>
-<br>
-  o Third beta release<br>
-  o Fix for a possible corruption bug in 1.7.4 currency support<br>
+<big><b><?php echo _("Specifically updated in this version");?>;</b></big><br>
+<br><?php
+echo " o " . _("Third beta release") . "<br>";
+echo " o " . _("Fix for a possible corruption bug in 1.7.4 currency support") . "<br>";?>
 <br><br>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
@@ -1350,91 +1538,50 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.7.4 beta: "The water of life"
+src="images/icons/document.txt.gif">&nbsp;<b><?php
+echo _("Announcement:</b> GnuCash 1.7.4 beta: \"The water of life\"");?>
  - <b>2002-12-02   11:23:47
 </b>
 </div><div class="newsinner">
 <br>
-The GnuCash team is pleased to announce the release of the second beta
-version 1.7.4: "The water of life".<br><br>
-<b><big>What's New in GnuCash 1.7.4?</big></b><br>
+<?php echo _("The GnuCash team is pleased to announce the release of the second beta version 1.7.4: \"The water of life\".");?><br><br>
+<b><big><?php echo _("What's New in GnuCash 1.7.4?");?></big></b><br>
 <br>
-<b>- Scheduled Transactions:</b> <br>
- GnuCash now has the ability to automatically create and
-enter transactions, remind<br>
- when a transaction is due, give a choice of entering a
-transaction or postponing it<br>
- and remove an automated transaction after a certain period.<br>
-<b>- Mortgage &amp; Loan Repayment Druid:</b><br>
- Used to setup a variable payment loan scheduled transaction.<br>
-<b>- Small Business Accounting Features: </b><br>
- GnuCash now can be used for Customer and Vendor tracking,
-Invoicing and Bill Payment,<br>
- and using different Tax and Billing Terms in a small business.<br>
-<b>- OFX Import:</b><br>
- GnuCash is the first free software application to support
-the Open Financial Exchange<br>
- protocol that many banks and financial services are moving
-to use. The development of<br>
- OFX and HBCI support has also resulted in an improved
-transaction matching system that<br>
- more accurately picks duplicate transactions.<br>
-<b>- HBCI Support:</b> <br>
- GnuCash is the first free software application to support
-the German Home Banking <br>
-&nbsp; Computer Information protocol which includes statement
-download, initiate bank <br>
- transfers and direct debits.<br>
-<b>- New User Manual and Help:</b><br>
- A brand new user help has been written which focuses on
-how to do tasks in <br>
- conjunction with a Tutorial and Concepts guide that gives
-the user background<br>
- information on using GnuCash.<br>
-<b>- New Multi-Currency Transaction Handling:</b><br>
- GnuCash no longer requires separate currency exchange
-accounts to handle multiple<br>
- currency transfers.<br>
-<b>- Redesigned Menu's</b><br>
- The GnuCash menu's have been redesigned to conform more
-with the new GNOME <br>
- Human Interface Guidelines.<br>
+<b>- <?php echo _("Scheduled Transactions");?>:</b> <br>
+<?php echo _("GnuCash now has the ability to automatically create and enter transactions, remind when a transaction is due, give a choice of entering a transaction or postponing it and remove an automated transaction after a certain period.");?><br>
+<b>- <?php echo _("Mortgage &amp; Loan Repayment Druid");?>:</b><br>
+<?php echo _("Used to setup a variable payment loan scheduled transaction.");?><br>
+<b>- <?php echo _("Small Business Accounting Features");?>: </b><br>
+<?php echo _("GnuCash now can be used for Customer and Vendor tracking, Invoicing and Bill Payment, and using different Tax and Billing Terms in a small business.");?><br>
+<b>- <?php echo _("OFX Import");?>:</b><br>
+<?php echo _("GnuCash is the first free software application to support the Open Financial Exchange protocol that many banks and financial services are moving to use. The development of OFX and HBCI support has also resulted in an improved transaction matching system that more accurately picks duplicate transactions.");?><br>
+<b>- <?php echo _("HBCI Support");?>:</b> <br>
+<?php echo _("GnuCash is the first free software application to support the German Home Banking Computer Information protocol which includes statement download, initiate bank transfers and direct debits.");?><br>
+<b>- <?php echo _("New User Manual and Help");?>:</b><br>
+<?php echo _("A brand new user help has been written which focuses on how to do tasks in  conjunction with a Tutorial and Concepts guide that gives the user background information on using GnuCash.");?><br>
+<b>- <?php echo _("New Multi-Currency Transaction Handling");?>:</b><br>
+<?php echo _("GnuCash no longer requires separate currency exchange accounts to handle multiple currency transfers.");?><br>
+<b>- <?php echo _("Redesigned Menus");?></b><br>
+<?php echo _("The GnuCash menu's have been redesigned to conform more with the new GNOME  Human Interface Guidelines.");?><br>
 <br>
-<big><b>Specifically updated in this version;</b></big><br>
+<big><b><?php echo _("Specifically updated in this version");?>;</b></big><br>
 <br>
-&nbsp;&nbsp; &nbsp; o Second beta release<br>
-&nbsp;&nbsp; &nbsp; o Problems with importing 1.6 data files fixed<br>
-&nbsp;&nbsp; &nbsp; o Updates to generic transaction matching<br>
-&nbsp;&nbsp; &nbsp; o More postgres backend fixes<br>
-&nbsp;&nbsp; &nbsp; o New progress bar when making reports<br>
-&nbsp;&nbsp; &nbsp; o Payment schedule review page added to loan druid<br>
-&nbsp;&nbsp; &nbsp; o Fixes to multi-currency support<br>
-&nbsp;&nbsp; &nbsp; o Added Brazilian Portugese account templates by Lucimar
-Moresco<br>
-&nbsp;&nbsp; &nbsp; o Added doxygen documentation support, and integrated
-it into the<br>
-&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; build system. There is a new target, make
-doc, that can be used to<br>
-&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; build the documentation if you have doxygen
-installed.<br>
-&nbsp;&nbsp; &nbsp; o Catch the condition gracefully when OpenHBCI config
-file does not<br>
-&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; exist.<br>
-&nbsp;&nbsp; &nbsp; o Compute the implicit exchange rates for ALL transactions
-when<br>
-&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; necessary. No longer requires the pricedb
-for printing split values.<br>
-&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; This will display all transactions in the
-currency of the current<br>
-&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; account, regardless of the number of splits
-in the transaction.<br>
-&nbsp;&nbsp; &nbsp; o First pass at getting multi-currency transactions to
-work from the<br>
-&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; register.<br>
-&nbsp;&nbsp; &nbsp; o Lots more bugfixes
+<?php echo " o " . _("Second beta release") . "<br>";
+echo " o " . _("Problems with importing 1.6 data files fixed") . "<br>";
+echo " o " . _("Updates to generic transaction matching") . "<br>";
+echo " o " . _("More postgres backend fixes") . "<br>";
+echo " o " . _("New progress bar when making reports") . "<br>";
+echo " o " . _("Payment schedule review page added to loan druid") . "<br>";
+echo " o " . _("Fixes to multi-currency support") . "<br>";
+echo " o " . _("Added Brazilian Portugese account templates by Lucimar Moresco") . "<br>";
+echo " o " . _("Added doxygen documentation support, and integrated it into the build system. There is a new target, make doc, that can be used to build the documentation if you have doxygen installed.") . "<br>";
+echo " o " . _("Catch the condition gracefully when OpenHBCI config file does not exist.") . "<br>";
+echo " o " . _("Compute the implicit exchange rates for ALL transactions when necessary. No longer requires the pricedb for printing split values. This will display all transactions in the currency of the current account, regardless of the number of splits in the transaction.") . "<br>";
+echo " o " . _("First pass at getting multi-currency transactions to work from the register.") . "<br>";
+echo " o " . _("Lots more bugfixes");?>
 
 <br><br>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
@@ -1444,49 +1591,43 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>CVS Cleanup; Server Outage</b>
+src="images/icons/document.txt.gif">&nbsp;<b><?php 
+echo _("CVS Cleanup; Server Outage");?></b>
  - <b>2002-11-26   20:20:31
 </b>
 </div><div class="newsinner">
 <br>
-The CVS tree was pruned to remove some old and dead directories.  This 
-should improve cvs update times a little bit.  A historical archive is still
-available by checking out the source from a different repository: the
-"gnucash-archive" repository.
+<?php echo _("The CVS tree was pruned to remove some old and dead directories. This should improve cvs update times a little bit.  A historical archive is still available by checking out the source from a different repository: the \"gnucash-archive\" repository.");?>
 <br><br>
-The cvs server and the web site will be down for a few hours during the 
-evening of 27 November or morning ov 28 November, as the servers are 
-relocated to a new location.
+<?php echo _("The cvs server and the web site will be down for a few hours during the evening of 27 November or morning ov 28 November, as the servers are relocated to a new location.");?>
 
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.7.3 beta: "This rose is priceless"
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<b>Announcement:</b> GnuCash 1.7.3 beta: \"This rose is priceless\"");?>
  - <b>2002-11-18   09:20:06
 </b>
 </div><div class="newsinner">
-<p>The GnuCash team is pleased to announce the release of the first beta
-version 1.7.3: "This rose is priceless".
+<p><?php echo _("The GnuCash team is pleased to announce the release of the first beta version 1.7.3: \"This rose is priceless\".");?>
 </p>
 <ul>
-<li>New Features in this version!</li>
-<li>Improved libofx configure support.  Add --with-ofx-prefix so users can define where to look for libofx.</li>
-<li>Fixed missing OFX files in tarball.</li>
-<li>MAJOR improvement to OFX investment support.  All transactions created from an investment account are now already balanced. Explicitely support Dividend Reinvestment transactions which will now directly create a income account -> stock account transaction, and Income transactions which will directly create a income account -> cash account transaction. Support memorising the income account association. Several stock account can use the same income account if desired.</li>
-<li>Updated gnucash.spec file to work with rh8.</li>
-<li>Added new cashflow report contributed by Herbert Thoma.</li>
-<li>New functions to get/set read-only status on a transaction, and to print a warning message if a 
-transaction is read-only.</li>
-<li>Added a bunch of currencies.</li>
-<li>Updated translations (merged from 1.6 branch plus updates from the Translation Project).</li>
-<li>Matthew Vanecek added some bug fixes for the SQL back end.</li>
-<li>Add support for gtkhtml 1.1</li>
-<li>Added calculate the number of remaining payments based on the start date, loan length and current 
-date to Mortgage druid.</li>
-<li>Loads of bugfixes, keep those bugs coming!</li>
-<li>NOTE: Report bugs to bugzilla.gnome.org</li>
+<li><?php echo _("New Features in this version!");?></li>
+<li><?php echo _("Improved libofx configure support.  Add --with-ofx-prefix so users can define where to look for libofx.");?></li>
+<li><?php echo _("Fixed missing OFX files in tarball.");?></li>
+<li><?php echo _("MAJOR improvement to OFX investment support.  All transactions created from an investment account are now already balanced. Explicitely support Dividend Reinvestment transactions which will now directly create a income account -> stock account transaction, and Income transactions which will directly create a income account -> cash account transaction. Support memorising the income account association. Several stock account can use the same income account if desired.");?></li>
+<li><?php echo _("Updated gnucash.spec file to work with rh8.");?></li>
+<li><?php echo _("Added new cashflow report contributed by Herbert Thoma.");?></li>
+<li><?php echo _("New functions to get/set read-only status on a transaction, and to print a warning message if a transaction is read-only.");?></li>
+<li><?php echo _("Added a bunch of currencies.");?></li>
+<li><?php echo _("Updated translations (merged from 1.6 branch plus updates from the Translation Project).");?></li>
+<li><?php echo _("Matthew Vanecek added some bug fixes for the SQL back end.");?></li>
+<li><?php echo _("Add support for gtkhtml 1.1");?></li>
+<li><?php echo _("Added calculate the number of remaining payments based on the start date, loan length and current date to Mortgage druid.");?></li>
+<li><?php echo _("Loads of bugfixes, keep those bugs coming!");?></li>
+<li><?php echo _("NOTE: Report bugs to bugzilla.gnome.org");?></li>
 </ul><p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="http://www.gnucash.org/pub/gnucash/">www.gnucash.org</a></b>
@@ -1494,45 +1635,35 @@ Available at the usual places!
 <br><br>
 <b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
 </p>
-</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.7.2 alpha: "Antipodean Nightmare"
+</div></div>
+
+<div class="newsborder"><div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;<b><?php 
+echo _("Announcement:</b> GnuCash 1.7.2 alpha: \"Antipodean Nightmare\"");?>
  - <b>2002-10-28   13:50:59
 </b>
 </div><div class="newsinner">
-The GnuCash team is pleased to announce the release of the second alpha
-version 1.7.2: "Antipodean Nightmare".
-This release is the result of the development team working so hard the
-GnuCash developers topped the GNOME Summary commits list last week.
+<?php echo _("The GnuCash team is pleased to announce the release of the second alpha version 1.7.2: \"Antipodean Nightmare\". This release is the result of the development team working so hard the GnuCash developers topped the GNOME Summary commits list last week.");?>
 <ul>
-<li>New Features in this version!</li>
-<li>You can now search by reconcile flag for transactions</li>
-<li>Ability to set posted invoices and payments read-only in the small   
-business module.</li>
-<li>New commodity matcher for OFX generic import.</li>
-<li>Latest libofx is needed for OFX support</li>
-<li>Investment transactions now create two accounts, one is for the
-stock, the other is the account defined by the FI, where the
-cash is swapped.</li>
-<li>Updated glossary</li>
-<li>HBCI improvements to transaction retrieval</li>
-<li>Add Direct Debit HBCI action and add caching of the
-PIN to user preferences.</li>
-<li>HBCI suport requires OpenHBCI 0.9.3 or current OpenHBCI CVS</li>
-<li>Loads of bugfixes, keep those bugs coming!</li>
-<li>NOTE: Report bugs to bugzilla.gnome.org</li>
+<li><?php echo _("New Features in this version!");?></li>
+<li><?php echo _("You can now search by reconcile flag for transactions");?></li>
+<li><?php echo _("Ability to set posted invoices and payments read-only in the small business module.");?></li>
+<li><?php echo _("New commodity matcher for OFX generic import.");?></li>
+<li><?php echo _("Latest libofx is needed for OFX support");?></li>
+<li><?php echo _("Investment transactions now create two accounts, one is for the stock, the other is the account defined by the FI, where the cash is swapped.");?></li>
+<li><?php echo _("Updated glossary");?></li>
+<li><?php echo _("HBCI improvements to transaction retrieval");?></li>
+<li><?php echo _("Add Direct Debit HBCI action and add caching of the PIN to user preferences.");?></li>
+<li><?php echo _("HBCI suport requires OpenHBCI 0.9.3 or current OpenHBCI CVS");?></li>
+<li><?php echo _("Loads of bugfixes, keep those bugs coming!");?></li>
+<li><?php echo _("NOTE: Report bugs to bugzilla.gnome.org");?></li>
 </ul><p>
-This release features HBCI online banking support. This makes it the
-world's first *free* HBCI-enabled personal finance manager.
+<?php echo _("This release features HBCI online banking support. This makes it the world's first *free* HBCI-enabled personal finance manager.");?>
 </p><p>
-HBCI (Home Banking Computer Interface) is a standard used by German
-banks for offering online banking service. Through this standard,
-business actions like statement retrieval, bank transfer, or direct
-debits can be invoked by any HBCI-compliant client application, i.e. now
-also from GnuCash. Authentification and encryption is done through a
-bank-issued chip card or a self-generated file-based RSA key pair. (In
-the latter case, the user prints out his public key finger print on
-paper, signs it, and sends it to his bank.)
+<?php echo _("HBCI (Home Banking Computer Interface) is a standard used by German banks for offering online banking service. Through this standard, business actions like statement retrieval, bank transfer, or direct debits can be invoked by any HBCI-compliant client application, i.e. now also from GnuCash. Authentification and encryption is done through a bank-issued chip card or a self-generated file-based RSA key pair. (In the latter case, the user prints out his public key finger print on paper, signs it, and sends it to his bank.)");
+?>
 <br><br>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="http://www.gnucash.org/pub/gnucash/">www.gnucash.org</a></b>
@@ -1543,26 +1674,20 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.7.1 alpha release!
+src="images/icons/document.txt.gif">&nbsp;<b><?php 
+echo _("Announcement:</b> GnuCash 1.7.1 alpha release!");?>
  - <b>2002-10-14   22:11:04
 </b>
 </div><div class="newsinner">
-The GnuCash team is pleased to announce the release of alpha version
-1.7.1. This is the first release as we begin the journey to stable version
-1.8.0. We have lots of bugfixes and new features in this release and
-would like as much testing and bug reporting as possible.
-Please report problems to bugzilla.gnome.org. If you feel the need to
-speak to us or even just to encourage us to move forward on the next
-major version please either join the mailing list or come on irc.gnome.org 
-and chat with us in the #gnucash channel.
+<?php echo _("The GnuCash team is pleased to announce the release of alpha version 1.7.1. This is the first release as we begin the journey to stable version 1.8.0. We have lots of bugfixes and new features in this release and would like as much testing and bug reporting as possible. Please report problems to bugzilla.gnome.org. If you feel the need to speak to us or even just to encourage us to move forward on the next major version please either join the mailing list or come on irc.gnome.org and chat with us in the #gnucash channel.");?>
 <ul>
-<li>New Features in this version!</li>
-<li>Scheduled Transactions</li>
-<li>Small Business Customer and Vendor tracking and Invoicing</li>
-<li>OFX and HBCI (Germany) Support</li>
-<li>Improved Menu layout</li>
+<li><?php echo _("New Features in this version!");?></li>
+<li><?php echo _("Scheduled Transactions");?></li>
+<li><?php echo _("Small Business Customer and Vendor tracking and Invoicing");?></li>
+<li><?php echo _("OFX and HBCI (Germany) Support");?></li>
+<li><?php echo _("Improved Menu layout");?></li>
 </ul><p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="http://www.gnucash.org/pub/gnucash/">www.gnucash.org</a></b>
@@ -1573,24 +1698,18 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.6.8 stable release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<b>Announcement:</b> GnuCash 1.6.8 stable release!");?>
  - <b>2002-08-22   09:16:14
 </b>
 </div><div class="newsinner">
-The GnuCash team is pleased to announce the release of stable version
-1.6.8. This is to fix some minor bugs that prevented the last release
-being easy to compile from source. Please continue to report problems to
-our new module in bugzilla.gnome.org. As usual, if you feel the need to
-speak to us or even just to encourage us to move forward on the next
-major version please either join the mailing list
-or come on irc.gnome.org and chat
-with us in the #gnucash channel.
+<?php echo _("The GnuCash team is pleased to announce the release of stable version 1.6.8. This is to fix some minor bugs that prevented the last release being easy to compile from source. Please continue to report problems to our new module in bugzilla.gnome.org. As usual, if you feel the need to speak to us or even just to encourage us to move forward on the next major version please either join the mailing list or come on irc.gnome.org and chat with us in the #gnucash channel.");?>
 <ul>
-<li>Fix for acinclude.m4 problem with guile-config</li>
-<li>Removed rpm spec file depenedncy on Postgresql</li>
+<li><?php echo _("Fix for acinclude.m4 problem with guile-config");?></li>
+<li><?php echo _("Removed rpm spec file dependency on Postgresql");?></li>
 </ul>
 <p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
@@ -1600,31 +1719,26 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.6.7 stable release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<b>Announcement:</b> GnuCash 1.6.7 stable release!");?>
  - <b>2002-08-22   09:14:59
 </b>
 </div><div class="newsinner">
-The GnuCash team is pleased to announce the release of stable version
-1.6.7. This is mainly to fix some important bugs that have cropped up
-and add some additional translations to the stable series. Please
-continue to report problems to our new module in bugzilla.gnome.org. As
-usual, if you feel the need to speak to us or even just to encourage us
-to move forward on the next major version please either join the mailing
-list or come on irc.gnome.org
-and chat with us in the #gnucash channel<ul>
-<li>Updated or new translations for Japanese, Italian, Traditional Chinese, 
-Simplified Chinese, Russian, French, German, Swedish, Portuguese, Brasilian Portugese.</li>
-<li>Add French account hierarchy template.</li>
-<li>Back-ported fix for locale of new accounts.</li>
-<li>File permission fix.</li>
-<li>Changed "Opening Balances" to "Opening Balance" to unify the account name.</li>
-<li>Tweak for newer versions of db2html.</li>
-<li>Fix a common crash (Gnome Bug #78132 et. al.) caused by a dangling pointer reference.</li>
-<li>Add upper bounds checking on the versions of guile and g-wrap.</li>
-<li>Fix for guile-1.4.1 srfi problem.</li>
-<li>Added support for VWD as a quote source (Joachim Breitner).</li>
+<?php echo _("The GnuCash team is pleased to announce the release of stable version 1.6.7. This is mainly to fix some important bugs that have cropped up and add some additional translations to the stable series. Please continue to report problems to our new module in bugzilla.gnome.org. As usual, if you feel the need to speak to us or even just to encourage us to move forward on the next major version please either join the mailing list or come on irc.gnome.org and chat with us in the #gnucash channel");?>
+<ul>
+<li><?php echo _("Updated or new translations for Japanese, Italian, Traditional Chinese, Simplified Chinese, Russian, French, German, Swedish, Portuguese, Brasilian Portugese.");?>
+</li>
+<li><?php echo _("Add French account hierarchy template.");?></li>
+<li><?php echo _("Back-ported fix for locale of new accounts.");?></li>
+<li><?php echo _("File permission fix.");?></li>
+<li><?php echo _("Changed \"Opening Balances\" to \"Opening Balance\" to unify the account name.");?></li>
+<li><?php echo _("Tweak for newer versions of db2html.");?></li>
+<li><?php echo _("Fix a common crash (Gnome Bug #78132 et. al.) caused by a dangling pointer reference.");?></li>
+<li><?php echo _("Add upper bounds checking on the versions of guile and g-wrap.");?></li>
+<li><?php echo _("Fix for guile-1.4.1 srfi problem.");?></li>
+<li><?php echo _("Added support for VWD as a quote source (Joachim Breitner).");?></li>
 </ul><p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
@@ -1635,55 +1749,56 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>GnuCash Bugs now at the GNOME Bugzilla</B>
+src="images/icons/document.txt.gif">&nbsp;<B><?php 
+echo _("GnuCash Bugs now at the GNOME Bugzilla");?></B>
  - <b>2002-07-07   02:49:43
 </b>
 </div><div class="newsinner">
 <br>
-GnuCash has now moved its bug reporting system into the central GNOME bugzilla. This will give the GnuCash project the ability to receive bug reports generated by Bug Buddy as well as take advantage of the GNOME bug team in their overall administration of GNOME bugs.
+<?php echo _("GnuCash has now moved its bug reporting system into the central GNOME bugzilla. This will give the GnuCash project the ability to receive bug reports generated by Bug Buddy as well as take advantage of the GNOME bug team in their overall administration of GNOME bugs.");?>
 <br>
-If you wish to use the GNOME bug system to report a GnuCash bug please go to <a href="http://bugzilla.gnome.org">bugzilla.gnome.org</a> and use the forms there to enter your report.<br>
-You can also see a complete list of GnuCash bugs by following this link, <a href="http://bugzilla.gnome.org/buglist.cgi?product=GnuCash">"Complete"</a> and this link <a href="http://bugzilla.gnome.org/buglist.cgi?product=GnuCash&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;changedin=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=&amp;keywords_type=anywords&amp;op_sys_details=&amp;op_sys_details_type=substring&amp;version_details=&amp;version_details_type=substring&amp;cmdtype=doit&amp;namedcmd=nautilus-backgrounds&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time&amp;form_name=query">"Open"</a> if you wish to just see any open bugs.
-</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>New GnuCash features in development</B>
+<?php echo _("If you wish to use the GNOME bug system to report a GnuCash bug please go to <a href=\"http://bugzilla.gnome.org\">bugzilla.gnome.org</a> and use the forms there to enter your report.");?><br>
+<?php echo _("You can also see a complete list of GnuCash bugs by following this link, <a href=\"http://bugzilla.gnome.org/buglist.cgi?product=GnuCash\">\"Complete\"</a> and this link") . "<a href=\"http://bugzilla.gnome.org/buglist.cgi?product=GnuCash&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;changedin=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=&amp;keywords_type=anywords&amp;op_sys_details=&amp;op_sys_details_type=substring&amp;version_details=&amp;version_details_type=substring&amp;cmdtype=doit&amp;namedcmd=nautilus-backgrounds&amp;newqueryname=&amp;order=Reuse+same+sort+as+last+time&amp;form_name=query\">" . _("Open") . "</a>" . _("if you wish to just see any open bugs.");?>
+</div></div>
+
+<div class="newsborder"><div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;<B><?php 
+echo _("New GnuCash features in development");?></B>
  - <b>2002-06-20   07:55:41
 </b>
 </div><div class="newsinner">
 <br>
-The GnuCash team has been hard at work developing new requested features for 
-the next version of GnuCash which is slated for beta testing and release in the late summer and fall of 2002.
+<?php echo _("The GnuCash team has been hard at work developing new requested features for the next version of GnuCash which is slated for beta testing and release in the late summer and fall of 2002.");?>
 <br>
-New features;
+<?php echo _("New features");?>;
 <ul>
-<li>Small Business functions</li>
-<li>Scheduled Transactions</li>
-<li>OFX support</li>
-<li>Improved User Interface</li>
-<li>Updated Users Guide</li>
+<li><?php echo _("Small Business functions");?></li>
+<li><?php echo _("Scheduled Transactions");?></li>
+<li><?php echo _("OFX support");?></li>
+<li><?php echo _("Improved User Interface");?></li>
+<li><?php echo _("Updated Users Guide");?></li>
 </ul>
 
 <p>
-The development team would appreciate greatly any feedback from persons testing these 
-features by compiling the CVS version of GnuCash. You can either join us on 
-irc.gnome.org #gnucash or email the developers list gnucash-devel@gnucash.org
+<?php echo _("The development team would appreciate greatly any feedback from persons testing these features by compiling the CVS version of GnuCash. You can either join us on irc.gnome.org #gnucash or email the developers list gnucash-devel@gnucash.org");?>
 </p>
-</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.6.6 stable release!
+</div></div>
+
+<div class="newsborder"><div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<b>Announcement:</b> GnuCash 1.6.6 stable release!");?>
  - <b>2002-03-11   18:18:31
 </b>
 </div><div class="newsinner">
 <ul>
-<li>Updated or new translations for Dutch, Norwegian, Russian,
-	   Greek, French, German, Portuguese, Azerbaijani Turkic,
-	   	   and Slovak.</li>
-<li>Tweaked the exchange rate calculation so that it will work
-	   in even more complicated cases, involving different 
-	   	   Euroland and other currencies.</li>
-<li>Added Edit Report Options hyperlink to warnings in reports.</li>
-<li>Added workaround for Guppi barchart legend sorting
-	   (broken in Guppi 0.40.0 - 0.40.3)</li>
-<li>Bug fixes</li>
+<li><?php echo _("Updated or new translations for Dutch, Norwegian, Russian, Greek, French, German, Portuguese, Azerbaijani Turkic, and Slovak.");?></li>
+<li><?php echo _("Tweaked the exchange rate calculation so that it will work in even more complicated cases, involving different Euroland and other currencies.");?></li>
+<li><?php echo _("Added Edit Report Options hyperlink to warnings in reports.");?></li>
+<li><?php echo _("Added workaround for Guppi barchart legend sorting (broken in Guppi 0.40.0 - 0.40.3)");?></li>
+<li><?php echo _("Bug fixes");?></li>
 </ul>
 <p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
@@ -1693,19 +1808,18 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.6.5 stable release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<b>Announcement:</b> GnuCash 1.6.5 stable release!");?>
  - <b>2001-12-17   11:12:18
 </b>
 </div><div class="newsinner">
 <ul>
-<li>Euro conversion druid</li>
-<li>Updated or new translations for Brazilian Portuguese,
-           Danish, German, Nicaraguan Spanish, Norwegian, Portuguese,
-	              Slovak, Spanish, and Swedish</li>
-<li>minor bug fixes</li>
+<li><?php echo _("Euro conversion druid");?></li>
+<li><?php echo _("Updated or new translations for Brazilian Portuguese, Danish, German, Nicaraguan Spanish, Norwegian, Portuguese, Slovak, Spanish, and Swedish");?></li>
+<li><?php echo _("minor bug fixes");?></li>
 </ul>
 <p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
@@ -1715,18 +1829,16 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>GnomeChart 0.1</b>
+src="images/icons/document.txt.gif">&nbsp;<b><?php echo _("GnomeChart 0.1");?></b>
  - <b>2001-11-22   16:17:01
 </b>
 </div><div class="newsinner">
 <br><br>
-GnomeChart 0.1 is now available.
+<?php echo _("GnomeChart 0.1 is now available.");?>
 <br><br>
-GnomeChart is a small application for viewing stock charts.  It uses
-libguppi for the graphics, so you'll need to have Guppi 0.40.1 or
-better installed.
+<?php echo _("GnomeChart is a small application for viewing stock charts. It uses libguppi for the graphics, so you'll need to have Guppi 0.40.1 or better installed.");?>
 <br><br>
-You can download GnomeChart from:
+<?php echo _("You can download GnomeChart from:");?>
 <br><br>
 http://download.gnome.org/GNOME/unstable/sources/gnome-chart
 <br><br>
@@ -1734,15 +1846,16 @@ http://download.gnome.org/GNOME/unstable/sources/gnome-chart
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.6.4 stable release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<b>Announcement:</b> GnuCash 1.6.4 stable release!");?>
  - <b>2001-10-01   07:50:27
 </b>
 </div><div class="newsinner">
 <ul>
-<li>fix bug loading GnuCash 1.4 files</li>
+<li><?php echo _("fix bug loading GnuCash 1.4 files");?></li>
 </ul>
 <p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 <br><br>
 <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 
@@ -1751,21 +1864,22 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.6.3 stable release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<b>Announcement:</b> GnuCash 1.6.3 stable release!");?>
  - <b>2001-09-24   08:41:22
 </b>
 </div><div class="newsinner">
 <ul>
-<li>new Polish translation</li>
-<li>Danish and Spanish translation of new account files</li>
-<li>updated Swedish, German, and Portuguese translations</li>
-<li>child accounts can be reconciled with the parent</li>
-<li>support for TrustNet online quotes</li>
-<li>support for precious metal currencies</li>
-<li>bug fixes</li>
+<li><?php echo _("new Polish translation");?></li>
+<li><?php echo _("Danish and Spanish translation of new account files");?></li>
+<li><?php echo _("updated Swedish, German, and Portuguese translations");?></li>
+<li><?php echo _("child accounts can be reconciled with the parent");?></li>
+<li><?php echo _("support for TrustNet online quotes");?></li>
+<li><?php echo _("support for precious metal currencies");?></li>
+<li><?php echo _("bug fixes");?></li>
 </ul>
 <p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
@@ -1775,53 +1889,38 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Gnome Time Tracker</b>
+src="images/icons/document.txt.gif">&nbsp;<b><?php echo _("Gnome Time Tracker");?></b>
  - <b>2001-09-15   00:43:08
 </b>
 </div><div class="newsinner">
 <br><br>
-Screenshorts showing the latest version of the 
-Gnome Time Tracker have been put up at a 
-<a href="http://www.linas.org/linux/gtt/gtt.html">
-temporary web site</a>.  Voluneteers are needed
-to provide a module to export gtt billing data 
-into gnucash, as well as to update the gtt 
-documentation.
+<?php echo _("Screenshorts showing the latest version of the Gnome Time Tracker have been put up at a <a href=\"http://www.linas.org/linux/gtt/gtt.html\">temporary web site</a>. Volunteers are needed to provide a module to export gtt billing data into gnucash, as well as to update the gtt documentation.");?>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Final Survey Results</b>
+src="images/icons/document.txt.gif">&nbsp;<b><?php echo _("Final Survey Results");?></b>
  - <b>2001-09-07   00:42:42
 </b>
 </div><div class="newsinner">
 <br><br>
-The First Gnucash User/Features Survey is now closed.
-There were 828 survey respondents. 
-The responses and the averages changed almost not at all 
-from the early snapshot posted here earlier.
-The majority of respondants
-are home users interested in more home-user features.  You can view
-an executive summary and the detailed responses 
-<a href="/en/quiz-results.phtml">here</a>.  
-We hope to do a bit of data mining later, and present 
-a more detailed breakdown according to the types of users.
-Let us know if you have interest in this dataset.
+<?php echo _("The First Gnucash User/Features Survey is now closed. There were 828 survey respondents. The responses and the averages changed almost not at all from the early snapshot posted here earlier. The majority of respondants are home users interested in more home-user features. We hope to do a bit of data mining later, and present a more detailed breakdown according to the types of users. Let us know if you have interest in this dataset.");?>
 
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.6.2 stable release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<b>Announcement:</b> GnuCash 1.6.2 stable release!");?>
  - <b>2001-08-13   08:51:53
 </b>
 </div><div class="newsinner">
 <ul>
-<li>Updated Danish and German translations</li>
-<li>SQL backend performance improvements</li>
-<li>bug fixes</li>
+<li><?php echo _("Updated Danish and German translations");?></li>
+<li><?php echo _("SQL backend performance improvements");?></li>
+<li><?php echo _("bug fixes");?></li>
 </ul>
 
 <p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
@@ -1831,55 +1930,52 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Preliminary Survey Results</b>
+src="images/icons/document.txt.gif">&nbsp;<b><?php echo _("Preliminary Survey Results");?></b>
  - <b>2001-07-12   19:01:35
 </b>
 </div><div class="newsinner">
 <br><br>
-There have been 415 survey takers to-date. The majority of respondants
-are home users interested in more home-user features.  You can view
-an executive summary and the detailed responses 
-<a href="/en/quiz-results.phtml">here</a>.  The survey itself
-continues, and we hope to have a more detailed breakdown according
-to the types of users later.
-
+<?php echo _("There have been 415 survey takers to-date. The majority of respondants are home users interested in more home-user features.  The survey itself continues, and we hope to have a more detailed breakdown according to the types of users later.");?>
 
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>GnuCash Tutorial</B>
+src="images/icons/document.txt.gif">&nbsp;<B><?php echo _("GnuCash Tutorial");?></B>
  - <b>2001-07-12   02:21:18
 </b>
 </div><div class="newsinner">
 <br>
-Joseph Mack has created an online <a href="http://www.ncsysadmin.org/july2001/ncsa-gnucash-talk.html">tutorial</a> as part of a GnuCash talk given to the
-North Carolina Systems Administrators on July 11. The tutorial is about
-how to do small-business accounting using GnuCash.
-</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>RedHat 7.1 GnuCash Packages</b>
- - <b>2001-07-09   21:17:05
-</b>
-</div><div class="newsinner">
-RedHat 7.1 packages of GnuCash-1.6.1 for guile-1.3.4 are now available
-<a href="ftp://ftp.gnucash.org/pub/gnucash/redhat-7.x/">here</a>, courtesy of 
-Ben Stanley.
-
-<br><br>
-Thanks Ben!
+<?php echo _("Joseph Mack has created an online <a href=\"http://www.ncsysadmin.org/july2001/ncsa-gnucash-talk.html\">tutorial</a> as part of a GnuCash talk given to the North Carolina Systems Administrators on July 11. The tutorial is about how to do small-business accounting using GnuCash.");?>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.6.1 stable release!
+src="images/icons/document.txt.gif">&nbsp;<b><?php 
+echo _("RedHat 7.1 GnuCash Packages");?></b>
+ - <b>2001-07-09   21:17:05
+</b>
+</div><div class="newsinner">
+<?php echo _("RedHat 7.1 packages of GnuCash-1.6.1 for guile-1.3.4 are now available.");?>
+<a href="ftp://ftp.gnucash.org/pub/gnucash/redhat-7.x/"><?php echo _("Here");?></a>.
+<?php echo _("Courtesy of Ben Stanley.");?>
+
+<br><br>
+<?php echo _("Thanks Ben!");?>
+</div></div>
+
+<div class="newsborder"><div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<b>Announcement:</b> GnuCash 1.6.1 stable release!");?>
  - <b>2001-07-07   09:01:57
 </b>
 </div><div class="newsinner">
 <ul>
-<li>Updated documentation</li>
-<li>Updated French, German, Japanese, and Portuguese translations</li>
-<li>Improved startup time</li>
-<li>Many bug fixes</li>
+<li><?php echo _("Updated documentation");?></li>
+<li><?php echo _("Updated French, German, Japanese, and Portuguese translations");?></li>
+<li><?php echo _("Improved startup time");?></li>
+<li><?php echo _("Many bug fixes");?></li>
 </ul>
 <p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
@@ -1889,127 +1985,118 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Features Survey</b>
+src="images/icons/document.txt.gif">&nbsp;<b><?php echo _("Features Survey");?></b>
  - <b>2001-06-30   08:08:52
 </b>
 </div><div class="newsinner">
-Let us know what your opinions about the future of GnuCash.  There is a rather long,
-detailed survey that asks for your opinion about the future of GnuCash.  You can rate
-the importance of a big list of features and possible future directions for gnucash.
-You can <a href="/en/quiz.phtml"> take the survey</a>, or study up on our thoughts 
-for the possible future directions for GnuCash by reading the 
-<a href="/en/roadmap.phtml">roadmap</a>.
+<?php echo _("Let us know what your opinions about the future of GnuCash.  There is a rather long, detailed survey that asks for your opinion about the future of GnuCash.  You can rate the importance of a big list of features and possible future directions for gnucash. You can  take the survey, or study up on our thoughts for the possible future directions for GnuCash by reading the roadmap.");?>
 
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>SuSE 7.1 GnuCash Packages</b>
+src="images/icons/document.txt.gif">&nbsp;<b><?php 
+echo _("SuSE 7.1 GnuCash Packages");?></b>
  - <b>2001-06-27   16:09:19
 </b>
 </div><div class="newsinner">
-SuSE 7.1 packages for GnuCash-1.6.0, Guppi ad g-wrap are now available
-<a href="ftp://ftp.gnucash.org/pub/gnucash/suse-7.x/">here</a>, courtesy of 
-Stephan Kahnt.
+<?php echo _("SuSE 7.1 packages for GnuCash-1.6.0, Guppi ad g-wrap are now available.");?>
+<a href="ftp://ftp.gnucash.org/pub/gnucash/suse-7.x/"><?php echo _("here");?></a>.
+<?php echo _("Courtesy of Stephan Kahnt.");?>
 
 <br><br>
-Thanks Stephan!
+<?php echo _("Thanks Stephan!");?>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Yellowdog PowerPC GnuCash Packages</b>
+src="images/icons/document.txt.gif">&nbsp;<b><?php 
+echo _("Yellowdog PowerPC GnuCash Packages");?></b>
  - <b>2001-06-26   17:38:59
 </b>
 </div><div class="newsinner">
-Yellowdog PowerPC packages of GnuCash-1.6.0, Guppi ad g-wrap are now available
-<a href="ftp://ftp.gnucash.org/pub/gnucash/yellowdog-2.x/">here</a>, courtesy of 
-Martin Hill.
+<?php echo _("Yellowdog PowerPC packages of GnuCash-1.6.0, Guppi ad g-wrap are now available.");?>
+<a href="ftp://ftp.gnucash.org/pub/gnucash/yellowdog-2.x/"><?php echo _("here");?></a>.
+<?php echo _("Courtesy of Martin Hill.");?>
 
 <br><br>
-Thanks Martin!
+<?php echo _("Thanks Martin!");?>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Mandrake GnuCash packages</B>
+src="images/icons/document.txt.gif">&nbsp;<B><?php echo _("Mandrake GnuCash packages");?></B>
  - <b>2001-06-17   08:34:00
 </b>
 </div><div class="newsinner">
-A Mandrake 8 package of GnuCash 1.6.0 is now available
-<a href="ftp://ftp.gnucash.org/pub/gnucash/mandrake-8.x/gnucash-1.6.0-1.i586.rpm">here</a>, courtesy of Arnold Troeger.
-A mandrake version of guppi, required by gnucash, is in the same directory.
+<?php echo _("A Mandrake 8 package of GnuCash 1.6.0 is now available.");?>
+<a href="ftp://ftp.gnucash.org/pub/gnucash/mandrake-8.x/gnucash-1.6.0-1.i586.rpm"><?php 
+echo _("here");?></a>.
+<?php echo _("Courtesy of Arnold Troeger. A mandrake version of guppi, required by gnucash, is in the same directory.");?>
 
 <br><br>
-Thanks Arnold!
+<?php echo _("Thanks Arnold!");?>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>GnuCash T-Shirts!</b>
+src="images/icons/document.txt.gif">&nbsp;<b><?php echo _("GnuCash T-Shirts!");?></b>
  - <b>2001-06-15   05:00:31
 </b>
 </div><div class="newsinner">
 <br>
-We have a limited number of <a href="/en/t-shirt/">t-shirts 
-left over from a trade show</a>.  They're $15 a pop. 
-Show your colors!
+<?php echo _("We have a limited number of t-shirts left over from a trade show.  They're $15 a pop. Show your colors!");?>
 
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>New GnuCash packages</B>
+src="images/icons/document.txt.gif">&nbsp;<B><?php echo _("New GnuCash packages");?></B>
  - <b>2001-06-13   06:42:35
 </b>
 </div><div class="newsinner">
-A Solaris 8 package of GnuCash 1.6.0 is now available
-<a href="ftp://ftp.gnucash.org/pub/gnucash/solaris-8/GNUcash.1.6.0.Solaris.8.Sparc.pkg.gz">here</a>, courtesy of Alan Orndorff.
+<?php echo _("A Solaris 8 package of GnuCash 1.6.0 is now available.");?>
+<a href="ftp://ftp.gnucash.org/pub/gnucash/solaris-8/GNUcash.1.6.0.Solaris.8.Sparc.pkg.gz"><?php
+echo _("here");?></a>.
+<?php echo _("Courtesy of Alan Orndorff.");?>
 
 <br><br>
-A debian package of GnuCash 1.6.0 is now available
-<a href="gopher://quux.org/11/devel/debian/gnucash">here</a>,
-courtesy of John Goerzen.
+<?php echo _("A debian package of GnuCash 1.6.0 is now available.");?>
+<a href="gopher://quux.org/11/devel/debian/gnucash"><?php 
+echo _("here");?></a>.
+<?php echo _("Courtesy of John Goerzen.");?>
 
 <br><br>
-Thanks guys!
+<?php echo _("Thanks guys!");?>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Announcement:</b> GnuCash 1.6.0 stable release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<b>Announcement:</b> GnuCash 1.6.0 stable release!");?>
  - <b>2001-06-11   00:48:27
 </b>
 </div><div class="newsinner">
 <br>
-The GnuCash Development Team &lt;http://www.gnucash.org&gt; proudly
-announces the release of GnuCash 1.6.0, the GNU personal finance
-manager.
+<?php echo _("The GnuCash Development Team &lt;http://www.gnucash.org&gt; proudly announces the release of GnuCash 1.6.0, the GNU personal finance manager.");?>
 
 <br><br>
-GnuCash features an account hierarchy creation tool, a checkbook-like
-register GUI to enter transactions, and a full set of reports to
-visualize the state of your finances. The new release comes with a
-configurable main window, a much improved checking and general ledger
-entry window, and over ten completely new graphical reports including
-pie charts and bar charts using the GNU plot program 
+<?php echo _("GnuCash features an account hierarchy creation tool, a checkbook-like register GUI to enter transactions, and a full set of reports to visualize the state of your finances. The new release comes with a configurable main window, a much improved checking and general ledger entry window, and over ten completely new graphical reports including pie charts and bar charts using the GNU plot program ");?>
 <a href="http://www.gnome.org/guppi">Guppi</a>.
 
 <br><br>
-Thanks go to all the translators, testers, bug reporters, artists,
-and programmers who made this release possible. And thanks to all
-our users for choosing GnuCash!
+<?php echo _("Thanks go to all the translators, testers, bug reporters, artists, and programmers who made this release possible. And thanks to all our users for choosing GnuCash!");?>
 
 <br><br>
-The new release of GnuCash contains many new features including:
+<?php echo _("The new release of GnuCash contains many new features including:")?>
 
 <ul>
-<li>Printable, persistent reports (reports are saved between sessions)</li>
-<li>XML file format (old binary files are converted automatically)</li>
-<li>Account hierarchy creation druid, account hierarchy export</li>
-<li>Much improved QIF importing</li>
-<li>Financial calculator</li>
-<li>Better support for multiple currencies, special support for the Euro</li>
-<li>Online stock quotes integrated with the GUI</li>
-<li>Expression evaluation (you can type in 40.45 + 31.23)</li>
-<li>PostgreSQL back-end supports multiple simultaneous users (beta, disabled by default)</li>
-<li>Menus translated to 12 languages, users guide to 3 (French, Spanish, Portuguese)</li>
+<li><?php echo _("Printable, persistent reports (reports are saved between sessions)");?></li>
+<li><?php echo _("XML file format (old binary files are converted automatically)");?></li>
+<li><?php echo _("Account hierarchy creation druid, account hierarchy export");?></li>
+<li><?php echo _("Much improved QIF importing");?></li>
+<li><?php echo _("Financial calculator");?></li>
+<li><?php echo _("Better support for multiple currencies, special support for the Euro");?></li>
+<li><?php echo _("Online stock quotes integrated with the GUI");?></li>
+<li><?php echo _("Expression evaluation (you can type in 40.45 + 31.23)");?></li>
+<li><?php echo _("PostgreSQL back-end supports multiple simultaneous users (beta, disabled by default)");?></li>
+<li><?php echo _("Menus translated to 12 languages, users guide to 3 (French, Spanish, Portuguese)");?></li>
 </ul>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
@@ -2019,26 +2106,25 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.98 release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.5.98 release!");?>
  - <b>2001-06-05   01:13:07
 </b>
 </div><div class="newsinner">
 <BR><BR>
-<b>Note: this is an unstable development release and may be buggy!</b>  
-Most users should probably stick to version 1.4.12 for day-to-day use.  
-(All 1.5.x releases will be unstable/buggy. The next stable version 
-will be 1.6.0).
+<b><?php echo _("Note: this is an unstable development release and may be buggy!");?></b>  
+<?php echo _("Most users should probably stick to version 1.4.12 for day-to-day use.  (All 1.5.x releases will be unstable/buggy. The next stable version will be 1.6.0).");?>
 <BR><BR>
-This is a beta release. GnuCash is now in feature freeze for 1.6.0.
+<?php echo _("This is a beta release. GnuCash is now in feature freeze for 1.6.0.");?>
 <ul>
-<li>updated documentation (English &amp; Portuguese)</li>
-<li>updated German and Portuguese translations</li>
-<li>more work on sql backend</li>
-<li>fixes for FreeBSD</li>
-<li>bug fixes</li>
+<li><?php echo _("updated documentation (English &amp; Portuguese)");?></li>
+<li><?php echo _("updated German and Portuguese translations");?></li>
+<li><?php echo _("more work on sql backend");?></li>
+<li><?php echo _("fixes for FreeBSD");?></li>
+<li><?php echo _("bug fixes");?></li>
 </ul>
 
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
@@ -2046,261 +2132,238 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Translators Needed!</B> 
+src="images/icons/document.txt.gif">&nbsp;<B><?php echo _("Translators Needed!");?></B> 
  - <b>2001-05-31   15:55:25
 </b>
 </div><div class="newsinner">
 <BR><BR>
-The next stable release, 1.6.0, is rapidly approaching, and we need
-all language translators to update the message catalogs. 
-The translatable text strings in 1.5.x have been frozen, we don't 
-expect any new strings in 1.6.0.  However, the text strings in 
-the current 1.5.x are completely different from those in 1.4.12,
-and many new strings have been added since he earlier days of 1.5.x.
-If these translations are not brought up to date, version 1.6.0
-will come out with broken or missing translations for many languages.
-Now is really the best time to bring translations up to date.
+<?php echo _("The next stable release, 1.6.0, is rapidly approaching, and we need all language translators to update the message catalogs. The translatable text strings in 1.5.x have been frozen, we don't expect any new strings in 1.6.0.  However, the text strings in the current 1.5.x are completely different from those in 1.4.12, and many new strings have been added since he earlier days of 1.5.x. If these translations are not brought up to date, version 1.6.0 will come out with broken or missing translations for many languages. Now is really the best time to bring translations up to date.");?>
 
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.97 release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.5.97 release!");?>
  - <b>2001-05-28   08:41:20
 </b>
 </div><div class="newsinner">
 <BR><BR>
-<b>Note: this is an unstable development release and may be buggy!</b>  
-Most users should probably stick to version 1.4.10 for day-to-day use.  
-(All 1.5.x releases will be unstable/buggy. The next stable version 
-will be 1.6.0).
+<b><?php echo _("Note: this is an unstable development release and may be buggy!");?></b>  
+<?php echo _("Most users should probably stick to version 1.4.10 for day-to-day use. (All 1.5.x releases will be unstable/buggy. The next stable version will be 1.6.0).");?>
 <BR><BR>
-This is a beta release. GnuCash is now in feature freeze for 1.6.0.
+<?php echo _("This is a beta release. GnuCash is now in feature freeze for 1.6.0.");?>
 <ul>
-<li>updated documentation</li>
-<li>updated Norwegian and Portuguese translations</li>
-<li>prices now stored in sql backend</li>
-<li>bug fixes</li>
+<li><?php echo _("updated documentation");?></li>
+<li><?php echo _("updated Norwegian and Portuguese translations");?></li>
+<li><?php echo _("prices now stored in sql backend");?></li>
+<li><?php echo _("bug fixes");?></li>
 </ul>
 
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.96 release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.5.96 release!");?>
  - <b>2001-05-21   09:05:50
 </b>
 </div><div class="newsinner">
 <BR><BR>
-<b>Note: this is an unstable development release and may be buggy!</b>  
-Most users should probably stick to version 1.4.10 for day-to-day use.  
-(All 1.5.x releases will be unstable/buggy. The next stable version 
-will be 1.6.0).
+<b><?php echo _("Note: this is an unstable development release and may be buggy!");?></b>  
+<?php echo _("Most users should probably stick to version 1.4.10 for day-to-day use. (All 1.5.x releases will be unstable/buggy. The next stable version will be 1.6.0).");?>
 <BR><BR>
-This is an alpha release.
+<?php echo _("This is an alpha release.");?>
 <ul>
-<li>updated user documentation</li>
-<li>updated api documentation</li>
-<li>bug fixes</li>
+<li><?php echo _("updated user documentation");?></li>
+<li><?php echo _("updated api documentation");?></li>
+<li><?php echo _("bug fixes");?></li>
 </ul>
 
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.95 release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.5.95 release!");?>
  - <b>2001-05-14   03:35:04
 </b>
 </div><div class="newsinner">
 <BR><BR>
-<b>Note: this is an unstable development release and may be buggy!</b>  
-Most users should probably stick to version 1.4.10 for day-to-day use.  
-(All 1.5.x releases will be unstable/buggy. The next stable version 
-will be 1.6.0).
+<b><?php echo _("Note: this is an unstable development release and may be buggy!");?></b>  
+<?php echo _("Most users should probably stick to version 1.4.10 for day-to-day use. (All 1.5.x releases will be unstable/buggy. The next stable version will be 1.6.0).");?>
 <p>
-This is an alpha release and a string freeze release.
+<?php echo _("This is an alpha release and a string freeze release.");?>
 </p>
 <ul>
-<li>new user account hierarchy wizard</li>
-<li>account hierarchy export</li>
-<li>reporting improvements</li>
-<li>transfer dialog auto-completion</li>
-<li>many bug fixes</li>
+<li><?php echo _("new user account hierarchy wizard");?></li>
+<li><?php echo _("account hierarchy export");?></li>
+<li><?php echo _("reporting improvements");?></li>
+<li><?php echo _("transfer dialog auto-completion");?></li>
+<li><?php echo _("many bug fixes");?></li>
 </ul>
 <p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br><b><a href="http://www.linas.org/pub/gnucash/">(fast mirror)</a></b>
 <br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
 </p>
-</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>Server Move</b>
- - <b>2001-05-09   20:10:35
-</b>
-</div><div class="newsinner">
-There will be sporadic outages next week as the gnucash.org server
-is moved to a new location sometime next week.
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.12 release!
+src="images/icons/document.txt.gif">&nbsp;<b><?php echo _("Server Move");?></b>
+ - <b>2001-05-09   20:10:35
+</b>
+</div><div class="newsinner">
+<?php echo _("There will be sporadic outages next week as the gnucash.org server is moved to a new location sometime next week.");?>
+</div></div>
+
+<div class="newsborder"><div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.4.12 release!");?>
  - <b>2001-05-01   01:56:35
 </b>
 </div><div class="newsinner">
 <ul>
-<li>Turkish translation</li>
-<li>minor bug fix</li>
+<li><?php echo _("Turkish translation");?></li>
+<li><?php echo _("minor bug fix");?></li>
 </ul><p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>I18N: The GnuCash Portuguese Web Site Goes On-line!</B>
+src="images/icons/document.txt.gif">&nbsp;<B><?php 
+echo _("I18N: The GnuCash Portuguese Web Site Goes On-line!");?></B>
  - <b>2001-04-24   21:00:54
 </b>
 </div><div class="newsinner">
 <BR>
-The new <a href="/pt_PT/">Portuguese</a> website is up!
-Many thanks to Duarte Loreto for the fantastic job setting
-up the site, as well as for the translations of the GnuCash 
-menus <i>and</i> the documentation!  Outstanding job Duarte!
+<?php echo _("The new <a href=\"pt_PT/\">Portuguese</a> website is up! Many thanks to Duarte Loreto for the fantastic job setting up the site, as well as for the translations of the GnuCash menus <i>and</i> the documentation!  Outstanding job Duarte!");?>
 <BR>
 
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.6 release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.5.6 release!");?>
  - <b>2001-04-23   09:37:07
 </b>
 </div><div class="newsinner">
 <BR><BR>
-<b>Note: this is an unstable development release and may be buggy!</b>  
-Most users should probably stick to version 1.4.10 for day-to-day use.  
-(All 1.5.x releases will be unstable/buggy. The next stable version 
-will be 1.6.0).
+<b><?php echo _("Note: this is an unstable development release and may be buggy!");?></b>
+<?php echo _("Most users should probably stick to version 1.4.10 for day-to-day use. (All 1.5.x releases will be unstable/buggy. The next stable version will be 1.6.0).");?>
 <BR><BR>
-This is a feature freeze release.
+<?php echo _("This is a feature freeze release.");?>
 
 <ul>
-<li>reporting improvements</li>
-<li>many misc GUI improvements</li>
-<li>updated German and Portuguese translations</li>
-<li>fixes for Solaris</li>
-<li>bug fixes</li>
+<li><?php echo _("reporting improvements");?></li>
+<li><?php echo _("many misc GUI improvements");?></li>
+<li><?php echo _("updated German and Portuguese translations");?></li>
+<li><?php echo _("fixes for Solaris");?></li>
+<li><?php echo _("bug fixes");?></li>
 </ul>
 <p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
-<br><br><b><a href="http://www.linas.org/pub/gnucash/">(fast mirror)</a></b>
+<br><br><b><a href="http://www.linas.org/pub/gnucash/"><?php 
+echo _("(fast mirror)");?></a></b>
 <br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.5 release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.5.5 release!");?>
  - <b>2001-04-16   01:50:06
 </b>
 </div><div class="newsinner">
 <BR><BR>
-<b>Note: this is an unstable development release and may be buggy!</b>  
-Most users should probably stick to version 1.4.10 for day-to-day use.  
-(All 1.5.x releases will be unstable/buggy. The next stable version 
-will be 1.6.0).  
+<b><?php echo _("Note: this is an unstable development release and may be buggy!");?></b>
+<?php echo _("Most users should probably stick to version 1.4.10 for day-to-day use. (All 1.5.x releases will be unstable/buggy. The next stable version will be 1.6.0).");?>
 
 <ul>
-<li>more new &amp; improved reports</li>
-<li>use of gnome MDI for main window</li>
-<li>GUI improvements</li>
-<li>bug fixes</li>
+<li><?php echo _("more new &amp; improved reports");?></li>
+<li><?php echo _("use of gnome MDI for main window");?></li>
+<li><?php echo _("GUI improvements");?></li>
+<li><?php echo _("bug fixes");?></li>
 </ul>
 <p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
-<br><br><b><a href="http://www.linas.org/pub/gnucash/">(fast mirror)</a></b>
+<br><br><b><a href="http://www.linas.org/pub/gnucash/"><?php 
+echo _("(fast mirror)");?></a></b>
 <br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.4 release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.5.4 release!");?>
  - <b>2001-04-02   04:23:48
 </b>
 </div><div class="newsinner">
 <BR><BR>
-<b>Note: this is an unstable development release and may be buggy!</b>  
-Most users should probably stick to version 1.4.10 for day-to-day use.  
-(All 1.5.x releases will be unstable/buggy. The next stable version 
-will be 1.6.0).  
+<b><?php echo _("Note: this is an unstable development release and may be buggy!");?></b>
+<?php echo _("Most users should probably stick to version 1.4.10 for day-to-day use. (All 1.5.x releases will be unstable/buggy. The next stable version will be 1.6.0).");?>
 <ul>
-<li>several new &amp; improved reports/graphs</li>
-<li>online price quotes now work</li>
-<li>new main window display</li>
-<li>Spanish & Portuguese translations of the manual</li>
-<li>many bug fixes</li>
+<li><?php echo _("several new &amp; improved reports/graphs");?></li>
+<li><?php echo _("online price quotes now work");?></li>
+<li><?php echo _("new main window display");?></li>
+<li><?php echo _("Spanish &amp; Portuguese translations of the manual");?></li>
+<li><?php echo _("many bug fixes");?></li>
 </ul>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
-<br><br><b><a href="http://www.linas.org/pub/gnucash/">(fast mirror)</a></b>
+<br><br><b><a href="http://www.linas.org/pub/gnucash/"><?php 
+echo _("(fast mirror)");?></a></b>
 <br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;GnuCash Website Redesigned!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("GnuCash Website Redesigned!");?>
  - <b>2001-03-27   18:20:13
 </b>
 </div><div class="newsinner">
 <p>
-Jeremy Collins has 
-<a href="/en/">
-updated & modernized the GnuCash website 
-layout for a cleaner, fresher feel.</a>  
-Please test it out, and let us know about 
-any bugs, layout problems, dead links, etc.
+<?php echo _("Jeremy Collins has updated &amp; modernized the GnuCash website layout for a cleaner, fresher feel. Please test it out, and let us know about any bugs, layout problems, dead links, etc.");?>
 </p><p>
-Note also: we now have a full backup copy of 
-the French translation of the GnuCash site
-<a href="/fr/">hosted on this server</a>. 
-We are looking for volunteers to help 
-Yannick Le-Ny bring it in sync with the 
-new site layout.
+<?php echo _("Note also: we now have a full backup copy of the French translation of the GnuCash site <a href=\"/fr/\">hosted on this server</a>. We are looking for volunteers to help Yannick Le-Ny bring it in sync with the new site layout.");?>
 </p>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Five Stars!</b> -- Editors Choice
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<b>Five Stars!</b> -- Editors Choice");?>
  - <b>2001-03-27   00:46:19
 </b>
 </div><div class="newsinner">
-Five stars and the editors' choice award is what GnuCash-1.4.8
-received in the December 2000 edition of Maximum Linux France.
-Hurrah!  We've scanned in the article: read it 
-<a href="/press-archive/maximum-linux-2000-12/p1.jpg">here, page 1</a>,
-<a href="/press-archive/maximum-linux-2000-12/p2.jpg">page 2</a>,
-<a href="/press-archive/maximum-linux-2000-12/p3.jpg">page 3</a>,
-<a href="/press-archive/maximum-linux-2000-12/p4.jpg">page 4</a>.
+<?php echo _("Five stars and the editors' choice award is what GnuCash-1.4.8 received in the December 2000 edition of Maximum Linux France. Hurrah!");?>
 <br><br>
 
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.11 release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.4.11 release!");?>
  - <b>2001-03-19   01:22:12
 </b>
 </div><div class="newsinner">
 <ul>
-<li>Brazilian Portuguese, Danish, Norwegian, and Ukranian translations</li>
-<li>bug fixes</li>
+<li><?php echo _("Brazilian Portuguese, Danish, Norwegian, and Ukranian translations");?></li>
+<li><?php echo _("bug fixes");?></li>
 </ul><p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
@@ -2308,66 +2371,63 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.3 release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.5.3 release!");?>
  - <b>2001-02-27   02:28:45
 </b>
 </div><div class="newsinner">
 <BR><BR>
-<b>Note: this is an unstable development release and may be buggy!</b>  
-Most users should probably stick to version 1.4.10 for day-to-day use.  
-(All 1.5.x releases will be unstable/buggy. The next stable version 
-will be 1.6.0).  
+<b><?php echo _("Note: this is an unstable development release and may be buggy!");?></b>
+<?php echo _("Most users should probably stick to version 1.4.10 for day-to-day use. (All 1.5.x releases will be unstable/buggy. The next stable version will be 1.6.0).");?>
 <ul>
-<li>new XML file format</li>
-<li>better support for importing qifs from online banks</li>
-<li>improved checking register</li>
-<li>support for charts & graphs</li>
-<li>financial calculator</li>
-<li>new user account hierarchy wizard</li>
-<li>many UI improvements</li>
-<li>beta support for postgresql -- see src/engine/sql/README</li>
+<li><?php echo _("new XML file format");?></li>
+<li><?php echo _("better support for importing qifs from online banks");?></li>
+<li><?php echo _("improved checking register");?></li>
+<li><?php echo _("support for charts &amp; graphs");?></li>
+<li><?php echo _("financial calculator");?></li>
+<li><?php echo _("new user account hierarchy wizard");?></li>
+<li><?php echo _("many UI improvements");?></li>
+<li><?php echo _("beta support for postgresql -- see src/engine/sql/README");?></li>
 </ul>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
-<br><br><b><a href="http://www.linas.org/pub/gnucash/">(fast mirror)</a></b>
+<br><br><b><a href="http://www.linas.org/pub/gnucash/"><?php 
+echo _("(fast mirror)");?></a></b>
 <br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;CVS snapshots 
+src="images/icons/document.txt.gif">&nbsp;<?php echo _("CVS snapshots");?>
  - <b>2001-02-26   08:16:15
 </b>
 </div><div class="newsinner">
 <p>
-CVS snapshots with tarballs and RPMs for Redhat 6.x and 7.x
-are now available on ftp.gnucash.org. Thanks to Chris Lyttle
-for making these available!
+<?php echo _("CVS snapshots with tarballs and RPMs for Redhat 6.x and 7.x are now available on ftp.gnucash.org. Thanks to Chris Lyttle for making these available!");?>
 </p>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>CVS server failure</b>
+src="images/icons/document.txt.gif">&nbsp;<b><?php echo _("CVS server failure");?></b>
  - <b>2001-02-19   22:07:51
 </b>
 </div><div class="newsinner">
-The CVS server has fallen off the net because the 
-DSL line to the CVS server has a shorting clip on it somewhere.
-We are waiting for Southwestern Bell (SBC) technicians to remove 
-the clip.   This is the second time in 4 months that SBC has 
-sabotaged the line.  Estimated up time: 2 or 3 days.  In the meanwhile, 
-please study up on CVSUP.
-</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.10 release!
+<?php echo _("The CVS server has fallen off the net because the DSL line to the CVS server has a shorting clip on it somewhere. We are waiting for Southwestern Bell (SBC) technicians to remove the clip.  This is the second time in 4 months that SBC has sabotaged the line.  Estimated up time: 2 or 3 days.  In the meanwhile, please study up on CVSUP.");?>
+</div></div>
+
+<div class="newsborder"><div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.4.10 release!");?>
  - <b>2001-01-29   21:19:45
 </b>
 </div><div class="newsinner">
 <ul>
-<li>updated translations</li>
-<li>support for Greek Drachma as Euro currency</li>
-<li>updated tax report</li>
-<li>bug fixes</li>
+<li><?php echo _("updated translations");?></li>
+<li><?php echo _("support for Greek Drachma as Euro currency");?></li>
+<li><?php echo _("updated tax report");?></li>
+<li><?php echo _("bug fixes");?></li>
 </ul><p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
@@ -2375,123 +2435,104 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;Beta Screenshots
+src="images/icons/document.txt.gif">&nbsp;<?php echo _("Beta Screenshots");?>
  - <b>2001-01-18   21:50:41
 </b>
 </div><div class="newsinner">
 <p>
-<a href="/gnome-1.5-screenshots.php3">Screenshots</a> from the unstable 
-development version of gnucash are now online!
+<?php 
+echo _("Screenshots from the unstable development version of gnucash are now online!");
+?>
 </p>
-</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;g-wrap RPMS
+</div></div>
+
+<div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<?php echo _("g-wrap RPMS");?>
  - <b>2000-12-29   06:44:00
 </b>
 </div><div class="newsinner">
 <p>
-RPMS for g-wrap-1.1.4 for Redhat-6.2 are now available on the ftp 
-site.  <b>NOTE:</b>This version of g-wrap can only be used to build the 
-gnucash-1.5.x series.  You <b>MUST</b> use the older, g-wrap-0.9.x 
-for building gnucash-1.4.x
+<?php echo _("RPMS for g-wrap-1.1.4 for Redhat-6.2 are now available on the ftp site.  <b>NOTE:</b>This version of g-wrap can only be used to build the gnucash-1.5.x series.  You <b>MUST</b> use the older, g-wrap-0.9.x for building gnucash-1.4.x");?>
 </p>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Links page updated</b>
+src="images/icons/document.txt.gif">&nbsp;<b><?php echo _("Links page updated");?></b>
  - <b>2000-12-13   00:37:59
 </b>
 </div><div class="newsinner">
-The '<a href="links.php3">links</a>' page has been updated with
-a wealth of new links to stock-tracking tools, business accounting 
-packages (including our favorite, 
-<a href="http://www.gnue.org">GnuE</a>), and XML format standards.
-We didn't get around to listing any of the competitors to gnucash, 
-mostly because we got lazy. 
+<?php echo _("The links page has been updated with a wealth of new links to stock-tracking tools, business accounting packages (including our favorite, GnuE), and XML format standards. We didn't get around to listing any of the competitors to gnucash, mostly because we got lazy.");?>
 
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.9 release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.4.9 release!");?>
  - <b>2000-12-06   06:56:07
 </b>
 </div><div class="newsinner">
 <ul>
-<li>tax report</li>
-<li>txf export</li>
-<li>bug fixes</li>
+<li><?php echo _("tax report");?></li>
+<li><?php echo _("txf export");?></li>
+<li><?php echo _("bug fixes");?></li>
 </ul><p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;IRC #gnucash
+src="images/icons/document.txt.gif">&nbsp;<?php echo _("IRC #gnucash");?>
  - <b>2000-11-21   02:16:18
 </b>
 </div><div class="newsinner">
 <p>
-Email got you down?  Tired of leaving a bit-trail on 
-your hard drive that your boss, the IRS, the CIA or the NSA 
-use against you?  Or do you merely want to flame the gnucash
-developers in the most ephemeral possible way?  Then IRC
-is for you: check out <b>#gnucash at irc.gnome.org</b>, where
-the conversations are monitored only by the gnucash developers.
+<?php echo _("Email got you down?  Tired of leaving a bit-trail on your hard drive that your boss, the IRS, the CIA or the NSA use against you?  Or do you merely want to flame the gnucash developers in the most ephemeral possible way?  Then IRC is for you: check out <b>#gnucash at irc.gnome.org</b>, where the conversations are monitored only by the gnucash developers.");?>
 </p>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Overview diagrams</b>
+src="images/icons/document.txt.gif">&nbsp;<b><?php echo _("Overview diagrams");?></b>
  - <b>2000-10-30   07:54:20
 </b>
 </div><div class="newsinner">
-Of interest to current & future GnuCash developers might be two
-overview diagrams: the
-<a href="images/diagrams/components.png"><b> system block diagram</b></a> 
-which shows the arrangement of the major components, and the 
-<a href="images/diagrams/structures.png"><b> accounting structures</b></a>
-diagram, which shows the relationships between accounts, transactions, 
-splits and currencies.  Both of these diagrams are linked from the
-<a href="architecture.php3"><b>architecture overview</b></a> page.
+<?php echo _("Of interest to current &amp; future GnuCash developers might be two overview diagrams: the <b> system block diagram</b> which shows the arrangement of the major components, and the <b> accounting structures</b> diagram, which shows the relationships between accounts, transactions, splits and currencies.  Both of these diagrams are linked from the <b>architecture overview</b> page.");?>
 
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>CVS back up</b>
+src="images/icons/document.txt.gif">&nbsp;<b><?php echo _("CVS back up");?></b>
  - <b>2000-10-27   15:14:54
 </b>
 </div><div class="newsinner">
-CVS is back up.  The problem was
-due to SBC/SWBT 'backhoe fade' (actually, a technician
-with wireclippers and something against Covad).  
-DSL is great when it works, but when its down, its a 
-nightmare to restore service: there are an incredible number 
-of layers that get involved with line testing.
+<?php echo _("CVS is back up.  The problem was due to SBC/SWBT 'backhoe fade' (actually, a technician with wireclippers and something against Covad). DSL is great when it works, but when its down, its a nightmare to restore service: there are an incredible number of layers that get involved with line testing.");?>
 
-</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.8 release!
+</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.4.8 release!");?>
  - <b>2000-10-23   00:53:53
 </b>
 </div><div class="newsinner">
 <ul>
-<li>bug fixes</li>
+<li><?php echo _("bug fixes");?></li>
 </ul><p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.7 release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.4.7 release!");?>
  - <b>2000-10-02   11:35:31
 </b>
 </div><div class="newsinner">
 <ul>
-<li>updated translations</li>
-<li>updated documentation</li>
-<li>a few bug fixes</li>
+<li><?php echo _("updated translations");?></li>
+<li><?php echo _("updated documentation");?></li>
+<li><?php echo _("a few bug fixes");?></li>
 </ul><p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
@@ -2499,42 +2540,40 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.2 release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.5.2 release!");?>
  - <b>2000-09-26   06:25:16
 </b>
 </div><div class="newsinner">
 <br><BR>
-<b>Note: this is an unstable development release and may be buggy!</b>  
-Most users should probably stick to version 1.4.6 for day-to-day use.  
-(All 1.5.x releases will be unstable/buggy. The next stable version 
-will be 2.0.0).  
+<b><?php echo _("Note: this is an unstable development release and may be buggy!");?></b>
+<?php echo _("Most users should probably stick to version 1.4.6 for day-to-day use. (All 1.5.x releases will be unstable/buggy. The next stable version will be 2.0.0).");?>
 <ul>
-<li>fixes for Solaris</li>
-<li>fixes for gnome-print 0.23</li>
-<li>misc bug fixes</li>
+<li><?php echo _("fixes for Solaris");?></li>
+<li><?php echo _("fixes for gnome-print 0.23");?></li>
+<li><?php echo _("misc bug fixes");?></li>
 </ul>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.1 release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.5.1 release!");?>
  - <b>2000-09-18   19:13:26
 </b>
 </div><div class="newsinner">
 <br><br>
-<b>Note: this is an unstable development release and may be buggy!</b>  
-  Most users should probably stick to version 1.4.6 for day-to-day use.  
-  (All 1.5.x releases will be unstable/buggy. The next stable version 
-will be 2.0.0).  
+<b><?php echo _("Note: this is an unstable development release and may be buggy!");?></b>
+<?php echo _("Most users should probably stick to version 1.4.6 for day-to-day use. (All 1.5.x releases will be unstable/buggy. The next stable version will be 2.0.0).");?>
 <ul>
-<li>New translations</li>
-<li>Updated documentation</li>
-<li>Lots of bug fixes</li>
+<li><?php echo _("New translations");?></li>
+<li><?php echo _("Updated documentation");?></li>
+<li><?php echo _("Lots of bug fixes");?></li>
 </ul>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br>
 <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
@@ -2543,130 +2582,128 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.6 release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.4.6 release!");?>
  - <b>2000-09-11   10:42:14
 </b>
 </div><div class="newsinner">
 <ul>
-<li>New Spanish translation.</li>
-<li>Several bug fixes.</li>
+<li><?php echo _("New Spanish translation.");?></li>
+<li><?php echo _("Several bug fixes.");?></li>
 </ul><p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.5 release!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.4.5 release!");?>
  - <b>2000-08-29   05:36:01
 </b>
 </div><div class="newsinner">
 <ul>
-<li>A few bug fixes.</li>
+<li><?php echo _("A few bug fixes.");?></li>
 </ul><p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash has a Corporate Backer!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash has a Corporate Backer!");?>
  - <b>2000-08-14   08:16:00
 </b>
 </div><div class="newsinner">
 <BR><BR>
-<a href="http://www.gnumatic.com">Gnumatic Incorporated</a> 
- is pleased to announce its formal support for GnuCash!
- Gnumatic is a company that was created expressly to 
- further develop and enhance GnuCash, to broaden its 
- availability, and to provide formal, for-fee support
- to customers that need a strong corporate backer.
+<?php echo _("<a href=\"http://www.gnumatic.com\">Gnumatic Incorporated</a> is pleased to announce its formal support for GnuCash! Gnumatic is a company that was created expressly to  further develop and enhance GnuCash, to broaden its availability, and to provide formal, for-fee support to customers that need a strong corporate backer.");?>
  <br><br>
- Who's Gnumatic, you may ask?  Well, some of the voices
- you already know from the mailing list are a part of 
- Gnumatic: rlb, grib, dave@krondo, rgmerk, linas, and,
- hopefully, soon, others. 
+<?php echo _("Who's Gnumatic, you may ask?  Well, some of the voices you already know from the mailing list are a part of Gnumatic: rlb, grib, dave@krondo, rgmerk, linas, and, hopefully, soon, others.");?>
  <br><br>
- What does corporate support mean?  Well, we hope that
- it means only positive things: more features, more 
- functions, faster and with less bugs.  We hope that
- it means that GnuCash will have a rosy long-term 
- future to become the premier accounting package on 
- Linux.  We hope that it establishes the GPL as the
- only viable long-term licensing model for desktop 
- software.  And finally, we hope that GnuCash can 
- spin off and excite a number of
- projects that will further enhance the state of 
- financial software on Linux.
+<?php echo _("What does corporate support mean?  Well, we hope that it means only positive things: more features, more functions, faster and with less bugs.  We hope that it means that GnuCash will have a rosy long-term  future to become the premier accounting package on  Linux. We hope that it establishes the GPL as the only viable long-term licensing model for desktop software. And finally, we hope that GnuCash can spin off and excite a number of
+ projects that will further enhance the state of financial software on Linux.");?>
  <br><br>
- We're pretty excited, and we hope that you will be too!
+<?php echo _("We're pretty excited, and we hope that you will be too!");?>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.4 release! 
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.4.4 release!");?>
  - <b>2000-08-14   04:40:00
 </b>
 </div><div class="newsinner">
 <ul>
-<li>new Russian translation</li>
-<li>a few bug fixes</li>
+<li><?php echo _("new Russian translation");?></li>
+<li><?php echo _("a few bug fixes");?></li>
 </ul><p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
-<br><br><b><a href="http://www.linas.org/pub/gnucash/">HTTP download</a></b>
-<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">FTP download</a></b>
+<br><br><b><a href="http://www.linas.org/pub/gnucash/"><?php 
+echo _("HTTP download");?></a></b>
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/"><?php 
+echo _("FTP download");?></a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.3 release! 
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.4.3 release!");?>
  - <b>2000-07-27   19:02:27
 </b>
 </div><div class="newsinner">
 <ul>
-<li>fix for stock quotes from the London exchange</li>
-<li>updated French translation</li>
-<li>a few bug fixes</li>
+<li><?php echo _("fix for stock quotes from the London exchange");?></li>
+<li><?php echo _("updated French translation");?></li>
+<li><?php echo _("a few bug fixes");?></li>
 </ul><p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
-<br><br><b><a href="http://www.linas.org/pub/gnucash/">HTTP download</a></b>
-<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">FTP download</a></b>
+<br><br><b><a href="http://www.linas.org/pub/gnucash/"><?php 
+echo _("HTTP download");?></a></b>
+<br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/"><?php 
+echo _("FTP download");?></a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Information:</B> Version Numbers<br><br>
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Information:</B> Version Numbers");?><br><br>
  - <b>2000-07-15   21:07:21
 </b>
 </div><div class="newsinner">
-Please be aware that the 1.5 series of GnuCash is a
-<em> development</em> release. This means you can expect instabilities and dependency problems as we add features and use newer libraries.  If you just want to use GnuCash and not worry about having the latest features and bugs, you should use the 1.4 series.
-</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash has a booth at COMDEX Toronto.
+<?php echo _("Please be aware that the 1.5 series of GnuCash is a <em> development</em> release. This means you can expect instabilities and dependency problems as we add features and use newer libraries.  If you just want to use GnuCash and not worry about having the latest features and bugs, you should use the 1.4 series.");?>
+</div></div>
+
+<div class="newsborder"><div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash has a booth at COMDEX Toronto.");?>
  - <b>2000-07-12   17:43:49
 </b>
 </div><div class="newsinner">
 <br><br>
-The GnuCash project has a booth at COMDEX Toronto, graciously donated by LinuxMall, and Linas, Bill, and Rob (rlb), are there.  If you're in the area, come by and visit.
+<?php echo _("The GnuCash project has a booth at COMDEX Toronto, graciously donated by LinuxMall, and Linas, Bill, and Rob (rlb), are there.  If you're in the area, come by and visit.");?>
 
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash for Solaris<br><br>
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash for Solaris");?><br><br>
  - <b>2000-07-12   07:44:21
 </b>
 </div><div class="newsinner">
-You can obtain a Solaris package for GnuCash 1.4.2 from &nbsp;
-<b><a href="ftp://ftp.gnucash.org/pub/gnucash/gnucash/solaris-8">ftp.gnucash.org</a></b> and <b><a href="ftp://ftp.krondo.com">ftp.krondo.com</a></b>.<br>
-This package was created by Alan Orndorff and contains all the needed libraries
-(that's why it's so big).
+<?php echo _("You can obtain a Solaris package for GnuCash 1.4.2 from");?>
+<b><a href="ftp://ftp.gnucash.org/pub/gnucash/gnucash/solaris-8">ftp.gnucash.org</a></b> <?php 
+echo _("and");?>
+<b><a href="ftp://ftp.krondo.com">ftp.krondo.com</a></b>.<br>
+<?php echo _("This package was created by Alan Orndorff and contains all the needed libraries
+(that's why it's so big).");?>
 
 <br><br>
 
-Charles Gagnon has also created Solaris packages for GnuCash, for both
-&nbsp; the stable and development series. They are available at
+<?php echo _("Charles Gagnon has also created Solaris packages for GnuCash, for both the stable and development series. They are available at");?>
 <b><a href="http://www.unixrealm.com/downloads/"> www.unixrealm.com/downloads</a></b>.
 
 <br><br>
@@ -2675,80 +2712,85 @@ Enjoy!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> Alternative download sites<br><br>
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> Alternative download sites");?><br><br>
  - <b>2000-07-11   07:53:26
 </b>
 </div><div class="newsinner">
-You can download the latest gnucash releases from &nbsp;
+<?php echo _("You can download the latest gnucash releases from ");?>
 <b><a href="ftp://ftp.krondo.com">ftp.krondo.com</a></b>.<br><br>
 
-Mandrake users can download a Mandrake rpm from Mandrake Cooker sites.
+<?php echo _("Mandrake users can download a Mandrake rpm from Mandrake Cooker sites.");?>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.5.0 release! 
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.5.0 release!");?>
  - <b>2000-07-10   19:08:25
 </b>
 </div><div class="newsinner">
 <ul>
-<li>switch to using the gtkhtml widget</li>
-<li>all the fixes in 1.4.2</li>
+<li><?php echo _("switch to using the gtkhtml widget");?></li>
+<li><?php echo _("all the fixes in 1.4.2");?></li>
 </ul><p>
-This release requires the gnome-print and gtkhtml libraries.<br>
+<?php echo _("This release requires the gnome-print and gtkhtml libraries.");?><br>
 
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.2 release! 
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.4.2 release!");?>
  - <b>2000-07-10   19:03:02
 </b>
 </div><div class="newsinner">
 <ul>
-<li>updated French translations</li>
-<li>improved qif importing</li>
-<li>fix for g-wrap 0.9.4</li>
-<li>misc bug fixes</li>
+<li><?php echo _("updated French translations");?></li>
+<li><?php echo _("improved qif importing");?></li>
+<li><?php echo _("fix for g-wrap 0.9.4");?></li>
+<li><?php echo _("misc bug fixes");?></li>
 </ul>
 <p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash services are migrating.
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash services are migrating.");?>
  - <b>2000-07-09   21:18:05
 </b>
 </div><div class="newsinner">
-<BR><BR> The GnuCash web, ftp, and mail services are migrating to a new home.  This may cause some temporary inconveniences.  Please bear with us.
+<BR><BR><?php echo _("The GnuCash web, ftp, and mail services are migrating to a new home.  This may cause some temporary inconveniences.  Please bear with us.");?>
 
 <BR><BR>
-In the interim, ftp service should be available at <a href="ftp://ftp.gnucash.net/">ftp://ftp.gnucash.net/</a>, and web services should be available from <a href="ftp://www.gnucash.net/">ftp://www.gnucash.net/</a>.
+<?php echo _("In the interim, ftp service should be available at <a href=\"ftp://ftp.gnucash.net/\">ftp://ftp.gnucash.net/</a>, and web services should be available from <a href=\"ftp://www.gnucash.net/\">ftp://www.gnucash.net/</a>.");?>
 
-<BR><BR> Things should be back to normal in a week or so, once DNS finishes propagating.
+<BR><BR><?php echo _("Things should be back to normal in a week or so, once DNS finishes propagating.");?>
 
 <BR><BR>
-Thanks
+<?php echo _("Thanks");?>
 
 
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.1 release! 
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.4.1 release!");?>
  - <b>2000-06-26   13:08:51
 </b>
 </div><div class="newsinner">
 <ul>
-<li>translations are loaded correctly</li>
-<li>improved qif importing</li>
-<li>bug fixes</li>
+<li><?php echo _("translations are loaded correctly");?></li>
+<li><?php echo _("improved qif importing");?></li>
+<li><?php echo _("bug fixes");?></li>
 </ul><p>
-Available at the usual places! 
+<?php echo _("Available at the usual places!");?>
 
 <br><br><b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 <br><br><b><a href="http://download.sourceforge.net/gnucash/">download.sourceforge.net/gnucash</a></b>
@@ -2756,391 +2798,398 @@ Available at the usual places!
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.4.0 is released!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.4.0 is released!");?>
  - <b>2000-06-20   03:33:56
 </b>
 </div><div class="newsinner">
 <BR><BR>
-The GnuCash developers are proud to announce GnuCash 1.4.  This new stable release marks the transition from Motif to GNOME.
+<?php echo _("The GnuCash developers are proud to announce GnuCash 1.4.  This new stable release marks the transition from Motif to GNOME.");?>
 <BR><BR>
-Some of the many new and improved features include:
+<?php echo _("Some of the many new and improved features include:");?>
 <BR><BR>
 <ul>
-<li>Totally revamped interface, customizable from within the GUI.
-<li>This includes transaction auto-completion.
-<li>New reporting system, including several new reports and much improved existing ones.
-<li>Internationalisation.
+<li><?php echo _("Totally revamped interface, customizable from within the GUI.");?></li>
+<li><?php echo _("This includes transaction auto-completion.");?></li>
+<li><?php echo _("New reporting system, including several new reports and much improved existing ones.");?></li>
+<li><?php echo _("Internationalisation.");?></li>
 </ul>
 <br>
-You can download this release from 
+<?php echo _("You can download this release from ");?>
 <BR><BR>
 <a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp://ftp.gnucash.org/pub/gnucash/</a>
 <BR><BR>
-or, alternatively, you can try the Sourceforge mirror:
+<?php echo _("or, alternatively, you can try the Sourceforge mirror:");?>
 <BR><BR>
 <a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash/</a>
 <BR><BR>
-Please read the README before compiling GnuCash, as there are several other packages that must be installed first.
+<?php echo _("Please read the README before compiling GnuCash, as there are several other packages that must be installed first.");?>
 <BR><BR>
-We hope you enjoy the new release.
+<?php echo _("We hope you enjoy the new release.");?>
 <BR><BR>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash moves closer to stability with 1.3.100 release! 
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash moves closer to stability with 1.3.100 release!");?>
  - <b>2000-06-12   13:18:50
 </b>
 </div><div class="newsinner">
 <ul>
-<li>bug fixes</li>
-<li>updated documentation</li>
-<li>updated translations</li>
+<li><?php echo _("bug fixes");?></li>
+<li><?php echo _("updated documentation");?></li>
+<li><?php echo _("updated translations");?></li>
 </ul><p>
-Please note that the RPM does not contain the checking printing feature.  You will have
-to compile it yourself.
+<?php echo _("Please note that the RPM does not contain the check printing feature.  You will have to compile it yourself.");?>
 
 <BR><BR>
-This release is the last in the 1.3 development series.
+<?php echo _("This release is the last in the 1.3 development series.");?>
 
 <BR><BR>
-Available at the usual place! <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<?php echo _("Available at the usual place!");?>
+<b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash moves closer to stability with 1.3.99 release! 
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash moves closer to stability with 1.3.99 release!");?>
  - <b>2000-06-05   12:19:55
 </b>
 </div><div class="newsinner">
 <ul>
-<li>transaction auto-completion</li> 
-<li>improved qif importing</li>
-<li>fixes for 64-bit architectures</li>
-<li>updated translations</li>
-<li>automaked build system</li>
-<li>bug fixes and ui improvements</li>
+<li><?php echo _("transaction auto-completion");?></li> 
+<li><?php echo _("improved qif importing");?></li>
+<li><?php echo _("fixes for 64-bit architectures");?></li>
+<li><?php echo _("updated translations");?></li>
+<li><?php echo _("automaked build system");?></li>
+<li><?php echo _("bug fixes and ui improvements");?></li>
 </ul><p>
-Please note that the RPM does not contain the checking printing feature.  You will have
-to compile it yourself.
+<?php echo _("Please note that the RPM does not contain the check printing feature.  You will have to compile it yourself.");?>
 
 <BR><BR>
-This release is one of (and maybe) the last in the 1.3 development series.
+<?php echo _("This release is one of (and maybe) the last in the 1.3 development series.");?>
 
 <BR><BR>
-Available at the usual place! <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<?php echo _("Available at the usual place!");?>
+<b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Mailing Lists</B>
+src="images/icons/document.txt.gif">&nbsp;<B><?php echo _("Mailing Lists");?></B>
  - <b>2000-05-26   13:07:41
 </b>
 </div><div class="newsinner">
- Due to recent switch of the servers that house the mailing lists many people seem to have
- been unsubscribed, or resubscribed to the lists.  Please just take the appropriate action
- by unsubscribing, or resubscribing.  Sorry for the inconvience.
+<?php echo _("Due to recent switch of the servers that house the mailing lists many people seem to have been unsubscribed, or resubscribed to the lists.  Please just take the appropriate action by unsubscribing, or resubscribing.  Sorry for the inconvience.");?>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.3.8 Released!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.3.8 Released!");?>
  - <b>2000-05-26   13:05:16
 </b>
 </div><div class="newsinner">
 <ul>
-<li>transaction cut/copy/paste</li>
-<li>new Japanese translations</li>
-<li>user interface improvements</li>
-<li>bug fixes</li>
+<li><?php echo _("transaction cut/copy/paste");?></li>
+<li><?php echo _("new Japanese translations");?></li>
+<li><?php echo _("user interface improvements");?></li>
+<li><?php echo _("bug fixes");?></li>
 </ul><p>
-Please note that the RPM does not contain the checking printing feature.  You will have
-to compile it yourself.
+<?php echo _("Please note that the RPM does not contain the check printing feature.  You will have to compile it yourself.");?>
 
 <BR><BR>
-Available at the usual place! <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
->
+<?php echo _("Available at the usual place!");?>
+<b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.3.7 Released!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.3.7 Released!");?>
  - <b>2000-05-08   10:20:53
 </b>
 </div><div class="newsinner">
 <ul>
-<li>better printing of multiple currencies</li>
-<li>user interface improvements</li>
-<li>bug fixes</li>
+<li><?php echo _("better printing of multiple currencies");?></li>
+<li><?php echo _("user interface improvements");?></li>
+<li><?php echo _("bug fixes");?></li>
 </ul>
 <p>
-Please note that the RPM does not contain the checking printing feature.  You will have
-to compile it yourself.
+<?php echo _("Please note that the RPM does not contain the check printing feature.  You will have to compile it yourself.");?>
 
 <BR><BR>
-Available at the usual place! <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
-
+<?php echo _("Available at the usual place!");?>
+<b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>LWN review</b>
+src="images/icons/document.txt.gif">&nbsp;<b><?php echo _("LWN review");?></b>
  - <b>2000-05-06   02:42:40
 </b>
 </div><div class="newsinner">
-LWN gave GNUcash another whirl after visiting our booth at Comdex.  Read
- what that had to say!
+<?php echo _("LWN gave GNUcash another whirl after visiting our booth at Comdex.  Read what that had to say!");?>
 <BR><BR>
-<a href="http://www.lwn.net/2000/0504/devel.phtml">Another look at Gnucash</a>
+<a href="http://www.lwn.net/2000/0504/devel.phtml"><?php 
+echo _("Another look at Gnucash");?></a>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.3.4 Released!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.3.4 Released!");?>
  - <b>2000-04-27   07:16:48
 </b>
 </div><div class="newsinner">
 <ul>
-<li>alpha code for check printing (requires gnome-print)</li>
-<li>more i18n of reports</li>
-<li>auto check numbering</li>
-<li>bug fixes and GUI improvements</li>
+<li><?php echo _("alpha code for check printing (requires gnome-print)");?></li>
+<li><?php echo _("more i18n of reports");?></li>
+<li><?php echo _("auto check numbering");?></li>
+<li><?php echo _("bug fixes and GUI improvements");?></li>
 </ul>
 
 <p>
-Please note that the RPM does not contain the checking printing feature.  
-You will have
-to compile it yourself.
+<?php echo _("Please note that the RPM does not contain the check printing feature.  
+You will have to compile it yourself.");?>
 </p>
 <p>
-Available at the usual place! <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<?php echo _("Available at the usual place!");?>
+<b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.3.6 Released!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.3.6 Released!");?>
  - <b>2000-04-27   07:16:47
 </b>
 </div><div class="newsinner">
 <ul>
-<li>transaction finder dialog</li>
-<li>even better qif importing</li>
-<li>some support for the euro</li>
-<li>bug fixes</li>
+<li><?php echo _("transaction finder dialog");?></li>
+<li><?php echo _("even better qif importing");?></li>
+<li><?php echo _("some support for the euro");?></li>
+<li><?php echo _("bug fixes");?></li>
 </ul>
 <p>
-Please note that the RPM does not contain the checking printing feature.  
-You will have
-to compile it yourself.
+<?php echo _("Please note that the RPM does not contain the check printing feature. You will have to compile it yourself.");?>
 </p>
 <p>
-Available at the usual place! 
+<?php echo _("Available at the usual place!");?>
 <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.3.5 Released!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.3.5 Released!");?>
  - <b>2000-04-27   07:16:47
 </b>
 </div><div class="newsinner">
 <ul>
-<li>more work on reports and check-printing</li>
-<li>fixes to qif importing</li>
-<li>misc bug fixes</li>
+<li><?php echo _("more work on reports and check-printing");?></li>
+<li><?php echo _("fixes to qif importing");?></li>
+<li><?php echo _("misc bug fixes");?></li>
 </ul>
 <p>
-Please note that the RPM does not contain the checking printing feature.  
-You will have
-to compile it yourself.
+<?php echo _("Please note that the RPM does not contain the check printing feature. You will have to compile it yourself.");?>
 </p>
 <p>
-Available at the usual place! 
+<?php echo _("Available at the usual place!");?>
 <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
-
-
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.3.2 Released!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.3.2 Released!");?>
  - <b>2000-04-27   07:16:47
 </b>
 </div><div class="newsinner">
 <ul>
-<li>new French and German translations</li>
-<li>new French documentation</li>
-<li>speed and other improvements in the register</li>
-<li>more work on reports</li>
+<li><?php echo _("new French and German translations");?></li>
+<li><?php echo _("new French documentation");?></li>
+<li><?php echo _("speed and other improvements in the register");?></li>
+<li><?php echo _("more work on reports");?></li>
 </ul>
 <p>
-Available at the usual place! <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<?php echo _("Available at the usual place!");?>
+<b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 </p>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Update:</b> Archives are up to date.
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<b>Update:</b> Archives are up to date.");?>
  - <b>2000-04-27   07:16:46
 </b>
 </div><div class="newsinner">
-They are automatically updated again every night.<BR><BR>
-We also added a new list, gnucash-patches@gnucash.org.  This list is strictly for posting patches to Gnucash.
+<?php echo _("They are automatically updated again every night.");?><BR><BR>
+<?php echo _("We also added a new list, gnucash-patches@gnucash.org.  This list is strictly for posting patches to Gnucash.");?>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Screenshots</b>
+src="images/icons/document.txt.gif">&nbsp;<b><?php echo _("Screenshots");?></b>
  - <b>2000-04-27   07:16:46
 </b>
 </div><div class="newsinner">
-For the "I won't compile it until I have seen it" crowd I have updated the screenshots for the Gnome/Gtk+ version of Gnucash.  I hope waves of people will checkout the latest source from CVS and go absolutely nutz debugging it! =)
-</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>Announcement:</B> GnuCash 1.3.1 Released!
+<?php echo _("For the \"I won't compile it until I have seen it\" crowd I have updated the screenshots for the Gnome/Gtk+ version of Gnucash.  I hope waves of people will checkout the latest source from CVS and go absolutely nutz debugging it! =)");?>
+</div></div>
+
+<div class="newsborder"><div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>Announcement:</B> GnuCash 1.3.1 Released!");?>
  - <b>2000-04-27   07:16:46
 </b>
 </div><div class="newsinner">
 <ul>
-<li>Includes documentation in French.</li>
-<li>QIF importing fixes.</li>
-<li>Various GUI improvements.</li>
+<li><?php echo _("Includes documentation in French.");?></li>
+<li><?php echo _("QIF importing fixes.");?></li>
+<li><?php echo _("Various GUI improvements.");?></li>
 </ul>
 <p>
-This release also requires gnome-libs >= 1.0.40.
+<?php echo _("This release also requires gnome-libs >= 1.0.40.");?>
 </p>
-<p>Available at the usual place! <b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
+<p><?php echo _("Available at the usual place!");?>
+<b><a href="ftp://ftp.gnucash.org/pub/gnucash/">ftp.gnucash.org</a></b>
 </p>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>V-One</b>
+src="images/icons/document.txt.gif">&nbsp;<b><?php echo _("V-One");?></b>
  - <b>2000-04-27   07:16:46
 </b>
 </div><div class="newsinner">
-Has anyone heard of this company?  V-One. 
-Apparently their shares tripled because they made a Linux 
-port of their software available.  <BR><BR>
+<?php echo _("Has anyone heard of this company?  V-One. Apparently their shares tripled because they made a Linux port of their software available.");?>  <BR><BR>
 
 <a href="http://news.cnet.com/news/0-1003-200-1474480.html?pt.athome..ticker.ne">http://news.cnet.com/news/0-1003-200-1474480.html?pt.athome..ticker.ne</a>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>Intuit</b>
+src="images/icons/document.txt.gif">&nbsp;<b><?php echo _("Intuit");?></b>
  - <b>2000-04-27   07:16:45
 </b>
 </div><div class="newsinner"> 
-Here is an interesting tidbit about a certain company that should 
-listen to a certain community.<BR>
+<?php echo _("Here is an interesting tidbit about a certain company that should listen to a certain community.");?><BR>
 <BR>
 <a href="http://news.cnet.com/news/0-1007-200-1463213.html?pt.athome..ticker.ne">
 http://news.cnet.com/news/0-1007-200-1463213.html?pt.athome..ticker.ne</A>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<b>New server</b>
+src="images/icons/document.txt.gif">&nbsp;<b><?php echo _("New server");?></b>
  - <b>2000-04-27   07:16:45
 </b>
 </div><div class="newsinner">
-After over a month of server problems I think we have things worked out.  I still need to setup mailing list archives.  Also ftp.gnucash.org points to the wrong IP, this is already fixed and just needs to get refreshed in your DNS! =)
+<?php echo _("After over a month of server problems I think we have things worked out.  I still need to setup mailing list archives.  Also ftp.gnucash.org points to the wrong IP, this is already fixed and just needs to get refreshed in your DNS! =)");?>
 
 <BR><BR>
-In addition anyone who was having difficulty subscribing to the mailing list should try again.  Keep in mind that we have change mailing list managers and the process for subscribing is different.  Read the section "Mailing List - Help" for more information!
-</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<B>ANNOUNCEMENT:</B> Gnucash 1.2.1 is now available.
- - <b>2000-04-27   07:16:45
-</b>
-</div><div class="newsinner">
-  This is now the latest stable release of Gnucash.  Enjoy!
-</div></div><div class="newsborder"><div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;<b>New screenshots</b>
- - <b>2000-04-27   07:16:45
-</b>
-</div><div class="newsinner">
-A lot has changed in the last month... so what do you do when things change? 
-You take screenshots!!!!  Enjoy!<BR>
-<BR>
-<B>these are of the lastest CVS version!</B>
-
-<BR>
-<a href="gnome_screenshots.php3">gnome screenshots</a>
+<?php echo _("In addition anyone who was having difficulty subscribing to the mailing list should try again.  Keep in mind that we have change mailing list managers and the process for subscribing is different.  Read the section \"Mailing List - Help\" for more information!");?>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;gnucash-1.2.2 is out at the usual places.
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>ANNOUNCEMENT:</B> Gnucash 1.2.1 is now available.");?>
+ - <b>2000-04-27   07:16:45
+</b>
+</div><div class="newsinner">
+<?php echo _("This is now the latest stable release of Gnucash.  Enjoy!");?>
+</div></div>
+
+<div class="newsborder"><div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;<b><?php echo _("New screenshots");?></b>
+ - <b>2000-04-27   07:16:45
+</b>
+</div><div class="newsinner">
+<?php echo _("A lot has changed in the last month... so what do you do when things change? You take screenshots!!!!  Enjoy!");?><BR>
+<BR>
+<B><?php echo _("these are of the lastest CVS version!");?></B>
+
+<BR>
+</div></div>
+
+<div class="newsborder"><div class="newsheader"><img alt="news panel" 
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("gnucash-1.2.2 is out at the usual places.");?>
  - <b>2000-04-27   07:16:44
 </b>
 </div><div class="newsinner">
 <BR><BR>
-This release includes misc bug fixes, update README files, updated german &amp;
-french message translations.  I hope that I've touched the timestamps on some 
-certain files so that the LIBTOOL irritation goes away.
+<?php echo _("This release includes misc bug fixes, update README files, updated german &amp; french message translations. I hope that I've touched the timestamps on some certain files so that the LIBTOOL irritation goes away.");?>
 <BR><BR>
-The 1.2.2 release is meant to be a stable release for general use.
+<?php echo _("The 1.2.2 release is meant to be a stable release for general use.");?>
 <BR><BR>
-The latest experimental version is available via cvs and includes a new large 
-patch to gnome from Heath Martin. 
-
+<?php echo _("The latest experimental version is available via cvs and includes a new large patch to gnome from Heath Martin.");?>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>ANNOUNCEMENT</B>: GNUcash 1.3.0 beta has been released!<BR><BR>
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>ANNOUNCEMENT</B>: GNUcash 1.3.0 beta has been released!");?>
+<BR><BR>
  - <b>2000-04-27   07:16:44
 </b>
 </div><div class="newsinner">
-After months of intensive development by some really awesome people we are proud to announce the release of GNUcash 1.3.0.  This is a beta quality development release.  RPMS, and source tarballs are available at <a href="ftp://ftp.gnucash.org/gnucash/">ftp.gnucash.org</a>.  Please test them and report all bugs back to our <a href="/cgi-bin/bugtrack">bug tracking system</a>, or our <a href="/maillist.php3">developers mailing list</a>. <BR><BR>
+<?php echo _("After months of intensive development by some really awesome people we are proud to announce the release of GNUcash 1.3.0.  This is a beta quality development release.  RPMS, and source tarballs are available at <a href=\"ftp://ftp.gnucash.org/gnucash/\">ftp.gnucash.org</a>.  Please test them and report all bugs back to our bug tracking system, or our developers mailing list");?>. <BR><BR>
 
-Now for the details.  This release signifies the switch from Motif to Gnome as our GUI toolkit.  The build process should also be a lot easier.<BR><BR>
+<?php echo _("Now for the details.  This release signifies the switch from Motif to Gnome as our GUI toolkit.  The build process should also be a lot easier.");?><BR><BR>
 
-<B>Key Features:</B>
+<B><?php echo _("Key Features");?>:</B>
 <BR><BR>
 <ul>
-<li>Gnome/Gtk based</li>
-<li>Canvas based register</li>
-<li>New reporting engine based on scheme</li>
-<li>Lots of options are now configurable</li>
-<li>Ability to reparent accounts</li>
-<li>A really slick/polished interface</li>
+<li><?php echo _("Gnome/Gtk based");?></li>
+<li><?php echo _("Canvas based register");?></li>
+<li><?php echo _("New reporting engine based on scheme");?></li>
+<li><?php echo _("Lots of options are now configurable");?></li>
+<li><?php echo _("Ability to reparent accounts");?></li>
+<li><?php echo _("A really slick/polished interface");?></li>
 </ul>
 
 <BR><BR>
-I will post screenshots of the new development release in a bit.  In the meantime just downloaded, install, and go wild with it! =) 
+<?php echo _("I will post screenshots of the new development release in a bit.  In the meantime just downloaded, install, and go wild with it! =)");?>
 
 <BR><BR>
-<B>MIRROR AT SOURCEFORGE.NET</B><BR><BR>
+<B><?php echo _("MIRROR AT SOURCEFORGE.NET");?></B><BR><BR>
 
 <a href="http://download.sourceforge.net/gnucash/gnucash-1.3.0-1.i386.rpm">http://download.sourceforge.net/gnucash/gnucash-1.3.0-1.i386.rpm</a>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>ANNOUNCEMENT</B>: Gnucash 1.2.5 is released!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>ANNOUNCEMENT</B>: Gnucash 1.2.5 is released!");?>
  - <b>2000-04-27   07:16:44
 </b>
 </div><div class="newsinner">
 <BR><BR>
-All those who downloaded 1.2.4 can go right back and get the new version! =)
+<?php 
+echo _("All those who downloaded 1.2.4 can go right back and get the new version! =)");
+?>
 <BR>
 <BR>
-It fixes a rounding bug which caused 0.999 to be printed as 0.0
-   instead of 1.0.  (The math was done right, it just the printing was
-   broken).<BR>
+<?php echo _("It fixes a rounding bug which caused 0.999 to be printed as 0.0 instead of 1.0.  (The math was done right, it just the printing was broken).");?><BR>
 <BR>
-And checks & returns error when you try to save to a disk that is
-   over-full. 
+<?php echo _("And checks &amp; returns error when you try to save to a disk that is over-full.");?>
 
 <BR><BR>
-You can get it at: <a href="/pub/gnucash/sources/stable/">http://www.gnucash.org/pub/gnucash/sources/stable/</a>
+<?php echo _("You can get it at:");?> <a href="/pub/gnucash/sources/stable/">http://www.gnucash.org/pub/gnucash/sources/stable/</a>
 <BR><BR>
-<B>UPDATE:</B> Binaries are now available at:<BR><BR>
+<?php echo _("<B>UPDATE:</B> Binaries are now available at:");?><BR><BR>
 <a href="/pub/gnucash/">http://www.gnucash.org/pub/gnucash/</a>
 </div></div>
 
 <div class="newsborder"><div class="newsheader"><img alt="news panel" 
-src="images/icons/document.txt.gif">&nbsp;<B>ANNOUNCEMENT</B>: Gnucash 1.2.4 is released!
+src="images/icons/document.txt.gif">&nbsp;<?php 
+echo _("<B>ANNOUNCEMENT</B>: Gnucash 1.2.4 is released!");?>
  - <b>2000-04-27   07:16:43
 </b>
 </div><div class="newsinner">
 <BR><BR>
--- Is supposed to be 'stable' i.e. usable, crash-proof, not subject to
-   frequent or radical change.<BR>
--- Motif-only source code. No gnome.  This should simplify builds.<BR>
--- Fixes some core dumps that 1.2.3 had.<BR>
--- Is maintained in a separate cvs branch; if you send patches to
-   fix problems with this code, indicate that its for this release.<BR>
+<?php echo _("Is supposed to be 'stable' i.e. usable, crash-proof, not subject to frequent or radical change.");?><BR>
+<?php echo _("Motif-only source code. No gnome.  This should simplify builds.");?><BR>
+<?php echo _("Fixes some core dumps that 1.2.3 had.");?><BR>
+<?php echo _("Is maintained in a separate cvs branch; if you send patches to fix problems with this code, indicate that its for this release.");?><BR>
 
 <BR><BR>
-You can get it at: <a href="/pub/gnucash/sources/stable/">http://www.gnucash.org/pub/gnucash/sources/stable/</a>
+<?php echo _("You can get it at:");?>
+ <a href="/pub/gnucash/sources/stable/">http://www.gnucash.org/pub/gnucash/sources/stable/</a>
 <BR><BR>
-<B>UPDATE:</B> Binaries are now available at:<BR><BR>
+<?php echo _("<B>UPDATE:</B> Binaries are now available at:");?><BR><BR>
 <a href="/pub/gnucash/">http://www.gnucash.org/pub/gnucash/</a>
 </div></div>  
 </div>
 
 
-<?php include($toppath."/externals/en/footer.phtml"); ?>
+<?php include("externals/footer.phtml"); ?>
 
