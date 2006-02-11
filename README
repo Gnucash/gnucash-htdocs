@@ -1,19 +1,22 @@
 # Notes for those editing these pages.
 #
-# all pages must call emulate_globals_on.php
-# Two variables then become available on all systems:
-# $toppath is for filesystem paths, generally include files.
-# $topdir is for http paths e.g. images and other user-facing resources.
-# To make your pages portable, always precede a local href or src
-# location with $topdir:
-# src="<?php echo $topdir; ?>/path"
-# this allows mirrors to install the site in a sub-directory.
+# all pages must call emulate_globals_on.php to bring in
+# gettext support.
 #
 # Within content, the absolute rules are:
 # 1. If you OPEN a tag, YOU are responsible for closing it
 # 2. Escape all entities: use &amp; &lt; &gt; - watch those
 # Bugzilla or SourceForge URL links: all query strings need to
 # use &amp;
+#
+# Setup
+# =====
+# 
+# This section will be improved as more mirrors come into use.
+# 
+# Your DocumentRoot should be <path to checkout>/htdocs/www
+# Files in htdocs/ should NOT be visible on your website!
+
 
 # i18n and l10n:
 # =============
@@ -32,4 +35,38 @@
 # it_IT.iso88591 it_IT.utf8 italian nl_NL nl_NL.iso88591 nl_NL.utf8
 # portuguese pt_BR pt_BR.iso88591 pt_BR.utf8 pt_PT pt_PT.iso88591
 # pt_PT.utf8 spanish
+
+# The aim is that all translatable content is in either www/ or news/
+# and all translation files are in htdocs/ and po/. Other directories will be
+# gradually removed. In particular, www/ and news/ will not need
+# to contain separate directories for each supported language. Scripts will
+# then update the gnucash-htdocs.pot file, merge updated messages with available
+# translations and create binary translation files in relevant LC_MESSAGES locations
+# ready for a commit.
+#
+# Preparing translations:
+# =======================
+# 
+# ./create-potfiles.pl > po/POTFILES
+# ./make-pot.sh
+
+# Now merge the new content into your translation, substituting the name of 
+# your po file in the command:
+
+# msgmerge po/en_GB.po po/gnucash-htdocs.pot -o po/en_GB.po
+
+# Finally, see the size of the task ahead:
+
+# msgfmt -c --statistics po/en_GB.po
+
+# Whilst editing the translation, run the msgfmt command from time to time to catch
+# errors and let you know how much is left to do.
+
+# When you come across fuzzy markers: (#, fuzzy), remove them.
+
+# When you have no fuzzy and no untranslated messages, update the binary translation file:
+
+msgfmt po/en_GB.po -o en_GB/LC_MESSAGES/gnucash-htdocs.mo
+
+# Again, substitute your language in the name of the po file and the installed directory.
 
