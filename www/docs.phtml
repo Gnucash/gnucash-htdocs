@@ -103,59 +103,26 @@ include("externals/menu-main-documentation.phtml");
          <b><?php echo _("Documentation Development");?></b>
      </div>
      <div class="newsinner">
-        <!--
-        This is the current snapshot of the documentation in development.  
-	This is only valid for the future version of GnuCash, please do not 
-	use with the current stable release.  
-        <br>
-        HTML: <a href="../docs/v1.10/C/gnucash-guide/">Concepts Guide</a>
-        or the <a href="../docs/v1.10/C/gnucash-help/help.html">Help Manual</a>.
-`        -->
-        <p>We track bugs and feature requests in <a href='http://bugzilla.gnome.org/'>gnome's bugzilla</a>,
-        maybe you would like to see a list of all open 
-        <a href="http://bugzilla.gnome.org/buglist.cgi?product=GnuCash&amp;component=Documentation&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;email1=&amp;emailtype1=substring&amp;emailassigned_to1=1&amp;email2=&amp;emailtype2=substring&amp;emailreporter2=1&amp;changedin=&amp;chfieldfrom=&amp;chfieldto=Now&amp;chfieldvalue=&amp;short_desc=&amp;short_desc_type=substring&amp;long_desc=&amp;long_desc_type=substring&amp;bug_file_loc=&amp;bug_file_loc_type=substring&amp;status_whiteboard=&amp;status_whiteboard_type=substring&amp;keywords=&amp;keywords_type=anywords&amp;op_sys_details=&amp;op_sys_details_type=substring&amp;version_details=&amp;version_details_type=substring&amp;cmdtype=doit&amp;order=Reuse+same+sort+as+last+time&amp;form_name=query">
-documentation bugs</a>?</p>
-        <p>Interesting Links:<br>
-	The following links are for further sites that can help with the
-	documentation and review process.<br><p>
+        <p><?php echo _("Interesting Links");?>:<br>
+	<?php echo _("The following links are for further sites that can help with the documentation and review process.");?><br><p>
 	<a href='http://www.docbook.org'> DocBook: The Definitive Guide.</a><br>
 	<a href='http://www.sagehill.net/docbookxsl/'>DocBook XSL: The Complete Guide</a>.<br>
 	<a href='http://developer.gnome.org/projects/gup/hig/1.0/'> GNOME Human Interface
 Guidelines</a></p>
-        <p>For both reviewers and documentation writers:<br>
-	Please read the following guides. The new docs are based on the 
-	GNOME2 XML docbook system.
-	Everyone wishing to help please
-	follow these guides where possible when reviewing and/or writing docs.</p>
+        <p><?php echo _("For both reviewers and documentation writers");?>:<br>
+	<?php echo _("Please read the following guides. The new docs are based on the GNOME2 XML docbook system. Everyone wishing to help please follow these guides where possible when reviewing and/or writing docs.");?></p>
         <p><a href='http://developer.gnome.org/projects/gdp/styleguide.html'>
 The GNOME Documentation Style Guide</a><br>
 <a href='http://developer.gnome.org/projects/gdp/handbook.html'>
 The GNOME Handbook of Writing Software Documentation</a></p>
-        <p>We suggest also subscribing to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a>.</p>
-        <p>Reviewers;</p>
-        <p>Please check out the documentation module from the GnuCash CVS -
-	gnucash-docs. For those not familiar with cvs, the GnuCash website has a
-	<a href='/en/hacking.phtml'>description.</a> The only change
-	to get the docs is to change the checkout gnucash to checkout
-	gnucash-docs. You can also start from the current docs tarball.</p>
-        <p>The best way of retaining comments about docs in an easy to find
-	way for everyone would be to use <a href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> to file the bugs
-	under documentation. This can also be done using bug-buddy.</p>
-        <p>Writers;</p>
-        <p>Also checkout the docs cvs as above. The usual procedure for
-	contributors to GnuCash is to initially submit patches to the
-	<a href='mailto:gnucash-patches@lists.gnucash.org'>gnucash-patches</a> 
-	mailing list. We will handle getting the patches added into CVS 
-	until you are given an account. You can also add the 
-	patch to a bug report in bugzilla if you wish.</p>
-        <p>Please let other writers know which
-	section you wish to tackle. Please forward this to 
-	<a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> so
-	that people can say 'hey I'm doing that already' or 
-	'go ahead and do it'.</p>
-        <p>You may also want to retain a local copy of the old documentation to
-	refer to when writing. This still has a lot of useful information in it
-	which hasn't been transferred to the new docs</p>
+        <p><?php echo _("We suggest also subscribing to ");?><a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a>.</p>
+        <p><?php echo _("Reviewers");?></p>
+        <p><?php echo _("Please check out the documentation module from the GnuCash svn - gnucash-docs. For those not familiar with svn, the GnuCash wiki has a <a href='http://wiki.gnucash.org/wiki/Subversion'>description.</a> The only change to get the docs is to change the checkout gnucash to checkout gnucash-docs. You can also start from the current docs tarball.");?></p>
+        <p><?php echo _("The best way of retaining comments about docs in an easy to find way for everyone would be to use <a href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> to file the bugs under documentation. This can also be done using bug-buddy.");?></p>
+        <p><?php echo _("Writers");?></p>
+        <p><?php echo _("Also checkout the docs svn as above. The usual procedure for contributors to GnuCash is to initially submit patches to the <a href='mailto:gnucash-patches@lists.gnucash.org'>gnucash-patches</a> mailing list. We will handle getting the patches added into svn until you are given an account. You can also add the patch to a bug report in bugzilla if you wish.");?></p>
+        <p><?php echo _("Please let other writers know which section you wish to tackle. Please forward this to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> so that people can say 'hey I'm doing that already' or 'go ahead and do it'.");?></p>
+        <p><?php echo _("You may also want to retain a local copy of the old documentation to refer to when writing. This still has a lot of useful information in it which hasn't been transferred to the new docs");?></p>
     </div>
 </div>
 
