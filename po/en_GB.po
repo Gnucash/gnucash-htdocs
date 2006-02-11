@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-11 18:42+0000\n"
+"POT-Creation-Date: 2006-02-11 19:33+0000\n"
 "PO-Revision-Date: 2006-02-11 16:49+0000\n"
 "Last-Translator: Neil Williams <linux@codehelp.co.uk>\n"
 "Language-Team: en_GB <en_GB@li.org>\n"
@@ -150,10 +150,10 @@ msgstr "QIF/OFX/HBCI Import, Transaction Matching"
 msgid "Reports, Graphs"
 msgstr "Reports, Graphs"
 
-#: www/index.phtml:23 www/oldnews.phtml:711 www/oldnews.phtml:1103
-#: www/oldnews.phtml:1154 www/oldnews.phtml:1263 www/oldnews.phtml:1330
-#: www/oldnews.phtml:1408 www/oldnews.phtml:1506 www/oldnews.phtml:1547
-#: www/oldnews.phtml:1682 www/oldnews.phtml:1773
+#: www/index.phtml:23 www/features_5.phtml:24 www/oldnews.phtml:711
+#: www/oldnews.phtml:1103 www/oldnews.phtml:1154 www/oldnews.phtml:1263
+#: www/oldnews.phtml:1330 www/oldnews.phtml:1408 www/oldnews.phtml:1506
+#: www/oldnews.phtml:1547 www/oldnews.phtml:1682 www/oldnews.phtml:1773
 msgid "Scheduled Transactions"
 msgstr "Scheduled Transactions"
 
@@ -342,6 +342,106 @@ msgstr "Fran&ccedil;ais"
 msgid "Documentation Development"
 msgstr "Documentation Development"
 
+#: www/docs.phtml:106
+msgid "Interesting Links"
+msgstr "Interesting Links"
+
+#: www/docs.phtml:107
+msgid ""
+"The following links are for further sites that can help with the "
+"documentation and review process."
+msgstr ""
+"The following links are for further sites that can help with the "
+"documentation and review process."
+
+#: www/docs.phtml:112
+msgid "For both reviewers and documentation writers"
+msgstr "For both reviewers and documentation writers"
+
+#: www/docs.phtml:113
+msgid ""
+"Please read the following guides. The new docs are based on the GNOME2 XML "
+"docbook system. Everyone wishing to help please follow these guides where "
+"possible when reviewing and/or writing docs."
+msgstr ""
+"Please read the following guides. The new docs are based on the GNOME2 XML "
+"docbook system. Everyone wishing to help please follow these guides where "
+"possible when reviewing and/or writing docs."
+
+#: www/docs.phtml:118
+msgid "We suggest also subscribing to "
+msgstr "We suggest also subscribing to "
+
+#: www/docs.phtml:119
+msgid "Reviewers"
+msgstr "Reviewers"
+
+#: www/docs.phtml:120
+msgid ""
+"Please check out the documentation module from the GnuCash svn - gnucash-"
+"docs. For those not familiar with svn, the GnuCash wiki has a <a "
+"href='http://wiki.gnucash.org/wiki/Subversion'>description.</a> The only "
+"change to get the docs is to change the checkout gnucash to checkout gnucash-"
+"docs. You can also start from the current docs tarball."
+msgstr ""
+"Please check out the documentation module from the GnuCash svn - gnucash-"
+"docs. For those not familiar with svn, the GnuCash wiki has a <a "
+"href='http://wiki.gnucash.org/wiki/Subversion'>description.</a> The only "
+"change to get the docs is to change the checkout gnucash to checkout gnucash-"
+"docs. You can also start from the current docs tarball."
+
+#: www/docs.phtml:121
+msgid ""
+"The best way of retaining comments about docs in an easy to find way for "
+"everyone would be to use <a href='http://bugzilla.gnome.org/'>bugzilla.gnome."
+"org</a> to file the bugs under documentation. This can also be done using "
+"bug-buddy."
+msgstr ""
+"The best way of retaining comments about docs in an easy to find way for "
+"everyone would be to use <a href='http://bugzilla.gnome.org/'>bugzilla.gnome."
+"org</a> to file the bugs under documentation. This can also be done using "
+"bug-buddy."
+
+#: www/docs.phtml:122
+msgid "Writers"
+msgstr "Writers"
+
+#: www/docs.phtml:123
+msgid ""
+"Also checkout the docs svn as above. The usual procedure for contributors to "
+"GnuCash is to initially submit patches to the <a href='mailto:gnucash-"
+"patches@lists.gnucash.org'>gnucash-patches</a> mailing list. We will handle "
+"getting the patches added into svn until you are given an account. You can "
+"also add the patch to a bug report in bugzilla if you wish."
+msgstr ""
+"Also checkout the docs svn as above. The usual procedure for contributors to "
+"GnuCash is to initially submit patches to the <a href='mailto:gnucash-"
+"patches@lists.gnucash.org'>gnucash-patches</a> mailing list. We will handle "
+"getting the patches added into svn until you are given an account. You can "
+"also add the patch to a bug report in bugzilla if you wish."
+
+#: www/docs.phtml:124
+msgid ""
+"Please let other writers know which section you wish to tackle. Please "
+"forward this to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-"
+"devel</a> so that people can say 'hey I'm doing that already' or 'go ahead "
+"and do it'."
+msgstr ""
+"Please let other writers know which section you wish to tackle. Please "
+"forward this to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-"
+"devel</a> so that people can say 'hey I'm doing that already' or 'go ahead "
+"and do it'."
+
+#: www/docs.phtml:125
+msgid ""
+"You may also want to retain a local copy of the old documentation to refer "
+"to when writing. This still has a lot of useful information in it which "
+"hasn't been transferred to the new docs"
+msgstr ""
+"You may also want to retain a local copy of the old documentation to refer "
+"to when writing. This still has a lot of useful information in it which "
+"hasn't been transferred to the new docs"
+
 #: www/features_1.phtml:22
 msgid ""
 "If you can use the register in the back of your checkbook, you can use "
@@ -409,9 +509,325 @@ msgstr ""
 "The 1.8.x series of stable releases introduce many new features not found in "
 "the older gnucash-1.6.8."
 
-#: www/features_5.phtml:174
+#: www/features_5.phtml:25
+msgid ""
+"You can now create recurring transactions, including automatic reminders "
+"when a transaction is due, the ability to postpone a scheduled transaction "
+"without canceling it, and the ability to specify only a limited number of "
+"transactions."
+msgstr ""
+"You can now create recurring transactions, including automatic reminders "
+"when a transaction is due, the ability to postpone a scheduled transaction "
+"without canceling it, and the ability to specify only a limited number of "
+"transactions."
+
+#: www/features_5.phtml:27 www/oldnews.phtml:715 www/oldnews.phtml:1106
+#: www/oldnews.phtml:1156 www/oldnews.phtml:1332 www/oldnews.phtml:1410
+#: www/oldnews.phtml:1508 www/oldnews.phtml:1549
+msgid "Mortgage &amp; Loan Repayment Druid"
+msgstr "Mortgage &amp; Loan Repayment Druid"
+
+#: www/features_5.phtml:28
+msgid ""
+"A guided dialogue for setting up loan payments as scheduled transactions."
+msgstr ""
+"A guided dialogue for setting up loan payments as scheduled transactions."
+
+#: www/features_5.phtml:31 www/oldnews.phtml:717 www/oldnews.phtml:1109
+#: www/oldnews.phtml:1158 www/oldnews.phtml:1267 www/oldnews.phtml:1334
+#: www/oldnews.phtml:1412 www/oldnews.phtml:1510 www/oldnews.phtml:1551
+msgid "Small Business Accounting Features"
+msgstr "Small Business Accounting Features"
+
+#: www/features_5.phtml:32
+msgid ""
+"Simplify managing a small business with Customer and Vendor tracking,    "
+"Invoicing and Bill Payment, and Tax and Billing Terms."
+msgstr ""
+"Simplify managing a small business with Customer and Vendor tracking,    "
+"Invoicing and Bill Payment, and Tax and Billing Terms."
+
+#: www/features_5.phtml:34 www/oldnews.phtml:719 www/oldnews.phtml:1112
+#: www/oldnews.phtml:1160 www/oldnews.phtml:1269 www/oldnews.phtml:1337
+#: www/oldnews.phtml:1414 www/oldnews.phtml:1512 www/oldnews.phtml:1553
+msgid "OFX Import"
+msgstr "OFX Import"
+
+#: www/features_5.phtml:35
+msgid ""
+"GnuCash is the first free software application to support the Open Financial "
+"Exchange protocol that many banks and financial services are starting to use."
+msgstr ""
+"GnuCash is the first free software application to support the Open Financial "
+"Exchange protocol that many banks and financial services are starting to use."
+
+#: www/features_5.phtml:37 www/oldnews.phtml:721 www/oldnews.phtml:1114
+#: www/oldnews.phtml:1162 www/oldnews.phtml:1271 www/oldnews.phtml:1339
+#: www/oldnews.phtml:1416 www/oldnews.phtml:1514 www/oldnews.phtml:1555
+msgid "HBCI Support"
+msgstr "HBCI Support"
+
+#: www/features_5.phtml:38
+msgid ""
+"GnuCash is the first free software application to support the German Home "
+"Banking Computer Information protocol, allowing German users to perform "
+"statement download and initiate bank transfers and direct debits."
+msgstr ""
+"GnuCash is the first free software application to support the German Home "
+"Banking Computer Information protocol, allowing German users to perform "
+"statement download and initiate bank transfers and direct debits."
+
+#: www/features_5.phtml:40
+msgid "Improved Import Transaction Matching"
+msgstr "Improved Import Transaction Matching"
+
+#: www/features_5.phtml:41
+msgid ""
+"The development of OFX and HBCI support has also resulted in an improved "
+"transaction matching system that more accurately recognizes duplicate "
+"transactions during file import."
+msgstr ""
+"The development of OFX and HBCI support has also resulted in an improved "
+"transaction matching system that more accurately recognizes duplicate "
+"transactions during file import."
+
+#: www/features_5.phtml:43 www/oldnews.phtml:723 www/oldnews.phtml:1116
+#: www/oldnews.phtml:1164 www/oldnews.phtml:1273 www/oldnews.phtml:1341
+#: www/oldnews.phtml:1418 www/oldnews.phtml:1516 www/oldnews.phtml:1557
+msgid "New User Manual and Help"
+msgstr "New User Manual and Help"
+
+#: www/features_5.phtml:44
+msgid ""
+"A new help subsystem that focuses on how to do tasks is now available, in "
+"addition to a Tutorial and Concepts guide that gives the user background "
+"information on accounting principles and how they are reflected in GnuCash."
+msgstr ""
+"A new help subsystem that focuses on how to do tasks is now available, in "
+"addition to a Tutorial and Concepts guide that gives the user background "
+"information on accounting principles and how they are reflected in GnuCash."
+
+#: www/features_5.phtml:46 www/oldnews.phtml:725 www/oldnews.phtml:1118
+#: www/oldnews.phtml:1166 www/oldnews.phtml:1275 www/oldnews.phtml:1343
+#: www/oldnews.phtml:1420 www/oldnews.phtml:1518 www/oldnews.phtml:1559
+msgid "New Multi-Currency Transaction Handling"
+msgstr "New Multi-Currency Transaction Handling"
+
+#: www/features_5.phtml:47
+msgid ""
+"GnuCash no longer requires separate currency exchange accounts to handle "
+"multiple currency transfers.  Transactions can be made directly between "
+"accounts denominated in different currencies."
+msgstr ""
+"GnuCash no longer requires separate currency exchange accounts to handle "
+"multiple currency transfers.  Transactions can be made directly between "
+"accounts denominated in different currencies."
+
+#: www/features_5.phtml:49 www/oldnews.phtml:727 www/oldnews.phtml:1120
+#: www/oldnews.phtml:1168 www/oldnews.phtml:1277 www/oldnews.phtml:1345
+#: www/oldnews.phtml:1422 www/oldnews.phtml:1520 www/oldnews.phtml:1561
+msgid "Redesigned Menus"
+msgstr "Redesigned Menus"
+
+#: www/features_5.phtml:50
+msgid ""
+"The GnuCash menus have been redesigned to conform more with the new GNOME "
+"Human Interface Guidelines."
+msgstr ""
+"The GnuCash menus have been redesigned to conform more with the new GNOME "
+"Human Interface Guidelines."
+
+#: www/features_5.phtml:54
+msgid "Old Favorites"
+msgstr "Old Favourites"
+
+#: www/features_5.phtml:55
+msgid "And of course, some favorite features from earlier versions:"
+msgstr "And of course, some favourite features from earlier versions:"
+
+#: www/features_5.phtml:59
+msgid "Statement Reconciliation"
+msgstr "Statement Reconciliation"
+
+#: www/features_5.phtml:60
+msgid ""
+"A reconcile window with running reconciled and cleared balances makes "
+"balancing against bank statements easy."
+msgstr ""
+"A reconcile window with running reconciled and cleared balances makes "
+"balancing against bank statements easy."
+
+#: www/features_5.phtml:63
+msgid "Stock/Mutual Fund Portfolios"
+msgstr "Stock/Mutual Fund Portfolios"
+
+#: www/features_5.phtml:64
+msgid ""
+"Track stocks individually (one per account) or in portfolio of accounts (a "
+"group of accounts that can be displayed together)."
+msgstr ""
+"Track stocks individually (one per account) or in portfolio of accounts (a "
+"group of accounts that can be displayed together)."
+
+#: www/features_5.phtml:67
+msgid "QIF Import"
+msgstr "QIF Import"
+
+#: www/features_5.phtml:68
+msgid ""
+"Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> QIF files can be imported, "
+"and are automatically merged to eliminate duplicate transactions."
+msgstr ""
+"Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> QIF files can be imported, "
+"and are automatically merged to eliminate duplicate transactions."
+
+#: www/features_5.phtml:71
+msgid "Localization"
+msgstr "Localisation"
+
+#: www/features_5.phtml:72
+msgid ""
+"Handles internationalized dates and currencies.  The Gnucash menus and "
+"popups have been translated to 21 languages, including Chinese, Danish, "
+"French, German, Hungarian, Italian, Japanese, Norwegian, Polish, Portuguese, "
+"Russian, Spanish, Swedish, Turkish, Ukrainian, and British English. "
+"Documentation is available in English, French, Portuguese and Spanish."
+msgstr ""
+"Handles internationalised dates and currencies.  The Gnucash menus and "
+"popups have been translated to 21 languages, including Chinese, Danish, "
+"French, German, Hungarian, Italian, Japanese, Norwegian, Polish, Portuguese, "
+"Russian, Spanish, Swedish, Turkish, Ukrainian and British English. "
+"Documentation is available in English, French, Portuguese and Spanish."
+
+#: www/features_5.phtml:75
+msgid "Reports"
+msgstr "Reports"
+
+#: www/features_5.phtml:76
+msgid ""
+"Display Balance Sheet, Profit &amp; Loss, Portfolio Valuation, and others. "
+"Reports can be saved as HTML or postscript, or printed."
+msgstr ""
+"Display Balance Sheet, Profit &amp; Loss, Portfolio Valuation, and others. "
+"Reports can be saved as HTML or postscript, or printed."
+
+#: www/features_5.phtml:79
+msgid "Transaction Finder"
+msgstr "Transaction Finder"
+
+#: www/features_5.phtml:80
+msgid ""
+"A powerful transaction query dialogue can help you quickly locate a needle "
+"in a haystack."
+msgstr ""
+"A powerful transaction query dialogue can help you quickly locate a needle "
+"in a haystack."
+
+#: www/features_5.phtml:83
+msgid "Double Entry"
+msgstr "Double Entry"
+
+#: www/features_5.phtml:84
+msgid ""
+"When enabled, every transaction must debit one account and credit others by "
+"an equal amount. This ensures that the \"books balance\": that the "
+"difference between income and outflow exactly equals the sum of all assets "
+"and equity."
+msgstr ""
+"When enabled, every transaction must debit one account and credit others by "
+"an equal amount. This ensures that the \"books balance\": that the "
+"difference between income and outflow exactly equals the sum of all assets "
+"and equity."
+
+#: www/features_5.phtml:87
+msgid "Income/Expense Account Types"
+msgstr "Income/Expense Account Types"
+
+#: www/features_5.phtml:88
+msgid ""
+"Income/Expense Account Types (Categories) allow you to categorize your cash "
+"flow.  When used properly with the double-entry feature and equity accounts, "
+"these enable you to generate reports, such as Profit &amp; Loss, that plain-"
+"vanilla systems cannot handle."
+msgstr ""
+"Income/Expense Account Types (Categories) allow you to categorize your cash "
+"flow.  When used properly with the double-entry feature and equity accounts, "
+"these enable you to generate reports, such as Profit &amp; Loss, that plain-"
+"vanilla systems cannot handle."
+
+#: www/features_5.phtml:91
+msgid "General Ledger"
+msgstr "General Ledger"
+
+#: www/features_5.phtml:92
+msgid ""
+"Multiple accounts can be displayed in one register window at the same time. "
+"This can ease the trouble of tracking down typing/entry errors. It also "
+"provides a convenient way of viewing a portfolio of many stocks, by showing "
+"all transactions in that portfolio."
+msgstr ""
+"Multiple accounts can be displayed in one register window at the same time. "
+"This can ease the trouble of tracking down typing/entry errors. It also "
+"provides a convenient way of viewing a portfolio of many stocks, by showing "
+"all transactions in that portfolio."
+
+#: www/features_5.phtml:95
+msgid "Online Stock &amp; Mutual Fund Quotes"
+msgstr "Online Stock &amp; Mutual Fund Quotes"
+
+#: www/features_5.phtml:96
+msgid ""
+"Get Stock &amp; Mutual Fund quotes from various web sites, update portfolio "
+"automatically. Additional pricing sources are added regularly."
+msgstr ""
+"Get Stock &amp; Mutual Fund quotes from various web sites, update portfolio "
+"automatically. Additional pricing sources are added regularly."
+
+#: www/features_5.phtml:99
+msgid "Check Printing"
+msgstr "Cheque Printing"
+
+#: www/features_5.phtml:100
+msgid ""
+"Checks may be printed in standard formats on common check stocks. A "
+"customization GUI allows custom check layouts to be developed."
+msgstr ""
+"Cheques may be printed in standard formats on common cheque stocks. A "
+"customisation GUI allows custom cheque layouts to be developed."
+
+#: www/features_5.phtml:103
+msgid "Multiple Currencies"
+msgstr "Multiple Currencies"
+
+#: www/features_5.phtml:104
+msgid ""
+"Different accounts can be denominated in different currencies. Currency "
+"movements between accounts are fully balanced when double-entry is enabled."
+msgstr ""
+"Different accounts can be denominated in different currencies. Currency "
+"movements between accounts are fully balanced when double-entry is enabled."
+
+#: www/features_5.phtml:107
+msgid "Multi-User SQL Support"
+msgstr "Multi-User SQL Support"
+
+#: www/features_5.phtml:108
+msgid ""
+"Multiple users can now simultaneously access and update GnuCash data stored "
+"in a Postgres SQL backend. Postgres must be installed and configured to use "
+"this option."
+msgstr ""
+"Multiple users can now simultaneously access and update GnuCash data stored "
+"in a Postgres SQL backend. Postgres must be installed and configured to use "
+"this option."
+
+#: www/features_5.phtml:117
 msgid "back to slide 4"
 msgstr "back to slide 4"
+
+#: www/features_5.phtml:120
+msgid "end of slides"
+msgstr "end of slides"
 
 #: www/features.phtml:9 www/externals/menu-general.phtml:8
 msgid "Features"
@@ -1182,43 +1598,41 @@ msgstr "New Support Links"
 
 #: www/oldnews.phtml:325
 msgid ""
-"I've added two new links to the GnuCash website menus: The <a href=&quot;"
-"http://gnomesupport.org/wiki/index.php/GnuCash&quot;>User Wiki</a> and the "
-"<a href=&quot;http://linuxwiki.de/GnuCash_2fDevelTexts&quot;>Devel Wiki</a>. "
-"If you have questions about how to use GnuCash, including problems with "
-"installation, using, or general accounting questions, please review the <a "
-"href=&quot;http://gnomesupport.org/wiki/index.php/GnuCash&quot;>User Wiki</"
-"a> before posting to the mailing lists.  If you figure out the answer to "
-"your questions, then please <b>edit</b> the <a href=&quot;http://"
-"gnomesupport.org/wiki/index.php/GnuCash&quot;>User Wiki</a> to add the "
-"answer.  Yes, that's right, edit: that's what a Wiki does; it allows anyone "
-"to add, update and correct the content.  If you like GnuCash, and want to "
-"help, but don't know how, then please consider helping others by updating "
-"the Wiki."
+"I've added two new links to the GnuCash website menus: The <a href='http://"
+"gnomesupport.org/wiki/index.php/GnuCash'>User Wiki</a> and the <a "
+"href='http://linuxwiki.de/GnuCash_2fDevelTexts'>Devel Wiki</a>. If you have "
+"questions about how to use GnuCash, including problems with installation, "
+"using, or general accounting questions, please review the <a href='http://"
+"gnomesupport.org/wiki/index.php/GnuCash'>User Wiki</a> before posting to the "
+"mailing lists.  If you figure out the answer to your questions, then please "
+"<b>edit</b> the <a href='http://gnomesupport.org/wiki/index.php/"
+"GnuCash'>User Wiki</a> to add the answer.  Yes, that's right, edit: that's "
+"what a Wiki does; it allows anyone to add, update and correct the content.  "
+"If you like GnuCash, and want to help, but don't know how, then please "
+"consider helping others by updating the Wiki."
 msgstr ""
-"I've added two new links to the GnuCash website menus: The <a href=&quot;"
-"http://gnomesupport.org/wiki/index.php/GnuCash&quot;>User Wiki</a> and the "
-"<a href=&quot;http://linuxwiki.de/GnuCash_2fDevelTexts&quot;>Devel Wiki</a>. "
-"If you have questions about how to use GnuCash, including problems with "
-"installation, using, or general accounting questions, please review the <a "
-"href=&quot;http://gnomesupport.org/wiki/index.php/GnuCash&quot;>User Wiki</"
-"a> before posting to the mailing lists.  If you figure out the answer to "
-"your questions, then please <b>edit</b> the <a href=&quot;http://"
-"gnomesupport.org/wiki/index.php/GnuCash&quot;>User Wiki</a> to add the "
-"answer.  Yes, that's right, edit: that's what a Wiki does; it allows anyone "
-"to add, update and correct the content.  If you like GnuCash, and want to "
-"help, but don't know how, then please consider helping others by updating "
-"the Wiki."
+"I've added two new links to the GnuCash website menus: The <a href='http://"
+"gnomesupport.org/wiki/index.php/GnuCash'>User Wiki</a> and the <a "
+"href='http://linuxwiki.de/GnuCash_2fDevelTexts'>Devel Wiki</a>. If you have "
+"questions about how to use GnuCash, including problems with installation, "
+"using, or general accounting questions, please review the <a href='http://"
+"gnomesupport.org/wiki/index.php/GnuCash'>User Wiki</a> before posting to the "
+"mailing lists.  If you figure out the answer to your questions, then please "
+"<b>edit</b> the <a href='http://gnomesupport.org/wiki/index.php/"
+"GnuCash'>User Wiki</a> to add the answer.  Yes, that's right, edit: that's "
+"what a Wiki does; it allows anyone to add, update and correct the content.  "
+"If you like GnuCash, and want to help, but don't know how, then please "
+"consider helping others by updating the Wiki."
 
 #: www/oldnews.phtml:327
 msgid ""
-"The <a href=&quot;http://linuxwiki.de/GnuCash_2fDevelTexts&quot;>Devel Wiki</"
-"a> contains various development notes and status.  Some developers use it, "
-"and some don't.  Tough development questions?  This is one place to look."
+"The <a href='http://linuxwiki.de/GnuCash_2fDevelTexts'>Devel Wiki</a> "
+"contains various development notes and status.  Some developers use it, and "
+"some don't.  Tough development questions?  This is one place to look."
 msgstr ""
-"The <a href=&quot;http://linuxwiki.de/GnuCash_2fDevelTexts&quot;>Devel Wiki</"
-"a> contains various development notes and status.  Some developers use it, "
-"and some don't.  Tough development questions?  This is one place to look."
+"The <a href='http://linuxwiki.de/GnuCash_2fDevelTexts'>Devel Wiki</a> "
+"contains various development notes and status.  Some developers use it, and "
+"some don't.  Tough development questions?  This is one place to look."
 
 #: www/oldnews.phtml:336
 msgid "Christian Stimming writes:"
@@ -1566,41 +1980,39 @@ msgstr ""
 msgid ""
 "Version 2.1.8 is now available.  This version includes a simple search "
 "interface, for generating reports for projects that occured in a given time "
-"period.  This new feature is built using <a href=&quot;http://qof."
-"sourceforge.net&quot;>QOF</a>, a gnucash spin-off technology.  Version 2.1.7 "
-"introduced an easier way of allowing users to create and manage custom "
-"reports. Version 2.1.6 introduced a 'daily report' for summarizing hours "
-"worked on a day-by-day basis.  Version 2.1.5 introduced a vastly improved "
-"diary/note-taking/blogging interface.  Version 2.1.4 was the first version "
-"to introduce user-customizable reports, using a simple scheme-embedded-in-"
-"html system."
+"period.  This new feature is built using <a href='http://qof.sourceforge."
+"net'>QOF</a>, a gnucash spin-off technology.  Version 2.1.7 introduced an "
+"easier way of allowing users to create and manage custom reports. Version "
+"2.1.6 introduced a 'daily report' for summarizing hours worked on a day-by-"
+"day basis.  Version 2.1.5 introduced a vastly improved diary/note-taking/"
+"blogging interface.  Version 2.1.4 was the first version to introduce user-"
+"customizable reports, using a simple scheme-embedded-in-html system."
 msgstr ""
 "Version 2.1.8 is now available.  This version includes a simple search "
 "interface, for generating reports for projects that occured in a given time "
-"period.  This new feature is built using <a href=&quot;http://qof."
-"sourceforge.net&quot;>QOF</a>, a gnucash spin-off technology.  Version 2.1.7 "
-"introduced an easier way of allowing users to create and manage custom "
-"reports. Version 2.1.6 introduced a 'daily report' for summarizing hours "
-"worked on a day-by-day basis.  Version 2.1.5 introduced a vastly improved "
-"diary/note-taking/blogging interface.  Version 2.1.4 was the first version "
-"to introduce user-customizable reports, using a simple scheme-embedded-in-"
-"html system."
+"period.  This new feature is built using <a href='http://qof.sourceforge."
+"net'>QOF</a>, a gnucash spin-off technology.  Version 2.1.7 introduced an "
+"easier way of allowing users to create and manage custom reports. Version "
+"2.1.6 introduced a 'daily report' for summarizing hours worked on a day-by-"
+"day basis.  Version 2.1.5 introduced a vastly improved diary/note-taking/"
+"blogging interface.  Version 2.1.4 was the first version to introduce user-"
+"customizable reports, using a simple scheme-embedded-in-html system."
 
 #: www/oldnews.phtml:429
 msgid ""
-"The <a href=&quot;http://gttr.sourceforge.net&quot;>GnoTime website is here</"
-"a> and is <a href=&quot;http://www.linas.org/linux/gtt/gtt.html&quot;"
-">mirrored here</a>. Sources and CVS access is at the <a href=&quot;http://"
-"sourceforge.net/projects/gttr/&quot;> sourceforge project site</a>.  Most "
-"major distributions now carry GnoTime, so look to your distro first for a "
-"binary. Runs on Apple Macintosh OSX under Fink, too."
+"The <a href='http://gttr.sourceforge.net'>GnoTime website is here</a> and is "
+"<a href='http://www.linas.org/linux/gtt/gtt.html'>mirrored here</a>. Sources "
+"and CVS access is at the <a href='http://sourceforge.net/projects/gttr/'> "
+"sourceforge project site</a>.  Most major distributions now carry GnoTime, "
+"so look to your distro first for a binary. Runs on Apple Macintosh OSX under "
+"Fink, too."
 msgstr ""
-"The <a href=&quot;http://gttr.sourceforge.net&quot;>GnoTime website is here</"
-"a> and is <a href=&quot;http://www.linas.org/linux/gtt/gtt.html&quot;"
-">mirrored here</a>. Sources and CVS access is at the <a href=&quot;http://"
-"sourceforge.net/projects/gttr/&quot;> sourceforge project site</a>.  Most "
-"major distributions now carry GnoTime, so look to your distro first for a "
-"binary. Runs on Apple Macintosh OSX under Fink, too."
+"The <a href='http://gttr.sourceforge.net'>GnoTime website is here</a> and is "
+"<a href='http://www.linas.org/linux/gtt/gtt.html'>mirrored here</a>. Sources "
+"and CVS access is at the <a href='http://sourceforge.net/projects/gttr/'> "
+"sourceforge project site</a>.  Most major distributions now carry GnoTime, "
+"so look to your distro first for a binary. Runs on Apple Macintosh OSX under "
+"Fink, too."
 
 #: www/oldnews.phtml:455
 msgid ""
@@ -1735,32 +2147,32 @@ msgid ""
 "A European mirror of the GnuCash website is now operational. If you are "
 "located in Europe, Eastern Europe or Africa, and are having poor web or "
 "download response times accessing the US website, please try the <a "
-"href=&quot;http://www.at.gnucash.org&quot;>European Mirror</a>. This mirror "
-"includes a copy of the download area and the mailing list archives as well. "
-"(Thanks to <a href=&quot;http://sts.tuwien.ac.at/staff/Sprinzl.html&quot;"
-">Antonin Sprinzl</a> of the Technical University of Vienna for this service)."
+"href='http://www.at.gnucash.org'>European Mirror</a>. This mirror includes a "
+"copy of the download area and the mailing list archives as well. (Thanks to "
+"<a href='http://sts.tuwien.ac.at/staff/Sprinzl.html'>Antonin Sprinzl</a> of "
+"the Technical University of Vienna for this service)."
 msgstr ""
 "A European mirror of the GnuCash website is now operational. If you are "
 "located in Europe, Eastern Europe or Africa, and are having poor web or "
 "download response times accessing the US website, please try the <a "
-"href=&quot;http://www.at.gnucash.org&quot;>European Mirror</a>. This mirror "
-"includes a copy of the download area and the mailing list archives as well. "
-"(Thanks to <a href=&quot;http://sts.tuwien.ac.at/staff/Sprinzl.html&quot;"
-">Antonin Sprinzl</a> of the Technical University of Vienna for this service)."
+"href='http://www.at.gnucash.org'>European Mirror</a>. This mirror includes a "
+"copy of the download area and the mailing list archives as well. (Thanks to "
+"<a href='http://sts.tuwien.ac.at/staff/Sprinzl.html'>Antonin Sprinzl</a> of "
+"the Technical University of Vienna for this service)."
 
 #: www/oldnews.phtml:514
 msgid ""
 "Older News: Australian and Asian users are encouraged to use the <a "
-"href=&quot;http://www.au.gnucash.org&quot;>Australian Mirror</a>.  Note that "
-"at this time the Australian Mirror does not include the mailing list "
-"archives. (Thanks to <a href=&quot;http://public.www.planetmirror.com/&quot;"
-">PlanetMirror</a> for this service)."
+"href='http://www.au.gnucash.org'>Australian Mirror</a>.  Note that at this "
+"time the Australian Mirror does not include the mailing list archives. "
+"(Thanks to <a href='http://public.www.planetmirror.com/'>PlanetMirror</a> "
+"for this service)."
 msgstr ""
 "Older News: Australian and Asian users are encouraged to use the <a "
-"href=&quot;http://www.au.gnucash.org&quot;>Australian Mirror</a>.  Note that "
-"at this time the Australian Mirror does not include the mailing list "
-"archives. (Thanks to <a href=&quot;http://public.www.planetmirror.com/&quot;"
-">PlanetMirror</a> for this service)."
+"href='http://www.au.gnucash.org'>Australian Mirror</a>.  Note that at this "
+"time the Australian Mirror does not include the mailing list archives. "
+"(Thanks to <a href='http://public.www.planetmirror.com/'>PlanetMirror</a> "
+"for this service)."
 
 #: www/oldnews.phtml:520
 msgid "Update Debian Woody GnuCash Package"
@@ -1794,15 +2206,15 @@ msgstr "Vote for GnuCash to go to Comdex!"
 
 #: www/oldnews.phtml:545
 msgid ""
-"Your vote in the <a href=&quot;http://www.oreillynet.com/contest/comdex/"
-"&quot;>O'Reilly &quot;Open Source Goes to COMDEX&quot; Contest</a> could "
+"Your vote in the <a href='http://www.oreillynet.com/contest/"
+"comdex/'>O'Reilly &quot;Open Source Goes to COMDEX&quot; Contest</a> could "
 "send one of the GnuCash developers to Comdex to show off our wares!  Take a "
 "moment to vote, as the increased exposure of GnuCash will help attract more "
 "developers, more translators, and more accountants to help answer your "
 "questions on the mailing lists!"
 msgstr ""
-"Your vote in the <a href=&quot;http://www.oreillynet.com/contest/comdex/"
-"&quot;>O'Reilly &quot;Open Source Goes to COMDEX&quot; Contest</a> could "
+"Your vote in the <a href='http://www.oreillynet.com/contest/"
+"comdex/'>O'Reilly &quot;Open Source Goes to COMDEX&quot; Contest</a> could "
 "send one of the GnuCash developers to Comdex to show off our wares!  Take a "
 "moment to vote, as the increased exposure of GnuCash will help attract more "
 "developers, more translators, and more accountants to help answer your "
@@ -1816,16 +2228,16 @@ msgstr "<b>System Outage</b>  FIXED"
 msgid ""
 "Yes, the www.gnucash.org server was down most of today. Problem was a failed "
 "IDE controller. Please remember that the gnucash website &amp; ftp site are "
-"mirrored in Australia, at <a href=&quot;http://www.au.gnucash.org&quot;"
-">http://www.au.gnucash.org</a>. (A European mirror coming soon). If you know "
-"of a technology to mirror mailman mailing lists,\n"
+"mirrored in Australia, at <a href='http://www.au.gnucash.org'>http://www.au."
+"gnucash.org</a>. (A European mirror coming soon). If you know of a "
+"technology to mirror mailman mailing lists,\n"
 "let us know."
 msgstr ""
 "Yes, the www.gnucash.org server was down most of today. Problem was a failed "
 "IDE controller. Please remember that the gnucash website &amp; ftp site are "
-"mirrored in Australia, at <a href=&quot;http://www.au.gnucash.org&quot;"
-">http://www.au.gnucash.org</a>. (A European mirror coming soon). If you know "
-"of a technology to mirror mailman mailing lists,\n"
+"mirrored in Australia, at <a href='http://www.au.gnucash.org'>http://www.au."
+"gnucash.org</a>. (A European mirror coming soon). If you know of a "
+"technology to mirror mailman mailing lists,\n"
 "let us know."
 
 #: www/oldnews.phtml:567
@@ -1834,21 +2246,21 @@ msgstr "Linas Vepstas writes:"
 
 #: www/oldnews.phtml:570
 msgid ""
-"I'm currently tearing up the guts of &quot;DWI&quot; <a href=&quot;http://"
-"dwi.sourceforge.net&quot;> http://dwi.sourceforge.net</a> DWI was originally "
-"(and still is) a way of 'quickly' developing glade apps that are hooked to "
-"an SQL db.  I wrote a kind of tracking tool using the thing for a client "
-"(tracking maintenance of pipes & pumps), so DWI has been vetted with a 'real "
-"life' project.  I've been planning on creating a whiz-bang open source bug "
-"tracker & etc with it, but never got around to it."
+"I'm currently tearing up the guts of &quot;DWI&quot; <a href='http://dwi."
+"sourceforge.net'> http://dwi.sourceforge.net</a> DWI was originally (and "
+"still is) a way of 'quickly' developing glade apps that are hooked to an SQL "
+"db.  I wrote a kind of tracking tool using the thing for a client (tracking "
+"maintenance of pipes & pumps), so DWI has been vetted with a 'real life' "
+"project.  I've been planning on creating a whiz-bang open source bug tracker "
+"& etc with it, but never got around to it."
 msgstr ""
-"I'm currently tearing up the guts of &quot;DWI&quot; <a href=&quot;http://"
-"dwi.sourceforge.net&quot;> http://dwi.sourceforge.net</a> DWI was originally "
-"(and still is) a way of 'quickly' developing glade apps that are hooked to "
-"an SQL db.  I wrote a kind of tracking tool using the thing for a client "
-"(tracking maintenance of pipes & pumps), so DWI has been vetted with a 'real "
-"life' project.  I've been planning on creating a whiz-bang open source bug "
-"tracker & etc with it, but never got around to it."
+"I'm currently tearing up the guts of &quot;DWI&quot; <a href='http://dwi."
+"sourceforge.net'> http://dwi.sourceforge.net</a> DWI was originally (and "
+"still is) a way of 'quickly' developing glade apps that are hooked to an SQL "
+"db. I wrote a kind of tracking tool using the thing for a client (tracking "
+"maintenance of pipes & pumps), so DWI has been vetted with a 'real life' "
+"project. I've been planning on creating a whiz-bang open source bug tracker "
+"&amp; etc with it, but never got around to it."
 
 #: www/oldnews.phtml:572
 msgid ""
@@ -2163,23 +2575,11 @@ msgstr ""
 "when a transaction is due, give a choice of entering a transaction or "
 "postponing it and remove an automated transaction after a certain period."
 
-#: www/oldnews.phtml:715 www/oldnews.phtml:1106 www/oldnews.phtml:1156
-#: www/oldnews.phtml:1332 www/oldnews.phtml:1410 www/oldnews.phtml:1508
-#: www/oldnews.phtml:1549
-msgid "Mortgage &amp; Loan Repayment Druid"
-msgstr "Mortgage &amp; Loan Repayment Druid"
-
 #: www/oldnews.phtml:716 www/oldnews.phtml:1107 www/oldnews.phtml:1157
 #: www/oldnews.phtml:1266 www/oldnews.phtml:1333 www/oldnews.phtml:1509
 #: www/oldnews.phtml:1550
 msgid "Used to setup a variable payment loan scheduled transaction."
 msgstr "Used to setup a variable payment loan scheduled transaction."
-
-#: www/oldnews.phtml:717 www/oldnews.phtml:1109 www/oldnews.phtml:1158
-#: www/oldnews.phtml:1267 www/oldnews.phtml:1334 www/oldnews.phtml:1412
-#: www/oldnews.phtml:1510 www/oldnews.phtml:1551
-msgid "Small Business Accounting Features"
-msgstr "Small Business Accounting Features"
 
 #: www/oldnews.phtml:718 www/oldnews.phtml:1110 www/oldnews.phtml:1159
 #: www/oldnews.phtml:1268 www/oldnews.phtml:1413 www/oldnews.phtml:1511
@@ -2190,12 +2590,6 @@ msgid ""
 msgstr ""
 "GnuCash now can be used for Customer and Vendor tracking, Invoicing and Bill "
 "Payment, and using different Tax and Billing Terms in a small business."
-
-#: www/oldnews.phtml:719 www/oldnews.phtml:1112 www/oldnews.phtml:1160
-#: www/oldnews.phtml:1269 www/oldnews.phtml:1337 www/oldnews.phtml:1414
-#: www/oldnews.phtml:1512 www/oldnews.phtml:1553
-msgid "OFX Import"
-msgstr "OFX Import"
 
 #: www/oldnews.phtml:720 www/oldnews.phtml:1113 www/oldnews.phtml:1161
 #: www/oldnews.phtml:1270 www/oldnews.phtml:1338 www/oldnews.phtml:1415
@@ -2213,12 +2607,6 @@ msgstr ""
 "transaction matching system that more accurately picks duplicate "
 "transactions."
 
-#: www/oldnews.phtml:721 www/oldnews.phtml:1114 www/oldnews.phtml:1162
-#: www/oldnews.phtml:1271 www/oldnews.phtml:1339 www/oldnews.phtml:1416
-#: www/oldnews.phtml:1514 www/oldnews.phtml:1555
-msgid "HBCI Support"
-msgstr "HBCI Support"
-
 #: www/oldnews.phtml:722 www/oldnews.phtml:1272 www/oldnews.phtml:1340
 #: www/oldnews.phtml:1515 www/oldnews.phtml:1556
 msgid ""
@@ -2230,12 +2618,6 @@ msgstr ""
 "Banking Computer Information protocol which includes statement download, "
 "initiate bank transfers and direct debits."
 
-#: www/oldnews.phtml:723 www/oldnews.phtml:1116 www/oldnews.phtml:1164
-#: www/oldnews.phtml:1273 www/oldnews.phtml:1341 www/oldnews.phtml:1418
-#: www/oldnews.phtml:1516 www/oldnews.phtml:1557
-msgid "New User Manual and Help"
-msgstr "New User Manual and Help"
-
 #: www/oldnews.phtml:724 www/oldnews.phtml:1517
 msgid ""
 "A brand new user help has been written which focuses on how to do tasks in "
@@ -2246,12 +2628,6 @@ msgstr ""
 "conjunction with a Tutorial and Concepts guide that gives the user "
 "background information on using GnuCash."
 
-#: www/oldnews.phtml:725 www/oldnews.phtml:1118 www/oldnews.phtml:1166
-#: www/oldnews.phtml:1275 www/oldnews.phtml:1343 www/oldnews.phtml:1420
-#: www/oldnews.phtml:1518 www/oldnews.phtml:1559
-msgid "New Multi-Currency Transaction Handling"
-msgstr "New Multi-Currency Transaction Handling"
-
 #: www/oldnews.phtml:726 www/oldnews.phtml:1119 www/oldnews.phtml:1167
 #: www/oldnews.phtml:1276 www/oldnews.phtml:1344 www/oldnews.phtml:1421
 #: www/oldnews.phtml:1519 www/oldnews.phtml:1560
@@ -2261,12 +2637,6 @@ msgid ""
 msgstr ""
 "GnuCash no longer requires separate currency exchange accounts to handle "
 "multiple currency transfers."
-
-#: www/oldnews.phtml:727 www/oldnews.phtml:1120 www/oldnews.phtml:1168
-#: www/oldnews.phtml:1277 www/oldnews.phtml:1345 www/oldnews.phtml:1422
-#: www/oldnews.phtml:1520 www/oldnews.phtml:1561
-msgid "Redesigned Menus"
-msgstr "Redesigned Menus"
 
 #: www/oldnews.phtml:728 www/oldnews.phtml:1278 www/oldnews.phtml:1346
 msgid ""
@@ -2826,13 +3196,13 @@ msgstr "<b>State of the GnuCash project,</b> a call for help"
 
 #: www/oldnews.phtml:860
 msgid ""
-"<a href=&quot;mailto:bock@step.polymtl.ca&quot;>Benoit Gr&eacute;goire</a> "
-"has written an important document outlining some of the major issues for the "
-"GnuCash project"
+"<a href='mailto:bock@step.polymtl.ca'>Benoit Gr&eacute;goire</a> has written "
+"an important document outlining some of the major issues for the GnuCash "
+"project"
 msgstr ""
-"<a href=&quot;mailto:bock@step.polymtl.ca&quot;>Benoit Gr&eacute;goire</a> "
-"has written an important document outlining some of the major issues for the "
-"GnuCash project"
+"<a href='mailto:bock@step.polymtl.ca'>Benoit Gr&eacute;goire</a> has written "
+"an important document outlining some of the major issues for the GnuCash "
+"project"
 
 #: www/oldnews.phtml:863
 msgid ""
@@ -3988,18 +4358,18 @@ msgstr "German / Deutsch Mailing List"
 #: www/oldnews.phtml:1233
 msgid ""
 "A new mailing list for German speaking GnuCash users has been created: "
-"gnucash-de@gnucash.org. To subscribe, visit <a href=&quot;http://www.gnucash."
-"org/cgi-bin/mailman/listinfo/gnucash-de&quot;>http://www.gnucash.org/cgi-bin/"
-"mailman/listinfo/gnucash-de</a> and enter your email address there. You can "
-"choose whether you would like to receive the administrative emails in German "
-"or in English language."
+"gnucash-de@gnucash.org. To subscribe, visit <a href='http://www.gnucash.org/"
+"cgi-bin/mailman/listinfo/gnucash-de'>http://www.gnucash.org/cgi-bin/mailman/"
+"listinfo/gnucash-de</a> and enter your email address there. You can choose "
+"whether you would like to receive the administrative emails in German or in "
+"English language."
 msgstr ""
 "A new mailing list for German speaking GnuCash users has been created: "
-"gnucash-de@gnucash.org. To subscribe, visit <a href=&quot;http://www.gnucash."
-"org/cgi-bin/mailman/listinfo/gnucash-de&quot;>http://www.gnucash.org/cgi-bin/"
-"mailman/listinfo/gnucash-de</a> and enter your email address there. You can "
-"choose whether you would like to receive the administrative emails in German "
-"or in English language."
+"gnucash-de@gnucash.org. To subscribe, visit <a href='http://www.gnucash.org/"
+"cgi-bin/mailman/listinfo/gnucash-de'>http://www.gnucash.org/cgi-bin/mailman/"
+"listinfo/gnucash-de</a> and enter your email address there. You can choose "
+"whether you would like to receive the administrative emails in German or in "
+"English language."
 
 #: www/oldnews.phtml:1235
 msgid ""
@@ -7476,4 +7846,3 @@ msgstr "About / News"
 #: www/externals/menu-general.phtml:10
 msgid "How to help"
 msgstr "How to help"
-
