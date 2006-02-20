@@ -21,6 +21,26 @@
     //  If the second line does not create a valid timestamp, the 
     //  inode change time of file is used.
 
+    //  Text messages are later converted to .phtml with translatable strings
+    //  marked up in PHP. (You can follow the example of other files to do this
+    //  yourself, e.g. when updating your translation.)
+
+    //  These phtml files will replace the alternative of separately translated
+    //  files in bespoke language directories. Once created, the .phtml file
+    //  replaces the .txt version. This automatically enables the translated
+    //  text or uses en_US if the new strings have not been translated yet.
+
+    //  Indicate the sequence for the phtml files here: Most recent last.
+    //  Use the original timestamps as values for the array.
+
+$translated_news = array(
+"1.9.0" => "2006-02-09   05:19:32", 
+"1.9.1" => "2006-02-20   04:29:24"    );
+
+    //  If the entry in translated_news is omitted, the script will try to use
+    //  the seventh line of the phtml which should consist of just the
+    //  timestamp, without the tags or brackets.
+
     # Be sure to define the following path to newsdirs
     if (!$en_newspath) { exit;  }
     if (!$lang_newspath) { exit;  }
@@ -33,23 +53,20 @@
     $native_files = array();
     $hd  =  dir($lang_newspath);
 
-    //  Get  all  files in the language directory
+    //  Get all translatable files in the news directory
     while(  $filename  =  $hd->read()  )  {
         $s=strtolower($filename);
-        if  (strstr($s, ".txt"))  {
-            $lang_files[$filename]  =  $lang_newspath.$filename;
-
-	    $display_filename = $lang_newspath.$filename;
-
-            //  Determine  last  modification  date
-	    $lastchanged="";
-	    $about = file($display_filename);
-	    $lastchanged=$about[1];
-	    if($lastchanged == "\n")
-	    {
-		$lastchanged = date("Y-m-d H:m:s", filectime($display_filename));
-	    }
-            $newsfile[$display_filename]  =  $lastchanged;
+        if  (strstr($s, ".phtml"))  {
+                $stump = str_replace("phtml", "txt", $filename);
+                $lang_files[$stump]  =  $lang_newspath.$filename;
+                $display_filename = $lang_newspath.$filename;
+                $lastchanged=$translated_news[$stump];
+                if(!$lastchanged)
+                {
+                       $about = file($display_filename);
+                       $lastchanged=$about[6];
+                }
+                $newsfile[$display_filename] = $lastchanged;
         }
     }
     $hd->close();
@@ -67,7 +84,6 @@
 	    // display english only if there isn't a translated version
 	    if (!$lang_files[$filename]) {
 	       $display_filename = $en_newspath.$filename;
-               //  Determine  last  modification  date
 	       $lastchanged="";
 	       $about = file($display_filename);
                $lastchanged=$about[1];
@@ -91,17 +107,21 @@
         $fa  =  file($key);
         $n=count($fa);
 
-        echo ("<div class=\"newsborder\"><div class=\"newsheader\">");
-        echo("<img alt=\"news panel\" src=\"images/icons/document.txt.gif\">&nbsp;");
-	print $fa[0];
-	print  " - <b>" . $newsfile[$key] . "</b>\n</div>";
-
-        echo "<div class=\"newsinner\">";
-        for  ($i=2;  $i<$n;  $i++)  {
-	    print $fa[$i];
+        if  (strstr($key, ".phtml"))  {
+              include $key;
         }
-        echo "</div>";
-        echo "</div>";
+        else {
+             echo ("<div class=\"newsborder\"><div class=\"newsheader\">");
+             echo("<img alt=\"news panel\" src=\"images/icons/document.txt.gif\">&nbsp;");
+             print $fa[0];
+             print  " - <b>" . $newsfile[$key] . "</b>\n</div>";
+             echo "<div class=\"newsinner\">";
+             for  ($i=2;  $i<$n;  $i++)  {
+                 print $fa[$i];
+             }
+             echo "</div>";
+             echo "</div>";
+        }
     }
 
 ?>
