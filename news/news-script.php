@@ -111,10 +111,10 @@ $translated_news = array(
               include $key;
         }
         else {
-             echo ("<div class=\"newsborder\"><h1 class=\"newsheader\">");
+             echo ("<div class=\"newsborder\"><div class=\"newsheader\">");
              echo("<img alt=\"news panel\" src=\"images/icons/document.txt.gif\">&nbsp;");
              print $fa[0];
-             print  " - <b>" . $newsfile[$key] . "</b></h1>\n";
+             print  " - <b>" . $newsfile[$key] . "</b></div>\n";
              echo "<div class=\"newsinner\">";
              for  ($i=2;  $i<$n;  $i++)  {
                  print $fa[$i];
