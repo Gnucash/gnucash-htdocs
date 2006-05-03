@@ -14,9 +14,8 @@
    // 
    // Created by Linas Vepstas 2003, 2004
 
-   header("Content-Type: text/rss; charset=iso-8859-1");
-
-   echo ("<?xml version=\"1.0\" ?>\n");
+   header("Content-Type: application/rss+xml; charset=iso-8859-1");
+   echo ("<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>\n");
 ?>
 
  <rss version="2.0" encoding="iso-8859-1">
@@ -50,14 +49,8 @@
     }
 
     $newspath  =  "$topdir/news/"; 
-
-    //  Declare  array  to  hold  filenames 
     $newsfile  =  array(); 
-    
-    //  Create  handle  to  search  directory  $newspath  for  files 
     $hd  =  dir($newspath); 
-    
-    //  Get  all  files  and  store  them  in  array 
     while(  $filename  =  $hd->read()  )  { 
         $s=strtolower($filename); 
         if  (strstr($s, ".txt"))  { 
