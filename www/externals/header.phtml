@@ -1,17 +1,12 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
 <head>
-<?php echo "<link rel=\"stylesheet\" href=\"externals/gnucash.css\"";
-echo" type=\"text/css\">\n"; 
-echo "<link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">\n";
-echo "<link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\">\n";
-echo $mimeline;
+<?php
+  echo "<link rel=\"stylesheet\" href=\"externals/gnucash.css\" type=\"text/css\">\n";
+  echo "<link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">\n";
+  echo "<link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\">\n";
+  echo $mimeline;
 ?>
-<style type="text/css">
-#news LI	{
-list-style-image:url(images/webding.png);
-}
-</style>
 <?php if (isset($homepage)) { ?>
 <!-- the RSS only appears on the home page, not on all pages. -->
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.gnucash.org/en/rss-feed.phtml">
@@ -21,8 +16,7 @@ list-style-image:url(images/webding.png);
 
 <body>
 <div id="head">
-<?php echo "<img src=\"images/gnucash_logo1.png\" ";
-echo "alt=\"GnuCash Logo\" id=\"gnclogo\">\n"; ?>
+<?php echo "<img src=\"images/gnucash_logo1.png\" alt=\"GnuCash Logo\" id=\"gnclogo\" width=\"179\" height=\"45\">\n"; ?>
 <br/>
 <span id="language">
  Language:

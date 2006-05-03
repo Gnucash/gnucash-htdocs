@@ -67,7 +67,7 @@ TR {
    padding-bottom: 0.5em;
 }
 
-#head A
+#head A, #tail A
 {
    background-color: #666699;
    color: white;
@@ -81,7 +81,9 @@ TR {
    color: white;
    margin-left: 0;
    margin-right: 0;
+   min-height: 60px;
 }
+
 .tblborder {
    border-style: ridge;
    border-color: silver;
@@ -123,6 +125,12 @@ TR {
    float: left;
    width: 20%;
 }
+
+#news LI 
+{
+  list-style-image: url(../images/webding.png);
+}
+
 .highlight {
    background-color: #cacaf7;
    color: black;
@@ -141,11 +149,10 @@ TR {
 }
 #content {
    float: left;
-   width: 65%;
+   width: 75%;
    margin-right: 1em;
    padding-right: 1em;
-   margin-left: 2em;
-   text-align: justify;
+   margin-left: 1%;
 }
 #location {
    padding-left: 0.3em;
@@ -160,6 +167,18 @@ TR {
 }
 .history {
    margin-bottom: 2em;
+}
+
+#tail P#validation
+{
+  float: right;
+  margin-right: 1em;
+}
+
+#tail P#rss
+{
+  float: left;
+  margin-left: 1em;
 }
 
 H1
