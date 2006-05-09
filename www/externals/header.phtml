@@ -6,6 +6,9 @@
   echo "<link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">\n";
   echo "<link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\">\n";
   echo $mimeline;
+
+$home = "..";
+
 ?>
 <?php if (isset($homepage)) { ?>
 <!-- the RSS only appears on the home page, not on all pages. -->
@@ -16,10 +19,10 @@
 
 <body>
 <div id="head">
-<?php echo "<img src=\"images/gnucash_logo1.png\" alt=\"GnuCash Logo\" id=\"gnclogo\" width=\"179\" height=\"45\">\n"; ?>
+<img src="images/gnucash_logo1.png" alt="GnuCash Logo" id="gnclogo" width="179" height="45" />
 <br/>
 <span id="language">
- Language:
+Language:
 <b>English</b>
 | <a class="nav" href="<?php echo $home;?>/fr/">Fran&ccedil;ais</a>
 | <a class="nav" href="http://www.hthoma.de/projekte/gnucash/index.html">Deutsch</a>
