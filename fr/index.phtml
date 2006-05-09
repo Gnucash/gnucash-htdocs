@@ -3,14 +3,14 @@
  include("../emulate_globals_on.php");
 }
 ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/fr/components/header.phtml"); ?>
-<?php include($GLOBALS['DOCUMENT_ROOT']."/fr/menu/menu-main.phtml"); ?>
+<?php include("components/header.phtml"); ?>
+<?php include("menu/menu-main.phtml"); ?>
 
 	</td>
   <td valign="top" width="98%">
   
 <h1>Bienvenue Sur GnuCash.org</h1>
-  
+
 <font size=-1>
 
 Si vous recherchez un moyen de gérer vos finances personnelles en utilisant un logiciel gratuit
@@ -49,9 +49,9 @@ contacter pour pouvoir la corriger au plus vite. Merci de votre indulgence.
 <h1>Actualités</h1>
 
 <?php 
-$lang_newspath = $toppath . "/news/fr/";
-$en_newspath = $toppath . "/news/en/";
-include($toppath."/news/news-script.php"); 
+$lang_newspath = "../news/fr/";
+$en_newspath = "../news/en/";
+include("../news/news-script.php"); 
 ?>
 
 <font size=-2>
@@ -63,4 +63,4 @@ include($toppath."/news/news-script.php");
 
   </td>
 
-<?php include($toppath."/fr/components/footer.phtml"); ?>
+<?php include("components/footer.phtml"); ?>
