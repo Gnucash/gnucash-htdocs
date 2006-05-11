@@ -17,7 +17,6 @@ include("$top_dir/externals/menu-main-general.phtml");
 - report+graph
 - invoice
 - search query builder?
-
 -->
 
 <h2><?php echo _("Checkbook-Style Register");?></h2>
@@ -36,7 +35,7 @@ The checkbook-style register provides a custom, convenient and familiar interfac
 
 <h2><?php echo _("Reports, Graphs");?></h2>
 <p>
-<img src="images/features/feature_graph-report.png" width="300" height="200" style="float: left; border: solid thin grey; margin: 0.5em;" alt="[Graphs]"/>
+<img src="<?=$top_dir?>/images/features/feature_graph-report.png" width="300" height="200" style="float: left; border: solid thin grey; margin: 0.5em;" alt="[Graphs]"/>
 <?php echo _("GnuCash has an integrated reporting and graphing module, and comes complete with a full suite of standard and customizeable reports, such as Balance Sheet, Profit &amp; Loss, Portfolio Valuation, and many others.");?>
 </p>
 <br clear="all"/>
@@ -86,7 +85,7 @@ The checkbook-style register provides a custom, convenient and familiar interfac
 
 <h2><?php echo _("Transaction Finder");?></h2>
 <p>
-<img src="images/features/feature_search.png" width="300" height="200" alt="[Transaction Finder]" style="float: right; margin: 0.5em; border: solid thin grey;"/>
+<img src="<?=$top_dir?>/images/features/feature_search.png" width="300" height="200" alt="[Transaction Finder]" style="float: right; margin: 0.5em; border: solid thin grey;"/>
 <?php echo _("A powerful transaction query dialogue can help you quickly locate a needle in a haystack.");?></p>
 <br clear="all" />
 
