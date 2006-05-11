@@ -12,9 +12,10 @@ use File::Basename;
 
 my @cvsignores = `find . -name '.cvsignore'`;
 my @phtml_files = `find . -name '*.php' -o -name '*.phtml' -maxdepth 1`;
+my @ext_files = `find externals -name '*.phtml'`;
 my @news_files = `find news -name '*.phtml'`;
 #my @news_files = ();
-my @possible_files = (@phtml_files, @news_files);
+my @possible_files = (@phtml_files, @ext_files, @news_files);
 
 chomp(my $cwd = `pwd`);
 
