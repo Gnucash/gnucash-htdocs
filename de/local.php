@@ -1,4 +1,4 @@
 <?php
 $top_dir = "..";
-$locale = "de"; # _DE";
+$locale = "de_DE";
 ?>
