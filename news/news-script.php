@@ -112,7 +112,7 @@ $translated_news = array(
         }
         else {
              echo ("<div class=\"newsborder\"><div class=\"newsheader\">");
-             echo("<img alt=\"news panel\" src=\"images/icons/document.txt.gif\">&nbsp;");
+             echo("<img alt=\"news panel\" src=\"$top_dir/images/icons/document.txt.gif\">&nbsp;");
              print $fa[0];
              print  " - <b>" . $newsfile[$key] . "</b></div>\n";
              echo "<div class=\"newsinner\">";
