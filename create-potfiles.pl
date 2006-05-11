@@ -11,7 +11,7 @@ use strict;
 use File::Basename;
 
 my @cvsignores = `find . -name '.cvsignore'`;
-my @phtml_files = `find www -name '*.php' -o -name '*.phtml'`;
+my @phtml_files = `find . -name '*.php' -o -name '*.phtml' -maxdepth 1`;
 my @news_files = `find news -name '*.phtml'`;
 #my @news_files = ();
 my @possible_files = (@phtml_files, @news_files);
