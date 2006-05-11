@@ -1,12 +1,9 @@
-<?php
-echo "<span class=\"linktop\">\n";
-echo "<img class=\"dot\" src=\"$top_dir/images/webding.png\" alt=\"marker\">\n";
-echo "<b>" . _("Information") . "</b>\n";
-echo "</span>\n";
-echo "<ul>\n";
-echo "<li><a href=\"index.phtml\">" . _("About / News") . " </a></li>\n";
-echo "<li><a href=\"features.phtml\">" . _("Features") . "</a></li>\n";
-echo "<li><a href=\"http://wiki.gnucash.org/wiki/Development\">";
-echo _("How to help") . "</a></li>\n";
-echo "</ul>\n";
-?>
+<span class="linktop">
+<img class="dot" src="<?=$top_dir?>/images/webding.png" alt="marker">
+<b><?= _("Information")?></b>
+</span>
+<ul>
+<li><a href="<?=$home?>/index.phtml"><?= _("About / News")?></a></li>
+<li><a href="<?=$home?>/features.phtml"><?=_("Features")?></a></li>
+<li><a href="http://wiki.gnucash.org/wiki/Development"><?= _("How to help")?></a></li>
+</ul>

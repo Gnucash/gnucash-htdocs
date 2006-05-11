@@ -1,29 +1,25 @@
-<?php
-echo "<span class=\"linktop\">\n";
-echo "<img class=\"dot\" src=\"$top_dir/images/webding.png\" alt=\"marker\">\n";
-echo "<b>" . _("Documentation") . "</b></span>\n";
-echo "<ul>\n";
-echo "<li><a href=\"http://wiki.gnucash.org/wiki/FAQ\">" . _("FAQ") . "</a></li>\n";
-echo "<li><a href=\"http://wiki.gnucash.org/wiki/\">" . _("Wiki") . "</a>&nbsp;";
-echo "<a href=\"http://linuxwiki.de/GnuCash\">[de]</a></li>\n";
-echo "<li><a href=\"docs.phtml\">Tutorial and Help</a></li>\n";
-
-#echo "<li><a href=\"http://www.gnucash.org/docs/v1.8/C/gnucash-guide\">";
-#echo _("Concepts Guide") . "</a></li>\n";
-#echo "<li>\n";
-#echo "<a href=\"http://www.gnucash.org/docs/v1.8/C/gnucash-help/help.html\">";
+<span class="linktop">
+<img class="dot" src="<?=$top_dir?>/images/webding.png" alt="marker" />
+<b><?=_("Documentation")?></b></span>
+<ul>
+<li><a href="http://wiki.gnucash.org/wiki/FAQ"><?=_("FAQ")?></a></li>
+<li><a href="http://wiki.gnucash.org/wiki/"><?=_("Wiki")?></a>&nbsp;
+  <a href="http://linuxwiki.de/GnuCash">[de]</a></li>
+<li><a href="<?=$home?>/docs.phtml">Tutorial and Help</a></li>
+<!--
+#<li><a href="http://www.gnucash.org/docs/v1.8/C/gnucash-guide">
+#echo _("Concepts Guide")?></a></li>
+#<li>\n
+#<a href="http://www.gnucash.org/docs/v1.8/C/gnucash-help/help.html">
 #echo _("Help Manual") . "</a>\n";
-#echo "<a href=\"http://www.gnucash.org/docs/v1.8/de_DE/gnucash-help/help.html\">";
-#echo "[de]</a></li>\n";
-echo "<li><a href=\"http://wiki.gnucash.org/wiki/Mailing_Lists\">";
-echo _("Mailing Lists") . "</a>\n";
-echo "<li style=\"list-style-image:none;list-style-type:none;\"><ul><li>\n";
-echo "<a href=\"https://lists.gnucash.org/search/\">" . _("Search") . "</a>\n";
-echo "</li></ul></li>\n";
-echo "<li><a href=\"http://wiki.gnucash.org/wiki/Bugzilla\">";
-echo _("Bug Reports") . "</a></li>\n";
-echo "<li><a href=\"http://wiki.gnucash.org/wiki/IRC\">";
-echo _("IRC (Chat)") . "</a></li>\n";
-echo "<li><a href=\"http://sourceforge.net/donate/index.php?group_id=192\">" . _("Donations") . "</a></li>\n";
-echo "\n</ul>\n";
-?>
+#<a href="http://www.gnucash.org/docs/v1.8/de_DE/gnucash-help/help.html">
+#[de]</a></li>\n
+-->
+<li><a href="http://wiki.gnucash.org/wiki/Mailing_Lists"><?=_("Mailing Lists")?></a>
+<li style="list-style-image:none;list-style-type:none;"><ul>
+  <li><a href="https://lists.gnucash.org/search/"><?=_("Search")?></a></li>
+  </ul></li>
+<li><a href="http://wiki.gnucash.org/wiki/Bugzilla"><?=_("Bug Reports")?></a></li>
+<li><a href="http://wiki.gnucash.org/wiki/IRC"><?=_("IRC (Chat)")?></a></li>
+<li><a href="http://sourceforge.net/donate/index.php?group_id=192"><?=_("Donations")?></a></li>
+</ul>

@@ -7,28 +7,28 @@
 <link rel="shortcut icon" href="<?=$top_dir?>/favicon.ico" type="image/x-icon" />
 <?php echo $mimeline; ?>
 <?php
-
-$home = $top_dir;
+$home = ".";
 
 if (isset($homepage)) { ?>
 <!-- the RSS only appears on the home page, not on all pages. -->
-<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.gnucash.org/en/rss-feed.phtml">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="<?=$top_dir?>rss-feed.phtml">
 <?php } ?>
 
-<title>GnuCash - <?php echo _($title); ?></title>
+<title>GnuCash - <?= _($title); ?></title>
 </head>
 
 <body>
+
 <div id="head">
 <img src="<?=$top_dir?>/images/gnucash_logo1.png" alt="[GnuCash Logo]" id="gnclogo" width="179" height="45" />
 <br/>
 <span id="language">
 Language:
-<a class="nav" href="<?=$home;?>">English</a>
-| <a class="nav" href="<?=$home;?>/fr/">Fran&ccedil;ais</a>
-| <a class="nav" href="<?=$home?>/de/">Deutsch</a>
-| <a class="nav" href="<?=$home;?>/nl/">Nederlands</a>
-| <a class="nav" href="<?=$home;?>/pt_PT/">Portugu&ecirc;s</a>
+  <a class="nav" href="<?=$top_dir;?>">English</a>
+| <a class="nav" href="<?=$top_dir;?>/fr/">Fran&ccedil;ais</a>
+| <a class="nav" href="<?=$top_dir;?>/de/">Deutsch</a>
+| <a class="nav" href="<?=$top_dir;?>/nl/">Nederlands</a>
+| <a class="nav" href="<?=$top_dir;?>/pt_PT/">Portugu&ecirc;s</a>
 </span>
 <span id="location">Continent:
  (<a class="nav" href="http://www.gnucash.org/">US</a>)

@@ -1,27 +1,13 @@
-<!-- MENU:START -->
 <?php
 $self = $_SERVER["HTTP_HOST"];
 if(ereg("lists.gnucash.org",$self)) {
   $home = "http://www.gnucash.org";
 }
-else {
-  $home = ".";
-}
-
-echo "<div id=\"news\">";
-echo "<div id=\"othernews\">";
-include("externals/menu-general.phtml");
-echo "</div>\n<div class=\"othernews\">\n";
-include("externals/menu-documentation.phtml");
-echo "</div>\n<div class=\"othernews\">\n";
-include("externals/menu-downloads.phtml");
-# highlighted menu entry:
-echo "</div>\n<div class=\"highlight\">\n";
-include("externals/menu-developer.phtml");
-echo "</div>\n<div class=\"othernews\">\n";
-include("externals/menu-other.phtml");
-echo "</div>\n";
-echo "</div>\n";
 ?>
-
-<!-- MENU:END -->
+<div id="news">
+  <div id="othernews"><?php include("externals/menu-general.phtml"); ?></div>
+  <div class="othernews"><?php include("externals/menu-documentation.phtml");?></div>
+  <div class="othernews"><?php include("externals/menu-downloads.phtml");?></div>
+  <div class="highlight"><?php include("externals/menu-developer.phtml");?></div>
+  <div class="othernews"><?php include("externals/menu-other.phtml");?></div>
+</div>

@@ -1,20 +1,7 @@
-<!-- MENU:START -->
-<?php
-
-echo "<div id=\"news\"><div class=\"othernews\">";
-include("externals/menu-general.phtml");
-echo "</div>\n<div class=\"othernews\">\n";
-include("externals/menu-documentation.phtml");
-# highlighted menu entry:
-echo "</div>\n<div class=\"highlight\">\n";
-include("externals/menu-downloads.phtml");
-echo "</div>\n<div class=\"othernews\">\n";
-include("externals/menu-developer.phtml");
-echo "</div>\n<div class=\"othernews\">\n";
-include("externals/menu-other.phtml");
-echo "</div>\n";
-echo "</div>\n";
-?>
-
-
-<!-- MENU:END -->
+<div id="news">
+  <div class="othernews"><?php include("$top_dir/externals/menu-general.phtml");?></div>
+  <div class="othernews"><?php include("$top_dir/externals/menu-documentation.phtml");?></div>
+  <div class="highlight"><?php include("$top_dir/externals/menu-downloads.phtml");?></div>
+  <div class="othernews"><?php include("$top_dir/externals/menu-developer.phtml");?></div>
+  <div class="othernews"><?php include("$top_dir/externals/menu-other.phtml");?></div>
+</div>
