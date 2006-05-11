@@ -9,5 +9,5 @@ $locale_res = setlocale(LC_ALL, $locale);
 $domain = "gnucash-htdocs";
 $dir_res = bindtextdomain($domain, $top_dir);
 textdomain($domain);
-echo ("<!-- locale_res $locale_res , dir_res $dir_res -->\n");
+echo ("<!-- locale_res [$locale_res] , dir_res $dir_res -->\n");
 ?>
