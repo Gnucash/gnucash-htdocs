@@ -1,13 +1,14 @@
-<?php $title = "Sizing"; ?>
-<?php
-include("../emulate_globals_on.php");
+<?php $title = "Sizing";
+include("local.php");
+include("lang.php");
+include("emulate_globals_on.php");
 include("externals/header.phtml");
 include("externals/menu-main-other.phtml");
 ?>
 
 <div id="content">
 
-<h1><?php echo _("Sizing");?></h1>
+<h1><?php echo _($title);?></h1>
 
 <p>
 <?php echo _("It can often be quite interesting to study the source code metrics behind a software development project.   Not a surprising interest: its accounting afterall.  GnuCash has grown, over the years, from a small handy electronic checkbook to a rather large and multi-featured desktop app.");?>
@@ -16,7 +17,7 @@ include("externals/menu-main-other.phtml");
 <?php echo _("GnuCash currently consists of over a third of a million lines of code spread over more than a thousand files.  It has been translated into twenty-three languages and credits over 139 authors and contributors.");?>
 </p>
 <p>
-<img alt="[code size graph]" src="images/sizing-graph.png" width="640" height="480" />
+<img alt="[code size graph]" src="<?=$top_dir?>/images/sizing-graph.png" width="640" height="480" />
 </p>
 <p>
 <?php echo _("If you've had trouble swimming through that mass of source code, think of it this way: printed out on paper, and bound into volumes, it would amount to several dozen copies of Tolstoy's \"War and Peace\", roughly a bookshelf-width's worth of source code.");?>
