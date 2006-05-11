@@ -3,7 +3,6 @@
 <h1> info... </h1>
 <?php
 
-
 function list_system_locales(){
    ob_start();
    system('locale -a');
@@ -12,7 +11,7 @@ function list_system_locales(){
    return split("\\n", trim($str));
 }
 
-echo list_system_locales();
+echo join('\n', list_system_locales());
 
 ?>
 <hr />
