@@ -5,8 +5,9 @@ if (isset($language)) { $locale = $language; }
 if ($locale == "") { $locale = "en_US"; }
 putenv("LANG=$locale");
 putenv("LANGUAGE=$locale");
-setlocale(LC_ALL, $locale);
+$locale_res = setlocale(LC_ALL, $locale);
 $domain = "gnucash-htdocs";
-bindtextdomain($domain, $top_dir);
+$dir_res = bindtextdomain($domain, $top_dir);
 textdomain($domain);
+echo ("<!-- locale_res $locale_res , dir_res $dir_res -->\n");
 ?>
