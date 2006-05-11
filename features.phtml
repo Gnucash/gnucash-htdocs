@@ -1,12 +1,14 @@
-<?php $title = "Features"; ?>
-<?php 
-include("../emulate_globals_on.php");
-include("externals/header.phtml");
-include("externals/menu-main-general.phtml");
+<?php
+$title = "Features";
+include("local.php");
+include("lang.php");
+include("emulate_globals_on.php");
+include("$top_dir/externals/header.phtml");
+include("$top_dir/externals/menu-main-general.phtml");
 ?>
 
 <div id="content">
-<h1><?php echo _("Features");?></h1>
+<h1><?php echo _($title);?></h1>
 
 <!-- images needed:
 - register
@@ -21,7 +23,7 @@ include("externals/menu-main-general.phtml");
 <h2><?php echo _("Checkbook-Style Register");?></h2>
 
 <p>
-<img src="images/features/feature_register.png" width="300" height="200" style="float: right; border: solid thin grey; margin: 0.5em;" alt="[Register]"/>
+<img src="<?=$top_dir?>/images/features/feature_register.png" width="300" height="200" style="float: right; border: solid thin grey; margin: 0.5em;" alt="[Register]"/>
 The checkbook-style register provides a custom, convenient and familiar interface to entering financial transactions.   The register supports common checking and credit-card transactions, as well as income, stock and currency transactions.
 </p>
 <br clear="all"/>

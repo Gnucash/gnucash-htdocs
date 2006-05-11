@@ -1,31 +1,32 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
 <head>
+
+<link rel="stylesheet" href="<?=$top_dir?>/externals/gnucash.css" type="text/css" />
+<link rel="icon" href="<?=$top_dir?>/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="<?=$top_dir?>/favicon.ico" type="image/x-icon" />
+<?php echo $mimeline; ?>
 <?php
-  echo "<link rel=\"stylesheet\" href=\"externals/gnucash.css\" type=\"text/css\">\n";
-  echo "<link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">\n";
-  echo "<link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\">\n";
-  echo $mimeline;
 
-$home = "..";
+$home = $top_dir;
 
-?>
-<?php if (isset($homepage)) { ?>
+if (isset($homepage)) { ?>
 <!-- the RSS only appears on the home page, not on all pages. -->
 <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.gnucash.org/en/rss-feed.phtml">
 <?php } ?>
-<title>GnuCash - <?php echo $title; ?></title>
+
+<title>GnuCash - <?php echo _($title); ?></title>
 </head>
 
 <body>
 <div id="head">
-<img src="images/gnucash_logo1.png" alt="GnuCash Logo" id="gnclogo" width="179" height="45" />
+<img src="<?=$top_dir?>/images/gnucash_logo1.png" alt="[GnuCash Logo]" id="gnclogo" width="179" height="45" />
 <br/>
 <span id="language">
 Language:
-<b>English</b>
+<a class="nav" href="<?php echo $home;?>">English</a>
 | <a class="nav" href="<?php echo $home;?>/fr/">Fran&ccedil;ais</a>
-| <a class="nav" href="http://www.hthoma.de/projekte/gnucash/index.html">Deutsch</a>
+| <a class="nav" href="<?=$top_dir?>/de/">Deutsch</a>
  (<a class="nav" href="<?php echo $home;?>/de/">mirror</a>)
 | <a class="nav" href="<?php echo $home;?>/nl/">Nederlands</a>
 | <a class="nav" href="<?php echo $home;?>/pt_PT/">Portugu&ecirc;s</a>
@@ -36,4 +37,3 @@ Language:
  (<a class="nav" href="http://www.au.gnucash.org/">AU</a>)
 </span>
 </div>
-

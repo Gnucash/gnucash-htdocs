@@ -1,6 +1,58 @@
-<html>
-<body>
-<a href="www/">Try here, for now.  This will move, soon...</a>
-<?php phpinfo(); ?>
-</body>
-</html>
+<?php 
+$homepage = true;
+$title = _("Open Source Accounting Software");
+include("local.php");
+include("emulate_globals_on.php");
+include("lang.php");
+include("externals/header.phtml");
+include("externals/menu-main.phtml"); 
+?>
+
+<div id="content">
+
+<h1><?php echo _("Welcome to GnuCash.org")?></h1>
+
+<p><?php echo _("GnuCash is personal and small-business financial-accounting software, freely licensed under the GNU GPL and available for GNU/Linux, *BSD, Solaris and Mac OSX.");?></p>
+
+<p><?php echo _("Designed to be easy to use, yet powerful and flexible, GnuCash allows you to track bank accounts, stocks, income and expenses.  As quick and intuitive to use as a checkbook register, it is based on professional accounting principles to ensure balanced books and accurate reports. "); ?></p>
+
+<div>
+<h2>Feature Highlights</h2>
+<div style="float: right">
+<ul>
+<li><?php echo _("QIF/OFX/HBCI Import, Transaction Matching");?></li>
+<li><?php echo _("Reports, Graphs");?></li>
+<li><?php echo _("Scheduled Transactions");?></li>
+<li><?php echo _("Budgeting "); ?></li>
+</ul>
+</div><div style="border: solid thin white;">
+<ul>
+<li><?php echo _("Double-Entry Accounting");?></li>
+<li><?php echo _("Stock/Bond/Mutual Fund Accounts");?></li>
+<li><?php echo _("Small-Business Accounting");?></li>
+<li><?php echo _("Customers, Vendors, Jobs, <br>Invoices, A/P, A/R");?></li>
+</ul>
+</div>
+</div>
+
+
+<h1><?php echo _("News"); ?></h1>
+
+<?php
+# News will continue to be translated separately because 
+# of the .txt format. 
+  # for english, the lang and en news path are identical
+  $en_newspath  =  $top_dir."/news/";
+  $lang_newspath  =  $top_dir."/news/";
+  include("$top_dir/news/news-script.php"); ?>
+
+<div class="newsborder">
+<div class="newsheader"><img alt="news panel" src="images/icons/document.txt.gif">&nbsp;
+<a href="oldnews.phtml">Older Announcements ...</a>
+
+</div><div class="newsinner">
+Click <a href="oldnews.phtml">here</a> for older announcements ...
+</div></div>
+</div>
+
+<?php include("externals/footer.phtml"); ?>
