@@ -7,20 +7,19 @@
 <link rel="shortcut icon" href="<?=$top_dir?>/favicon.ico" type="image/x-icon" />
 <?php echo $mimeline; ?>
 <?php
-$home = ".";
 
 if (isset($homepage)) { ?>
-<!-- the RSS only appears on the home page, not on all pages. -->
-<link rel="alternate" type="application/rss+xml" title="RSS" href="<?=$top_dir?>rss-feed.phtml">
+  <!-- the RSS only appears on the home page, not on all pages. -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="<?=$top_dir?>rss-feed.phtml">
 <?php } ?>
 
-<title>GnuCash - <?= _($title); ?></title>
+<title><?= _($title); ?> | GnuCash</title>
 </head>
 
 <body>
 
 <div id="head">
-<img src="<?=$top_dir?>/images/gnucash_logo1.png" alt="[GnuCash Logo]" id="gnclogo" width="179" height="45" />
+<a href="$home"><img src="<?=$top_dir?>/images/gnucash_logo1.png" alt="[GnuCash Logo]" id="gnclogo" width="179" height="45" border="0"/></a>
 <br/>
 <span id="language">
 Language:

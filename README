@@ -1,22 +1,62 @@
-Notes about multi-lingual gnucash website content.
+# -*- rst -*-
+
+-------------------------------------------------
+Notes about multi-lingual gnucash website content
+-------------------------------------------------
 
 - all pages must call lang.php to bring in gettext support.
-
 - It would be nice to use the same containing structure for all translations.
 - Phrase content can probably be po-style translated well.
 - Body/paragraph content probably wants to be block-replaced.
 - We're fine not doing auto-language negotiation.
 
+----------------------------------------
 www.gnucash.org coding conventions/notes
 ----------------------------------------
 
-$top_dir := the relative reference to the top of the relative website; this
-  should be used for language-independent resources (stylesheets, images, php
-  includes), but not for links...
+There are three main classes of links:
 
-$home := a prefix for URLs; for everything but lists.gnucash.org, this'll
-  be ".", but for lists.gnucash.org it'll be "http://www.gnucash.org/".
+- external resources [$top_dir[/externals]]
+  - www: relative
+  - !www: relative
 
+- translations [$top_dir/[«lang»]]
+  - www: relative
+  - !www: relative
+
+- navigation [$home]
+  - www: relative
+  - !www: url-prefixed ("http://www.gnucash.org/file.phtml")
+
+                        | www.gnucash.org  |  lists.gnucash.org        |
+                        +------------------+---------------------------+
+           external (C) |   ./[externals/] |  ./[externals/]           | \
+        external (lang) |  ../[externals/] | ../[externals/]           |  \,- $top_dir
+        translation (C) |   ./[lang]       |  ./[lang]                 |  / 
+     translation (lang) |  ../[lang]       | ../[lang]                 | /
+         navigation (C) |   ./             | http://www.[...]/         |  \,- $home
+      navigation (lang) |   ./             | http://www.[...]/[lang]/  |  /
+
+As such:
+
+  $top_dir := the relative reference to the top of the relative website; this
+    should be used for language-independent resources (stylesheets, images, php
+    includes), but not for links...
+
+  $home := a prefix for navigational URLs; for everything but
+    lists.gnucash.org, this'll be ".", but for lists.gnucash.org it'll
+    be "http://www.gnucash.org/".
+
+As well, the following variables should be set:
+...per directory:
+
+  $locale := the LANG to use for gettext.
+
+...per file:
+
+  $title := the text of the page.
+
+  $homepage := if the file is the homepage; controls RSS feed linkage.
 
 ----------------------
 Preparing translations
