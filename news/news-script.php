@@ -101,6 +101,9 @@ $translated_news = array(
     //  Sort  files  in  descending  date order
     arsort($newsfile);
 
+    // a little debugging
+    echo("<!-- in news/news-script.php: top_dir = $top_dir -->\n");
+
     //  Output  files  to  browser
     for(reset($newsfile);  $key  =  key($newsfile);  next($newsfile))
     {
