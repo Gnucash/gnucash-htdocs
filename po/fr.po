@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-05-10 22:44-0400\n"
-"PO-Revision-Date: 2006-05-10 22:54-0400\n"
+"POT-Creation-Date: 2006-05-17 22:23-0400\n"
+"PO-Revision-Date: 2006-05-17 22:39-0400\n"
 "Last-Translator: jsled <jsled@asynchronous.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -38,6 +38,17 @@ msgid ""
 "use as a checkbook register, it is based on professional accounting "
 "principles to ensure balanced books and accurate reports. "
 msgstr ""
+"Etudi pour tre simple  utiliser, puissant et flexible, GnuCash vous permet\n"
+"de suivre vos comptes bancaires, portefeuilles action, revenus et dpenses.\n"
+"Aussi rapide et intuitif  utiliser qu'un registre de compte papier, il est "
+"bas sur des principes\n"
+"de comptabilit professionnelle pour assurer l'quilibre des comptes et des "
+"rapports fiables.\n"
+"GnuCash est soutenu par une communaut de dveloppement active et s'panouit "
+"dans un vritable plan comptable.\n"
+"Dvelopp sous la licence GPL, vous n'avez aucune raison  de vous inquiter de "
+"son l'obsolescence :\n"
+"GnuCash sera l pour vous."
 
 #: index.phtml:23
 msgid "QIF/OFX/HBCI Import, Transaction Matching"
@@ -45,7 +56,7 @@ msgstr ""
 
 #: index.phtml:24 features.phtml:36
 msgid "Reports, Graphs"
-msgstr ""
+msgstr "Rapports"
 
 #: index.phtml:25 features.phtml:105 oldnews.phtml:713 oldnews.phtml:1105
 #: oldnews.phtml:1156 oldnews.phtml:1265 oldnews.phtml:1332 oldnews.phtml:1410
@@ -59,7 +70,7 @@ msgstr ""
 
 #: index.phtml:30
 msgid "Double-Entry Accounting"
-msgstr ""
+msgstr "La Double Entrée"
 
 #: index.phtml:31
 msgid "Stock/Bond/Mutual Fund Accounts"
@@ -287,7 +298,7 @@ msgstr ""
 
 #: features.phtml:30
 msgid "Double Entry"
-msgstr ""
+msgstr "La Double Entrée"
 
 #: features.phtml:32
 msgid ""
@@ -295,6 +306,10 @@ msgid ""
 "amount. This ensures that the \"books balance\": that the difference between "
 "income and outflow exactly equals the sum of all assets and equity."
 msgstr ""
+"Une fois permise, chaque transaction doit créditer un compte et débiter \n"
+"un autre d'un montant équivalent. Ceci assure à cela l'\"équilibre du \n"
+"registre\" : la différence entre les revenus et les dépenses égale \n"
+"exactement la somme de tous les capitaux et capitaux propres. "
 
 #: features.phtml:39
 msgid ""
@@ -305,7 +320,7 @@ msgstr ""
 
 #: features.phtml:43
 msgid "Income/Expense Account Types"
-msgstr ""
+msgstr "Types De Compte De Revenus/Dépenses "
 
 #: features.phtml:44
 msgid ""
@@ -314,16 +329,24 @@ msgid ""
 "these enable you to generate reports, such as Profit &amp; Loss, that plain-"
 "vanilla systems cannot handle."
 msgstr ""
+"Les types (catégories) de compte De Revenus/Dépenses  vous permettent de classer \n"
+"vos flux financiers. Lorsque cela est utilisés correctement, la fonctionnalités  \n"
+"de double entrée et les comptes de capitaux propres,ceux-ci vous permettent de \n"
+"produire des rapports, tels que les perte et profits , que les systèmes classique \n"
+"ne peuvent pas manipuler. "
 
 #: features.phtml:48
 msgid "Multiple Currencies"
-msgstr ""
+msgstr "Devises Multiple"
 
 #: features.phtml:49
+#, fuzzy
 msgid ""
 "Different accounts can be denominated in different currencies. Currency "
 "movements between accounts are fully balanced when double-entry is enabled."
 msgstr ""
+"Différents comptes peuvent être dénommés dans différentes devises. Les mouvements de devise \n"
+"entre les comptes sont entièrement équilibrés quand on permet la comptabilité en double entrée."
 
 #: features.phtml:53
 msgid "Stock/Mutual Fund Portfolios"
@@ -349,13 +372,16 @@ msgstr ""
 
 #: features.phtml:62
 msgid "QIF Import"
-msgstr ""
+msgstr "Importation de fichier QIF"
 
 #: features.phtml:63
 msgid ""
 "Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> QIF files can be imported, "
 "and are automatically merged to eliminate duplicate transactions."
 msgstr ""
+"Les fichiers Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup>\n"
+"QIF peuvent être importé, et sont automatiquement fusionné \n"
+"pour éliminer des transactions doubles. "
 
 #: features.phtml:66 oldnews.phtml:721 oldnews.phtml:1114 oldnews.phtml:1162
 #: oldnews.phtml:1271 oldnews.phtml:1339 oldnews.phtml:1416 oldnews.phtml:1514
@@ -373,7 +399,7 @@ msgstr ""
 #: oldnews.phtml:1273 oldnews.phtml:1341 oldnews.phtml:1418 oldnews.phtml:1516
 #: oldnews.phtml:1557
 msgid "HBCI Support"
-msgstr ""
+msgstr "Support de HBCI"
 
 #: features.phtml:71
 msgid ""
@@ -381,10 +407,14 @@ msgid ""
 "Banking Computer Information protocol, allowing German users to perform "
 "statement download and initiate bank transfers and direct debits."
 msgstr ""
+"GnuCash est la première application libre à soutenir le \n"
+"protocole allemand  d'information d'opérations bancaires personnelles \n"
+", permettant aux utilisateurs allemands d'exécuter des virements \n"
+"bancaires et d'initier des débits directs. "
 
 #: features.phtml:74
 msgid "Improved Import Transaction Matching"
-msgstr ""
+msgstr "Améliorations de la Réconciliation de Transaction Importées"
 
 #: features.phtml:75
 msgid ""
@@ -392,6 +422,9 @@ msgid ""
 "transaction matching system that more accurately recognizes duplicate "
 "transactions during file import."
 msgstr ""
+"Le développement d'OFX et de HBCI a également eu comme conséquence \n"
+"l'améliorations du  système de réconciliation des transactions qui identifie \n"
+"plus exactement des transactions en doubles pendant l'importation des fichiers de comptes. "
 
 #: features.phtml:78
 msgid "Statement Reconciliation"
@@ -405,7 +438,7 @@ msgstr ""
 
 #: features.phtml:82
 msgid "Localization"
-msgstr ""
+msgstr "Localisation"
 
 #: features.phtml:83
 msgid ""
@@ -415,20 +448,29 @@ msgid ""
 "Russian, Spanish, Swedish, Turkish, Ukrainian, and British English. "
 "Documentation is available in English, French, Portuguese and Spanish."
 msgstr ""
+"Support des formats de dates et devises internationalisées. \n"
+"Les menus et les dialogues de Gnucash ont été traduits en 21 langues, \n"
+"y compris le Chinois, le danois, le Français, l'Allemand, le Hongrois, \n"
+"l'Italien, le Japonais, le Norvégien, le polonais, le Portugais, le Russe, \n"
+"l'Espagnol, le Suédois, le Turc, l'ukrainiens, et l'anglais britannique. \n"
+"La documentation est disponible en anglais, français, Portugais et en \n"
+"Espagnol. "
 
 #: features.phtml:86
 msgid "Transaction Finder"
-msgstr ""
+msgstr "Systme de Recherche De Transaction"
 
 #: features.phtml:89
 msgid ""
 "A powerful transaction query dialogue can help you quickly locate a needle "
 "in a haystack."
 msgstr ""
+"Un puissant dialogue de requtes sur les transactions peut vous aider  "
+"localiser rapidement une aiguille dans une meule de foin. "
 
 #: features.phtml:92
 msgid "General Ledger"
-msgstr ""
+msgstr "Registre Gnral de comptes"
 
 #: features.phtml:93
 msgid ""
@@ -437,6 +479,11 @@ msgid ""
 "provides a convenient way of viewing a portfolio of many stocks, by showing "
 "all transactions in that portfolio."
 msgstr ""
+"Des comptes multiples peuvent tre affichs en mme temps dans une fentre de "
+"registre. Ceci peut soulager les problmes de dpistage des erreurs de frappes/"
+"saisie. Il fournit galement une manire commode de regarder un portefeuille "
+"contenant beaucoup d'actions, en montrant toutes les transactions de ce "
+"portefeuille. "
 
 #: features.phtml:96
 msgid "Online Stock &amp; Mutual Fund Quotes"
@@ -450,13 +497,15 @@ msgstr ""
 
 #: features.phtml:100
 msgid "Check Printing"
-msgstr ""
+msgstr "Impression de cheques"
 
 #: features.phtml:101
 msgid ""
 "Checks may be printed in standard formats on common check stocks. A "
 "customization GUI allows custom check layouts to be developed."
 msgstr ""
+"Les chèques peuvent être imprimés dans des formats standard.\n"
+"Une personnalisation de l'interface utilisateur permet de développer différentes dispositions."
 
 #: features.phtml:106
 msgid ""
@@ -465,16 +514,22 @@ msgid ""
 "without canceling it, and the ability to specify only a limited number of "
 "transactions."
 msgstr ""
+"Vous pouvez maintenant crer des transactions se rcurrente, y compris des "
+"rappels automatiques quand une transaction est due, la capacit de remettre "
+"une transaction sans annuler la planification, et la capacit d'indiquer un "
+"nombre limit de transactions."
 
 #: features.phtml:109 oldnews.phtml:717 oldnews.phtml:1108 oldnews.phtml:1158
 #: oldnews.phtml:1334 oldnews.phtml:1412 oldnews.phtml:1510 oldnews.phtml:1551
 msgid "Mortgage &amp; Loan Repayment Druid"
-msgstr ""
+msgstr "Assistant D'Hypothque &amp; De Remboursement De Prt"
 
 #: features.phtml:110
 msgid ""
 "A guided dialogue for setting up loan payments as scheduled transactions."
 msgstr ""
+"Un assistant vous guide pour mettre en place des remboursements de prt en "
+"tant que transactions planifies. "
 
 #: features.phtml:114
 msgid "Budgets"
@@ -488,7 +543,7 @@ msgstr ""
 #: oldnews.phtml:1275 oldnews.phtml:1343 oldnews.phtml:1420 oldnews.phtml:1518
 #: oldnews.phtml:1559
 msgid "New User Manual and Help"
-msgstr ""
+msgstr "Un Nouveau Manuel et  de l'Aide Utilisateur"
 
 #: features.phtml:121
 msgid ""
@@ -496,6 +551,11 @@ msgid ""
 "addition to a Tutorial and Concepts guide that gives the user background "
 "information on accounting principles and how they are reflected in GnuCash."
 msgstr ""
+"Un nouveau sous-système d'aide qui se concentre sur comment exécuter \n"
+"différentes actions est maintenant disponible, en plus d'un tutorial \n"
+"et d'un guide de concepts qui fournit à l'utilisateur les informations \n"
+"de base sur les règles de comptabilité et comment elles sont gérées par \n"
+"GnuCash. "
 
 #: promote.phtml:11
 msgid "Promote GnuCash"
@@ -5717,7 +5777,7 @@ msgid ""
 "This release is one of (and maybe) the last in the 1.3 development series."
 msgstr ""
 
-#: oldnews.phtml:2877 externals/menu-documentation.phtml:18
+#: oldnews.phtml:2877 externals/menu.phtml:37
 msgid "Mailing Lists"
 msgstr ""
 
@@ -6087,82 +6147,96 @@ msgid ""
 "with this code, indicate that its for this release."
 msgstr ""
 
-#: externals/menu-other.phtml:3
-msgid "Other Information"
-msgstr "Autres Informations"
-
-#: externals/menu-other.phtml:6
-msgid "GnuCash Banners!"
-msgstr "Bannieres GnuCash !"
-
-#: externals/menu-other.phtml:7
-msgid "Sizing"
-msgstr "Dimensionnement"
-
-#: externals/menu-general.phtml:3
-msgid "Information"
+#: externals/footer.phtml:5
+msgid "Server &amp; email outage reports to: "
 msgstr ""
 
-#: externals/menu-general.phtml:6
+#: externals/footer.phtml:6
+msgid ""
+"Translation problems? Contact: <a href=\"mailto:gnucash-devel@gnucash.org"
+"\"><b>gnucash-devel@gnucash.org</b></a>"
+msgstr ""
+
+#: externals/menu.phtml:11
+msgid "Information"
+msgstr "Informations Generales"
+
+#: externals/menu.phtml:14
 msgid "About / News"
-msgstr "Sommaire / Actualités"
+msgstr "Sommaire / Actualits"
 
-#: externals/menu-general.phtml:7
+#: externals/menu.phtml:15
 msgid "Features"
-msgstr "Fonctionnalités"
+msgstr "Fonctionnalits"
 
-#: externals/menu-general.phtml:8
+#: externals/menu.phtml:16
 msgid "How to help"
 msgstr "Comment Aider"
 
-#: externals/menu-developer.phtml:3
+#: externals/menu.phtml:22
+msgid "Documentation"
+msgstr ""
+
+#: externals/menu.phtml:24
+msgid "FAQ"
+msgstr ""
+
+#: externals/menu.phtml:25
+msgid "Wiki"
+msgstr ""
+
+#: externals/menu.phtml:27
+msgid "Tutorial and Help"
+msgstr "encore plus..."
+
+#: externals/menu.phtml:39
+msgid "Search"
+msgstr ""
+
+#: externals/menu.phtml:41
+msgid "Bug Reports"
+msgstr "Rapport de Bug"
+
+#: externals/menu.phtml:42
+msgid "IRC (Chat)"
+msgstr ""
+
+#: externals/menu.phtml:43
+msgid "Donations"
+msgstr ""
+
+#: externals/menu.phtml:63
 msgid "Developer Information"
 msgstr "Informations Developpeur"
 
-#: externals/menu-developer.phtml:6
+#: externals/menu.phtml:66
 msgid "Source Docs"
 msgstr ""
 
-#: externals/menu-developer.phtml:7
+#: externals/menu.phtml:67
 msgid "Browse Source Code"
 msgstr ""
 
-#: externals/menu-developer.phtml:8
+#: externals/menu.phtml:68
 msgid "Subversion Access"
 msgstr ""
 
-#: externals/menu-developer.phtml:9
+#: externals/menu.phtml:69
 #, fuzzy
 msgid "Language Translations"
 msgstr "Transactions Planifies"
 
-#: externals/menu-documentation.phtml:3
-msgid "Documentation"
-msgstr ""
+#: externals/menu.phtml:76
+msgid "Other Information"
+msgstr "Autres Informations"
 
-#: externals/menu-documentation.phtml:5
-msgid "FAQ"
-msgstr ""
+#: externals/menu.phtml:79
+msgid "GnuCash Banners!"
+msgstr "Bannieres GnuCash !"
 
-#: externals/menu-documentation.phtml:6
-msgid "Wiki"
-msgstr ""
-
-#: externals/menu-documentation.phtml:20
-msgid "Search"
-msgstr ""
-
-#: externals/menu-documentation.phtml:22
-msgid "Bug Reports"
-msgstr "Rapport de Bug"
-
-#: externals/menu-documentation.phtml:23
-msgid "IRC (Chat)"
-msgstr ""
-
-#: externals/menu-documentation.phtml:24
-msgid "Donations"
-msgstr ""
+#: externals/menu.phtml:80
+msgid "Sizing"
+msgstr "Dimensionnement"
 
 #: news/1.9.0.phtml:5
 msgid "<b>Announcement:</b> GnuCash 1.9.0 Release"
