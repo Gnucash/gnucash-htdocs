@@ -73,7 +73,7 @@
         $s=strtolower($filename);
         if (strstr($s, ".news"))  {
 	    //echo("<!-- found english file: $s -->\n");
-	    if (!$lang_files[$filename]) {
+	    if (! array_key_exists($filename, $lang_files)) {
 	       $display_filename = $en_newspath.$filename;
 	       //echo("<!-- using untranslated english file: $display_filename -->\n");
 	       $about = file($display_filename);

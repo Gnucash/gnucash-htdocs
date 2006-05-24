@@ -36,7 +36,7 @@ if(ereg("lists.gnucash.org",$self)) {
       -->
       <li><a href="http://wiki.gnucash.org/wiki/Mailing_Lists"><?=_("Mailing Lists")?></a>
       <li style="list-style-image:none;list-style-type:none;"><ul>
-        <li><a href="https://lists.gnucash.org/search/"><?=_("Search")?></a></li>
+        <li><a href="https://lists.gnucash.org/search/<?= $lang_dir ?>"><?=_("Search")?></a></li>
       </ul></li>
       <li><a href="http://wiki.gnucash.org/wiki/Bugzilla"><?=_("Bug Reports")?></a></li>
       <li><a href="http://wiki.gnucash.org/wiki/IRC"><?=_("IRC (Chat)")?></a></li>
@@ -50,10 +50,10 @@ if(ereg("lists.gnucash.org",$self)) {
     <b>Downloads</b>
   </span>
   <ul>
-    <li><a href="http://www.gnucash.org/pub/">USA (master site)</a></li>
-    <li><a href="http://ftp.at.gnucash.org/pub/gnucash/">Europe</a></li>
-    <li><a href="http://sourceforge.net/project/showfiles.php?group_id=192">SourceForge</a></li>
-    <li><a href="ftp://planetmirror.com/pub/gnucash/">Australia</a></li>
+    <li><a href="http://www.gnucash.org/pub/"><?= _("USA (master site)");?></a></li>
+    <li><a href="http://ftp.at.gnucash.org/pub/gnucash/"><?= _("Europe");?></a></li>
+    <li><a href="http://sourceforge.net/project/showfiles.php?group_id=192"><?= _("SourceForge");?></a></li>
+    <li><a href="ftp://planetmirror.com/pub/gnucash/"><?= _("Australia");?></a></li>
   </ul>
 </div>
 <div class="othernews">
