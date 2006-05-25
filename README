@@ -63,8 +63,8 @@ As well, the following variables should be set:
 Preparing translations
 ----------------------
 
-    $ ./create-potfiles.pl > po/POTFILES
-    $ ./make-pot.sh
+    $ make po/POTFILES
+    $ make po/gnucash-htdocs.pot
 
 Now merge the new content into your translation, substituting the name of 
 your po file in the command:
@@ -83,3 +83,13 @@ When you come across fuzzy markers: (#, fuzzy), remove them.
 When you have no fuzzy and no untranslated messages, update the binary translation file:
 
     $ msgfmt po/en_GB.po -o en_GB/LC_MESSAGES/gnucash-htdocs.mo
+
+Or:
+
+    $ make de [fr nl ...]
+
+Which will build an individual translation, or:
+
+    $ make mos
+
+Which will make all the known translations.
