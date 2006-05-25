@@ -5,15 +5,16 @@
 
 function list_system_locales(){
    ob_start();
-   system('cat /etc/locale.gen');
+   system('locale -a');
    $str = ob_get_contents();
    ob_end_clean();
-   return split("\\n", trim($str));
+   return trim($str);
 }
 
-echo join('\n', list_system_locales());
-
+?><pre><?
+echo list_system_locales();
 ?>
+</pre>
 <hr />
 <?
 phpinfo();
