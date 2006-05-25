@@ -2,5 +2,5 @@
 $top_dir = "..";
 $home = ".";
 $locale = "pt_PT";
-$lang_dir = "pt";
+$lang_dir = $locale;
 ?>
