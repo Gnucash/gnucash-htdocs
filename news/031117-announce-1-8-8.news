@@ -1,0 +1,37 @@
+<b>Announcement:</b> GnuCash 1.8.8 Release
+2003-11-19   04:48:47
+
+The GnuCash team is pleased to announce the release
+of stable version 1.8.8.<br><br>
+<b><big>What's New in GnuCash 1.8.8?</big></b><br>
+<br>
+ o HBCI - Improve error message when receiving zero balance from bank.<br>
+ o Add account template for Swiss German businesses "KMU" by Tom
+   Winterhalder<br>
+ o Add *big* account template for German businesses "SKR04" by Betina
+   Schmidt<br>
+ o Add Catalan and Turkish translation, Updated German, Italian,
+   Czech, Greek and Dutch translations.<br>
+ o Add Turkish account template. Updated Greek account templates.<br>
+ o Remove debian scripts<br>
+ o Add a comment about minimum string length<br>
+ o Fix the ISO_DATELEN to be "long enough"<br>
+ o Fix handling of HBCI direct debits (fix wrong textkey). Fix and
+   initially implement handling of multiple banks/users/customers.<br>
+ o Fixed extremly stupid, old bug that causes weird HBCI errors.
+   Improved user messages.<br>
+ o Refactor some GUI code. Improve user messages.<br>
+ o BillTermDecRef should have been BillTermIncRef when setting new
+   bill term.<br>
+ o Applied Frank Pavageau's patch regarding capital gains to handle
+   split transactions.<br>
+ o Don't make a timespec with tv_sec == 0.  Fixes some tests on the
+   alpha platform.<br>
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
