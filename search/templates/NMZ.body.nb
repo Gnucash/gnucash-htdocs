@@ -1,0 +1,190 @@
+<h2><a name="query" id="query">Søk</a></h2>
+
+<h3><a name="query-term" id="query-term">Enkelt ord søk</a></h3>
+<p>
+Dette søket er for å finne alle dokumenter som inneholder det ene ordet/uttrykket
+for eksempel: 
+</p>
+
+<p class="example">
+namazu
+</p>
+
+<h3><a name="query-and" id="query-and">OG søk</a></h3> 
+
+<p>
+Dette søket inneholder to eller flere ord/uttrykk, og vil finne alle dokumenter 
+som inneholder begge disse. Sett inn
+<code class="operator">og</code> mellom søkeordene, f.eks. 
+</p>
+
+<p class="example">
+Linux og Netscape
+</p>
+
+<p>
+Du kan også utelate <code class="operator">og</code> koden.  Søkeord som er
+adskilt med mellomrom er antatt å være og søk.
+</p>
+
+<h3><a name="query-or" id="query-or">ELLER søk</a></h3>
+<p>
+Dette søket inneholder to eller flere ord/uttrykk, og vil finne alle dokumenter
+som inneholder minst ett av ordene. Sett inn
+<code class="operator">eller</code> mellom ordene,
+f.eks.
+</p>
+
+<p class="example">
+Linux eller FreeBSD
+</p>
+
+<h3><a name="query-not" id="query-not">IKKE søk</a></h3>
+<p>
+Dette søket finner alle dokumenter som inneholder ett ord,
+men ikke de andre.
+Sett inn <code class="operator">ikke</code>
+mellom ordene, f.eks.
+</p>
+
+<p class="example">
+Linux ikke UNIX
+</p>
+
+
+<h3><a name="query-grouping" id="query-grouping">Gruppering</a></h3>
+<p>
+Du kan gruppere søkeord ved å sette de inne i
+paranteser. Parantesene skal være separert av ett eller
+flere mellomrom. f.eks. 
+</p>
+
+<p class="example">
+( Linux eller FreeBSD ) og Netscape ikke Windows
+</p>
+
+<h3><a name="query-phrase" id="query-phrase">Frase søk</a></h3>
+<p>
+Du kan søke etter en frase som inneholder to eller flere ord
+ved å sette de inne i anførselstegn eller klammeparanteser som
+<code class="operator">"..."</code> og <code class="operator">{...}</code>.
+I Namazu, frase søket virker ikke helt 100 %,
+Feil resultat kan derfor dukke opp.  Eksempel:
+</p>
+
+<p class="example">
+{GNU Emacs}
+</p>
+
+<!-- foo
+<p>
+You must choose the latter with Tkanamzu or namazu.el.
+</p>
+-->
+
+<h3><a name="query-substring" id="query-substring">Delstreng søk</a></h3>
+<p>
+Det er tre typer delstreng søk.
+</p>
+
+<dl> 
+<dt>Prefiks søk</dt>
+<dd><code class="example">inter*</code> (ord som begynner med <code>inter</code>)</dd>
+<dt>Midtdel søk</dt>
+<dd><code class="example">*text*</code> (ord som inneholder <code>text</code>)</dd>
+<dt>Suffiks søk</dt>
+<dd><code class="example">*net</code> (ord som slutter
+med <code>net</code>)</dd>
+</dl>
+
+
+<h3><a name="query-regex" id="query-regex">Regular expressions</a></h3>
+
+<p>
+You can use regular expressions for pattern matching. The
+regular expressions must be surrounded by slashes like <code
+class="operator">/.../</code>. Namazu uses <a
+href="http://www.ruby-lang.org/">Ruby</a>'s regular
+regular expressions engine. It generally offers a <a
+href="http://www.perl.com/">Perl</a> compatible flavor.
+e.g.,
+</p>
+
+<p class="example">
+/pro(gram|blem)s?/
+</p>
+
+
+<h3><a name="query-field" id="query-field">Felt spesifisert søk</a></h3>
+<p>
+Du kan begrense ditt søk til enkelte felter slik som
+<code>Subject:</code>, <code>From:</code>,
+<code>Message-Id:</code>. Denne funksjonaliteten er utmerket for
+Mail/News dokumenter, f.eks.:
+</p>
+
+<ul>
+<li><code class="example">+subject:Linux</code><br>
+(Finner alle dokumenter som inneholder <code>Linux</code>
+i et <code>Subject:</code> felt)
+</li>
+
+<li><code class="example">+subject:"GNU Emacs"</code><br>
+(Finner alle dokumenter som inneholder <code>GNU Emacs</code>
+i et <code>Subject:</code> felt)
+</li>
+
+<li><code class="example">+from:foo@bar.jp</code><br>
+(Finner alle dokumenter som inneholder <code>foo@bar.jp</code>
+i et <code>From:</code> felt)
+</li>
+
+
+<li><code class="example">+message-id:&lt;199801240555.OAA18737@foo.bar.jp&gt;</code><br>
+(Finner et dokument som inneholder
+<code>Message-Id:</code>)
+</li>
+</ul>
+
+<h3><a name="query-notes" id="query-notes">Notat</a></h3>
+
+<ul>
+<li>I alle søk, Namazu ignores om det er store eller små bokstaver
+</li>
+
+<li>Japanese phrases are automatically segmented into
+morphemes and are handled as <a
+href="#query-phrase">phrase searching</a>. This process occasionally
+causes invalid segmentation.
+</li>
+
+<li>Bokstaver, tall eller deler av symboler (duplisert i
+ASCII) som er definert i JIS X 0208 (Japanese
+Industrial Standards) blir betraktet som ASCII tegn.
+</li>
+
+<li>Namazu kan håndtere ord/uttrykk som inneholder symboler slik som
+<code>TCP/IP</code>.  Siden denne håndteringen ikke er ferdigutviklet,
+kan du også skrive dette som <code>TCP og IP</code> isteden for
+<code>TCP/IP</code>, men det kan gi feil / rotete resultat.
+</li>
+
+
+<li>Delstreng og felt spesifike søk tar
+lenger tid enn andre søk.
+</li>
+
+<li>Hvis du vil bruke <code class="operator">og</code>,
+<code class="operator">eller</code> eller <code
+class="operator">ikke</code> som søkeord, kan du
+sette den inne i anførselstegn eller klammeparanteser <code
+class="operator">"..."</code> eller <code
+class="operator">{...}</code>. 
+
+<!-- foo
+You must choose the latter with Tkanamzu or namazu.el.
+-->
+</li>
+
+</ul>
+

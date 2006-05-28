@@ -1,0 +1,19 @@
+#
+# NMZ Logrotate script
+#
+# $Id$
+
+/home/nmz/index/*/*.err {
+    missingok
+    notifempty
+}
+
+/home/nmz/index/*/*.log {
+    missingok
+    notifempty
+}
+
+#/home/nmz/index/*/*.slog {
+#    missingok
+#    notifempty
+#}

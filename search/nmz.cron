@@ -1,0 +1,11 @@
+#
+# Crontab entry for nmz
+#
+# $Id$
+#
+
+SHELL=/bin/sh
+MAILTO=root
+
+# Rebuild the indices every hour
+17 * * * * $HOME/nmz/build-indices.sh

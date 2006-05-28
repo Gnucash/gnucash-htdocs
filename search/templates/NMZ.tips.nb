@@ -1,0 +1,65 @@
+<h2><a name="tips" id="tips">Søke Tips</a></h2>
+
+<p>
+Hvis du har problemer med søket, kan du prøve følgende tips.
+</p>
+
+<ul>
+<li>Kontoller stavingen av søkeordene<br>
+Namazu kan ikke finne noe som er feil stavet.
+</li>
+
+<li>Legg til flere søkeord<br>
+
+Ved få eller ingen resultater, kan det legges til en eller
+flere relaterte søkeord med <code
+class="operator">eller</code> operator.  Du burde da få flere resultater.
+e.g., <br>
+<code class="example">tex eller ptex eller latex eller latex2e</code><br>
+
+Hvis du fikk for mange resultater, kan du legge til en eller
+flere relaterte søkeord med <code class="operator">og</code>
+operator. Det vil begrense søket. e.g., <br>
+<code class="example">latex og dvi2ps og eps</code>
+</li>
+
+<li>Try substring matching<br>
+
+Hvis du fikk ingen eller få resultater, kan du prøve
+delstreng søk. 
+
+Du kan skrive <code class="example">tex*</code> for
+å søke etter ord som begynner med
+<code>tex</code> (f.eks., <code>tex</code>,
+<code>texi2html</code>,
+<code>texindex</code>, <code>text</code>).
+<br>
+
+Du kan skrive <code class="example">*tex</code> for
+å søke etter ord som slutter med <code>tex</code> (f.eks.,
+<code>bibtex</code>, 
+<code>jlatex</code>, <code>latex</code>,
+<code>platex</code>, <code>ptex</code>, <code>vertex</code>).
+<br>
+
+Du kan skrive <code class="example">*tex*</code> for
+å søke etter ord som inneholder <code>tex</code> (mange).
+<br>
+</li>
+
+<li>Du prøvde frase søk, men fant ingen dokumenter som 
+inneholdt din frase.<br>
+
+Dette er ikke Namazu sterke side. Presisjonen på frase søk er
+ikke 100 %, så den kan til tider gi feil resultat.
+</li>
+
+<li>Det kan hende du vil bruke <code class="operator">og</code>,
+<code class="operator">eller</code> eller <code
+class="operator">ikke</code> som vanlige søkeord<br>
+Det kan gjøres ved at du setter disse inne i anførselstegn slik som <code
+class="operator">"..."</code> eller klammeparanteser slik som <code
+class="operator">{...}</code>.
+</li>
+
+</ul>
