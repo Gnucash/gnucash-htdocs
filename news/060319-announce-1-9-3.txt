@@ -1,0 +1,94 @@
+<b>Announcement:</b> GnuCash 1.9.3 Release
+
+<br>The GnuCash development team proudly announces GnuCash 1.9.3 aka 
+"Mo money, Mo problemss", the fourth of several unstable 1.9.x
+releases of the GnuCash Open Source Accounting Software which will eventually
+lead to the stable version 2.0.0. This release contains many bugfixes since
+the third release but is still only intended for developers and adventurous
+testers who want to help tracking down bugs.
+<br>
+<br>
+
+<b><big>What's New in GnuCash 1.9.3?</big></b><br>
+
+o WARNING WARNING WARNING - Make sure you make backups of any files
+  used in testing versions of GnuCash in the 1.9.x series. Although the
+  developers go to great lengths to ensure that no data will be lost we
+  cannot guarantee that your data will not be affected if for some
+  reason GnuCash crashes in testing these releases.<br>
+o PLEASE TEST TEST AND TEST SOME MORE any and all features important
+  to you. Then post any bugs you find to bugzilla
+  http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash<br>
+o If you have the urge to help beyond testing please get involved in
+  the discussions on the GnuCash mailing lists which you will find at
+  http://www.gnucash.org. We especially need people to help with
+  updating the documentation as all texts refer currently to the 1.8.x
+  series. Please see http://wiki.gnucash.org/wiki/Development on how to
+  get involved.<br>
+o Major bugfixes include -<br> 
+ o More Register fixes.<br>
+ o Fixes for OFX importer.<br>
+ o Add printing support for the graphs.<br>
+ o Add multi-commodity SX support.<br>
+ o Fixes for windows/mingw32 porting.<br>
+ o Fixes for currency settings.<br>
+ o Add support for XSL.<br>
+ o Recode all po files into UTF-8 character encoding.<br>
+ o Lots of Qof fixes.<br>
+ o Fix the build-order (and install order) of the engine libs.<br>
+ o Fix a problem where account cell contents disappear when focusing
+   in/out of an account cell.<br>
+ o Report fixes<br>
+ o More Qof fixes<br>
+ o More fixes for UTF-8 support<br>
+ o Fixes to Scheduled Transactions<br>
+
+<h2> Caveats </h2>
+<p>Caveats for testers:
+</p>
+<ul><li> Any 1.9.x version might <i>crash unexpectedly at any point</i> during
+runtime. If you test some serious work in a 1.9.x release, make sure you hit
+"Save" after ever non-trivial workstep.
+</li><li> Keep in mind that features which are not used in everyday work might
+crash unexpectedly at all times. This includes but is not limited to:
+graphical reports, scheduled transaction editor, price editor, financial
+calculator, OFX/QIF/HBCI import.
+</li><li> Especially all the <i>new features</i> might crash instantly on
+testing. This applies in particular to any of the budget-related features. We
+may always decide to disable such new features for the initial 2.0.0 release,
+and re-enable them in a later release.
+</li><li> The <i>documentation is completely outdated</i>. All help texts
+usually only refer to the 1.8.x series; please expect all descriptions in the
+help texts to be totally wrong when applied to the upcoming 1.9.x series.
+Everyone is invited to help improve the documentation; see <a
+href="http://wiki.gnucash.org/wiki/Development" class='external free'
+title="http://wiki.gnucash.org/wiki/Development"
+rel="nofollow">http://wiki.gnucash.org/wiki/Development</a> on how to get
+involved.
+</li></ul>
+<h2> How can you help? </h2>
+<ul><li> Testing: Test it and help us discover all bugs that might show up in
+there. Please enter each and every bug into bugzilla at <a
+href="http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash" class='external
+free' title="http://bugzilla.gnome.org/enter bug.cgi?product=GnuCash"
+rel="nofollow">http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash</a>
+</li><li> Translating: The new release comes with plenty of new translation
+strings. If you consider contributing a translation, we invite you to test
+this release already, but please keep in mind that we are not yet in our
+string freeze phase. Please check <a
+href="http://wiki.gnucash.org/wiki/Translation_Status" class='external free'
+title="http://wiki.gnucash.org/wiki/Translation Status"
+rel="nofollow">http://wiki.gnucash.org/wiki/Translation_Status</a> for updates
+on this, as we recommend to wait for the string freeze phase for the serious
+translation work.
+</li></ul>
+
+
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
