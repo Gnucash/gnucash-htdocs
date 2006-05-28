@@ -1,6 +1,7 @@
 <?php
 $title = "Mailing List Search";
 include("externals/header.phtml");
+include("externals/menu.phtml");
 ?>
 <style type="text/css"><!--
   strong.keyword { color: Red; }
@@ -17,7 +18,6 @@ include("externals/header.phtml");
                    font-family: monospace; 
 		   font-weight: bold; }
 --></style>
-<?php include("externals/menu.phtml"); ?>
 <div id="content">
 <h1><?= _($title); ?></h1>
 
@@ -25,52 +25,51 @@ include("externals/header.phtml");
 <p>
 <strong>Query:</strong> 
 <input type="text" name="query" size="40">
-<input type="submit" name="submit" value="Search!">
+<input type="submit" name="submit" value="<?=_("Search!")?>">
 <!-- <input type="hidden" name="idxname" value="foobar"> -->
-<a href="{cgi}">[How to search]</a>
+<a href="{cgi}"><?=_("[How to search]")?></a>
 </p>
 <p>
-<strong>Display:</strong>
+<strong><?=_("Display")?>:</strong>
 <select name="max">
 <option value="10">10</option>
-<option selected="true" value="20">20</option>
+<option selected value="20">20</option>
 <option value="30">30</option>
 <option value="50">50</option>
 <option value="100">100</option>
 </select>
-<strong>Description:</strong>
+<strong><?=_("Description")?>:</strong>
 <select name="result">
-<option selected="true" value="normal">normal</option>
-<option value="short">short</option>
+<option selected value="normal"><?=_("normal")?></option>
+<option value="short"><?=_("short")?></option>
 </select>
-<strong>Sort:</strong>
+<strong><?=_("Sort")?>:</strong>
 <select name="sort">
-<option selected="true" value="score">by score</option>
-<option value="date:late">by date in late order</option>
-<option value="date:early">by date in early order</option>
-<option value="field:subject:ascending">by title in ascending order</option>
-<option value="field:subject:descending">by title in descending order</option>
-<option value="field:from:ascending">by author in ascending order</option>
-<option value="field:from:descending">by author in descending order</option>
-<option value="field:size:ascending">by size in ascending order</option>
-<option value="field:size:descending">by size in descending order</option>
-<option value="field:uri:ascending">by URI in ascending order</option>
-<option value="field:uri:descending">by URI in descending order</option>
+<option selected value="score"><?=_("by score")?></option>
+<option value="date:late"><?=_("by date in late order")?></option>
+<option value="date:early"><?=_("by date in early order")?></option>
+<option value="field:subject:ascending"><?=_("by title in ascending order")?></option>
+<option value="field:subject:descending"><?=_("by title in descending order")?></option>
+<option value="field:from:ascending"><?=_("by author in ascending order")?></option>
+<option value="field:from:descending"><?=_("by author in descending order")?></option>
+<option value="field:size:ascending"><?=_("by size in ascending order")?></option>
+<option value="field:size:descending"><?=_("by size in descending order")?></option>
+<option value="field:uri:ascending"><?=_("by URI in ascending order")?></option>
+<option value="field:uri:descending"><?=_("by URI in descending order")?></option>
 </select>
 </p>
 
 <p>
-<strong>Lists to Search:</strong>
-<blockquote style="white-space: nowrap">
-<input type="checkbox" name="idxname" value="gnucash-announce" />gnucash-announce
-<input type="checkbox" name="idxname" value="gnucash-devel" checked="true">gnucash-devel
-<input type="checkbox" name="idxname" value="gnucash-user" checked="true">gnucash-user
-<input type="checkbox" name="idxname" value="gnucash-br">gnucash-br<br />
-<input type="checkbox" name="idxname" value="gnucash-de">gnucash-de
-<input type="checkbox" name="idxname" value="gnucash-es">gnucash-es
-<input type="checkbox" name="idxname" value="gnucash-fr">gnucash-fr
-<input type="checkbox" name="idxname" value="gnucash-it">gnucash-it
-</blockquote>
+<strong><?=_("Lists to Search")?>:</strong>
+<ul>
+<?php
+  if (file_exists("search/templates/NMZ.head.lists.$lang_dir")) {
+    include("search/templates/NMZ.head.lists.$lang_dir");
+  } else {
+    include("search/templates/NMZ.head.lists");
+  }
+?>
+</ul>
 </p>
 </form>
 <hr />
