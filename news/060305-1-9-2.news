@@ -11,41 +11,41 @@ testers who want to help tracking down bugs.
 
 <h2>What's New in GnuCash 1.9.2?</h2>
 
-o WARNING WARNING WARNING - Make sure you make backups of any files
+<p>o WARNING WARNING WARNING - Make sure you make backups of any files
   used in testing versions of GnuCash in the 1.9.x series. Although the
   developers go to great lengths to ensure that no data will be lost we
   cannot guarantee that your data will not be affected if for some
-  reason GnuCash crashes in testing these releases.<br>
-o PLEASE TEST TEST AND TEST SOME MORE any and all features important
+  reason GnuCash crashes in testing these releases.</p>
+<p>o PLEASE TEST TEST AND TEST SOME MORE any and all features important
   to you. Then post any bugs you find to bugzilla
-  http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash<br>
-o If you have the urge to help beyond testing please get involved in
+  http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash</p>
+<p>o If you have the urge to help beyond testing please get involved in
   the discussions on the GnuCash mailing lists which you will find at
   http://www.gnucash.org. We especially need people to help with
   updating the documentation as all texts refer currently to the 1.8.x
   series. Please see http://wiki.gnucash.org/wiki/Development on how to
-  get involved.<br>
-o Major bugfixes include -<br> 
- o More Register fixes.<br>
- o HIGify the scheduled transaction dialogs.<br>
- o Fix the qof configure test for OSX.<br>
- o Compile cleanly with when _FORTIFY_SOURCE is defined. This definition is
-   forced when building RPMs on FC4.<br>
- o Catch and defer the quit command if a file save is in progress.<br>
- o Disable quote related functionality when F::Q isn't installed.<br>
- o Lots of Qof fixes.<br>
- o Add ebuild for gnucash 1.9/2.0 series.<br>
- o Fix x-axis labeling and other barchart improvements.<br>
- o Get MT940 importer to compile again (experimental; requires
-   aqbanking-1.9.7). It is not yet tested with actual files.<br>
- o Menu and toolbar fixes.<br>
- o Remember the order in which the notebook tabs are referenced.<br>
- o Updates to business invoicing functionality.<br>
- o Fix Chart of Accounts export so it works again.<br>
- o Add support for using multi-byte unicode thousands separator and
-   decimal point characters when printing numbers.<br>
- o Lots of fixes to splits and transaction editing.<br>
- o Added new icons.<br>
+  get involved.</p>
+<p>o Major bugfixes include -</p>
+<ul> <li>More Register fixes.</li>
+<li>HIGify the scheduled transaction dialogs.</li>
+<li>Fix the qof configure test for OSX.</li>
+<li>Compile cleanly with when _FORTIFY_SOURCE is defined. This definition is
+   forced when building RPMs on FC4.</li>
+<li>Catch and defer the quit command if a file save is in progress.</li>
+<li>Disable quote related functionality when F::Q isn't installed.</li>
+<li>Lots of Qof fixes.</li>
+<li>Add ebuild for gnucash 1.9/2.0 series.</li>
+<li>Fix x-axis labeling and other barchart improvements.</li>
+<li>Get MT940 importer to compile again (experimental; requires
+   aqbanking-1.9.7). It is not yet tested with actual files</li>.
+<li>Menu and toolbar fixes.</li>
+<li>Remember the order in which the notebook tabs are referenced.</li>
+<li>Updates to business invoicing functionality.</li>
+<li>Fix Chart of Accounts export so it works again.</li>
+<li>Add support for using multi-byte unicode thousands separator and
+   decimal point characters when printing numbers.</li>
+<li>Lots of fixes to splits and transaction editing.</li>
+<li>Added new icons.</li></ul>
 
 <h2> Caveats </h2>
 <p>Caveats for testers:
