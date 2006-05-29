@@ -1,5 +1,5 @@
 
-.PHONY: pot mos msgmerge de fr nb nl pt_PT nmz nmz.lang nmz nmz.onefile
+.PHONY: pot mos msgmerge de es fr nb nl pl pt_PT nmz nmz.lang nmz nmz.onefile
 
 pot: po/POTFILES po/gnucash-htdocs.pot
 
@@ -12,14 +12,17 @@ po/gnucash-htdocs.pot: po/POTFILES
 	xgettext -f po/POTFILES -L PHP -o po/gnucash-htdocs.pot
 
 msgmerge: po/gnucash-htdocs.pot
-	for f in de en_GB fr nb nl pt_PT ; do \
+	for f in de en_GB es fr nb nl pl pt_PT ; do \
 	  msgmerge -U po/$$f.po po/gnucash-htdocs.pot ; \
 	done
 
-mos: de fr nb nl pt_PT
+mos: de es fr nb nl pl pt_PT
 
 de: po/de.po
 	msgfmt po/de.po -o de/LC_MESSAGES/gnucash-htdocs.mo
+
+es: po/es.po
+	msgfmt po/es.po -o es/LC_MESSAGES/gnucash-htdocs.mo
 
 fr: po/fr.po
 	msgfmt po/fr.po -o fr/LC_MESSAGES/gnucash-htdocs.mo
@@ -29,6 +32,9 @@ nb: po/nb.po
 
 nl: po/nl.po
 	msgfmt po/nl.po -o nl/LC_MESSAGES/gnucash-htdocs.mo
+
+pl: po/pl.po
+	msgfmt po/pl.po -o pl/LC_MESSAGES/gnucash-htdocs.mo
 
 pt_PT: po/pt_PT.po
 	msgfmt po/pt_PT.po -o pt_PT/LC_MESSAGES/gnucash-htdocs.mo
@@ -56,7 +62,8 @@ nmz.lang:
 
 nmz:
 	$(MAKE) nmz.lang
-	# other langs: es ja pl 
-	for l in de fr nb ; do \
+	# other NMZ langs not merged into po system: ja
+	# note: PL is only "mostly" translated.  it diff's differently
+	for l in de en_GB es fr nb nl pl pt_PT ; do \
 	  $(MAKE) nmz.lang LOCALFILE=$$l/local.php FILETAIL=.$$l ; \
 	done
