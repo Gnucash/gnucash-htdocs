@@ -1,5 +1,6 @@
 <?php
 $title = "Mailing List Search";
+include("lang.php");
 include("externals/header.phtml");
 include("externals/menu.phtml");
 ?>
@@ -23,7 +24,7 @@ include("externals/menu.phtml");
 
 <form method="get" action="{cgi}">
 <p>
-<strong>Query:</strong> 
+<strong><?=_("Query")?>:</strong> 
 <input type="text" name="query" size="40">
 <input type="submit" name="submit" value="<?=_("Search!")?>">
 <!-- <input type="hidden" name="idxname" value="foobar"> -->
