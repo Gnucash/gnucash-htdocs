@@ -21,7 +21,7 @@ indexdir=index
 # in the future we could turn this into the top-level
 # of the per-list template.  This is also relative to
 # $topdir
-templatedir=nmz/templates
+templatedir=nmz/search/templates
 
 # This is the top of the mailman archives.
 mailmandir=/home/mailman/archives/public
