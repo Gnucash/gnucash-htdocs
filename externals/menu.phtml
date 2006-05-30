@@ -1,0 +1,83 @@
+<?php
+$self = $_SERVER["HTTP_HOST"];
+if(ereg("lists.gnucash.org",$self)) {
+  $home = "http://www.gnucash.org/";
+}
+?>
+<div id="news">
+<div class="othernews">
+  <span class="linktop">
+    <img class="dot" src="<?=$top_dir?>/externals/webding.png" alt="marker">
+    <b><?= _("Information")?></b>
+  </span>
+  <ul>
+    <li><a href="<?=$home?>/index.phtml"><?= _("About / News")?></a></li>
+    <li><a href="<?=$home?>/features.phtml"><?=_("Features")?></a></li>
+    <li><a href="http://wiki.gnucash.org/wiki/Development"><?= _("How to help")?></a></li>
+  </ul>
+</div>
+<div class="othernews">
+  <span class="linktop">
+    <img class="dot" src="<?=$top_dir?>/externals/webding.png" alt="marker" />
+    <b><?=_("Documentation")?></b></span>
+    <ul>
+      <li><a href="http://wiki.gnucash.org/wiki/FAQ"><?=_("FAQ")?></a></li>
+      <li><a href="http://wiki.gnucash.org/wiki/"><?=_("Wiki")?></a>&nbsp;
+      <a href="http://linuxwiki.de/GnuCash">[de]</a></li>
+      <li><a href="<?=$home?>/docs.phtml"><?=_("Tutorial and Help")?></a></li>
+      <!--
+          #<li><a href="http://www.gnucash.org/docs/v1.8/C/gnucash-guide">
+          #echo _("Concepts Guide")?></a></li>
+          #<li>\n
+          #<a href="http://www.gnucash.org/docs/v1.8/C/gnucash-help/help.html">
+          #echo _("Help Manual") . "</a>\n";
+          #<a href="http://www.gnucash.org/docs/v1.8/de_DE/gnucash-help/help.html">
+          #[de]</a></li>\n
+      -->
+      <li><a href="http://wiki.gnucash.org/wiki/Mailing_Lists"><?=_("Mailing Lists")?></a>
+      <li style="list-style-image:none;list-style-type:none;"><ul>
+        <li><a href="https://lists.gnucash.org/search/<?= $lang_dir ?>"><?=_("Search")?></a></li>
+      </ul></li>
+      <li><a href="http://wiki.gnucash.org/wiki/Bugzilla"><?=_("Bug Reports")?></a></li>
+      <li><a href="http://wiki.gnucash.org/wiki/IRC"><?=_("IRC (Chat)")?></a></li>
+      <li><a href="http://sourceforge.net/donate/index.php?group_id=192"><?=_("Donations")?></a></li>
+    </ul>
+</div>
+<div class="othernews">
+  <!-- ?php include("$top_dir/externals/menu-downloads.phtml");? -->
+  <span class="linktop">
+    <img class="dot" src="<?=$top_dir?>/externals/webding.png" alt="marker" />
+    <b>Downloads</b>
+  </span>
+  <ul>
+    <li><a href="http://www.gnucash.org/pub/"><?= _("USA (master site)");?></a></li>
+    <li><a href="http://ftp.at.gnucash.org/pub/gnucash/"><?= _("Europe");?></a></li>
+    <li><a href="http://sourceforge.net/project/showfiles.php?group_id=192"><?= _("SourceForge");?></a></li>
+    <li><a href="ftp://planetmirror.com/pub/gnucash/"><?= _("Australia");?></a></li>
+  </ul>
+</div>
+<div class="othernews">
+  <!-- ?php include("$top_dir/externals/menu-developer.phtml");? -->
+  <span class="linktop">
+    <img class="dot" src="<?=$top_dir?>/externals/webding.png" alt="marker">
+    <b><?=_("Developer Information")?></b>
+  </span>
+  <ul>
+    <li><a href="http://svn.gnucash.org/docs/HEAD/"><?=_("Source Docs")?></a></li>
+    <li><a href="http://svn.gnucash.org/trac/browser/"><?= _("Browse Source Code")?></a></li>
+    <li><a href="http://wiki.gnucash.org/wiki/Subversion"><?= _("Subversion Access")?> </a></li>
+    <li><a href="http://wiki.gnucash.org/wiki/Translation"><?=_("Language Translations")?></a></li>
+  </ul>
+</div>
+<div class="othernews">
+  <!-- ?php include("$top_dir/externals/menu-other.phtml");? -->
+  <span class="linktop">
+    <img class="dot" src="<?=$top_dir?>/externals/webding.png" alt="marker">
+    <b><?=_("Other Information")?></b>
+  </span>
+  <ul>
+    <li><a href="<?=$home?>/promote.phtml"><?=_("GnuCash Banners!")?></a></li>
+    <li><a href="<?=$home?>/sizing.phtml"><?=_("Sizing")?></a></li>
+  </ul>
+</div>
+</div>

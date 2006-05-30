@@ -1,77 +1,107 @@
-# Notes for those editing these pages.
-#
-# all pages must call emulate_globals_on.php to bring in
-# gettext support.
-#
-# Within content, the absolute rules are:
-# 1. If you OPEN a tag, YOU are responsible for closing it
-# 2. Escape all entities: use &amp; &lt; &gt; - watch those
-# Bugzilla or SourceForge URL links: all query strings need to
-# use &amp;
-#
-# Setup
-# =====
-# 
-# This section will be improved as more mirrors come into use.
-# 
-# Your DocumentRoot should be <path to checkout>/htdocs/www
-# Files in htdocs/ should NOT be visible on your website!
+# -*- rst -*-
 
+----
+TODO
+----
 
-# i18n and l10n:
-# =============
-# 
-# The server needs to be configured for the underlying locales
-# before PHP can use gettext to translate them. On Debian,
-# install and configure 'locales' for each supported language
-# and use 'dpkg-reconfigure locales' to add new ones later.
-# 
-# The test server at http://gnucash.neil.williamsleesmill.me.uk/
-# supports: C POSIX de_DE de_DE.iso88591 de_DE.utf8 deutsch dutch
-# en_AU en_AU.iso88591 en_AU.utf8 en_BW en_BW.iso88591 en_BW.utf8
-# en_CA en_CA.iso88591 en_CA.utf8 en_GB en_GB.iso88591 en_GB.utf8
-# en_US en_US.iso88591 en_US.utf8 es_ES es_ES.iso88591 es_ES.utf8
-# fr_FR fr_FR.iso88591 fr_FR.utf8 français french german it_IT
-# it_IT.iso88591 it_IT.utf8 italian nl_NL nl_NL.iso88591 nl_NL.utf8
-# portuguese pt_BR pt_BR.iso88591 pt_BR.utf8 pt_PT pt_PT.iso88591
-# pt_PT.utf8 spanish
+- atom (/rss) generator
+- re-work page content for new-style translations (one big block)
+  - re-flow existing po-file content.
+- get gettext working on www.gnucash.org
+- update features screenshots
+- revise docs.phtml
+- pull mail-search into htdocs
 
-# The aim is that all translatable content is in either www/ or news/
-# and all translation files are in htdocs/ and po/. Other directories will be
-# gradually removed. In particular, www/ and news/ will not need
-# to contain separate directories for each supported language. Scripts will
-# then update the gnucash-htdocs.pot file, merge updated messages with available
-# translations and create binary translation files in relevant LC_MESSAGES locations
-# ready for a commit.
-#
-# Preparing translations:
-# =======================
-# 
-# ./create-potfiles.pl > po/POTFILES
-# ./make-pot.sh
+-------------------------------------------------
+Notes about multi-lingual gnucash website content
+-------------------------------------------------
 
-# Now merge the new content into your translation, substituting the name of 
-# your po file in the command:
+- all pages must call lang.php to bring in gettext support.
+- It would be nice to use the same containing structure for all translations.
+- Phrase content can probably be po-style translated well.
+- Body/paragraph content probably wants to be block-replaced.
+- We're fine not doing auto-language negotiation.
 
-# msgmerge po/en_GB.po po/gnucash-htdocs.pot -o po/en_GB.po
+----------------------------------------
+www.gnucash.org coding conventions/notes
+----------------------------------------
 
-# Finally, see the size of the task ahead:
+There are three main classes of links:
 
-# msgfmt -c --statistics po/en_GB.po
+- external resources [$top_dir[/externals]]
+  - www: relative
+  - !www: relative
 
-# Whilst editing the translation, run the msgfmt command from time to time to catch
-# errors and let you know how much is left to do.
+- translations [$top_dir/[«lang»]]
+  - www: relative
+  - !www: relative
 
-# When you come across fuzzy markers: (#, fuzzy), remove them.
+- navigation [$home]
+  - www: relative
+  - !www: url-prefixed ("http://www.gnucash.org/file.phtml")
 
-# When you have no fuzzy and no untranslated messages, update the binary translation file:
+                        | www.gnucash.org  |  lists.gnucash.org        |
+                        +------------------+---------------------------+
+           external (C) |   ./[externals/] |  ./[externals/]           | \
+        external (lang) |  ../[externals/] | ../[externals/]           |  \,- $top_dir
+        translation (C) |   ./[lang]       |  ./[lang]                 |  / 
+     translation (lang) |  ../[lang]       | ../[lang]                 | /
+         navigation (C) |   ./             | http://www.[...]/         |  \,- $home
+      navigation (lang) |   ./             | http://www.[...]/[lang]/  |  /
+                        +------------------+---------------------------+
 
-msgfmt po/en_GB.po -o en_GB/LC_MESSAGES/gnucash-htdocs.mo
+As such:
 
-# Again, substitute your language in the name of the po file and the installed directory.
+  $top_dir := the relative reference to the top of the relative website; this
+    should be used for language-independent resources (stylesheets, images, php
+    includes), but not for links...
 
+  $home := a prefix for navigational URLs; for everything but
+    lists.gnucash.org, this'll be ".", but for lists.gnucash.org it'll
+    be "http://www.gnucash.org/".
 
+As well, the following variables should be set:
+...per directory:
 
+  $locale := the LANG to use for gettext.
 
+...per file:
 
+  $title := the text of the page.
 
+  $homepage := if the file is the homepage; controls RSS feed linkage.
+
+----------------------
+Preparing translations
+----------------------
+
+    $ make po/POTFILES
+    $ make po/gnucash-htdocs.pot
+
+Now merge the new content into your translation, substituting the name of 
+your po file in the command:
+
+    $ msgmerge po/en_GB.po po/gnucash-htdocs.pot -o po/en_GB.po
+
+Finally, see the size of the task ahead:
+
+    $ msgfmt -c --statistics po/en_GB.po
+
+Whilst editing the translation, run the msgfmt command from time to time to catch
+errors and let you know how much is left to do.
+
+When you come across fuzzy markers: (#, fuzzy), remove them.
+
+When you have no fuzzy and no untranslated messages, update the binary translation file:
+
+    $ msgfmt po/en_GB.po -o en_GB/LC_MESSAGES/gnucash-htdocs.mo
+
+Or:
+
+    $ make de [fr nl ...]
+
+Which will build an individual translation, or:
+
+    $ make mos
+
+Which will make all the known translations.

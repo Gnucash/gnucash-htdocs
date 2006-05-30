@@ -1,0 +1,27 @@
+<?php 
+$title = _("Open Source Accounting Software");
+include("local.php");
+include("emulate_globals_on.php");
+include("lang.php");
+include("externals/header.phtml");
+include("externals/menu.phtml");
+?>
+<div id="content">
+
+<h1><?php echo _("Older Announcements");?></h1>
+
+<p>
+<?php echo _("This is an archive of announcements that once appeared on the GnuCash home page.");?>
+</p>
+
+<?php
+  echo("<!-- top_dir = $top_dir , home = $home -->\n");
+# News will continue to be translated separately because 
+# of the .txt format. 
+  # for english, the lang and en news path are identical
+  $en_newspath  =  $top_dir."/news/";
+  $lang_newspath  =  $top_dir."/news/".$lang_dir."/";
+  $oldnews = true;
+  include("$top_dir/news/news-script.php"); ?>
+
+<?php include("externals/footer.phtml"); ?>

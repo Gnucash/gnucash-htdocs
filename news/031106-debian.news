@@ -1,0 +1,19 @@
+<b>Update Debian Woody GnuCash Package</b>
+2003-11-06   19:01:55
+
+James A. Treacy writes:
+<p>
+<i>
+I have just updated the gnucash package on people.debian.org.
+All dependencies should work now and after upgrading it should work
+'out of the box'.
+<br><br>
+Edit <tt>/etc/apt/sources.list</tt> and add <br>
+<tt>
+deb http://people.debian.org/~treacy/gnucash.woody ./
+</tt>
+<br>
+then<br>
+<tt>apt-get update ; apt-get install gnucash</tt>
+</i>
+

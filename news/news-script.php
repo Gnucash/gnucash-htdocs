@@ -10,62 +10,54 @@
     //
     // originally by Jeremy Collins, heavily modified by Linas Vepstas
     // Restructured by Neil Williams
+    // Significantly modified by Derek Atkins
     //
-    //  they  should  be  plain  ASCII  text  files  with  extension  ".txt"
-    //  The FIRST line is the title of the news panel, including <b></b>
-    //  tags.
-    //  The SECOND line is the DATE of the news panel (as the date of modification
-    //  of these files is unreliable now that they are under version control).
-    //  Use a UNIX timestamp: any string parseable by 'date' is sufficient:
-    //  e.g. Jan 21 18:35
-    //  If the second line does not create a valid timestamp, the 
-    //  inode change time of file is used.
 
-    //  Text messages are later converted to .phtml with translatable strings
-    //  marked up in PHP. (You can follow the example of other files to do this
-    //  yourself, e.g. when updating your translation.)
-
-    //  These phtml files will replace the alternative of separately translated
-    //  files in bespoke language directories. Once created, the .phtml file
-    //  replaces the .txt version. This automatically enables the translated
-    //  text or uses en_US if the new strings have not been translated yet.
-
-    //  Indicate the sequence for the phtml files here: Most recent last.
-    //  Use the original timestamps as values for the array.
-
-$translated_news = array(
-"1.9.0" => "2006-02-09   05:19:32", 
-"1.9.1" => "2006-02-20   04:29:24"    );
-
-    //  If the entry in translated_news is omitted, the script will try to use
-    //  the seventh line of the phtml which should consist of just the
-    //  timestamp, without the tags or brackets.
+    //  News files should be HTML-marked files with extension ".news"
+    //  The FIRST line is the title of the news panel, including
+    //  <b></b> tags.
+    //  The SECOND line is the DATE of the news panel (as the date of
+    //  modification of these files is unreliable now that they are
+    //  under version control).  Use a UNIX timestamp: any string
+    //  parseable by 'date' is sufficient: e.g. Jan 21 18:35 If the
+    //  second line does not create a valid timestamp, the inode
+    //  change time of file is used.
 
     # Be sure to define the following path to newsdirs
     if (!$en_newspath) { exit;  }
     if (!$lang_newspath) { exit;  }
 
+    // This is how many news items to display on the main page.
+    // Everything after this is displayed on the "oldnews" page.
+    $cutoff = 10;
+
     // array of displayed filenames is indexed with filenames, holds timestamps.
-    $newsfile  =  array();
+    $newsfile = array();
+
+    // array of translated news files.  Holds filenames of translated news.
+    $lang_files = array();
+
+    // a little debugging
+    echo("<!-- in news/news-script.php: top_dir = $top_dir -->\n");
+    echo("<!-- lang-path: $lang_newspath ; en-path: $en_newspath -->\n");
 
     // ------------------------------------------
-    // array holding native-language news articles.
-    $native_files = array();
-    $hd  =  dir($lang_newspath);
+    // check for the translated articles
+    $hd = dir($lang_newspath);
 
-    //  Get all translatable files in the news directory
-    while(  $filename  =  $hd->read()  )  {
+    //  Get all translated files in the translated-news directory
+    while( $filename = $hd->read() )  {
         $s=strtolower($filename);
-        if  (strstr($s, ".phtml"))  {
-                $stump = str_replace("phtml", "txt", $filename);
-                $lang_files[$stump]  =  $lang_newspath.$filename;
+        if (strstr($s, ".news"))  {
+                $lang_files[$filename] = $lang_newspath.$filename;
                 $display_filename = $lang_newspath.$filename;
-                $lastchanged=$translated_news[$stump];
-                if(!$lastchanged)
-                {
-                       $about = file($display_filename);
-                       $lastchanged=$about[6];
-                }
+		//echo("<!-- found locale news: $display_filename -->\n");
+                $about = file($display_filename);
+                $lastchanged=$about[1];
+	        if($lastchanged == "\n")
+	        {
+			$lastchanged = date("Y-m-d H:m:s", filectime($display_filename));
+	        }
                 $newsfile[$display_filename] = $lastchanged;
         }
     }
@@ -75,23 +67,22 @@ $translated_news = array(
     // Are there english language articles to display?
     $hd  =  dir($en_newspath);
 
-    //  Get all the alternate-language files, and display them
+    // Get all the english-language files, and display them
     // only if there isn't a matching native language article.
-    while(  $filename  =  $hd->read()  )  {
+    while( $filename = $hd->read() )  {
         $s=strtolower($filename);
-        if  (strstr($s, ".txt"))  {
-
-	    // display english only if there isn't a translated version
-	    if (!$lang_files[$filename]) {
+        if (strstr($s, ".news"))  {
+	    //echo("<!-- found english file: $s -->\n");
+	    if (! array_key_exists($filename, $lang_files)) {
 	       $display_filename = $en_newspath.$filename;
-	       $lastchanged="";
+	       //echo("<!-- using untranslated english file: $display_filename -->\n");
 	       $about = file($display_filename);
                $lastchanged=$about[1];
 	       if($lastchanged == "\n")
 	       {
 			$lastchanged = date("Y-m-d H:m:s", filectime($display_filename));
 	       }
-               $newsfile[$display_filename]  =  $lastchanged;
+               $newsfile[$display_filename] = $lastchanged;
 	    }
         }
     }
@@ -102,26 +93,27 @@ $translated_news = array(
     arsort($newsfile);
 
     //  Output  files  to  browser
-    for(reset($newsfile);  $key  =  key($newsfile);  next($newsfile))
+    $filecount = 0;
+    for(reset($newsfile); $key = key($newsfile); next($newsfile))
     {
-        $fa  =  file($key);
-        $n=count($fa);
+        $filecount++;
+	if ( ($oldnews && $filecount > $cutoff) ||
+	     (! $oldnews && $filecount <= $cutoff) )
+	{
+	    $fa = file($key);
+	    $n=count($fa);
 
-        if  (strstr($key, ".phtml"))  {
-              include $key;
-        }
-        else {
-             echo ("<div class=\"newsborder\"><div class=\"newsheader\">");
-             echo("<img alt=\"news panel\" src=\"images/icons/document.txt.gif\">&nbsp;");
-             print $fa[0];
-             print  " - <b>" . $newsfile[$key] . "</b>\n</div>";
-             echo "<div class=\"newsinner\">";
-             for  ($i=2;  $i<$n;  $i++)  {
-                 print $fa[$i];
-             }
-             echo "</div>";
-             echo "</div>";
-        }
+	    echo ("<div class=\"newsborder\"><div class=\"newsheader\">");
+	    echo("<img alt=\"news panel\" src=\"${top_dir}/images/icons/document.txt.gif\">&nbsp;");
+	    print $fa[0];
+	    print  " - <b>" . $newsfile[$key] . "</b></div>\n";
+	    echo "<div class=\"newsinner\">";
+	    for  ($i=2;  $i<$n;  $i++)  {
+	      print $fa[$i];
+	    }
+	    echo "</div>";
+	    echo "</div>";
+	}
     }
 
 ?>

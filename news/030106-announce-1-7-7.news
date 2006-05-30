@@ -1,0 +1,108 @@
+<b>Announcement:</b> GnuCash 1.7.7 Release Candidate 2: "It ain't easy, livin free"
+2003-01-06   11:40:34
+
+The GnuCash team is pleased to announce Release Candidate 2
+version 1.7.7: "It ain't easy, livin free".<br><br>
+<b><big>What's New in GnuCash 1.7.7?</big></b><br>
+<br>
+<b>- Scheduled Transactions:</b> <br>
+&nbsp;&nbsp; &nbsp;GnuCash now has the ability to automatically create and
+enter transactions, remind<br>
+&nbsp;&nbsp; &nbsp;when a transaction is due, give a choice of entering a
+transaction or postponing it<br>
+&nbsp;&nbsp; &nbsp;and remove an automated transaction after a certain period.<br>
+<b>- Mortgage &amp; Loan Repayment Druid:</b><br>
+&nbsp;&nbsp; &nbsp;Used to setup a variable payment loan scheduled transaction.<br>
+<b>- Small Business Accounting Features: </b><br>
+&nbsp;&nbsp; &nbsp;GnuCash now can be used for Customer and Vendor tracking,
+Invoicing and Bill Payment,<br>
+&nbsp;&nbsp; &nbsp;and using different Tax and Billing Terms in a small business.<br>
+<b>- OFX Import:</b><br>
+&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+the Open Financial Exchange<br>
+&nbsp;&nbsp; &nbsp;protocol that many banks and financial services are moving
+to use. The development of<br>
+&nbsp;&nbsp; &nbsp;OFX and HBCI support has also resulted in an improved
+transaction matching system that<br>
+&nbsp;&nbsp; &nbsp;more accurately picks duplicate transactions.<br>
+<b>- HBCI Support:</b> <br>
+&nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
+the German Home Banking <br>
+&nbsp;&nbsp; &nbsp;Computer Information protocol which includes statement
+download, initiate bank <br>
+&nbsp;&nbsp; &nbsp;transfers and direct debits.<br>
+<b>- New User Manual and Help:</b><br>
+&nbsp;&nbsp; &nbsp;A brand new user help has been written which focuses on
+how to do tasks in <br>
+&nbsp;&nbsp; &nbsp;conjunction with a Tutorial and Concepts guide that gives
+the user background<br>
+&nbsp;&nbsp; &nbsp;information on using GnuCash.<br>
+<b>- New Multi-Currency Transaction Handling:</b><br>
+&nbsp;&nbsp; &nbsp;GnuCash no longer requires separate currency exchange
+accounts to handle multiple<br>
+&nbsp;&nbsp; &nbsp;currency transfers.<br>
+<b>- Redesigned Menu's</b><br>
+&nbsp;&nbsp; &nbsp;The GnuCash menu's have been redesigned to conform more
+with the new GNOME <br>
+&nbsp;&nbsp; &nbsp;Human Interface Guidelines.<br>
+<br>
+<big><b>Specifically updated in this version;</b></big><br>
+<br>
+ o Welcome to Release Candidate 2<br>
+ o Give the user better feedback on exactly what the exchange rate
+   means.<br>
+ o Better handling of corrupt XML data files.  Print better error
+   messages for unknown tags, or mismatched start/end tags.<br>
+ o When checking for gtkhtml-1.1, make the lack of pkg-config a fatal
+   error. Also check for pkgconfig<br>
+ o Updated translations, po/de.po <br>
+ o Fix HBCI reparent warnings. Make the PIN dialog a bit nicer.<br>
+ o Fixes to Postgresql backend.<br>
+ o Changed the "ALTER TABLE table ADD COLUMN..." statements to conform
+   to the current Postgres implementation (and SQL 92) standard by
+   putting the DEFAULT modifier in a separate ALTER statement.  This was
+   reported by Christopher B. Browne.<br>
+ o Implement unpost function in invoices.<br>
+ o Correctly open a help window when the initial URL contains a label
+   component to it.<br>
+ o Make the reconciliation window respect the 'include subaccount'
+   flag any time it opens a register.  Consolidate logic for opening a
+   new register. Enhance the reconciliation start window to update the
+   ending value when this flag is changed.<br>
+ o If the amount is monetary, map the keypad decimal key to the
+   correct decimal character for the locale.<br>
+ o Fix malformed URLs for bringing up a report options window.<br>
+ o Add new option for specifying sort critera for piecharts and
+   barcharts.<br>
+ o The report title should change when the report name field is
+   changed in the options.<br>
+ o Add a smart function for going "back" from the "load a file" page.
+   If there are any files loaded it returns to the "loaded files" page
+   instead of the initial druid page.<br>
+ o Add support for i18n of price source strings.<br>
+ o Add icons to gtk only windows.<br>
+ o Search on NOTES add code to prevent searching on template-txn
+   accounts so SXes don't show up in find results.<br>
+ o Create a 'file compression' option and pass the data into the
+   backend. This is an option in the preferences.<br>
+ o Provide a simple checkbook set of accounts<br>
+ o When editing an exchange rate, always change the _VALUE_ of the
+   split, not the amount.  This has the affect of keeping the visible
+   number the same and changing the "other" account.<br>
+ o Add a set of business accounts to the account setup<br>
+ o Give a much higher importance to the date heuristics in the OFX
+   import. <br>
+ o Disable skipping transactions which already have an online id
+   during matching, untill a fix for the "transfer between two accounts"
+   bug is properly fixed.<br>
+ o Large set of fixes to the build system by John H. Pierce
+   <john@killterm.org><br>
+ o Lots more bugfixes<br>
+<br><br>
+Available at the usual places! 
+
+<br><br>
+<b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
+
+<br><br>
+<b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
