@@ -75,8 +75,10 @@ As well, the following variables should be set:
 Preparing translations
 ----------------------
 
-    $ make po/POTFILES
-    $ make po/gnucash-htdocs.pot
+First, make sure the pot file is up to date.  You can do that by running
+the command:
+
+    $ make pot
 
 Now merge the new content into your translation, substituting the name of 
 your po file in the command:
@@ -87,16 +89,13 @@ Finally, see the size of the task ahead:
 
     $ msgfmt -c --statistics po/en_GB.po
 
-Whilst editing the translation, run the msgfmt command from time to time to catch
-errors and let you know how much is left to do.
+Whilst editing the translation, run the msgfmt command from time to
+time to catch errors and let you know how much is left to do.
 
 When you come across fuzzy markers: (#, fuzzy), remove them.
 
-When you have no fuzzy and no untranslated messages, update the binary translation file:
-
-    $ msgfmt po/en_GB.po -o en_GB/LC_MESSAGES/gnucash-htdocs.mo
-
-Or:
+When you have no fuzzy and no untranslated messages, update the binary
+translation file for your locale:
 
     $ make de [fr nl ...]
 
@@ -105,3 +104,22 @@ Which will build an individual translation, or:
     $ make mos
 
 Which will make all the known translations.
+
+----------------------
+Publishing the website
+----------------------
+
+Once you've got the website content up to date, you need to publish
+the content from the beta site to the main website (and beta search
+site to the main search site).  To do this, you need to merge your
+changes from the 'trunk' into the 'published' branch.  Here's how you
+do that:
+
+  svn checkout .../repo/htdocs/branches/published htdocs-pub
+  cd htdocs-pub
+  svn log --stop-on-copy emulate-globals.php
+  # find the last merge point from trunk
+  svn merge -r <last_merge_point>:<head_rev> .../htdocs/trunk
+  # resolve conflicts
+  svn commit
+  # Make sure you put <head_rev> into your comment!!!!!!!
