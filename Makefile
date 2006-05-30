@@ -57,7 +57,7 @@ nmz.onefile:
 	( echo '<?php include("$(LOCALFILE)"); ' ; \
 	  echo '$$home = "$(HOME)/$$lang_dir"; ' ; \
 	  echo '$$text_dir = "."; ?>'; \
-	  cat $(TMPLBASE)$(FILE).php_tmpl ) | php | tail +5 > \
+	  cat $(TMPLBASE)$(FILE).php_tmpl ) | php -q > \
 	  $(TMPLBASE)$(FILE)$(FILETAIL)
 
 nmz.lang:
