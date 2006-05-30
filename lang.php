@@ -7,7 +7,8 @@ putenv("LANG=$locale");
 putenv("LANGUAGE=$locale");
 $locale_res = setlocale(LC_ALL, "");
 $domain = "gnucash-htdocs";
-$dir_res = bindtextdomain($domain, $top_dir);
+if (! isset($text_dir)) { $test_dir = $top_dir; }
+$dir_res = bindtextdomain($domain, $text_dir);
 textdomain($domain);
 echo ("<!-- $lang , locale_res [$locale_res] , dir_res $dir_res -->\n");
 ?>

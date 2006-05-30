@@ -48,14 +48,15 @@ LOCALFILE=local.php
 URLBASE=
 FILETAIL=
 FILE=
-URL=http://www.gnucash.org$(URLBASE)
+HOME=http://www.gnucash.org$(URLBASE)
 TMPLBASE=search/templates/NMZ.
 
 # add when we have utf-8 translations: iconv -f UTF-8 -t ISO8859-1 
 
 nmz.onefile:
 	( echo '<?php include("$(LOCALFILE)"); ' ; \
-	  echo '$$home = "$(URL)/$$lang_dir"; ?>'; \
+	  echo '$$home = "$(HOME)/$$lang_dir"; ' ; \
+	  echo '$$text_dir = "."; ?>'; \
 	  cat $(TMPLBASE)$(FILE).php_tmpl ) | php | tail +5 > \
 	  $(TMPLBASE)$(FILE)$(FILETAIL)
 
