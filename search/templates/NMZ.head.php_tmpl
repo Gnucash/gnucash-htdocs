@@ -64,10 +64,10 @@ include("externals/menu.phtml");
 <strong><?=_("Lists to Search")?>:</strong>
 <ul>
 <?php
-  if (file_exists("search/templates/NMZ.head.lists.$lang_dir")) {
-    include("search/templates/NMZ.head.lists.$lang_dir");
+  if (file_exists("search/templates/NMZtmpl.head.lists.$lang_dir")) {
+    include("search/templates/NMZtmpl.head.lists.$lang_dir");
   } else {
-    include("search/templates/NMZ.head.lists");
+    include("search/templates/NMZtmpl.head.lists");
   }
 ?>
 </ul>
