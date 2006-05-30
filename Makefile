@@ -45,15 +45,16 @@ pt_PT: po/pt_PT.po
 # Code to build the Namazu templates
 #
 LOCALFILE=local.php
-HOME=http://www.gnucash.org/beta
+URLBASE=
 FILETAIL=
 FILE=
+URL=http://www.gnucash.org$(URLBASE)
 TMPLBASE=search/templates/NMZ.
 
 # add when we have utf-8 translations: iconv -f UTF-8 -t ISO8859-1 
 
 nmz.onefile:
-	( echo '<?php ; include("$(LOCALFILE)"); $$home = "$(HOME)/$$lang_dir"; $$top_dir="."; ?>'; cat $(TMPLBASE)$(FILE).php_tmpl ) | php | tail +5 > $(TMPLBASE)$(FILE)$(FILETAIL)
+	( echo '<?php ; include("$(LOCALFILE)"); $$home = "$(URL)/$$lang_dir"; ?>'; cat $(TMPLBASE)$(FILE).php_tmpl ) | php | tail +5 > $(TMPLBASE)$(FILE)$(FILETAIL)
 
 nmz.lang:
 	$(MAKE) nmz.onefile FILE=head
