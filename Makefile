@@ -54,7 +54,10 @@ TMPLBASE=search/templates/NMZ.
 # add when we have utf-8 translations: iconv -f UTF-8 -t ISO8859-1 
 
 nmz.onefile:
-	( echo '<?php ; include("$(LOCALFILE)"); $$home = "$(URL)/$$lang_dir"; ?>'; cat $(TMPLBASE)$(FILE).php_tmpl ) | php | tail +5 > $(TMPLBASE)$(FILE)$(FILETAIL)
+	( echo '<?php include("$(LOCALFILE)"); ' ; \
+	  echo '$$home = "$(URL)/$$lang_dir"; ?>'; \
+	  cat $(TMPLBASE)$(FILE).php_tmpl ) | php | tail +5 > \
+	  $(TMPLBASE)$(FILE)$(FILETAIL)
 
 nmz.lang:
 	$(MAKE) nmz.onefile FILE=head
