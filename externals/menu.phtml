@@ -36,7 +36,7 @@ if(ereg("lists.gnucash.org",$self)) {
       -->
       <li><a href="http://wiki.gnucash.org/wiki/Mailing_Lists"><?=_("Mailing Lists")?></a>
       <li style="list-style-image:none;list-style-type:none;"><ul>
-        <li><a href="https://lists.gnucash.org/search/<?= $lang_dir ?>"><?=_("Search")?></a></li>
+        <li><a href="https://lists.gnucash.org/search/<? if ($lang_dir != "") { echo "$lang_dir/"; } ?>"><?=_("Search")?></a></li>
       </ul></li>
       <li><a href="http://wiki.gnucash.org/wiki/Bugzilla"><?=_("Bug Reports")?></a></li>
       <li><a href="http://wiki.gnucash.org/wiki/IRC"><?=_("IRC (Chat)")?></a></li>
