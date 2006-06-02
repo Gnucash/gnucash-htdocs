@@ -19,12 +19,14 @@
   $newsdir = "${top_dir}/news/";
   include("$top_dir/news/news-script.php");
 ?>
+
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>http://www.gnucash.org/atom.php</id>
   <title>GnuCash News</title>
   <generator>GnuCash htdocs/trunk/atom-feed.php 1.0 &lt;gnucash-devel@gnucash.org&gt;</generator>
   <logo>http://www.gnucash.org/images/gnucash_logo.png</logo>
   <link href="http://www.gnucash.org/" />
+  <link rel="self" href="atom-feed.php" />
 
   <?php
   $news_items = get_news($newsdir, $newsdir);
@@ -45,9 +47,9 @@
     }
   ?>
   <entry>
-    <id>urn:x-gnucash:news:<?= $key ?></id>
+    <id>urn:x-gnucash:news:<?= urlencode($key) ?></id>
     <title><?= $title ?></title>
-    <updated><?= str_replace($update_date, ' ', 'T') ?>-08:00</updated>
+    <updated><?= str_replace(' ', 'T', $update_date) ?>-08:00</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <? for ($i=2; $i<$n; $i++) {
@@ -58,5 +60,5 @@
   </entry>
   <?php } ?>
 
-  <updated><?= str_replace($most_recent, ' ', 'T') ?>-08:00</updated>
+  <updated><?= str_replace(' ', 'T', $most_recent) ?>-08:00</updated>
 </feed>
