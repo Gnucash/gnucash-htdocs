@@ -49,16 +49,15 @@
   <entry>
     <id>urn:x-gnucash:news:<?= urlencode($key) ?></id>
     <title><?= $title ?></title>
-    <updated><?= str_replace(' ', 'T', $update_date) ?>-08:00</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
+    <updated><?= str_replace(' ', 'T', $update_date) ?>:00-08:00</updated>
+    <content type="html">
         <? for ($i=2; $i<$n; $i++) {
-            print $fa[$i];
+            print urlencode($fa[$i]);
         } ?>
       </div>
     </content>
   </entry>
   <?php } ?>
 
-  <updated><?= str_replace(' ', 'T', $most_recent) ?>-08:00</updated>
+  <updated><?= str_replace(' ', 'T', $most_recent) ?>:00-08:00</updated>
 </feed>
