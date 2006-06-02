@@ -54,7 +54,6 @@
         <? for ($i=2; $i<$n; $i++) {
             print urlencode($fa[$i]);
         } ?>
-      </div>
     </content>
   </entry>
   <?php } ?>
