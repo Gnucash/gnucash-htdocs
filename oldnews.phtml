@@ -16,12 +16,13 @@ include("externals/menu.phtml");
 
 <?php
   echo("<!-- top_dir = $top_dir , home = $home -->\n");
-# News will continue to be translated separately because 
-# of the .txt format. 
+  # News will continue to be translated separately because 
+  # of the .txt format. 
   # for english, the lang and en news path are identical
   $en_newspath  =  $top_dir."/news/";
   $lang_newspath  =  $top_dir."/news/".$lang_dir."/";
   $oldnews = true;
-  include("$top_dir/news/news-script.php"); ?>
-
+  include("$top_dir/news/news-script.php");
+  emit_news($en_newspath, $lang_newspath, $oldnews);
+?>
 <?php include("externals/footer.phtml"); ?>

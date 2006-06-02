@@ -23,13 +23,8 @@
     //  second line does not create a valid timestamp, the inode
     //  change time of file is used.
 
-    # Be sure to define the following path to newsdirs
-    if (!$en_newspath) { exit;  }
-    if (!$lang_newspath) { exit;  }
-
-    // This is how many news items to display on the main page.
-    // Everything after this is displayed on the "oldnews" page.
-    $cutoff = 10;
+    function get_news($en_newspath, $lang_newspath)
+    {
 
     // array of displayed filenames is indexed with filenames, holds timestamps.
     $newsfile = array();
@@ -46,15 +41,15 @@
     $hd = dir($lang_newspath);
 
     //  Get all translated files in the translated-news directory
-    while( $filename = $hd->read() )  {
-        $s=strtolower($filename);
-        if (strstr($s, ".news"))  {
+    while ($filename = $hd->read()) {
+        $s = strtolower($filename);
+        if (strstr($s, ".news")) {
                 $lang_files[$filename] = $lang_newspath.$filename;
                 $display_filename = $lang_newspath.$filename;
-		//echo("<!-- found locale news: $display_filename -->\n");
+		// echo("<!-- found locale news: $display_filename -->\n");
                 $about = file($display_filename);
-                $lastchanged=$about[1];
-	        if($lastchanged == "\n")
+                $lastchanged = $about[1];
+	        if ($lastchanged == "\n")
 	        {
 			$lastchanged = date("Y-m-d H:m:s", filectime($display_filename));
 	        }
@@ -65,22 +60,22 @@
 
     // ------------------------------------------
     // Are there english language articles to display?
-    $hd  =  dir($en_newspath);
+    $hd = dir($en_newspath);
 
     // Get all the english-language files, and display them
     // only if there isn't a matching native language article.
-    while( $filename = $hd->read() )  {
-        $s=strtolower($filename);
-        if (strstr($s, ".news"))  {
-	    //echo("<!-- found english file: $s -->\n");
+    while ($filename = $hd->read()) {
+        $s = strtolower($filename);
+        if (strstr($s, ".news")) {
+	    // echo("<!-- found english file: $s -->\n");
 	    if (! array_key_exists($filename, $lang_files)) {
 	       $display_filename = $en_newspath.$filename;
-	       //echo("<!-- using untranslated english file: $display_filename -->\n");
+	       // echo("<!-- using untranslated english file: $display_filename -->\n");
 	       $about = file($display_filename);
-               $lastchanged=$about[1];
-	       if($lastchanged == "\n")
+               $lastchanged = $about[1];
+	       if ($lastchanged == "\n")
 	       {
-			$lastchanged = date("Y-m-d H:m:s", filectime($display_filename));
+                 $lastchanged = date("Y-m-d H:m:s", filectime($display_filename));
 	       }
                $newsfile[$display_filename] = $lastchanged;
 	    }
@@ -92,28 +87,50 @@
     //  Sort  files  in  descending  date order
     arsort($newsfile);
 
+    return $newsfile;
+}
+
+
+function emit_news($en_newspath, $lang_newspath, $oldnews)
+{
+    global $top_dir;
+
+    # Be sure to define the following path to newsdirs
+    if (!$en_newspath) { exit; }
+    if (!$lang_newspath) { exit; }
+
+    // This is how many news items to display on the main page.
+    // Everything after this is displayed on the "oldnews" page.
+    $cutoff = 10;
+
+    $newsfiles = get_news($en_newspath, $lang_newspath);
+    if ($oldnews)
+    {
+      $newsfile = array_slice($newsfiles, $cutoff, -1, true);
+    }
+    else
+    {
+      $newsfile = array_slice($newsfiles, 0, $cutoff, true);
+    }
     //  Output  files  to  browser
     $filecount = 0;
     for(reset($newsfile); $key = key($newsfile); next($newsfile))
     {
-        $filecount++;
-	if ( ($oldnews && $filecount > $cutoff) ||
-	     (! $oldnews && $filecount <= $cutoff) )
-	{
-	    $fa = file($key);
-	    $n=count($fa);
-
-	    echo ("<div class=\"newsborder\"><div class=\"newsheader\">");
-	    echo("<img alt=\"news panel\" src=\"${top_dir}/images/icons/document.txt.gif\">&nbsp;");
-	    print $fa[0];
-	    print  " - <b>" . $newsfile[$key] . "</b></div>\n";
-	    echo "<div class=\"newsinner\">";
-	    for  ($i=2;  $i<$n;  $i++)  {
-	      print $fa[$i];
-	    }
-	    echo "</div>";
-	    echo "</div>";
-	}
+        $fa = file($key);
+        $n = count($fa);
+?>
+<div class="newsborder">
+  <div class="newsheader">
+    <img alt="news panel" src="<?=${top_dir}?>/images/icons/document.txt.gif" width="16" height="16" alt="[news]"/>&nbsp;
+    <?= $fa[0]; ?> - <b><?= $newsfile[$key] ?></b>
+  </div>
+  <div class="newsinner">
+  <? for ($i=2; $i<$n; $i++)  {
+          print $fa[$i];
+     } ?>
+  </div>
+</div>
+<?
     }
-
+}
 ?>

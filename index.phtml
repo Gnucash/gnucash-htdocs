@@ -40,14 +40,15 @@ include("externals/menu.phtml");
 
 <?php
   echo("<!-- top_dir = $top_dir , home = $home -->\n");
-# News will continue to be translated separately because 
-# of the .txt format. 
+  # News will continue to be translated separately because 
+  # of the .txt format. 
   # for english, the lang and en news path are identical
   $en_newspath  =  $top_dir."/news/";
   $lang_newspath  =  $top_dir."/news/".$lang_dir."/";
   $oldnews = false;
-  include("$top_dir/news/news-script.php"); ?>
-
+  include("$top_dir/news/news-script.php");
+  emit_news($en_newspath, $lang_newspath, $oldnews);
+?>
 <div class="newsborder">
 <div class="newsheader"><img alt="news panel" src="<?=$top_dir;?>/images/icons/document.txt.gif">&nbsp;
 <a href="oldnews.phtml">Older Announcements ...</a>
