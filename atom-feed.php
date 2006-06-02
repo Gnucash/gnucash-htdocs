@@ -12,7 +12,6 @@
   }
   $charset = "iso-8859-1";
   header("Content-Type: $contentType; charset=$charset");
-
 ?>
 <?="<?xml version=\"1.0\" encoding=\"$charset\"?>"?>
 <?php
@@ -33,7 +32,6 @@
   reset($news_items);
   $most_recent = null;
   ?>
-  <updated><?=$most_recent?></updated>
 
   <?php for (reset($news_items); $key = key($news_items); next($news_items))
   {
@@ -49,7 +47,7 @@
   <entry>
     <id>urn:x-gnucash:news:<?= $key ?></id>
     <title><?= $title ?></title>
-    <updated><?= $update_date ?></updated>
+    <updated><?= str_replace($update_date, ' ', 'T') ?>-08:00</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <? for ($i=2; $i<$n; $i++) {
@@ -60,5 +58,5 @@
   </entry>
   <?php } ?>
 
-  <updated><?= $most_recent ?></updated>
+  <updated><?= str_replace($most_recent, ' ', 'T') ?>-08:00</updated>
 </feed>
