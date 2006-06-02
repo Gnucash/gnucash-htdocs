@@ -14,7 +14,7 @@
   header("Content-Type: $contentType; charset=$charset");
 
 ?>
-<?="<?xml version=\"1.0\" encoding=\"<?=$charset?>\"?>"?>
+<?="<?xml version=\"1.0\" encoding=\"$charset\"?>"?>
 <?php
   $entry_count = 10;
   $newsdir = "${top_dir}/news/";
