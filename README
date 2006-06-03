@@ -4,7 +4,6 @@
 TODO
 ----
 
-- atom (/rss) generator
 - re-work page content for new-style translations (one big block)
   - re-flow existing po-file content.
 - update features screenshots
@@ -59,11 +58,12 @@ As such:
     be "http://www.gnucash.org/".
 
 As well, the following variables should be set:
-...per directory:
+
+- per directory:
 
   $locale := the LANG to use for gettext.
 
-...per file:
+- per file:
 
   $title := the text of the page.
 
@@ -113,11 +113,11 @@ site to the main search site).  To do this, you need to merge your
 changes from the 'trunk' into the 'published' branch.  Here's how you
 do that:
 
-  svn checkout .../repo/htdocs/branches/published htdocs-pub
-  cd htdocs-pub
-  svn log --stop-on-copy emulate-globals.php
-  # find the last merge point from trunk
-  svn merge -r <last_merge_point>:<head_rev> .../htdocs/trunk
-  # resolve conflicts
-  svn commit
-  # Make sure you put <head_rev> into your comment!!!!!!!
+    svn checkout .../repo/htdocs/branches/published htdocs-pub
+    cd htdocs-pub
+    svn log --stop-on-copy emulate-globals.php
+    # find the last merge point from trunk
+    svn merge -r <last_merge_point>:<head_rev> .../htdocs/trunk
+    # resolve conflicts
+    svn commit
+    # Make sure you put <head_rev> into your comment!!!!!!!
