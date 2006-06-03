@@ -43,8 +43,8 @@ include("externals/menu.phtml");
   # News will continue to be translated separately because 
   # of the .txt format. 
   # for english, the lang and en news path are identical
-  $en_newspath  =  $top_dir."/news/";
-  $lang_newspath  =  $top_dir."/news/".$lang_dir."/";
+  $en_newspath  =  $top_dir."/news";
+  $lang_newspath  =  $top_dir."/news/".$lang_dir;
   $oldnews = false;
   include("$top_dir/news/news-script.php");
   emit_news($en_newspath, $lang_newspath, $oldnews);

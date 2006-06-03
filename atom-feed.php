@@ -1,7 +1,6 @@
 <?php
   // TODO:
   // - reasonable permalinks
-
   include("local.php");
 
   $contentType = "application/atom+xml";
@@ -12,11 +11,12 @@
   }
   $charset = "iso-8859-1";
   header("Content-Type: $contentType; charset=$charset");
+
+  $entry_count = 10;
+  $newsdir = "${top_dir}/news/";
 ?>
 <?="<?xml version=\"1.0\" encoding=\"$charset\"?>"?>
 <?php
-  $entry_count = 10;
-  $newsdir = "${top_dir}/news/";
   include("$top_dir/news/news-script.php");
 ?>
 
@@ -27,13 +27,14 @@
   <logo>http://www.gnucash.org/images/gnucash_logo.png</logo>
   <link href="http://www.gnucash.org/" />
   <link rel="self" href="atom-feed.php" />
-
   <?php
   $news_items = get_news($newsdir, $newsdir);
   $news_items = array_slice($news_items, 0, $entry_count);
   reset($news_items);
-  $most_recent = null;
+  $most_recent = file(key($news_items));
+  $most_recent_update = chop($most_recent[1]);
   ?>
+  <updated><?= date(DATE_ATOM, strtotime($most_recent_update)) ?></updated>
 
   <?php for (reset($news_items); $key = key($news_items); next($news_items))
   {
@@ -41,22 +42,23 @@
     $n = count($fa);
     $title = strip_tags(chop($fa[0]));
     $update_date = chop($fa[1]);
-    if ($most_recent == null || $update_date > $most_recent )
-    {
-      $most_recent = $update_date;
-    }
-  ?>
+    ?>
   <entry>
     <id>urn:x-gnucash:news:<?= urlencode($key) ?></id>
     <title><?= $title ?></title>
-    <updated><?= str_replace(' ', 'T', $update_date) ?>:00-08:00</updated>
+    <link href="<?=${top_dir}?>/#<?=generate_anchor($key);?>" />
+    <author>
+      <name>GnuCash Developers</name>
+      <email>gnucash-devel@gnucash.org</email>
+    </author>
+    <updated><?= date(DATE_ATOM, strtotime($update_date)) ?></updated>
     <content type="html">
         <? for ($i=2; $i<$n; $i++) {
-            print urlencode($fa[$i]);
+            print htmlentities($fa[$i]);
         } ?>
     </content>
   </entry>
-  <?php } ?>
+  <?php
+  } ?>
 
-  <updated><?= str_replace(' ', 'T', $most_recent) ?>:00-08:00</updated>
 </feed>

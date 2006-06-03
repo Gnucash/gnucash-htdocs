@@ -90,6 +90,10 @@
     return $newsfile;
 }
 
+function generate_anchor($news_key)
+{
+  return urlencode(substr($news_key, strpos($news_key, '/', 2)+1));
+}
 
 function emit_news($en_newspath, $lang_newspath, $oldnews)
 {
@@ -122,7 +126,7 @@ function emit_news($en_newspath, $lang_newspath, $oldnews)
 <div class="newsborder">
   <div class="newsheader">
     <img alt="news panel" src="<?=${top_dir}?>/images/icons/document.txt.gif" width="16" height="16" alt="[news]"/>&nbsp;
-    <?= $fa[0]; ?> - <b><?= $newsfile[$key] ?></b>
+    <a name="<?=generate_anchor($key)?>"><?= $fa[0]; ?> - <b><?= $newsfile[$key] ?></b></a>
   </div>
   <div class="newsinner">
   <? for ($i=2; $i<$n; $i++)  {
