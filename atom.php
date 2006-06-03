@@ -12,6 +12,7 @@
   $charset = "iso-8859-1";
   header("Content-Type: $contentType; charset=$charset");
 
+  $DATE_ATOM = "Y-m-d\TH:i:sP";
   $entry_count = 10;
   $newsdir = "${top_dir}/news/";
 ?>
@@ -34,7 +35,7 @@
   $most_recent = file(key($news_items));
   $most_recent_update = chop($most_recent[1]);
   ?>
-  <updated><?= date(DATE_ATOM, strtotime($most_recent_update)) ?></updated>
+  <updated><?= date($DATE_ATOM, strtotime($most_recent_update)) ?></updated>
 
   <?php for (reset($news_items); $key = key($news_items); next($news_items))
   {
@@ -51,7 +52,7 @@
       <name>GnuCash Developers</name>
       <email>gnucash-devel@gnucash.org</email>
     </author>
-    <updated><?= date(DATE_ATOM, strtotime($update_date)) ?></updated>
+    <updated><?= date($DATE_ATOM, strtotime($update_date)) ?></updated>
     <content type="html">
         <? for ($i=2; $i<$n; $i++) {
             print htmlentities($fa[$i]);
