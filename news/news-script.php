@@ -110,11 +110,11 @@ function emit_news($en_newspath, $lang_newspath, $oldnews)
     $newsfiles = get_news($en_newspath, $lang_newspath);
     if ($oldnews)
     {
-      $newsfile = array_slice($newsfiles, $cutoff, -1, true);
+      $newsfile = array_slice($newsfiles, $cutoff, -1);
     }
     else
     {
-      $newsfile = array_slice($newsfiles, 0, $cutoff, true);
+      $newsfile = array_slice($newsfiles, 0, $cutoff);
     }
     //  Output  files  to  browser
     $filecount = 0;
