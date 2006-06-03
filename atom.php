@@ -23,10 +23,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>http://www.gnucash.org/atom.php</id>
   <title>GnuCash News</title>
-  <generator>GnuCash htdocs/trunk/atom-feed.php 1.0 &lt;gnucash-devel@gnucash.org&gt;</generator>
+  <generator>GnuCash htdocs/trunk/atom.php 1.0 &lt;gnucash-devel@gnucash.org&gt;</generator>
   <logo>http://www.gnucash.org/images/gnucash_logo.png</logo>
   <link href="http://www.gnucash.org/" />
-  <link rel="self" href="atom-feed.php" />
+  <link rel="self" href="atom.php" />
   <?php
   $news_items = get_news($newsdir, $newsdir);
   $news_items = array_slice($news_items, 0, $entry_count);
