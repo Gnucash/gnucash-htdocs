@@ -12,9 +12,22 @@
   $charset = "iso-8859-1";
   header("Content-Type: $contentType; charset=$charset");
 
-  $DATE_ATOM = "Y-m-d\TH:i:sP";
   $entry_count = 10;
   $newsdir = "${top_dir}/news/";
+
+  /**
+   * In php5, this is simply: date(DATE_ATOM, strtotime($news_date)).
+   * php4 doesn't know what 'DATE_ATOM' is, and doesn't know what the 'P'
+   * argument is ("+04:00"). The 'O' argument is supported and close ("+0400"),
+   * but we need to insert the ':', as such...
+   **/
+  function date_convert_news_to_atom($news_date)
+  {
+    $DATE_ATOM_MOSTLY = "Y-m-d\TH:i:sO";
+    $semi_atom_date = date($DATE_ATOM_MOSTLY, strtotime($news_date));
+    $len = strlen($semi_atom_date);
+    return substr($semi_atom_date, 0, $len-2) . ":" . substr($semi_atom_date, $len-2);
+  }
 ?>
 <?="<?xml version=\"1.0\" encoding=\"$charset\"?>"?>
 <?php
@@ -35,7 +48,7 @@
   $most_recent = file(key($news_items));
   $most_recent_update = chop($most_recent[1]);
   ?>
-  <updated><?= date($DATE_ATOM, strtotime($most_recent_update)) ?></updated>
+  <updated><?= date_convert_news_to_atom($most_recent_update) ?></updated>
 
   <?php for (reset($news_items); $key = key($news_items); next($news_items))
   {
@@ -52,7 +65,7 @@
       <name>GnuCash Developers</name>
       <email>gnucash-devel@gnucash.org</email>
     </author>
-    <updated><?= date($DATE_ATOM, strtotime($update_date)) ?></updated>
+    <updated><?= date_convert_news_to_atom($update_date) ?></updated>
     <content type="html">
         <? for ($i=2; $i<$n; $i++) {
             print htmlentities($fa[$i]);
