@@ -9,8 +9,7 @@
 <?php
 
 if (isset($homepage)) { ?>
-  <!-- the RSS only appears on the home page, not on all pages. -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="<?=$top_dir?>rss-feed.phtml">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="<?=$top_dir?>atom.php">
 <?php } ?>
 
 <title><?= _($title); ?> | GnuCash</title>
