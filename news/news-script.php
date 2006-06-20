@@ -44,8 +44,8 @@
     while ($filename = $hd->read()) {
         $s = strtolower($filename);
         if (strstr($s, ".news")) {
-                $lang_files[$filename] = $lang_newspath.$filename;
-                $display_filename = $lang_newspath.$filename;
+                $lang_files[$filename] = $lang_newspath."/".$filename;
+                $display_filename = $lang_newspath."/".$filename;
 		// echo("<!-- found locale news: $display_filename -->\n");
                 $about = file($display_filename);
                 $lastchanged = $about[1];
@@ -69,7 +69,7 @@
         if (strstr($s, ".news")) {
 	    // echo("<!-- found english file: $s -->\n");
 	    if (! array_key_exists($filename, $lang_files)) {
-	       $display_filename = $en_newspath.$filename;
+	       $display_filename = $en_newspath."/".$filename;
 	       // echo("<!-- using untranslated english file: $display_filename -->\n");
 	       $about = file($display_filename);
                $lastchanged = $about[1];
