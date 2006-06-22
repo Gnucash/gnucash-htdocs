@@ -91,7 +91,11 @@ Finally, see the size of the task ahead:
 Whilst editing the translation, run the msgfmt command from time to
 time to catch errors and let you know how much is left to do.
 
-When you come across fuzzy markers: (#, fuzzy), remove them.
+When you come across fuzzy markers: (#, fuzzy), check whether the
+proposed translation is a valid translation. If it is, then remove
+the fuzzy marker. If it is not, either edit the translation and
+remove the fuzzy marker, or leave the fuzzy marker where it is --
+this message will then be treated as untranslated.
 
 When you have no fuzzy and no untranslated messages, update the binary
 translation file for your locale:
