@@ -2,11 +2,11 @@
 <html>
 <head>
 
-<link rel="stylesheet" href="<?=$top_dir?>/externals/gnucash.css" type="text/css" />
-<link rel="alternate stylesheet" href="<?=$top_dir?>/externals/option0.css" type="text/css" title="simplicity" />
-<link rel="alternate stylesheet" href="<?=$top_dir?>/externals/option0-a.css" type="text/css" title="simplicity and links" />
-<link rel="alternate stylesheet" href="<?=$top_dir?>/externals/option1.css" type="text/css" title="lighter" />
-<link rel="alternate stylesheet" href="<?=$top_dir?>/externals/option2.css" type="text/css" title="newsitem sync" />
+<link rel="<?= (isset($_GET['style'])) ? "alternate " : ""?>stylesheet" href="<?=$top_dir?>/externals/gnucash.css" type="text/css" />
+<link rel="<?= ($_GET['style'] == '0') ? "" : "alternate "?>stylesheet" href="<?=$top_dir?>/externals/option0.css" type="text/css" title="simplicity" />
+<link rel="<?= ($_GET['style'] == '0-a') ? "" : "alternate "?>stylesheet" href="<?=$top_dir?>/externals/option0-a.css" type="text/css" title="simplicity and links" />
+<link rel="<?= ($_GET['style'] == '1') ? "" : "alternate "?>stylesheet" href="<?=$top_dir?>/externals/option1.css" type="text/css" title="lighter" />
+<link rel="<?= ($_GET['style'] == '2') ? "" : "alternate "?>stylesheet" href="<?=$top_dir?>/externals/option2.css" type="text/css" title="newsitem sync" />
 
 
 <link rel="icon" href="<?=$top_dir?>/favicon.ico" type="image/x-icon" />
