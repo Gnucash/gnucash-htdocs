@@ -3,6 +3,12 @@
 <head>
 
 <link rel="stylesheet" href="<?=$top_dir?>/externals/gnucash.css" type="text/css" />
+<link rel="alternate stylesheet" href="<?=$top_dir?>/externals/option0.css" type="text/css" title="simplicity" />
+<link rel="alternate stylesheet" href="<?=$top_dir?>/externals/option0-a.css" type="text/css" title="simplicity and links" />
+<link rel="alternate stylesheet" href="<?=$top_dir?>/externals/option1.css" type="text/css" title="lighter" />
+<link rel="alternate stylesheet" href="<?=$top_dir?>/externals/option2.css" type="text/css" title="newsitem sync" />
+
+
 <link rel="icon" href="<?=$top_dir?>/favicon.ico" type="image/x-icon" />
 <link rel="shortcut icon" href="<?=$top_dir?>/favicon.ico" type="image/x-icon" />
 <?php echo $mimeline; ?>
@@ -18,7 +24,9 @@ if (isset($homepage)) { ?>
 <body>
 
 <div id="head">
-<a href="<?=$home?>/"><img src="<?=$top_dir?>/externals/gnucash_logo1.png" alt="[GnuCash Logo]" id="gnclogo" width="179" height="45" border="0"/></a>
+<a href="<?=$home?>/"><!--img src="<?=$top_dir?>/externals/gnucash_logo1.png" alt="[GnuCash Logo]" id="gnclogo" width="179" height="45" border="0"/ -->
+<img src="<?=$top_dir?>/externals/banner5.png" width="453" height="45" />
+</a>
 <br/>
 <span id="language">
 <?= _("Language"); ?>:
