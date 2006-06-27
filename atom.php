@@ -13,7 +13,7 @@
   header("Content-Type: $contentType; charset=$charset");
 
   $entry_count = 10;
-  $newsdir = "${top_dir}/news/";
+  $newsdir = "${top_dir}/news";
 
   /**
    * In php5, this is simply: date(DATE_ATOM, strtotime($news_date)).
@@ -60,7 +60,7 @@
   <entry>
     <id>urn:x-gnucash:news:<?= urlencode($key) ?></id>
     <title><?= $title ?></title>
-    <link rel="alternate" href="<?=${top_dir}?>/#<?=generate_anchor($key);?>" />
+    <link rel="alternate" href="http://www.gnucash.org/#<?=generate_anchor($key);?>" />
     <author>
       <name>GnuCash Developers</name>
       <email>gnucash-devel@gnucash.org</email>
