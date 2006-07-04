@@ -14,126 +14,85 @@ include("externals/menu.phtml");
 
 <p><?php echo _("Everything you need concerning GnuCash documentation should be here, if you notice something missing, email <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> and we will add it.");?></p>
 
-<div class="tblborder">
-     <div class="frametitle">
-         <img src="<?=$top_dir?>/images/icons/document.txt.gif" width="16" height="16" alt="[document icon]" />
-         <b><?php echo _("GnuCash v1.9 (current unstable)");?></b>
-     </div>
-     <div class="newsinner">
-       <p>A nightly build of the <a href="http://svn.gnucash.org/docs/guide/">current unstable-branch Concepts Guide</a> is available.</p>
-       <p>A nightly build of the <a href="http://svn.gnucash.org/docs/help/help.html">current unstable-branch Help</a> is also available.</p>
-     </div>
-</div>
+<h2><?= _("GnuCash v1.9 (current unstable)");?></h2>
 
-<br />
+<p>A nightly build of the <a href="http://svn.gnucash.org/docs/guide/">current unstable-branch Concepts Guide</a> is available.</p>
+<p>A nightly build of the <a href="http://svn.gnucash.org/docs/help/help.html">current unstable-branch Help</a> is also available.</p>
 
-<div class="tblborder">
-     <div class="frametitle">
-         <img src="<?=$top_dir?>/images/icons/document.txt.gif" width="16" height="16" alt="[document icon]" />
-         <b><?php echo _("GnuCash v1.8 (current stable release)");?></b>
-     </div>
-     <div class="newsinner">
-	<p><?php echo _("If you have a question about how to use GnuCash, you are in the right place. The first thing you should do is read the Help Manual and the Concepts Guide, most of your questions can probably be answered by these documents.");?></p>
-	<p><?php echo _("The Help Manual is designed to be a quick reference of how to accomplish specific tasks and how to use the features in GnuCash. The Concepts Guide is designed to be an in depth guide to the concepts behind using GnuCash with a tutorial to show how to put those concepts into practice.");?></p>
-        <div style="margin-left:25%;margin-right:25%;">
-        <table border="0" cellpadding="10" cellspacing="2">
-	<colgroup><col width="50%"><col width="50%"></colgroup>
-	<tr><td align="center" class="tblbanner">
-        <span class="smalltext"><b><?php echo _("Help Manual");?></b><br>
-        HTML: <a href="../docs/v1.8/C/gnucash-help/help.html"><?php
-	echo _("English");?></a> | 
-        <a href="../docs/v1.8/de_DE/gnucash-help/help.html"><?php
-	echo _("Deutsch");?></a><br>
-        PDF: <a href="../docs/v1.8/C/gnucash-help.pdf"><?php
-	echo _("English");?></a></span></td>
-        <td align="center" class="tblbanner">
-        <span class="smalltext"><b><?php echo _("Concepts Guide");?></b><br>
-        HTML: <a href="../docs/v1.8/C/gnucash-guide/"><?php
-	echo _("English");?></a><br>
-        PDF: <a href="../docs/v1.8/C/gnucash-guide.pdf"><?php
-	echo _("English");?></a>
-	</span></td></tr></table>
-        </div>
-	<p><?php echo _("Please send an email to the <a href='mailto:gnucash-user@lists.gnucash.org'>gnucash-user</a> mailing list if you cannot find a satisfactory answer to your question within either the Help Manual or the Concepts Guide. We <b>want</b> feedback from you, it is only through your comments that we know how to modify the documentation.");?>
-	</p>
-	<p><?php echo _("Additionally, you can talk to someone via IRC at irc.gnome.org channel \"#gnucash\" about your question.  Another resource is the <a href='http://wiki.gnucash.org/wiki/'>English</a> or <a href='http://linuxwiki.de/GnuCash'>Deutsch</a> GnuCash wikis. A wiki is an interactive website where registered users can ask and answer questions.");?></p>
-   </div>
-</div>
+<h2><?=_("GnuCash v1.8 (current stable release)");?></h2>
 
-<div>&nbsp;</div>
+<p><?php echo _("If you have a question about how to use GnuCash, you are in the right place. The first thing you should do is read the Help Manual and the Concepts Guide, most of your questions can probably be answered by these documents.");?></p>
+<p><?php echo _("The Help Manual is designed to be a quick reference of how to accomplish specific tasks and how to use the features in GnuCash. The Concepts Guide is designed to be an in depth guide to the concepts behind using GnuCash with a tutorial to show how to put those concepts into practice.");?></p>
 
-<div class="tblborder">
-     <div class="frametitle">
-         <img src="<?=$top_dir?>/images/icons/document.txt.gif" width="16" height="16" alt="[document icon]" />
-         <b><?php echo _("User Contributed Documentation");?></b>
-     </div>
-     <div class="newsinner">
-	<p><?php echo _("Some people have written HOWTO guides or tutorials. Note: the information presented in these sources may or may not be updated to the most recent version of GnuCash. If you are interested in doing development work on these documents, you should contact the original authors.");?></p>
+
+<ul>
+  <li><?php echo _("Help Manual");?>
     <ul>
-    <li><a href="http://code.neil.williamsleesmill.me.uk/otherdocs.html"><?php
-	echo _("Neil Williams GnuCash documentation");?></a>
-    <li><a href="http://www.aerospacesoftware.com/GNU_Cash_for_Business_users_Howto_Guide.html"><?php
-	echo _("GnuCash for Business Users");?></a> 
-    (<a href="http://www.linas.org/mirrors/www.aerospacesoftware.com/2003.06.21/GNU_Cash_for_Business_users_Howto_Guide.html"><?php echo _("mirror");?></a>)
-    <li><a href="http://www.ncsysadmin.org/july2001/ncsa-gnucash-talk.html"><?php
-	echo _("Joe Mack's Tutorial");?></a>
-    <li><a href="http://www.object-refinery.com/gnucash/index.html"><?php
-	echo _("Dave Gilbert's User Guide (PDF)");?></a>
+    <li><a href="docs/v1.8/C/gnucash-help/help.html"><?php echo _("English");?> (HTML)</a></li>
+    <li><a href="docs/v1.8/de_DE/gnucash-help/help.html"><?php echo _("Deutsch");?> (HTML)</a></li>
+    <li><a href="docs/gnucash-help.pdf"><?php echo _("English");?> (PDF)</a></li>
     </ul>
-    </div>
+    </li>
+  </li>
+  <li><?= _("Concepts Guide") ?>
+    <ul>
+      <li><a href="docs/v1.8/C/gnucash-guide/"><?php echo _("English");?> (HTML)</a></li>
+      <li><a href="docs/gnucash-guide.pdf"><?php echo _("English");?> (PDF)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p><?php echo _("Please send an email to the <a href='mailto:gnucash-user@lists.gnucash.org'>gnucash-user</a> mailing list if you cannot find a satisfactory answer to your question within either the Help Manual or the Concepts Guide. We <b>want</b> feedback from you, it is only through your comments that we know how to modify the documentation.");?></p>
+<p><?php echo _("Additionally, you can talk to someone via IRC at irc.gnome.org channel \"#gnucash\" about your question.  Another resource is the <a href='http://wiki.gnucash.org/wiki/'>English</a> or <a href='http://linuxwiki.de/GnuCash'>Deutsch</a> GnuCash wikis. A wiki is an interactive website where registered users can ask and answer questions.");?></p>
+
+<p><?php echo _("Some people have written HOWTO guides or tutorials. Note: the information presented in these sources may or may not be updated to the most recent version of GnuCash. If you are interested in doing development work on these documents, you should contact the original authors.");?></p>
+<ul>
+  <li><a href="http://code.neil.williamsleesmill.me.uk/otherdocs.html"><?php echo _("Neil Williams GnuCash documentation");?></a></li>
+  <li><a href="http://www.aerospacesoftware.com/GNU_Cash_for_Business_users_Howto_Guide.html"><?php echo _("GnuCash for Business Users");?></a>
+    (<a href="http://www.linas.org/mirrors/www.aerospacesoftware.com/2003.06.21/GNU_Cash_for_Business_users_Howto_Guide.html"><?php echo _("mirror");?></a>)</li>
+  <li><a href="http://www.ncsysadmin.org/july2001/ncsa-gnucash-talk.html"><?php
+	echo _("Joe Mack's Tutorial");?></a></li>
+  <li><a href="http://www.object-refinery.com/gnucash/index.html"><?php
+	echo _("Dave Gilbert's User Guide (PDF)");?></a></li>
+</ul>
+
+<h2><?php echo _("Older GnuCash Documentation");?></h2>
+<p><?php echo _("This section contains all the older GnuCash documentation. If you are using one of these old versions of GnuCash, it is highly recommended that you upgrade to the latest stable version.");?></p>
+<ul>
+  <li><b>GnuCash v1.6</b>: 
+  <a href="docs/v1.6/C/"><?php echo _("English");?></a> | 
+  <a href="docs/v1.6/de_DE/"><?php echo _("Deutsch");?></a> | 
+  <a href="docs/v1.6/es/"><?php echo _("Espagnol");?></a> | 
+  <a href="docs/v1.6/pt_PT/"><?php echo _("Portugu&ecirc;s");?></a></li>
+</ul>
+
+<h2><?php echo _("Documentation Development");?></h2>
+
+<h3><?php echo _("Interesting Links");?></h3>
+<?php echo _("The following links are for further sites that can help with the documentation and review process.");?>
+<ul>
+<li><a href='http://www.docbook.org'> DocBook: The Definitive Guide.</a></li>
+<li><a href='http://www.sagehill.net/docbookxsl/'>DocBook XSL: The Complete Guide</a>.</li>
+<li><a href='http://developer.gnome.org/projects/gup/hig/1.0/'> GNOME Human Interface Guidelines</a></li>
+</ul>
+
+<h3><?php echo _("For both reviewers and documentation writers");?></h3>
+<?php echo _("Please read the following guides. The new docs are based on the GNOME2 XML docbook system. Everyone wishing to help please follow these guides where possible when reviewing and/or writing docs.");?></p>
+<ul>
+<li><a href='http://developer.gnome.org/projects/gdp/styleguide.html'>The GNOME Documentation Style Guide</a></li>
+<li><a href='http://developer.gnome.org/projects/gdp/handbook.html'>The GNOME Handbook of Writing Software Documentation</a></li>
+</ul>
+<p><?php echo _("We suggest also subscribing to ");?><a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a>.</p>
+
+<h3><?php echo _("Reviewers");?></h3>
+<p><?php echo _("Please check out the documentation module from the GnuCash svn - gnucash-docs. For those not familiar with svn, the GnuCash wiki has a <a href='http://wiki.gnucash.org/wiki/Subversion'>description.</a> The only change to get the docs is to change the checkout gnucash to checkout gnucash-docs. You can also start from the current docs tarball.");?></p>
+<p><?php echo _("The best way of retaining comments about docs in an easy to find way for everyone would be to use <a href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> to file the bugs under documentation. This can also be done using bug-buddy.");?></p>
+
+<h3><?php echo _("Writers");?></h3>
+<p><?php echo _("Also checkout the docs svn as above. The usual procedure for contributors to GnuCash is to initially submit patches to the <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> mailing list. We will handle getting the patches added into svn until you are given an account. You can also add the patch to a bug report in bugzilla if you wish.");?></p>
+<p><?php echo _("Please let other writers know which section you wish to tackle. Please forward this to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> so that people can say 'hey I'm doing that already' or 'go ahead and do it'.");?></p>
+<p><?php echo _("You may also want to retain a local copy of the old documentation to refer to when writing. This still has a lot of useful information in it which hasn't been transferred to the new docs");?></p>
+    
 </div>
-
-<div>&nbsp;</div>
-
-<div class="tblborder">
-     <div class="frametitle">
-         <img src="<?=$top_dir?>/images/icons/document.txt.gif" width="16" height="16" alt="[document icon]" />
-         <b><?php echo _("Older GnuCash Documentation");?></b>
-     </div>
-     <div class="newsinner">
-	<p><?php echo _("This section contains all the older GnuCash documentation. If you are using one of these old versions of GnuCash, it is highly recommended that you upgrade to the latest stable version.");?></p>
-        <ul>
-        <li><b>GnuCash v1.6</b>: 
-        <a href="../docs/v1.6/C/"><?php echo _("English");?></a> | 
-        <a href="../docs/v1.6/de_DE/"><?php echo _("Deutsch");?></a> | 
-        <a href="../docs/v1.6/es/"><?php echo _("Espagnol");?></a> | 
-        <a href="../docs/v1.6/pt_PT/"><?php echo _("Portugu&ecirc;s");?></a></li>
-        </ul>
-   </div>
-</div>
-
-<div>&nbsp;</div>
-
-<div class="tblborder">
-     <div class="frametitle">
-         <img src="<?=$top_dir?>/images/icons/document.txt.gif" width="16" height="16" alt="[document icon]" />
-         <b><?php echo _("Documentation Development");?></b>
-     </div>
-     <div class="newsinner">
-        <p><?php echo _("Interesting Links");?>:<br>
-	<?php echo _("The following links are for further sites that can help with the documentation and review process.");?><br><p>
-	<a href='http://www.docbook.org'> DocBook: The Definitive Guide.</a><br>
-	<a href='http://www.sagehill.net/docbookxsl/'>DocBook XSL: The Complete Guide</a>.<br>
-	<a href='http://developer.gnome.org/projects/gup/hig/1.0/'> GNOME Human Interface
-Guidelines</a></p>
-        <p><?php echo _("For both reviewers and documentation writers");?>:<br>
-	<?php echo _("Please read the following guides. The new docs are based on the GNOME2 XML docbook system. Everyone wishing to help please follow these guides where possible when reviewing and/or writing docs.");?></p>
-        <p><a href='http://developer.gnome.org/projects/gdp/styleguide.html'>
-The GNOME Documentation Style Guide</a><br>
-<a href='http://developer.gnome.org/projects/gdp/handbook.html'>
-The GNOME Handbook of Writing Software Documentation</a></p>
-        <p><?php echo _("We suggest also subscribing to ");?><a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a>.</p>
-        <p><?php echo _("Reviewers");?></p>
-        <p><?php echo _("Please check out the documentation module from the GnuCash svn - gnucash-docs. For those not familiar with svn, the GnuCash wiki has a <a href='http://wiki.gnucash.org/wiki/Subversion'>description.</a> The only change to get the docs is to change the checkout gnucash to checkout gnucash-docs. You can also start from the current docs tarball.");?></p>
-        <p><?php echo _("The best way of retaining comments about docs in an easy to find way for everyone would be to use <a href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> to file the bugs under documentation. This can also be done using bug-buddy.");?></p>
-        <p><?php echo _("Writers");?></p>
-        <p><?php echo _("Also checkout the docs svn as above. The usual procedure for contributors to GnuCash is to initially submit patches to the <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> mailing list. We will handle getting the patches added into svn until you are given an account. You can also add the patch to a bug report in bugzilla if you wish.");?></p>
-        <p><?php echo _("Please let other writers know which section you wish to tackle. Please forward this to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> so that people can say 'hey I'm doing that already' or 'go ahead and do it'.");?></p>
-        <p><?php echo _("You may also want to retain a local copy of the old documentation to refer to when writing. This still has a lot of useful information in it which hasn't been transferred to the new docs");?></p>
-    </div>
-</div>
-
-</div>
-
 <?php include("externals/footer.phtml"); ?>
 

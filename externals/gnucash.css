@@ -72,8 +72,14 @@ TR {
    color: black;
 }
 
-#head {
-   background-color: #666699;
+A[href], A[href]:visited
+{
+  color: rgb(8, 0, 109);
+}
+
+#head
+{
+   background-color: #7F7FAA;
    color: white;
    font-size: small;
    padding: 0.5em;
@@ -81,15 +87,15 @@ TR {
 
 #head A, #tail A
 {
-   background-color: #666699;
    color: white;
 }
 
 #tail {
    font-size: small;
+   text-align: center;
    clear: both;
    float: none;
-   background-color: #666699;
+   background-color: #7F7FAA;
    color: white;
    margin-left: 0;
    margin-right: 0;
@@ -100,12 +106,12 @@ TR {
    border-style: ridge;
    border-color: silver;
    border-width: 1px;
-   background-color: #666699;
+   background-color: #7F7FAA;
    color: white;
 }
 
 .tblheader {
-   background-color: #666699;
+   background-color: #7F7FAA;
    color: white;
    border-width: 1px;
    border-color: silver;
@@ -120,7 +126,7 @@ TR {
 }
 
 .frametitle {
-   background-color: #666699;
+   background-color: #7F7FAA;
    color: white;
    padding: 5px;
    border-width: 2px;
@@ -193,12 +199,6 @@ TR {
    margin-bottom: 2em;
 }
 
-#tail P#validation
-{
-  float: right;
-  margin-right: 1em;
-}
-
 #tail P#rss
 {
   float: left;
@@ -207,5 +207,5 @@ TR {
 
 H1
 {
-  border-bottom: solid thin #666699;
+  border-bottom: solid thin #7F7FAA;
 }
