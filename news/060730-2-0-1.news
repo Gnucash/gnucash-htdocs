@@ -1,0 +1,73 @@
+<b>Announcement:</b> GnuCash 2.0.1 Release
+2006-07-30 17:44
+
+<h2>GnuCash 2.0.1 released</h2>
+
+<p>Personal and small business accounting in Linux will be easier and better
+after today's release of GnuCash 2.0.1.</p>
+<p>This release of the free, open source accounting program improves on the
+generational advances in the last version. GnuCash 2.0 is based on
+state-of-the-art gtk2 GUI technology. Developers worked hard to integrate the
+Gnome Human Interface Guidelines (HIG) for a consistent behaviour and
+look-and-feel for the whole Desktop.</p>
+<p>Major changes in this release include;
+<ul>
+<li>Check for (g-wrap) module, apparently some distributions ship
+g-wrap-config separately from the g-wrap.scm guile module. Check for SLIB.</li>
+<li>Correctly set column sort orders from gconf. Allow proper compile/install
+from tarball using separate builddir.</li>
+<li>Fixed bug where OFX/HBCI imports loose spaces in descriptions. Ignore any
+unknown !Option in QIF files that are being imported. Allow comma-radix
+numbers without a radix. Replace the hbox separating debits from credits in
+the reconciliation window by a homogeneous table. Remove obsolete buttons for
+aqbanking/hbci setup that are unneeded.</li>
+<li>Fixed problem when booking an invoice with account name using account
+separator character. Set the summary bar values when the invoice window is
+first opened. Properly round invoice entries and totals.</li>
+<li>Changed Since-Last-Run default to automatically run at GnuCash start.</li>
+<li>Change cmdline warning into an actual user's error dialog when user
+attempts to save a report with the same name as an existing report.</li>
+</ul>
+
+<p>The GnuCash development team said these new features and changes will make
+GnuCash easier than ever for newcomers.</p>
+<p>GnuCash is the leading free, open source accounting program and the leap to gtk2
+will enable users to be able to enjoy cutting edge functionality with the
+freedom of not being locked into proprietory file formats.</p>
+<p><b>Playing With Others</b></p>
+<p>As with other leading Linux software that is designed to replace
+proprietory programs, GnuCash is a functional
+replacement for expensive accounting programs.  Like OpenOffice.org and
+The Gimp, GnuCash is also programmed to communicate and interact with as many
+existing programs, institutions and people as possible.</p>
+<p>The GnuCash development team has continued to improve file import filters,
+which allow users to import work from old programs like Microsoft Money and
+Quicken.  GnuCash can load QIF and QFX files, which are used by both of those
+programs.</p>
+<p>Developers have also continued to incorporate support for online banking into
+the program.  GnuCash 2.0 supports OFX DirectConnect which can directly
+retrieve and import account statements over the Internet.</p>
+<p>Ths release is available in 29 languages, including English,
+French, German, Spanish, Norwegian, so people from around the world will have
+no difficulty operating the program</p>
+<p><b>Off on the Right Foot</b></p>
+<p>Users of GnuCash 2.0 will notice a few changes when they start the
+program.  Improvements have been made on startup speed, scheduled
+transactions, currency support and currency quote retrievals.</p>
+<p>After they enter the program, users will find a double-ledger account
+system, exhaustive report options and account hierarchy tools.  Also at their
+disposal is a full system of tutorials and documentation.</p>
+<p><b>Getting GnuCash</b></p>
+<p>GnuCash 2.0 can be downloaded from sourceforge.net.  It is available as
+source code.</p>
+<p>To install GnuCash, users will need Gnome 2, guile, slib and
+g-wrap.</p>
+<p><b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b></p>
+<p><b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b></p>
+<p><b>About the Program</b></p>
+<p>GnuCash is a free, open source accounting program released under the GNU
+General Public License (GPL) and available for GNU/Linux, *BSD, Solaris and
+Mac OSX. It is collaboratively developed by 10 people from over 5
+countries.</p>
+<p>Programming on GnuCash began in 1997, and its first stable release was in
+1998.</p>
