@@ -90,9 +90,14 @@
     return $newsfile;
 }
 
+/**
+ * @return From the last '/' through the end of the string.  Too many
+ * double-slash and leading '.' issues due to lang directories,
+ * otherwise. :(
+ **/
 function generate_anchor($news_key)
 {
-  return urlencode(substr($news_key, strpos($news_key, '/', 2)+1));
+  return urlencode(substr(strrchr($news_key, '/'), 1));
 }
 
 function emit_news($en_newspath, $lang_newspath, $oldnews)
