@@ -14,12 +14,19 @@ include("externals/menu.phtml");
 
 <p><?php echo _("Everything you need concerning GnuCash documentation should be here, if you notice something missing, email <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> and we will add it.");?></p>
 
-<h2><?= _("GnuCash v1.9 (current unstable)");?></h2>
+<h2><?= _("Nightly Documentation Builds (current unstable user documentation and developer documentation");?></h2>
 
-<p>A nightly build of the <a href="http://svn.gnucash.org/docs/guide/">current unstable-branch Concepts Guide</a> is available.</p>
-<p>A nightly build of the <a href="http://svn.gnucash.org/docs/help/help.html">current unstable-branch Help</a> is also available.</p>
+<p><?php echo _("Every night a server builds the documentation from the current contents of the GnuCash subversion repository.  This includes the Developer Documentation from Doxygen and User Documentation for the current unstable version of GnuCash.");?>
 
-<h2><?=_("GnuCash v1.8 (current stable release)");?></h2>
+<ul>
+  <li><?php echo _("Nightly Documentation Builds");?>:
+    <ul><a href="http://svn.gnucash.org/docs/guide/"><?= _(Concepts Guide) ?></a></ul>
+    <ul><a href="http://svn.gnucash.org/docs/help/help.html"><?= _("Help Manual") ?></a></ul>
+    <ul><a href="http://svn.gnucash.org/docs/HEAD/"><?= _("Doxygen Developer Documentation") ?></ul>
+  </li>
+</ul>
+
+<h2><?=_("GnuCash v2.0 (current stable release)");?></h2>
 
 <p><?php echo _("If you have a question about how to use GnuCash, you are in the right place. The first thing you should do is read the Help Manual and the Concepts Guide, most of your questions can probably be answered by these documents.");?></p>
 <p><?php echo _("The Help Manual is designed to be a quick reference of how to accomplish specific tasks and how to use the features in GnuCash. The Concepts Guide is designed to be an in depth guide to the concepts behind using GnuCash with a tutorial to show how to put those concepts into practice.");?></p>
@@ -28,16 +35,16 @@ include("externals/menu.phtml");
 <ul>
   <li><?php echo _("Help Manual");?>
     <ul>
-    <li><a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-help/help.html"><?php echo _("English");?> (HTML)</a></li>
-    <li><a href="<?=$top_dir;?>/docs/v1.8/de_DE/gnucash-help/help.html"><?php echo _("Deutsch");?> (HTML)</a></li>
-    <li><a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-help.pdf"><?php echo _("English");?> (PDF)</a></li>
+    <li><a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-help/help.html"><?php echo _("English");?> (HTML)</a></li>
+    <li><a href="<?=$top_dir;?>/docs/v2.0/de_DE/gnucash-help/help.html"><?php echo _("Deutsch");?> (HTML)</a></li>
+    <li><a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-help.pdf"><?php echo _("English");?> (PDF)</a></li>
     </ul>
     </li>
   </li>
   <li><?= _("Concepts Guide") ?>
     <ul>
-      <li><a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-guide/"><?php echo _("English");?> (HTML)</a></li>
-      <li><a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-guide.pdf"><?php echo _("English");?> (PDF)</a></li>
+      <li><a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-guide/"><?php echo _("English");?> (HTML)</a></li>
+      <li><a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-guide.pdf"><?php echo _("English");?> (PDF)</a></li>
     </ul>
   </li>
 </ul>
@@ -59,6 +66,17 @@ include("externals/menu.phtml");
 <h2><?php echo _("Older GnuCash Documentation");?></h2>
 <p><?php echo _("This section contains all the older GnuCash documentation. If you are using one of these old versions of GnuCash, it is highly recommended that you upgrade to the latest stable version.");?></p>
 <ul>
+  <li><b>GnuCash v1.8</b>:
+    <ul><b><?php echo _("Help Manual");?></b>:
+      <a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-help/help.html"><?php echo _("English");?> (HTML)</a>
+      <a href="<?=$top_dir;?>/docs/v1.8/de_DE/gnucash-help/help.html"><?php echo _("Deutsch");?> (HTML)</a>
+      <a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-help.pdf"><?php echo _("English");?> (PDF)</a>
+    </ul>
+    <ul><b><?= _("Concepts Guide") ?></b>:
+      <a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-guide/"><?php echo _("English");?> (HTML)</a>
+      <a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-guide.pdf"><?php echo _("English");?> (PDF)</a>
+    </ul>
+  </li>
   <li><b>GnuCash v1.6</b>: 
   <a href="<?=$top_dir;?>/docs/v1.6/C/"><?php echo _("English");?></a> | 
   <a href="<?=$top_dir;?>/docs/v1.6/de_DE/"><?php echo _("Deutsch");?></a> | 
