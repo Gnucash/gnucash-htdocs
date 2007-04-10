@@ -9,6 +9,7 @@ $locale_res = setlocale(LC_ALL, "");
 $domain = "gnucash-htdocs";
 if (! isset($text_dir)) { $text_dir = $top_dir; }
 $dir_res = bindtextdomain($domain, $text_dir);
+bind_textdomain_codeset($domain, "UTF-8"); # serve pages in utf-8
 textdomain($domain);
 echo ("<!-- $lang , locale_res [$locale_res] , dir_res $dir_res -->\n");
 ?>
