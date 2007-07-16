@@ -1,0 +1,46 @@
+<b>Ankündigung</b>: GnuCash 2.2.0 veröffentlicht
+2007-07-15 14:17
+
+<p>Das GnuCash Entwicklerteam verkündet das Release 2.2.0, die neue stabile Version der Open-Source Finanzsoftware GnuCash. Mit diesem Release ist GnuCash zum allerersten Mal auch auf Microsoft Windows verfügbar, zusätzlich zu der bewährten Unterstützung von GNU/Linux, *BSD, Solaris und Mac OSX.</p>
+
+<h4>
+Download</h4>
+<ul><li> <a href="http://sourceforge.net/project/showfiles.php?group_id=192"
+class='external free'
+title="http://sourceforge.net/project/showfiles.php?group id=192"
+rel="nofollow">http://sourceforge.net/project/showfiles.php?group_id=192</a>
+(Quelltext und Windows-Paket)
+</li><li> <a href="http://www.gnucash.org/pub/gnucash/sources/stable/"
+class='external free'
+title="http://www.gnucash.org/pub/gnucash/sources/stable/"
+rel="nofollow">http://www.gnucash.org/pub/gnucash/sources/stable/</a> (Nur Quelltext)
+</li></ul>
+
+<h4>
+Was ist neu in GnuCash 2.2.0?</h4>
+
+<p>In diesem Release wurden nur wenige für Benutzer sichtbare Änderungen umgesetzt, abgesehen von der Portierung auf das Betriebssystem Microsoft Windows. Folgende neue Features wurden im Vergleich zu 2.0.x eingebaut:</p>
+
+<ul><li>
+     Portierung nach Microsoft Windows abgeschlossen
+</li><li> Dateiformat-Änderung: Mit Version 2.1.2 wurde das Dateiformat für die Terminierten Buchungen in der Datei geändert. Dateien im alten Format werden in dieser neuen Version problemlos geladen, aber die neue Version wird nur das neue Format speichern. Das neue Format kann nicht von älteren GnuCash-Versionen geladen werden. (Wenn man es versucht, wird das Laden mit einer Fehlermeldung abgebrochen.) Dies bedeutet, wenn jemand das neue GnuCash verwendet und dabei Terminierte Buchungen einsetzt, kann diese Datei nicht von alten GnuCash-Versionen gelesen werden. Wenn dies trotzdem notwendig ist, kann man die neue Datei kompatibel zum alten GnuCash machen, indem man alle Terminierten Buchungen im entsprechenden Dialogfenster löscht.
+</li><li> Jetzt wird SWIG als Programmiersprachen-Wrapper anstelle des veralteten g-wrap benutzt.
+</li><li> Die Ansichten der Terminierten Buchungen wurden verbessert. Der "Seit letztem Aufruf"-Dialog wurde vereinfacht und lässt sich schneller bedienen.
+</li><li> Die Druckfunktion für Schecks wurde universeller und leistungsfähiger gestaltet.
+</li><li> Automatisches Speichern der Datei wurde hinzugefügt. 
+</li></ul>
+
+<h4>
+Wie kann man mitmachen?
+</h4>
+
+<ul><li> Testen: Jeder ist eingeladen, alle Funktionen zu testen und auszuprobieren. Jegliches unerwartete Verhalten und alle Fehler sollen dann bitte ins Bugzilla eingetragen werden: http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash
+</li><li> In den Diskussionen auf den Mailinglisten werden immer Mitstreiter gesucht, die hilfreiche Tipps sammeln und weitergeben. Weitere Hinweise zum Helfen sind auf http://wiki.gnucash.org/wiki/Development zu finden. 
+</li></ul>
+
+<h4>
+Download</h4>
+
+<p>GnuCash 2.2.0 kann von sourceforge.net heruntergeladen werden. Es liegt als Quellcode und als All-In-One Windows-Paket vor, welches alle notwendigen Bibliotheken enthält. Durch die Veröffentlichung unter der freien GPL-Lizenz kann das Windows-Paket ohne weitere Rückfragen sofort weiterverbreitet werden und zum Beispiel gerne auf Magazin-CDs veröffentlicht werden.</p>
+
+<p>Um GnuCash aus dem Quelltext zu installieren, benötigt man Gnome2, guile und slib. Im Gegensatz zu früher werden weder das momentane Wrapper-Programm SWIG noch das alte g-wrap mehr benötigt. Die Windows-Version benötigt Windows 2000, XP oder Vista; GnuCash läuft nicht auf Windows 98 oder 95.</p>
