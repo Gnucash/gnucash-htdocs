@@ -1,0 +1,67 @@
+<b>Announcement:</b> GnuCash 2.2.2 Release
+2007-12-18 06:36
+
+<h2>GnuCash 2.2.2 released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.2.2, the second bug fix release in a series of stable releases of the GnuCash Free Accounting Software.  GnuCash is available on Microsoft Windows since the release of 2.2.0, and it also runs on GNU/Linux, *BSD, Solaris and Mac OSX.
+</p>
+<h4>Getting GnuCash</h4>
+<p>GnuCash 2.2.2 can be downloaded from gnucash.org or sourceforge.net.  It is available as source code.  For the Microsoft Windows operating system there is a self-installing setup program which includes all necessary additional libraries.</p>
+<p>To install GnuCash on other platforms, users will need Gnome 2, guile, and slib.  Neither the currently used swig nor the previously used g-wrap packages are needed anymore when compiling from tarball or when installing a binary.</p>
+<ul>
+<li><a href="http://sourceforge.net/project/showfiles.php?group_id=192" class="external free" title="http://sourceforge.net/project/showfiles.php?group_id=192">http://sourceforge.net/project/showfiles.php?group_id=192</a> (Source code and Windows binary)</li>
+<li><a href="http://www.gnucash.org/pub/gnucash/sources/stable/" class="external free" title="http://www.gnucash.org/pub/gnucash/sources/stable/">http://www.gnucash.org/pub/gnucash/sources/stable/</a> (Source code only)</li>
+</ul>
+<h4>What's New in GnuCash 2.2.2? </h4>
+<p>Fixed Bugs:</p>
+<ul>
+<li>#336240: advanced portfolio - the basis calculation is not working properly in funds</li>
+<li>#343245: Advanced Portfolio gets basis wrong with stock split</li>
+<li>#343448: Hide unused horizontal scrollbar</li>
+<li>#344566: Advance Portfolio has wrong Realized Gain</li>
+<li>#347739: Advanced Portfolio calculates values incorrectly when it involves a capital loss</li>
+<li>#438360: Case-insensitive search for non-ascii characters broken</li>
+<li>#460232: advanced portfolio report fails</li>
+<li>#467521: Persistent splash screen blocks "could not obtain lock" warning</li>
+<li>#467532: Clipping check fields in gtkprint is not consistent with clipping in gnomeprint</li>
+<li>#468681: RFE: Customizable summary bar position</li>
+<li>#470750: src/design/*.texinfo refers to non-existent GncBooks API</li>
+<li>#470801: Tip Of The Day says 2.2.1 is development version</li>
+<li>#473827: chinese translate for gnucash account</li>
+<li>#475666: Missing national currency CUC</li>
+<li>#476189: Configure script should fail when gettext is not installed</li>
+<li>#481110: Win32: Crash when opening SX Editor</li>
+<li>#482177: Customer report shows no invoices or detail with 2nd A/Receivable</li>
+<li>#483796: Fancy Invoice - Report Error</li>
+<li>#484576: Configuration error with goffice 0.5</li>
+<li>#487317: QIF import druid crash when stepping back and forth from the "loaded files page" without selection</li>
+<li>#487326: Preferences dialog does not remove all its gconf callbacks</li>
+<li>#487572: advanced portfolio breaks on "Most Recent to Report"</li>
+<li>#488001: speed up several reports that rely on html-acct-table.scm</li>
+<li>#488004: provide a two-column income-statement</li>
+<li>#490679: GnuCash doesn't honor the GNOME toolbar settings</li>
+<li>#491581: Import 'Cash' Action (in Investment Accounts)</li>
+<li>#492137: Lot scrubber doesn't add splits to existing lots correctly</li>
+<li>#496023: Pressing ESC Cancels modifications whether you choose yes or no.</li>
+<li>#496178: gnucash segfaults with troublesome automatic transactions</li>
+<li>#499360: Crash when editing a commodity whose quote source timezone is set to local time</li>
+<li>#499788: gnucash-make-guids does not work, fails with "Unbound variable: gnc:guid-new"</li>
+<li>#500026: [PATCH] Report correct package for qt3-wizard</li>
+<li>#500427: SX creation doesn't include template transaction "Notes"</li>
+<li>#501059: GnuCash leaks since last run dialogs</li>
+<li>#502755: GnuCash hangs after modifying SX</li>
+<li>#503579: win32 packaging fails installing mingw</li>
+</ul>
+<p>Other Changes</p>
+<ul>
+<li>Many changes to the german SKR03 and SKR04 account templates</li>
+<li>Include updated GNOME libraries and a patched ORBit2 in Win32 build</li>
+<li>Improve resizing of search and invoice posting dialogs</li>
+<li>Add MimeType directive for GnuCash data files</li>
+<li>Fix some new compiler warnings</li>
+<li>Add AZN [Azerbaijani Manat]</li>
+<li>Add COU [Colombian Unidad de Valor Real]</li>
+<li>Add MZN [Mozambique Metical]</li>
+<li>Some occurrences of "Open Source" were changed to "Free".</li>
+<li>Update translations: Brazilian Portugese, Czech, German, Japanese, Traditional Chinese</li>
+</ul>
