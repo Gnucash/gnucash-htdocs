@@ -1,0 +1,68 @@
+<b>Announcement:</b>
+GnuCash 2.2.3 Release
+2008-01-08 22:28
+
+<h2>GnuCash 2.2.3 released</h2>
+<p>
+  The GnuCash development team proudly announces GnuCash 2.2.3, the
+  third bug fix release in a series of stable releases of the GnuCash
+  Free Accounting Software.  GnuCash is available on Microsoft Windows
+  since the release of 2.2.0, and it also runs on GNU/Linux, *BSD,
+  Solaris and Mac OSX.
+</p>
+<h4>Getting GnuCash</h4>
+<p>
+  GnuCash 2.2.2 can be downloaded from gnucash.org or sourceforge.net.
+  It is available as source code.  For the Microsoft Windows operating
+  system there is a self-installing setup program which includes all
+  necessary additional libraries.
+</p>
+<p>
+  To install GnuCash on other platforms, users will need Gnome 2, guile,
+  and slib.  Neither the currently used swig nor the previously used
+  g-wrap packages are needed anymore when compiling from tarball or when
+  installing a binary.
+</p>
+<ul>
+  <li>
+    <a href="http://sourceforge.net/project/showfiles.php?group_id=192"
+       class="external free"
+       title="http://sourceforge.net/project/showfiles.php?group_id=192">http://sourceforge.net/project/showfiles.php?group_id=192</a>
+    (Source code and Windows binary)
+  </li>
+  <li>
+    <a href="http://www.gnucash.org/pub/gnucash/sources/stable/"
+       class="external free"
+       title="http://www.gnucash.org/pub/gnucash/sources/stable/">http://www.gnucash.org/pub/gnucash/sources/stable/</a>
+    (Source code only)
+  </li>
+</ul>
+<h4>What's New in GnuCash 2.2.3?</h4>
+<p>
+  Fixed Bugs
+</p>
+<ul>
+  <li>#114724: QIF importer drops split details for transfers with identical amount</li>
+  <li>#463678: xfer dialog from CC auto-payment from reconcile doesn't display accounts</li>
+  <li>#495219: QIF-Importer handles memo from transactions wrong</li>
+  <li>#497517: Transactions set to 'c' in the R(econciled) field of the register are incorrectly set to 'n' when postponing a reconciliation</li>
+  <li>#503889: Should install icons into expected locations</li>
+  <li>#504007: QIF Import Druid does not allow selecting currency</li>
+  <li>#504257: Need to replace old Afghanistan Afghani (AFA) with new Afghanistan Afghani (AFN)</li>
+  <li>#504261: Start on W2K fails with Entry Point Not Found (KERNEL32.dll)</li>
+  <li>#505386: Gnucash looses transactions if the file contains special characters</li>
+  <li>#505972: SX-related segfaults in 2.2.2</li>
+  <li>#506074: Fractional timezone offsets not always handled correctly</li>
+  <li>#506429: "Last Day of Month" SXes saved on wrong day of week</li>
+  <li>#506671: Add cyprus, maltese and slovenian currencies to EURO support</li>
+  <li>#506714: progress bar during launching</li>
+</ul>
+<p>Other Changes</p>
+<ul>
+  <li>New Vietnamese translation</li>
+  <li>Improve several minor strings</li>
+  <li>Update translations: Dutch, German</li>
+  <li>Some business report improvements regarding date parameters</li>
+  <li>Fix gcc 4.2.x compiler warnings</li>
+  <li>Use aqbanking pkg-config file and require < v2.9, allow goffice v0.6</li>
+</ul>
