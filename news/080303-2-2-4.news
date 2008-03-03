@@ -1,0 +1,76 @@
+<b>Announcement:</b> GnuCash 2.2.4 Release
+2008-03-03 08:46
+
+<h2>GnuCash 2.2.4 released</h2>
+<p>
+  The GnuCash development team proudly announces GnuCash 2.2.4 aka
+  "Kicking QIF", the fourth bug fix release in a series of stable
+  releases of the GnuCash Free Accounting Software.
+</p>
+<h4>Getting GnuCash</h4>
+<p>
+  GnuCash 2.2.4 can be downloaded from gnucash.org or sourceforge.net.
+  It is available as source code.  For the Microsoft Windows operating
+  system there is a self-installing setup program which includes all
+  necessary additional libraries.
+</p>
+<p>
+  To install GnuCash on other platforms, users will need Gnome 2, guile,
+  and slib.  Neither the currently used swig nor the previously used
+  g-wrap packages are needed anymore when compiling from tarball or when
+  installing a binary.
+</p>
+<ul>
+  <li>
+    <a href="http://sourceforge.net/project/showfiles.php?group_id=192"
+       class="external free"
+       title="http://sourceforge.net/project/showfiles.php?group_id=192">http://sourceforge.net/project/showfiles.php?group_id=192</a>
+    (Source code and Windows binary)
+  </li>
+  <li>
+
+    <a href="http://www.gnucash.org/pub/gnucash/sources/stable/"
+       class="external free"
+       title="http://www.gnucash.org/pub/gnucash/sources/stable/">http://www.gnucash.org/pub/gnucash/sources/stable/</a>
+    (Source code only)
+  </li>
+</ul>
+<h4>What's New in GnuCash 2.2.4?</h4>
+<p>
+  Fixed Bugs
+</p>
+<ul>
+  <li>#106242: qif Importer should warn users about dates before 1970</li>
+  <li>#106383: feature request: close year end</li>
+  <li>#123312: QIF Import: Autoselection of Stock Exchange during import</li>
+  <li>#336211: QIF Import generates spurious duplicate transactions</li>
+  <li>#360058: GnuCash crashes on QIF-import after changing account's separator to * (asterisk)</li>
+  <li>#373584: Rounding error in QIF import of commodity transactions</li>
+  <li>#454834: Memo Incorrect or missing in Transaction Report</li>
+  <li>#457591: QIF import does not handle tabs at top of file</li>
+  <li>#481528: QIF importer should show imported transaction as possible duplicate if original transaction is split</li>
+  <li>#503166: QIF Import Druid Flow incorrect</li>
+  <li>#506798: Custom Reports don't allow sorting by Account Code</li>
+  <li>#506873: 'Install Online Price Retrieval' fails with ActivePerl 5.10</li>
+  <li>#506810: QIF Import can mismatch account transfers</li>
+  <li>#510221: Include Mexican Accounts</li>
+  <li>#510630: typo in description of BUYMF transaction (OFX import)</li>
+  <li>#510725: crash importing a .OFX file</li>
+  <li>#510940: Unrecognized date format causes crash</li>
+  <li>#510962: QIF transactions without dates are silently ignored</li>
+  <li>#511006: Commodity creation skipped due to saved mappings</li>
+  <li>#512166: doesn't build with glib-2.15.3</li>
+  <li>#512173: Empty "match payees/memos" druid step shown</li>
+  <li>#512497: Investment transactions ignore payee/memo mappings</li>
+  <li>#513088: "Find" immediately unmaps window</li>
+  <li>#513829: Investment account may be created with Stock account type</li>
+  <li>#516178: Scheme error during progress dialog causes freeze</li>
+</ul>
+<p>Other Changes</p>
+<ul>
+  <li>Recognize 401k/403b in QIF import</li>
+  <li>Remove superfluous trailing colons of de_DE SKR04 account names</li>
+  <li>Add russian account templates</li>
+  <li>Add Swiss German translation</li>
+  <li>Update translations: Brazilian Portugese, German, Greek, Russian, Simplified Chinese, Slovak, Spanish</li>
+</ul>
