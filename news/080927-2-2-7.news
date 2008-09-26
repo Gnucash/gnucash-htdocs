@@ -1,0 +1,84 @@
+<b>Announcement:</b> GnuCash 2.2.7 Release
+2008-09-27 01:41
+
+<h2>GnuCash 2.2.7 released</h2>
+<p>
+  The GnuCash development team proudly announces GnuCash 2.2.7 aka
+  "Dates'n'Prices", the seventh bug fix release in a series of stable
+  releases of the GnuCash Free Accounting Software.
+</p>
+<h4>Getting GnuCash</h4>
+<p>
+  GnuCash 2.2.7 can be downloaded from gnucash.org or sourceforge.net.
+  It is available as source code.  For the Microsoft Windows operating
+  system there is a self-installing setup program which includes all
+  necessary additional libraries.
+</p>
+<p>
+  To install GnuCash on other platforms, users will need Gnome 2, guile,
+  and slib.  Neither the currently used swig nor the previously used
+  g-wrap packages are needed anymore when compiling from tarball or when
+  installing a binary.
+</p>
+<ul>
+  <li>
+    <a href="http://sourceforge.net/project/showfiles.php?group_id=192"
+       class="external free"
+       title="http://sourceforge.net/project/showfiles.php?group_id=192">http://sourceforge.net/project/showfiles.php?group_id=192</a>
+    (Source code and Windows binary)
+  </li>
+  <li>
+
+    <a href="http://www.gnucash.org/pub/gnucash/sources/stable/"
+       class="external free"
+       title="http://www.gnucash.org/pub/gnucash/sources/stable/">http://www.gnucash.org/pub/gnucash/sources/stable/</a>
+    (Source code only)
+  </li>
+</ul>
+<h4>What's New in GnuCash 2.2.7?</h4>
+<p>
+  Fixed Bugs
+</p>
+<ul>
+  <li>#139651: Register: Split transaction with multiple currencies fails</li>
+  <li>#309863: Balance Sheet: Rounding errors with prices from pricedb</li>
+  <li>#341362: Price Editor: Price is displayed as fraction instead of decimal</li>
+  <li>#376298: Price Editor: Window Contents Corrupted After Manually Adding a Price</li>
+  <li>#378734: Drop down calendar only works once</li>
+  <li>#430121: Incorrect Sign Symbol for Fractional Commodity/Security Sale</li>
+  <li>#454340: Security Editor: duplicate rows after editing a security</li>
+  <li>#454827: Reports: Incorrect share value of stocks in foreign currency</li>
+  <li>#464771: Investment Portfolio: Report crashes without price data</li>
+  <li>#483393: Reports: Allow mixed denominators in numeric collectors</li>
+  <li>#504935: Add currencies XDR and XXX</li>
+  <li>#506873: Win32: Cannot install online price retrieval with ActivePerl 5.10</li>
+  <li>#520570: Drop-down calendar for "reconcile information" non-responsive</li>
+  <li>#522095: Updating stock prices does not update totals shown in windows</li>
+  <li>#526313: GnuCash does not support the new currency in Venezuela</li>
+  <li>#529816: Supplement "CUSIP" by "ISIN", to give people outside USA a hint</li>
+  <li>#539640: Price Editor: Security disappears from price list</li>
+  <li>#539962: Void function cannot return value with sun cc</li>
+  <li>#540148: GnuCash cannot be built with libgoffice-0.8</li>
+  <li>#541970: Balance Sheet: "Nearest in time" exchange rate not correct</li>
+  <li>#543061: Fractional not working in IDR (rupiah) currency</li>
+  <li>#543780: Transfer Dialog: CRIT messages in gnucash.trace from exchange rate dialog</li>
+  <li>#545316: Drop-down calendar is not clickable when posting invoice</li>
+  <li>#545722: Can't change date in dialog boxes</li>
+  <li>#546064: gnucash.desktop file does not comply with desktop-file-validate</li>
+  <li>#548601: AqBanking Import: Obscuring zero balance windows after getting transactions</li>
+  <li>#548891: QIF Import: GnuCash crashes when .gnucash/qif-accounts-map is readonly</li>
+  <li>#549115: Popup calendar unresponsive in modal dialogs</li>
+  <li>#549595: Silently removes main files while trying to save without lock</li>
+  <li>#549738: Reports: Default date on aging and customer reports is too far in the future</li>
+  <li>#551038: Reports: Alt-O shortcut in report options dialog crashes app</li>
+  <li>#552306: Fails to save file when using a network filesystem on Mac</li>
+</ul>
+<p>Other Changes</p>
+<ul>
+  <li>New Finnish translation</li>
+  <li>Complete Romanian translation</li>
+  <li>Usability improvements in the price and the security editor</li>
+  <li>Lower number of false positives when checking aqbanking results for failures</li>
+  <li>Correct import of remote names, zero balances from aqbanking3</li>
+  <li>Update translations: Catalan, Dutch, German, Italian, Polish</li>
+</ul>
