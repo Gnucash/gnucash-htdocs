@@ -1,6 +1,6 @@
 <?php
 $top_dir = "..";
 $home = ".";
-$locale = "it";
+$locale = "it_IT";
 $lang_dir = "it";
 ?>
