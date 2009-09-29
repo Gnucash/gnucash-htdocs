@@ -1,0 +1,91 @@
+<b>Announcement:</b> GnuCash 2.3.6 Release
+2009-09-29
+
+<h2>GnuCash 2.3.9 released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.3.6, the seventh of several unstable 2.3.x releases of the GnuCash Free Accounting Software which will eventually lead to the stable version 2.4.0. With this new release series, GnuCash can use an SQL database using SQLite3, MySQL or PostgreSQL. It runs on GNU/Linux, *BSD, Solaris, Microsoft Windows and Mac OSX. This release is intended for developers and testers who want to help tracking down all those bugs that are still in there.</p>
+<p> WARNING WARNING WARNING - Make sure you make backups of any files used in testing versions of GnuCash in the 2.3.x series. Although the developers go to great lengths to ensure that no data will be lost we cannot guarantee that your data will not be affected if for some reason GnuCash crashes in testing these releases.</p>
+<p>PLEASE TEST TEST AND TEST SOME MORE any and all features important to you.
+Then post any bugs you find to bugzilla</p>
+<p>Major changes in the 2.3.x release include;
+<ul>
+<li>In addition to the XML backend, Gnucash can now use a SQLite3, MySQL or PostgreSQL database to store the data. This is a new implementation using libdbi. It supports all features including the business features.  In order to build with this, add --enable-dbi to the configure command.  In addition to the libdbi-dev package for your distribution, you will also need the appropriate DBD (libdbi driver) package for sqlite3, mysql or postgresql.</li>
+<li>In addition to the current GtkHTML HTML engine used to display reports and graphs, Gnucash can use WebKit. WebKit is the engine used by Google Chrome on Windows and Safari on Apple.  In order to build with this, add --enable-webkit to the configure command.  You will need an appropriate webkit-dev package.  On win32, you will need to download the webkit-1.1.5-win32.zip file from the source repository and put it into the downloads directory of your gnucash build area.</li>
+<li>Updated to AqBanking 3 on Win32.</li>
+</ul>
+
+<p>Changes between 2.3.5 and 2.3.6 include:
+<ul>
+<li>Fix #107929: Improved running balance implementation.  Patch by Tim M</li>
+<li>Fix #593906: Fix crash at creating account report Patch by Mike Alexander</li>
+<li>When configuring to build, if webkit chosen as html engine, don't bother looking for gtkhtml.</li>
+<li>Fix enhancement bug 101456 - 'Find' dialog cumbersome for Business functions. Patch by Geert Janssens</li>
+<li>Fix enhancement bug 589787 - Multi-line up/down scroll for register transaction Notes field text.  Patch by James Raehl</li>
+<li>Win32 build: Add forgotten dist_ktoblzcheck step to dist creation.</li>
+<li>Use GtkFunction instead of obsolete GtkDestroyNotify for argument type</li>
+<li>Win32: Newer Aqbanking version</li>
+<li>Win32 build: Remove gwenhywfar configure option which has been removed before gwenhywfar-3.8.2.</li>
+<li>I18n fix: Markup preference tab name "Online Banking" for translation.</li>
+<li>Win32 installer: Really fix path of qt3-wizard.exe.</li>
+<li>Fix bug #595920: Fix missing ca-bundle.crt in windows installer.</li>
+<li>Add "file://" URL type to images in invoices.</li>
+<li>Latest pot template merged into all .po translation files</li>
+2009-09-20 20:03  cstim
+<li>Bug #589804: Additions to register transactions Action pulldown list.  Patch by James Raehl.</li>
+<li>Bug #572938: Fix OFX Mutual fund buys that are imported as sells. Patch by Matt Lavin, signed-off by Benoit Grégoire.</li>
+<li>Bug #585784: Fix wrong fractional precision in stock/mutual fund registers. Patch by Daniel Harding.</li>
+<li>Source of src/libqof/qof run through astyle to be re-indented</li>
+<li>Add GNC_DBD_DIR definition for libdbi on mac</li>
+<li>Fix bug 590386 - Add option to always use today for reconciliation statement date Patch by Simon Arlott</li>
+<li>Fix bug 591117 - Cash Flow Report's "Depth: All" Option is Broken. Patch by David Eisner</li>
+<li>Fix bug 595014 - MacOSX 10.6 (Snow Leopard) fails configure.in check. Patch by David Reiser</li>
+<li>Fix bug 595015 - compiler warnings for missing printf format specs, gcc 4.2.1.  Patch by David Reiser</li>
+<li>Fix bug 595017 - compiler complaints about incompatible pointer types in gnc-gwen-gui.c. Patch by David Reiser</li>
+<li>Fix bug 589673 - need to patch libdbi source for win32 problem.</li>
+<li>Fix bug 594048 - gnucash will not compile with most recent goffice versions. Patch by Jean Brefort</li>
+<li>Remove trailing whitespace from lines. Patch by Geert Janssens.</li>
+<li>Move gnc_account_get_full_name() from app-utils to engine and remove xaccAccountGetFullName in engine.</li>
+<li>If an object is loaded with a reference to an invoice, order, tax table or bill term which has not been loaded yet, print a warning message into the trace file.</li>
+<li>If an object is being loaded that has a reference to a transaction, and the transaction hasn't been loaded yet, load it. If an object has a reference to an account, commodity, budget or lot that hasn't been loaded yet, print a warning message in the trace file. The difference in handling is that these object types are always loaded at init time, whereas transactions are not.</li>
+<li>Replace some calls to (deprecated) xaccAccountGetGUID() with calls to qof_entity_get_guid()</li>
+<li>Fix svn:ignore property to ignore Makefile/Makefile.in in accounts/ko</li>
+<li>Minor updates to HACKING, by Geert Janssens.</li>
+<li>Use SWIG properly to wrap functions to free strings which need to be freed by the caller.</li>
+<li>Fix Bug 590458 - Invoices are incomplete or miss specifications Replace call to gncEntrySetInvoice() with gncInvoiceAddEntry() which is the real function.</li>
+<li>Fix Bug 590900 - "Unable to save to DB" dialog from Business -> Customer -> New Job Allow owner id to be NULL</li>
+<li>Fix bug 593865 - Unable to save to database error when scheduling transactions Allow scheduled transaction to have NULL start date. Will require db to be deleted and recreated.</li>
+<li>Fix index-out-of-range compilation error</li>
+<li>Fix typo in message as pointed out by Joe Dalton.</li>
+<li>Fix some memory leaks</li>
+<li>Add some dbi backend tests to test db save/load. In order to test the mysql backend, the --with-test-mysql-url=URL option must be supplied to configure where URL is the full url (mysql://host[:port]:db:user:password) to access a mysql db. The same is true for postgres, with the --with-test-pgsql-url=URL option.</li>
+<li>Python bindings patches by Mark Jenkins. python_GetNthChild_remove.patch remove the redundant GetNthChild code, gnc_account_nth_child supported python_more_GUID.patch Improve support for GUID python_better_commodity.patch * Removed custom __init__ from GncCommodity, not only is it wrong but the one from GnuCashCoreClass is just fine. * Supported the get_table method For Book * Removed support for direct instantiation of GncCommodityTable. (via gnc_commodity_table_new() ). Only methods and not the constructor function are added to the class now. Python binding users can access a GncCommodityTable instance via Book.get_table() and have no need to use gnc_commodity_table_new(), which the apis advise is for internal use only. python_GncLot.patch * included gnc-lot.h in gnucash_core.i again * Made GncLot class use superclass __init__, it doesn't need its own.  python_more_documentation.patch Documentation strings for many classes, which can be viewed in source and with python's help() mechanism. python_business_module_load.patch load the business module, not the business module specific backend python_example_scripts.py example scripts improved, new one added. This new script originally came from this post: http://lists.gnucash.org/pipermail/gnucash-devel/2008-July/023618.html python_authors_update.patch added Legal Aid Manitoba to credit line for Mark Jenkins</li>
+<li>Use "float8" instead of "real" for double field in slots table so that we get an 8 byte float rather than only 4 byte.</li>
+<li>Doubles weren't being loaded properly from sqlite3. Fix that problem by examine more closely the type information returned by libdbi.</li>
+<li>Fix bug where NULL dates on sqlite cause sigsegv</li>
+<li>Updated Slovak translation, copied from the Translation Project.</li>
+<li>Updated Danish translation by Joe Hansen, copied from the Translation Project.</li>
+<li>Updated German translation, inspired by Raffael Luthiger's contribution on 2008-12-31.</li>
+<li>Update of Polish translation by Jacek Baszkiewicz</li>
+<li>Update of Lithuanian translation by Tadas Masiulionis</li>
+<li>Updated Danish glossary by Joe Hansen.</li>
+<li>Updated Danish translation by Joe Hansen, copied from the TP.</li>
+<li>Updated Dutch translation by Erwin Poeze, copied from the Translation Project.</li>
+</ul>
+
+<p><b>Caveats for Testers</b></p>
+<p>Any 2.3.x version might crash unexpectedly at any point during runtime. If you test some serious work in a 2.3.x release and are using the XML file backend for data storage, make sure you hit "Save" after every non-trivial workstep.  If you are using the SQL backend, this is not required as every change is saved immediately to the database.<p>
+<p>The documentation has had screenshots updated, however, many help texts usually only refers to the 1.8.x series. Everyone is invited to help improve the documentation; see http://wiki.gnucash.org/wiki/Development on how to get involved.</p>
+
+<p><b>How can you help?</b></p>
+<p>Testing: Test it and help us discover all bugs that might show up in there.  Please enter each and every bug into bugzilla.</p>
+<p>Translating: The new release comes with some new translation strings. If you consider contributing a translation, we invite you to test this release already. A string freeze will be announced in one of the later 2.3.x releases.  Please check http://wiki.gnucash.org/wiki/Translation_Status for updates on this.</p>
+<p></p>
+<p>We would like to encourage people to test this and any further releases as much as possible and submit bug reports in order that we can polish GnuCash to be as stable as possible for the 2.4.0 release in a few weeks. Then post any bugs you find to <a href="http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">bugzilla</a></p>
+<p><b>Getting GnuCash</b></p>
+<p>Source code for GnuCash 2.3.6 can be downloaded from www.gnucash.org or https://sourceforge.net/projects/gnucash/files under "gnucash (unstable)".</p>
+<p>To install GnuCash, users will need Gnome 2, guile, slib and swig.</p>
+<p><b><a href="http://www.gnucash.org/pub/gnucash/sources/unstable/2.3.x">http://www.gnucash.org</a></b></p>
+<p><b>Win32 binary</b></p>
+<p>The Gnucash 2.3.6 Win32 setup executable can be downloaded from https://sourceforge.net/projects/gnucash/files.  Look under "gnucash (unstable)".
+<p><b>About the Program</b></p>
+<p>GnuCash is a free, open source accounting program released under the GNU General Public License (GPL) and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash began in 1997, and its first stable release was in 1998.</p>
