@@ -1,14 +1,20 @@
-<b>Announcement:</b> GnuCash 2.3.7 Release
+<b>Announcement:</b> GnuCash 2.3.7 (Unstable) Release
 2009-10-06
 
-<h2>GnuCash 2.3.7 released</h2>
+<h2>GnuCash 2.3.7 (Unstable) released</h2>
 
-<p>The GnuCash development team proudly announces GnuCash 2.3.7, the eighth of several unstable 2.3.x releases of the GnuCash Free Accounting Software which will eventually lead to the stable version 2.4.0. With this new release series, GnuCash can use an SQL database using SQLite3, MySQL or PostgreSQL. It runs on GNU/Linux, *BSD, Solaris, Microsoft Windows and Mac OSX. This release is intended for developers and testers who want to help tracking down all those bugs that are still in there.</p>
-<p> WARNING WARNING WARNING - Make sure you make backups of any files used in testing versions of GnuCash in the 2.3.x series. Although the developers go to great lengths to ensure that no data will be lost we cannot guarantee that your data will not be affected if for some reason GnuCash crashes in testing these releases.</p>
-<p>
-NOTE: This is an *UNSTABLE* version of Gnucash.  The latest stable version is
-2.2.9.
-<p>
+<p>The GnuCash development team proudly announces GnuCash 2.3.7, the eighth of several unstable 2.3.x releases of the GnuCash Free Accounting Software which will eventually lead to the stable version 2.4.0. With this new release series, GnuCash can use an SQL database using SQLite3, MySQL or PostgreSQL. It runs on GNU/Linux, *BSD, Solaris, Microsoft Windows and Mac OSX.</p>
+
+<div class="dialog warning">
+<p><b>WARNING:</b> This is an *UNSTABLE* version of Gnucash.</p>
+<p>This release is intended for developers and testers who want to help tracking down all those bugs that are still in there.</p>
+<p>Make sure you make backups of any files used in testing versions of GnuCash in the 2.3.x series. Although the developers go to great lengths to ensure that no data will be lost we cannot guarantee that your data will not be affected if for some reason GnuCash crashes in testing these releases.</p>
+</div>
+
+<div class="dialog note">
+<p><b>NOTE:</b> The latest stable version is 2.2.9.</p>
+</div>
+
 <p>PLEASE TEST TEST AND TEST SOME MORE any and all features important to you.
 Then post any bugs you find to bugzilla</p>
 <p>Major changes in the 2.3.x release include;
@@ -28,20 +34,28 @@ Then post any bugs you find to bugzilla</p>
 <li>Update of Polish translation by Jacek Baszkiewicz</li>
 </ul>
 
-<p><b>Caveats for Testers</b></p>
+<h3>Caveats for Testers</h3>
 <p>Any 2.3.x version might crash unexpectedly at any point during runtime. If you test some serious work in a 2.3.x release and are using the XML file backend for data storage, make sure you hit "Save" after every non-trivial workstep.  If you are using the SQL backend, this is not required as every change is saved immediately to the database.<p>
 <p>The documentation has had screenshots updated, however, many help texts usually only refers to the 1.8.x series. Everyone is invited to help improve the documentation; see http://wiki.gnucash.org/wiki/Development on how to get involved.</p>
 
-<p><b>How can you help?</b></p>
+<h3>How can you help?</h3>
 <p>Testing: Test it and help us discover all bugs that might show up in there.  Please enter each and every bug into bugzilla.</p>
 <p>Translating: The new release comes with some new translation strings. If you consider contributing a translation, we invite you to test this release already. A string freeze will be announced in one of the later 2.3.x releases.  Please check http://wiki.gnucash.org/wiki/Translation_Status for updates on this.</p>
 <p></p>
 <p>We would like to encourage people to test this and any further releases as much as possible and submit bug reports in order that we can polish GnuCash to be as stable as possible for the 2.4.0 release in a few weeks. Then post any bugs you find to <a href="http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">bugzilla</a></p>
-<p><b>Getting GnuCash</b></p>
-<p>Source code for GnuCash 2.3.7 can be downloaded from www.gnucash.org or https://sourceforge.net/projects/gnucash/files under "gnucash (unstable)".</p>
+
+<h3>Getting GnuCash</h3>
+<p>Source code for GnuCash 2.3.7 can be downloaded from multiple locations:
+<ul>
+<li><a href="http://www.gnucash.org/download.phtml">The GnuCash website</a></li>
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.7.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.7.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/2.3.7/">all files</a>.</li>
+<li>You can also checkout the sources directly from the subversion repository with this command:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/trunk gnucash</span></li>
+</ul></p>
+
 <p>To install GnuCash, users will need Gnome 2, guile, slib and swig.</p>
-<p><b><a href="http://www.gnucash.org/pub/gnucash/sources/unstable/2.3.x">http://www.gnucash.org</a></b></p>
-<p><b>Win32 binary</b></p>
-<p>The Gnucash 2.3.7 Win32 setup executable can be downloaded from https://sourceforge.net/projects/gnucash/files.  Look under "gnucash (unstable)".
-<p><b>About the Program</b></p>
+
+<h3>Win32 binary</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.7-setup.exe">Gnucash 2.3.7 Win32 setup executable</a> can be downloaded from Sourceforge as well.
+
+<h3>About the Program</h3>
 <p>GnuCash is a free, open source accounting program released under the GNU General Public License (GPL) and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash began in 1997, and its first stable release was in 1998.</p>
