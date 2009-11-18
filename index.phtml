@@ -16,9 +16,9 @@ include("externals/menu.phtml");
 <h2><?php echo _("Download GnuCash $latest_stable")?></h2>
 
 <ul>
-<li><img src="images/icons/linux.png" /> Linux <a href="<?php echo $download_path.$latest_stable_source;?>"><?php echo _("Source");?></a> | <a href="<?=$home?>/download.phtml#distribution"><?php echo _("Via distribution");?></a></li>
-<li><img src="images/icons/windows.png" /> Microsoft Windows <a href="<?php echo $download_path.$latest_stable_win;?>">XP/Vista</a></li>
-<li><img src="images/icons/macosx.png" /> Mac OS X <a href="<?php echo $download_path.$latest_stable_mac_intel;?>">Intel</a> | <a href="<?php echo $download_path.$latest_stable_mac_ppc;?>">Power PC</a> | <a href="osx_readme.phtml?branch=stable&version=<?php echo $latest_stable;?>">Readme</a></li>
+<li><img src="<?=$top_dir?>/images/icons/linux.png" /> Linux <a href="<?php echo $download_path.$latest_stable_source;?>"><?php echo _("Source");?></a> | <a href="<?=$home?>/download.phtml#distribution"><?php echo _("Via distribution");?></a></li>
+<li><img src="<?=$top_dir?>/images/icons/windows.png" /> Microsoft Windows <a href="<?php echo $download_path.$latest_stable_win;?>">XP/Vista</a></li>
+<li><img src="<?=$top_dir?>/images/icons/macosx.png" /> Mac OS X <a href="<?php echo $download_path.$latest_stable_mac_intel;?>">Intel</a> | <a href="<?php echo $download_path.$latest_stable_mac_ppc;?>">Power PC</a> | <a href="osx_readme.phtml?branch=stable&version=<?php echo $latest_stable;?>">Readme</a></li>
 <li><a href="<?=$home?>/download.phtml" style="font-size: 80%;"><?=_("More downloads (Source, Development,...)")?></a></li>
 </ul>
 </div>

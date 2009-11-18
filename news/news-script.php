@@ -32,10 +32,6 @@
     // array of translated news files.  Holds filenames of translated news.
     $lang_files = array();
 
-    // a little debugging
-    echo("<!-- in news/news-script.php: top_dir = $top_dir -->\n");
-    echo("<!-- lang-path: $lang_newspath ; en-path: $en_newspath -->\n");
-
     // ------------------------------------------
     // check for the translated articles
     $hd = dir($lang_newspath);
@@ -104,6 +100,10 @@ function emit_news($en_newspath, $lang_newspath, $oldnews)
 {
     global $top_dir;
 
+    // a little debugging
+    echo("<!-- in news/news-script.php: top_dir = $top_dir -->\n");
+    echo("<!-- lang-path: $lang_newspath ; en-path: $en_newspath -->\n");
+
     # Be sure to define the following path to newsdirs
     if (!$en_newspath) { exit; }
     if (!$lang_newspath) { exit; }
@@ -130,7 +130,7 @@ function emit_news($en_newspath, $lang_newspath, $oldnews)
 ?>
 <div class="newsborder">
   <div class="newsheader">
-    <img alt="news panel" src="<?=${top_dir}?>/images/icons/document.txt.gif" width="16" height="16" alt="[news]"/>&nbsp;
+    <img alt="news panel" src="<?=$top_dir?>/images/icons/document.txt.gif" width="16" height="16" alt="[news]"/>&nbsp;
     <a name="<?=generate_anchor($key)?>"><?= $fa[0]; ?> - <b><?= $newsfile[$key] ?></b></a>
   </div>
   <div class="newsinner">

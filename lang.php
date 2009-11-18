@@ -1,7 +1,6 @@
 <?php
 # allow user override.
-$language = $_GET["lang"];
-if (isset($language)) { $locale = $language; }
+if (array_key_exists('lang', $_GET)) { $locale = $_GET["lang"]; }
 if ($locale == "") { $locale = "en_US"; }
 putenv("LANG=$locale");
 putenv("LANGUAGE=$locale");
@@ -14,5 +13,5 @@ $dir_res = bindtextdomain($domain, $text_dir);
 bind_textdomain_codeset($domain, 'UTF-8');
 
 textdomain($domain);
-echo ("<!-- $lang , locale_res [$locale_res] , dir_res $dir_res -->\n");
+echo ("<!-- $locale , locale_res [$locale_res] , dir_res $dir_res -->\n");
 ?>
