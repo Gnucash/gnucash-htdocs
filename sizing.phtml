@@ -41,19 +41,19 @@ include("externals/menu.phtml");
 <THEAD>
 <TR
 ><TH ALIGN="LEFT" VALIGN="TOP"><?php echo _("Version");?></TH
-><TH ALIGN="LEFT" VALIGN="TOP"><?php echo _("engine");?></TH
-><TH ALIGN="LEFT" VALIGN="TOP"><?php echo _("backend");?></TH
-><TH ALIGN="LEFT" VALIGN="TOP"><?php echo _("register");?></TH
-><TH ALIGN="LEFT" VALIGN="TOP"><?php echo _("ledger");?></TH
-><TH ALIGN="LEFT" VALIGN="TOP"><?php echo _("motif");?></TH
-><TH ALIGN="LEFT" VALIGN="TOP"><?php echo _("gnome");?></TH
+><TH ALIGN="LEFT" VALIGN="TOP">engine</TH
+><TH ALIGN="LEFT" VALIGN="TOP">backend</TH
+><TH ALIGN="LEFT" VALIGN="TOP">register</TH
+><TH ALIGN="LEFT" VALIGN="TOP">ledger</TH
+><TH ALIGN="LEFT" VALIGN="TOP">motif</TH
+><TH ALIGN="LEFT" VALIGN="TOP">gnome</TH
 ><TH ALIGN="LEFT" VALIGN="TOP"><?php echo _("misc app");?></TH
-><TH ALIGN="LEFT" VALIGN="TOP"><?php echo _("import export");?></TH
-><TH ALIGN="LEFT" VALIGN="TOP"><?php echo _("reports");?></TH
-><TH ALIGN="LEFT" VALIGN="TOP"><?php echo _("scheme (misc)");?></TH
-><TH ALIGN="LEFT" VALIGN="TOP"><?php echo _("business");?></TH
-><TH ALIGN="LEFT" VALIGN="TOP"><?php echo _("test");?></TH
-><TH ALIGN="LEFT" VALIGN="TOP"><?php echo _("user docs");?></TH
+><TH ALIGN="LEFT" VALIGN="TOP">import-export</TH
+><TH ALIGN="LEFT" VALIGN="TOP">reports</TH
+><TH ALIGN="LEFT" VALIGN="TOP">scheme</TH
+><TH ALIGN="LEFT" VALIGN="TOP">business</TH
+><TH ALIGN="LEFT" VALIGN="TOP">test</TH
+><TH ALIGN="LEFT" VALIGN="TOP">docs</TH
 ><TH ALIGN="LEFT" VALIGN="TOP"><?php echo _("internal txt");?></TH
 ><TH ALIGN="LEFT" VALIGN="TOP"><?php echo _("Total");?></TH>
 <TH ALIGN="LEFT" VALIGN="TOP"><?php echo _("Languages");?></TH >
@@ -327,15 +327,15 @@ echo _("number of *c and *.h and *.scm files (KLOCS in *.c + KLOCS in *.h + KLOC
 <b><?php echo _("Table Column Legend");?></b><br><br>
     <P></P>
  <DL>
-    <DT><B><?php echo _("engine");?></B></DT>
+    <DT><B>engine</B></DT>
     <DD><?php echo _("Contents of the src/engine and the include directories. The engine was split out from the motif code in version 1.1. The data storage backend (file-io, sql) was split out in the course of version 1.5");?>
 	<P></P>
         </DD>
-    <DT><B><?php echo _("backend");?></B></DT>
+    <DT><B>backend</B></DT>
     <DD><?php echo _("Contents of the src/backend directory (version 1.7 and later) or of src/engine/file, src/engine/sql (version 1.6 and earlier)");?>
 	<P></P>
         </DD>
-    <DT><B><?php echo _("register");?></B></DT>
+    <DT><B>register</B></DT>
     <DD><?php echo _("Contents of the src/register directory (version 1.6 and earlier) or src/register/register-core (version 1.7 and later).  The register was split out as a separate component from the motif code in version 1.1. As can be seen from the stats, the register code has been fairly stable. At version 1.7 and later, this cell shows a second count: the number of lines of code in src/register/register-gnome (previously counted as part of gnome)");?>
 	<P></P>
         </DD>
@@ -343,11 +343,11 @@ echo _("number of *c and *.h and *.scm files (KLOCS in *.c + KLOCS in *.h + KLOC
     <DD><?php echo _("*.c, *.h files in the src directory only (version 1.6 and earlier) or src/register/ledger-core (version 1.7 and later)");?>
 	<P></P>
     </DD>
-    <DT><B><?php echo _("motif");?></B></DT>
+    <DT><B>motif</B></DT>
     <DD><?php echo _("Contents of the src/motif directory (version 1.2 and earlier).  The motif version of the code was discontinued after version 1.2, after most of the non-gui code was moved to either the engine, the register or the ledger.");?>
 	<P></P>
     </DD>
-    <DT><B><?php echo _("gnome");?></B></DT>
+    <DT><B>gnome</B></DT>
     <DD><?php echo _("Contents of src/gnome plus src/register/gnome (version 1.6 and earlier). For version 1.7 and later, this consists of src/gnome, src/gnome-search and src/gnome-util");?>
 	<P></P>
     </DD>
@@ -357,17 +357,17 @@ echo _("number of *c and *.h and *.scm files (KLOCS in *.c + KLOCS in *.h + KLOC
 	<P></P>
     </DD>
 
-    <DT><B><?php echo _("import export");?></B></DT>
+    <DT><B>import-export</B></DT>
     <DD><?php echo _("Code to import and export various file formats: contents of the src/import-export directory.");?>
 	<P></P>
      </DD>
 
-    <DT><B><?php echo _("reports");?></B></DT>
+    <DT><B>reports</B></DT>
     <DD><?php echo _("Code to generate reports and graphs: contents of the src/reports directory.");?>
 	<P></P>
      </DD>
 
-    <DT><B><?php echo _("scheme");?></B></DT>
+    <DT><B>scheme</B></DT>
     <DD><?php echo _("scheme and guile code in directories src/scm plus src/guile (version 1.6 and earlier). In version 1.7 and later, much of this code went into reports, import/export, and into indiovidual modules; thus only miscellaneous code remains.");?>
 	<P></P>
     </DD>
@@ -377,12 +377,12 @@ echo _("number of *c and *.h and *.scm files (KLOCS in *.c + KLOCS in *.h + KLOC
 	<P></P>
      </DD>
 
-    <DT><B><?php echo _("test");?></B></DT>
+    <DT><B>test</B></DT>
     <DD><?php echo _("Code to peform automated regression tests: contents of the src/*/test directories.");?>
 	<P></P>
      </DD>
 
-    <DT><B><?php echo _("docs");?></B></DT>
+    <DT><B>docs</B></DT>
     <DD><?php echo _("English-language-only user documentation, including on-line help and manual (html, sgml or xml). For version 1.8.4 and later, the number below the bar counts the translated, non-english docs (currently de, es, fr, pt_PT).  Both of these numbers are somewhat hard to count, because of fairly large format churns, and multiple competing versions.");?>
 	<P></P>
     </DD>

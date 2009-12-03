@@ -13,7 +13,7 @@ include("externals/menu.phtml");
 <h1><?php echo _("Welcome to GnuCash.org")?></h1>
 
 <div id="download">
-<h2><?php echo _("Download GnuCash $latest_stable")?></h2>
+<h2><?php printf (_("Download GnuCash %s"), $latest_stable)?></h2>
 
 <ul>
 <li><img src="<?=$top_dir?>/images/icons/linux.png" /> Linux <a href="<?php echo $download_path.$latest_stable_source;?>"><?php echo _("Source");?></a> | <a href="<?=$home?>/download.phtml#distribution"><?php echo _("Via distribution");?></a></li>
