@@ -1,6 +1,6 @@
 <?php
      $latest_stable="2.2.9";
-     $latest_unstable="2.3.7";
+     $latest_unstable="2.3.8";
      
      $stable_path="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/";
      $latest_stable_path=$stable_path.$latest_stable."/";
