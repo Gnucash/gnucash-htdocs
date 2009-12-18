@@ -7,7 +7,7 @@
      
      $latest_stable_win="gnucash-".$latest_stable."-setup.exe";
      $latest_stable_mac_intel="Gnucash-Intel-".$latest_stable.".4.dmg";
-     $latest_stable_mac_ppc="Gnucash-PPC-".$latest_stable.".3.dmg";
+     $latest_stable_mac_ppc="Gnucash-PPC-".$latest_stable.".4.dmg";
      $latest_stable_source="gnucash-".$latest_stable.".tar.bz2";
      
      $unstable_path="http://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/";
