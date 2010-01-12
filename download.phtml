@@ -18,7 +18,7 @@ include("externals/menu.phtml");
 
 <h3><?php echo _("Installers")?></h3>
 <ul>
-<li><?php printf (_("GnuCash %s for"), $latest_stable)?> <a href="<?php echo $download_path.$latest_stable_win;?>">Microsoft Windows XP/Vista</a></li>
+<li><?php printf (_("GnuCash %s for"), $latest_stable)?> <a href="<?php echo $download_path.$latest_stable_win;?>">Microsoft Windows XP/Vista/7</a></li>
 <li><?php printf (_("GnuCash %s for"), $latest_stable)?> Mac OS X <a href="<?php echo $download_path.$latest_stable_mac_intel;?>">Intel</a> | <a href="<?php echo $download_path.$latest_stable_mac_ppc;?>">Power PC</a> | <a href="http://wiki.gnucash.org/wiki/MacOSX/<?php echo $latest_stable;?>/Readme">Readme</a></li>
 </ul>
 
@@ -45,7 +45,7 @@ include("externals/menu.phtml");
 <p><?php printf (_("The latest unstable release of GnuCash is %s.  Choose the download for your operating system below."), $latest_unstable)?></p>
 
 <ul>
-  <li><?php printf (_("GnuCash %s for"), $latest_unstable)?> <a href="<?php echo $download_path.$latest_unstable_win;?>">Microsoft Windows XP/Vista</a></li>
+  <li><?php printf (_("GnuCash %s for"), $latest_unstable)?> <a href="<?php echo $download_path.$latest_unstable_win;?>">Microsoft Windows XP/Vista/7</a></li>
   <li><?php printf (_("GnuCash %s for"), $latest_unstable)?> Mac OS X <a href="<?php echo $download_path.$latest_unstable_mac_intel;?>">Intel</a> | <a href="http://wiki.gnucash.org/wiki/MacOSX/<?php echo $latest_unstable;?>/Readme">Readme</a></li>
   <li><a href="<?php echo $download_path.$latest_unstable_source;?>">bzip2 compressed tarball</a> <?php printf (_("for GnuCash %s"), $latest_unstable)?></li>
 </ul>
