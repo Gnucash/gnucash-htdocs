@@ -1,5 +1,5 @@
 
-.PHONY: pot mos msgmerge de es fr it nb nl pl pt_PT nmz nmz.lang nmz nmz.onefile
+.PHONY: pot mos msgmerge de es fr it ja nb nl pl pt_PT nmz nmz.lang nmz nmz.onefile
 
 pot: po/POTFILES po/gnucash-htdocs.pot
 
@@ -12,11 +12,11 @@ po/gnucash-htdocs.pot: po/POTFILES
 	xgettext -f po/POTFILES -L PHP -o po/gnucash-htdocs.pot
 
 msgmerge: po/gnucash-htdocs.pot
-	for f in de es fr it nb nl pl pt_PT ; do \
+	for f in de es fr it ja nb nl pl pt_PT ; do \
 	  msgmerge -U po/$$f.po po/gnucash-htdocs.pot ; \
 	done
 
-mos: de es fr it nb nl pl pt_PT
+mos: de es fr it ja nb nl pl pt_PT
 
 de: po/de.po
 	msgfmt po/de.po -o de/LC_MESSAGES/gnucash-htdocs.mo
@@ -29,6 +29,9 @@ fr: po/fr.po
 
 it: po/it.po
 	msgfmt po/it.po -o it/LC_MESSAGES/gnucash-htdocs.mo
+
+ja: po/ja.po
+	msgfmt po/ja.po -o ja/LC_MESSAGES/gnucash-htdocs.mo
 
 nb: po/nb.po
 	msgfmt po/nb.po -o nb/LC_MESSAGES/gnucash-htdocs.mo
