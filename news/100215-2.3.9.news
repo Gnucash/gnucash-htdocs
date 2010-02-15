@@ -1,0 +1,531 @@
+<b>Announcement:</b> GnuCash 2.3.9 (Unstable) Release
+2010-02-15
+
+<h2>GnuCash 2.3.9 (Unstable) released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.3.9, the tenth of several unstable 2.3.x releases of the GnuCash Free Accounting Software which will eventually lead to the stable version 2.4.0. With this new release series, GnuCash can use an SQL database using SQLite3, MySQL or PostgreSQL. It runs on GNU/Linux, *BSD, Solaris, Microsoft Windows and Mac OSX.</p>
+
+<div class="dialog warning">
+<p><b>WARNING:</b> This is an *UNSTABLE* version of Gnucash.</p>
+<p>This release is intended for developers and testers who want to help tracking down all those bugs that are still in there.</p>
+<p>Make sure you make backups of any files used in testing versions of GnuCash in the 2.3.x series. Although the developers go to great lengths to ensure that no data will be lost we cannot guarantee that your data will not be affected if for some reason GnuCash crashes in testing these releases.</p>
+</div>
+
+<div class="dialog note">
+<p><b>NOTE:</b> The latest stable version is 2.2.9.</p>
+</div>
+
+<p>PLEASE TEST TEST AND TEST SOME MORE any and all features important to you.
+Then post any bugs you find to bugzilla</p>
+<p>Major changes in the 2.3.x release include;
+<ul>
+<li>In addition to the XML backend, Gnucash can now use a SQLite3, MySQL or PostgreSQL database to store the data. This is a new implementation using libdbi. It supports all features including the business features.  In order to build with this, add --enable-dbi to the configure command.  In addition to the libdbi-dev package for your distribution, you will also need the appropriate DBD (libdbi driver) package for sqlite3, mysql or postgresql.</li>
+<li>In addition to the current GtkHTML HTML engine used to display reports and graphs, Gnucash can use WebKit. WebKit is the engine used by Google Chrome on Windows and Safari on Apple.  In order to build with this, add --enable-webkit to the configure command.  You will need an appropriate webkit-dev package.  On win32, you will need to download the webkit-1.1.5-win32.zip file from the source repository and put it into the downloads directory of your gnucash build area.  Note that there are serious bugs when using webkit on win32, so it is advised that win32 builds continue to use gtkhtml</li>
+<li>Updated to AqBanking 3 on Win32.</li>
+</ul>
+
+<p>Changes between 2.3.8 and 2.3.9 include:
+<ul>
+
+<li>Bugs fixed</li>
+<ul>
+<li>Bug #608436: Add auto-clear feature
+
+Patch by Cristian KLEIN:
+
+= Usage scenario =
+John keeps his personal accounting in GnuCash and writes all credit card
+expenses therein. On weekends, we checks his Internet Banking and sees that
+some transactions have been recorded. He would like to clear those transactions
+in GnuCash, but it is tiresome to go through each Internet Banking transaction
+and do manual comparison with GnuCash records, especially since Internet
+Banking transactions might be in a different order than in GnuCash.
+
+John would prefer having an "auto-clear" feature. Given the "current amount"
+from the Internet Banking, he would like GnuCash to clear the transactions for
+him, if and only if, there is a unique combination of transactions that could
+achieve this. If there is no solution, or if the solution is not unique,
+GnuCash should warn him and John must manually clear the transactions.</li>
+<li>Bug #590332: New eguile-based Tax Invoice report
+
+Patch by Chris Dennis.</li>
+<li>Bug #606053: Add stylesheet with footer
+
+Patch by edodd@billiau.net and Frank H. Ellenberger.</li>
+<li> Bug 586122 -  The AqBanking Wizard can't be loaded: plugins\20 folder to be renamed into plugins\16
+
+The patch evaluates and configures the proper paths at build time, retrieving
+the required info directly from the aqbanking source</li>
+<li>Bug #608329: Add Color to Account tabs
+
+Patch by "Bob":
+I wanted a way to select an account easily when I have several accounts open in
+the main window. I decided to add a color option to the account so that the tab
+can be set to a specific color and so easily identifiable. This could also be
+used to link like minded accounts together.
+
+This patch also fixes the account tooltip not being
+updated when the name changes.</li>
+<li>Bug #534210: Add individual check item types.
+
+Patch by Thomas Troesch: The proposed patch does:
+
+1.  Changes the chk file key to Blocking_Chars as described in 607522 ( this
+had been dropped by mistake ).
+
+2.  Add several fields to the Custom tab in the print check dialog.
+
+  Locations for:
+  a.  split memos fields.
+  b.  split accounts ( e.g.  Expenses:Auto )
+  c.  split amounts ( e.g.  GBP 21.40 )
+
+  The splits do not include the last split in the transaction.
+  The keys in the chk format file are:
+  SPLITS_AMOUNT
+  SPLITS_MEMO
+  SPLITS_ACCOUNTS
+
+3.  Memo was added to the custom tab.  This is the memo from the split that
+matches the account from the register.</li>
+<li>Bug #608306: check amount_word should print the fraction correctly.
+
+Patch by Thomas Troesch:
+
+Checks printed the wrong string for the amount_words.  The utility
+number_to_words had produced e.g. from 100.04 -&gt; One Hundred and 4/100.  The
+word string should be One Hundred and 04/100.</li>
+<li>Bug #608874: Spelling fix for Emoluments
+
+Patch by Adrian Bridgett.</li>
+<li>Bug #589320 Price Editor - Currency Namespace does not show up
+
+This bug was introduced by r18062 (applying a patch from bug #580281 Entering multiple pices with price editor is tedious)
+For some unknown reason, r18062 assumed exchange rates are not supposed to be edited via the Price Editor dialog.</li>
+<li>Bug #105669: Improve error handling in gz_thread_func.
+
+Honor errors when reading/writing from/to a compressed file or the pipe
+to the main thread.</li>
+<li>Bug #606728: Catch errors when opening saved-reports-2.4 for write.</li>
+<li>Bug #105669: Add checks to detect errors on write, especially if there no space left on the disk.
+
+Check the return value of fprintf and use ferror where libraries as
+libxml do the write.
+
+The change may not be perfect yet and a review would be nice. Still, it
+detects quite a few errors that, without it, slip through and may
+destroy valuable data.</li>
+<li>Bug #607522: Add ADDRESS to check printing
+
+Patch by Thomas Troesch: The patch does three things:
+
+1.  Adds the ability to print an address on checks.  The Print Check dialog is
+changed to have 5 address lines.
+The first field is filled in with the same data as the PAYEE check item.  The
+other lines are blank.  The check format keys
+have a new check-item type 'ADDRESS'.  It behaves like other text check-item
+types.  The address fields on the dialog are set 'not-sensitive'
+if the current format does not have an ADDRESS check item defined.  The Custom
+Field tab has a new line for the address
+location.
+
+2.  Added new check format key - Blocking_Chars.  This is to put the blocking
+character feature into the check format file.  It is currently
+only in the preferences dialog in the printing tab, and therefore currently
+applies (or not) to all text fields in th_e check format.  By
+adding the key Blocking_Chars_n to the check format, the blocking characters
+can be applied to text type check-items individually.  Its
+really useful when printing stubs and so on.  (NOTE:  blocking characters are
+printed around a field to protect against alteration
+e.g.  ***$100.00***  vs     $100.00)
+
+3. Included a Voucher check template.  This is a full page check with the check
+on top and which has two stubs below.  There
+are other voucher formats ( middle and bottom ) , but the check printing
+functionality would require separate templates for
+the different formats.  Also changed the Quicken/Quickbooks US-Letter check
+format to include the ADDRESS check item and blocking
+around the AMOUNT_NUMBER field.  I made a change to the Quicken-wallet check to
+add blocking characters around the
+AMOUNT_NUMBER field, and I added a clipping rectangle definition to the NOTES
+and PAYEE fields the were placed in the
+check stub area ( if the fields were too long, they would print into the check
+area ).</li>
+<li>Bug #607517: Migrate print.glade from glade-2 to glade-3 format.
+
+Patch by Thomas Troesch.</li>
+<li>Bug #607246: In qof_string_number_compare_func, use base 10 and do not allow octals to sneak in.
+
+Otherwise, transaction number 0108 (octal 010=8) will sort before 0107 (octal 0107=71).</li>
+<li>Bug #607255: Repair Hungarian report main menu, by Attila Nagy.</li>
+<li>Bug #607185: Add f-q workaround for missing date.
+
+Patch by "meo":
+
+If for whatever reason finance-quote is unable to get a date for a quote or to
+convert it to the standardized form, gnucash is unable to use the otherwise
+correct quote. With web pages being updated definitively more frequently than
+finance-quote, this is quite a nuisance.
+Up to now, gnc-fq-helper emits an error message + the quote, a combination
+gnucash is unable to process. This patch presents a workaround.
+
+I would prefer using the current date + 12 hours rather than current date +
+time, but this is open for discussion.</li>
+<li>Bug #606077: Fix uncommon configure option --program-suffix.
+
+Patch by Peter Selinger:
+
+OK, the attached patch fixes part of this problem. Specifically, it applies the
+specified transform (from ./configure option --program-suffix,
+--program-prefix, or --program-transform-name) to the files
+
+src/bin/gnucash-valgrind
+src/bin/gnucash-gdb
+src/bin/gnucash
+
+This is done in the Makefile at compile time.
+
+In the end, I am not sure why the GnuCash configure.in provides the
+--program-suffix mechanism at all, since apparently it hasn't been used in 10
+years. According to info autoconf, these are supposed to be enabled by the
+macro AC_ARG_PROGRAM, but I don't see this in configure.in. So perhaps it has
+been enabled by accident and shouldn't really be there.</li>
+<li>Bug #511606: Fix ipmt() and ppmt() functions in scheduled transactions.
+
+Patch by Jean-Baptiste: " The instance counter is now incremented into increment_sx_state function."</li>
+<li>Bug #538902: Moves the "New Accounts Page" menu option to the "View" menu
+
+Patch by Steven N. Severinghaus.</li>
+<li>Bug #348701 Wrong currency symbol when currency is set to DKK
+This fix reverts changeset r7200, which caused some currency symbols to be replaced with the EURO sign.
+This replacement was a workaround for gtkhtml1 and no longer needed.</li>
+<li>Bug #606626: Change wording from Druid to Assistant</li>
+<li>Bug #589032: Replace some strcmp() by safe_strcmp() to fix crashes on NULL strings.</li>
+<li>Bug #602051: Replace the word "string" in GUI messages by non-developer wordings.
+
+Same for dialog -&gt; window.</li>
+<li>Bug #602091: Fix broken Due Bill Reminder in all non-C locales
+
+The Due Bill Reminder used the translated form of "Invoice" as
+query string predicate, which can't work because the untranslated
+string must be searched for.</li>
+<li>Bug #582325:  Refactor some deprecated guile functions:
+SCM_BOOLP -&gt; scm_is_bool
+SCM_NULLP -&gt; scm_is_null
+SCM_FALSEP -&gt; scm_is_false
+SCM_NFALSEP -&gt; scm_is_true
+SCM_VECTORP -&gt; scm_is_vector
+SCM_NUMBERP -&gt; scm_is_number
+SCM_CONSP -&gt; scm_is_pair
+SCM_STRING_CHARS -&gt; scm_to_locale_string
+
+Specifically the replacement of SCM_STRING_CHARS with scm_to_locale_string fixes Bug #582325
+
+Additionally, I have renamed these internal functions for global consistency:
+SCM_PROCEDUREP -&gt; scm_is_procedure
+SCM_LISTP -&gt; scm_is_list
+SCM_EXACTP -&gt; scm_is_exact
+SCM_EQUALP -&gt; scm_is_equal</li>
+<li>Bug #605414: Clarify Quick-fill tip of the day
+
+Patch by James Raehl:
+
+Patch adds Tab key step to the Quick Fill tip.  New users do not know about
+this step.</li>
+<li>Bug #605415: Relax limit on scheduled days in the future
+
+Patch by James Raehl: Expand scheduled transaction date limit by 366 days
+
+Usually, scheduled transactions are limited to 365 days in the future.  This
+patch doubles that limit plus adds a day for leap years.  The patch supports a
+method for separating transactions that are not yet posted at the bank, by
+assigning an initial date one year in the future.  Under this method, scheduled
+transactions and their reminders are one year in the future, since they have
+not happened yet.</li>
+<li>Fix bug #603215 -  Custom report from Budget Report does not save selected Budget
+
+Problem was how budget option tried to create the lambda function to restore the value.  </li>
+<li>Bug #479581 gnucash --nofile hasn't application name in window title
+
+When no file is selected, the title now becomes "Unsaved Book - GnuCash".
+The first part is following Gnome HIG guidelines, the latter part is
+a preference of several GnuCash developers.
+Furthermore, the "- GnuCash" suffix will always be appended, not only 
+when no file is open.</li>
+<li>Fix #586122 (follow-up to r18488) by using aqbanking/version.h from its installation path.
+
+Also look up the gwenhywfar so-name accordingly.</li>
+<li>Bug #609402 Add Japanese resource to Windows (inno) setup</li>
+</ul>
+<li>Updated translations or translation-related changes</li>
+<ul>
+<li>Updated Dutch translation, by Mark Haanen and Jos, copied from the Translation Project.</li>
+<li>Updated Japanese translation, by Yasuaki Taniguchi, copied from the Translation Project.</li>
+<li>I18n fix of concatenated expression.
+
+We must not concatenate a word expression from different strings.
+Instead, we must translate each expression separately.
+
+Pointed out by Mark Haanen.</li>
+<li>I18n improvement: Translate plural-dependent string correctly by ngettext().</li>
+<li>Minor updates to British English translation by Mike Evans.
+
+Copied from bug#602051.</li>
+<li>Fix translation issues caused by r18474.</li>
+<li>Update Chinese (simplified) translation, copied from the Translation Project.</li>
+<li>Update British English translation by Mike E.</li>
+<li>Remove de_CH translation because it ceased to be maintained. The normal German translation will appear for de_CH locales, just as in 2.2.x.</li>
+<li>Fix typo: accouting -&gt; accounting</li>
+<li>Update German translation</li>
+<li>Add initial Persian translation (Farsi) by Mehdi Alidoost.</li>
+<li>Fix translation error in r18550, bug#602051.</li>
+<li>Update Japanese translation, copied from the Translation Project.</li>
+<li>Fix missing header information about Farsi plural forms in fa.po, according to what has been explained to me.</li>
+<li>Add disambiguation prefix to the word Split where it is the action of a Stock Split.</li>
+<li>Add new source files to POTFILES.in
+</li>
+<li>Updated Dutch translation, copied from the Translation Project.</li>
+<li>Update German translation.</li>
+<li>Update the translations with the latest string template.</li>
+<li>I18n improvement: The account name of the other account in multi-split transaction is extended to conform to the name in the register.
+
+Otherwise, the string Split from here has the ambiguity with the button
+labeles Split, which is the verb, whereas here we need the noun.</li>
+<li>I18n improvement: Add disambiguation prefix to the account code of the other account in a multi-split txn.
+
+Without the disambiguation, the string here is identical to the button
+labeled Split, but that one is for sure something different from here,
+namely the old verb vs. noun issue.</li>
+</ul>
+<li>Other user-visible changes</li>
+<ul>
+<li>Small UI string corrections related to the recent tax enhancements.
+
+Patch by J. Alex Aycinena.</li>
+<li>Payment dialog layout improvements
+
+- Rearrange the frames so that the Transfer Account frame gets
+  more space
+- Add tooltips to (owner), (invoice) and amount related widgets.
+- Properly align the invoice_label widget</li>
+<li>Watch out for  a missing pricing transaction when looking for price data.</li>
+<li>Add a comment about GNC_COMMODITY_NS_ISO and GNC_COMMODITY_NS_CURRENCY.</li>
+<li>Add new columns for the name of the lot each split is part of and for 
+the value of the split.  Both are optional and default to off.</li>
+<li>Call gnc_{suspend|resume}_gui_refresh while closing accounts and scrubbing lots
+to make them go much faster and avoid flicker.</li>
+<li>Watch out for a null account in render-corresponding-account-subheading, it 
+happened to me once.</li>
+<li>Pass the correct report name to income-statement-renderer-internal when rendering
+a profit and loss report.</li>
+<li>Don't leak a file port when saving reports.</li>
+<li>Reset found_trans_split when the transaction being considered in gnc_split_register_find_split
+turns out to be the wrong one.</li>
+<li>Fix an off by one error in gnc_ui_sx_loan_druid_create.</li>
+<li>Increase the size of the Guile stack to avoid stack overflow errors.</li>
+<li>Some usability improvements to the Save As.../Open dialog (part 2)
+
+Forgot to add the changes in c code...</li>
+<li>Some usability improvements to the Save As.../Open dialog
+
+* The dialog gets a proper title
+* Only show the File frame or the Database frame,
+  as relevant to the chosen data format
+* Set a minimum width. Without it the dialog comes up too narrow.
+* Some minor layout changes (spacing, justification,...) to harmonize with
+  other GnuCash dialogs.  </li>
+<li>Don't show hidden accounts in the transfer dialog.  This should be connected to the UI,
+but my ubuntu has glade 3 which mucks up the .glade files.  </li>
+<li>Add a Select Children button to the widget used for account selection in 
+report options dialogs.  </li>
+<li>Load gnc-build-url from the correct file so the accounts list 
+option works again.  </li>
+<li>Speed up the balance sheet report by a factor of 5 or so by using C functions instead
+of Scheme functions to get account commodity balances.  This idea is borrowed 
+from the EGuile version of the balance sheet report.</li>
+<li>Avoid a bunch of assertion failures when the general ledger is open.  The general ledger has no
+account so attempts to get the balance of the register's account pass a null account pointer
+to functions that won't accept that.  Also stop leaking a GList in the functions that get account
+balances.</li>
+<li>Remove the "Compute unrealized gains and losses" option from the balance sheet
+report.  Instead compute unrealized gains and losses only if the current book
+does not use trading accounts.</li>
+<li>Change 'Int' to 'Interest' and 'Div' to 'Dividend' in action strings</li>
+<li>Use string saved-reports-2.4 in the description of the save report action.</li>
+<li>Use gtkhtml as html render in the Windows build</li>
+<li>[Patch] Corrections to taxtxf.scm
+
+Patch by J. Alex Aycinena:
+
+I attach a patchfile that corrects two problems with taxtxf.scm: the
+report would not gracefully handle the cases where, 1, a datafile from
+an earlier version of gnucash might have tax codes assigned to
+accounts and no tax-entity-type code assigned to the file, and, 2,
+some cases where accounts had no tax code assigned and the tax-related
+flag not set.</li>
+<li>Have the Post date widget grab the focus by default when opening the post invoice dialog.</li>
+<li>Updated txf.scm for 2009 US tax form changes by J. Alex Aycinena.</li>
+<li>Fix crash when copying a currently edited transaction in the register.</li>
+</ul>
+<li>Other code/build changes</li>
+<ul>
+<li>Remove gnucash.lsm from EXTRA_DIST
+<li>Fix doxygen markup</li>
+<li>Small documentation improvements for better doxygen docs</li>
+<li>Move splint-defs.h to src/debug.
+
+It's only used for debugging. Note that the current splint-defs.h causes compilation errors due to redefinition of function declarations. These should be fixed when splint is to be run again.</li>
+<li>Win32: Fix building of libgoffice.
+
+Required libgsf to not remove the build directory, hence part
+of r18559 need to be reverted.</li>
+<li>Fix null-pointer dereference from r18612</li>
+<li>Remove Linux Software Map description.
+
+It's unmaintained for years now.</li>
+<li>Move count.* to util
+
+Also I made a first attempt at improving the line count.
+The old script missed a number of files in the directories
+it counted.
+
+The script is still not in line with the current code base
+though. A number of directories are still not counted (like
+gnome, engine, ledger, ...)</li>
+<li>Moved svnlog2ul from contrib to util
+
+It makes more sense in util as it is by and for the devs, not
+contributed by an external user for external use.</li>
+<li>Add svnlog2ul.sh, and accompanying xslt sheets.
+
+svnlog2ul.sh is a script to extract the commit messages from svn
+between two releases and converts them into a simple html unordered
+list. This is a useful aid to create the news pages on the website.</li>
+<li>Move valgrind suppression rules to debug subdirectory
+This will require a new run of configure as some makefiles have changed</li>
+<li>Set svn:ignore on pl accounts like the other account directories
+
+(Meaning: ignore Makefile and Makefile.in)</li>
+<li>Remove the old, obsolete postgres backend and its tools
+
+I also changed some of the documentation that referred to it, but there are still some
+references left in the (unmaintained ?) design documents.</li>
+<li>Win32: Hopefully fix goffice installation.</li>
+<li>Free sort_keys as allocated by g_utf8_collate_key in ExtensionInfos.</li>
+<li>Fix script to check for &gt; 2.8 entries to remove
+
+The minimal Gtk+ requirement has been set to 2.8 recently. This script still removed glade
+parameters that are valid in 2.8. This patch fixes that.</li>
+<li>Corrections to r18610 to permit compiling against older versions of glib</li>
+<li>Remove more executable bits from data files</li>
+<li>Remove executable flag from data files</li>
+<li>Fix URL of ActivePerl.</li>
+<li>Minor changes to global project files
+
+1. Fix spelling errors in HACKING
+- appearenet -&gt; apparent (patch by Tom Van Braeckel)
+- supressions -&gt; suppressions
+
+2. Keep the contributer list sorted alphabetically in AUTHORS</li>
+<li>Fix "make distcheck".  Patch by Jan Arne Petersen
+</li>
+<li>Reverse r18597
+</li>
+<li>Create routines qof_book_get_string_option() and qof_book_set_string_option() to get/set a kvp string, respectively.
+qof_book_set_string_option() also handles saving the book so that the kvp is updated in the db.
+
+In the future, qof_book_set_&lt;type&gt;_option() and qof_book_get_&lt;type&gt;_option() should be created, where type is
+boolean, int, double, ...   In addition, other places which handle options in the book should use these routines.
+</li>
+<li>Create qof_book_begin_edit()/qof_book_commit_edit() routines.  These need to be added around lines which set kvp
+values for the book, and the dirty flag does *not* need to be set.
+</li>
+<li>Revert 18490/18491/18527 - I'm not sure it's actually deleting the objects without affecting the database.
+</li>
+<li>Add ChangeLog.2009 for the last year.</li>
+<li>Use correct routine to add a newly loaded entry to the correct bill.  r18302 fixed the entry
+loading problem for invoices, this extends it to bills.
+</li>
+<li>Remove build directories of dependencies after their successful installation.</li>
+<li>Remove a couple of unused local variables left over from a previous iteration of
+the trading account changes.</li>
+<li>Fix guile-1.6 compatibility of r18541 (bug#582325).
+
+We still suppport guile-1.6, hence we can use the functions
+introduced in guile-1.8 only by providing our own backward compatibility
+macro definitions in guile-mappings.h.</li>
+<li>Update gwenhywfar/aqbanking version numbers for win32 build.</li>
+<li>Fix gwenhywfar version lookup by tightening the RE used</li>
+<li>Need to export the variables for glib to see them </li>
+<li>temporarily disable the gwenhywfar version lookup - there are multiple lines matching GWENHYWFAR_SO_EFFECTIVE</li>
+<li>Really fix r18495 (#586122) to look up the so-name of gwenhywfar correctly.</li>
+<li>Require gtk+ &gt;= 2.8</li>
+<li>Remove unneeded information lines about "qof" - we're using our internal code always anyway.</li>
+<li>Re-indentation of source code, next batch.
+
+This also strips trailing whitespaces from lines where they existed.
+This re-indentation was done using astyle-1.23 using the following options:
+
+astyle --indent=spaces=4 --brackets=break --pad-oper
+
+Discussed at http://lists.gnucash.org/pipermail/gnucash-devel/2009-August/026121.html</li>
+<li>Allow digits in Gtk action names created in gnc_create_extension_info.
+This should fix bug 447339 as long as all report names are unique 
+considering only alphanumeric characters.  </li>
+<li>Free accounts/lots/splits/transactions when closing a book </li>
+<li>Fix a couple of echo commands and set warnings=no-portability when running automake.</li>
+<li>Make xaccSplitDump and xaccTransDump work for debugging.</li>
+<li>Teach xaccSplitConvertAmount that 0*x = 0.  Avoids looking up non-existant exchange rate.  </li>
+<li>Add some missing Leave() calls.  </li>
+<li>Symlink the reports to the build directory to make it easier to use them when 
+running in place after a build without installing GnuCash.  </li>
+<li>Use resolve-interface instead of resolve-module when loading reports fo only the
+exported interface gets imported instead of everything defined in the file.  </li>
+<li>Make the dbi backend tests work correctly if dbd is installed in a nonstandard location.
+Supply a GNC_DBD_DIR environment variable to the tests so it knows where to find the 
+database modules.  This is needed if libdbi is installed via MacPorts on OS X.  </li>
+<li>Add flags to help with valgrind on glib </li>
+<li>Free prices so that they can be deleted when the book is closed </li>
+<li>Free budgets when closing a book </li>
+<li>When closing the book, destroy all lots (found by valgrind) </li>
+<li>Free memory leaks </li>
+<li>Add qof_backend_module_finalize() routine to call dbi_shutdown() to free allocated resources.  </li>
+<li>Add qof_finalize_backend_libraries() which is called during shutdown.  This routine checks each backend
+library for an exported qof_backend_module_finalize() routine, and if it exists, calls it so that the
+backend can free any resources which have been allocated.  </li>
+<li>Fix some memory leaks found by valgrinding tests </li>
+<li>Remove erroneous use lib from gnc-fq-*, along with PERLINC setup in configure.in</li>
+<li>Decrease verbosity during win32 packaging: Inno, gconftool-2, htmlhelp compiler (hhc) with less output.</li>
+<li>Fix some incorrect ENTER() and LEAVE() calls.</li>
+<li>Fix up some gnc:debug calls (and one comment).</li>
+<li>Fix a couple of initialized variable warnings.</li>
+<li>Add missing PORTFOLIO_LEDGER register type to switch statement in 
+gnc_split_register_get_debcred_entry.</li>
+</ul>
+</ul>
+
+<h3>Caveats for Testers</h3>
+<p>Any 2.3.x version might crash unexpectedly at any point during runtime. If you test some serious work in a 2.3.x release and are using the XML file backend for data storage, make sure you hit "Save" after every non-trivial workstep.  If you are using the SQL backend, this is not required as every change is saved immediately to the database.<p>
+<p>The documentation has had screenshots updated, however, many help texts usually only refers to the 1.8.x series. Everyone is invited to help improve the documentation; see http://wiki.gnucash.org/wiki/Development on how to get involved.</p>
+
+<h3>How can you help?</h3>
+<p>Testing: Test it and help us discover all bugs that might show up in there.  Please enter each and every bug into bugzilla.</p>
+<p>Translating: The new release comes with some new translation strings. If you consider contributing a translation, we invite you to test this release already. A string freeze will be announced in one of the later 2.3.x releases.  Please check http://wiki.gnucash.org/wiki/Translation_Status for updates on this.</p>
+<p></p>
+<p>We would like to encourage people to test this and any further releases as much as possible and submit bug reports in order that we can polish GnuCash to be as stable as possible for the 2.4.0 release in a few weeks. Then post any bugs you find to <a href="http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">bugzilla</a></p>
+
+<h3>Getting GnuCash</h3>
+<p>Source code for GnuCash 2.3.9 can be downloaded from multiple locations:
+<ul>
+<li><a href="http://www.gnucash.org/download.phtml">The GnuCash website</a></li>
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.9.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.9.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/2.3.9/">all files</a>.</li>
+<li>You can also checkout the sources directly from the subversion repository with this command:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/trunk gnucash</span></li>
+</ul></p>
+
+<p>To install GnuCash, you will need Gnome 2, guile, slib. In addition you will need swig if compiling from subversion.</p>
+
+<h3>Win32 binary</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.9-setup.exe">Gnucash 2.3.9 Win32 setup executable</a> can be downloaded from Sourceforge as well.
+
+<h3>About the Program</h3>
+<p>GnuCash is a free, open source accounting program released under the GNU General Public License (GPL) and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash began in 1997, and its first stable release was in 1998.</p>
