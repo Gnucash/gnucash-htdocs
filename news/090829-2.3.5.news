@@ -29,7 +29,7 @@ Then post any bugs you find to bugzilla</p>
 <li>Partly revert r18246: disable writing of "hidden" and "placeholder" so that XML files written by 2.3.5 can be read by 2.2.9</li>
 <li>Avoid CRIT messages when loading root account which has NULL commodity</li>
 <li>Fix compilation problem - add GPOINTER_TO_UINT() cast</li>
-<li>Fix bug 592357: Cannot specify port for database connection.  You can now add a port number using ":<port>" (e.g. ":100") to the end of the host specification in the Open and Save As dialog for databases.</li>
+<li>Fix bug 592357: Cannot specify port for database connection.  You can now add a port number using ":&lt;port&gt;" (e.g. ":100") to the end of the host specification in the Open and Save As dialog for databases.</li>
 <li>Fix bug 592021: Budget Report: Options to show actual, budgeted and diff don't work</li>
 <li>Fix minor i18n issues. 1) Don't translate gtk stock button labels. 2) Don't split sentences when translating. 3) Exclude formatting from translatable messages when possible</li>
 <li>Updated German translation</li>
