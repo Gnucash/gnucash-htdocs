@@ -1,0 +1,357 @@
+<b>Announcement:</b> GnuCash 2.3.12 (Unstable) Release
+2010-04-21
+
+<h2>GnuCash 2.3.12 (Unstable) released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.3.12, the thirteenth of several unstable 2.3.x releases of the GnuCash Free Accounting Software which will eventually lead to the stable version 2.4.0. With this new release series, GnuCash can use an SQL database using SQLite3, MySQL or PostgreSQL. It runs on GNU/Linux, *BSD, Solaris, Microsoft Windows and Mac OSX.</p>
+
+<div class="dialog warning">
+<p><b>WARNING:</b> This is an *UNSTABLE* version of Gnucash.</p>
+<p>This release is intended for developers and testers who want to help tracking down all those bugs that are still in there.</p>
+<p>Make sure you make backups of any files used in testing versions of GnuCash in the 2.3.x series. Although the developers go to great lengths to ensure that no data will be lost we cannot guarantee that your data will not be affected if for some reason GnuCash crashes in testing these releases.</p>
+</div>
+
+<div class="dialog note">
+<p><b>NOTE:</b> The latest stable version is 2.2.9.</p>
+</div>
+
+<p>PLEASE TEST TEST AND TEST SOME MORE any and all features important to you.
+Then post any bugs you find to bugzilla</p>
+<p>Major changes in the 2.3.x release include;
+<ul>
+<li>In addition to the XML backend, Gnucash can now use a SQLite3, MySQL or PostgreSQL database to store the data. This is a new implementation using libdbi. It supports all features including the business features.  In order to build with this, add --enable-dbi to the configure command.  In addition to the libdbi-dev package for your distribution, you will also need the appropriate DBD (libdbi driver) package for sqlite3, mysql or postgresql.</li>
+<li>As a replacement for the current GtkHTML HTML engine used to display reports and graphs, Gnucash can use WebKit. WebKit is the engine used by Google Chrome on Windows and Safari on Apple.  In order to build with this, add --enable-webkit to the configure command.  You will need an appropriate webkit-dev package.  On win32, you will need to download the webkit-1.1.5-win32.zip file from the source repository and put it into the downloads directory of your gnucash build area.</li>
+<li>Updated to AqBanking 3 on Win32.</li>
+</ul>
+
+<p>Strings are frozen.  This means no new changes will be introduced which change any text displayed by Gnucash.  Therefore, final translations for 2.4.0 release may begin.</p>
+
+<p>Changes between 2.3.11 and 2.3.12 include:
+
+<ul>
+<li>Bugs fixed</li>
+<ul>
+<li>Fix #588816 - Heading Banner Image does not display or print on invoice reports
+
+Along with a new version of webkit which properly handles local image files, a change was needed so that instead of creating an html string and feeding it directly to webkit, it is exported to a temp file which is then loaded as a file:// URI.  On Linux, if this is not done, any embedded images do not appear, and there is a console message that local resources can't be loaded.  On Windows, the embedded images don't appear, possibly for the same reason, but I'm not sure where the console messages go.  </li>
+<li>Bug #525821 - new or edited account names should be checked for reserved chars like ":"
+Addendum: Fix compatibility with older Gtk versions.</li>
+<li>Bug #525821 - new or edited account names should be checked for reserved chars like ":"
+This patch checks if the separator character is used in account names when loading
+a data file, or when changing the separator character in the preferences.
+If the separator character is incompatible with some account names, a warning
+dialog box is popped up explaining the situation. This dialog also lists the
+violating account names.
+Additionally, the preferences dialog will show a warning sign as long as the separator
+clashes with some account names. The tooltip for this sign will also display the
+violating account names.</li>
+<li>Bug #613963 - GnuCash opens empty window when no state file is found</li>
+<li>Bug #612566 - Build failure with glib 2.10 - undefined gdk_color_to_string - part 2
+Create the necessary HAVE_GTK_2_12 check in configure.in</li>
+<li>Bug #612566 - Build failure with glib 2.10 - undefined gdk_color_to_string
+From modified patch by Bob</li>
+<li>Bug #605802 - Can't input Japanese characters at an account register window on windows with SCIM, IIIMF and XIM
+This patch by Yasuaki Taniguchi fixes the business register.</li>
+<li>Bug #613655 - Cannot load MYsql data, fix invalid state file name</li>
+<li>Fix #613574 - Cannot create/save new employees using MySQL backend
+
+Wrong gobject property name used when creating "username" property - sql backend couldn't read it.  </li>
+<li>Fix bug #613375
+
+Odd that this affected only OSX, as the fix is clearly consistent with the GtkLabel "ellipsize" property documentation. (I.e., the packing "expand" property must be TRUE on notebook labels.) </li>
+<li>Bug #610675: Re-apply r18918, and now with the account color.</li>
+<li>Bug #610675: Re-apply r18918, but only the tooltip fixing.</li>
+<li>Bug #610675: Re-apply r18918 but with the relevant event_box not visible on Windows.
+
+This patch contains only the changed widget order (no color yet).</li>
+<li>Make sure we include glade headers (#613326)</li>
+</ul>
+
+<li>Updated translations or translation-related changes</li>
+<ul>
+<li>Update Japanese names of accounts. And remove empty ja_JP.EUC directory.
+
+Patch by Yasuaki Taniguchi.</li>
+<li>Update of Brazilian Portuguese translation by Miguel Rozsas</li>
+<li>Updated Dutch translation, copied from the Translation Project.</li>
+<li>Update German translation.</li>
+<li>Updated Danish translation, copied from the Translation Project.</li>
+<li>Merge po templates with latest string changes (mostly the removal of taxtxf.scm from translation)</li>
+<li>I18n: Remove strings of the US tax report from translation because this report makes sense only in English.</li>
+<li>I18n: Mark forgotten string for translation. Pointed out by Yasuaki Taniguch.</li>
+<li>Updated Japanese translation, copied from the Translation Project.</li>
+</ul>
+
+<li>Other user-visible changes</li>
+<ul>
+<li>Enable the use of gnome-keyring during loading and saving of data.
+- The database passwords will no longer be stored in history
+- During save as, the user-entered password will be stored in gnome-keyring
+- During open, the user-entered password will be stored in gnome-keyring
+- When a file is opened from history (no file specified at startup or
+  user selects an entry in the File menu's history) the password is
+  fetched from the gnome-keyring.
+
+This currently works on linux. On Mac OS X or Windows no passwords are stored
+and the user is asked for a password when a file is loaded from history.
+Adding keyring/keychain capability on these systems is tbd.</li>
+<li>When printing WebKit based reports respect the Page Setup settings.
+If webkit_web_frame_print_full exists in the version of WebKit being used then 
+use it with a GtkPrintOperation which has been initialized from the Page
+Setup data.</li>
+<li>Make the calculations more nearly the same as the older balance sheet report
+
+Calculate retained earnings or loss from income and expense accounts and
+label the amount needed to balance the books as the imbalance amount
+instead of retained earnings or loss.</li>
+<li>Update eguile based balance sheet report to work with current GnuCash.</li>
+<li>Add the eguile based balance sheet report.
+
+This version is directly from the wiki at
+&lt;http://wiki.gnucash.org/wiki/Custom_Reports_Using_Eguile&gt;
+and won't work in the current version of GnuCash.  It is included for 
+reference purposes.</li>
+<li>Can't add or update currencies in 2.3.11
+Reported by Markus Scheffler on Apr 2 via gnucash-user ML</li>
+<li>Open/Save As...: configure enter/double click to run the default action.</li>
+</ul>
+
+<li>Other code/build changes</li>
+<ul>
+<li>Add functions to compare 2 business objects for equality, and use them in 'make check' tests.
+
+Adds functions to compare 2 business objects for equality.  The 'make check' tests can then use these functions to store and reload objects and compare them for equality.  This allows the sql backend to be tested.  </li>
+<li>Check for webkit_web_view_load_uri() function, and if not available, fall back to webkit_web_view_load_html_string().
+
+This change also changes the config #define name from HAVE_WEBKIT_PRINT_FULL to HAVE_WEBKIT_WEB_FRAME_PRINT_FULL to be a bit more descriptive.  </li>
+<li>Change default from --disable-dbi to --enable-dbi.
+
+This is needed so that 'make distcheck' will work with the business sql backend tests.  </li>
+<li>Disable transaction log in backend test so that there aren't log files left lying around to make 'distcheck' fail.  </li>
+<li>Add .h files to EXTRA_DIST to ensure they are put into tarball </li>
+<li>Fix test dependencies </li>
+<li>Ensure necessary .h files are included in EXTRA_DIST </li>
+<li>Remove reference to GNC_TEST_SRFI_LOAD_CMD since we no longer support local srfi's.  </li>
+<li>Assume webkit functions exist on win32 </li>
+<li>Small corrections in the comments of gnc-commodity.h
+
+1 typo
+1 moved file
+1 complement
+
+Patch by Frank H. Ellenberger</li>
+<li>When updating book counters for business objects (in book slots), ensure they're saved.
+</li>
+<li>Allow QTDIR to be defined either in pure windows format (c:\xyz\def) or unix format (/c/xyz/def) without ISS bailing out.
+Previously, only unix format worked.</li>
+<li>pexports is only available if MSVC is installed. Encapsulate it in a conditional.</li>
+<li>Move one more MSVC-only line inside the MSVC test</li>
+<li>Fix gnucash-gdb.in to use gdb from the right place </li>
+<li>Change the iso-4217 generator script to accept the srcdir as cmdline argument instead of an env variable.</li>
+<li>Insert missing "format:" - otherwise it didn't build for me.
+Additional simplifying git expressions.
+Patch by Frank H. Ellenberger</li>
+<li>Remove unneeded path conversion on Windows</li>
+<li>Add note about required Qt for dist.sh + some typo fixes</li>
+<li>Fix crash when trying to unset a parameter via the environment config file</li>
+<li>Fix Windows build after introduction of the environment config file.</li>
+<li>Revive gnucash-setup-env on OSX/Quartz.
+This fixes the OSX issues caused by the introduction of 
+the environment config file.</li>
+<li>Fix MacOSX keyring test in configure to work and make gnc-keyring.c compile if it does.</li>
+<li>Initialize new_val in environment_override to avoid a compiler warning.</li>
+<li>G_PATH_SEPARATOR is not used in the environment config file. Remove it from the make script.</li>
+<li>Make sure only the quartz build uses environment-osx.in</li>
+<li>Remove local srfi's and require guile 1.6.7 or better.
+All now supported versions of guile come bundled with these
+srfi's, so there's no need to keep our own copies.</li>
+<li>Have the gnucash binary setup its required environment by itself
+
+- New "environment" config file that holds the environment modifications to make
+- Added a parser for this file that does the actual modification
+  of the environment (in gnucash-bin.c)
+- Eliminate the old gnucash-setup-env script</li>
+<li>Configure: fix password store test</li>
+<li>Upgrade win32 version of webkit from 1.1.5 to 1.1.90.
+
+This version contains changes required to fix #588816 (Heading Banner Image does not display or print
+on invoice reports).  Note that this bug won't be fixed until some gnucash changes are checked in as well.</li>
+<li>Configure: group platform dependent tests</li>
+<li>Fix missing printf format string</li>
+<li>Fix indentation with astyle
+The indentation was mixed up due to the unusual IF_TYPE macro, now removed.</li>
+<li>Replace IF_TYPE macro with a validation function
+The macro is quite ugly: it's not a complete if condition (missing closing bracket)
+which makes the code using it difficult to read and error-prone.
+Even astyle got confused by it.
+The replacement code is slightly longer (two lines per replaced IF_TYPE invocation)
+but clean and readable.</li>
+<li>Remove redundant page tab setting code.
+The tab is set again some time later in the gnc_main_window_connect function.</li>
+<li>Add svn:ignore properties</li>
+<li>Code cleanup in binreloc: Remove unused init_lib function. Add possibility to set the looked-up exe path from somewhere else.
+
+Remove symbol mangling because r18940 already added the gnc_* prefix,
+hence the symbol names are unique to gnucash anyway.</li>
+<li>Re-indentation of source code (sql parts).
+
+This also strips trailing whitespaces from lines where they existed.
+This re-indentation was done using astyle-1.24 using the following options:
+
+astyle --indent=spaces=4 --brackets=break --pad-oper --pad-header --suffix</li>
+<li>Re-indentation of source code.
+
+This also strips trailing whitespaces from lines where they existed.
+This re-indentation was done using astyle-1.24 using the following options:
+
+astyle --indent=spaces=4 --brackets=break --pad-oper --pad-header --suffix=none</li>
+<li>Rename the type GUID into GncGUID because on Windows, the system headers have a type GUID which clashes with ours.
+
+Note that only the type was renamed, but not any enums or function names.
+Hence, the scheme wrappers should be unchanged completely (hopefully).
+
+Discussed at http://lists.gnucash.org/pipermail/gnucash-devel/2010-March/027679.html</li>
+<li>Add business backend sql test infrastructure.
+
+At this point, the test creates a customer, saves it to an sqlite3 db, loads it and compares the original and the loaded customer.  Will be expanded to test other business objects. </li>
+<li>Add deep comparison routines for test purposes
+
+1) Add routine gncCustomerEqual() which will do a deep comparison between two customers
+2) Add routine gncAddressEqual() which will do a deep comparison between two addresses
+3) Add more GncAddress gobject parameters for the remaining data items </li>
+<li>Changes in dbi test infrastructure
+
+1) Now that the various objects .c files can compare objects in different books, remove the duplicate copies.
+2) Create a .la so that the business sql test code can use some common test infrastructure. </li>
+<li>Extend xaccXXXXXEqual() routines so that they can compare objects in different books to see if they have the same contents.  </li>
+<li>Set some more line-ending style properties.</li>
+<li>Set the desired line-ending style to the correct value on the server side.
+
+Without the svn:eol-style property, SVN checkouts on windows tend to appear
+with varying line endings. The only possible way around this in svn is to
+set the expected line endings as svn properties.</li>
+<li>Update dbi tests - more object types are now saved and loaded </li>
+<li>Add new CPP macros which make it cleaner to have conditional compilation based on compiler/system and options selected during config
+
+Examples:
+
+#if COMPILER(MSVC)
+#if COMPILER(GCC)
+
+#if ENABLE(NLS)
+#if HAVE(PUTENV)
+
+This platform.h file includes config.h, so that doesn't need to be included any more.
+
+PLATFORM(X) is based on the definition of GNC_PLATFORM_X
+COMPILER(X) is based on the definition of GNC_COMPILER_X.  At this point, only COMPILER(GCC), COMPILER(MSVC), COMPILER(MSVC7) and COMPILER(MINGW) are determined.
+HAVE(X) is based on HAVE_X from config.h
+ENABLE(X) is based on ENABLE_X from config.h
+USE(X) is based on GNC_USE_X from config.h
+
+Having these determinations at a central point makes it easier to add new platforms and easier to conditionally compile based on them.  </li>
+<li>Create splits-&gt;accounts sql index and tx-&gt;post_date index when creating new databases </li>
+<li>Cleanup cruft and an error from r18945</li>
+<li>Whitespace cleanup</li>
+<li>Forgot to delete a diagnostic in 18941</li>
+<li>Fixup binreloc, which wasn't working correctly on OSX
+
+Most changes are to rename the functions named gbr_* to gnc_gbr_*, so
+that our modified binreloc (to provide mac bundle support) doesn't
+collide with binreloc implementations in other libraries. (The instant
+case was in libenchant.)
+
+Also moved the IGE_MAC_CFLAGS and IGE_MAC_LIBS lines from
+engine/Makefile.am to core-utils/Makefile.am. This was missed when
+binreloc was moved.
+
+And last, there was a minor error in the original OSX binreloc patch:
+At line 68, #elif MAC_INTEGRATION should be (and now is) #elif defined
+MAC_INTEGRATION.  </li>
+<li>Add getter/setter for transaction posted-date as a GDate.
+
+In addition to the known timespec, the date is also stored
+as a kvp_value of TYPE_GDATE so that we know afterwards this
+date has really been set as a date.</li>
+<li>Add a GDate kvp_value type including conversions from and to all sorts of thingys.
+
+Also, removed the default: switch clauses when handling a
+kvp_value so that the compiler will already complain about
+unhandled enum values.</li>
+<li>Fix Windows installer doc to have perl &gt;= 5.8 instead of 5.10</li>
+</ul>
+
+<li>Cutecash</li>
+
+Some of the GnuCash developers have decided to rewrite the UI for the cross-platform Qt toolkit from TrollTech.  The goal is a simpler UI which is more powerful and easier to develop.  This project has gotten the name "Cutecash".  It uses the same back-ends and engine as gnucash.  Only the UI is different.  The source for the Cutecash UI is in the same tree (and therefore, the tarballs) as GnuCash, but at this point, no MAC or Win32 builds are being produced.
+<ul>
+<li>Cutecash: Add install and packaging rules.
+
+Running "make package" will produce a binary package.
+Running "make package_source" will produce a source package.</li>
+<li>Win/MSVC compatibility: Replace g_* file operations by the direct calls into the MSVC runtime.
+
+This tries to avoid a collision between glib's C runtime vs.
+the one that is used by MSVC (and hence also Qt) by using
+file access only through MSVC's one.</li>
+<li>Win32: Add mingw cutecash build to the install.sh script, enabled by WITH_CUTECASH=yes.</li>
+<li>Cutecash: Slightly decrease debug output verbosity.</li>
+<li>MSVC: Add creation of MSVC import library of libdbi.</li>
+<li>Fix CMake for building the dbi backend.</li>
+<li>Cutecash: Fix missing #ifdefs for dbi calls.</li>
+<li>Cutecash: Compile &amp; link SQL backend as well (but there is no GUI for this yet)</li>
+<li>Cutecash: Fix memory leak of missing cleanup of RecentFileMenu object.</li>
+<li>MSVC compatibility: MSVC must not use g_fopen because it uses a different C runtime than the rest of (MSVC) file-handling functions.</li>
+<li>MSVC compatibility: Always initialize all members of the QofObject struct.</li>
+<li>Cutecash: Add more event handler to the account windows so that they will be deleted upon book closing.</li>
+<li>Cutecash: Code cleanup. Avoid crashes when undoing adding of new transactions by not deleting the tmp transaction object.
+
+Also, correctly set the document state to "clean" after saving.</li>
+<li>Cutecash: Implement account selection in new transaction correctly.</li>
+<li>Cutecash: Implement entering new transactions in the register.
+
+Only the account selection is still missing.</li>
+<li>Cutecash: Add empty line for entering a new transaction in the register. Doesn't yet store data, though.</li>
+<li>Cutecash: Introduce separate base class GncInstance for QofInstance methods.
+
+This is the base class for Account, Book, Commodity, Split, Transaction.</li>
+<li>Cutecash: Add deletion of rows/transactions (through "Cut"). With Undo. Hee Hee.</li>
+<li>Cutecash: Fix file loading, saving, and save-as. Works fine now.
+
+Also, use the new GDate setter/getter for the transaction time.</li>
+<li>Cutecash: Add separate Cmd class for setting the amount/value.
+
+Setting the amount in the register now works.</li>
+<li>Enable editing of the "other" account of a transaction.
+
+Register Account and our other types in the QMetaType system
+so that QVariant can hold it and pass it between the model,
+view, and delegate. Implement AccountSelectionDelegate that
+presents a QComboBox editor widget for account selection.</li>
+</ul>
+
+<h3>Caveats for Testers</h3>
+<p>Any 2.3.x version might crash unexpectedly at any point during runtime. If you test some serious work in a 2.3.x release and are using the XML file backend for data storage, make sure you hit "Save" after every non-trivial workstep.  If you are using the SQL backend, this is not required as every change is saved immediately to the database.<p>
+<p>The documentation has had screenshots updated, however, many help texts usually only refers to the 1.8.x series. Everyone is invited to help improve the documentation; see http://wiki.gnucash.org/wiki/Development on how to get involved.</p>
+
+<h3>How can you help?</h3>
+<p>Testing: Test it and help us discover all bugs that might show up in there.  Please enter each and every bug into bugzilla.</p>
+<p>Translating: The new release comes with some new translation strings. If you consider contributing a translation, we invite you to test this release already. A string freeze will be announced in one of the later 2.3.x releases.  Please check http://wiki.gnucash.org/wiki/Translation_Status for updates on this.</p>
+<p></p>
+<p>We would like to encourage people to test this and any further releases as much as possible and submit bug reports in order that we can polish GnuCash to be as stable as possible for the 2.4.0 release in a few weeks. Then post any bugs you find to <a href="http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">bugzilla</a></p>
+
+<h3>Getting GnuCash</h3>
+<p>Source code for GnuCash 2.3.12 can be downloaded from multiple locations:
+<ul>
+<li><a href="http://www.gnucash.org/download.phtml">The GnuCash website</a></li>
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.12.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.12.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/2.3.12/">all files</a>.</li>
+<li>You can also checkout the sources directly from the subversion repository with this command:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/trunk gnucash</span></li>
+</ul></p>
+
+<p>To install GnuCash, you will need Gnome 2, guile, slib. In addition you will need swig if compiling from subversion.</p>
+
+<h3>Win32 binary</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.12-setup.exe">Gnucash 2.3.12 Win32 setup executable</a> can be downloaded from Sourceforge as well.
+
+<h3>About the Program</h3>
+<p>GnuCash is a free, open source accounting program released under the GNU General Public License (GPL) and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash began in 1997, and its first stable release was in 1998.</p>
