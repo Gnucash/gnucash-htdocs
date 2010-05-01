@@ -45,7 +45,7 @@ pl: po/pl.po
 pt_PT: po/pt_PT.po
 	msgfmt po/pt_PT.po -o pt_PT/LC_MESSAGES/gnucash-htdocs.mo
 
-zh_CN: po/pt_PT.po
+zh_CN: po/zh_CN.po
 	msgfmt po/zh_CN.po -o zh_CN/LC_MESSAGES/gnucash-htdocs.mo
 
 
