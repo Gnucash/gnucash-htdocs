@@ -16,7 +16,7 @@ msgmerge: po/gnucash-htdocs.pot
 	  msgmerge -U po/$$f.po po/gnucash-htdocs.pot ; \
 	done
 
-mos: de es fr it ja nb nl pl pt_PT
+mos: de es fr it ja nb nl pl pt_PT zh_CN
 
 de: po/de.po
 	msgfmt po/de.po -o de/LC_MESSAGES/gnucash-htdocs.mo
