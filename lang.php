@@ -37,7 +37,7 @@ if ($locale == "") {
         }
         # nothing matched, use default language
         if ($locale == "") { $locale = "en_US"; }
-        $lang_dir = $supported_language[$locale];
+        $lang_dir = $supported_languages[$locale];
 }
 
 # We should have a locale now, let's set up the required bits and pieces to show
