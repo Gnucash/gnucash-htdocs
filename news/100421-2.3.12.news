@@ -17,7 +17,7 @@
 
 <p>PLEASE TEST TEST AND TEST SOME MORE any and all features important to you.
 Then post any bugs you find to bugzilla</p>
-<p>Major changes in the 2.3.x release include;
+<h3>Major changes in the 2.3.x release include</h3>
 <ul>
 <li>In addition to the XML backend, Gnucash can now use a SQLite3, MySQL or PostgreSQL database to store the data. This is a new implementation using libdbi. It supports all features including the business features.  In order to build with this, add --enable-dbi to the configure command.  In addition to the libdbi-dev package for your distribution, you will also need the appropriate DBD (libdbi driver) package for sqlite3, mysql or postgresql.</li>
 <li>As a replacement for the current GtkHTML HTML engine used to display reports and graphs, Gnucash can use WebKit. WebKit is the engine used by Google Chrome on Windows and Safari on Apple.  In order to build with this, add --enable-webkit to the configure command.  You will need an appropriate webkit-dev package.  On win32, you will need to download the webkit-1.1.5-win32.zip file from the source repository and put it into the downloads directory of your gnucash build area.</li>
@@ -26,10 +26,9 @@ Then post any bugs you find to bugzilla</p>
 
 <p>Strings are frozen.  This means no new changes will be introduced which change any text displayed by Gnucash.  Therefore, final translations for 2.4.0 release may begin.</p>
 
-<p>Changes between 2.3.11 and 2.3.12 include:
+<h3>Changes between 2.3.11 and 2.3.12 include:</h3>
 
-<ul>
-<li>Bugs fixed</li>
+<p>Bugs fixed</p>
 <ul>
 <li>Fix #588816 - Heading Banner Image does not display or print on invoice reports
 
@@ -67,7 +66,7 @@ This patch contains only the changed widget order (no color yet).</li>
 <li>Make sure we include glade headers (#613326)</li>
 </ul>
 
-<li>Updated translations or translation-related changes</li>
+<p>Updated translations or translation-related changes</p>
 <ul>
 <li>Update Japanese names of accounts. And remove empty ja_JP.EUC directory.
 
@@ -82,7 +81,7 @@ Patch by Yasuaki Taniguchi.</li>
 <li>Updated Japanese translation, copied from the Translation Project.</li>
 </ul>
 
-<li>Other user-visible changes</li>
+<p>Other user-visible changes</p>
 <ul>
 <li>Enable the use of gnome-keyring during loading and saving of data.
 - The database passwords will no longer be stored in history
@@ -116,7 +115,7 @@ Reported by Markus Scheffler on Apr 2 via gnucash-user ML</li>
 <li>Open/Save As...: configure enter/double click to run the default action.</li>
 </ul>
 
-<li>Other code/build changes</li>
+<p>Other code/build changes</p>
 <ul>
 <li>Add functions to compare 2 business objects for equality, and use them in 'make check' tests.
 
@@ -281,54 +280,6 @@ unhandled enum values.</li>
 <li>Fix Windows installer doc to have perl &gt;= 5.8 instead of 5.10</li>
 </ul>
 
-<li>Cutecash</li>
-
-Some of the GnuCash developers have decided to rewrite the UI for the cross-platform Qt toolkit from TrollTech.  The goal is a simpler UI which is more powerful and easier to develop.  This project has gotten the name "Cutecash".  It uses the same back-ends and engine as gnucash.  Only the UI is different.  The source for the Cutecash UI is in the same tree (and therefore, the tarballs) as GnuCash, but at this point, no MAC or Win32 builds are being produced.
-<ul>
-<li>Cutecash: Add install and packaging rules.
-
-Running "make package" will produce a binary package.
-Running "make package_source" will produce a source package.</li>
-<li>Win/MSVC compatibility: Replace g_* file operations by the direct calls into the MSVC runtime.
-
-This tries to avoid a collision between glib's C runtime vs.
-the one that is used by MSVC (and hence also Qt) by using
-file access only through MSVC's one.</li>
-<li>Win32: Add mingw cutecash build to the install.sh script, enabled by WITH_CUTECASH=yes.</li>
-<li>Cutecash: Slightly decrease debug output verbosity.</li>
-<li>MSVC: Add creation of MSVC import library of libdbi.</li>
-<li>Fix CMake for building the dbi backend.</li>
-<li>Cutecash: Fix missing #ifdefs for dbi calls.</li>
-<li>Cutecash: Compile &amp; link SQL backend as well (but there is no GUI for this yet)</li>
-<li>Cutecash: Fix memory leak of missing cleanup of RecentFileMenu object.</li>
-<li>MSVC compatibility: MSVC must not use g_fopen because it uses a different C runtime than the rest of (MSVC) file-handling functions.</li>
-<li>MSVC compatibility: Always initialize all members of the QofObject struct.</li>
-<li>Cutecash: Add more event handler to the account windows so that they will be deleted upon book closing.</li>
-<li>Cutecash: Code cleanup. Avoid crashes when undoing adding of new transactions by not deleting the tmp transaction object.
-
-Also, correctly set the document state to "clean" after saving.</li>
-<li>Cutecash: Implement account selection in new transaction correctly.</li>
-<li>Cutecash: Implement entering new transactions in the register.
-
-Only the account selection is still missing.</li>
-<li>Cutecash: Add empty line for entering a new transaction in the register. Doesn't yet store data, though.</li>
-<li>Cutecash: Introduce separate base class GncInstance for QofInstance methods.
-
-This is the base class for Account, Book, Commodity, Split, Transaction.</li>
-<li>Cutecash: Add deletion of rows/transactions (through "Cut"). With Undo. Hee Hee.</li>
-<li>Cutecash: Fix file loading, saving, and save-as. Works fine now.
-
-Also, use the new GDate setter/getter for the transaction time.</li>
-<li>Cutecash: Add separate Cmd class for setting the amount/value.
-
-Setting the amount in the register now works.</li>
-<li>Enable editing of the "other" account of a transaction.
-
-Register Account and our other types in the QMetaType system
-so that QVariant can hold it and pass it between the model,
-view, and delegate. Implement AccountSelectionDelegate that
-presents a QComboBox editor widget for account selection.</li>
-</ul>
 
 <h3>Caveats for Testers</h3>
 <p>Any 2.3.x version might crash unexpectedly at any point during runtime. If you test some serious work in a 2.3.x release and are using the XML file backend for data storage, make sure you hit "Save" after every non-trivial workstep.  If you are using the SQL backend, this is not required as every change is saved immediately to the database.<p>
