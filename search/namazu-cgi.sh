@@ -11,7 +11,7 @@ if [ -n "$langinfo" ] ; then
   SCRIPT_NAME="$SCRIPT_NAME/$langinfo"
   export LANG
 fi
-SCRIPT_NAME="$SCRIPT_NAME/"
+#SCRIPT_NAME="$SCRIPT_NAME/"
 export SCRIPT_NAME
 
 exec /var/www/cgi-bin/namazu.cgi
