@@ -1,1 +1,0 @@
-../emulate_globals_on.php
