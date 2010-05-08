@@ -1,5 +1,6 @@
+languages = de es fr it ja nb nl pl pt_PT zh_CN
 
-.PHONY: pot mos msgmerge de es fr it ja nb nl pl pt_PT zh_CN nmz nmz.lang nmz nmz.onefile
+.PHONY: pot mos msgmerge ${languages} nmz nmz.lang nmz nmz.onefile
 
 pot: po/POTFILES po/gnucash-htdocs.pot
 
@@ -12,12 +13,11 @@ po/gnucash-htdocs.pot: po/POTFILES
 	xgettext -f po/POTFILES -L PHP -o po/gnucash-htdocs.pot
 
 msgmerge: po/gnucash-htdocs.pot
-	for f in de es fr it ja nb nl pl pt_PT zh_CN ; do \
+	for f in ${languages} ; do \
 	  msgmerge -U po/$$f.po po/gnucash-htdocs.pot ; \
 	done
 
-mos: de es fr it ja nb nl pl pt_PT zh_CN
-
+mos: ${languages} 
 de: po/de.po
 	msgfmt po/de.po -o de/LC_MESSAGES/gnucash-htdocs.mo
 
@@ -79,6 +79,6 @@ nmz:
 	$(MAKE) nmz.lang
 	# other NMZ langs not merged into po system: ja
 	# note: PL is only "mostly" translated.  it diff's differently
-	for l in de es fr nb nl pl pt_PT ; do \
+	for l in en ${languages} ; do \
 	  $(MAKE) nmz.lang LOCALFILE=$$l/local.php FILETAIL=.$$l ; \
 	done
