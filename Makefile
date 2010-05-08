@@ -1,6 +1,8 @@
-languages = de es fr it ja nb nl pl pt_PT zh_CN
+languages = de es fr it nb nl pl pt_PT zh_CN
+languages_with_template = ja
+all_languages = ${languages} ${languages_with_template}
 
-.PHONY: pot mos msgmerge ${languages} nmz nmz.lang nmz nmz.onefile
+.PHONY: pot mos msgmerge ${all_languages} nmz nmz.lang nmz nmz.onefile
 
 pot: po/POTFILES po/gnucash-htdocs.pot
 
@@ -13,11 +15,11 @@ po/gnucash-htdocs.pot: po/POTFILES
 	xgettext -f po/POTFILES -L PHP -o po/gnucash-htdocs.pot
 
 msgmerge: po/gnucash-htdocs.pot
-	for f in ${languages} ; do \
+	for f in ${all_languages} ; do \
 	  msgmerge -U po/$$f.po po/gnucash-htdocs.pot ; \
 	done
 
-mos: ${languages} 
+mos: ${all_languages} 
 de: po/de.po
 	msgfmt po/de.po -o de/LC_MESSAGES/gnucash-htdocs.mo
 
