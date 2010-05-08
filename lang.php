@@ -5,7 +5,7 @@ if (array_key_exists('lang', $_GET)) { $locale = $_GET["lang"]; }
 # choose a default language based on the client browser's preferred
 # language list
 echo ("<!-- LANG: $LANG, ENV_LANG: ".$_ENV['LANG']." , SCRIPT_NAME: ".$_SERVER['SCRIPT_NAME'].", PATH_INFO: ".$_SERVER['PATH_INFO']." -->\n");
-echo ("<!-- top_dir: $top_dir -->\n");
+echo ("<!-- top_dir: $top_dir, me: ".__FILE__."-->\n");
 
 
 # key: locale, value: lang_dir
