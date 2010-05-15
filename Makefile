@@ -2,6 +2,8 @@ languages = de es fr it nb nl pl pt_PT zh_CN
 languages_with_template = ja
 all_languages = ${languages} ${languages_with_template}
 
+.SECONDEXPANSION:
+
 .PHONY: pot mos msgmerge ${all_languages} nmz nmz.lang nmz nmz.onefile
 
 pot: po/POTFILES po/gnucash-htdocs.pot
@@ -20,36 +22,9 @@ msgmerge: po/gnucash-htdocs.pot
 	done
 
 mos: ${all_languages} 
-de: po/de.po
-	msgfmt po/de.po -o de/LC_MESSAGES/gnucash-htdocs.mo
 
-es: po/es.po
-	msgfmt po/es.po -o es/LC_MESSAGES/gnucash-htdocs.mo
-
-fr: po/fr.po
-	msgfmt po/fr.po -o fr/LC_MESSAGES/gnucash-htdocs.mo
-
-it: po/it.po
-	msgfmt po/it.po -o it/LC_MESSAGES/gnucash-htdocs.mo
-
-ja: po/ja.po
-	msgfmt po/ja.po -o ja/LC_MESSAGES/gnucash-htdocs.mo
-
-nb: po/nb.po
-	msgfmt po/nb.po -o nb/LC_MESSAGES/gnucash-htdocs.mo
-
-nl: po/nl.po
-	msgfmt po/nl.po -o nl/LC_MESSAGES/gnucash-htdocs.mo
-
-pl: po/pl.po
-	msgfmt po/pl.po -o pl/LC_MESSAGES/gnucash-htdocs.mo
-
-pt_PT: po/pt_PT.po
-	msgfmt po/pt_PT.po -o pt_PT/LC_MESSAGES/gnucash-htdocs.mo
-
-zh_CN: po/zh_CN.po
-	msgfmt po/zh_CN.po -o zh_CN/LC_MESSAGES/gnucash-htdocs.mo
-
+${all_languages}: po/$$@.po
+	msgfmt $< -o $@/LC_MESSAGES/gnucash-htdocs.mo
 
 ####################################################################
 #
