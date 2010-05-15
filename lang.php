@@ -1,4 +1,11 @@
 <?php
+$top_dir = ".";
+$home = $top_dir;
+$locale_dir = "locale";
+
+# get the cookie setting
+if (array_key_exists('lang_cookie', $_COOKIE)) { $locale = $_COOKIE['lang_cookie']; }
+
 # allow user override.
 if (array_key_exists('lang', $_GET)) { $locale = $_GET["lang"]; }
 
@@ -42,18 +49,21 @@ if ($locale == "") {
         $lang_dir = $supported_languages[$locale];
 }
 
+setcookie("lang_cookie", $locale);
+
 # We should have a locale now, let's set up the required bits and pieces to show
 # the website in that language.
-putenv("LANG=$locale");
-putenv("LANGUAGE=$locale");
-$locale_res = setlocale(LC_ALL, "");
+require_once("externals/gettext.inc");
+//putenv("LANG=$locale");
+//putenv("LANGUAGE=$locale");
+$locale_res = T_setlocale(LC_ALL, $locale);
 $domain = "gnucash-htdocs";
-if (! isset($text_dir)) { $text_dir = $top_dir; }
-$dir_res = bindtextdomain($domain, $text_dir);
+if (! isset($text_dir)) { $text_dir = $locale_dir; }
+$dir_res = T_bindtextdomain($domain, $text_dir);
 
 # Also specify that we want to receive the translated strings as UTF-8
-bind_textdomain_codeset($domain, 'UTF-8');
+T_bind_textdomain_codeset($domain, 'UTF-8');
 
-textdomain($domain);
-echo ("<!-- $locale , locale_res [$locale_res] , dir_res $dir_res -->\n");
+T_textdomain($domain);
+echo ("<!-- $locale , locale_res [$locale_res] , dir_res $dir_res, lang_cookie [$lang_cookie] -->\n");
 ?>

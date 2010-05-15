@@ -21,7 +21,7 @@ msgmerge: po/gnucash-htdocs.pot
 	  msgmerge -U po/$$f.po po/gnucash-htdocs.pot ; \
 	done
 
-mos: ${all_languages} 
+mos: ${all_languages}
 
 ${all_languages}: po/$$@.po
 	msgfmt $< -o $@/LC_MESSAGES/gnucash-htdocs.mo
@@ -40,15 +40,12 @@ TMPLBASE=search/templates/NMZ.
 # add when we have utf-8 translations: iconv -f UTF-8 -t ISO8859-1 
 
 nmz.onefile:
-	( echo '<?php include("$(LOCALFILE)"); ' ; \
-	  echo '$$home = "$(HOME)/$$lang_dir"; ' ; \
-	  echo '$$text_dir = "."; ?>'; \
+	( echo '$$text_dir = "."; ?>'; \
 	  cat $(TMPLBASE)$(FILE).php_tmpl ) | php -q > \
 	  $(TMPLBASE)$(FILE)$(FILETAIL)
 
 nmz.lang:
-	$(MAKE) nmz.onefile FILE=head
-	for f in body foot result.normal result.short tips ; do \
+	for f in head body foot result.normal result.short tips ; do \
 	  $(MAKE) nmz.onefile FILE="$$f"; \
 	done
 
@@ -57,5 +54,5 @@ nmz:
 	# other NMZ langs not merged into po system: ja
 	# note: PL is only "mostly" translated.  it diff's differently
 	for l in en ${languages} ; do \
-	  $(MAKE) nmz.lang LOCALFILE=$$l/local.php FILETAIL=.$$l ; \
+	  $(MAKE) nmz.lang FILETAIL=.$$l ; \
 	done

@@ -1,118 +1,117 @@
 <?php 
-$title = _("Documentation Project");
-include("local.php");
 include("lang.php");
+$title = T_("Documentation Project");
 include("emulate_globals_on.php");
 include("externals/header.phtml");
 include("externals/menu.phtml");
 ?>
 <div id="content">
 
-<h1><?php echo _("GnuCash Documentation Project");?></h1>
+<h1><?php echo T_("GnuCash Documentation Project");?></h1>
 
-<p><?php echo _("This page is the home of the Gnucash Documentation Project, our goal is to maintain a community of people working towards creation of high quality documentation for GnuCash.");?></p>
+<p><?php echo T_("This page is the home of the Gnucash Documentation Project, our goal is to maintain a community of people working towards creation of high quality documentation for GnuCash.");?></p>
 
-<p><?php echo _("Everything you need concerning GnuCash documentation should be here, if you notice something missing, email <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> and we will add it.");?></p>
+<p><?php echo T_("Everything you need concerning GnuCash documentation should be here, if you notice something missing, email <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> and we will add it.");?></p>
 
-<h2><?= _("Nightly Documentation Builds");?></h2>
-<h3><?= _("current unstable user documentation and developer documentation");?></h3>
+<h2><?= T_("Nightly Documentation Builds");?></h2>
+<h3><?= T_("current unstable user documentation and developer documentation");?></h3>
 
-<p><?php echo _("Every night a server builds the documentation from the current contents of the GnuCash subversion repository.  This includes the Developer Documentation from Doxygen and User Documentation for the current unstable version of GnuCash.");?>
+<p><?php echo T_("Every night a server builds the documentation from the current contents of the GnuCash subversion repository.  This includes the Developer Documentation from Doxygen and User Documentation for the current unstable version of GnuCash.");?>
 
 <ul>
-  <li><?php echo _("Nightly Documentation Builds");?>:
+  <li><?php echo T_("Nightly Documentation Builds");?>:
     <ul>
-    <li><a href="http://svn.gnucash.org/docs/guide/"><?= _("Concepts Guide") ?></a></li>
-    <li><a href="http://svn.gnucash.org/docs/help/help.html"><?= _("Help Manual") ?></a></li>
-    <li><a href="http://svn.gnucash.org/docs/HEAD/"><?= _("Doxygen Developer Documentation") ?></a></li>
+    <li><a href="http://svn.gnucash.org/docs/guide/"><?= T_("Concepts Guide") ?></a></li>
+    <li><a href="http://svn.gnucash.org/docs/help/help.html"><?= T_("Help Manual") ?></a></li>
+    <li><a href="http://svn.gnucash.org/docs/HEAD/"><?= T_("Doxygen Developer Documentation") ?></a></li>
     </ul>
   </li>
 </ul>
 
-<h2><?=_("GnuCash v2.0 (current stable release)");?></h2>
+<h2><?=T_("GnuCash v2.0 (current stable release)");?></h2>
 
-<p><?php echo _("If you have a question about how to use GnuCash, you are in the right place. The first thing you should do is read the Help Manual and the Concepts Guide, most of your questions can probably be answered by these documents.");?></p>
-<p><?php echo _("The Help Manual is designed to be a quick reference of how to accomplish specific tasks and how to use the features in GnuCash. The Concepts Guide is designed to be an in depth guide to the concepts behind using GnuCash with a tutorial to show how to put those concepts into practice.");?></p>
+<p><?php echo T_("If you have a question about how to use GnuCash, you are in the right place. The first thing you should do is read the Help Manual and the Concepts Guide, most of your questions can probably be answered by these documents.");?></p>
+<p><?php echo T_("The Help Manual is designed to be a quick reference of how to accomplish specific tasks and how to use the features in GnuCash. The Concepts Guide is designed to be an in depth guide to the concepts behind using GnuCash with a tutorial to show how to put those concepts into practice.");?></p>
 
 
 <ul>
-  <li><?php echo _("Help Manual");?>
+  <li><?php echo T_("Help Manual");?>
     <ul>
-    <li><a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-help/help.html"><?php echo _("English");?> (HTML)</a></li>
-    <li><a href="<?=$top_dir;?>/docs/v2.0/de_DE/gnucash-help/help.html"><?php echo _("Deutsch");?> (HTML)</a></li>
-    <!-- <li><a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-help.pdf"><?php echo _("English");?> (PDF)</a></li> -->
+    <li><a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-help/help.html"><?php echo T_("English");?> (HTML)</a></li>
+    <li><a href="<?=$top_dir;?>/docs/v2.0/de_DE/gnucash-help/help.html"><?php echo T_("Deutsch");?> (HTML)</a></li>
+    <!-- <li><a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-help.pdf"><?php echo T_("English");?> (PDF)</a></li> -->
     </ul>
     </li>
   </li>
-  <li><?= _("Concepts Guide") ?>
+  <li><?= T_("Concepts Guide") ?>
     <ul>
-      <li><a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-guide/"><?php echo _("English");?> (HTML)</a></li>
-      <!-- <li><a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-guide.pdf"><?php echo _("English");?> (PDF)</a></li> -->
+      <li><a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-guide/"><?php echo T_("English");?> (HTML)</a></li>
+      <!-- <li><a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-guide.pdf"><?php echo T_("English");?> (PDF)</a></li> -->
     </ul>
   </li>
 </ul>
 
-<p><?php echo _("Please send an email to the <a href='mailto:gnucash-user@lists.gnucash.org'>gnucash-user</a> mailing list if you cannot find a satisfactory answer to your question within either the Help Manual or the Concepts Guide. We <b>want</b> feedback from you, it is only through your comments that we know how to modify the documentation.");?></p>
-<p><?php echo _("Additionally, you can talk to someone via IRC at irc.gnome.org channel \"#gnucash\" about your question.  Another resource is the <a href='http://wiki.gnucash.org/wiki/'>English</a> or <a href='http://linuxwiki.de/GnuCash'>Deutsch</a> GnuCash wikis. A wiki is an interactive website where registered users can ask and answer questions.");?></p>
+<p><?php echo T_("Please send an email to the <a href='mailto:gnucash-user@lists.gnucash.org'>gnucash-user</a> mailing list if you cannot find a satisfactory answer to your question within either the Help Manual or the Concepts Guide. We <b>want</b> feedback from you, it is only through your comments that we know how to modify the documentation.");?></p>
+<p><?php echo T_("Additionally, you can talk to someone via IRC at irc.gnome.org channel \"#gnucash\" about your question.  Another resource is the <a href='http://wiki.gnucash.org/wiki/'>English</a> or <a href='http://linuxwiki.de/GnuCash'>Deutsch</a> GnuCash wikis. A wiki is an interactive website where registered users can ask and answer questions.");?></p>
 
-<p><?php echo _("Some people have written HOWTO guides or tutorials. Note: the information presented in these sources may or may not be updated to the most recent version of GnuCash. If you are interested in doing development work on these documents, you should contact the original authors.");?></p>
+<p><?php echo T_("Some people have written HOWTO guides or tutorials. Note: the information presented in these sources may or may not be updated to the most recent version of GnuCash. If you are interested in doing development work on these documents, you should contact the original authors.");?></p>
 <ul>
-  <li><a href="http://code.neil.williamsleesmill.me.uk/otherdocs.html"><?php echo _("Neil Williams GnuCash documentation");?></a></li>
-  <li><a href="http://www.aerospacesoftware.com/GNU_Cash_for_Business_users_Howto_Guide.html"><?php echo _("GnuCash for Business Users");?></a>
-    (<a href="http://www.linas.org/mirrors/www.aerospacesoftware.com/2003.06.21/GNU_Cash_for_Business_users_Howto_Guide.html"><?php echo _("mirror");?></a>)</li>
+  <li><a href="http://code.neil.williamsleesmill.me.uk/otherdocs.html"><?php echo T_("Neil Williams GnuCash documentation");?></a></li>
+  <li><a href="http://www.aerospacesoftware.com/GNU_Cash_for_Business_users_Howto_Guide.html"><?php echo T_("GnuCash for Business Users");?></a>
+    (<a href="http://www.linas.org/mirrors/www.aerospacesoftware.com/2003.06.21/GNU_Cash_for_Business_users_Howto_Guide.html"><?php echo T_("mirror");?></a>)</li>
   <li><a href="http://www.austintek.com/gnucash/ncsa-gnucash-talk.html"><?php
-	echo _("Joe Mack's Tutorial");?></a></li>
+	echo T_("Joe Mack's Tutorial");?></a></li>
   <li><a href="http://www.object-refinery.com/gnucash/index.html"><?php
-	echo _("Dave Gilbert's User Guide (PDF)");?></a></li>
+	echo T_("Dave Gilbert's User Guide (PDF)");?></a></li>
 </ul>
 
-<h2><?php echo _("Older GnuCash Documentation");?></h2>
-<p><?php echo _("This section contains all the older GnuCash documentation. If you are using one of these old versions of GnuCash, it is highly recommended that you upgrade to the latest stable version.");?></p>
+<h2><?php echo T_("Older GnuCash Documentation");?></h2>
+<p><?php echo T_("This section contains all the older GnuCash documentation. If you are using one of these old versions of GnuCash, it is highly recommended that you upgrade to the latest stable version.");?></p>
 <ul>
   <li><b>GnuCash v1.8</b>:
-    <ul><b><?php echo _("Help Manual");?></b>:
-      <a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-help/help.html"><?php echo _("English");?> (HTML)</a>
-      <a href="<?=$top_dir;?>/docs/v1.8/de_DE/gnucash-help/help.html"><?php echo _("Deutsch");?> (HTML)</a>
-      <a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-help.pdf"><?php echo _("English");?> (PDF)</a>
+    <ul><b><?php echo T_("Help Manual");?></b>:
+      <a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-help/help.html"><?php echo T_("English");?> (HTML)</a>
+      <a href="<?=$top_dir;?>/docs/v1.8/de_DE/gnucash-help/help.html"><?php echo T_("Deutsch");?> (HTML)</a>
+      <a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-help.pdf"><?php echo T_("English");?> (PDF)</a>
     </ul>
-    <ul><b><?= _("Concepts Guide") ?></b>:
-      <a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-guide/"><?php echo _("English");?> (HTML)</a>
-      <a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-guide.pdf"><?php echo _("English");?> (PDF)</a>
+    <ul><b><?= T_("Concepts Guide") ?></b>:
+      <a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-guide/"><?php echo T_("English");?> (HTML)</a>
+      <a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-guide.pdf"><?php echo T_("English");?> (PDF)</a>
     </ul>
   </li>
   <li><b>GnuCash v1.6</b>: 
-  <a href="<?=$top_dir;?>/docs/v1.6/C/"><?php echo _("English");?></a> | 
-  <a href="<?=$top_dir;?>/docs/v1.6/de_DE/"><?php echo _("Deutsch");?></a> | 
-  <a href="<?=$top_dir;?>/docs/v1.6/es/"><?php echo _("Espagnol");?></a> | 
-  <a href="<?=$top_dir;?>/docs/v1.6/pt_PT/"><?php echo _("Portugu&ecirc;s");?></a></li>
+  <a href="<?=$top_dir;?>/docs/v1.6/C/"><?php echo T_("English");?></a> | 
+  <a href="<?=$top_dir;?>/docs/v1.6/de_DE/"><?php echo T_("Deutsch");?></a> | 
+  <a href="<?=$top_dir;?>/docs/v1.6/es/"><?php echo T_("Espagnol");?></a> | 
+  <a href="<?=$top_dir;?>/docs/v1.6/pt_PT/"><?php echo T_("Portugu&ecirc;s");?></a></li>
 </ul>
 
-<h2><?php echo _("Documentation Development");?></h2>
+<h2><?php echo T_("Documentation Development");?></h2>
 
-<h3><?php echo _("Interesting Links");?></h3>
-<?php echo _("The following links are for further sites that can help with the documentation and review process.");?>
+<h3><?php echo T_("Interesting Links");?></h3>
+<?php echo T_("The following links are for further sites that can help with the documentation and review process.");?>
 <ul>
 <li><a href='http://www.docbook.org'> DocBook: The Definitive Guide.</a></li>
 <li><a href='http://www.sagehill.net/docbookxsl/'>DocBook XSL: The Complete Guide</a>.</li>
 <li><a href='http://developer.gnome.org/projects/gup/hig/2.0/'> GNOME Human Interface Guidelines</a></li>
 </ul>
 
-<h3><?php echo _("For both reviewers and documentation writers");?></h3>
-<?php echo _("Please read the following guides. The new docs are based on the GNOME2 XML docbook system. Everyone wishing to help please follow these guides where possible when reviewing and/or writing docs.");?></p>
+<h3><?php echo T_("For both reviewers and documentation writers");?></h3>
+<?php echo T_("Please read the following guides. The new docs are based on the GNOME2 XML docbook system. Everyone wishing to help please follow these guides where possible when reviewing and/or writing docs.");?></p>
 <ul>
 <li><a href='http://developer.gnome.org/projects/gdp/styleguide.html'>The GNOME Documentation Style Guide</a></li>
 <li><a href='http://developer.gnome.org/projects/gdp/handbook.html'>The GNOME Handbook of Writing Software Documentation</a></li>
 </ul>
-<p><?php echo _("We suggest also subscribing to ");?><a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a>.</p>
+<p><?php echo T_("We suggest also subscribing to ");?><a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a>.</p>
 
-<h3><?php echo _("Reviewers");?></h3>
-<p><?php echo _("Please check out the documentation module from the GnuCash svn - gnucash-docs. For those not familiar with svn, the GnuCash wiki has a <a href='http://wiki.gnucash.org/wiki/Subversion'>description.</a> The only change to get the docs is to change the checkout gnucash to checkout gnucash-docs. You can also start from the current docs tarball.");?></p>
-<p><?php echo _("The best way of retaining comments about docs in an easy to find way for everyone would be to use <a href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> to file the bugs under documentation. This can also be done using bug-buddy.");?></p>
+<h3><?php echo T_("Reviewers");?></h3>
+<p><?php echo T_("Please check out the documentation module from the GnuCash svn - gnucash-docs. For those not familiar with svn, the GnuCash wiki has a <a href='http://wiki.gnucash.org/wiki/Subversion'>description.</a> The only change to get the docs is to change the checkout gnucash to checkout gnucash-docs. You can also start from the current docs tarball.");?></p>
+<p><?php echo T_("The best way of retaining comments about docs in an easy to find way for everyone would be to use <a href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> to file the bugs under documentation. This can also be done using bug-buddy.");?></p>
 
-<h3><?php echo _("Writers");?></h3>
-<p><?php echo _("Also checkout the docs svn as above. The usual procedure for contributors to GnuCash is to initially submit patches to the <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> mailing list. We will handle getting the patches added into svn until you are given an account. You can also add the patch to a bug report in bugzilla if you wish.");?></p>
-<p><?php echo _("Please let other writers know which section you wish to tackle. Please forward this to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> so that people can say 'hey I'm doing that already' or 'go ahead and do it'.");?></p>
-<p><?php echo _("You may also want to retain a local copy of the old documentation to refer to when writing. This still has a lot of useful information in it which hasn't been transferred to the new docs");?></p>
+<h3><?php echo T_("Writers");?></h3>
+<p><?php echo T_("Also checkout the docs svn as above. The usual procedure for contributors to GnuCash is to initially submit patches to the <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> mailing list. We will handle getting the patches added into svn until you are given an account. You can also add the patch to a bug report in bugzilla if you wish.");?></p>
+<p><?php echo T_("Please let other writers know which section you wish to tackle. Please forward this to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> so that people can say 'hey I'm doing that already' or 'go ahead and do it'.");?></p>
+<p><?php echo T_("You may also want to retain a local copy of the old documentation to refer to when writing. This still has a lot of useful information in it which hasn't been transferred to the new docs");?></p>
     
 </div>
 <?php include("externals/footer.phtml"); ?>

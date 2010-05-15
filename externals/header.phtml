@@ -19,7 +19,7 @@ if (isset($homepage)) { ?>
   <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="<?=$top_dir?>/atom.php">
 <?php } ?>
 
-<title><?= _($title); ?> | GnuCash</title>
+<title><?= T_($title); ?> | GnuCash</title>
 </head>
 
 <body>
@@ -30,18 +30,18 @@ if (isset($homepage)) { ?>
 </a>
 <br/>
 <span id="language">
-<?= _("Language"); ?>:
-  <a class="nav" href="<?=$top_dir;?>/en/<?=$current_page;?>">English</a>
-| <a class="nav" href="<?=$top_dir;?>/de/<?=$current_page;?>">Deutsch</a>
-| <a class="nav" href="<?=$top_dir;?>/es/<?=$current_page;?>">Espa&ntilde;ol</a>
-| <a class="nav" href="<?=$top_dir;?>/fr/<?=$current_page;?>">Fran&ccedil;ais</a>
-| <a class="nav" href="<?=$top_dir;?>/it/<?=$current_page;?>">Italiano</a>
-| <a class="nav" href="<?=$top_dir;?>/ja/<?=$current_page;?>">日本語</a> <!-- Japanese -->
-| <a class="nav" href="<?=$top_dir;?>/nl/<?=$current_page;?>">Nederlands</a>
-| <a class="nav" href="<?=$top_dir;?>/nb/<?=$current_page;?>">Norsk Bokm&aring;l</a>
+<?= T_("Language"); ?>:
+  <a class="nav" href="<?=$top_dir;?>/<?=$current_page;?>?lang=en_US">English</a>
+| <a class="nav" href="<?=$top_dir;?>/<?=$current_page;?>?lang=de_DE">Deutsch</a>
+| <a class="nav" href="<?=$top_dir;?>/<?=$current_page;?>?lang=es_ES">Espa&ntilde;ol</a>
+| <a class="nav" href="<?=$top_dir;?>/<?=$current_page;?>?lang=fr_FR">Fran&ccedil;ais</a>
+| <a class="nav" href="<?=$top_dir;?>/<?=$current_page;?>?lang=it_IT">Italiano</a>
+| <a class="nav" href="<?=$top_dir;?>/<?=$current_page;?>?lang=ja_JP">日本語</a> <!-- Japanese -->
+| <a class="nav" href="<?=$top_dir;?>/<?=$current_page;?>?lang=nl_NL">Nederlands</a>
+| <a class="nav" href="<?=$top_dir;?>/<?=$current_page;?>?lang=nb_NO">Norsk Bokm&aring;l</a>
 <!-- | <a class="nav" href="<?=$top_dir;?>/pl/">Polska</a> -->
-| <a class="nav" href="<?=$top_dir;?>/pt_PT/<?=$current_page;?>">Portugu&ecirc;s</a>
-| <a class="nav" href="<?=$top_dir;?>/zh_CN/<?=$current_page;?>">中文</a> <!-- Simplified Chinese -->
+| <a class="nav" href="<?=$top_dir;?>/<?=$current_page;?>?lang=pt_PT">Portugu&ecirc;s</a>
+| <a class="nav" href="<?=$top_dir;?>/<?=$current_page;?>?lang=zh_CN">中文</a> <!-- Simplified Chinese -->
 </span>
 <span id="location">&nbsp; <!-- <?= _("Continent"); ?>:
  (<a class="nav" href="http://www.gnucash.org/">US</a>)

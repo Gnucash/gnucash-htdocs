@@ -8,38 +8,38 @@ if (ereg("lists.gnucash.org", $self)) {
 <div class="othernews">
   <span class="linktop">
     <img class="dot" src="<?=$top_dir?>/externals/webding.png" alt="marker">
-    <b><?= _("Information")?></b>
+    <b><?= T_("Information")?></b>
   </span>
   <ul>
-    <li><a href="<?=$home?>/index.phtml"><?= _("About / News")?></a></li>
-    <li><a href="<?=$home?>/atom.php"><img src="<?=$top_dir?>/externals/feed-icon-12x12.png" width="12" height="12" alt="[atom feed]" /> <?= _("News Feed")?></a></li>
-    <li><a href="<?=$home?>/features.phtml"><?=_("Screenshots, Features")?></a></li>
-    <li><a href="http://wiki.gnucash.org/wiki/Development"><?= _("How to help")?></a></li>
+    <li><a href="<?=$home?>/index.phtml"><?= T_("About / News")?></a></li>
+    <li><a href="<?=$home?>/atom.php"><img src="<?=$top_dir?>/externals/feed-icon-12x12.png" width="12" height="12" alt="[atom feed]" /> <?= T_("News Feed")?></a></li>
+    <li><a href="<?=$home?>/features.phtml"><?=T_("Screenshots, Features")?></a></li>
+    <li><a href="http://wiki.gnucash.org/wiki/Development"><?= T_("How to help")?></a></li>
   </ul>
 </div>
 <div class="othernews">
   <span class="linktop">
     <img class="dot" src="<?=$top_dir?>/externals/webding.png" alt="marker" />
-    <b><?=_("Documentation")?></b></span>
+    <b><?=T_("Documentation")?></b></span>
     <ul>
-      <li><a href="<?=$home?>/docs.phtml"><?=_("Documentation")?></a></li>
-      <li><a href="http://wiki.gnucash.org/wiki/FAQ"><?=_("FAQ")?></a></li>
-      <li><a href="http://wiki.gnucash.org/wiki/"><?=_("Wiki")?></a>&nbsp;
+      <li><a href="<?=$home?>/docs.phtml"><?=T_("Documentation")?></a></li>
+      <li><a href="http://wiki.gnucash.org/wiki/FAQ"><?=T_("FAQ")?></a></li>
+      <li><a href="http://wiki.gnucash.org/wiki/"><?=T_("Wiki")?></a>&nbsp;
       <a href="http://wiki.gnucash.org/wiki/De/GnuCash">[de]</a></li>
-      <li><a href="http://wiki.gnucash.org/wiki/Mailing_Lists"><?=_("Mailing Lists")?></a>
+      <li><a href="http://wiki.gnucash.org/wiki/Mailing_Lists"><?=T_("Mailing Lists")?></a>
       <li style="list-style-image:none;list-style-type:none;"><ul>
-        <li><a href="https://lists.gnucash.org/search/<? if ($lang_dir != "") { echo "$lang_dir/"; } ?>"><?=_("Search")?></a></li>
+        <li><a href="https://lists.gnucash.org/search/<? if ($lang_dir != "") { echo "$lang_dir/"; } ?>"><?=T_("Search")?></a></li>
       </ul></li>
-      <li><a href="http://wiki.gnucash.org/wiki/Bugzilla"><?=_("Bug Reports")?></a></li>
-      <li><a href="http://wiki.gnucash.org/wiki/IRC"><?=_("IRC (Chat)")?></a></li>
-      <li><a href="http://sourceforge.net/donate/index.php?group_id=192"><?=_("Donations")?></a></li>
+      <li><a href="http://wiki.gnucash.org/wiki/Bugzilla"><?=T_("Bug Reports")?></a></li>
+      <li><a href="http://wiki.gnucash.org/wiki/IRC"><?=T_("IRC (Chat)")?></a></li>
+      <li><a href="http://sourceforge.net/donate/index.php?group_id=192"><?=T_("Donations")?></a></li>
     </ul>
 </div>
 <div class="othernews">
   <!-- ?php include("$top_dir/externals/menu-downloads.phtml");? -->
   <span class="linktop">
     <img class="dot" src="<?=$top_dir?>/externals/webding.png" alt="marker" />
-    <b><a href="<?=$home?>/download.phtml"><?=_("Downloads")?></a></b>
+    <b><a href="<?=$home?>/download.phtml"><?=T_("Downloads")?></a></b>
     <ul></ul>
   </span>
 </div>
@@ -47,14 +47,14 @@ if (ereg("lists.gnucash.org", $self)) {
   <!-- ?php include("$top_dir/externals/menu-developer.phtml");? -->
   <span class="linktop">
     <img class="dot" src="<?=$top_dir?>/externals/webding.png" alt="marker">
-    <b><?=_("Developer Information")?></b>
+    <b><?=T_("Developer Information")?></b>
   </span>
   <ul>
-    <li><a href="http://svn.gnucash.org/docs/HEAD/"><?=_("Source Docs")?></a></li>
-    <li><a href="http://svn.gnucash.org/trac/browser/"><?= _("Browse Source Code")?></a></li>
-    <li><a href="http://wiki.gnucash.org/wiki/Subversion"><?= _("Subversion Access")?> </a></li>
-    <li><a href="http://wiki.gnucash.org/wiki/Translation"><?=_("Language Translations")?></a></li>
-    <li><a href="<?=$home?>/sizing.phtml"><?=_("Sizing")?></a></li>
+    <li><a href="http://svn.gnucash.org/docs/HEAD/"><?=T_("Source Docs")?></a></li>
+    <li><a href="http://svn.gnucash.org/trac/browser/"><?= T_("Browse Source Code")?></a></li>
+    <li><a href="http://wiki.gnucash.org/wiki/Subversion"><?= T_("Subversion Access")?> </a></li>
+    <li><a href="http://wiki.gnucash.org/wiki/Translation"><?=T_("Language Translations")?></a></li>
+    <li><a href="<?=$home?>/sizing.phtml"><?=T_("Sizing")?></a></li>
   </ul>
 </div>
 </div>
