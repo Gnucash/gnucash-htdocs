@@ -24,7 +24,7 @@ msgmerge: po/gnucash-htdocs.pot
 mos: ${all_languages}
 
 ${all_languages}: po/$$@.po
-	msgfmt $< -o $@/LC_MESSAGES/gnucash-htdocs.mo
+	msgfmt $< -o locale/$@/LC_MESSAGES/gnucash-htdocs.mo
 
 ####################################################################
 #
