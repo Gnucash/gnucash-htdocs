@@ -65,5 +65,7 @@ $dir_res = T_bindtextdomain($domain, $text_dir);
 T_bind_textdomain_codeset($domain, 'UTF-8');
 
 T_textdomain($domain);
+
+$lang_cookie = $_COOKIE['lang_cookie'];
 echo ("<!-- $locale , locale_res [$locale_res] , dir_res $dir_res, lang_cookie [$lang_cookie] -->\n");
 ?>

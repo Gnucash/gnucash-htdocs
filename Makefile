@@ -40,8 +40,7 @@ TMPLBASE=search/templates/NMZ.
 # add when we have utf-8 translations: iconv -f UTF-8 -t ISO8859-1 
 
 nmz.onefile:
-	( echo '$$text_dir = "."; ?>'; \
-	  cat $(TMPLBASE)$(FILE).php_tmpl ) | php -q > \
+	( cat $(TMPLBASE)$(FILE).php_tmpl ) | php -q > \
 	  $(TMPLBASE)$(FILE)$(FILETAIL)
 
 nmz.lang:
