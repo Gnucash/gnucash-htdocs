@@ -33,6 +33,7 @@ ${all_languages}: po/$$@.po
 LOCALFILE=local.php
 URLBASE=
 FILETAIL=
+LOCALE=
 FILE=
 HOME=http://www.gnucash.org$(URLBASE)
 TMPLBASE=search/templates/NMZ.
@@ -40,7 +41,8 @@ TMPLBASE=search/templates/NMZ.
 # add when we have utf-8 translations: iconv -f UTF-8 -t ISO8859-1 
 
 nmz.onefile:
-	( cat $(TMPLBASE)$(FILE).php_tmpl ) | php -q > \
+	( echo '<?php $$locale = "$(LOCALE)"; ?>' ; \
+	  cat $(TMPLBASE)$(FILE).php_tmpl ) | php -q > \
 	  $(TMPLBASE)$(FILE)$(FILETAIL)
 
 nmz.lang:
@@ -53,5 +55,5 @@ nmz:
 	# other NMZ langs not merged into po system: ja
 	# note: PL is only "mostly" translated.  it diff's differently
 	for l in en ${languages} ; do \
-	  $(MAKE) nmz.lang FILETAIL=.$$l ; \
+	  $(MAKE) nmz.lang FILETAIL=.$$l LOCALE=$$l; \
 	done

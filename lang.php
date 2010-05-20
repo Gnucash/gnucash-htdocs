@@ -1,10 +1,24 @@
 <?php
 $top_dir = ".";
-$home = $top_dir;
 $locale_dir = "locale";
 
+if (!array_key_exists('HTTP_HOST', $_SERVER) || ($_SERVER["HTTP_HOST"] == "lists.gnucash.org"))
+{
+    $home = "http://www.gnucash.org";
+}else{
+    $home = $top_dir;
+}
+
+if ( !isset($locale) ) { $locale = ""; }
+if ( !isset($lang_dir) ) { $lang_dir = $locale; }
+
 # get the cookie setting
-if (array_key_exists('lang_cookie', $_COOKIE)) { $locale = $_COOKIE['lang_cookie']; }
+if (array_key_exists('lang_cookie', $_COOKIE)) {
+    $locale = $_COOKIE['lang_cookie'];
+    $lang_cookie = $locale;
+}else{
+    $lang_cookie = "";
+}
 
 # allow user override.
 if (array_key_exists('lang', $_GET)) { $locale = $_GET["lang"]; }
@@ -22,6 +36,20 @@ $supported_languages = array(
         'zh_CN' => 'zh_CN', 'en_US' => 'en'
         );
 
+# Find the full locale name for short language name.
+if (strlen($locale) == 2) {
+    foreach($supported_languages as $loc_lang => $loc_dir)
+    {
+        if ( (strtolower($locale) == strtolower($loc_dir))
+            || (strtolower($locale) == substr($loc_lang, 0, 2 )) )
+        {
+            $locale = $loc_lang;
+            break;
+        }
+    }
+}
+
+# Find the locale from Client Accept language
 if ($locale == "") {
         # Get user prefered languages, and match agasint supported language
         if ( isset( $_SERVER["HTTP_ACCEPT_LANGUAGE"] ) )
@@ -66,6 +94,5 @@ T_bind_textdomain_codeset($domain, 'UTF-8');
 
 T_textdomain($domain);
 
-$lang_cookie = $_COOKIE['lang_cookie'];
 echo ("<!-- $locale , locale_res [$locale_res] , dir_res $dir_res, lang_cookie [$lang_cookie] -->\n");
 ?>

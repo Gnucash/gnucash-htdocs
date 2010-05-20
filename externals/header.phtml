@@ -7,16 +7,16 @@ if ($can_utf)
 { ?>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <?php } ?>
-<link rel="stylesheet" href="<?=$top_dir?>/externals/gnucash.css" type="text/css" />
-<link rel="icon" href="<?=$top_dir?>/favicon.ico" type="image/x-icon" />
-<link rel="shortcut icon" href="<?=$top_dir?>/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="<?=$home?>/externals/gnucash.css" type="text/css" />
+<link rel="icon" href="<?=$home?>/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="<?=$home?>/favicon.ico" type="image/x-icon" />
 <?php echo $mimeline;  ?>
 <?php
 include("$top_dir/externals/global_params.php");
-$current_page = basename($_SERVER["SCRIPT_NAME"]);
+$current_page = array_key_exists('HTTP_HOST', $_SERVER) ? ($top_dir . "/" . basename($_SERVER["SCRIPT_NAME"])) : "";
 
 if (isset($homepage)) { ?>
-  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="<?=$top_dir?>/atom.php">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="<?=$home?>/atom.php">
 <?php } ?>
 
 <title><?= T_($title); ?> | GnuCash</title>
@@ -25,23 +25,23 @@ if (isset($homepage)) { ?>
 <body>
 
 <div id="head">
-<a href="<?=$home?>/"><!--img src="<?=$top_dir?>/externals/gnucash_logo1.png" alt="[GnuCash Logo]" id="gnclogo" width="179" height="45" border="0"/ -->
-<img src="<?=$top_dir?>/externals/banner5.png" width="453" height="45" />
+<a href="<?=$home?>/"><!--img src="<?=$home?>/externals/gnucash_logo1.png" alt="[GnuCash Logo]" id="gnclogo" width="179" height="45" border="0"/ -->
+<img src="<?=$home?>/externals/banner5.png" width="453" height="45" />
 </a>
 <br/>
 <span id="language">
 <?= T_("Language"); ?>:
-  <a class="nav" href="<?=$top_dir;?>/<?=$current_page;?>?lang=en_US">English</a>
-| <a class="nav" href="<?=$top_dir;?>/<?=$current_page;?>?lang=de_DE">Deutsch</a>
-| <a class="nav" href="<?=$top_dir;?>/<?=$current_page;?>?lang=es_ES">Espa&ntilde;ol</a>
-| <a class="nav" href="<?=$top_dir;?>/<?=$current_page;?>?lang=fr_FR">Fran&ccedil;ais</a>
-| <a class="nav" href="<?=$top_dir;?>/<?=$current_page;?>?lang=it_IT">Italiano</a>
-| <a class="nav" href="<?=$top_dir;?>/<?=$current_page;?>?lang=ja_JP">日本語</a> <!-- Japanese -->
-| <a class="nav" href="<?=$top_dir;?>/<?=$current_page;?>?lang=nl_NL">Nederlands</a>
-| <a class="nav" href="<?=$top_dir;?>/<?=$current_page;?>?lang=nb_NO">Norsk Bokm&aring;l</a>
-<!-- | <a class="nav" href="<?=$top_dir;?>/pl/">Polska</a> -->
-| <a class="nav" href="<?=$top_dir;?>/<?=$current_page;?>?lang=pt_PT">Portugu&ecirc;s</a>
-| <a class="nav" href="<?=$top_dir;?>/<?=$current_page;?>?lang=zh_CN">中文</a> <!-- Simplified Chinese -->
+  <a class="nav" href="<?=$current_path;?>?lang=en_US">English</a>
+| <a class="nav" href="<?=$current_path;?>?lang=de_DE">Deutsch</a>
+| <a class="nav" href="<?=$current_path;?>?lang=es_ES">Espa&ntilde;ol</a>
+| <a class="nav" href="<?=$current_path;?>?lang=fr_FR">Fran&ccedil;ais</a>
+| <a class="nav" href="<?=$current_path;?>?lang=it_IT">Italiano</a>
+| <a class="nav" href="<?=$current_path;?>?lang=ja_JP">日本語</a> <!-- Japanese -->
+| <a class="nav" href="<?=$current_path;?>?lang=nl_NL">Nederlands</a>
+| <a class="nav" href="<?=$current_path;?>?lang=nb_NO">Norsk Bokm&aring;l</a>
+<!-- | <a class="nav" href="<?=$current_path;?>?lang=pl_PL">Polska</a> -->
+| <a class="nav" href="<?=$current_path;?>?lang=pt_PT">Portugu&ecirc;s</a>
+| <a class="nav" href="<?=$current_path;?>?lang=zh_CN">中文</a> <!-- Simplified Chinese -->
 </span>
 <span id="location">&nbsp; <!-- <?= _("Continent"); ?>:
  (<a class="nav" href="http://www.gnucash.org/">US</a>)
