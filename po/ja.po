@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: gnucash-htdocs r18581\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-05-05 12:14+0200\n"
-"PO-Revision-Date: 2010-03-20 19:52+0900\n"
+"PO-Revision-Date: 2010-05-19 04:53+1000\n"
 "Last-Translator: Yasuaki Taniguchi <yasuakit@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1128,28 +1128,28 @@ msgstr ""
 
 #: search/templates/NMZ.foot.php_tmpl:9
 msgid "This search system is powered by:"
-msgstr ""
+msgstr "この全文検索システムは:"
 
 # Namazu 検索関係の文字列 (search 配下) は元々日本語化されているため訳す必要はありません。
 # 以下同様です。
 # Comment by Yasuaki Taniguchi
 #: search/templates/NMZ.body.php_tmpl:4 search/templates/NMZ.head.php_tmpl:27
 msgid "Query"
-msgstr ""
+msgstr "検索式"
 
 #: search/templates/NMZ.body.php_tmpl:6
 msgid "Single term query"
-msgstr ""
+msgstr "単一単語検索"
 
 #: search/templates/NMZ.body.php_tmpl:8
 msgid ""
 "This query specifies only one term for retrieving all of the\n"
 "documents which contain that term, for example:"
-msgstr ""
+msgstr "調べたい単語を一つ指定するだけのもっとも基本的な検索手法です。例: "
 
 #: search/templates/NMZ.body.php_tmpl:16
 msgid "AND query"
-msgstr ""
+msgstr "AND検索"
 
 #: search/templates/NMZ.body.php_tmpl:19
 msgid ""
@@ -1157,6 +1157,9 @@ msgid ""
 "documents which contain both terms. Insert the\n"
 "<code class=\"operator\">and</code> operator between the terms, e.g."
 msgstr ""
+"ある単語とある単語の両方を含む文書を検索します。検索結果を絞\n"
+"り込むのに有効です。3つ以上の単語を指定することも可能です。\n"
+"単語と単語の間に <code class=\"operator\">and</code> を挿みます。例:"
 
 #: search/templates/NMZ.body.php_tmpl:29
 msgid ""
@@ -1164,10 +1167,13 @@ msgid ""
 "are\n"
 "separated by one or more spaces are assumed to be an AND query."
 msgstr ""
+"<code class=\"operator\">and</code> は省略できます。単語を空白で区切って羅列"
+"す\n"
+"るとそれらの語すべてを含む文書をAND検索します。"
 
 #: search/templates/NMZ.body.php_tmpl:33
 msgid "OR query"
-msgstr ""
+msgstr "OR検索"
 
 #: search/templates/NMZ.body.php_tmpl:35
 msgid ""
@@ -1176,10 +1182,13 @@ msgid ""
 "<code class=\"operator\">or</code> operator between the terms,\n"
 "e.g."
 msgstr ""
+"ある単語とある単語のどちらかを含む文書を検索します。3つ以上\n"
+"の単語を指定することも可能です。単語と単語の間に \n"
+"<code class=\"operator\">or</code> を挿みます。例:"
 
 #: search/templates/NMZ.body.php_tmpl:45
 msgid "NOT query"
-msgstr ""
+msgstr "NOT検索"
 
 #: search/templates/NMZ.body.php_tmpl:47
 msgid ""
@@ -1188,10 +1197,13 @@ msgid ""
 "following terms. Insert the <code class=\"operator\">not</code>\n"
 "operator between the terms, for example:"
 msgstr ""
+"ある単語を含み、ある単語を含まない文書を検索します。3つ以上\n"
+"の単語を指定することも可能です。単語と単語の間に \n"
+"<code class=\"operator\">not</code> を挿みます。例: "
 
 #: search/templates/NMZ.body.php_tmpl:58
 msgid "Grouping"
-msgstr ""
+msgstr "グループ化"
 
 #: search/templates/NMZ.body.php_tmpl:60
 msgid ""
@@ -1199,10 +1211,12 @@ msgid ""
 "parentheses. The parentheses should be separated by one or\n"
 "more spaces. e.g."
 msgstr ""
+"AND検索、OR検索、NOT検索を括弧でグループ化できます。括弧の両\n"
+"隣には空白を入れる必要があります。例:"
 
 #: search/templates/NMZ.body.php_tmpl:69
 msgid "Phrase searching"
-msgstr ""
+msgstr "フレイズ検索"
 
 #: search/templates/NMZ.body.php_tmpl:71
 msgid ""
@@ -1213,42 +1227,47 @@ msgid ""
 "In Namazu, the precision of phrase searching is not 100%,\n"
 "so wrong results may occasionally occur.  Example:"
 msgstr ""
+"2語以上からなる複合語を検索します。 <code\n"
+"class=\"operator\">\"...\"</code> と2重引用符で、あるいは <code\n"
+"class=\"operator\">{...}</code> と中括弧で囲みます。Namazuのフ\n"
+"レイズ検索は精度が 100 % ではないため、ときどき誤ることがあ\n"
+"ります。例:"
 
 #: search/templates/NMZ.body.php_tmpl:88
 msgid "Substring matching"
-msgstr ""
+msgstr "部分一致検索"
 
 #: search/templates/NMZ.body.php_tmpl:90
 msgid "There are three types of searching by substring matching."
-msgstr ""
+msgstr "部分一致検索には前方一致、中間一致、後方一致の 3種類があります。"
 
 #: search/templates/NMZ.body.php_tmpl:94
 msgid "Prefix matching"
-msgstr ""
+msgstr "前方一致検索"
 
 #: search/templates/NMZ.body.php_tmpl:95
 msgid "(terms which begin with <code>inter</code>)"
-msgstr ""
+msgstr "(<code>inter</code> から始まる単語を含む文書を検索)"
 
 #: search/templates/NMZ.body.php_tmpl:96
 msgid "Inside matching"
-msgstr ""
+msgstr "中間一致検索"
 
 #: search/templates/NMZ.body.php_tmpl:97
 msgid "(terms which contain <code>text</code>)"
-msgstr ""
+msgstr "(<code>text</code> を内包する単語を含む文書を検索)"
 
 #: search/templates/NMZ.body.php_tmpl:98
 msgid "Suffix matching"
-msgstr ""
+msgstr "後方一致検索"
 
 #: search/templates/NMZ.body.php_tmpl:100
 msgid "(terms which terminated with <code>net</code>)"
-msgstr ""
+msgstr "(<code>net</code> で終わる単語を含む文書を検索)"
 
 #: search/templates/NMZ.body.php_tmpl:104
 msgid "Regular expressions"
-msgstr ""
+msgstr "正規表現検索"
 
 #: search/templates/NMZ.body.php_tmpl:107
 msgid ""
@@ -1260,10 +1279,17 @@ msgid ""
 "href=\"http://www.perl.com/\">Perl</a> compatible flavor.\n"
 "e.g.,"
 msgstr ""
+"検索するキーワードを正規表現で指定します。正規表現は \n"
+"<code class=\"operator\">/.../</code> のようにスラッシュ記号で囲みます。正規"
+"表\n"
+"現のエンジンには<a\n"
+"href=\"http://www.ruby-lang.org/\">Ruby</a>のコードを利用\n"
+"しています。正規表現の書式は<a\n"
+"href=\"http://www.perl.com/\">Perl</a>とほぼ同じです。 例:"
 
 #: search/templates/NMZ.body.php_tmpl:121
 msgid "Field-specified searching"
-msgstr ""
+msgstr "フィールド指定の検索"
 
 #: search/templates/NMZ.body.php_tmpl:123
 msgid ""
@@ -1272,34 +1298,38 @@ msgid ""
 "<code>Message-Id:</code>. This feature is especially convenient for\n"
 "Mail/News documents, for example:"
 msgstr ""
+"<code>Subject:</code>, <code>From:</code>,\n"
+"<code>Message-Id:</code> といったフィールドを指定して検\n"
+"索する手法です。特にMail/News のファイルを扱う際に効果を発揮\n"
+"します。例:"
 
 #: search/templates/NMZ.body.php_tmpl:131
 msgid ""
 "(Retrieves all documents which contain <code>Linux</code>\n"
 "in a <code>Subject:</code> field)"
-msgstr ""
+msgstr "(Subject: に <code>Linux</code>が含まれる文書)"
 
 #: search/templates/NMZ.body.php_tmpl:136
 msgid ""
 "(Retrieves all documents which contain <code>GNU Emacs</code>\n"
 "in a <code>Subject:</code> field)"
-msgstr ""
+msgstr "(Subject: に <code>GNU Emacs</code>が含まれる文書)"
 
 #: search/templates/NMZ.body.php_tmpl:141
 msgid ""
 "(Retrieves all documents which contain <code>foo@bar.jp</code>\n"
 "in a <code>From:</code> field)"
-msgstr ""
+msgstr "(From: に <code>foo@bar.jp</code> が含まれる文書)"
 
 #: search/templates/NMZ.body.php_tmpl:147
 msgid ""
 "(Retrieves a certain document which contains specified\n"
 "<code>Message-Id:</code>)"
-msgstr ""
+msgstr "(Message-Id を指定)"
 
 #: search/templates/NMZ.body.php_tmpl:152
 msgid "Notes"
-msgstr ""
+msgstr "特記事項"
 
 #: search/templates/NMZ.body.php_tmpl:155
 msgid ""
@@ -1307,6 +1337,8 @@ msgid ""
 "alphabet characters; i.e. Namazu does\n"
 "case-insensitive pattern matching."
 msgstr ""
+"いずれの検索方法でもアルファベットの大文字・小文字の区別\n"
+"はしません。"
 
 #: search/templates/NMZ.body.php_tmpl:160
 msgid ""
@@ -1315,6 +1347,9 @@ msgid ""
 "href=\"#query-phrase\">phrase searching</a>. This process occasionally\n"
 "causes invalid segmentation."
 msgstr ""
+"日本語の複合語は形態素単位に分割し、それらを<a\n"
+"href=\"#query-phrase\"> フレイズ検索</a>します。分割は不適切に\n"
+"行なわれることがあります。"
 
 #: search/templates/NMZ.body.php_tmpl:166
 msgid ""
@@ -1322,6 +1357,9 @@ msgid ""
 "ASCII) which are defined in JIS X 0208 (Japanese\n"
 "Industrial Standards) are handled as ASCII characters."
 msgstr ""
+"JIS X 0208 (いわゆる全角文字) の英数字と記号の一部 \n"
+"(ASCIIと重複しているもの) は ASCII (いわゆる半角文字) として\n"
+"処理されます。"
 
 #: search/templates/NMZ.body.php_tmpl:171
 msgid ""
@@ -1330,12 +1368,19 @@ msgid ""
 "you can also describe the term as <code>TCP and IP</code> instead of\n"
 "<code>TCP/IP</code>, but it may cause noisy results."
 msgstr ""
+"記号を含む語の検索ができます。例: <code>TCP/IP</code>。\n"
+"ただし、記号の処理は完全ではないので <code>TCP and IP</code> \n"
+"のように分割して<a href=\"#query-and\">AND検索</a>をかけた方が取りこ\n"
+"ぼしがありません (その代わり余計なファイルまでヒットしてしま\n"
+"う可能性があります)。"
 
 #: search/templates/NMZ.body.php_tmpl:178
 msgid ""
 "Substring matching and field-specified searching takes\n"
 "more time than other methods."
 msgstr ""
+"中間一致・後方一致、正規表現、フィールド指定の検索には少\n"
+"し時間がかかります。"
 
 #: search/templates/NMZ.body.php_tmpl:182
 #: search/templates/NMZ.tips.php_tmpl:60
@@ -1347,6 +1392,11 @@ msgid ""
 "class=\"operator\">\"...\"</code> or braces like <code\n"
 "class=\"operator\">{...}</code>."
 msgstr ""
+"<code class=\"operator\">and</code>, <code\n"
+"class=\"operator\">or</code>, <code\n"
+"class=\"operator\">not</code> を単語として検索したいときはそれ\n"
+"ぞれ、 <code class=\"operator\">\"...\"</code> と2重引用符で、\n"
+"あるいは <code class=\"operator\">{...}</code> と中括弧で囲みます。"
 
 #: search/templates/NMZ.head.php_tmpl:2
 msgid "Mailing List Search"
@@ -1358,93 +1408,95 @@ msgstr ""
 
 #: search/templates/NMZ.head.php_tmpl:31
 msgid "[How to search]"
-msgstr ""
+msgstr "[検索方法]"
 
 #: search/templates/NMZ.head.php_tmpl:34
 msgid "Display"
-msgstr ""
+msgstr "表示件数"
 
 #: search/templates/NMZ.head.php_tmpl:42
 msgid "Description"
-msgstr ""
+msgstr "表示形式"
 
 #: search/templates/NMZ.head.php_tmpl:44
 msgid "normal"
-msgstr ""
+msgstr "標準"
 
 #: search/templates/NMZ.head.php_tmpl:45
 msgid "short"
-msgstr ""
+msgstr "簡潔"
 
 #: search/templates/NMZ.head.php_tmpl:47
 msgid "Sort"
-msgstr ""
+msgstr "ソート"
 
 #: search/templates/NMZ.head.php_tmpl:49
 msgid "by score"
-msgstr ""
+msgstr "スコア"
 
 #: search/templates/NMZ.head.php_tmpl:50
 msgid "by date in late order"
-msgstr ""
+msgstr "日付 (新しい順)"
 
 #: search/templates/NMZ.head.php_tmpl:51
 msgid "by date in early order"
-msgstr ""
+msgstr "日付 (古い順)"
 
 #: search/templates/NMZ.head.php_tmpl:52
 msgid "by title in ascending order"
-msgstr ""
+msgstr "題名 (昇順)"
 
 #: search/templates/NMZ.head.php_tmpl:53
 msgid "by title in descending order"
-msgstr ""
+msgstr "題名 (降順)"
 
 #: search/templates/NMZ.head.php_tmpl:54
 msgid "by author in ascending order"
-msgstr ""
+msgstr "著者 (昇順)"
 
 #: search/templates/NMZ.head.php_tmpl:55
 msgid "by author in descending order"
-msgstr ""
+msgstr "著者 (降順)"
 
 #: search/templates/NMZ.head.php_tmpl:56
 msgid "by size in ascending order"
-msgstr ""
+msgstr "サイズ (昇順)"
 
 #: search/templates/NMZ.head.php_tmpl:57
 msgid "by size in descending order"
-msgstr ""
+msgstr "サイズ (降順)"
 
 #: search/templates/NMZ.head.php_tmpl:58
 msgid "by URI in ascending order"
-msgstr ""
+msgstr "URI (昇順)"
 
 #: search/templates/NMZ.head.php_tmpl:59
 msgid "by URI in descending order"
-msgstr ""
+msgstr "URI (降順)"
 
 #: search/templates/NMZ.head.php_tmpl:64
 msgid "Lists to Search"
-msgstr ""
+msgstr "検索対象"
 
 #: search/templates/NMZ.tips.php_tmpl:4
 msgid "Tips on searching"
-msgstr ""
+msgstr "検索のコツ"
 
 #: search/templates/NMZ.tips.php_tmpl:7
 msgid "If you have trouble with searching, you can check the following tips."
-msgstr ""
+msgstr "検索がうまくいかないときは、次の点を確認してください。"
 
 #: search/templates/NMZ.tips.php_tmpl:11
 msgid ""
 "Check a spelling of your keyword<br>\n"
 "Namazu can't find anything with wrong spelling."
 msgstr ""
+"キーワードの綴りを確かめる<br>\n"
+"キーワードの綴りが間違っていると検索できません。"
 
 #: search/templates/NMZ.tips.php_tmpl:15
 msgid "Add keywords"
-msgstr ""
+msgstr "キーワードを増やしてみる"
 
 #: search/templates/NMZ.tips.php_tmpl:17
 msgid ""
@@ -1453,6 +1505,9 @@ msgid ""
 "class=\"operator\">or</code> operator.  You should get more results.\n"
 "e.g.,"
 msgstr ""
+"検索結果が何もない、あるいは少ないときは、関連するキーワードを<code\n"
+"class=\"operator\">or</code> を挿んで羅列してみましょう。ヒット\n"
+"しやすくなります。<br>例:"
 
 #: search/templates/NMZ.tips.php_tmpl:23
 msgid ""
@@ -1460,16 +1515,21 @@ msgid ""
 "related keywords with <code class=\"operator\">and</code>\n"
 "operator. It makes your search more limited. e.g.,"
 msgstr ""
+"検索結果が多すぎるときは、関連するキーワードを<code\n"
+"class=\"operator\">and</code> を挿んで羅列してみましょう。検索結\n"
+"果を絞り込めます。<br>例:"
 
 #: search/templates/NMZ.tips.php_tmpl:29
 msgid "Try substring matching"
-msgstr ""
+msgstr "部分一致検索を試してみる"
 
 #: search/templates/NMZ.tips.php_tmpl:31
 msgid ""
 "If you gained no results or too few results, you can try\n"
 "substring matching."
 msgstr ""
+"検索結果が何もない、あるいは少ないときは、部分一致検索を試し\n"
+"てみましょう。"
 
 #: search/templates/NMZ.tips.php_tmpl:34
 msgid ""
@@ -1479,6 +1539,11 @@ msgid ""
 "<code>texi2html</code>,\n"
 "<code>texindex</code>, <code>text</code>)."
 msgstr ""
+"<code class=\"example\">tex*</code> を入力すると、\n"
+"\n"
+"<code>tex</code> から始まる単語 (<code>tex</code>,\n"
+"<code>texi2html</code>,\n"
+"<code>texindex</code>, <code>text</code> など) を検索できます。"
 
 #: search/templates/NMZ.tips.php_tmpl:41
 msgid ""
@@ -1488,37 +1553,50 @@ msgid ""
 "<code>jlatex</code>, <code>latex</code>,\n"
 "<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
 msgstr ""
+"<code class=\"example\">*tex</code> を入力すると、\n"
+"\n"
+"<code>tex</code> で終わる単語 (\n"
+"<code>bibtex</code>, \n"
+"<code>jlatex</code>, <code>latex</code>,\n"
+"<code>platex</code>, <code>ptex</code>, <code>vertex</code>\n"
+"など) を検索できます。"
 
 #: search/templates/NMZ.tips.php_tmpl:48
 msgid ""
 "You can specify <code class=\"example\">*tex*</code> to\n"
 "search for terms which contain <code>tex</code> (many)."
 msgstr ""
+"<code class=\"example\">*tex*</code> を入力すると、\n"
+"<code>tex</code> を含む単語 (たくさん) を検索できます。"
 
 #: search/templates/NMZ.tips.php_tmpl:53
 msgid ""
 "You tried phrase searching but it hit documents which\n"
 "didn't contain your phrase."
 msgstr ""
+"フレイズ検索をしたが、そのフレイズを含まない文章までヒッ\n"
+"トしてしまった"
 
 #: search/templates/NMZ.tips.php_tmpl:56
 msgid ""
 "It's a defect of Namazu. Precision of phrase searching is\n"
 "not 100%, so it cause wrong results occasionally."
 msgstr ""
+"これは仕様です。 Namazu のフレイズ検索は精度が 100 % ではな\n"
+"いため、ときどき失敗します。"
 
 #: search/templates/NMZ.result.normal.php_tmpl:4
 #: search/templates/NMZ.result.short.php_tmpl:4
 msgid "score"
-msgstr ""
+msgstr "スコア"
 
 #: search/templates/NMZ.result.normal.php_tmpl:5
 msgid "Author"
-msgstr ""
+msgstr "著者"
 
 #: search/templates/NMZ.result.normal.php_tmpl:6
 msgid "Date"
-msgstr ""
+msgstr "日付"
 
 #: search/templates/NMZ.result.normal.php_tmpl:9
 #: search/templates/NMZ.result.short.php_tmpl:6
