@@ -1,7 +1,7 @@
 <?php
   // TODO:
   // - reasonable permalinks
-#  include("local.php");
+  $top_dir = ".";
 
   $contentType = "application/atom+xml";
   $overrideContentType = $_GET["content-type"];
