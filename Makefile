@@ -1,10 +1,9 @@
-languages = de es fr it nb nl pl pt_PT zh_CN
-languages_with_template = ja
-all_languages = ${languages} ${languages_with_template}
+iso_languages = de es fr it
+languages = ${iso_languages} ja nb nl pl pt_PT zh_CN
 
 .SECONDEXPANSION:
 
-.PHONY: pot mos msgmerge ${all_languages} nmz nmz.lang nmz nmz.onefile
+.PHONY: pot mos msgmerge ${languages} nmz nmz.lang nmz nmz.onefile nmz.locale
 
 pot: po/POTFILES po/gnucash-htdocs.pot
 
@@ -17,13 +16,13 @@ po/gnucash-htdocs.pot: po/POTFILES
 	xgettext -f po/POTFILES -L PHP -o po/gnucash-htdocs.pot
 
 msgmerge: po/gnucash-htdocs.pot
-	for f in ${all_languages} ; do \
+	for f in ${languages} ; do \
 	  msgmerge -U po/$$f.po po/gnucash-htdocs.pot ; \
 	done
 
-mos: ${all_languages}
+mos: ${languages}
 
-${all_languages}: po/$$@.po
+${languages}: po/$$@.po
 	msgfmt $< -o locale/$@/LC_MESSAGES/gnucash-htdocs.mo
 
 ####################################################################
@@ -50,10 +49,19 @@ nmz.lang:
 	  $(MAKE) nmz.onefile FILE="$$f"; \
 	done
 
+nmz.locale:
+	# convert to ISO_8859-1
+	for f in $(TMPLBASE)*.$(LOCALE); do \
+	  iconv -f utf-8 -t ISO_8859-1//TRANSLIT -o $$f.local -c $$f ; \
+	  mv $$f.local $$f ; \
+	done
+
 nmz:
 	$(MAKE) nmz.lang
-	# other NMZ langs not merged into po system: ja
 	# note: PL is only "mostly" translated.  it diff's differently
 	for l in en ${languages} ; do \
 	  $(MAKE) nmz.lang FILETAIL=.$$l LOCALE=$$l; \
+	done
+	for l in ${iso_languages} ; do \
+	  $(MAKE) nmz.locale LOCALE=$$l; \
 	done
