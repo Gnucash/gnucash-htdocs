@@ -13,7 +13,7 @@ po/POTFILES: .potfiles
 .potfiles:
 
 po/gnucash-htdocs.pot: po/POTFILES
-	xgettext -f po/POTFILES -L PHP -o po/gnucash-htdocs.pot
+	xgettext -f po/POTFILES -L PHP --keyword="T_" -o po/gnucash-htdocs.pot
 
 msgmerge: po/gnucash-htdocs.pot
 	for f in ${languages} ; do \
