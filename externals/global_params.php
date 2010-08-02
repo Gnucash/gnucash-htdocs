@@ -5,7 +5,7 @@
      $latest_stable             = "2.2.9";
      $latest_stable_win         = $latest_stable;
      $latest_stable_mac_ppc     = $latest_stable.".4";
-     $latest_stable_mac_intel   = $latest_stable.".4";
+     $latest_stable_mac_intel   = $latest_stable.".5";
 
      $latest_unstable           = "2.3.14";
      $latest_unstable_win       = $latest_unstable;
