@@ -28,7 +28,7 @@ include("externals/menu.phtml");
   </li>
 </ul>
 
-<h2><?=T_("GnuCash v2.0 (current stable release)");?></h2>
+<h2><?=T_("GnuCash v2.2 (current stable release)");?></h2>
 
 <p><?php echo T_("If you have a question about how to use GnuCash, you are in the right place. The first thing you should do is read the Help Manual and the Concepts Guide, most of your questions can probably be answered by these documents.");?></p>
 <p><?php echo T_("The Help Manual is designed to be a quick reference of how to accomplish specific tasks and how to use the features in GnuCash. The Concepts Guide is designed to be an in depth guide to the concepts behind using GnuCash with a tutorial to show how to put those concepts into practice.");?></p>
@@ -37,16 +37,19 @@ include("externals/menu.phtml");
 <ul>
   <li><?php echo T_("Help Manual");?>
     <ul>
-    <li><a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-help/help.html"><?php echo T_("English");?> (HTML)</a></li>
-    <li><a href="<?=$top_dir;?>/docs/v2.0/de_DE/gnucash-help/help.html"><?php echo T_("Deutsch");?> (HTML)</a></li>
-    <!-- <li><a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-help.pdf"><?php echo T_("English");?> (PDF)</a></li> -->
+    <li><a href="<?=$top_dir;?>/docs/v2.2/C/gnucash-help/help.html"><?php echo T_("English");?> (HTML)</a></li>
+    <li><a href="<?=$top_dir;?>/docs/v2.2/de_DE/gnucash-help/help.html"><?php echo T_("Deutsch");?> (HTML)</a></li>
+    <li><a href="<?=$top_dir;?>/docs/v2.2/it_IT/gnucash-help/help.html"><?php echo T_("Italiano");?> (HTML)</a></li>
+    <!-- <li><a href="<?=$top_dir;?>/docs/v2.2/C/gnucash-help.pdf"><?php echo T_("English");?> (PDF)</a></li> -->
     </ul>
     </li>
   </li>
   <li><?= T_("Concepts Guide") ?>
     <ul>
-      <li><a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-guide/"><?php echo T_("English");?> (HTML)</a></li>
-      <!-- <li><a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-guide.pdf"><?php echo T_("English");?> (PDF)</a></li> -->
+      <li><a href="<?=$top_dir;?>/docs/v2.2/C/gnucash-guide/"><?php echo T_("English");?> (HTML)</a></li>
+      <li><a href="<?=$top_dir;?>/docs/v2.2/de_DE/gnucash-guide/"><?php echo T_("Deutsch");?> (HTML)</a></li>
+      <li><a href="<?=$top_dir;?>/docs/v2.2/it_IT/gnucash-guide/"><?php echo T_("Italiano");?> (HTML)</a></li>
+      <!-- <li><a href="<?=$top_dir;?>/docs/v2.2/C/gnucash-guide.pdf"><?php echo T_("English");?> (PDF)</a></li> -->
     </ul>
   </li>
 </ul>
@@ -68,6 +71,15 @@ include("externals/menu.phtml");
 <h2><?php echo T_("Older GnuCash Documentation");?></h2>
 <p><?php echo T_("This section contains all the older GnuCash documentation. If you are using one of these old versions of GnuCash, it is highly recommended that you upgrade to the latest stable version.");?></p>
 <ul>
+  <li><b>GnuCash v2.0</b>:
+    <ul><b><?php echo T_("Help Manual");?></b>:
+      <a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-help/help.html"><?php echo T_("English");?> (HTML)</a>
+      <a href="<?=$top_dir;?>/docs/v2.0/de_DE/gnucash-help/help.html"><?php echo T_("Deutsch");?> (HTML)</a>
+    </ul>
+    <ul><b><?= T_("Concepts Guide") ?></b>:
+      <a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-guide/"><?php echo T_("English");?> (HTML)</a>
+    </ul>
+  </li>
   <li><b>GnuCash v1.8</b>:
     <ul><b><?php echo T_("Help Manual");?></b>:
       <a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-help/help.html"><?php echo T_("English");?> (HTML)</a>
