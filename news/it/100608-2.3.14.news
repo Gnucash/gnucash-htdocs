@@ -1,0 +1,114 @@
+<b>Annuncio:</b> Rilasciato GnuCash 2.3.14 (instabile)
+2010-06-08
+
+<h2>Rilasciato GnuCash 2.3.14 (instabile) </h2>
+
+<p>Il team di sviluppo di GnuCash è orgoglioso di annunciare GnuCash 2.3.14, il quindicesimo di diversi rilasci 2.3.x instabili del programma di contabilità gratuito GnuCash in attesa della versione stabile 2.4.0. Con questa nuova serie di rilasci, GnuCash può utilizzare un database SQL avvalendosi di SQLite3, MySQL o PostgreSQL. Il programma funziona in ambiente GNU/Linux, *BSD, Solaris, Microsoft Windows e Mac OSX.</p>
+
+<div class="dialog warning">
+<p><b>ATTENZIONE:</b> Questa è una versione *INSTABILE* di Gnucash.</p>
+<p>Questa versione è dedicata agli sviluppatori e agli utenti che intendo contribuire alla ricerca di tutti i problemi ancora presenti.</p>
+<p>Si consiglia di effettuare delle copie di sicurezza di tutti i file utilizzati nelle versioni instabili della serie 2.3.x di GnuCash. Anche se gli sviluppatori hanno cercato di impedire in ogni modo la perdita di dati, non è possibile garantire che in caso di crash di GnuCash in queste versioni, i dati non vengano corrotti.</p>
+</div>
+
+<div class="dialog note">
+<p><b>NOTA:</b> L'ultima versione stabile è la 2.2.9.</p>
+</div>
+
+<p>SI CONSIGLIA DI TESTARE, TESTARE, TESTARE E ANCORA TESTARE qualsiasi e tutte le funzioni importanti.
+E poi segnalare qualsiasi problema riscontrato su bugzilla</p>
+<p>I principali cambiamenti nel rilascio 2.3.x comprendono:
+<ul>
+<li>Oltre al backend XML, Gnucash può ora utilizzare un database SQLite3, MySQL o PostgreSQL per l'immagazzinamento dei dati. Questa è una nuova implementazione che utilizza libdbi. Sono supportate tutte le caratteristiche incluse quelle professionali. Per compilare con questa funzionalità, aggiungere "--enable-dbi" al comando "configure". Oltre al pacchetto libdbi-dev della propria distribuzione, sarà anche necessario l'appropriato pacchetto DBD (libdbi driver) per sqlite3, mysql o postgresql.</li>
+<li>Come sostituto dell'attuale motore GtkHTML HTML utilizzato per visualizzare i resoconti e i grafici, Gnucash può usare WebKit. WebKit è il motore utilizzato da Google Chrome su Windows e da Safari su Apple. Per compilare con questa caratteristica, aggiungere "--enable-webkit" al comando "configure". Sarà necessario l'appropriato pacchetto webkit-dev. Su win32, si dovrà scaricare il file compresso webkit-1.1.5-win32.zip dal repository sorgente e inserirlo nella cartella "downloads" della propria area di compilazione di GnuCash.</li>
+<li>Aggiornamento a AqBanking 3 su Win32.</li>
+</ul>
+
+<p>Le stringhe di testo sono congelate. Ciò significa che non verranno applicati dei cambiamenti che potrebbero introdurre una qualsiasi modifica del testo visualizzato da GnuCash. Quindi, le traduzioni finali per la versione 2.4.0 possono partire.</p>
+
+<p>I cambiamenti tra le versioni 2.3.13 e 2.3.14 comprendono:
+
+<ul>
+<li>Bug corretti</li>
+<ul>
+<li>Bug #618954: Aggiunta la colonna "Scadenza" all'elenco dei risultati di ricerca delle fatture.
+
+Patch di "scar".</li>
+<li>Bug #618951: Aggiunta la possibilità di ricercare le fatture per data di scadenza
+
+Patch di "scar".</li>
+<li>Bug #118391: Ridimensionata la lista a comparsa delle valute.
+
+Patch di Frank H. Ellenberger.
+
+Ora nelle lingue testate (europee) è possibile capire il significato senza dover eseguire lo scrolling orizzontale - 
+cercare per MXV o UYI per vedere esempi più lunghi.
+
+Ho usato glade 3, che ha creato il file in maniera differente -
+fatemi sapere se è un problema.</li>
+<li>Bug #619984: Rimosso "Gnumatic, Inc." da po/Makevars
+
+Gnumatic Inc. non esiste più da alcuni anni.
+Quindi non ha senso ritenerlo detentore del copyright delle traduzioni di GnuCash.
+
+Linas era d'accordo con questo cambiamento su IRC:
+http://lists.gnucash.org/logs/2010/05/2010-05-28.html#T13:37:53 - #T16:12:23</li>
+<li>Bug #617797: Impostato eol-style a CRLF per i file win32.</li>
+<li>Bug #618434 - Il separatore decimale è sempre '.' quando si usa il tastierino numerico, patch di Yasuaki Taniguchi</li>
+</ul>
+
+<li>Traduzioni aggiornate o modifiche relative alle traduzioni</li>
+<ul>
+<li>Corretto l'albero dei conti in lettone, patch di Bill Nottingham.</li>
+<li>Aggiornata la traduzione tedesca
+
+Patch di Frank H. Ellenberger: aggiornato de.po
+
+1. aggiunte le traduzioni mancanti
+2. revisione delle traduzione fuzzy
+3. corretto "liabilities": Passiva -&gt; Fremdkapital/Verbindlichkeiten
+4. corretto discount: Skonto -&gt; Skonto, Rabatt &amp; Nachlass
+5. errori ortografici</li>
+<li>Traduzione olandese aggiornata da Mark Haanen, copiata dal Translation Project. </li>
+<li>Traduzione giapponese aggiornata da Yasuaki Taniguchi, copiata dal Translation Project. </li>
+</ul>
+
+<li>Altri cambiamenti visibili dall'utente</li>
+<ul>
+<li>Corretto r19227, r19228: Resa non primaria la ricerca per "Data di scadenza"; corretti parametri erronei al momento dell'inserimento nell'elenco.</li>
+
+</ul>
+
+<li>Altri cambiamenti relativi al codice e alla compilazione</li>
+<ul>
+<li>Conversione del file commodity.glade in glade3-3.6.7 per assicurare che la richiesta di gtk-2.10 sia sufficiente.</li>
+<li>Impostazione di eol-style per win32-bin.txt a CRLF perché questo file dovrebbe essere visualizzato correttamente nei sistemi win32.</li>
+<li>Impostazione di tutti gli script per la shell a svn:eol-style LF perché dovrebbero avere gli stessi finali di linea.</li>
+<li>Correzione dello script che compila i tag per la release. Awk apparentemente lavora in modo differente su windows e linux.</li>
+</ul>
+
+<h3>Avviso per i tester</h3>
+<p>Una qualsiasi versione 2.3.x può andare in crash senza preavviso in qualsiasi momento durante l'utilizzo. Se si sta testando del lavoro importante in un rilascio 2.3.x e si sta utilizzando il formato di file XML per il salvataggio dei dati, assicurarsi di premere "Salva" dopo ogni importante modifica al lavoro. Se si utilizza il backend SQL, questo non è necessario dato che ogni cambiamento è salvato immediatamente nel database.<p>
+<p>Le immagini della documentazione sono state aggiornate, ciò nonostante vari testi si riferiscono ancora alla versione 1.8.x. Chiunque è invitato a contribuire al miglioramento della documentazione; consultare http://wiki.gnucash.org/wiki/Development per le informazioni su come contribuire.</p>
+
+<h3>Come contribuire?</h3>
+<p>Testando: provando il programma e ricercando i bug che possono manifestarsi. Ognuno di essi dovrebbe essere segnalato su bugzilla.</p>
+<p>Traducendo: il nuovo rilascio è accompagnato da alcune nuove stringhe da tradurre. Se si intende contribuire con una traduzione, si consiglia di testare fin da subito questo rilascio. Un congelamento delle stringhe sarà annunciato in una delle successive versioni 2.3.x. Controllare http://wiki.gnucash.org/wiki/Translation_Status per aggioranmenti a riguardo.</p>
+<p></p>
+<p>Si incoraggiano gli utenti a testare il più possibile questa versione ed eventualmente quelle successive, segnalando i bug in modo che sia possibile correggerli rendendo GnuCash il più stabile possibile in vista del rilascio stabile 2.4.0 che dovrebbe avvenire nel giro di qualche settimana. Si prega quindi di segnalare qualsiasi problema su <a href="http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">bugzilla</a></p>
+
+<h3>Ottenere GnuCash</h3>
+<p>Il codice sorgente di GnuCash 2.3.14 può essere scaricato da diverse posizioni:
+<ul>
+<li><a href="http://www.gnucash.org/download.phtml">Il sito internet di GnuCash</a></li>
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.14.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.14.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/2.3.14/">tutti i file</a>.</li>
+<li>É anche possibile effettuare il "check out" direttamente del codice sorgente dal deposito subversion con il seguente comando:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/trunk gnucash</span></li>
+</ul></p>
+
+<p>Per installare GnuCash, sono necessari Gnome 2, guile, slib. Sarà inoltre necessario avere swig se si compila da subversion.</p>
+
+<h3>File binari Win32</h3>
+<p>L'<a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.14-setup.exe">eseguibile di Gnucash 2.3.14 Win32</a> può anch'esso essere scaricato da Sourceforge.
+
+<h3>Informazioni sul programma</h3>
+<p>GnuCash è un programma di contabilità gratuito e a codice aperto rilasciato nel rispetto dei termini della licenza GNU General Public License (GPL) e disponibile per GNU/Linux, *BSD, Solaris, Mac OSX e Microsoft Windows. La scrittura del programma GnuCash ha avuto inizio nel 1997 e la prima versione stabile risale al 1998.</p>
