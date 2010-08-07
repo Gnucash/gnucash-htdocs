@@ -74,9 +74,9 @@ if ($locale == "") {
         }
         # nothing matched, use default language
         if ($locale == "") { $locale = "en_US"; }
-        $lang_dir = $supported_languages[$locale];
 }
 
+$lang_dir = $supported_languages[$locale];
 setcookie("lang_cookie", $locale);
 
 # We should have a locale now, let's set up the required bits and pieces to show
