@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: gnucash-htdocs r18581\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-07-07 15:31+0200\n"
-"PO-Revision-Date: 2010-05-19 04:53+1000\n"
+"PO-Revision-Date: 2010-08-20 14:01+0900\n"
 "Last-Translator: Yasuaki Taniguchi <yasuakit@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -580,9 +580,8 @@ msgid "Documentation Development"
 msgstr "文書作成"
 
 #: docs.phtml:91
-#, fuzzy
 msgid "Introduction"
-msgstr "情報"
+msgstr "導入"
 
 #: docs.phtml:92
 msgid ""
@@ -590,13 +589,13 @@ msgid ""
 "the GNOME2 XML docbook system. This is a relatively flexible system that "
 "takes xml files as input and can generate documentation in several different "
 "output formats (html, pdf,...)."
-msgstr ""
+msgstr "GnuCash の文書は xml ファイルとして保存されています。もっと正確に言うと、GNOME2 XML docbook システムを使用しています。これは比較的柔軟なシステムで xml ファイルを入力としていくつかの異なる形式 (html、pdf等) で出力することができます。"
 
 #: docs.phtml:93
 msgid ""
 "If you wish to review or write GnuCash documentation, you will need to know "
 "xml. Some basic knowledge of the docbook system may be useful as well"
-msgstr ""
+msgstr "GnuCash の文書を査読または記述するときは xml を知っている必要があります。加えて、いくつかの docbook システムに関する基本的な知識も役に立ちます。"
 
 #: docs.phtml:94
 msgid ""
@@ -608,31 +607,26 @@ msgstr "次のリンクは文書化および査読過程で非常に役に立つ
 msgid ""
 "While this GnuCash wiki page is really about translating the documentation, "
 "it holds some useful information on working with docbook files."
-msgstr ""
+msgstr "この GnuCash wiki ページはこれから翻訳が必要ですが、docbook ファイルを使用するために役に立つ情報が含まれています。"
 
 #: docs.phtml:101
 msgid "We suggest also subscribing to "
 msgstr "次のメーリングリストを購読することを提案します"
 
 #: docs.phtml:103
-#, fuzzy
 msgid "Gnome Documentation guidelines"
-msgstr "日次夜間文書ビルド"
+msgstr "Gnome 文書ガイドライン"
 
 #: docs.phtml:104
-#, fuzzy
 msgid ""
 "As stated earlier, the new docs are based on the GNOME2 XML docbook system. "
 "Everyone wishing to help please follow these guides where possible when "
 "reviewing and/or writing docs."
-msgstr ""
-"次に記載しているガイドを読んでください。新規の文書は GNOME2 XML docbook シス"
-"テムに基づいています。査読や文書作成を行なおうと思っている方は、可能な限りこ"
-"れらのガイドに従ってくださるようお願いします。"
+msgstr "前に述べたように、新しい文書は GNOME2 XML docbook システムに基づいています。貢献をしようと考えている方は、査読や文書作成を行うときにこれらのガイドに従うようにしてください。"
 
 #: docs.phtml:110
 msgid "Where to get the documentation source"
-msgstr ""
+msgstr "文書ソースの入手"
 
 #: docs.phtml:111
 msgid ""
@@ -640,21 +634,15 @@ msgid ""
 "check out the documentation module from the GnuCash svn. Reviewers could "
 "also start from the <a href='http://sourceforge.net/projects/gnucash/files/"
 "gnucash-docs/'>current docs tarball</a>."
-msgstr ""
+msgstr "文書ソースの最新版を入手する必要がある場合は GnuCash svn から文書モジュールをチェックアウトしてください。査読者は <a href='http://sourceforge.net/projects/gnucash/files/gnucash-docs/'>最新の文書 tar アーカイブ</a> から開始しても構いません。"
 
 #: docs.phtml:112
-#, fuzzy
 msgid ""
 "For those not familiar with svn, the GnuCash wiki has a <a href='http://wiki."
 "gnucash.org/wiki/Subversion'>description</a> tailored to the GnuCash code. "
 "To get the documentation source instead of the program source, replace "
 "'gnucash' with 'gnucash-docs' in the mentioned svn commands, like this:"
-msgstr ""
-"GnuCash の svn リポジトリ gnucash-docs から文書モジュールをチェックアウトして"
-"ください。もし svn にあまりなじみがないなら、 GnuCash wiki に <a "
-"href='http://wiki.gnucash.org/wiki/Subversion'>説明</a>があります。 文書を得"
-"るためにはチェックアウト対象を gnucash から gnucash-docs に単に変更するだけで"
-"す。 現在の文書の tar アーカイブから始めることもできます。"
+msgstr "もし svn にあまりなじみがないなら、 GnuCash wiki に <a href='http://wiki.gnucash.org/wiki/Subversion'>説明</a>があります。 文書を得るためにはチェックアウト対象を gnucash から gnucash-docs に単に変更してください。実際には以下のようになります。"
 
 #: docs.phtml:115
 msgid "Writers"
@@ -666,22 +654,16 @@ msgid ""
 "changes. When you are satisfied with your changes you can create a patch by "
 "running the following command in the base directory of the documentation "
 "(usually gnucash-docs, unless you renamed it):"
-msgstr ""
+msgstr "上記の方法で文書のソースを入手したら、変更を開始してください。変更した文書が満足のいく物になったら文書の最上位ディレクトリ (通常は変更しない限り gnucash-docs になります) で以下のコマンドを入力してパッチを作成してください。"
 
 #: docs.phtml:118
-#, fuzzy
 msgid ""
 "The usual procedure for contributors to GnuCash is to initially submit "
 "patches to the <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-"
 "devel</a> mailing list. We will handle getting the patches added into svn "
 "until you are given an account. You can also add the patch to a bug report "
 "in <a href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> if you wish."
-msgstr ""
-"上記と同様に文書の svn をチェックアウトしてください。GnuCash への貢献者が通常"
-"行う手続きは、最初に (英語で) <a href='mailto:gnucash-devel@lists.gnucash."
-"org'>gnucash-devel</a> メーリングリストへパッチを送ることです。あなたにアカウ"
-"ントが与えられるまでは私たちがパッチを svn に追加します。あなたが望むなら "
-"bugzilla でバグレポートとしてパッチを加えることもできます。"
+msgstr "GnuCash への貢献者が通常行う手続きは、最初に (英語で) <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> メーリングリストへパッチを送ることです。あなたにアカウントが与えられるまでは私たちがパッチを svn に追加します。あなたが望むなら bugzilla でバグレポートとしてパッチを加えることもできます。"
 
 #: docs.phtml:119
 msgid ""
@@ -713,7 +695,7 @@ msgstr "査読者"
 msgid ""
 "Get a copy of the documentation source as described above and start "
 "commenting on it."
-msgstr ""
+msgstr "上で説明した方法で文書のソースを入手し、査読を行ってください。"
 
 #: docs.phtml:124
 msgid ""
@@ -721,7 +703,7 @@ msgid ""
 "everyone would be to use <a href='http://bugzilla.gnome.org/'>bugzilla.gnome."
 "org</a> to file the bugs under documentation. This can also be done using "
 "bug-buddy."
-msgstr ""
+msgstr "文書に関するコメントを記録して、皆が見つけられるようにしておく最良の方法は <a href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> に文書に関してバグ登録をしておくことです。バグ追跡システムによって記録が残ります。"
 
 #: index.phtml:5 oldnews.phtml:4
 msgid "Free Accounting Software"
