@@ -9,7 +9,7 @@
 
      $latest_unstable           = "2.3.15";
      $latest_unstable_win       = $latest_unstable;
-     $latest_unstable_mac_ppc   = "2.3.9";
+     $latest_unstable_mac_ppc   = $latest_unstable.".3";
      $latest_unstable_mac_intel = $latest_unstable.".3";
 
      // The definitions below use the latest version definitions above
@@ -28,7 +28,7 @@
      $latest_unstable_path=$unstable_path.$latest_unstable."/";
      
      $latest_unstable_win="gnucash-".$latest_unstable_win."-setup.exe";
-     $latest_unstable_mac_intel="Gnucash-Intel-".$latest_unstable_mac_intel.".dmg";
+     $latest_unstable_mac_intel="Gnucash Intel ".$latest_unstable_mac_intel.".dmg";
      $latest_unstable_mac_ppc="Gnucash-PPC-".$latest_unstable_mac_ppc.".dmg";
      $latest_unstable_source="gnucash-".$latest_unstable.".tar.bz2";
      
