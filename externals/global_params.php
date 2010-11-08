@@ -7,10 +7,10 @@
      $latest_stable_mac_ppc     = $latest_stable.".4";
      $latest_stable_mac_intel   = $latest_stable.".5";
 
-     $latest_unstable           = "2.3.15";
+     $latest_unstable           = "2.3.16";
      $latest_unstable_win       = $latest_unstable;
-     $latest_unstable_mac_ppc   = $latest_unstable.".3";
-     $latest_unstable_mac_intel = $latest_unstable.".3";
+     $latest_unstable_mac_ppc   = $latest_unstable;
+     $latest_unstable_mac_intel = $latest_unstable;
 
      // The definitions below use the latest version definitions above
      // to define several paths that will be used on several pages
