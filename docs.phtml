@@ -19,11 +19,41 @@ include("externals/menu.phtml");
 <p><?php echo T_("Every night a server builds the documentation from the current contents of the GnuCash subversion repository.  This includes the Developer Documentation from Doxygen and User Documentation for the current unstable version of GnuCash.");?>
 
 <ul>
-  <li><?php echo T_("Nightly Documentation Builds");?>:
+  <li><b><?php echo T_("Help Manual");?></b>:
     <ul>
-    <li><a href="http://svn.gnucash.org/docs/guide/"><?= T_("Concepts Guide") ?></a></li>
-    <li><a href="http://svn.gnucash.org/docs/help/help.html"><?= T_("Help Manual") ?></a></li>
-    <li><a href="http://svn.gnucash.org/docs/HEAD/"><?= T_("Doxygen Developer Documentation") ?></a></li>
+      <li>
+        <?php echo T_("English");?> :
+        <a href="http://code.gnucash.org/docs/help/help.html">HTML</a> | <a href="http://code.gnucash.org/docs/help.pdf">PDF</a>
+      </li>
+      <li>
+        <?php echo T_("German");?> :
+        <a href="http://code.gnucash.org/docs/help-de_DE/help.html">HTML</a> | <a href="http://code.gnucash.org/docs/help-de_DE.pdf">PDF</a>
+      </li>
+      <li>
+        <?php echo T_("Italian");?> :
+        <a href="http://code.gnucash.org/docs/help-it_IT/help.html">HTML</a> | <a href="http://code.gnucash.org/docs/help-it_IT.pdf">PDF</a>
+      </li>
+    </ul>
+  </li>
+  </li>
+  <li><b><?= T_("Concepts Guide") ?></b>:
+    <ul>
+      <li>
+        <?php echo T_("English");?> :
+        <a href="http://code.gnucash.org/docs/guide/">HTML</a> | <a href="http://code.gnucash.org/docs/guide.pdf">PDF</a>
+      </li>
+      <li>
+        <?php echo T_("German");?> :
+        <a href="http://code.gnucash.org/docs/guide-de_DE/">HTML</a> | <a href="http://code.gnucash.org/docs/guide-de_DE.pdf">PDF</a>
+      </li>
+      <li>
+        <?php echo T_("Italian");?> :
+        <a href="http://code.gnucash.org/docs/guide-it_IT/">HTML</a> | <a href="http://code.gnucash.org/docs/guide-it_IT.pdf">PDF</a>
+      </li>
+      <li>
+        <?php echo T_("Japanese");?> :
+        <a href="http://code.gnucash.org/docs/guide-ja_JA/">HTML</a> | <a href="http://code.gnucash.org/docs/guide-ja_JA.pdf">PDF</a>
+      </li>
     </ul>
   </li>
 </ul>
@@ -116,7 +146,7 @@ include("externals/menu.phtml");
 <h3><?php echo T_("Where to get the documentation source");?></h3>
 <p><?php echo T_("You will need a recent copy of the documentation source. For this you can check out the documentation module from the GnuCash svn. Reviewers could also start from the <a href='http://sourceforge.net/projects/gnucash/files/gnucash-docs/'>current docs tarball</a>.");?></p>
 <p><?php echo T_("For those not familiar with svn, the GnuCash wiki has a <a href='http://wiki.gnucash.org/wiki/Subversion'>description</a> tailored to the GnuCash code. To get the documentation source instead of the program source, replace 'gnucash' with 'gnucash-docs' in the mentioned svn commands, like this:");?></p>
-<pre>svn checkout http://svn.gnucash.org/repo/gnucash-docs/trunk gnucash-docs</pre>
+<pre>svn checkout http://code.gnucash.org/repo/gnucash-docs/trunk gnucash-docs</pre>
 
 <h3><?php echo T_("Writers");?></h3>
 <p><?php echo T_("Get a copy of the documentation source as described above and start making changes. When you are satisfied with your changes you can create a patch by running the following command in the base directory of the documentation (usually gnucash-docs, unless you renamed it):");?></p>
