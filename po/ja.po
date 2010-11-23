@@ -6,10 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs r18581\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-07 15:31+0200\n"
+"POT-Creation-Date: 2010-11-23 12:13+0100\n"
 "PO-Revision-Date: 2010-08-20 14:01+0900\n"
 "Last-Translator: Yasuaki Taniguchi <yasuakit@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -444,11 +445,11 @@ msgstr ""
 "には Doxygen による開発者向け文書および現在のGnuCash開発版のユーザー文書が含"
 "まれます。"
 
-#: docs.phtml:24 docs.phtml:46 docs.phtml:77
+#: docs.phtml:24 docs.phtml:44 docs.phtml:73 docs.phtml:83
 msgid "Concepts Guide"
 msgstr "コンセプトガイド"
 
-#: docs.phtml:25 docs.phtml:38 docs.phtml:72
+#: docs.phtml:25 docs.phtml:38 docs.phtml:69 docs.phtml:78
 msgid "Help Manual"
 msgstr "ヘルプマニュアル"
 
@@ -457,7 +458,8 @@ msgid "Doxygen Developer Documentation"
 msgstr "Doxygen 開発文書"
 
 #: docs.phtml:31
-msgid "GnuCash v2.0 (current stable release)"
+#, fuzzy
+msgid "GnuCash v2.2 (current stable release)"
 msgstr "GnuCash v2.0 (現在の安定版)"
 
 #: docs.phtml:33
@@ -483,16 +485,21 @@ msgstr ""
 "て設計され、これらの概念を利用する方法に関するチュートリアルを提供していま"
 "す。"
 
-#: docs.phtml:40 docs.phtml:42 docs.phtml:48 docs.phtml:49 docs.phtml:73
-#: docs.phtml:75 docs.phtml:78 docs.phtml:79 docs.phtml:83
+#: docs.phtml:39 docs.phtml:42 docs.phtml:45 docs.phtml:47 docs.phtml:70
+#: docs.phtml:74 docs.phtml:79 docs.phtml:81 docs.phtml:84 docs.phtml:85
+#: docs.phtml:89
 msgid "English"
 msgstr "英語"
 
-#: docs.phtml:41 docs.phtml:74 docs.phtml:84
+#: docs.phtml:40 docs.phtml:71 docs.phtml:80 docs.phtml:90
 msgid "Deutsch"
 msgstr "ドイツ語"
 
-#: docs.phtml:54
+#: docs.phtml:41 docs.phtml:46
+msgid "Italiano"
+msgstr ""
+
+#: docs.phtml:51
 msgid ""
 "Please send an email to the <a href='mailto:gnucash-user@lists.gnucash."
 "org'>gnucash-user</a> mailing list if you cannot find a satisfactory answer "
@@ -506,7 +513,7 @@ msgstr ""
 "フィードバックを<b>求めています</b>。あなたのコメントを通してのみ私たちはどの"
 "ように文書を変更するべきか知ることができます。"
 
-#: docs.phtml:55
+#: docs.phtml:52
 msgid ""
 "Additionally, you can talk to someone via IRC at irc.gnome.org channel "
 "\"#gnucash\" about your question.  Another resource is the <a href='http://"
@@ -521,7 +528,7 @@ msgstr ""
 "wiki は登録された利用者が質問や回答を登録することが可能な対話的な Web サイト"
 "です。"
 
-#: docs.phtml:57
+#: docs.phtml:54
 msgid ""
 "Some people have written HOWTO guides or tutorials. Note: the information "
 "presented in these sources may or may not be updated to the most recent "
@@ -533,31 +540,31 @@ msgstr ""
 "アップデートしていないかもしれません。もしこれらの文書の開発に興味があるな"
 "ら、元の作者に連絡してください。"
 
-#: docs.phtml:59
+#: docs.phtml:56
 msgid "Neil Williams GnuCash documentation"
 msgstr "Neil Williams 氏による GnuCash 文書"
 
-#: docs.phtml:60
+#: docs.phtml:57
 msgid "GnuCash for Business Users"
 msgstr "ビジネス利用者向け GnuCash 文書"
 
-#: docs.phtml:61
+#: docs.phtml:58
 msgid "mirror"
 msgstr "ミラー"
 
-#: docs.phtml:63
+#: docs.phtml:60
 msgid "Joe Mack's Tutorial"
 msgstr "Joe Mack 氏によるチュートリアル"
 
-#: docs.phtml:65
+#: docs.phtml:62
 msgid "Dave Gilbert's User Guide (PDF)"
 msgstr "Dave Gilbert 氏によるユーザーズガイド (PDF)"
 
-#: docs.phtml:68
+#: docs.phtml:65
 msgid "Older GnuCash Documentation"
 msgstr "過去の GnuCash 文書"
 
-#: docs.phtml:69
+#: docs.phtml:66
 msgid ""
 "This section contains all the older GnuCash documentation. If you are using "
 "one of these old versions of GnuCash, it is highly recommended that you "
@@ -567,105 +574,138 @@ msgstr ""
 "ら古いバージョンの GnuCash を使用している場合は、最新の安定バージョンにアップ"
 "グレードすることを推奨します。"
 
-#: docs.phtml:85
+#: docs.phtml:91
 msgid "Espagnol"
 msgstr "スペイン語"
 
-#: docs.phtml:86
+#: docs.phtml:92
 msgid "Portugu&ecirc;s"
 msgstr "ポルトガル語"
 
-#: docs.phtml:89
+#: docs.phtml:95
 msgid "Documentation Development"
 msgstr "文書作成"
 
-#: docs.phtml:91
+#: docs.phtml:97
 msgid "Introduction"
 msgstr "導入"
 
-#: docs.phtml:92
+#: docs.phtml:98
 msgid ""
 "The GnuCash documentation is stored in xml files. More precisely, it uses "
 "the GNOME2 XML docbook system. This is a relatively flexible system that "
 "takes xml files as input and can generate documentation in several different "
 "output formats (html, pdf,...)."
-msgstr "GnuCash の文書は xml ファイルとして保存されています。もっと正確に言うと、GNOME2 XML docbook システムを使用しています。これは比較的柔軟なシステムで xml ファイルを入力としていくつかの異なる形式 (html、pdf等) で出力することができます。"
+msgstr ""
+"GnuCash の文書は xml ファイルとして保存されています。もっと正確に言うと、"
+"GNOME2 XML docbook システムを使用しています。これは比較的柔軟なシステムで "
+"xml ファイルを入力としていくつかの異なる形式 (html、pdf等) で出力することがで"
+"きます。"
 
-#: docs.phtml:93
+#: docs.phtml:99
 msgid ""
 "If you wish to review or write GnuCash documentation, you will need to know "
 "xml. Some basic knowledge of the docbook system may be useful as well"
-msgstr "GnuCash の文書を査読または記述するときは xml を知っている必要があります。加えて、いくつかの docbook システムに関する基本的な知識も役に立ちます。"
+msgstr ""
+"GnuCash の文書を査読または記述するときは xml を知っている必要があります。加え"
+"て、いくつかの docbook システムに関する基本的な知識も役に立ちます。"
 
-#: docs.phtml:94
+#: docs.phtml:100
 msgid ""
 "The following links are for further sites that can help with the "
 "documentation and review process."
 msgstr "次のリンクは文書化および査読過程で非常に役に立つサイトです。"
 
-#: docs.phtml:99
+#: docs.phtml:105
 msgid ""
 "While this GnuCash wiki page is really about translating the documentation, "
 "it holds some useful information on working with docbook files."
-msgstr "この GnuCash wiki ページはこれから翻訳が必要ですが、docbook ファイルを使用するために役に立つ情報が含まれています。"
+msgstr ""
+"この GnuCash wiki ページはこれから翻訳が必要ですが、docbook ファイルを使用す"
+"るために役に立つ情報が含まれています。"
 
-#: docs.phtml:101
+#: docs.phtml:107
 msgid "We suggest also subscribing to "
 msgstr "次のメーリングリストを購読することを提案します"
 
-#: docs.phtml:103
+#: docs.phtml:109
 msgid "Gnome Documentation guidelines"
 msgstr "Gnome 文書ガイドライン"
 
-#: docs.phtml:104
+#: docs.phtml:110
 msgid ""
 "As stated earlier, the new docs are based on the GNOME2 XML docbook system. "
 "Everyone wishing to help please follow these guides where possible when "
 "reviewing and/or writing docs."
-msgstr "前に述べたように、新しい文書は GNOME2 XML docbook システムに基づいています。貢献をしようと考えている方は、査読や文書作成を行うときにこれらのガイドに従うようにしてください。"
+msgstr ""
+"前に述べたように、新しい文書は GNOME2 XML docbook システムに基づいています。"
+"貢献をしようと考えている方は、査読や文書作成を行うときにこれらのガイドに従う"
+"ようにしてください。"
 
-#: docs.phtml:110
+#: docs.phtml:116
 msgid "Where to get the documentation source"
 msgstr "文書ソースの入手"
 
-#: docs.phtml:111
+#: docs.phtml:117
 msgid ""
 "You will need a recent copy of the documentation source. For this you can "
 "check out the documentation module from the GnuCash svn. Reviewers could "
 "also start from the <a href='http://sourceforge.net/projects/gnucash/files/"
 "gnucash-docs/'>current docs tarball</a>."
-msgstr "文書ソースの最新版を入手する必要がある場合は GnuCash svn から文書モジュールをチェックアウトしてください。査読者は <a href='http://sourceforge.net/projects/gnucash/files/gnucash-docs/'>最新の文書 tar アーカイブ</a> から開始しても構いません。"
+msgstr ""
+"文書ソースの最新版を入手する必要がある場合は GnuCash svn から文書モジュールを"
+"チェックアウトしてください。査読者は <a href='http://sourceforge.net/"
+"projects/gnucash/files/gnucash-docs/'>最新の文書 tar アーカイブ</a> から開始"
+"しても構いません。"
 
-#: docs.phtml:112
+#: docs.phtml:118
 msgid ""
 "For those not familiar with svn, the GnuCash wiki has a <a href='http://wiki."
 "gnucash.org/wiki/Subversion'>description</a> tailored to the GnuCash code. "
 "To get the documentation source instead of the program source, replace "
 "'gnucash' with 'gnucash-docs' in the mentioned svn commands, like this:"
-msgstr "もし svn にあまりなじみがないなら、 GnuCash wiki に <a href='http://wiki.gnucash.org/wiki/Subversion'>説明</a>があります。 文書を得るためにはチェックアウト対象を gnucash から gnucash-docs に単に変更してください。実際には以下のようになります。"
+msgstr ""
+"もし svn にあまりなじみがないなら、 GnuCash wiki に <a href='http://wiki."
+"gnucash.org/wiki/Subversion'>説明</a>があります。 文書を得るためにはチェック"
+"アウト対象を gnucash から gnucash-docs に単に変更してください。実際には以下の"
+"ようになります。"
 
-#: docs.phtml:115
+#: docs.phtml:121
 msgid "Writers"
 msgstr "著者"
 
-#: docs.phtml:116
+#: docs.phtml:122
 msgid ""
 "Get a copy of the documentation source as described above and start making "
 "changes. When you are satisfied with your changes you can create a patch by "
 "running the following command in the base directory of the documentation "
 "(usually gnucash-docs, unless you renamed it):"
-msgstr "上記の方法で文書のソースを入手したら、変更を開始してください。変更した文書が満足のいく物になったら文書の最上位ディレクトリ (通常は変更しない限り gnucash-docs になります) で以下のコマンドを入力してパッチを作成してください。"
+msgstr ""
+"上記の方法で文書のソースを入手したら、変更を開始してください。変更した文書が"
+"満足のいく物になったら文書の最上位ディレクトリ (通常は変更しない限り gnucash-"
+"docs になります) で以下のコマンドを入力してパッチを作成してください。"
 
-#: docs.phtml:118
+#: docs.phtml:124
 msgid ""
-"The usual procedure for contributors to GnuCash is to initially submit "
-"patches to the <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-"
-"devel</a> mailing list. We will handle getting the patches added into svn "
-"until you are given an account. You can also add the patch to a bug report "
-"in <a href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> if you wish."
-msgstr "GnuCash への貢献者が通常行う手続きは、最初に (英語で) <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> メーリングリストへパッチを送ることです。あなたにアカウントが与えられるまでは私たちがパッチを svn に追加します。あなたが望むなら bugzilla でバグレポートとしてパッチを加えることもできます。"
+"Next attach your patch to a bug report against the documentation component "
+"for the GnuCash project in <a href='http://bugzilla.gnome.org/'>Gnome's "
+"bugzilla database</a> and send an email to <a href='mailto:gnucash-"
+"devel@lists.gnucash.org'>gnucash-devel</a> mailing list to inform other "
+"developers on your work. See also <a href='http://wiki.gnucash.org/wiki/"
+"Bugzilla'>GnuCash' wiki page on bugzilla</a> for more details about patch "
+"submission."
+msgstr ""
 
-#: docs.phtml:119
+#: docs.phtml:126
+msgid ""
+"<b>NOTE:</b> It used to be ok also to send your patch directly to the "
+"gnucash-devel list. This is discouraged now, as a patch is easily forgotten "
+"between the many list discussions. Attach patches to bugs in Bugzilla "
+"instead (either an existing bug or a new one). If you insist on sending a "
+"patch to gnucash-devel, it should be attached, not inlined."
+msgstr ""
+
+#: docs.phtml:127
 msgid ""
 "Please let other writers know which section you wish to tackle. Please "
 "forward this to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-"
@@ -677,7 +717,7 @@ msgstr ""
 "きるように <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</"
 "a> へメールを送ってください。"
 
-#: docs.phtml:120
+#: docs.phtml:128
 msgid ""
 "You may also want to retain a local copy of the old documentation to refer "
 "to when writing. This still has a lot of useful information in it which "
@@ -687,23 +727,26 @@ msgstr ""
 "れません。これは古い文書内に新しい文書に移行されていない多くの役に立つ情報が"
 "ある場合です。"
 
-#: docs.phtml:122
+#: docs.phtml:131
 msgid "Reviewers"
 msgstr "査読者"
 
-#: docs.phtml:123
+#: docs.phtml:132
 msgid ""
 "Get a copy of the documentation source as described above and start "
 "commenting on it."
 msgstr "上で説明した方法で文書のソースを入手し、査読を行ってください。"
 
-#: docs.phtml:124
+#: docs.phtml:133
 msgid ""
 "The best way of retaining comments about docs in an easy to find way for "
 "everyone would be to use <a href='http://bugzilla.gnome.org/'>bugzilla.gnome."
 "org</a> to file the bugs under documentation. This can also be done using "
 "bug-buddy."
-msgstr "文書に関するコメントを記録して、皆が見つけられるようにしておく最良の方法は <a href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> に文書に関してバグ登録をしておくことです。バグ追跡システムによって記録が残ります。"
+msgstr ""
+"文書に関するコメントを記録して、皆が見つけられるようにしておく最良の方法は "
+"<a href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> に文書に関してバ"
+"グ登録をしておくことです。バグ追跡システムによって記録が残ります。"
 
 #: index.phtml:5 oldnews.phtml:4
 msgid "Free Accounting Software"
@@ -1634,6 +1677,20 @@ msgstr "日付"
 #: search/templates/NMZ.result.short.php_tmpl:6
 msgid "(${size} bytes)"
 msgstr ""
+
+#~ msgid ""
+#~ "The usual procedure for contributors to GnuCash is to initially submit "
+#~ "patches to the <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-"
+#~ "devel</a> mailing list. We will handle getting the patches added into svn "
+#~ "until you are given an account. You can also add the patch to a bug "
+#~ "report in <a href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> if "
+#~ "you wish."
+#~ msgstr ""
+#~ "GnuCash への貢献者が通常行う手続きは、最初に (英語で) <a href='mailto:"
+#~ "gnucash-devel@lists.gnucash.org'>gnucash-devel</a> メーリングリストへパッ"
+#~ "チを送ることです。あなたにアカウントが与えられるまでは私たちがパッチを "
+#~ "svn に追加します。あなたが望むなら bugzilla でバグレポートとしてパッチを加"
+#~ "えることもできます。"
 
 #~ msgid "Interesting Links"
 #~ msgstr "関連リンク"

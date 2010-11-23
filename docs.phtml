@@ -121,10 +121,12 @@ include("externals/menu.phtml");
 <h3><?php echo T_("Writers");?></h3>
 <p><?php echo T_("Get a copy of the documentation source as described above and start making changes. When you are satisfied with your changes you can create a patch by running the following command in the base directory of the documentation (usually gnucash-docs, unless you renamed it):");?></p>
 <pre>svn diff > my-patch-name.patch</pre>
-<p><?php echo T_("The usual procedure for contributors to GnuCash is to initially attach your patch to a bug report in <a href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> and send an email to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> mailing list to inform other developers on your work.");?></p>
-<p><?php echo T_("It used to be ok also to send your patch directly to the gnucash-devel list. This is discouraged now, as a patch is easily forgotten between the many list discussions. Attach patches to bugs in Bugzilla instead (either an existing bug or a new one). If you insist on sending a patch to gnucash-devel, it should be attached, not inlined.");?></p>
+<p><?php echo T_("Next attach your patch to a bug report against the documentation component for the GnuCash project in <a href='http://bugzilla.gnome.org/'>Gnome's bugzilla database</a> and send an email to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> mailing list to inform other developers on your work. See also <a href='http://wiki.gnucash.org/wiki/Bugzilla'>GnuCash' wiki page on bugzilla</a> for more details about patch submission.");?></p>
+<div class="dialog note">
+<p><?php echo T_("<b>NOTE:</b> It used to be ok also to send your patch directly to the gnucash-devel list. This is discouraged now, as a patch is easily forgotten between the many list discussions. Attach patches to bugs in Bugzilla instead (either an existing bug or a new one). If you insist on sending a patch to gnucash-devel, it should be attached, not inlined.");?></p>
 <p><?php echo T_("Please let other writers know which section you wish to tackle. Please forward this to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> so that people can say 'hey I'm doing that already' or 'go ahead and do it'.");?></p>
 <p><?php echo T_("You may also want to retain a local copy of the old documentation to refer to when writing. This still has a lot of useful information in it which hasn't been transferred to the new docs");?></p>
+</div>
     
 <h3><?php echo T_("Reviewers");?></h3>
 <p><?php echo T_("Get a copy of the documentation source as described above and start commenting on it.");?></p>
