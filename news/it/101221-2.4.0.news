@@ -1,0 +1,351 @@
+<b>Annuncio:</b> rilascio di GnuCash GnuCash 2.4.0
+2010-12-21
+
+<h2>Rilasciato GnuCash 2.4.0</h2>
+
+<p>TIl team di sviluppo di GnuCash è orgoglioso di annunciare GnuCash 2.4.0, l'ultimo rilascio stabile del programma di contabilità gratuito GnuCash.  Con questa nuova serie di rilasci, GnuCash può utilizzare un database SQL avvalendosi di SQLite3, MySQL o PostgreSQL. Il programma funziona in ambiente GNU/Linux, *BSD, Solaris, Microsoft Windows e Mac OSX.</p>
+<div class="dialog warning">
+<p><b>ATTENZIONE:</b> si consiglia di rimuovere qualsiasi versione precedente di GnuCash dal proprio sistema prima di installare la versione 2.4.0.</p>
+<p>Tralasciando questo passo potrebbero verificarsi degli errori all'avvio. In particolare in ambiente Windows ciò potrebbe causare degli errori del tipo "Parse error: entry point not found".</p>
+</div>
+
+</div>
+
+<p>Le principali novità della versione 2.4.0 comprendono:
+<ul>
+<li>Oltre al backend XML, Gnucash può ora utilizzare un database SQLite3, MySQL o PostgreSQL per l'immagazzinamento dei dati. Questa è una nuova implementazione che utilizza libdbi. Sono supportate tutte le caratteristiche incluse quelle professionali. Per compilare con questa funzionalità, aggiungere "--enable-dbi" al comando "configure". Oltre al pacchetto libdbi-dev della propria distribuzione, sarà anche necessario l'appropriato pacchetto DBD (libdbi driver) per sqlite3, mysql o postgresql.</li>
+<li>Come sostituto dell'attuale motore GtkHTML HTML utilizzato per visualizzare i resoconti e i grafici, Gnucash può usare WebKit. WebKit è il motore utilizzato da Google Chrome su Windows e da Safari su Apple. Per compilare con questa caratteristica, aggiungere "--with-html-engine=webkit" al comando "configure". Sarà necessario l'appropriato pacchetto webkit-dev. Su win32, si dovrà scaricare il file compresso webkit-1.1.90-win32.zip dal repository sorgente e inserirlo nella cartella "downloads" della propria area di compilazione di GnuCash.</li>
+<li>Aggiornamento di AqBanking su Win32.</li>
+</ul>
+
+<h3>Ottenere GnuCash</h3>
+<p>Il codice sorgente di GnuCash 2.4.0 può essere scaricato da:
+<ul>
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.0.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.0.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.4.0/">tutti i file</a>.</li>
+<li>É anche possibile effettuare il "check out" direttamente del codice sorgente dal deposito subversion con il seguente comando: <br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/tags/2.4.0 gnucash</span></li>
+</ul></p>
+
+<p>Per installare GnuCash, sono necessari Gnome 2, guile, slib. Sarà inoltre necessario avere swig se si compila da subversion.</p>
+
+<h3>File binari Win32</h3>
+<p>L'<a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.0-setup.exe">eseguibile di Gnucash 2.4.0 per Win32</a> può essere scaricato anch'esso da Sourceforge.
+
+<h3>File binari per MacOSX</h3>
+<p>Il <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.4.0.dmg">pacchetto per MacOSX di Gnucash 2.4.0</a> può essere scaricato anch'esso da Sourceforge.
+
+<p>Cambiamenti tra la versione 2.3.17 e la versione 2.4.0:
+
+<ul>
+
+
+
+
+<li>Cambiamenti visibili dall'utente</li>
+<ul>
+<li>Update copyright notice dates to include 2010 </li>
+<li>Use proper decimal separator for monetary amounts</li>
+<li>If you have a parent account with a subaccount whose commodity allows more
+decimal places in the amount field than the parent account does things
+don't work right if you open a register for the parent account and all
+subaccounts.  This situation can occur if you have a broker account with
+subaccounts for the securities held in that broker account. If you open a
+register for the top account and all subaccounts, it is impossible to enter
+a transaction to buy or sell a fractional share of the security where there
+are more digits after the decimal point than the parent account allows.
+This change fixes this if the subaccount allows no more than six digits
+after the decimal point.</li>
+<li>When creating a new style sheet, make sure the name for it is non-empty.</li>
+<li>Implement (but currently deactivated) auto-completion in the invoice ledger using all entries from the current book.
+
+Eventually, this will enable drawing the auto-completion from all entries in
+the previous invoices (i.e. book-wide), but in order to give the user a
+good enough feedback during typing we additionally need a quick-fill object
+over those book-wide entries. Currently, the user cannot see whether the
+current description would result in an auto-completion from another invoice,
+and that's not yet enough.</li>
+<li>Implement auto-completion in the invoice/bill entry ledger.</li>
+<li>Take a first shot at adding auto-completion in the business ledger, but currently it doesn't do anything yet.</li>
+</ul>
+
+
+
+
+<li>Traduzioni aggiornate o modifiche relative alle traduzioni</li>
+<ul>
+<li>Updated POTFILES.in </li>
+<li>Mark erroneous translation as fuzzy because it doesn't have the correct c-format.</li>
+<li>Reverse inadvertent mods to po/POTFILES.in in r19904</li>
+<li>Updated Greek translation provided by Nikos Charonitakis.</li>
+<li>Updated Japanese translation, copied from the Translation Project.</li>
+<li>Add "discount" to all glossary files because some languages use different translations in billing terms and invoices.
+
+Additional the german translation is added to glossary/de.po.
+This change does not break the string freeze as it is not user visible.</li>
+<li>Update German translation.
+
+(This includes the 14 new strings which are already there but not yet being used.)</li>
+<li>Merge German translation with latest pot template.
+
+This is merged using msgmerge --no-location de.po gnucash.pot -o de.new.po
+and we use "--no-location" to make the updates actually readable.
+(Unfortunately this doesn't prevent the strings from changing ordering anyway. Oh well.)</li>
+<li>Remove superfluous whitespace at end of string. Incidentally, this way the string already exists and no broken translation results.</li>
+<li>When extracting the translation strings from the scheme files, sort the scheme files to obtain a stable ordering of the output.</li>
+</ul>
+
+
+
+
+<li>Problemi corretti</li>
+<ul>
+<li>Bug #637346: Adding python-bindings to doxygen documentation
+
+Patch by Christoph Holtermann.</li>
+<li>Bug #637041: Revert r19861 as the patch from bug#635439 causes a crash.
+
+The patch can be re-applied after the 2.4.0 release is out, but for now
+I prefer to defer it until after the release.
+
+To be precise, this patch reverts all parts of bug#635439: r19861, r19860,
+r19854, r19853.</li>
+<li>Bug #629446: TRY is now called plain Turkish Lira.</li>
+<li>Bug #454109: Online banking: grey out online actions when there is no online account
+
+Patch by Manfred Usselmann:
+Online actions are disabled for accounts which have no bankcode and account id
+assigned
+
+This fix does not require initialization of the AB_BANKING object.</li>
+<li>Bug #635926: Lower-case the name of the lock table to avoid confusing Postgres. Also abstract it to a static variable instead of repeating the string everywhere.</li>
+<li>Bug #635967: Slots didn't correctly read the path semantics stored by
+2.3.15 and earlier.
+
+Corrected, but note that 2.3.15 and earlier didn't write lists to the
+database, so users should re-save from XML using 2.3.17 or later.
+
+</li>
+<li>Bug #635355: Partly implement the correct "DTAUS import and send" feature again.
+
+Patch by Manfred Usselmann.
+
+The main part of the feature is delayed until the string freeze is lifted.
+This part (without adding strings) implements the infrastructure for sending
+only the correctly imported transactions to the bank later.</li>
+<li>Bug #636459: Recursively delete slots contained in slots of type KVP_TYPE_FRAME or KVP_TYPE_LIST.</li>
+<li>Bug #635859: Strip all trailing '/'es from kvp_slot paths when loading.
+
+This changes round-tripping slightly (because the resulting slot key
+won't have the trailing slash when it's re-saved as xml). It may also
+change the behavior of the facility using the slot, because the key is
+changed. So far, the only known instances which trip this bug are
+import-map-bayes, because descriptions may have '/'es in them (and why
+shouldn't they).
+
+Unfortunately, fixing this right (so that key values can have embedded
+'/''es and be saved/retrieved from sql databases will require changing
+the slot architecture in ways that impact the engine. Since we don't
+have adequate unit tests to be confident of not introducing a
+regression, I'm applying this instead.
+
+</li>
+<li>Bug #609472: Fix translation of displayed style sheet names in the style sheet editor.</li>
+<li>Bug #635911 GnuCash crashes out when trying to save-as MySQL
+Disclaimer: This fix attempt is purely based on the information given in
+the bug report and code reading. I never could reproduce this bug
+but the code suggests an unitialized pointer may be the the cause.</li>
+<li>Bug #635469: Add a (typemap for a) QofQueryParamList typedef.
+
+Patch by Matthijs Kooijman:
+
+This is a typedef for a GSList, that is used to identify the path from
+an object to one of its parameters in search queries and sorting.
+
+This typedef replaces GSList everywhere where it's applicable. This
+relieves the need to special case a few functions in the swig bindings
+and makes the bindings for a bunch of other functions work as well.
+
+Note this is (still) only an in typemap, since no useful functions that
+return a QofQueryParamList are exposed in the bindings right now anyway.</li>
+<li>Bug #635632: Update existing eguile reports to use new for syntax.
+
+Patch by Matthijs Kooijman &lt;matthijs@stdin.nl&gt;:
+
+    This makes use of the new for syntax introduced in the previous
+    commit, making these reports and templates a bit easier to read and
+    modify.</li>
+<li>Bug #635632: Add custom for loop syntax for eguile templates
+
+Patch by Matthijs Kooijman &lt;matthijs@stdin.nl&gt;:
+
+    The built-in for-each loop construct is a bit cumbersome: It always
+    requires an explicit lambda and the list to loop over is the last
+    argument. Especially the latter makes it very hard to read when the
+    lambda is big and multiple for-each'es are nested.
+
+    For hashes, this prevents the need of the cumbersome hash-fold and
+    slightly better hash-for-each (which still suffers from the same
+    problems as for-each and is not available in guile 1.6).
+
+    This new syntax allows for three distinct syntaxes:
+
+     * Looping over a single list:
+	 (for a in lst do (display a))
+     * Looping over multiple lists:
+	 (for (a b) in (lsta lstb) do (display (+ a b)))
+     * Looping over a hash:
+	 (for key =&gt; value in hash do (display (* key value)))</li>
+<li>Bug #635469: Add bindings for running a qofquery on invoices.
+
+This adds a new typedef "GncInvoiceList" with the corresponding typemap,
+and adds two new functions qof_query_create_for_invoices and
+qof_query_run_for_invoices, which are trivial wrappers around
+qof_query_create_for and qof_query_run respectively.</li>
+<li>Bug #635355: Add public declaration of gnc_info_dialog.
+
+Patch by Manfred Usselmann.</li>
+<li>Bug #635439: Patch to autoset owner in the payment dialog
+Patch by Matthijs Kooijman &lt;matthijs@stdin.nl&gt;</li>
+<li>Revert "Bug #635439: Patch to autoset owner in the payment dialog"
+
+This reverts commit 232ae4064952cb65e9703d61778cb1531d2e4f56.</li>
+<li>Bug #635439: Fix "Pay invoice" while the invoice dialog is open.
+
+Patch by Matthijs Kooijman &lt;matthijs@stdin.nl&gt;:
+
+    If you use "Pay invoice", normally a new payment dialog is opened which
+    is completely filled in. However, when there was already a dialog open,
+    it was reused but only the owner would be filled in. This patch makes
+    sure that the invoice and amount are filled in as well.</li>
+<li>Bug #635439: Patch to autoset owner in the payment dialog
+
+Patch by Matthijs Kooijman &lt;matthijs@stdin.nl&gt;:
+
+    In the payment dialog, set the owner when an invoice is selected
+
+    Before, you would always need to select an owner manually. If you would
+    just select an invoice (which was possible, since the invoice selection
+    is not disabled when no owner has been selected yet), pressing OK would
+    error out because no owner was selected.
+
+    This patch makes sure that when an invoice is selected, but no owner is
+    selected yet, the right owner is filled into the owner selection box
+    automatically.
+
+    This also happens when the wrong owner is selected, which can happen
+    because the invoice autocompletion is not limited to invoices from the
+    selected owner, but always completes all invoices. This could cause
+    weird behaviour: Select an owner, then use completion to select an
+    invoice by another owner and press ok. This would cause the amount for
+    the invoice by the other owner to be charged against the first owner.
+    This patch prevents that by replacing the first owner by the other owner
+    in the dialog.
+
+    This patch also changes gnc_invoice_set_owner to no longer reset the
+    invoice selection to NULL. Instead, this is now handled by</li>
+</ul>
+
+
+
+
+<li>Altri cambiamenti relativi al codice e alla compilazione</li>
+<ul>
+<li>Update configure.ac to 2.4.0
+Update gnucash-bin.c to indicate stable version is 2.4.0, next stable version 2.6
+
+Here we go...  </li>
+<li>Add gnc-backend-dbi-priv.h to list of header files so that 'make distcheck' passes </li>
+<li>Fixed date problem in MySql backend</li>
+<li>Removed accidentally created directory.</li>
+<li>Add enumeration of indexes in sql backends.
+
+This is a first step to rewriting databases in a safe way. Indexes are 
+named entities in sql databases and so need to be renamed along with the 
+tables before creating and populating a new set.
+
+This change also introduces a unit test of the new enumeration, and that 
+test has to be able to see data structures which are private to 
+gnc-backend-dbi.c, so those data structures are moved to a new file, 
+gnc-backend-dbi-priv.h, which both gnc-backend-dbi.c and 
+tests/test-stuff.c can include.
+
+</li>
+<li>Add debug helper function qofeventid_to_string.</li>
+<li>Support for GncCommodityNamespace, better support for GncCommodity, and example
+enhancements.
+Patch supplied my Mark Jenkins.</li>
+<li>Changes to example Script to include added namespace functionality
+This patch changes the example script to reflect the capability of reading all
+namespaces.
+Patch provided by Christoph Holtermann.</li>
+<li>Cutecash: Add generation of dummy gnc-version.h file.</li>
+<li>Add missing newline at end of file</li>
+<li>Replace more obsolete #define'd function names by their current names.</li>
+<li>Add gitignore for backup files from make check.</li>
+<li>Replace more obsolete #define'd function names by their current names.</li>
+<li>Make "make check" work when run from "make distcheck".</li>
+<li>Replace obsolete &lt;QueryNew.h&gt; #defines by the current &lt;qof.h&gt; function names.</li>
+<li>Follow-up to r19928: Include gnc-version.h with directory path to avoid picking the wrong file.</li>
+<li>Improve the cached quickfill for GncEntry description lines of r19941.</li>
+<li>Add APIs to get/set a flag signifying that a transaction is a book-closing txn.
+This is necessary for Bug #570042 but doesn't completely solve it until
+the reports are updated to use the new API.  This is backwards-compatible
+with the slot data inserted by the book closing since 2010-03-02.</li>
+<li>Adds checking of gnc_commodity_namespace in glists
+In src/base-typemaps.i check for return type gnc_commodity_namespace is added
+so that it is returned instead of gnc_type_monetary.
+Thanks to Christoph Holtermann for the patch.</li>
+<li>Move price_database_example.py to the correct place and remove incorrect path/file</li>
+<li>Change indent to 4 sp</li>
+<li>Implement prerequisites for full auto-completion in the entry ledger.
+
+Added a cached quickfill for GncEntry description lines. Extend QuickFillCell
+interface to be able to use a common cached quickfill.</li>
+<li>Remove doubled include files.
+
+(Also, QuickFill.h doesn't depend on gdk.h)</li>
+<li>Add messages to backend errors, ensuring that qof_session_backend_get_message() will actually get a useful message, or that there will be a descriptive warning immediately before in the trace file.</li>
+<li>Move gnc-version.h and gnc-svninfo.h from gnome-utils to core-utils.</li>
+<li>If the build directory is not the source directory and the source directory
+is read only, the build fails.  Fix by only making guile-strings.c if 
+building from SVN.</li>
+<li>Get rid of the rest of the gnc-prices man page, r19921 is incomplete</li>
+<li>Remove variable names that conflict with Python keywords.  Relevent when using SWIG autodoc feature for python bindings.</li>
+<li>Add %feature("autodoc", "1"); to gnucash_core.i to pass C documentation through to python interface.</li>
+<li>New example script for prices dababase.  Thanks to Christoph Holtermann for contributing to this.</li>
+<li>Remove obsolete gnc-prices man page</li>
+<li>Add Gnucash svn version to sql versions table.</li>
+<li>Insert missing space</li>
+<li>Re-enable -Werror in Makefile.am and remove %feature("autodoc", "1"); from gnucash_core.i</li>
+<li>Add commodity price functions to bindings.
+See Bug 636457 for more details.</li>
+<li>Add PriceList to typemap for Python bindings</li>
+<li>Patch by Matthijs Kooijman.
+
+In r19863, some qofquery bindings were added. For those to compile,
+business-core.i now includes qofquery.h. However, this causes the
+bindings for qofquery.h to be generated twice: Once through engine.i and
+once through business-core.i. The latter generated broken versions of
+the bindings, breaking (at least) the receivable aging report.
+
+This commit changes the %include to an %import, so the new bindings
+still compile but the query bindings don't get generated twice.
+
+</li>
+<li>Re-indentation of source code.
+
+This re-indentation was done using astyle-1.24 using the following options:
+
+  astyle --indent=spaces=4 --brackets=break --pad-oper --pad-header --suffix=none</li>
+<li>Make prototype for gnc_entry_ledger_get_entry public. Add documentation.</li>
+<li>Fix GtkSpinButton with page-size deprecated warning in gnucash.trace</li>
+</ul>
+
+
+</ul>
+
+<h3>Come contribuire?</h3>
+<p>Traducendo: il nuovo rilascio è accompagnato da alcune nuove stringhe da tradurre. Se si intende contribuire con una traduzione, si consiglia di testare fin da subito questo rilascio.</p>
+<p></p>
+
+<h3>Informazioni sul programma</h3>
+<p>GnuCash è un programma di contabilità gratuito e a codice aperto rilasciato nel rispetto dei termini della licenza GNU General Public License (GPL) e disponibile per GNU/Linux, *BSD, Solaris, Mac OSX e Microsoft Windows. La scrittura del programma GnuCash ha avuto inizio nel 1997 e la prima versione stabile risale al 1998.</p>
