@@ -14,67 +14,93 @@ include("externals/menu.phtml");
 <p><?php echo T_("Everything you need concerning GnuCash documentation should be here, if you notice something missing, email <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> and we will add it.");?></p>
 
 <h2><?= T_("Nightly Documentation Builds");?></h2>
-<h3><?= T_("current unstable user documentation and developer documentation");?></h3>
+<h3><?= T_("Current unstable user documentation and developer documentation");?></h3>
 
 <p><?php echo T_("Every night a server builds the documentation from the current contents of the GnuCash subversion repository.  This includes the Developer Documentation from Doxygen and User Documentation for the current unstable version of GnuCash.");?>
 
 <ul>
-  <li><b><?php echo T_("Help Manual");?></b>:
+  <li><b><?php echo T_("Help Manual");?></b>
     <ul>
       <li>
         <?php echo T_("English");?> :
-        <a href="http://code.gnucash.org/docs/help/help.html">HTML</a> | <a href="http://code.gnucash.org/docs/help.pdf">PDF</a>
+        <a href="http://code.gnucash.org/docs/help/help.html"><?php echo T_("Online");?></a> | <a href="http://code.gnucash.org/docs/help.pdf">Pdf</a>
       </li>
       <li>
         <?php echo T_("German");?> :
-        <a href="http://code.gnucash.org/docs/help-de_DE/help.html">HTML</a> | <a href="http://code.gnucash.org/docs/help-de_DE.pdf">PDF</a>
+        <a href="http://code.gnucash.org/docs/help-de_DE/help.html"><?php echo T_("Online");?></a> | <a href="http://code.gnucash.org/docs/help-de_DE.pdf">Pdf</a>
       </li>
       <li>
         <?php echo T_("Italian");?> :
-        <a href="http://code.gnucash.org/docs/help-it_IT/help.html">HTML</a> | <a href="http://code.gnucash.org/docs/help-it_IT.pdf">PDF</a>
+        <a href="http://code.gnucash.org/docs/help-it_IT/help.html"><?php echo T_("Online");?></a> | <a href="http://code.gnucash.org/docs/help-it_IT.pdf">Pdf</a>
       </li>
     </ul>
   </li>
   </li>
-  <li><b><?= T_("Concepts Guide") ?></b>:
+  <li><b><?= T_("Concepts Guide") ?></b>
     <ul>
       <li>
         <?php echo T_("English");?> :
-        <a href="http://code.gnucash.org/docs/guide/">HTML</a> | <a href="http://code.gnucash.org/docs/guide.pdf">PDF</a>
+        <a href="http://code.gnucash.org/docs/guide/"><?php echo T_("Online");?></a> | <a href="http://code.gnucash.org/docs/guide.pdf">PDF</a>
       </li>
       <li>
         <?php echo T_("German");?> :
-        <a href="http://code.gnucash.org/docs/guide-de_DE/">HTML</a> | <a href="http://code.gnucash.org/docs/guide-de_DE.pdf">PDF</a>
+        <a href="http://code.gnucash.org/docs/guide-de_DE/"><?php echo T_("Online");?></a> | <a href="http://code.gnucash.org/docs/guide-de_DE.pdf">Pdf</a>
       </li>
       <li>
         <?php echo T_("Italian");?> :
-        <a href="http://code.gnucash.org/docs/guide-it_IT/">HTML</a> | <a href="http://code.gnucash.org/docs/guide-it_IT.pdf">PDF</a>
+        <a href="http://code.gnucash.org/docs/guide-it_IT/"><?php echo T_("Online");?></a> | <a href="http://code.gnucash.org/docs/guide-it_IT.pdf">Pdf</a>
       </li>
       <li>
         <?php echo T_("Japanese");?> :
-        <a href="http://code.gnucash.org/docs/guide-ja_JP/">HTML</a> | <a href="http://code.gnucash.org/docs/guide-ja_JP.pdf">PDF</a>
+        <a href="http://code.gnucash.org/docs/guide-ja_JP/"><?php echo T_("Online");?></a> | <a href="http://code.gnucash.org/docs/guide-ja_JP.pdf">Pdf</a>
       </li>
     </ul>
   </li>
 </ul>
 
-<h2><?=T_("GnuCash v2.2");?></h2>
+<h2><?=T_("GnuCash v2.4");?></h2>
 
 <p><?php echo T_("If you have a question about how to use GnuCash, you are in the right place. The first thing you should do is read the Help Manual and the Concepts Guide, most of your questions can probably be answered by these documents.");?></p>
 <p><?php echo T_("The Help Manual is designed to be a quick reference of how to accomplish specific tasks and how to use the features in GnuCash. The Concepts Guide is designed to be an in depth guide to the concepts behind using GnuCash with a tutorial to show how to put those concepts into practice.");?></p>
 
 
 <ul>
-  <li><b><?php echo T_("Help Manual");?></b>:
-    <a href="<?=$top_dir;?>/docs/v2.2/C/gnucash-help/help.html"><?php echo T_("English");?> (HTML)</a> |
-    <a href="<?=$top_dir;?>/docs/v2.2/de_DE/gnucash-help/help.html"><?php echo T_("Deutsch");?> (HTML)</a> |
-    <a href="<?=$top_dir;?>/docs/v2.2/it_IT/gnucash-help/help.html"><?php echo T_("Italiano");?> (HTML)</a>
-    <!-- <a href="<?=$top_dir;?>/docs/v2.2/C/gnucash-help.pdf"><?php echo T_("English");?> (PDF)</a> -->
+  <li><b><?php echo T_("Help Manual");?></b>
+    <ul>
+      <li>
+        <?php echo T_("English");?> :
+        <a href="<?=$top_dir;?>/docs/v2.4/C/gnucash-help/help.html"><?php echo T_("Online");?></a> | <a href="<?=$top_dir;?>/docs/v2.4/C/gnucash-help.pdf">Pdf</a>
+      </li>
+      <li>
+        <?php echo T_("German");?> :
+        <a href="<?=$top_dir;?>/docs/v2.4/de_DE/gnucash-help/help.html"><?php echo T_("Online");?></a> | <a href="<?=$top_dir;?>/docs/v2.4/de_DE/gnucash-help.pdf">Pdf</a>
+      </li>
+      <li>
+        <?php echo T_("Italian");?> :
+        <a href="<?=$top_dir;?>/docs/v2.4/it_IT/gnucash-help/help.html"><?php echo T_("Online");?></a> | <a href="<?=$top_dir;?>/docs/v2.4/it_IT/gnucash-help.pdf">Pdf</a>
+      </li>
+    </ul>
   </li>
-  <li><b><?= T_("Concepts Guide") ?></b>:
-      <a href="<?=$top_dir;?>/docs/v2.2/C/gnucash-guide/"><?php echo T_("English");?> (HTML)</a> |
-      <a href="<?=$top_dir;?>/docs/v2.2/it_IT/gnucash-guide/"><?php echo T_("Italiano");?> (HTML)</a>
-      <!-- <a href="<?=$top_dir;?>/docs/v2.2/C/gnucash-guide.pdf"><?php echo T_("English");?> (PDF)</a> -->
+  </li>
+  <li><b><?= T_("Concepts Guide") ?></b>
+    <ul>
+      <li>
+        <?php echo T_("English");?> :
+        <a href="<?=$top_dir;?>/docs/v2.4/C/gnucash-guide/"><?php echo T_("Online");?></a> | <a href="<?=$top_dir;?>/docs/v2.4/C/gnucash-guide.pdf">Pdf</a>
+      </li>
+      <li>
+        <?php echo T_("German");?> :
+        <a href="<?=$top_dir;?>/docs/v2.4/de_DE/gnucash-guide/"><?php echo T_("Online");?></a> | <a href="<?=$top_dir;?>/docs/v2.4/de_DE/gnucash-guide.pdf">Pdf</a>
+      </li>
+      <li>
+        <?php echo T_("Italian");?> :
+        <a href="<?=$top_dir;?>/docs/v2.4/it_IT/gnucash-guide/"><?php echo T_("Online");?></a> | <a href="<?=$top_dir;?>/docs/v2.4/it_IT/gnucash-guide.pdf">Pdf</a>
+      </li>
+      <li>
+        <?php echo T_("Japanese");?> :
+        <a href="<?=$top_dir;?>/docs/v2.4/ja_JP/gnucash-guide/"><?php echo T_("Online");?></a> | <a href="<?=$top_dir;?>/docs/v2.4/ja_JP/gnucash-guide.pdf">Pdf</a>
+      </li>
+    </ul>
   </li>
 </ul>
 
@@ -94,29 +120,40 @@ include("externals/menu.phtml");
 <ul>
   <li><b>GnuCash v2.0</b>:
     <ul><b><?php echo T_("Help Manual");?></b>:
-      <a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-help/help.html"><?php echo T_("English");?> (HTML)</a> |
-      <a href="<?=$top_dir;?>/docs/v2.0/de_DE/gnucash-help/help.html"><?php echo T_("Deutsch");?> (HTML)</a>
+      <?php echo T_("English");?> (<a href="<?=$top_dir;?>/docs/v2.2/C/gnucash-help/help.html"><?php echo T_("Online");?></a>) |
+      <?php echo T_("German");?> (<a href="<?=$top_dir;?>/docs/v2.2/de_DE/gnucash-help/help.html"><?php echo T_("Online");?></a>) |
+      <?php echo T_("Italian");?> (<a href="<?=$top_dir;?>/docs/v2.2/it_IT/gnucash-help/help.html"><?php echo T_("Online");?></a>)
     </ul>
     <ul><b><?= T_("Concepts Guide") ?></b>:
-      <a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-guide/"><?php echo T_("English");?> (HTML)</a>
+      <?php echo T_("English");?> (<a href="<?=$top_dir;?>/docs/v2.2/C/gnucash-guide/"><?php echo T_("Online");?></a>)
+      <?php echo T_("Italian");?> (<a href="<?=$top_dir;?>/docs/v2.2/it_IT/gnucash-guide/"><?php echo T_("Online");?></a>)
+    </ul>
+  </li>
+  <li><b>GnuCash v2.0</b>:
+    <ul><b><?php echo T_("Help Manual");?></b>:
+      <?php echo T_("English");?> (<a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-help/help.html"><?php echo T_("Online");?></a>) |
+      <?php echo T_("German");?> (<a href="<?=$top_dir;?>/docs/v2.0/de_DE/gnucash-help/help.html"><?php echo T_("Online");?></a>)
+    </ul>
+    <ul><b><?= T_("Concepts Guide") ?></b>:
+      <?php echo T_("English");?> (<a href="<?=$top_dir;?>/docs/v2.0/C/gnucash-guide/"><?php echo T_("Online");?></a>)
     </ul>
   </li>
   <li><b>GnuCash v1.8</b>:
     <ul><b><?php echo T_("Help Manual");?></b>:
-      <a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-help/help.html"><?php echo T_("English");?> (HTML)</a> |
-      <a href="<?=$top_dir;?>/docs/v1.8/de_DE/gnucash-help/help.html"><?php echo T_("Deutsch");?> (HTML)</a> |
-      <a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-help.pdf"><?php echo T_("English");?> (PDF)</a>
+      <?php echo T_("English");?> (<a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-help/help.html"><?php echo T_("Online");?></a>,
+      <a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-help.pdf">Pdf</a>) |
+      <?php echo T_("German");?> (<a href="<?=$top_dir;?>/docs/v1.8/de_DE/gnucash-help/help.html"><?php echo T_("Online");?></a>)
     </ul>
     <ul><b><?= T_("Concepts Guide") ?></b>:
-      <a href="<?=$top_dir;?>/docs/v2.8/C/gnucash-guide/"><?php echo T_("English");?> (HTML)</a> |
-      <a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-guide.pdf"><?php echo T_("English");?> (PDF)</a>
+      <?php echo T_("German");?> (<a href="<?=$top_dir;?>/docs/v2.8/C/gnucash-guide/"><?php echo T_("Online");?></a>,
+      <a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-guide.pdf">PDF</a>)
     </ul>
   </li>
   <li><b>GnuCash v1.6</b>: 
   <a href="<?=$top_dir;?>/docs/v1.6/C/"><?php echo T_("English");?></a> | 
-  <a href="<?=$top_dir;?>/docs/v1.6/de_DE/"><?php echo T_("Deutsch");?></a> | 
-  <a href="<?=$top_dir;?>/docs/v1.6/es/"><?php echo T_("Espagnol");?></a> | 
-  <a href="<?=$top_dir;?>/docs/v1.6/pt_PT/"><?php echo T_("Portugu&ecirc;s");?></a></li>
+  <a href="<?=$top_dir;?>/docs/v1.6/de_DE/"><?php echo T_("German");?></a> | 
+  <a href="<?=$top_dir;?>/docs/v1.6/es/"><?php echo T_("Spanish");?></a> | 
+  <a href="<?=$top_dir;?>/docs/v1.6/pt_PT/"><?php echo T_("Portugese");?></a></li>
 </ul>
 
 <h2><?php echo T_("Documentation Development");?></h2>
