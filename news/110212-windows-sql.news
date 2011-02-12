@@ -1,0 +1,23 @@
+<b>Attention:</b> Broken SQL support in GnuCash 2.4.2 on Windows
+2011-02-12
+
+<h2>Broken SQL support in GnuCash 2.4.2 on Windows</h2>
+
+<div class="dialog warning">
+<p><b>WARNING:</b> The SQL support in GnuCash 2.4.2 is broken on Windows</p>
+<p>If you are using GnuCash 2.4.2 on Windows you will likely experience a crash when you attempt to
+<ul>
+<li>load your data from an Sqlite3 file or from a MySQL/PostgreSQL database</li>
+<li>save your data to any of those formats</li>
+</ul></p>
+<p>If you have already stored your data using any of the SQL formats using a previous version 
+of GnuCash, your best way forward is to uninstall GnuCash 2.4.2 and reinstall GnuCash 2.4.0 to 
+regain access to your data. If your data is still in xml format, don't attempt to save it to 
+an sql format in GnuCash 2.4.2 on Windows as that will fail.</p>
+</div>
+<p>Apparently this only happens on Windows. The Linux and Mac OS X builds don't appear to be affected. 
+Note also that the bug only affects the SQL support in GnuCash. If you are storing your data in xml 
+format, you can safely continue to use GnuCash 2.4.2 on Windows.</p>
+<p>We are currently working to solve this problem and will release a fixed version as soon as possible. 
+You can find more details on this bug and track its progress on 
+<a href="https://bugzilla.gnome.org/show_bug.cgi?id=641832">this bug report</a>.</p>
