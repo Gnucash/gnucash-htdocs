@@ -5,8 +5,6 @@
 
 <p>The GnuCash development team proudly announces GnuCash 2.4.4, the fourth bug fix release in a series of stable of the GnuCash Free Accounting Software. With this new release series, GnuCash can use an SQL database using SQLite3, MySQL or PostgreSQL. It runs on GNU/Linux, *BSD, Solaris, Microsoft Windows and Mac OSX.</p>
 
-<p>Note: 2.4.1 was partially released but was pulled at the last minute when critical problems were found.  2.4.1 should NOT be used.</p>
-
 <p>Major changes in the 2.4.0 release include;
 <ul>
 <li>In addition to the XML backend, Gnucash can now use a SQLite3, MySQL or PostgreSQL database to store the data. This is a new implementation using libdbi. It supports all features including the business features.  In order to build with this, add --enable-dbi to the configure command.  In addition to the libdbi-dev package for your distribution, you will also need the appropriate DBD (libdbi driver) package for sqlite3, mysql or postgresql.</li>
@@ -35,7 +33,6 @@
 <ul>
 <li>User-visible changes</li>
 <ul>
-<li>Update rev to 2.4.4 </li>
 <li>Implement automatic creation of stock account for newly imported OFX stocks.
 
 Only active if "auto-create commodity" is switched on in the preferences
@@ -63,7 +60,6 @@ Modify gnc-tree-view-account.c to define a tax_info_data_func that displays only
 
 <li>Updated translations or translation-related changes</li>
 <ul>
-<li>Update POTFILES.in </li>
 <li>Updated Dutch translation copied from the translation project.</li>
 <li>Updated Ukranian translation copied from the translation project.</li>
 <li>Updated Traditional Chinese translation, glossary and win32 txt.</li>
@@ -132,66 +128,16 @@ found on the internet regarding this issue.</li>
 
 <li>Other code/build changes</li>
 <ul>
-<li>Tag 2.4.4 </li>
-<li>Add some more sanity checking in common importer module.</li>
-<li>Refactor KVP-related functions of OFX into separate file.</li>
 <li>Revert r20405, "Correct memory leaks..." - does not compile with guile-1.6
 
 The patch will be re-applied once trunk requires guile-1.8, which will be done
 right after the oncoming branching.</li>
-<li>Code cleanup in ofx importer; refactoring to get away from the single giant long function.</li>
-<li>Add some more const-correctness.</li>
 <li>Configure simplification: Use pkg-config for libofx. Remove obsolete external qof detection.
 
 (Somehow the argument --with-qt3-wizard-package was writting right
 inside the qof code stuff. This has been moved to the aqbanking section now.)</li>
-<li>Win32: Tweak cross compiling script for webkit so that is seems to almost compile.</li>
 <li>Correct memory leaks found with valgrind</li>
-<li>Remove unused functions for wall clock timing.
-
-Facilities such as this should be used from external expert libraries.
-Also, this is in the way when cleaning up some log system problems
-in subsequent commits.</li>
-<li>Fix r20394: Output string clean-up was missing the date part.</li>
-<li>Move business-options.[hc] from business-utils to app-utils.
-
-As "business-core" has been dissolved, the "business-utils" code
-has no more requirements than app-utils and can be moved there because of this.</li>
-<li>Add ChangeLog.2010.</li>
-<li>Fix missing timestamp in trace files on Windows</li>
-<li>Additional svn:ignore settings</li>
-<li>Add yet more gitignores.</li>
-<li>Add more gitignore entries.</li>
-<li>Add comments to warn about lack of Windows support in the guid_init
-function.</li>
-<li>Fix an accelerator.</li>
-<li>Correct memory leaks found with valgrind</li>
-<li>Add more debug logging.</li>
-<li>Minor code cleanup: Move gconf section name into header; clarify argument name.</li>
-<li>Minor code cleanup in ofx importer; improve const-correctness.</li>
-<li>Use qualified include path for cmake/automake simplification</li>
-<li>Add additional debug markers</li>
-<li>Correct memory leak found with valgrind</li>
-<li>Remove some obsolete files
-
-These files were once copied from gtk 2.8 to work around pre-2.8 gtk
-bugs when that was still our baseline. Our baseline is currently 2.10,
-so these files are no longer needed/used.</li>
-<li>Fix Gtk CRIT warnings introduced in r20351</li>
-<li>Small spelling corrections in comments and some whitespace adjustments</li>
 </ul>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </ul>
