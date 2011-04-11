@@ -1,0 +1,119 @@
+<b>Annuncio:</b> rilascio di GnuCash 2.4.5
+2011-04-10
+
+<h2>Rilasciato GnuCash 2.4.5</h2>
+
+<p>Il team di sviluppo di GnuCash è orgoglioso di annunciare GnuCash 2.4.5, la quinta versione di correzione dei problemi riscontrati nel rilascio stabile del programma di contabilità gratuito GnuCash. Con questa nuova serie di rilasci, GnuCash può utilizzare un database SQL avvalendosi di SQLite3, MySQL o PostgreSQL. Il programma funziona in ambiente GNU/Linux, *BSD, Solaris, Microsoft Windows e Mac OSX.</p>
+
+<p>Le principali novità della versione 2.4.0 comprendono:
+<ul>
+<li>Oltre al backend XML, Gnucash può ora utilizzare un database SQLite3, MySQL o PostgreSQL per l'immagazzinamento dei dati. Questa è una nuova implementazione che utilizza libdbi. Sono supportate tutte le caratteristiche incluse quelle professionali. Per compilare con questa funzionalità, aggiungere "--enable-dbi" al comando "configure". Oltre al pacchetto libdbi-dev della propria distribuzione, sarà anche necessario l'appropriato pacchetto DBD (libdbi driver) per sqlite3, mysql o postgresql.</li>
+<li>Come sostituto dell'attuale motore GtkHTML HTML utilizzato per visualizzare i resoconti e i grafici, Gnucash può usare WebKit. WebKit è il motore utilizzato da Google Chrome su Windows e da Safari su Apple. Per compilare con questa caratteristica, aggiungere "--with-html-engine=webkit" al comando "configure". Sarà necessario l'appropriato pacchetto webkit-dev. Su win32, si dovrà scaricare il file compresso webkit-1.1.90-win32.zip dal repository sorgente e inserirlo nella cartella "downloads" della propria area di compilazione di GnuCash.</li>
+<li>Aggiornamento di AqBanking su Win32.</li>
+</ul>
+
+<h3>Ottenere GnuCash per sistemi Windows (file binari di Win32)</h3>
+<p>Il <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.5-setup.exe">file eseguibile di Win32 per l'installazione di Gnucash 2.4.5</a> può essere scaricato da Sourceforge. Il file installerà tutto ciò che è necessario per eseguire GnuCash.
+
+<h3>File binario per sistemi Mac OSX</h3>
+<p>Il <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.4.5.dmg">pacchetto per MacOSX di Gnucash 2.4.5</a> può essere scaricato anch'esso da Sourceforge.
+
+<h3>Ottenere GnuCash come codice sorgente</h3>
+<p>Per compilare autonomamente GnuCash 2.4.5, il codice sorgente può essere scaricato da:
+<ul>
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.5.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.5.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.4.5/">tutti i file</a>.</li>
+<li>È inoltre possibile eseguire il checkout direttamente dal repository subversion con il seguente comando:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/tags/2.4.5 gnucash</span></li>
+</ul></p>
+
+<p>Per compilare GnuCash dal codice sorgente sono necessari Gnome 2, guile, slib. Sarà inoltre necessario avere swig se si compila da subversion.</p>
+
+
+<p>Cambiamenti tra la versione 2.4.4 e la versione 2.4.5:
+
+<ul>
+<li>Cambiamenti visibili dall'utente</li>
+<ul>
+<li>[20457] Improve message printed on screen</li>
+<li>Note last stable version number</li>
+</ul>
+
+
+
+
+<li>Traduzioni aggiornate o modifiche relative alle traduzioni</li>
+<ul>
+<li>[20507] Various spelling fixes in comments and translatable strings.</li>
+<li>Updated Dutch translation, copied from the translation project.</li>
+<li>Updated Italian translation.</li>
+</ul>
+
+
+
+
+<li>Problemi corretti</li>
+<ul>
+<li>[20496] Bug #645518: Partly revert r20378, "Correct memory leaks found with valgrind"
+
+The original author (Alex) asked to have this part reverted as it seems
+to cause the crash explained in the bugreport, but he doesn't have time
+to investigate this in detail right now.</li>
+<li>[20481] Bug #645640: Online transfer must not allow to change amount in second window</li>
+<li>Bug #642176: Add four decimals to CLF (Chilean Unidades de fomento)
+
+Oops, I forgot 1 digit</li>
+<li>Bug #642176: Add four decimals to CLF (Chilean Unidades de fomento)
+
+While we could not find a document, which defines the decimals,
+they are indispensable for the conversion of payments in "real" CLP.</li>
+<li>Bug #645173 - [PATCH] Configure check uses hardcoded webkit library
+name
+
+Patch by Andy Clayton.</li>
+<li>Bug #641645 - Support ActivePerl 5.12 for Finance:Quote on Windows</li>
+<li>Bug #644688: Account edit fails to detect that no changes have been made and marks the account 'dirty'.</li>
+</ul>
+
+
+
+
+<li>Altri cambiamenti relativi al codice e alla compilazione</li>
+<ul>
+<li>[20501] During win32 build, if a component is already installed, print the installation path
+
+Original patch by plongstaff.</li>
+<li>[20491] Fix glade message with unintended whitespaces.</li>
+<li>[20487]Windows nightly build: fix webserver directory creation hack</li>
+<li>[20475] Windows build: fix weekly 2.4 build and move log files into separate directory</li>
+<li>[20461] Windows build: allow reset.sh to remove mingw</li>
+<li>[20460] Windows build: fix upload code</li>
+<li>[20456] Some additional Windows nightly build fixes:
+- restore the original mingw/msys link, even when the build script abort (due to a die command)
+- only restore the mingw/msys link if it was saved before
+- weekly builds should be on Monday, not Tuesday
+- upload tag rebuilds to a directory named 'releases' instead of 'tags'</li>
+<li>[20455] Build server: automatically create directories on webserver for new branches</li>
+<li>[20454] Rework the Windows weekly 2.4 build to avoid parallel builds (which would fail)</li>
+<li>[20452] Adapt the windows build system to deal with swapping mingw installations on one build machine</li>
+<li>Start the 2.4 stable branch so that trunk is now experimental again</li>
+<li>Add some convenience getter functions to gncOwner.</li>
+<li>Whitespace and spelling corrections</li>
+<li>Make error message on missing &lt;dbi/dbi.h&gt; more verbose.
+
+Also mention the infamous dbi database drivers here,
+https://lists.gnucash.org/pipermail/gnucash-devel/2011-February/031171.html</li>
+</ul>
+
+
+
+
+
+
+
+</ul>
+
+<h3>Come contribuire?</h3>
+<p>Traducendo: il nuovo rilascio è accompagnato da alcune nuove stringhe da tradurre. Se si intende contribuire con una traduzione, si consiglia di testare fin da subito questo rilascio.</p>
+<p></p>
+
+<h3>Informazioni sul programma</h3>
+<p>GnuCash è un programma di contabilità gratuito e a codice aperto rilasciato nel rispetto dei termini della licenza GNU General Public License (GPL) e disponibile per GNU/Linux, *BSD, Solaris, Mac OSX e Microsoft Windows. La scrittura del programma GnuCash ha avuto inizio nel 1997 e la prima versione stabile risale al 1998.</p>
