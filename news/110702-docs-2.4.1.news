@@ -1,0 +1,196 @@
+<b>Announcement:</b> GnuCash Documentation 2.4.1 Release
+2011-07-02
+
+<h2>GnuCash Documentation 2.4.1 released</h2>
+
+<p>The GnuCash documentation team proudly announces release 2.4.1 of the GnuCash help manual and concepts guide. This documentation is intended for the 2.4 series of GnuCash.</p>
+<p>Note: version 2.4.0 of the GnuCash Documentation was only partially released and had several issues. Hence it was never officially announced and should be skipped.</p>
+
+<h3>Reading the documentation online</h3>
+
+<p>An online version of the documentation is available on the <a href="http://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="http://www.gnucash.org/">GnuCash website</a>. The 2.4.1 documentation can be found under "GnuCash v2.4 (current stable release)" in multiple languages.
+
+<h3>Getting GnuCash Documentation as pdf</h3>
+
+<p>An pdf version of the documentation available on the <a href="http://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="http://www.gnucash.org/">GnuCash website</a>. The 2.4.1 documentation will be found under "GnuCash v2.4 (current stable release)" in multiple languages.
+
+<h3>Getting GnuCash Documentation as source code</h3>
+
+<p>If you want to compile the GnuCash Documentation 2.4.1 for yourself, the source code can be downloaded from:
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-docs-2.4.1.tar.gz">Sourceforge</a></li>
+<li>You can also checkout the sources directly from the subversion repository as <a href="http://wiki.gnucash.org/wiki/Subversion">described here.</a></li>
+</ul></p>
+
+<h3>Changes</h3>
+<p>Changes between the 2.2 series and 2.4.1 include</p>
+<ul>
+  <li>Bugs fixed</li>
+  <ul>
+    <li>Bug #130920: Explain workaround for user-defined currencies.</li>
+    <li>Bug #535424: Update documentation for the Since Last Run assistant.</li>
+    <li>Bug #582547: Add account tree columns description.</li>
+    <li>Bug #588035: Correct keyboard shortcut for Actions &gt; Split menu item.</li>
+    <li>Bug #621573: Simplify explanation of entering a split transaction and remove comment
+    about register bug (no longer applicable).</li>
+    <li>Bug #627266: "Steps to enable On-line price updating" doesn't say to
+    install Finance::Quote</li>
+    <li>Bug #627983: Quit or Cancel</li>
+    <li>Bug #627984: Documentation consistency: either don't use the term druid or at least explain it.</li>
+    <li>Bug #628745 - guide: Add What's New section for current stable series</li>
+    <li>Bug #630652: Expand and add GnuCash Other Assets<br/>
+    Patch author: Tom Bullock (tbullock at nd dot edu)</li>
+    <li>Bug #632244: Removed the Preferences section from guide and updated on help.</li>
+    <li>Bug #633385:
+    Restructure section 2.2 Data Entry Concepts to only include basic info on files,
+    accounts, and transactions.<br/>
+    Minor cosmetic edits to section 2.1.3 and a concept clarification to section 4.2.2.<br/>
+
+    Author: David (sunfish62 at yahoo dot com)<br/>
+    Input:  Yawar Amin (yawar dot amin at gmail dot com) and Tom Bullock (tbullock at nd dot edu)</li>
+    <li>Bug #633586:
+
+    Move the explanation of debits and credits from  section 3.2.2 `Income and Expense
+    Accounts' into section 2.1.3 `Double Entry', a more logical place.<br/>
+    Get rid of historical info (easy to look up online), error checking features info
+    (this isn't a sales pitch), and banks' reversed usage of debit and credit
+    terms (a digression, not really relevant at this point).</li>
+    <li>Bug #634075: Replace all usage of the term `druid' with `assistant' in the GnuCash
+    Guide.<br/>
+    Author: Mike E (mikee at saxicola dot idps dot co dot uk)</li>
+    <li>Bug #635357: Document Save As and Open dialogs.</li>
+    <li>Bug #635360: Explain backup files from a 2.4 point of view.</li>
+    <li>Bug #635361: Update the new account screen description and minor changes to account basics chapter in help.</li>
+    <li>Bug #635363: Add description of auto completion for business features.</li>
+    <li>Bug #635365: Mention invoice post date default.</li>
+    <li>Bug #635365: New images for AR Payment and AP Payment</li>
+    <li>Bug #635365: documents the new dialog related to style sheets</li>
+    <li>Bug #635386: Document trading accounts GnuCash capabilities.</li>
+    <li>Bug #635982: Fix typos and grammatical errors.<br/>
+
+    Author: Yasuaki Taniguchi (yasuakit at gmail dot com)<br/>
+    Review: Yawar Amin (yawar dot amin at gmail dot com) and Cristian Marchi (cri79 at ngi dot it)</li>
+    <li>Bug #638500: Add a note about the source of the report being modified so that users can follow along.</li>
+    <li>Bug #639264: Add Information about Starting Balance in reconcile window and revise the entire section.</li>
+    <li>Bug #639999: 16.3 Current Assets miscalculation in 16.3.5 Wash/Suspense Account<br/>
+    Patch by Chris Curtis.</li>
+    <li>Bug #644984: Update to 2.4 UI and workflow the guide section on scheduled transactions entering from the Scheduled transaction editor.</li>
+    <li>Bug #647735: Add instructions on how to change the GnuCash interface language.</li>
+    <li>Related to bug #635366: Add cross-links for the Tax Options menu.</li>
+    <li>Related to bug #635357: Remove QIF assistant description and move New Account Hierarchy setup description.</li>
+  </ul>
+
+
+
+ <li>Translation updates</li>
+ <ul>
+    <li>New and updated German version of guide document, by Juergen Hoewener.</li>
+    <li>Updated German help, by Holger Stöhr.</li>
+    <li>Much improved Italian version of the documentation, by Christan Marchi.</li>
+    <li>New Japanese version of the guide, by Yasuaki Taniguchi.</li>
+ </ul>
+
+
+
+ <li>New or improved content</li>
+ <ul>
+    <li>GnuCash Docs: Update GNOME documentation links, patch by Yawar Amin</li>
+    <li>Update help manual to reflect partial support of capital gains for US Income Tax reporting and TXF exporting for code 673.</li>
+    <li>New figure for Printing tab under Preferences.</li>
+    <li>Updated Preferences section to GnuCash 2.4 and minor changes for 2.4 release.</li>
+    <li>guide: Reword paragraphs about new file extension<br/>
+
+    Mention new file extension chosen during 2.3 development. Also, two
+    paragraphs in the `Basics' chapter talk about the new default .gnucash file
+    format. Make the second refer to the first.</li>
+    <li>guide: Change/remove references to old versions</li>
+    <li>guide: Mention important changes in What's New section</li>
+    <li>guide: Explain concept behind What's New section.</li>
+    <li>Update Reports section of help manual to reflect enhanced tax report.</li>
+    <li>help &amp; guide: Update date, series and version entity definitions to current release.</li>
+    <li>Update menu paths to 2.4 UI.</li>
+    <li>Updated help content to GnuCash 2.4, improved markup and tagging.</li>
+    <li>Update help to reflect changes introduced with bug #634357.</li>
+    <li>Add shortcut for Transfer command.</li>
+    <li>Reintroduce the show splash screen option.</li>
+    <li>Add description for File-&gt;Add Report item.</li>
+    <li>Fix mixed up account names, spotted by aikhan</li>
+    <li>Provide separate Finance::Quote instructions for each OS and clarify the ones for Linux.</li>
+    <li>Changed "Portfoloio View" to "Commodity View". A "portfolio" is a
+    collection of investments, not a single investment. The register view in
+    question applies to a single investment, and is used for all
+    non-monetary commodities.</li>
+    <li>Update all references in the C guide &amp; help files to also show the correct
+    preferences menu path for Mac OS X in addition to the Gnome one.</li>
+    <li>guide:Remove sections on international preferences and currency support, and
+    absorb them into earlier introduction and account setup sections.</li>
+    <li>Remove a note about bug #340041 that is fixed now.</li>
+    <li>Add information on python invoice import script
+    Documenation created by Mike Evans</li>
+
+    <li>Lots of small fixes and tweaks to improve the quality of the content.</li>
+ </ul>
+
+
+
+  <li>Markup releated changes</li>
+  <ul>
+    <li>Delete guilabel tags below section titles with same wording (redundant).<br/>
+    Delete note about debit and credit effects on asset accounts because it's
+    effectively the same as note `More on Debits and Credits' at the end of
+    Section 3.2.2 (Income and Expense Accounts).<br/>
+    Replace GnuCash name with defined app entity.<br/>
+    Use tip tags for tips.<br/>
+    Use an xref tag for a reference.</li>
+    <li>Replace all uses of GnuCash with the app entity</li>
+    <li>Replace all usage of the words 'GnuCash' or 'Gnucash' with the 'app' entity<br/>
+    Patch by Yawar Amin</li>
+    <li>Add &lt;application&gt; markup to &amp;app; entity.</li>
+    <li>guide: Add single-quote entity definitions</li>
+    <li>Use &amp;rsquo; entity instead of "'"</li>
+    <li>Define entities for current stable and unstable versions, patch by Yawar Amin</li>
+    <li>guide: Add entities for stable and unstable series<br/>
+
+    Sometimes referring to the exact version in the documentation is a bit
+    superfluous, and instead we just want to refer to general GnuCash release
+    series (2.2, 2.3, 2.4, etc.) in which something happened.</li>
+    <li>Add mdash entity to enable the use of xml2po and add description for entities.</li>
+    <li>Add guibutton tag.</li>
+    <li>Generate html doc in UTF-8 instead of ISO-8859-1</li>
+    <li>Add figure tags and pgwide attribute to some screenshots<br/>
+    The figure tags should go around all screenshots to have them
+    show up in the list of figures.<br/>
+    The pgwide attribute repositions the image in pdf documents. Large
+    pictures still fit on the page thanks to this flag.</li>
+    <li>Use different accounting equation image for html or pdf rendering
+    This is meant as an example of how the pdf images can be improved.
+    This may not work well for screenshots though.</li>
+    <li>Improve figures and images for pdf printing and remove unused ones.
+    Change ppi to 144 for all figures</li>
+    <li>Add hyperlink to GnuCash user list.</li>
+    <li>Add function attribute to Enter key tagging.</li>
+ </ul>
+
+ 
+  <li>Other, non-visible changes</li>
+  <ul>
+  <li>Remove old files that collide with existing ones in case-insensitive filesystems.</li>
+  <li>Add chapter getting-help to Makefile.</li>
+  <li>Merge branch 'bug633066' into HEAD</li>
+  <li>Remove redundant index.</li>
+  <li>Add gitignores.</li>
+  <li>Separate getting-help chapter to validate getting-started xml file.</li>
+  <li>Update the build system to a more recent xsl stylesheet, including ones required for pdf and htmlhelp (Windows)</li>
+  <li>Restore pdf creation for gnucash-guide and gnucash-help in all languages.</li>
+  <li>Update docbook specification from 4.1.2 to 4.4.</li>
+  <li>Migrate the Italian GnuCash guide to a po file based workflow.</li>
+  <li>Set svn:eol-style property for all XML files to LF to avoid CRLF/LF mixups.</li>
+  <li>More information on translation process</li>
+
+  <li>Several other small fixes and tweaks in the documentation build system</li>
+ </ul>
+</ul>
+
+
+<h3>About the Program</h3>
+<p>GnuCash is a free, open source accounting program released under the GNU General Public License (GPL) and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash began in 1997, and its first stable release was in 1998.</p>
