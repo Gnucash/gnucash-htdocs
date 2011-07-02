@@ -1,0 +1,73 @@
+<b>Announcement:</b> GnuCash 2.4.7 Release
+2011-07-02
+
+<h2>GnuCash 2.4.7 released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.4.7, the seventh bug fix release in a series of stable of the GnuCash Free Accounting Software. With this release series, GnuCash can use an SQL database using SQLite3, MySQL or PostgreSQL. It runs on GNU/Linux, *BSD, Solaris, Microsoft Windows and Mac OSX.</p>
+
+<h3>Getting GnuCash for Windows (Win32 binary)</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.7-setup.exe">Gnucash 2.4.7 Win32 setup executable</a> can be downloaded from Sourceforge. It will install everything needed to run GnuCash.
+
+<h3>Mac OSX binary</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.4.7.dmg">Gnucash 2.4.7 MacOSX package</a> can be downloaded from Sourceforge as well.
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.4.7 for yourself, the source code can be downloaded from:
+<ul>
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.7.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.7.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.4.7/">all files</a>.</li>
+<li>You can also checkout the sources directly from the subversion repository as <a href="http://wiki.gnucash.org/wiki/Subversion">described here.</a></li>
+</ul></p>
+
+<p>To compile GnuCash from the source code by yourself, you will need Gnome 2, guile, slib. In addition you will need swig if compiling from subversion.</p>
+
+<h3>Changes</h3>
+
+<p>Between 2.4.6 and 2.4.7, the following bugfixes were included:</p>
+<ul>
+<li>[20804]Bug #653056: Fix menu accelerators not working, crash on save-while-quitting.</li>
+<li>[20800] Bug #646541: new invoice line items default to invoice open date
+instead of current date
+This commit partially reverts the changes in r19134 so that
+customer invoices and employee vouchers default to the current date.
+Vendor bills still default to the invoice open date.</li>
+<li>[20798] Fix report reload and options change that got broken by the previous
+commit.</li>
+<li>[20796] Force custom url handlers to lowercase to deal with Webkit 1.4's case
+sensitivity.
+For more details, consult this Fedora bugreport:
+https://bugzilla.redhat.com/show_bug.cgi?id=712268</li>
+<li>[20792] Bug #652257 - Memory leak in gnc-file.c
+Patch by Tim M</li>
+<li>[20786] Bug #652435 - Fancy invoice export has &lt;generic&gt; tags in it preventing html validation Patch by Bert Claesen</li>
+<li>[20785] Bug #652377 - XHTML 1.0 Transitional compliance for reports Patch by Tim M</li>
+<li>[20784] Bug #632931 - Advanced Portfolio: new income column shows negative amount Patch by Sebastien Alborini</li>
+<li>[20783] Bug #651889 - Using trading accounts, new non-expanded trading transaction shows inverted rates in exchange dialog
+
+When using trading accounts, the exchange rate dialog has a slightly
+different behavior. This patch fixes the behavior for transactions
+that are created in-line and are not expanded (single-line).
+It does not affect the expanded transactions or transactions created
+in the new transaction dialog.
+Patch by Mathieu De Zutter</li>
+<li>[20782] Bug #651992 - Exported invoices do not render correctly in Firefox Patch by Bert Claesen</li>
+<li>[20760]Bug #612562 - Transfer Funds dialog - 'Show Income/Expense' checkboxes
+are not working</li>
+<li>[20750] Windows build: change default gtk theme to work around a number of
+problems in the Ms-Windows theme we used before.
+Particularly, this prevents the crash caused by bug #614636 and fixes
+the black notebook tabs that appeared after Phil upgraded webkit and
+many related gnome dependencies.
+The new default theme is "Nimbus" following a suggestion by Kim Wood
+on the mailing list.</li>
+<li>[20746] Bug #652193 - Upcoming Scheduled Transactions Calendar Starting Month
+Error. Patch by Rich</li>
+<li>[20745] Replace deprecated xml tag in chart of accounts templates</li>
+</ul>
+
+<p>In 2.4.7, translations for Tamil language were updated, by AshokR
+from Transifex.  See also
+https://www.transifex.net/projects/p/gnucash24/</p>
+
+
+<h3>About the Program</h3>
+<p>GnuCash is a free, open source accounting program released under the GNU General Public License (GPL) and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash began in 1997, and its first stable release was in 1998.</p>
