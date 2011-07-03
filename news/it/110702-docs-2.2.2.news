@@ -1,0 +1,102 @@
+<b>Annuncio:</b> rilascio 2.2.2 della Documentazione di GnuCash
+2011-07-02
+
+<h2>Rilasciata la versione 2.2.2 della documentazione di GnuCash</h2>
+
+<p>Il gruppo della documentazione di GnuCash è orgoglioso di annunciare il rilascio della versione 2.2.2 dell'aiuto e della guida ai concetti e manuale di GnuCash. Questa documentazione è
+rivolta alla serie 2.2 dei rilasci di GnuCash.</p></p>
+<p>Nota: questo sraà l'ultimo rilascio per la serie 2.2. Le forze saranno d'ora in poi concentrate solo sulla documentazione della serie stabile 2.4 e sulla versione in sviluppo.</p>
+
+<h3>Leggere la documentazione online</h3>
+
+<p>Una versione online della documentazione è disponibile nella pagina della <a href="http://www.gnucash.org/docs.phtml">documentazione</a> del <a href="http://www.gnucash.org/">sito di GnuCash</a>. La versione 2.2.2 della documentazione è disponibile nella sezione "Vecchia documentazione di GnuCash", "GnuCash v2.2".
+
+<h3>Ottenere la documentazione di GnuCash come codice sorgente</h3>
+
+<p>Per compilare la versione 2.2.2 della documentazione di GnuCash, il codice sorgente può essere scaricato da:
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-docs-2.2.2.tar.gz">Sourceforge</a></li>
+<li>È anche possibile eseguire il checkout del sorgente direttamente dal deposito subversion come <a href="http://wiki.gnucash.org/wiki/Subversion">descritto qui.</a></li>
+</ul></p>
+
+<h3>Cambiamenti</h3>
+<p>Le modifiche tra la versione 2.2.1 e la 2.2.2 includono</p>
+<ul>
+  <li>Problemi corretti</li>
+
+  <ul>
+    <li>Bug #588035: Correct keyboard shortcut for Actions &gt; Split menu item.</li>
+    <li>Bug #621573: Simplify explanation of entering a split transaction and remove comment
+    about register bug (no longer applicable).</li>
+    <li>Bug #627266: "Steps to enable On-line price updating" doesn't say to install Finance::Quote</li>
+    <li>Bug #630652: Expand and add GnuCash Other Assets<br/>
+
+    Patch author: Tom Bullock (tbullock at nd dot edu)</li>
+    <li>Bug #632244: Removed the Preferences section from guide and updated on help.
+
+    Keep old screenshots and source credits. Delete all references to new
+    preferences such as Printing tab. Delete all references to new SQL backend
+    and default .gnucash extension.</li>
+    <li>Bug #633066</li>
+    <li>Bug #633385:
+    Restructure section 2.2 Data Entry Concepts to only include basic info on files,
+      accounts, and transactions.<br/>
+    Minor cosmetic edits to section 2.1.3 and a concept clarification to section 4.2.2.<br/>
+
+    Author: David (sunfish62 at yahoo dot com)<br/>
+    Input:  Yawar Amin (yawar dot amin at gmail dot com) and
+            Tom Bullock (tbullock at nd dot edu)</li>
+    <li>Bug #634075: Replace all usage of the term `druid' with `assistant' in the GnuCash
+    Guide.<br/>
+    Author: Mike E (mikee at saxicola dot idps dot co dot uk)</li>
+  </ul>
+
+
+  <li>Aggiornamenti alle traduzioni</li>
+  <ul>
+    <li>New and updated German version of guide document, by Juergen Hoewener.</li>
+  </ul>
+
+
+  <li>Novità e miglioramenti ai contenuti</li>
+  <ul>
+    <li>guide: Explain concept behind What's New section</li>
+    <li>guide: Mention important changes in What's New section</li>
+    <li>guide: Mention platform support only for current stable version</li>
+    <li>guide: Change/remove references to old versions</li>
+    <li>New figure for Printing tab under Preferences.</li>
+    <li>Add Budgets and Other Assets chapters to the overview.<br/>
+
+    Author: Tom Bullock (tbullock at nd dot edu)</li>
+    <li>Fix sequence of tenses grammar error<br/>
+
+    Author: Tom Bullock (tbullock at nd dot edu)</li>
+    <li>Minor spelling and grammar fixes.</li>
+  </ul>
+
+
+  <li>Modifiche interne, non visibile all'utente</li>
+  <ul>
+    <li>Add chapter getting-help to Makefile.</li>
+    <li>Separate getting-help chapter to validate getting-started xml file.</li>
+    <li>guide: Add entities for stable and unstable series</li>
+    <li>guide: Add single-quote entity definitions</li>
+    <li>Replace all usage of the words `GnuCash' or 'Gnucash' with the 'app' entity.
+    Patch by Yawar Amin</li>
+    <li>Added &lt;application&gt; markup to GnuCash program name</li>
+    <li>Remove old file that collides with existing one in case-insensitive filesystems.</li>
+    <li>Delete guilabel tags below section titles with same wording (redundant).<br/>
+    Delete note about debit and credit effects on asset accounts because it's<br/>
+    effectively the same as note `More on Debits and Credits' at the end of
+    Section 3.2.2 (Income and Expense Accounts).<br/>
+    Replace GnuCash name with defined app entity.<br/>
+    Use tip tags for tips.<br/>
+    Use an xref tag for a reference.</li>
+    <li>GnuCash docs: merge revisions 19151,19307,19312-19313,19386,19455,19460,19472-19473,19479-19480,19482-19483 to 2.2 branch</li>
+    <li>guide: Remove 2.3+-specific info</li>
+  </ul>
+</ul>
+
+
+<h3>Informazioni sul programma</h3>
+<p>GnuCash è un programma di contabilità gratuito e a codice aperto rilasciato nel rispetto dei termini della licenza GNU General Public License (GPL) e disponibile per GNU/Linux, *BSD, Solaris, Mac OSX e Microsoft Windows. La scrittura del programma GnuCash ha avuto inizio nel 1997 e la prima versione stabile risale al 1998.</p>
