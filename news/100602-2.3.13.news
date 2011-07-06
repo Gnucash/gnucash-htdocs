@@ -1,0 +1,463 @@
+<b>Announcement:</b> GnuCash 2.3.13 (Unstable) Release
+2010-06-02
+
+<h2>GnuCash 2.3.13 (Unstable) released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.3.13, the fourteenth of several unstable 2.3.x releases of the GnuCash Free Accounting Software which will eventually lead to the stable version 2.4.0. With this new release series, GnuCash can use an SQL database using SQLite3, MySQL or PostgreSQL. It runs on GNU/Linux, *BSD, Solaris, Microsoft Windows and Mac OSX.</p>
+
+<div class="dialog warning">
+<p><b>WARNING:</b> This is an *UNSTABLE* version of Gnucash.</p>
+<p>This release is intended for developers and testers who want to help tracking down all those bugs that are still in there.</p>
+<p>Make sure you make backups of any files used in testing versions of GnuCash in the 2.3.x series. Although the developers go to great lengths to ensure that no data will be lost we cannot guarantee that your data will not be affected if for some reason GnuCash crashes in testing these releases.</p>
+</div>
+
+<div class="dialog note">
+<p><b>NOTE:</b> The latest stable version is 2.2.9.</p>
+</div>
+
+<p>PLEASE TEST TEST AND TEST SOME MORE any and all features important to you.
+Then post any bugs you find to bugzilla</p>
+<p>Major changes in the 2.3.x release include;
+<ul>
+<li>In addition to the XML backend, Gnucash can now use a SQLite3, MySQL or PostgreSQL database to store the data. This is a new implementation using libdbi. It supports all features including the business features.  In order to build with this, add --enable-dbi to the configure command.  In addition to the libdbi-dev package for your distribution, you will also need the appropriate DBD (libdbi driver) package for sqlite3, mysql or postgresql.</li>
+<li>As a replacement for the current GtkHTML HTML engine used to display reports and graphs, Gnucash can use WebKit. WebKit is the engine used by Google Chrome on Windows and Safari on Apple.  In order to build with this, add --enable-webkit to the configure command.  You will need an appropriate webkit-dev package.  On win32, you will need to download the webkit-1.1.5-win32.zip file from the source repository and put it into the downloads directory of your gnucash build area.</li>
+<li>Updated to AqBanking 3 on Win32.</li>
+</ul>
+
+<p>Strings are frozen.  This means no new changes will be introduced which change any text displayed by Gnucash.  Therefore, final translations for 2.4.0 release may begin.</p>
+
+<p>Changes between 2.3.12 and 2.3.13 include:
+
+<ul>
+<li>Bugs fixed</li>
+<ul>
+<li>Change from ige-mac-menu to GtkOSXApplication for OSX integration. Fixes #600590.</li>
+<li>Bug #618646 - Should be able to run gnucash-bin.exe directly, rather than gnucash.cmd
+Patch by Tao Wang.</li>
+<li>Fix #616100  - Incorrect character set used in MySQL backend
+
+Use "SET NAMES 'utf8'" so that mysql uses utf8 for communication and all char sets.  </li>
+<li>Bug #618647 - Compile .ico as resource into gnucash-bin.exe, patch by Tao Wang</li>
+<li>Bug #618505 - Separate shell functions files from variables and steps files, patch by Yasuaki Taniguchi</li>
+<li>Bug #618341: Additional paths to reset.sh
+
+Patch by Yasuaki Taniguchi.</li>
+<li>Bug #615168: Remove instances of (use-modules (ice-9 slib)) except report-system.scm
+
+There are no more instances of (require ...), so Guile's slib support is
+no longer needed.
+
+Patch by Andy Wingo, but except report-system.scm because saved
+reports still use the hash-for-each -- so we will need to
+continue to support the symbol.</li>
+<li>Bug #615168: Remove spurious (require 'hash-table) instances except report-system.scm
+
+Patch by Andy Wingo, but except report-system.scm.
+
+There is nothing that the slib hash-table module provides that was used
+in any of these files; they all used Guile's stock hash tables.</li>
+<li>Fix #616554 - New stylesheets based on Fancy template cause BIN to crash
+
+An interface issue between libjpeg and webkit (incorrect type used in libjpeg) causes the crash.  This patch replaces the normal libjpeg with a patched one.  </li>
+<li>Bug #352058 - Invoice entries should default to opening date of invoice.</li>
+<li>Bug #615510 - Gnucash crashes when creating new customer job</li>
+<li>Bug #357696 - Billable items appear in more than one invoice</li>
+<li>Bug #118391: Implement translation long currency names
+
+Adjust in iso-4217-currencies.scm fullnames to conform with iso-codes-3.3
+
+Patch by Frank H. Ellenberger.</li>
+<li>Bug #616524: Fix missing re-generating of gnucash_core.c code.
+
+The .c file gets outdated easily because the makefile doesn't contain
+enough of its dependencies. I would need to be regenerated each time any of the
+included files was changed, but currently it doesn't contain these dependencies
+in the makefile rules. Having it depending on config.h should
+at least trigger the generation at each version number change (so
+that the tarball contains an up-to-date version.)</li>
+<li>Bug #612212: Provide a method to set the default budget
+
+Patch by Jeff Kletsky.
+
+(Cstim: Accepted even though string freeze is in effect because it was
+submitted before the freeze. Also, the string additions are very minor.)
+
+Summary of Changes:
+
+* Initial story related to providing default budget control
+  * Add a "Budgeting" tab to the book-level preferences dialog
+  * Add a "Default Budget" selector to the "Budgeting" tab
+  * Modify gnc_budget_get_default() to
+    * Respect the new KVP, if present
+    * Fall back to 2.2.x behavior, if not present
+  * Modify gnc:make-budget-option
+    * Reformatted for readability with additional comments
+    * Default is now "#f" so that selected value is always saved
+      Otherwise, if selection happened to be the current default
+      and the default was later changed, the report would change
+    * getter, setter, and generate-restore-form all now consistent
+      * setter now always takes a budget object
+      * generate-restore-form does not rely on "hack" in setter that
+          previously allowed either a budget object or a GUID string
+          This is a different fix for 603215 -- see Known Issues
+
+* Provide translation support for "Trading Acccounts" (and "Budgeting")
+  * Refactor #define names for consistency and extensibility
+    * KVP_OPTION_PATH for consistency with Guile usage
+    * OPTION_SECTION_blahblah
+    * OPTION_NAME_blahblah
+  * Modify qofbookslots.h to be "SWIG-aware"
+  * Pick up qofbookslots.h in make-gnucash-potfiles.in and po/POTFILES.in
+
+Known Issues:
+
+* There is no selection (yet) for "Use default budget" so changing the
+  default budget and reloading a report does not change the budget used
+
+* setter is no more robust to "bad" values than in previous code
+
+* Budget reports created with 2.3.x after r18528 (between 2.3.8 and
+  2.3.9) may not load or re-render as they relied on the setter taking
+  either a budget object or a GUID as a string This should not impact
+  any 2.2.x users as nothing was saved under 2.2.x related to the
+  default budget. This can be resolved through removing the option
+  restore code in ~/.gnucash/saved-reports-2.4 and, if affected reports
+  were open, in ~/.gnucash/books/&lt;name_of_book&gt;
+
+* Budget reports prior to r18528 did not save budget selection (603215)</li>
+<li>Bug #586805: Fix errorneous abs() in csv import
+
+Changes abs function to fabs in gnc-csv-model.c, to allow csv imports of values
+less than $1.00.
+
+Patch by James Raehl.</li>
+<li>Bug #617660: Improving iso-4217-currencies
+
+Patch by Frank H. Ellenberger
+
+1. improve the header of fieldnames with annotations
+2. sort by ISO code, because
+   a. easier for non english people
+   b. most tables in the internet have this sort order.
+      So maintainance becomes easier.
+3. inserting a Column local_symbol, because some people like to use it, e.g.
+   https://bugzilla.gnome.org/show_bug.cgi?id=492417#c3
+   But probably there is a better way to get this informations.
+4. Review List:
+   a. adding: CDF, GHS, ...
+   b. outdated: AON-&gt;AOR-&gt;AOA, GWP-&gt;XOF, ...
+   c. Typos like "fening".
+   d. Alway use singular instead of a mixture.
+5. add comments:
+   a. outdated currencies prepared as in the header shown.
+   b. for abbreviations.
+
+Background is the thread starting with
+https://lists.gnucash.org/pipermail/gnucash-devel/2009-October/026558.html</li>
+<li>Bug #617435 - webkitgtk+ cross build script, created by Yasuaki Taniguchi</li>
+<li>Bug #617558 - Header in register doesn't clear properly in double-line mode when switching from transaction to split, patch by Alex Aycinena</li>
+<li>Bug #617072 - Update create_cross_mingw.sh, patch by Yasuaki Taniguchi</li>
+<li>Bug #554936 - 'configure.in' files should be renamed 'configure.ac'</li>
+<li>Bug #616696 - Development version warning string should not include hardcode version.
+Third revision.
+- Stable Version changed into Stable Series (easier to track automatically)
+- Modified motd code to deal with replacement strings
+- Changed DEVELOPMENT release tip to separate the Stable Series number from the translatable string.</li>
+<li>Bug #615168: Don't define hash-fold for guile 2.x
+
+Patch by Andy Wingo.
+
+* src/scm/main.scm (hash-fold): Only do the conditional hash-fold dance
+  if we don't have guile 2.0. (Definitions in expression context are
+  actually invalid Scheme, but older Guiles are more permissive.)</li>
+<li>Bug #615168: scm_c_string_length is the proper spelling now
+
+Patch by Andy Wingo.
+
+Fix up a couple uses of scm_i_string_length, and add a back-compat shim
+for earlier versions.</li>
+<li>Bug #616696 - Development version warning string should not include hardcode version.
+* Improve on the previous fix: really display stable version in tooltip, not current version.
+* Also revert change of "What's new in GnuCash 2.0" because that's the title actually found
+  in the help manual.</li>
+<li>Bug #615317 - Windows installer requires Qt libraries</li>
+<li>Bug #616696 - Development version warning string should not include hardcode version.</li>
+<li>Fix #616606 - Add &lt;meta&gt; line indicating utf8 encoding so that non-latin chars show correctly.  </li>
+<li>Bug #615168: Make sure that printf is available whereever it is used
+
+So, the right thing is for each file to be in its own module. Barring
+that it's tough to see what the environment is in a given module. So to
+be safe, everywhere there's a printf, make sure the (gnucash printf)
+module is duly included.
+
+Patch by Andy Wingo.
+
+Conflicts:
+
+	src/business/business-reports/easy-invoice.scm
+	src/business/business-reports/fancy-invoice.scm
+	src/business/business-reports/invoice.scm
+	src/business/business-reports/job-report.scm
+	src/report/standard-reports/budget-income-statement.scm
+	src/report/standard-reports/income-statement.scm
+	src/report/standard-reports/trial-balance.scm</li>
+<li>Bug #615168: Fix a number of scheme syntax errors
+
+This kind of error is detected "eagerly" in Guile 2.0.
+
+Patch by Andy Wingo.</li>
+<li>Bug #615168: Fix bogus gnc:safe-strcmp definition
+
+Patch by Andy Wingo.</li>
+<li>Bug #615168: Fixup one last simple-format bit
+
+src/engine/iso-currencies-to-c did the same simple-format dance that is
+now unnecessary.
+
+Patch by Andy Wingo.</li>
+<li>Bug #615168: Replace calls to simple-format with calls to format
+
+Guile 1.6 and up always provides simple-format, and defines it as a
+restricted subset of the full format, so there's no harm in using the
+construct's proper name.
+
+Patch by Andy Wingo.</li>
+<li>Bug #615168: Pull in printf from slib, change all code to use it.
+
+There is a new module, (gnucash printf).
+
+Patch by Andy Wingo.</li>
+<li>Bug #616093: Notes are not editable in scheduled transaction edit window
+
+Patch by James Raehl:
+
+The Notes field is not visible or editable.
+
+This appears to be a deliberate choice, as can be seen in line 1308 of
+gnome/dialog-sx-editor.c routine schedXact_editor_create_ledger.  I disagree.
+Since Notes are not copied to the newly-created scheduled transaction, there is
+no way for the user to copy Notes to the model, nor to modify the Notes.  This
+makes the partial fix in r16652 for bug 500427 kind of pointless.
+
+This patch reverses that decision.</li>
+<li>Bug #615912: Update gnc_quote_source from FQ 1.11 to 1.17 and enhance user_name
+
+Patch by Frank H. Ellenberger.
+
+Because many sources were listet as unknown, I tried to sort them in.
+Because normal users don't know all englisch abbreviations of far continents,
+I tried to use better understandable descriptions and added country codes.
+
+Caveats:
+1. The HU methods were not quite clear to me, so I added only one.
+2. The Currencies methods seems to fetch lists of currencies,
+ something what we don't need here; correct me, if I am wrong.</li>
+<li>Bug #118391: Mark currency names for translation but using the "iso_4217" translation domain.
+
+This will make approx. 50% of the currency names show up in translated form.
+At least more than nothing. Eventually, we most probably must change our
+long name definitions to match those of iso_4217, and after this we will
+get 100% translations.</li>
+<li>Revert r19051, "Bug #118391: Mark the currency names for translation."
+
+We better don't mark the currency names for translation inside gnucash.pot;
+instead, we should use the "iso_4217" translation domain.</li>
+<li>Bug #616615  - Request for larger size icon (96x96, 128x128, 256x256): Properly include smaller icon sizes, remove duplicate size</li>
+<li>Bug #616615  - Request for larger size icon (96x96, 128x128, 256x256)</li>
+<li>Bug #118391: Mark the currency names for translation.</li>
+</ul>
+
+<li>Updated translations or translation-related changes</li>
+<ul>
+<li>Update of Latvian translation by Valdis Vitolins</li>
+<li>Additional fix for Simplified Chinese translation of windows installer</li>
+<li>Add Latvian account templates by Valdis Vitoliņš.</li>
+<li>Reapply Simplified Chinese patches</li>
+<li>Repatch Windows installer for Simplified Chinese</li>
+<li>Update German translation.</li>
+<li>I18n improvements: Remove colons from translatable strings. Use correct capitalization.
+
+In most cases, the changed strings already appear somewhere else in the program,
+so only very few are unfortunately now new strings even though we hoped
+we could stick to the string freeze.</li>
+<li>zh_CN translation for Windows Installer, patch by Tao Wang.</li>
+<li>Update zh_CN account charts, patch by Tao Wang.</li>
+<li>Updated Dutch translation, copied from the Translation Project.</li>
+<li>Update Chinese (simplified) Translation, copied from the Translation Project.</li>
+<li>Fix help text, discovered by Nikos Charonitakis</li>
+<li>Update of Brazilian Portuguese translation by Miguel A.Rozsas</li>
+<li>Update of Greek translation by Nikos Charonitakis</li>
+<li>Updated Danish translation by Joe Hansen, copied from the Translation Project.</li>
+<li>Update zh_CN translation, patch by Tao Wang</li>
+<li>Update of Italian translation by Cristian Marchi</li>
+<li>zh_CN translation of gnucash glossary file, patch by Tao Wang</li>
+<li>Updated zh_CN translation of accounts, patch by Tao Wang</li>
+<li>I18n: Fix erroneous message.
+
+This (tooltip) string is blatantly wrong, so we need to fix it regardless
+of string freeze.
+
+Spotted by Mark Haanen.</li>
+<li>I18n fix: Mark forgotten strings for translation.
+
+These are allowed regardless of string freeze because the strings are already
+in the program and are untranslated so far. So marking them for translation
+will only improve the situation but not introduce new strings into the
+program in general.
+
+Spotted by Mark Haanen.</li>
+<li>Add src/gnome/gnucash.desktop.in.in to the translation input files.</li>
+<li>I18n: Fix typo in user message.
+
+This breaks the string freeze, but 1. the typo really hurts one's eyes, and
+2. the message is only secondarily important, so I would accept this single
+string freeze breakage.</li>
+</ul>
+
+<li>Other user-visible changes</li>
+<ul>
+<li>Implement help for OSX</li>
+<li>Set default webkit font from system font.  </li>
+<li>Merge CSS and plain stylesheets, leaving the plain and remove the CSS stylesheet.  Plain now has font specifications.  </li>
+<li>Add font support to all stylesheets </li>
+<li>Add "Pay invoice" toolbar button when invoice is open.</li>
+<li>When posting an invoice, propose the invoice's opened date as post date.</li>
+<li>A search with no search terms set by the user should still honor the original search constraints.
+For example: if a user does:
+- Find customer
+- Click on Customer's invoices
+- Then explicitly removes the empty search term
+- Click Find
+=&gt; the user should still see only the invoices for this customer.
+Previously this scenario would return all bills, invoices AND vouchers in the book.
+
+The cause was an attempt to merge two queries with AND while one query had no terms. The code
+already partially checked for this, but there was still an unhandled case.</li>
+<li>Return only bills when searching for bills, return only invoices when searching for invoices and  return only vouchers when searching for vouchers</li>
+<li>Change default report stylesheet from "Default" to "Default CSS" </li>
+</ul>
+
+<li>Other code/build changes</li>
+<ul>
+<li>Fix warning message of autogen.sh for python-binding. Patch by Tao Wang</li>
+<li>Remove AC_PROG_OBJC from configure.ac</li>
+<li>printf with %zd is not known in mingw gcc 4.4.0 and prevents gnucash from being built with that compiler. Since this is only a debug message, I chose to replace it with %d which should also do the  right thing.</li>
+<li>Properly check for the unavailability of windows webkit.
+The logic was accidentally inverted when #ifndef got replaced with if HAVE().
+As a side effect, this fixes a mingw gcc-4.4 compiler warning.</li>
+<li>Fix encoding issues introduced in r19204</li>
+<li>Fix gnc-module test after patch from bug #618646.</li>
+<li>Win32 - Fix installation location of some files, reported by Tao Wang.</li>
+<li>Fix 64-bit compiler error introduced in r19206</li>
+<li>Split "Arial" out from font names to make it easier to replace.  </li>
+<li>Update binreloc to use Cocoa-based GtkOSXApplication instead of ige-mac-bundle.</li>
+<li>Fix gnc_dbd_dir foulup</li>
+<li>Fix libdbi hardcoded driver directory usage
+Patch by Bill Nottingham, with modifications to only set GNC_DBD_DIR if --with-dbi-dbd-path is explicitly set.</li>
+<li>Win32 use up-to-date configure parameters for aqbanking</li>
+<li>Svn ignore built files</li>
+<li>Make the keychain interface in MacOSX compile and work.</li>
+<li>Fix windows build</li>
+<li>Add rules to copy the necessary icons during build.</li>
+<li>Fix windows tag build script, by Geert Janssens</li>
+<li>Revert r19159, "Fix windows tag build script, by Geert Janssens"
+
+I thought I would get access to the build server immediately to
+perform the cleanup of the old tag file, but apparently the server is
+unreachable for me for now, so I cannot commit this change today. Maybe later.</li>
+<li>Fix windows tag build script, by Geert Janssens</li>
+<li>One more revert of r19148, "Bug #615168: Remove instances of (use-modules (ice-9 slib))..."
+
+Missed that one in r19154.</li>
+<li>Revert r19147, "Bug #615168: Remove spurious (require 'hash-table) instances..."
+
+Apparently guile-1.6 still needs all of those.</li>
+<li>Partly revert r19148, "Bug #615168: Remove instances of (use-modules (ice-9 slib))..."
+
+Apparently guile-1.6 needs this in more places than I thought at r19148.</li>
+<li>Add support for upcoming libaqbanking-5 version.</li>
+<li>Follow-up to r19099: Remove qof's backend loading because there is no backend anymore.
+
+Remove generated file qofla-dir.h. This is actually good progress because
+it gets rid of yet another compiled-in path, which are a nuisance and
+need to be replaced by runtime path lookup everywhere, if needed.</li>
+<li>Remove qsf related code from windows installer script.</li>
+<li>Rewrite assert_one_dir function to not crash on a native build machine </li>
+<li>Improve the cross-compilation process.
+- improve create_cross_mingw.sh's integration in defaults.sh and install.sh
+- update README file</li>
+<li>Remove some additional QSF references</li>
+<li>Improve test_for_mingw
+- change test so that both tested programs must work, not only the exit code of the last one
+- make it cross-compile compatible</li>
+<li>Improve assert_one_dir
+It now gives a different error message when no directory was found or when multiple directories were found</li>
+<li>Remove QSF</li>
+<li>Remove forgotten debug statement</li>
+<li>Add ./ to sourced files, so that they are found when cross-compiling.</li>
+<li>Add (optional) destination file name parameter to wget_unpacked and smart_wget functions.
+This parameter can be used to override the filename to be used for the downloaded package. If empty, the functions continue to work as before.
+
+This new option will be used for cross compilation.</li>
+<li>Windows build script improvements
+- make sure pexports is available before guile is built
+- test for pexports availability when compiling libdbi (to fix crosscompilation)</li>
+<li>Fix some typos</li>
+<li>Add .log extension to qof_log filename while creating the temporary file.
+This will only be visible on Windows. On all other platforms the logfile is
+successfully renamed to the requested name.</li>
+<li>Add missing libmysql.def to tarball</li>
+<li>Enable environment file on Windows (only direct install, not via ISS installer)</li>
+<li>Write makefile rule to create gnucash-icon.ico.
+This rule isn't called by default though. It uses image-magick to
+add several png images of different size and bitdepth together.
+Current ico has:
+16x16,8-bit
+22x22,8-bit
+24x24,8-bit
+32x32,32-bit
+48x48,32-bit
+64x64,32-bit
+96x96,32-bit
+128x128,32-bit
+256x256,32-bit</li>
+<li>Remove redundant test for ENOSYS
+The error code was checked twice against ENOSYS, once in all situations, and once if ENOSYS is defined. This makes no sense. Since we never had bug reports for compilation errors on ENOSYS undefined, we can assume ENOSYS is always defined.</li>
+<li>Replace directory mv's with cp -r when the move potentially crosses filesystem borders.
+Apparently, Msys' mv command fails to move directories across filesystem borders (like
+from a directory on the c drive to a mounted samba share).
+I hit this issue because my tmp dir is on a different filesystem from
+my base dir.</li>
+<li>Enable keychain functionality on OS X after fixing compiler bugs.</li>
+<li>* Make sure wget downloads are stored with filenames not containing any html garbage (&amp; and = signs as a result of http_get parameters).
+* Have wget_unpacked return the actual path where the files were unpacked via the _EXTRACT_UDIR env variable. In most cases this is simply the path that was requested, but sometimes, a tarball or zip file adds its own relative path. The _EXTRACT_UDIR variable will take this into account by analysing the contents of the tarball/zip file.
+
+These changes will be used in the revived cross-compile script.</li>
+<li>Makefile fixes for setup-gnucash-env on OS X</li>
+</ul>
+
+<h3>Caveats for Testers</h3>
+<p>Any 2.3.x version might crash unexpectedly at any point during runtime. If you test some serious work in a 2.3.x release and are using the XML file backend for data storage, make sure you hit "Save" after every non-trivial workstep.  If you are using the SQL backend, this is not required as every change is saved immediately to the database.<p>
+<p>The documentation has had screenshots updated, however, many help texts usually only refers to the 1.8.x series. Everyone is invited to help improve the documentation; see http://wiki.gnucash.org/wiki/Development on how to get involved.</p>
+
+<h3>How can you help?</h3>
+<p>Testing: Test it and help us discover all bugs that might show up in there.  Please enter each and every bug into bugzilla.</p>
+<p>Translating: The new release comes with some new translation strings. If you consider contributing a translation, we invite you to test this release already. A string freeze will be announced in one of the later 2.3.x releases.  Please check http://wiki.gnucash.org/wiki/Translation_Status for updates on this.</p>
+<p></p>
+<p>We would like to encourage people to test this and any further releases as much as possible and submit bug reports in order that we can polish GnuCash to be as stable as possible for the 2.4.0 release in a few weeks. Then post any bugs you find to <a href="http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">bugzilla</a></p>
+
+<h3>Getting GnuCash</h3>
+<p>Source code for GnuCash 2.3.13 can be downloaded from multiple locations:
+<ul>
+<li><a href="http://www.gnucash.org/download.phtml">The GnuCash website</a></li>
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.13.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.13.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/2.3.13/">all files</a>.</li>
+<li>You can also checkout the sources directly from the subversion repository with this command:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/trunk gnucash</span></li>
+</ul></p>
+
+<p>To install GnuCash, you will need Gnome 2, guile, slib. In addition you will need swig if compiling from subversion.</p>
+
+<h3>Win32 binary</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.13-setup.exe">Gnucash 2.3.13 Win32 setup executable</a> can be downloaded from Sourceforge as well.
+
+<h3>About the Program</h3>
+<p>GnuCash is a free, open source accounting program released under the GNU General Public License (GPL) and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash began in 1997, and its first stable release was in 1998.</p>

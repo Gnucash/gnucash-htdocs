@@ -3,15 +3,17 @@
 # Namazu CGI wrapper. Deal with LANG
 #
 
-# compute the langinfo from the PATH_INFO
-langinfo=`echo $PATH_INFO | grep '^/\w*' | sed -e 's#^/\(\w*\).*$#\1#'`
+# compute the langinfo from the $QUERY_STRING
+langinfo=`echo "$QUERY_STRING" | grep -oE '(^|[?&])lang=([a-zA-Z_]+)' | cut -f 2 -d "="`
+if [ -z "$langinfo" ]; then
+  # if cannot get langinfo from $QUERY_STRING, then get it from COOKIE
+  langinfo=`echo "$HTTP_COOKIE" | grep -oE '(^|[?&])lang_cookie=([a-zA-Z_]+)' | cut -f 2 -d "="`
+fi
 
 if [ -n "$langinfo" ] ; then
   LANG="$langinfo"
-  SCRIPT_NAME="$SCRIPT_NAME/$langinfo"
   export LANG
+  echo "Set-Cookie: lang_cookie=$langinfo"
 fi
-SCRIPT_NAME="$SCRIPT_NAME/"
-export SCRIPT_NAME
 
 exec /var/www/cgi-bin/namazu.cgi

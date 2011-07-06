@@ -1,0 +1,71 @@
+<b>Announcement:</b> GnuCash 2.2.9 Release
+2009-02-24 01:21
+
+<h2>GnuCash 2.2.9 released</h2>
+<p>
+  The GnuCash development team proudly announces GnuCash 2.2.9 aka
+  "Mirror-like", the ninth bug fix release in a series of stable
+  releases of the GnuCash Free Accounting Software.
+</p>
+<h4>Getting GnuCash</h4>
+<p>
+  GnuCash 2.2.9 can be downloaded from gnucash.org or sourceforge.net.
+  It is available as source code.  For the Microsoft Windows operating
+  system there is a self-installing setup program which includes all
+  necessary additional libraries.
+</p>
+<p>
+  To install GnuCash on other platforms, users will need Gnome 2, guile,
+  and slib.  Neither the currently used swig nor the previously used
+  g-wrap packages are needed anymore when compiling from tarball or when
+  installing a binary.
+</p>
+<ul>
+  <li>
+    <a href="http://sourceforge.net/project/showfiles.php?group_id=192"
+       class="external free"
+       title="http://sourceforge.net/project/showfiles.php?group_id=192">http://sourceforge.net/project/showfiles.php?group_id=192</a>
+    (Source code and Windows binary)
+  </li>
+  <li>
+    <a href="http://www.gnucash.org/pub/gnucash/sources/stable/"
+       class="external free"
+       title="http://www.gnucash.org/pub/gnucash/sources/stable/">http://www.gnucash.org/pub/gnucash/sources/stable/</a>
+    (Source code only)
+  </li>
+</ul>
+<h4>What's New in GnuCash 2.2.9?</h4>
+<p>
+  Fixed Bugs
+</p>
+<ul>
+  <li>#339027: Reconcile window should display the date</li>
+  <li>#435642: Crash editing results of a find</li>
+  <li>#438132: Warning about commodity being NULL for root account on save</li>
+  <li>#462148: Report output is vertically inverted and bottom up printed (mirror, reverse, &c.)</li>
+  <li>#514455: Dutch (Netherlands) translation of account templates</li>
+  <li>#526775: Win32: Crashes when importing brokerage account data</li>
+  <li>#542382: Assign GnuCash to file name extension .gnucash</li>
+  <li>#564209: Improved debuggability for module loading</li>
+  <li>#564450: HUF currency handling incorrect as 1HUF divided into 100FILLERs</li>
+  <li>#564928: Segfault when closing a invoice tab</li>
+  <li>#565421: gnc-date-edit.c did not compile with Gtk < 2.10</li>
+  <li>#565721: Multicolumn report options: Report names are not translated</li>
+  <li>#566198: Slovakia joined the Euro</li>
+  <li>#566352: Crash during OFX import under Win 2000 / SP4</li>
+  <li>#566567: Scheme modifications are not built on windows</li>
+  <li>#567174: Files with NIS stocks fail to open</li>
+  <li>#568327: Using most "budget" reports, without a budget defined crashes gnucash</li>
+  <li>#568653: Add SKR49 template</li>
+  <li>#568945: The gnc_pricedb_convert_balance_... methods should look for the reciprocal of the exchange rate</li>
+  <li>#569734: Give the template root account a name</li>
+  <li>#570166: Weird text entry box when typing on Account Tree page</li>
+  <li>#570894: Use of symbol t, which is not defined in all guile versions</li>
+  <li>#571220: Program won't start if SCHEME_LIBRARY_PATH is set</li>
+</ul>
+<p>Other Changes</p>
+<ul>
+  <li>Added German account template for a Wohnungswirtschaft business</li>
+  <li>Fixed french business account templates</li>
+  <li>Updated translations: Catalan, Chinese, German, Italian</li>
+</ul>

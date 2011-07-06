@@ -1,0 +1,679 @@
+<b>Annuncio:</b> rilascio di GnuCash 2.4.2
+2011-02-07
+
+<h2>Rilasciato GnuCash 2.4.2</h2>
+
+<p>Il team di sviluppo di GnuCash è orgoglioso di annunciare GnuCash 2.4.2, la seconda versione di correzione dei problemi riscontrati nel rilascio stabile del programma di contabilità gratuito GnuCash. Con questa nuova serie di rilasci, GnuCash può utilizzare un database SQL avvalendosi di SQLite3, MySQL o PostgreSQL. Il programma funziona in ambiente GNU/Linux, *BSD, Solaris, Microsoft Windows e Mac OSX.</p>
+
+<p>Nota: la versione 2.4.1 è stata parzialmente rilasciata ma poi è stata ritirata all'ultimo minuto a causa della presenza di alcuni problemi critici. La versione 2.4.1 NON dovrebbe essere utilizzata.</p>
+
+<p>Le principali novità della versione 2.4.0 comprendono:
+<ul>
+<li>Oltre al backend XML, Gnucash può ora utilizzare un database SQLite3, MySQL o PostgreSQL per l'immagazzinamento dei dati. Questa è una nuova implementazione che utilizza libdbi. Sono supportate tutte le caratteristiche incluse quelle professionali. Per compilare con questa funzionalità, aggiungere "--enable-dbi" al comando "configure". Oltre al pacchetto libdbi-dev della propria distribuzione, sarà anche necessario l'appropriato pacchetto DBD (libdbi driver) per sqlite3, mysql o postgresql.</li>
+<li>Come sostituto dell'attuale motore GtkHTML HTML utilizzato per visualizzare i resoconti e i grafici, Gnucash può usare WebKit. WebKit è il motore utilizzato da Google Chrome su Windows e da Safari su Apple. Per compilare con questa caratteristica, aggiungere "--with-html-engine=webkit" al comando "configure". Sarà necessario l'appropriato pacchetto webkit-dev. Su win32, si dovrà scaricare il file compresso webkit-1.1.90-win32.zip dal repository sorgente e inserirlo nella cartella "downloads" della propria area di compilazione di GnuCash.</li>
+<li>Aggiornamento di AqBanking su Win32.</li>
+</ul>
+
+<h3>Ottenere GnuCash per sistemi Windows (file binari di Win32)</h3>
+<p>Il <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.2-setup.exe">file eseguibile di Win32 per l'installazione di Gnucash 2.4.2</a> può essere scaricato da Sourceforge. Il file installerà tutto ciò che è necessario per eseguire GnuCash.
+
+<h3>File binario per sistemi Mac OSX</h3>
+<p>Il <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.4.2.dmg">pacchetto per MacOSX di Gnucash 2.4.2</a> può essere scaricato anch'esso da Sourceforge.
+
+<h3>Ottenere GnuCash come codice sorgente</h3>
+<p>Per compilare autonomamente GnuCash 2.4.2, il codice sorgente può essere scaricato da:
+<ul>
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.2.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.2.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.4.2/">tutti i file</a>.</li>
+<li>È inoltre possibile eseguire il checkout direttamente dal repository subversion con il seguente comando:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/tags/2.4.2 gnucash</span></li>
+</ul></p>
+
+<p>Per compilare GnuCash dal codice sorgente sono necessari 
+Gnome 2, guile, slib. Sarà inoltre necessario avere swig se si compila da subversion.</p>
+
+
+<p>Cambiamenti tra la versione 2.4.0 e la versione 2.4.2:
+
+<ul>
+
+
+
+
+<li>Cambiamenti visibili dall'utente</li>
+<ul>
+<li>Partly revert r20207, "Modify Tax Info on Account Page..."
+
+The changes in the tree-model-account caused CRITICAL gtk warnings, so we
+revert that part for now. The changes in gnc-ui-utils.[hc] have been kept.</li>
+<li>Do not modify the entry's DateEntered when duplicating invoice to keep the entry ordering.
+
+Follow-up to r20115.</li>
+<li>Modify Tax Info on Account Page to display or not display sub-account info based on whether row is expanded.
+
+Revert changes made in gnc-ui-util.c in rev 20039 and instead put those changes in new function: gnc_ui_account_get_tax_info_sub_acct_string.
+
+Define a new column, GNC_TREE_MODEL_ACCOUNT_COL_TAX_INFO_SUB_ACCT, in gnc-tree-model-account.c filled with gnc_ui_account_get_tax_info_sub_acct_string.
+
+Modify gnc-tree-view-account.c to define a tax_info_data_func that displays only the the data in the GNC_TREE_MODEL_ACCOUNT_COL_TAX_INFO model column if the row is expanded; otherwise it combines it with the data in the GNC_TREE_MODEL_ACCOUNT_COL_TAX_INFO_SUB_ACCT model column. Modily the view creation function to use the new tax_info_data_func.  </li>
+<li>Open the newly created invoices for editing after import.</li>
+<li>Make the splash screen stack as a regular window instead of stacking in front of everything else.</li>
+<li>SQL Backend Version Control: The final part.
+
+New error dialog boxes for ERR_SQL_DB_TOO_OLD and ERR_SQL_DB_TOO_NEW
+Marks the book read-only if the user doesn't upgrade a too-old db and 
+when the user tries to load a too-new db.  </li>
+<li>Provide more detail in commit error when it's caused by a read-only book. Mark error message for translation.</li>
+<li>Throw an error and return if if the book is marked readonly.</li>
+<li>Add icons for Duplicate Invoice functionality</li>
+<li>This patch adds a new option under Edit -&gt; Preferences -&gt; Date/Time
+that looks like this:
+
+ Date Completion
+ When a date is entered without year, it should be taken:
+ (*) In the current calendar year
+ ( ) In a sliding 12-month window starting this many months before the
+     current month:  [ 6 ]
+
+Patch by Peter Selinger with minor modifications</li>
+<li>Fix a bug introduced in 20042 which caused lists of Scheme strings passed to C code to be garbage.
+This caused online price quotes to fail for anything other than a currency.</li>
+<li>Make it possible to include trading accounts in the Income Statement and Profit and Loss reports.</li>
+<li>Additionally, make the "Duplicate Invoice" feature available as menu item and toolbar button when viewing an invoice.</li>
+<li>Implement "Duplicate Invoice" feature, where a new invoice is created as a copy of an old one with new date and new ID.
+
+This patch makes this feature available as button "Duplicate" in the search window.</li>
+<li>Make reconcile+update import action of r20021 bug#373415 enabled by default because it's so useful.</li>
+<li>Fix version number in welcome report.</li>
+<li>Set sort order for GncEntry quickfill to LIFO by-date.
+
+Previously, the insertion order was random instead of by-date.</li>
+<li>Activate balance averaging in account piechart report, introduced in r19253.</li>
+<li>Add budget name to budget tab </li>
+<li>Add info about sub-accounts to Tax Info column on Accounts page.</li>
+<li>A plugin to import CSV data as a new invoice or bill.  Based on code written by Sebastian Held.
+Also includes a python script to massage a downloaded order form into the correct format for import.  See contrib/rapid2gnucash.py
+This works with Rapid Electronics (UK) and can be used as a basis for other vendors.  Users need to add a line in their  ~/.gnucash/config.user
+for the module to be loaded:
+(gnc:module-load "gnucash/plugins/bi_import" 0)
+See bug #624911 for more details.</li>
+<li>Add "copy budget" command to menu.  Works like "open budget" except that a copy of the budget is made with the name "Copy of "+name of old budget.
+
+This command will allow you to easily create a copy of your 2010 budget and change its name to "2011".  I also plan to add UI capabilities to more easily manipulate budget numbers.  </li>
+<li>Fully implement auto-completion in the invoice entries on the description field, separately for bills or invoices.
+
+The quickfill is obtained from the global cache of the GncEntry's
+descriptions, one for invoices, one for the rest.
+The auto-completion is a simple query to get the newest entry with the
+same description, but limited to invoices or bills, respectively.</li>
+<li>Add a new report: Customer Summary.
+
+This report shows a table of all customers and the sales, profit, and markup
+in that table.</li>
+<li>Add a new report: Future Scheduled Transaction Summary.</li>
+<li>Improve GncEntry quickfill to create separate quickfills for invoices and bills</li>
+</ul>
+
+
+
+
+<li>Traduzioni aggiornate o modifiche relative alle traduzioni</li>
+<ul>
+<li>Updated German translation, now 100% completed.</li>
+<li>I18n improvements: Fix weird strings.</li>
+<li>Update POTFILES.in</li>
+<li>Updated Dutch translation, copied from the translation project.</li>
+<li>I18n: Fix misleading composed strings by defining two separate full sentences.</li>
+<li>i18n: Add more terms to the glossary</li>
+<li>i18n: Fix missing space in message</li>
+<li>Updated Ukrainian translation, copied from the Translation Project.</li>
+<li>Better OSX language handling: Add a "C" locale to the language-list 
+after any english locale so that if that english locale isn't present, 
+gettext will fall through to "C", which makes unnecessary the "en.po" 
+file. Also removed the special casing and locale truncation; gettext is 
+quite capable of doing that itself.  </li>
+<li>I18n improvements: Fix typos, fix unnecessary near-duplicates, remove unneeded strings.</li>
+<li>Updated Italian translation.</li>
+<li>Rejigger the set_macos_locale function to better handle qualified 
+languages (e.g., Portugues (Portugal). Add po/en.po so that english 
+doesn't have to be special-cased to the C locale.  </li>
+<li>Improve the for translators problematic format string from gnc_entry_ledger_verify_acc_cell_ok
+
+This version uses 2 separate sentences,
+mentions currencies and
+gives a clue for the account type.
+Add enable basic doxygen output.</li>
+</ul>
+
+
+
+
+<li>Problemi corretti</li>
+<ul>
+<li>Bug #639172: Remove "Warning!! This is a DEVELOPMENT version .." tip of the day
+
+Also, to my knowledge the docs don't contain a "what's new in 2.4" section,
+so I removed that tip as well.</li>
+<li>Bug #638621: Update README file.</li>
+<li>Bug #502066: The aging in business reports should use the due date instead of the post date
+
+Patch by Bert Claesen (but I changed the option name):
+
+Patch to aging.scm to include due date and "current" bucket
+Patch file for aging.scm to include:
+* Option to select due date or date posted
+* Added column of "Current" for invoices not yet due</li>
+<li>Bug #603334: Updates to RPM spec file to allow 2.3.7 to build on Fedora Core 12</li>
+<li>Bug #638225: Sort when saving as XML
+
+Patch by Jim Radford (with code beautified and re-indented by myself):
+
+The attached patches sort the slots, lots, book accounts, bill terms,
+customers, employees, entries, invoices, jobs, orders, tax tables and
+vendors before saving them to the GnuCash XML file.
+
+This is an attempt to make saves more idempotent thereby facilitating
+the use of a revision control system on the GnuCash XML files.
+
+With these patches most of the needless and seemingly random churn is
+gone and I can add or remove a transaction and expect
+there to be no unrelated changes to the GnuCash file.
+
+I've been using and refining this patches for the last few years, so it has
+received quite a bit of testing.
+
+David Fraser adds: Without specific testing, I'm using this on an average-sized gnucash file
+(5.7MB) without noticing any particular slowdown in saving, but a wonderful
+reduction in diffs when comparing changes.</li>
+<li>Bug #638962: Update Brazil Portugese translation by Dorneles Treméa</li>
+<li>Bug #638615: Fix schema install with DESTDIR
+
+Patch by Jim Radford:
+
+
+When doing
+
+  make install DESTDIR=/tmp/gnucash
+
+the install fails because GCONF_SCHEMA_CONFIG_SOURCE doesn't end up using
+DESTDIR (and it's non-trivial because of the xml:: prefix).  The attached patch
+fixes it for me but is non-ideal because it hard codes the value of
+GCONF_SCHEMA_CONFIG_SOURCE using GCONF_SCHEMA_CONFIG_SOURCE_DIRONLY.</li>
+<li>Bug #638543: Add a GUI for the counter format and current value.
+
+Patch by Matthijs Kooijman:
+
+This allows the user to change the format used for the various counters,
+as well as see and change the current value of the counter.
+
+This is a bit of hack right now, since the format and current counter
+values are stored in the counter_formats and counters kvp slots
+respectively, instead of options/&lt;section&gt; like the other options in the
+File-&gt;properties window.
+
+This is implemented by adding the make-counter-option and
+make-counter-format-option, which both replace the scm-&gt;kvp and kvp-&gt;scm
+functions defined by make-number-range-option and make-string-option
+respectively. The replaced function simply ignores the "path" parameter
+and instead saves to the "counter" or "counter_formats" slot hardcoded.</li>
+<li>Bug #638543: Validate counter format strings before using them.
+
+Patch by Matthijs Kooijman:
+
+The validation function is a very simple "parser" that simply checks for
+a single gint64 conversion specification, allowing all modifiers and
+flags that printf(3) specifies (except for the * width and precision,
+which need an extra argument).
+
+The validation function returns an error message that is used to log a
+warning and can be used by the GUI later on.</li>
+<li>Bug #638543: Make the various counter formats configurable.
+
+Patch by Matthijs Kooijman:
+
+This retrieves the counter formats from the kvp slots in the book. The
+defaults are unchanged, so this should not affect existing books at all.</li>
+<li>Bug #638543: Centralize the counter formatting in qofbook.
+
+Patch by Matthijs Kooijman:
+
+Instead of querying qofbook for the next counter number and then doing
+the formatting in all the different business modules (all using the same
+format string), the formatting is now moved inside
+qof_book_increment_and_get_counter (which is renamed to
+qof_book_increment_and_format_counter).
+
+This changes the return value of a bunch of helper functions from gint64
+(the counter value) to gchar* (the formatted counter value), but does
+not have any user-visible changes.</li>
+<li>Bug #638543: Split the qof_book_get_counter function.
+
+Patch by Matthijs Kooijman:
+
+The qof_book_get_counter function now only gets the current counter
+value. The new qof_book_get_and_increment_counter function now does the
+incrementing.</li>
+<li>Bug #638543: Remove the counter() method from the backends.
+
+Patch by Matthijs Kooijman:
+
+This method is not implemented by either of the backends and removing it
+makes the subsequent commits possible.</li>
+<li>Bug #636402: Add test case for DBI error: 1: table sqlite_sequence may not be dropped
+
+Patch by Mark Jenkins:
+
+The attached patch adds a test program demonstrating the problem in C, built in
+src/optional/python-bindings
+It pretty much shows the same calls that are being made to the C by the python
+bindings (including initialization) and the example sqlite3 python script.
+Running this small C program produces the same result.
+
+(The program is built in check_PROGRAMS, not bin_PROGRAMS, to avoid having it installed.)</li>
+<li>Bug #454109: Online banking: grey out online action menu items when there is no online account
+
+Patch by Manfred Usselmann:
+
+Show error message, if assigned online account is not valid or cannot be found
+or if the selected online action is not valid for this account. Improved
+checking if online job has been successfully executed.</li>
+<li>Bug #373415: Replace existing transaction fields by imported transaction marked as reconcile
+
+Patch by Manfred Usselmann:
+
+This patch adds an additional update action to the import matcher as described
+above. It can be activated with the online banking preferences dialog.
+
+(Patch changed because of one function name adaption after r19936)</li>
+<li>Bug #635355: Implement the correct "DTAUS import and send" feature again.
+
+Patch by Manfred Usselmann: Improved version: Only transactions which have
+been successfully imported into GC are transmitted to the bank.</li>
+<li>Bug #95635: QIF import: Mark matched transactions as cleared
+
+Patch by Tristan Faujour:
+
+Please describe the problem:
+My bank allows me to download bank statement files in the QIF format. They
+contain paid transactions, but there is no status ("C") line, so all
+transactions are left in the "not cleared" status.
+I wish it would be possible to define the default status in user preferences.
+
+Steps to reproduce:
+- Import a QIF file with no "C" line.
+
+Actual results:
+- Transactions are not cleared.
+
+Expected results:
+- The "near split" of the imported transactions should be set to a default
+status 'defined in user preferences).
+
+Does this happen every time?
+- Yes
+
+Other information:
+- I developed a patch. See attachment. It allows defining another status that
+will be applied to the transactions that are imported as "not cleared".
+- It is my first contribution, it should be taken with all due prudence.</li>
+<li>Bug #637346: A second step towards doxygen python-bindings docs; add file missing in r19981</li>
+<li>Bug #637346: A second step towards doxygen python-bindings docs
+
+Patch by Christoph Holtermann</li>
+<li>Bug #636988: Tip about "New default date" by Tarlika Elisabeth Schmitz and Derek Atkins
+
+Contributed at gnucash-user@gnucash.org 2010-09-16</li>
+<li>Bug #628444: String improvements after string freeze is lifted</li>
+<li>Bug #565348: Patch to include subaccounts in the all columns in the account page
+
+Patch by James Duerr:
+
+Patch to include subaccounts in all columns, not just present column, and also
+to sort including sub-account totals, rather than without.</li>
+<li>Bug #639365: Revert r18546 so that the bills-due dialog displays only bills but not invoices.
+
+The INVOICE_TYPE string unfortunately is
+stored in translated form due to the usage of gncInvoiceGetType()
+for user-visible strings as well. Hence, as an exception we
+must also search for the translated here even though it's an
+internal flag.</li>
+<li>Bug 638842 - Estonia adopted the Euro on 01.01.2011
+
+Thanks to Toomas Tamm</li>
+<li>Bug #636907: Improve "Close when finished" handling in "Online Banking Connection Window"
+
+Patch by Manfred Usselmann:
+
+This patch adds a toggle action to the online banking menu, which allows to
+open and close the online banking log window. In addition it adds an option to
+the online banking preferences to keep the log window open after the transfer
+has finished.</li>
+<li>Bug #639259: Add averages in barchart reports.
+
+Patch by Herbert Thoma:
+
+Matthias Gruhn suggested on the German GnuCash list:
+
+Add averages to the income and expense bar chart reports just like it was
+introduced for the income and expense pie chart reports in r19253</li>
+<li>Bug #638225: Author Jim Radford. KVP lists are ordered so should not be sorted </li>
+<li>Bug #639498: Fix aqbanking-4.2.4 issue with "execute online transfer" on WinXP.</li>
+<li>Bug #638689: Require libaqbanking &gt;= 4.0.0 because earlier versions are not supported correctly by our code anymore.</li>
+<li>Bug 639322 part 3: provide users with a sensible first time "Save As..." path on Windows
+While $HOME is fine on linux, on Windows the most sensible location is "My Documents"
+(or its translated equivalent).</li>
+<li>Bug 639322 part 2b: display an error message if a user attempts to export to somewhere in gnc_dotgnucash_dir
+and add a hint for translators to the error message string</li>
+<li>Bug 639322 part 2: display an error message if a user attempts to save beneath gnc_dotgnucash_dir</li>
+<li>Bug 639322 part 1: add extension .gcm to future state files
+Old state files are still read (if no new equivalent exists yet)
+but will never be written to again.</li>
+<li>Bug #641628: I18n: Fix untranslated string in fancy-invoice.scm and invoice.scm</li>
+<li>Bug #641646: Fix incorrect tip on switching between multiple tabs</li>
+<li>Bug #641557: I18n slightly improved in fancy-invoice</li>
+<li>Bug #640061 - Invoice items are not saved, patch by Christoph Holterman</li>
+<li>Bug #631789 - "Assets" in summary bar does not match assets displayed
+
+As proposed in the bug, I have changed it to "Net Assets"</li>
+<li>Bug #637770: Fix progress bar on load and full save in sql backend.</li>
+<li>Bug #611936: Test DBI backends for a dbi bug which causes 64-bit numbers 
+to not be stored on 32-bit systems, and prevent saving or loading with 
+an informative error dialog box.  </li>
+<li>Bug #639906: Improve text output methods of python bindings
+
+Patch by Christoph Holtermann:
+
+For the more complex financial objects i chose a different approach.
+
+The printing functions are located in one module. Importing this module adds
+these functions as methods to the classes defined in gnucash_core.py.</li>
+<li>Bug #640233: Don't add "Account unknown Bank Unknown" memo when account and/or bank does not exist
+
+Patch by Jeff Kletsky:
+
+At least for the online OFX sources I use in the US, downloaded
+transactions are populated with memos of
+
+"Account unknown Bank unknown"
+
+Past being annoying, this can cause improper "matches" when comparing
+transactions.
+
+The root cause is found in src/import-export/aqbanking/gnc-ab-utils.c
+in the function gnc_ab_memo_to_gnc where the code seems to check for
+the existence of a remote account number from the aqbanking
+transaction
+
+if (ab_other_accountid &amp;&amp; *ab_other_accountid)
+
+and appears to intend to return the empty string if one is not present.
+
+However, an earlier line in the code sets ab_other_accountid to
+"unknown" so that the test always returns true.
+
+This patch should return:
+
+* "Account &lt;account number&gt; Bank &lt;bank number&gt;" if both are present
+
+* "Account &lt;account number&gt;" if only the account is present
+
+* "Bank &lt;bank number&gt;" if only the bank is present
+
+* "" if neither is present
+
+Additionally, ordering of trimming was changed to handle the
+possibility that the leading and/or trailing character(s) were stripped
+as invalid UTF-8, resulting in an untrimmed string.</li>
+<li>Bug #638762 - Windows 7 64-bit: GnuCash will not start due to existing SCHEME_LIBRARY_PATH env variable</li>
+<li>Bug #629501 Nonexistent field in error message</li>
+<li>Bug #467311 Print invoice button should be restored to View invoice</li>
+<li>Bug #352057 button to create a new invoice when viewing an old one.</li>
+<li>Bug #535774: Fix label for employee option on "Employee Report"
+
+Patch by Bert Claesen:
+
+The attached patch (against r20122) tries to solve bug #535774 and:
+
+*Introduces Option naming consistent with report title (e.g. Customer Report
+shows Customer in the Option screen)
+*Removes the printf() default string in case no arguments where given
+*Moves the docname up to a higher level for easy of overview
+
+Cases default to a GNC-OWNER-VENDOR.
+
+Note on the patch:
+*As indicated in the comments, two functions are nearly identical, where in the
+Vendor report the use of Vendor/Company is mixed. This can easily be moved into
+one function as the footprint is the same.
+
+cstim: I've clarified which ones of the functions returns translated vs.
+untranslated strings, too.</li>
+<li>639980: Add EntryList and _gncEntry objects to list typemap.
+
+Patch by bstpierre.org
+
+Fix python failing getting invoice entry data.</li>
+<li>Bug #639906: Adding __str__ and __unicode__ methods to GncNumeric
+
+Patch by Christoph Holtermann:
+
+1) I decided to let the methods return "Division by Zero" for denom()==0.
+2) As proposed in
+http://stackoverflow.com/questions/1307014/python-str-versus-unicode i created
+both __str__ and __unicode__.
+3) I use format to fix the decimal places to 2. It would be nice if the number
+would be configurable.</li>
+<li>Bug 637346: A small python doc enhancement, basically mentioning the wiki-page
+
+Patch by Christoph Holtermann.</li>
+<li>Adds percentages to piecharts.  See bug #343449 for details.  Patch is derived from a patch submitted by Alexander Weiss</li>
+</ul>
+
+
+
+
+<li>Altri cambiamenti relativi al codice e alla compilazione</li>
+<ul>
+<li>Tag 2.4.2 </li>
+<li>Update revision to 2.4.2 </li>
+<li>Remove references to Neil William's website because it is vastly outdated.</li>
+<li>Update revision to 2.4.1 </li>
+<li>DBI Backend: Cleanup after testing version control so that repeating the tests doesn't fail.</li>
+<li>Check whether session has been created before trying to end it.  </li>
+<li>Fix compiler warning in gnc-backend-dbi.c.</li>
+<li>Fix cmake build after latest configure changes.</li>
+<li>Change GNC_RESAVE_VERSION to GNUCASH_RESAVE_VERSION so that it's similar to the other version macros; define it at the top of configure.ac so that it's obvious to everybody; and store the current Gnucash version only when doing a full save so that retrospective changes to GNUCASH_RESAVE_VERSION won't skip a resave because the database has been touchedby a newer version.</li>
+<li>Win32: Add missing include for windows build</li>
+<li>Set line ending property svn:eol-style to LF for newly added files</li>
+<li>The new files for gnc_locale functions, ommitted from r20110.</li>
+<li>Adjustments to test Makefiles required by r20176 (move quickfill functions from gnome-utils to app-utils</li>
+<li>More adjustments for moving gnc_locale functions from app-utils to core-utils</li>
+<li>Move gnc_locale functions from src/app-utils/gnc-ui-util to src/core-utils/gnc-locale-utils (new files) and adjust accordingly.</li>
+<li>Adjust location and add gnc_(push|pop)_locale wrapper around dbi_conn_query() calls which retrieve data. Patch by Christoph Holtermann</li>
+<li>Update newly introduced NANO version number in cmake build script as well.</li>
+<li>Get rid of gtk dependency in &lt;app-util/option-util.h&gt; header by storing only a gpointer for the widget.
+
+This means the very last part of a gtk-dependency in app-util is in option-util.c
+in one error message. My goal is to remove gtk completely from app-util
+so that all code in our dependency chain up to app-util can be packaged
+into a GUI-independent library, which can then be used by the python wrappers
+and other GUI frontends alike.</li>
+<li>Add gnc_get_long_version, a guint concocted by adding the version values together allowing two digits for each. Add a new version value, GNUNCASH_NANO_VERSION, to be incremented when there's any change to data serialization. Use the new gnc_get_long_version to tag the Gnucash version in the versions table in the dbi backend.</li>
+<li>Add libgncmod-app-utils.la to src/backend/dbi/tests LDADD so that gnc_push_locale and gnc_pop_locale can be found for testing.</li>
+<li>Re-indentation of source code.
+
+This re-indentation was done using astyle-1.24 using the following options:
+
+  astyle --indent=spaces=4 --brackets=break --pad-oper --pad-header --suffix=none</li>
+<li>Fix missing include in cmake build file.</li>
+<li>Move gnc-ui.h file from top-level to gnome-utils. It is gtk-dependent anyway, so it is moved to where it belongs now.</li>
+<li>Remove unneeded usage of a generic &lt;gnc-ui.h&gt; include in headers.</li>
+<li>Remove pointless header RecnWindow.h - nothing gtk-independent here anyway.</li>
+<li>Fix cmake build file after file removal.</li>
+<li>Drop the obsolete gncUIWidget typedef because all of our GUI-code is inherently gtk-dependent (with the exception of option-util.h).
+
+If there were any re-write of gnucash with a different GUI toolkit, it will
+define all GUI-related functions in its own way, so there's no point in
+pretending those very gtk'ish functions were usable in a different toolkit as well.</li>
+<li>Delete the unused and slightly pointless gnucash_foo_version functions</li>
+<li>Adjust gnc_push_locale and gnc_pop_locale to take a locale category and 
+to handle MSWin32 (following gnome/druid-hierarchy.c) correctly.
+Use them in gnc-backend-dbi.c instead of the incorrect code from r20189 
+(Thanks, Christian).  </li>
+<li>Add locale.h; some systems seem not to pull it in via glib/gi18n.h</li>
+<li>Left out of r20188: Actually wrap the important code...</li>
+<li>Handle localization-ignorance bug in libdbi by setting LC_NUMERIC locale 
+to "C" before calling dbi_result_get_double() and back afterwards. This 
+is not thread-safe, but we're not multithreaded yet.  </li>
+<li>Change serialization of doubles in the dbi backend to use 
+g_ascii_dtostr() instead of sprintf. 
+
+The problem is that sprintf is subject to localization and will output 
+e.g. 1,25 for one-and-a-quarter in European locales. SQL doesn't support 
+localization, so will interpret 1,25 as two fields, 1 and 25.
+
+Note also that GUID_ENCODING_LENGTH isn't big enough for a double, so 
+that's changed to G_ASCII_DTOSTR_BUF_SIZE.  </li>
+<li>Move quickfill and gnc-entry-quickfill files from gnome-utils to app-utils because they don't require gtk/gnome.
+
+(account-quickfill can't be moved because it also works with a GtkListStore.)</li>
+<li>Add #include gnc-main.h for declaration of gnc_get_svn_version() for test_dbi_version_control().</li>
+<li>Fix core swig files to have appropriate ifdefs for guile only portions
+
+Patch by Andy Clayton &lt;q3aiml@gmail.com&gt;</li>
+<li>Fix r20169 for out-of-tree build. Clean up included .c file.</li>
+<li>Add declaration for test_dbi_version_control; doxygen comments for test_dbi_safe_save and test_dbi_version_control; and rearrange order of declarations to keep the test functions together.</li>
+<li>Spelling fixes in code comments.</li>
+<li>Clarify the use of pathnames in the python bindings example scripts</li>
+<li>Allow all book types instead of only sqlite3 for account_analysis.py</li>
+<li>Fix lots of memory leaks</li>
+<li>When closing a book (e.g. when opening a new file), release memory of the objects in the book</li>
+<li>Remove qof_instance_begin_edit test from test_book_readonly; qof_instance_begin_edit doesn't check qof_book_is_readonly anymore.</li>
+<li>Update svn:ignore for bi_import plugin</li>
+<li>Set line ending property svn:eol-style to LF for newly added files</li>
+<li>Re-indentation of source code.
+
+This re-indentation was done using astyle-1.24 using the following options:
+
+  astyle --indent=spaces=4 --brackets=break --pad-oper --pad-header --suffix=none</li>
+<li>Add missing svn:executable property</li>
+<li>Fix printf conversion specifier of 64 bit integers in message.
+
+(Also, fix compiler warning about &amp;&amp; and ||).</li>
+<li>Improve wording of libdbi error message even more.</li>
+<li>Remove old obsolete unused file from python wrappers.
+
+Apparently this is unused since r17284.</li>
+<li>Make sure ENTER is balanced by LEAVE in gnc_commodity_set_quote_tz.</li>
+<li>Win32 build: Aqbanking has a patch now, but doesn't need autotools called.</li>
+<li>Remove *.i files from doxygen input again because at least my doxygen-1.6.3 hangs on gnucash_core.i.
+
+This is a follow-up to r19956, bug #637346.</li>
+<li>Remove book_is_readonly check from qof_instance_begin_edit; it crashes if it's actually used.</li>
+<li>Prevent a crash if gnc_sx_sxes_reverencing_account called when book has no sxes.</li>
+<li>Win32: Add missing link libraries to bi_import plugin. Necessary for win32 linking.</li>
+<li>Fix qof/test compilation errors, provide guard for glib_testing.</li>
+<li>Remove the old "import-export/hbci" module because it is no longer supported.
+
+The newer "import-export/aqbanking" has been in use since aqbanking-3.0.0.
+As it turned out, we require aqbanking-4.0.0 now anyway, which was
+release 2009-05-30. Consequently, the old module isn't being maintained
+by us and so needs to be removed.</li>
+<li>Disable usage of qof/test for now because is does not yet compile.</li>
+<li>Add a read-only attribute to QofBook and check of same to 
+qof_instance_begin_edit. Add qof_session_safe_save. Add unit tests for 
+these changes.
+
+QofBook read-only attribute is to prevent starting an edit when the 
+version of Gnucash which created a dataset is newer than the one 
+currently running. This is to prevent writing records of an old format 
+into an existing data set. The user can use File&gt;Save As to create a new 
+QofSession which will write a completely new dataset in the current 
+format. This is an important safety feature for future versions of 
+Gnucash which will not bring all of a dataset into memory, instead 
+loading only what is immediately needed.
+
+Safe-save is the Qof access to allow writing out a dataset to an 
+existing server database (i.e., postgresql or mysql) while maintaining 
+the ability to both transaction-protect saving individual records while 
+maintaining the ability to rollback the entire save if something goes 
+wrong.
+
+The unit test framework is added to enable testing these components. 
+More tests will be added in a later commit.  </li>
+<li>Provide glib unit testing template files to make it easier to add unit testing to modules</li>
+<li>Remove unused variable.</li>
+<li>Remove obsolete compatibility code in the state file processing.
+No version GnuCash 2.2.x version will produce state files with
+spaces in their key names, and we don't need to worry about older
+compatibility (migrating from 2.0.x should always happen via 2.2.x).</li>
+<li>Fix some spelling errors in doxigen documentation</li>
+<li>Provide for safely overwriting a sql database by moving the existing 
+tables out of the way, writing new tables, and then dropping the old 
+tables once everything has been saved.  </li>
+<li>Add python in section optional of README.dependencies
+
+Additional: explain alternatives and optional parts</li>
+<li>Revert r20082 (re-enable plugins)
+Get the bi_import plugin building on Windows by including missing libc functions</li>
+<li>Disable building the plugins directory until windows build issues can be fixed </li>
+<li>Add function for creating a new copy of an existing GncInvoice.</li>
+<li>Remove obsolete unused autoconf macro</li>
+<li>Add gnc_budget_clone() and make some functions arguments 'const' </li>
+Please enter the commit message for your changes. Lines starting</li>
+<li>Follow-up to r19999: Refactor guile version-safe scm_to_locale_string into gnc function.
+
+(Yay, I made r20000 :-)</li>
+<li>Fix r19985, r19986 for guile-1.6.8.
+
+The return value of guile-1.6's SCM_STRING_CHARS must not be freed, as
+opposed to the return value of guile-1.8's scm_to_locale_string. So we
+must wrap the free() into a macro that is defined appropriately (or maybe
+we should refactor this into a function returning a g_malloc'd g_char anyway.)</li>
+<li>Add facility to force BUILDING_FROM_SVN=no from outside the Gnucash build system
+
+Needed by packagers that maintain the packaging code in svn, svk or git too </li>
+<li>Change dependency in src/backend/dbi/Makefile.am from app-utils to core-utils</li>
+<li>Add en to the ALL_LINGUAS list in configure.ac; should have been in r20142</li>
+<li>Enhanced database version handling.
+
+* Add a macro GNC_RESAVE_VERSION which holds an svn revision number. 
+* When fully saving a database put this number in versions with 
+  table_name Gnucash-Resave.
+* On database load, compare the current GNC_RESAVE_VERSION with the 
+  Gnucash revision and Gnucash-Resave revision saved when the database 
+  was created. 
+* If the current GNC_RESAVE_VERSION &gt; the saved Gnucash 
+  version, then emit ERR_SQL_DB_TOO_OLD.
+* If GNC_RESAVE_VERSION &lt; the saved Gnucash-Resave, emit ERR_SQL_DB_TOO_NEW.  </li>
+<li>Minor fixes to g_test: Adjust MODULEPATH so that the boundary path delimiters go at invocation; add DEFAULT_INCLUDES to the test_foo_CFLAGS; include the required NULL third arg to g_test_init()</li>
+<li>Use last changed revision number instead of last-commited-somewhere-in-repo
+
+svnversion without options returns the most recent revision in the repo
+at the time of the last svn update/checkout even if that revision
+didn't hold any changes in the current path. Not very useful as a
+reference. Better is to ask for the last changed revision with -c.
+BUT: -c option for some reason always considers svn working copy
+as having mixed sources. We're only interested in the last part so
+we strip the beginning revision if it's there.
+As a result if your WC really has mixed sources, that will not be
+visible in the version number...</li>
+<li>Remove the word "days" because it is also located after the near field.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+<h3>Come contribuire?</h3>
+<p>Traducendo: il nuovo rilascio è accompagnato da alcune nuove stringhe da tradurre. Se si intende contribuire con una traduzione, si consiglia di testare fin da subito questo rilascio.</p>
+<p></p>
+
+<h3>Informazioni sul programma</h3>
+<p>GnuCash è un programma di contabilità gratuito e a codice aperto rilasciato nel rispetto dei termini della licenza GNU General Public License (GPL) e disponibile per GNU/Linux, *BSD, Solaris, Mac OSX e Microsoft Windows. La scrittura del programma GnuCash ha avuto inizio nel 1997 e la prima versione stabile risale al 1998.</p>

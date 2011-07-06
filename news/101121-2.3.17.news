@@ -1,0 +1,210 @@
+<b>Announcement:</b> GnuCash 2.3.17 (RC2) Release
+2010-11-21
+
+<h2>GnuCash 2.3.17 (RC2) released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.3.17, the eighteenth of several 2.3.x releases of the GnuCash Free Accounting Software and second release candidate for the stable version 2.4.0. With this new release series, GnuCash can use an SQL database using SQLite3, MySQL or PostgreSQL. It runs on GNU/Linux, *BSD, Solaris, Microsoft Windows and Mac OSX.</p>
+
+<div class="dialog warning">
+<p><b>WARNING:</b> This is a release candidate version of Gnucash.</p>
+<p>This release is intended for developers and testers who want to verify that bugs found during development have been fixed and that the software is stable enough to be released as 2.4.0.</p>
+<p>Make sure you make backups of any files used in testing versions of GnuCash in the 2.3.x series. Although the developers go to great lengths to ensure that no data will be lost we cannot guarantee that your data will not be affected if for some reason GnuCash crashes in testing these releases.</p>
+</div>
+
+<div class="dialog warning">
+<p><b>WARNING:</b> You should uninstall any earlier GnuCash version from your system prior to installing 2.3.17.</p>
+<p>Failing to do so may result in startup errors. In particular on Windows this may cause "Parse error: entry point not found" errors.</p>
+</div>
+
+<div class="dialog note">
+<p><b>NOTE:</b> The latest stable version is 2.2.9.</p>
+</div>
+
+<p>PLEASE TEST TEST AND TEST SOME MORE any and all features important to you.
+Then post any bugs you find to bugzilla</p>
+<p>Major changes in the 2.3.x release include;
+<ul>
+<li>In addition to the XML backend, Gnucash can now use a SQLite3, MySQL or PostgreSQL database to store the data. This is a new implementation using libdbi. It supports all features including the business features.  In order to build with this, add --enable-dbi to the configure command.  In addition to the libdbi-dev package for your distribution, you will also need the appropriate DBD (libdbi driver) package for sqlite3, mysql or postgresql.</li>
+<li>As a replacement for the current GtkHTML HTML engine used to display reports and graphs, Gnucash can use WebKit. WebKit is the engine used by Google Chrome on Windows and Safari on Apple.  In order to build with this, add --with-html-engine=webkit to the configure command.  You will need an appropriate webkit-dev package.  On win32, you will need to download the webkit-1.1.90-win32.zip file from the source repository and put it into the downloads directory of your gnucash build area.</li>
+<li>Updated to AqBanking 3 on Win32.</li>
+</ul>
+
+<p>Strings are frozen.  This means no new changes will be introduced which change any text displayed by Gnucash.  Therefore, final translations for 2.4.0 release may begin.</p>
+
+<p>Changes between 2.3.16 and 2.3.17 include:
+
+<ul>
+<li>Bugs fixed</li>
+<ul>
+<li>Bug #589954: No blank split after creating a new account "on the fly" while editing a transaction.
+
+Cause was that gnc_split_register_get_account_by_name() turned of "full_refresh" if the account didn't already exist and turned it back on only if the name of the account actually created in the new account dialog box differed from the one originally entered in the transaction.
+
+Since "full_refresh" isn't manipulated much, that effectively shut down the ledger for further editing. Probably not what the original author intended!
+
+</li>
+<li>Bug #634906 - Re-enable splash screen preference option</li>
+<li>Bug #633550 - Help and concepts guide are missing from the prebuilt binary (because xsltproc chokes on undefined entities)</li>
+<li>Bug #609581 - Gnucash 2.3.8 offers to create db and then fails to do so</li>
+<li>Bug 628409: SQL coerces identifiers to lowercase, but postgres's C interface is case sensitive.</li>
+<li>Bug 592643: Set standard_conforming_strings on postgresql databases.</li>
+<li>Bug 634964: Crash in pgsql_error_fn. The dbi_conn isn't set if the server refuses the connection, so protect dereferences from null pointers.</li>
+<li>Bug #634357 followup: convert New and Open submenus into plain menus</li>
+<li>Bug #634812: Improve backend error reporting for Session begin
+
+Patch by Mike E:
+
+The current error feedback to a python scrpt/user looks something like:
+
+call to begin resulted in the following errors, (7,)
+
+This change in gnucash_core.py makes the feedback similar to:
+
+call to begin resulted in the following errors, ERR_BACKEND_LOCKED
+
+This is less cryptic and aid debugging of user python scripts.  My only
+issue though is whether this would break existing user scripts where checking
+of this error code is used for flow control.  Although since the ERR_ codes are
+imported with gnucash_core_c it *should* have no effect.</li>
+<li>Bug #634357: Further menu ui cleanup: Reserve File New/Open menu only the file-related items anymore.
+
+The menu items under "File" should relate only to the file (database),
+not to anything within a file. The open/new for all other things (budget,
+invoice, account) have been moved somewhere else.</li>
+<li>Minor fix of r19802, bug#634673: config.h is in builddir, not srcdir; add last .i file dependency.</li>
+<li>Bug 634673: Add dependency information &amp; fix typo in python-bindings Makefile.</li>
+<li>Bug 634392: New sql database raises clobber warning
+
+A fairly extensive change, because I changed may_clobber from a global 
+qof function (which passed through qofbackend and fetched up in the 
+actual backends) to a local static in the individual backends which 
+raise a new qof_backend_error, QOF_ABCKEND_STORE_EXISTS. This was 
+necessary to reorder the existence check before the lock, because with 
+the sql backends, locking creates the database... which then would 
+return may_clobber as true, even though it really wasn't.
+
+New parameter "force" added to session_begin() functions, and 
+"create_if_nonexistant" is renamed to simply "create". The reason for 
+the latter is that the file/database is created regardless of whether it 
+already exists; that's what the clobber check is about. The new "force" 
+parameter is set to true the second time through, after the user has 
+responded to the clobber dialog indicating that the data should be 
+destroyed.
+
+Many of the extraneous changes are just adding the new parameter to the 
+session_begin() calls.
+
+gnc-file changes to handle the error in favor of calling the 
+no-longer-existing qof_check_may_clobber_data() call after 
+session_begin().
+
+Two minor changes to gnc_file_do_save_as: gnc_add_history and 
+gnc_hook_run are now called on new_session instead of old_session; this 
+ensures that the new file/database is used at the next startup of 
+gnucash. Second, the filename/url is filtered before displaying the 
+"may_clobber" dialog box to prevent displaying plaintext database 
+passwords.
+
+</li>
+<li>Bug #634165: Better dealing with a locked database in python
+
+Patch by Christoph Holtermann:
+
+For the second enhancement proposal i have attached a simple patch which adds
+the argument ignore_lock to Session.__init__() which is passed through to
+qof_session_begin.
+
+This patch extends the function Session.__init__() with ignore_lock</li>
+<li>Bug #634357: Move the Budget Open/New menu items to Actions -&gt; Budget -&gt; New Budget / Open Budget because they have nothing to do with the file menu.</li>
+<li>Bug 634334: Check that subdir argument really is one of the two cases
+we can handle. Wrap fileURLWithPath in @try/@catch so that we don't
+crash when it throws.
+
+Free bonus fix: If "en" is the language and doesn't have a translation, force the C locale.
+
+</li>
+<li>Bug 634334: Crash on selecting New User Tutorial from new user dialog.</li>
+<li>Bug #633942: Fix "nil" column header on single account report
+
+When I open a report window (barchart in the example) and select only one
+account, I get a column header saying "nil" near the only data column.
+
+Someone accidentally wrote "nil" instead of the empty list '().</li>
+<li>Bug #634252: Re-enable the splash screen if the user selects open anyway
+
+If during startup a file or database turns out to beeing locked the user is
+presented a dialog with the options to open anyway, create a new file or abort.
+This dialog, however, closes the splash screen. This may cause confusion,
+because file loading and report generation may still take quite some time.
+
+Patch by Herbert Thoma.</li>
+</ul>
+
+
+<li>Updated translations or translation-related changes</li>
+<ul>
+<li>Updated Italian Translation.</li>
+<li>Updated dutch translation, copied from Translation Project</li>
+<li>Minor update of German translation.
+
+In the "bills due" dialog we use Bill -&gt; Rechnung, not Lieferantenrechnung.</li>
+</ul>
+
+
+<li>Other user-visible changes</li>
+<ul>
+<li>Fix crash when using the function "Import DTAUS and send". The actual function is still implemented, though.</li>
+</ul>
+
+
+<li>Other code/build changes</li>
+<ul>
+<li>Correct patch submission instructions to direct patches to bugzilla rather than the mailing list.</li>
+<li>Splash screen: minor code cleanup</li>
+<li>Fix error in r19822 which prevented creation of postgres databases.</li>
+<li>Fix python samples to work with reordered Session.__init__() args</li>
+<li>Fixed aqbanking transaction type on importing DTAUS online transfers.
+
+Patch by Manfred Usselmann.</li>
+<li>Disable Italian docs generation I just accidentally enabled. It
+wasn't enabled before the xsltproc issue popped up, so it shouldn't
+be enabled now.</li>
+<li>Reactivate English docs generation in Windows build</li>
+<li>When preparing imported DTAUS jobs, check their availability as well.</li>
+<li>Fix misplaced comment in gnome-utls/gnome-file.c from 19798</li>
+<li>Make arguments to Session.__init__() have the same order as to qof_session_begin() to reduce potential confusion.</li>
+<li>Fix typo in AUTHORS, as pointed out by Mike himself.</li>
+<li>Add Mike Evans to AUTHORS as he has been providing patches regularly.</li>
+<li>Win32 build: Update versions of libktoblzcheck, gwenhywfar4.</li>
+<li>Add force_new parameter to GnuCashCoreClass.__init__, reflecting change to qof_session_begin() in r19798</li>
+<li>Increase gnutls version to 2.8.6 (might fix bug#632158)</li>
+</ul>
+
+</ul>
+
+
+<h3>Caveats for Testers</h3>
+<p>Any 2.3.x version might crash unexpectedly at any point during runtime. If you test some serious work in a 2.3.x release and are using the XML file backend for data storage, make sure you hit "Save" after every non-trivial workstep.  If you are using the SQL backend, this is not required as every change is saved immediately to the database.<p>
+<p>The documentation has had screenshots updated, however, many help texts usually only refers to the 1.8.x series. Everyone is invited to help improve the documentation; see http://wiki.gnucash.org/wiki/Development on how to get involved.</p>
+
+<h3>How can you help?</h3>
+<p>Testing: Test it and help us discover all bugs that might show up in there.  Please enter each and every bug into bugzilla.</p>
+<p>Translating: The new release comes with some new translation strings. If you consider contributing a translation, we invite you to test this release already. A string freeze will be announced in one of the later 2.3.x releases.  Please check http://wiki.gnucash.org/wiki/Translation_Status for updates on this.</p>
+<p></p>
+<p>We would like to encourage people to test this and any further releases as much as possible and submit bug reports in order that we can polish GnuCash to be as stable as possible for the 2.4.0 release in a few weeks. Then post any bugs you find to <a href="http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">bugzilla</a></p>
+
+<h3>Getting GnuCash</h3>
+<p>Source code for GnuCash 2.3.17 can be downloaded from multiple locations:
+<ul>
+<li><a href="http://www.gnucash.org/download.phtml">The GnuCash website</a></li>
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.17.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.17.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/2.3.17/">all files</a>.</li>
+<li>You can also checkout the sources directly from the subversion repository with this command:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/trunk gnucash</span></li>
+</ul></p>
+
+<p>To install GnuCash, you will need Gnome 2, guile, slib. In addition you will need swig if compiling from subversion.</p>
+
+<h3>Win32 binary</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.17-setup.exe">Gnucash 2.3.17 Win32 setup executable</a> can be downloaded from Sourceforge as well.
+
+<h3>About the Program</h3>
+<p>GnuCash is a free, open source accounting program released under the GNU General Public License (GPL) and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash began in 1997, and its first stable release was in 1998.</p>

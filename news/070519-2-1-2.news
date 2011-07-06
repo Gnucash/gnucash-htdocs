@@ -1,0 +1,53 @@
+<b>Announcement:</b> GnuCash 2.1.2 Release
+2007-05-19 21:47
+
+<h2>GnuCash 2.1.2 released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.1.2 aka
+"Financially secure yet?", the third of several unstable 2.1.x releases of the GnuCash
+Free Accounting Software which will eventually lead to the stable
+version 2.2.0. With this new release series, GnuCash is available on Microsoft
+Windows for the first time, and it also runs on GNU/Linux, *BSD, Solaris and
+Mac OSX. This release is intended for developers and testers who want to help
+tracking down all those bugs that are still in there. With this release, the
+2.1.x series will go into string freeze for translators to update their
+translations until 2.2.0 comes out.</p>
+<p><b>DATA FILE NOTICE</b>  If you are using Scheduled Transactions, the data
+file saved by GnuCash 2.1.2 and higher is <b>NOT</b> backward-compatible with
+GnuCash 2.0 anymore.   Please make a safe backup of your 2.0 data before
+upgrading to 2.1.2.
+</p>
+<h3> Download: </h3>
+<ul><li> <a href="http://www.gnucash.org/pub/gnucash/sources/unstable/2.1.x/"
+class='external free'
+title="http://www.gnucash.org/pub/gnucash/sources/unstable/2.1.x/"
+rel="nofollow">http://www.gnucash.org/pub/gnucash/sources/unstable/2.1.x/</a>
+</li><li> <a href="http://download.sourceforge.net/gnucash" class='external
+free' title="http://download.sourceforge.net/gnucash"
+rel="nofollow">http://download.sourceforge.net/gnucash</a>
+</li></ul>
+<h3> What's New in GnuCash 2.1.2? </h3>
+<p>This release has only a few user-visible new features, except for the
+completed port to the Microsoft Windows operating system. In summary, the
+following features are new, compared to the older 2.0.x series:
+</p>
+<ul><li> Port to Microsoft Windows completed.</li>
+<li> The Scheduled Transaction code has been refactored.  The Scheduled
+Transaction list view is now integrated into the main window, and the
+Since-Last-Run dialog has been simplified.
+</li><li> SWIG is now used instead of g-wrap for providing language bindings. 
+</li><li> Check printing has been improved, with new formats and simpler
+format descriptions.
+</li><li> <b>DATA FILE NOTICE</b> If you are using Scheduled Transactions, the
+data file saved by GnuCash 2.1.2 and higher is <b>NOT</b> backward-compatible
+with GnuCash 2.0 anymore because of extensions in the file format.  Please
+make a safe backup of your 2.0 data before upgrading to 2.1.2.
+</li></ul>
+<p>Bugfixes and improvements since the last version 2.1.1 include: 
+
+</p>
+<ul><li> Internal GObject integration is much more advanced by now
+</li><li> Crash on OFX import crashing has been fixed
+</li><li> Windows timezone problems fixed
+</li><li> Some memory leaks have been fixed
+</li></ul>

@@ -1,0 +1,78 @@
+<b>Announcement:</b> GnuCash 2.3.3 (Unstable) Release
+2009-07-23
+
+<h2>GnuCash 2.3.3 (Unstable) released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.3.3, the fourth of several unstable 2.3.x releases of the GnuCash Free Accounting Software which will eventually lead to the stable version 2.4.0. With this new release series, GnuCash can use an SQL database using SQLite3, MySQL or PostgreSQL. It runs on GNU/Linux, *BSD, Solaris, Microsoft Windows and Mac OSX.</p>
+
+<div class="dialog warning">
+<p><b>WARNING:</b> This is an *UNSTABLE* version of Gnucash.</p>
+<p>This release is intended for developers and testers who want to help tracking down all those bugs that are still in there.</p>
+<p>Make sure you make backups of any files used in testing versions of GnuCash in the 2.3.x series. Although the developers go to great lengths to ensure that no data will be lost we cannot guarantee that your data will not be affected if for some reason GnuCash crashes in testing these releases.</p>
+</div>
+
+<div class="dialog note">
+<p><b>NOTE:</b> The latest stable version is 2.2.9.</p>
+</div>
+
+<p>PLEASE TEST TEST AND TEST SOME MORE any and all features important to you.
+Then post any bugs you find to bugzilla</p>
+<p>Major changes in the 2.3.x release include;
+<ul>
+<li>In addition to the XML backend, Gnucash can now use a SQLite3, MySQL or PostgreSQL database to store the data. This is a new implementation using libdbi. It supports all features including the business features.  In order to build with this, add --enable-dbi to the configure command.  In addition to the libdbi-dev package for your distribution, you will also need the appropriate DBD (libdbi driver) package for sqlite3, mysql or postgresql.</li>
+<li>In addition to the current GtkHTML HTML engine used to display reports and graphs, Gnucash can use WebKit. WebKit is the engine used by Google Chrome on Windows and Safari on Apple.  In order to build with this, add --enable-webkit to the configure command.  You will need an appropriate webkit-dev package.  On win32, you will need to download the webkit-1.1.5-win32.zip file from the source repository and put it into the downloads directory of your gnucash build area.</li>
+<li>Updated to AqBanking 3 on Win32.</li>
+</ul>
+
+<p>Changes between 2.3.2 and 2.3.3 include:
+<ul>
+<li>Fix crash for "save as" if sqlite3 backend not available.</li>
+<li>Updated Korean translation by yongdoria.<li>
+<li>If a report defines style-text, that text will be added to the report header</li>
+<li>Add new stylesheet to provide css information. Allows users to specify report fonts</li>
+<li>Update CSS style sheet to use font buttons rather than strings.</li>
+<li>Patch by Jim Raehl Fix bug 587853/585939. When parsing file: or xml: handle file: or file://, xml: or xml://</li>
+<li>Patch by John Ralls. Adjust configure.in for Mac compilation with Quartz.</li>
+<li>Patch by John Ralls. Provides (and installs when appropriate) a special gnucash-setup-env for OSX.</li>
+<li>Patch by John Ralls. Permits binreloc to work from inside a MacOSX application bundle</li>
+<li>Patch by John Ralls. Integrates the gnucash menus into the MacOSX menubar.</li>
+<li>Fix bug 588212 - PgSql: Pop-up dialog for overwriting db contents even for new database</li>
+<li>Fix bug 587436 - Make Bayesian Matching ON by default</li>
+<li>Fix bug 363339 - Exclude hidden accounts from reports. New check box added</li>
+<li>Fix up some more reports to use cell tags which allow CSS style font usage</li>
+<li>Add Korean translation of account charts by Jin-Hwan Jeong.</li>
+<li>Fix bug 585899 - environment variable GNC_DEFAULT_DATABASE can be used to set the default database name in the Save As dialog</li>
+</ul>
+
+<h3>Caveats for Testers</h3>
+<p>Any 2.3.x version might crash unexpectedly at any point during runtime. If
+you test some serious work in a 2.3.x release and are using the XML file backend for data
+storage, make sure you hit "Save" after
+every non-trivial workstep.  If you are using the SQL backend, this is not required as every
+change is saved immediately to the database.<p>
+<p>The documentation has had screenshots updated, however, many help texts
+usually only refers to the 1.8.x series. Everyone is invited to help improve
+the documentation; see http://wiki.gnucash.org/wiki/Development on how to get
+involved.</p>
+
+<h3>How can you help?</h3>
+<p>Testing: Test it and help us discover all bugs that might show up in there.  Please enter each and every bug into bugzilla.</p>
+<p>Translating: The new release comes with some new translation strings. If you consider contributing a translation, we invite you to test this release already. A string freeze will be announced in one of the later 2.3.x releases.  Please check http://wiki.gnucash.org/wiki/Translation_Status for updates on this.</p>
+<p></p>
+<p>We would like to encourage people to test this and any further releases as much as possible and submit bug reports in order that we can polish GnuCash to be as stable as possible for the 2.4.0 release in a few weeks. Then post any bugs you find to <a href="http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">bugzilla</a></p>
+
+<h3>Getting GnuCash</h3>
+<p>Source code for GnuCash 2.3.3 can be downloaded from multiple locations:
+<ul>
+<li><a href="http://www.gnucash.org/download.phtml">The GnuCash website</a></li>
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.3.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.3.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/2.3.3/">all files</a>.</li>
+<li>You can also checkout the sources directly from the subversion repository with this command:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/trunk gnucash</span></li>
+</ul></p>
+
+<p>To install GnuCash, you will need Gnome 2, guile, slib. In addition you will need swig if compiling from subversion.</p>
+
+<h3>Win32 binary</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.3-setup.exe">Gnucash 2.3.3 Win32 setup executable</a> can be downloaded from Sourceforge as well.
+
+<h3>About the Program</h3>
+<p>GnuCash is a free, open source accounting program released under the GNU General Public License (GPL) and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash began in 1997, and its first stable release was in 1998.</p>

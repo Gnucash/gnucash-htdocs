@@ -91,7 +91,11 @@ Finally, see the size of the task ahead:
 Whilst editing the translation, run the msgfmt command from time to
 time to catch errors and let you know how much is left to do.
 
-When you come across fuzzy markers: (#, fuzzy), remove them.
+When you come across fuzzy markers: (#, fuzzy), check whether the
+proposed translation is a valid translation. If it is, then remove
+the fuzzy marker. If it is not, either edit the translation and
+remove the fuzzy marker, or leave the fuzzy marker where it is --
+this message will then be treated as untranslated.
 
 When you have no fuzzy and no untranslated messages, update the binary
 translation file for your locale:
@@ -108,17 +112,22 @@ Which will make all the known translations.
 Publishing the website
 ----------------------
 
-Once you've got the website content up to date, you need to publish
-the content from the beta site to the main website (and beta search
-site to the main search site).  To do this, you need to merge your
-changes from the 'trunk' into the 'published' branch.  Here's how you
-do that:
+Changes that are committed to 'trunk' are published automatically.
+No other steps are required.
 
-    svn checkout .../repo/htdocs/branches/published htdocs-pub
-    cd htdocs-pub
-    svn log --stop-on-copy emulate-globals.php
-    # find the last merge point from trunk
-    svn merge -r <last_merge_point>:<head_rev> .../htdocs/trunk
-    # resolve conflicts
-    svn commit
-    # Make sure you put <head_rev> into your comment!!!!!!!
+------------------------
+Website beta environment
+------------------------
+
+Some changes may be too drastic or experimental to push to the public
+website. There is a beta website available as well on
+
+http://www.gnucash.org/beta/
+
+To work in this beta environment, checkout the beta branch from svn:
+
+svn checkout http://svn.gnucash.org/repo/htdocs/branches/beta htdocs-beta
+
+WARNING: this branch is currently not kept in sync with trunk. So if you
+         intend to experiment with the current conten in trunk, please ask
+         one of the devs to merge the current trunk to beta first !

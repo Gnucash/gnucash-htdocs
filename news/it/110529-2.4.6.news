@@ -1,0 +1,96 @@
+<b>Announcio:</b> rilascio di GnuCash 2.4.6
+2011-05-29
+
+<h2>Rilasciato GnuCash 2.4.6</h2>
+
+<p>Il team di sviluppo di GnuCash è orgoglioso di annunciare GnuCash 2.4.6, la sesta versione di correzione dei problemi riscontrati nel rilascio stabile del programma di contabilità gratuito GnuCash. Con questa nuova serie di rilasci, GnuCash può utilizzare un database SQL avvalendosi di SQLite3, MySQL o PostgreSQL. Il programma funziona in ambiente GNU/Linux, *BSD, Solaris, Microsoft Windows e Mac OSX.</p>
+
+<h3>Ottenere GnuCash per sistemi Windows (file binari di Win32)</h3>
+<p>Il <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.6-setup.exe">file eseguibile di Win32 per l'installazione di Gnucash 2.4.6</a> può essere scaricato da Sourceforge. Il file installerà tutto ciò che è necessario per eseguire GnuCash.
+
+<h3>File binario per sistemi Mac OSX</h3>
+<p>Il <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.4.6.dmg">pacchetto per MacOSX di Gnucash 2.4.6</a> può essere scaricato anch'esso da Sourceforge.
+
+<h3>Ottenere GnuCash come codice sorgente</h3>
+<p>Per compilare autonomamente GnuCash 2.4.6, il codice sorgente può essere scaricato da:
+<ul>
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.6.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.6.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.4.6">tutti i file</a>.</li>
+<li>È inoltre possibile eseguire il checkout direttamente dal repository subversion con il seguente comando:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/tags/2.4.6 gnucash</span></li>
+</ul></p>
+
+<p>Per compilare GnuCash dal codice sorgente sono necessari Gnome 2, guile, slib. Sarà inoltre necessario avere swig se si compila da subversion.</p>
+
+<h3>Modifiche</h3>
+
+<p>Tra la versione 2.4.5 e la 2.4.6, sono state introdotte le seguenti modifiche:</p>
+<ul>
+<li>Preserve selection around the call to gtk_editable_set_position.
+This lets us drop the racy gnucash_sheet_select_data_cb, which fixes
+problems with lost input.</li>
+<li>Add a gnc_quartz_set_menu call to main_window_new() so that newly
+created windows get their menus on the mac menu.</li>
+<li>Fix up the Mac shutdown process to give Gnucash a chance to clean up without spewing critical errors about the main loop already running (because of calling gnc_shutdown in an event handler).</li>
+
+<li>Bug #650241: Fix style for aging table in owner reports that has changed (after defining doctype)
+Prevent inheriting the parent tablestyle for aging table in owner-report.</li>
+<li>Bug #650757: Fix Easy &amp; footer styles output wrong tags &lt;/btd&gt; iso &lt;/b&gt;&lt;/td&gt; preventing HTML 4.01 Transitional validation
+
+This patch removes the wrong &lt;/btd&gt; tags and closes the center tag in the
+footer and easy stylesheets.
+</li>
+<li>Bug #645221: Patch to show the headline as an h3 across all stylesheets
+
+The attached patch makes sure that the title fonts set through the options menu
+behaves consistently across all style sheets.
+</li>
+<li>Bug #620123: Patch to make account name a header cell, iso td in trial-balance</li>
+<li>Bug #648554: SQL backend doesn't correctly save taxable flag on bills.
+</li>
+<li>Bug #650163: Fix Technicolor style that outputs wrong tags &lt;btd&gt; instead of &lt;b&gt;&lt;td&gt;
+</li>
+<li>Bug #650139: Fix missing doctype preventing HTML 4.01 transitional validation
+
+Exported reports lack a document type, preventing HTML validation.
+
+When exporting this may lead browsers to incorrectly read the reports generated
+by GnuCash.
+</li>
+<li>Bug #650138: Style plain: Fix incorrect &lt;p&gt; tag around &lt;h3&gt; preventing HTML 4.01 transitional validation
+</li>
+<li>Bug #649992: Let owner-report aging table include due date / post date options in aging.
+The attached patch patches the owner report to:
+*Allow a choice between the use of Due Date and Date Posted
+*Report with the current bucket</li>
+<li>Bug #649608: Skip non-enabled Scheduled Transactions for Future Txn report</li>
+<li>Update Slovak translation, copied from the Translation Project.</li>
+<li>Bug #646729: Create the lockfile with at least read write user permissions
+</li>
+<li>Bug #647945: Add sanity check to hopefully fix crash when running custom reports </li>
+<li>Bug #644897: Correctly link in libgncmod-report-gnome.la to avoid linking against an installed version.</li>
+<li>Bug #646268: Fix missing GWEN_SYNCIO initialization.</li>
+<li>Bug #644762: Deprecated __new__() call in function_class.py</li>
+<li>Bug #647360: Invoice entries in expense voucher are created in old voucher, not in new one.
+It worked fine for customer invoices, and vendor bills, but not
+expense vouchers, where the feature was broken all along.</li>
+<li>Bug #647242: Fix broken averaging for quarter or half-year step size
+</li>
+<li>Bug #647316: Fix crash when deleting custom report if no backup file existed.
+
+Before deleting the backup file by (delete-file), it must be checked
+whether the to-be-deleted file exists, otherwise the guile procedure
+will crash.</li>
+<li>Fix warning about NULL guid_list in xaccQueryAddAccountGUIDMatch, which caused some total amounts in reports to disappear.
+
+Apparently gnc:account-get-trans-type-splits-interval didn't watch out
+for empty lists of accounts, and the resulting split list somehow
+was bogus. Now that we check for empty account list, all is fine again.
+This was broken for some months by now, maybe since r20404?</li>
+<li>Bug #628342 - Quick open on File menu deleted if failed</li>
+<li>Bug #629156 Recently Used Filenames incorrectly displayed</li>
+</ul>
+
+<p>In 2.4.6, translations for Japanese language were updated.</p>
+
+
+<h3>Informazioni sul programma</h3>
+<p>GnuCash è un programma di contabilità gratuito e a codice aperto rilasciato nel rispetto dei termini della licenza GNU General Public License (GPL) e disponibile per GNU/Linux, *BSD, Solaris, Mac OSX e Microsoft Windows. La scrittura del programma GnuCash ha avuto inizio nel 1997 e la prima versione stabile risale al 1998.</p>

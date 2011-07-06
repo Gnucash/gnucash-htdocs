@@ -1,44 +1,29 @@
+iso_languages = de es fr
+languages = ${iso_languages} it ja nb nl pl pt_PT zh_CN
 
-.PHONY: pot mos msgmerge de es fr nb nl pl pt_PT nmz nmz.lang nmz nmz.onefile
+.SECONDEXPANSION:
+
+.PHONY: pot mos msgmerge ${languages} nmz nmz.lang nmz nmz.onefile nmz.locale
 
 pot: po/POTFILES po/gnucash-htdocs.pot
 
 po/POTFILES: .potfiles
-	( find . -type f -name '*.php' -o -name '*.phtml' -maxdepth 1; find externals -name '*.phtml'; find search/templates -name '*.php_tmpl'; ) > po/POTFILES
+	( find . -maxdepth 1 -type f -name '*.php' -o -name '*.phtml'; find externals -name '*.phtml'; find search/templates -name '*.php_tmpl'; ) > po/POTFILES
 
 .potfiles:
 
 po/gnucash-htdocs.pot: po/POTFILES
-	xgettext -f po/POTFILES -L PHP -o po/gnucash-htdocs.pot
+	xgettext -f po/POTFILES -L PHP --keyword="T_" -o po/gnucash-htdocs.pot
 
 msgmerge: po/gnucash-htdocs.pot
-	for f in de es fr nb nl pl pt_PT ; do \
+	for f in ${languages} ; do \
 	  msgmerge -U po/$$f.po po/gnucash-htdocs.pot ; \
 	done
 
-mos: de es fr nb nl pl pt_PT
+mos: ${languages}
 
-de: po/de.po
-	msgfmt po/de.po -o de/LC_MESSAGES/gnucash-htdocs.mo
-
-es: po/es.po
-	msgfmt po/es.po -o es/LC_MESSAGES/gnucash-htdocs.mo
-
-fr: po/fr.po
-	msgfmt po/fr.po -o fr/LC_MESSAGES/gnucash-htdocs.mo
-
-nb: po/nb.po
-	msgfmt po/nb.po -o nb/LC_MESSAGES/gnucash-htdocs.mo
-
-nl: po/nl.po
-	msgfmt po/nl.po -o nl/LC_MESSAGES/gnucash-htdocs.mo
-
-pl: po/pl.po
-	msgfmt po/pl.po -o pl/LC_MESSAGES/gnucash-htdocs.mo
-
-pt_PT: po/pt_PT.po
-	msgfmt po/pt_PT.po -o pt_PT/LC_MESSAGES/gnucash-htdocs.mo
-
+${languages}: po/$$@.po
+	msgfmt $< -o locale/$@/LC_MESSAGES/gnucash-htdocs.mo
 
 ####################################################################
 #
@@ -47,6 +32,7 @@ pt_PT: po/pt_PT.po
 LOCALFILE=local.php
 URLBASE=
 FILETAIL=
+LOCALE=
 FILE=
 HOME=http://www.gnucash.org$(URLBASE)
 TMPLBASE=search/templates/NMZ.
@@ -54,22 +40,28 @@ TMPLBASE=search/templates/NMZ.
 # add when we have utf-8 translations: iconv -f UTF-8 -t ISO8859-1 
 
 nmz.onefile:
-	( echo '<?php include("$(LOCALFILE)"); ' ; \
-	  echo '$$home = "$(HOME)/$$lang_dir"; ' ; \
-	  echo '$$text_dir = "."; ?>'; \
+	( echo '<?php $$locale = "$(LOCALE)"; ?>' ; \
 	  cat $(TMPLBASE)$(FILE).php_tmpl ) | php -q > \
 	  $(TMPLBASE)$(FILE)$(FILETAIL)
 
 nmz.lang:
-	$(MAKE) nmz.onefile FILE=head
-	for f in body foot result.normal result.short tips ; do \
+	for f in head body foot result.normal result.short tips ; do \
 	  $(MAKE) nmz.onefile FILE="$$f"; \
+	done
+
+nmz.locale:
+	# convert to ISO_8859-1
+	for f in $(TMPLBASE)*.$(LOCALE); do \
+	  iconv -f utf-8 -t ISO_8859-1//TRANSLIT -o $$f.local -c $$f ; \
+	  mv $$f.local $$f ; \
 	done
 
 nmz:
 	$(MAKE) nmz.lang
-	# other NMZ langs not merged into po system: ja
 	# note: PL is only "mostly" translated.  it diff's differently
-	for l in de es fr nb nl pl pt_PT ; do \
-	  $(MAKE) nmz.lang LOCALFILE=$$l/local.php FILETAIL=.$$l ; \
+	for l in en ${languages} ; do \
+	  $(MAKE) nmz.lang FILETAIL=.$$l LOCALE=$$l; \
+	done
+	for l in ${iso_languages} ; do \
+	  $(MAKE) nmz.locale LOCALE=$$l; \
 	done

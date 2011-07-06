@@ -1,0 +1,444 @@
+<b>Annuncio:</b> rilascio di GnuCash 2.3.15 (instabile)
+2010-08-20
+
+<h2>Rilasciato GnuCash 2.3.15 (instabile)</h2>
+
+<p>Il team di sviluppo di GnuCash è orgoglioso di annunciare GnuCash 2.3.15, il quindicesimo di diversi rilasci 2.3.x instabili del programma di contabilità gratuito GnuCash in attesa della versione stabile 2.4.0. Con questa nuova serie di rilasci, GnuCash può utilizzare un database SQL avvalendosi di SQLite3, MySQL o PostgreSQL. Il programma funziona in ambiente GNU/Linux, *BSD, Solaris, Microsoft Windows e Mac OSX.</p>
+
+<div class="dialog warning">
+<p><b>ATTENZIONE:</b> Questa è una versione *INSTABILE* di Gnucash.</p>
+<p>Questa versione è dedicata agli sviluppatori e agli utenti che intendo contribuire alla ricerca di tutti i problemi ancora presenti.</p>
+<p>Si consiglia di effettuare delle copie di sicurezza di tutti i file utilizzati nelle versioni instabili della serie 2.3.x di GnuCash. Anche se gli sviluppatori hanno cercato di impedire in ogni modo la perdita di dati, non è possibile garantire che in caso di crash di GnuCash in queste versioni, i dati non vengano corrotti.</p>
+</div>
+
+<div class="dialog warning">
+<p><b>ATTENZIONE:</b> prima da installare la versione 2.3.15 di GnuCash sul proprio computer si consiglia di rimuovere qualsiasi versione precedente del programma.</p>
+<p>Tralasciando questo passo potrebbero verificarsi degli errori all'avvio. In particolare in ambiente Windows ciò potrebbe causare degli errori del tipo "Parse error: entry point not found".</p>
+</div>
+
+<div class="dialog note">
+<p><b>NOTA:</b> L'ultima versione stabile è la 2.2.9.</p>
+</div>
+
+<p>SI CONSIGLIA DI TESTARE, TESTARE, TESTARE E ANCORA TESTARE qualsiasi e tutte le funzioni importanti.
+E poi segnalare qualsiasi problema riscontrato su bugzilla</p>
+<p>I principali cambiamenti nel rilascio 2.3.x comprendono:
+<ul>
+<li>Oltre al backend XML, Gnucash può ora utilizzare un database SQLite3, MySQL o PostgreSQL per l'immagazzinamento dei dati. Questa è una nuova implementazione che utilizza libdbi. Sono supportate tutte le caratteristiche incluse quelle professionali. Per compilare con questa funzionalità, aggiungere "--enable-dbi" al comando "configure". Oltre al pacchetto libdbi-dev della propria distribuzione, sarà anche necessario l'appropriato pacchetto DBD (libdbi driver) per sqlite3, mysql o postgresql.</li>
+<li>Come sostituto dell'attuale motore GtkHTML HTML utilizzato per visualizzare i resoconti e i grafici, Gnucash può usare WebKit. WebKit è il motore utilizzato da Google Chrome su Windows e da Safari su Apple. Per compilare con questa caratteristica, aggiungere "--with-html-engine=webkit" al comando "configure". Sarà necessario l'appropriato pacchetto webkit-dev. Su win32, si dovrà scaricare il file compresso webkit-1.1.5-win32.zip dal repository sorgente e inserirlo nella cartella "downloads" della propria area di compilazione di GnuCash.</li>
+<li>Aggiornamento a AqBanking 3 su Win32.</li>
+</ul>
+
+<p>Le stringhe di testo sono congelate. Ciò significa che non verranno applicati dei cambiamenti che potrebbero introdurre una qualsiasi modifica del testo visualizzato da GnuCash. Quindi, le traduzioni finali per la versione 2.4.0 possono partire.</p>
+
+<p>I cambiamenti tra le versioni 2.3.14 e 2.3.15 comprendono:
+
+<ul>
+<li>Bug corretti</li>
+<ul>
+<li>Bug #626459: Change Transaction Report default account selection to none
+
+I think in the specific case of the
+"Transaction Report" this is the better choice. The error message
+will be clear enough ("No accounts selected. Click here to Edit report
+options"), and it will probably meet the user expectation that some account
+needs to be selected anyway before something can be seen.</li>
+<li>Bug #625193: Added 'search by ID' in python binding for invoices, customers and bills.
+
+Patch di Mike E and Mark Jenkins:
+
+When creating or appending to invoices, customers and bills, searching by ID is
+likely more useful than by GUID.  I've added this functionality to the Python
+bindings.
+
+Search by ID using the python code:
+tmp = gnucash.gnucash_core_c.search_invoice_on_id(ID,book.instance)
+if tmp:
+  invoice =  gnucash.gnucash_business.Invoice(instance=tmp)
+
+Use the invoice object as in sample_scripts/simple_invoice_insert.py
+
+I support this patch, but I've made a few improvments of my own.
+
+I switched up the arguments in search_customer_on_id, search_invoice_on_id,
+search_bill_on_id to have Book first and ID second. The reason for this was to
+make these functions more consistent with the other functions where a search is
+done through a book on a particular attribute.
+
+Also added some specific python bindings support to allow this to be used as
+methods of Book: Book.CustomerLookupByID, Book.InvoiceLookupByID,
+Book.BillLoookupByID.</li>
+<li>Bug #624721: Show backtrace for errors in eguile templates
+
+Patch di Matthijs Kooijman:
+
+The current eguile template implementation catches errors that occur while
+evaluating an eguile template. However, only the error is shown, not a
+backtrace (so no location of the error either).
+
+The attached patch modifies the error handling to also capture the stack
+backtrace, using a lazy exception handler (e.g., capture the stack before
+unwinding the stack to the real exception handler).
+
+To extract only the relevant part of the stack (e.g., the part inside the
+eguile template, not the tens of stack frames leading up to the report
+rendering), a stack dump is made just before evaluating the eguile template (so
+a sort of "diff" can be made).
+
+For more details, see the extensive comments in the patch itself.</li>
+<li>Bug #616613: Automatically append the extension if user forgot append them.
+
+Patch di "Bob":
+
+The enclosed patch simply tests for a period in the file name,
+if one exists it leaves it alone,
+if not, it adds one plus a default extension.</li>
+<li>Bug #626403: Fix inconsistent formatting between stylesheets (Webkit vs. gtkhtml)
+
+Patch di Alex Aycinena:
+
+The 'default' stylesheet formats the balance sheet, cash flow, income statement
+and transaction reports properly under webkit but not under gtkhtml.
+
+The 'easy', 'footer', and 'technicolor' stylesheets are the reverse; that is,
+they format the balance sheet, cash flow, income statement and transaction
+reports properly under gtkhtml but not under webkit, except that the 'footer'
+stylesheet also has some formatting problems with gtkhtml as well.
+
+The attached patch file corrects these problems. Specifically:
+
+- styles that are missing in the 'footer' stylesheet (compared to 'easy') are
+added
+
+- the function 'gnc-html-engine-supports-css' is used in the 'default', 'easy',
+'footer' and 'technicolor' stylesheets to provide styles for either webkit or
+gtkhtml
+
+- the taxtxf.scm report file is simplified to take advantage of these changes</li>
+<li>Bug #625697: Prior patch, Changeset 19376, broke reports for non-default stylesheets
+
+Patch di Frank Ellenberger
+</li>
+<li>Bug 623801 - gnucash file is not saved</li>
+<li>Bug 625845 - Exporting Accounts results in 0 byte file.</li>
+<li>Bug 625977 - Python Bindings, enhanced examples showing the use of Transaction.BeginEdit(), patch by Mark Jenkins</li>
+<li>Bug 625976 - Python Bindings Patch for Transaction.GetImbalance(), patch by Mark Jenkins</li>
+<li>FIx bug 596124: don't crash if someone adds a split to a capital gains transaction
+created by the lot scrubber.</li>
+<li>Double clicking on the balance column in a register doesn't resize the
+column because there is a zero width column to the right of it.  This may
+fix all or part of bugs 563588, 345711, or 506261.</li>
+<li>Bug 612337: Add file save to hierarchy druid when the new file druid completes.
+
+Patch di "Bob": I thought I would give this a try and come up with a patch to use the file save
+as function after the after pressing the apply button. Not sure if it is the
+best way but seems to work on my linux box and on windows without any errors.
+
+I have changed the text in the account.glade file to reflect the firing of the
+save as and also increased the size of the window to give more room for the
+'Category Description' to stop scroll bars.</li>
+<li>Bug #624623 - Patch: US Tax Report for webkit and gtkhtml</li>
+<li>Bug #556713 - inconsistency in report options
+Use "Reset defaults" instead of "Use defaults, as suggested by Derek.</li>
+<li>Bug #556713 - inconsistency in report options
+Final additions to this bug.</li>
+<li>Bug #621016: Print multiple checks at the same time
+
+The print checks operation should be able to print more than one check with a
+single invocation of the "Print Check..." command.  The attached patch does
+this.  If the active register is an account register, then the selected
+transaction is printed (as before).  If it is a search results register where
+all the splits are from the same account, then it prints a check for each of
+them.  Anything else is an error.
+
+Patch di Mike Alexander.</li>
+<li>Bug #118391: This patch add isocodes support for Windows build.
+
+It automatically download,
+build, install and packaging the isocodes.
+
+Currently, the patch will not make Windows build show the locale long
+currencies name. But it make the isocode available on Windows. Since the long
+currencies names are already shown on Linux, I think it should not far to make
+it happen on Windows too, especially the isocode will be available after this
+patch.</li>
+<li>Bug #620763: Fix permuted "Retained Earnings/Losses" in balsheet-eg.eguile.scm</li>
+<li>Bug #620763: remove trailing whitespace from balsheet-eg*</li>
+<li>Bug #556713: Fix inconsistency in report options
+
+The attached patch should fix the remaining outstanding issues of this bug.
+Applying this patch now would break string freeze.</li>
+<li>#616606 - Get default report font from top level widget
+
+Patch di Tao Wang </li>
+<li>Bug #623844 - CRITICAL gnc.backend Error message in trace file.</li>
+<li>Bug #623842 - Reseting of Color Tabs to default color wrong.</li>
+<li>Bug #556713 - inconsistency in report options, partial fix
+This commit aligns all occurences of "Current/Previous Year Start/End" to "Start/End of this year"</li>
+<li>Bug #556713 - inconsistency in report options, partial fix
+This commit aligns all occurences of "Report Accounts" and "Accounts to include" to "Accounts"</li>
+<li>Bug #447339 - custom reports with similar names misbehaving</li>
+<li>Bug #556713 - inconsistency in report options, partial fix
+This commit aligns all occurences of "Report Currency" and variants to "Report's currency"</li>
+<li>Bug #556713 - inconsistency in report options, partial fix
+This commit replaces "From/To" with "Start Date/End Date" in all standard reports.</li>
+<li>Bug #389841: Wrong translation of Tax Amount and update of Italian translation by Cristian Marchi</li>
+<li>Bug #622953 - Enable comment for date format string again in gnucash.pot, patch by Frank H. Ellenberger.</li>
+<li>Bug #622637 - The classical invoices should use the more specific strings from taxinvoice, part 2, by Frank H. Ellenberger</li>
+<li>Bug #622637 - The classical invoices should use the more specific strings from taxinvoice, part 1: whitespace cleanups, patch by Frank H. Ellenberger.</li>
+<li>Bug #617797 - Win32 need to downgrade to gtk-2.16 (Default theme not working under Windows), second patch adding custom themes, by Tao Wang</li>
+<li>Bug #622523 - Python bindings are crash prone when linked to guile</li>
+<li>Bug #622520 - gnucash business objects disapear on save, patch by Mark Jenkins</li>
+<li>Bug #622271 - Category 'Gas' under 'Auto' should be translated to Petrol in en_GB and en_AU</li>
+<li>Bug #617797 - Win32 need to downgrade to gtk-2.16 (Default theme not working under Windows), patch by Tao Wang</li>
+<li>Bug #616606: Add gnc-get-default-report-font-family function callable from scm.
+
+Currently returns "Arial" but can be modified to get default GtkWindow font.  </li>
+<li>Bug #600574 - Would like to disable creation of log files and backup files entirely</li>
+<li>Bug #621744 - Prompt for password is not hidden</li>
+<li>Bug #619709 - Upgrade Inno Setup to 5.3.x to use utf-8 in .iss script, patch by Tao Wang</li>
+<li>Bug #621602 - Upgrade svn on Windows building environment to 1.6.x, patch by Tao Wang.</li>
+<li>Bug #378638 - log replay creates two transactions from a single logged transaction</li>
+<li>Bug #615347 - Use enforced, consistent data file extension across supported platforms
+
+The choice has fallen on ".gnucash". This extension will be added to all filenames that don't have it already when a user chooses "Save As...". Obviously this is only done for files, not for database storage. The backup files will from now on also end in ".gnucash" instead of the previous ".xac". The code that removes old backup files scans for both extensions to ensure that backup files still available with the ".xac" extension are rotated as well.</li>
+</ul>
+
+<li>Traduzioni aggiornate o modifiche relative alle traduzioni</li>
+<ul>
+<li>Update po files with up-to-date pot template.</li>
+<li>Remove unused file from both SVN and POTFILES.in.</li>
+<li>de.po: correction of "Income Tax Identity"
+
+This term is used in the first dialog of "Ta_x Report Options".</li>
+<li>Updated Italian translation by Cristian Marchi.</li>
+<li>Updated Japanese translation by Yasuaki Taniguchi, copied from the Translation Project.</li>
+<li>Updated Latvian translation by Valdis Vītoliņš.</li>
+<li>New Latvian translation of the business account chart, thanks to Valdis Vītoliņš &lt;valdis.vitolins@odo.lv&gt;</li>
+<li>Updated simplified Chinese translation by Tao Wang.</li>
+<li>Updated Dutch translation by Mark Haanen, copied from the TP.</li>
+<li>Updated German translation.</li>
+<li>Add initial Bulgarian translation, by Rosi Dimova, by Bulgarian Gnome translation team.</li>
+<li>Fix missing translation of buttons in invoice reminder dialog.</li>
+<li>Updated Dutch translation, copied from the Translation Project</li>
+<li>Update of Italian translation by Cristian Marchi</li>
+<li>Merge most recent pot template into all language po files.</li>
+<li>Update German translation.</li>
+<li>Merge most recent translation template into de.po.</li>
+<li>Update POTFILES.in after recent file move.</li>
+<li>I18n improvements in invoice reports: Mark last untranslated strings for translation.</li>
+<li>Update de.po after invoice review.
+
+There were some equivocalnesses between invoice and balance.
+After using the strings from tax-invoice in the other invoice forms,
+the de translations should switch back.
+
+Patch by Frank H. Ellenberger.</li>
+<li>Improve i18n comments: Comment for gnucash.pot must appear immediately before the marked string.</li>
+<li>Improve name consistency. Use "GnuCash" (or more precisely PACKAGE_NAME), wherever the name is visible to the user, and "gnucash" (or more precisely PACKAGE) everywhere else.</li>
+<li>Add utf-8 prefix, so the Windows installer interprets the file properly</li>
+<li>Fix Latvian language support for Windows installer (should have used lv instead of lv_LV)</li>
+<li>Add Latvian translation for the Windows Installer, patch by Valdis Vītoliņš</li>
+<li>Fix encoding issues in Windows README file and translate last sentence.</li>
+<li>Add Latvian readme file for Windows</li>
+<li>Update Dutch translation from the TP</li>
+<li>Update Chinese (simplified) translation, from the TP</li>
+<li>Set user visible application name as part of the gui initialization.
+This defines which name is used in the about dialog and is used by gnome-keyring
+to determine where to store passwords.</li>
+<li>Add simple checkbook account chart in Dutch, by Mark Haanen.</li>
+<li>Move language dependent files lv_LV to lv</li>
+<li>Move language dependent files lv_LV to lv, one more change</li>
+<li>Move language dependent files lv_LV to lv</li>
+<li>Updated Italian translation by Cristian Marchi.</li>
+</ul>
+
+<li>Altri cambiamenti visibili dall'utente</li>
+<ul>
+<li>Allow negative tax percentages.
+This allows to model some tax rules for trade between European countries.</li>
+<li>Add error message if the unimplemented aqbanking setup button is pressed.
+
+Please see http://lists.gnucash.org/pipermail/gnucash-devel/2010-August/029188.html
+and http://lists.gnucash.org/pipermail/gnucash-devel/2010-August/029189.html</li>
+<li>Bug 616612 - Remember last location of File Open/Save dialog, partial solution
+This commit remembers the last directory for
+* Open
+* Save
+* Export chart of accounts
+* Save Report
+This only stores file based paths, not db based paths.</li>
+<li>Modify the osx_accel_map to reflect the different keybinding in Gtk+-2.20</li>
+<li>Fix crash when run with the --add-price-quotes parameter.</li>
+<li>Follow-up of r19358: Need to use AB_SetupDialog_new instead as replacement of the previous wizard.</li>
+<li>Adapt to newest (unstable) aqbanking: No external application needed anymore for user setup.</li>
+<li>Re-enable colored tabs on Windows. This works fine with gtk+2.16.</li>
+<li>Add averaging option (but currently deactivated) for monthly or weekly average in account piechart.
+
+Will be activated once we're out of string freeze in order not to have
+untranslated strings show up for the user.</li>
+<li>Explain proximo concept.</li>
+</ul>
+
+<li>Altri cambiamenti relativi al codice e alla compilazione</li>
+<ul>
+<li>Get library from correct directory - fixes "make check" </li>
+<li>Dummy commit to test mailing list hooks.</li>
+<li>Fix typo in comment.</li>
+<li>Convert glade files to gtk+2.10, last batch.</li>
+<li>Fix stupid compiler error.
+
+(Should compile first, then commit, not the other way round.)</li>
+<li>Copy OpenOffice.org python macro for import of the gnucash file to here because its original download location is hard to reach.</li>
+<li>Fix compiler warning</li>
+<li>Fix compiler error reported by Herbert Thoma</li>
+<li>Replace a gkt+2.18 function to be gtk+2.10 compatible</li>
+<li>Fix gtk critical warning, patch by Bob.</li>
+<li>Fix problem with "t" unbound in cond expression.  Use "else" instead.</li>
+<li>Add missing return value specification of lookup_by_code() in python bindings.
+
+Patch by Daniele Varrazzo.</li>
+<li>Remove now empty business directories</li>
+<li>Fix r19364: Remove last reference to removed business-backend-sql.</li>
+<li>Merge the sql parsers of the business objects into the main sql module.
+
+Also, completely remove the business-core/sql module because it is
+no longer needed. The tests of this module have been moved into
+backend/dbi because they depend on sql+dbi, but not more than that.</li>
+<li>Completely remove the business-core/xml module as it is no longer needed.</li>
+<li>Remove the separate business xml backend from cutecash and python as well.</li>
+<li>Merge the xml parsers of business objects into the main xml backend module.</li>
+<li>Remove separate object initialization in engine/gncBusiness.c and move this into one common initialization function cashobjects_register in &lt;engine/cashobjects.h&gt;.</li>
+<li>Convert glade files to Gtk+2.10: remaining business dialogs</li>
+<li>Convert glade files to Gtk+2.10: business dialogs except customer/vendor/invoice</li>
+<li>Convert glade files to Gtk+2.10, next batch: gnome-utils</li>
+<li>Convert dialogs to Gtk+2.10
+Removed one unused dialog as well, as it contained many deprecated widgets causing trouble.</li>
+<li>Remove unused dialog</li>
+<li>Fix GtkSpinButton with non-zero page_size warnings.</li>
+<li>Move the business object implementations from separate module into the main gnucash engine.</li>
+<li>Move initialization of business objects into gncBusiness.c so that this fits to the header where the function was declared.</li>
+<li>Remove header gncBusinessP.h which is unused anyway.</li>
+<li>Convert glade files to glade3/gtk+2.10, next batch.</li>
+<li>Remove obsolete code.</li>
+<li>Some changes to align the README files with the current state of gnucash.</li>
+<li>Convert glade files to gtk+2.10, next batch.</li>
+<li>Convert to glade-3 target gtk+2.10</li>
+<li>Fix binary test.</li>
+<li>More path fixes.</li>
+<li>Fix paths. On Mandriva the original code resulted in two absolute path being appended, resulting in file not found errors.</li>
+<li>Python bindings, gncnumeric and accounttype constants, patch by Mark Jenkins.</li>
+<li>Nice example python scripts, patch by Mark Jenkins.</li>
+<li>Future default file extension is .gnucash, so
+- rename example files to this extension
+- replace references to the old extension where appropriate</li>
+<li>Fix erroneous quotation in scheme string of last commit</li>
+<li>Improve the initial report loading code so that it loads only files ending with .scm.
+
+This should avoid accidentally loading .scm~ backup files etc. The code
+matches the filenames against the regexp "\.scm$", so the previous hand-
+written comparison against "." and ".." is no longer necessary as those don't
+match that regexp anyway.</li>
+<li>Fix build failure introduced by r19285 on systems with guile 1.6.</li>
+<li>Properly check for SWIG version 2.0.0 and later.</li>
+<li>Revert part of R19263.  DYLD_LIBRARY_PATH must be set on MacOSX (running under X11, not Quartz) in order for GnuCash to find its dynamic libraries.</li>
+<li>Change gnucash-bin to gnucash on OS X (the other platforms had been changed already)</li>
+<li>After learning the scheme case syntax, implement it correctly this time.
+
+Fixes r19281, r19280, r19253, r19252.</li>
+<li>Add missing UTF-8 BOM</li>
+<li>Some more disabling of the new deactivated option in the piechart. Forgotten in r19280, sorry for that.</li>
+<li>Disable new option of piechart report even more.</li>
+<li>Check properly for svn availability</li>
+<li>Re-indentation of source code.
+
+This re-indentation was done using astyle-1.24 using the following options:
+
+astyle --indent=spaces=4 --brackets=break --pad-oper --pad-header --suffix=none</li>
+<li>Document what to do if svn isn't found. This only applies to the scripts used to setup an automated build system</li>
+<li>Cleanup use of constants</li>
+<li>Finish direct binary execution on Windows and linux and cleanup bin Makefile/targets
+- Windows
+  * binary name becomes GnuCash.exe
+  * gnucash.cmd is renamed to gnucash-launcer.cmd (consistent with OS X). This file is only needed to run GnuCash straight from the source installation. It is not used (or distributed) with the Windows Installer version.
+  * gnucash-valgrind, gnucash-gdb and the override extra's have been removed as they are meant for a UNIX like environment
+
+- Linux/others
+  * binary name becomes gnucash
+  * the gnucash launch script has been removed together with gnucash-gdb. They no longer add value on linux.
+  * gnucash-valgrind has been retained because it contains useful presets
+
+- OS X (Quartz)
+  * binary name remains gnucash-bin for now (requires synchronous changes in the externally hosted OS X build system)
+  * gnucash launcher script has been renamed to gnucash-launcher. This file is only needed to run GnuCash straight from the source installation. It is not used (or distributed) in the OS X bundle version.
+  * gnucash-gdb and gnucash-valgrind remain and can be used for debugging the source installation.</li>
+<li>Undo debug modification introduced in r19100. It bypassed the Abort and was never intended to be committed.</li>
+<li>Use enum value QOF_LOG_MESSAGE (newly defined in r19257) instead of the generic G_LOG_LEVEL_MESSAGE</li>
+<li>OSX: Use the language list instead of the locale
+
+Language list is better than locale:
+
+* Locale is only one choice, language list gives user several chances
+  before defaulting to english.
+
+* Locale is set on the Formats page in System Preferences&gt;Language &amp;
+  Text and labelled "Region", which makes one think that it's separate
+  from language choices.
+
+* This new code looks at only the first two letters, so any time
+  (e.g.) German is selected as the language it will use the de_DE
+  localization. This will have to be elaborated if we ever get
+  regional language translations.
+
+</li>
+<li>OSX: Set locale and languages from User Defaults.
+
+This was handled in the bundle launcher script and completely ignored
+when gnucash is launched from the command line. Should offer better
+performance than the scripted version, which had some odd workarounds.
+
+</li>
+<li>Add missing enum value</li>
+<li>Fix report error in piechart due to the temporary deactivation of the new option.</li>
+<li>Make business sql backend initialization functions accessible when statically linking.
+
+Same change as what r18841 added in business-core/xml.</li>
+<li>Delegate transaction log enabling/disabling to the backends. Let only the xml backend enable logging.</li>
+<li>Add getter function for mapping a {year,month,day} symbol to the conversion function of a date to a fractional number.</li>
+<li>Fix a comment to reflect the actual code.</li>
+<li>Remove command line parameter that is ignored anyway.</li>
+<li>Fix typo in commodity.glade which broke creating new commodities</li>
+<li>Improve handling of unknown access methods (protocols). Avoid mangling of such urls, so that a clean error message can be displayed.</li>
+<li>Disable enviroment_overide() when MAC_INTEGRATION is defined: It doesn't play well with App Bundles.</li>
+<li>Don't look for dbi drivers if dbi_initialize failed.</li>
+<li>Fix dbi drivers not found when --with-dbi-dbd-dir is set at configure time.</li>
+<li>Default key accelerator map for OSX, using Command instead of Control</li>
+</ul>
+
+</ul>
+
+<h3>Avviso per i tester</h3>
+<p>Una qualsiasi versione 2.3.x può andare in crash senza preavviso in qualsiasi momento durante l'utilizzo. Se si sta testando del lavoro importante in un rilascio 2.3.x e si sta utilizzando il formato di file XML per il salvataggio dei dati, assicurarsi di premere "Salva" dopo ogni importante modifica al lavoro. Se si utilizza il backend SQL, questo non è necessario dato che ogni cambiamento è salvato immediatamente nel database.<p>
+<p>Le immagini della documentazione sono state aggiornate, ciò nonostante vari testi si riferiscono ancora alla versione 1.8.x. Tutti possono contribuire al miglioramento della documentazione; consultare http://wiki.gnucash.org/wiki/Development per le informazioni su come contribuire.</p>
+
+<h3>Come contribuire?</h3>
+<p>Testando: provando il programma e ricercando i bug che possono manifestarsi. Ognuno di essi dovrebbe essere segnalato su bugzilla.</p>
+<p>Traducendo: il nuovo rilascio è accompagnato da alcune nuove stringhe da tradurre. Se si intende contribuire con una traduzione, si consiglia di testare fin da subito questo rilascio. Un congelamento delle stringhe sarà annunciato in una delle successive versioni 2.3.x. Controllare http://wiki.gnucash.org/wiki/Translation_Status per aggiornamenti a riguardo.</p>
+<p></p>
+<p>Si incoraggiano gli utenti a testare il più possibile questa versione ed eventualmente quelle successive, segnalando i bug in modo che sia possibile correggerli rendendo GnuCash il più stabile possibile in vista del rilascio stabile 2.4.0 che dovrebbe avvenire nel giro di qualche settimana. Si prega quindi di segnalare qualsiasi problema su <a href="http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">bugzilla</a></p>
+
+<h3>Ottenere GnuCash</h3>
+<p>Il codice sorgente di GnuCash 2.3.15 può essere scaricato da diverse posizioni:
+<ul>
+<li><a href="http://www.gnucash.org/download.phtml">Il sito internet di GnuCash</a></li>
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.15.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.15.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/2.3.15/">tutti i file</a>.</li>
+<li>É anche possibile effettuare il "check out" direttamente del codice sorgente dal deposito subversion con il seguente comando:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/trunk gnucash</span></li>
+</ul></p>
+
+<p>Per installare GnuCash, sono necessari Gnome 2, guile, slib. Sarà inoltre necessario avere swig se si compila da subversion.</p>
+
+<h3>File binari Win32</h3>
+<p>L'<a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.15-setup.exe">eseguibile di Gnucash 2.3.15 Win32</a> può anch'esso essere scaricato da Sourceforge.
+
+<h3>Informazioni sul programma</h3>
+<p>GnuCash è un programma di contabilità gratuito e a codice aperto rilasciato nel rispetto dei termini della licenza GNU General Public License (GPL) e disponibile per GNU/Linux, *BSD, Solaris, Mac OSX e Microsoft Windows. La scrittura del programma GnuCash ha avuto inizio nel 1997 e la prima versione stabile risale al 1998.</p>

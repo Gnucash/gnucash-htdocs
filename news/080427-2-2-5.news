@@ -1,0 +1,74 @@
+<b>Announcement:</b> GnuCash 2.2.5 Release
+2008-04-28 07:11
+
+<h2>GnuCash 2.2.5 released</h2>
+<p>
+  The GnuCash development team proudly announces GnuCash 2.2.5 aka "Do
+  what I mean", the fifth bug fix release in a series of stable releases
+  of the GnuCash Free Accounting Software.
+</p>
+<h4>Getting GnuCash</h4>
+<p>
+  GnuCash 2.2.5 can be downloaded from gnucash.org or sourceforge.net.
+  It is available as source code.  For the Microsoft Windows operating
+  system there is a self-installing setup program which includes all
+  necessary additional libraries.
+</p>
+<p>
+  To install GnuCash on other platforms, users will need Gnome 2, guile,
+  and slib.  Neither the currently used swig nor the previously used
+  g-wrap packages are needed anymore when compiling from tarball or when
+  installing a binary.
+</p>
+<ul>
+  <li>
+    <a href="http://sourceforge.net/project/showfiles.php?group_id=192"
+       class="external free"
+       title="http://sourceforge.net/project/showfiles.php?group_id=192">http://sourceforge.net/project/showfiles.php?group_id=192</a>
+    (Source code and Windows binary)
+  </li>
+  <li>
+
+    <a href="http://www.gnucash.org/pub/gnucash/sources/stable/"
+       class="external free"
+       title="http://www.gnucash.org/pub/gnucash/sources/stable/">http://www.gnucash.org/pub/gnucash/sources/stable/</a>
+    (Source code only)
+  </li>
+</ul>
+<h4>What's New in GnuCash 2.2.5?</h4>
+<p>
+  Fixed Bugs
+</p>
+<ul>
+  <li>#166101: Register: Topmost splits' accounts are rewritten confusingly</li>
+  <li>#341414: QIF Import: Changing account separator breaks saved account mappings</li>
+  <li>#341608: Transaction Report: Filtering void/non-void doesn't work</li>
+  <li>#347474: Register: Tab goes to wrong split</li>
+  <li>#396665: QIF Import: Detect and convert non-ascii character encoding of QIF files</li>
+  <li>#450354: QIF Import, Win32: Can only load files from ascii paths</li>
+  <li>#475960: Reconciliation: Postponed balances of liability accounts are not reversed correctly</li>
+  <li>#467529: Check Printing: Align_n not working in custom check definitions</li>
+  <li>#509089: QIF Import: Duplicates windows shown after Scheme error</li>
+  <li>#511182: QIF Import: Saved commodity mappings lost after import to new GnuCash file</li>
+  <li>#511231: QIF Import: Use QIF security type to provide better default namespace</li>
+  <li>#512208: QIF Import: New commodities remain if import canceled</li>
+  <li>#512841: Register: Crash in expression parser on nullary functions, like pmt()</li>
+  <li>#514027: QIF Import: Commodities page is skipped if you go back to currency page</li>
+  <li>#519988: QIF Import: Error reporting doesn't follow GnuCash guidelines</li>
+  <li>#520606: QIF import: Memo mappings for non-split, non-investment transactions are ignored</li>
+  <li>#521957: Auto-save not canceled on opening other files</li>
+  <li>#522795: QIF Import: Does not support "ShtSell" or "CvrShrt" transactions</li>
+  <li>#523194: QIF Import: Existing commodities can cause import failure</li>
+  <li>#523922: GnuCash ships the wrong scalable icon and no small (22x22, 24x24) sizes</li>
+  <li>#527459: QIF Import: Support voided transactions</li>
+  <li>#527886: QIF Import: Support QIF numeric formats of 12'345.67 as produced by Quicken 4</li>
+  <li>#529232: Average Balance Report: Reversing the starting balance distorts the numbers</li>
+</ul>
+<p>Other Changes</p>
+<ul>
+  <li>Add a new Liberty(tm) check format</li>
+  <li>Show QIF import documentation by default</li>
+  <li>Improve cancel behavior in reconciliation window</li>
+  <li>Fix a few memory leaks</li>
+  <li>Update translations: Brazilian Portuguese, German, Romanian, Russian, Swiss German</li>
+</ul>

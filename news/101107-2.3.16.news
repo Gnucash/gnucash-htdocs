@@ -1,0 +1,649 @@
+<b>Announcement:</b> GnuCash 2.3.16 (RC1) Release
+2010-11-07
+
+<h2>GnuCash 2.3.16 (RC1) released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.3.16, the seventeenth of several 2.3.x releases of the GnuCash Free Accounting Software and first release candidate for the stable version 2.4.0. With this new release series, GnuCash can use an SQL database using SQLite3, MySQL or PostgreSQL. It runs on GNU/Linux, *BSD, Solaris, Microsoft Windows and Mac OSX.</p>
+
+<div class="dialog warning">
+<p><b>WARNING:</b> This is a release candidate version of Gnucash.</p>
+<p>This release is intended for developers and testers who want to verify that bugs found during development have been fixed and that the software is stable enough to be released as 2.4.0.</p>
+<p>Make sure you make backups of any files used in testing versions of GnuCash in the 2.3.x series. Although the developers go to great lengths to ensure that no data will be lost we cannot guarantee that your data will not be affected if for some reason GnuCash crashes in testing these releases.</p>
+</div>
+
+<div class="dialog warning">
+<p><b>WARNING:</b> You should uninstall any earlier GnuCash version from your system prior to installing 2.3.16.</p>
+<p>Failing to do so may result in startup errors. In particular on Windows this may cause "Parse error: entry point not found" errors.</p>
+</div>
+
+<div class="dialog note">
+<p><b>NOTE:</b> The latest stable version is 2.2.9.</p>
+</div>
+
+<p>PLEASE TEST TEST AND TEST SOME MORE any and all features important to you.
+Then post any bugs you find to bugzilla</p>
+<p>Major changes in the 2.3.x release include;
+<ul>
+<li>In addition to the XML backend, Gnucash can now use a SQLite3, MySQL or PostgreSQL database to store the data. This is a new implementation using libdbi. It supports all features including the business features.  In order to build with this, add --enable-dbi to the configure command.  In addition to the libdbi-dev package for your distribution, you will also need the appropriate DBD (libdbi driver) package for sqlite3, mysql or postgresql.</li>
+<li>As a replacement for the current GtkHTML HTML engine used to display reports and graphs, Gnucash can use WebKit. WebKit is the engine used by Google Chrome on Windows and Safari on Apple.  In order to build with this, add --with-html-engine=webkit to the configure command.  You will need an appropriate webkit-dev package.  On win32, you will need to download the webkit-1.1.90-win32.zip file from the source repository and put it into the downloads directory of your gnucash build area.</li>
+<li>Updated to AqBanking 3 on Win32.</li>
+</ul>
+
+<p>Strings are frozen.  This means no new changes will be introduced which change any text displayed by Gnucash.  Therefore, final translations for 2.4.0 release may begin.</p>
+
+<p>Changes between 2.3.15 and 2.3.16 include:
+
+<ul>
+<li>Bugs fixed</li>
+<ul>
+<li>Bug 632346: Fixed test failures in dbi</li>
+<li>Bugs 632346 &amp; 632166: Fixup transaction currency scrubbing.
+
+Biggest problem was that almost well-formed transactions missing a currency 
+element wouldn't import correctly because the FindCommonCurrencies function 
+only used the old currency values, ignoring the commodity values in the 
+splits' accounts. A new function, xaccFindCommonCurrencies(), looks at those 
+first and then calls xaccFindOldCommonCurrencies only if it fails. That 
+addresses the cause of the import failure reported in 632166 and a big chunk 
+of the warning messages complained about in 632346.
+
+A secondary problem, also addressed in this change, was that the last block 
+in xaccTransScrubCurrencyFromSplits always replaced the "amount" with the 
+"value". This is the right thing to do if the commodity for the split account 
+is a currency, but if it isn't, the replacement should be reversed. 
+
+</li>
+<li>Bug 629238: Part 2: Extend locking table to SQLite3.</li>
+<li>Bug 629238: Part 1: Create a lock table for postgresql and mysql backends.</li>
+<li>Bug 627831: Implements recursion into storing and retrieving nested slot frames and lists.</li>
+<li>Bug #630770 - Crash when connection lost using db</li>
+<li>Bug #629524: Fix redundant string.</li>
+<li>Bug 611077: Removed warnings, webkit handles jumps to anchors internally</li>
+<li>Bug #502853 - Incorrent tax rounding in invoice (rounding of .5)
+
+This patch changes the default rounding behaviour in GnuCash from
+"Round to nearest even" to "Round away to infinity". See the bugreport
+for more details on these different rounding methods.</li>
+<li>Bug #593479 - Account file being deleted because of erroneous checking for lock file.
+
+Replaces the pointer arithmetics with string functions and regexes where possible
+to avoid typical pointer pitfalls.</li>
+<li>Bug 3786338.  Change r19243 deleted a call to xaccTransBeginEdit which causes a crash replaying a log that
+deletes an existing transaction.  Log replay should now do exactly one xaccTransBeginEdit/xaccTransCommitEdit
+call per logged transaction.</li>
+<li>Bug 632166: Restore the old session if "save as" fails.
+
+Save as would make a new session the "current session" and attempt to
+save it.  If it failed, the new session (with an invalid database)
+would remain the current session -- and would be marked clean. An
+XML-only file-save-as dialog would be presented with no instructions
+about what was going on.
+
+With this change, if the "save as" fails, the old session is restored,
+still marked unsaved. This should be much less confusing to users and
+more likely to avoid data loss.  
+
+Yes, there's some duplicated code now, because do_save_as doesn't call
+save. That's because save did some extra things that do_save_as
+doesn't need and it didn't allow do_save_as to properly correct the
+session. This could be refactored into some tiny functions, but that
+seems a bit excessive to me.
+
+</li>
+<li>Bug 632166: gnc_backend_sql_sync_all: Commit only if all operations were successful; otherwise roll back. </li>
+<li>Bug 632166: A Better fix that doesn't break string freeze or introduce a Gtk GUI dependency into the backend.</li>
+<li>Bug 632166: Notify user when something goes wrong with a transaction save.</li>
+<li>Bug 611077: Warn instead of assert about gtk_html_jump_to_anchor not being implemented in webkit. Note, however, that Webkit seems to take care of this on its own, so even the warning may be unnecessary.</li>
+<li>Fix #630286 - Please add handling code for GDate kvp values in SQL, too
+
+If slots table does not include gdate field, it will be added and all current slots will have a NULL value.
+
+Tested on sqlite3 and mysql.  Tested using the example gnucash file referenced from the bug report.  When saved from XML -&gt; sqlite3 -&gt; XML, some timestamps changed their timezone because of a change of timezone (I'm in North America).  I guess this is OK.
+</li>
+<li>Bug #631058: Add future date period choices to be available in the date options
+
+Patch by Chris Leach:
+
+This patch provides date utilities to calculate future dates. This
+allows easy selection of common future periods.
+
+cstim adds: This patch adds new strings, but they are not used anywhere so
+far, i.e. they will not be user-visible. Hence, I agree those scheme functions
+may be useful for external report writers and for this reason they are
+already added.
+
+Note: The original submission would have added those options to the standard
+relative-date chooser report option, but I (cstim) do not support adding those
+extra option for all reports as standard setting. Hence, the usage of this
+additional choices has to be added by the report writer explicitly.</li>
+<li>Bug #593479: Ensure not to accidentally delete our main account file.
+
+Original patch by Tim Retout who writes:
+
+strptime is passed (name + pathlen + 1) as the string to search.  However, when
+looking at the main account file, strlen(name) == pathlen, so strptime is
+looking at the point just past the end of name.
+
+Sometimes this will be parseable by strptime, and this leads to the account
+file being unlinked.</li>
+<li>Bug #554396: Implement a partial TXF output for capital gains</li>
+<li>Bug #620663: Fix French spelling mistake in preferences window</li>
+<li>Bug #629641: Fixes WARN messages.
+
+Bug in gncIDSearch.c causes "WARN &lt;qof.class&gt; [qof_class_get_parameter()] no
+object of type string" to be emitted to error log.
+
+Currently only affects Python bindings; InvoiceLookupByID(ID_STRING).</li>
+<li>Bug #118391: Put isocodes in README.dependencies to inform packet maintainers
+
+Additional changes in that file:
+1. Link to more up to date http://wiki.gnucash.org/wiki/Dependencies
+2. Introduce Structure:
+required, alternatives, optional, at runtime suggested
+3. Add webkit</li>
+<li>Bug #628960 - Column width unchanged after shortening translation string</li>
+<li>Bug #628865 - Error dialog displays password to MySql database when fails to connect</li>
+<li>Fix bug 573702.  When reading an old data file that doesn't have a template root
+account for scheduled transactions invent one.</li>
+<li>Bug #137017: Save the transaction date as a GDate directly, additionally.
+
+This way, the date that was entered by the user is now at least saved
+in the kvp and can later be retrieved in case we really fix the
+timezone dependence of our txn's dates.</li>
+<li>Bug #370331: Store the numeric values of SX in their kvp as well, if possible.
+
+For SX whose values do not depend on any variables, we now store
+the numeric value as well. This way, we get rid of locale-dependent
+parsing errors due to changing decimal separators in changing
+locales - at least for SX which do not use variables.</li>
+<li>Bug #616697 - string "Payment rec'd..." should be more cleared.</li>
+<li>Bug #626681 - date fields missing in GUI, lost in change from 2.2.9 to 2.3.14</li>
+<li>Bug #588414 - Got "Entry Point Not Found" errors starting GnuCash, but ran OK
+The problem is caused by leftover files from a previous install.
+The solution is to uninstall GnuCash before installing a new version in such cases.
+This commit adds a compatibility test and uninstall step to the windows installer
+that will automatically uninstall the previous gnucash release if it is considered
+'incompatible' with the one to be installed. The user will be warned of this, so
+he can decide to cancel the installation if he doesn't like the idea of uninstalling
+his working GnuCash installation.
+Currently, versions are considered 'incompatible' if their major or minor version
+components are different, so 2.3.x is incompatible with 2.2.x and will trigger
+an uninstall. Likewise, a 2.4.x install is incompatible with a 2.3.x and will
+trigger an uninstall. This is a nice way to remove all testing 'cruft' from the 
+system once the new release comes out.
+Note that in the future installing 2.3.16+ over 2.4.x will also trigger the uninstall, which is
+a good thing IMO. An older release can't know about changes made in a newer one,
+so it's safer to first uninstall the newer one to avoid leftover files.</li>
+<li>Bug #504954 - Wrong calculation of TAX</li>
+<li>[Bug 560052] Force use of internal strptime to work around bug in the Leopard libc.</li>
+<li>Bug #627325 - Update Subversion URL, patch by Yasuaki Taniguchi</li>
+<li>Bug #625193: Move newly introduced search-by-id functions into src/engine.
+
+Patch by Mike Evans.</li>
+<li>update po/de.po after r19435 msgmerge
+
+1. 2 dirty and 2 new strings
+2. partial spell verification
+ entity -&gt; Entität
+ small typos</li>
+</ul>
+
+
+
+
+
+
+<li>Updated translations or translation-related changes</li>
+<ul>
+<li>Updated Latvian translation by Valdis Vītoliņš.</li>
+<li>Updated British English translation by Mike Evans.</li>
+<li>Updated Bulgarian glossary by Rosi Dimova.</li>
+<li>Updated Bulgarian translation by Rosi Dimova.</li>
+<li>Updated Latvian translation by Valdis Vītoliņš.</li>
+<li>Minor update of German translation.
+
+"xy anlegen" -&gt; "Neue xy"
+bill -&gt; "Lieferantenrechnung" to distinguish from invoice -&gt; "Rechnung".</li>
+<li>Updated Turkish translation by Seyfi Duyan.</li>
+<li>Minor update of German translation.
+
+Kontenbaum (urgh) -&gt; Kontenplan
+Kontenrahmen -&gt; Kontenplan</li>
+<li>Minor update of German translation</li>
+<li>Updated Turkish translation by Seyfi Duyan</li>
+<li>Updated Dutch translation, copied from the Translation Project.</li>
+<li>Update German translation.</li>
+<li>Updated Italian translation.</li>
+<li>Updated Italian translation.po/it.po</li>
+<li>Updated Dutch translation copied from translation project</li>
+<li>Fix 2 nonfatal syntax errors in german SKR49
+
+1 missing Namespace
+1 forgotten replacing of the last closing tag
+
+This is now also updated in http://wiki.gnucash.org/wiki/AccountHierarchyTemplate</li>
+<li>Fix erroneous translation of strings with context prefix. The msgstr must not contain the prefix anymore.
+
+http://lists.gnucash.org/pipermail/gnucash-devel/2010-September/029481.html</li>
+<li>Minor update of German translation</li>
+<li>Updated Polish translations by Radzisław Galler.</li>
+<li>Updated Polish translations by Radzisław Galler.</li>
+<li>Updates for German account templates, by Frank H. Ellenberger.
+
+He writes:
+Im beiliegenden Patch habe ich ziemlich mechanisch (grep, recode, sed) die
+folgenden Anpassungen vorgenommen:
+* encoding="ISO-8859-1" -&gt; utf-8
+* &lt;cmdty:id&gt;USD -&gt; EUR, respektive CHF
+** dies betraf auch de_DE/*[brokerage|full]*
+*: interessanterweise wandelt der Druide die aber anscheinend in die default
+currency um.
+* Passiva -&gt; Fremdkapital</li>
+<li>Updated Japanese translation, copied from TP.</li>
+<li>Fix disambiguation prefix translation errors, by Valdis Vītoliņš</li>
+<li>Updated Italian translation.</li>
+<li>I18n: Add German translation for new installer texts.
+
+Suggested by Frank H. Ellenberger and edited by myself.</li>
+<li>Update German translation.</li>
+<li>Merge most recent pot template into all language po files.</li>
+<li>Updated Japanese translation for win32 installer wizard by Yasuaki Taniguchi.</li>
+<li>Added Japanese translation for win32 installer wizard by Yasuaki Taniguchi.</li>
+<li>Updated Latvian translation for win32 installer wizard by Valdis Vītoliņš.</li>
+<li>Updated Latvian translation for the Windows installer, patch by Valdis Vītoliņš</li>
+<li>Updated Italian translation for win32 installer wizard.</li>
+<li>Updated Japanese translation, copied from the Translation Project.</li>
+<li>Updates for Latvian po file, patch by Valdis Vītoliņš.</li>
+<li>Translatable string fixes by Yasuaki Taniguchi
+
+One is on the price editor. Namespace: is not marked translatable.
+
+Another is about a tip for account editor window. The label
+"Edit-&gt;Income tax Options" was
+changed to "Edit-&gt;Tax Report Options" but an old msgid remains on tip.
+
+The last is on the Tax Table. The label "_Edit" is not marked
+translatable but it should be.</li>
+<li>Replace misleading "Passiva" in accounts/de_DE/* by "Fremdkapital" with description "alle Verbindlichkeiten"
+
+Patch by Frank H. Ellenberger.</li>
+<li>Remove file locations from de.po file by running
+
+  msgcat --no-location de.po &gt; tmp ; mv tmp de.po
+
+This way, the text diff of translation updates suddenly becomes readable.</li>
+<li>Fixed a string not translatable.</li>
+<li>I18n: Replace untranslatable sub-strings by the correct full strings.
+
+The implementation is a hacky workaround, but at least better than
+having weird translations as in the current state. Note: Even
+though new strings are introduced, they are not yet used in order
+not to break the string freeze here. The new strings need to
+be activated once the 2.4.0 string freeze is lifted.</li>
+<li>Updated Dutch translation, copied from the Translation Project.</li>
+<li>Updated Latvian translation of business account chart by Valdis Vītoliņš.</li>
+<li>Updated Latvian translation by Valdis Vītoliņš.</li>
+<li>correct syntax error in po/glossary/de.po
+
+" must be quoted in strings.</li>
+</ul>
+
+
+
+
+
+
+<li>Other user-visible changes</li>
+<ul>
+<li>Fix error in dense-cal widget where the last occurrence of a SX wasn't displayed.</li>
+<li>Really fix error in sx_get_num_occur for SX which are limited by num_occur.
+
+Follow-up to r19757 which was incomplete. Hopefully I now really got everything.</li>
+<li>Fix error in sx_get_num_occur for SX which are limited by num_occur.
+
+The last occurrence wasn't counted because it was still valid
+but turned num_occur_rem to zero, hence the counting stopped one too early.</li>
+<li>Revised handling of obsolete security elements, made log messages better.
+
+Accounts with security elements would only use the security to update the 
+commodity if there wasn't a commodity; however, the files in the tests had 
+accounts which had a security and a commodity, where the commodity was a 
+currency. That's wrong. so now if the commodity is a currency, the security 
+will overwrite it.
+
+Added the account name and element name to the log message to assist in 
+troubleshooting, should that be needed.
+
+</li>
+<li>Preferences window improvements:
+* Accounting Period: reorder options so the dates are on top
+* Business: reorder options to clarify which options are general and which apply to invoices or bills only
+* Business: remove obscure "Number of lines" option
+* Register defaults: remove obscure "Number of lines" option
+* General: remove "Show splash screen" option
+
+While removing the "Number of lines" options, I have also removed most of the code that used this option. The number of lines was used to calculate the default window size in various places in the code. The code now simply uses sensible defaults for that.</li>
+<li>Suspend GUI refresh while replaying a log file to avoid flicker and speed it up dramatically.</li>
+<li>File dialog - make enter activate the default action for mysql/pgsql selection.
+This was already the case in the standard file selector. This change makes the 
+two selection methods more consistent.</li>
+</ul>
+
+
+
+
+
+<li>Other code/build changes</li>
+<ul>
+<li>Add 'test-dbi-business' to svn:ignore </li>
+<li>Add test-dbi-business-stuff.h to EXTRA_DIST so "make distcheck" passes </li>
+<li>Fix the errors, reduce the noise when testing the dbi backend
+
+* Check for a null gdate before attempting to make it a string. Fixes a bunch 
+  of CRIT errors.
+
+* Comment out the log debug setting in dbi. It's stable enough that it 
+  shouldn't be needed routinely. It can, of course, be enabled from the command 
+  line.
+
+* Add a notice to ignore the warnings about there being no lock on the 
+  database when session 3 is closed. Session 3 has to be run with ignore 
+  locking or it won't run at all.
+
+</li>
+<li>Fix business-core tests so that all pass</li>
+<li>Updated tests matching the xml backend as of 2011-11-02</li>
+<li>Updated test files complying with the xml schema as of 2011-11-02</li>
+<li>Minor fixups to dbi backend:
+
+* dbi_conn_error_flag is deprecated, replace with dbi_conn_error
+  (Thanks, Christian).
+
+* Switch from OS-determined HOST_NAME_MAX to locally defined
+  GNC_HOSTNAME_MAX so that the field is always 255 regardless of what
+  OS creates it.
+
+* Use G_OS_WIN32 instead of naked WIN32
+</li>
+<li>Win32 build: Update ktoblzcheck version number.</li>
+<li>Some whitespace cleanups</li>
+<li>Fix gtk warnings when erroneously setting the fixed-width property to zero.</li>
+<li>INFO message to trace log if a table is automatically upgraded to newer version.  </li>
+<li>Update POTFILES.in with recent file addition.</li>
+<li>Fix minor typo in error message.</li>
+<li>Remove gnc_book_mark_saved from gnc_sql_save_book. It's a bit premature to mark the book as saved when we haven't yet saved its contents.</li>
+<li>qoflog.h: No such macro as G_LOG_LEVEL_FATAL</li>
+<li>Fix include files.  Include files now only include other include files if symbols from the other files are needed by this one.  </li>
+<li>Remove lbgncmod-backend-xml as an additional library in business/business-core/test/Makefile.am. libgncmod-backend-xml.so is a loadable module, not a shared library, and it shouldn't be dynamically linked. While this will do no harm on Linux, it fails on OSX/Darwin.</li>
+<li>Fix misplaced quote in backend/dbi/test/Makefile.am, broke dbi testing.</li>
+<li>Rename old gnc_book_get_commodity_table into the newer gnc_commodity_table_get_table.</li>
+<li>Spelling fixes in comments.</li>
+<li>Replace all occurrences of the old gnc_book_get_pricedb with the newer gnc_pricedb_get_db</li>
+<li>Partly revert r19550, "Bug #370331: Store the numeric values of SX..."
+
+This caused the numbers in the "SX from txn" to appear as "220/100" ratios,
+which we do not want.</li>
+<li>Rework two nearly identical fuctions into a common function with parameters.
+Keep the old function names as convenience wrappers around the new function.</li>
+<li>Remove obsolete example files: also remove them from the makefile.</li>
+<li>Remove incompatible example files (X-Account) and update the README file</li>
+<li>Commit missed file for gnc-fq-* location fix.</li>
+<li>Make qof_query_run_subquery() available to scheme as well, and also the gnc_numeric options.
+
+Needed to remove an unimplemented function from &lt;gnc-numeric.h&gt;
+header.</li>
+<li>Replace some renamed functions by their real new names, removing the annoying #defines.</li>
+<li>Make sure the right gnc-fq-* scripts are used.
+
+With the original configuration, whatever script was found first on the path was used.
+When testing development versions, this caused the also installed stable version to 
+be used as it happened to appear first on the path.</li>
+<li>Separate load paths for shared libraries and gnucash loadable modules.
+The former should be found on (DY)LD_LIBRARY_PATH, the latter on
+GNC_MODULE_PATH. These paths shouldn't overlap as that needlessly
+confuses things.</li>
+<li>Make the INVOICE-BILLTO query predicate available to scheme also.</li>
+<li>Fix erroneous extra package that I forgot to remove in r19641.
+
+It doesn't have to be reverted because libjpeg-7 shouldn't be needed
+with a clean webkit rebuild anyway.</li>
+<li>Revert r19576, r19590, r19593, r19601: "Update gtk versions..."
+
+It's been 3 weeks without a working windows build. Apparently this
+has to wait until we have an updated webkit again. Revert this back once
+we have a working webkit with gtk-2.20.</li>
+<li>Fix typos in comments.</li>
+<li>Re-indentation of source code.
+
+This re-indentation was done using astyle-1.24 using the following options:
+
+ astyle --indent=spaces=4 --brackets=break --pad-oper --pad-header --suffix=none</li>
+<li>Add wrapper for obtaining a list of business objects as list of owners, and add SWIG wrappers so that scheme can use it.</li>
+<li>Add a function gncBusinessGetList() that existed previously until r6680 so that a list of all customers can be obtained.</li>
+<li>Decrease number of test iterations in old engine tests - they take just way too long otherwise.
+
+Also, nobody can actually give any reason as for why a higher number
+of iterations would really cover more of our test cases. My suspicion
+is that 2-3 iterations would be sufficient anyway, and only more
+clever test case construction would give a larger test coverage.</li>
+<li>Add word wrapping to very long label in dialog-tax-info</li>
+<li>Corrected a problem with c-format attribute.</li>
+<li>Remove leading character N from tax code, but only if it is there, and remove leading blank character when no tax code.</li>
+<li>Add kvp_frame_set_gdate() function </li>
+<li>Win32 build: Temporarily disable the english (C) help compiling because it crashes the hhc.exe compiler.</li>
+<li>Fix use of accelerator for a string.</li>
+<li>Fix use of accelerators for some strings.</li>
+<li>Win32 build: Needs libjpeg-7 in dist as well.</li>
+<li>Win32 build: The existing webkit binary needs libjpeg-7, so we install that one, too.</li>
+<li>Enclose book kvp manipulation in begin/commit_edit in aqbanking plugin.</li>
+<li>Win32 build: Is running again. Some debug output of r19595 can be removed again.</li>
+<li>Win32 build: Fix libxslt installation. Improve its calling arguments. Download inno before processing the docs (if the latter fails, we at least have inno).</li>
+<li>Fix typo in osx_accel_map, caused error in Accounts page Actions&gt;Transfer accelerator</li>
+<li>Win32 build: Switch back gettext to 0.17 because 0.18 require libc++ which we don't want to have.</li>
+<li>Win32 build: xsltproc needs its suitable iconv and zlib, so install it there.</li>
+<li>Win32 build: Fix typo</li>
+<li>Win32: Fix missing gettext-tools (is packaged in gettext-tools-dev)</li>
+<li>Fix addition of gnc_numeric that was wrong in r19511.</li>
+<li>Revert to previous version for erroneous commit.</li>
+<li>add "isocodes" to reset directory</li>
+<li>Win32: Fix function attributes when using gwenhywfar-4.</li>
+<li>Win32 build: Remove installation directory before installing the new version. Require exact gwen/aqbanking version.</li>
+<li>Win32: Try to fix the nightly build errors. (Directory went away?)</li>
+<li>Win32: Fix checking for goffice installation</li>
+<li>Win32 build: Update gtk to 2.20; let pkg-config check for the versions, hence triggering the update automatically.</li>
+<li>Win32 build: Add version number checks for gtk and gconf so that updating them should work more easily.</li>
+<li>Win32 build: Remove commented-out gtkhtml references.</li>
+<li>Win32 build: Set gwen/aqbanking version numbers in defaults.sh.</li>
+<li>Revert r19475. That revision fixed one rounding error, but introduced another one.</li>
+<li>Add missing header, issue detected via failing make distcheck</li>
+<li>Fix invalid po file header</li>
+<li>Eliminate *-vicinity functions from e-guile reports.</li>
+<li>Fix typo in comment</li>
+<li>Add some disabled testing code that uses the stock gwenhywfar-gtk2 gui for online banking.</li>
+<li>De-activate aqbanking5 by default again because it requires gtk-2.18 or higher, which we don't have. Sigh.</li>
+<li>Fix Stock Split Druid.</li>
+<li>Add getter function for the date in a datecell as a GDate.</li>
+<li>Win32: Add gtk's cflags to gwenhywfar configure.</li>
+<li>Relax configure test for svnversion of BUILDING_FROM_SVN was set beforehand. Helpful when building from git.</li>
+<li>Fix counting of occurrence number w.r.t. the first valid date in the SX state.</li>
+<li>Clarify Derek's code to be licensed "GPL v2 or later" as he has confirmed in private email.
+
+All of his other code has been licensed this way all along anyway.
+
+After this change, all source code files are licensed under both
+GPL version 2 and GPL version 3, which gives us enough flexibility in case any
+requirements might switch to GPL v3-only. But currently we are for sure both.</li>
+<li>Spelling fixes in comments</li>
+<li>Win32: Add gtk include path to gwenhywfar configure.</li>
+<li>Win32: Add pkg-config version check for aqbanking so that the new version is installed without removing the old one manually.</li>
+
+
+
+
+
+
+
+
+<li>Updated accounts chart by Seyfi Duyan.</li>
+<li>Win32: Update aqbanking packages. Enable building with aqbanking5.
+
+In r19532 I accidentally already removed the Qt DLLs from the installer. Of
+course those can only be removed if indeed aqbanking5 is used, otherwise
+they must still be in the installer.</li>
+<li>Add newly introduced gconf parameter in the default schema.</li>
+<li>some bitrot in python bindings examples/tests, patch by Daniele Varrazzo</li>
+<li>Remove aqbanking2 from windows build scripts. Add optional aqbanking5 instead, which works without QT.</li>
+<li>Add scheme wrapper for SX cashflow calculation, including a typemap for the resulting GHashTable.</li>
+<li>Add scheme/swig typemap for GDate.</li>
+<li>Spelling correction in comment.</li>
+<li>Consolidate accelerator map loading for OSX with the others. Accelerator maps can't be modified interactively in OSX so there's no point to reloading the saved map.</li>
+<li>GnuCash on Windows is built with webkit, no need to install gtkhtml</li>
+<li>Cleanup whitespace</li>
+<li>Add vendor search to python bindings and refactors files gncIDSearch.c/h with vendor search.
+Patch by Mike Evans.</li>
+<li>Remove obsolete file from distribution list</li>
+<li>Make GnuCash more runtime relocatable by using dynamic paths in the environment file.</li>
+<li>Restored changes of r19477 inadvertently reverted in r19515</li>
+<li>Relicense code to GNU GPL v2 or later.  </li>
+<li>Update binreloc to use the free functions for bundle id and resource path</li>
+<li>Windows build: strip the .la files in their new location</li>
+<li>Windows version:
+* reduce footprint by not packaging unused files
+* move gnc-mod required files to bin
+* remove libdir from the PATH</li>
+<li>Windows version: remove obsolete and duplicate parameters from the environment file</li>
+<li>Implement the evaluation of SX cashflow.</li>
+<li>More const correctness and refactoring in gnc-sx-instance-model.c.</li>
+<li>Remove GNC_STANDARD_REPORTS_DIR from gnucash launcher as well.</li>
+<li>Update man page following the recent removal of command line options.</li>
+<li>Update license after Josh Sled's relicensing of his code under GPL v2 and/or v3.
+
+He wrote to gnucash-devel on 2010-08-28:
+
+Much of the last batch code I contributed to gnucash was licensed
+without the "or any later version" clause of the GPL boilerplate, and
+thus specifically and only under version 2 of the GPL.
+
+I hereby extend that to version 2 and/or version 3.
+
+Any contribution I've made to gnucash which was under the GPLv2 only may
+be considered to be under both v2 and v3.</li>
+<li>I18n: Fix last remaining user-visible mention of the abbreviation "SX".
+
+This should have never appeared in a user message. However, in order
+not to make this single string untranslated, we add the correct form
+but don't use it yet so that it can be translated, and we will be
+using it once 2.4.0 is out and the string freeze lifted.</li>
+<li>Calculate standard-reports dir internally instead of reading it from the environment.
+This is a step to make gnucash more run-time relocatable.</li>
+<li>Readd LD_LIBRARY_PATH to environment to make sure Guile loads the proper shared libraries
+when multiple installations of GnuCash exist (like stable and devel version on one system).</li>
+<li>Remove the config-path and share-path command line options.
+The values set on the command line were never used.</li>
+<li>Some more uses of PACKAGE_NAME instead of "GnuCash"</li>
+<li>Fix some obsolete uses of gnucash-bin.</li>
+<li>Refactoring: replace all GNC_RND_* and GNC_DENOM_* occurences with their GNC_HOW_RND_* and GNC_HOW_DENOM_* equivalents
+And then remove the deprecated definitions.</li>
+<li>Add functions to calculate the cash-flow numbers that will be generated by a Scheduled Transaction. Unfinished, though.</li>
+<li>Add aqbanking5 extensions of GWEN_GUI object.
+
+We need to locally store a reference to that particular GWEN_GUI
+object that was used in Extend because we have more than one such
+object in use inside gnucash (currently). If accidentally the wrong
+one would be used in Unextend, a crash occurs.</li>
+<li>Fix erroneous place of "Bildung" account in hierarchy: Was moved to top-level due to double parent tag.</li>
+<li>Add new function gnc_sx_get_num_occur_daterange and unittests for this in test-sx.c.</li>
+<li>And more const-correctnes in SchedXaction.h</li>
+<li>Make sx-instance-model more const-correct. Improve documentation.
+
+Fix minor memory leak in gnc_sx_get_current_instances(void) - was not
+free'ing the GDate of now.</li>
+<li>Impove const-correctness of SchedXaction.h functions; improve documentation.
+
+Also, replace "void *" by pointers to the actual type.</li>
+<li>Unify label with src/gnome/gnc-plugin-page-register.c:379.</li>
+<li>Move business-reports to the reports module.</li>
+<li>Automatically map pre-2.3.15 report option names to their new 2.3.15 equivalents.
+
+This will ensure that users won't lose the settings they stored in saved reports
+and open report windows when switching from 2.2.x to 2.4.
+
+Note that this only works in one direction, from 2.2.x to 2.4. If a user switches
+back to 2.2.x, the open report windows will lose many settings, almost resetting
+them to their default state. Saved reports won't have this problem as they are
+copied to a new file during the migration.
+
+In detail:
+For open reports:
+pre-2.3.15 -&gt; 2.3.15+ : options for open reports will be migrated
+2.3.15+ -&gt; pre-2.3.15 : options for open reports will be migrated
+
+For saved reports:
+2.2.x -&gt; 2.3.15+      : all options will be migrated, if saved-reports-2.4
+                        does not yet exist
+pre-2.3.15 -&gt; 2.3.15+ : options for saved reports won't be migrated but reports
+                        continue to work. It would be best to save the reports again,
+                        but my scheme-fu is not good enough to let the code do that
+                        automatically. Alternatively users should remove the file
+                        saved-reports-2.4 to recreate it on the next run, based on
+                        saved-reports-2.0.
+2.3.15+ -&gt; 2.2.x      : options are unaffected, sine 2.2.x and 2.15 use different
+                        saved reports files
+2.3.15+ -&gt; pre-2.3.15 : reports saved in 2.3.15 will lose their options, older reports
+                        are unaffected. But returning to 2.3.15+, the options will
+                        continue to work.</li>
+<li>Aqbanking: Enable gwengui-gtk2 implementation and fix setup wizard.
+
+Setup wizard was missing OnlineInit/OnlineFini calls around it; with
+them and the newest gwenhywfar, the setup wizard is now working again
+in a gtk2 implementation.</li>
+<li>Add lookup of linker flags of libgwenhyfar-gui-gtk2.
+
+It is still disabled until more testing has been done, though.</li>
+<li>Add instantiation of gwengui-gtk2 object in gnucash, which enables the setup wizard again, but it doesn't fully work yet.
+
+In particular, a quick test runs into significant UI work which is
+still needed, and also occasional crashes might occur. Hence, the
+gwengui-gtk2 parts have to be enabled manually by un-commenting
+USING_GWENHYWFAR_GTK2_GUI.</li>
+<li>Minor simplification of aqbanking version number check.</li>
+<li>Check for upgrading an older aqbanking configuration to its current version.
+
+This way, an older configuration is now updated automatically.
+
+Patch by Bill Nottingham, confirmed by Martin Preuss, adapted to aqbanking5 by myself.</li>
+</ul>
+
+</ul>
+
+
+
+
+
+
+
+<h3>Caveats for Testers</h3>
+<p>Any 2.3.x version might crash unexpectedly at any point during runtime. If you test some serious work in a 2.3.x release and are using the XML file backend for data storage, make sure you hit "Save" after every non-trivial workstep.  If you are using the SQL backend, this is not required as every change is saved immediately to the database.<p>
+<p>The documentation has had screenshots updated, however, many help texts usually only refers to the 1.8.x series. Everyone is invited to help improve the documentation; see http://wiki.gnucash.org/wiki/Development on how to get involved.</p>
+
+<h3>How can you help?</h3>
+<p>Testing: Test it and help us discover all bugs that might show up in there.  Please enter each and every bug into bugzilla.</p>
+<p>Translating: The new release comes with some new translation strings. If you consider contributing a translation, we invite you to test this release already. A string freeze will be announced in one of the later 2.3.x releases.  Please check http://wiki.gnucash.org/wiki/Translation_Status for updates on this.</p>
+<p></p>
+<p>We would like to encourage people to test this and any further releases as much as possible and submit bug reports in order that we can polish GnuCash to be as stable as possible for the 2.4.0 release in a few weeks. Then post any bugs you find to <a href="http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">bugzilla</a></p>
+
+<h3>Getting GnuCash</h3>
+<p>Source code for GnuCash 2.3.16 can be downloaded from multiple locations:
+<ul>
+<li><a href="http://www.gnucash.org/download.phtml">The GnuCash website</a></li>
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.16.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.16.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/2.3.16/">all files</a>.</li>
+<li>You can also checkout the sources directly from the subversion repository with this command:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/trunk gnucash</span></li>
+</ul></p>
+
+<p>To install GnuCash, you will need Gnome 2, guile, slib. In addition you will need swig if compiling from subversion.</p>
+
+<h3>Win32 binary</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.16-setup.exe">Gnucash 2.3.16 Win32 setup executable</a> can be downloaded from Sourceforge as well.
+
+<h3>About the Program</h3>
+<p>GnuCash is a free, open source accounting program released under the GNU General Public License (GPL) and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash began in 1997, and its first stable release was in 1998.</p>

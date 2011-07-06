@@ -1,0 +1,124 @@
+<b>Announcement:</b> GnuCash 2.3.8 (Unstable) Release
+2009-12-08
+
+<h2>GnuCash 2.3.8 (Unstable) released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.3.8, the ninth of several unstable 2.3.x releases of the GnuCash Free Accounting Software which will eventually lead to the stable version 2.4.0. With this new release series, GnuCash can use an SQL database using SQLite3, MySQL or PostgreSQL. It runs on GNU/Linux, *BSD, Solaris, Microsoft Windows and Mac OSX.</p>
+
+<div class="dialog warning">
+<p><b>WARNING:</b> This is an *UNSTABLE* version of Gnucash.</p>
+<p>This release is intended for developers and testers who want to help tracking down all those bugs that are still in there.</p>
+<p>Make sure you make backups of any files used in testing versions of GnuCash in the 2.3.x series. Although the developers go to great lengths to ensure that no data will be lost we cannot guarantee that your data will not be affected if for some reason GnuCash crashes in testing these releases.</p>
+</div>
+
+<div class="dialog note">
+<p><b>NOTE:</b> The latest stable version is 2.2.9.</p>
+</div>
+
+<p>PLEASE TEST TEST AND TEST SOME MORE any and all features important to you.
+Then post any bugs you find to bugzilla</p>
+<p>Major changes in the 2.3.x release include;
+<ul>
+<li>In addition to the XML backend, Gnucash can now use a SQLite3, MySQL or PostgreSQL database to store the data. This is a new implementation using libdbi. It supports all features including the business features.  In order to build with this, add --enable-dbi to the configure command.  In addition to the libdbi-dev package for your distribution, you will also need the appropriate DBD (libdbi driver) package for sqlite3, mysql or postgresql.</li>
+<li>In addition to the current GtkHTML HTML engine used to display reports and graphs, Gnucash can use WebKit. WebKit is the engine used by Google Chrome on Windows and Safari on Apple.  In order to build with this, add --enable-webkit to the configure command.  You will need an appropriate webkit-dev package.  On win32, you will need to download the webkit-1.1.5-win32.zip file from the source repository and put it into the downloads directory of your gnucash build area.</li>
+<li>Updated to AqBanking 3 on Win32.</li>
+</ul>
+
+<p>Changes between 2.3.7 and 2.3.8 include:
+<ul>
+<li>Disable it_IT help in the win32 binary</li>
+<li>Recreate index after updating table</li>
+<li>Temporarily disable currency trading accounts so that 'make check' will pass</li>
+<li>Fix test-resolve-file-path - results have changed</li>
+<li>Fix compilation problem in test</li>
+<li>Add src/gnome-utils/gnc-tree-model-account-drag.c to po/POTFILES.in</li>
+<li>Set debug level for gnc.backend.dbi automatically to DEBUG.</li>
+<li>Fix memory leak: Let the pixbuf renderer for goffice plots be unreferenced</li>
+<li>Add libguile CFLAGS and LIBADD to libqof build</li>
+<li>Fix too-new gtk_dialog_get_content_area function of r18413: Patch by J. ...</li>
+<li>Transaction post date also needs to allow NULL values.</li>
+<li>Temporary workaround for crash at startup after r18429.</li>
+<li>Decrease verbosity of aqbanking plugin: Debug output only if preference ...</li>
+<li>In the "Save As" dialog, set XML as default, not sqlite3.</li>
+<li>Fix compile error on current ubuntu by clashing symbol declarations in ...</li>
+<li>When creating an account selector and a commodity list if provider, just ...</li>
+<li>Remove forgotten printf in r18402 which shouldn't have been committed to ...</li>
+<li>Fix amount sign of imported bank transfers (e.g. from DTAUS ...</li>
+<li>Fix GCC pointer strictness compiler errors/warnings and remove duplicate ...</li>
+<li>Fix compile error related to uninitialized value. Patch by Matt Lavin ...</li>
+<li>Introduce disambiguation prefix for "Deposit" action to distinguish it ...</li>
+<li>Make one register function more const correct to avoid compiler warnings ...</li>
+<li>Fix typo: scm_catch_body_t -> scm_t_catch_body</li>
+<li>gnc-module doesn't need to compile/link with guile</li>
+<li>Add new option in register "Tab order includes Transfer field". Patch by Colin Law</li>
+<li>Partly fix broken data file backward compatibility with SX recurrence</li>
+<li>Win32: Allow m4 1.4.11 and 1.4.13 as well as 1.4.7.</li>
+<li>Win32: Assert there is only one aqbanking plugin directory</li>
+<li>Win32: Minor version update of aqbanking.</li>
+
+<li>Bug #603186: Fix crash with txf.scm on win32 Patch by J. Alex ...</li>
+<li>Bug #537476: Fix currency trading account preference lookup Patch by Mike ...</li>
+<li>Fix the bug described in comment 19 of bug 537476, balance sheet wrong ...</li>
+<li>Bug #310567: Disable newly introduced "shift txn forward" feature again ...</li>
+<li>Fix bug 600486 - Unable to open sqllite file on Win7 64 bit Unposted ...</li>
+<li>Fix Bug 591573 - "File|Save As" with xml option and no file name ...</li>
+<li>Fix bug 602603 - State file cannot be saved with MySQL because of colon ...</li>
+<li>Bug #570895: Allow reporting for single budget periods in budget income ...</li>
+<li>Bug #602744: Fix broken tip_of_the_day list creation. Patch in r18417 ...</li>
+<li>Fix bug 591098 - when starting Gnucash, "Present" and all other collumns ...</li>
+<li>Bug #537476: Implement currency trading accounts optionally, to be enabled ...</li>
+<li>Bug #554394: Income Tax Enhancements Patch by J. Alex Aycinena. Patch ...</li>
+<li>Bug #600374: Add editable transaction field in the register for bank ...</li>
+<li>Bug #310567: Add menu item to shift transaction forward in sorting ...</li>
+<li>Bug #121695: Support account reparenting through drag and drop in the ...</li>
+<li>Fix bug 492865 - Add Last Reconcile Date as an Option in the Chart of ...</li>
+<li>Fix bug 593581 - 2.3.5: Save to MySQL still fails with date error After ...</li>
+<li>Bug #601861: Fix mis-captioning in button labels The keyboard shortcut ...</li>
+<li>Bug #602070: Fix return value in void function Patch by Halton Huo.</li>
+<li>Bug #602062: Fix hard-coded gcc program name Patch by Halton Huo.</li>
+<li>Bug #540452: Remove inline from function declaration/definition because it ...</li>
+<li>Bug #602069: Fix build on Solaris for different gmp header ...</li>
+<li>Revert r18396, "Bug #593906: Fix crash at account report" This change ...</li>
+<li>Fix bug 598213 - Selecting "Account Report" causes gnucash to ...</li>
+<li>Bug 600947 - Gnucash-2.3.7 crashes when doing reports with ...</li>
+<li>Bug 599324 - Patch: Add double click behaviour to account list in payment ...</li>
+<li>Bug 599322 - Patch: Minor gui tweak for invoice window Fix widget ...</li>
+<li>Bug #599953: Let gnc:make-[complex|simple]-boolean-option store its value ...</li>
+<li>Bug #593906: Fix crash at account report Patch by Mike Alexander. This ...</li>
+<li>Bug #582985, #585022: Add missing currencies Armenian Dram (AMD) and ...</li>
+<li>Bug #593070: Budget Report: Omit accounts with no budget and zero ...</li>
+<li>Fix 598491: Remove use of guile's deprecated GH interface</li>
+<li>Bug #567090: Fix erroneous password length comparison.</li>
+
+<li>Updated Dutch translation by Mark Haanen, copied from Translation Project.</li>
+<li>Add Latvian translation by Valdis Vitolins &lt;valdis.Vitolins@odo.lv&gt;</li>
+<li>Update of Japanese translation by KUSANO Takayuki</li>
+<li>Add polish account templates, contributed by Jacek Baszkiewicz ...</li>
+<li>Update German translation.</li>
+</ul>
+
+<h3>Caveats for Testers</h3>
+<p>Any 2.3.x version might crash unexpectedly at any point during runtime. If you test some serious work in a 2.3.x release and are using the XML file backend for data storage, make sure you hit "Save" after every non-trivial workstep.  If you are using the SQL backend, this is not required as every change is saved immediately to the database.<p>
+<p>The documentation has had screenshots updated, however, many help texts usually only refers to the 1.8.x series. Everyone is invited to help improve the documentation; see http://wiki.gnucash.org/wiki/Development on how to get involved.</p>
+
+<h3>How can you help?</h3>
+<p>Testing: Test it and help us discover all bugs that might show up in there.  Please enter each and every bug into bugzilla.</p>
+<p>Translating: The new release comes with some new translation strings. If you consider contributing a translation, we invite you to test this release already. A string freeze will be announced in one of the later 2.3.x releases.  Please check http://wiki.gnucash.org/wiki/Translation_Status for updates on this.</p>
+<p></p>
+<p>We would like to encourage people to test this and any further releases as much as possible and submit bug reports in order that we can polish GnuCash to be as stable as possible for the 2.4.0 release in a few weeks. Then post any bugs you find to <a href="http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">bugzilla</a></p>
+
+<h3>Getting GnuCash</h3>
+<p>Source code for GnuCash 2.3.8 can be downloaded from multiple locations:
+<ul>
+<li><a href="http://www.gnucash.org/download.phtml">The GnuCash website</a></li>
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.8.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.8.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/2.3.8/">all files</a>.</li>
+<li>You can also checkout the sources directly from the subversion repository with this command:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/trunk gnucash</span></li>
+</ul></p>
+
+<p>To install GnuCash, you will need Gnome 2, guile, slib. In addition you will need swig if compiling from subversion.</p>
+
+<h3>Win32 binary</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.8-setup.exe">Gnucash 2.3.8 Win32 setup executable</a> can be downloaded from Sourceforge as well.
+
+<h3>About the Program</h3>
+<p>GnuCash is a free, open source accounting program released under the GNU General Public License (GPL) and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash began in 1997, and its first stable release was in 1998.</p>

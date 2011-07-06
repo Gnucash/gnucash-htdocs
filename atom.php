@@ -1,7 +1,7 @@
 <?php
   // TODO:
   // - reasonable permalinks
-  include("local.php");
+  $top_dir = ".";
 
   $contentType = "application/atom+xml";
   $overrideContentType = $_GET["content-type"];
@@ -40,7 +40,7 @@
   <generator>GnuCash htdocs/trunk/atom.php 1.0 &lt;gnucash-devel@gnucash.org&gt;</generator>
   <logo>http://www.gnucash.org/images/gnucash_logo.png</logo>
   <link rel="alternate" href="http://www.gnucash.org/" />
-  <link rel="self" href="atom.php" />
+  <link rel="self" href="http://www.gnucash.org/atom.php" />
   <?php
   $news_items = get_news($newsdir, $newsdir);
   $news_items = array_slice($news_items, 0, $entry_count);

@@ -1,0 +1,221 @@
+<b>Annuncio:</b> rilascio di GnuCash 2.4.3
+2011-02-27
+
+<h2>Rilasciato GnuCash 2.4.3</h2>
+
+<p>Il team di sviluppo di GnuCash è orgoglioso di annunciare GnuCash 2.4.3, la terza versione di correzione dei problemi riscontrati nel rilascio stabile del programma di contabilità gratuito GnuCash. Con questa nuova serie di rilasci, GnuCash può utilizzare un database SQL avvalendosi di SQLite3, MySQL o PostgreSQL. Il programma funziona in ambiente GNU/Linux, *BSD, Solaris, Microsoft Windows e Mac OSX.</p>
+
+<p>Le principali novità della versione 2.4.0 comprendono:
+<ul>
+<li>Oltre al backend XML, Gnucash può ora utilizzare un database SQLite3, MySQL o PostgreSQL per l'immagazzinamento dei dati. Questa è una nuova implementazione che utilizza libdbi. Sono supportate tutte le caratteristiche incluse quelle professionali. Per compilare con questa funzionalità, aggiungere "--enable-dbi" al comando "configure". Oltre al pacchetto libdbi-dev della propria distribuzione, sarà anche necessario l'appropriato pacchetto DBD (libdbi driver) per sqlite3, mysql o postgresql.</li>
+<li>Come sostituto dell'attuale motore GtkHTML HTML utilizzato per visualizzare i resoconti e i grafici, Gnucash può usare WebKit. WebKit è il motore utilizzato da Google Chrome su Windows e da Safari su Apple. Per compilare con questa caratteristica, aggiungere "--with-html-engine=webkit" al comando "configure". Sarà necessario l'appropriato pacchetto webkit-dev. Su win32, si dovrà scaricare il file compresso webkit-1.1.90-win32.zip dal repository sorgente e inserirlo nella cartella "downloads" della propria area di compilazione di GnuCash.</li>
+<li>Aggiornamento di AqBanking su Win32.</li>
+</ul>
+
+<h3>Ottenere GnuCash per sistemi Windows (file binari di Win32)</h3>
+<p>Il <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.3-setup.exe">file eseguibile di Win32 per l'installazione di Gnucash 2.4.3</a> può essere scaricato da Sourceforge. Il file installerà tutto ciò che è necessario per eseguire GnuCash.
+
+<h3>File binario per sistemi Mac OSX</h3>
+<p>Il <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.4.3.dmg">pacchetto per MacOSX di Gnucash 2.4.3</a> può essere scaricato anch'esso da Sourceforge.
+
+<h3>Ottenere GnuCash come codice sorgente</h3>
+<p>Per compilare autonomamente GnuCash 2.4.3, il codice sorgente può essere scaricato da:
+<ul>
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.3.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.3.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.4.3/">tutti i file</a>.</li>
+<li>È inoltre possibile eseguire il checkout direttamente dal repository subversion con il seguente comando:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/tags/2.4.3 gnucash</span></li>
+</ul></p>
+
+<p>Per compilare GnuCash dal codice sorgente sono necessari Gnome 2, guile, slib. Sarà inoltre necessario avere swig se si compila da subversion.</p>
+
+
+<p>Cambiamenti tra la versione 2.4.2 e la versione 2.4.3:
+
+<ul>
+<li>Cambiamenti visibili dall'utente</li>
+<ul>
+<li>Only show the Save As dialog at the end of the Hierarchy druid if it
+was called at the beginning of a new book, not when a hierarchy is
+added to from the actions menu.</li>
+<li>Set a printer job name when printing reports and cheques</li>
+<li>Update revision to 2.4.3 </li>
+<li>Fix invoice line ordering mismatch between register window and reports.
+
+The new code was missing the call to gncInvoiceSortEntries.</li>
+<li>Add extra toolbar buttons as shortcuts for some business functions, "New Invoice" for now.
+
+The extra toolbar buttons are disabled until the user enables them
+manually in Preferences -&gt; Business -&gt; Extra buttons.</li>
+<li>Implement command for changing the ordering of invoice entries by moving them up or down one row.
+
+Turned out this is rather easy: Just swap the "date-entered" of both items.</li>
+<li>Fix r20272: The text selection after auto-completion should work correctly now.</li>
+<li>Extend the addr2/addr3 auto-completion also to the shipping addr2/addr3 lines.</li>
+<li>Implement auto-completion on the addr2/addr3 lines of the "New Customer" dialog box.</li>
+<li>Fix missing copying of invoice currency on "Copy Invoice".
+
+Unfortunately this feature has been creating invoices with no currency set.
+This leads to weird amounts that have more digits than expected and don't
+sum up correctly, and it also triggers the warning dialog "One or more of
+the entries are for accounts different from the invoice/bill currency. (...)"</li>
+<li>Minor tweaking of icon for duplicate invoice so that it doesn't look grayed out</li>
+</ul>
+
+
+
+
+<li>Traduzioni aggiornate o modifiche relative alle traduzioni</li>
+<ul>
+<li>Update Russian translation by Sergey Belyashov.</li>
+<li>Update translation po files: Merge latest pot template.</li>
+<li>Update Dutch translation by Mark Haanen, copied from the Translation Project.</li>
+<li>Updated Spanish translation, by Francisco Javier F. Serrador.</li>
+<li>Updated Lithuanian translation by Mantas Kriaučiūnas.</li>
+<li>Update German translation.</li>
+<li>I18n improvement: Unify two very similar strings.</li>
+<li>Updated Italian translation.</li>
+<li>Updated Slovak translation, copied from the translation project.</li>
+<li>Updated Traditional Chinese translation, by Kuang-che Wu.</li>
+<li>Remove translation markers from already-translated strings in German tax report.</li>
+<li>Update German tax report, by Franz Stoll.
+
+The contributor also sent some explanatory documents, which I for now
+copied into tax/us/de_DE/, but I just didn't know whether they better
+belong anywhere else.</li>
+<li>Updated Italian translation.</li>
+<li>Unify two very similar strings.</li>
+</ul>
+
+
+
+
+<li>Problemi corretti</li>
+<ul>
+<li>Bug #635552: Rename "Financial Calculator" into "Loan Repayment Calculator"
+
+I've been told (by users who know the subject well enough) the "Financial
+Calculator" should rather be called a "Loan Repayment Calculator" or a
+"Mortgage Payment Calculator", as this is what is being offered there. So
+I finally made this renaming.</li>
+<li>Bug #640357: Adding very limited Perl-Support for doxygen
+
+Adding Doxygen commands to the Perl-scripts in the sources
+
+I searched for every *.pl file in the GnuCash source and added Doxygen commands
+like @file, @brief, @author to better include them in doxygen.
+
+Patch by Christoph Holtermann.</li>
+<li>Bug #640357: Adding very limited Perl-Support for doxygen
+
+There are a few Perl-scripts scattered through the GnuCash sources. This patch
+enables doxygen to interpret them so that they can be provided with information
+about author, date and so on.
+
+This is done by telling doxygen that their python-files. So python-comments can
+be used.
+
+The actual Perl-source is commented out by using
+@cond Perl
+...PERL-CODE...
+@endcond Perl
+
+Patch by Christoph Holtermann</li>
+<li>Bug #640347: Adding Example Skripts for historic Stock Quotes
+
+This patch adds the example skripts from
+http://wiki.gnucash.org/wiki/Stocks/get_prices
+to the directory python-bindings/example_scripts.
+
+Patch by Christoph Holtermann.</li>
+<li>Bug #640328: This patch makes Transaction.GetSplitList and Account.GetSplitList return Split instances
+
+I changed gnucash_core.py so that GetSplitList methods of Transaction and
+Account return Split-instances so that the user doesn't need to call
+Split(instance=GetSplitList()[n]).
+
+I checked the examples and changed one either.
+
+Patch by Christoph Holtermann</li>
+<li>Bug #639906: Changing the way __format__ works for Split and Transaction
+
+Patch by Christoph Holtermann</li>
+<li>Bug #641832: Workaround to avoid the current crashes on windows.
+
+On win32 the queryf() calls below seem to crash. On the other hand,
+we know the used libdbi on windows is fine, so as a first
+workaround, we assume libdbi is safe.</li>
+<li>Bug #642445 [PATCH] Segfault when tip_of_the_day.list is empty</li>
+<li>Bug #642284: Fails to build on Ubuntu Natty
+
+Patch by Ahmed El-Mahmoudy.</li>
+<li>Bug #641832: Use g_strdup_printf() instead of dbi_conn_queryf() to format the query; the latter crashed msvcrt. Also reverts r20287 because the root bug is fixed.</li>
+<li>Bug #641909: Fix broken price scatter plot
+
+The report was unknowingly broken by the move of one function in r20209
+namely gnc-locale-default-iso-currency-code from app-utils to core-utils,
+and somehow this needs a re-export in the core-utils.scm declaration.
+(I don't know why. For me, this confirms again this whole scheme plugin
+stuff sucks, royally.)</li>
+</ul>
+
+
+
+
+<li>Altri cambiamenti relativi al codice e alla compilazione</li>
+<ul>
+<li>Tag 2.4.3 </li>
+<li>Re-indentation of source code.
+
+This re-indentation was done using astyle-1.24 using the following options:
+
+  astyle --indent=spaces=4 --brackets=break --pad-oper --pad-header --suffix=none</li>
+<li>Update gtk include headers to follow gtk recommendations (only include gtk/gtk.h)</li>
+<li>qofinstance.h: Delete duplicate declarations and consolidate editlevel declarations in one place.</li>
+<li>Extend gtkmm/C++ plugin to include an actual gnc-plugin implementation.</li>
+<li>Really fix conditional configure test for gtkmm.</li>
+<li>Add optional module that compiles with gtkmm, i.e. in C++.
+
+This was just a crazy idea, but it turns out to be extremely easy.
+This can be used as a place for new GUI elements which people prefer
+to write in gtkmm/C++ instead of C. It's disabled by default.
+Use configure --enable-gtkmm to enable it.</li>
+<li>Fix const-correctness of gnc-module interface.</li>
+<li>Add missing run-time typechecks in new code.</li>
+<li>Fix CRIT gtk warning if the old_page_long_name was NULL but still passed to g_strrstr.</li>
+<li>Win32 build: Updated aqbanking5 version numbers</li>
+<li>Add accessor of GtkUIManager in GncMainWindow.</li>
+<li>Win32 build: Fix outdated (and broken) URL of ActivePerl.</li>
+<li>QofSession: Don't push a new generic error if there's already one available that might be more descriptive.</li>
+<li>Remove no-longer-correct warning about the aqbanking5 setup wizard not being implemented: It is.</li>
+<li>Add a Timespec constructor for the current clock time.</li>
+<li>Win32 build: Fix some cross-compiling issues.</li>
+<li>Win32 build: Update some version numbers: libofx, gwenhywfar, aqbanking</li>
+<li>Fix potential parsing of NULL strings by correctly use an empty non-NULL string instead.</li>
+<li>Another error message somewhat more verbose.</li>
+<li>Make log warning about bad gnc_numeric print the actual error code.</li>
+<li>Add address auto-completion of r20272 also for address line 4.</li>
+<li>Add a common shared quickfill object for the addr2/addr3 lines of a GncAddress.</li>
+<li>Minor code cleanup - remove includes from header if not necessary.</li>
+<li>Fix CRIT error message on program quit in the aqbanking module.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+<h3>Come contribuire?</h3>
+<p>Traducendo: il nuovo rilascio è accompagnato da alcune nuove stringhe da tradurre. Se si intende contribuire con una traduzione, si consiglia di testare fin da subito questo rilascio.</p>
+<p></p>
+
+<h3>Informazioni sul programma</h3>
+<p>GnuCash è un programma di contabilità gratuito e a codice aperto rilasciato nel rispetto dei termini della licenza GNU General Public License (GPL) e disponibile per GNU/Linux, *BSD, Solaris, Mac OSX e Microsoft Windows. La scrittura del programma GnuCash ha avuto inizio nel 1997 e la prima versione stabile risale al 1998.</p>

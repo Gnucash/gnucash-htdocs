@@ -1,0 +1,45 @@
+<b>Announcement:</b> GnuCash 2.2.1 Release
+2007-08-20 07:38
+
+<h2>GnuCash 2.2.1 released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.2.1, the first bug fix release in a series of stable releases of the GnuCash Free Accounting Software. GnuCash is available on Microsoft Windows since the release of 2.2.0, and it also runs on GNU/Linux, *BSD, Solaris and Mac OSX.
+</p>
+<h4>Getting GnuCash</h4>
+<p>GnuCash 2.2.1 can be downloaded from gnucash.org or sourceforge.net. It is available as source code. For the Microsoft Windows operating system there is a self-installing setup program which includes all necessary additional libraries.</p>
+<p>To install GnuCash on other platforms, users will need Gnome 2, guile, and slib. Neither the currently used swig nor the previously used g-wrap packages are needed anymore when compiling from tarball or when installing a binary.</p>
+<ul>
+<li><a href="http://sourceforge.net/project/showfiles.php?group_id=192" class="external free" title="http://sourceforge.net/project/showfiles.php?group_id=192">http://sourceforge.net/project/showfiles.php?group_id=192</a> (Source code and Windows binary)</li>
+<li><a href="http://www.gnucash.org/pub/gnucash/sources/stable/" class="external free" title="http://www.gnucash.org/pub/gnucash/sources/stable/">http://www.gnucash.org/pub/gnucash/sources/stable/</a> (Source code only)</li>
+</ul>
+<h4>What's New in GnuCash 2.2.1? </h4>
+<p>Fixed Bugs:</p>
+<ul>
+<li>#170729: locale-specific delimiters in scheduled transactions templates and mortgage druid</li>
+<li>#339260: Right-click doesn't select txn but works on the previously selected in the register</li>
+<li>#361604: Balance sheet report shows incorrect prices for commodities when using "nearest in time" option</li>
+<li>#445917: Dialog says, Click "Next"..., Button says "Forward"</li>
+<li>#452496: Dirtying a split does not dirty the parent txn or book</li>
+<li>#457027: About dialog shows wrong year in Copyright string</li>
+<li>#457213: Resizing SLR window causes it to show up as blank next time</li>
+<li>#457228: AqBanking Wizard QtCore4.dll error on WinXP, procedure entry point not found</li>
+<li>#457944: startup delay, keep splash screen during file loading</li>
+<li>#458080: RPM .spec file still depends on g-wrap</li>
+<li>#458567: Ship with windows gtkrc</li>
+<li>#458783: Doesn't start if installed into a directory with an "umlaut"</li>
+<li>#459259: Unshortened column-title in Scheduled Transactions editor for some locales</li>
+<li>#460432: Crash when running Account Report or Account Transaction Report against A/R account</li>
+<li>#460924: Fox for warning: the address of '*' will always evaluate as 'true'</li>
+<li>#462567: win32: GnuCash improperly interprets filenames as URLs and fails</li>
+<li>#465338: hbci module init fails on FreeBSD due to change 15799</li>
+<li>#468115: Save Account Tree Sort Preference</li>
+</ul>
+<p>Other Changes</p>
+<ul>
+<li>Fix XPF [CFP Franc Pacifique] to not use cents, add YER [Yemeni Riyal]</li>
+<li>Update gnome libraries in Win32 build</li>
+<li>Avoid a few critical warnings and improve logging</li>
+<li>Completely remove FreqSpec</li>
+<li>Disable Close books and QSF Import again</li>
+<li>Update translations: British English, Catalan, French, German, Hungarian, Japanese, Ukrainian</li>
+</ul>

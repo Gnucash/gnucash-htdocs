@@ -1,0 +1,785 @@
+<b>Announcement:</b> GnuCash 2.3.11 (Unstable) Release
+2010-03-19
+
+<h2>GnuCash 2.3.11 (Unstable) released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.3.11, the twelfth of several unstable 2.3.x releases of the GnuCash Free Accounting Software which will eventually lead to the stable version 2.4.0. With this new release series, GnuCash can use an SQL database using SQLite3, MySQL or PostgreSQL. It runs on GNU/Linux, *BSD, Solaris, Microsoft Windows and Mac OSX.</p>
+
+<div class="dialog warning">
+<p><b>WARNING:</b> This is an *UNSTABLE* version of Gnucash.</p>
+<p>This release is intended for developers and testers who want to help tracking down all those bugs that are still in there.</p>
+<p>Make sure you make backups of any files used in testing versions of GnuCash in the 2.3.x series. Although the developers go to great lengths to ensure that no data will be lost we cannot guarantee that your data will not be affected if for some reason GnuCash crashes in testing these releases.</p>
+</div>
+
+<div class="dialog note">
+<p><b>NOTE:</b> The latest stable version is 2.2.9.</p>
+</div>
+
+<p>PLEASE TEST TEST AND TEST SOME MORE any and all features important to you.
+Then post any bugs you find to bugzilla</p>
+<p>Major changes in the 2.3.x release include;
+<ul>
+<li>In addition to the XML backend, Gnucash can now use a SQLite3, MySQL or PostgreSQL database to store the data. This is a new implementation using libdbi. It supports all features including the business features.  In order to build with this, add --enable-dbi to the configure command.  In addition to the libdbi-dev package for your distribution, you will also need the appropriate DBD (libdbi driver) package for sqlite3, mysql or postgresql.</li>
+<li>As a replacement for the current GtkHTML HTML engine used to display reports and graphs, Gnucash can use WebKit. WebKit is the engine used by Google Chrome on Windows and Safari on Apple.  In order to build with this, add --enable-webkit to the configure command.  You will need an appropriate webkit-dev package.  On win32, you will need to download the webkit-1.1.5-win32.zip file from the source repository and put it into the downloads directory of your gnucash build area.</li>
+<li>Updated to AqBanking 3 on Win32.</li>
+</ul>
+
+<p>Changes between 2.3.10 and 2.3.11 include:
+
+<ul>
+<li>Bugs fixed</li>
+<ul>
+<li>Partial fix for #611014 - CSV import crashes
+
+Bug #611014 mentions a problem where after setting the columns, clicking OK and selecting a target account, the Date column is lost.  This is because of a difference in behaviour on windows and linux.  The code attaches to the "edited" signal of the renderer.  On linux, this signal is emitted when a new combo box item is selected.  On windows, the combo box needs to be selected and focus lost before the signal is emitted.  This is changed to the "changed" signal of the renderer which acts as expected on both platforms.
+</li>
+<li>Bug #140400 - Crash when deleting an account that is still in use by the business features
+
+Add a dialog which contains a list of objects referring to the account and an explanation that these need to be deleted or have the account reference modified.
+
+Note: I'm no UI designer.  This is functional, but if anybody wants to pretty it up, go ahead.
+</li>
+<li>Bug #536108 - After cancelling "save as", user is not prompted 2nd time</li>
+<li>Bug #507351 Terms not defined prior to use
+
+This commit changes the text in the accounts druid to explain what a placeholder account is, together with some additional improvements in the wording of that page.
+
+Since this increases the amount of text, the width of the label has been modified as well.</li>
+<li>Fix Bug 590570 - When deleting more than one report in sequence the program crashes
+
+Delete the custom report backup file before renaming the current custom report file.
+</li>
+<li>Fix Bug 611346 - Crash in Saved Reports dialog if you select Delete button with no report selected
+
+Test for no report selected before trying to use the selected report guid.
+</li>
+<li>Bug #364358 - Import dialog unreadable with dark colored gtk theme (with solution)</li>
+<li>Bug #525821 new or edited account names should be checked for reserved chars like ":"</li>
+<li>Bug #610675 Register Tabs Do Not Display Since Nightly Build r18685
+Apply Bob's patch after fixing the whitespace. This patch may cause issues on Windows
+(a previous version of the patch did). If the next Windows nightly build exhibits
+the missing register tab names again, it will have to be reverted again
+and improved upon.</li>
+<li>Bug #611645 gnc-svnversion returns "too long" a string for git users, patch by Jeff Kletsky</li>
+<li>Bug#325436 creating income account for invoice doesn't restrict account type</li>
+<li>Fix Bug 611810 -  GC crashes when I click on File -&gt; Properties
+
+SCM files still refered to gnc-book-get-slots which had been removed.  gnc-book-get-slots was replaced everywhere by qof-book-get-slots.
+</li>
+<li>Fix bug 611885 - Crash when opening postgresql file
+
+Previous work setting Timespec values via gobject properties missed the case where the timespec loaded from the database was NULL.
+</li>
+<li>Bug #611140: Fix crash on Open Subaccounts (hopefully).</li>
+<li>Bug #610321 - Compile errors with gtk-2.10.4: GTK_BUTTONBOX_CENTER undeclared
+
+This commit applies a reworked version of the patch to remove the use of GHashTableIter
+by Cristian Klein. Cristian's patch didn't apply cleanly to the current trunk.
+I have made the necessary changes to make it apply (and hopefully do what
+Cristian intended).</li>
+<li>Bug #611470 Add Japanese concepts guide into GnuCash installer, patch by Yasuaki Taniguchi</li>
+<li>Bug 605802: Can't input Japanese characters at an account register window on windows with SCIM, IIIMF and XIM
+
+Latest patch by Yasuaki Taniguchi to fix two problems 1) Can't use account separator char when entering account name in a split, and 2) Can't use &lt;SHIFT&gt;+ and &lt;SHIFT&gt;- to go forward/backward a week.
+</li>
+<li>Fix bug 591177: Printer font is too small to read with webkit as html renderer.
+
+From comment 23:
+"The PDF in comment 2 is about 8 times smaller than it should be. One possible cause of this bug is if gtk_print_operation_set_unit (op, GTK_UNIT_POINTS) is not called. gtkprint defaults to GTK_UNIT_PIXEL - a useless unit to be using with printers.
+
+On Linux GTK_UNIT_PIXEL units are 1 unit = 1/72 inch (the same as GTK_UNIT_POINTS as well as PostScript and PDF units). On Windows GTK_UNIT_PIXEL units are the GDI device units which for printers is the dpi resolution. So for a 600dpi printer 1 unit is 1/600".
+
+If the application was developed on Linux and assumes the default gtkprint units are always 1/72" inch the output on Windows using a 600dpi printer will be 72/600 = 0.12 of the size (or approximately 1/8 of the size)."
+
+Solution was to use webkit_web_frame_print_full() which allows us to provide our own GtkPrintOperation object with units set to GTK_UNIT_POINTS.  Tested on both Linux and Windows.
+</li>
+<li>Bug #610675: Revert the gnc-main-window parts of r18637 because it makes the tab names disappear under Windows.
+
+This disables the enhancement of bug#608329 again, but
+the disappearing of the tab names is a rather major bug.
+
+Note that we either need to fix the enhancement again,
+or revert the rest of r18637 as well so that the account
+properties don't show the color chooser without any effects.</li>
+<li>Bug #605802: Fix input of Japanese characters in register with SCIM, IIIMF and XIM
+
+Patch by Yasuaki Taniguchi. Revised and extended version of r18638.
+
+The main functions are as follows:
+(1) synchronization of preedit string between the register window and
+sheet-&gt;entry,
+(2) application to pango attributes to preedit string in the register window,
+(3) include scroll offset patch (id=153514),
+(4) include preedit string rollback patch (id=153518),
+(5) fix formula and account cells input problem which Christian pointed out,
+(6) surpress quick-fill when preedit string exists,
+(7) fix Windows IME problem.
+(8) Fix quick-fill problem.</li>
+<li>Redo of the dot-gnucash fix (so that GNC_DOT_DIR actually works) fixing bug 610707, adding Doxygen comments for all functions in gnc-filepath-utils, and adding testing for xaccResolveURI and more tests for xaccResolveFilePath.</li>
+<li>Revert r18713 (reopen 605802 "Input of Japanese characters".
+
+This commit had 2 problems:
+1) when entering an account name, the account separator would no longer accept at the current level of the account tree and move to the next level
+2) &lt;SHIFT&gt;+ and &lt;SHIFT&gt;- in a date field would not change the field by 1 week.
+</li>
+<li>Bug #610348: Add compiling our own binary of libbonoboui because the ftp.gnome.org binary still depends on the obsolete libxml2.dll.
+
+However, we still download the erroneous binary and unpack it into $GNOME_DIR
+because libgnomeui depends on libbonoboui which in turn depends on libgnome.
+Hence, libbonoboui cannot be compiled before libgnome-dev is unpacked, but
+libgnomeui won't report to be installed correctly before libbonoboui is
+available as well. Theoretically, we would have to split the inst_gnome step
+so that it first unpacks libgnome et al., then we run the inst_libbonoboui
+step, then we run the second part of inst_gnome which would be something like
+inst_gnomeui. I'm lazy, so I silently overwrite the libbonoboui DLL with
+our hand-compiled version and that's it.</li>
+<li>Bug #608032 - MySQL timeout and no attempt reconnect, second version
+
+This version builds on Phil's implementation of the dbi error callback
+functions to test for a timeout and to do the reconnect.
+
+The same error handling is equally implemented for postgres and sqlite.
+Unlike MySQL these two database types don't actually generate timeouts, but the
+functionality can be used later on for other error types as well.</li>
+<li>Bug #610051 - Crash when using GktHtml whenever a report is opened</li>
+<li>Bug #610348 missing dependencies in windows build
+Update gnome-vfs to 2.24.1
+Note that this means Windows 2000 is no longer supported.</li>
+<li>Partial fix for bug #610321 Compile errors with gtk-2.10.4: GTK_BUTTONBOX_CENTER undeclared
+GTK_BUTTONBOX_CENTER is replaced with GTK_BUTTONBOX_START</li>
+<li>Fix bug #564380 additionally for easy invoice and fancy invoice.
+Patch by Mike Evans.</li>
+<li>Bug #610047 - Dutch accounts template doesn't work
+Add missing closing brackets</li>
+<li>Bug #609044: Improve UI strings for tax report options
+
+Patch by Frank H. Ellenberger:
+
+As we currently have a nice US income and a partial german VAT tax report, I
+feel uncomfortable with the change of r18413, which renamed Edit-&gt;Tax options
+to Income Tax options. So here is another approach, to clarify the tax report
+and business tax menu points.</li>
+<li>Bug #609043: Improve (mostly german) translation of txf
+
+Patch by Frank H. Ellenberger:
+
+This patch is a first extract of so an approach, which I have here, which will
+probably lead to a german income tax declaration ESt-A1. But this extract is
+more general and based on r18413 changes.
+
+Changes:
+1. Header Comments: adding Contributors
+2. Most strings in de_DE translated to german.</li>
+<li>Bug #608032: Handle MySQL connection timeouts with reconnect
+
+Patch by Tom van Braeckel:
+
+For the full discussion, see the mailing list:
+https://lists.gnucash.org/pipermail/gnucash-devel/2010-February/027323.html
+
+Rationale: When we try to open a database transaction, and the database reports
+that the "server has gone away", we try to reconnect before failing hard.</li>
+<li>Bug #609005: Add recipient name on invoices
+
+Patch by Mike E:
+
+Having set up a client/customer including the name of a recipient when I print
+an invoice the recipients name ("Account Dept" say) is not printed in the
+invoice.  I think this is a bug rather than a feature.  I have attached a patch
+to fix.
+
+It still prints the company name above the recipient name however.  I could
+submit an additional patch to provide an invoice option to toggle printing of
+the company name if users/developers feel they want this option, as I do.</li>
+<li>Bug #609603: Windows packing/win32/install.sh PATH fix
+
+Patch by Yasuaki Taniguchi:
+
+When I run /c/soft/gnucash/inst/bin/gnucash or gnucash.cmd after I finish
+building win32 binary, DLL missing dialog boxes pop up.
+
+Missing DLLs are
+ - libgcrypto.dll,
+ - libPQ.dll,
+ - mysql.dll, and
+ - ssleay32.dll.
+
+This patch add search path to them to fix this problem.</li>
+<li>Bug #564380 Payment on bills doubles bill
+
+Patch by Mike Evans</li>
+</ul>
+
+<li>Updated translations or translation-related changes</li>
+<ul>
+<li>Updated Japanese translation, copied from the Translation Project.</li>
+<li>Updated Persian (Farsi) translation by Mehdi Alidoost.</li>
+<li>Add dutch translation to the Windows installer.</li>
+<li>Updated Slovak translation, copied from the Translation Project.</li>
+<li>Updated Dutch translation, copied from the Translation Project.</li>
+<li>Update German translation.</li>
+<li>Add implementation of Gregorian - Jalali converter code.
+
+Copied from http://www.farsiweb.ir/wiki/Iranian_calendar</li>
+</ul>
+
+<li>Other user-visible changes</li>
+<ul>
+<li>Change file loading message to "Loading user data..."
+
+Reading file is technically only correct for files not for databases.</li>
+<li>Display the SX variables in the "Since Last Run..." dialog in ASCII order
+rather than ordering by hashvalue (i.e. no order at all) as was done previously.
+Patch by Jesse Weinstein.</li>
+<li>Add bzr support to gnc-svnversion. Patch by Jesse Weinstein</li>
+<li>Fix crash on opening the tax report, introduced by r18673.
+
+Patch by Alex Aycinena.</li>
+<li>Revert r18881/18884/18885 (bug #610675 - Register Tabs Do Not Display Since Nightly Build r18685) </li>
+<li>Fix missing color in qif-import account copy, patch by Tom Van Braeckel</li>
+<li>Replace Income Tax Options with Tax Report Options. Patch by J. Alex Aycinena.</li>
+
+<li>Patch my patch in r18884. Spotted by Herbert Thoma.</li>
+<li>Regression fix: patch for colored tabs segfault in trunk, patch by Tom Van Braeckel</li>
+</ul>
+
+<li>Other code/build changes</li>
+<ul>
+
+<li>Remove test-load-module from tests
+</li>
+<li>Fix Makefile.am handling of gncla-dir.h so that it will be removed so that 'make distcheck' will pass
+</li>
+<li>Fix guint32 vs gint32 in gnc-uri-utils test.</li>
+<li>Update POTFILES.in based on new source files
+</li>
+<li>Complete unit tests for gnc-uri-utils api and fix bug found by running the tests.</li>
+<li>More doxygen.log-prompted typo fixes, patch by Jesse Weinstein</li>
+<li>Fix typo in previous commit</li>
+<li>Add first test for the gnc-uri-utils api.
+This test verifies gnc_uri_get_components.</li>
+<li>Implement the object reference infrastructure routines to allow a list of business objects referring to a specific other object (e.g. an account) to be determined.  This will help fix bug 140400 because the account delete code can now determine a list of business (or other) objects which have references to that account, and prevent the account from being deleted while references still exist.
+</li>
+<li>Add some new gobject-related infrastructure so that when deleting an object, it can be determined if there are other objects with references to that object (bug 140400).
+
+Some routines are normal routines, and some routines use the gobject structure to allow different implementations by different object types.
+
+Per-instance routine: gboolean qof_instance_refers_to_object(QofInstance* A, QofInstance* B) - returns TRUE/FALSE whether object A contains a reference to object B.
+Normal routine: GList* qof_instance_get_referring_object_list_from_collection(QofCollection* c, QofInstance* B) - Calls qof_instance_refers_to_object() for each object in the collection, and returns a list of the objects which contain a reference to B.
+Per-instance routine: GList* qof_instance_get_typed_referring_object_list(QofInstance* A, QofInstance* B) - returns a list of all objects of the same type as A which contain a reference to B.  Being per-instance allows an object to use knowledge to avoid scanning cases where there are no references (e.g. billterms do not contain references to splits), or a scan is not needed (references from splits to an account can be determined using xaccAccountGetSplitList()).  This routine can do a scan by calling qof_instnace_get_referring_object_list_from_collection().
+Normal routine: qof_instance_get_referring_object_list(QofInstance* A) - For all collections in the book, gets an instance and calls its qof_instance_get_typed_referring_object_list() routine, concatenating all of the returned lists.  This is the routine that external code can call to get a list of all objects with references to an object A.  The list must be freed by the caller but the contents must not.
+Per-instance routine: gchar* qof_instance_get_display_name(QofInstance* A) - returns a string which can identify object A to the user.  This could be used to display a list of the objects returned by qof_instance_get_referring_object_list() ("Invoice 0004 for customer C") so that the user can modify those objects to remove the references.  Note that this is going to require internationalization, which has not been implemented yet.  If not overridden by the object class, the default string is "Object &lt;type&gt; &lt;address&gt;" e.g. "Object gncCustomer 0x12345678".
+</li>
+<li>Add event registration and handling from the qof_event_handlers.
+
+This way, the split view is updated correctly even on undo/redo.</li>
+<li>Revert r18869, "Move gnc-ui-util.[hc] and gnc-euro.[hc] from app-utils to engine"
+
+Those files indeed belong better into app-utils; the app-utils defines
+several not-yet-GUI parts of gnucash, like many conversions from and to
+strings (more than those in these two files), so these files are well
+suited in here.</li>
+<li>MSVC compatiblity: Fix include files in MSVC. Replace QSTRCMP by g_strcmp0 on MSVC.</li>
+<li>Improve non-gnome UI compatiblity: app-utils can compile without gtk as well.</li>
+<li>Add src/calculation and src/app-utils to cmake build system.
+
+app-utils is needed for the conversion from and to string
+for gnc_numeric, date, and other values.</li>
+<li>Fix failing core-utils tests
+I simply removed the obsolete test cases. More work is still needed to add new valid tests.</li>
+<li>Remove some unused variables.</li>
+<li>Win32/MSVC compatiblity
+
+- Replace trunc() by floor()
+ - Provide a round() workaround implementation for MSVC
+ - Use g_strcasecmp instead of the libc one
+ - Add include for libc replacements</li>
+<li>Some more const-correctness in engine functions.</li>
+<li>Update POTFILES.in for the moved dialog-userpass.c and the newely added gnc-jalali.c</li>
+<li>Move gnc-ui-util.[hc] and gnc-euro.[hc] from app-utils to engine because they don't depend on gtk but are important additions for the engine types.
+
+In particular, the formatting of a gnc_numeric is defined there.</li>
+<li>Fix circular dependency between gnome and gnome-utils introduced in r18842</li>
+<li>MSVC compatiblity: snprintf is required to have a prefixing underscore.
+
+Also, more symbols of libguile/gc.h need explicit declspec on MSVC.</li>
+<li>Add variant of gnc_engine_init which is suitable for statically the linked-in library.</li>
+<li>Only use long long format specifiers if available - avoids error message when compiler thinks they're not available.
+</li>
+<li>Fix parent/child relationships in billterms in case the parent hasn't been loaded yet.
+
+Remove child column from billterm table because it duplicates info in the parent column and just complicates loading objects.
+</li>
+<li>Fix parent/child links for tax tables.  If a tax table's parent table has not been loaded yet, remember the relationship, and after all tables have been loaded, fix up the rest of the parent/child links.
+</li>
+<li>Handle NULL string pointer as a NULL guid </li>
+<li>Add a mechanism so that the business sql backend module can provide the main sql backend with the order in which objects should be loaded.  This will allow billterms and taxtables to be loaded before objects which contain references to those objects.  </li>
+<li>MSVC compatiblity: Replace QOF_BOOK_LOOKUP_ENTITY macro by a RETURN_ENTITY macro and add inline functions for lookup.
+
+MSVC doesn't accept the syntax with an inlined block,
+x = ({ foo; bar; value;}). Hence, this is being replaced
+by actual function definitions, and the body of those functions
+is defined by the new macro.</li>
+<li>Delete unused variables.</li>
+<li>Use a normalized uri format internally to refer to data stores.
+
+Data stores for GC can be a file (xml or sqlite3) or a database
+one some server (mysql or postgres).
+Wherever it makes sense internally, data stores will be referred to
+via a normalized uri:
+protocol://user:password@host:port/path
+Depending on the context and story type some of these parts are optional or unused.
+
+To achieve this, a new utility interface has been setup:
+gnc_uri_&lt;xxx&gt;_&lt;yyy&gt;
+that can be used to manipulate the uris or convert from non-normalized
+formats to normalized and back.
+For example, when the user selects a file in the Open or Save As dialog,
+gnc_uri_get_normalized_uri will convert the file into a normalized uri.
+Or when the actual filename is needed this can be extracted with
+gnc_uri_get_path.
+You can also test if a uri defines a file or something else with
+gnc_uri_is_file_uri.
+
+For the complete documentation, see src/core-utils/gnc-uri-uitls.h
+
+This commit installs gnc-uri-utils and modifies the source where it makes
+sense to use its convenience functions. This concerns all functions that
+had to deal with file access in some way or another, the history module
+and the functions that generate the history menu list and the window titles.
+
+Note that gnc-uri-utils replaces xaccResolveFilePath and xaccResolveUrl in all cases.
+xaccResolveUrl has been removed, because gnc-uri-utils fully replaces its functionality.
+xaccResolveFilePath is used internally in gnc-uri-utils to ensure an absolute path
+is always returned (in case of a file uri, not for db uris). But it has been renamed to
+gnc_resolve_file_path to be more consistent with the other functions.
+
+Lastly, this commit also adds a first implementation to work with a keyring to
+store and retrieve passwords, althoug</li>
+<li>Make business backend initialization functions accessible when statically linking</li>
+<li>MSVC compatibility: Disable "C99 designated initializers" by a compiler-dependent macro
+
+Same as r18755.</li>
+<li>Make the backend initialization functions accessible when statically linking</li>
+<li>Change the definition of QOF_STDOUT
+The old definition file: conflicts with normal uris that can
+start with file: as well.
+I have chosen &gt; instead, which is never a valid filename and
+on unixlike systems associated with standard out operations.</li>
+<li>Use proper qof CFLAGS/LDFLAGS since core-utils now uses qof
+</li>
+<li>The webkit used on win32 has webkit_web_frame_print_full() defined in include files, so we don't need a potentially conflicting extern declaration.
+</li>
+<li>If gmtime_r is defined as a macro, undef it
+</li>
+<li>Add svn:ignore to src/core-utils/test</li>
+<li>Remove invalid target (got copied from src/engine/test)</li>
+<li>Build test-core before core-utils</li>
+<li>Add the core-utils tests in the automake system</li>
+<li>Move filepath related tests to core-utils/test</li>
+<li>Undefine localtime_r as a macro (new mingw pthreads package defines it)
+</li>
+<li>Add braces to make if-if-then-else structure clear and avoid GCC 4.4.0 error message
+</li>
+<li>Remove gncmod-test from test-core
+It's not used and prevents test-core from being included in core-utils tests</li>
+<li>Add missing NULL sentinel at end of g_strconcat() function call </li>
+<li>Removed erroneously re-created src/engine/gnc-filepath-utils.c</li>
+<li>Move binreloc library include</li>
+<li>Note the moved files in POTFILES.in.</li>
+<li>Remove C executable from cmake as it is no longer necessary.</li>
+<li>Add missing link library after r18811.</li>
+<li>Adapt cmake to the file move in r18811.</li>
+<li>Add src/engine/test/test-resolve-url</li>
+<li>Win32: Add download of cmake, disabled by default.</li>
+<li>MSVC compatibility: strftime() doesn't know "%T" here. Also, g_fopen doesn't work, but fopen does.</li>
+<li>Move gnc-filepath-utils and dependencies from engine to core-utils</li>
+<li>Typo fixes, as found by doxygen.log, patch by Jesse Weinstein</li>
+<li>Tweak to gnc-svnversion's bzr section, patch by Jesse Weinstein</li>
+<li>Use "template-account" property to get/set template account.  </li>
+<li>Add "template-account" to schedxaction as a gobject property.  </li>
+<li>Simplify handling of sx template_acct column.  </li>
+<li>Rename GNCBook into QofBook everywhere and remove separate header gnc-book.h.
+
+The former was already #define'd on the latter, so its removal gets
+rid of one level of indirection which makes function lookup easier.
+Also, the macro (!) qof_book_get_slots was turned into a normal
+function again because that's what functions are for (and otherwise
+the additional declaration in engine.i would break).</li>
+<li>Decrease compiler warnings by removing unused variables.</li>
+<li>Reduce compiler warnings by replacing strerror() with g_strerror() and similar glib replacements.</li>
+<li>Win32: Add more header includes where necessary to avoid using undeclared functions.</li>
+<li>Comment out unimplemented function. Improve const-correctness.</li>
+<li>Include gtk/gtk.h instead of gtk/gtkclist.h as recommended by Gtk</li>
+<li>Fix make dist
+r18765 introduced test target test-resolve-url, but no source file test-resolve-url.c
+Removed the target.</li>
+<li>Re-indentation of source code, next batch: src/gnome-utils/*
+
+This also strips trailing whitespaces from lines where they existed.
+This re-indentation was done using astyle-1.24 using the following options:
+
+astyle --indent=spaces=4 --brackets=break --pad-oper --pad-header --suffix=none</li>
+<li>Re-indentation of source code, next batch: src/register/*
+
+This also strips trailing whitespaces from lines where they existed.
+This re-indentation was done using astyle-1.24 using the following options:
+
+astyle --indent=spaces=4 --brackets=break --pad-oper --pad-header --suffix=none</li>
+<li>Re-indentation of source code, next batch: src/business/*
+
+This also strips trailing whitespaces from lines where they existed.
+This re-indentation was done using astyle-1.24 using the following options:
+
+astyle --indent=spaces=4 --brackets=break --pad-oper --pad-header --suffix=none</li>
+<li>Re-indentation of source code, next batch: src/engine/*
+
+This also strips trailing whitespaces from lines where they existed.
+This re-indentation was done using astyle-1.24 using the following options:
+
+astyle --indent=spaces=4 --brackets=break --pad-oper --pad-header --suffix=none</li>
+<li>Re-indentation of source code, next batch.
+
+This also strips trailing whitespaces from lines where they existed.
+This re-indentation was done using astyle-1.24 using the following options:
+
+astyle --indent=spaces=4 --brackets=break --pad-oper --pad-header --suffix=none</li>
+<li>Replace and-let* in scheme script so that srfi-2 isn't needed.</li>
+<li>Replace one more g_list_append by g_list_prepend.</li>
+<li>MSVC compatibility: Somehow fdopen() doesn't work during the trace file initialization. Use fopen() instead.</li>
+<li>Win32 build: libguile needs minor tweaking for MSVC compatibility.</li>
+<li>MSVC compatibility: Fix r18748, r18761 by replacing strncasecmp() with strnicmp().</li>
+<li>MSVC C++ compatibility: Rename the internal name of union _GUID because _GUID is a builtin keyword here.
+
+This does not concern the typedef name, only the internal union name,
+so it doesn't harm us.</li>
+<li>C++ compatibility: namespace is a keyword, so don't use it as variable name.</li>
+<li>C++ compatibility: export is a keyword, so don't use it as a member name.</li>
+<li>Add support for passing a Timespec as a boxed GValue </li>
+<li>Fix test makefiles.  Many tests now need to include other libraries because files have changed directories.
+</li>
+<li>Add more gobject property definitions to GNCPrice, Transaction, SchedXaction and Split.  </li>
+<li>Win32: Create the MSVC import library for libguile during install.sh.</li>
+<li>Remove static current_session variable of libqof - we keep one in gnc-session.c already.</li>
+<li>Doxygen improvements, patch by Jesse Weinstein</li>
+<li>More changes where SQL backend uses gobject properties to load/save objects.  </li>
+<li>More conversion to read/write objects from sql backend using gobject parameters </li>
+<li>Start to add properties to business objects.  Currently only 1 property per object, but this infrastructure will allow more generic importing of objects.  </li>
+<li>Take advantage of the initial property definition for Transaction, Split, GNCPrice and SchedXaction by replacing custom access routines with gobject properties.  </li>
+<li>Add a few gobject properties to some engine object types.  This adds more of the gobject infrastructure to Transaction, Split, SchedXaction and GNCPrice.  Gobject properties provides a standardized interface to the engine objects which should allow standard and simplified read/write mechanisms.  For the sql backend, for example, db columns can be mapped to properties.  In a generalized csv importer, csv columns can be mapped to properties.
+</li>
+<li>Partly revert r18748, "Win32 compatibility": lib/libc directory doesn't have glib available.</li>
+<li>Add a "make indent" target, but watch out with using its result.
+
+The "astyle" indent tool unfortunately behaves significantly different
+in its different versions (1.22, 1.23, 1.24) even with identical
+options. That is, the basic indentation is the same, but in a large
+project such as ours, there are just too many special cases which
+astyle doesn't get identical due to its bugfixes and new features.
+Hence, please use the result of this target with great care, and
+if in doubt, just use it for your own amusement but don't commit the
+resulting changes. Thanks!</li>
+<li>Fix up some doxygen comments </li>
+<li>Don't include gnc-lot-p.h where not needed </li>
+<li>Win32: Fix libbonoboui compiling.</li>
+<li>MSVC compatibility: Microsoft doesn't have C99 "designated initializers".
+
+Those were introduced in r17724, bug#539957, but apparently this
+C99 is not supported by MSVC and won't be for some time to come.
+Hence, for MSVC we need the workaround to define a macro that will
+shadow the member names. However, the initialization itself works
+fine and non-MSVC code is unchanged, so I think we can live with that.</li>
+<li>MSVC compatiblity: Struct initialization doesn't work as expected.
+
+Somehow, the struct initialization containing a gnc_numeric
+doesn't work. As an exception, we hand-initialize that member
+afterwards.</li>
+<li>MSVC compatiblity: open() flags and S_ISDIR doesn't exist on MSVC.</li>
+<li>MSVC compatiblity: Use a char* pointer for the memcpy() input argument.
+
+This is required by MSVC because we do some pointer arithmetic
+in the memcpy() argument, but in order to do this, MSVC wants to
+know the pointed-to type of the pointer because pointer arithmetic
+increases the pointer not by a number a bytes but a number of
+sizeof(type). MSVC thinks for void* it doesn't count bytes. We
+achieve the desired effect by using a char* pointer so that bytes
+are counted.</li>
+<li>MSVC compatiblity: Add defines for functions/types which are available under different names in MSVC.</li>
+<li>MSVC compatiblity: Array initialization in MSVC requires a constant, not a variable.
+
+That is, gcc accepts a constant variable in many cases now, but
+MSVC doesn't accept it. So it must be turned into an old preprocessor
+define.</li>
+<li>MSVC compatibility: Remove forward declaration of static array by reordering the function that uses it.</li>
+<li>Win32 compatibility: Use glib wrappers of non-usual POSIX functions.</li>
+<li>More header include compatibility: Watch out for HAVE_UNISTD_H.</li>
+<li>Re-indentation of source code, next batch.
+
+This also strips trailing whitespaces from lines where they existed.
+This re-indentation was done using astyle-1.24 using the following options:
+
+astyle --indent=spaces=4 --brackets=break --pad-oper --pad-header --suffix=none</li>
+<li>Convert GNCLot to use more gobject features.  Removes all direct access to lot object fields, which are now accessed through functions or property names (for backend sql load).
+</li>
+<li>Modify POTFILES.in to handle source files moved to a new directory
+</li>
+<li>Also build backend/xml in cmake.</li>
+<li>Reverted 18699</li>
+<li>Clarify required steps to setup windows build environment.
+The mingw website has changed quite a lot since the README
+was written and some of the url's used in it were confusing.
+I have changed the url's to point to the actual packages
+on sourceforge (current at the time of this writing)
+and added some extra details where I had trouble understanding
+the actions to perform.</li>
+<li>Doxygen fixes
+- Have this file show up under module "Utility Functions"
+- Normalize the function descriptions (some were not in doxygen format)
+- Add a global file description
+- rename parameter 'file' to 'filename' for better consistency (note
+  this required an internal parameter to be renamed from filename to
+  new_filename)</li>
+<li>More minor MSVC code fixes.
+
+However, this code doesn't compile with MSVC9.0 for a few reasons:
+
+1. libguile.h comes with its own scmconfig.h which contains HAVE_STDINT_H
+whereas MSVC doesn't have that. This is stupid guile which doesn't accept
+the fact that the user uses a different compiler than how they compiled guile.
+
+2. Some initializations are not supported: Account.c:3312 etc.
+
+3. The C99 "designated initializers" of e.g. Account.c:4661 ff. (r17724,
+bug#539957) are not supported by MSVC9.0 - this is the hardest problem
+of these all.</li>
+<li>Make CMake system more complete so that it builds on win32/mingw.
+
+Also, add a test executable to check that we got all the
+library dependencies.</li>
+<li>More CMake work: Build swig wrappers correctly. Build gnc-module.</li>
+<li>Cosmetic: Remove duplicate include of gnc-engine.h</li>
+<li>Remove trailing whitespace</li>
+<li>Minor doxygen change and lots or trailing whitespace removed</li>
+<li>Remove GNOME_PRINT_{CFLAGS,LIBS} from the Makefile templates</li>
+<li>Spelling errors and trailing whitespace removal</li>
+<li>Remove reference to gnome print in the comments
+
+GnuCash no longer uses gnome print. It has been replaced with gtk print.</li>
+<li>Remove two more popt references in support files.</li>
+<li>Remove popt requirement from configure
+GnuCash doesn't use it.
+At the same time, I removed a check that has been commented out
+since the beginning of the revision history (somewhere in 2007).
+This check tested for the presence of popt.h to then run some
+libtool changes. As I said this whole block has been commented
+out since the beginning of time, so I considered it to be obsolete,
+more even so now that the popt requirement has been removed.</li>
+<li>Remove popt references
+
+- popt has been replaced with the GOption infrastructure.
+So there's no need to include the popt.h file.
+- Also rewritten the comment that was elaborating on popt
+vs GOption
+- Finally removed the loglevel option (which was excluded from
+the compile anyway) that still referred to popt.</li>
+<li>Fix minor spelling errors</li>
+<li>When creating lists of database objects, use g_list_prepend() rather than g_list_append().  There may be cases where the list order is significant and thus needs to be reversed, but that is not true in these cases.  This provides a large improvement in database loading performance.
+
+Analysis and basis patch supplied by Donald Allen.
+</li>
+<li>Update documentation references to Active Perl (5.8-&gt;5.10)</li>
+<li>Remove redundant entries in EXTRA_DIST</li>
+<li>More experimental cmake building.
+
+Except for the scheme wrappers this seems to work until
+at least the engine module. However, I didn't tackle the issue
+with the generated headers which contain some installation
+paths - but those we should get rid of anyway.</li>
+<li>Move two gtk-dependent files from src/core-utils to src/gnome-utils.
+
+core-utils depends on glib and additionally guile and gconf, but
+not (yet) gtk. Those two files which do are moved to the next
+module which already depends on gtk, which is gnome-utils.</li>
+<li>Add some experimental CMakeLists.txt which can compile the libqof part, on Linux, Windows/mingw and (no joke) Windows/MSVC.
+
+I'm interested in some tests with the cmake build system, but
+if it doesn't prove useful I will remove it again within a
+few weeks.</li>
+<li>Make libqof compatible for MSVC9.0 compiler (no joke).
+
+The main change is that the syntax for variadic macros is
+slightly different in MSVC compared to gcc. But they exist, so
+offering the log macros in the different syntax is sufficient.</li>
+<li>Make more header inclusions conditional on whether they exist.</li>
+<li>Update .gitignore, proposed by Jeff Kletsky</li>
+<li>Make sure file urls actually contain path information or are NULL</li>
+<li>Remove redundant GLIB check.</li>
+<li>Bump minimum required versions of gtk+, goffice and gtkhtml
+gtk+: 2.10
+goffice: 0.5.1
+gtkhtml: 3.14</li>
+<li>Add a starter script for gnucash under ddd (a gui frontend for gdb)</li>
+<li>Build fixes for EL5 after glib 2.12 requirement</li>
+<li>    Ensure that GNC_DOT_PATH and other gnc_dotgnucash_dir() logic is
+    used for all cases, remove hard-coded references to /usr/etc,
+    /usr/share, /usr/local/etc, and /usr/local/share while providing
+    for xaccResolveFilePath to actually search the data and sysconfdir
+    directories used in the build.
+    
+    (gnc_build_data_path): New function, just a copy of
+    gnc_build_book_path. Needed for rewrite of xaccResolveFilePath.
+    (xaccResolveFilePath): Cleaned out the hard-coded paths and weird
+    file path contruction functions and rewrote the function to use
+    gnc_path_get_foo and gnc_build_data_path without all of the silly
+    indirection. Removed superfluous URI checks (which are correctly
+    perfomed by xaccResolveURL()).
+    (MakeHomeDir, xaccPathGenerator, xaccDataPathGenerator)
+    (xaccUserPathGenerator): Deleted; their functionality is replaced
+    as noted above.
+
+    (check_file_return_if_true): Renamed check_file_return_if_valid, a
+    more descriptive name.
+
+</li>
+<li>Bump glib2 minimum requirement to 2.12.
+At the same time, remove all the conditional code and workarounds
+that were in the code to cater for glib &lt; 2.12.
+
+Note: this commit will require a rerun of autogen.sh and configure.</li>
+<li>README referred to a non-existent file
+So per a suggestion on IRC, I took the reference out. Patch by Jesse Weinstein.</li>
+<li>Win32: Update libxslt version, but it needs its own copy of libxml2.dll.
+
+Apparently the gnome-provided libxml2 has the DLL filename libxml2-2.dll,
+but the binary from xmlsoft.org still has the filename libxml2.dll.</li>
+<li>Win32: And one more dependency upgrade (causes missing libxml2.dll complaints otherwise)</li>
+<li>More win32 dependency version updates.</li>
+<li>Update libpng package dependency for win32 to 1.4.0</li>
+<li>Small spelling fixes in the comments</li>
+<li>Re-indentation of source code, next batch.
+
+This also strips trailing whitespaces from lines where they existed.
+This re-indentation was done using astyle-1.24 using the following options:
+
+astyle --indent=spaces=4 --brackets=break --pad-oper --pad-header
+
+Discussed at http://lists.gnucash.org/pipermail/gnucash-devel/2009-August/026121.html</li>
+<li>Update gnome package versions.</li>
+<li>GDate values weren't being properly fetched from objects to be saved in a database column if they were fetched as a gobject property.  </li>
+<li>Clean up account column in the lot table to specify that the guid is an account reference.  Simplifies the code a bit, and makes future use of foreign keys easier.  </li>
+<li>If building for WIN32, use webkit_web_frame_print_full() so that a GtkPrintOperation object with the correct units can be used to prevent font size problems (see bug 591177).  On other platforms, use webkit_web_frame_print() because some distros seem not to have webkit_web_frame_print_full() (and also don't have the font size problem so on those distros, we don't need to create our own GtkPrintOperation object).  </li>
+
+</ul>
+<li>Cutecash</li>
+
+Some of the GnuCash developers have decided to rewrite the UI for the cross-platform Qt toolkit from TrollTech.  The goal is a simpler UI which is more powerful and easier to develop.  This project has gotten the name "Cutecash".  It uses the same back-ends and engine as gnucash.  Only the UI is different.  The source for the Cutecash UI is in the same tree (and therefore, the tarballs) as GnuCash, but at this point, no MAC or Win32 builds are being produced.
+<ul>
+<li>Cutecash: Add Commodity wrapper. Use gnc-exp-parser for numbers.
+
+ - Allow amounts to be edited.
+ - Let the date column be handled by the QDate delegate with a QDateEdit widget</li>
+<li>Cutecash: Enable entering of more cells in register. Some code cleanup. Add class documentation.</li>
+<li>Enable editing of the "Description" column in the split list view - WITH UNDO!
+
+The Qt Undo framework is almost like magic. We just have to create a
+command object instead of directly manipulating the value, and suddenly
+the undo/redo just works. This is fun!</li>
+<li>Cutecash: Add QUndoStack to implement all editing through the Command pattern and make it undoable.</li>
+<li>Cutecash: Enable closing and re-opening the different tab views.
+
+Also, change many main window slots to make use of the auto-connection
+feature because it makes the slot intention much easier to read.
+
+Also, note how we store the Tab position, title, isEnabled state
+in dynamically allocated properties in the Tab widget itself -
+this is a rather cool feature of QObject here (see reallyRemoveTab()
+and viewOrHideTab()).</li>
+<li>Cutecash: Add Recent-File menu.</li>
+<li>Cutecash: Enable tab moving and other UI features of Qt.</li>
+<li>Cutecash: Add Timespec conversion to QDateTime. Add display of transaction date in register tabs.</li>
+<li>Cutecash: Display account balance in tree and split amount in account register.</li>
+<li>Cutecash: Add gnc::Numeric wrapper for gnc_numeric.</li>
+<li>Implement a table widget with the list of the splits of one account, and open this if an account in the tree is double-clicked.
+
+Date and values/amounts can follow next, once those types are suitably
+wrapped into C++ as well.</li>
+<li>Cutecash: Add progress bar during loading the file.</li>
+<li>Implement the account list data model as a specialization of the account tree model.
+
+This is helpful in order to understand Qt's Model/View structure, so both
+(list and tree) are still available.</li>
+<li>Cutecash: Fix guile version number query. Patch by Herbert Thoma.</li>
+<li>Cutecash: Add a tree view of the accounts.</li>
+<li>Cutecash: Fix CMakeLists for change in guile lookup, r18846</li>
+<li>Cutecash: Remove QSharedPointer because manual delete is sufficient.
+
+Also, the QSharedPointer cannot be used for bookkeeping of a C pointer
+to any gnucash object because it refuses to work if it doesn't know the
+actual struct definition, which in gnucash is always private. The
+boost::shared_ptr would work without (by the custom deleter argument in the
+constructor), but QSharedPointer doesn't (the custom deleter is accepted
+only in addition to the known storage size, not alternatively), so it is
+pointless here.</li>
+<li>Cutecash: Add version check for guile and define HAVE_GUILE18 if appropriate.</li>
+<li>Adapt cutecash to r18842.</li>
+<li>Cutecash: Fix extern "C" usage: Must not enclose system includes, supposedly.</li>
+<li>Cutecash: Allow older glib versions as well.</li>
+<li>Cutecash: Add business-core including business-core/xml into the executable.</li>
+<li>Add copyright notices in cutecash source code files.</li>
+<li>Cutecash: Copy some more icons into the program. Add a clickable hyperlink.</li>
+<li>More C++/Qt4 frontend work.</li>
+<li>Add example main window in C++ and Qt that links against gnucash-engine.
+
+The example was based on Qt4's "application" example, but
+the main window layout is done through the .ui file already.</li>
+<li>Finish cmake build system for the C++ experiment.
+
+To build this:
+
+mkdir build-cpp
+cd build-cpp
+cmake ..
+make
+./src/gnc/cutecash</li>
+<li>C++ experiment: Extend the AccountModel into a table with name and description.
+
+Use QString everywhere as well.</li>
+<li>C++ experiment: Add first simple model/view widget for the loaded account list.</li>
+<li>Some more C++ work. Opening an existing file works, even though nothing is visible so far.
+
+The implementation of a scoped_ptr wrapper around a C object
+uses the boost library, though, because writing our own
+implementation of a scoped_ptr with custom deletion function
+is too non-trivial and I rather re-use the boost::shared_ptr
+here instead of making our own mistakes.</li>
+
+</ul>
+
+
+
+
+<h3>Caveats for Testers</h3>
+<p>Any 2.3.x version might crash unexpectedly at any point during runtime. If you test some serious work in a 2.3.x release and are using the XML file backend for data storage, make sure you hit "Save" after every non-trivial workstep.  If you are using the SQL backend, this is not required as every change is saved immediately to the database.<p>
+<p>The documentation has had screenshots updated, however, many help texts usually only refers to the 1.8.x series. Everyone is invited to help improve the documentation; see http://wiki.gnucash.org/wiki/Development on how to get involved.</p>
+
+<h3>How can you help?</h3>
+<p>Testing: Test it and help us discover all bugs that might show up in there.  Please enter each and every bug into bugzilla.</p>
+<p>Translating: The new release comes with some new translation strings. If you consider contributing a translation, we invite you to test this release already. A string freeze will be announced in one of the later 2.3.x releases.  Please check http://wiki.gnucash.org/wiki/Translation_Status for updates on this.</p>
+<p></p>
+<p>We would like to encourage people to test this and any further releases as much as possible and submit bug reports in order that we can polish GnuCash to be as stable as possible for the 2.4.0 release in a few weeks. Then post any bugs you find to <a href="http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">bugzilla</a></p>
+
+<h3>Getting GnuCash</h3>
+<p>Source code for GnuCash 2.3.11 can be downloaded from multiple locations:
+<ul>
+<li><a href="http://www.gnucash.org/download.phtml">The GnuCash website</a></li>
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.11.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.11.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/2.3.11/">all files</a>.</li>
+<li>You can also checkout the sources directly from the subversion repository with this command:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/trunk gnucash</span></li>
+</ul></p>
+
+<p>To install GnuCash, you will need Gnome 2, guile, slib. In addition you will need swig if compiling from subversion.</p>
+
+<h3>Win32 binary</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.11-setup.exe">Gnucash 2.3.11 Win32 setup executable</a> can be downloaded from Sourceforge as well.
+
+<h3>About the Program</h3>
+<p>GnuCash is a free, open source accounting program released under the GNU General Public License (GPL) and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash began in 1997, and its first stable release was in 1998.</p>
