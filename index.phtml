@@ -61,10 +61,10 @@ include("externals/menu.phtml");
 ?>
 <div class="newsborder">
 <div class="newsheader"><img alt="news panel" src="<?=$top_dir;?>/images/icons/document.txt.gif">&nbsp;
-<a href="oldnews.phtml">Older Announcements ...</a>
+<a href="oldnews.phtml"><?php echo T_("Older Announcements ...");?></a>
 
 </div><div class="newsinner">
-Click <a href="oldnews.phtml">here</a> for older announcements ...
+<?php echo T_("Click");?> <a href="oldnews.phtml"><?php echo T_("here");?></a> <?php echo T_("for older announcements ...");?>
 </div></div>
 </div>
 
