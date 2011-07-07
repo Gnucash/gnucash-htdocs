@@ -30,13 +30,58 @@ IMG {
    height: 280px;
 }
 
+.center {
+	text-align:center;
+}
+
+.justify {
+	text-align:justify;
+}
+
 .featureimage {
    float: right;
+   width: 400px;
+   margin: 0 0 1em 1em;
 }
 
 .featureblock {
    background-color: black;
    color: silver;
+}
+
+.featureborder {
+   background-color: #cacaf7;
+   color: black;
+   border: 1px;
+   border-color: silver;
+   border-style: ridge;
+   padding: 2px;
+   margin-bottom: 1em;
+}
+
+.featurecontainer {
+   width:98%;
+   float:right;
+}
+
+h1.featuresection {
+   font-style:italic;
+}
+
+h2.featuretitle {
+   margin-top: 2px;
+   margin-bottom: 2px;
+   margin-left: 2px;
+   text-align: left;
+   color: black;
+}
+
+.gnc-icon {
+   height:28px;
+   width:28px;
+   float:right;
+   vertical-align:middle;
+   margin-right:10px;
 }
 
 .divider {
@@ -259,4 +304,18 @@ div.warning {
 
 div.note {
    background: url('../images/icons/gnome-dialog-information.png') 5px 5px no-repeat #E6E6F7;
+}
+
+span.gnu {
+	font-weight:bold;
+	color: blue;
+}
+
+span.cash {
+	font-weight:bold;
+	color: green;
+}
+
+span.bold {
+	font-weight:bold;
 }

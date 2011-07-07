@@ -9,35 +9,95 @@ include("$top_dir/externals/menu.phtml");
 <div id="content">
 <h1><?php echo T_($title);?></h1>
 
-<!-- images needed:
-- register
-- double-entry
-- expense account hierarchy
-- report+graph
-- invoice
-- search query builder?
--->
-
-<h2><?php echo T_("Checkbook-Style Register");?></h2>
-
+<div>
 <p>
-<img src="<?=$top_dir?>/images/features/feature_register.png" width="300" height="200" style="float: right; border: solid thin grey; margin: 0.5em;" alt="[Register]"/>
-<?php echo T_("The checkbook-style register provides a custom, convenient and familiar interface to entering financial transactions.   The register supports common checking and credit-card transactions, as well as income, stock and currency transactions.");?>
+<?php echo T_("<span class="gnu">Gnu</span><span class="cash">Cash</span> is a powerful accounting software. This page will try to explain 
+in detail which are the numerous features that <span class="gnu">Gnu</span><span class="cash">Cash</span> has to offer to it's users.");?>
 </p>
-<br clear="all"/>
+<ul>
+<li><a title="<?php echo T_("Jump to the the main features section");?>" href="#main-feat"><?php echo T_("Main features");?></a></li>
+<li><?php echo T_("Advanced features");?></li>
+<li><?php echo T_("Data storing and exchange features");?></li>
+<li><?php echo T_("Other goodies");?></li>
+</ul>
+</div>
 
-<h2><?php echo T_("Double Entry");?></h2>
-<p>
-<?php echo T_("Every transaction must debit one account and credit others by an equal amount. This ensures that the \"books balance\": that the difference between income and outflow exactly equals the sum of all assets and equity.");?>
+<h1 class="featuresection"><img class="gnc-icon" src="features_files/gnucash-icon-32x32.png" alt="[GnuCash]"></a><?php echo T_("Main features");?></h1>
+
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Double Entry");?></h2>
+</div>
+<div class="center">
+<img class="featureimage" src="<?=$top_dir?>/images/features/basics_AccountRelationships.png" alt="[Basic account relationship]">
+</div>
+<p class="justify">
+<?php echo T_("Every transaction must debit one account and credit others by an equal amount. This ensures that the <span class="bold">books balance</span>: that the difference between <span class="bold">income</span> and <span class="bold">expenses</span> exactly equals the sum of <span class="bold">assets</span> and <span class="bold">liabilities</span>.");?>
 </p>
 <br clear="all" />
+</div>
 
-<h2><?php echo T_("Reports, Graphs");?></h2>
-<p>
-<img src="<?=$top_dir?>/images/features/feature_graph-report.png" width="300" height="200" style="float: left; border: solid thin grey; margin: 0.5em;" alt="[Graphs]"/>
-<?php echo T_("GnuCash has an integrated reporting and graphing module, and comes complete with a full suite of standard and customizeable reports, such as Balance Sheet, Profit &amp; Loss, Portfolio Valuation, and many others.");?>
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Checkbook-Style Register");?></h2>
+</div>
+<div class="center">
+<img class="featureimage" src="<?=$top_dir?>/images/features/feature_register.png" alt="[Register]"/>
+</div>
+<p class="justify">
+<?php echo T_("The <span class="gnu">Gnu</span><span class="cash">Cash</span> checkbook-style <span class="bold">register</span> provides a custom, convenient and familiar interface to entering financial transactions.");?>
+<p class="justify">
+<?php echo T_("The <span class="bold">register</span> supports common checking and credit-card transactions, as well as income, stock and currency transactions. The following features are also provided:");?>
+</p>
+<ul>
+<li><?php echo T_("<span class="bold">Autofill</span> of entered transactions");?></li>
+<li><?php echo T_("Possibility to mark a transaction as <span class="bold">cleared</span>");?></li>
+<li><?php echo T_("Possibility to enter <span class="bold">split transactions</span>");?></li>
+<li><?php echo T_("Multiple accounts can be displayed in one register window at the same time");?></li>
+<li><?php echo T_("A summarybar that display all the relevant account's balance informations");?></li>
+<li><?php echo T_("Many options to <span class="bold">costumize</span> the appearence and the display style");?></li>
+</ul>
+<br clear="all"/>
+</div>
+
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Reports, Graphs");?></h2>
+</div>
+<img class="featureimage" src="<?=$top_dir?>/images/features/feature_graph-report.png" width="300" height="200" style="float: left; border: solid thin grey; margin: 0.5em;" alt="[Graphs]"/>
+<p class="justify">
+<?php echo T_("<span class="gnu">Gnu</span><span class="cash">Cash</span> has an integrated module to display graphs of your financial data in the form of:");?>
+</p>
+<ul>
+<li><?php echo T_("Barcharts");?></li>
+<li><?php echo T_("Piecharts");?></li>
+<li><?php echo T_("Scatter plots");?></li>
+</ul>
+
+<?php echo T_("<span class="gnu">Gnu</span><span class="cash">Cash</span> comes also complete with a full suite of standard and customizeable reports, such as:");?>
+<ul>
+<li><?php echo T_("Balance Sheet");?></li>
+<li><?php echo T_("Profit &amp; Loss");?></li>
+<li><?php echo T_("Portfolio Valuation");?></li>
+<li><?php echo T_("and many others.");?></li>
+</ul>
+<p class="justify">
+<?php echo T_("Graphs and reports can be highly and easily customized in appearence and contents, in order to fullfill every user's need.");?>
 </p>
 <br clear="all"/>
+</div>
+
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Statement Reconciliation");?></h2>
+</div>
+<div class="center">
+<img class="featureimage" src="<?=$top_dir?>/images/features/feature_reconcile.png" alt="[Reconcile]"/>
+</div>
+<p class="justify"><?php echo T_("The <span class="bold">reconciliation</span> of an account is an operation that allow the user to check the entered transactions belongings to a <span class="gnu">Gnu</span><span class="cash">Cash</span> account against a bank statement. This operation is very useful to spot untracked operations.");?></p>
+<p class="justify"><?php echo T_("In <span class="gnu">Gnu</span><span class="cash">Cash</span>, a reconcile window with running reconciled and cleared balances makes balancing against bank statements an easy task.");?></p>
+<br clear="all" />
+</div>
 
 <h2><?php echo T_("Income/Expense Account Types");?></h2>
 <p><?php echo T_("Income/Expense Account Types (Categories) allow you to categorize your cash flow.  When used properly with the double-entry feature and equity accounts, these enable you to generate reports, such as Profit &amp; Loss, that plain-vanilla systems cannot handle.");?>
@@ -72,10 +132,6 @@ include("$top_dir/externals/menu.phtml");
 
 <h2><?php echo T_("Improved Import Transaction Matching");?></h2>
 <p><?php echo T_("The development of OFX and HBCI support has also resulted in an improved transaction matching system that more accurately recognizes duplicate transactions during file import.");?></p>
-<br clear="all" />
-
-<h2><?php echo T_("Statement Reconciliation");?></h2>
-<p><?php echo T_("A reconcile window with running reconciled and cleared balances makes balancing against bank statements easy.");?></p>
 <br clear="all" />
 
 <h2><?php echo T_("Localization");?></h2>
