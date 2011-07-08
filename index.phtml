@@ -22,30 +22,39 @@ include("externals/menu.phtml");
 </ul>
 </div>
 
-<p><?php echo T_("GnuCash is personal and small-business financial-accounting software, freely licensed under the <a href=\"http://www.gnu.org/\">GNU</a> GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.");?></p>
+<p class="justify">><?php echo T_("GnuCash is personal and small-business financial-accounting software, freely licensed under the <a href=\"http://www.gnu.org/\">GNU</a> GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.");?></p>
 
-<p><?php echo T_("Designed to be easy to use, yet powerful and flexible, GnuCash allows you to track bank accounts, stocks, income and expenses.  As quick and intuitive to use as a checkbook register, it is based on professional accounting principles to ensure balanced books and accurate reports. "); ?></p>
+<p class="justify">><?php echo T_("Designed to be easy to use, yet powerful and flexible, GnuCash allows you to track bank accounts, stocks, income and expenses.  As quick and intuitive to use as a checkbook register, it is based on professional accounting principles to ensure balanced books and accurate reports. "); ?></p>
 
-<div>
-<h2><?php echo T_("Feature Highlights"); ?></h2>
-<div style="float: right">
-<ul>
-<li><?php echo T_("QIF/OFX/HBCI Import, Transaction Matching");?></li>
-<li><?php echo T_("Scheduled Transactions");?></li>
-<li><?php echo T_("Financial Calculations "); ?></li>
-<li><a href="<?=$home?>/features.phtml"><?php echo T_("Discover more...");?></a></li>
-</ul>
-</div><div style="border: solid thin white;">
+<div style="float:right; width:100%">
+<h2 style="margin-bottom:1px; margin-top:0px"><?php echo T_("Feature Highlights"); ?></h2>
+</div>
+
+<div style="float:right; width:98%;  background-color: #f3f3f3; color: black; border: 2px;  border-color: black; border-style: ridge; padding: 1%">
+
+<div style="width:50%;float:left;">
+<ul style="font-style:italic;">
 <ul>
 <li><?php echo T_("Double-Entry Accounting");?></li>
 <li><?php echo T_("Stock/Bond/Mutual Fund Accounts");?></li>
 <li><?php echo T_("Small-Business Accounting");?></li>
 <li><?php echo T_("Reports, Graphs");?></li>
 </ul>
-</div>
+<a href="<?=$home?>/features.phtml"><?php echo T_("<b>Discover more...</b>");?></a>
 </div>
 
+<div style="width:50%;float:left;"> 
+<ul style="font-style:italic;">
+<ul>
+<li><?php echo T_("QIF/OFX/HBCI Import, Transaction Matching");?></li>
+<li><?php echo T_("Scheduled Transactions");?></li>
+<li><?php echo T_("Financial Calculations "); ?></li>
+</ul>
+</div>
 
+</div>
+
+<div style="float:right; width:100%">
 <h1><?php echo T_("News"); ?></h1>
 
 <?php
@@ -67,5 +76,5 @@ include("externals/menu.phtml");
 <?php echo T_("Click");?> <a href="oldnews.phtml"><?php echo T_("here");?></a> <?php echo T_("for older announcements ...");?>
 </div></div>
 </div>
-
+</div>
 <?php include("externals/footer.phtml"); ?>
