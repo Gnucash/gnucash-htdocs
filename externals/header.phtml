@@ -24,8 +24,16 @@ if (isset($homepage)) { ?>
 <body>
 
 <div id="head">
+<div style="float:right;">
+<p id="rss"><a href="<?=$home?>/atom.php"><img src="<?=$top_dir?>/externals/feed-icon-32x32.png" alt="[atom syndication feed]" width="32" height="32" /></a></p>
+</div>
+
+<div style="margin: 0px 0px 0 0;">
 <a href="<?=$home?>/"><!--img src="<?=$home?>/externals/gnucash_logo1.png" alt="[GnuCash Logo]" id="gnclogo" width="179" height="45" border="0"/ -->
-<img src="<?=$home?>/externals/banner5.png" width="453" height="45" />
+<img src="<?=$home?>/externals/banner5.png"/>
+<p style="font-style:italic; font-size:1.1em; margin: 0 0 0 0; color: #08006d"><?php echo T_("Free Acconting Software");?></p>
+</div>
+
 </a>
 <br/>
 <span id="language">
