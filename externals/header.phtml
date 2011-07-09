@@ -1,6 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <?php
 $titleRSS = T_("Subscribe to RSS feed");
+$titledonation = T_("Support the GnuCash project with a donation");
 ?>
 
 <html>
@@ -29,7 +30,10 @@ if (isset($homepage)) { ?>
 
 <div id="head">
 <div style="float:right;">
-<p id="rss"><a href="<?=$home?>/atom.php"><img style="margin: 0 10px 0 0" src="<?=$top_dir?>/externals/feed-icon-32x32.png" title="<?php echo T_($titleRSS);?>" alt="[atom syndication feed]" width="32" height="32" /></a></p>
+<p id="rss">
+<a href="http://sourceforge.net/donate/index.php?group_id=192"><img style="margin: 0 10px 0 0" src="<?=$top_dir?>/externals/donation-32x32.png" title="<?php echo T_($titledonation);?>" alt="[Donation]" width="32" height="32" /></a>
+<a href="<?=$home?>/atom.php"><img style="margin: 0 10px 0 0" src="<?=$top_dir?>/externals/feed-icon-32x32.png" title="<?php echo T_($titleRSS);?>" alt="[atom syndication feed]" width="32" height="32" /></a>
+</p>
 </div>
 
 <div style="margin: 0px 0px 0 0;">
