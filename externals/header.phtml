@@ -1,4 +1,10 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<?php
+include("lang.php");
+$titleRSS = T_("Subscribe to RSS feed");
+include("emulate_globals_on.php");
+?>
+
 <html>
 <head>
 <?php
@@ -25,7 +31,7 @@ if (isset($homepage)) { ?>
 
 <div id="head">
 <div style="float:right;">
-<p id="rss"><a href="<?=$home?>/atom.php"><img style="margin: 0 10px 0 0" src="<?=$top_dir?>/externals/feed-icon-32x32.png" title="Subscribe to RSS-atom feed" alt="[atom syndication feed]" width="32" height="32" /></a></p>
+<p id="rss"><a href="<?=$home?>/atom.php"><img style="margin: 0 10px 0 0" src="<?=$top_dir?>/externals/feed-icon-32x32.png" title="<?php echo T_($titleRSS);?>" alt="[atom syndication feed]" width="32" height="32" /></a></p>
 </div>
 
 <div style="margin: 0px 0px 0 0;">
