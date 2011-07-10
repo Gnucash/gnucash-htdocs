@@ -13,13 +13,13 @@ include("externals/menu.phtml");
 
 <p><?php echo T_("Everything you need concerning <span class=\"gnucash\">Gnucash</span> documentation should be here, if you notice something missing, email <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> and we will add it.");?></p>
 
+<div class="featurecontainer">
 <div class="featureborder">
 <h2 class="featuretitle"><?= T_("Nightly Documentation Builds");?></h2>
 </div>
-<h3><?= T_("Current unstable user documentation and developer documentation");?></h3>
 
-<p class="justify"><?php echo T_("Every night a server builds the documentation from the current contents of the <span class=\"gnucash\">Gnucash</span> subversion repository.  This includes the Developer Documentation from Doxygen and User Documentation for the current unstable version of GnuCash.");?>
-
+<div id="develdoc">
+<h2><?php echo T_("Download");?></h2>
 <ul>
   <li><b><?php echo T_("Help Manual");?></b>
     <ul>
@@ -59,15 +59,19 @@ include("externals/menu.phtml");
     </ul>
   </li>
 </ul>
+</div>
 
+<h3><?= T_("Current unstable user documentation and developer documentation");?></h3>
+
+<p class="justify"><?php echo T_("Every night a server builds the documentation from the current contents of the <span class=\"gnucash\">Gnucash</span> subversion repository.  This includes the Developer Documentation from Doxygen and User Documentation for the current unstable version of GnuCash.");?>
+</div>
+
+<div class="featurecontainer">
 <div class="featureborder">
 <h2 class="featuretitle">GnuCash v2.4 <?=T_("(current stable release)");?></h2>
 </div>
-
-<p class="justify"><?php echo T_("If you have a question about how to use GnuCash, you are in the right place. The first thing you should do is read the Help Manual and the Concepts Guide, most of your questions can probably be answered by these documents.");?></p>
-<p class="justify"><?php echo T_("The Help Manual is designed to be a quick reference of how to accomplish specific tasks and how to use the features in GnuCash. The Concepts Guide is designed to be an in depth guide to the concepts behind using <span class=\"gnucash\">Gnucash</span> with a tutorial to show how to put those concepts into practice.");?></p>
-
-
+<div id="stabledoc">
+<h2><?php echo T_("Download");?></h2>
 <ul>
   <li><b><?php echo T_("Help Manual");?></b>
     <ul>
@@ -107,6 +111,10 @@ include("externals/menu.phtml");
     </ul>
   </li>
 </ul>
+</div>
+
+<p class="justify"><?php echo T_("If you have a question about how to use GnuCash, you are in the right place. The first thing you should do is read the Help Manual and the Concepts Guide, most of your questions can probably be answered by these documents.");?></p>
+<p class="justify"><?php echo T_("The Help Manual is designed to be a quick reference of how to accomplish specific tasks and how to use the features in GnuCash. The Concepts Guide is designed to be an in depth guide to the concepts behind using <span class=\"gnucash\">Gnucash</span> with a tutorial to show how to put those concepts into practice.");?></p>
 
 <p class="justify"><?php echo T_("Please send an email to the <a href='mailto:gnucash-user@lists.gnucash.org'>gnucash-user</a> mailing list if you cannot find a satisfactory answer to your question within either the Help Manual or the Concepts Guide. We <b>want</b> feedback from you, it is only through your comments that we know how to modify the documentation.");?></p>
 <p class="justify"><?php echo T_("Additionally, you can talk to someone via IRC at irc.gnome.org channel \"#gnucash\" about your question.  Another resource is the <a href='http://wiki.gnucash.org/wiki/'>English</a> or <a href='http://linuxwiki.de/GnuCash'>Deutsch</a> <span class=\"gnucash\">Gnucash</span> wikis. A wiki is an interactive website where registered users can ask and answer questions.");?></p>
@@ -118,7 +126,9 @@ include("externals/menu.phtml");
   <li><a href="http://www.object-refinery.com/gnucash/index.html"><?php
 	echo T_("Dave Gilbert's User Guide (Pdf)");?></a></li>
 </ul>
+</div>
 
+<div class="featurecontainer">
 <div class="featureborder">
 <h2 class="featuretitle"><?php echo T_("Older GnuCash Documentation");?></h2>
 </div>
@@ -161,7 +171,9 @@ include("externals/menu.phtml");
   <a href="<?=$top_dir;?>/docs/v1.6/es/"><?php echo T_("Spanish");?></a> | 
   <a href="<?=$top_dir;?>/docs/v1.6/pt_PT/"><?php echo T_("Portugese");?></a></li>
 </ul>
+</div>
 
+<div class="featurecontainer">
 <div class="featureborder">
 <h2 class="featuretitle"><?php echo T_("Documentation Development");?></h2>
 </div>
@@ -204,6 +216,7 @@ include("externals/menu.phtml");
 <p class="justify"><?php echo T_("Get a copy of the documentation source as described above and start commenting on it.");?></p>
 <p class="justify"><?php echo T_("The best way of retaining comments about docs in an easy to find way for everyone would be to use <a href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> to file the bugs under documentation. This can also be done using bug-buddy.");?></p>
 
+</div>
 </div>
 <?php include("externals/footer.phtml"); ?>
 
