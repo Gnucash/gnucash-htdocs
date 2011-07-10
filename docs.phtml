@@ -13,10 +13,12 @@ include("externals/menu.phtml");
 
 <p><?php echo T_("Everything you need concerning GnuCash documentation should be here, if you notice something missing, email <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> and we will add it.");?></p>
 
-<h2><?= T_("Nightly Documentation Builds");?></h2>
+<div class="featureborder">
+<h2 class="featuretitle"><?= T_("Nightly Documentation Builds");?></h2>
+</div>
 <h3><?= T_("Current unstable user documentation and developer documentation");?></h3>
 
-<p><?php echo T_("Every night a server builds the documentation from the current contents of the GnuCash subversion repository.  This includes the Developer Documentation from Doxygen and User Documentation for the current unstable version of GnuCash.");?>
+<p class="justify"><?php echo T_("Every night a server builds the documentation from the current contents of the GnuCash subversion repository.  This includes the Developer Documentation from Doxygen and User Documentation for the current unstable version of GnuCash.");?>
 
 <ul>
   <li><b><?php echo T_("Help Manual");?></b>
