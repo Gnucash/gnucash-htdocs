@@ -9,7 +9,7 @@ include("externals/menu.phtml");
 
 <h1><?php echo T_("GnuCash Documentation Project");?></h1>
 
-<p><?php echo T_("This page is the home of the <span class=\"gnucash\">Gnucash</span> Documentation Project, our goal is to maintain a community of people working towards creation of high quality documentation for GnuCash.");?></p>
+<p><?php echo T_("This page is the home of the <span class=\"gnucash\">Gnucash</span> Documentation Project, our goal is to maintain a community of people working towards creation of high quality documentation for <span class=\"gnucash\">Gnucash</span> .");?></p>
 
 <p><?php echo T_("Everything you need concerning <span class=\"gnucash\">Gnucash</span> documentation should be here, if you notice something missing, email <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> and we will add it.");?></p>
 
@@ -63,7 +63,7 @@ include("externals/menu.phtml");
 
 <h3><?= T_("Current unstable user documentation and developer documentation");?></h3>
 
-<p class="justify"><?php echo T_("Every night a server builds the documentation from the current contents of the <span class=\"gnucash\">Gnucash</span> subversion repository.  This includes the Developer Documentation from Doxygen and User Documentation for the current unstable version of GnuCash.");?>
+<p class="justify"><?php echo T_("Every night a server builds the documentation from the current contents of the <span class=\"gnucash\">Gnucash</span> subversion repository. This includes the <b>Developer Documentation</b> from <b>Doxygen</b> and <b>User Documentation</b> for the current <em>unstable</em> version of <span class=\"gnucash\">Gnucash</span>.");?>
 </div>
 
 <div class="featurecontainer">
@@ -113,26 +113,32 @@ include("externals/menu.phtml");
 </ul>
 </div>
 
-<p class="justify"><?php echo T_("If you have a question about how to use GnuCash, you are in the right place. The first thing you should do is read the Help Manual and the Concepts Guide, most of your questions can probably be answered by these documents.");?></p>
-<p class="justify"><?php echo T_("The Help Manual is designed to be a quick reference of how to accomplish specific tasks and how to use the features in GnuCash. The Concepts Guide is designed to be an in depth guide to the concepts behind using <span class=\"gnucash\">Gnucash</span> with a tutorial to show how to put those concepts into practice.");?></p>
+<p class="justify"><?php echo T_("If you have a question about how to use <span class=\"gnucash\">Gnucash</span>, you are in the right place. The first thing you should do is read the <b>Help Manual</b> and the <b>Concepts Guide</b>, most of your questions can probably be answered by these documents.");?></p>
+<p class="justify"><?php echo T_("The <b>Help Manual</b> is designed to be a quick reference of how to accomplish specific tasks and how to use the features in <span class=\"gnucash\">Gnucash</span>. The <b>Concepts Guide</b> is designed to be an in depth guide to the concepts behind using <span class=\"gnucash\">Gnucash</span> with a tutorial to show how to put those concepts into practice.");?></p>
 
-<p class="justify"><?php echo T_("Please send an email to the <a href='mailto:gnucash-user@lists.gnucash.org'>gnucash-user</a> mailing list if you cannot find a satisfactory answer to your question within either the Help Manual or the Concepts Guide. We <b>want</b> feedback from you, it is only through your comments that we know how to modify the documentation.");?></p>
+<p class="justify"><?php echo T_("Please send an email to the <a href='mailto:gnucash-user@lists.gnucash.org'>gnucash-user</a> mailing list if you cannot find a satisfactory answer to your question within either the <b>Help Manual</b> or the <b>Concepts Guide</b>. We <b>want</b> feedback from you, it is only through your comments that we know how to modify the documentation.");?></p>
 <p class="justify"><?php echo T_("Additionally, you can talk to someone via IRC at irc.gnome.org channel \"#gnucash\" about your question.  Another resource is the <a href='http://wiki.gnucash.org/wiki/'>English</a> or <a href='http://linuxwiki.de/GnuCash'>Deutsch</a> <span class=\"gnucash\">Gnucash</span> wikis. A wiki is an interactive website where registered users can ask and answer questions.");?></p>
 
-<p class="justify"><?php echo T_("Some people have written HOWTO guides or tutorials. Note: the information presented in these sources may or may not be updated to the most recent version of GnuCash. If you are interested in doing development work on these documents, you should contact the original authors.");?></p>
+<p class="justify"><?php echo T_("Some people have written HOWTO guides or tutorials.");?>
+
 <ul>
   <li><a href="http://www.austintek.com/gnucash/ncsa-gnucash-talk.html"><?php
 	echo T_("Joe Mack's Tutorial");?></a></li>
   <li><a href="http://www.object-refinery.com/gnucash/index.html"><?php
 	echo T_("Dave Gilbert's User Guide (Pdf)");?></a></li>
 </ul>
+
+<div class="dialog note">
+<p><?php echo T_("Note: the information presented in these sources may or may not be updated to the most recent version of <span class=\"gnucash\">Gnucash</span>. If you are interested in doing development work on these documents, you should contact the original authors.");?></p>
+</div>
+
 </div>
 
 <div class="featurecontainer">
 <div class="featureborder">
 <h2 class="featuretitle"><?php echo T_("Older GnuCash Documentation");?></h2>
 </div>
-<p class="justify"><?php echo T_("This section contains all the older <span class=\"gnucash\">Gnucash</span> documentation. If you are using one of these old versions of GnuCash, it is highly recommended that you upgrade to the latest stable version.");?></p>
+<p class="justify"><?php echo T_("This section contains all the older <span class=\"gnucash\">Gnucash</span> documentation. If you are using one of these old versions of <span class=\"gnucash\">Gnucash</span>, it is highly recommended that you upgrade to the latest stable version.");?></p>
 <ul>
   <li><b>GnuCash v2.2</b>:
     <ul><b><?php echo T_("Help Manual");?></b>:
