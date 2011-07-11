@@ -19,15 +19,6 @@ include("externals/menu.phtml");
 <p class="justify"><?php echo T_("Please send an email to the <a href='mailto:gnucash-user@lists.gnucash.org'>gnucash-user</a> mailing list if you cannot find a satisfactory answer to your question within either the <b>Help Manual</b> or the <b>Concepts Guide</b>. We <b>want</b> feedback from you, it is only through your comments that we know how to modify the documentation.");?></p>
 <p class="justify"><?php echo T_("Additionally, you can talk to someone via IRC at irc.gnome.org channel \"#gnucash\" about your question.  Another resource is the <a href='http://wiki.gnucash.org/wiki/'>English</a> or <a href='http://linuxwiki.de/GnuCash'>Deutsch</a> <span class=\"gnucash\">Gnucash</span> wikis. A wiki is an interactive website where registered users can ask and answer questions.");?></p>
 
-<p class="justify"><?php echo T_("Some people have written HOWTO guides or tutorials.");?>
-
-<ul>
-  <li><a href="http://www.austintek.com/gnucash/ncsa-gnucash-talk.html"><?php
-	echo T_("Joe Mack's Tutorial");?></a></li>
-  <li><a href="http://www.object-refinery.com/gnucash/index.html"><?php
-	echo T_("Dave Gilbert's User Guide (Pdf)");?></a></li>
-</ul>
-
 <div class="featurecontainer">
 <div class="featureborder">
 <h2 class="featuretitle"><?= T_("Nightly Documentation Builds");?></h2>
@@ -127,6 +118,16 @@ include("externals/menu.phtml");
   </li>
 </ul>
 </div>
+
+
+<p class="justify"><?php echo T_("Some people have written HOWTO guides or tutorials.");?>
+<ul>
+  <li><a href="http://www.austintek.com/gnucash/ncsa-gnucash-talk.html"><?php
+	echo T_("Joe Mack's Tutorial");?></a></li>
+  <li><a href="http://www.object-refinery.com/gnucash/index.html"><?php
+	echo T_("Dave Gilbert's User Guide (Pdf)");?></a></li>
+</ul>
+</p>
 
 <div class="dialog note">
 <p><?php echo T_("<b>NOTE:</b> the information presented in these sources may or may not be updated to the most recent version of <span class=\"gnucash\">Gnucash</span>. If you are interested in doing development work on these documents, you should contact the original authors.");?></p>
