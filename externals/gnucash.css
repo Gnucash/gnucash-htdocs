@@ -50,13 +50,18 @@ IMG {
 }
 
 .featureborder {
-   background-color: #cacaf7;
+   background: url(gnc-icon.png) no-repeat 99% #cacaf7;
    color: black;
    border: 1px;
    border-color: silver;
    border-style: ridge;
    padding: 2px;
    margin-bottom: 1em;
+   -moz-box-shadow: 3px 3px 3px #888888; /* Firefox 3.6 and earlier */
+   -webkit-box-shadow: 3px 3px 3px #888888; /* Safari */
+   box-shadow: 3px 3px 3px #888888;
+   border-radius:5px;
+   -moz-border-radius:5px;
 }
 
 .featurecontainer {
@@ -259,12 +264,19 @@ H1
 #download {
    width:580px;
    float:right; 	
-   margin-left: 4em;
+   margin-left:2em;
    margin-right:2em;
+   margin-bottom:1em;
+   margin-top:0;
    padding: 0.4em;
    background: url(gnc-download.png) no-repeat 96% #7F7FAA;
    border: 1px solid #CACAF7;
    color: white;
+   -moz-box-shadow: 5px 5px 5px #888888; /* Firefox 3.6 and earlier */
+   -webkit-box-shadow: 5px 5px 5px #888888; /* Safari */
+   box-shadow: 10px 10px 5px #888888;
+   border-radius:15px;
+   -moz-border-radius:15px;
 }
 
 #download h2 {
@@ -296,6 +308,7 @@ H1
 }
 
 div.dialog {
+   float:left;
    padding-left: 58px;
    border: 1px solid #7F7FAA;
    margin: 1em 2em;
@@ -347,14 +360,19 @@ text-align:center;
 #develdoc {
    width:480px;
    float:right; 	
-   margin-left:4em;
+   margin-left:2em;
    margin-right:2em;
-   margin-bottom:2em;
+   margin-bottom:1em;
    margin-top:0;
    padding:0.4em;
    background: url(develdoc.png) no-repeat 96% #7F7FAA;
    border: 1px solid #CACAF7;
    color: white;
+   -moz-box-shadow: 5px 5px 5px #888888; /* Firefox 3.6 and earlier */
+   -webkit-box-shadow: 5px 5px 5px #888888; /* Safari */
+   box-shadow: 10px 10px 5px #888888;
+   border-radius:15px;
+   -moz-border-radius:15px;
 }
 
 #stabledoc {
@@ -368,6 +386,11 @@ text-align:center;
    background: url(stabledoc.png) no-repeat 96% #7F7FAA;
    border: 1px solid #CACAF7;
    color: white;
+   -moz-box-shadow: 5px 5px 5px #888888; /* Firefox 3.6 and earlier */
+   -webkit-box-shadow: 5px 5px 5px #888888; /* Safari */
+   box-shadow: 10px 10px 5px #888888;
+   border-radius:15px;
+   -moz-border-radius:15px;
 }
 
 h2.download-title {
