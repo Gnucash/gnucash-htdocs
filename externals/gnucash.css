@@ -188,13 +188,35 @@ A[href], A[href]:visited
 }
 
 #news {
+   margin-top:20px;
+   margin-left:10px;
+   margin-right:10px;
    float: left;
-   width: 20%;
+   width: 300px;
 }
 
-#news LI 
+#news ul
+{
+  background-color:#cacaf7;
+  padding-bottom:5px;
+  margin-bottom:15;
+}
+
+#news li 
 {
   list-style-image: url(webding.png);
+}
+
+#news a, #news a:visited {
+   color: black;
+   text-decoration: underline;
+}
+
+#news a:hover,a:active
+{
+background-color:#7F7FAA;
+text-decoration:none;
+color:white;
 }
 
 .highlight {
@@ -204,8 +226,8 @@ A[href], A[href]:visited
 }
 
 .othernews {
-   background-color: white;
-   color: black;
+   background-color:#7F7FAA;
+   color: white;
 }
 
 .dot	{
@@ -234,6 +256,7 @@ A[href], A[href]:visited
 }
 
 .linktop {
+   margin-left:10px;
    position: relative;
    top: 0.5em;
 }
@@ -323,7 +346,7 @@ span.bold {
 
 .adscontainer
 {
- margin: 30px 60px 30px 20px;
+ margin: 30px 20px 30px 20px;
  background:#dedede;
  padding:10px;
  float:center;
