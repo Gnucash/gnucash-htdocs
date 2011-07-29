@@ -191,18 +191,19 @@ A[href], A[href]:visited
 
 #news {
    margin-top:20px;
-   margin-left:10px;
+   margin-left:15%;
    margin-right:10px;
    float: left;
-   width: 16%;
+   width: 12%;
+   font-size:85%;
 }
 
 #news ul
 {
-  border-top: solid thin silver;
-  background-color:white;
-  padding-bottom:5px;
-  margin-bottom:15;
+  background-color:none;
+  padding-bottom:15px;
+  margin-top:20px;
+  margin-bottom:0px;
 }
 
 #news li 
@@ -229,10 +230,12 @@ color:white;
 }
 
 .othernews {
-   background-color:#7F7FAA;
+   margin-bottom:10px;
+   background:url(backg-linktop.png) white repeat-x;
+   border: solid thin #7F7FAA;
    color: white;
-   border-radius:15px;
-   -moz-border-radius:15px; /* Firefox 3.6 and earlier */
+   border-radius:10px;
+   -moz-border-radius:10px; /* Firefox 3.6 and earlier */
 }
 
 .dot	{
@@ -261,6 +264,8 @@ color:white;
 }
 
 .linktop {
+   text-shadow: 1px 1px black;
+   color:white;
    margin-left:10px;
    position: relative;
    top: 0.5em;
