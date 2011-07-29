@@ -12,11 +12,11 @@ $titleuservoice = T_("Request or vote an enhancement for GnuCash");
 if (!isset($can_utf)) { $can_utf = true; }
 if ($can_utf)
 { ?>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <?php } ?>
-<link rel="stylesheet" href="<?=$home?>/externals/gnucash.css" type="text/css" />
+<link rel="stylesheet" href="<?=$home?>/externals/gnucash.css" type="text/css">
 <link rel="icon" href="<?=$home?>/favicon.ico" type="image/x-icon" />
-<link rel="shortcut icon" href="<?=$home?>/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="<?=$home?>/favicon.ico" type="image/x-icon">
 <?php
 include("$top_dir/externals/global_params.php");
 $current_page = array_key_exists('HTTP_HOST', $_SERVER) ? ($top_dir . "/" . basename($_SERVER["SCRIPT_NAME"])) : "";
