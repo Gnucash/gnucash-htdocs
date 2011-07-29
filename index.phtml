@@ -14,6 +14,7 @@ include("externals/menu.phtml");
 <h1><?php echo T_("Welcome to GnuCash.org")?></h1>
 
 <div id="download">
+<div style="float:left;">
 <h2><?php printf (T_("Download GnuCash %s"), $latest_stable)?></h2>
 
 <ul>
@@ -22,6 +23,11 @@ include("externals/menu.phtml");
 <li><img src="<?=$top_dir?>/images/icons/macosx.png" /> Mac OS X <a href="<?php echo $download_path.$latest_stable_mac_intel;?>">Intel</a> | <a href="<?php echo $download_path.$latest_stable_mac_ppc;?>">Power PC</a> | <a href="http://wiki.gnucash.org/wiki/MacOSX/<?php echo $latest_stable;?>/Readme">Readme</a></li>
 <li><a href="<?=$home?>/download.phtml" style="font-size: 80%;"><?=T_("More downloads (Source, Development,...)")?></a></li>
 </ul>
+
+<div id="downloadimage">
+<img src="<?=$top_dir;?>/externals/gnc-download.png"></img>
+</div>
+
 </div>
 
 <p class="justify"><?php echo T_("<span class=\"gnucash\">GnuCash</span> is personal and small-business financial-accounting software, freely licensed under the <a href=\"http://www.gnu.org/\">GNU</a> GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.");?></p>
