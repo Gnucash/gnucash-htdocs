@@ -26,6 +26,7 @@ include("externals/menu.phtml");
 </div>
 
 <div id="develdoc">
+<div style="float:left;">
 <h2 class="download-title"><?php echo T_("Download");?> (<em><?php echo T_("Unstable");?>)</em></h2>
 <ul>
   <li><b><?php echo T_("Help Manual");?></b>
@@ -68,6 +69,11 @@ include("externals/menu.phtml");
 </ul>
 </div>
 
+<div id="downloadimage">
+<img src="<?=$top_dir;?>/externals/develdoc.png"></img>
+</div>
+</div>
+
 <h3><?= T_("Current <em>unstable</em> user documentation and developer documentation");?></h3>
 
 <p class="justify"><?php echo T_("Every night a server builds the documentation from the current contents of the <span class=\"gnucash\">Gnucash</span> subversion repository. This includes the <b>Developer Documentation</b> from <b>Doxygen</b> and <b>User Documentation</b> for the current <em>unstable</em> version of <span class=\"gnucash\">Gnucash</span>.");?>
@@ -82,6 +88,7 @@ include("externals/menu.phtml");
 <h2 class="featuretitle">GnuCash v2.4 <?=T_("(current stable release)");?></h2>
 </div>
 <div id="stabledoc">
+<div style="float:left;">
 <h2 class="download-title"><?php echo T_("Download");?> (<em><?php echo T_("Stable");?>)</em></h2>
 <ul>
   <li><b><?php echo T_("Help Manual");?></b>
@@ -123,7 +130,13 @@ include("externals/menu.phtml");
   </li>
 </ul>
 </div>
+
 <h3><?= T_("Current <em>stable</em> user documentation and developer documentation");?></h3>
+
+<div id="downloadimage">
+<img src="<?=$top_dir;?>/externals/stabledoc.png"></img>
+</div>
+</div>
 
 <p class="justify"><?php echo T_("This is the latest stable release of the <span class=\"gnucash\">Gnucash</span> documentation. <em>Stable</em> means that this documentation is not necessarily the most up to date but it works without any problem.");?>
 </div>
