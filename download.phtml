@@ -20,9 +20,9 @@ include("externals/menu.phtml");
 <p class="justify"><?php printf (T_("The latest stable release of <span class=\"gnucash\">GnuCash</span> is %s. Choose the download for your operating system below."), $latest_stable)?></p>
 
 <h3><?php echo T_("Installers")?></h3>
-<ul>
-<li><?php printf (T_("GnuCash %s for"), $latest_stable)?> <a href="<?php echo $download_path.$latest_stable_win;?>">Microsoft Windows XP/Vista/7</a></li>
-<li><?php printf (T_("GnuCash %s for"), $latest_stable)?> Mac OS X <a href="<?php echo $download_path.$latest_stable_mac_intel;?>">Intel</a> | <a href="<?php echo $download_path.$latest_stable_mac_ppc;?>">Power PC</a> | <a href="http://wiki.gnucash.org/wiki/MacOSX/<?php echo $latest_stable;?>/Readme">Readme</a></li>
+<ul class="imagelist">
+<li class="imagelistitem" style="background-image: url(<?=$top_dir?>/externals/windows.png);"><?php printf (T_("GnuCash %s for"), $latest_stable)?> <a href="<?php echo $download_path.$latest_stable_win;?>">Microsoft Windows XP/Vista/7</a></li>
+<li class="imagelistitem" style="background-image: url(<?=$top_dir?>/externals/macosx.png);"><?php printf (T_("GnuCash %s for"), $latest_stable)?> Mac OS X <a href="<?php echo $download_path.$latest_stable_mac_intel;?>">Intel</a> | <a href="<?php echo $download_path.$latest_stable_mac_ppc;?>">Power PC</a> | <a href="http://wiki.gnucash.org/wiki/MacOSX/<?php echo $latest_stable;?>/Readme">Readme</a></li>
 </ul>
 
 <a name="distribution"></a><h3>Linux</h3>
