@@ -7,7 +7,7 @@ include("externals/header.phtml");
 include("externals/menu.phtml"); 
 ?>
 
-<div style="position:fixed; right:0px; top:14%"><img alt="GnuCash" src="<?=$top_dir?>/externals/gnucash-vert.png"></img></div>
+<div style="position:fixed; right:0px; top:14%"><img alt="GnuCash" src="<?=$top_dir?>/externals/gnucash-vert.png"></div>
 
 <div id="content">
 
@@ -18,15 +18,15 @@ include("externals/menu.phtml");
 <h2><?php printf (T_("Download GnuCash %s"), $latest_stable)?></h2>
 
 <ul>
-<li><img alt="linux" src="<?=$top_dir?>/images/icons/linux.png"></img> Linux <a href="<?php echo $download_path.$latest_stable_source;?>"><?php echo T_("Source");?></a> | <a href="<?=$home?>/download.phtml#distribution"><?php echo T_("Via distribution");?></a></li>
-<li><img alt="windows" src="<?=$top_dir?>/images/icons/windows.png"></img> Microsoft Windows <a href="<?php echo $download_path.$latest_stable_win;?>">XP/Vista/7</a></li>
-<li><img alt="macosx" src="<?=$top_dir?>/images/icons/macosx.png"></img> Mac OS X <a href="<?php echo $download_path.$latest_stable_mac_intel;?>">Intel</a> | <a href="<?php echo $download_path.$latest_stable_mac_ppc;?>">Power PC</a> | <a href="http://wiki.gnucash.org/wiki/MacOSX/<?php echo $latest_stable;?>/Readme">Readme</a></li>
+<li><img alt="linux" src="<?=$top_dir?>/images/icons/linux.png"> Linux <a href="<?php echo $download_path.$latest_stable_source;?>"><?php echo T_("Source");?></a> | <a href="<?=$home?>/download.phtml#distribution"><?php echo T_("Via distribution");?></a></li>
+<li><img alt="windows" src="<?=$top_dir?>/images/icons/windows.png"> Microsoft Windows <a href="<?php echo $download_path.$latest_stable_win;?>">XP/Vista/7</a></li>
+<li><img alt="macosx" src="<?=$top_dir?>/images/icons/macosx.png"> Mac OS X <a href="<?php echo $download_path.$latest_stable_mac_intel;?>">Intel</a> | <a href="<?php echo $download_path.$latest_stable_mac_ppc;?>">Power PC</a> | <a href="http://wiki.gnucash.org/wiki/MacOSX/<?php echo $latest_stable;?>/Readme">Readme</a></li>
 <li><a href="<?=$home?>/download.phtml" style="font-size: 80%;"><?=T_("More downloads (Source, Development,...)")?></a></li>
 </ul>
 </div>
 
-<div id="downloadimage">
-<img alt="download" src="<?=$top_dir;?>/externals/gnc-download.png"></img>
+<div class="downloadimage">
+<img alt="download" src="<?=$top_dir;?>/externals/gnc-download.png">
 </div>
 </div>
 
