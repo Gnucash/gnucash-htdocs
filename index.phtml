@@ -38,24 +38,19 @@ include("externals/menu.phtml");
 <h2 style="margin-bottom:1px; margin-top:0px"><?php echo T_("Feature Highlights"); ?></h2>
 </div>
 
-<div style="float:right; width:98%;  background-color: #f3f3f3; color: black; border: 2px;  border-color: black; border-style: ridge; padding: 1%">
+<div id="mainfeature">
 
-<div style="width:50%;float:left;">
-<ul style="font-style:italic; list-style-image:url('<?=$home?>/externals/checkmark.png');">
+<div style="float:left;">
+<ul>
 <li><?php echo T_("Double-Entry Accounting");?></li>
 <li><?php echo T_("Stock/Bond/Mutual Fund Accounts");?></li>
 <li><?php echo T_("Small-Business Accounting");?></li>
 <li><?php echo T_("Reports, Graphs");?></li>
-</ul>
-<a href="<?=$home?>/features.phtml"><?php echo T_("<b>Discover more...</b>");?></a>
-</div>
-
-<div style="width:50%;float:left;"> 
-<ul style="font-style:italic; list-style-image:url('<?=$home?>/externals/checkmark.png');">
 <li><?php echo T_("QIF/OFX/HBCI Import, Transaction Matching");?></li>
 <li><?php echo T_("Scheduled Transactions");?></li>
-<li><?php echo T_("Financial Calculations "); ?></li>
+<li><?php echo T_("Financial Calculations"); ?></li>
 </ul>
+<a href="<?=$home?>/features.phtml"><?php echo T_("<b>Discover more...</b>");?></a>
 </div>
 
 </div>
