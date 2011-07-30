@@ -130,7 +130,7 @@ function emit_news($en_newspath, $lang_newspath, $oldnews)
 ?>
 <div class="newsborder">
   <div class="newsheader">
-    <img src="<?=$top_dir?>/images/icons/document.txt.gif" width="16" height="16" alt="[news]"/>&nbsp;
+    <img src="<?=$top_dir?>/images/icons/document.txt.gif" width="16" height="16" alt="[news]">&nbsp;
     <a name="<?=generate_anchor($key)?>"><?= $fa[0]; ?> - <b><?= $newsfile[$key] ?></b></a>
   </div>
   <div class="newsinner">
