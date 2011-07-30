@@ -12,17 +12,17 @@ $titleuservoice = T_("Request or vote an enhancement for GnuCash");
 if (!isset($can_utf)) { $can_utf = true; }
 if ($can_utf)
 { ?>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8"></meta>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <?php } ?>
-<link rel="stylesheet" href="<?=$home?>/externals/gnucash.css" type="text/css"></link>
-<link rel="icon" href="<?=$home?>/favicon.ico" type="image/x-icon" ></link>
-<link rel="shortcut icon" href="<?=$home?>/favicon.ico" type="image/x-icon"></link>
+<link rel="stylesheet" href="<?=$home?>/externals/gnucash.css" type="text/css" />
+<link rel="icon" href="<?=$home?>/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="<?=$home?>/favicon.ico" type="image/x-icon" />
 <?php
 include("$top_dir/externals/global_params.php");
 $current_page = array_key_exists('HTTP_HOST', $_SERVER) ? ($top_dir . "/" . basename($_SERVER["SCRIPT_NAME"])) : "";
 
 if (isset($homepage)) { ?>
-  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="<?=$home?>/atom.php"></link>
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="<?=$home?>/atom.php" />
 <?php } ?>
 
 <title><?= T_($title); ?> | GnuCash</title>
@@ -33,9 +33,9 @@ if (isset($homepage)) { ?>
 <div id="head">
 <div style="float:right;">
 <p id="rss">
-<a href="http://gnucash.uservoice.com/"><img style="margin: 0 10px 0 0" src="<?=$top_dir?>/externals/uservoice-32x32.png" title="<?php echo T_($titleuservoice);?>" alt="[Donation]" width="32" height="32" ></img></a>
-<a href="http://sourceforge.net/donate/index.php?group_id=192"><img style="margin: 0 10px 0 0" src="<?=$top_dir?>/externals/donation-32x32.png" title="<?php echo T_($titledonation);?>" alt="[Donation]" width="32" height="32" ></img></a>
-<a href="<?=$home?>/atom.php"><img style="margin: 0 10px 0 0" src="<?=$top_dir?>/externals/feed-icon-32x32.png" title="<?php echo T_($titleRSS);?>" alt="[atom syndication feed]" width="32" height="32" ></img></a>
+<a href="http://gnucash.uservoice.com/"><img style="margin: 0 10px 0 0" src="<?=$top_dir?>/externals/uservoice-32x32.png" title="<?php echo T_($titleuservoice);?>" alt="[Donation]" width="32" height="32" /></a>
+<a href="http://sourceforge.net/donate/index.php?group_id=192"><img style="margin: 0 10px 0 0" src="<?=$top_dir?>/externals/donation-32x32.png" title="<?php echo T_($titledonation);?>" alt="[Donation]" width="32" height="32" /></a>
+<a href="<?=$home?>/atom.php"><img style="margin: 0 10px 0 0" src="<?=$top_dir?>/externals/feed-icon-32x32.png" title="<?php echo T_($titleRSS);?>" alt="[atom syndication feed]" width="32" height="32" /></a>
 </p>
 </div>
 
