@@ -14,15 +14,15 @@ if ($can_utf)
 { ?>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <?php } ?>
-<link rel="stylesheet" href="<?=$home?>/externals/gnucash.css" type="text/css" />
-<link rel="icon" href="<?=$home?>/favicon.ico" type="image/x-icon" />
-<link rel="shortcut icon" href="<?=$home?>/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="<?=$home?>/externals/gnucash.css" type="text/css">
+<link rel="icon" href="<?=$home?>/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="<?=$home?>/favicon.ico" type="image/x-icon">
 <?php
 include("$top_dir/externals/global_params.php");
 $current_page = array_key_exists('HTTP_HOST', $_SERVER) ? ($top_dir . "/" . basename($_SERVER["SCRIPT_NAME"])) : "";
 
 if (isset($homepage)) { ?>
-  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="<?=$home?>/atom.php" />
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="<?=$home?>/atom.php">
 <?php } ?>
 
 <title><?= T_($title); ?> | GnuCash</title>
@@ -41,7 +41,7 @@ if (isset($homepage)) { ?>
 
 <div style="margin: 0px 0px 0 0;">
 <a href="<?=$home?>/"><!--img src="<?=$home?>/externals/gnucash_logo1.png" alt="[GnuCash Logo]" id="gnclogo" width="179" height="45" border="0"/ -->
-<img alt="banner" src="<?=$home?>/externals/banner5.png"></img></a>
+<img alt="banner" src="<?=$home?>/externals/banner5.png" /></a>
 <p style="font-style:italic; font-size:1.1em; margin: 0 0 0 10px; color: #08006d"><?php echo T_("Free Acconting Software");?></p>
 </div>
 
