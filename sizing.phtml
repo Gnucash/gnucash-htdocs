@@ -6,7 +6,7 @@ include("externals/header.phtml");
 include("externals/menu.phtml");
 ?>
 
-<div style="position:fixed; right:0px; top:14%"><img src="<?=$top_dir?>/externals/gnucash-vert.png"></img></div>
+<div style="position:fixed; right:0px; top:14%"><img alt="GnuCash" src="<?=$top_dir?>/externals/gnucash-vert.png"></img></div>
 
 <div id="content">
 
@@ -19,7 +19,7 @@ include("externals/menu.phtml");
 <?php echo T_("<span class=\"gnucash\">GnuCash</span> currently consists of over a third of a million lines of code spread over more than a thousand files.  It has been translated into twenty-three languages and credits over 139 authors and contributors.");?>
 </p>
 <p class="center">
-<img alt="[code size graph]" src="<?=$top_dir?>/images/sizing-graph.png" width="640" height="480" />
+<img alt="[code size graph]" src="<?=$top_dir?>/images/sizing-graph.png" width="640" height="480">
 </p>
 <p class="justify">
 <?php echo T_("If you've had trouble swimming through that mass of source code, think of it this way: printed out on paper, and bound into volumes, it would amount to several dozen copies of Tolstoy's \"War and Peace\", roughly a bookshelf-width's worth of source code.");?>
@@ -32,36 +32,36 @@ include("externals/menu.phtml");
 </p>
 <p class="justify">
 <?php echo T_("The table below shows some historical lines-of-code and number-of-files metrics for the <span class=\"gnucash\">GnuCash</span> development project.  Note that not all of the code is counted: for instance, the Makefiles and configure.in and autogen.sh are not counted. Also, files that are automatically generated are not counted, nor are files that have been 'borrowed' from other projects. Also not counted are experimental files, miscellaneous perl scripts, various converters, addons and utilities.  Finally, <tt>glade</tt> files are not counted, although large parts of the overall GUI are described in <tt>glade</tt> files.");?>
-</P>
+</p>
 <p class="justify">
 <?php echo T_("Note also that KLOC's are not a good metric of programmer productivity, nor even that <code>wc</code> is a good way of counting KLOC's.  Much better measures are complexity metrics, which, for example, count the number and size of if-then-else blocks, or the number and size of all blocks, or the number of math operators per statement.  Maybe someday we'll run one of those tools on this code. For now, this is what we have.  On the other hand, we've attempted to count only those files that contain human-edited code, that is, files that are directly edited by humans.  The point of doing this is to avoid artificially inflating the KLOC counts by counting automatically generated code (which is why the glade files are not counted: they are large and automatically generated).");?>
-</P>
-<P>
-<DIV CLASS="TABLE">
-<P><B><?php echo T_("Table 1.  Historical Development Stats");?></B></P>
-<TABLE BORDER="1" CLASS="CALSTABLE">
-<THEAD>
-<TR
-><TH ALIGN="LEFT" VALIGN="TOP"><?php echo T_("Version");?></TH
-><TH ALIGN="LEFT" VALIGN="TOP">engine</TH
-><TH ALIGN="LEFT" VALIGN="TOP">backend</TH
-><TH ALIGN="LEFT" VALIGN="TOP">register</TH
-><TH ALIGN="LEFT" VALIGN="TOP">ledger</TH
-><TH ALIGN="LEFT" VALIGN="TOP">motif</TH
-><TH ALIGN="LEFT" VALIGN="TOP">gnome</TH
-><TH ALIGN="LEFT" VALIGN="TOP"><?php echo T_("misc app");?></TH
-><TH ALIGN="LEFT" VALIGN="TOP">import-export</TH
-><TH ALIGN="LEFT" VALIGN="TOP">reports</TH
-><TH ALIGN="LEFT" VALIGN="TOP">scheme</TH
-><TH ALIGN="LEFT" VALIGN="TOP">business</TH
-><TH ALIGN="LEFT" VALIGN="TOP">test</TH
-><TH ALIGN="LEFT" VALIGN="TOP">docs</TH
-><TH ALIGN="LEFT" VALIGN="TOP"><?php echo T_("internal txt");?></TH
-><TH ALIGN="LEFT" VALIGN="TOP"><?php echo T_("Total");?></TH>
-<TH ALIGN="LEFT" VALIGN="TOP"><?php echo T_("Languages");?></TH >
-<TH ALIGN="LEFT" VALIGN="TOP"><?php echo T_("Author Credits");?></TH >
-</TR>
-</THEAD><TBODY>
+</p>
+<p>
+<div class="TABLE">
+<p><b><?php echo T_("Table 1.  Historical Development Stats");?></B></p>
+<table border="1" class="CALSTABLE">
+<thead>
+<tr>
+<th ALIGN="LEFT" VALIGN="TOP"><?php echo T_("Version");?></th>
+<th ALIGN="LEFT" VALIGN="TOP">engine</th>
+<th ALIGN="LEFT" VALIGN="TOP">backend</th>
+<th ALIGN="LEFT" VALIGN="TOP">register</th>
+<th ALIGN="LEFT" VALIGN="TOP">ledger</th>
+<th ALIGN="LEFT" VALIGN="TOP">motif</th>
+<th ALIGN="LEFT" VALIGN="TOP">gnome</th>
+<th ALIGN="LEFT" VALIGN="TOP"><?php echo T_("misc app");?></th>
+<th ALIGN="LEFT" VALIGN="TOP">import-export</th>
+<th ALIGN="LEFT" VALIGN="TOP">reports</th>
+<th ALIGN="LEFT" VALIGN="TOP">scheme</th>
+<th ALIGN="LEFT" VALIGN="TOP">business</th>
+<th ALIGN="LEFT" VALIGN="TOP">test</th>
+<th ALIGN="LEFT" VALIGN="TOP">docs</th>
+<th ALIGN="LEFT" VALIGN="TOP"><?php echo T_("internal txt");?></th>
+<th ALIGN="LEFT" VALIGN="TOP"><?php echo T_("Total");?></th>
+<th ALIGN="LEFT" VALIGN="TOP"><?php echo T_("Languages");?></th>
+<th ALIGN="LEFT" VALIGN="TOP"><?php echo T_("Author Credits");?></th>
+</tr>
+</thead><tbody>
 
 <!--      xacc-0.9 Sept 97              -->
 <tr>
@@ -328,82 +328,82 @@ echo T_("number of *c and *.h and *.scm files (KLOCS in *.c + KLOCS in *.h + KLO
 </p>
 
 <b><?php echo T_("Table Column Legend");?></b><br><br>
-    <P></P>
- <DL>
-    <DT><B>engine</B></DT>
-    <DD><?php echo T_("Contents of the src/engine and the include directories. The engine was split out from the motif code in version 1.1. The data storage backend (file-io, sql) was split out in the course of version 1.5");?>
-	<P></P>
-        </DD>
-    <DT><B>backend</B></DT>
-    <DD><?php echo T_("Contents of the src/backend directory (version 1.7 and later) or of src/engine/file, src/engine/sql (version 1.6 and earlier)");?>
-	<P></P>
-        </DD>
-    <DT><B>register</B></DT>
-    <DD><?php echo T_("Contents of the src/register directory (version 1.6 and earlier) or src/register/register-core (version 1.7 and later).  The register was split out as a separate component from the motif code in version 1.1. As can be seen from the stats, the register code has been fairly stable. At version 1.7 and later, this cell shows a second count: the number of lines of code in src/register/register-gnome (previously counted as part of gnome)");?>
-	<P></P>
-        </DD>
-    <DT><B>ledger</B></DT>
-    <DD><?php echo T_("*.c, *.h files in the src directory only (version 1.6 and earlier) or src/register/ledger-core (version 1.7 and later)");?>
-	<P></P>
-    </DD>
-    <DT><B>motif</B></DT>
-    <DD><?php echo T_("Contents of the src/motif directory (version 1.2 and earlier).  The motif version of the code was discontinued after version 1.2, after most of the non-gui code was moved to either the engine, the register or the ledger.");?>
-	<P></P>
-    </DD>
-    <DT><B>gnome</B></DT>
-    <DD><?php echo T_("Contents of src/gnome plus src/register/gnome (version 1.6 and earlier). For version 1.7 and later, this consists of src/gnome, src/gnome-search and src/gnome-util");?>
-	<P></P>
-    </DD>
+    <p></p>
+ <dl>
+    <dt><b>engine</B></dt>
+    <dd><?php echo T_("Contents of the src/engine and the include directories. The engine was split out from the motif code in version 1.1. The data storage backend (file-io, sql) was split out in the course of version 1.5");?>
+	<p></p>
+        </dd>
+    <dt><b>backend</B></dt>
+    <dd><?php echo T_("Contents of the src/backend directory (version 1.7 and later) or of src/engine/file, src/engine/sql (version 1.6 and earlier)");?>
+	<p></p>
+        </dd>
+    <dt><b>register</B></dt>
+    <dd><?php echo T_("Contents of the src/register directory (version 1.6 and earlier) or src/register/register-core (version 1.7 and later).  The register was split out as a separate component from the motif code in version 1.1. As can be seen from the stats, the register code has been fairly stable. At version 1.7 and later, this cell shows a second count: the number of lines of code in src/register/register-gnome (previously counted as part of gnome)");?>
+	<p></p>
+        </dd>
+    <dt><b>ledger</B></dt>
+    <dd><?php echo T_("*.c, *.h files in the src directory only (version 1.6 and earlier) or src/register/ledger-core (version 1.7 and later)");?>
+	<p></p>
+    </dd>
+    <dt><b>motif</B></dt>
+    <dd><?php echo T_("Contents of the src/motif directory (version 1.2 and earlier).  The motif version of the code was discontinued after version 1.2, after most of the non-gui code was moved to either the engine, the register or the ledger.");?>
+	<p></p>
+    </dd>
+    <dt><b>gnome</B></dt>
+    <dd><?php echo T_("Contents of src/gnome plus src/register/gnome (version 1.6 and earlier). For version 1.7 and later, this consists of src/gnome, src/gnome-search and src/gnome-util");?>
+	<p></p>
+    </dd>
 
-    <DT><B><?php echo T_("misc app");?></B></DT>
-    <DD><?php echo T_("Contents of miscellanous application-related directories (version 1.7 and later): src/app-file, src/app-utils, src/calculation, src/core-utils, src/gnc-module, src/network-utils, src/tax/us");?>
-	<P></P>
-    </DD>
+    <dt><b><?php echo T_("misc app");?></B></dt>
+    <dd><?php echo T_("Contents of miscellanous application-related directories (version 1.7 and later): src/app-file, src/app-utils, src/calculation, src/core-utils, src/gnc-module, src/network-utils, src/tax/us");?>
+	<p></p>
+    </dd>
 
-    <DT><B>import-export</B></DT>
-    <DD><?php echo T_("Code to import and export various file formats: contents of the src/import-export directory.");?>
-	<P></P>
-     </DD>
+    <dt><b>import-export</B></dt>
+    <dd><?php echo T_("Code to import and export various file formats: contents of the src/import-export directory.");?>
+	<p></p>
+     </dd>
 
-    <DT><B>reports</B></DT>
-    <DD><?php echo T_("Code to generate reports and graphs: contents of the src/reports directory.");?>
-	<P></P>
-     </DD>
+    <dt><b>reports</B></dt>
+    <dd><?php echo T_("Code to generate reports and graphs: contents of the src/reports directory.");?>
+	<p></p>
+     </dd>
 
-    <DT><B>scheme</B></DT>
-    <DD><?php echo T_("scheme and guile code in directories src/scm plus src/guile (version 1.6 and earlier). In version 1.7 and later, much of this code went into reports, import/export, and into indiovidual modules; thus only miscellaneous code remains.");?>
-	<P></P>
-    </DD>
+    <dt><b>scheme</B></dt>
+    <dd><?php echo T_("scheme and guile code in directories src/scm plus src/guile (version 1.6 and earlier). In version 1.7 and later, much of this code went into reports, import/export, and into indiovidual modules; thus only miscellaneous code remains.");?>
+	<p></p>
+    </dd>
 
-    <DT><B>business</B></DT>
-    <DD><?php echo T_("Code to add small-business features: contents of the src/business directory.");?>
-	<P></P>
-     </DD>
+    <dt><b>business</B></dt>
+    <dd><?php echo T_("Code to add small-business features: contents of the src/business directory.");?>
+	<p></p>
+     </dd>
 
-    <DT><B>test</B></DT>
-    <DD><?php echo T_("Code to peform automated regression tests: contents of the src/*/test directories.");?>
-	<P></P>
-     </DD>
+    <dt><b>test</B></dt>
+    <dd><?php echo T_("Code to peform automated regression tests: contents of the src/*/test directories.");?>
+	<p></p>
+     </dd>
 
-    <DT><B>docs</B></DT>
-    <DD><?php echo T_("English-language-only user documentation, including on-line help and manual (html, sgml or xml). For version 1.8.4 and later, the number below the bar counts the translated, non-english docs (currently de, es, fr, pt_PT).  Both of these numbers are somewhat hard to count, because of fairly large format churns, and multiple competing versions.");?>
-	<P></P>
-    </DD>
+    <dt><b>docs</B></dt>
+    <dd><?php echo T_("English-language-only user documentation, including on-line help and manual (html, sgml or xml). For version 1.8.4 and later, the number below the bar counts the translated, non-english docs (currently de, es, fr, pt_PT).  Both of these numbers are somewhat hard to count, because of fairly large format churns, and multiple competing versions.");?>
+	<p></p>
+    </dd>
     
-    <DT><B><?php echo T_("internal txt");?></B></DT>
-    <DD><?php echo T_("The number of design documents and README files aimed at developers. This includes *.txt files, *.texinfo files and README.* files in all subdirectories.  For version 1.7 and later, only those in the src subdirectory are counted (leaving out some half-dozen scattered elsewhere)");?>
-	<P></P>
-     </DD>
+    <dt><b><?php echo T_("internal txt");?></B></dt>
+    <dd><?php echo T_("The number of design documents and README files aimed at developers. This includes *.txt files, *.texinfo files and README.* files in all subdirectories.  For version 1.7 and later, only those in the src subdirectory are counted (leaving out some half-dozen scattered elsewhere)");?>
+	<p></p>
+     </dd>
 
-    <DT><B><?php echo T_("Languages");?></B></DT>
-    <DD><?php echo T_("The number of languages that the application messages have been translated to (the number of <tt>po/*.po</tt> files). In parenthesis, the number of messages in the message files (<tt>grep msgstr po/*.po |wc</tt>), in thousands.");?>
-	<P></P>
-    </DD>
+    <dt><b><?php echo T_("Languages");?></B></dt>
+    <dd><?php echo T_("The number of languages that the application messages have been translated to (the number of <tt>po/*.po</tt> files). In parenthesis, the number of messages in the message files (<tt>grep msgstr po/*.po |wc</tt>), in thousands.");?>
+	<p></p>
+    </dd>
     
-    <DT><B><?php echo T_("Author Credits");?></B></DT>
-    <DD><?php echo T_("The number of people credited in the AUTHORS file (version 1.6 and later) or the README file (earlier versions).  These include lead developers, patch submitters and national-language translators.  This includes additional credits listed in the gnucash-docs/AUTHORS file that are not listed in the main gnucash/AUTHORS file.");?>
-	<P></P>
-    </DD>
-</DL>
+    <dt><b><?php echo T_("Author Credits");?></B></dt>
+    <dd><?php echo T_("The number of people credited in the AUTHORS file (version 1.6 and later) or the README file (earlier versions).  These include lead developers, patch submitters and national-language translators.  This includes additional credits listed in the gnucash-docs/AUTHORS file that are not listed in the main gnucash/AUTHORS file.");?>
+	<p></p>
+    </dd>
+</dl>
 </div>
 <?php include("externals/footer.phtml"); ?>
