@@ -24,7 +24,7 @@ Then post any bugs you find to bugzilla</p>
 <li>Updated to AqBanking 3 on Win32.</li>
 </ul>
 
-<p>Changes between 2.3.3 and 2.3.4 include:
+<p>Changes between 2.3.3 and 2.3.4 include:</p>
 <ul>
 <li>Changes in database schema.  The "helper" tables (slots, recurrences, taxtable_entries) which can have multiple entries per object now have a unique, auto-increment integer primary key.  Dates and date/times stored in the database are now stored in DATE and TIMESTAMP columns (mysql and pgsql).  The "hidden" and "placeholder" account flags are now stored in individual fields in the accounts table.  A new budget_amounts table contains 1 record per budget per account per period and contains the budget amount for that account/period.  The scheduled transaction end date is now being stored.  The versions table now has the table name as the primary key, and NULL values are disallowed for all fields.
 <br></br><br></br>
@@ -71,7 +71,7 @@ Because of these changes, you will need to delete and recreate your database.  I
 <p>To install GnuCash, you will need Gnome 2, guile, slib. In addition you will need swig if compiling from subversion.</p>
 
 <h3>Win32 binary</h3>
-<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.4-setup.exe">Gnucash 2.3.4 Win32 setup executable</a> can be downloaded from Sourceforge as well.
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.4-setup.exe">Gnucash 2.3.4 Win32 setup executable</a> can be downloaded from Sourceforge as well.</p>
 
 <h3>About the Program</h3>
 <p>GnuCash is a free, open source accounting program released under the GNU General Public License (GPL) and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash began in 1997, and its first stable release was in 1998.</p>
