@@ -38,25 +38,25 @@
     <li>Bug #627983: Quit or Cancel</li>
     <li>Bug #627984: Documentation consistency: either don't use the term druid or at least explain it.</li>
     <li>Bug #628745 - guide: Add What's New section for current stable series</li>
-    <li>Bug #630652: Expand and add GnuCash Other Assets<br></br></br>
+    <li>Bug #630652: Expand and add GnuCash Other Assets<br></br>
     Patch author: Tom Bullock (tbullock at nd dot edu)</li>
     <li>Bug #632244: Removed the Preferences section from guide and updated on help.</li>
     <li>Bug #633385:
     Restructure section 2.2 Data Entry Concepts to only include basic info on files,
-    accounts, and transactions.<br></br></br>
-    Minor cosmetic edits to section 2.1.3 and a concept clarification to section 4.2.2.<br></br></br>
+    accounts, and transactions.<br></br>
+    Minor cosmetic edits to section 2.1.3 and a concept clarification to section 4.2.2.<br></br>
 
-    Author: David (sunfish62 at yahoo dot com)<br></br></br>
+    Author: David (sunfish62 at yahoo dot com)<br></br>
     Input:  Yawar Amin (yawar dot amin at gmail dot com) and Tom Bullock (tbullock at nd dot edu)</li>
     <li>Bug #633586:
 
     Move the explanation of debits and credits from  section 3.2.2 `Income and Expense
-    Accounts' into section 2.1.3 `Double Entry', a more logical place.<br></br></br>
+    Accounts' into section 2.1.3 `Double Entry', a more logical place.<br></br>
     Get rid of historical info (easy to look up online), error checking features info
     (this isn't a sales pitch), and banks' reversed usage of debit and credit
     terms (a digression, not really relevant at this point).</li>
     <li>Bug #634075: Replace all usage of the term `druid' with `assistant' in the GnuCash
-    Guide.<br></br></br>
+    Guide.<br></br>
     Author: Mike E (mikee at saxicola dot idps dot co dot uk)</li>
     <li>Bug #635357: Document Save As and Open dialogs.</li>
     <li>Bug #635360: Explain backup files from a 2.4 point of view.</li>
@@ -66,13 +66,13 @@
     <li>Bug #635365: New images for AR Payment and AP Payment</li>
     <li>Bug #635365: documents the new dialog related to style sheets</li>
     <li>Bug #635386: Document trading accounts GnuCash capabilities.</li>
-    <li>Bug #635982: Fix typos and grammatical errors.<br></br></br>
+    <li>Bug #635982: Fix typos and grammatical errors.<br></br>
 
-    Author: Yasuaki Taniguchi (yasuakit at gmail dot com)<br></br></br>
+    Author: Yasuaki Taniguchi (yasuakit at gmail dot com)<br></br>
     Review: Yawar Amin (yawar dot amin at gmail dot com) and Cristian Marchi (cri79 at ngi dot it)</li>
     <li>Bug #638500: Add a note about the source of the report being modified so that users can follow along.</li>
     <li>Bug #639264: Add Information about Starting Balance in reconcile window and revise the entire section.</li>
-    <li>Bug #639999: 16.3 Current Assets miscalculation in 16.3.5 Wash/Suspense Account<br></br></br>
+    <li>Bug #639999: 16.3 Current Assets miscalculation in 16.3.5 Wash/Suspense Account<br></br>
     Patch by Chris Curtis.</li>
     <li>Bug #644984: Update to 2.4 UI and workflow the guide section on scheduled transactions entering from the Scheduled transaction editor.</li>
     <li>Bug #647735: Add instructions on how to change the GnuCash interface language.</li>
@@ -98,7 +98,7 @@
     <li>Update help manual to reflect partial support of capital gains for US Income Tax reporting and TXF exporting for code 673.</li>
     <li>New figure for Printing tab under Preferences.</li>
     <li>Updated Preferences section to GnuCash 2.4 and minor changes for 2.4 release.</li>
-    <li>guide: Reword paragraphs about new file extension<br></br></br>
+    <li>guide: Reword paragraphs about new file extension<br></br>
 
     Mention new file extension chosen during 2.3 development. Also, two
     paragraphs in the `Basics' chapter talk about the new default .gnucash file
@@ -135,21 +135,21 @@
 
   <li>Markup releated changes
   <ul>
-    <li>Delete guilabel tags below section titles with same wording (redundant).<br></br></br>
+    <li>Delete guilabel tags below section titles with same wording (redundant).<br></br>
     Delete note about debit and credit effects on asset accounts because it's
     effectively the same as note `More on Debits and Credits' at the end of
-    Section 3.2.2 (Income and Expense Accounts).<br></br></br>
-    Replace GnuCash name with defined app entity.<br></br></br>
-    Use tip tags for tips.<br></br></br>
+    Section 3.2.2 (Income and Expense Accounts).<br></br>
+    Replace GnuCash name with defined app entity.<br></br>
+    Use tip tags for tips.<br></br>
     Use an xref tag for a reference.</li>
     <li>Replace all uses of GnuCash with the app entity</li>
-    <li>Replace all usage of the words 'GnuCash' or 'Gnucash' with the 'app' entity<br></br></br>
+    <li>Replace all usage of the words 'GnuCash' or 'Gnucash' with the 'app' entity<br></br>
     Patch by Yawar Amin</li>
     <li>Add &lt;application&gt; markup to &amp;app; entity.</li>
     <li>guide: Add single-quote entity definitions</li>
     <li>Use &amp;rsquo; entity instead of "'"</li>
     <li>Define entities for current stable and unstable versions, patch by Yawar Amin</li>
-    <li>guide: Add entities for stable and unstable series<br></br></br>
+    <li>guide: Add entities for stable and unstable series<br></br>
 
     Sometimes referring to the exact version in the documentation is a bit
     superfluous, and instead we just want to refer to general GnuCash release
@@ -157,9 +157,9 @@
     <li>Add mdash entity to enable the use of xml2po and add description for entities.</li>
     <li>Add guibutton tag.</li>
     <li>Generate html doc in UTF-8 instead of ISO-8859-1</li>
-    <li>Add figure tags and pgwide attribute to some screenshots<br></br></br>
+    <li>Add figure tags and pgwide attribute to some screenshots<br></br>
     The figure tags should go around all screenshots to have them
-    show up in the list of figures.<br></br></br>
+    show up in the list of figures.<br></br>
     The pgwide attribute repositions the image in pdf documents. Large
     pictures still fit on the page thanks to this flag.</li>
     <li>Use different accounting equation image for html or pdf rendering
