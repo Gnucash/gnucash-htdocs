@@ -22,7 +22,7 @@
 
 <p>PLEASE TEST TEST AND TEST SOME MORE any and all features important to you.
 Then post any bugs you find to bugzilla</p>
-<p>Major changes in the 2.3.x release include;
+<p>Major changes in the 2.3.x release include:</p>
 <ul>
 <li>In addition to the XML backend, Gnucash can now use a SQLite3, MySQL or PostgreSQL database to store the data. This is a new implementation using libdbi. It supports all features including the business features.  In order to build with this, add --enable-dbi to the configure command.  In addition to the libdbi-dev package for your distribution, you will also need the appropriate DBD (libdbi driver) package for sqlite3, mysql or postgresql.</li>
 <li>As a replacement for the current GtkHTML HTML engine used to display reports and graphs, Gnucash can use WebKit. WebKit is the engine used by Google Chrome on Windows and Safari on Apple.  In order to build with this, add --with-html-engine=webkit to the configure command.  You will need an appropriate webkit-dev package.  On win32, you will need to download the webkit-1.1.5-win32.zip file from the source repository and put it into the downloads directory of your gnucash build area.</li>
@@ -34,7 +34,7 @@ Then post any bugs you find to bugzilla</p>
 <p>Changes between 2.3.14 and 2.3.15 include:
 
 <ul>
-<li>Bugs fixed</li>
+<li>Bugs fixed
 <ul>
 <li>Bug #626459: Change Transaction Report default account selection to none
 
@@ -203,8 +203,12 @@ Currently returns "Arial" but can be modified to get default GtkWindow font.  </
 
 The choice has fallen on ".gnucash". This extension will be added to all filenames that don't have it already when a user chooses "Save As...". Obviously this is only done for files, not for database storage. The backup files will from now on also end in ".gnucash" instead of the previous ".xac". The code that removes old backup files scans for both extensions to ensure that backup files still available with the ".xac" extension are rotated as well.</li>
 </ul>
+</li>
 
-<li>Updated translations or translation-related changes</li>
+
+
+
+<li>Updated translations or translation-related changes
 <ul>
 <li>Update po files with up-to-date pot template.</li>
 <li>Remove unused file from both SVN and POTFILES.in.</li>
@@ -252,8 +256,11 @@ to determine where to store passwords.</li>
 <li>Move language dependent files lv_LV to lv</li>
 <li>Updated Italian translation by Cristian Marchi.</li>
 </ul>
+</li>
 
-<li>Other user-visible changes</li>
+
+
+<li>Other user-visible changes
 <ul>
 <li>Allow negative tax percentages.
 This allows to model some tax rules for trade between European countries.</li>
@@ -279,8 +286,12 @@ Will be activated once we're out of string freeze in order not to have
 untranslated strings show up for the user.</li>
 <li>Explain proximo concept.</li>
 </ul>
+</li>
 
-<li>Other code/build changes</li>
+
+
+
+<li>Other code/build changes
 <ul>
 <li>Get library from correct directory - fixes "make check" </li>
 <li>Dummy commit to test mailing list hooks.</li>
@@ -414,8 +425,12 @@ Same change as what r18841 added in business-core/xml.</li>
 <li>Fix dbi drivers not found when --with-dbi-dbd-dir is set at configure time.</li>
 <li>Default key accelerator map for OSX, using Command instead of Control</li>
 </ul>
+</li>
+
+
 
 </ul>
+
 
 <h3>Caveats for Testers</h3>
 <p>Any 2.3.x version might crash unexpectedly at any point during runtime. If you test some serious work in a 2.3.x release and are using the XML file backend for data storage, make sure you hit "Save" after every non-trivial workstep.  If you are using the SQL backend, this is not required as every change is saved immediately to the database.<p>
@@ -428,12 +443,12 @@ Same change as what r18841 added in business-core/xml.</li>
 <p>We would like to encourage people to test this and any further releases as much as possible and submit bug reports in order that we can polish GnuCash to be as stable as possible for the 2.4.0 release in a few weeks. Then post any bugs you find to <a href="http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">bugzilla</a></p>
 
 <h3>Getting GnuCash</h3>
-<p>Source code for GnuCash 2.3.15 can be downloaded from multiple locations:
+<p>Source code for GnuCash 2.3.15 can be downloaded from multiple locations:</p>
 <ul>
 <li><a href="http://www.gnucash.org/download.phtml">The GnuCash website</a></li>
 <li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.15.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.15.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/2.3.15/">all files</a>.</li>
 <li>You can also checkout the sources directly from the subversion repository with this command:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/trunk gnucash</span></li>
-</ul></p>
+</ul>
 
 <p>To install GnuCash, you will need Gnome 2, guile, slib. In addition you will need swig if compiling from subversion.</p>
 
