@@ -2,137 +2,137 @@
 2003-08-20   03:45:09
 
 The GnuCash team is pleased to announce the release
-of stable version 1.8.5.<br><br>
-<b><big>What's New in GnuCash 1.8.5?</big></b><br>
-<br>
+of stable version 1.8.5.<br></br><br></br>
+<b><big>What's New in GnuCash 1.8.5?</big></b><br></br>
+<br></br>
  o Add IS_PAID column and the ability to search for paid/not-paid
-   invoices.<br>
- o Add HBCI online transfer templates and make usable<br>
+   invoices.<br></br>
+ o Add HBCI online transfer templates and make usable<br></br>
  o Fix a bug where if you unpost an invoice and don't bring the
    TaxTables up to date, the total value shown in the register is
    different depending on whether the cursor is on the current line
-   or not.<br>
+   or not.<br></br>
  o Don't constantly resize the invoice window every time we update
-   ourselves.<br>
+   ourselves.<br></br>
  o Updated Italian, Brazilian Portugese, German, Czech, Dutch and
-   British English translation.<br>
+   British English translation.<br></br>
  o Add Subtotal and Tax labels in the summary bar to print the
-   Invoice's total amounts.<br>
+   Invoice's total amounts.<br></br>
  o Change the log format to use GUID instead of C pointers, use
-   ISO8601 instead of proprietary form and log the Notes field.<br>
- o Port new log replay module from HEAD.<br>
+   ISO8601 instead of proprietary form and log the Notes field.<br></br>
+ o Port new log replay module from HEAD.<br></br>
  o Re-enable reversed legend in stacked barcharts. Needs Guppi 0.40.4
-   a.k.a. Guppi CVS, though, to actually work.<br>
- o Update the Polish Zloty for its new ISO currency code.<br>
- o Add ability to sort by Action and Notes.<br>
+   a.k.a. Guppi CVS, though, to actually work.<br></br>
+ o Update the Polish Zloty for its new ISO currency code.<br></br>
+ o Add ability to sort by Action and Notes.<br></br>
  o Fix the vendor window title to use the company name, not the
-   contact name. Change the message when the company name is left blank.<br>
+   contact name. Change the message when the company name is left blank.<br></br>
  o Create a new "date format" widget to let the user choose a date
-   format (and see the results of what the date would look like).<br>
+   format (and see the results of what the date would look like).<br></br>
  o Add "Deluxe Personal Check" type. Add support for printing to
    "deluxe" personal checks.  This prints the check "sideways" on a
-   US-Letter configuration.<br>
+   US-Letter configuration.<br></br>
  o Backport the QueryList widget and associated usage (this allows
-   more places to have sortable column displays for query results)<br>
- o Improve HBCI error handling. Add more user feedback functions.<br>
+   more places to have sortable column displays for query results)<br></br>
+ o Improve HBCI error handling. Add more user feedback functions.<br></br>
  o Add support for KtoBlzCheck, a small checking package for
    destination account numbers for German banks. Very small, very useful
-   http://sourceforge.net/projects/ktoblzcheck<br>
- o TRANSLATION_HOWTO: Added, by Jon Lapham<br>
+   http://sourceforge.net/projects/ktoblzcheck<br></br>
+ o TRANSLATION_HOWTO: Added, by Jon Lapham<br></br>
  o Add API to the plugin modules to allow post-processing (scrubbing)
    of the book after it is loaded from XML.  This allows a plug-in to
-   post-process the complete book.<br>
+   post-process the complete book.<br></br>
  o Create a scrub function to clear up bogus tax tables due to a bug
    which could cause tax tables to get created ad-nausium if you post
-   and then unpost an invoice.<br>
+   and then unpost an invoice.<br></br>
  o Create a scrub function to clear up bogus bill terms due to a bug
    which could cause bill terms to get created due to post/unpost of
-   invoices.<br>
- o Enable the exchange-rate dialog on "search ledger" registers.<br>
- o Raise the import window after choosing a file.<br>
+   invoices.<br></br>
+ o Enable the exchange-rate dialog on "search ledger" registers.<br></br>
+ o Raise the import window after choosing a file.<br></br>
  o Change dialog statements to allow for embedded percent signs in the
    messages.  In other words, don't allow user input into the format
-   string of a printf.<br>
+   string of a printf.<br></br>
  o Change how the billterms option menu is used so it will change
-   properly if you change the invoice's owner.<br>
+   properly if you change the invoice's owner.<br></br>
  o Don't use gnc:reverse-account-balance? to determine whether to
-   reverse the balance -- base it purely on the report type.<br>
- o Fix gncBillTermCopy() so it PROPERLY copies the bill term.<br>
- o Tolerate some HBCI banks failure of the GetSystemId-job.<br>
- o Don't allow selection of directory for save file.<br>
+   reverse the balance -- base it purely on the report type.<br></br>
+ o Fix gncBillTermCopy() so it PROPERLY copies the bill term.<br></br>
+ o Tolerate some HBCI banks failure of the GetSystemId-job.<br></br>
+ o Don't allow selection of directory for save file.<br></br>
  o Add fancy-invoice report, to show what else is possible.  It's not
    really useful per se, but it is another example for users.  To be
-   useful it requires some custom editing.<br>
- o Limit the commodity choices based upon the current account type.<br>
+   useful it requires some custom editing.<br></br>
+ o Limit the commodity choices based upon the current account type.<br></br>
  o Add a new argument to the dialog creation functions to specify what
    types of commodities should be presented.Also tweak the title of the
    dialog based upon this argument.  Remove the "new" button when the
-   dialog is limited strictly to currencies.<br>
- o Show the running balance column by default in the register report.<br>
+   dialog is limited strictly to currencies.<br></br>
+ o Show the running balance column by default in the register report.<br></br>
  o Annotate the window title to indicate whether a register is for a
-   single account or it includes all subaccounts.<br>
- o Change the register close dialog to include a cancel option.<br>
- o Don't close the register if the user cancelled.<br>
+   single account or it includes all subaccounts.<br></br>
+ o Change the register close dialog to include a cancel option.<br></br>
+ o Don't close the register if the user cancelled.<br></br>
  o If the user has manually entered an amount, then stop automatically
-   updated the amount when the date is changed.<br>
+   updated the amount when the date is changed.<br></br>
  o Refactor many HBCI functions to eventually enable queued processing
-   of several HBCI jobs.<br>
+   of several HBCI jobs.<br></br>
  o Add a "retained earnings" item under equity, and change the title
-   to include the start date (Balance Sheet report).<br>
+   to include the start date (Balance Sheet report).<br></br>
  o Don't print the "handling-request" messages when getting stock
-   quotes.<br>
- o Display selected pixmap when opening an options window.<br>
- o Fix 'Save As' so it can write to non-existing files.<br>
- o New data file should have same uid/gids original file.<br>
- o Added Italian account templates by Lorenzo Cappelletti<br>
+   quotes.<br></br>
+ o Display selected pixmap when opening an options window.<br></br>
+ o Fix 'Save As' so it can write to non-existing files.<br></br>
+ o New data file should have same uid/gids original file.<br></br>
+ o Added Italian account templates by Lorenzo Cappelletti<br></br>
  o Change HBCI online transfer action so that first the gnucash
    Transaction is created and only after that the HBCI connection is
    started. Necessary for later implementation of offline queueing and
-   multi-job execution.<br>
+   multi-job execution.<br></br>
  o Clarify the part of the HBCI setup about potentially adding HBCI
-   accounts manually.<br>
+   accounts manually.<br></br>
  o Add a couple of extra checks to prevent crashing if the commodity
-   attached to a price quote has disappeared.<br>
+   attached to a price quote has disappeared.<br></br>
  o Provide a new warning message before deletion if a commodity has
    any price quotes.  If the user deletes the commodity anyway, removed
-   any quotes are based on the commodity<br>
+   any quotes are based on the commodity<br></br>
  o Enhance the get prices routine to handle a request with a NULL
-   currency.<br>
+   currency.<br></br>
  o Fix a crash where removing items in the wrong order could cause
-   "Bad Things" to happen<br>
+   "Bad Things" to happen<br></br>
  o Sort the bills before displaying them, so they appear in a
-   consistent order (by date due).<br>
+   consistent order (by date due).<br></br>
  o Fix a bunch more rounding errors, and add more precision to the
-   price.<br>
+   price.<br></br>
  o Change the description and action of Invoice and Payement
    Transactions/Splits, to make it easier to print a check off the
-   posted transactions.<br>
- o Add Debit and Credit totals to Register report.<br>
+   posted transactions.<br></br>
+ o Add Debit and Credit totals to Register report.<br></br>
  o Differentiate between "file is already locked" and "we can't create
-   the lockfile" so we can let the user know.<br>
+   the lockfile" so we can let the user know.<br></br>
  o Fix the message to be more appropriate when we hit a READONLY
-   error.<br>
- o Various Postgres backend fixes<br>
+   error.<br></br>
+ o Various Postgres backend fixes<br></br>
  o Add button for manual adding of HBCI accounts. Requires latest
-   OpenHBCI 0.9.13<br>
+   OpenHBCI 0.9.13<br></br>
  o Add saving of the HBCI_API so that bank's status changes will now
-   be remembered immediately.<br>
+   be remembered immediately.<br></br>
  o Add "(Report)" strings to the various columns displayed in the
-   report currency.<br>
+   report currency.<br></br>
  o Set the date-entered on invoice transactions to "now" instead of
    the post date.  Thi lets us know when an invoice was actually posted,
-   or a payment was actually made.<br>
- o Support "gain/loss" balancing splits on stocks<br>
- o Apply patch to fix a number of off-by-one bugs in the loan druid.<br>
- o Adapted to latest gnucash-docs changes, by Jon Lapham<br>
- o Add code to read XML files with real namespace declarations.<br>
- o Make sure we define PWD, as not all shells define it properly.<br>
+   or a payment was actually made.<br></br>
+ o Support "gain/loss" balancing splits on stocks<br></br>
+ o Apply patch to fix a number of off-by-one bugs in the loan druid.<br></br>
+ o Adapted to latest gnucash-docs changes, by Jon Lapham<br></br>
+ o Add code to read XML files with real namespace declarations.<br></br>
+ o Make sure we define PWD, as not all shells define it properly.<br></br>
  o Workaround for multi-currency importing bug.
-<br><br>
+<br></br><br></br>
 Available at the usual places! 
 
-<br><br>
+<br></br><br></br>
 <b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
 
-<br><br>
+<br></br><br></br>
 <b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>

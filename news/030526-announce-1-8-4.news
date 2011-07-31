@@ -2,92 +2,92 @@
 2003-05-26   17:44:57
 
 The GnuCash team is pleased to announce the release
-of stable version 1.8.4.<br><br>
-<b><big>What's New in GnuCash 1.8.4?</big></b><br>
-<br>
+of stable version 1.8.4.<br></br><br></br>
+<b><big>What's New in GnuCash 1.8.4?</big></b><br></br>
+<br></br>
  o Fix transfer dialog to not hang if OK button is clicked w/o filling
-   in dialog properly.<br>
- o Add HTML::Parser to the list of items checked/installed.<br>
- o Updated translations:  Brazilian Portugese, Czech, Italian, German<br>
+   in dialog properly.<br></br>
+ o Add HTML::Parser to the list of items checked/installed.<br></br>
+ o Updated translations:  Brazilian Portugese, Czech, Italian, German<br></br>
  o Fix the "View xxxbar" menu items to track properly when a new data
    file is opened. Consolidate the code for manipulating the
    View/Statusbar and View/Summarybar menu items.  Work around a Gnome
-   MDI bug as best as possible.<br>
+   MDI bug as best as possible.<br></br>
  o The numeric test regex was broken and would fail on ALL numerics,
-   causing all imports to be of value zero.<br>
+   causing all imports to be of value zero.<br></br>
  o Fix for creating new template transactions [from Scheduling
-   existing transactions], such that they have valid Posted dates.<br>
+   existing transactions], such that they have valid Posted dates.<br></br>
  o Fix for existing/old data without posted dates.  If we encounter
    the condition, fixup the transaction's Posted date to that of the
-   Entered date.<br>
- o Add LOT_IS_CLOSED and LOT_BALANCE query parameter methods<br>
- o Fixes for 64-bit architectures.<br>
- o Add gncQueryGetBooks() API to return list of books in a query.<br>
- o Add INVOICE_POST_LOT query parameter methods<br>
+   Entered date.<br></br>
+ o Add LOT_IS_CLOSED and LOT_BALANCE query parameter methods<br></br>
+ o Fixes for 64-bit architectures.<br></br>
+ o Add gncQueryGetBooks() API to return list of books in a query.<br></br>
+ o Add INVOICE_POST_LOT query parameter methods<br></br>
  o Add an api to force an event even when events are suspended.
    Without such an API, events can be lost if the event system is
-   suspended when the event comes in.<br>
+   suspended when the event comes in.<br></br>
  o Added gnucash wrappers around gnome-print's rotate, translate,
    gsave, and grestore APIs.  All to allow sideways printing (by
-   rotating the image).<br>
- o Wrap the new print-session apis.<br>
+   rotating the image).<br></br>
+ o Wrap the new print-session apis.<br></br>
  o Modify the AC_GWRAP_CHECK_GUILE() macro to take an argument, the
    g-wrap module directory.  Then actually test that the g-wrap module
-   loads.  This should detect systems without slib installed.<br>
- o New gwrap check macro<br>
- o Deal properly when there are no prices for a commodity.<br>
+   loads.  This should detect systems without slib installed.<br></br>
+ o New gwrap check macro<br></br>
+ o Deal properly when there are no prices for a commodity.<br></br>
  o Supply a start date (as well as an end date) and don't print
    invoices that occur prior to the start date or after the end date.
    The aging information ignores the start date, but not the end date.
    This means the aging information will always be acurate through the
-   end date (even if all the invoices and payments are not displayed).<br>
+   end date (even if all the invoices and payments are not displayed).<br></br>
  o Limit the itemized invoices/payments to the start/end date range,
    but print out a "Balance" line if there is a non-zero balance as of
-   the start date.<br>
+   the start date.<br></br>
  o Nikos Charonitakis's account chart updates: added new carloan
-   account chart, updated account chart.<br>
+   account chart, updated account chart.<br></br>
  o Use the correct columns when printing the Gain column, don't reuse
-   the same column as profit; we want to report different values.<br>
+   the same column as profit; we want to report different values.<br></br>
  o Don't let the user do anything with the options dialog until
-   Apply() finishes.<br>
- o Had the wrong number of arguments in gnc:account-get-balance-at-date<br>
+   Apply() finishes.<br></br>
+ o Had the wrong number of arguments in gnc:account-get-balance-at-date<br></br>
  o Add some (commented out) code to support a start date for computing
-   the Net Income (aka Net Profit) in the Balance Sheet.<br>
+   the Net Income (aka Net Profit) in the Balance Sheet.<br></br>
  o Move the instantiation of File -> Properties into main-window.scm
    (out of business-gnome.scm) for future cases where we might decide to
-   ship the business modules separately.<br>
+   ship the business modules separately.<br></br>
  o Fix the ofx test program to make sure it links on many weird
-   platforms.<br>
+   platforms.<br></br>
  o When we are asked to reload the report, queue the request, queue a
    draw event, and then return immediately.  When the draw event
    happens, load the report then.  This lets you hit Apply and then OK
-   before the report finishes loading.<br>
- o Make sure we can find libofx/libofx.h<br>
+   before the report finishes loading.<br></br>
+ o Make sure we can find libofx/libofx.h<br></br>
  o Include split transactions in the filtering of the transaction
-   report.<br>
- o Use a 'from' date to better compute the Net Income on the report.<br>
+   report.<br></br>
+ o Use a 'from' date to better compute the Net Income on the report.<br></br>
  o Change the default Search Operation for numerics from "less than"
-   to "equals" -- so by default you would search for an exact value.<br>
+   to "equals" -- so by default you would search for an exact value.<br></br>
  o "eval" changed API on guile-1.6.  Use the existing API to convert a
-   delta symbol to a delta time.<br>
+   delta symbol to a delta time.<br></br>
  o Call eval with the right number of arguments based on early or late
-   versions.<br>
+   versions.<br></br>
  o Change the date format string to be consistent with other places
-   (e.g. the check print dialog) and use '%' instead of '~'.<br>
+   (e.g. the check print dialog) and use '%' instead of '~'.<br></br>
  o Make the Bill Due Days option selectable based on the setting of
-   Notify Bills Due?<br>
- o Don't crash if you remove the last entry and then add another one.<br>
+   Notify Bills Due?<br></br>
+ o Don't crash if you remove the last entry and then add another one.<br></br>
  o Deal with the case where the first transaction found for a
-   particular company is a payment<br>
- o Also print out any overpayment in the total column.<br>
+   particular company is a payment<br></br>
+ o Also print out any overpayment in the total column.<br></br>
  o Catch errors when running the child reports so we display the
    failed report backtrace but also display an error and continue with
-   the multicolumn report.<br>
-<br><br>
+   the multicolumn report.<br></br>
+<br></br><br></br>
 Available at the usual places! 
 
-<br><br>
+<br></br><br></br>
 <b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
 
-<br><br>
+<br></br><br></br>
 <b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>
