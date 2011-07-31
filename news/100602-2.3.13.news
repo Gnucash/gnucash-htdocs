@@ -29,7 +29,7 @@ Then post any bugs you find to bugzilla</p>
 <p>Changes between 2.3.12 and 2.3.13 include:</p>
 
 <ul>
-<li>Bugs fixed</li>
+<li>Bugs fixed
 <ul>
 <li>Change from ige-mac-menu to GtkOSXApplication for OSX integration. Fixes #600590.</li>
 <li>Bug #618646 - Should be able to run gnucash-bin.exe directly, rather than gnucash.cmd
@@ -266,8 +266,10 @@ instead, we should use the "iso_4217" translation domain.</li>
 <li>Bug #616615  - Request for larger size icon (96x96, 128x128, 256x256)</li>
 <li>Bug #118391: Mark the currency names for translation.</li>
 </ul>
+</li>
 
-<li>Updated translations or translation-related changes</li>
+
+<li>Updated translations or translation-related changes
 <ul>
 <li>Update of Latvian translation by Valdis Vitolins</li>
 <li>Additional fix for Simplified Chinese translation of windows installer</li>
@@ -313,8 +315,11 @@ This breaks the string freeze, but 1. the typo really hurts one's eyes, and
 2. the message is only secondarily important, so I would accept this single
 string freeze breakage.</li>
 </ul>
+</li>
 
-<li>Other user-visible changes</li>
+
+
+<li>Other user-visible changes
 <ul>
 <li>Implement help for OSX</li>
 <li>Set default webkit font from system font.  </li>
@@ -336,8 +341,12 @@ already partially checked for this, but there was still an unhandled case.</li>
 <li>Return only bills when searching for bills, return only invoices when searching for invoices and  return only vouchers when searching for vouchers</li>
 <li>Change default report stylesheet from "Default" to "Default CSS" </li>
 </ul>
+</li>
 
-<li>Other code/build changes</li>
+
+
+
+<li>Other code/build changes
 <ul>
 <li>Fix warning message of autogen.sh for python-binding. Patch by Tao Wang</li>
 <li>Remove AC_PROG_OBJC from configure.ac</li>
@@ -434,6 +443,12 @@ my base dir.</li>
 
 These changes will be used in the revived cross-compile script.</li>
 <li>Makefile fixes for setup-gnucash-env on OS X</li>
+</ul>
+</li>
+
+
+
+
 </ul>
 
 <h3>Caveats for Testers</h3>

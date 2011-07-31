@@ -29,7 +29,8 @@ Then post any bugs you find to bugzilla</p>
 <p>Changes between 2.3.13 and 2.3.14 include:</p>
 
 <ul>
-<li>Bugs fixed</li>
+
+<li>Bugs fixed
 <ul>
 <li>Bug #618954: Add a column "Due" to the invoice search results list.
 
@@ -57,8 +58,10 @@ http://lists.gnucash.org/logs/2010/05/2010-05-28.html#T13:37:53 - #T16:12:23</li
 <li>Bug #617797: Set eol-style to CRLF for win32 files.</li>
 <li>Bug #618434 - Decimal separator is always '.' when using the keypad, patch by Yasuaki Taniguchi</li>
 </ul>
+</li>
 
-<li>Updated translations or translation-related changes</li>
+
+<li>Updated translations or translation-related changes
 <ul>
 <li>fix Latvian account trees, patch by Bill Nottingham.</li>
 <li>Update German translation
@@ -73,20 +76,30 @@ Patch by Frank H. Ellenberger: update de.po
 <li>Updated Dutch translation by Mark Haanen, copied from the Translation Project. </li>
 <li>Updated Japanese translation by Yasuaki Taniguchi, copied from the Translation Project. </li>
 </ul>
+</li>
 
-<li>Other user-visible changes</li>
+
+
+<li>Other user-visible changes
 <ul>
 <li>Fix r19227, r19228: Don't make the "Due Date" the primary search; fix erroneous parameters when inserting into list.</li>
-
 </ul>
+</li>
 
-<li>Other code/build changes</li>
+
+<li>Other code/build changes
 <ul>
 <li>File convert commodity.glade in glade3-3.6.7 to ensure our gtk-2.10 requirement is sufficient.</li>
 <li>Set eol-style for win32-bin.txt to CRLF because this file should view correctly on win32 systems</li>
 <li>Set all shell scripts to svn:eol-style LF because they should have the same line endings.</li>
 <li>Fix script that builds the release tags. Awk works differently on windows than on linux apparently.</li>
 </ul>
+</li>
+
+
+</ul>
+
+
 
 <h3>Caveats for Testers</h3>
 <p>Any 2.3.x version might crash unexpectedly at any point during runtime. If you test some serious work in a 2.3.x release and are using the XML file backend for data storage, make sure you hit "Save" after every non-trivial workstep.  If you are using the SQL backend, this is not required as every change is saved immediately to the database.</p>
