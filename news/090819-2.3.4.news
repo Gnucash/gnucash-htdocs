@@ -45,6 +45,7 @@ Because of these changes, you will need to delete and recreate your database.  I
 <li>Period dates are now centered properly over the columns for that period</li>
 <li>Add an option to the budget report.  If enabled, and an account does not have a budget value for the period, the budget values for all child accounts are added.  If the chart of accounts is set up so that only leaf accounts have transactions, this allows budget values to be assigned either to all children and not the parent (they will be summed) or the parent.</li>
 </ol>
+</li>
 <li>Changed --enable-webkit configure option to --with-html-engine=XXX where XXX is "gtkhtml" (default) or "webkit".</li>
 <li>Merged latest pot template into all .po translation files.</li>
 <li>Fixed signed vs unsigned char pointer type conflicts.</li>
