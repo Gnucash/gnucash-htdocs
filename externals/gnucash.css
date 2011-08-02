@@ -1,13 +1,27 @@
 BODY {
    color: black;
-   background:url(backg.png) repeat;
-   background-attachment:fixed;
-   border: 0px;
-   margin: 0px;
+   background:url(backg.png) repeat fixed;
+   border:0;
+   margin:0;
    font-size:90%;
    font-family:"Verdana", Geneva, sans-serif;
    height:100%;
+   width:100%;
 }
+#wrapper1 {
+	position:relative;
+	width:100%;
+}
+#wrapper2 {
+	position:relative;
+	width:100%;
+}
+
+#maincol {
+	position:relative;
+	margin:0;
+	padding:0;
+	}
 
 .newsborder {
    background-color: #cacaf7;
@@ -22,6 +36,11 @@ BODY {
 .newsheader {
    line-height: 2em;
    font-size: large;
+}
+
+.newscontainer {
+height:100%;
+width:100%;
 }
 
 .featurepanel {
@@ -198,10 +217,10 @@ A[href], A[href]:visited
 }
 
 #news {
-   margin-top:20px;
-   margin-left:15%;
-   margin-right:10px;
-   float: left;
+   position:relative;
+   margin-top:0px;
+   margin-left:110px;
+   float:left;
    width: 190px;
    font-size:85%;
 }
@@ -257,14 +276,12 @@ color:white;
 }
 
 #content {
-   float:left;
-   width: 53%;
-   margin-right:1em;
+   position:relative;
    margin-top:20px;
    margin-bottom:20px;
-   margin-left: 1%;
-   padding-right:1.5em;
-   padding-left:1.5em;
+   margin-left:310px;
+   margin-right:110px;
+   padding:10px;
    background-color:white;   
    border:solid thin #7F7FAA;
    border-radius:25px;
@@ -323,7 +340,7 @@ H1
 }
 
 #download {
-   float:right; 	
+   float:right;
    margin-left:2em;
    margin-right:2em;
    margin-bottom:1em;
@@ -340,8 +357,7 @@ H1
 }
 
 .downloadimage {
-  width:240px;
-  float:left;
+  width:200px;
   text-align:center;
 }
 

@@ -32,13 +32,11 @@ include("externals/menu.phtml");
 
 <p class="justify"><?php echo T_("Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash\">GnuCash</span> allows you to track bank accounts, stocks, income and expenses.  As quick and intuitive to use as a checkbook register, it is based on professional accounting principles to ensure balanced books and accurate reports. "); ?></p>
 
-<div style="float:right; width:100%">
+<div style="width:100%">
 <h2 style="margin-bottom:1px; margin-top:0px"><?php echo T_("Feature Highlights"); ?></h2>
 </div>
 
 <div id="mainfeature">
-
-<div style="float:left;">
 <ul>
 <li><?php echo T_("Double-Entry Accounting");?></li>
 <li><?php echo T_("Stock/Bond/Mutual Fund Accounts");?></li>
@@ -51,9 +49,9 @@ include("externals/menu.phtml");
 <a href="<?=$home?>/features.phtml"><?php echo T_("<b>Discover more...</b>");?></a>
 </div>
 
-</div>
 
-<div style="float:right; width:100%">
+
+<div id="newscontainer">
 <h1><?php echo T_("News"); ?></h1>
 
 <?php
@@ -75,5 +73,5 @@ include("externals/menu.phtml");
 <?php echo T_("Click <a href=\"oldnews.phtml\">here</a> for older announcements...");?>
 </div></div>
 </div>
-</div>
+
 <?php include("externals/footer.phtml"); ?>
