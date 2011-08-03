@@ -10,7 +10,7 @@
 <p>Tralasciando questo passo potrebbero verificarsi degli errori all'avvio. In particolare in ambiente Windows ciò potrebbe causare degli errori del tipo "Parse error: entry point not found".</p>
 </div>
 
-<p>Le principali novità della versione 2.4.0 comprendono:
+<p>Le principali novità della versione 2.4.0 comprendono:</p>
 <ul>
 <li>Oltre al backend XML, Gnucash può ora utilizzare un database SQLite3, MySQL o PostgreSQL per l'immagazzinamento dei dati. Questa è una nuova implementazione che utilizza libdbi. Sono supportate tutte le caratteristiche incluse quelle professionali. Per compilare con questa funzionalità, aggiungere "--enable-dbi" al comando "configure". Oltre al pacchetto libdbi-dev della propria distribuzione, sarà anche necessario l'appropriato pacchetto DBD (libdbi driver) per sqlite3, mysql o postgresql.</li>
 <li>Come sostituto dell'attuale motore GtkHTML HTML utilizzato per visualizzare i resoconti e i grafici, Gnucash può usare WebKit. WebKit è il motore utilizzato da Google Chrome su Windows e da Safari su Apple. Per compilare con questa caratteristica, aggiungere "--with-html-engine=webkit" al comando "configure". Sarà necessario l'appropriato pacchetto webkit-dev. Su win32, si dovrà scaricare il file compresso webkit-1.1.90-win32.zip dal repository sorgente e inserirlo nella cartella "downloads" della propria area di compilazione di GnuCash.</li>
@@ -18,28 +18,28 @@
 </ul>
 
 <h3>Ottenere GnuCash</h3>
-<p>Il codice sorgente di GnuCash 2.4.0 può essere scaricato da:
+<p>Il codice sorgente di GnuCash 2.4.0 può essere scaricato da:</p>
 <ul>
 <li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.0.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.0.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.4.0/">tutti i file</a>.</li>
 <li>É anche possibile effettuare il "check out" direttamente del codice sorgente dal deposito subversion con il seguente comando: <br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/tags/2.4.0 gnucash</span></li>
-</ul></p>
+</ul>
 
 <p>Per installare GnuCash, sono necessari Gnome 2, guile, slib. Sarà inoltre necessario avere swig se si compila da subversion.</p>
 
 <h3>File binari Win32</h3>
-<p>L'<a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.0-setup.exe">eseguibile di Gnucash 2.4.0 per Win32</a> può essere scaricato anch'esso da Sourceforge.
+<p>L'<a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.0-setup.exe">eseguibile di Gnucash 2.4.0 per Win32</a> può essere scaricato anch'esso da Sourceforge.</p>
 
 <h3>File binari per MacOSX</h3>
-<p>Il <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.4.0.dmg">pacchetto per MacOSX di Gnucash 2.4.0</a> può essere scaricato anch'esso da Sourceforge.
+<p>Il <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.4.0.dmg">pacchetto per MacOSX di Gnucash 2.4.0</a> può essere scaricato anch'esso da Sourceforge.</p>
 
-<p>Cambiamenti tra la versione 2.3.17 e la versione 2.4.0:
+<p>Cambiamenti tra la versione 2.3.17 e la versione 2.4.0:</p>
 
 <ul>
 
 
 
 
-<li>Cambiamenti visibili dall'utente</li>
+<li>Cambiamenti visibili dall'utente
 <ul>
 <li>Update copyright notice dates to include 2010 </li>
 <li>Use proper decimal separator for monetary amounts</li>
@@ -65,11 +65,11 @@ and that's not yet enough.</li>
 <li>Implement auto-completion in the invoice/bill entry ledger.</li>
 <li>Take a first shot at adding auto-completion in the business ledger, but currently it doesn't do anything yet.</li>
 </ul>
+</li>
 
 
 
-
-<li>Traduzioni aggiornate o modifiche relative alle traduzioni</li>
+<li>Traduzioni aggiornate o modifiche relative alle traduzioni
 <ul>
 <li>Updated POTFILES.in </li>
 <li>Mark erroneous translation as fuzzy because it doesn't have the correct c-format.</li>
@@ -91,11 +91,11 @@ and we use "--no-location" to make the updates actually readable.
 <li>Remove superfluous whitespace at end of string. Incidentally, this way the string already exists and no broken translation results.</li>
 <li>When extracting the translation strings from the scheme files, sort the scheme files to obtain a stable ordering of the output.</li>
 </ul>
+</li>
 
 
 
-
-<li>Problemi corretti</li>
+<li>Problemi corretti
 <ul>
 <li>Bug #637346: Adding python-bindings to doxygen documentation
 
@@ -338,6 +338,8 @@ This re-indentation was done using astyle-1.24 using the following options:
 <li>Make prototype for gnc_entry_ledger_get_entry public. Add documentation.</li>
 <li>Fix GtkSpinButton with page-size deprecated warning in gnucash.trace</li>
 </ul>
+</li>
+
 
 
 </ul>

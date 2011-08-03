@@ -5,7 +5,7 @@
 
 <p>Il team di sviluppo di GnuCash è orgoglioso di annunciare GnuCash 2.4.5, la quinta versione di correzione dei problemi riscontrati nel rilascio stabile del programma di contabilità gratuito GnuCash. Con questa nuova serie di rilasci, GnuCash può utilizzare un database SQL avvalendosi di SQLite3, MySQL o PostgreSQL. Il programma funziona in ambiente GNU/Linux, *BSD, Solaris, Microsoft Windows e Mac OSX.</p>
 
-<p>Le principali novità della versione 2.4.0 comprendono:
+<p>Le principali novità della versione 2.4.0 comprendono:</p>
 <ul>
 <li>Oltre al backend XML, Gnucash può ora utilizzare un database SQLite3, MySQL o PostgreSQL per l'immagazzinamento dei dati. Questa è una nuova implementazione che utilizza libdbi. Sono supportate tutte le caratteristiche incluse quelle professionali. Per compilare con questa funzionalità, aggiungere "--enable-dbi" al comando "configure". Oltre al pacchetto libdbi-dev della propria distribuzione, sarà anche necessario l'appropriato pacchetto DBD (libdbi driver) per sqlite3, mysql o postgresql.</li>
 <li>Come sostituto dell'attuale motore GtkHTML HTML utilizzato per visualizzare i resoconti e i grafici, Gnucash può usare WebKit. WebKit è il motore utilizzato da Google Chrome su Windows e da Safari su Apple. Per compilare con questa caratteristica, aggiungere "--with-html-engine=webkit" al comando "configure". Sarà necessario l'appropriato pacchetto webkit-dev. Su win32, si dovrà scaricare il file compresso webkit-1.1.90-win32.zip dal repository sorgente e inserirlo nella cartella "downloads" della propria area di compilazione di GnuCash.</li>
@@ -13,17 +13,17 @@
 </ul>
 
 <h3>Ottenere GnuCash per sistemi Windows (file binari di Win32)</h3>
-<p>Il <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.5-setup.exe">file eseguibile di Win32 per l'installazione di Gnucash 2.4.5</a> può essere scaricato da Sourceforge. Il file installerà tutto ciò che è necessario per eseguire GnuCash.
+<p>Il <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.5-setup.exe">file eseguibile di Win32 per l'installazione di Gnucash 2.4.5</a> può essere scaricato da Sourceforge. Il file installerà tutto ciò che è necessario per eseguire GnuCash.</p>
 
 <h3>File binario per sistemi Mac OSX</h3>
-<p>Il <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.4.5.dmg">pacchetto per MacOSX di Gnucash 2.4.5</a> può essere scaricato anch'esso da Sourceforge.
+<p>Il <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.4.5.dmg">pacchetto per MacOSX di Gnucash 2.4.5</a> può essere scaricato anch'esso da Sourceforge.</p>
 
 <h3>Ottenere GnuCash come codice sorgente</h3>
-<p>Per compilare autonomamente GnuCash 2.4.5, il codice sorgente può essere scaricato da:
+<p>Per compilare autonomamente GnuCash 2.4.5, il codice sorgente può essere scaricato da:</p>
 <ul>
 <li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.5.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.5.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.4.5/">tutti i file</a>.</li>
 <li>È inoltre possibile eseguire il checkout direttamente dal repository subversion con il seguente comando:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/tags/2.4.5 gnucash</span></li>
-</ul></p>
+</ul>
 
 <p>Per compilare GnuCash dal codice sorgente sono necessari Gnome 2, guile, slib. Sarà inoltre necessario avere swig se si compila da subversion.</p>
 
@@ -31,26 +31,26 @@
 <p>Cambiamenti tra la versione 2.4.4 e la versione 2.4.5:
 
 <ul>
-<li>Cambiamenti visibili dall'utente</li>
+<li>Cambiamenti visibili dall'utente
 <ul>
 <li>[20457] Improve message printed on screen</li>
 <li>Note last stable version number</li>
 </ul>
+</li>
 
 
 
-
-<li>Traduzioni aggiornate o modifiche relative alle traduzioni</li>
+<li>Traduzioni aggiornate o modifiche relative alle traduzioni
 <ul>
 <li>[20507] Various spelling fixes in comments and translatable strings.</li>
 <li>Updated Dutch translation, copied from the translation project.</li>
 <li>Updated Italian translation.</li>
 </ul>
+</li>
 
 
 
-
-<li>Problemi corretti</li>
+<li>Problemi corretti
 <ul>
 <li>[20496] Bug #645518: Partly revert r20378, "Correct memory leaks found with valgrind"
 
@@ -72,11 +72,11 @@ Patch by Andy Clayton.</li>
 <li>Bug #641645 - Support ActivePerl 5.12 for Finance:Quote on Windows</li>
 <li>Bug #644688: Account edit fails to detect that no changes have been made and marks the account 'dirty'.</li>
 </ul>
+</li>
 
 
 
-
-<li>Altri cambiamenti relativi al codice e alla compilazione</li>
+<li>Altri cambiamenti relativi al codice e alla compilazione
 <ul>
 <li>[20501] During win32 build, if a component is already installed, print the installation path
 
@@ -102,7 +102,7 @@ Original patch by plongstaff.</li>
 Also mention the infamous dbi database drivers here,
 https://lists.gnucash.org/pipermail/gnucash-devel/2011-February/031171.html</li>
 </ul>
-
+</li>
 
 
 

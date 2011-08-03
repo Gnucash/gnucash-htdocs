@@ -22,7 +22,7 @@
 
 <p>SI CONSIGLIA DI TESTARE, TESTARE, TESTARE E ANCORA TESTARE qualsiasi e tutte le funzioni importanti.
 E poi segnalare qualsiasi problema riscontrato su bugzilla</p>
-<p>I principali cambiamenti nel rilascio 2.3.x comprendono:
+<p>I principali cambiamenti nel rilascio 2.3.x comprendono:</p>
 <ul>
 <li>Oltre al backend XML, Gnucash può ora utilizzare un database SQLite3, MySQL o PostgreSQL per l'immagazzinamento dei dati. Questa è una nuova implementazione che utilizza libdbi. Sono supportate tutte le caratteristiche incluse quelle professionali. Per compilare con questa funzionalità, aggiungere "--enable-dbi" al comando "configure". Oltre al pacchetto libdbi-dev della propria distribuzione, sarà anche necessario l'appropriato pacchetto DBD (libdbi driver) per sqlite3, mysql o postgresql.</li>
 <li>Come sostituto dell'attuale motore GtkHTML HTML utilizzato per visualizzare i resoconti e i grafici, Gnucash può usare WebKit. WebKit è il motore utilizzato da Google Chrome su Windows e da Safari su Apple. Per compilare con questa caratteristica, aggiungere "--with-html-engine=webkit" al comando "configure". Sarà necessario l'appropriato pacchetto webkit-dev. Su win32, si dovrà scaricare il file compresso webkit-1.1.90-win32.zip dal repository sorgente e inserirlo nella cartella "downloads" della propria area di compilazione di GnuCash.</li>
@@ -31,10 +31,10 @@ E poi segnalare qualsiasi problema riscontrato su bugzilla</p>
 
 <p>Le stringhe di testo sono congelate. Ciò significa che non verranno applicati dei cambiamenti che potrebbero introdurre una qualsiasi modifica del testo visualizzato da GnuCash. Quindi, le traduzioni finali per la versione 2.4.0 possono partire.</p>
 
-<p>I cambiamenti tra le versioni 2.3.15 e 2.3.16 comprendono:
+<p>I cambiamenti tra le versioni 2.3.15 e 2.3.16 comprendono:</p>
 
 <ul>
-<li>Bug corretti</li>
+<li>Bug corretti
 <ul>
 <li>Bug 632346: Fixed test failures in dbi</li>
 <li>Bugs 632346 &amp; 632166: Fixup transaction currency scrubbing.
@@ -187,13 +187,13 @@ Patch by Mike Evans.</li>
  entity -&gt; Entität
  small typos</li>
 </ul>
+</li>
 
 
 
 
 
-
-<li>Traduzioni aggiornate o modifiche relative alle traduzioni</li>
+<li>Traduzioni aggiornate o modifiche relative alle traduzioni
 <ul>
 <li>Updated Latvian translation by Valdis Vītoliņš.</li>
 <li>Updated British English translation by Mike Evans.</li>
@@ -287,13 +287,13 @@ be activated once the 2.4.0 string freeze is lifted.</li>
 
 " must be quoted in strings.</li>
 </ul>
+</li>
 
 
 
 
 
-
-<li>Altri cambiamenti visibili dall'utente</li>
+<li>Altri cambiamenti visibili dall'utente
 <ul>
 <li>Fix error in dense-cal widget where the last occurrence of a SX wasn't displayed.</li>
 <li>Really fix error in sx_get_num_occur for SX which are limited by num_occur.
@@ -328,12 +328,12 @@ While removing the "Number of lines" options, I have also removed most of the co
 This was already the case in the standard file selector. This change makes the 
 two selection methods more consistent.</li>
 </ul>
+</li>
 
 
 
 
-
-<li>Altri cambiamenti relativi al codice e alla compilazione</li>
+<li>Altri cambiamenti relativi al codice e alla compilazione
 <ul>
 <li>Add 'test-dbi-business' to svn:ignore </li>
 <li>Add test-dbi-business-stuff.h to EXTRA_DIST so "make distcheck" passes </li>
@@ -613,7 +613,7 @@ This way, an older configuration is now updated automatically.
 
 Patch by Bill Nottingham, confirmed by Martin Preuss, adapted to aqbanking5 by myself.</li>
 </ul>
-
+</li>
 </ul>
 
 
@@ -623,7 +623,7 @@ Patch by Bill Nottingham, confirmed by Martin Preuss, adapted to aqbanking5 by m
 
 
 <h3>Avviso per i tester</h3>
-<p>Una qualsiasi versione 2.3.x può andare in crash senza preavviso in qualsiasi momento durante l'utilizzo. Se si sta testando del lavoro importante in un rilascio 2.3.x e si sta utilizzando il formato di file XML per il salvataggio dei dati, assicurarsi di premere "Salva" dopo ogni importante modifica al lavoro. Se si utilizza il backend SQL, questo non è necessario dato che ogni cambiamento è salvato immediatamente nel database.<p>
+<p>Una qualsiasi versione 2.3.x può andare in crash senza preavviso in qualsiasi momento durante l'utilizzo. Se si sta testando del lavoro importante in un rilascio 2.3.x e si sta utilizzando il formato di file XML per il salvataggio dei dati, assicurarsi di premere "Salva" dopo ogni importante modifica al lavoro. Se si utilizza il backend SQL, questo non è necessario dato che ogni cambiamento è salvato immediatamente nel database.</p>
 <p>Le immagini della documentazione sono state aggiornate, ciò nonostante vari testi si riferiscono ancora alla versione 1.8.x. Tutti possono contribuire al miglioramento della documentazione; consultare http://wiki.gnucash.org/wiki/Development per le informazioni su come contribuire.</p>
 
 <h3>Come contribuire?</h3>
@@ -633,17 +633,17 @@ Patch by Bill Nottingham, confirmed by Martin Preuss, adapted to aqbanking5 by m
 <p>Si incoraggiano gli utenti a testare il più possibile questa versione ed eventualmente quelle successive, segnalando i bug in modo che sia possibile correggerli rendendo GnuCash il più stabile possibile in vista del rilascio stabile 2.4.0 che dovrebbe avvenire nel giro di qualche settimana. Si prega quindi di segnalare qualsiasi problema su <a href="http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">bugzilla</a></p>
 
 <h3>Ottenere GnuCash</h3>
-<p>Il codice sorgente di GnuCash 2.3.16 può essere scaricato da diverse posizioni:
+<p>Il codice sorgente di GnuCash 2.3.16 può essere scaricato da diverse posizioni:</p>
 <ul>
 <li><a href="http://www.gnucash.org/download.phtml">Il sito internet di GnuCash</a></li>
 <li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.16.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.16.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/2.3.16/">tutti i file</a>.</li>
 <li>É anche possibile effettuare il "check out" direttamente del codice sorgente dal deposito subversion con il seguente comando:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/trunk gnucash</span></li>
-</ul></p>
+</ul>
 
 <p>Per installare GnuCash, sono necessari Gnome 2, guile, slib. Sarà inoltre necessario avere swig se si compila da subversion.</p>
 
 <h3>File binari Win32</h3>
-<p>L'<a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.16-setup.exe">eseguibile di Gnucash 2.3.16 Win32</a> può anch'esso essere scaricato da Sourceforge.
+<p>L'<a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.16-setup.exe">eseguibile di Gnucash 2.3.16 Win32</a> può anch'esso essere scaricato da Sourceforge.</p>
 
 <h3>Informazioni sul programma</h3>
 <p>GnuCash è un programma di contabilità gratuito e a codice aperto rilasciato nel rispetto dei termini della licenza GNU General Public License (GPL) e disponibile per GNU/Linux, *BSD, Solaris, Mac OSX e Microsoft Windows. La scrittura del programma GnuCash ha avuto inizio nel 1997 e la prima versione stabile risale al 1998.</p>
