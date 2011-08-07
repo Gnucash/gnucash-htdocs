@@ -3,10 +3,9 @@ BODY {
    background:url(../images/backg.png) repeat fixed;
    border:0;
    margin:0;
-   font-size:90%;
+   font-size:80%;
    font-family:"Verdana", Geneva, sans-serif;
    height:100%;
-   width:100%;
 }
 
 #maincol {
@@ -128,7 +127,7 @@ a[href], a[href]:visited
 
 #head
 {
-   background:url(../images/shadowhead.png) repeat-x #7F7FAA bottom;
+    background: url("../images/shadowhead.png") repeat-x scroll center bottom #7F7FAA;
    color: white;
    font-size: small;
    padding: 0.5em;
@@ -141,7 +140,7 @@ a[href], a[href]:visited
    text-align: center;
    clear: both;
    float: none;
-   background:url(../images/shadowfoot.png) repeat-x #7F7FAA top;
+   background:url(../images/shadowfoot.png) repeat-x scroll center top #7F7FAA top;
    color: white;
    margin-left: 0;
    margin-right: 0;
@@ -202,12 +201,11 @@ a[href], a[href]:visited
 }
 
 #news {
-   position:relative;
-   margin-top:0px;
-   margin-left:110px;
+   clear: both;
+   margin-top:20px;
    float:left;
-   width: 190px;
-   font-size:85%;
+   min-width: 23%;
+   font-size:90%;
 }
 
 #news ul
@@ -215,7 +213,7 @@ a[href], a[href]:visited
    padding-bottom:15px;
    margin-top:20px;
    margin-bottom:0px;
-   padding-left:35px;
+   padding-left:25px;
    padding-right:5px;
 }
 
@@ -244,9 +242,12 @@ a[href], a[href]:visited
 
 .othernews {
    margin-bottom:10px;
-   background:url(../images/backg-linktop.png) white repeat-x;
+   background: url("../images/backg-linktop.png") repeat-x scroll 0 0 white;
    border: solid thin #7F7FAA;
    border-radius:10px;
+    clear: both;
+    float: right;
+    width: 190px;
    -moz-border-radius:10px; /* Firefox 3.6 and earlier */
 }
 
@@ -259,12 +260,12 @@ a[href], a[href]:visited
 }
 
 #content {
-   position:relative;
    margin-top:20px;
    margin-bottom:20px;
-   margin-left:310px;
-   margin-right:110px;
+   margin-left:10px;
    padding:10px;
+   float:left;
+   max-width:65%;
    background-color:white;   
    border:solid thin #7F7FAA;
    border-radius:25px;
@@ -397,10 +398,10 @@ span.bold {
 
 .adscontainer
 {  
-   position:relative;
-   float:left;
+   clear: both;
+   float: right;
+   margin: 0 5px 0 auto;
    width: 160px;
-   margin: 10px 5px 10px 5px;
    background:#dedede;
    padding:10px;
    border:solid thin #7F7FAA;
@@ -408,13 +409,13 @@ span.bold {
 
 h2.adstitle
 {
-   font-size:0.8em;
+   font-size:0.9em;
    text-align:center;
 }
 
 p.adstext
 {
-   font-size:0.7em;
+   font-size:0.8em;
    text-align:center;
 }
 
@@ -521,7 +522,7 @@ h2.download-title {
 #validator {
    position:relative;
    height:0px;
-   left:-45%;
+   left:-43%;
    bottom:-1%;
 }
 
@@ -530,4 +531,5 @@ h2.download-title {
    height:0;
    right:0;
    top:140px;
+   z-index:-1;
 }
