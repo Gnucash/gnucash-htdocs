@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-03 21:01+0200\n"
+"POT-Creation-Date: 2011-08-12 10:11+0200\n"
 "PO-Revision-Date: 2011-08-11 22:35+0200\n"
 "Last-Translator: Mark Haanen <i18n@haanen.net>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n > 1);\n"
 
-#: download.phtml:5 docs.phtml:28 docs.phtml:88
+#: download.phtml:5 docs.phtml:32 docs.phtml:96
 msgid "Download"
 msgstr "Downloaden"
 
@@ -65,10 +65,10 @@ msgid ""
 "class=\"gnucash\">GnuCash</span> version that comes with your distribution."
 msgstr ""
 "De meeste Linux-distributies worden geleverd met een versie van <span class="
-"\"gnucash\">GnuCash</span>, maar dit is niet altijd de meest recente "
-"versie; ook moet deze vaak eerst nog worden geïnstalleerd. Toch wordt het "
-"aangeraden om de <span class=\"gnucash\">GnuCash</span>-versie te gebruiken "
-"die met uw distributie wordt meegeleverd."
+"\"gnucash\">GnuCash</span>, maar dit is niet altijd de meest recente versie; "
+"ook moet deze vaak eerst nog worden geïnstalleerd. Toch wordt het aangeraden "
+"om de <span class=\"gnucash\">GnuCash</span>-versie te gebruiken die met uw "
+"distributie wordt meegeleverd."
 
 #: download.phtml:28
 msgid ""
@@ -97,11 +97,12 @@ msgstr ""
 "installeren via Softwarebeheer in het Mandriva Controlecentrum."
 
 #: download.phtml:33
+#, fuzzy
 msgid ""
 "Redhat and CentOS don't have <span class=\"gnucash\">GnuCash</span> in their "
 "repositories by default. It can be installed however from the third-party "
 "Epel repository. For more details on configuring this additional software "
-"repository for your setup, see "
+"repository for your setup, see"
 msgstr ""
 "Redhat en CentOS hebben <span class=\"gnucash\">Gnucash</span> niet "
 "standaard in hun pakketbronnen opgenomen, maar het kan wel worden "
@@ -176,8 +177,8 @@ msgstr ""
 #: download.phtml:48
 #, php-format
 msgid ""
-"The latest unstable release of <span class=\"gnucash\">GnuCash</span> is %"
-"s.  Choose the download for your operating system below."
+"The latest unstable release of <span class=\"gnucash\">GnuCash</span> is "
+"%s.  Choose the download for your operating system below."
 msgstr ""
 "De meest actuele instabiele <span class=\"gnucash\">GnuCash</span>-versie is "
 "%s. Kies de download voor uw besturingssysteem hieronder."
@@ -759,11 +760,30 @@ msgstr ""
 msgid "Documentation Project"
 msgstr "Documentatieproject"
 
-#: docs.phtml:11
+#: docs.phtml:4
+#, fuzzy
+msgid "Browse documentation online"
+msgstr "Documentatierichtlijnen van Gnome"
+
+#: docs.phtml:5
+#, fuzzy
+msgid "Download documentation as PDF"
+msgstr "Officieuze documentatie"
+
+#: docs.phtml:6
+#, fuzzy
+msgid "Download documentation as epub"
+msgstr "Officieuze documentatie"
+
+#: docs.phtml:7
+msgid "Download documentation as mobipocket"
+msgstr ""
+
+#: docs.phtml:15
 msgid "GnuCash Documentation Project"
 msgstr "GnuCash documentatieproject"
 
-#: docs.phtml:13
+#: docs.phtml:17
 msgid ""
 "This page is the home of the <span class=\"gnucash\">GnuCash</span> "
 "Documentation Project, our goal is to maintain a community of people working "
@@ -775,7 +795,7 @@ msgstr ""
 "samen werken aan kwalitatief hoogwaardige documentatie voor <span class="
 "\"gnucash\">GnuCash</span>."
 
-#: docs.phtml:15
+#: docs.phtml:19
 msgid ""
 "If you have a question about how to use <span class=\"gnucash\">GnuCash</"
 "span>, you are in the right place. The first thing you should do is read the "
@@ -787,7 +807,7 @@ msgstr ""
 "de <b>handleiding</b> en de <b>conceptengids</b>, omdat deze twee documenten "
 "waarschijnlijk je meeste vragen al beantwoorden."
 
-#: docs.phtml:16
+#: docs.phtml:20
 msgid ""
 "The <b>Help Manual</b> is designed to be a quick reference of how to "
 "accomplish specific tasks and how to use the features in <span class="
@@ -802,7 +822,7 @@ msgstr ""
 "\"gnucash\">GnuCash</span>, compleet met een zelfstudiegids die laat zien "
 "hoe deze concepten in de praktijk kunnen worden toegepast."
 
-#: docs.phtml:18
+#: docs.phtml:22
 msgid ""
 "Please send an email to the <a href='mailto:gnucash-user@lists.gnucash."
 "org'>gnucash-user</a> mailing list if you cannot find a satisfactory answer "
@@ -816,7 +836,7 @@ msgstr ""
 "ontvangen <b>graag</b> uw feedback, want enkel op die manier ontdekken wij "
 "hoe wij de documentatie kunnen verbeteren."
 
-#: docs.phtml:19
+#: docs.phtml:23
 msgid ""
 "Additionally, you can talk to someone via IRC at irc.gnome.org channel "
 "\"#gnucash\" about your question.  Another resource is the <a href='http://"
@@ -830,55 +850,47 @@ msgstr ""
 "wiki is een interactieve website waar geregistreerde gebruikers vragen "
 "kunnen stellen en/of beantwoorden."
 
-#: docs.phtml:23
+#: docs.phtml:27
 msgid "Nightly Documentation Builds"
 msgstr "Door nachtverwerking gegenereerde documentatie"
 
-#: docs.phtml:25
+#: docs.phtml:29
 msgid ""
 "Current <em>unstable</em> user documentation and developer documentation"
 msgstr "Huidige <em>instabiele</em> gebruikers- en ontwikkelaarsdocumentatie"
 
-#: docs.phtml:28
+#: docs.phtml:32
 msgid "Unstable"
 msgstr "Instabiel"
 
-#: docs.phtml:30 docs.phtml:90 docs.phtml:146 docs.phtml:163 docs.phtml:178
+#: docs.phtml:34 docs.phtml:98 docs.phtml:159 docs.phtml:176 docs.phtml:191
 msgid "Help Manual"
 msgstr "Handleiding"
 
-#: docs.phtml:33 docs.phtml:49 docs.phtml:93 docs.phtml:109 docs.phtml:147
-#: docs.phtml:155 docs.phtml:164 docs.phtml:171 docs.phtml:179 docs.phtml:193
+#: docs.phtml:38 docs.phtml:56 docs.phtml:102 docs.phtml:120 docs.phtml:160
+#: docs.phtml:168 docs.phtml:177 docs.phtml:184 docs.phtml:192 docs.phtml:206
 msgid "English"
 msgstr "Engels"
 
-#: docs.phtml:34 docs.phtml:38 docs.phtml:42 docs.phtml:50 docs.phtml:54
-#: docs.phtml:58 docs.phtml:62 docs.phtml:94 docs.phtml:98 docs.phtml:102
-#: docs.phtml:110 docs.phtml:114 docs.phtml:118 docs.phtml:122 docs.phtml:147
-#: docs.phtml:148 docs.phtml:149 docs.phtml:155 docs.phtml:156 docs.phtml:164
-#: docs.phtml:165 docs.phtml:171 docs.phtml:179 docs.phtml:181 docs.phtml:187
-msgid "Online"
-msgstr "Online"
-
-#: docs.phtml:37 docs.phtml:53 docs.phtml:97 docs.phtml:113 docs.phtml:148
-#: docs.phtml:165 docs.phtml:181 docs.phtml:187 docs.phtml:194
+#: docs.phtml:42 docs.phtml:60 docs.phtml:106 docs.phtml:124 docs.phtml:161
+#: docs.phtml:178 docs.phtml:194 docs.phtml:200 docs.phtml:207
 msgid "German"
 msgstr "Duits"
 
-#: docs.phtml:41 docs.phtml:57 docs.phtml:101 docs.phtml:117 docs.phtml:149
-#: docs.phtml:156
+#: docs.phtml:46 docs.phtml:64 docs.phtml:110 docs.phtml:128 docs.phtml:162
+#: docs.phtml:169
 msgid "Italian"
 msgstr "Italiaans"
 
-#: docs.phtml:46 docs.phtml:106 docs.phtml:154 docs.phtml:170 docs.phtml:186
+#: docs.phtml:52 docs.phtml:116 docs.phtml:167 docs.phtml:183 docs.phtml:199
 msgid "Concepts Guide"
 msgstr "Conceptengids"
 
-#: docs.phtml:61 docs.phtml:121
+#: docs.phtml:68 docs.phtml:132
 msgid "Japanese"
 msgstr "Japans"
 
-#: docs.phtml:74
+#: docs.phtml:82
 msgid ""
 "Every night a server builds the documentation from the current contents of "
 "the <span class=\"gnucash\">GnuCash</span> subversion repository. This "
@@ -892,7 +904,7 @@ msgstr ""
 "<b>gebruikersdocumentatie</b> voor voor de huidige <em>instabiele</em> <span "
 "class=\"gnucash\">GnuCash</span>-versie."
 
-#: docs.phtml:78
+#: docs.phtml:86
 msgid ""
 "<b>NOTE:</b> these documents might not be accessible from time to time "
 "because developers might be working on improvements. However they are the "
@@ -902,19 +914,19 @@ msgstr ""
 "ontwkkelaars soms werken aan verbeteringen. Dit is echter de meest actuele "
 "naslagbron voor <span class=\"gnucash\">GnuCash</span>-gebruikers."
 
-#: docs.phtml:83
+#: docs.phtml:91
 msgid "(current stable release)"
 msgstr "(actuele stabiele uitgave)"
 
-#: docs.phtml:85
+#: docs.phtml:93
 msgid "Current <em>stable</em> user documentation and developer documentation"
 msgstr "Huidige <em>stabiele</em> gebruikers- en ontwikkelaarsdocumentatie"
 
-#: docs.phtml:88
+#: docs.phtml:96
 msgid "Stable"
 msgstr "Stabiel"
 
-#: docs.phtml:134
+#: docs.phtml:147
 msgid ""
 "This is the latest stable release of the <span class=\"gnucash\">GnuCash</"
 "span> documentation. <em>Stable</em> means that this documentation is not "
@@ -925,11 +937,11 @@ msgstr ""
 "documentatie volledig actueel is, maar wel dat deze zonder problemen zou "
 "moeten werken."
 
-#: docs.phtml:139
+#: docs.phtml:152
 msgid "Older GnuCash Documentation"
 msgstr "Oudere GnuCash-documentatie"
 
-#: docs.phtml:141
+#: docs.phtml:154
 msgid ""
 "This section contains all the older <span class=\"gnucash\">GnuCash</span> "
 "documentation. If you are using one of these old versions of <span class="
@@ -941,32 +953,32 @@ msgstr ""
 "\">GnuCash</span> gebruikt, raden wij je met klem aan om te upgraden naar de "
 "huidige stabiele versie."
 
-#: docs.phtml:195
+#: docs.phtml:208
 msgid "Spanish"
 msgstr "Spaans"
 
-#: docs.phtml:196
+#: docs.phtml:209
 msgid "Portugese"
 msgstr "Portugees"
 
-#: docs.phtml:202
+#: docs.phtml:215
 msgid "Unofficial documentation"
 msgstr "Officieuze documentatie"
 
-#: docs.phtml:204
+#: docs.phtml:217
 msgid "Some people have written HOWTO guides or tutorials."
 msgstr ""
 "Sommige mensen hebben zelf handleidingen of zelfstudie-gidsen geschreven."
 
-#: docs.phtml:207
+#: docs.phtml:220
 msgid "Joe Mack's Tutorial"
 msgstr "Zelfstudie-gids (Engelstalig, geschreven door Joe Mack)"
 
-#: docs.phtml:209
+#: docs.phtml:222
 msgid "Dave Gilbert's User Guide (Pdf)"
 msgstr "Gebruikershandleiding (Engelstalige PDF, geschreven door Dave Gilbert)"
 
-#: docs.phtml:213
+#: docs.phtml:226
 msgid ""
 "<b>NOTE:</b> the information presented in these sources may or may not be "
 "updated to the most recent version of <span class=\"gnucash\">GnuCash</"
@@ -978,15 +990,15 @@ msgstr ""
 "Als je geïnteresseerd bent om aan deze documenten te werken, neem dan "
 "contact op met de oorspronkelijke auteurs."
 
-#: docs.phtml:219
+#: docs.phtml:232
 msgid "Documentation Development"
 msgstr "Documentatie-ontwikkeling"
 
-#: docs.phtml:222
+#: docs.phtml:235
 msgid "Introduction"
 msgstr "Introductie"
 
-#: docs.phtml:223
+#: docs.phtml:236
 msgid ""
 "The <span class=\"gnucash\">GnuCash</span> documentation is stored in "
 "<b>xml</b> files. More precisely, it uses the <b>GNOME2 XML docbook system</"
@@ -1000,7 +1012,7 @@ msgstr ""
 "bestanden documentatie in verschillende vormen (html, pdf, ...) kan "
 "aanbieden."
 
-#: docs.phtml:224
+#: docs.phtml:237
 msgid ""
 "If you wish to review or write <span class=\"gnucash\">GnuCash</span> "
 "documentation, you will need to know xml. Some basic knowledge of the "
@@ -1010,7 +1022,7 @@ msgstr ""
 "\">GnuCash</span> documentatie, zal je eerst met XML overweg moeten kunnen. "
 "Elementaire kennis van het docbook-systeem kan ook handig zijn."
 
-#: docs.phtml:225
+#: docs.phtml:238
 msgid ""
 "The following links are for further sites that can help with the "
 "documentation and review process."
@@ -1018,7 +1030,7 @@ msgstr ""
 "De volgende koppelingen verwijzen naar overige sites die kunnen helpen bij "
 "het documentatie- en reviewproces."
 
-#: docs.phtml:230
+#: docs.phtml:243
 msgid ""
 "While this <span class=\"gnucash\">GnuCash</span> wiki page is really about "
 "translating the documentation, it holds some useful information on working "
@@ -1028,22 +1040,22 @@ msgstr ""
 "over het vertalen van de documentatie gaat, staat er ook nuttige informatie "
 "in over het werken met docbook-bestanden."
 
-#: docs.phtml:231
+#: docs.phtml:244
 msgid ""
 "A detailed guide on how to work with documentation (update and maintenance)."
 msgstr ""
 "Een gedetailleerde handleiding hoe om te gaan met documentatie (bijwerken en "
 "onderhoud)"
 
-#: docs.phtml:233
+#: docs.phtml:246
 msgid "We suggest also subscribing to"
 msgstr "Ook adviseren wij u zich te abonneren op"
 
-#: docs.phtml:235
+#: docs.phtml:248
 msgid "Gnome Documentation guidelines"
 msgstr "Documentatierichtlijnen van Gnome"
 
-#: docs.phtml:236
+#: docs.phtml:249
 msgid ""
 "As stated earlier, the new docs are based on the GNOME2 XML docbook system. "
 "Everyone wishing to help please follow these guides where possible when "
@@ -1054,11 +1066,11 @@ msgstr ""
 "van de documentatie verzoeken wij om deze richtlijnen waar mogelijk te "
 "volgen."
 
-#: docs.phtml:242
+#: docs.phtml:255
 msgid "Where to get the documentation source"
 msgstr "Waar vind ik de documentatiebestanden"
 
-#: docs.phtml:243
+#: docs.phtml:256
 msgid ""
 "You will need a recent copy of the documentation source. For this you can "
 "check out the documentation module from the <span class=\"gnucash\">GnuCash</"
@@ -1071,7 +1083,7 @@ msgstr ""
 "sourceforge.net/projects/gnucash/files/gnucash-docs/'>huidige documentatie-"
 "tarball</a>."
 
-#: docs.phtml:244
+#: docs.phtml:257
 msgid ""
 "For those not familiar with svn, the <span class=\"gnucash\">GnuCash</span> "
 "wiki has a <a href='http://wiki.gnucash.org/wiki/Subversion'>description</a> "
@@ -1086,11 +1098,11 @@ msgstr ""
 "de broncode van het programma moet je 'gnucash' in de genoemde commando's "
 "vervangen door 'gnucash-docs', zoals dit:"
 
-#: docs.phtml:247
+#: docs.phtml:260
 msgid "Writers"
 msgstr "Schrijvers"
 
-#: docs.phtml:248
+#: docs.phtml:261
 msgid ""
 "Get a copy of the documentation source as described above and start making "
 "changes. When you are satisfied with your changes you can create a patch by "
@@ -1103,7 +1115,7 @@ msgstr ""
 "documentatie (normaal gesproken gnucash-docs, tenzij je de naam hebt "
 "gewijzigd):"
 
-#: docs.phtml:250
+#: docs.phtml:263
 msgid ""
 "Next attach your patch to a bug report against the documentation component "
 "for the <span class=\"gnucash\">GnuCash</span> project in <a href='http://"
@@ -1123,7 +1135,7 @@ msgstr ""
 "wiki.gnucash.org/wiki/Bugzilla'>GnuCash wiki pagina over Bugzilla</a> "
 "doorlezen."
 
-#: docs.phtml:252
+#: docs.phtml:265
 msgid ""
 "<b>NOTE:</b> It used to be ok also to send your patch directly to the "
 "gnucash-devel list. This is discouraged now, as a patch is easily forgotten "
@@ -1139,7 +1151,7 @@ msgstr ""
 "mailinglijst te sturen, doe het dan als bijlage, niet in de tekst van de e-"
 "mail zelf."
 
-#: docs.phtml:253
+#: docs.phtml:266
 msgid ""
 "Please let other writers know which section you wish to tackle. Please "
 "forward this to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-"
@@ -1151,7 +1163,7 @@ msgstr ""
 "org'>gnucash-devel</a>. Op die manier kunnen we dubbel werk zoveel mogelijk "
 "voorkomen."
 
-#: docs.phtml:254
+#: docs.phtml:267
 msgid ""
 "You may also want to retain a local copy of the old documentation to refer "
 "to when writing. This still has a lot of useful information in it which "
@@ -1161,11 +1173,11 @@ msgstr ""
 "documentatie om dingen op te zoeken tijdens het schrijven. Deze bevat nog "
 "veel nuttige informatie die niet overgenomen is in de nieuwe documentatie."
 
-#: docs.phtml:257
+#: docs.phtml:270
 msgid "Reviewers"
 msgstr "Reviewers"
 
-#: docs.phtml:258
+#: docs.phtml:271
 msgid ""
 "Get a copy of the documentation source as described above and start "
 "commenting on it."
@@ -1173,7 +1185,7 @@ msgstr ""
 "Maak een eigen kopie van de documentatiebestanden zoals hierboven beschreven "
 "en begin met het leveren van opmerkingen."
 
-#: docs.phtml:259
+#: docs.phtml:272
 msgid ""
 "The best way of retaining comments about docs in an easy to find way for "
 "everyone would be to use <a href='http://bugzilla.gnome.org/'>bugzilla.gnome."
@@ -1197,7 +1209,7 @@ msgid ""
 msgstr ""
 "Dit is een archief met berichten die ooit op de GnuCash thuispagina stonden."
 
-#: sizing.phtml:3 externals/menu.phtml:57
+#: sizing.phtml:3 externals/menu.phtml:53
 msgid "Sizing"
 msgstr "Statistieken"
 
@@ -1566,91 +1578,91 @@ msgstr ""
 "verzenders en vertalers. Dit omvat extra vermeldingen uit het gnucash-docs/"
 "AUTHORS bestand die niet vermeld zijn in het gnucash/AUTHORS hoofdbestand."
 
-#: externals/menu.phtml:10
+#: externals/menu.phtml:6
 msgid "Information"
 msgstr "Informatie"
 
-#: externals/menu.phtml:13
+#: externals/menu.phtml:9
 msgid "About / News"
 msgstr "Algemeen/Nieuws"
 
-#: externals/menu.phtml:14
+#: externals/menu.phtml:10
 msgid "News Feed"
 msgstr "Nieuwsfeed"
 
-#: externals/menu.phtml:15
+#: externals/menu.phtml:11
 msgid "Screenshots, Features"
 msgstr "Schermafbeeldingen, functies"
 
-#: externals/menu.phtml:16
+#: externals/menu.phtml:12
 msgid "How to help"
 msgstr "Meehelpen"
 
-#: externals/menu.phtml:17
+#: externals/menu.phtml:13
 msgid "Donations"
 msgstr "Donaties"
 
-#: externals/menu.phtml:23
+#: externals/menu.phtml:19
 msgid "Downloads"
 msgstr "Downloaden"
 
-#: externals/menu.phtml:26
+#: externals/menu.phtml:22
 msgid "Program"
 msgstr "Programma"
 
-#: externals/menu.phtml:27 externals/menu.phtml:34
+#: externals/menu.phtml:23 externals/menu.phtml:30
 msgid "Documentation"
 msgstr "Documentatie"
 
-#: externals/menu.phtml:32
+#: externals/menu.phtml:28
 msgid "Support"
 msgstr "Ondersteuning"
 
-#: externals/menu.phtml:35
+#: externals/menu.phtml:31
 msgid "FAQ"
 msgstr "Veelgestelde vragen"
 
-#: externals/menu.phtml:36
+#: externals/menu.phtml:32
 msgid "Wiki"
 msgstr "Wiki"
 
-#: externals/menu.phtml:37
+#: externals/menu.phtml:33
 msgid "Mailing Lists"
 msgstr "Mailinglijsten"
 
-#: externals/menu.phtml:40
+#: externals/menu.phtml:36
 msgid "Search"
 msgstr "Zoeken"
 
-#: externals/menu.phtml:43
+#: externals/menu.phtml:39
 msgid "Bug Reports"
 msgstr "Bugrapporten"
 
-#: externals/menu.phtml:44
+#: externals/menu.phtml:40
 msgid "IRC (Chat)"
 msgstr "IRC (Chat)"
 
-#: externals/menu.phtml:50
+#: externals/menu.phtml:46
 msgid "Developement"
 msgstr "Ontwikkeling"
 
-#: externals/menu.phtml:53
+#: externals/menu.phtml:49
 msgid "Source Docs"
 msgstr "Ontwerprichtlijnen"
 
-#: externals/menu.phtml:54
+#: externals/menu.phtml:50
 msgid "Browse Source Code"
 msgstr "Broncode bekijken"
 
-#: externals/menu.phtml:55
+#: externals/menu.phtml:51
 msgid "Subversion Access"
 msgstr "Toegang tot Subversion"
 
-#: externals/menu.phtml:56
+#: externals/menu.phtml:52
 msgid "Language Translations"
 msgstr "Vertalingen"
 
-#: externals/menu.phtml:69
+#: externals/menu.phtml:64
 msgid ""
 "The GnuCash development team received notice about a new book published by "
 "PacktPub, UK:"
@@ -1658,18 +1670,18 @@ msgstr ""
 "Het GnuCash ontwikkelteam ontving bericht over een nieuw boek, uitgegeven "
 "door PacktPub (UK):"
 
-#: externals/menu.phtml:70
+#: externals/menu.phtml:65
 msgid "GnuCash 2.4 Small Business Accounting, by Ashok Ramachandran"
 msgstr ""
 "GnuCash 2.4 Small Business Accounting, geschreven door Ashok Ramachandran"
 
-#: externals/menu.phtml:71
+#: externals/menu.phtml:66
 msgid "This is a Beginner's Guide for managing your accounts."
 msgstr ""
 "Deze handleiding voor het beheren van uw rekeningen is geschreven voor "
 "beginners."
 
-#: externals/menu.phtml:72
+#: externals/menu.phtml:67
 msgid ""
 "Our own developer Christian Stimming has been contributing to this book as a "
 "reviewer, and we can wholeheartly recommend the outcome of this fruitful "
@@ -1703,15 +1715,15 @@ msgstr ""
 msgid "Language"
 msgstr "Taal"
 
-#: externals/header.phtml:69
+#: externals/header.phtml:70
 msgid "Continent"
 msgstr "Continent"
 
-#: externals/footer.phtml:11
+#: externals/footer.phtml:8
 msgid "Server &amp; email outage reports to:"
 msgstr "Storingsmeldingen server &amp; e-mail naar:"
 
-#: externals/footer.phtml:12
+#: externals/footer.phtml:9
 msgid "Translation problems? Contact:"
 msgstr "Vertaalproblemen? Meld het op:"
 
@@ -2226,6 +2238,9 @@ msgstr "Auteur"
 #: search/templates/NMZ.result.normal.php_tmpl:6
 msgid "Date"
 msgstr "Datum"
+
+#~ msgid "Online"
+#~ msgstr "Online"
 
 #, fuzzy
 #~ msgid "Free Acconting Software"
