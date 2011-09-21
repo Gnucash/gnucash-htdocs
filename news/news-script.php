@@ -130,6 +130,7 @@ function emit_news($en_newspath, $lang_newspath, $oldnews)
 ?>
 <div class="newsborder">
   <div class="newsheader">
+    <div style="float:left; width:90%; background color:rgb(202, 202, 247);">
     <img src="<?=$top_dir?>/images/icons/document.txt.gif" width="16" height="16" alt="[news]" />&nbsp;
     <a style="text-decoration:none;color:black;" onmouseover="this.style.backgroundColor='#cacaf7';" onmouseout="this.style.backgroundColor='#cacaf7';" name="<?=generate_anchor($key)?>"><?= $fa[0]; ?> - <b><?= $newsfile[$key] ?></b></a>
   </div>
@@ -137,8 +138,11 @@ function emit_news($en_newspath, $lang_newspath, $oldnews)
   <? for ($i=2; $i<$n; $i++)  {
           print $fa[$i];
      } ?>
-<!-- The google +1 button-->
-<g:plusone></g:plusone>
+  <div style="float:right; width:10%; background color:rgb(202, 202, 247);">
+  <!-- The google +1 button-->
+  <g:plusone></g:plusone>
+  </div>
+
   </div>
 </div>
 <?
