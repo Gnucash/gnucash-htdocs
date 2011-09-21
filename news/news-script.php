@@ -129,12 +129,12 @@ function emit_news($en_newspath, $lang_newspath, $oldnews)
         $n = count($fa);
 ?>
 <div class="newsborder">
-  <div class="newsheader">
-    <div style="float:left; width:90%; background-color:rgb(202, 202, 247);">
+  <div class="newsheader" style="display:inline-block;background-color:#CACAF7;width:100%">
+    <div style="float:left; max-width:80%;">
     <img src="<?=$top_dir?>/images/icons/document.txt.gif" width="16" height="16" alt="[news]" />&nbsp;
     <a style="text-decoration:none;color:black;" onmouseover="this.style.backgroundColor='#cacaf7';" onmouseout="this.style.backgroundColor='#cacaf7';" name="<?=generate_anchor($key)?>"><?= $fa[0]; ?> - <b><?= $newsfile[$key] ?></b></a>
   </div>
-  <div style="float:right; width:10%; background-color:rgb(202, 202, 247);">
+  <div style="float:right; min-width:100px;padding-top:5px">
   <!-- The google +1 button-->
   <g:plusone></g:plusone>
   </div>
