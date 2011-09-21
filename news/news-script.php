@@ -136,7 +136,7 @@ function emit_news($en_newspath, $lang_newspath, $oldnews)
   </div>
   <div style="float:right; min-width:100px;padding-top:5px">
   <!-- The google +1 button-->
-  <g:plusone href="http://www.google.com"></g:plusone>
+  <g:plusone href="http://www.gnucash.org/beta/#<?=generate_anchor($key)?>"></g:plusone>
   </div>
   </div>
   <div class="newsinner">
