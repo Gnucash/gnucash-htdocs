@@ -134,6 +134,7 @@ function emit_news($en_newspath, $lang_newspath, $oldnews)
     <img src="<?=$top_dir?>/images/icons/document.txt.gif" width="16" height="16" alt="[news]" />&nbsp;
     <a style="text-decoration:none;color:black;" onmouseover="this.style.backgroundColor='#cacaf7';" onmouseout="this.style.backgroundColor='#cacaf7';" name="<?=generate_anchor($key)?>"><?= $fa[0]; ?> - <b><?= $newsfile[$key] ?></b></a>
   </div>
+  </div>
   <div class="newsinner">
   <? for ($i=2; $i<$n; $i++)  {
           print $fa[$i];
