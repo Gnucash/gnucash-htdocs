@@ -137,6 +137,8 @@ function emit_news($en_newspath, $lang_newspath, $oldnews)
   <? for ($i=2; $i<$n; $i++)  {
           print $fa[$i];
      } ?>
+<!-- The google +1 button-->
+<g:plusone></g:plusone>
   </div>
 </div>
 <?
