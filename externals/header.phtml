@@ -27,7 +27,11 @@ if (isset($homepage)) { ?>
   <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="<?=$home?>/atom.php" />
 <?php } ?>
 
+<!--This is the description shown on google+ profile for GnuCash-->
 <meta name="description" content="A personal and small-business financial-accounting software, freely licensed under the GNU GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows." />
+<!--This is an image out of the view that is shown on google+ profile for GnuCash-->
+<div style="position:absolute;top:-1000px;left:-1000px;"><img src="<?=$home?>/images/gnc-download.png" alt="GnuCash small business accounting" height="152" width="125" /></div>
+
 <title><?= T_($title); ?> | GnuCash</title>
 <!--script for Google+1 button-->
 <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
@@ -42,7 +46,7 @@ if (isset($homepage)) { ?>
 </div>
 
 <div id="googleplusone">
-<g:plusone size="tall" href="http://www.gnucash.org"></g:plusone>
+<g:plusone size="tall" href="http://www.gnucash.org/beta/"></g:plusone>
 </div>
 
 <div style="float:right;">
