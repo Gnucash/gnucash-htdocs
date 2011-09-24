@@ -34,11 +34,12 @@
   include("$top_dir/news/news-script.php");
 ?>
 
-<feed xmlns="http://www.w3.org/2005/Atom">
+<rss xmlns="http://www.w3.org/2005/Atom">
   <id>http://www.gnucash.org/atom.php</id>
   <title>GnuCash News</title>
+  <description>DESCRIPTION</description>
   <generator>GnuCash htdocs/trunk/atom.php 1.0 &lt;gnucash-devel@gnucash.org&gt;</generator>
-  <logo>http://www.gnucash.org/beta/images/gnucash_logo.png</logo>
+  <logo>http://www.gnucash.org/beta/images/icons/gnc-icon.png</logo>
   <link rel="alternate" href="http://www.gnucash.org/beta/" />
   <link rel="self" href="http://www.gnucash.org/beta/atom.php" />
   <?php
@@ -75,4 +76,4 @@
   <?php
   } ?>
 
-</feed>
+</rss>
