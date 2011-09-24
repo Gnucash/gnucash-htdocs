@@ -37,11 +37,5 @@
 <feed version="2.0" xmlns="http://www.w3.org/2005/Atom">
   <channel>
     <title>GnuCash News</title>
-  <description>DESCRIPTION</description>
-  <generator>GnuCash htdocs/trunk/atom.php 1.0 &lt;gnucash-devel@gnucash.org&gt;</generator>
-  <logo>http://www.gnucash.org/beta/images/icons/gnc-icon.png</logo>
-  <link rel="alternate" href="http://www.gnucash.org/beta/" />
-  <link rel="self" href="http://www.gnucash.org/beta/atom.php" />
-
   </channel>
 </feed>
