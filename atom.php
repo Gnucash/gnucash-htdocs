@@ -38,7 +38,7 @@
   <title>GnuCash News</title>
   <subtitle>GnuCash is personal and small-business financial-accounting software, freely licensed under the GNU GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.</subtitle>
   <generator>GnuCash htdocs/trunk/atom.php 1.0 &lt;gnucash-devel@gnucash.org&gt;</generator>
-  <logo>http://www.gnucash.org/images/icons-gnc-icon.png</logo>
+  <logo>http://www.gnucash.org/beta/images/icons-gnc-icon.png</logo>
   <link rel="alternate" href="http://www.gnucash.org/beta/" />
   <link rel="self" href="http://www.gnucash.org/beta/atom.php" />
   <?php
