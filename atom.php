@@ -29,13 +29,23 @@
     return substr($semi_atom_date, 0, $len-2) . ":" . substr($semi_atom_date, $len-2);
   }
 ?>
-<?="<?xml version=\"1.0\" encoding=\"$charset\"?>"?>
+
 <?php
   include("$top_dir/news/news-script.php");
 ?>
 
-<feed version="2.0" xmlns="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>GnuCash News</title>
-  </channel>
-</feed>
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="2.0">
+
+<channel>
+  <title>W3Schools Home Page</title>
+  <link>http://www.w3schools.com</link>
+  <description>Free web building tutorials</description>
+  <item>
+    <title>RSS Tutorial</title>
+    <link>http://www.w3schools.com/rss</link>
+    <description>New RSS tutorial on W3Schools</description>
+  </item>
+</channel>
+
+</rss>
