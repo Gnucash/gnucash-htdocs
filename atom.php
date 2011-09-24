@@ -68,7 +68,7 @@
     <updated><?= date_convert_news_to_atom($update_date) ?></updated>
     <description><![CDATA[
         <? for ($i=2; $i<$n; $i++) {
-            print htmlentities($fa[$i]);
+            print ($fa[$i]);
         } ?>
     ]]></content>
   </entry>
