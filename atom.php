@@ -71,7 +71,7 @@
         <? for ($i=2; $i<$n; $i++) {
             print ($fa[$i]);
         } ?>
-    ]]></content>
+    ]]></description>
   </item>
   <?php
   } ?>
