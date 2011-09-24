@@ -50,6 +50,29 @@
   ?>
   <updated><?= date_convert_news_to_atom($most_recent_update) ?></updated>
 
-
+  <?php for (reset($news_items); $key = key($news_items); next($news_items))
+  {
+    $fa = file($key);
+    $n = count($fa);
+    $title = strip_tags(chop($fa[0]));
+    $update_date = chop($fa[1]);
+    ?>
+  <entry>
+    <id>urn:x-gnucash:news:<?= urlencode($key) ?></id>
+    <title><?= $title ?></title>
+    <link rel="alternate" href="http://www.gnucash.org/beta/#<?=generate_anchor($key);?>" />
+    <author>
+      <name>GnuCash Developers</name>
+      <email>gnucash-devel@gnucash.org</email>
+    </author>
+    <updated><?= date_convert_news_to_atom($update_date) ?></updated>
+    <summary>
+        <? for ($i=2; $i<$n; $i++) {
+            print htmlentities($fa[$i]);
+        } ?>
+    <summary>
+  </entry>
+  <?php
+  } ?>
 
 </feed>
