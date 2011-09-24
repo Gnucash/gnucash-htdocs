@@ -12,7 +12,7 @@
   $charset = "iso-8859-1";
   header("Content-Type: $contentType; charset=$charset");
 
-  $entry_count = 10;
+  $entry_count = 1;
   $newsdir = "${top_dir}/news";
 
   /**
@@ -68,7 +68,7 @@
     <updated><?= date_convert_news_to_atom($update_date) ?></updated>
     <content type="html">
         <? for ($i=2; $i<$n; $i++) {
-            print ($fa[$i]);
+            print htmlentities($fa[$i]);
         } ?>
     </content>
   </entry>
