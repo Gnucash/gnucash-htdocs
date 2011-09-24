@@ -66,11 +66,11 @@
       <email>gnucash-devel@gnucash.org</email>
     </author>
     <updated><?= date_convert_news_to_atom($update_date) ?></updated>
-    <content type="html">
+    <description><![CDATA[
         <? for ($i=2; $i<$n; $i++) {
             print htmlentities($fa[$i]);
         } ?>
-    </content>
+    ]]></content>
   </entry>
   <?php
   } ?>
