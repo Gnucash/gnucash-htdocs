@@ -34,7 +34,7 @@
   include("$top_dir/news/news-script.php");
 ?>
 
-<rss version="2.0" xmlns="http://www.w3.org/2005/Atom">
+<feed version="2.0" xmlns="http://www.w3.org/2005/Atom">
   <channel>
   <id>http://www.gnucash.org/atom.php</id>
   <title>GnuCash News</title>
@@ -77,4 +77,4 @@
   <?php
   } ?>
   </channel>
-</rss>
+</feed>
