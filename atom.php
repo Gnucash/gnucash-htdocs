@@ -34,10 +34,9 @@
   include("$top_dir/news/news-script.php");
 ?>
 
-<rss version="2.0" xmlns="http://www.w3.org/2005/Atom">
-  <channel>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://www.gnucash.org/atom.php</id>
   <title>GnuCash News</title>
-  <description>GnuCash is personal and small-business financial-accounting software, freely licensed under the GNU GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.</description>
   <generator>GnuCash htdocs/trunk/atom.php 1.0 &lt;gnucash-devel@gnucash.org&gt;</generator>
   <logo>http://www.gnucash.org/beta/images/gnucash_logo.png</logo>
   <link rel="alternate" href="http://www.gnucash.org/beta/" />
@@ -58,7 +57,7 @@
     $title = strip_tags(chop($fa[0]));
     $update_date = chop($fa[1]);
     ?>
-  <item>
+  <entry>
     <id>urn:x-gnucash:news:<?= urlencode($key) ?></id>
     <title><?= $title ?></title>
     <link rel="alternate" href="http://www.gnucash.org/beta/#<?=generate_anchor($key);?>" />
@@ -71,9 +70,9 @@
         <? for ($i=2; $i<$n; $i++) {
             print ($fa[$i]);
         } ?>
-    ]]></description>
-  </item>
+    ]]></content>
+  </entry>
   <?php
   } ?>
-  </channel>
-</rss>
+
+</feed>
