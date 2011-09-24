@@ -38,9 +38,9 @@
   <id>http://www.gnucash.org/atom.php</id>
   <title>GnuCash News</title>
   <generator>GnuCash htdocs/trunk/atom.php 1.0 &lt;gnucash-devel@gnucash.org&gt;</generator>
-  <logo>http://www.gnucash.org/images/gnucash_logo.png</logo>
-  <link rel="alternate" href="http://www.gnucash.org/" />
-  <link rel="self" href="http://www.gnucash.org/atom.php" />
+  <logo>http://www.gnucash.org/beta/images/gnucash_logo.png</logo>
+  <link rel="alternate" href="http://www.gnucash.org/beta/" />
+  <link rel="self" href="http://www.gnucash.org/beta/atom.php" />
   <?php
   $news_items = get_news($newsdir, $newsdir);
   $news_items = array_slice($news_items, 0, $entry_count);
@@ -60,7 +60,7 @@
   <entry>
     <id>urn:x-gnucash:news:<?= urlencode($key) ?></id>
     <title><?= $title ?></title>
-    <link rel="alternate" href="http://www.gnucash.org/#<?=generate_anchor($key);?>" />
+    <link rel="alternate" href="http://www.gnucash.org/beta/#<?=generate_anchor($key);?>" />
     <author>
       <name>GnuCash Developers</name>
       <email>gnucash-devel@gnucash.org</email>
