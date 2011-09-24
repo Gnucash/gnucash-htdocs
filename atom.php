@@ -35,12 +35,12 @@
 ?>
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://www.gnucash.org/atom.php</id>
   <title>GnuCash News</title>
+  <subtitle>GnuCash is personal and small-business financial-accounting software, freely licensed under the GNU GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.</subtitle>
   <generator>GnuCash htdocs/trunk/atom.php 1.0 &lt;gnucash-devel@gnucash.org&gt;</generator>
   <logo>http://www.gnucash.org/images/gnucash_logo.png</logo>
-  <link rel="alternate" href="http://www.gnucash.org/" />
-  <link rel="self" href="http://www.gnucash.org/atom.php" />
+  <link rel="alternate" href="http://www.gnucash.org/beta/" />
+  <link rel="self" href="http://www.gnucash.org/beta/atom.php" />
   <?php
   $news_items = get_news($newsdir, $newsdir);
   $news_items = array_slice($news_items, 0, $entry_count);
@@ -60,17 +60,17 @@
   <entry>
     <id>urn:x-gnucash:news:<?= urlencode($key) ?></id>
     <title><?= $title ?></title>
-    <link rel="alternate" href="http://www.gnucash.org/#<?=generate_anchor($key);?>" />
+    <link rel="alternate" href="http://www.gnucash.org/beta/#<?=generate_anchor($key);?>" />
     <author>
       <name>GnuCash Developers</name>
       <email>gnucash-devel@gnucash.org</email>
     </author>
     <updated><?= date_convert_news_to_atom($update_date) ?></updated>
-    <content type="html">
+    <summary>
         <? for ($i=2; $i<$n; $i++) {
             print htmlentities($fa[$i]);
         } ?>
-    </content>
+    <summary>
   </entry>
   <?php
   } ?>
