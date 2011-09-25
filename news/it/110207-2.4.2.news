@@ -7,7 +7,7 @@
 
 <p>Nota: la versione 2.4.1 è stata parzialmente rilasciata ma poi è stata ritirata all'ultimo minuto a causa della presenza di alcuni problemi critici. La versione 2.4.1 NON dovrebbe essere utilizzata.</p>
 
-<p>Le principali novità della versione 2.4.0 comprendono:
+<p>Le principali novità della versione 2.4.0 comprendono:</p>
 <ul>
 <li>Oltre al backend XML, Gnucash può ora utilizzare un database SQLite3, MySQL o PostgreSQL per l'immagazzinamento dei dati. Questa è una nuova implementazione che utilizza libdbi. Sono supportate tutte le caratteristiche incluse quelle professionali. Per compilare con questa funzionalità, aggiungere "--enable-dbi" al comando "configure". Oltre al pacchetto libdbi-dev della propria distribuzione, sarà anche necessario l'appropriato pacchetto DBD (libdbi driver) per sqlite3, mysql o postgresql.</li>
 <li>Come sostituto dell'attuale motore GtkHTML HTML utilizzato per visualizzare i resoconti e i grafici, Gnucash può usare WebKit. WebKit è il motore utilizzato da Google Chrome su Windows e da Safari su Apple. Per compilare con questa caratteristica, aggiungere "--with-html-engine=webkit" al comando "configure". Sarà necessario l'appropriato pacchetto webkit-dev. Su win32, si dovrà scaricare il file compresso webkit-1.1.90-win32.zip dal repository sorgente e inserirlo nella cartella "downloads" della propria area di compilazione di GnuCash.</li>
@@ -15,13 +15,13 @@
 </ul>
 
 <h3>Ottenere GnuCash per sistemi Windows (file binari di Win32)</h3>
-<p>Il <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.2-setup.exe">file eseguibile di Win32 per l'installazione di Gnucash 2.4.2</a> può essere scaricato da Sourceforge. Il file installerà tutto ciò che è necessario per eseguire GnuCash.
+<p>Il <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.2-setup.exe">file eseguibile di Win32 per l'installazione di Gnucash 2.4.2</a> può essere scaricato da Sourceforge. Il file installerà tutto ciò che è necessario per eseguire GnuCash.</p>
 
 <h3>File binario per sistemi Mac OSX</h3>
-<p>Il <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.4.2.dmg">pacchetto per MacOSX di Gnucash 2.4.2</a> può essere scaricato anch'esso da Sourceforge.
+<p>Il <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.4.2.dmg">pacchetto per MacOSX di Gnucash 2.4.2</a> può essere scaricato anch'esso da Sourceforge.</p>
 
 <h3>Ottenere GnuCash come codice sorgente</h3>
-<p>Per compilare autonomamente GnuCash 2.4.2, il codice sorgente può essere scaricato da:
+<p>Per compilare autonomamente GnuCash 2.4.2, il codice sorgente può essere scaricato da:</p>
 <ul>
 <li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.2.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.2.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.4.2/">tutti i file</a>.</li>
 <li>È inoltre possibile eseguire il checkout direttamente dal repository subversion con il seguente comando:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/tags/2.4.2 gnucash</span></li>
@@ -31,14 +31,14 @@
 Gnome 2, guile, slib. Sarà inoltre necessario avere swig se si compila da subversion.</p>
 
 
-<p>Cambiamenti tra la versione 2.4.0 e la versione 2.4.2:
+<p>Cambiamenti tra la versione 2.4.0 e la versione 2.4.2:</p>
 
 <ul>
 
 
 
 
-<li>Cambiamenti visibili dall'utente</li>
+<li>Cambiamenti visibili dall'utente
 <ul>
 <li>Partly revert r20207, "Modify Tax Info on Account Page..."
 
@@ -111,11 +111,11 @@ in that table.</li>
 <li>Add a new report: Future Scheduled Transaction Summary.</li>
 <li>Improve GncEntry quickfill to create separate quickfills for invoices and bills</li>
 </ul>
+</li>
 
 
 
-
-<li>Traduzioni aggiornate o modifiche relative alle traduzioni</li>
+<li>Traduzioni aggiornate o modifiche relative alle traduzioni
 <ul>
 <li>Updated German translation, now 100% completed.</li>
 <li>I18n improvements: Fix weird strings.</li>
@@ -142,11 +142,11 @@ mentions currencies and
 gives a clue for the account type.
 Add enable basic doxygen output.</li>
 </ul>
+</li>
 
 
 
-
-<li>Problemi corretti</li>
+<li>Problemi corretti
 <ul>
 <li>Bug #639172: Remove "Warning!! This is a DEVELOPMENT version .." tip of the day
 
@@ -466,11 +466,11 @@ would be configurable.</li>
 Patch by Christoph Holtermann.</li>
 <li>Adds percentages to piecharts.  See bug #343449 for details.  Patch is derived from a patch submitted by Alexander Weiss</li>
 </ul>
+</li>
 
 
 
-
-<li>Altri cambiamenti relativi al codice e alla compilazione</li>
+<li>Altri cambiamenti relativi al codice e alla compilazione
 <ul>
 <li>Tag 2.4.2 </li>
 <li>Update revision to 2.4.2 </li>
@@ -658,7 +658,7 @@ As a result if your WC really has mixed sources, that will not be
 visible in the version number...</li>
 <li>Remove the word "days" because it is also located after the near field.</li>
 </ul>
-
+</li>
 
 
 

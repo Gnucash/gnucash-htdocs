@@ -17,17 +17,17 @@
 
 <p>PLEASE TEST TEST AND TEST SOME MORE any and all features important to you.
 Then post any bugs you find to bugzilla</p>
-<p>Major changes in the 2.3.x release include;
+<p>Major changes in the 2.3.x release include:</p>
 <ul>
 <li>In addition to the XML backend, Gnucash can now use a SQLite3, MySQL or PostgreSQL database to store the data. This is a new implementation using libdbi. It supports all features including the business features.  In order to build with this, add --enable-dbi to the configure command.  In addition to the libdbi-dev package for your distribution, you will also need the appropriate DBD (libdbi driver) package for sqlite3, mysql or postgresql.</li>
 <li>As a replacement for the current GtkHTML HTML engine used to display reports and graphs, Gnucash can use WebKit. WebKit is the engine used by Google Chrome on Windows and Safari on Apple.  In order to build with this, add --enable-webkit to the configure command.  You will need an appropriate webkit-dev package.  On win32, you will need to download the webkit-1.1.5-win32.zip file from the source repository and put it into the downloads directory of your gnucash build area.</li>
 <li>Updated to AqBanking 3 on Win32.</li>
 </ul>
 
-<p>Changes between 2.3.10 and 2.3.11 include:
+<p>Changes between 2.3.10 and 2.3.11 include:</p>
 
 <ul>
-<li>Bugs fixed</li>
+<li>Bugs fixed
 <ul>
 <li>Partial fix for #611014 - CSV import crashes
 
@@ -209,8 +209,11 @@ This patch add search path to them to fix this problem.</li>
 
 Patch by Mike Evans</li>
 </ul>
+</li>
 
-<li>Updated translations or translation-related changes</li>
+
+
+<li>Updated translations or translation-related changes
 <ul>
 <li>Updated Japanese translation, copied from the Translation Project.</li>
 <li>Updated Persian (Farsi) translation by Mehdi Alidoost.</li>
@@ -222,8 +225,12 @@ Patch by Mike Evans</li>
 
 Copied from http://www.farsiweb.ir/wiki/Iranian_calendar</li>
 </ul>
+</li>
 
-<li>Other user-visible changes</li>
+
+
+
+<li>Other user-visible changes
 <ul>
 <li>Change file loading message to "Loading user data..."
 
@@ -242,8 +249,12 @@ Patch by Alex Aycinena.</li>
 <li>Patch my patch in r18884. Spotted by Herbert Thoma.</li>
 <li>Regression fix: patch for colored tabs segfault in trunk, patch by Tom Van Braeckel</li>
 </ul>
+</li>
 
-<li>Other code/build changes</li>
+
+
+
+<li>Other code/build changes
 <ul>
 
 <li>Remove test-load-module from tests
@@ -668,9 +679,13 @@ Discussed at http://lists.gnucash.org/pipermail/gnucash-devel/2009-August/026121
 <li>GDate values weren't being properly fetched from objects to be saved in a database column if they were fetched as a gobject property.  </li>
 <li>Clean up account column in the lot table to specify that the guid is an account reference.  Simplifies the code a bit, and makes future use of foreign keys easier.  </li>
 <li>If building for WIN32, use webkit_web_frame_print_full() so that a GtkPrintOperation object with the correct units can be used to prevent font size problems (see bug 591177).  On other platforms, use webkit_web_frame_print() because some distros seem not to have webkit_web_frame_print_full() (and also don't have the font size problem so on those distros, we don't need to create our own GtkPrintOperation object).  </li>
-
 </ul>
-<li>Cutecash</li>
+</li>
+
+
+
+
+<li>Cutecash
 
 Some of the GnuCash developers have decided to rewrite the UI for the cross-platform Qt toolkit from TrollTech.  The goal is a simpler UI which is more powerful and easier to develop.  This project has gotten the name "Cutecash".  It uses the same back-ends and engine as gnucash.  Only the UI is different.  The source for the Cutecash UI is in the same tree (and therefore, the tarballs) as GnuCash, but at this point, no MAC or Win32 builds are being produced.
 <ul>
@@ -752,14 +767,16 @@ uses the boost library, though, because writing our own
 implementation of a scoped_ptr with custom deletion function
 is too non-trivial and I rather re-use the boost::shared_ptr
 here instead of making our own mistakes.</li>
+</ul>
+</li>
+
 
 </ul>
 
 
 
-
 <h3>Caveats for Testers</h3>
-<p>Any 2.3.x version might crash unexpectedly at any point during runtime. If you test some serious work in a 2.3.x release and are using the XML file backend for data storage, make sure you hit "Save" after every non-trivial workstep.  If you are using the SQL backend, this is not required as every change is saved immediately to the database.<p>
+<p>Any 2.3.x version might crash unexpectedly at any point during runtime. If you test some serious work in a 2.3.x release and are using the XML file backend for data storage, make sure you hit "Save" after every non-trivial workstep.  If you are using the SQL backend, this is not required as every change is saved immediately to the database.</p>
 <p>The documentation has had screenshots updated, however, many help texts usually only refers to the 1.8.x series. Everyone is invited to help improve the documentation; see http://wiki.gnucash.org/wiki/Development on how to get involved.</p>
 
 <h3>How can you help?</h3>
@@ -769,17 +786,17 @@ here instead of making our own mistakes.</li>
 <p>We would like to encourage people to test this and any further releases as much as possible and submit bug reports in order that we can polish GnuCash to be as stable as possible for the 2.4.0 release in a few weeks. Then post any bugs you find to <a href="http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">bugzilla</a></p>
 
 <h3>Getting GnuCash</h3>
-<p>Source code for GnuCash 2.3.11 can be downloaded from multiple locations:
+<p>Source code for GnuCash 2.3.11 can be downloaded from multiple locations:</p>
 <ul>
 <li><a href="http://www.gnucash.org/download.phtml">The GnuCash website</a></li>
 <li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.11.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.11.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/2.3.11/">all files</a>.</li>
 <li>You can also checkout the sources directly from the subversion repository with this command:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/trunk gnucash</span></li>
-</ul></p>
+</ul>
 
 <p>To install GnuCash, you will need Gnome 2, guile, slib. In addition you will need swig if compiling from subversion.</p>
 
 <h3>Win32 binary</h3>
-<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.11-setup.exe">Gnucash 2.3.11 Win32 setup executable</a> can be downloaded from Sourceforge as well.
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.11-setup.exe">Gnucash 2.3.11 Win32 setup executable</a> can be downloaded from Sourceforge as well.</p>
 
 <h3>About the Program</h3>
 <p>GnuCash is a free, open source accounting program released under the GNU General Public License (GPL) and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash began in 1997, and its first stable release was in 1998.</p>

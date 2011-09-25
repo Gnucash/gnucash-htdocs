@@ -9,111 +9,237 @@ include("$top_dir/externals/menu.phtml");
 <div id="content">
 <h1><?php echo T_($title);?></h1>
 
-<!-- images needed:
-- register
-- double-entry
-- expense account hierarchy
-- report+graph
-- invoice
-- search query builder?
--->
-
-<h2><?php echo T_("Checkbook-Style Register");?></h2>
-
+<div>
 <p>
-<img src="<?=$top_dir?>/images/features/feature_register.png" width="300" height="200" style="float: right; border: solid thin grey; margin: 0.5em;" alt="[Register]"/>
-<?php echo T_("The checkbook-style register provides a custom, convenient and familiar interface to entering financial transactions.   The register supports common checking and credit-card transactions, as well as income, stock and currency transactions.");?>
+<?php echo T_("<span class=\"gnucash\">GnuCash</span> is a powerful accounting software. This page will try to explain in detail which are the numerous features that <span class=\"gnucash\">GnuCash</span> has to offer to it's users.");?>
 </p>
-<br clear="all"/>
+<ul>
+<li><a href="#main-feat"><?php echo T_("Main features");?></a></li>
+<li><a href="#advan-feat"><?php echo T_("Advanced features");?></a></li>
+<li><a href="#data-feat"><?php echo T_("Data storing and exchange features");?></a></li>
+<li><a href="#oth-feat"><?php echo T_("Other goodies");?></a></li>
+</ul>
+</div>
 
-<h2><?php echo T_("Double Entry");?></h2>
-<p>
-<?php echo T_("Every transaction must debit one account and credit others by an equal amount. This ensures that the \"books balance\": that the difference between income and outflow exactly equals the sum of all assets and equity.");?>
+<h1 class="featuresection"><a name="main-feat"></a><?php echo T_("Main features");?></h1>
+
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Double Entry");?></h2>
+</div>
+<div class="center">
+<img class="featureimage" src="<?=$top_dir?>/images/features/basics_AccountRelationships.png" alt="[Basic account relationship]" />
+</div>
+<p class="justify">
+<?php echo T_("Every transaction must debit one account and credit others by an equal amount. This ensures the books balance: the difference between income and expenses exactly equals the sum of assets and liabilities.");?>
 </p>
-<br clear="all" />
+</div>
 
-<h2><?php echo T_("Reports, Graphs");?></h2>
-<p>
-<img src="<?=$top_dir?>/images/features/feature_graph-report.png" width="300" height="200" style="float: left; border: solid thin grey; margin: 0.5em;" alt="[Graphs]"/>
-<?php echo T_("GnuCash has an integrated reporting and graphing module, and comes complete with a full suite of standard and customizeable reports, such as Balance Sheet, Profit &amp; Loss, Portfolio Valuation, and many others.");?>
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Checkbook-Style Register");?></h2>
+</div>
+<div class="center">
+<img class="featureimage" src="<?=$top_dir?>/images/features/feature_register.png" alt="[Register]" />
+</div>
+<p class="justify">
+<?php echo T_("The <span class=\"gnucash\">GnuCash</span> checkbook-style register provides a custom, convenient and familiar interface to entering financial transactions.");?></p>
+<p class="justify">
+<?php echo T_("The register supports common checking and credit-card transactions, as well as income, stock and currency transactions. The following features are also provided:");?>
 </p>
-<br clear="all"/>
+<ul>
+<li><?php echo T_("<b>Autofill</b> of entered transactions");?></li>
+<li><?php echo T_("Possibility to mark a transaction as <b>cleared</b>");?></li>
+<li><?php echo T_("Possibility to enter <b>split transactions</b>");?></li>
+<li><?php echo T_("<b>Multiple accounts</b> can be displayed in one register window at the same time");?></li>
+<li><?php echo T_("A <b>summarybar</b> that display all the relevant account's balance information");?></li>
+<li><?php echo T_("Many options to <b>customize</b> the appearance and the display style");?></li>
+</ul>
+</div>
 
-<h2><?php echo T_("Income/Expense Account Types");?></h2>
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Scheduled Transactions");?></h2>
+</div>
+<img class="featureimage" src="<?=$top_dir?>/images/features/feature_SX.png" alt="[Scheduled transactions]" />
+<p class="justify">
+<?php echo T_("You can create recurring transactions with a high level of customization of amounts and timeline. You can also set an automatic reminder when a transaction is due.");?>
+</p>
+<p class="justify">
+<?php echo T_("An assistant that runs when <span class=\"gnucash\">GnuCash</span> is started, allows you to postpone a scheduled transaction without canceling it or to enter it before the due date.");?>
+</p>
+</div>
+
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Reports, Graphs");?></h2>
+</div>
+<img class="featureimage" src="<?=$top_dir?>/images/features/feature_graph-report.png" alt="[Graphs]" />
+<p class="justify">
+<?php echo T_("<span class=\"gnucash\">GnuCash</span> has an integrated module to display graphs of your financial data in the form of:");?>
+</p>
+<ul>
+<li><?php echo T_("Barcharts");?></li>
+<li><?php echo T_("Piecharts");?></li>
+<li><?php echo T_("Scatter plots");?></li>
+</ul>
+<?php echo T_("<span class=\"gnucash\">GnuCash</span> also comes complete with a full suite of standard and customizeable reports, such as:");?>
+<ul>
+<li><?php echo T_("Balance Sheet");?></li>
+<li><?php echo T_("Profit &amp; Loss");?></li>
+<li><?php echo T_("Portfolio Valuation");?></li>
+<li><?php echo T_("and many others.");?></li>
+</ul>
+<p class="justify">
+<?php echo T_("Graphs and reports can be highly and easily customized in appearance and contents, in order to fullfill every user's need.");?>
+</p>
+</div>
+
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Statement Reconciliation");?></h2>
+</div>
+<div class="center">
+<img class="featureimage" src="<?=$top_dir?>/images/features/feature_reconcile.png" alt="[Reconcile]" />
+</div>
+<p class="justify"><?php echo T_("The <b>reconciliation</b> of an account is an operation that allows the user to check the entered transactions belonging to a <span class=\"gnucash\">GnuCash</span> account against a bank statement. This operation is very useful to spot untracked transactions or data entry errors.");?></p>
+<p class="justify"><?php echo T_("The <span class=\"gnucash\">GnuCash</span> reconcile tool with running reconciled and cleared balances makes reconciling against bank statements an easy task.");?></p>
+</div>
+
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Income/Expense Account Types");?></h2>
+</div>
 <p><?php echo T_("Income/Expense Account Types (Categories) allow you to categorize your cash flow.  When used properly with the double-entry feature and equity accounts, these enable you to generate reports, such as Profit &amp; Loss, that plain-vanilla systems cannot handle.");?>
 </p>
-<br clear="all" />
+</div>
 
-<h2><?php echo T_("Multiple Currencies");?></h2>
-<p><?php echo T_("Different accounts can be denominated in different currencies. Currency movements between accounts are fully balanced when double-entry is enabled.");?>
+<h1 class="featuresection"><a name="advan-feat"></a><?php echo T_("Advanced features");?></h1>
+
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Small Business Accounting Features");?></h2>
+</div>
+<p class="justify">
+<?php echo T_("Simplify managing a small business with <b>Customer</b> and <b>Vendor</b> tracking, <b>Jobs</b>, <b>Invoicing</b> and <b>Bill</b> Payment, and <b>Tax</b> and <b>Billing Terms</b>.");?>
 </p>
-<br clear="all" />
+<p class="justify">
+<?php echo T_("Using A/Receivable and A/Payable accounts you can even manage <b>payrolls</b> for your employees.");?>
+</p>
+<p class="justify">
+<?php echo T_("<span class=\"gnucash\">GnuCash</span> gives you also a tool to manage your business' <b>budget</b> so that you can easily plan your financial strategy.");?>
+</p>
+</div>
 
-<h2><?php echo T_("Stock/Mutual Fund Portfolios");?></h2>
-<p><?php echo T_("Track stocks individually (one per account) or in portfolio of accounts (a group of accounts that can be displayed together).");?></p>
-<br clear="all" />
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Multiple Currencies");?></h2>
+</div>
+<img class="featureimage" src="<?=$top_dir?>/images/features/feature_currency.png" alt="[Multiple currencies]" />
+<p class="justify">
+<?php echo T_("Different accounts can be denominated in different currencies. Currency movements between accounts are fully balanced when double-entry is enabled.");?>
+</p>
+</div>
 
-<h2><?php echo T_("Small Business Accounting Features");?></h2>
-<p>
-<?php echo T_("Simplify managing a small business with Customer and Vendor tracking, Invoicing and Bill Payment, and Tax and Billing Terms.");?></p>
-<br clear="all" />
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Stock/Mutual Fund Portfolios");?></h2>
+</div>
+<p class="justify">
+<?php echo T_("Track stocks individually (one per account) or in portfolio of accounts (a group of accounts that can be displayed together).");?></p>
+</div>
 
-<h2><?php echo T_("QIF Import");?></h2>
-<p><?php echo T_("Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> QIF files can be imported, and are automatically merged to eliminate duplicate transactions.");?></p>
-<br clear="all" />
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Online Stock &amp; Mutual Fund Quotes");?></h2>
+</div>
+<p class="justify">
+<?php echo T_("Get Stock &amp; Mutual Fund quotes from various web sites, update portfolio automatically. Additional pricing sources are added regularly.");?></p>
+</div>
 
-<h2><?php echo T_("OFX Import");?></h2>
-<p><?php echo T_("GnuCash is the first free software application to support the Open Financial Exchange protocol that many banks and financial services are starting to use.");?></p>
-<br clear="all" />
+<h1 class="featuresection"><a name="data-feat"></a><?php echo T_("Data storage and exchange features");?></h1>
 
-<h2><?php echo T_("HBCI Support");?></h2>
-<p><?php echo T_("GnuCash is the first free software application to support the German Home Banking Computer Information protocol, allowing German users to perform statement download and initiate bank transfers and direct debits.");?></p>
-<br clear="all" />
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Database support");?></h2>
+</div>
+<p class="justify"><?php echo T_("Along the usual xml format, starting from version 2.4, your <span class=\"gnucash\">GnuCash</span> financial data can be stored in a <b>SQL database</b> under the application of your selection (SQLite3, MySQL or PostgreSQL).");?></p>
+</div>
 
-<h2><?php echo T_("Improved Import Transaction Matching");?></h2>
-<p><?php echo T_("The development of OFX and HBCI support has also resulted in an improved transaction matching system that more accurately recognizes duplicate transactions during file import.");?></p>
-<br clear="all" />
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("QIF and OFX Import");?></h2>
+</div>
+<p class="justify">
+<?php echo T_("If you are migrating from other financial software, <span class=\"gnucash\">GnuCash</span>  can import Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> <b>QIF</b> files using a practical assistant.");?>
+</p>
+<p class="justify">
+<?php echo T_("<span class=\"gnucash\">GnuCash</span> is also the first free software application to support the <b>OFX</b> (Open Financial Exchange) protocol that many banks and financial services are starting to use.");?>
+</p>
+<p class="justify">
+<?php echo T_("A transaction matching system ensures that duplicate transactions are accurately recognized and automatically deleted during file import.");?>
+</p>
+</div>
 
-<h2><?php echo T_("Statement Reconciliation");?></h2>
-<p><?php echo T_("A reconcile window with running reconciled and cleared balances makes balancing against bank statements easy.");?></p>
-<br clear="all" />
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("HBCI Support");?></h2>
+</div>
+<p class="justify">
+<?php echo T_("<span class=\"gnucash\">GnuCash</span> is the first free software application to support the German <b>Home Banking Computer Information</b> protocol, allowing German users to perform statement download and initiate bank transfers and direct debits.");?>
+</p>
+</div>
 
-<h2><?php echo T_("Localization");?></h2>
-<p><?php echo T_("Handles internationalized dates and currencies.  The Gnucash menus and popups have been translated to 21 languages, including Chinese, Danish, French, German, Hungarian, Italian, Japanese, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, and British English. Documentation is available in English, French, Portuguese and Spanish.");?></p>
-<br clear="all" />
+<h1 class="featuresection"><a name="oth-feat"></a><?php echo T_("Other goodies");?></h1>
 
-<h2><?php echo T_("Transaction Finder");?></h2>
-<p>
-<img src="<?=$top_dir?>/images/features/feature_search.png" width="300" height="200" alt="[Transaction Finder]" style="float: right; margin: 0.5em; border: solid thin grey;"/>
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Multiplatform");?></h2>
+</div>
+<p class="justify">
+<?php echo T_("<span class=\"gnucash\">GnuCash</span> can be executed on different operating systems. The most commonly used OS's like <b>Windows</b>, <b>MacOSX</b> and <b>Linux</b>, are supported along with many others.");?></p>
+</div>
+
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Localization");?></h2>
+</div>
+<p class="justify">
+<?php echo T_("<span class=\"gnucash\">GnuCash</span> handles internationalized dates and currencies. The application's menus and popups have been translated to 21 languages, including Chinese, Danish, French, German, Hungarian, Italian, Japanese, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, Ukrainian, and British English. Documentation is available in English, French, Portuguese and Spanish.");?></p>
+</div>
+
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Transaction Finder");?></h2>
+</div>
+<p class="justify">
 <?php echo T_("A powerful transaction query dialogue can help you quickly locate a needle in a haystack.");?></p>
-<br clear="all" />
+</div>
 
-<h2><?php echo T_("General Ledger");?></h2>
-<p><?php echo T_("Multiple accounts can be displayed in one register window at the same time. This can ease the trouble of tracking down typing/entry errors. It also provides a convenient way of viewing a portfolio of many stocks, by showing all transactions in that portfolio.");?></p>
-<br clear="all" />
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Check Printing");?></h2>
+</div>
+<p class="justify">
+<?php echo T_("Checks may be printed in standard formats on common check stocks. A customization GUI allows custom check layouts to be developed.");?></p>
+</div>
 
-<h2><?php echo T_("Online Stock &amp; Mutual Fund Quotes");?></h2>
-<p><?php echo T_("Get Stock &amp; Mutual Fund quotes from various web sites, update portfolio automatically. Additional pricing sources are added regularly.");?></p>
-<br clear="all" />
-
-<h2><?php echo T_("Check Printing");?></h2>
-<p><?php echo T_("Checks may be printed in standard formats on common check stocks. A customization GUI allows custom check layouts to be developed.");?></p>
-<br clear="all" />
-
-<dl>
-<h2><?php echo T_("Scheduled Transactions");?></h2>
-<p><?php echo T_("You can now create recurring transactions, including automatic reminders when a transaction is due, the ability to postpone a scheduled transaction without canceling it, and the ability to specify only a limited number of transactions.");?></p>
-<br clear="all" />
-
-<h2><?php echo T_("Mortgage &amp; Loan Repayment Druid");?></h2>
-<p><?php echo T_("A guided dialogue for setting up loan payments as scheduled transactions.");?>
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Mortgage &amp; Loan Repayment Assistant");?></h2>
+</div>
+<p class="justify">
+<?php echo T_("A guided dialogue for setting up loan payments as scheduled transactions.");?>
 </p>
-<br clear="all" />
+</div>
 
-<!-- fixme: "complete user manual"? -->
-<h2><?php echo T_("New User Manual and Help");?></h2>
-<p><?php echo T_("A new help subsystem that focuses on how to do tasks is now available, in addition to a Tutorial and Concepts guide that gives the user background information on accounting principles and how they are reflected in GnuCash.");?></p>
-<br clear="all" />
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("User Manual and Help");?></h2>
+</div>
+<p class="justify">
+<?php echo T_("<span class=\"gnucash\">GnuCash</span> is very well documented: along the application <b>Manual</b>, new users can take full advantage of the <b>Tutorial and Concepts guide</b>. This document gives background information on accounting principles and how they are reflected in <span class=\"gnucash\">GnuCash</span> with many practical examples described step by step.");?></p>
+</div>
 
 </div>
 <?php include("externals/footer.phtml"); ?>

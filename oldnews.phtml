@@ -5,6 +5,7 @@ $title = T_("Free Accounting Software");
 include("externals/header.phtml");
 include("externals/menu.phtml");
 ?>
+
 <div id="content">
 
 <h1><?php echo T_("Older Announcements");?></h1>
@@ -24,4 +25,6 @@ include("externals/menu.phtml");
   include("$top_dir/news/news-script.php");
   emit_news($en_newspath, $lang_newspath, $oldnews);
 ?>
+</div>
 <?php include("externals/footer.phtml"); ?>
+

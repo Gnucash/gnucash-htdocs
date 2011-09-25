@@ -1,47 +1,49 @@
+<div id="maincol"><!-- begin main content area -->
+
 <div id="news">
 <div class="othernews">
   <span class="linktop">
-    <img class="dot" src="<?=$home?>/externals/webding.png" alt="marker">
     <b><?= T_("Information")?></b>
   </span>
   <ul>
     <li><a href="<?=$home?>/index.phtml"><?= T_("About / News")?></a></li>
-    <li><a href="<?=$home?>/atom.php"><img src="<?=$home?>/externals/feed-icon-12x12.png" width="12" height="12" alt="[atom feed]" /> <?= T_("News Feed")?></a></li>
+<!--RSS atom feed link is on the top-right of the page   <li><a href="<?=$home?>/atom.php"><img src="<?=$home?>/images/icons/feed-icon-12x12.png" width="12" height="12" alt="[atom feed]" /> <?= T_("News Feed")?></a></li>-->
     <li><a href="<?=$home?>/features.phtml"><?=T_("Screenshots, Features")?></a></li>
     <li><a href="http://wiki.gnucash.org/wiki/Development"><?= T_("How to help")?></a></li>
+    <li><a href="http://sourceforge.net/donate/index.php?group_id=192"><?=T_("Donations")?></a></li>
   </ul>
-</div>
-<div class="othernews">
-  <span class="linktop">
-    <img class="dot" src="<?=$home?>/externals/webding.png" alt="marker" />
-    <b><?=T_("Documentation")?></b></span>
-    <ul>
-      <li><a href="<?=$home?>/docs.phtml"><?=T_("Documentation")?></a></li>
-      <li><a href="http://wiki.gnucash.org/wiki/FAQ"><?=T_("FAQ")?></a></li>
-      <li><a href="http://wiki.gnucash.org/wiki/"><?=T_("Wiki")?></a>&nbsp;
-      <a href="http://wiki.gnucash.org/wiki/De/GnuCash">[de]</a></li>
-      <li><a href="http://wiki.gnucash.org/wiki/Mailing_Lists"><?=T_("Mailing Lists")?></a>
-      <li style="list-style-image:none;list-style-type:none;"><ul>
-        <li><a href="https://lists.gnucash.org/search/<? if ($locale != "") { echo "?lang=$locale"; } ?>"><?=T_("Search")?></a></li>
-      </ul></li>
-      <li><a href="http://wiki.gnucash.org/wiki/Bugzilla"><?=T_("Bug Reports")?></a></li>
-      <li><a href="http://wiki.gnucash.org/wiki/IRC"><?=T_("IRC (Chat)")?></a></li>
-      <li><a href="http://sourceforge.net/donate/index.php?group_id=192"><?=T_("Donations")?></a></li>
-    </ul>
 </div>
 <div class="othernews">
   <!-- ?php include("$top_dir/externals/menu-downloads.phtml");? -->
   <span class="linktop">
-    <img class="dot" src="<?=$home?>/externals/webding.png" alt="marker" />
-    <b><a href="<?=$home?>/download.phtml"><?=T_("Downloads")?></a></b>
-    <ul></ul>
+    <b><?=T_("Downloads")?></b>
   </span>
+  <ul>
+    <li><a href="<?=$home?>/download.phtml"><?=T_("Program")?></a></li>
+    <li><a href="<?=$home?>/docs.phtml"><?=T_("Documentation")?></a></li>
+  </ul>
+</div>
+<div class="othernews">
+  <span class="linktop">
+    <b><?=T_("Support")?></b></span>
+    <ul>
+      <li><a href="<?=$home?>/docs.phtml"><?=T_("Documentation")?></a></li>
+      <li><a href="http://wiki.gnucash.org/wiki/FAQ"><?=T_("FAQ")?></a></li>
+      <li><a href="http://wiki.gnucash.org/wiki/"><?=T_("Wiki")?></a>&nbsp;<a href="http://wiki.gnucash.org/wiki/De/GnuCash">[de]</a></li>
+      <li><a href="http://wiki.gnucash.org/wiki/Mailing_Lists"><?=T_("Mailing Lists")?></a></li>
+<!--      <li style="list-style-image:none;list-style-type:none;">
+        <ul style="padding-bottom:0px;  margin-top:0px; margin-bottom:5px;">
+        <li><a href="https://lists.gnucash.org/search/<? if ($locale != "") { echo "?lang=$locale"; } ?>"><?=T_("Search")?></a></li>
+        </ul>
+      </li>-->
+      <li><a href="http://wiki.gnucash.org/wiki/Bugzilla"><?=T_("Bug Reports")?></a></li>
+      <li><a href="http://wiki.gnucash.org/wiki/IRC"><?=T_("IRC (Chat)")?></a></li>
+    </ul>
 </div>
 <div class="othernews">
   <!-- ?php include("$top_dir/externals/menu-developer.phtml");? -->
   <span class="linktop">
-    <img class="dot" src="<?=$home?>/externals/webding.png" alt="marker">
-    <b><?=T_("Developer Information")?></b>
+    <b><?=T_("Developement")?></b>
   </span>
   <ul>
     <li><a href="http://svn.gnucash.org/docs/HEAD/"><?=T_("Source Docs")?></a></li>
@@ -51,4 +53,21 @@
     <li><a href="<?=$home?>/sizing.phtml"><?=T_("Sizing")?></a></li>
   </ul>
 </div>
+
+<!-- ADS start: GnuCash small business accounting book-->
+<div class="adscontainer">
+  
+<h2 class="adstitle"><?= T_("New Book: GnuCash 2.4 Small Business Accounting")?></h2>
+
+<p class="center"><a href="http://link.packtpub.com/6FDDUr"><img class="adsimage" src="<?=$home?>/externals/packtpub_gnucash_2.4cov.png" alt="GnuCash 2.4 small business accounting" height="152" width="125" /></a>
+</p>
+<p class="adstext"><?= T_("The GnuCash development team received notice about a new book published by PacktPub, UK:")?></p>
+<p class="adstext"><a href="http://link.packtpub.com/6FDDUr"><?= T_("GnuCash 2.4 Small Business Accounting, by Ashok Ramachandran")?></a>.</p>
+<p class="adstext"><?= T_("This is a Beginner's Guide for managing your accounts.")?></p>
+<p class="adstext"><?= T_("Our own developer Christian Stimming has been contributing to this book as a reviewer, and we can wholeheartly recommend the outcome of this fruitful collaboration. Feel free to have a look at this book over at <a href=\"http://link.packtpub.com/6FDDUr\">packtpub.com</a>, and, best of all, the publisher has committed to allocate some percentage of the book sales back to the GnuCash project. Have fun with this book!")?></p>
+
 </div>
+
+</div>
+<!-- ADS end: GnuCash small business accounting book-->
+

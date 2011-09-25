@@ -1,5 +1,13 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<?php
+$titleRSS = T_("Subscribe to RSS feed");
+$titledonation = T_("Support the GnuCash project with a donation");
+$titleuservoice = T_("Request or vote enhancements for GnuCash");
+?>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <?php
 if (!isset($can_utf)) { $can_utf = true; }
@@ -15,32 +23,60 @@ include("$top_dir/externals/global_params.php");
 $current_page = array_key_exists('HTTP_HOST', $_SERVER) ? ($top_dir . "/" . basename($_SERVER["SCRIPT_NAME"])) : "";
 
 if (isset($homepage)) { ?>
-  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="<?=$home?>/atom.php">
+  <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="<?=$home?>/atom.php" />
 <?php } ?>
 
+<!--This is the description shown on google+ profile for GnuCash-->
+<meta name="description" content="A personal and small-business financial-accounting software, licensed under GNU/GPL and available for Linux, Windows, Mac OS X, BSD, and Solaris." />
+
 <title><?= T_($title); ?> | GnuCash</title>
+<!--script for Google+1 button-->
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 </head>
 
 <body>
 
 <div id="head">
+
+<div id="branding">
+<p><img src="<?=$top_dir?>/images/gnucash-vert.png" alt="GnuCash" /></p>
+</div>
+
+<!--This is an image out of the view that is shown on google+ profile for GnuCash-->
+<div style="position:absolute;top:-1000px;left:-1000px;"><img src="<?=$home?>/images/gnc-download.png" alt="GnuCash small business accounting" height="152" width="125" /></div>
+
+<div id="googleplusone">
+<g:plusone size="tall" href="http://www.gnucash.org/"></g:plusone>
+</div>
+
+<div style="float:right;">
+<p id="rss">
+<a href="http://gnucash.uservoice.com/"><img style="margin: 0 10px 0 0" src="<?=$top_dir?>/images/icons/uservoice-32x32.png" title="<?php echo T_($titleuservoice);?>" alt="[Uservoice]" width="32" height="32" /></a>
+<a href="http://sourceforge.net/donate/index.php?group_id=192"><img style="margin: 0 10px 0 0" src="<?=$top_dir?>/images/icons/donation-32x32.png" title="<?php echo T_($titledonation);?>" alt="[Donation]" width="32" height="32" /></a>
+<a href="<?=$home?>/atom.php"><img style="margin: 0 10px 0 0" src="<?=$top_dir?>/images/icons/feed-icon-32x32.png" title="<?php echo T_($titleRSS);?>" alt="[atom syndication feed]" width="32" height="32" /></a>
+</p>
+</div>
+
+<div style="margin: 0px 0px 0 0;">
 <a href="<?=$home?>/"><!--img src="<?=$home?>/externals/gnucash_logo1.png" alt="[GnuCash Logo]" id="gnclogo" width="179" height="45" border="0"/ -->
-<img src="<?=$home?>/externals/banner5.png" width="453" height="45" />
-</a>
-<br/>
+<img alt="banner" src="<?=$home?>/images/banner5.png" /></a>
+<p style="font-style:italic; font-size:1.1em; margin: 0 0 0 10px; color: #08006d; text-shadow:0px 0px 9px white;"><?php echo T_("Free Accounting Software");?></p>
+</div>
+
 <span id="language">
 <?= T_("Language"); ?>:
   <a class="nav" href="<?=$current_path;?>?lang=en_US">English</a>
 | <a class="nav" href="<?=$current_path;?>?lang=de_DE">Deutsch</a>
-| <a class="nav" href="<?=$current_path;?>?lang=es_ES">Espa&ntilde;ol</a>
+<!--| <a class="nav" href="<?=$current_path;?>?lang=es_ES">Espa&ntilde;ol</a>-->
 | <a class="nav" href="<?=$current_path;?>?lang=fr_FR">Fran&ccedil;ais</a>
 | <a class="nav" href="<?=$current_path;?>?lang=it_IT">Italiano</a>
-| <a class="nav" href="<?=$current_path;?>?lang=ja_JP">日本語</a> <!-- Japanese -->
+| <a class="nav" href="<?=$current_path;?>?lang=ja_JP">日本語</a>
+| <a class="nav" href="<?=$current_path;?>?lang=hu_HU">Magyar</a>
 | <a class="nav" href="<?=$current_path;?>?lang=nl_NL">Nederlands</a>
-| <a class="nav" href="<?=$current_path;?>?lang=nb_NO">Norsk Bokm&aring;l</a>
+<!--| <a class="nav" href="<?=$current_path;?>?lang=nb_NO">Norsk Bokm&aring;l</a>-->
 <!-- | <a class="nav" href="<?=$current_path;?>?lang=pl_PL">Polska</a> -->
-| <a class="nav" href="<?=$current_path;?>?lang=pt_PT">Portugu&ecirc;s</a>
-| <a class="nav" href="<?=$current_path;?>?lang=zh_CN">中文</a> <!-- Simplified Chinese -->
+<!--| <a class="nav" href="<?=$current_path;?>?lang=pt_PT">Portugu&ecirc;s</a>-->
+| <a class="nav" href="<?=$current_path;?>?lang=zh_CN">中文</a>
 </span>
 <span id="location">&nbsp; <!-- <?= _("Continent"); ?>:
  (<a class="nav" href="http://www.gnucash.org/">US</a>)

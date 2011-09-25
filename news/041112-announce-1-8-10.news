@@ -2,100 +2,100 @@
 2004-12-13   03:12:34
 
 The GnuCash team is pleased to announce the release
-of stable version 1.8.10.<br><br>
-<b><big>What's New in GnuCash 1.8.10?</big></b><br>
-<br>
-<br>
+of stable version 1.8.10.<br></br><br></br>
+<b><big>What's New in GnuCash 1.8.10?</big></b><br></br>
+<br></br>
+<br></br>
  o Don't use C++/C99 declarations.  Declare variables at the top of
- the function.<br>
+ the function.<br></br>
  o Updated British English, Czech, Italian, Russian, German,
- Brazilian Portugese, Dutch, French, Spanish, translations.<br>
+ Brazilian Portugese, Dutch, French, Spanish, translations.<br></br>
  o Fabien COELHO's zero-balance patch to remove accounts of zero
- balance from the report.<br>
+ balance from the report.<br></br>
  o Fix a broken recursion problem.  Don't call show-acct? from
  use-acct? so we don't recurse ad flictum.  This recursive call isn't
- necessary, just have use-acct? recurse unto itself.<br>
- o look in ${srcdir} for build-config.scm.in<br>
- o Work around problems with libltdl3.<br>
+ necessary, just have use-acct? recurse unto itself.<br></br>
+ o look in ${srcdir} for build-config.scm.in<br></br>
+ o Work around problems with libltdl3.<br></br>
  o don't automatically try to (require 'format), so gnucash will build
- on an slib-3 system.<br>
- o Added quote sources for Indian Mutual Funds.<br>
+ on an slib-3 system.<br></br>
+ o Added quote sources for Indian Mutual Funds.<br></br>
  o Skip the case when a token is the empty string. This caused many
- warnings about a NULL kvp_frame lookup.<br>
- o Luigi Ballabio's automake patch to gnucash.m4<br>
- o guile-1.6 complains about string->symbol when passed a symbol.<br>
+ warnings about a NULL kvp_frame lookup.<br></br>
+ o Luigi Ballabio's automake patch to gnucash.m4<br></br>
+ o guile-1.6 complains about string->symbol when passed a symbol.<br></br>
  o applied Vasil's patch to improve the transaction report for HTML
- export purposes.<br>
+ export purposes.<br></br>
  o Backport of CVS-head changes to improve register open performance
  when working with large account trees (>500 accounts).  The new code
  caches the quickfill tree so that it is shared by all register
- windows.<br>
+ windows.<br></br>
  o create gnc:current-saved-reports, as the file to store saved
  reports from cstim.  Autoload the saved-reports file at startup
- (after config.user/config.auto is loaded).<br>
+ (after config.user/config.auto is loaded).<br></br>
  o Added gnc:report-generate-saved-forms that will generate the scheme
  code necessary to create a new report from the saved options of an
- old report.<br>
+ old report.<br></br>
  o Added example Menu item "File -> Save all reports" that will call
  the new report saving function for all reports. This would need more
  work so that not all reports are saved but only the currently
- selected one -- any volunteer may feel free to add that.<br>
+ selected one -- any volunteer may feel free to add that.<br></br>
  o Fix saving of report: It now appends to
- ~/.gnucash/saved-reports-1.8 Statusbar tip is now more verbose.<br>
- o Add toolbar element for saving the current report.<br>
+ ~/.gnucash/saved-reports-1.8 Statusbar tip is now more verbose.<br></br>
+ o Add toolbar element for saving the current report.<br></br>
  o Add function for saving one particular report to the
  ~/.gnucash/saved-reports-1.8 file. Add extra menu only for customized
- reports.<br>
+ reports.<br></br>
  o Remove the previous function for saving all reports since it is no
- longer necessary.<br>
- o Apply David Reiser's patch for Quicken(tm) cheques with stub.<br>
- o Apply David Grant's patch to add TD Efunds.<br>
- o make the desktop file HIG compliant.<br>
- o change the gtkhtml order to search for >= 1.1 before < 1.1, in
+ longer necessary.<br></br>
+ o Apply David Reiser's patch for Quicken(tm) cheques with stub.<br></br>
+ o Apply David Grant's patch to add TD Efunds.<br></br>
+ o make the desktop file HIG compliant.<br></br>
+ o change the gtkhtml order to search for >= 1.1 before &lt; 1.1, in
  order to try to fix #84707 on systems with multiple versions of
- gtkhtml.<br>
+ gtkhtml.<br></br>
  o Perry Smith's Null Account Patch.  Make sure the security is a real
  string before appending an account separator, so we don't try to
- create a "null" account.<br>
- o Add option to include zero-amount splits in computations.<br>
+ create a "null" account.<br></br>
+ o Add option to include zero-amount splits in computations.<br></br>
  o fix xaccAccountGetBalanceAsOfDate() to properly compute the balance
- at the end of the split list.<br>
+ at the end of the split list.<br></br>
  o Major change for HBCI, back-ported from HEAD. The HBCI online
  banking is no longer based on the openhbci library but instead on the
  aqbanking library http://sf.net/projects/aqbanking which is Martin
  Preuss' successor of openhbci. This means that now aqbanking-0.9.5 is
- required instead of any openhbci package.<br>
- o Fixes for x86_64<br>
+ required instead of any openhbci package.<br></br>
+ o Fixes for x86_64<br></br>
  o Update for new LibOfx, this among other things, gives gnucash
- Microsoft OFC support.<br>
- o Duplicate match tweaks in import code<br>
- o Andreas Rottmann's patch to support g-wrap 1.9.<br>
+ Microsoft OFC support.<br></br>
+ o Duplicate match tweaks in import code<br></br>
+ o Andreas Rottmann's patch to support g-wrap 1.9.<br></br>
  o provide a default account name so we don't crash when someone
- imports a broken QIF that has a !Account without an account name.<br>
+ imports a broken QIF that has a !Account without an account name.<br></br>
  o Daniel Lindenaar's patch to implement a check-box in the Invoice
  Post Dialog (with a default in the File Preferences) to choose to
- accumulate splits when posting an invoice, or post a 1:1 mapping.<br>
- o Phil Longstaff's patch to prevent duplicate pricedb entries.<br>
- o Heath Martin's x86_64 patch<br>
+ accumulate splits when posting an invoice, or post a 1:1 mapping.<br></br>
+ o Phil Longstaff's patch to prevent duplicate pricedb entries.<br></br>
+ o Heath Martin's x86_64 patch<br></br>
  o Mark search criteria for translation -- somehow this had been
- missed all the time.<br>
+ missed all the time.<br></br>
  o Change currency mnemonic for "New Israeli Shekel" from "ILS" to
- "NIS".<br>
- o Identified and fixed several places with untranslated strings.<br>
+ "NIS".<br></br>
+ o Identified and fixed several places with untranslated strings.<br></br>
  o Add configure check for libofx version 0.7.0 and respective error
- message. Update docs.<br>
+ message. Update docs.<br></br>
  o Improve importer performance by matching imported transactions only
- against transactions in the proper time interval.<br>
+ against transactions in the proper time interval.<br></br>
  o send an event when a payment is processed so the invoice gets
- updated as "paid" in the search window.<br>
+ updated as "paid" in the search window.<br></br>
  o Make sure we set the proper search-type when we create the query,
- otherwise the search will fail later.<br>
+ otherwise the search will fail later.<br></br>
 
-<br><br>
+<br></br><br></br>
 Available at the usual places! 
 
-<br><br>
+<br></br><br></br>
 <b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
 
-<br><br>
+<br></br><br></br>
 <b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>

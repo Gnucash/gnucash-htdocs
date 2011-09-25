@@ -31,7 +31,7 @@ if (array_key_exists('lang', $_GET)) { $locale = $_GET["lang"]; }
 # key: locale, value: lang_dir
 $supported_languages = array(
         'de_DE' => 'de', 'es_ES' => 'es', 'fr_FR' => 'fr',
-        'it_IT' => 'it', 'ja_JP' => 'ja', 'nb_NO' => 'nb',
+        'hu_HU' => 'hu', 'it_IT' => 'it', 'ja_JP' => 'ja', 'nb_NO' => 'nb',
         'nl_NL' => 'nl', 'pl_PL' => 'pl', 'pt_PT' => 'pt_PT',
         'zh_CN' => 'zh_CN', 'en_US' => 'en'
         );
@@ -94,5 +94,6 @@ T_bind_textdomain_codeset($domain, 'UTF-8');
 
 T_textdomain($domain);
 
-echo ("<!-- $locale , locale_res [$locale_res] , dir_res $dir_res, lang_cookie [$lang_cookie] -->\n");
-?>
+# Next line was disabled in order to have the definition of doctype on the first line of the html resulting page. In this way the fixed attribute of the branding GnuCash sign works in ie8
+/*echo ("<!-- $locale , locale_res [$locale_res] , dir_res $dir_res, lang_cookie [$lang_cookie] -->\n");?>*/
+

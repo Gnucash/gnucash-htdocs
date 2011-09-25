@@ -5,7 +5,7 @@
 
 <p>The GnuCash development team proudly announces GnuCash 2.4.5, the fifth bug fix release in a series of stable of the GnuCash Free Accounting Software. With this new release series, GnuCash can use an SQL database using SQLite3, MySQL or PostgreSQL. It runs on GNU/Linux, *BSD, Solaris, Microsoft Windows and Mac OSX.</p>
 
-<p>Major changes in the 2.4.0 release include;
+<p>Major changes in the 2.4.0 release include:</p>
 <ul>
 <li>In addition to the XML backend, Gnucash can now use a SQLite3, MySQL or PostgreSQL database to store the data. This is a new implementation using libdbi. It supports all features including the business features.  In order to build with this, add --enable-dbi to the configure command.  In addition to the libdbi-dev package for your distribution, you will also need the appropriate DBD (libdbi driver) package for sqlite3, mysql or postgresql.</li>
 <li>As a replacement for the current GtkHTML HTML engine used to display reports and graphs, Gnucash can use WebKit. WebKit is the engine used by Google Chrome on Windows and Safari on Apple.  In order to build with this, add --with-html-engine=webkit to the configure command.  You will need an appropriate webkit-dev package.  On win32, you will need to download the webkit-1.1.90-win32.zip file from the source repository and put it into the downloads directory of your gnucash build area.</li>
@@ -13,44 +13,45 @@
 </ul>
 
 <h3>Getting GnuCash for Windows (Win32 binary)</h3>
-<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.5-setup.exe">Gnucash 2.4.5 Win32 setup executable</a> can be downloaded from Sourceforge. It will install everything needed to run GnuCash.
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.5-setup.exe">Gnucash 2.4.5 Win32 setup executable</a> can be downloaded from Sourceforge. It will install everything needed to run GnuCash.</p>
 
 <h3>Mac OSX binary</h3>
-<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.4.5.dmg">Gnucash 2.4.5 MacOSX package</a> can be downloaded from Sourceforge as well.
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.4.5.dmg">Gnucash 2.4.5 MacOSX package</a> can be downloaded from Sourceforge as well.</p>
 
 <h3>Getting GnuCash as source code</h3>
-<p>If you want to compile GnuCash 2.4.5 for yourself, the source code can be downloaded from:
+<p>If you want to compile GnuCash 2.4.5 for yourself, the source code can be downloaded from:</p>
 <ul>
 <li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.5.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.5.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.4.5/">all files</a>.</li>
-<li>You can also checkout the sources directly from the subversion repository with this command:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/tags/2.4.5 gnucash</span></li>
-</ul></p>
+<li>You can also checkout the sources directly from the subversion repository with this command:<br></br><br></br><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/tags/2.4.5 gnucash</span></li>
+</ul>
 
 <p>To compile GnuCash from the source code by yourself, you will need Gnome 2, guile, slib. In addition you will need swig if compiling from subversion.</p>
 
 
-<p>Changes between 2.4.4 and 2.4.5 include:
+<p>Changes between 2.4.4 and 2.4.5 include:</p>
 
 <ul>
-<li>User-visible changes</li>
+<li>User-visible changes
 <ul>
 <li>[20457] Improve message printed on screen</li>
 <li>Note last stable version number</li>
 </ul>
+</li>
 
 
 
 
-<li>Updated translations or translation-related changes</li>
+<li>Updated translations or translation-related changes
 <ul>
 <li>[20507] Various spelling fixes in comments and translatable strings.</li>
 <li>Updated Dutch translation, copied from the translation project.</li>
 <li>Updated Italian translation.</li>
 </ul>
+</li>
 
 
 
-
-<li>Bugs fixed</li>
+<li>Bugs fixed
 <ul>
 <li>[20496] Bug #645518: Partly revert r20378, "Correct memory leaks found with valgrind"
 
@@ -72,11 +73,11 @@ Patch by Andy Clayton.</li>
 <li>Bug #641645 - Support ActivePerl 5.12 for Finance:Quote on Windows</li>
 <li>Bug #644688: Account edit fails to detect that no changes have been made and marks the account 'dirty'.</li>
 </ul>
+</li>
 
 
 
-
-<li>Other code/build changes</li>
+<li>Other code/build changes
 <ul>
 <li>[20501] During win32 build, if a component is already installed, print the installation path
 
@@ -102,7 +103,7 @@ Original patch by plongstaff.</li>
 Also mention the infamous dbi database drivers here,
 https://lists.gnucash.org/pipermail/gnucash-devel/2011-February/031171.html</li>
 </ul>
-
+</li>
 
 
 

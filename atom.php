@@ -35,10 +35,10 @@
 ?>
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://www.gnucash.org/atom.php</id>
   <title>GnuCash News</title>
+  <subtitle>GnuCash is personal and small-business financial-accounting software, freely licensed under the GNU GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.</subtitle>
   <generator>GnuCash htdocs/trunk/atom.php 1.0 &lt;gnucash-devel@gnucash.org&gt;</generator>
-  <logo>http://www.gnucash.org/images/gnucash_logo.png</logo>
+  <logo>http://www.gnucash.org/images/icons/gnc-icon.png</logo>
   <link rel="alternate" href="http://www.gnucash.org/" />
   <link rel="self" href="http://www.gnucash.org/atom.php" />
   <?php
@@ -66,11 +66,6 @@
       <email>gnucash-devel@gnucash.org</email>
     </author>
     <updated><?= date_convert_news_to_atom($update_date) ?></updated>
-    <content type="html">
-        <? for ($i=2; $i<$n; $i++) {
-            print htmlentities($fa[$i]);
-        } ?>
-    </content>
   </entry>
   <?php
   } ?>

@@ -17,17 +17,17 @@
 
 <p>PLEASE TEST TEST AND TEST SOME MORE any and all features important to you.
 Then post any bugs you find to bugzilla</p>
-<p>Major changes in the 2.3.x release include;
+<p>Major changes in the 2.3.x release include:</p>
 <ul>
 <li>In addition to the XML backend, Gnucash can now use a SQLite3, MySQL or PostgreSQL database to store the data. This is a new implementation using libdbi. It supports all features including the business features.  In order to build with this, add --enable-dbi to the configure command.  In addition to the libdbi-dev package for your distribution, you will also need the appropriate DBD (libdbi driver) package for sqlite3, mysql or postgresql.</li>
 <li>In addition to the current GtkHTML HTML engine used to display reports and graphs, Gnucash can use WebKit. WebKit is the engine used by Google Chrome on Windows and Safari on Apple.  In order to build with this, add --enable-webkit to the configure command.  You will need an appropriate webkit-dev package.  On win32, you will need to download the webkit-1.1.5-win32.zip file from the source repository and put it into the downloads directory of your gnucash build area.</li>
 <li>Updated to AqBanking 3 on Win32.</li>
 </ul>
 
-<p>Changes between 2.3.3 and 2.3.4 include:
+<p>Changes between 2.3.3 and 2.3.4 include:</p>
 <ul>
 <li>Changes in database schema.  The "helper" tables (slots, recurrences, taxtable_entries) which can have multiple entries per object now have a unique, auto-increment integer primary key.  Dates and date/times stored in the database are now stored in DATE and TIMESTAMP columns (mysql and pgsql).  The "hidden" and "placeholder" account flags are now stored in individual fields in the accounts table.  A new budget_amounts table contains 1 record per budget per account per period and contains the budget amount for that account/period.  The scheduled transaction end date is now being stored.  The versions table now has the table name as the primary key, and NULL values are disallowed for all fields.
-<br><br>
+<br></br><br></br>
 Because of these changes, you will need to delete and recreate your database.  If you want to save your data, save it to XML before upgrading to 2.3.4, upgrade, then load the XML file and save to a new database or over your existing database.</li>
 <li>The standard report .scm files are now in &lt;install-location&gt;/share/gnucash/guile-modules/gnucash/report/standard-reports.  When gnucash is started, it will scan this directory and load each .scm file into the report menu system.  This means that if you want to add a new report to gnucash, you only need to copy it into this directory.</li>
 <li>Updated Japanese translation</li>
@@ -45,13 +45,14 @@ Because of these changes, you will need to delete and recreate your database.  I
 <li>Period dates are now centered properly over the columns for that period</li>
 <li>Add an option to the budget report.  If enabled, and an account does not have a budget value for the period, the budget values for all child accounts are added.  If the chart of accounts is set up so that only leaf accounts have transactions, this allows budget values to be assigned either to all children and not the parent (they will be summed) or the parent.</li>
 </ol>
+</li>
 <li>Changed --enable-webkit configure option to --with-html-engine=XXX where XXX is "gtkhtml" (default) or "webkit".</li>
 <li>Merged latest pot template into all .po translation files.</li>
 <li>Fixed signed vs unsigned char pointer type conflicts.</li>
 </ul>
 
 <h3>Caveats for Testers</h3>
-<p>Any 2.3.x version might crash unexpectedly at any point during runtime. If you test some serious work in a 2.3.x release and are using the XML file backend for data storage, make sure you hit "Save" after every non-trivial workstep.  If you are using the SQL backend, this is not required as every change is saved immediately to the database.<p>
+<p>Any 2.3.x version might crash unexpectedly at any point during runtime. If you test some serious work in a 2.3.x release and are using the XML file backend for data storage, make sure you hit "Save" after every non-trivial workstep.  If you are using the SQL backend, this is not required as every change is saved immediately to the database.</p>
 <p>The documentation has had screenshots updated, however, many help texts usually only refers to the 1.8.x series. Everyone is invited to help improve the documentation; see http://wiki.gnucash.org/wiki/Development on how to get involved.</p>
 
 <h3>How can you help?</h3>
@@ -61,17 +62,17 @@ Because of these changes, you will need to delete and recreate your database.  I
 <p>We would like to encourage people to test this and any further releases as much as possible and submit bug reports in order that we can polish GnuCash to be as stable as possible for the 2.4.0 release in a few weeks. Then post any bugs you find to <a href="http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">bugzilla</a></p>
 
 <h3>Getting GnuCash</h3>
-<p>Source code for GnuCash 2.3.4 can be downloaded from multiple locations:
+<p>Source code for GnuCash 2.3.4 can be downloaded from multiple locations:</p>
 <ul>
 <li><a href="http://www.gnucash.org/download.phtml">The GnuCash website</a></li>
 <li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.4.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.4.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/2.3.4/">all files</a>.</li>
 <li>You can also checkout the sources directly from the subversion repository with this command:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/trunk gnucash</span></li>
-</ul></p>
+</ul>
 
 <p>To install GnuCash, you will need Gnome 2, guile, slib. In addition you will need swig if compiling from subversion.</p>
 
 <h3>Win32 binary</h3>
-<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.4-setup.exe">Gnucash 2.3.4 Win32 setup executable</a> can be downloaded from Sourceforge as well.
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.3.4-setup.exe">Gnucash 2.3.4 Win32 setup executable</a> can be downloaded from Sourceforge as well.</p>
 
 <h3>About the Program</h3>
 <p>GnuCash is a free, open source accounting program released under the GNU General Public License (GPL) and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash began in 1997, and its first stable release was in 1998.</p>

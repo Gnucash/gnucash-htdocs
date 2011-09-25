@@ -2,101 +2,101 @@
 2004-04-13   06:13:39
 
 The GnuCash team is pleased to announce the release
-of stable version 1.8.9.<br><br>
-<b><big>What's New in GnuCash 1.8.9?</big></b><br>
-<br>
-<br>
+of stable version 1.8.9.<br></br><br></br>
+<b><big>What's New in GnuCash 1.8.9?</big></b><br></br>
+<br></br>
+<br></br>
  o Updated Polish translation by GNOME PL Team, updated French, Czech,
-   Spanish, Russian, Dutch, German and Italian translations.<br>
- o dump-finance-quote - Be more explicit when a lookup fails.<br>
- o log-replay - Increase read buffer size.<br>
+   Spanish, Russian, Dutch, German and Italian translations.<br></br>
+ o dump-finance-quote - Be more explicit when a lookup fails.<br></br>
+ o log-replay - Increase read buffer size.<br></br>
  o Make sure to verify that the items in the reconcile hash are still
-   around after a refresh.<br>
+   around after a refresh.<br></br>
  o When the commodity is changed, then set the currency to the
-   currency of the last price entered for this commodity.<br>
- o Add Hungarian account templates by Sulyok Peter<br>
+   currency of the last price entered for this commodity.<br></br>
+ o Add Hungarian account templates by Sulyok Peter<br></br>
  o Patch by Geoff Kassel to work on OpenBSD (allow user to set
-   diffcmd).<br>
+   diffcmd).<br></br>
  o Don't test double KVPs, on the theory that they will soon be
-   deprecated.<br>
+   deprecated.<br></br>
  o  When computing the aging report, ignore splits that belong to
    closed lots.  This way we wont get the wrong values when the invoice
    falls outside the 360-day window but its payment falls inside the
-   window.<br>
+   window.<br></br>
  o Add gnc_getline() function to read an unlimited line-length from a
    file (so you're not limited to a buffer size with fgets() and the
    like). It is similar to the getline(3) on Linux except the API is
-   different and it will always set the return string.<br>
- o Add workaround code for openhbci/chipcard problem.<br>
- o Add gnc_lookup_date_option() function.<br>
- o Add gnc_ui_account_get_balance_in_currency() function.<br>
- o Add preferences for summarybar.<br>
- o Add xaccAccountConvertBalanceToCurrencyAsOfDate() function<br>
+   different and it will always set the return string.<br></br>
+ o Add workaround code for openhbci/chipcard problem.<br></br>
+ o Add gnc_lookup_date_option() function.<br></br>
+ o Add gnc_ui_account_get_balance_in_currency() function.<br></br>
+ o Add preferences for summarybar.<br></br>
+ o Add xaccAccountConvertBalanceToCurrencyAsOfDate() function<br></br>
  o Summarybar can now display a grand total of all commodities,
    profits of a period of time and net assets at the end of the period;
    summarybar can be configured with some options under
-   edit->preferences.<br>
+   edit->preferences.<br></br>
  o Create two new functions to centralize date-selection option
-   creation.<br>
- o Export the new scheme functions.<br>
+   creation.<br></br>
+ o Export the new scheme functions.<br></br>
  o Modify Herbert's patch to centralize the date-selection option
-   code.<br>
- o Use the new centralized date-selection option-creation code.<br>
- o Fix a typo in the help (was --diable-gui).<br>
- o Add db-4.2 to the list of databases we search.<br>
- o Fix a problem with opt style installs.<br>
+   code.<br></br>
+ o Use the new centralized date-selection option-creation code.<br></br>
+ o Fix a typo in the help (was --diable-gui).<br></br>
+ o Add db-4.2 to the list of databases we search.<br></br>
+ o Fix a problem with opt style installs.<br></br>
  o Rename from_xxx and to_xxx account tree widgets to left_xxx and
-   right_xxx.<br>
+   right_xxx.<br></br>
  o If in "accountant mode" call "transfer from" "credit account" and
-   "transfer to" "debit account" and interchange account trees.<br>
+   "transfer to" "debit account" and interchange account trees.<br></br>
  o Remove the RECN cell from payable/receivable to stop confusing
-   people.<br>
- o Change Ukrainian "UAG" into "UAH"<br>
+   people.<br></br>
+ o Change Ukrainian "UAG" into "UAH"<br></br>
  o Commented out setting the memo always to "Auto-created split" due
-   to popular request.<br>
+   to popular request.<br></br>
  o Fix for part of bug only allow auto-create SXes which have splits 
-   to be created.<br>
- o HBCI transfer template management GUI added by Bernd Wagner.<br>
- o Added instructions about running under valgrind.<br>
+   to be created.<br></br>
+ o HBCI transfer template management GUI added by Bernd Wagner.<br></br>
+ o Added instructions about running under valgrind.<br></br>
  o Added a large set of valgrind suppressions for both guile and
-   gnucash.<br>
+   gnucash.<br></br>
  o Change the reg_type to SEARCH_LEDGER so all the 'action' types
-   appear.<br>
- o Remove unused 'ledger_status' widget.<br>
+   appear.<br></br>
+ o Remove unused 'ledger_status' widget.<br></br>
  o At least be consistent about the background coloring of the month
-   labels, even if we're still not using GTK themeage correctly.<br>
- o Destroy the transient window when the widget is destroyed.<br>
- o Make the advance and remind spin-buttons editable.<br>
+   labels, even if we're still not using GTK themeage correctly.<br></br>
+ o Destroy the transient window when the widget is destroyed.<br></br>
+ o Make the advance and remind spin-buttons editable.<br></br>
  o Change the upper bound on the advance and remind spins to 365
-   [days], with a page-size of 30 [days].<br>
+   [days], with a page-size of 30 [days].<br></br>
  o Disallow the Scheduling of being-editing transactions in the
    Register, preventing a class of unbalanced SX template transactions
-   from being entered and propogated through the system.<br>
+   from being entered and propogated through the system.<br></br>
  o Fix nasty memory-corruption issue; insufficent bounds checking on
-   array index.<br>
- o Better handling of various error cases in transaction-creation.<br>
+   array index.<br></br>
+ o Better handling of various error cases in transaction-creation.<br></br>
  o When we have a problem parsing a credit/debit cell, indicate to the
-   user what occurred.<br>
+   user what occurred.<br></br>
  o Use the account-list filtering capability of the GncAccountSel to
-   only show/allow-creation-of valid account-types in the loan-druid.<br>
+   only show/allow-creation-of valid account-types in the loan-druid.<br></br>
  o Add ':' to the token list of allowable characters in the formula
-   cell.<br>
- o Fix precedence bug screwing up loan review page.<br>
+   cell.<br></br>
+ o Fix precedence bug screwing up loan review page.<br></br>
  o Don't need to require format; main.scm handles it, and the default
    "format" (simple-format) is sufficient to handle everything we need.
-   This allows gnucash to work with slib3.<br>
+   This allows gnucash to work with slib3.<br></br>
  o Add code to remove "intl/Makefile po/Makefile" from AC_OUTPUT in
    configure.in prior to calling gettextize to make sure that you can
    build from CVS with recent versions of gettextize.  Tested with both
-   RH9 and RH7.3 to make sure it works with both old and new.<br>
- o Move variable declaration to the top of the block.<br>
+   RH9 and RH7.3 to make sure it works with both old and new.<br></br>
+ o Move variable declaration to the top of the block.<br></br>
  o Make sure we always have intl and po Makefiles in the configure
-   script.  Sometimes it was ripped out without being replaced.<br> 
-<br><br>
+   script.  Sometimes it was ripped out without being replaced.<br></br> 
+<br></br><br></br>
 Available at the usual places! 
 
-<br><br>
+<br></br><br></br>
 <b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
 
-<br><br>
+<br></br><br></br>
 <b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>

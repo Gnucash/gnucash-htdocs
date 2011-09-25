@@ -1,13 +1,16 @@
 BODY {
-   font-family: sans-serif;
-   color: black;
-   background-color: white;
-   border: 0px;
-   margin: 0px;
+   background:url(../images/backg.png) fixed repeat;
+   border:0;
+   margin:0;
+   font-size:80%;
+   font-family:"Verdana", Geneva, sans-serif;
+   height:100%;
 }
 
-IMG {
-   border-style: none;
+#maincol {
+   position:relative;
+   margin:0;
+   padding:0;
 }
 
 .newsborder {
@@ -25,18 +28,58 @@ IMG {
    font-size: large;
 }
 
+.newscontainer {
+   height:100%;
+   width:100%;
+}
+
 .featurepanel {
    width: 50%;
    height: 280px;
 }
 
-.featureimage {
-   float: right;
+.center {
+   text-align:center;
 }
 
-.featureblock {
-   background-color: black;
-   color: silver;
+.justify {
+   text-align:justify;
+}
+
+.featureimage {
+   float: right;
+   width: 400px;
+   margin: 0 0 1em 1em;
+}
+
+
+.featureborder {
+   background: url(../images/icons/gnc-icon.png) no-repeat 99% #cacaf7;
+   color: black;
+   border: 1px;
+   border-color: silver;
+   border-style: ridge;
+   padding: 2px;
+   margin-bottom: 1em;
+   -moz-box-shadow: 3px 3px 3px #888888; /* Firefox 3.6 and earlier */
+   -webkit-box-shadow: 3px 3px 3px #888888; /* Safari */
+   box-shadow: 3px 3px 3px #888888;
+   border-radius:5px;
+   -moz-border-radius:5px;
+}
+
+.featurecontainer {
+   clear:right;
+}
+
+h1.featuresection {
+   font-style:italic;
+}
+
+h2.featuretitle {
+   margin:2px;
+   text-align: left;
+   color: black;
 }
 
 .divider {
@@ -45,15 +88,19 @@ IMG {
    color: black;
 }
 
-TABLE {
-   border-width: 2px;
-   border-style: ridge;
-   border-color: silver;
+table {
+   font-size:40%;
+   width:100%;
+   border:1px solid silver;
 } 
 
-TR {
+tr.CALSTABLE {
    background-color: white;
    color: black;
+}
+
+dd {
+   text-align:justify;
 }
 
 .tblbanner {
@@ -72,34 +119,46 @@ TR {
    color: black;
 }
 
-A[href], A[href]:visited
+a[href], a[href]:visited
 {
-  color: rgb(8, 0, 109);
+   color: rgb(8, 0, 109);
 }
 
 #head
 {
-   background-color: #7F7FAA;
+   background: url("../images/shadowhead.png") repeat-x scroll center bottom #7F7FAA;
    color: white;
-   font-size: small;
    padding: 0.5em;
-}
-
-#head A, #tail A
-{
-   color: white;
+   border-bottom: solid thin silver;
 }
 
 #tail {
-   font-size: small;
+   padding-bottom:20px;
+   font-size: 0.8em;
    text-align: center;
    clear: both;
    float: none;
-   background-color: #7F7FAA;
+   background:url(../images/shadowfoot.png) repeat-x scroll center top #7F7FAA;
    color: white;
    margin-left: 0;
    margin-right: 0;
    min-height: 60px;
+   border-top: solid thin silver;
+}
+
+#head a, #tail a
+{
+   color: white;
+}
+
+#tail a:hover
+{
+   text-decoration:none;
+}
+
+#head img, #tail img
+{
+   border:0
 }
 
 .tblborder {
@@ -145,13 +204,38 @@ A[href], A[href]:visited
 }
 
 #news {
-   float: left;
-   width: 20%;
+   clear: both;
+   margin-top:20px;
+   float:left;
+   min-width: 23%;
+   font-size:90%;
 }
 
-#news LI 
+#news ul
 {
-  list-style-image: url(webding.png);
+   padding-bottom:15px;
+   margin-top:20px;
+   margin-bottom:0px;
+   padding-left:25px;
+   padding-right:5px;
+}
+
+#news li 
+{
+   list-style-image: url(../images/webding.png);
+}
+
+#news a, #news a:visited {
+   color: black;
+   text-decoration: underline;
+}
+
+#news a:hover,a:active
+{
+   background-color:#7F7FAA;
+   text-decoration:none;
+   color:white;
+   border-radius:3px;
 }
 
 .highlight {
@@ -161,8 +245,15 @@ A[href], A[href]:visited
 }
 
 .othernews {
-   background-color: white;
-   color: black;
+   margin-bottom:10px;
+   background: url("../images/backg-linktop.png") repeat-x scroll 0 0 white;
+   border: solid thin #7F7FAA;
+   border-radius: 10px 0 0 10px;
+   box-shadow: 2px 2px 6px silver;
+   clear: both;
+   float: right;
+   width: 190px;
+   -moz-border-radius:10px 0 0 10px; /* Firefox 3.6 and earlier */
 }
 
 .dot	{
@@ -174,11 +265,31 @@ A[href], A[href]:visited
 }
 
 #content {
-   float: left;
-   width: 75%;
-   margin-right: 1em;
-   padding-right: 1em;
-   margin-left: 1%;
+   margin-top:20px;
+   margin-bottom:20px;
+   margin-left:10px;
+   padding:10px;
+   float:left;
+   max-width:65%;
+   background-color:white;   
+   border:solid thin #7F7FAA;
+   border-radius:0 25px 25px 25px;
+   box-shadow: 4px 4px 8px silver;
+   -moz-border-radius:0 25px 25px 25px;
+}
+
+#content a
+{
+   font-weight:bold;
+   text-decoration:underline;
+   color:black;
+}
+
+#content a:hover,a:active
+{
+   background-color:#7F7FAA;
+   text-decoration:none;
+   color:white;
 }
 
 #location {
@@ -186,11 +297,19 @@ A[href], A[href]:visited
 }
 
 #language {
+   font-size: 0.9em;
    float: right;
    margin-right: 1em;
 }
 
+#language a:hover {
+   text-decoration:none;
+}
+
 .linktop {
+   text-shadow: 1px 1px black;
+   color:white;
+   margin-left:10px;
    position: relative;
    top: 0.5em;
 }
@@ -201,22 +320,36 @@ A[href], A[href]:visited
 
 #tail P#rss
 {
-  float: left;
-  margin-left: 1em;
+   float: left;
+   margin-left: 1em;
 }
 
-H1
+h1
 {
-  border-bottom: solid thin #7F7FAA;
+   border-bottom: solid thin #7F7FAA;
 }
 
 #download {
-   float: right;
-   margin-left: 1em;
-   padding: 0.3em;
-   background-color: #7F7FAA;
+   float:right;
+   margin-left:2em;
+   margin-right:2em;
+   margin-bottom:1em;
+   margin-top:0;
+   padding: 0.4em;
+   background-color:#7F7FAA;
    border: 1px solid #CACAF7;
    color: white;
+   -moz-box-shadow: 5px 5px 5px #888888; /* Firefox 3.6 and earlier */
+   -webkit-box-shadow: 5px 5px 5px #888888; /* Safari */
+   box-shadow: 10px 10px 5px #888888;
+   border-radius:15px;
+   -moz-border-radius:15px;
+}
+
+.downloadimage {
+   float:left;
+   width:200px;
+   text-align:center;
 }
 
 #download h2 {
@@ -238,16 +371,19 @@ H1
 }
 
 #download a, #download a:visited {
-   color: white;
+   color: #E3E3E3;
    font-weight: bold;
    text-decoration: none;
 }
 
 #download a:hover {
    text-decoration: underline;
+   color:white;
+   text-shadow:0px 0px 9px white;
 }
 
 div.dialog {
+   clear:right;	
    padding-left: 58px;
    border: 1px solid #7F7FAA;
    margin: 1em 2em;
@@ -255,8 +391,210 @@ div.dialog {
 
 div.warning {
    background: url('../images/icons/gnome-dialog-warning.png') 5px 5px no-repeat #E6E6F7;
+   padding-right:20px;
 }
 
 div.note {
    background: url('../images/icons/gnome-dialog-information.png') 5px 5px no-repeat #E6E6F7;
+   padding-right:20px;
+}
+
+
+span.bold {
+   font-weight:bold;
+}
+
+.adscontainer
+{  
+   clear: both;
+   float: right;
+   margin: 0 5px 0 auto;
+   width: 160px;
+   background:#dedede;
+   padding:10px;
+   border:solid thin #7F7FAA;
+}
+
+h2.adstitle
+{
+   font-size:0.9em;
+   text-align:center;
+}
+
+p.adstext
+{
+   font-size:0.8em;
+   text-align:center;
+}
+
+.adsimage
+{
+   border: 1px solid black;
+   -moz-box-shadow: 0px 0px 5px #888888; /* Firefox 3.6 and earlier */
+   -webkit-box-shadow: 4px 4px 6px #888888; /* Safari */
+   box-shadow: 0px 0px 5px #888888;
+}
+
+.adscontainer img:hover {
+   border: 1px solid red;
+   box-shadow: 0px 0px 10px black;
+}
+
+.gnucash
+{
+  font-weight:bold;
+  font-style:italic;
+  color: #7F7FAA;
+}
+
+#develdoc {
+   float:right; 	
+   margin-left:2em;
+   margin-right:2em;
+   margin-bottom:1em;
+   margin-top:0;
+   padding:0.4em;
+   background-color:#7F7FAA;
+   border: 1px solid #CACAF7;
+   color: white;
+   -moz-box-shadow: 5px 5px 5px #888888; /* Firefox 3.6 and earlier */
+   -webkit-box-shadow: 5px 5px 5px #888888; /* Safari */
+   box-shadow: 10px 10px 5px #888888;
+   border-radius:15px;
+   -moz-border-radius:15px;
+}
+
+#develdoc a:hover,a:active
+{
+   background-color:white;
+}
+
+.docicon {
+   border:0;
+   vertical-align:middle;
+   width:16px;
+}
+
+#stabledoc {
+   float:right; 	
+   margin-left:2em;
+   margin-right:2em;
+   margin-bottom:2em;
+   margin-top:0;
+   padding:0.4em;
+   background-color:#7F7FAA;
+   border: 1px solid #CACAF7;
+   color: white;
+   -moz-box-shadow: 5px 5px 5px #888888; /* Firefox 3.6 and earlier */
+   -webkit-box-shadow: 5px 5px 5px #888888; /* Safari */
+   box-shadow: 10px 10px 5px #888888;
+   border-radius:15px;
+   -moz-border-radius:15px;
+}
+
+#stabledoc a:hover,a:active
+{
+   background-color:white;
+}
+
+.doctable {
+   margin-left: 1.5em;
+   font-size:100%;
+   background-color: #7f7faa;
+   border:0px;
+}
+.doctr {
+   background-color: #7f7faa;
+   color: white;
+}
+
+h2.download-title {
+   margin-top:0px;
+   padding-left:40px;
+   background: url(../images/icons/download-32x32.png) left no-repeat;
+}
+
+.command {
+   margin-left:30px;
+   margin-right:30px;
+   background:#f3f3f3;
+   border-style:dashed;
+   border-width:1px;
+   padding:10px;
+}
+
+.imagelist {
+   list-style-type:none;
+   padding:0px;
+   margin:0px;
+}
+
+.imagelistitem {
+   text-align:justify;
+   background-repeat:no-repeat;
+   background-position: 0px 5px;
+   padding-top:12px;
+   padding-bottom:16px;
+   padding-left:45px;
+}
+
+#mainfeature {
+   margin-left:5px;
+   margin-right:5px;
+   background:url(../images/gnucash-perspective.png) #f3f3f3 95% no-repeat;
+   color:black;
+   border:1px dotted #7F7FAA;
+   padding:1%;
+}
+
+#mainfeature ul {
+   font-style:italic;
+   list-style-image: url(../images/checkmark.png);
+   padding: 30px 10px 30px 30px;
+   line-height:25px;
+   margin: 0 53% 0 0;
+   background-color: #F3F3F3;
+   border-right: thin solid silver;
+   font-style: italic;
+}
+
+#validator {
+   position:relative;
+   height:0px;
+   left:-43%;
+   bottom:-1%;
+}
+
+#branding {
+   position:fixed;
+   height:0;
+   right:0;
+   top:200px;
+   z-index:-1;
+}
+
+#googleplusone {
+   position:fixed;
+   background-color:#7F7FAA;
+   border-bottom:1px solid #CACAF7;
+   border-left:1px solid #CACAF7;
+   border-top:1px solid #CACAF7;
+   border-radius:10px 0 0 10px;
+   box-shadow: 0px 0px 8px silver;
+   padding:5px;
+   right:0;
+   top:120px;
+}
+
+#googleplusone:hover {
+   position:fixed;
+   background-color:#CACAF7;
+   border-bottom:1px solid #7F7FAA;
+   border-left:1px solid #7F7FAA;
+   border-top:1px solid #7F7FAA;
+   border-radius:10px 0 0 10px;
+   box-shadow: 0px 0px 8px black;
+   padding:5px;
+   right:0;
+   top:120px;
 }

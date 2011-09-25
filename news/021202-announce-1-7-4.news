@@ -2,88 +2,88 @@
 2002-12-02   11:23:47
 
 The GnuCash team is pleased to announce the release of the second beta
-version 1.7.4: "The water of life".<br><br>
-<b><big>What's New in GnuCash 1.7.4?</big></b><br>
-<br>
-<b>- Scheduled Transactions:</b> <br>
+version 1.7.4: "The water of life".<br></br><br></br>
+<b><big>What's New in GnuCash 1.7.4?</big></b><br></br>
+<br></br>
+<b>- Scheduled Transactions:</b> <br></br>
 &nbsp;&nbsp; &nbsp;GnuCash now has the ability to automatically create and
-enter transactions, remind<br>
+enter transactions, remind<br></br>
 &nbsp;&nbsp; &nbsp;when a transaction is due, give a choice of entering a
-transaction or postponing it<br>
-&nbsp;&nbsp; &nbsp;and remove an automated transaction after a certain period.<br>
-<b>- Mortgage &amp; Loan Repayment Druid:</b><br>
-&nbsp;&nbsp; &nbsp;Used to setup a variable payment loan scheduled transaction.<br>
-<b>- Small Business Accounting Features: </b><br>
+transaction or postponing it<br></br>
+&nbsp;&nbsp; &nbsp;and remove an automated transaction after a certain period.<br></br>
+<b>- Mortgage &amp; Loan Repayment Druid:</b><br></br>
+&nbsp;&nbsp; &nbsp;Used to setup a variable payment loan scheduled transaction.<br></br>
+<b>- Small Business Accounting Features: </b><br></br>
 &nbsp;&nbsp; &nbsp;GnuCash now can be used for Customer and Vendor tracking,
-Invoicing and Bill Payment,<br>
-&nbsp;&nbsp; &nbsp;and using different Tax and Billing Terms in a small business.<br>
-<b>- OFX Import:</b><br>
+Invoicing and Bill Payment,<br></br>
+&nbsp;&nbsp; &nbsp;and using different Tax and Billing Terms in a small business.<br></br>
+<b>- OFX Import:</b><br></br>
 &nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
-the Open Financial Exchange<br>
+the Open Financial Exchange<br></br>
 &nbsp;&nbsp; &nbsp;protocol that many banks and financial services are moving
-to use. The development of<br>
+to use. The development of<br></br>
 &nbsp;&nbsp; &nbsp;OFX and HBCI support has also resulted in an improved
-transaction matching system that<br>
-&nbsp;&nbsp; &nbsp;more accurately picks duplicate transactions.<br>
-<b>- HBCI Support:</b> <br>
+transaction matching system that<br></br>
+&nbsp;&nbsp; &nbsp;more accurately picks duplicate transactions.<br></br>
+<b>- HBCI Support:</b> <br></br>
 &nbsp;&nbsp; &nbsp;GnuCash is the first free software application to support
-the German Home Banking <br>
+the German Home Banking <br></br>
 &nbsp;&nbsp; &nbsp;Computer Information protocol which includes statement
-download, initiate bank <br>
-&nbsp;&nbsp; &nbsp;transfers and direct debits.<br>
-<b>- New User Manual and Help:</b><br>
+download, initiate bank <br></br>
+&nbsp;&nbsp; &nbsp;transfers and direct debits.<br></br>
+<b>- New User Manual and Help:</b><br></br>
 &nbsp;&nbsp; &nbsp;A brand new user help has been written which focuses on
-how to do tasks in <br>
+how to do tasks in <br></br>
 &nbsp;&nbsp; &nbsp;conjunction with a Tutorial and Concepts guide that gives
-the user background<br>
-&nbsp;&nbsp; &nbsp;information on using GnuCash.<br>
-<b>- New Multi-Currency Transaction Handling:</b><br>
+the user background<br></br>
+&nbsp;&nbsp; &nbsp;information on using GnuCash.<br></br>
+<b>- New Multi-Currency Transaction Handling:</b><br></br>
 &nbsp;&nbsp; &nbsp;GnuCash no longer requires separate currency exchange
-accounts to handle multiple<br>
-&nbsp;&nbsp; &nbsp;currency transfers.<br>
-<b>- Redesigned Menu's</b><br>
+accounts to handle multiple<br></br>
+&nbsp;&nbsp; &nbsp;currency transfers.<br></br>
+<b>- Redesigned Menu's</b><br></br>
 &nbsp;&nbsp; &nbsp;The GnuCash menu's have been redesigned to conform more
-with the new GNOME <br>
-&nbsp;&nbsp; &nbsp;Human Interface Guidelines.<br>
-<br>
-<big><b>Specifically updated in this version;</b></big><br>
-<br>
-&nbsp;&nbsp; &nbsp; o Second beta release<br>
-&nbsp;&nbsp; &nbsp; o Problems with importing 1.6 data files fixed<br>
-&nbsp;&nbsp; &nbsp; o Updates to generic transaction matching<br>
-&nbsp;&nbsp; &nbsp; o More postgres backend fixes<br>
-&nbsp;&nbsp; &nbsp; o New progress bar when making reports<br>
-&nbsp;&nbsp; &nbsp; o Payment schedule review page added to loan druid<br>
-&nbsp;&nbsp; &nbsp; o Fixes to multi-currency support<br>
+with the new GNOME <br></br>
+&nbsp;&nbsp; &nbsp;Human Interface Guidelines.<br></br>
+<br></br>
+<big><b>Specifically updated in this version;</b></big><br></br>
+<br></br>
+&nbsp;&nbsp; &nbsp; o Second beta release<br></br>
+&nbsp;&nbsp; &nbsp; o Problems with importing 1.6 data files fixed<br></br>
+&nbsp;&nbsp; &nbsp; o Updates to generic transaction matching<br></br>
+&nbsp;&nbsp; &nbsp; o More postgres backend fixes<br></br>
+&nbsp;&nbsp; &nbsp; o New progress bar when making reports<br></br>
+&nbsp;&nbsp; &nbsp; o Payment schedule review page added to loan druid<br></br>
+&nbsp;&nbsp; &nbsp; o Fixes to multi-currency support<br></br>
 &nbsp;&nbsp; &nbsp; o Added Brazilian Portugese account templates by Lucimar
-Moresco<br>
+Moresco<br></br>
 &nbsp;&nbsp; &nbsp; o Added doxygen documentation support, and integrated
-it into the<br>
+it into the<br></br>
 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; build system. There is a new target, make
-doc, that can be used to<br>
+doc, that can be used to<br></br>
 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; build the documentation if you have doxygen
-installed.<br>
+installed.<br></br>
 &nbsp;&nbsp; &nbsp; o Catch the condition gracefully when OpenHBCI config
-file does not<br>
-&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; exist.<br>
+file does not<br></br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; exist.<br></br>
 &nbsp;&nbsp; &nbsp; o Compute the implicit exchange rates for ALL transactions
-when<br>
+when<br></br>
 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; necessary. No longer requires the pricedb
-for printing split values.<br>
+for printing split values.<br></br>
 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; This will display all transactions in the
-currency of the current<br>
+currency of the current<br></br>
 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; account, regardless of the number of splits
-in the transaction.<br>
+in the transaction.<br></br>
 &nbsp;&nbsp; &nbsp; o First pass at getting multi-currency transactions to
-work from the<br>
-&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; register.<br>
+work from the<br></br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; register.<br></br>
 &nbsp;&nbsp; &nbsp; o Lots more bugfixes
 
-<br><br>
+<br></br><br></br>
 Available at the usual places! 
 
-<br><br>
+<br></br><br></br>
 <b><a href="http://www.gnucash.org/pub/gnucash/">http://www.gnucash.org</a></b>
 
-<br><br>
+<br></br><br></br>
 <b><a href="http://download.sourceforge.net/gnucash/">http://download.sourceforge.net/gnucash</a></b>

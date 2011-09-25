@@ -5,17 +5,18 @@
 
 <div class="dialog warning">
 <p><b>ATTENZIONE:</b> il supporto SQL in GnuCash 2.4.2 su piattaforma Windows è danneggiato</p>
-<p>Se si utilizza GnuCash 2.4.2 su piattaforma Windows si incontreranno probabilmente dei problemi quando:
+<p>Se si utilizza GnuCash 2.4.2 su piattaforma Windows si incontreranno probabilmente dei problemi quando:</p>
 <ul>
 <li>si caricheranno dati da un file Sqlite3 o da un database MySQL/PostgreSQL;</li>
 <li>si salveranno i propri dati in uno dei precedenti formati.</li>
-</ul></p>
+</ul>
 <p>Se i propri dati sono già stati salvati in uno dei formati SQL utilizzando una versione precedente di 
 GnuCash, il modo migliore per evitare problemi consiste nel disinstallare GnuCash 2.4.2 e reinstallare GnuCash 2.4.0
 (<a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.0-setup.exe">collegamneto al download</a>) per
 ottenere di nuovo l'accesso ai propri dati. Se invece i propri dati sono ancora in formato xml, è bene evitare di salvarli in un
 formato sql con GnuCash 2.4.2 in ambiente Windows per evitare problemi.</p>
 </div>
+
 <p>Apparentemente questo problema si verifica solo in ambiente Windows. Le compilazioni per Linux e Mac OS X sembrano non
 esserne affette. 
 Inoltre il problema affligge solamente il supporto SQL di GnuCash. Se i propri dati sono immagazzinati in formato xml, si può

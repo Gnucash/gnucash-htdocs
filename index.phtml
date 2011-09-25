@@ -11,41 +11,50 @@ include("externals/menu.phtml");
 
 <h1><?php echo T_("Welcome to GnuCash.org")?></h1>
 
+<div style="width:100%;float:left">
+
 <div id="download">
+<div style="float:left;">
 <h2><?php printf (T_("Download GnuCash %s"), $latest_stable)?></h2>
 
 <ul>
-<li><img src="<?=$top_dir?>/images/icons/linux.png" /> Linux <a href="<?php echo $download_path.$latest_stable_source;?>"><?php echo T_("Source");?></a> | <a href="<?=$home?>/download.phtml#distribution"><?php echo T_("Via distribution");?></a></li>
-<li><img src="<?=$top_dir?>/images/icons/windows.png" /> Microsoft Windows <a href="<?php echo $download_path.$latest_stable_win;?>">XP/Vista/7</a></li>
-<li><img src="<?=$top_dir?>/images/icons/macosx.png" /> Mac OS X <a href="<?php echo $download_path.$latest_stable_mac_intel;?>">Intel</a> | <a href="<?php echo $download_path.$latest_stable_mac_ppc;?>">Power PC</a> | <a href="http://wiki.gnucash.org/wiki/MacOSX/<?php echo $latest_stable;?>/Readme">Readme</a></li>
+<li><img alt="linux" src="<?=$top_dir?>/images/icons/linux.png" /> Linux <a href="<?php echo $download_path.$latest_stable_source;?>"><?php echo T_("Source");?></a> | <a href="<?=$home?>/download.phtml#distribution"><?php echo T_("Via distribution");?></a></li>
+<li><img alt="windows" src="<?=$top_dir?>/images/icons/windows.png" /> Microsoft Windows <a href="<?php echo $download_path.$latest_stable_win;?>">XP/Vista/7</a></li>
+<li><img alt="macosx" src="<?=$top_dir?>/images/icons/macosx.png" /> Mac OS X <a href="<?php echo $download_path.$latest_stable_mac_intel;?>">Intel</a> | <a href="<?php echo $download_path.$latest_stable_mac_ppc;?>">Power PC</a> | <a href="http://wiki.gnucash.org/wiki/MacOSX/<?php echo $latest_stable;?>/Readme">Readme</a></li>
 <li><a href="<?=$home?>/download.phtml" style="font-size: 80%;"><?=T_("More downloads (Source, Development,...)")?></a></li>
 </ul>
 </div>
 
-<p><?php echo T_("GnuCash is personal and small-business financial-accounting software, freely licensed under the <a href=\"http://www.gnu.org/\">GNU</a> GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.");?></p>
+<div class="downloadimage">
+<img alt="download" src="<?=$top_dir;?>/images/gnc-download.png" />
+</div>
+</div>
 
-<p><?php echo T_("Designed to be easy to use, yet powerful and flexible, GnuCash allows you to track bank accounts, stocks, income and expenses.  As quick and intuitive to use as a checkbook register, it is based on professional accounting principles to ensure balanced books and accurate reports. "); ?></p>
+<p class="justify"><?php echo T_("<span class=\"gnucash\">GnuCash</span> is personal and small-business financial-accounting software, freely licensed under the <a href=\"http://www.gnu.org/\">GNU</a> GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.");?></p>
 
-<div>
-<h2><?php echo T_("Feature Highlights"); ?></h2>
-<div style="float: right">
-<ul>
-<li><?php echo T_("QIF/OFX/HBCI Import, Transaction Matching");?></li>
-<li><?php echo T_("Reports, Graphs");?></li>
-<li><?php echo T_("Scheduled Transactions");?></li>
-<li><?php echo T_("Financial Calculations "); ?></li>
-</ul>
-</div><div style="border: solid thin white;">
+<p class="justify"><?php echo T_("Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash\">GnuCash</span> allows you to track bank accounts, stocks, income and expenses.  As quick and intuitive to use as a checkbook register, it is based on professional accounting principles to ensure balanced books and accurate reports. "); ?></p>
+</div>
+
+<div style="width:100%">
+<h2 style="margin-bottom:1px; margin-top:0px"><?php echo T_("Feature Highlights"); ?></h2>
+</div>
+
+<div id="mainfeature">
 <ul>
 <li><?php echo T_("Double-Entry Accounting");?></li>
 <li><?php echo T_("Stock/Bond/Mutual Fund Accounts");?></li>
 <li><?php echo T_("Small-Business Accounting");?></li>
-<li><?php echo T_("Customers, Vendors, Jobs, <br>Invoices, A/P, A/R");?></li>
+<li><?php echo T_("Reports, Graphs");?></li>
+<li><?php echo T_("QIF/OFX/HBCI Import, Transaction Matching");?></li>
+<li><?php echo T_("Scheduled Transactions");?></li>
+<li><?php echo T_("Financial Calculations"); ?></li>
 </ul>
-</div>
+<a href="<?=$home?>/features.phtml"><?php echo T_("<b>Discover more...</b>");?></a>
 </div>
 
 
+
+<div id="newscontainer">
 <h1><?php echo T_("News"); ?></h1>
 
 <?php
@@ -60,12 +69,13 @@ include("externals/menu.phtml");
   emit_news($en_newspath, $lang_newspath, $oldnews);
 ?>
 <div class="newsborder">
-<div class="newsheader"><img alt="news panel" src="<?=$top_dir;?>/images/icons/document.txt.gif">&nbsp;
-<a href="oldnews.phtml">Older Announcements ...</a>
+<div class="newsheader"><img alt="news panel" src="<?=$top_dir;?>/images/icons/document.txt.gif" />&nbsp;
+<a href="oldnews.phtml"><?php echo T_("Older Announcements ...");?></a>
 
 </div><div class="newsinner">
-Click <a href="oldnews.phtml">here</a> for older announcements ...
+<?php echo T_("Click <a href=\"oldnews.phtml\">here</a> for older announcements...");?>
 </div></div>
+</div>
 </div>
 
 <?php include("externals/footer.phtml"); ?>
