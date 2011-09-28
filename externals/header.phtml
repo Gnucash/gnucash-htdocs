@@ -64,12 +64,13 @@ if (isset($homepage)) { ?>
 <g:plusone size="tall" href="http://www.gnucash.org/"></g:plusone>
 </div>
 
+<!-- the icons on the top right-->
 <div style="float:right;">
-<p id="rss">
-<a href="http://gnucash.uservoice.com/"><img style="margin: 0 10px 0 0" src="<?=$top_dir?>/images/icons/uservoice-32x32.png" title="<?php echo T_($titleuservoice);?>" alt="[Uservoice]" width="32" height="32" /></a>
-<a href="http://sourceforge.net/donate/index.php?group_id=192"><img style="margin: 0 10px 0 0" src="<?=$top_dir?>/images/icons/donation-32x32.png" title="<?php echo T_($titledonation);?>" alt="[Donation]" width="32" height="32" /></a>
-<a href="<?=$home?>/atom.php"><img style="margin: 0 10px 0 0" src="<?=$top_dir?>/images/icons/feed-icon-32x32.png" title="<?php echo T_($titleRSS);?>" alt="[atom syndication feed]" width="32" height="32" /></a>
-</p>
+<ul id="navlist">
+  <li id="uservoice-icon"><a href="http://gnucash.uservoice.com/" title="<?php echo T_($titleuservoice);?>"></a></li>
+  <li id="donation-icon"><a href="http://sourceforge.net/donate/index.php?group_id=192" title="<?php echo T_($titledonation);?>"></a></li>
+  <li id="rss-icon"><a href="<?=$home?>/atom.php" title="<?php echo T_($titleRSS);?>"></a></li>
+</ul>
 </div>
 
 <div style="margin: 0px 0px 0 0;">
