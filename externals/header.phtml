@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
 
 <?php
 $titleRSS = T_("Subscribe to RSS feed");
@@ -41,7 +40,7 @@ if (isset($homepage)) { ?>
 
 <title><?= T_($title); ?> | GnuCash</title>
 <!--script for Google+1 button-->
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js">      {lang:'en', parsetags:'explicit'}   </script>
 </head>
 
 <body>
@@ -60,18 +59,24 @@ if (isset($homepage)) { ?>
 <!--facebook like button-->
 <div style="padding:0 0 5px 0">
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<div class="fb-like" data-href="www.gnucash.org" data-send="false" data-layout="box_count" data-width="60" data-show-faces="true" data-font="verdana"></div>
+    <script type="text/javascript">
+    //<![CDATA[
+    (function() {
+        document.write('<fb:like width="200" data-href="www.gnucash.org" data-send="false" data-layout="box_count" data-width="60" data-show-faces="true" data-font="verdana"></fb:like>');
+        var s = document.createElement('SCRIPT'), s1 = document.getElementsByTagName('SCRIPT')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://connect.facebook.net/en_US/all.js#xfbml=1';
+        s1.parentNode.insertBefore(s, s1);
+    })();
+    //]]>
+    </script>
 </div>
 <!-- google +1 button-->
-<g:plusone size="tall" href="http://www.gnucash.org/"></g:plusone>
+<div id="gplusone" class="plusone"></div>
+                   <script type="text/javascript">
+                              gapi.plusone.render('gplusone', { "size": "tall", "count": "false" });
+                   </script> 
 </div>
 
 <!-- the icons on the top right-->
