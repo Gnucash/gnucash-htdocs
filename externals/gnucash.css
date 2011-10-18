@@ -117,6 +117,13 @@ dd {
    background-color: #ffffff;
    padding: 4px;
    color: black;
+   display:inline-block;
+}
+
+.newsinner img
+{
+float:left;
+padding:0px 10px 10px 0px;
 }
 
 a[href], a[href]:visited
@@ -569,7 +576,7 @@ h2.download-title {
    position:fixed;
    height:0;
    right:0;
-   top:200px;
+   top:255px;
    z-index:-1;
 }
 
@@ -584,6 +591,7 @@ h2.download-title {
    padding:5px;
    right:0;
    top:120px;
+   width:55px;
 }
 
 #googleplusone:hover {
@@ -597,4 +605,69 @@ h2.download-title {
    padding:5px;
    right:0;
    top:120px;
+}
+
+#navlist{
+   position:relative;
+   width:120px
+}
+
+#navlist li{
+   margin:0;
+   padding:0;
+   list-style:none;
+   position:absolute;
+   top:0;
+}
+#navlist li, #navlist a{
+   height:42px;
+   display:block;
+}
+
+#uservoice-icon{
+   left:0px;
+   width:42px;
+}
+
+#uservoice-icon{
+   background:url('../images/icons/gc-uservoice.png') 0 0;
+   border-radius:12px;
+}
+
+#uservoice-icon a:hover{
+   background: url('../images/icons/gc-uservoice.png') 0 -42px white;
+   border-radius: 16px;
+   box-shadow: 0 0 4px silver;
+}
+
+#donation-icon{
+   left:50px;
+   width:42px;
+}
+
+#donation-icon{
+   background:url('../images/icons/gc-donation.png') 0 0;
+   border-radius:12px;
+}
+
+#donation-icon a:hover{
+   background: url('../images/icons/gc-donation.png') 0 -42px white;
+   border-radius: 16px;
+   box-shadow: 0 0 4px silver;
+}
+
+#rss-icon{
+   left:100px;
+   width:42px;
+}
+
+#rss-icon{
+   background:url('../images/icons/gc-rss.png') 0 0;
+   border-radius:12px;
+}
+
+#rss-icon a:hover{
+   background: url('../images/icons/gc-rss.png') 0 -42px white;
+   border-radius: 16px;
+   box-shadow: 0 0 4px silver;
 }

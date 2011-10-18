@@ -14,6 +14,16 @@ if (!isset($can_utf)) { $can_utf = true; }
 if ($can_utf)
 { ?>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+<!--meta properties for facebook Open Graph-->
+<meta property="og:title" content="Free Accounting Software | GnuCash"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="http://www.gnucash.org/"/>
+<meta property="og:image" content="http://www.gnucash.org/images/icons/gnc-icon-64x64.png"/>
+<meta property="og:site_name" content="GnuCash"/>
+<meta property="og:description" content="A personal and small-business financial-accounting software, licensed under GNU/GPL and available for Linux, Windows, Mac OS X, BSD, and Solaris."/>
+<!--end of Open Graph properties-->
+
 <?php } ?>
 <link rel="stylesheet" href="<?=$home?>/externals/gnucash.css" type="text/css" />
 <link rel="icon" href="<?=$home?>/favicon.ico" type="image/x-icon" />
@@ -46,15 +56,31 @@ if (isset($homepage)) { ?>
 <div style="position:absolute;top:-1000px;left:-1000px;"><img src="<?=$home?>/images/gnc-download.png" alt="GnuCash small business accounting" height="152" width="125" /></div>
 
 <div id="googleplusone">
+
+<!--facebook like button-->
+<div style="padding:0 0 5px 0">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="www.gnucash.org" data-send="false" data-layout="box_count" data-width="60" data-show-faces="true" data-font="verdana"></div>
+</div>
+<!-- google +1 button-->
 <g:plusone size="tall" href="http://www.gnucash.org/"></g:plusone>
 </div>
 
+<!-- the icons on the top right-->
 <div style="float:right;">
-<p id="rss">
-<a href="http://gnucash.uservoice.com/"><img style="margin: 0 10px 0 0" src="<?=$top_dir?>/images/icons/uservoice-32x32.png" title="<?php echo T_($titleuservoice);?>" alt="[Uservoice]" width="32" height="32" /></a>
-<a href="http://sourceforge.net/donate/index.php?group_id=192"><img style="margin: 0 10px 0 0" src="<?=$top_dir?>/images/icons/donation-32x32.png" title="<?php echo T_($titledonation);?>" alt="[Donation]" width="32" height="32" /></a>
-<a href="<?=$home?>/atom.php"><img style="margin: 0 10px 0 0" src="<?=$top_dir?>/images/icons/feed-icon-32x32.png" title="<?php echo T_($titleRSS);?>" alt="[atom syndication feed]" width="32" height="32" /></a>
-</p>
+<ul id="navlist">
+  <li id="uservoice-icon"><a href="http://gnucash.uservoice.com/" title="<?php echo T_($titleuservoice);?>"></a></li>
+  <li id="donation-icon"><a href="http://sourceforge.net/donate/index.php?group_id=192" title="<?php echo T_($titledonation);?>"></a></li>
+  <li id="rss-icon"><a href="<?=$home?>/atom.php" title="<?php echo T_($titleRSS);?>"></a></li>
+</ul>
 </div>
 
 <div style="margin: 0px 0px 0 0;">
