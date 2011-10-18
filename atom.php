@@ -60,7 +60,7 @@
   <entry>
     <id>urn:x-gnucash:news:<?= urlencode($key) ?></id>
     <title><?= $title ?></title>
-    <link rel="alternate" href="http://www.gnucash.org/beta/n-#<?=generate_anchor($key);?>" />
+    <link rel="alternate" href="http://www.gnucash.org/beta/#n-<?=generate_anchor($key);?>" />
     <author>
       <name>GnuCash Developers</name>
       <email>gnucash-devel@gnucash.org</email>
