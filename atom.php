@@ -38,9 +38,9 @@
   <title>GnuCash News</title>
   <subtitle>GnuCash is personal and small-business financial-accounting software, freely licensed under the GNU GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.</subtitle>
   <generator>GnuCash htdocs/trunk/atom.php 1.0 &lt;gnucash-devel@gnucash.org&gt;</generator>
-  <logo>http://www.gnucash.org/beta/images/icons/gnc-icon.png</logo>
-  <link rel="alternate" href="http://www.gnucash.org/beta/" />
-  <link rel="self" href="http://www.gnucash.org/beta/atom.php" />
+  <logo>http://www.gnucash.org/images/icons/gnc-icon.png</logo>
+  <link rel="alternate" href="http://www.gnucash.org/" />
+  <link rel="self" href="http://www.gnucash.org/atom.php" />
   <?php
   $news_items = get_news($newsdir, $newsdir);
   $news_items = array_slice($news_items, 0, $entry_count);
@@ -60,7 +60,7 @@
   <entry>
     <id>urn:x-gnucash:news:<?= urlencode($key) ?></id>
     <title><?= $title ?></title>
-    <link rel="alternate" href="http://www.gnucash.org/beta/#n-<?=generate_anchor($key);?>" />
+    <link rel="alternate" href="http://www.gnucash.org/#n-<?=generate_anchor($key);?>" />
     <author>
       <name>GnuCash Developers</name>
       <email>gnucash-devel@gnucash.org</email>
