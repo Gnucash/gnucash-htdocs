@@ -41,7 +41,7 @@ if (isset($homepage)) { ?>
 
 <title><?= T_($title); ?> | GnuCash</title>
 <!--script for Google+1 button-->
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js">      {lang:'en', parsetags:'explicit'}   </script>
 </head>
 
 <body>
@@ -74,7 +74,10 @@ if (isset($homepage)) { ?>
     </script>
 </div>
 <!-- google +1 button-->
-<g:plusone size="tall" href="http://www.gnucash.org/"></g:plusone>
+<div id="gplusone" class="plusone"></div>
+                   <script type="text/javascript">
+                              gapi.plusone.render('gplusone', { "size": "medium", "count": "false" });
+                   </script> 
 </div>
 
 <!-- the icons on the top right-->
