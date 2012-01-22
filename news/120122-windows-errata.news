@@ -1,0 +1,22 @@
+<b>Errata:</b> GnuCash 2.4.9 on Windows
+2012-01-22
+
+<h2>GnuCash 2.4.9 on Windows: errata</h2>
+
+<p>After GnuCash 2.4.9 was released a number of issues were discovered with GnuCash on Windows:</p>
+
+<ul>
+<li>Due to a bug in the installer package, GnuCash 2.4.9 will fail to start if
+you installed it over an existing previous installation. The solution is simple:
+uninstall GnuCash before you install GnuCash 2.4.9.<br />If you already
+installed GnuCash 2.4.9 and are experiencing this problem, the same solution
+works equally: uninstall GnuCash and install it again. Your data will not be
+affected by this.</li>
+<li>Copy/Paste is not working in the account registers. Until now, no
+workaround exists yet. If you depend heavily on copy/paste you may consider
+staying with GnuCash 2.4.8 for now.</li>
+</ul>
+<p>We are currently working to solve these problems and will release a fixed
+version as soon as possible.
+You can find more details on the copy/paste bug and track its progress on
+<a href="https://bugzilla.gnome.org/show_bug.cgi?id=667900">this bug report</a>.</p>
