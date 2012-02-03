@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GnuCash ht-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-19 18:02+0200\n"
-"PO-Revision-Date: 2011-10-19 18:08+0100\n"
+"POT-Creation-Date: 2012-02-03 20:33+0100\n"
+"PO-Revision-Date: 2012-02-03 20:33+0100\n"
 "Last-Translator: Cristian Marchi <cri.penta@gmail.com>\n"
 "Language-Team: \n"
 "Language: \n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: download.phtml:5
-#: docs.phtml:32
+#: docs.phtml:36
 #: docs.phtml:96
 msgid "Download"
 msgstr "Scarica"
@@ -214,13 +214,126 @@ msgstr "Vecchie notizie..."
 msgid "Click <a href=\"oldnews.phtml\">here</a> for older announcements..."
 msgstr "Fare clic  <a href=\"oldnews.phtml\">qui</a> per consultare le notizie precedenti..."
 
+#: develdocs.phtml:3
+#: externals/menu.phtml:53
+msgid "Writing Documentation"
+msgstr "Scrittura della documentazione"
+
+#: develdocs.phtml:11
+msgid "Writing GnuCash Documentation"
+msgstr "Scrittura della documentazione di GnuCash"
+
+#: develdocs.phtml:13
+msgid "If you are interested in improving the <span class=\"gnucash\">GnuCash</span> documentation, you have come to the right place. This page will provide you with the necessary information to get started."
+msgstr "Se si intende migliorare la documentazione di <span class=\"gnucash\">GnuCash</span>, questo è il posto giusto. In questa pagina verranno fornite le informazioni necessarie per iniziare."
+
+#: develdocs.phtml:15
+msgid "Just as the <span class=\"gnucash\">GnuCash</span> application has been developed over time by volunteers, so too has the documentation been written by volunteer developers and users to help others learn how <span class=\"gnucash\">GnuCash</span> works. This collaborative effort has resulted in the creation of two major documents, the <b>Help Manual</b> and the <b>Concepts and Tutorial Guide</b>."
+msgstr "Proprio come <span class=\"gnucash\">GnuCash</span> è stato sviluppato nel tempo grazie all'apporto di volontari, anche la documentazione è stata preparata da sviluppatori volontari e dagli utenti con lo scopo di insegnare agli altri come utilizzare <span class=\"gnucash\">GnuCash</span>. Questo sforzo collaborativo, ha portato alla creazione di due documenti, il <b>manuale di aiuto</b> e la <b>guida ai concetti</b>."
+
+#: develdocs.phtml:17
+msgid "The <span class=\"gnucash\">GnuCash</span> community welcomes assistance in maintaining and improving both the program and its documentation. If you are interested in helping write, edit or translate <span class=\"gnucash\">GnuCash</span>'s documentation, this page gives guidance on how to get set up to join the effort."
+msgstr "La comunità di  <span class=\"gnucash\">GnuCash</span> accetta qualsiasi aiuto per il miglioramento sia del programma che della documentazione. Se si intende contribuire scrivendo, modificando o traducendo la documentazione di  <span class=\"gnucash\">GnuCash</span>, questa pagina fornisce le indicazioni necessarie per poter iniziare a contribuire."
+
+#: develdocs.phtml:20
+msgid "The <span class=\"gnucash\">GnuCash</span> documentation can be viewed and downloaded from the <a href=\"docs.phtml\">Documentation page</a>."
+msgstr "La documentazione di <span class=\"gnucash\">GnuCash</span> può essere visualizzata e scaricata dalla <a href=\"docs.phtml\">pagina della documentazione</a>."
+
+#: develdocs.phtml:25
+msgid "Introduction"
+msgstr "Introduzione"
+
+#: develdocs.phtml:27
+msgid "The <span class=\"gnucash\">GnuCash</span> documentation is stored in <b>xml</b> files. More precisely, it uses the <b>GNOME2 XML docbook system</b>. This is a relatively flexible system that takes xml files as input and can generate documentation in several different output formats (html, pdf,...)."
+msgstr "La documentazione di <span class=\"gnucash\">GnuCash</span> è contenuta in file di tipo <b>xml</b>. Più precisamente, utilizza il sistema <b>docbook GNOME2 XML</b>. Questo sistema è relativamente flessibile e partendo dai file xml è possibile generare la documentazione in vari altri formati (html, pdf, ecc...)"
+
+#: develdocs.phtml:28
+msgid "If you wish to review or write <span class=\"gnucash\">GnuCash</span> documentation, you will need to know xml. Some basic knowledge of the docbook system may be useful as well"
+msgstr "Per revisionare o scrivere della documentazione per <span class=\"gnucash\">GnuCash</span>, è necessario conoscere il linguaggio XML. Può anche essere necessaria una conoscenza di base del sistema docbook"
+
+#: develdocs.phtml:29
+msgid "The following links are for further sites that can help with the documentation and review process."
+msgstr "I collegamenti seguenti sono relativi ad altri siti che possono essere di aiuto per i processi di creazione e di revisione della documentazione."
+
+#: develdocs.phtml:34
+msgid "While this <span class=\"gnucash\">GnuCash</span> wiki page is really about translating the documentation, it holds some useful information on working with docbook files."
+msgstr "Anche se questa pagina del wiki di <span class=\"gnucash\">GnuCash</span> tratta la traduzione della documentazione, contiene alcune informazioni utili per lavorare con i file docbook."
+
+#: develdocs.phtml:35
+msgid "A detailed guide on how to work with documentation (update and maintenance)."
+msgstr "Una guida dettagliata su come lavorare con la documentazione (aggiornamento e manutenzione)"
+
+#: develdocs.phtml:37
+msgid "We suggest also subscribing to"
+msgstr "Si consiglia anche l'iscrizione a"
+
+#: develdocs.phtml:42
+msgid "Gnome Documentation guidelines"
+msgstr "Linee guida di GNOME per la documentazione"
+
+#: develdocs.phtml:44
+msgid "As stated earlier, the new docs are based on the GNOME2 XML docbook system. Everyone wishing to help please follow these guides where possible when reviewing and/or writing docs."
+msgstr "Come già detto, la nuova documentazione è basata sul sistema docbook GNOME2 XML. Chiunque desideri contribuire è invitato, dove possibile, a seguire le linee guida al momento della revisione e/o scrittura della documentazione."
+
+#: develdocs.phtml:53
+msgid "Where to get the documentation source"
+msgstr "Dove ottenere il codice sorgente della documentazione"
+
+#: develdocs.phtml:55
+msgid "You will need a recent copy of the documentation source. For this you can check out the documentation module from the <span class=\"gnucash\">GnuCash</span> svn. Reviewers could also start from the <a href='http://sourceforge.net/projects/gnucash/files/gnucash-docs/'>current docs tarball</a>."
+msgstr "Sarà necessario ottenere una copia recente del codice sorgente della documentazione. Per fare questo è possibile eseguire il \"check out\" del modulo della documentazione dall'svn di <span class=\"gnucash\">GnuCash</span>. I revisori possono anche iniziare dal <a href='http://sourceforge.net/projects/gnucash/files/gnucash-docs/'>pacchetto della documentazione corrente</a>."
+
+#: develdocs.phtml:56
+msgid "For those not familiar with svn, the <span class=\"gnucash\">GnuCash</span> wiki has a <a href='http://wiki.gnucash.org/wiki/Subversion'>description</a> tailored to the <span class=\"gnucash\">GnuCash</span> code. To get the documentation source instead of the program source, replace 'gnucash' with 'gnucash-docs' in the mentioned svn commands, like this:"
+msgstr "Per coloro che non hanno familiarità con il sistema svn, il wiki di <span class=\"gnucash\">GnuCash</span> ne fornisce una <a href='http://wiki.gnucash.org/wiki/Subversion'>descrizione</a> relativamente al codice di <span class=\"gnucash\">GnuCash</span>. Per ottenere il codice sorgente della documentazione in luogo di quello del programma, sostituire \"gnucash\" con \"gnucash-docs\" nei comandi svn riportati, come per esempio:"
+
+#: develdocs.phtml:59
+msgid "There are two major <span class=\"gnucash\">GnuCash</span> documentation packages to help users: the <b>Help Manual</b> and the <b>Tutorials and Concepts Guide</b>. With the above command, the source code of both will be downloaded."
+msgstr "Esistono due documenti principali di <span class=\"gnucash\">GnuCash</span> per aiutare l'utente: il <b>manuale di aiuto</b> e la <b>guida ai concetti</b>. Con il comando fornito, verrà scaricato il codice sorgente di entrambi."
+
+#: develdocs.phtml:65
+msgid "Writers"
+msgstr "Autori"
+
+#: develdocs.phtml:67
+msgid "Get a copy of the documentation source as described above and start making changes. When you are satisfied with your changes you can create a patch by running the following command in the base directory of the documentation (usually gnucash-docs, unless you renamed it):"
+msgstr "Una volta ottenuta una copia del codice sorgente della documentazione nel modo descritto più sopra, sarà possibile iniziare ad effettuare delle modifiche. Una volta soddisfatti dei propri cambiamenti, si potrà creare una patch eseguendo il seguente comando nella cartella base della documentazione (di solito \"gnucash-docs\", se non è stata rinominata):"
+
+#: develdocs.phtml:69
+msgid "Next attach your patch to a bug report against the documentation component for the <span class=\"gnucash\">GnuCash</span> project in <a href='http://bugzilla.gnome.org/'>Gnome's bugzilla database</a> and send an email to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> mailing list to inform other developers on your work. See also <a href='http://wiki.gnucash.org/wiki/Bugzilla'>GnuCash' wiki page on bugzilla</a> for more details about patch submission."
+msgstr "Allegare poi la patch a una segnalazione di bug relativa al componente \"documentazione\" per il progetto <span class=\"gnucash\">GnuCash</span> nel <a href='http://bugzilla.gnome.org/'>database Bugzilla di GNOME</a> e inviare una mail alla lista di discussione <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> per informare gli altri sviluppatori del proprio lavoro. Consultare anche la <a href='http://wiki.gnucash.org/wiki/Bugzilla'>pagina del wiki di <span class=\"gnucash\">GnuCash</span> dedicata a bugzilla</a> per maggiori informazioni su come inviare una patch."
+
+#: develdocs.phtml:71
+msgid "<b>NOTE:</b> It used to be ok also to send your patch directly to the gnucash-devel list. This is discouraged now, as a patch is easily forgotten between the many list discussions. Attach patches to bugs in Bugzilla instead (either an existing bug or a new one). If you insist on sending a patch to gnucash-devel, it should be attached, not inlined."
+msgstr "<b>NOTA:</b> in passato era sufficiente inviare la propria patch direttamente alla lista di discussione degli sviluppatori. Oggi questo è sconsigliato perché la patch rischia di passare inosservata tra le tante discussioni. Allegare invece la patch a una segnalazione di bug su bugzilla. Se si volesse comunque inviare la patch alla lista di discussione gnucash-devel, si consiglia di allegarla e di non inserirle nel testo della mail."
+
+#: develdocs.phtml:72
+msgid "Please let other writers know which section you wish to tackle. Please forward this to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> so that people can say 'hey I'm doing that already' or 'go ahead and do it'."
+msgstr "Si consiglia di comunicare ad altri autori la sezione su cui si desidera lavorare. La richiesta deve essere fatta sulla lista <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> in modo che le altre persone interessate possano dare il via libera o comunicare che quella particolare sezione è già assegnata a qualcun altro."
+
+#: develdocs.phtml:73
+msgid "You may also want to retain a local copy of the old documentation to refer to when writing. This still has a lot of useful information in it which hasn't been transferred to the new docs"
+msgstr "Può anche risultare utile mantenere una copia locale della vecchia documentazione come riferimento per la scrittura: essa contiene ancora una grande quantità di informazioni utili che non sono ancora state trasferite nella nuova documentazione."
+
+#: develdocs.phtml:79
+msgid "Reviewers"
+msgstr "Revisori"
+
+#: develdocs.phtml:81
+msgid "Get a copy of the documentation source as described above and start commenting on it."
+msgstr "Una volta ottenuta una copia del codice sorgente della documentazione nel modo descritto più sopra, sarà possibile iniziare a commentarla."
+
+#: develdocs.phtml:82
+msgid "The best way of retaining comments about docs in an easy to find way for everyone would be to use <a href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> to file the bugs under documentation. This can also be done using bug-buddy."
+msgstr "Il miglior modo per sottoporre in maniera semplice le proprie osservazioni relative alla documentazione, consiste nell'utilizzo di <a href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a>: qui è possibile inserire un bug indicandolo come relativo alla documentazione. Questo può avvenire anche utilizzando \"bug-buddy\"."
+
 #: features.phtml:3
 msgid "Features"
 msgstr "Funzionalità"
 
 #: features.phtml:14
-msgid "<span class=\"gnucash\">GnuCash</span> is a powerful accounting software. This page will try to explain in detail which are the numerous features that <span class=\"gnucash\">GnuCash</span> has to offer to it's users."
-msgstr "<span class=\"gnucash\">GnuCash</span> è un potente programma di contabilità. Questa pagina descrive in dettaglio le numerose funzionalità che <span class=\"gnucash\">GnuCash</span> offre ai suoi utenti."
+msgid "<span class=\"gnucash\">GnuCash</span> is powerful accounting software. Below are details of some of the numerous features that <span class=\"gnucash\">GnuCash</span> has to offer to its users."
+msgstr "<span class=\"gnucash\">GnuCash</span> è un potente programma di contabilità. Questa pagina descrive in dettaglio le numerose funzionalità che <span class=\"gnucash\">GnuCash</span> offre ai propri utenti."
 
 #: features.phtml:17
 #: features.phtml:24
@@ -262,23 +375,23 @@ msgid "The register supports common checking and credit-card transactions, as we
 msgstr "Il registro supporta le comuni transazioni del conto corrente e della carta di credito, ma anche le entrate, le azioni e le transazioni in valuta. Sono inoltre fornite le seguenti funzionalità:"
 
 #: features.phtml:51
+msgid "The ability to enter <b>split transactions</b>"
+msgstr "Possibilità di immettere delle <b>transazioni pianificate</b>"
+
+#: features.phtml:52
+msgid "The ability to mark a transaction as <b>cleared</b> or <b>reconciled</b>"
+msgstr "Possibilità di marcare una transazione come <b>liquidata</b> o <b>riconciliata</b>"
+
+#: features.phtml:53
 msgid "<b>Autofill</b> of entered transactions"
 msgstr "<b>Autocompletamento</b> delle transazioni inserite"
 
-#: features.phtml:52
-msgid "Possibility to mark a transaction as <b>cleared</b>"
-msgstr "Possibilità di marcare una transazione come <b>liquidata</b>"
-
-#: features.phtml:53
-msgid "Possibility to enter <b>split transactions</b>"
-msgstr "Possibilità di immissione di <b>transazioni pianificate</b>"
-
 #: features.phtml:54
-msgid "<b>Multiple accounts</b> can be displayed in one register window at the same time"
-msgstr "<b>Più conti</b> possono essere visualizzati contemporaneamente in un'unica finestra del registro."
+msgid "The ability to display <b>multiple accounts</b> in a single register window"
+msgstr "Possibilità di visualizzare <b>Più conti</b> contemporaneamente in un'unica finestra del registro"
 
 #: features.phtml:55
-msgid "A <b>summarybar</b> that display all the relevant account's balance information"
+msgid "A <b>summary bar</b> that displays all of the relevant account's balance information"
 msgstr "Una <b>barra di riepilogo</b> visualizza tutte le informazioni relative al saldo del conto"
 
 #: features.phtml:56
@@ -290,7 +403,7 @@ msgid "You can create recurring transactions with a high level of customization 
 msgstr "È possibile creare delle transazioni ricorrenti con un alto livello di personalizzazione sia degli importi che delle scadenze. È anche possibile impostare dei promemoria automatici della scadenza di una transazione."
 
 #: features.phtml:69
-msgid "An assistant that runs when <span class=\"gnucash\">GnuCash</span> is started, allows you to postpone a scheduled transaction without canceling it or to enter it before the due date."
+msgid "An assistant that runs when <span class=\"gnucash\">GnuCash</span> is started allows scheduled transactions to be postponed without canceling or entering them before the due date."
 msgstr "Un assistente che viene eseguito ad ogni avvio di <span class=\"gnucash\">GnuCash</span>, permette di posticipare una transazione pianificata senza annullarla o di inserirla prima della data di scadenza."
 
 #: features.phtml:79
@@ -338,7 +451,7 @@ msgid "Statement Reconciliation"
 msgstr "Riconciliazione con l'estratto conto"
 
 #: features.phtml:105
-msgid "The <b>reconciliation</b> of an account is an operation that allows the user to check the entered transactions belonging to a <span class=\"gnucash\">GnuCash</span> account against a bank statement. This operation is very useful to spot untracked transactions or data entry errors."
+msgid "<b>Account reconciliation</b> allows the user to compare the transactions entered in an account against a bank statement. This operation is very useful to spot untracked transactions or data entry errors and ensure that your books match the bank's."
 msgstr "La <b>riconciliazione</b> di un conto è un'operazione che permette all'utente di confrontare le transazioni inserite in un conto di <span class=\"gnucash\">GnuCash</span> con un estratto conto. Questa operazione è molto utile per individuare errori nell'immissione delle transazioni o dei movimenti non registrati."
 
 #: features.phtml:106
@@ -402,8 +515,8 @@ msgid "Database support"
 msgstr "Supporto ai database"
 
 #: features.phtml:166
-msgid "Along the usual xml format, starting from version 2.4, your <span class=\"gnucash\">GnuCash</span> financial data can be stored in a <b>SQL database</b> under the application of your selection (SQLite3, MySQL or PostgreSQL)."
-msgstr "Oltre al formato xml, a partire dalla versione 2.4 i dati finanziari di <span class=\"gnucash\">GnuCash</span> possono essere immagazzinati in un <b>database SQL</b> nella propria applicazione preferita (SQLite3, MySQL o PostgreSQL)."
+msgid "<span class=\"gnucash\">GnuCash</span> by default stores data in an <b>xml</b> format. Starting with version 2.4, <span class=\"gnucash\">GnuCash</span> financial data can be stored in a <b>SQL database</b> using <b>SQLite3</b>, <b>MySQL</b> or <b>PostgreSQL</b>."
+msgstr "<span class=\"gnucash\">GnuCash</span> di norma immagazzina i dati in file di formato <b>xml</b>. A partire dalla versione 2.4 i dati finanziari di <span class=\"gnucash\">GnuCash</span> possono essere immagazzinati in un <b>database SQL</b> usando <b>SQLite3</b>, <b>MySQL</b> o <b>PostgreSQL</b>."
 
 #: features.phtml:171
 msgid "QIF and OFX Import"
@@ -434,8 +547,8 @@ msgid "Multiplatform"
 msgstr "Multipiattaforma"
 
 #: features.phtml:200
-msgid "<span class=\"gnucash\">GnuCash</span> can be executed on different operating systems. The most commonly used OS's like <b>Windows</b>, <b>MacOSX</b> and <b>Linux</b>, are supported along with many others."
-msgstr "<span class=\"gnucash\">GnuCash</span> può essere eseguito su diversi sistemi operativi. Sono supporti i più diffusi sistemi operativi, come <b>Windows</b>, <b>MacOSX</b> e <b>Linux</b> ma anche molti altri."
+msgid "<span class=\"gnucash\">GnuCash</span> runs on many different operating systems including <b>Windows</b>, <b>MacOSX</b> and <b>Linux</b>."
+msgstr "<span class=\"gnucash\">GnuCash</span> può essere eseguito su diversi sistemi operativi inclusi <b>Windows</b>, <b>MacOSX</b> e <b>Linux</b>."
 
 #: features.phtml:205
 msgid "Localization"
@@ -478,8 +591,10 @@ msgid "<span class=\"gnucash\">GnuCash</span> is very well documented: along the
 msgstr "<span class=\"gnucash\">GnuCash</span> è ben documentato: assieme al <b>manuale</b> dell'applicazione, i nuovi utenti possono consultare la <b>guida ai concetti</b>. Quest'ultima fornisce all'utente le informazioni di base relative ai principi di contabilità e su come questi vengano applicati in <span class=\"gnucash\">GnuCash</span>."
 
 #: docs.phtml:3
-msgid "Documentation Project"
-msgstr "Progetto per la documentazione"
+#: externals/menu.phtml:23
+#: externals/menu.phtml:30
+msgid "Documentation"
+msgstr "Documentazione"
 
 #: docs.phtml:4
 msgid "Browse documentation online"
@@ -498,243 +613,155 @@ msgid "Download documentation as mobipocket"
 msgstr "Scarica la documentazione in formato mobi"
 
 #: docs.phtml:15
-msgid "GnuCash Documentation Project"
-msgstr "Progetto per la documentazione di GnuCash"
+msgid "GnuCash Documentation"
+msgstr "Documentazione di GnuCash"
 
 #: docs.phtml:17
-msgid "This page is the home of the <span class=\"gnucash\">GnuCash</span> Documentation Project, our goal is to maintain a community of people working towards creation of high quality documentation for <span class=\"gnucash\">GnuCash</span>."
-msgstr "Questa è la pagina principale del progetto per la documentazione di <span class=\"gnucash\">GnuCash</span>; l'obiettivo che si prefigge è quello di mantenere una comunità di persone che lavorano alla realizzazione di documentazione di elevata qualità per <span class=\"gnucash\">GnuCash</span>."
+msgid "There are two major <span class=\"gnucash\">GnuCash</span> documentation packages to help users: the <b>Help Manual</b> and the <b>Tutorials and Concepts Guide</b>."
+msgstr "Esistono due documenti principali di <span class=\"gnucash\">GnuCash</span> per aiutare l'utente: il <b>manuale di aiuto</b> e la <b>guida ai concetti</b>."
 
 #: docs.phtml:19
-msgid "If you have a question about how to use <span class=\"gnucash\">GnuCash</span>, you are in the right place. The first thing you should do is read the <b>Help Manual</b> and the <b>Concepts Guide</b>, most of your questions can probably be answered by these documents."
-msgstr "Queso è il posto giusto per chiunque abbia una domanda relativa all'utilizzo di <span class=\"gnucash\">GnuCash</span>. Per prima cosa, si dovrebbe leggere il <b>manuale di aiuto</b> e la <b>guida ai concetti</b>; la maggior parte delle domande potrebbero trovare risposta in questi documenti."
-
-#: docs.phtml:20
 msgid "The <b>Help Manual</b> is designed to be a quick reference of how to accomplish specific tasks and how to use the features in <span class=\"gnucash\">GnuCash</span>. The <b>Concepts Guide</b> is designed to be an in depth guide to the concepts behind using <span class=\"gnucash\">GnuCash</span> with a tutorial to show how to put those concepts into practice."
 msgstr "Il <b>manuale di aiuto</b> è pensato per costituire un rapido riferimento su come compiere delle operazioni specifiche e su come utilizzare le caratteristiche di <span class=\"gnucash\">GnuCash</span>. La <b>guida ai concetti</b> costituisce invece un approfondimento dei concetti che stanno alla base dell'utilizzo di <span class=\"gnucash\">GnuCash</span>; essa illustra anche degli esempi guidati su come mettere in pratica questi concetti."
 
-#: docs.phtml:22
-msgid "Please send an email to the <a href='mailto:gnucash-user@lists.gnucash.org'>gnucash-user</a> mailing list if you cannot find a satisfactory answer to your question within either the <b>Help Manual</b> or the <b>Concepts Guide</b>. We <b>want</b> feedback from you, it is also through your comments that we know how to improve the documentation."
-msgstr "Inviare una mail alla lista di discussione <a href='mailto:gnucash-user@lists.gnucash.org'>gnucash-user</a> se non è stata trovata una risposta soddisfacente al proprio quesito nel <b>manuale di aiuto</b> o nella <b>guida ai concetti</b>. Abbiamo <b>bisogno</b> dei vostri commenti, dato che solo attraverso di essi possiamo capire come migliorare la documentazione."
+#: docs.phtml:21
+msgid "Additionally, you can talk to someone via IRC at <i>irc.gnome.org</i> channel <b>#gnucash</b> about your question. Another resource is the <a href=\"http://wiki.gnucash.org/wiki/\">English</a> or <a href=\"http://linuxwiki.de/GnuCash\">Deutsch</a> <span class=\"gnucash\">GnuCash</span> wikis."
+msgstr "In aggiunta, è possibile discutere con altri della propria domanda tramite IRC usando il canale <b>#gnucash</b> su <i>irc.gnome.org</i>. Ulteriori risorse sono le wiki <a href='http://wiki.gnucash.org/wiki/'>Inglese</a> o <a href='http://linuxwiki.de/GnuCash'>Tedesca</a> di <span class=\"gnucash\">GnuCash</span>."
 
 #: docs.phtml:23
-msgid "Additionally, you can talk to someone via IRC at irc.gnome.org channel \"#gnucash\" about your question.  Another resource is the <a href='http://wiki.gnucash.org/wiki/'>English</a> or <a href='http://linuxwiki.de/GnuCash'>Deutsch</a> <span class=\"gnucash\">GnuCash</span> wikis. A wiki is an interactive website where registered users can ask and answer questions."
-msgstr "In aggiunta, è possibile discutere con qualcuno, relativamente alla propria domanda, tramite IRC nel canale \"#gnucash\" su irc.gnome.org. Ulteriori risorse sono le wiki <a href='http://wiki.gnucash.org/wiki/'>Inglese</a> o <a href='http://linuxwiki.de/GnuCash'>Tedesca</a> di <span class=\"gnucash\">GnuCash</span>. Una wiki è un sito web interattivo in cui gli utenti registrati possono rispondere o proporre delle domande."
+msgid "You can also send an email to the <a href=\"mailto:gnucash-user@lists.gnucash.org\">gnucash-user</a> mailing list if you cannot find a satisfactory answer to your question within either the <b>Help Manual</b> or the <b>Tutorial and Concepts Guide</b>. We <b>want</b> feedback from you, it is also through your comments that we know how to improve the documentation."
+msgstr "Inviare una mail alla lista di discussione <a href='mailto:gnucash-user@lists.gnucash.org'>gnucash-user</a> se non è stata trovata una risposta soddisfacente al proprio quesito nel <b>manuale di aiuto</b> o nella <b>guida ai concetti</b>. Abbiamo <b>bisogno</b> dei vostri commenti, dato che solo attraverso di essi possiamo capire come migliorare la documentazione."
 
-#: docs.phtml:27
-msgid "Nightly Documentation Builds"
-msgstr "Documentazione compilata in notturna"
+#: docs.phtml:26
+msgid "<span class=\"gnucash\">GnuCash</span>'s documentation has been created by its community. See the <a href=\"develdocs.phtml\">Writing Documentation page</a> if you are interested in contributing to this effort."
+msgstr "La documentazione di <span class=\"gnucash\">GnuCash</span> è stata creata dalla comunità degli utenti. Consultare la <a href=\"develdocs.phtml\">pagina sulla scrittura della documentazione</a> per contribuire a questo progetto."
 
-#: docs.phtml:29
-msgid "Current <em>unstable</em> user documentation and developer documentation"
-msgstr "L'attuale documentazione <em>instabile</em> dell'utente e dello sviluppatore"
+#: docs.phtml:31
+msgid "(current stable release)"
+msgstr "(rilascio stabile attuale)"
 
-#: docs.phtml:32
-msgid "Unstable"
-msgstr "Instabile"
+#: docs.phtml:33
+msgid "Current <em>stable</em> user documentation and developer documentation"
+msgstr "L'attuale documentazione <em>stabile</em> dell'utente e dello sviluppatore"
 
-#: docs.phtml:34
+#: docs.phtml:36
+msgid "Stable"
+msgstr "Stabile"
+
+#: docs.phtml:38
 #: docs.phtml:98
-#: docs.phtml:159
-#: docs.phtml:176
-#: docs.phtml:191
+#: docs.phtml:163
+#: docs.phtml:180
+#: docs.phtml:195
 msgid "Help Manual"
 msgstr "Manuale di aiuto"
 
-#: docs.phtml:38
-#: docs.phtml:56
+#: docs.phtml:42
+#: docs.phtml:60
 #: docs.phtml:102
 #: docs.phtml:120
-#: docs.phtml:160
-#: docs.phtml:168
-#: docs.phtml:177
-#: docs.phtml:184
-#: docs.phtml:192
-#: docs.phtml:206
+#: docs.phtml:164
+#: docs.phtml:172
+#: docs.phtml:181
+#: docs.phtml:188
+#: docs.phtml:196
+#: docs.phtml:210
 msgid "English"
 msgstr "Inglese"
 
-#: docs.phtml:42
-#: docs.phtml:60
+#: docs.phtml:46
+#: docs.phtml:64
 #: docs.phtml:106
 #: docs.phtml:124
-#: docs.phtml:161
-#: docs.phtml:178
-#: docs.phtml:194
-#: docs.phtml:200
-#: docs.phtml:207
+#: docs.phtml:165
+#: docs.phtml:182
+#: docs.phtml:198
+#: docs.phtml:204
+#: docs.phtml:211
 msgid "German"
 msgstr "Tedesco"
 
-#: docs.phtml:46
-#: docs.phtml:64
+#: docs.phtml:50
+#: docs.phtml:68
 #: docs.phtml:110
 #: docs.phtml:128
-#: docs.phtml:162
-#: docs.phtml:169
+#: docs.phtml:166
+#: docs.phtml:173
 msgid "Italian"
 msgstr "Italiano"
 
-#: docs.phtml:52
+#: docs.phtml:56
 #: docs.phtml:116
-#: docs.phtml:167
-#: docs.phtml:183
-#: docs.phtml:199
+#: docs.phtml:171
+#: docs.phtml:187
+#: docs.phtml:203
 msgid "Concepts Guide"
 msgstr "Guida ai concetti"
 
-#: docs.phtml:68
+#: docs.phtml:72
 #: docs.phtml:132
 msgid "Japanese"
 msgstr "Giapponese"
 
-#: docs.phtml:82
-msgid "Every night a server builds the documentation from the current contents of the <span class=\"gnucash\">GnuCash</span> subversion repository. This includes the <b>Developer Documentation</b> from <b>Doxygen</b> and <b>User Documentation</b> for the current <em>unstable</em> version of <span class=\"gnucash\">GnuCash</span>."
-msgstr "Ogni notte un server compila la documentazione partendo dal contenuto del deposito SVN di <span class=\"gnucash\">GnuCash</span>. Sono incluse la <b>documentazione per gli sviluppatori</b> di <b>Doxygen</b> e la <b>documentazione dell'utente</b> relativa all'attuale versione instabile di <span class=\"gnucash\">GnuCash</span>."
-
 #: docs.phtml:86
-msgid "<b>NOTE:</b> these documents might not be accessible from time to time because developers might be working on improvements. However they are the most up to date reference for <span class=\"gnucash\">GnuCash</span> users."
-msgstr "<b>NOTA:</b> questi documenti potrebbero a volte non essere accessibili poiché gli sviluppatori potrebbero essere al lavoro su di essi per migliorarli. Comunque rappresentano il riferimento più aggiornato per gli utenti di  <span class=\"gnucash\">GnuCash</span>."
-
-#: docs.phtml:91
-msgid "(current stable release)"
-msgstr "(rilascio stabile attuale)"
-
-#: docs.phtml:93
-msgid "Current <em>stable</em> user documentation and developer documentation"
-msgstr "L'attuale documentazione <em>stabile</em> dell'utente e dello sviluppatore"
-
-#: docs.phtml:96
-msgid "Stable"
-msgstr "Stabile"
-
-#: docs.phtml:147
 msgid "This is the latest stable release of the <span class=\"gnucash\">GnuCash</span> documentation. <em>Stable</em> means that this documentation is not necessarily the most up to date but it works without any problem."
 msgstr "Questa è l'ultima versione stabile della documentazione di <span class=\"gnucash\">GnuCash</span>. <em>Stabile</em> significa che questa documentazione non è necessariamente la più aggiornata ma funziona senza problemi."
 
-#: docs.phtml:152
+#: docs.phtml:91
+msgid "Nightly Documentation Builds"
+msgstr "Documentazione compilata in notturna"
+
+#: docs.phtml:93
+msgid "Current <em>unstable</em> user documentation and developer documentation"
+msgstr "L'attuale documentazione <em>instabile</em> dell'utente e dello sviluppatore"
+
+#: docs.phtml:96
+msgid "Unstable"
+msgstr "Instabile"
+
+#: docs.phtml:147
+msgid "Every night a server builds the documentation from the current contents of the <span class=\"gnucash\">GnuCash</span> subversion repository. This includes the <b>Developer Documentation</b> from <b>Doxygen</b> and <b>User Documentation</b> for the current <em>unstable</em> version of <span class=\"gnucash\">GnuCash</span>."
+msgstr "Ogni notte un server compila la documentazione partendo dal contenuto del deposito SVN di <span class=\"gnucash\">GnuCash</span>. Sono incluse la <b>documentazione per gli sviluppatori</b> di <b>Doxygen</b> e la <b>documentazione dell'utente</b> relativa all'attuale versione instabile di <span class=\"gnucash\">GnuCash</span>."
+
+#: docs.phtml:151
+msgid "<b>NOTE:</b> these documents might not be accessible from time to time because developers might be working on improvements. However they are the most up to date reference for <span class=\"gnucash\">GnuCash</span> users."
+msgstr "<b>NOTA:</b> questi documenti potrebbero a volte non essere accessibili poiché gli sviluppatori potrebbero essere al lavoro su di essi per migliorarli. Comunque rappresentano il riferimento più aggiornato per gli utenti di  <span class=\"gnucash\">GnuCash</span>."
+
+#: docs.phtml:156
 msgid "Older GnuCash Documentation"
 msgstr "Vecchia documentazione di GnuCash"
 
-#: docs.phtml:154
+#: docs.phtml:158
 msgid "This section contains all the older <span class=\"gnucash\">GnuCash</span> documentation. If you are using one of these old versions of <span class=\"gnucash\">GnuCash</span>, it is highly recommended that you upgrade to the latest stable version."
 msgstr "Questa sezione raccoglie tutta la vecchia documentazione di <span class=\"gnucash\">GnuCash</span>. Se si sta utilizzando una di queste vecchie versioni di <span class=\"gnucash\">GnuCash</span>, si raccomanda caldamente di aggiornarla all'ultima versione stabile."
 
-#: docs.phtml:208
+#: docs.phtml:212
 msgid "Spanish"
 msgstr "Spagnolo"
 
-#: docs.phtml:209
+#: docs.phtml:213
 msgid "Portugese"
 msgstr "Portoghese"
 
-#: docs.phtml:215
+#: docs.phtml:219
 msgid "Unofficial documentation"
 msgstr "Documentazione non ufficiale"
 
-#: docs.phtml:217
+#: docs.phtml:221
 msgid "Some people have written HOWTO guides or tutorials."
 msgstr "Alcune persone hanno scritto degli HOWTO e delle guide."
 
-#: docs.phtml:220
+#: docs.phtml:224
 msgid "Joe Mack's Tutorial"
 msgstr "Guida pratica di Joe Mack (Inglese)"
 
-#: docs.phtml:222
+#: docs.phtml:226
 msgid "Dave Gilbert's User Guide (Pdf)"
 msgstr "Guida dell'utente di Dave Gilbert (Pdf in Inglese)"
 
-#: docs.phtml:226
+#: docs.phtml:230
 msgid "<b>NOTE:</b> the information presented in these sources may or may not be updated to the most recent version of <span class=\"gnucash\">GnuCash</span>. If you are interested in doing development work on these documents, you should contact the original authors."
 msgstr "<b>NOTA</b>: le informazioni presenti in queste fonti possono o non possono essere aggiornate alla versione più recente di <span class=\"gnucash\">GnuCash</span>. Se si è interessati a sviluppare questi documenti, si dovrebbe prima contattare l'autore originale."
-
-#: docs.phtml:232
-msgid "Documentation Development"
-msgstr "Sviluppo della documentazione"
-
-#: docs.phtml:235
-msgid "Introduction"
-msgstr "Introduzione"
-
-#: docs.phtml:236
-msgid "The <span class=\"gnucash\">GnuCash</span> documentation is stored in <b>xml</b> files. More precisely, it uses the <b>GNOME2 XML docbook system</b>. This is a relatively flexible system that takes xml files as input and can generate documentation in several different output formats (html, pdf,...)."
-msgstr "La documentazione di <span class=\"gnucash\">GnuCash</span> è contenuta in file di tipo <b>xml</b>. Più precisamente, utilizza il sistema <b>docbook GNOME2 XML</b>. Questo sistema è relativamente flessibile e partendo dai file xml è possibile generare la documentazione in vari altri formati (html, pdf, ecc...)"
-
-#: docs.phtml:237
-msgid "If you wish to review or write <span class=\"gnucash\">GnuCash</span> documentation, you will need to know xml. Some basic knowledge of the docbook system may be useful as well"
-msgstr "Per revisionare o scrivere della documentazione per <span class=\"gnucash\">GnuCash</span>, è necessario conoscere il linguaggio XML. Può anche essere necessaria una conoscenza di base del sistema docbook"
-
-#: docs.phtml:238
-msgid "The following links are for further sites that can help with the documentation and review process."
-msgstr "I collegamenti seguenti sono relativi ad altri siti che possono essere di aiuto per i processi di creazione e di revisione della documentazione."
-
-#: docs.phtml:243
-msgid "While this <span class=\"gnucash\">GnuCash</span> wiki page is really about translating the documentation, it holds some useful information on working with docbook files."
-msgstr "Anche se questa pagina del wiki di <span class=\"gnucash\">GnuCash</span> tratta la traduzione della documentazione, contiene alcune informazioni utili per lavorare con i file docbook."
-
-#: docs.phtml:244
-msgid "A detailed guide on how to work with documentation (update and maintenance)."
-msgstr "Una guida dettagliata su come lavorare con la documentazione (aggiornamento e manutenzione)"
-
-#: docs.phtml:246
-msgid "We suggest also subscribing to"
-msgstr "Si consiglia anche l'iscrizione a"
-
-#: docs.phtml:248
-msgid "Gnome Documentation guidelines"
-msgstr "Linee guida di GNOME per la documentazione"
-
-#: docs.phtml:249
-msgid "As stated earlier, the new docs are based on the GNOME2 XML docbook system. Everyone wishing to help please follow these guides where possible when reviewing and/or writing docs."
-msgstr "Come già detto, la nuova documentazione è basata sul sistema docbook GNOME2 XML. Chiunque desideri contribuire è invitato, dove possibile, a seguire le linee guida al momento della revisione e/o scrittura della documentazione."
-
-#: docs.phtml:255
-msgid "Where to get the documentation source"
-msgstr "Dove ottenere il codice sorgente della documentazione"
-
-#: docs.phtml:256
-msgid "You will need a recent copy of the documentation source. For this you can check out the documentation module from the <span class=\"gnucash\">GnuCash</span> svn. Reviewers could also start from the <a href='http://sourceforge.net/projects/gnucash/files/gnucash-docs/'>current docs tarball</a>."
-msgstr "Sarà necessario ottenere una copia recente del codice sorgente della documentazione. Per fare questo è possibile eseguire il \"check out\" del modulo della documentazione dall'svn di <span class=\"gnucash\">GnuCash</span>. I revisori possono anche iniziare dal <a href='http://sourceforge.net/projects/gnucash/files/gnucash-docs/'>pacchetto della documentazione corrente</a>."
-
-#: docs.phtml:257
-msgid "For those not familiar with svn, the <span class=\"gnucash\">GnuCash</span> wiki has a <a href='http://wiki.gnucash.org/wiki/Subversion'>description</a> tailored to the <span class=\"gnucash\">GnuCash</span> code. To get the documentation source instead of the program source, replace 'gnucash' with 'gnucash-docs' in the mentioned svn commands, like this:"
-msgstr "Per coloro che non hanno familiarità con il sistema svn, il wiki di <span class=\"gnucash\">GnuCash</span> ne fornisce una <a href='http://wiki.gnucash.org/wiki/Subversion'>descrizione</a> relativamente al codice di <span class=\"gnucash\">GnuCash</span>. Per ottenere il codice sorgente della documentazione in luogo di quello del programma, sostituire \"gnucash\" con \"gnucash-docs\" nei comandi svn riportati, come per esempio:"
-
-#: docs.phtml:260
-msgid "Writers"
-msgstr "Autori"
-
-#: docs.phtml:261
-msgid "Get a copy of the documentation source as described above and start making changes. When you are satisfied with your changes you can create a patch by running the following command in the base directory of the documentation (usually gnucash-docs, unless you renamed it):"
-msgstr "Una volta ottenuta una copia del codice sorgente della documentazione nel modo descritto più sopra, sarà possibile iniziare ad effettuare delle modifiche. Una volta soddisfatti dei propri cambiamenti, si potrà creare una patch eseguendo il seguente comando nella cartella base della documentazione (di solito \"gnucash-docs\", se non è stata rinominata):"
-
-#: docs.phtml:263
-msgid "Next attach your patch to a bug report against the documentation component for the <span class=\"gnucash\">GnuCash</span> project in <a href='http://bugzilla.gnome.org/'>Gnome's bugzilla database</a> and send an email to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> mailing list to inform other developers on your work. See also <a href='http://wiki.gnucash.org/wiki/Bugzilla'>GnuCash' wiki page on bugzilla</a> for more details about patch submission."
-msgstr "Allegare poi la patch a una segnalazione di bug relativa al componente \"documentazione\" per il progetto <span class=\"gnucash\">GnuCash</span> nel <a href='http://bugzilla.gnome.org/'>database Bugzilla di GNOME</a> e inviare una mail alla lista di discussione <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> per informare gli altri sviluppatori del proprio lavoro. Consultare anche la <a href='http://wiki.gnucash.org/wiki/Bugzilla'>pagina del wiki di <span class=\"gnucash\">GnuCash</span> dedicata a bugzilla</a> per maggiori informazioni su come inviare una patch."
-
-#: docs.phtml:265
-msgid "<b>NOTE:</b> It used to be ok also to send your patch directly to the gnucash-devel list. This is discouraged now, as a patch is easily forgotten between the many list discussions. Attach patches to bugs in Bugzilla instead (either an existing bug or a new one). If you insist on sending a patch to gnucash-devel, it should be attached, not inlined."
-msgstr "<b>NOTA:</b> in passato era sufficiente inviare la propria patch direttamente alla lista di discussione degli sviluppatori. Oggi questo è sconsigliato perché la patch rischia di passare inosservata tra le tante discussioni. Allegare invece la patch a una segnalazione di bug su bugzilla. Se si volesse comunque inviare la patch alla lista di discussione gnucash-devel, si consiglia di allegarla e di non inserirle nel testo della mail."
-
-#: docs.phtml:266
-msgid "Please let other writers know which section you wish to tackle. Please forward this to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> so that people can say 'hey I'm doing that already' or 'go ahead and do it'."
-msgstr "Si consiglia di comunicare agli altri autori la sezione su cui si desidera lavorare. La richiesta deve essere fatta sulla lista <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> in modo che le altre persone interessate possano dare il via libera o comunicare che quella particolare sezione è già assegnata a qualcun altro."
-
-#: docs.phtml:267
-msgid "You may also want to retain a local copy of the old documentation to refer to when writing. This still has a lot of useful information in it which hasn't been transferred to the new docs"
-msgstr "Può anche risultare utile mantenere una copia locale della vecchia documentazione come riferimento per la scrittura: essa contiene ancora una grande quantità di informazioni utili che non sono ancora state trasferite nella nuova documentazione."
-
-#: docs.phtml:270
-msgid "Reviewers"
-msgstr "Revisori"
-
-#: docs.phtml:271
-msgid "Get a copy of the documentation source as described above and start commenting on it."
-msgstr "Una volta ottenuta una copia del codice sorgente della documentazione nel modo descritto più sopra, sarà possibile iniziare a commentarla."
-
-#: docs.phtml:272
-msgid "The best way of retaining comments about docs in an easy to find way for everyone would be to use <a href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> to file the bugs under documentation. This can also be done using bug-buddy."
-msgstr "Il miglior modo per sottoporre in maniera semplice le proprie osservazioni relative alla documentazione, consiste nell'utilizzo di <a href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a>: qui è possibile inserire un bug indicandolo come relativo alla documentazione. Questo può avvenire anche utilizzando \"bug-buddy\"."
 
 #: oldnews.phtml:11
 msgid "Older Announcements"
@@ -745,7 +772,7 @@ msgid "This is an archive of announcements that once appeared on the GnuCash hom
 msgstr "Questo è un archivio di annunci comparsi in passato nella pagina principale di GnuCash."
 
 #: sizing.phtml:3
-#: externals/menu.phtml:53
+#: externals/menu.phtml:54
 msgid "Sizing"
 msgstr "Dimensioni"
 
@@ -921,11 +948,6 @@ msgstr "Download"
 msgid "Program"
 msgstr "Programma"
 
-#: externals/menu.phtml:23
-#: externals/menu.phtml:30
-msgid "Documentation"
-msgstr "Documentazione"
-
 #: externals/menu.phtml:28
 msgid "Support"
 msgstr "Supporto"
@@ -974,23 +996,23 @@ msgstr "Accesso al codice"
 msgid "Language Translations"
 msgstr "Localizzazioni"
 
-#: externals/menu.phtml:60
+#: externals/menu.phtml:61
 msgid "New Book: GnuCash 2.4 Small Business Accounting"
 msgstr "Nuovo libro (in Inglese): GnuCash 2.4 Small Business Accounting"
 
-#: externals/menu.phtml:64
+#: externals/menu.phtml:65
 msgid "The GnuCash development team received notice about a new book published by PacktPub, UK:"
 msgstr "Il gruppo di sviluppo di GnuCash ha ricevuto una notifica riguardante la pubblicazione di un nuovo libro edito da PacktPub (Regno Unito):"
 
-#: externals/menu.phtml:65
+#: externals/menu.phtml:66
 msgid "GnuCash 2.4 Small Business Accounting, by Ashok Ramachandran"
 msgstr "GnuCash 2.4 Small Business Accounting, di Ashok Ramachandran (libro in lingua inglese)"
 
-#: externals/menu.phtml:66
+#: externals/menu.phtml:67
 msgid "This is a Beginner's Guide for managing your accounts."
 msgstr "Si tratta di una guida per i nuovi utenti sulla gestione dei propri conti."
 
-#: externals/menu.phtml:67
+#: externals/menu.phtml:68
 msgid "Our own developer Christian Stimming has been contributing to this book as a reviewer, and we can wholeheartly recommend the outcome of this fruitful collaboration. Feel free to have a look at this book over at <a href=\"http://link.packtpub.com/6FDDUr\">packtpub.com</a>, and, best of all, the publisher has committed to allocate some percentage of the book sales back to the GnuCash project. Have fun with this book!"
 msgstr "Il nostro sviluppatore Christian Stimming ha contribuito al libro in qualità di revisore, e non possiamo che raccomandare il frutto di questa collaborazione. Per dare un'occhiata a questo libro dirigersi su <a href=\"http://link.packtpub.com/6FDDUr\">packtpub.com</a> e, tra l'altro, l'editore si è impegnato a versare una piccola percentuale sulle vendite direttamente al progetto GnuCash. Quindi buona lettura!"
 
@@ -1514,6 +1536,31 @@ msgstr "Autore"
 #: search/templates/NMZ.result.normal.php_tmpl:6
 msgid "Date"
 msgstr "Data"
+
+#, fuzzy
+#~ msgid "Writing documentation"
+#~ msgstr "Documentazione non ufficiale"
+
+#~ msgid "Documentation Project"
+#~ msgstr "Progetto per la documentazione"
+
+#~ msgid "GnuCash Documentation Project"
+#~ msgstr "Progetto per la documentazione di GnuCash"
+
+#~ msgid ""
+#~ "This page is the home of the <span class=\"gnucash\">GnuCash</span> "
+#~ "Documentation Project, our goal is to maintain a community of people "
+#~ "working towards creation of high quality documentation for <span class="
+#~ "\"gnucash\">GnuCash</span>."
+#~ msgstr ""
+#~ "Questa è la pagina principale del progetto per la documentazione di <span "
+#~ "class=\"gnucash\">GnuCash</span>; l'obiettivo che si prefigge è quello di "
+#~ "mantenere una comunità di persone che lavorano alla realizzazione di "
+#~ "documentazione di elevata qualità per <span class=\"gnucash\">GnuCash</"
+#~ "span>."
+
+#~ msgid "Documentation Development"
+#~ msgstr "Sviluppo della documentazione"
 
 #~ msgid "Online"
 #~ msgstr "Online"
