@@ -1,6 +1,6 @@
 <?php 
 include("lang.php");
-$title = T_("Documentation Development");
+$title = T_("Writing documentation");
 $online = T_("Browse documentation online");
 $pdf = T_("Download documentation as PDF");
 $epub = T_("Download documentation as epub");
@@ -12,11 +12,13 @@ include("externals/menu.phtml");
 
 <div id="content">
 
-<h1><?php echo T_("GnuCash Documentation in development");?></h1>
+<h1><?php echo T_("Writing GnuCash Documentation");?></h1>
 
-<p class="justify"><?php echo T_("There are two major <span class=\"gnucash\">GnuCash</span> documentation packages to help users: the <b>Help Manual</b> and the <b>Tutorials and Concepts Guide</b>.");?></p>
+<p class="justify"><?php echo T_("If you are interested in improving the <span class=\"gnucash\">GnuCash</span> documentation, you have come to the right place. This page will provide you with the necessary information to get started.");?></p>
 
-<p class="justify"><?php echo T_("The <b>Help Manual</b> is designed to be a quick reference of how to accomplish specific tasks and how to use the features in <span class=\"gnucash\">GnuCash</span>. The <b>Concepts Guide</b> is designed to be an in depth guide to the concepts behind using <span class=\"gnucash\">GnuCash</span> with a tutorial to show how to put those concepts into practice.");?></p>
+<div class="dialog note">
+<p class="justify"><?php echo T_("The <span class=\"gnucash\">GnuCash</span> documentation can be viewed and downloaded from the <a href=\"docs.phtml\">Documentation page</a>.");?></p>
+</div>
 
 <div class="featurecontainer">
 <div class="featureborder">
@@ -53,6 +55,9 @@ include("externals/menu.phtml");
 <p class="justify"><?php echo T_("You will need a recent copy of the documentation source. For this you can check out the documentation module from the <span class=\"gnucash\">GnuCash</span> svn. Reviewers could also start from the <a href='http://sourceforge.net/projects/gnucash/files/gnucash-docs/'>current docs tarball</a>.");?></p>
 <p class="justify"><?php echo T_("For those not familiar with svn, the <span class=\"gnucash\">GnuCash</span> wiki has a <a href='http://wiki.gnucash.org/wiki/Subversion'>description</a> tailored to the <span class=\"gnucash\">GnuCash</span> code. To get the documentation source instead of the program source, replace 'gnucash' with 'gnucash-docs' in the mentioned svn commands, like this:");?></p>
 <pre class="command">svn checkout http://code.gnucash.org/repo/gnucash-docs/trunk gnucash-docs</pre>
+<div class="dialog note">
+<p class="justify"><?php echo T_("There are two major <span class=\"gnucash\">GnuCash</span> documentation packages to help users: the <b>Help Manual</b> and the <b>Tutorials and Concepts Guide</b>. With the above command, the source code of both will be downloaded.");?></p>
+</div>
 </div>
 
 <div class="featurecontainer">
