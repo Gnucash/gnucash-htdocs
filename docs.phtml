@@ -23,7 +23,67 @@ include("externals/menu.phtml");
 <p class="justify"><?php echo T_("You can also send an email to the <a href=\"mailto:gnucash-user@lists.gnucash.org\">gnucash-user</a> mailing list if you cannot find a satisfactory answer to your question within either the <b>Help Manual</b> or the <b>Tutorial and Concepts Guide</b>. We <b>want</b> feedback from you, it is also through your comments that we know how to improve the documentation.");?></p>
 
 <div class="dialog note">
-<p class="justify"><?php echo T_("<span class=\"gnucash\">GnuCash</span>'s documentation has been created by its community. See <a href=\"#docsdevel\">Documentation Development</a> guidelines if you are interested in contributing to this effort.");?></p>
+<p class="justify"><?php echo T_("<span class=\"gnucash\">GnuCash</span>'s documentation has been created by its community. See the <a href=\"develdocs.phtml\">Writing Documentation page</a> if you are interested in contributing to this effort.");?></p>
+</div>
+
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle">GnuCash v2.4 <?=T_("(current stable release)");?></h2>
+</div>
+<h3><?= T_("Current <em>stable</em> user documentation and developer documentation");?></h3>
+<div id="stabledoc">
+<div style="float:left;">
+<h2 class="download-title"><?php echo T_("Download");?> (<em><?php echo T_("Stable");?></em>)</h2>
+  <ul>
+  <li><b><?php echo T_("Help Manual");?></b>
+    <table class="doctable">
+    <tbody>
+      <tr class="doctr">
+      <td><?php echo T_("English");?> :</td><td>
+        <a href="<?=$top_dir;?>/docs/v2.4/C/gnucash-help/help.html"><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/C/gnucash-help.pdf"><img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a><!-- | <a href="<?=$top_dir;?>/docs/v2.4/C/gnucash-help.epub"><img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/C/gnucash-help.mobi"><img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>-->
+      </td></tr>
+      <tr class="doctr">
+      <td><?php echo T_("German");?> :</td><td>
+        <a href="<?=$top_dir;?>/docs/v2.4/de_DE/gnucash-help/help.html"><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/de_DE/gnucash-help.pdf"><img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a><!-- | <a href="<?=$top_dir;?>/docs/v2.4/de_DE/gnucash-help.epubf"><img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/de_DE/gnucash-help.mobi"><img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>-->
+      </td></tr>
+      <tr class="doctr">
+      <td><?php echo T_("Italian");?> :</td><td>
+        <a href="<?=$top_dir;?>/docs/v2.4/it_IT/gnucash-help/help.html"><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/it_IT/gnucash-help.pdf"><img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a><!-- | <a href="<?=$top_dir;?>/docs/v2.4/it_IT/gnucash-help.epub"><img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/it_IT/gnucash-help.mobi"><img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>-->
+      </td></tr>
+    </tbody>
+    </table>
+  </li>
+  <li><b><?= T_("Concepts Guide") ?></b>
+    <table class="doctable">
+    <tbody>
+      <tr class="doctr">
+      <td><?php echo T_("English");?> :</td><td>
+        <a href="<?=$top_dir;?>/docs/v2.4/C/gnucash-guide/"><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/C/gnucash-guide.pdf"><img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a><!-- | <a href="<?=$top_dir;?>/docs/v2.4/C/gnucash-guide.epub"><img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/C/gnucash-guide.mobi"><img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>-->
+      </td></tr>
+      <tr class="doctr">
+      <td><?php echo T_("German");?> :</td><td>
+        <a href="<?=$top_dir;?>/docs/v2.4/de_DE/gnucash-guide/"><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/de_DE/gnucash-guide.pdf"><img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a><!-- | <a href="<?=$top_dir;?>/docs/v2.4/de_DE/gnucash-guide.epub"><img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/de_DE/gnucash-guide.mobi"><img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>-->
+      </td></tr>
+      <tr class="doctr">
+      <td><?php echo T_("Italian");?> :</td><td>
+        <a href="<?=$top_dir;?>/docs/v2.4/it_IT/gnucash-guide/"><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/it_IT/gnucash-guide.pdf"><img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a><!-- | <a href="<?=$top_dir;?>/docs/v2.4/it_IT/gnucash-guide.epub"><img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/it_IT/gnucash-guide.mobi"><img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>-->
+      </td></tr>
+      <tr class="doctr">
+      <td><?php echo T_("Japanese");?> :</td><td>
+        <a href="<?=$top_dir;?>/docs/v2.4/ja_JP/gnucash-guide/"><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/ja_JP/gnucash-guide.pdf"><img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a><!-- | <a href="<?=$top_dir;?>/docs/v2.4/ja_JP/gnucash-guide.epub"><img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/ja_JP/gnucash-guide.mobi"><img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>-->
+      </td></tr>
+    </tbody>
+    </table>
+  </li>
+</ul>
+</div>
+
+<div class="downloadimage">
+<img alt="stabledoc" src="<?=$top_dir;?>/images/stabledoc.png" />
+</div>
+</div>
+
+<p class="justify"><?php echo T_("This is the latest stable release of the <span class=\"gnucash\">GnuCash</span> documentation. <em>Stable</em> means that this documentation is not necessarily the most up to date but it works without any problem.");?></p>
 </div>
 
 <div class="featurecontainer">
@@ -81,6 +141,7 @@ include("externals/menu.phtml");
 <div class="downloadimage">
 <img alt="develdoc" src="<?=$top_dir;?>/images/develdoc.png" />
 </div>
+
 </div>
 
 <p class="justify"><?php echo T_("Every night a server builds the documentation from the current contents of the <span class=\"gnucash\">GnuCash</span> subversion repository. This includes the <b>Developer Documentation</b> from <b>Doxygen</b> and <b>User Documentation</b> for the current <em>unstable</em> version of <span class=\"gnucash\">GnuCash</span>.");?></p>
@@ -88,67 +149,6 @@ include("externals/menu.phtml");
 
 <div class="dialog warning">
 <p class="justify"><?php echo T_("<b>NOTE:</b> these documents might not be accessible from time to time because developers might be working on improvements. However they are the most up to date reference for <span class=\"gnucash\">GnuCash</span> users.");?></p>
-</div>
-
-<div class="featurecontainer">
-<div class="featureborder">
-<h2 class="featuretitle">GnuCash v2.4 <?=T_("(current stable release)");?></h2>
-</div>
-<h3><?= T_("Current <em>stable</em> user documentation and developer documentation");?></h3>
-<div id="stabledoc">
-<div style="float:left;">
-<h2 class="download-title"><?php echo T_("Download");?> (<em><?php echo T_("Stable");?></em>)</h2>
-  <ul>
-  <li><b><?php echo T_("Help Manual");?></b>
-    <table class="doctable">
-    <tbody>
-      <tr class="doctr">
-      <td><?php echo T_("English");?> :</td><td>
-        <a href="<?=$top_dir;?>/docs/v2.4/C/gnucash-help/help.html"><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/C/gnucash-help.pdf"><img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a><!-- | <a href="<?=$top_dir;?>/docs/v2.4/C/gnucash-help.epub"><img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/C/gnucash-help.mobi"><img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>-->
-      </td></tr>
-      <tr class="doctr">
-      <td><?php echo T_("German");?> :</td><td>
-        <a href="<?=$top_dir;?>/docs/v2.4/de_DE/gnucash-help/help.html"><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/de_DE/gnucash-help.pdf"><img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a><!-- | <a href="<?=$top_dir;?>/docs/v2.4/de_DE/gnucash-help.epubf"><img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/de_DE/gnucash-help.mobi"><img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>-->
-      </td></tr>
-      <tr class="doctr">
-      <td><?php echo T_("Italian");?> :</td><td>
-        <a href="<?=$top_dir;?>/docs/v2.4/it_IT/gnucash-help/help.html"><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/it_IT/gnucash-help.pdf"><img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a><!-- | <a href="<?=$top_dir;?>/docs/v2.4/it_IT/gnucash-help.epub"><img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/it_IT/gnucash-help.mobi"><img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>-->
-      </td></tr>
-    </tbody>
-    </table>
-  </li>
-  <li><b><?= T_("Concepts Guide") ?></b>
-    <table class="doctable">
-    <tbody>
-      <tr class="doctr">
-      <td><?php echo T_("English");?> :</td><td>
-        <a href="<?=$top_dir;?>/docs/v2.4/C/gnucash-guide/"><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/C/gnucash-guide.pdf"><img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a><!-- | <a href="<?=$top_dir;?>/docs/v2.4/C/gnucash-guide.epub"><img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/C/gnucash-guide.mobi"><img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>-->
-      </td></tr>
-      <tr class="doctr">
-      <td><?php echo T_("German");?> :</td><td>
-        <a href="<?=$top_dir;?>/docs/v2.4/de_DE/gnucash-guide/"><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/de_DE/gnucash-guide.pdf"><img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a><!-- | <a href="<?=$top_dir;?>/docs/v2.4/de_DE/gnucash-guide.epub"><img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/de_DE/gnucash-guide.mobi"><img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>-->
-      </td></tr>
-      <tr class="doctr">
-      <td><?php echo T_("Italian");?> :</td><td>
-        <a href="<?=$top_dir;?>/docs/v2.4/it_IT/gnucash-guide/"><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/it_IT/gnucash-guide.pdf"><img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a><!-- | <a href="<?=$top_dir;?>/docs/v2.4/it_IT/gnucash-guide.epub"><img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/it_IT/gnucash-guide.mobi"><img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>-->
-      </td></tr>
-      <tr class="doctr">
-      <td><?php echo T_("Japanese");?> :</td><td>
-        <a href="<?=$top_dir;?>/docs/v2.4/ja_JP/gnucash-guide/"><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/ja_JP/gnucash-guide.pdf"><img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a><!-- | <a href="<?=$top_dir;?>/docs/v2.4/ja_JP/gnucash-guide.epub"><img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> | <a href="<?=$top_dir;?>/docs/v2.4/ja_JP/gnucash-guide.mobi"><img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>-->
-      </td></tr>
-    </tbody>
-    </table>
-  </li>
-</ul>
-
-</div>
-
-<div class="downloadimage">
-<img alt="stabledoc" src="<?=$top_dir;?>/images/stabledoc.png" />
-</div>
-</div>
-
-<p class="justify"><?php echo T_("This is the latest stable release of the <span class=\"gnucash\">GnuCash</span> documentation. <em>Stable</em> means that this documentation is not necessarily the most up to date but it works without any problem.");?></p>
 </div>
 
 <div class="featurecontainer">
@@ -229,53 +229,7 @@ include("externals/menu.phtml");
 <div class="dialog note">
 <p class="justify"><?php echo T_("<b>NOTE:</b> the information presented in these sources may or may not be updated to the most recent version of <span class=\"gnucash\">GnuCash</span>. If you are interested in doing development work on these documents, you should contact the original authors.");?></p>
 </div>
-</div>
-
-<div class="featurecontainer">
-<div class="featureborder">
-<h2 class="featuretitle"><a id="docsdevel"><?php echo T_("Documentation Development");?></a></h2>
-</div>
-
-<h3><?php echo T_("Introduction");?></h3>
-<p class="justify"><?php echo T_("The <span class=\"gnucash\">GnuCash</span> documentation is stored in <b>xml</b> files. More precisely, it uses the <b>GNOME2 XML docbook system</b>. This is a relatively flexible system that takes xml files as input and can generate documentation in several different output formats (html, pdf,...).");?></p>
-<p class="justify"><?php echo T_("If you wish to review or write <span class=\"gnucash\">GnuCash</span> documentation, you will need to know xml. Some basic knowledge of the docbook system may be useful as well");?></p>
-<p class="justify"><?php echo T_("The following links are for further sites that can help with the documentation and review process.");?></p>
-<ul>
-<li><a href='http://www.docbook.org'> DocBook: The Definitive Guide.</a></li>
-<li><a href='http://www.sagehill.net/docbookxsl/'>DocBook XSL: The Complete Guide</a>.</li>
-<li><a href='http://library.gnome.org/devel/hig-book/stable/'> GNOME Human Interface Guidelines</a></li>
-<li><a href='http://wiki.gnucash.org/wiki/Translation#How_to_translate_the_GnuCash_guide_and.2For_help_files'>How_to_translate_the_GnuCash_guide_and/or_help_files</a>: <?php echo T_("While this <span class=\"gnucash\">GnuCash</span> wiki page is really about translating the documentation, it holds some useful information on working with docbook files.");?></li>
-<li><a href='http://wiki.gnucash.org/wiki/Documentation_Update_Instructions'> Documentation_Update_Instructions</a>: <?php echo T_("A detailed guide on how to work with documentation (update and maintenance).");?></li>
-</ul>
-<p class="justify"><?php echo T_("We suggest also subscribing to");?> <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a>.</p>
-
-<h3><?php echo T_("Gnome Documentation guidelines");?></h3>
-<p class="justify"><?php echo T_("As stated earlier, the new docs are based on the GNOME2 XML docbook system. Everyone wishing to help please follow these guides where possible when reviewing and/or writing docs.");?></p>
-<ul>
-<li><a href='http://library.gnome.org/devel/gdp-handbook/stable/'>The GNOME Handbook of Writing Software Documentation</a></li>
-<li><a href='http://library.gnome.org/devel/gdp-style-guide/stable/'>The GNOME Documentation Style Guide</a></li>
-</ul>
-
-<h3><?php echo T_("Where to get the documentation source");?></h3>
-<p class="justify"><?php echo T_("You will need a recent copy of the documentation source. For this you can check out the documentation module from the <span class=\"gnucash\">GnuCash</span> svn. Reviewers could also start from the <a href='http://sourceforge.net/projects/gnucash/files/gnucash-docs/'>current docs tarball</a>.");?></p>
-<p class="justify"><?php echo T_("For those not familiar with svn, the <span class=\"gnucash\">GnuCash</span> wiki has a <a href='http://wiki.gnucash.org/wiki/Subversion'>description</a> tailored to the <span class=\"gnucash\">GnuCash</span> code. To get the documentation source instead of the program source, replace 'gnucash' with 'gnucash-docs' in the mentioned svn commands, like this:");?></p>
-<pre class="command">svn checkout http://code.gnucash.org/repo/gnucash-docs/trunk gnucash-docs</pre>
-
-<h3><?php echo T_("Writers");?></h3>
-<p class="justify"><?php echo T_("Get a copy of the documentation source as described above and start making changes. When you are satisfied with your changes you can create a patch by running the following command in the base directory of the documentation (usually gnucash-docs, unless you renamed it):");?></p>
-<pre class="command">svn diff > my-patch-name.patch</pre>
-<p class="justify"><?php echo T_("Next attach your patch to a bug report against the documentation component for the <span class=\"gnucash\">GnuCash</span> project in <a href='http://bugzilla.gnome.org/'>Gnome's bugzilla database</a> and send an email to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> mailing list to inform other developers on your work. See also <a href='http://wiki.gnucash.org/wiki/Bugzilla'>GnuCash' wiki page on bugzilla</a> for more details about patch submission.");?></p>
-<div class="dialog note">
-<p class="justify"><?php echo T_("<b>NOTE:</b> It used to be ok also to send your patch directly to the gnucash-devel list. This is discouraged now, as a patch is easily forgotten between the many list discussions. Attach patches to bugs in Bugzilla instead (either an existing bug or a new one). If you insist on sending a patch to gnucash-devel, it should be attached, not inlined.");?></p>
-<p class="justify"><?php echo T_("Please let other writers know which section you wish to tackle. Please forward this to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> so that people can say 'hey I'm doing that already' or 'go ahead and do it'.");?></p>
-<p class="justify"><?php echo T_("You may also want to retain a local copy of the old documentation to refer to when writing. This still has a lot of useful information in it which hasn't been transferred to the new docs");?></p>
-</div>
-    
-<h3><?php echo T_("Reviewers");?></h3>
-<p class="justify"><?php echo T_("Get a copy of the documentation source as described above and start commenting on it.");?></p>
-<p class="justify"><?php echo T_("The best way of retaining comments about docs in an easy to find way for everyone would be to use <a href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> to file the bugs under documentation. This can also be done using bug-buddy.");?></p>
 
 </div>
 </div>
 <?php include("externals/footer.phtml"); ?>
-
