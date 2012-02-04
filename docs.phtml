@@ -8,13 +8,30 @@ $mobi = T_("Download documentation as mobipocket");
 include("emulate_globals_on.php");
 include("externals/header.phtml");
 include("externals/menu.phtml");
+$basepath = "http://gnucash.org/docs/v2.4/";
+$helpfile = "gnucash-help.pdf";
+$tcfile   = "gnucash-guide.pdf";
+$langpath = 'C';
+$l_arg = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
+if ($l_arg) { /* There is a language argument */
+  switch ($l_arg) {
+    case "lang=de_DE":
+        $langpath = "de_DE";
+        break;
+    case "lang=it_IT":
+        $langpath = "it_IT";
+        break;
+  }
+}
+$hfileurl = $basefile . $langpath . "/" . $helpfile;
+$tfileurl = $basefile . $langpath . "/" . $tcfile;
 ?>
 
 <div id="content">
 
 <h1><?php echo T_("GnuCash Documentation");?></h1>
 
-<p class="justify"><?php echo T_("There are two major <span class=\"gnucash\">GnuCash</span> documentation packages to help users: the <b>Help Manual</b> and the <b>Tutorials and Concepts Guide</b>.");?></p>
+<p class="justify"><?php echo T_("There are two major <span class=\"gnucash\">GnuCash</span> documentation packages to help users: the");?> <a href=$hfileurl><?php echo T_("<b>Help Manual</b></a> and the <b>Tutorials and Concepts Guide</b>.");?></p>
 
 <p class="justify"><?php echo T_("The <b>Help Manual</b> is designed to be a quick reference of how to accomplish specific tasks and how to use the features in <span class=\"gnucash\">GnuCash</span>. The <b>Concepts Guide</b> is designed to be an in depth guide to the concepts behind using <span class=\"gnucash\">GnuCash</span> with a tutorial to show how to put those concepts into practice.");?></p>
 
