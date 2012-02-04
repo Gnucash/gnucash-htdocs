@@ -12,7 +12,7 @@ $basepath = "http://gnucash.org/docs/v2.4/";
 $helpfile = "gnucash-help.pdf";
 $tcfile   = "gnucash-guide.pdf";
 $langpath = 'C';
-$l_arg = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
+$l_arg = parse_url($_SERVER['REQUEST_URI']);
 if ($l_arg) { /* There is a language argument */
   switch ($l_arg) {
     case "lang=de_DE":
