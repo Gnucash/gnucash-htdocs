@@ -9,12 +9,14 @@ include("emulate_globals_on.php");
 include("externals/header.phtml");
 include("externals/menu.phtml");
 $basepath = "http://gnucash.org/docs/v2.4/";
-$helpfile = "gnucash-help.pdf";
-$tcfile   = "gnucash-guide.pdf";
+$helpfile = "help.html";
+$tcfile   = "index.html";
 $langpath = 'C';
-$l_arg = parse_url($_SERVER['REQUEST_URI']);
+$l_argarray = parse_url($_SERVER['REQUEST_URI']);
+$l_arg = $l_argarray[query];
+print_r($l_argarray);
 print_r($l_arg);
-if (is_null($l_arg[query])) { $l_arg = $_COOKIE['lang_cookie']; }
+if (is_null($l_arg)) { $l_arg = $_COOKIE['lang_cookie']; }
 echo $l_arg;
 if ($l_arg[query]) { /* There is a language argument */
   switch ($l_arg[query]) {
