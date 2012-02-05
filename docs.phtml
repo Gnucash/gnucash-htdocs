@@ -16,7 +16,7 @@ $l_argarray = parse_url($_SERVER['REQUEST_URI']);
 $l_arg = $l_argarray[query];
 print_r($l_argarray);
 print_r($l_arg);
-if (is_null($l_arg)) { $l_arg = "lang="$_COOKIE['lang_cookie']; }
+if (is_null($l_arg)) { $l_arg = "lang=".$_COOKIE['lang_cookie']; }
 echo "l_arg=$l_arg";
 if ($l_arg) { /* There is a language argument */
   switch ($l_arg) {
