@@ -15,7 +15,7 @@ $langpath = 'C';
 $l_arg = parse_url($_SERVER['REQUEST_URI']);
 print_r($l_arg);
 if (is_null($l_arg[query])) { $l_arg = $_COOKIE['lang_cookie']; }
-echo $l_arg[query];
+echo $l_arg;
 if ($l_arg[query]) { /* There is a language argument */
   switch ($l_arg[query]) {
     case "lang=de_DE":
