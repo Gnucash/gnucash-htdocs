@@ -8,35 +8,52 @@ $mobi = T_("Download documentation as mobipocket");
 include("emulate_globals_on.php");
 include("externals/header.phtml");
 include("externals/menu.phtml");
+
+/*the following code selects the link to browse online docs based on the language selected in the GnuCash website*/
 $basepath = "http://gnucash.org/docs/v2.4/";
 $helpfile = "gnucash-help/help.html";
 $tcfile   = "gnucash-guide/index.html";
-$langpath = 'C';
-$l_argarray = parse_url($_SERVER['REQUEST_URI']);
-$l_arg = $l_argarray[query];
-print_r($l_argarray);
-print_r($l_arg);
-if (is_null($l_arg)) { $l_arg = "lang=".$_COOKIE['lang_cookie']; }
-echo "l_arg=$l_arg";
+$helplangpath = 'C';
+$guidelangpath = 'C';
+$l_argarray = parse_url($_SERVER['REQUEST_URI']); /*read the array for the path*/
+$l_arg = $l_argarray[query]; /*select the lang part (query) from the above array: for example "lang=it_IT"*/
+if (is_null($l_arg)) { $l_arg = "lang=".$_COOKIE['lang_cookie']; } /*if lang query is not in the url read it from cookie as f.e. "lang=it_IT"*/
+/* the next switch assigns the language path to the help documents*/
 if ($l_arg) { /* There is a language argument */
   switch ($l_arg) {
     case "lang=de_DE":
-        $langpath = "de_DE";
+        $helplangpath = "de_DE";
         break;
     case "lang=it_IT":
-        $langpath = "it_IT";
+        $helplangpath = "it_IT";
         break;
   }
 }
-$hfileurl = $basepath . $langpath . "/" . $helpfile;
-$tfileurl = $basepath . $langpath . "/" . $tcfile;
+/* the next switch assigns the language path to the guide documents*/
+if ($l_arg) { /* There is a language argument */
+  switch ($l_arg) {
+    case "lang=de_DE":
+        $guidelangpath = "de_DE";
+        break;
+    case "lang=it_IT":
+        $guidelangpath = "it_IT";
+        break;
+    case "lang=ja_JP":
+        $guidelangpath = "ja_JP";
+        break;
+  }
+}
+/*finally build the language based urls to docs*/
+$hfileurl = $basepath . $helplangpath . "/" . $helpfile;
+$tfileurl = $basepath . $guidelangpath . "/" . $tcfile;
+/*end of the language based docs link creator code*/
 ?>
 
 <div id="content">
 
 <h1><?php echo T_("GnuCash Documentation");?></h1>
 
-<p class="justify"><?php echo T_("There are two major <span class=\"gnucash\">GnuCash</span> documentation packages to help users: the <a href=\"");?><?php echo $hfileurl?><?php echo T_("\"<b>Help Manual</b></a> and the <b>Tutorials and Concepts Guide</b>.");?></p>
+<p class="justify"><?php echo T_("There are two major <span class=\"gnucash\">GnuCash</span> documentation packages to help users: the <a href=\"");?><?php echo $hfileurl?><?php echo T_("\"<b>Help Manual</b></a> and the <a href=\"");?><?php echo $hfileurl?><?php echo T_("\"<b>Tutorials and Concepts Guide</b></a>.");?></p>
 
 <p class="justify"><?php echo T_("The <b>Help Manual</b> is designed to be a quick reference of how to accomplish specific tasks and how to use the features in <span class=\"gnucash\">GnuCash</span>. The <b>Concepts Guide</b> is designed to be an in depth guide to the concepts behind using <span class=\"gnucash\">GnuCash</span> with a tutorial to show how to put those concepts into practice.");?></p>
 
