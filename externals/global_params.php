@@ -2,7 +2,7 @@
      // This section defines the most recent version numbers for all platforms.
      // Each platform can define its own latest version or follow the default.
      // Both a latest stable version and a latest unstable version are defined.
-     $latest_stable             = "2.4.9";
+     $latest_stable             = "2.4.10";
      $latest_stable_win         = $latest_stable;
  #    $latest_stable_mac_ppc     = $latest_stable."-2";
      $latest_stable_mac_ppc     = $latest_stable;
