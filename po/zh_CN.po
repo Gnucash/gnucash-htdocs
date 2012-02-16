@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs r18948\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-07 13:41+0200\n"
+"POT-Creation-Date: 2012-02-15 21:10+0100\n"
 "PO-Revision-Date: 2010-05-02 07:26+1000\n"
 "Last-Translator: Tao Wang <dancefire@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: download.phtml:5 docs.phtml:28 docs.phtml:88
+#: download.phtml:5 docs.phtml:79 docs.phtml:139
 msgid "Download"
 msgstr "下载"
 
@@ -97,7 +97,7 @@ msgid ""
 "Redhat and CentOS don't have <span class=\"gnucash\">GnuCash</span> in their "
 "repositories by default. It can be installed however from the third-party "
 "Epel repository. For more details on configuring this additional software "
-"repository for your setup, see "
+"repository for your setup, see"
 msgstr ""
 "Redhat 和 CentOS 在它们的软件库里面默认没有 GnuCash。但是，它可以通过第三方的"
 "软件库 Epel 来进行安装。如果需要配置这个额外的软件库用以安装的更多信息，请见 "
@@ -181,7 +181,7 @@ msgstr "查看所有 GnuCash %s 的下载 (不稳定版)"
 msgid "View all GnuCash downloads"
 msgstr "查看所有的 GnuCash 下载"
 
-#: index.phtml:5 oldnews.phtml:4 externals/header.phtml:52
+#: index.phtml:5 oldnews.phtml:4 externals/header.phtml:94
 msgid "Free Accounting Software"
 msgstr "免费的财务软件"
 
@@ -280,6 +280,197 @@ msgstr "以前的公告"
 #: index.phtml:76
 msgid "Click <a href=\"oldnews.phtml\">here</a> for older announcements..."
 msgstr ""
+
+#: develdocs.phtml:3 externals/menu.phtml:53
+#, fuzzy
+msgid "Writing Documentation"
+msgstr "文档"
+
+#: develdocs.phtml:11
+#, fuzzy
+msgid "Writing GnuCash Documentation"
+msgstr "早期的 GnuCash 的文档"
+
+#: develdocs.phtml:13
+msgid ""
+"If you are interested in improving the <span class=\"gnucash\">GnuCash</"
+"span> documentation, you have come to the right place. This page will "
+"provide you with the necessary information to get started."
+msgstr ""
+
+#: develdocs.phtml:16
+msgid ""
+"The <span class=\"gnucash\">GnuCash</span> documentation can be viewed and "
+"downloaded from the <a href=\"docs.phtml\">Documentation page</a>."
+msgstr ""
+
+#: develdocs.phtml:21
+#, fuzzy
+msgid "Introduction"
+msgstr "信息"
+
+#: develdocs.phtml:23
+msgid ""
+"The <span class=\"gnucash\">GnuCash</span> documentation is stored in "
+"<b>xml</b> files. More precisely, it uses the <b>GNOME2 XML docbook system</"
+"b>. This is a relatively flexible system that takes xml files as input and "
+"can generate documentation in several different output formats (html, "
+"pdf,...)."
+msgstr ""
+
+#: develdocs.phtml:24
+msgid ""
+"If you wish to review or write <span class=\"gnucash\">GnuCash</span> "
+"documentation, you will need to know xml. Some basic knowledge of the "
+"docbook system may be useful as well"
+msgstr ""
+
+#: develdocs.phtml:25
+msgid ""
+"The following links are for further sites that can help with the "
+"documentation and review process."
+msgstr "下面这些链接对进一步寻找文档和评论有帮助。"
+
+#: develdocs.phtml:30
+msgid ""
+"While this <span class=\"gnucash\">GnuCash</span> wiki page is really about "
+"translating the documentation, it holds some useful information on working "
+"with docbook files."
+msgstr ""
+
+#: develdocs.phtml:31
+msgid ""
+"A detailed guide on how to work with documentation (update and maintenance)."
+msgstr ""
+
+#: develdocs.phtml:33
+#, fuzzy
+msgid "We suggest also subscribing to"
+msgstr "我们建议同样订阅"
+
+#: develdocs.phtml:38
+#, fuzzy
+msgid "Gnome Documentation guidelines"
+msgstr "每夜文档构建"
+
+#: develdocs.phtml:40
+#, fuzzy
+msgid ""
+"As stated earlier, the new docs are based on the GNOME2 XML docbook system. "
+"Everyone wishing to help please follow these guides where possible when "
+"reviewing and/or writing docs."
+msgstr ""
+"请阅读下列指南。新文档是基于 GNOME2 XML Docbook 系统。每一个希望帮助写文档"
+"的，请在评论或者撰写文档时尽量遵循这些指南。"
+
+#: develdocs.phtml:49
+msgid "Where to get the documentation source"
+msgstr ""
+
+#: develdocs.phtml:51
+msgid ""
+"You will need a recent copy of the documentation source. For this you can "
+"check out the documentation module from the <span class=\"gnucash\">GnuCash</"
+"span> svn. Reviewers could also start from the <a href='http://sourceforge."
+"net/projects/gnucash/files/gnucash-docs/'>current docs tarball</a>."
+msgstr ""
+
+#: develdocs.phtml:52
+#, fuzzy
+msgid ""
+"For those not familiar with svn, the <span class=\"gnucash\">GnuCash</span> "
+"wiki has a <a href='http://wiki.gnucash.org/wiki/Subversion'>description</a> "
+"tailored to the <span class=\"gnucash\">GnuCash</span> code. To get the "
+"documentation source instead of the program source, replace 'gnucash' with "
+"'gnucash-docs' in the mentioned svn commands, like this:"
+msgstr ""
+"请从 GnuCash 的 svn 中 check out 文档模块: gnucash-docs。对那些不熟悉 svn 的"
+"人，GnuCash wiki 后关于<a href='http://wiki.gnucash.org/wiki/"
+"Subversion'>Subversion 的介绍</a>。相对于check out 源代码，唯一的改变就是从 "
+"gnucash 变到 gnucash-docs。您也可以从当前文档的压缩文件开始。"
+
+#: develdocs.phtml:55
+#, fuzzy
+msgid ""
+"There are two major <span class=\"gnucash\">GnuCash</span> documentation "
+"packages to help users: the <b>Help Manual</b> and the <b>Tutorials and "
+"Concepts Guide</b>. With the above command, the source code of both will be "
+"downloaded."
+msgstr ""
+"如果您对使用 GnuCash 有任何疑问，那么你找对地方了。你首先需要做的是阅读《帮助"
+"手册》和《概念指南》，绝大多数的问题都会在里面找到答案。"
+
+#: develdocs.phtml:61
+msgid "Writers"
+msgstr "作者"
+
+#: develdocs.phtml:63
+msgid ""
+"Get a copy of the documentation source as described above and start making "
+"changes. When you are satisfied with your changes you can create a patch by "
+"running the following command in the base directory of the documentation "
+"(usually gnucash-docs, unless you renamed it):"
+msgstr ""
+
+#: develdocs.phtml:65
+msgid ""
+"Next attach your patch to a bug report against the documentation component "
+"for the <span class=\"gnucash\">GnuCash</span> project in <a href='http://"
+"bugzilla.gnome.org/'>Gnome's bugzilla database</a> and send an email to <a "
+"href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> mailing list "
+"to inform other developers on your work. See also <a href='http://wiki."
+"gnucash.org/wiki/Bugzilla'>GnuCash' wiki page on bugzilla</a> for more "
+"details about patch submission."
+msgstr ""
+
+#: develdocs.phtml:67
+msgid ""
+"<b>NOTE:</b> It used to be ok also to send your patch directly to the "
+"gnucash-devel list. This is discouraged now, as a patch is easily forgotten "
+"between the many list discussions. Attach patches to bugs in Bugzilla "
+"instead (either an existing bug or a new one). If you insist on sending a "
+"patch to gnucash-devel, it should be attached, not inlined."
+msgstr ""
+
+#: develdocs.phtml:68
+msgid ""
+"Please let other writers know which section you wish to tackle. Please "
+"forward this to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-"
+"devel</a> so that people can say 'hey I'm doing that already' or 'go ahead "
+"and do it'."
+msgstr ""
+"请告诉其他作者您正在撰写哪一个部分。请转发给 <a href='mailto:gnucash-"
+"devel@lists.gnucash.org'>gnucash-devel</a>，这样人们就可以说“嘿，我已经做了那"
+"个了”，或者“好吧，去做吧”。"
+
+#: develdocs.phtml:69
+msgid ""
+"You may also want to retain a local copy of the old documentation to refer "
+"to when writing. This still has a lot of useful information in it which "
+"hasn't been transferred to the new docs"
+msgstr ""
+"您也可以为老文档保留一个本地副本。里面还是有大量的信息未被转移到新文档中。"
+
+#: develdocs.phtml:75
+msgid "Reviewers"
+msgstr "评论人员"
+
+#: develdocs.phtml:77
+msgid ""
+"Get a copy of the documentation source as described above and start "
+"commenting on it."
+msgstr ""
+
+#: develdocs.phtml:78
+msgid ""
+"The best way of retaining comments about docs in an easy to find way for "
+"everyone would be to use <a href='http://bugzilla.gnome.org/'>bugzilla.gnome."
+"org</a> to file the bugs under documentation. This can also be done using "
+"bug-buddy."
+msgstr ""
+"对于所有人都可以使用的，关于文档中某部分提出意见最好的方式就是在 <a "
+"href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> 中提交一个关于文档"
+"的 Bug。这也可以通过使用 Bug-buddy 来实现。"
 
 #: features.phtml:3
 msgid "Features"
@@ -663,37 +854,52 @@ msgid ""
 "by step."
 msgstr ""
 
-#: docs.phtml:3
-msgid "Documentation Project"
-msgstr "文档项目"
+#: docs.phtml:3 externals/menu.phtml:23 externals/menu.phtml:30
+msgid "Documentation"
+msgstr "文档"
 
-#: docs.phtml:11
-msgid "GnuCash Documentation Project"
-msgstr "GnuCash 文档项目"
+#: docs.phtml:4
+#, fuzzy
+msgid "Browse documentation online"
+msgstr "每夜文档构建"
 
-#: docs.phtml:13
+#: docs.phtml:5
+#, fuzzy
+msgid "Download documentation as PDF"
+msgstr "文档"
+
+#: docs.phtml:6
+#, fuzzy
+msgid "Download documentation as epub"
+msgstr "文档"
+
+#: docs.phtml:7
+msgid "Download documentation as mobipocket"
+msgstr ""
+
+#: docs.phtml:54
+#, fuzzy
+msgid "GnuCash Documentation"
+msgstr "早期的 GnuCash 的文档"
+
+#: docs.phtml:56
 #, fuzzy
 msgid ""
-"This page is the home of the <span class=\"gnucash\">GnuCash</span> "
-"Documentation Project, our goal is to maintain a community of people working "
-"towards creation of high quality documentation for <span class=\"gnucash"
-"\">GnuCash</span>."
-msgstr ""
-"这个页面是 GnuCash 文档项目的大本营。我们的目标是维护一个为 GnuCash 创建高质"
-"量文档的社区。"
+"There are two major <span class=\"gnucash\">GnuCash</span> documentation "
+"packages to help users:"
+msgstr "下面是安装 GnuCash 到一些较流行的 Linux 发布版的方法："
 
-#: docs.phtml:15
+#: docs.phtml:58
 #, fuzzy
-msgid ""
-"If you have a question about how to use <span class=\"gnucash\">GnuCash</"
-"span>, you are in the right place. The first thing you should do is read the "
-"<b>Help Manual</b> and the <b>Concepts Guide</b>, most of your questions can "
-"probably be answered by these documents."
-msgstr ""
-"如果您对使用 GnuCash 有任何疑问，那么你找对地方了。你首先需要做的是阅读《帮助"
-"手册》和《概念指南》，绝大多数的问题都会在里面找到答案。"
+msgid "The Help Manual"
+msgstr "帮助手册"
 
-#: docs.phtml:16
+#: docs.phtml:59
+#, fuzzy
+msgid "The Tutorials and Concepts Guide"
+msgstr "概念指南"
+
+#: docs.phtml:62
 #, fuzzy
 msgid ""
 "The <b>Help Manual</b> is designed to be a quick reference of how to "
@@ -706,84 +912,103 @@ msgstr ""
 "考。《概念指南》是使用 GnuCash 背后更深层次的概念，包括了一个教程用以显示如何"
 "将这些概念用于实际。"
 
-#: docs.phtml:18
-#, fuzzy
-msgid ""
-"Please send an email to the <a href='mailto:gnucash-user@lists.gnucash."
-"org'>gnucash-user</a> mailing list if you cannot find a satisfactory answer "
-"to your question within either the <b>Help Manual</b> or the <b>Concepts "
-"Guide</b>. We <b>want</b> feedback from you, it is also through your "
-"comments that we know how to improve the documentation."
-msgstr ""
-"如果您不能在《帮助手册》或《概念指南》中找到满意答案，请发邮件到 <a "
-"href='mailto:gnucash-user@lists.gnucash.org'>gnucash-user</a> 邮件列表。我们"
-"<b>希望</b>得到您的反馈，只有通过您的评论，我们才能够知道应当如何修改文档。"
-
-#: docs.phtml:19
+#: docs.phtml:64
 #, fuzzy
 msgid ""
 "Additionally, you can talk to someone via IRC at irc.gnome.org channel "
-"\"#gnucash\" about your question.  Another resource is the <a href='http://"
-"wiki.gnucash.org/wiki/'>English</a> or <a href='http://linuxwiki.de/"
-"GnuCash'>Deutsch</a> <span class=\"gnucash\">GnuCash</span> wikis. A wiki is "
-"an interactive website where registered users can ask and answer questions."
+"<b>#gnucash</b> about your question. Another resource is the <a href="
+"\"http://wiki.gnucash.org/wiki/\">English</a> or <a href=\"http://linuxwiki."
+"de/GnuCash\">Deutsch</a> <span class=\"gnucash\">GnuCash</span> wikis."
 msgstr ""
 "此外，您也可以在 irc.gnome.org 频道“#gnucash”中找个人问您的问题。其它的资源还"
 "有<a href='http://wiki.gnucash.org/wiki/'>English</a> 或 <a href='http://"
 "linuxwiki.de/GnuCash'>Deutsch</a> 的 GnuCash 的 Wiki。Wiki 是一个交互性的网"
 "站，注册的用户可以在那里提问或者回答问题。"
 
-#: docs.phtml:23
+#: docs.phtml:66
+#, fuzzy
+msgid ""
+"You can also send an email to the <a href=\"mailto:gnucash-user@lists."
+"gnucash.org\">gnucash-user</a> mailing list if you cannot find a "
+"satisfactory answer to your question within either the <b>Help Manual</b> or "
+"the <b>Tutorial and Concepts Guide</b>. We <b>want</b> feedback from you, it "
+"is also through your comments that we know how to improve the documentation."
+msgstr ""
+"如果您不能在《帮助手册》或《概念指南》中找到满意答案，请发邮件到 <a "
+"href='mailto:gnucash-user@lists.gnucash.org'>gnucash-user</a> 邮件列表。我们"
+"<b>希望</b>得到您的反馈，只有通过您的评论，我们才能够知道应当如何修改文档。"
+
+#: docs.phtml:69
+msgid ""
+"<span class=\"gnucash\">GnuCash</span>'s documentation has been created by "
+"its community. See the <a href=\"develdocs.phtml\">Writing Documentation "
+"page</a> if you are interested in contributing to this effort."
+msgstr ""
+
+#: docs.phtml:74
+#, fuzzy
+msgid "(current stable release)"
+msgstr "GnuCash v2.0 (当前稳定版本)"
+
+#: docs.phtml:76
+#, fuzzy
+msgid "Current <em>stable</em> user documentation and developer documentation"
+msgstr "当前不稳定版用户文档和开发者文档"
+
+#: docs.phtml:79
+msgid "Stable"
+msgstr ""
+
+#: docs.phtml:81 docs.phtml:141 docs.phtml:206 docs.phtml:223 docs.phtml:238
+msgid "Help Manual"
+msgstr "帮助手册"
+
+#: docs.phtml:85 docs.phtml:103 docs.phtml:145 docs.phtml:163 docs.phtml:207
+#: docs.phtml:215 docs.phtml:224 docs.phtml:231 docs.phtml:239 docs.phtml:253
+msgid "English"
+msgstr "英语"
+
+#: docs.phtml:89 docs.phtml:107 docs.phtml:149 docs.phtml:167 docs.phtml:208
+#: docs.phtml:225 docs.phtml:241 docs.phtml:247 docs.phtml:254
+msgid "German"
+msgstr ""
+
+#: docs.phtml:93 docs.phtml:111 docs.phtml:153 docs.phtml:171 docs.phtml:209
+#: docs.phtml:216
+msgid "Italian"
+msgstr ""
+
+#: docs.phtml:99 docs.phtml:159 docs.phtml:214 docs.phtml:230 docs.phtml:246
+msgid "Concepts Guide"
+msgstr "概念指南"
+
+#: docs.phtml:115 docs.phtml:175
+msgid "Japanese"
+msgstr ""
+
+#: docs.phtml:129
+msgid ""
+"This is the latest stable release of the <span class=\"gnucash\">GnuCash</"
+"span> documentation. <em>Stable</em> means that this documentation is not "
+"necessarily the most up to date but it works without any problem."
+msgstr ""
+
+#: docs.phtml:134
 msgid "Nightly Documentation Builds"
 msgstr "每夜文档构建"
 
-#: docs.phtml:25
+#: docs.phtml:136
 #, fuzzy
 msgid ""
 "Current <em>unstable</em> user documentation and developer documentation"
 msgstr "当前不稳定版用户文档和开发者文档"
 
-#: docs.phtml:28
+#: docs.phtml:139
 #, fuzzy
 msgid "Unstable"
 msgstr "安装程序"
 
-#: docs.phtml:30 docs.phtml:90 docs.phtml:146 docs.phtml:163 docs.phtml:178
-msgid "Help Manual"
-msgstr "帮助手册"
-
-#: docs.phtml:33 docs.phtml:49 docs.phtml:93 docs.phtml:109 docs.phtml:147
-#: docs.phtml:155 docs.phtml:164 docs.phtml:171 docs.phtml:179 docs.phtml:193
-msgid "English"
-msgstr "英语"
-
-#: docs.phtml:34 docs.phtml:38 docs.phtml:42 docs.phtml:50 docs.phtml:54
-#: docs.phtml:58 docs.phtml:62 docs.phtml:94 docs.phtml:98 docs.phtml:102
-#: docs.phtml:110 docs.phtml:114 docs.phtml:118 docs.phtml:122 docs.phtml:147
-#: docs.phtml:148 docs.phtml:149 docs.phtml:155 docs.phtml:156 docs.phtml:164
-#: docs.phtml:165 docs.phtml:171 docs.phtml:179 docs.phtml:181 docs.phtml:187
-msgid "Online"
-msgstr ""
-
-#: docs.phtml:37 docs.phtml:53 docs.phtml:97 docs.phtml:113 docs.phtml:148
-#: docs.phtml:165 docs.phtml:181 docs.phtml:187 docs.phtml:194
-msgid "German"
-msgstr ""
-
-#: docs.phtml:41 docs.phtml:57 docs.phtml:101 docs.phtml:117 docs.phtml:149
-#: docs.phtml:156
-msgid "Italian"
-msgstr ""
-
-#: docs.phtml:46 docs.phtml:106 docs.phtml:154 docs.phtml:170 docs.phtml:186
-msgid "Concepts Guide"
-msgstr "概念指南"
-
-#: docs.phtml:61 docs.phtml:121
-msgid "Japanese"
-msgstr ""
-
-#: docs.phtml:74
+#: docs.phtml:190
 #, fuzzy
 msgid ""
 "Every night a server builds the documentation from the current contents of "
@@ -796,39 +1021,18 @@ msgstr ""
 "建最新的文档。这包括了从 Doxygen 生成的《开发人员文档》和为当前不稳定版本撰写"
 "的《用户文档》。"
 
-#: docs.phtml:78
+#: docs.phtml:194
 msgid ""
 "<b>NOTE:</b> these documents might not be accessible from time to time "
 "because developers might be working on improvements. However they are the "
 "most up to date reference for <span class=\"gnucash\">GnuCash</span> users."
 msgstr ""
 
-#: docs.phtml:83
-#, fuzzy
-msgid "(current stable release)"
-msgstr "GnuCash v2.0 (当前稳定版本)"
-
-#: docs.phtml:85
-#, fuzzy
-msgid "Current <em>stable</em> user documentation and developer documentation"
-msgstr "当前不稳定版用户文档和开发者文档"
-
-#: docs.phtml:88
-msgid "Stable"
-msgstr ""
-
-#: docs.phtml:134
-msgid ""
-"This is the latest stable release of the <span class=\"gnucash\">GnuCash</"
-"span> documentation. <em>Stable</em> means that this documentation is not "
-"necessarily the most up to date but it works without any problem."
-msgstr ""
-
-#: docs.phtml:139
+#: docs.phtml:199
 msgid "Older GnuCash Documentation"
 msgstr "早期的 GnuCash 的文档"
 
-#: docs.phtml:141
+#: docs.phtml:201
 #, fuzzy
 msgid ""
 "This section contains all the older <span class=\"gnucash\">GnuCash</span> "
@@ -839,34 +1043,34 @@ msgstr ""
 "这部分包含了所有早期的 GnuCash 的文档。如果您正在使用其中一个早期的版本，那么"
 "非常建议您升级到最新的稳定版本。"
 
-#: docs.phtml:195
+#: docs.phtml:255
 msgid "Spanish"
 msgstr ""
 
-#: docs.phtml:196
+#: docs.phtml:256
 #, fuzzy
 msgid "Portugese"
 msgstr "葡萄牙文"
 
-#: docs.phtml:202
+#: docs.phtml:262
 #, fuzzy
 msgid "Unofficial documentation"
 msgstr "文档"
 
-#: docs.phtml:204
+#: docs.phtml:264
 msgid "Some people have written HOWTO guides or tutorials."
 msgstr ""
 
-#: docs.phtml:207
+#: docs.phtml:267
 msgid "Joe Mack's Tutorial"
 msgstr "Joe Mack 的教程"
 
-#: docs.phtml:209
+#: docs.phtml:269
 #, fuzzy
 msgid "Dave Gilbert's User Guide (Pdf)"
 msgstr "Dave Gilbert 的用户手册 (PDF)"
 
-#: docs.phtml:213
+#: docs.phtml:273
 #, fuzzy
 msgid ""
 "<b>NOTE:</b> the information presented in these sources may or may not be "
@@ -876,167 +1080,6 @@ msgid ""
 msgstr ""
 "有些人写了“如何做”向导或者教程。注意：这些信息来源不一定反映了当前 GnuCash 的"
 "最新版本。如果您对这些文档比较感兴趣，您应当联系其原作者。"
-
-#: docs.phtml:219
-msgid "Documentation Development"
-msgstr "文档开发"
-
-#: docs.phtml:222
-#, fuzzy
-msgid "Introduction"
-msgstr "信息"
-
-#: docs.phtml:223
-msgid ""
-"The <span class=\"gnucash\">GnuCash</span> documentation is stored in "
-"<b>xml</b> files. More precisely, it uses the <b>GNOME2 XML docbook system</"
-"b>. This is a relatively flexible system that takes xml files as input and "
-"can generate documentation in several different output formats (html, "
-"pdf,...)."
-msgstr ""
-
-#: docs.phtml:224
-msgid ""
-"If you wish to review or write <span class=\"gnucash\">GnuCash</span> "
-"documentation, you will need to know xml. Some basic knowledge of the "
-"docbook system may be useful as well"
-msgstr ""
-
-#: docs.phtml:225
-msgid ""
-"The following links are for further sites that can help with the "
-"documentation and review process."
-msgstr "下面这些链接对进一步寻找文档和评论有帮助。"
-
-#: docs.phtml:230
-msgid ""
-"While this <span class=\"gnucash\">GnuCash</span> wiki page is really about "
-"translating the documentation, it holds some useful information on working "
-"with docbook files."
-msgstr ""
-
-#: docs.phtml:231
-msgid ""
-"A detailed guide on how to work with documentation (update and maintenance)."
-msgstr ""
-
-#: docs.phtml:233
-#, fuzzy
-msgid "We suggest also subscribing to"
-msgstr "我们建议同样订阅"
-
-#: docs.phtml:235
-#, fuzzy
-msgid "Gnome Documentation guidelines"
-msgstr "每夜文档构建"
-
-#: docs.phtml:236
-#, fuzzy
-msgid ""
-"As stated earlier, the new docs are based on the GNOME2 XML docbook system. "
-"Everyone wishing to help please follow these guides where possible when "
-"reviewing and/or writing docs."
-msgstr ""
-"请阅读下列指南。新文档是基于 GNOME2 XML Docbook 系统。每一个希望帮助写文档"
-"的，请在评论或者撰写文档时尽量遵循这些指南。"
-
-#: docs.phtml:242
-msgid "Where to get the documentation source"
-msgstr ""
-
-#: docs.phtml:243
-msgid ""
-"You will need a recent copy of the documentation source. For this you can "
-"check out the documentation module from the <span class=\"gnucash\">GnuCash</"
-"span> svn. Reviewers could also start from the <a href='http://sourceforge."
-"net/projects/gnucash/files/gnucash-docs/'>current docs tarball</a>."
-msgstr ""
-
-#: docs.phtml:244
-#, fuzzy
-msgid ""
-"For those not familiar with svn, the <span class=\"gnucash\">GnuCash</span> "
-"wiki has a <a href='http://wiki.gnucash.org/wiki/Subversion'>description</a> "
-"tailored to the <span class=\"gnucash\">GnuCash</span> code. To get the "
-"documentation source instead of the program source, replace 'gnucash' with "
-"'gnucash-docs' in the mentioned svn commands, like this:"
-msgstr ""
-"请从 GnuCash 的 svn 中 check out 文档模块: gnucash-docs。对那些不熟悉 svn 的"
-"人，GnuCash wiki 后关于<a href='http://wiki.gnucash.org/wiki/"
-"Subversion'>Subversion 的介绍</a>。相对于check out 源代码，唯一的改变就是从 "
-"gnucash 变到 gnucash-docs。您也可以从当前文档的压缩文件开始。"
-
-#: docs.phtml:247
-msgid "Writers"
-msgstr "作者"
-
-#: docs.phtml:248
-msgid ""
-"Get a copy of the documentation source as described above and start making "
-"changes. When you are satisfied with your changes you can create a patch by "
-"running the following command in the base directory of the documentation "
-"(usually gnucash-docs, unless you renamed it):"
-msgstr ""
-
-#: docs.phtml:250
-msgid ""
-"Next attach your patch to a bug report against the documentation component "
-"for the <span class=\"gnucash\">GnuCash</span> project in <a href='http://"
-"bugzilla.gnome.org/'>Gnome's bugzilla database</a> and send an email to <a "
-"href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> mailing list "
-"to inform other developers on your work. See also <a href='http://wiki."
-"gnucash.org/wiki/Bugzilla'>GnuCash' wiki page on bugzilla</a> for more "
-"details about patch submission."
-msgstr ""
-
-#: docs.phtml:252
-msgid ""
-"<b>NOTE:</b> It used to be ok also to send your patch directly to the "
-"gnucash-devel list. This is discouraged now, as a patch is easily forgotten "
-"between the many list discussions. Attach patches to bugs in Bugzilla "
-"instead (either an existing bug or a new one). If you insist on sending a "
-"patch to gnucash-devel, it should be attached, not inlined."
-msgstr ""
-
-#: docs.phtml:253
-msgid ""
-"Please let other writers know which section you wish to tackle. Please "
-"forward this to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-"
-"devel</a> so that people can say 'hey I'm doing that already' or 'go ahead "
-"and do it'."
-msgstr ""
-"请告诉其他作者您正在撰写哪一个部分。请转发给 <a href='mailto:gnucash-"
-"devel@lists.gnucash.org'>gnucash-devel</a>，这样人们就可以说“嘿，我已经做了那"
-"个了”，或者“好吧，去做吧”。"
-
-#: docs.phtml:254
-msgid ""
-"You may also want to retain a local copy of the old documentation to refer "
-"to when writing. This still has a lot of useful information in it which "
-"hasn't been transferred to the new docs"
-msgstr ""
-"您也可以为老文档保留一个本地副本。里面还是有大量的信息未被转移到新文档中。"
-
-#: docs.phtml:257
-msgid "Reviewers"
-msgstr "评论人员"
-
-#: docs.phtml:258
-msgid ""
-"Get a copy of the documentation source as described above and start "
-"commenting on it."
-msgstr ""
-
-#: docs.phtml:259
-msgid ""
-"The best way of retaining comments about docs in an easy to find way for "
-"everyone would be to use <a href='http://bugzilla.gnome.org/'>bugzilla.gnome."
-"org</a> to file the bugs under documentation. This can also be done using "
-"bug-buddy."
-msgstr ""
-"对于所有人都可以使用的，关于文档中某部分提出意见最好的方式就是在 <a "
-"href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> 中提交一个关于文档"
-"的 Bug。这也可以通过使用 Bug-buddy 来实现。"
 
 #: oldnews.phtml:11
 msgid "Older Announcements"
@@ -1048,7 +1091,7 @@ msgid ""
 "page."
 msgstr "这是一个公告的存档，曾经出现在 GnuCash 的首页上。"
 
-#: sizing.phtml:3 externals/menu.phtml:53
+#: sizing.phtml:3 externals/menu.phtml:54
 msgid "Sizing"
 msgstr "大小"
 
@@ -1384,10 +1427,6 @@ msgstr "下载"
 msgid "Program"
 msgstr ""
 
-#: externals/menu.phtml:23 externals/menu.phtml:30
-msgid "Documentation"
-msgstr "文档"
-
 #: externals/menu.phtml:28
 #, fuzzy
 msgid "Support"
@@ -1419,7 +1458,7 @@ msgstr "IRC (聊天)"
 
 #: externals/menu.phtml:46
 #, fuzzy
-msgid "Developement"
+msgid "Development"
 msgstr "开发人员信息"
 
 #: externals/menu.phtml:49
@@ -1438,21 +1477,26 @@ msgstr "Subversion 访问"
 msgid "Language Translations"
 msgstr "语言翻译"
 
-#: externals/menu.phtml:64
+#: externals/menu.phtml:61
+#, fuzzy
+msgid "New Book: GnuCash 2.4 Small Business Accounting"
+msgstr "小型企业会计"
+
+#: externals/menu.phtml:65
 msgid ""
 "The GnuCash development team received notice about a new book published by "
 "PacktPub, UK:"
 msgstr ""
 
-#: externals/menu.phtml:65
+#: externals/menu.phtml:66
 msgid "GnuCash 2.4 Small Business Accounting, by Ashok Ramachandran"
 msgstr ""
 
-#: externals/menu.phtml:66
+#: externals/menu.phtml:67
 msgid "This is a Beginner's Guide for managing your accounts."
 msgstr ""
 
-#: externals/menu.phtml:67
+#: externals/menu.phtml:68
 msgid ""
 "Our own developer Christian Stimming has been contributing to this book as a "
 "reviewer, and we can wholeheartly recommend the outcome of this fruitful "
@@ -1462,32 +1506,32 @@ msgid ""
 "to the GnuCash project. Have fun with this book!"
 msgstr ""
 
-#: externals/header.phtml:6
+#: externals/header.phtml:4
 msgid "Subscribe to RSS feed"
 msgstr ""
 
-#: externals/header.phtml:7
+#: externals/header.phtml:5
 msgid "Support the GnuCash project with a donation"
 msgstr ""
 
-#: externals/header.phtml:8
+#: externals/header.phtml:6
 msgid "Request or vote enhancements for GnuCash"
 msgstr ""
 
-#: externals/header.phtml:56
+#: externals/header.phtml:98
 msgid "Language"
 msgstr "语言"
 
-#: externals/header.phtml:69
+#: externals/header.phtml:112
 msgid "Continent"
 msgstr "大陆"
 
-#: externals/footer.phtml:8
+#: externals/footer.phtml:10
 #, fuzzy
 msgid "Server &amp; email outage reports to:"
 msgstr "服务器或电子邮件故障请报告："
 
-#: externals/footer.phtml:9
+#: externals/footer.phtml:11
 msgid "Translation problems? Contact:"
 msgstr ""
 
@@ -1916,6 +1960,25 @@ msgstr "作者"
 #: search/templates/NMZ.result.normal.php_tmpl:6
 msgid "Date"
 msgstr "日期"
+
+#~ msgid "Documentation Project"
+#~ msgstr "文档项目"
+
+#~ msgid "GnuCash Documentation Project"
+#~ msgstr "GnuCash 文档项目"
+
+#, fuzzy
+#~ msgid ""
+#~ "This page is the home of the <span class=\"gnucash\">GnuCash</span> "
+#~ "Documentation Project, our goal is to maintain a community of people "
+#~ "working towards creation of high quality documentation for <span class="
+#~ "\"gnucash\">GnuCash</span>."
+#~ msgstr ""
+#~ "这个页面是 GnuCash 文档项目的大本营。我们的目标是维护一个为 GnuCash 创建高"
+#~ "质量文档的社区。"
+
+#~ msgid "Documentation Development"
+#~ msgstr "文档开发"
 
 #, fuzzy
 #~ msgid "Free Acconting Software"
