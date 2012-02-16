@@ -39,8 +39,14 @@ if (isset($homepage)) { ?>
 <meta name="description" content="A personal and small-business financial-accounting software, licensed under GNU/GPL and available for Linux, Windows, Mac OS X, BSD, and Solaris." />
 
 <title><?= T_($title); ?> | GnuCash</title>
-<!--script for google+ button-->
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<!--script for Google+1 button-->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
 </head>
 
 <body>
@@ -73,8 +79,7 @@ if (isset($homepage)) { ?>
     </script>
 </div>
 <!-- google +1 button-->
-<div id="gplusone">
-<g:plusone size="tall" href="www.gnucash.org/beta/"></g:plusone></div>
+<g:plusone size="tall" href="http://www.gnucash.org/beta/"></g:plusone>
 </div>
 
 <!-- the icons on the top right-->
