@@ -40,7 +40,14 @@ if (isset($homepage)) { ?>
 
 <title><?= T_($title); ?> | GnuCash</title>
 <!--script for Google+1 button-->
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js">      {lang:'en', parsetags:'explicit'}   </script>
+<!-- Update your html tag to include the itemscope and itemtype attributes -->
+<html itemscope itemtype="http://schema.org/Product">
+<!-- Add the following three tags inside head -->
+<meta itemprop="name" content="GnuCash">
+<meta itemprop="description" content="GnuCash is personal and small-business financial-accounting software, freely licensed under the GNU GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.
+Designed to be easy to use, yet powerful and flexible, GnuCash allows you to track bank accounts, stocks, income and expenses. As quick and intuitive to use as a checkbook register, it is based on professional accounting principles to ensure balanced books and accurate reports.">
+<meta itemprop="image" content="http://gnucash.org/externals/logo_w120.png">
+<!--<script type="text/javascript" src="https://apis.google.com/js/plusone.js">      {lang:'en', parsetags:'explicit'}   </script>-->
 </head>
 
 <body>
@@ -51,8 +58,8 @@ if (isset($homepage)) { ?>
 <p><img src="<?=$top_dir?>/images/gnucash-vert.png" alt="GnuCash" /></p>
 </div>
 
-<!--This is an image out of the view that is shown on google+ profile for GnuCash-->
-<div style="position:absolute;top:-1000px;left:-1000px;"><img src="<?=$home?>/images/gnc-download.png" alt="GnuCash small business accounting" height="152" width="125" /></div>
+<!--This is an image out of the view that is shown on google+ profile for GnuCash
+<div style="position:absolute;top:-1000px;left:-1000px;"><img src="<?=$home?>/images/gnc-download.png" alt="GnuCash small business accounting" height="152" width="125" /></div>-->
 
 <div id="googleplusone">
 
@@ -76,7 +83,7 @@ if (isset($homepage)) { ?>
 <div id="gplusone" class="plusone"></div>
                    <script type="text/javascript">
                               gapi.plusone.render('gplusone', { "size": "tall", "href": "http://www.gnucash.org/", "count": "false" });
-                   </script> 
+                   </script>
 </div>
 
 <!-- the icons on the top right-->
