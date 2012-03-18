@@ -33,7 +33,7 @@ $supported_languages = array(
         'de_DE' => 'de', 'es_ES' => 'es', 'fr_FR' => 'fr',
         'hu_HU' => 'hu', 'it_IT' => 'it', 'ja_JP' => 'ja', 'nb_NO' => 'nb',
         'nl_NL' => 'nl', 'pl_PL' => 'pl', 'pt_PT' => 'pt_PT',
-        'zh_CN' => 'zh_CN', 'en_US' => 'en'
+        'zh_CN' => 'zh_CN', 'zh_TW' => 'zh_TW', 'en_US' => 'en'
         );
 
 # Find the full locale name for short language name.
