@@ -4,6 +4,7 @@
 $titleRSS = T_("Subscribe to RSS feed");
 $titledonation = T_("Support the GnuCash project with a donation");
 $titleuservoice = T_("Request or vote enhancements for GnuCash");
+$titlegplus = T_("GnuCash on Google +");
 ?>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -79,6 +80,7 @@ if (isset($homepage)) { ?>
 <!-- the icons on the top right-->
 <div style="float:right;">
 <ul id="navlist">
+  <li id="gplus-icon"><a href="https://plus.google.com/u/0/103666182558673867088/" title="<?php echo T_($titlegplus);?>"></a></li>
   <li id="uservoice-icon"><a href="http://gnucash.uservoice.com/" title="<?php echo T_($titleuservoice);?>"></a></li>
   <li id="donation-icon"><a href="http://sourceforge.net/donate/index.php?group_id=192" title="<?php echo T_($titledonation);?>"></a></li>
   <li id="rss-icon"><a href="<?=$home?>/atom.php" title="<?php echo T_($titleRSS);?>"></a></li>
