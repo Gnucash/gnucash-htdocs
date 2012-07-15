@@ -1,0 +1,189 @@
+<b>Announcement:</b> GnuCash 2.4.11 Release
+2012-07-14
+
+<h2>GnuCash 2.4.11 released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.4.11, the ninth bug fix release in a series of stable of the GnuCash Free Accounting Software. With this release series, GnuCash can use an SQL database using SQLite3, MySQL or PostgreSQL. It runs on GNU/Linux, *BSD, Solaris, Microsoft Windows and Mac OSX.</p>
+
+<h3>Getting GnuCash for Windows (Win32 binary)</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.11-setup.exe">Gnucash 2.4.11 Win32 setup executable</a> can be downloaded from Sourceforge. It will install everything needed to run GnuCash.</p>
+
+<h3>Mac OSX binary</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.4.11.dmg">Gnucash 2.4.11 MacOSX package</a> can be downloaded from Sourceforge as well.</p>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.4.11 for yourself, the source code can be downloaded from:</p>
+<ul>
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.11.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.11.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.4.11/">all files</a>.</li>
+<li>You can also checkout the sources directly from the subversion repository as <a href="http://wiki.gnucash.org/wiki/Subversion">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need Gnome 2, guile, slib. In addition you will need swig if compiling from subversion.</p>
+
+<h3>Changes</h3>
+
+<p>Between 2.4.10 and 2.4.11, the following bugfixes were included:</p>
+<ul>
+<li>[22080]Fix make dist for Swedish accounts files
+Reported by Robert Fewell</li>
+<li>[22260]Rewrite the tip-of-the-day parsing logic
+Since commit 22246, an empty tip of the day appears in the list of tips.
+This is due to the way the file is parsed.
+This commit rewrites the parsing logic to avoid such problems. As an
+added bonus, you can now add newlines in tips by using '\n' in the
+string.</li>
+<li>[22248]Bug #678848 - Customer/Vendor reports off-by-one on start date
+Additionally removes a superfluous module load</li>
+<li>[22246][PATCH] Fix tip-of-the-day with gcc-4.7
+When making the text file tips-of-the-day, GnuCash expects 'gcc -E' to
+preserve at least one of the whitespace lines between entries. However, this
+relies on behavior of 'gcc -E' that isn't actually part of the spec, and is
+a historical accident. And it changed in gcc-4.7, such that all the
+whitespace is removed.
+
+Work around this by explicitly adding a newline in the sed expression.
+
+Pre gcc-4.7 there will be two newlines between tips, but this has no impact
+on the tip displaying code.
+
+Patch by Bill Nottingham</li>
+<li>Bug #631611 - Check printing fails because fonts are too tiny on Windows
+Lesson learned: don't use cairo_identity_matrix on a cairo_t managed by
+GtkPrintContext. It kills a number of transformations that were already
+configured by GtkPrintContext. On Windows this breaks proper scaling.</li>
+<li>Fix a double free crash when the required features dialog is shown</li>
+<li>Bug #611853 - Entering a 2-digit year in the opening balance tab results
+in "Parsing Error"
+This bug was already fixed on trunk as part of the patch that converted
+the new account dialog from glade to gtkbuilder.
+This commit extracts only the parts required to fix bug #611853</li>
+<li>[22224] Bug #671323 - Scheduled monthly transactions lose "except on weekends"
+setting when using MySQL</li>
+<li>[22229] Bug #678214 - GnuCash fails to open some post-processed XML files
+Patch by Daniel Harding</li>
+<li>Bug #677570 - Error creating net worth linechart report
+
+Remove doubled file contents.
+Changeset 21628 has already done this for trunk.</li>
+<li>Add formatting to table.
+
+Add cell padding to columns in table.</li>
+<li>Bug #677570 Error creating net worth linechart report
+
+Revert "Added user settable line width and data point markers to net worth"
+
+Removed entire commit in order to make report work.  Details of error still need
+to found so that the feature can be reinstated.
+
+This reverts r21644.  Note, this feature works in trunk.</li>
+<li>[22197]Add EXTRA_CFLAGS for compiling on Win7
+
+
+Configure gets confused by some gcc builtins on Win7: Disable them so that configure finds the right settings.
+</li>
+<li>Add EXTRA_CFLAGS to inst_gnucash compile line so that cflags can be added by custom.sh</li>
+<li>[r22171][Bug 674862] Gnucash crashes after creating a new SX using the Mortgage
+Wizard and SQL Backend
+
+This addresses the crash reported on Ubuntu with Postgres by Krzysiek.
+The stack trace he posted showed the crash was the result of
+dereferencing a NULL GDate*, and this change protects against that. It
+still doesn't address the more basic problem of why on Win32 and with
+mysql and pgsql (but not SQLite3) the mortgage wizard is writing corrupt
+dates.
+</li>
+<li>[r22188][Bug #674862] Gnucash crashes after creating a new SX using the Mortgage Wizard and SQL Backend 
+
+
+Special-cases dbi_result_get_datetime returning -1 to work around a bug in MinGW's implementation of gmtime().
+</li>
+<li>[22157] Bug #674494: Fix version and method of downloading isocodes in win32 packaging
+
+Patch by Mark Jenkins</li>
+<li>[r22154][Bug 674283] With mysql crash after deleting accounts included
+into a budget
+
+Never assume a pointer is NULL unless you set it to NULL!</li>
+<li>[22097] [Win32 build] Update gwenhywfar/aqbanking versions.</li>
+<li>[22090] Revert r22083, "Adapt German account templates to updated tax rate."
+
+A pure renaming is not the correct solution, I've been told.</li>
+<li>[22083] Adapt German account templates to updated tax rate.</li>
+<li>[22067] Remove potentially abandoned file (that has a GPLv2-only license, too).
+
+The last contributors here, Josh Sled and Chris Lyttle, have put their
+code under "GPLv2 and GPLv3" license, see r22063, but I'm too lazy to
+look up the copyright holders on the file as a whole so I'd rather remove it.
+
+If someone wants to add a similar packaging file again, feel free to do
+so, but please don't use GPLv2-only code to do so.</li>
+<li>[22066] Bug #670727: Extend license of 3 files to be GPLv2 and GPLv3.
+
+This has been granted by the gnumeric copyright holders.
+See https://bugzilla.gnome.org/show_bug.cgi?id=670727#c7</li>
+<li>[22063] Bug #670727: Clarify license of a file to be GPLv2 and GPLv3
+
+gnc-dense-cal.h: License remark was forgotten in r19507, but the author
+Josh Sled agreed on GPLv2 and GPLv3 licensing in his gnucash-devel
+message on 2010-08-28.</li>
+<li>Fix skipping of alternate rows when there is a customer id mis-match and fix
+gtk_entry_set_text errors.
+Fix already exists in trunk.</li>
+<li>Revert "Fix skipping of alternate rows when there is a customer id mis-match."
+Doesn't fully work.  Will redo.
+This reverts commit 63c4689a36aa042564d7c29b40ee970533e3d81f.</li>
+<li>Fix skipping of alternate rows when there is a customer id mis-match.
+Fix already exists in trunk.</li>
+<li>Fix translatable strings. Patch provided by Aurimas Fišeras.</li>
+<li>Properly handle Windos end-of-line markers in determining file versions.</li>
+<li>[21905] Bug #668196: Fix installation of python bindings
+
+With this patch, files are correctly installed together.
+
+Patch by Vincent Untz.</li>
+<li>[22018] Bug 632931: Advanced Portfolio: total gains does not include income
+
+- new column layout as suggested on bugzilla. Total return is now an amount
+  (not a percentage), and includes income as well as capital gains. New
+  column "Rate of return" gives the percentage.
+- changed default value for "Ignore brokerage fees when calculating
+  returns", the default is now to NOT ignore the fees.
+
+Patch by Sebastien Alborini &lt;salborini@gmail.com&gt;</li>
+<li>[22012] Bug #669494 - Swedish account plan provided (BAS 2012)
+
+Additionally this commit adds some required changes to get the
+Swedish account plans to actually show up in GnuCash (both BAS and the
+earlier committed Swedish small business account plan)</li>
+<li>[22011] Fix a GtkWarning in the Account Hierarchy Druid which occurs
+if the Example Account file doesn't contain a long description.</li>
+<li>Fix translatable strings code for tax invoice report.</li>
+<li>Fix translatable strings code for some reports. Patch provided by Aurimas Fišeras.</li>
+<li>[21978] Move the features tests to its own source files.
+This allows for
+- other engine consumers to use the features test as well (think
+CuteCash, python bindings,...)
+- a central point for developers to check for feature definitions
+- a central point to manage all feature related code</li>
+<li>Windows: Update Gtk+ to 2.24.10</li>
+</ul>
+
+<p>In 2.4.11, the following languages had their translations updated:
+Lithuanian,  Traditional Chinese, Danish, Dutch, Czech, Bulgarian.</p>
+
+
+<h3>About the Program</h3>
+<p>GnuCash is a free, open source accounting program released under the GNU General Public License (GPL) and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash began in 1997, and its first stable release was in 1998.</p>
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+  <body>
+    <ul>
+<li>Tag 2.4.11 at the request of JRalls</li>
+<li>Bump version to 2.4.11 for release.</li>
+</ul>
+  </body>
+</html>
