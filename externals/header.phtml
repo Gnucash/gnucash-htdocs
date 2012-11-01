@@ -6,31 +6,6 @@ $titledonation = T_("Support the GnuCash project with a donation");
 $titleuservoice = T_("Request or vote enhancements for GnuCash");
 $titlegplus = T_("GnuCash on Google +");
 
-function makeQueryString($params, $prefix = '', $removeFinalAmp = true) {
-  $queryString = '';
-  if (is_array($params)) {
-    foreach ($params as $key => $value) {
-      $correctKey = $prefix;
-      if ('' === $prefix) {
-        $correctKey .= $key;
-      } else {
-        $correctKey .= "[" . $key . "]";
-      }
-      if (!is_array($value)) {
-        $queryString .= urlencode($correctKey) . "="
-                      . urlencode($value) . "&";
-      } else {
-        $queryString .= makeQueryString($value, $correctKey, false);
-      }
-    }
-  }
-  if ($removeFinalAmp === true) {
-    return substr($queryString, 0, strlen($queryString) - 1);
-  } else {
-    return $queryString;
-  }
-}
-
 # This function will create a link to the given page
 # reusing the get parameters that were specified
 # with the option to override the language
@@ -40,7 +15,7 @@ function make_lang_href ($page, $get_parms, $lang)
   {
     $get_parms[lang] = $lang;
   }
-  $url_get_query = makeQueryString ($get_parms);
+  $url_get_query = http_build_query ($get_parms);
   $lang_href = "$page"."?"."$url_get_query";
   return $lang_href;
 
