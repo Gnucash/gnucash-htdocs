@@ -94,13 +94,13 @@ if ($showrev == "trunk") {
 } else {
   # For the stable versions, we can simply check file availability because we're
   # on the same server
-  $checkpath="docs/v".$showversion."/".$showlang."/".$showdoc;
+  $checkpath="docs/v".$showrev."/".$showlang."/".$showdoc;
   if (!file_exists ($checkpath)) {
     $showlang    = "C";
     $req_lang_ok = false;
   }
   
-  $showurl=$basepath."/v".$showversion."/".$showlang."/".$showdoc;
+  $showurl=$basepath."/v".$showrev."/".$showlang."/".$showdoc;
 }
 
 ?>
