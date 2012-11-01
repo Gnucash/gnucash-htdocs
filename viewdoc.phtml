@@ -114,7 +114,7 @@ if ($showrev == "trunk") {
 <?php if (! $req_doc_ok ) { ?>
 <p style="color: red;"><?= T_("The document requested is not available. The tutorial and concepts guide will be displayed instead.")?></p>
 <?php } ?>
-<?php if (! $req_lang_ok ) {
+<?php if (! $req_rev_ok ) {
   $reqrev=$_GET["rev"]; ?>
 <p style="color: red;"><?= T_("The document requested is not available for the version $reqrev. Version $showrev will be displayed instead.")?></p>
 <?php } ?>
