@@ -1,0 +1,125 @@
+<?php                                                    
+include("emulate_globals_on.php");
+include("lang.php");
+$title = T_("Documentation");
+$online = T_("Browse documentation online");
+$pdf = T_("Download documentation as PDF");
+$epub = T_("Download documentation as epub");
+$mobi = T_("Download documentation as mobipocket");
+include("externals/header.phtml");
+include("externals/menu.phtml");
+
+# Some base parameters used later on
+$basepath = "http://www.gnucash.org/docs";
+$helpfile = "gnucash-help/help.html";
+$tcfile   = "gnucash-guide/index.html";
+$current_stable = "v2.4";
+
+# Determine which documentation to show based on 3 parameters:
+# - language
+# - help or guide (doc)
+# - doc version (rev)
+
+# Show current stable helpfile, in overall set language by default
+$showfile = $helpfile;
+$req_doc_ok = true;
+$showrev  = $current_stable;
+$req_rev_ok = true;
+
+# Requested language is set in $locale by included lang.php
+$showlang = $locale;
+$req_lang_ok = true;
+
+# Parse requested document
+if (array_key_exists('doc', $_GET)) {
+  switch ($_GET["doc"]) {
+    case "help":
+        $showfile = $helpfile;
+        break;
+    case "guide":
+        $showfile = $tcfile;
+        break;
+    default:  /* unknown document requested, will present help by default */
+        $req_doc_ok = false;
+        break;
+  }
+}
+
+# Parse requested version
+if (array_key_exists('rev', $_GET)) {
+  switch ($_GET["rev"]) {
+    case "1.8":
+        $showrev = "1.8";
+        break;
+    case "2.0":
+        $showrev = "2.0";
+        break;
+    case "2.2":
+        $showrev = "2.2";
+        break;
+    case "2.4":
+        $showrev = "2.4";
+        break;
+    case "current":
+        $showrev = $current_stable;
+        break;
+    case "trunk":
+        $showrev = "trunk";
+        break;
+    case "nightly":
+        $showrev = "trunk";
+        break;
+    default:  /* unknown version requested, will current stable by default */
+	$req_rev_ok = false;
+        break;
+  }
+}
+
+# Now check if the requested combination of doc, revision and language actually exists
+# If not, try the default C locale instead.
+
+# First evaluate the nightly builds, they are located on a different server
+# To avoid network traffic, the available languages are hard-coded here and should be
+# updated if list of languages in which the documentation is available changes
+if ($showrev == "trunk") {
+  $basepath = "http://code.gnucash.org/docs";
+  $trunk_langs = array ( $help_file => array( "C", "de_DE", "it_IT"),
+                         $tc_file   => array( "C", "de_DE", "it_IT", "ja_JP"));
+  if (!in_array ($showlang, $trunk_langs[$showdoc])) {
+    $showlang = "C";
+    $req_lang_ok = false;
+  }
+  
+  $showurl=$basepath."/".$showlang."/".$showfile;
+} else {
+  # For the stable versions, we can simply check file availability because we're
+  # on the same server
+  $checkpath="docs/".$showversion."/".$showlang."/".$showfile;
+  if (!file_exists ($checkpath) {
+    $showlang = "C";
+    $req_lang_ok = false;
+  }
+  
+  $showurl=$basepath."/v".$showversion."/".$showlang."/".$showfile;
+}
+
+?>
+
+<div id="content">
+
+<?php if (! $req_doc_ok ) { ?>
+<p style="color: red;"><?= T_("The document requested is not available. The tutorial and concepts guide will be displayed instead.")?></p>
+<?php } ?>
+<?php if (! $req_lang_ok ) { ?>
+<p style="color: red;"><?= T_("The document requested is not available for the version \"$_GET[rev]\". Version $showrev will be displayed instead.")?></p>
+<?php } ?>
+<?php if (! $req_lang_ok ) { ?>
+<p style="color: red;"><?= T_("The document requested is not available in the requested language. The English version will be displayed instead.")?></p>
+<?php } ?>
+
+<iframe src="<?php echo $showurl; ?>">
+<?php echo T_("It seems your browser doesn't support iframes. To view the requested page in a separate windows, please <a href=\"" . $showurl . "\">click here</a>."); ?>
+</iframe>
+
+</div>
+<?php include("externals/footer.phtml"); ?>
