@@ -10,9 +10,9 @@ include("externals/header.phtml");
 include("externals/menu.phtml");
 
 # Some base parameters used later on
-$basepath = "http://www.gnucash.org/docs";
-$helpdoc  = "gnucash-help/help.html";
-$tcdoc    = "gnucash-guide/index.html";
+$basepath       = "http://www.gnucash.org/docs";
+$helpdoc        = "gnucash-help/help.html";
+$tcdoc          = "gnucash-guide/index.html";
 $current_stable = "2.4";
 
 # Determine which documentation to show based on 3 parameters:
@@ -21,7 +21,7 @@ $current_stable = "2.4";
 # - doc version (rev)
 
 # Show current stable helpdoc, in overall set language by default
-$showdoc    = $tcdoc;
+$showdoc     = $tcdoc;
 $req_doc_ok  = true;
 $showrev     = $current_stable;
 $req_rev_ok  = true;
@@ -86,7 +86,7 @@ if ($showrev == "trunk") {
   $trunk_langs = array ( $helpdoc => array( "C", "de_DE", "it_IT"),
                          $tcdoc   => array( "C", "de_DE", "it_IT", "ja_JP"));
   if (!in_array ($showlang, $trunk_langs[$showdoc])) {
-    $showlang = "C";
+    $showlang    = "C";
     $req_lang_ok = false;
   }
   
@@ -94,9 +94,9 @@ if ($showrev == "trunk") {
 } else {
   # For the stable versions, we can simply check file availability because we're
   # on the same server
-  $checkpath="docs/".$showversion."/".$showlang."/".$showdoc;
+  $checkpath="docs/v".$showversion."/".$showlang."/".$showdoc;
   if (!file_exists ($checkpath)) {
-    $showlang = "C";
+    $showlang    = "C";
     $req_lang_ok = false;
   }
   
@@ -110,8 +110,9 @@ if ($showrev == "trunk") {
 <?php if (! $req_doc_ok ) { ?>
 <p style="color: red;"><?= T_("The document requested is not available. The tutorial and concepts guide will be displayed instead.")?></p>
 <?php } ?>
-<?php if (! $req_lang_ok ) { ?>
-<p style="color: red;"><?= T_("The document requested is not available for the version \"$_GET[rev]\". Version $showrev will be displayed instead.")?></p>
+<?php if (! $req_lang_ok ) {
+  $reqrev=$_GET["rev"]; ?>
+<p style="color: red;"><?= T_("The document requested is not available for the version $reqrev. Version $showrev will be displayed instead.")?></p>
 <?php } ?>
 <?php if (! $req_lang_ok ) { ?>
 <p style="color: red;"><?= T_("The document requested is not available in the requested language. The English version will be displayed instead.")?></p>
