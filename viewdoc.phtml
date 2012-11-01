@@ -28,9 +28,9 @@ $req_rev_ok  = true;
 
 # Requested language is set in $locale by included lang.php
 if ($locale == "en_US") {
-  $showlang    = "C";
+  $showlang  = "C";
 } else {
-  $showlang    = $locale;
+  $showlang  = $locale;
 }
 $req_lang_ok = true;
 
@@ -74,7 +74,7 @@ if (isset ('rev', $_GET)) {
         $showrev = "trunk";
         break;
     default:  /* unknown version requested, will current stable by default */
-	$req_rev_ok = false;
+        $req_rev_ok = false;
         break;
   }
 }
