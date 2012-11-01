@@ -11,33 +11,33 @@ include("externals/menu.phtml");
 
 # Some base parameters used later on
 $basepath = "http://www.gnucash.org/docs";
-$helpfile = "gnucash-help/help.html";
-$tcfile   = "gnucash-guide/index.html";
-$current_stable = "v2.4";
+$helpdoc  = "gnucash-help/help.html";
+$tcdoc    = "gnucash-guide/index.html";
+$current_stable = "2.4";
 
 # Determine which documentation to show based on 3 parameters:
 # - language
 # - help or guide (doc)
 # - doc version (rev)
 
-# Show current stable helpfile, in overall set language by default
-$showfile = $helpfile;
-$req_doc_ok = true;
-$showrev  = $current_stable;
-$req_rev_ok = true;
+# Show current stable helpdoc, in overall set language by default
+$showdoc    = $tcdoc;
+$req_doc_ok  = true;
+$showrev     = $current_stable;
+$req_rev_ok  = true;
 
 # Requested language is set in $locale by included lang.php
-$showlang = $locale;
+$showlang    = $locale;
 $req_lang_ok = true;
 
 # Parse requested document
 if (array_key_exists('doc', $_GET)) {
   switch ($_GET["doc"]) {
     case "help":
-        $showfile = $helpfile;
+        $showdoc = $helpdoc;
         break;
     case "guide":
-        $showfile = $tcfile;
+        $showdoc = $tcdoc;
         break;
     default:  /* unknown document requested, will present help by default */
         $req_doc_ok = false;
@@ -83,24 +83,24 @@ if (array_key_exists('rev', $_GET)) {
 # updated if list of languages in which the documentation is available changes
 if ($showrev == "trunk") {
   $basepath = "http://code.gnucash.org/docs";
-  $trunk_langs = array ( $help_file => array( "C", "de_DE", "it_IT"),
-                         $tc_file   => array( "C", "de_DE", "it_IT", "ja_JP"));
+  $trunk_langs = array ( $helpdoc => array( "C", "de_DE", "it_IT"),
+                         $tcdoc   => array( "C", "de_DE", "it_IT", "ja_JP"));
   if (!in_array ($showlang, $trunk_langs[$showdoc])) {
     $showlang = "C";
     $req_lang_ok = false;
   }
   
-  $showurl=$basepath."/".$showlang."/".$showfile;
+  $showurl=$basepath."/".$showlang."/".$showdoc;
 } else {
   # For the stable versions, we can simply check file availability because we're
   # on the same server
-  $checkpath="docs/".$showversion."/".$showlang."/".$showfile;
-  if (!file_exists ($checkpath) {
+  $checkpath="docs/".$showversion."/".$showlang."/".$showdoc;
+  if (!file_exists ($checkpath)) {
     $showlang = "C";
     $req_lang_ok = false;
   }
   
-  $showurl=$basepath."/v".$showversion."/".$showlang."/".$showfile;
+  $showurl=$basepath."/v".$showversion."/".$showlang."/".$showdoc;
 }
 
 ?>
