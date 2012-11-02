@@ -35,7 +35,7 @@ if ($locale == "en_US") {
 $req_lang_ok = true;
 
 # Parse requested document
-if (isset ('doc', $_GET)) {
+if (isset ($_GET["doc"])) {
   switch ($_GET["doc"]) {
     case "help":
         $showdoc = $helpdoc;
@@ -50,7 +50,7 @@ if (isset ('doc', $_GET)) {
 }
 
 # Parse requested version
-if (isset ('rev', $_GET)) {
+if (isset ($_GET["rev"])) {
   switch ($_GET["rev"]) {
     case "1.8":
         $showrev = "1.8";
