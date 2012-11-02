@@ -122,7 +122,7 @@ if ($showrev == "trunk") {
 <p style="color: red;"><?= T_("The document requested is not available in the requested language. The English version will be displayed instead.")?></p>
 <?php } ?>
 
-<iframe src="<?php echo $showurl; ?>">
+<iframe src="<?php echo $showurl; ?>" style="border-width: 0px; width: 100%; min-width: 700px; height: 80em;">
 <?php echo T_("It seems your browser doesn't support iframes. To view the requested page in a separate windows, please <a href=\"" . $showurl . "\">click here</a>."); ?>
 </iframe>
 
