@@ -1,0 +1,61 @@
+<b>Announcement:</b> GnuCash 2.4.10 Release
+2012-02-06
+
+<h2>GnuCash 2.4.10 released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.4.10, the ninth bug fix release in a series of stable of the GnuCash Free Accounting Software. With this release series, GnuCash can use an SQL database using SQLite3, MySQL or PostgreSQL. It runs on GNU/Linux, *BSD, Solaris, Microsoft Windows and Mac OSX.</p>
+
+<h3>Getting GnuCash for Windows (Win32 binary)</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.10-setup.exe">Gnucash 2.4.10 Win32 setup executable</a> can be downloaded from Sourceforge. It will install everything needed to run GnuCash.</p>
+
+<h3>Mac OSX binary</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.4.10.dmg">Gnucash 2.4.10 MacOSX package</a> can be downloaded from Sourceforge as well.</p>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.4.10 for yourself, the source code can be downloaded from:</p>
+<ul>
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.10.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.10.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.4.10/">all files</a>.</li>
+<li>You can also checkout the sources directly from the subversion repository as <a href="http://wiki.gnucash.org/wiki/Subversion">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need Gnome 2, guile, slib. In addition you will need swig if compiling from subversion.</p>
+
+<h3>Changes</h3>
+
+<p>Between 2.4.9 and 2.4.10, the following bugfixes were included:</p>
+<ul>
+
+<li>Win32 installer: always remove previously installed versions.
+This avoids problems when libraries or reports have been moved around in newer versions.</li>
+<li>[Bug #667900] no clipboard editing in Release 2.4.9
+Update Gtk+ to 2.24.8 for Windows, to pick up da756d51 (win32: fix gdk clipboard).</li>
+<li>Turn on AQBAnking 5 in 2.4 branch.</li>
+
+<li>Win32: Restore default gtk theme to MS-Windows
+Our problems with this theme have been resolved in gtk+ 2.24.8</li>
+<li>[Bug 666849] Non-privileged user first run trouble
+The problem is that the first run was creating the slib catalog. This introduces a script
+to do that as part of installation, guaranteed to be run as an admin user.</li>
+<li>Update xml file backend to recognize a newer version file on load attempt, not load, and alert user of need to upgrade Gnucash.
+</li>
+<li>Reports: Make report Budget Flow 100% translatable</li>
+<li>Update txf.scm in stable branch to reflect changes to US Income Tax Forms and Schedules for 2011.</li>
+<li>[r21867]Reverse the test for HAVE_DBI
+
+ac_cv_header_dbi_dbi_h is set only if want_dbi is true, so testing for
+!= no succeeds if dbi isn't enabled -- which is not what we want.</li>
+<li>[21860]Bug #667417 - Fix build with glib 2.31.x
+Patch by Vincent Untz</li>
+<li>[21840] Add dependency on qofbook.h for swig generated file.
+
+Otherwise the old generated file complains about a missing declaration
+from r21832.</li>
+
+</ul>
+
+<p>In 2.4.10, the following languages had their translations updated:
+Lithuanian, Finnish, German.</p>
+
+
+<h3>About the Program</h3>
+<p>GnuCash is a free, open source accounting program released under the GNU General Public License (GPL) and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash began in 1997, and its first stable release was in 1998.</p>

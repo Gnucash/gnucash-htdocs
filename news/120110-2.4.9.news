@@ -1,0 +1,98 @@
+<b>Announcement:</b> GnuCash 2.4.9 Release
+2012-01-12
+
+<h2>GnuCash 2.4.9 released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.4.9, the eighth bug fix release in a series of stable of the GnuCash Free Accounting Software. With this release series, GnuCash can use an SQL database using SQLite3, MySQL or PostgreSQL. It runs on GNU/Linux, *BSD, Solaris, Microsoft Windows and Mac OSX.</p>
+
+<h3>Getting GnuCash for Windows (Win32 binary)</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.9-setup.exe">Gnucash 2.4.9 Win32 setup executable</a> can be downloaded from Sourceforge. It will install everything needed to run GnuCash.</p>
+
+<h3>Mac OSX binary</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.4.9.dmg">Gnucash 2.4.9 MacOSX package</a> can be downloaded from Sourceforge as well.</p>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.4.9 for yourself, the source code can be downloaded from:</p>
+<ul>
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.9.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.9.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.4.9/">all files</a>.</li>
+<li>You can also checkout the sources directly from the subversion repository as <a href="http://wiki.gnucash.org/wiki/Subversion">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need Gnome 2, guile, slib. In addition you will need swig if compiling from subversion.</p>
+
+<h3>Changes</h3>
+
+<p>The headline change is for Microsoft Windows(TM) users: The underlying versions of Gtk+, Guile, and AQBanking (along with some dependencies) have been updated so that a separate GUI library (Qt) is no longer needed for AQBanking and those users can finally have the features of AQBanking5 which have been available to Linux and Mac users since 2.4.0.</p>
+
+<p>Between 2.4.8 and 2.4.9, the following bugfixes were included:</p>
+<ul>
+<li>Bug #666329 Empty database after a little while
+
+Separate the two uses of QofBook::dirty -- indicating that the book object
+itself has been edited and indicating that some object in the dataset has
+been changed -- into two separate variables with separate getters &amp; setters.
+
+Use gnc_dbi_safe_sync_all (which doesn't lose data if the save partion
+errors out) for all be-&gt;sync.
+
+Reverse qof_book_mark_saved and qof_instance_mark_clean so that the book
+is dirty for qof_book_mark_saved when it's the instance.
+
+Original commit by jralls</li>
+<li>Bug #667105: Fix grammatical error in some accounts file.</li>
+<li>Bug #667276 : Fiix Korean accounts files. Patch submitted by Eulgyoon Lim.</li>
+<li>Bug #457401 - Print invoice should not be disabled for unposted invoices.
+Enable printing for unposted invoices.</li>
+<li>Add a "features" table to the KVP frame, and pop up an error message
+if we find a feature we don't know about.  Currently there are no
+known features, so essentially we will error out if we see anything.
+</li>
+
+<li>Bug #665998 Replace no-op function force_account_dirty with qof_book_mark_dirty.</li>
+<li>Bug #658247 - First time setup should prompt to save file.
+Fix supplied by Bob referenced in bug #665996.</li>
+<li>Bug #642276 Bayesian association with Sqlite
+Wraps the kvp_frame_set_slot_path with xaccAccountBeginEdit()/xaccAccountCommitEdit(). Also clean up some other cases where KVP was set without committing an edit.</li>
+<li>Fix table number alignment. </li>
+<li>Fix number alignment in table.</li>
+<li>Bug #649362 - Transfer Funds Window Exchange Rate and Decimal Points
+Rounding in Bill/Invoices
+This patch fixes the rounding by showing the actual value to convert. As
+a result the exchange rate direction had to be swapped as well to avoid
+lots of confusion.</li>
+<li>Abort posting if not all required exchange rates are given.
+Note that any exchange rate successfully entered before the posting is
+aborted are still saved with the invoice.</li>
+<li>Bug #665202 - Improve python-finding code. Patch by Pacho Ramos</li>
+<li>Bug #661383 - GnuCash segfault on Linux (Fedora 16 beta) because of
+shared library load / unload weirdness</li>
+<li>Fix right align for number cells in table.</li>
+<li>Added user settable line width and data point markers to net worth
+line chart.</li>
+<li>Commented line width.  This value really should be passed from .scm file</li>
+<li>Fix setting of line color for line charts.</li>
+<li>Bug #664862 - New report showing net assets over time
+Added new line chart report for assets, net-linechart.scm.
+Distantly related to Bug #570011</li>
+<li> Add missing Root Account part. Original commit by mikee.</li>
+<li>Bug #664764 - Account setup for Swedish small business Added Swedish chart of accounts for small businesses.
+Original commit by mikee.</li>
+<li>Bug #663368  When importing CSV files, the word 'Deposit' appears in Num/Action column</li>
+<li>Bug #630804 - make check failure in business module</li>
+<li>Don't install a script that is only used for building and testing.
+This fixes Secunia Advisory SA42048</li>
+<li>Bug #663638 - Posting Invoices asks for curency conversion for blank
+lines</li>
+<li>Bug #639082 - General Journal report reports an error</li>
+<li>Bug #662477 - Desktop file not compliant with FreeDesktop spec and GNOME
+goal
+Patch by Sébastien Villemot</li>
+
+</ul>
+
+<p>In 2.4.9, the following languages had their translations updated:
+French, German, Lithuanian .</p>
+
+
+<h3>About the Program</h3>
+<p>GnuCash is a free, open source accounting program released under the GNU General Public License (GPL) and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash began in 1997, and its first stable release was in 1998.</p>

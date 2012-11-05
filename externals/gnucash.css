@@ -77,7 +77,7 @@ h1.featuresection {
 }
 
 h2.featuretitle {
-   margin:2px;
+   margin:2px 40px 2px 2px;
    text-align: left;
    color: black;
 }
@@ -394,6 +394,7 @@ div.dialog {
    padding-left: 58px;
    border: 1px solid #7F7FAA;
    margin: 1em 2em;
+   min-height:55px;
 }
 
 div.warning {
@@ -471,7 +472,7 @@ p.adstext
    -moz-border-radius:15px;
 }
 
-#develdoc a:hover,a:active
+#develdoc a:hover
 {
    background-color:white;
 }
@@ -499,7 +500,7 @@ p.adstext
    -moz-border-radius:15px;
 }
 
-#stabledoc a:hover,a:active
+#stabledoc a:hover
 {
    background-color:white;
 }
@@ -622,6 +623,22 @@ h2.download-title {
 #navlist li, #navlist a{
    height:42px;
    display:block;
+}
+
+#fb-icon{
+   left:-100px;
+   width:42px;
+}
+
+#fb-icon{
+   background:url('../images/icons/gc-fb.png') 0 0;
+   border-radius:12px;
+}
+
+#fb-icon a:hover{
+   background: url('../images/icons/gc-fb.png') 0 -42px white;
+   border-radius: 16px;
+   box-shadow: 0 0 4px silver;
 }
 
 #gplus-icon{

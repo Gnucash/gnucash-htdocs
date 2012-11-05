@@ -11,7 +11,7 @@ include("$top_dir/externals/menu.phtml");
 
 <div>
 <p>
-<?php echo T_("<span class=\"gnucash\">GnuCash</span> is a powerful accounting software. This page will try to explain in detail which are the numerous features that <span class=\"gnucash\">GnuCash</span> has to offer to it's users.");?>
+<?php echo T_("<span class=\"gnucash\">GnuCash</span> is powerful accounting software. Below are details of some of the numerous features that <span class=\"gnucash\">GnuCash</span> has to offer to its users.");?>
 </p>
 <ul>
 <li><a href="#main-feat"><?php echo T_("Main features");?></a></li>
@@ -48,12 +48,12 @@ include("$top_dir/externals/menu.phtml");
 <?php echo T_("The register supports common checking and credit-card transactions, as well as income, stock and currency transactions. The following features are also provided:");?>
 </p>
 <ul>
+<li><?php echo T_("The ability to enter <b>split transactions</b>");?></li>
+<li><?php echo T_("The ability to mark a transaction as <b>cleared</b> or <b>reconciled</b>");?></li>
 <li><?php echo T_("<b>Autofill</b> of entered transactions");?></li>
-<li><?php echo T_("Possibility to mark a transaction as <b>cleared</b>");?></li>
-<li><?php echo T_("Possibility to enter <b>split transactions</b>");?></li>
-<li><?php echo T_("<b>Multiple accounts</b> can be displayed in one register window at the same time");?></li>
-<li><?php echo T_("A <b>summarybar</b> that display all the relevant account's balance information");?></li>
-<li><?php echo T_("Many options to <b>customize</b> the appearence and the display style");?></li>
+<li><?php echo T_("The ability to display <b>multiple accounts</b> in a single register window");?></li>
+<li><?php echo T_("A <b>summary bar</b> that displays all of the relevant account's balance information");?></li>
+<li><?php echo T_("Many options to <b>customize</b> the appearance and the display style");?></li>
 </ul>
 </div>
 
@@ -66,7 +66,7 @@ include("$top_dir/externals/menu.phtml");
 <?php echo T_("You can create recurring transactions with a high level of customization of amounts and timeline. You can also set an automatic reminder when a transaction is due.");?>
 </p>
 <p class="justify">
-<?php echo T_("An assistant that runs when <span class=\"gnucash\">GnuCash</span> is started, allows you to postpone a scheduled transaction without canceling it or to enter it before the due date.");?>
+<?php echo T_("An assistant that runs when <span class=\"gnucash\">GnuCash</span> is started allows scheduled transactions to be postponed without canceling or entering them before the due date.");?>
 </p>
 </div>
 
@@ -91,7 +91,7 @@ include("$top_dir/externals/menu.phtml");
 <li><?php echo T_("and many others.");?></li>
 </ul>
 <p class="justify">
-<?php echo T_("Graphs and reports can be highly and easily customized in appearence and contents, in order to fullfill every user's need.");?>
+<?php echo T_("Graphs and reports can be highly and easily customized in appearance and contents, in order to fullfill every user's need.");?>
 </p>
 </div>
 
@@ -102,7 +102,7 @@ include("$top_dir/externals/menu.phtml");
 <div class="center">
 <img class="featureimage" src="<?=$top_dir?>/images/features/feature_reconcile.png" alt="[Reconcile]" />
 </div>
-<p class="justify"><?php echo T_("The <b>reconciliation</b> of an account is an operation that allows the user to check the entered transactions belonging to a <span class=\"gnucash\">GnuCash</span> account against a bank statement. This operation is very useful to spot untracked transactions or data entry errors.");?></p>
+<p class="justify"><?php echo T_("<b>Account reconciliation</b> allows the user to compare the transactions entered in an account against a bank statement. This operation is very useful to spot untracked transactions or data entry errors and ensure that your books match the bank's.");?></p>
 <p class="justify"><?php echo T_("The <span class=\"gnucash\">GnuCash</span> reconcile tool with running reconciled and cleared balances makes reconciling against bank statements an easy task.");?></p>
 </div>
 
@@ -163,7 +163,7 @@ include("$top_dir/externals/menu.phtml");
 <div class="featureborder">
 <h2 class="featuretitle"><?php echo T_("Database support");?></h2>
 </div>
-<p class="justify"><?php echo T_("Along the usual xml format, starting from version 2.4, your <span class=\"gnucash\">GnuCash</span> financial data can be stored in a <b>SQL database</b> under the application of your selection (SQLite3, MySQL or PostgreSQL).");?></p>
+<p class="justify"><?php echo T_("<span class=\"gnucash\">GnuCash</span> by default stores data in an <b>xml</b> format. Starting with version 2.4, <span class=\"gnucash\">GnuCash</span> financial data can be stored in a <b>SQL database</b> using <b>SQLite3</b>, <b>MySQL</b> or <b>PostgreSQL</b>.");?></p>
 </div>
 
 <div class="featurecontainer">
@@ -197,7 +197,7 @@ include("$top_dir/externals/menu.phtml");
 <h2 class="featuretitle"><?php echo T_("Multiplatform");?></h2>
 </div>
 <p class="justify">
-<?php echo T_("<span class=\"gnucash\">GnuCash</span> can be executed on different operating systems. The most commonly used OS's like <b>Windows</b>, <b>MacOSX</b> and <b>Linux</b>, are supported along with many others.");?></p>
+<?php echo T_("<span class=\"gnucash\">GnuCash</span> runs on many different operating systems including <b>Windows</b>, <b>MacOSX</b> and <b>Linux</b>.");?></p>
 </div>
 
 <div class="featurecontainer">

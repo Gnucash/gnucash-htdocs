@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs r18581\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-15 21:10+0100\n"
+"POT-Creation-Date: 2012-11-05 14:55+0100\n"
 "PO-Revision-Date: 2010-11-26 17:46+0900\n"
 "Last-Translator: Yasuaki Taniguchi <yasuakit@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: download.phtml:5 docs.phtml:79 docs.phtml:139
+#: download.phtml:5 docs.phtml:40 docs.phtml:149
 msgid "Download"
 msgstr "ダウンロード"
 
@@ -175,969 +175,6 @@ msgstr "すべての GnuCash %s ダウンロードファイルを見る (開発�
 #: download.phtml:63
 msgid "View all GnuCash downloads"
 msgstr "すべての GnuCash ダウンロードファイルを見る"
-
-#: index.phtml:5 oldnews.phtml:4 externals/header.phtml:94
-msgid "Free Accounting Software"
-msgstr "フリーの財務ソフトウェア"
-
-#: index.phtml:12
-msgid "Welcome to GnuCash.org"
-msgstr "GnuCash.orgにようこそ"
-
-#: index.phtml:18
-#, php-format
-msgid "Download GnuCash %s"
-msgstr "GnuCash %s のダウンロード"
-
-#: index.phtml:21
-msgid "Source"
-msgstr "ソース"
-
-#: index.phtml:21
-msgid "Via distribution"
-msgstr "ディストリビューションでの入手"
-
-#: index.phtml:24
-msgid "More downloads (Source, Development,...)"
-msgstr "他のダウンロード (ソース、開発版、…)"
-
-#: index.phtml:33
-#, fuzzy
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> is personal and small-business "
-"financial-accounting software, freely licensed under the <a href=\"http://"
-"www.gnu.org/\">GNU</a> GPL and available for GNU/Linux, BSD, Solaris, Mac OS "
-"X and Microsoft Windows."
-msgstr ""
-"GnuCash は個人または小規模ビジネス向けの財務ソフトウェアです。<a href="
-"\"http://www.gnu.org/\">GNU</a> GPL ライセンスに基づきフリーで提供されていま"
-"す。GNU/Linux、 BSD、 Solaris、 Mac OS X および Microsoft Windows で利用でき"
-"ます。"
-
-#: index.phtml:35
-#, fuzzy
-msgid ""
-"Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash"
-"\">GnuCash</span> allows you to track bank accounts, stocks, income and "
-"expenses.  As quick and intuitive to use as a checkbook register, it is "
-"based on professional accounting principles to ensure balanced books and "
-"accurate reports. "
-msgstr ""
-"簡単に使えるように設計されていますが、強力で高い柔軟性があります。GnuCash に"
-"よって銀行口座、株式、収益および費用を追跡することができます。小切手帳のよう"
-"に素早く、直感的に利用できる一方、プロの会計原理に基づいているため確実に帳簿"
-"の釣り合を保ち、正確な帳票を作成できます。"
-
-#: index.phtml:39
-msgid "Feature Highlights"
-msgstr "主な特徴"
-
-#: index.phtml:44
-msgid "Double-Entry Accounting"
-msgstr "複式記帳法会計処理"
-
-#: index.phtml:45
-msgid "Stock/Bond/Mutual Fund Accounts"
-msgstr "株式/債券/投資信託勘定科目"
-
-#: index.phtml:46
-msgid "Small-Business Accounting"
-msgstr "小規模ビジネスの会計処理"
-
-#: index.phtml:47 features.phtml:75
-msgid "Reports, Graphs"
-msgstr "帳票、グラフ"
-
-#: index.phtml:48
-msgid "QIF/OFX/HBCI Import, Transaction Matching"
-msgstr "QIF/OFX/HBCI 形式のインポート、取引を一致させる処理"
-
-#: index.phtml:49 features.phtml:62
-msgid "Scheduled Transactions"
-msgstr "予定取引"
-
-#: index.phtml:50
-#, fuzzy
-msgid "Financial Calculations"
-msgstr "財務計算"
-
-#: index.phtml:52
-msgid "<b>Discover more...</b>"
-msgstr ""
-
-#: index.phtml:58
-msgid "News"
-msgstr "ニュース"
-
-#: index.phtml:73
-#, fuzzy
-msgid "Older Announcements ..."
-msgstr "過去のアナウンス"
-
-#: index.phtml:76
-msgid "Click <a href=\"oldnews.phtml\">here</a> for older announcements..."
-msgstr ""
-
-#: develdocs.phtml:3 externals/menu.phtml:53
-#, fuzzy
-msgid "Writing Documentation"
-msgstr "文書"
-
-#: develdocs.phtml:11
-#, fuzzy
-msgid "Writing GnuCash Documentation"
-msgstr "過去の GnuCash 文書"
-
-#: develdocs.phtml:13
-msgid ""
-"If you are interested in improving the <span class=\"gnucash\">GnuCash</"
-"span> documentation, you have come to the right place. This page will "
-"provide you with the necessary information to get started."
-msgstr ""
-
-#: develdocs.phtml:16
-msgid ""
-"The <span class=\"gnucash\">GnuCash</span> documentation can be viewed and "
-"downloaded from the <a href=\"docs.phtml\">Documentation page</a>."
-msgstr ""
-
-#: develdocs.phtml:21
-msgid "Introduction"
-msgstr "導入"
-
-#: develdocs.phtml:23
-#, fuzzy
-msgid ""
-"The <span class=\"gnucash\">GnuCash</span> documentation is stored in "
-"<b>xml</b> files. More precisely, it uses the <b>GNOME2 XML docbook system</"
-"b>. This is a relatively flexible system that takes xml files as input and "
-"can generate documentation in several different output formats (html, "
-"pdf,...)."
-msgstr ""
-"GnuCash の文書は xml ファイルとして保存されています。もっと正確に言うと、"
-"GNOME2 XML docbook システムを使用しています。これは比較的柔軟なシステムで "
-"xml ファイルを入力としていくつかの異なる形式 (html、pdf等) で出力することがで"
-"きます。"
-
-#: develdocs.phtml:24
-#, fuzzy
-msgid ""
-"If you wish to review or write <span class=\"gnucash\">GnuCash</span> "
-"documentation, you will need to know xml. Some basic knowledge of the "
-"docbook system may be useful as well"
-msgstr ""
-"GnuCash の文書を査読または記述するときは xml を知っている必要があります。加え"
-"て、いくつかの docbook システムに関する基本的な知識も役に立ちます。"
-
-#: develdocs.phtml:25
-msgid ""
-"The following links are for further sites that can help with the "
-"documentation and review process."
-msgstr "次のリンクは文書化および査読過程で非常に役に立つサイトです。"
-
-#: develdocs.phtml:30
-#, fuzzy
-msgid ""
-"While this <span class=\"gnucash\">GnuCash</span> wiki page is really about "
-"translating the documentation, it holds some useful information on working "
-"with docbook files."
-msgstr ""
-"この GnuCash wiki ページはこれから翻訳が必要ですが、docbook ファイルを使用す"
-"るために役に立つ情報が含まれています。"
-
-#: develdocs.phtml:31
-msgid ""
-"A detailed guide on how to work with documentation (update and maintenance)."
-msgstr ""
-
-#: develdocs.phtml:33
-#, fuzzy
-msgid "We suggest also subscribing to"
-msgstr "次のメーリングリストを購読することを提案します"
-
-#: develdocs.phtml:38
-msgid "Gnome Documentation guidelines"
-msgstr "Gnome 文書ガイドライン"
-
-#: develdocs.phtml:40
-msgid ""
-"As stated earlier, the new docs are based on the GNOME2 XML docbook system. "
-"Everyone wishing to help please follow these guides where possible when "
-"reviewing and/or writing docs."
-msgstr ""
-"前に述べたように、新しい文書は GNOME2 XML docbook システムに基づいています。"
-"貢献をしようと考えている方は、査読や文書作成を行うときにこれらのガイドに従う"
-"ようにしてください。"
-
-#: develdocs.phtml:49
-msgid "Where to get the documentation source"
-msgstr "文書ソースの入手"
-
-#: develdocs.phtml:51
-#, fuzzy
-msgid ""
-"You will need a recent copy of the documentation source. For this you can "
-"check out the documentation module from the <span class=\"gnucash\">GnuCash</"
-"span> svn. Reviewers could also start from the <a href='http://sourceforge."
-"net/projects/gnucash/files/gnucash-docs/'>current docs tarball</a>."
-msgstr ""
-"文書ソースの最新版を入手する必要がある場合は GnuCash svn から文書モジュールを"
-"チェックアウトしてください。査読者は <a href='http://sourceforge.net/"
-"projects/gnucash/files/gnucash-docs/'>最新の文書 tar アーカイブ</a> から開始"
-"しても構いません。"
-
-#: develdocs.phtml:52
-#, fuzzy
-msgid ""
-"For those not familiar with svn, the <span class=\"gnucash\">GnuCash</span> "
-"wiki has a <a href='http://wiki.gnucash.org/wiki/Subversion'>description</a> "
-"tailored to the <span class=\"gnucash\">GnuCash</span> code. To get the "
-"documentation source instead of the program source, replace 'gnucash' with "
-"'gnucash-docs' in the mentioned svn commands, like this:"
-msgstr ""
-"もし svn にあまりなじみがないなら、 GnuCash wiki に <a href='http://wiki."
-"gnucash.org/wiki/Subversion'>説明</a>があります。 文書を得るためにはチェック"
-"アウト対象を gnucash から gnucash-docs に単に変更してください。実際には以下の"
-"ようになります。"
-
-#: develdocs.phtml:55
-#, fuzzy
-msgid ""
-"There are two major <span class=\"gnucash\">GnuCash</span> documentation "
-"packages to help users: the <b>Help Manual</b> and the <b>Tutorials and "
-"Concepts Guide</b>. With the above command, the source code of both will be "
-"downloaded."
-msgstr ""
-"GnuCash の使用方法に関して分からないことがあるならば、あなたは今正しい場所に"
-"います。最初に読むべき文書はヘルプマニュアルおよびコンセプトガイドです。あな"
-"たの疑問に対するほとんどの解決方法はこれらの文書に書いてあります。"
-
-#: develdocs.phtml:61
-msgid "Writers"
-msgstr "著者"
-
-#: develdocs.phtml:63
-msgid ""
-"Get a copy of the documentation source as described above and start making "
-"changes. When you are satisfied with your changes you can create a patch by "
-"running the following command in the base directory of the documentation "
-"(usually gnucash-docs, unless you renamed it):"
-msgstr ""
-"上記の方法で文書のソースを入手したら、変更を開始してください。変更した文書が"
-"満足のいく物になったら文書の最上位ディレクトリ (通常は変更しない限り gnucash-"
-"docs になります) で以下のコマンドを入力してパッチを作成してください。"
-
-#: develdocs.phtml:65
-#, fuzzy
-msgid ""
-"Next attach your patch to a bug report against the documentation component "
-"for the <span class=\"gnucash\">GnuCash</span> project in <a href='http://"
-"bugzilla.gnome.org/'>Gnome's bugzilla database</a> and send an email to <a "
-"href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> mailing list "
-"to inform other developers on your work. See also <a href='http://wiki."
-"gnucash.org/wiki/Bugzilla'>GnuCash' wiki page on bugzilla</a> for more "
-"details about patch submission."
-msgstr ""
-"次に<a href='http://bugzilla.gnome.org/'>Gnome's bugzilla データベース</a>で "
-"GnuCash プロジェクトの documentation コンポーネントに対してバグレポートを作成"
-"し、パッチを添付してください。そして、他の開発者があなたが行ったことについて"
-"分かるように <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</"
-"a> メーリングリストに英語でメールを送ってください。パッチ送付の詳細について"
-"は <a href='http://wiki.gnucash.org/wiki/Bugzilla'>GnuCash' wiki page on "
-"bugzilla</a> も併せて確認してください。"
-
-#: develdocs.phtml:67
-msgid ""
-"<b>NOTE:</b> It used to be ok also to send your patch directly to the "
-"gnucash-devel list. This is discouraged now, as a patch is easily forgotten "
-"between the many list discussions. Attach patches to bugs in Bugzilla "
-"instead (either an existing bug or a new one). If you insist on sending a "
-"patch to gnucash-devel, it should be attached, not inlined."
-msgstr ""
-"<b>注意:</b> 過去にはパッチを直接 gnucash-devel メーリングリストに送っても大"
-"丈夫でした。この方法は現在推奨されません。多くのメーリングリスト議論の中に埋"
-"もれてパッチが忘れられてしまうからです。その代わり Bugzilla にパッチをバグと"
-"して添付してください (既存のバグに追加するか新規のバグとして報告するかいずれ"
-"かです)。もしパッチを gnucash-devel に送ろうと考えている場合は、インラインに"
-"記述するのではなく添付してください。"
-
-#: develdocs.phtml:68
-msgid ""
-"Please let other writers know which section you wish to tackle. Please "
-"forward this to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-"
-"devel</a> so that people can say 'hey I'm doing that already' or 'go ahead "
-"and do it'."
-msgstr ""
-"あなたがどの項を変更しようとしているか他の著者が分かるようにしてください。他"
-"の人が「それはすでに行っています」または「では行ってください」と言うことがで"
-"きるように <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</"
-"a> へメールを送ってください。"
-
-#: develdocs.phtml:69
-msgid ""
-"You may also want to retain a local copy of the old documentation to refer "
-"to when writing. This still has a lot of useful information in it which "
-"hasn't been transferred to the new docs"
-msgstr ""
-"書いている時に、参照用として古い文書をローカルに保存しておきたいと思うかもし"
-"れません。これは古い文書内に新しい文書に移行されていない多くの役に立つ情報が"
-"ある場合です。"
-
-#: develdocs.phtml:75
-msgid "Reviewers"
-msgstr "査読者"
-
-#: develdocs.phtml:77
-msgid ""
-"Get a copy of the documentation source as described above and start "
-"commenting on it."
-msgstr "上で説明した方法で文書のソースを入手し、査読を行ってください。"
-
-#: develdocs.phtml:78
-msgid ""
-"The best way of retaining comments about docs in an easy to find way for "
-"everyone would be to use <a href='http://bugzilla.gnome.org/'>bugzilla.gnome."
-"org</a> to file the bugs under documentation. This can also be done using "
-"bug-buddy."
-msgstr ""
-"文書に関するコメントを記録して、皆が見つけられるようにしておく最良の方法は "
-"<a href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> に文書に関してバ"
-"グ登録をしておくことです。バグ追跡システムによって記録が残ります。"
-
-#: features.phtml:3
-msgid "Features"
-msgstr "特徴"
-
-#: features.phtml:14
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> is a powerful accounting software. "
-"This page will try to explain in detail which are the numerous features that "
-"<span class=\"gnucash\">GnuCash</span> has to offer to it's users."
-msgstr ""
-
-#: features.phtml:17 features.phtml:24
-#, fuzzy
-msgid "Main features"
-msgstr "特徴"
-
-#: features.phtml:18 features.phtml:117
-msgid "Advanced features"
-msgstr ""
-
-#: features.phtml:19
-msgid "Data storing and exchange features"
-msgstr ""
-
-#: features.phtml:20 features.phtml:193
-msgid "Other goodies"
-msgstr ""
-
-#: features.phtml:28
-msgid "Double Entry"
-msgstr "複式記帳法"
-
-#: features.phtml:34
-#, fuzzy
-msgid ""
-"Every transaction must debit one account and credit others by an equal "
-"amount. This ensures the books balance: the difference between income and "
-"expenses exactly equals the sum of assets and liabilities."
-msgstr ""
-"すべての取引はある勘定科目の借方となり、他の勘定科目で等量の貸方となります。"
-"これによって「帳簿の釣り合い」が確実に保たれます。これにより収益と費用の差が"
-"厳密に純資産の合計と一致します。"
-
-#: features.phtml:40
-msgid "Checkbook-Style Register"
-msgstr "小切手帳スタイルの記録簿"
-
-#: features.phtml:46
-msgid ""
-"The <span class=\"gnucash\">GnuCash</span> checkbook-style register provides "
-"a custom, convenient and familiar interface to entering financial "
-"transactions."
-msgstr ""
-
-#: features.phtml:48
-msgid ""
-"The register supports common checking and credit-card transactions, as well "
-"as income, stock and currency transactions. The following features are also "
-"provided:"
-msgstr ""
-
-#: features.phtml:51
-msgid "<b>Autofill</b> of entered transactions"
-msgstr ""
-
-#: features.phtml:52
-msgid "Possibility to mark a transaction as <b>cleared</b>"
-msgstr ""
-
-#: features.phtml:53
-msgid "Possibility to enter <b>split transactions</b>"
-msgstr ""
-
-#: features.phtml:54
-msgid ""
-"<b>Multiple accounts</b> can be displayed in one register window at the same "
-"time"
-msgstr ""
-
-#: features.phtml:55
-msgid ""
-"A <b>summarybar</b> that display all the relevant account's balance "
-"information"
-msgstr ""
-
-#: features.phtml:56
-msgid "Many options to <b>customize</b> the appearence and the display style"
-msgstr ""
-
-#: features.phtml:66
-msgid ""
-"You can create recurring transactions with a high level of customization of "
-"amounts and timeline. You can also set an automatic reminder when a "
-"transaction is due."
-msgstr ""
-
-#: features.phtml:69
-msgid ""
-"An assistant that runs when <span class=\"gnucash\">GnuCash</span> is "
-"started, allows you to postpone a scheduled transaction without canceling it "
-"or to enter it before the due date."
-msgstr ""
-
-#: features.phtml:79
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> has an integrated module to display "
-"graphs of your financial data in the form of:"
-msgstr ""
-
-#: features.phtml:82
-msgid "Barcharts"
-msgstr ""
-
-#: features.phtml:83
-msgid "Piecharts"
-msgstr ""
-
-#: features.phtml:84
-msgid "Scatter plots"
-msgstr ""
-
-#: features.phtml:86
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> also comes complete with a full suite "
-"of standard and customizeable reports, such as:"
-msgstr ""
-
-#: features.phtml:88
-msgid "Balance Sheet"
-msgstr ""
-
-#: features.phtml:89
-msgid "Profit &amp; Loss"
-msgstr ""
-
-#: features.phtml:90
-msgid "Portfolio Valuation"
-msgstr ""
-
-#: features.phtml:91
-msgid "and many others."
-msgstr ""
-
-#: features.phtml:94
-msgid ""
-"Graphs and reports can be highly and easily customized in appearence and "
-"contents, in order to fullfill every user's need."
-msgstr ""
-
-#: features.phtml:100
-msgid "Statement Reconciliation"
-msgstr "明細書の照合"
-
-#: features.phtml:105
-msgid ""
-"The <b>reconciliation</b> of an account is an operation that allows the user "
-"to check the entered transactions belonging to a <span class=\"gnucash"
-"\">GnuCash</span> account against a bank statement. This operation is very "
-"useful to spot untracked transactions or data entry errors."
-msgstr ""
-
-#: features.phtml:106
-#, fuzzy
-msgid ""
-"The <span class=\"gnucash\">GnuCash</span> reconcile tool with running "
-"reconciled and cleared balances makes reconciling against bank statements an "
-"easy task."
-msgstr ""
-"照合ウィンドウにより銀行の明細書に対する照合・清算処理が容易になります。"
-
-#: features.phtml:111
-msgid "Income/Expense Account Types"
-msgstr "収益/費用勘定科目タイプ"
-
-#: features.phtml:113
-msgid ""
-"Income/Expense Account Types (Categories) allow you to categorize your cash "
-"flow.  When used properly with the double-entry feature and equity accounts, "
-"these enable you to generate reports, such as Profit &amp; Loss, that plain-"
-"vanilla systems cannot handle."
-msgstr ""
-"収益/費用勘定科目タイプ (カテゴリ) によってキャッシュフローを分類することがで"
-"きます。複式記帳法と純資産勘定科目を適切に使用することで、ごく普通のシステム"
-"では取り扱うことができないような損益計算書などの帳票を作成することができま"
-"す。"
-
-#: features.phtml:121
-msgid "Small Business Accounting Features"
-msgstr "小規模ビジネス向け会計機能"
-
-#: features.phtml:124
-#, fuzzy
-msgid ""
-"Simplify managing a small business with <b>Customer</b> and <b>Vendor</b> "
-"tracking, <b>Jobs</b>, <b>Invoicing</b> and <b>Bill</b> Payment, and <b>Tax</"
-"b> and <b>Billing Terms</b>."
-msgstr ""
-"得意先と仕入先の追跡、得意先請求書と仕入先請求書の支払、税金と支払条件の管理"
-"など小規模ビジネスの管理が簡単になります。"
-
-#: features.phtml:127
-msgid ""
-"Using A/Receivable and A/Payable accounts you can even manage <b>payrolls</"
-"b> for your employees."
-msgstr ""
-
-#: features.phtml:130
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> gives you also a tool to manage your "
-"business' <b>budget</b> so that you can easily plan your financial strategy."
-msgstr ""
-
-#: features.phtml:136
-msgid "Multiple Currencies"
-msgstr "複数通貨"
-
-#: features.phtml:140
-msgid ""
-"Different accounts can be denominated in different currencies. Currency "
-"movements between accounts are fully balanced when double-entry is enabled."
-msgstr ""
-"異なる勘定科目に対しては異なる通貨単位で表示することができます。勘定科目間で"
-"の通貨の移動は複式記帳法を利用することで釣り合いが完全に保たれます。"
-
-#: features.phtml:146
-msgid "Stock/Mutual Fund Portfolios"
-msgstr "株式 / 投資信託のポートフォリオ"
-
-#: features.phtml:149
-msgid ""
-"Track stocks individually (one per account) or in portfolio of accounts (a "
-"group of accounts that can be displayed together)."
-msgstr ""
-"株式を個別 (勘定科目単位) または勘定科目のポートフォリオ (一緒に表示可能な勘"
-"定科目グループ) として追跡することができます。"
-
-#: features.phtml:154
-msgid "Online Stock &amp; Mutual Fund Quotes"
-msgstr "オンライン株式・投資信託相場表取得"
-
-#: features.phtml:157
-msgid ""
-"Get Stock &amp; Mutual Fund quotes from various web sites, update portfolio "
-"automatically. Additional pricing sources are added regularly."
-msgstr ""
-"株式・投資信託の相場表を様々なウェブサイトから取得して、自動的にポートフォリ"
-"オをアップデートします。相場情報源は定期的に追加されます。"
-
-#: features.phtml:160
-msgid "Data storage and exchange features"
-msgstr ""
-
-#: features.phtml:164
-msgid "Database support"
-msgstr ""
-
-#: features.phtml:166
-msgid ""
-"Along the usual xml format, starting from version 2.4, your <span class="
-"\"gnucash\">GnuCash</span> financial data can be stored in a <b>SQL "
-"database</b> under the application of your selection (SQLite3, MySQL or "
-"PostgreSQL)."
-msgstr ""
-
-#: features.phtml:171
-#, fuzzy
-msgid "QIF and OFX Import"
-msgstr "OFXのインポート"
-
-#: features.phtml:174
-msgid ""
-"If you are migrating from other financial software, <span class=\"gnucash"
-"\">GnuCash</span>  can import Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> "
-"<b>QIF</b> files using a practical assistant."
-msgstr ""
-
-#: features.phtml:177
-#, fuzzy
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> is also the first free software "
-"application to support the <b>OFX</b> (Open Financial Exchange) protocol "
-"that many banks and financial services are starting to use."
-msgstr ""
-"GnuCash は Open Financial Exchange プロトコルをサポートする史上初のフリーソフ"
-"トウェアです。このプロトコルは多くの銀行や財務サービスで利用され始めていま"
-"す。"
-
-#: features.phtml:180
-msgid ""
-"A transaction matching system ensures that duplicate transactions are "
-"accurately recognized and automatically deleted during file import."
-msgstr ""
-
-#: features.phtml:186
-msgid "HBCI Support"
-msgstr "HBCI サポート"
-
-#: features.phtml:189
-#, fuzzy
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> is the first free software "
-"application to support the German <b>Home Banking Computer Information</b> "
-"protocol, allowing German users to perform statement download and initiate "
-"bank transfers and direct debits."
-msgstr ""
-"GnuCashは German Home Banking Computer Information プロトコルをサポートする史"
-"上初のフリーソフトウェアです。ドイツの利用者は明細書のダウンロード、口座振"
-"替、直接入金を行うことができます。"
-
-#: features.phtml:197
-msgid "Multiplatform"
-msgstr ""
-
-#: features.phtml:200
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> can be executed on different "
-"operating systems. The most commonly used OS's like <b>Windows</b>, "
-"<b>MacOSX</b> and <b>Linux</b>, are supported along with many others."
-msgstr ""
-
-#: features.phtml:205
-msgid "Localization"
-msgstr "地域化対応"
-
-#: features.phtml:208
-#, fuzzy
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> handles internationalized dates and "
-"currencies. The application's menus and popups have been translated to 21 "
-"languages, including Chinese, Danish, French, German, Hungarian, Italian, "
-"Japanese, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, "
-"Ukrainian, and British English. Documentation is available in English, "
-"French, Portuguese and Spanish."
-msgstr ""
-"国際化された日付書式と通貨を取り扱うことができます。GnuCash のメニューおよび"
-"ポップアップは21言語に翻訳されています。中国語、デンマーク語、フランス語、ド"
-"イツ語、ハンガリー語、イタリア語、日本語、ノルウェー語、ポーランド語、ポルト"
-"ガル語、ロシア語、スペイン語、スウェーデン語、トルコ語、ウクライナ語、および"
-"英国英語です。英語、フランス語、ポルトガル語、スペイン語の文書も存在します。"
-
-#: features.phtml:213
-msgid "Transaction Finder"
-msgstr "取引検索"
-
-#: features.phtml:216
-msgid ""
-"A powerful transaction query dialogue can help you quickly locate a needle "
-"in a haystack."
-msgstr "強力な取引検索ダイアログで素早く取引を検索することができます。"
-
-#: features.phtml:221
-msgid "Check Printing"
-msgstr "小切手の印刷"
-
-#: features.phtml:224
-msgid ""
-"Checks may be printed in standard formats on common check stocks. A "
-"customization GUI allows custom check layouts to be developed."
-msgstr ""
-"一般的な小切手テンプレートにより小切手を標準形式で印刷することができます。GUI"
-"を利用して小切手レイアウトをカスタマイズすることもできます。"
-
-#: features.phtml:229
-#, fuzzy
-msgid "Mortgage &amp; Loan Repayment Assistant"
-msgstr "担保付きローン・ローン支払いウィザード"
-
-#: features.phtml:232
-msgid ""
-"A guided dialogue for setting up loan payments as scheduled transactions."
-msgstr "ウィザードを利用してローン支払いの予定取引を作成することができます。"
-
-#: features.phtml:238
-#, fuzzy
-msgid "User Manual and Help"
-msgstr "新しいユーザーマニュアルとヘルプ"
-
-#: features.phtml:241
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> is very well documented: along the "
-"application <b>Manual</b>, new users can take full advantage of the "
-"<b>Tutorial and Concepts guide</b>. This document gives background "
-"information on accounting principles and how they are reflected in <span "
-"class=\"gnucash\">GnuCash</span> with many practical examples described step "
-"by step."
-msgstr ""
-
-#: docs.phtml:3 externals/menu.phtml:23 externals/menu.phtml:30
-msgid "Documentation"
-msgstr "文書"
-
-#: docs.phtml:4
-#, fuzzy
-msgid "Browse documentation online"
-msgstr "Gnome 文書ガイドライン"
-
-#: docs.phtml:5
-#, fuzzy
-msgid "Download documentation as PDF"
-msgstr "文書"
-
-#: docs.phtml:6
-#, fuzzy
-msgid "Download documentation as epub"
-msgstr "文書"
-
-#: docs.phtml:7
-msgid "Download documentation as mobipocket"
-msgstr ""
-
-#: docs.phtml:54
-#, fuzzy
-msgid "GnuCash Documentation"
-msgstr "過去の GnuCash 文書"
-
-#: docs.phtml:56
-#, fuzzy
-msgid ""
-"There are two major <span class=\"gnucash\">GnuCash</span> documentation "
-"packages to help users:"
-msgstr ""
-"いくつかの有名なディストリビューションで GnuCash をインストールする方法は次の"
-"通りです。"
-
-#: docs.phtml:58
-#, fuzzy
-msgid "The Help Manual"
-msgstr "ヘルプマニュアル"
-
-#: docs.phtml:59
-#, fuzzy
-msgid "The Tutorials and Concepts Guide"
-msgstr "コンセプトガイド"
-
-#: docs.phtml:62
-#, fuzzy
-msgid ""
-"The <b>Help Manual</b> is designed to be a quick reference of how to "
-"accomplish specific tasks and how to use the features in <span class="
-"\"gnucash\">GnuCash</span>. The <b>Concepts Guide</b> is designed to be an "
-"in depth guide to the concepts behind using <span class=\"gnucash\">GnuCash</"
-"span> with a tutorial to show how to put those concepts into practice."
-msgstr ""
-"ヘルプマニュアルは GnuCash で特定の作業を達成を達成する方法、および、機能を使"
-"用する方法に関して説明するクイックリファレンスとして設計されています。コンセ"
-"プトガイドは GnuCash を使用する際の背景となる概念をより深く説明するガイドとし"
-"て設計され、これらの概念を利用する方法に関するチュートリアルを提供していま"
-"す。"
-
-#: docs.phtml:64
-#, fuzzy
-msgid ""
-"Additionally, you can talk to someone via IRC at irc.gnome.org channel "
-"<b>#gnucash</b> about your question. Another resource is the <a href="
-"\"http://wiki.gnucash.org/wiki/\">English</a> or <a href=\"http://linuxwiki."
-"de/GnuCash\">Deutsch</a> <span class=\"gnucash\">GnuCash</span> wikis."
-msgstr ""
-"これに加えて、IRC を使用して英語で他の誰かに質問をすることができます。 irc."
-"gnome.org サーバーの \"#gnucash\" チャンネルを使用してください。他のリソース"
-"として <a href='http://wiki.gnucash.org/wiki/'>英語</a> および <a "
-"href='http://linuxwiki.de/GnuCash'>ドイツ語</a> の GnuCash wiki があります。"
-"wiki は登録された利用者が質問や回答を登録することが可能な対話的な Web サイト"
-"です。"
-
-#: docs.phtml:66
-#, fuzzy
-msgid ""
-"You can also send an email to the <a href=\"mailto:gnucash-user@lists."
-"gnucash.org\">gnucash-user</a> mailing list if you cannot find a "
-"satisfactory answer to your question within either the <b>Help Manual</b> or "
-"the <b>Tutorial and Concepts Guide</b>. We <b>want</b> feedback from you, it "
-"is also through your comments that we know how to improve the documentation."
-msgstr ""
-"もしヘルプマニュアルとコンセプトガイドで疑問に対する十分な回答を得られなかっ"
-"た場合は <a href='mailto:gnucash-user@lists.gnucash.org'>gnucash-user</a> "
-"メーリングリストに<b>英語</b>でメールを送ってください。私たちはあなたたちの"
-"フィードバックを<b>求めています</b>。あなたのコメントを通してのみ私たちはどの"
-"ように文書を変更するべきか知ることができます。"
-
-#: docs.phtml:69
-msgid ""
-"<span class=\"gnucash\">GnuCash</span>'s documentation has been created by "
-"its community. See the <a href=\"develdocs.phtml\">Writing Documentation "
-"page</a> if you are interested in contributing to this effort."
-msgstr ""
-
-#: docs.phtml:74
-#, fuzzy
-msgid "(current stable release)"
-msgstr "GnuCash v2.2 (現在の安定版)"
-
-#: docs.phtml:76
-#, fuzzy
-msgid "Current <em>stable</em> user documentation and developer documentation"
-msgstr "現在の開発版ユーザー文書および開発文書"
-
-#: docs.phtml:79
-msgid "Stable"
-msgstr ""
-
-#: docs.phtml:81 docs.phtml:141 docs.phtml:206 docs.phtml:223 docs.phtml:238
-msgid "Help Manual"
-msgstr "ヘルプマニュアル"
-
-#: docs.phtml:85 docs.phtml:103 docs.phtml:145 docs.phtml:163 docs.phtml:207
-#: docs.phtml:215 docs.phtml:224 docs.phtml:231 docs.phtml:239 docs.phtml:253
-msgid "English"
-msgstr "英語"
-
-#: docs.phtml:89 docs.phtml:107 docs.phtml:149 docs.phtml:167 docs.phtml:208
-#: docs.phtml:225 docs.phtml:241 docs.phtml:247 docs.phtml:254
-msgid "German"
-msgstr "ドイツ語"
-
-#: docs.phtml:93 docs.phtml:111 docs.phtml:153 docs.phtml:171 docs.phtml:209
-#: docs.phtml:216
-msgid "Italian"
-msgstr "イタリア語"
-
-#: docs.phtml:99 docs.phtml:159 docs.phtml:214 docs.phtml:230 docs.phtml:246
-msgid "Concepts Guide"
-msgstr "コンセプトガイド"
-
-#: docs.phtml:115 docs.phtml:175
-msgid "Japanese"
-msgstr "日本語"
-
-#: docs.phtml:129
-msgid ""
-"This is the latest stable release of the <span class=\"gnucash\">GnuCash</"
-"span> documentation. <em>Stable</em> means that this documentation is not "
-"necessarily the most up to date but it works without any problem."
-msgstr ""
-
-#: docs.phtml:134
-msgid "Nightly Documentation Builds"
-msgstr "日次夜間文書ビルド"
-
-#: docs.phtml:136
-#, fuzzy
-msgid ""
-"Current <em>unstable</em> user documentation and developer documentation"
-msgstr "現在の開発版ユーザー文書および開発文書"
-
-#: docs.phtml:139
-#, fuzzy
-msgid "Unstable"
-msgstr "インストーラー"
-
-#: docs.phtml:190
-#, fuzzy
-msgid ""
-"Every night a server builds the documentation from the current contents of "
-"the <span class=\"gnucash\">GnuCash</span> subversion repository. This "
-"includes the <b>Developer Documentation</b> from <b>Doxygen</b> and <b>User "
-"Documentation</b> for the current <em>unstable</em> version of <span class="
-"\"gnucash\">GnuCash</span>."
-msgstr ""
-"毎晩、GnuCash subversion リポジトリの現在の内容から文書が作成されます。これら"
-"には Doxygen による開発者向け文書および現在のGnuCash開発版のユーザー文書が含"
-"まれます。"
-
-#: docs.phtml:194
-msgid ""
-"<b>NOTE:</b> these documents might not be accessible from time to time "
-"because developers might be working on improvements. However they are the "
-"most up to date reference for <span class=\"gnucash\">GnuCash</span> users."
-msgstr ""
-
-#: docs.phtml:199
-msgid "Older GnuCash Documentation"
-msgstr "過去の GnuCash 文書"
-
-#: docs.phtml:201
-#, fuzzy
-msgid ""
-"This section contains all the older <span class=\"gnucash\">GnuCash</span> "
-"documentation. If you are using one of these old versions of <span class="
-"\"gnucash\">GnuCash</span>, it is highly recommended that you upgrade to the "
-"latest stable version."
-msgstr ""
-"このセクションに含まれているのはすべて古い GnuCash に関する文書です。もしこれ"
-"ら古いバージョンの GnuCash を使用している場合は、最新の安定バージョンにアップ"
-"グレードすることを推奨します。"
-
-#: docs.phtml:255
-msgid "Spanish"
-msgstr ""
-
-#: docs.phtml:256
-#, fuzzy
-msgid "Portugese"
-msgstr "ポルトガル語"
-
-#: docs.phtml:262
-#, fuzzy
-msgid "Unofficial documentation"
-msgstr "文書"
-
-#: docs.phtml:264
-msgid "Some people have written HOWTO guides or tutorials."
-msgstr ""
-
-#: docs.phtml:267
-msgid "Joe Mack's Tutorial"
-msgstr "Joe Mack 氏によるチュートリアル"
-
-#: docs.phtml:269
-#, fuzzy
-msgid "Dave Gilbert's User Guide (Pdf)"
-msgstr "Dave Gilbert 氏によるユーザーズガイド (PDF)"
-
-#: docs.phtml:273
-#, fuzzy
-msgid ""
-"<b>NOTE:</b> the information presented in these sources may or may not be "
-"updated to the most recent version of <span class=\"gnucash\">GnuCash</"
-"span>. If you are interested in doing development work on these documents, "
-"you should contact the original authors."
-msgstr ""
-"何名かの人々が HOWTO ガイドやチュートリアルを書いています。注意: これらの情報"
-"は最新バージョンの GnuCash に対応してアップデートしているかもしれませんし、"
-"アップデートしていないかもしれません。もしこれらの文書の開発に興味があるな"
-"ら、元の作者に連絡してください。"
-
-#: oldnews.phtml:11
-msgid "Older Announcements"
-msgstr "過去のアナウンス"
-
-#: oldnews.phtml:14
-msgid ""
-"This is an archive of announcements that once appeared on the GnuCash home "
-"page."
-msgstr "GnuCash ホームページに掲載された過去のアナウンスのアーカイブです。"
 
 #: sizing.phtml:3 externals/menu.phtml:54
 msgid "Sizing"
@@ -1377,6 +414,1017 @@ msgid ""
 "main gnucash/AUTHORS file."
 msgstr ""
 
+#: develdocs.phtml:3 externals/menu.phtml:53
+#, fuzzy
+msgid "Writing Documentation"
+msgstr "文書"
+
+#: develdocs.phtml:11
+#, fuzzy
+msgid "Writing GnuCash Documentation"
+msgstr "過去の GnuCash 文書"
+
+#: develdocs.phtml:13
+msgid ""
+"If you are interested in improving the <span class=\"gnucash\">GnuCash</"
+"span> documentation, you have come to the right place. This page will "
+"provide you with the necessary information to get started."
+msgstr ""
+
+#: develdocs.phtml:15
+msgid ""
+"Just as the <span class=\"gnucash\">GnuCash</span> application has been "
+"developed over time by volunteers, so too has the documentation been written "
+"by volunteer developers and users to help others learn how <span class="
+"\"gnucash\">GnuCash</span> works. This collaborative effort has resulted in "
+"the creation of two major documents, the <b>Help Manual</b> and the "
+"<b>Concepts and Tutorial Guide</b>."
+msgstr ""
+
+#: develdocs.phtml:17
+msgid ""
+"The <span class=\"gnucash\">GnuCash</span> community welcomes assistance in "
+"maintaining and improving both the program and its documentation. If you are "
+"interested in helping write, edit or translate <span class=\"gnucash"
+"\">GnuCash</span>'s documentation, this page gives guidance on how to get "
+"set up to join the effort."
+msgstr ""
+
+#: develdocs.phtml:20
+msgid ""
+"The <span class=\"gnucash\">GnuCash</span> documentation can be viewed and "
+"downloaded from the <a href=\"docs.phtml\">Documentation page</a>."
+msgstr ""
+
+#: develdocs.phtml:25
+msgid "Introduction"
+msgstr "導入"
+
+#: develdocs.phtml:27
+#, fuzzy
+msgid ""
+"The <span class=\"gnucash\">GnuCash</span> documentation is stored in "
+"<b>xml</b> files. More precisely, it uses the <b>GNOME2 XML docbook system</"
+"b>. This is a relatively flexible system that takes xml files as input and "
+"can generate documentation in several different output formats (html, "
+"pdf,...)."
+msgstr ""
+"GnuCash の文書は xml ファイルとして保存されています。もっと正確に言うと、"
+"GNOME2 XML docbook システムを使用しています。これは比較的柔軟なシステムで "
+"xml ファイルを入力としていくつかの異なる形式 (html、pdf等) で出力することがで"
+"きます。"
+
+#: develdocs.phtml:28
+#, fuzzy
+msgid ""
+"If you wish to review or write <span class=\"gnucash\">GnuCash</span> "
+"documentation, you will need to know xml. Some basic knowledge of the "
+"docbook system may be useful as well"
+msgstr ""
+"GnuCash の文書を査読または記述するときは xml を知っている必要があります。加え"
+"て、いくつかの docbook システムに関する基本的な知識も役に立ちます。"
+
+#: develdocs.phtml:29
+msgid ""
+"The following links are for further sites that can help with the "
+"documentation and review process."
+msgstr "次のリンクは文書化および査読過程で非常に役に立つサイトです。"
+
+#: develdocs.phtml:34
+#, fuzzy
+msgid ""
+"While this <span class=\"gnucash\">GnuCash</span> wiki page is really about "
+"translating the documentation, it holds some useful information on working "
+"with docbook files."
+msgstr ""
+"この GnuCash wiki ページはこれから翻訳が必要ですが、docbook ファイルを使用す"
+"るために役に立つ情報が含まれています。"
+
+#: develdocs.phtml:35
+msgid ""
+"A detailed guide on how to work with documentation (update and maintenance)."
+msgstr ""
+
+#: develdocs.phtml:37
+#, fuzzy
+msgid "We suggest also subscribing to"
+msgstr "次のメーリングリストを購読することを提案します"
+
+#: develdocs.phtml:42
+msgid "Gnome Documentation guidelines"
+msgstr "Gnome 文書ガイドライン"
+
+#: develdocs.phtml:44
+msgid ""
+"As stated earlier, the new docs are based on the GNOME2 XML docbook system. "
+"Everyone wishing to help please follow these guides where possible when "
+"reviewing and/or writing docs."
+msgstr ""
+"前に述べたように、新しい文書は GNOME2 XML docbook システムに基づいています。"
+"貢献をしようと考えている方は、査読や文書作成を行うときにこれらのガイドに従う"
+"ようにしてください。"
+
+#: develdocs.phtml:53
+msgid "Where to get the documentation source"
+msgstr "文書ソースの入手"
+
+#: develdocs.phtml:55
+#, fuzzy
+msgid ""
+"You will need a recent copy of the documentation source. For this you can "
+"check out the documentation module from the <span class=\"gnucash\">GnuCash</"
+"span> svn. Reviewers could also start from the <a href='http://sourceforge."
+"net/projects/gnucash/files/gnucash-docs/'>current docs tarball</a>."
+msgstr ""
+"文書ソースの最新版を入手する必要がある場合は GnuCash svn から文書モジュールを"
+"チェックアウトしてください。査読者は <a href='http://sourceforge.net/"
+"projects/gnucash/files/gnucash-docs/'>最新の文書 tar アーカイブ</a> から開始"
+"しても構いません。"
+
+#: develdocs.phtml:56
+#, fuzzy
+msgid ""
+"For those not familiar with svn, the <span class=\"gnucash\">GnuCash</span> "
+"wiki has a <a href='http://wiki.gnucash.org/wiki/Subversion'>description</a> "
+"tailored to the <span class=\"gnucash\">GnuCash</span> code. To get the "
+"documentation source instead of the program source, replace 'gnucash' with "
+"'gnucash-docs' in the mentioned svn commands, like this:"
+msgstr ""
+"もし svn にあまりなじみがないなら、 GnuCash wiki に <a href='http://wiki."
+"gnucash.org/wiki/Subversion'>説明</a>があります。 文書を得るためにはチェック"
+"アウト対象を gnucash から gnucash-docs に単に変更してください。実際には以下の"
+"ようになります。"
+
+#: develdocs.phtml:59
+#, fuzzy
+msgid ""
+"There are two major <span class=\"gnucash\">GnuCash</span> documentation "
+"packages to help users: the <b>Help Manual</b> and the <b>Tutorials and "
+"Concepts Guide</b>. With the above command, the source code of both will be "
+"downloaded."
+msgstr ""
+"GnuCash の使用方法に関して分からないことがあるならば、あなたは今正しい場所に"
+"います。最初に読むべき文書はヘルプマニュアルおよびコンセプトガイドです。あな"
+"たの疑問に対するほとんどの解決方法はこれらの文書に書いてあります。"
+
+#: develdocs.phtml:65
+msgid "Writers"
+msgstr "著者"
+
+#: develdocs.phtml:67
+msgid ""
+"Get a copy of the documentation source as described above and start making "
+"changes. When you are satisfied with your changes you can create a patch by "
+"running the following command in the base directory of the documentation "
+"(usually gnucash-docs, unless you renamed it):"
+msgstr ""
+"上記の方法で文書のソースを入手したら、変更を開始してください。変更した文書が"
+"満足のいく物になったら文書の最上位ディレクトリ (通常は変更しない限り gnucash-"
+"docs になります) で以下のコマンドを入力してパッチを作成してください。"
+
+#: develdocs.phtml:69
+#, fuzzy
+msgid ""
+"Next attach your patch to a bug report against the documentation component "
+"for the <span class=\"gnucash\">GnuCash</span> project in <a href='http://"
+"bugzilla.gnome.org/'>Gnome's bugzilla database</a> and send an email to <a "
+"href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</a> mailing list "
+"to inform other developers on your work. See also <a href='http://wiki."
+"gnucash.org/wiki/Bugzilla'>GnuCash' wiki page on bugzilla</a> for more "
+"details about patch submission."
+msgstr ""
+"次に<a href='http://bugzilla.gnome.org/'>Gnome's bugzilla データベース</a>で "
+"GnuCash プロジェクトの documentation コンポーネントに対してバグレポートを作成"
+"し、パッチを添付してください。そして、他の開発者があなたが行ったことについて"
+"分かるように <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</"
+"a> メーリングリストに英語でメールを送ってください。パッチ送付の詳細について"
+"は <a href='http://wiki.gnucash.org/wiki/Bugzilla'>GnuCash' wiki page on "
+"bugzilla</a> も併せて確認してください。"
+
+#: develdocs.phtml:71
+msgid ""
+"<b>NOTE:</b> It used to be ok also to send your patch directly to the "
+"gnucash-devel list. This is discouraged now, as a patch is easily forgotten "
+"between the many list discussions. Attach patches to bugs in Bugzilla "
+"instead (either an existing bug or a new one). If you insist on sending a "
+"patch to gnucash-devel, it should be attached, not inlined."
+msgstr ""
+"<b>注意:</b> 過去にはパッチを直接 gnucash-devel メーリングリストに送っても大"
+"丈夫でした。この方法は現在推奨されません。多くのメーリングリスト議論の中に埋"
+"もれてパッチが忘れられてしまうからです。その代わり Bugzilla にパッチをバグと"
+"して添付してください (既存のバグに追加するか新規のバグとして報告するかいずれ"
+"かです)。もしパッチを gnucash-devel に送ろうと考えている場合は、インラインに"
+"記述するのではなく添付してください。"
+
+#: develdocs.phtml:72
+msgid ""
+"Please let other writers know which section you wish to tackle. Please "
+"forward this to <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-"
+"devel</a> so that people can say 'hey I'm doing that already' or 'go ahead "
+"and do it'."
+msgstr ""
+"あなたがどの項を変更しようとしているか他の著者が分かるようにしてください。他"
+"の人が「それはすでに行っています」または「では行ってください」と言うことがで"
+"きるように <a href='mailto:gnucash-devel@lists.gnucash.org'>gnucash-devel</"
+"a> へメールを送ってください。"
+
+#: develdocs.phtml:73
+msgid ""
+"You may also want to retain a local copy of the old documentation to refer "
+"to when writing. This still has a lot of useful information in it which "
+"hasn't been transferred to the new docs"
+msgstr ""
+"書いている時に、参照用として古い文書をローカルに保存しておきたいと思うかもし"
+"れません。これは古い文書内に新しい文書に移行されていない多くの役に立つ情報が"
+"ある場合です。"
+
+#: develdocs.phtml:79
+msgid "Reviewers"
+msgstr "査読者"
+
+#: develdocs.phtml:81
+msgid ""
+"Get a copy of the documentation source as described above and start "
+"commenting on it."
+msgstr "上で説明した方法で文書のソースを入手し、査読を行ってください。"
+
+#: develdocs.phtml:82
+msgid ""
+"The best way of retaining comments about docs in an easy to find way for "
+"everyone would be to use <a href='http://bugzilla.gnome.org/'>bugzilla.gnome."
+"org</a> to file the bugs under documentation. This can also be done using "
+"bug-buddy."
+msgstr ""
+"文書に関するコメントを記録して、皆が見つけられるようにしておく最良の方法は "
+"<a href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> に文書に関してバ"
+"グ登録をしておくことです。バグ追跡システムによって記録が残ります。"
+
+#: docs.phtml:3 externals/menu.phtml:23 externals/menu.phtml:30
+msgid "Documentation"
+msgstr "文書"
+
+#: docs.phtml:4
+#, fuzzy
+msgid "Browse documentation online"
+msgstr "Gnome 文書ガイドライン"
+
+#: docs.phtml:5
+#, fuzzy
+msgid "Download documentation as PDF"
+msgstr "文書"
+
+#: docs.phtml:6
+#, fuzzy
+msgid "Download documentation as epub"
+msgstr "文書"
+
+#: docs.phtml:7
+msgid "Download documentation as mobipocket"
+msgstr ""
+
+#: docs.phtml:15
+#, fuzzy
+msgid "GnuCash Documentation"
+msgstr "過去の GnuCash 文書"
+
+#: docs.phtml:17
+#, fuzzy
+msgid ""
+"There are two major <span class=\"gnucash\">GnuCash</span> documentation "
+"packages to help users:"
+msgstr ""
+"いくつかの有名なディストリビューションで GnuCash をインストールする方法は次の"
+"通りです。"
+
+#: docs.phtml:19
+#, fuzzy
+msgid "The Help Manual"
+msgstr "ヘルプマニュアル"
+
+#: docs.phtml:20
+#, fuzzy
+msgid "The Tutorials and Concepts Guide"
+msgstr "コンセプトガイド"
+
+#: docs.phtml:23
+#, fuzzy
+msgid ""
+"The <b>Help Manual</b> is designed to be a quick reference of how to "
+"accomplish specific tasks and how to use the features in <span class="
+"\"gnucash\">GnuCash</span>. The <b>Concepts Guide</b> is designed to be an "
+"in depth guide to the concepts behind using <span class=\"gnucash\">GnuCash</"
+"span> with a tutorial to show how to put those concepts into practice."
+msgstr ""
+"ヘルプマニュアルは GnuCash で特定の作業を達成を達成する方法、および、機能を使"
+"用する方法に関して説明するクイックリファレンスとして設計されています。コンセ"
+"プトガイドは GnuCash を使用する際の背景となる概念をより深く説明するガイドとし"
+"て設計され、これらの概念を利用する方法に関するチュートリアルを提供していま"
+"す。"
+
+#: docs.phtml:25
+#, fuzzy
+msgid ""
+"Additionally, you can talk to someone via IRC at <i>irc.gnome.org</i> "
+"channel <b>#gnucash</b> about your question. Another resource is the <a href="
+"\"http://wiki.gnucash.org/wiki/\">English</a> or <a href=\"http://linuxwiki."
+"de/GnuCash\">Deutsch</a> <span class=\"gnucash\">GnuCash</span> wikis."
+msgstr ""
+"これに加えて、IRC を使用して英語で他の誰かに質問をすることができます。 irc."
+"gnome.org サーバーの \"#gnucash\" チャンネルを使用してください。他のリソース"
+"として <a href='http://wiki.gnucash.org/wiki/'>英語</a> および <a "
+"href='http://linuxwiki.de/GnuCash'>ドイツ語</a> の GnuCash wiki があります。"
+"wiki は登録された利用者が質問や回答を登録することが可能な対話的な Web サイト"
+"です。"
+
+#: docs.phtml:27
+#, fuzzy
+msgid ""
+"You can also send an email to the <a href=\"mailto:gnucash-user@lists."
+"gnucash.org\">gnucash-user</a> mailing list if you cannot find a "
+"satisfactory answer to your question within either the <b>Help Manual</b> or "
+"the <b>Tutorial and Concepts Guide</b>. We <b>want</b> feedback from you, it "
+"is also through your comments that we know how to improve the documentation."
+msgstr ""
+"もしヘルプマニュアルとコンセプトガイドで疑問に対する十分な回答を得られなかっ"
+"た場合は <a href='mailto:gnucash-user@lists.gnucash.org'>gnucash-user</a> "
+"メーリングリストに<b>英語</b>でメールを送ってください。私たちはあなたたちの"
+"フィードバックを<b>求めています</b>。あなたのコメントを通してのみ私たちはどの"
+"ように文書を変更するべきか知ることができます。"
+
+#: docs.phtml:30
+msgid ""
+"<span class=\"gnucash\">GnuCash</span>'s documentation has been created by "
+"its community. See the <a href=\"develdocs.phtml\">Writing Documentation "
+"page</a> if you are interested in contributing to this effort."
+msgstr ""
+
+#: docs.phtml:35
+#, fuzzy
+msgid "(current stable release)"
+msgstr "GnuCash v2.2 (現在の安定版)"
+
+#: docs.phtml:37
+#, fuzzy
+msgid "Current <em>stable</em> user documentation and developer documentation"
+msgstr "現在の開発版ユーザー文書および開発文書"
+
+#: docs.phtml:40
+msgid "Stable"
+msgstr ""
+
+#: docs.phtml:42 docs.phtml:151 docs.phtml:265 docs.phtml:287 docs.phtml:305
+msgid "Help Manual"
+msgstr "ヘルプマニュアル"
+
+#: docs.phtml:46 docs.phtml:85 docs.phtml:155 docs.phtml:194 docs.phtml:266
+#: docs.phtml:277 docs.phtml:288 docs.phtml:297 docs.phtml:306 docs.phtml:325
+msgid "English"
+msgstr "英語"
+
+#: docs.phtml:57 docs.phtml:96 docs.phtml:166 docs.phtml:205 docs.phtml:268
+#: docs.phtml:290 docs.phtml:310 docs.phtml:317 docs.phtml:326
+msgid "German"
+msgstr "ドイツ語"
+
+#: docs.phtml:68 docs.phtml:107 docs.phtml:177 docs.phtml:216 docs.phtml:270
+#: docs.phtml:279
+msgid "Italian"
+msgstr "イタリア語"
+
+#: docs.phtml:81 docs.phtml:190 docs.phtml:276 docs.phtml:296 docs.phtml:316
+msgid "Concepts Guide"
+msgstr "コンセプトガイド"
+
+#: docs.phtml:118 docs.phtml:227
+msgid "Japanese"
+msgstr "日本語"
+
+#: docs.phtml:139
+msgid ""
+"This is the latest stable release of the <span class=\"gnucash\">GnuCash</"
+"span> documentation. <em>Stable</em> means that this documentation is not "
+"necessarily the most up to date but it works without any problem."
+msgstr ""
+
+#: docs.phtml:144
+msgid "Nightly Documentation Builds"
+msgstr "日次夜間文書ビルド"
+
+#: docs.phtml:146
+#, fuzzy
+msgid ""
+"Current <em>unstable</em> user documentation and developer documentation"
+msgstr "現在の開発版ユーザー文書および開発文書"
+
+#: docs.phtml:149
+#, fuzzy
+msgid "Unstable"
+msgstr "インストーラー"
+
+#: docs.phtml:249
+#, fuzzy
+msgid ""
+"Every night a server builds the documentation from the current contents of "
+"the <span class=\"gnucash\">GnuCash</span> subversion repository. This "
+"includes the <b>Developer Documentation</b> from <b>Doxygen</b> and <b>User "
+"Documentation</b> for the current <em>unstable</em> version of <span class="
+"\"gnucash\">GnuCash</span>."
+msgstr ""
+"毎晩、GnuCash subversion リポジトリの現在の内容から文書が作成されます。これら"
+"には Doxygen による開発者向け文書および現在のGnuCash開発版のユーザー文書が含"
+"まれます。"
+
+#: docs.phtml:253
+msgid ""
+"<b>NOTE:</b> these documents might not be accessible from time to time "
+"because developers might be working on improvements. However they are the "
+"most up to date reference for <span class=\"gnucash\">GnuCash</span> users."
+msgstr ""
+
+#: docs.phtml:258
+msgid "Older GnuCash Documentation"
+msgstr "過去の GnuCash 文書"
+
+#: docs.phtml:260
+#, fuzzy
+msgid ""
+"This section contains all the older <span class=\"gnucash\">GnuCash</span> "
+"documentation. If you are using one of these old versions of <span class="
+"\"gnucash\">GnuCash</span>, it is highly recommended that you upgrade to the "
+"latest stable version."
+msgstr ""
+"このセクションに含まれているのはすべて古い GnuCash に関する文書です。もしこれ"
+"ら古いバージョンの GnuCash を使用している場合は、最新の安定バージョンにアップ"
+"グレードすることを推奨します。"
+
+#: docs.phtml:327
+msgid "Spanish"
+msgstr ""
+
+#: docs.phtml:328
+#, fuzzy
+msgid "Portugese"
+msgstr "ポルトガル語"
+
+#: docs.phtml:334
+#, fuzzy
+msgid "Unofficial documentation"
+msgstr "文書"
+
+#: docs.phtml:336
+msgid "Some people have written HOWTO guides or tutorials."
+msgstr ""
+
+#: docs.phtml:339
+msgid "Joe Mack's Tutorial"
+msgstr "Joe Mack 氏によるチュートリアル"
+
+#: docs.phtml:341
+#, fuzzy
+msgid "Dave Gilbert's User Guide (Pdf)"
+msgstr "Dave Gilbert 氏によるユーザーズガイド (PDF)"
+
+#: docs.phtml:345
+#, fuzzy
+msgid ""
+"<b>NOTE:</b> the information presented in these sources may or may not be "
+"updated to the most recent version of <span class=\"gnucash\">GnuCash</"
+"span>. If you are interested in doing development work on these documents, "
+"you should contact the original authors."
+msgstr ""
+"何名かの人々が HOWTO ガイドやチュートリアルを書いています。注意: これらの情報"
+"は最新バージョンの GnuCash に対応してアップデートしているかもしれませんし、"
+"アップデートしていないかもしれません。もしこれらの文書の開発に興味があるな"
+"ら、元の作者に連絡してください。"
+
+#: index.phtml:5 oldnews.phtml:4 externals/header.phtml:112
+msgid "Free Accounting Software"
+msgstr "フリーの財務ソフトウェア"
+
+#: index.phtml:12
+msgid "Welcome to GnuCash.org"
+msgstr "GnuCash.orgにようこそ"
+
+#: index.phtml:18
+#, php-format
+msgid "Download GnuCash %s"
+msgstr "GnuCash %s のダウンロード"
+
+#: index.phtml:21
+msgid "Source"
+msgstr "ソース"
+
+#: index.phtml:21
+msgid "Via distribution"
+msgstr "ディストリビューションでの入手"
+
+#: index.phtml:24
+msgid "More downloads (Source, Development,...)"
+msgstr "他のダウンロード (ソース、開発版、…)"
+
+#: index.phtml:33
+#, fuzzy
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> is personal and small-business "
+"financial-accounting software, freely licensed under the <a href=\"http://"
+"www.gnu.org/\">GNU</a> GPL and available for GNU/Linux, BSD, Solaris, Mac OS "
+"X and Microsoft Windows."
+msgstr ""
+"GnuCash は個人または小規模ビジネス向けの財務ソフトウェアです。<a href="
+"\"http://www.gnu.org/\">GNU</a> GPL ライセンスに基づきフリーで提供されていま"
+"す。GNU/Linux、 BSD、 Solaris、 Mac OS X および Microsoft Windows で利用でき"
+"ます。"
+
+#: index.phtml:35
+#, fuzzy
+msgid ""
+"Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash"
+"\">GnuCash</span> allows you to track bank accounts, stocks, income and "
+"expenses.  As quick and intuitive to use as a checkbook register, it is "
+"based on professional accounting principles to ensure balanced books and "
+"accurate reports. "
+msgstr ""
+"簡単に使えるように設計されていますが、強力で高い柔軟性があります。GnuCash に"
+"よって銀行口座、株式、収益および費用を追跡することができます。小切手帳のよう"
+"に素早く、直感的に利用できる一方、プロの会計原理に基づいているため確実に帳簿"
+"の釣り合を保ち、正確な帳票を作成できます。"
+
+#: index.phtml:39
+msgid "Feature Highlights"
+msgstr "主な特徴"
+
+#: index.phtml:44
+msgid "Double-Entry Accounting"
+msgstr "複式記帳法会計処理"
+
+#: index.phtml:45
+msgid "Stock/Bond/Mutual Fund Accounts"
+msgstr "株式/債券/投資信託勘定科目"
+
+#: index.phtml:46
+msgid "Small-Business Accounting"
+msgstr "小規模ビジネスの会計処理"
+
+#: index.phtml:47 features.phtml:75
+msgid "Reports, Graphs"
+msgstr "帳票、グラフ"
+
+#: index.phtml:48
+msgid "QIF/OFX/HBCI Import, Transaction Matching"
+msgstr "QIF/OFX/HBCI 形式のインポート、取引を一致させる処理"
+
+#: index.phtml:49 features.phtml:62
+msgid "Scheduled Transactions"
+msgstr "予定取引"
+
+#: index.phtml:50
+#, fuzzy
+msgid "Financial Calculations"
+msgstr "財務計算"
+
+#: index.phtml:52
+msgid "<b>Discover more...</b>"
+msgstr ""
+
+#: index.phtml:58
+msgid "News"
+msgstr "ニュース"
+
+#: index.phtml:73
+#, fuzzy
+msgid "Older Announcements ..."
+msgstr "過去のアナウンス"
+
+#: index.phtml:76
+msgid "Click <a href=\"oldnews.phtml\">here</a> for older announcements..."
+msgstr ""
+
+#: viewdoc.phtml:4
+msgid "View document"
+msgstr ""
+
+#: viewdoc.phtml:111
+msgid ""
+"The document requested is not available. The tutorial and concepts guide "
+"will be displayed instead."
+msgstr ""
+
+#: viewdoc.phtml:115
+#, php-format
+msgid ""
+"The document requested is not available for the version %s. Version %s will "
+"be displayed instead."
+msgstr ""
+
+#: viewdoc.phtml:119
+msgid ""
+"The document requested is not available in the requested language. The "
+"English version will be displayed instead."
+msgstr ""
+
+#: viewdoc.phtml:123
+#, php-format
+msgid ""
+"It seems your browser doesn't support iframes. To view the requested page in "
+"a separate windows, please <a href=\"%s\">click here</a>."
+msgstr ""
+
+#: features.phtml:3
+msgid "Features"
+msgstr "特徴"
+
+#: features.phtml:14
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> is powerful accounting software. "
+"Below are details of some of the numerous features that <span class=\"gnucash"
+"\">GnuCash</span> has to offer to its users."
+msgstr ""
+
+#: features.phtml:17 features.phtml:24
+#, fuzzy
+msgid "Main features"
+msgstr "特徴"
+
+#: features.phtml:18 features.phtml:117
+msgid "Advanced features"
+msgstr ""
+
+#: features.phtml:19
+msgid "Data storing and exchange features"
+msgstr ""
+
+#: features.phtml:20 features.phtml:193
+msgid "Other goodies"
+msgstr ""
+
+#: features.phtml:28
+msgid "Double Entry"
+msgstr "複式記帳法"
+
+#: features.phtml:34
+#, fuzzy
+msgid ""
+"Every transaction must debit one account and credit others by an equal "
+"amount. This ensures the books balance: the difference between income and "
+"expenses exactly equals the sum of assets and liabilities."
+msgstr ""
+"すべての取引はある勘定科目の借方となり、他の勘定科目で等量の貸方となります。"
+"これによって「帳簿の釣り合い」が確実に保たれます。これにより収益と費用の差が"
+"厳密に純資産の合計と一致します。"
+
+#: features.phtml:40
+msgid "Checkbook-Style Register"
+msgstr "小切手帳スタイルの記録簿"
+
+#: features.phtml:46
+msgid ""
+"The <span class=\"gnucash\">GnuCash</span> checkbook-style register provides "
+"a custom, convenient and familiar interface to entering financial "
+"transactions."
+msgstr ""
+
+#: features.phtml:48
+msgid ""
+"The register supports common checking and credit-card transactions, as well "
+"as income, stock and currency transactions. The following features are also "
+"provided:"
+msgstr ""
+
+#: features.phtml:51
+msgid "The ability to enter <b>split transactions</b>"
+msgstr ""
+
+#: features.phtml:52
+msgid ""
+"The ability to mark a transaction as <b>cleared</b> or <b>reconciled</b>"
+msgstr ""
+
+#: features.phtml:53
+msgid "<b>Autofill</b> of entered transactions"
+msgstr ""
+
+#: features.phtml:54
+msgid ""
+"The ability to display <b>multiple accounts</b> in a single register window"
+msgstr ""
+
+#: features.phtml:55
+msgid ""
+"A <b>summary bar</b> that displays all of the relevant account's balance "
+"information"
+msgstr ""
+
+#: features.phtml:56
+msgid "Many options to <b>customize</b> the appearance and the display style"
+msgstr ""
+
+#: features.phtml:66
+msgid ""
+"You can create recurring transactions with a high level of customization of "
+"amounts and timeline. You can also set an automatic reminder when a "
+"transaction is due."
+msgstr ""
+
+#: features.phtml:69
+msgid ""
+"An assistant that runs when <span class=\"gnucash\">GnuCash</span> is "
+"started allows scheduled transactions to be postponed without canceling or "
+"entering them before the due date."
+msgstr ""
+
+#: features.phtml:79
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> has an integrated module to display "
+"graphs of your financial data in the form of:"
+msgstr ""
+
+#: features.phtml:82
+msgid "Barcharts"
+msgstr ""
+
+#: features.phtml:83
+msgid "Piecharts"
+msgstr ""
+
+#: features.phtml:84
+msgid "Scatter plots"
+msgstr ""
+
+#: features.phtml:86
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> also comes complete with a full suite "
+"of standard and customizeable reports, such as:"
+msgstr ""
+
+#: features.phtml:88
+msgid "Balance Sheet"
+msgstr ""
+
+#: features.phtml:89
+msgid "Profit &amp; Loss"
+msgstr ""
+
+#: features.phtml:90
+msgid "Portfolio Valuation"
+msgstr ""
+
+#: features.phtml:91
+msgid "and many others."
+msgstr ""
+
+#: features.phtml:94
+msgid ""
+"Graphs and reports can be highly and easily customized in appearance and "
+"contents, in order to fullfill every user's need."
+msgstr ""
+
+#: features.phtml:100
+msgid "Statement Reconciliation"
+msgstr "明細書の照合"
+
+#: features.phtml:105
+msgid ""
+"<b>Account reconciliation</b> allows the user to compare the transactions "
+"entered in an account against a bank statement. This operation is very "
+"useful to spot untracked transactions or data entry errors and ensure that "
+"your books match the bank's."
+msgstr ""
+
+#: features.phtml:106
+#, fuzzy
+msgid ""
+"The <span class=\"gnucash\">GnuCash</span> reconcile tool with running "
+"reconciled and cleared balances makes reconciling against bank statements an "
+"easy task."
+msgstr ""
+"照合ウィンドウにより銀行の明細書に対する照合・清算処理が容易になります。"
+
+#: features.phtml:111
+msgid "Income/Expense Account Types"
+msgstr "収益/費用勘定科目タイプ"
+
+#: features.phtml:113
+msgid ""
+"Income/Expense Account Types (Categories) allow you to categorize your cash "
+"flow.  When used properly with the double-entry feature and equity accounts, "
+"these enable you to generate reports, such as Profit &amp; Loss, that plain-"
+"vanilla systems cannot handle."
+msgstr ""
+"収益/費用勘定科目タイプ (カテゴリ) によってキャッシュフローを分類することがで"
+"きます。複式記帳法と純資産勘定科目を適切に使用することで、ごく普通のシステム"
+"では取り扱うことができないような損益計算書などの帳票を作成することができま"
+"す。"
+
+#: features.phtml:121
+msgid "Small Business Accounting Features"
+msgstr "小規模ビジネス向け会計機能"
+
+#: features.phtml:124
+#, fuzzy
+msgid ""
+"Simplify managing a small business with <b>Customer</b> and <b>Vendor</b> "
+"tracking, <b>Jobs</b>, <b>Invoicing</b> and <b>Bill</b> Payment, and <b>Tax</"
+"b> and <b>Billing Terms</b>."
+msgstr ""
+"得意先と仕入先の追跡、得意先請求書と仕入先請求書の支払、税金と支払条件の管理"
+"など小規模ビジネスの管理が簡単になります。"
+
+#: features.phtml:127
+msgid ""
+"Using A/Receivable and A/Payable accounts you can even manage <b>payrolls</"
+"b> for your employees."
+msgstr ""
+
+#: features.phtml:130
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> gives you also a tool to manage your "
+"business' <b>budget</b> so that you can easily plan your financial strategy."
+msgstr ""
+
+#: features.phtml:136
+msgid "Multiple Currencies"
+msgstr "複数通貨"
+
+#: features.phtml:140
+msgid ""
+"Different accounts can be denominated in different currencies. Currency "
+"movements between accounts are fully balanced when double-entry is enabled."
+msgstr ""
+"異なる勘定科目に対しては異なる通貨単位で表示することができます。勘定科目間で"
+"の通貨の移動は複式記帳法を利用することで釣り合いが完全に保たれます。"
+
+#: features.phtml:146
+msgid "Stock/Mutual Fund Portfolios"
+msgstr "株式 / 投資信託のポートフォリオ"
+
+#: features.phtml:149
+msgid ""
+"Track stocks individually (one per account) or in portfolio of accounts (a "
+"group of accounts that can be displayed together)."
+msgstr ""
+"株式を個別 (勘定科目単位) または勘定科目のポートフォリオ (一緒に表示可能な勘"
+"定科目グループ) として追跡することができます。"
+
+#: features.phtml:154
+msgid "Online Stock &amp; Mutual Fund Quotes"
+msgstr "オンライン株式・投資信託相場表取得"
+
+#: features.phtml:157
+msgid ""
+"Get Stock &amp; Mutual Fund quotes from various web sites, update portfolio "
+"automatically. Additional pricing sources are added regularly."
+msgstr ""
+"株式・投資信託の相場表を様々なウェブサイトから取得して、自動的にポートフォリ"
+"オをアップデートします。相場情報源は定期的に追加されます。"
+
+#: features.phtml:160
+msgid "Data storage and exchange features"
+msgstr ""
+
+#: features.phtml:164
+msgid "Database support"
+msgstr ""
+
+#: features.phtml:166
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> by default stores data in an <b>xml</"
+"b> format. Starting with version 2.4, <span class=\"gnucash\">GnuCash</span> "
+"financial data can be stored in a <b>SQL database</b> using <b>SQLite3</b>, "
+"<b>MySQL</b> or <b>PostgreSQL</b>."
+msgstr ""
+
+#: features.phtml:171
+#, fuzzy
+msgid "QIF and OFX Import"
+msgstr "OFXのインポート"
+
+#: features.phtml:174
+msgid ""
+"If you are migrating from other financial software, <span class=\"gnucash"
+"\">GnuCash</span>  can import Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> "
+"<b>QIF</b> files using a practical assistant."
+msgstr ""
+
+#: features.phtml:177
+#, fuzzy
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> is also the first free software "
+"application to support the <b>OFX</b> (Open Financial Exchange) protocol "
+"that many banks and financial services are starting to use."
+msgstr ""
+"GnuCash は Open Financial Exchange プロトコルをサポートする史上初のフリーソフ"
+"トウェアです。このプロトコルは多くの銀行や財務サービスで利用され始めていま"
+"す。"
+
+#: features.phtml:180
+msgid ""
+"A transaction matching system ensures that duplicate transactions are "
+"accurately recognized and automatically deleted during file import."
+msgstr ""
+
+#: features.phtml:186
+msgid "HBCI Support"
+msgstr "HBCI サポート"
+
+#: features.phtml:189
+#, fuzzy
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> is the first free software "
+"application to support the German <b>Home Banking Computer Information</b> "
+"protocol, allowing German users to perform statement download and initiate "
+"bank transfers and direct debits."
+msgstr ""
+"GnuCashは German Home Banking Computer Information プロトコルをサポートする史"
+"上初のフリーソフトウェアです。ドイツの利用者は明細書のダウンロード、口座振"
+"替、直接入金を行うことができます。"
+
+#: features.phtml:197
+msgid "Multiplatform"
+msgstr ""
+
+#: features.phtml:200
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> runs on many different operating "
+"systems including <b>Windows</b>, <b>MacOSX</b> and <b>Linux</b>."
+msgstr ""
+
+#: features.phtml:205
+msgid "Localization"
+msgstr "地域化対応"
+
+#: features.phtml:208
+#, fuzzy
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> handles internationalized dates and "
+"currencies. The application's menus and popups have been translated to 21 "
+"languages, including Chinese, Danish, French, German, Hungarian, Italian, "
+"Japanese, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, "
+"Ukrainian, and British English. Documentation is available in English, "
+"French, Portuguese and Spanish."
+msgstr ""
+"国際化された日付書式と通貨を取り扱うことができます。GnuCash のメニューおよび"
+"ポップアップは21言語に翻訳されています。中国語、デンマーク語、フランス語、ド"
+"イツ語、ハンガリー語、イタリア語、日本語、ノルウェー語、ポーランド語、ポルト"
+"ガル語、ロシア語、スペイン語、スウェーデン語、トルコ語、ウクライナ語、および"
+"英国英語です。英語、フランス語、ポルトガル語、スペイン語の文書も存在します。"
+
+#: features.phtml:213
+msgid "Transaction Finder"
+msgstr "取引検索"
+
+#: features.phtml:216
+msgid ""
+"A powerful transaction query dialogue can help you quickly locate a needle "
+"in a haystack."
+msgstr "強力な取引検索ダイアログで素早く取引を検索することができます。"
+
+#: features.phtml:221
+msgid "Check Printing"
+msgstr "小切手の印刷"
+
+#: features.phtml:224
+msgid ""
+"Checks may be printed in standard formats on common check stocks. A "
+"customization GUI allows custom check layouts to be developed."
+msgstr ""
+"一般的な小切手テンプレートにより小切手を標準形式で印刷することができます。GUI"
+"を利用して小切手レイアウトをカスタマイズすることもできます。"
+
+#: features.phtml:229
+#, fuzzy
+msgid "Mortgage &amp; Loan Repayment Assistant"
+msgstr "担保付きローン・ローン支払いウィザード"
+
+#: features.phtml:232
+msgid ""
+"A guided dialogue for setting up loan payments as scheduled transactions."
+msgstr "ウィザードを利用してローン支払いの予定取引を作成することができます。"
+
+#: features.phtml:238
+#, fuzzy
+msgid "User Manual and Help"
+msgstr "新しいユーザーマニュアルとヘルプ"
+
+#: features.phtml:241
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> is very well documented: along the "
+"application <b>Manual</b>, new users can take full advantage of the "
+"<b>Tutorial and Concepts guide</b>. This document gives background "
+"information on accounting principles and how they are reflected in <span "
+"class=\"gnucash\">GnuCash</span> with many practical examples described step "
+"by step."
+msgstr ""
+
+#: oldnews.phtml:11
+msgid "Older Announcements"
+msgstr "過去のアナウンス"
+
+#: oldnews.phtml:14
+msgid ""
+"This is an archive of announcements that once appeared on the GnuCash home "
+"page."
+msgstr "GnuCash ホームページに掲載された過去のアナウンスのアーカイブです。"
+
 #: externals/menu.phtml:6
 msgid "Information"
 msgstr "情報"
@@ -1500,11 +1548,21 @@ msgstr ""
 msgid "Request or vote enhancements for GnuCash"
 msgstr ""
 
-#: externals/header.phtml:98
+#: externals/header.phtml:7
+#, fuzzy
+msgid "GnuCash on Google +"
+msgstr "GnuCash %s for"
+
+#: externals/header.phtml:8
+#, fuzzy
+msgid "GnuCash on facebook"
+msgstr "GnuCash %s for"
+
+#: externals/header.phtml:116
 msgid "Language"
 msgstr "言語"
 
-#: externals/header.phtml:112
+#: externals/header.phtml:131
 msgid "Continent"
 msgstr "大陸"
 
@@ -1517,15 +1575,23 @@ msgstr "サーバーおよび email の不具合に関する連絡先: "
 msgid "Translation problems? Contact:"
 msgstr ""
 
-#: search/templates/NMZ.result.short.php_tmpl:4
-#: search/templates/NMZ.result.normal.php_tmpl:4
-msgid "score"
-msgstr "スコア"
+#: search/templates/NMZ.foot.php_tmpl:9
+msgid "This search system is powered by:"
+msgstr "この全文検索システムは:"
 
-#: search/templates/NMZ.result.short.php_tmpl:6
-#: search/templates/NMZ.result.normal.php_tmpl:9
-msgid "(${size} bytes)"
-msgstr "(${size} バイト)"
+#: search/templates/NMZ.foot.php_tmpl:13
+msgid "Server &amp; email outage reports to: "
+msgstr "サーバーおよび email の不具合に関する連絡先: "
+
+#: search/templates/NMZ.foot.php_tmpl:15
+msgid ""
+"Translation problems? Contact: <a href=\"mailto:gnucash-devel@gnucash.org"
+"\"><b>gnucash-devel@gnucash.org</b></a>"
+msgstr ""
+"翻訳に関する連絡先: <a href=\"mailto:gnucash-devel@gnucash.org\"><b>gnucash-"
+"devel@gnucash.org</b></a> <br>\n"
+"日本語チーム: <a href=\"mailto:translation-team-ja@lists.sourceforge.net"
+"\"><b>translation-team-ja@lists.sourceforge.net</b></a>"
 
 # Namazu 検索関係の文字列 (search 配下) は元々日本語化されているため訳す必要はありません。
 # 以下同様です。
@@ -1875,24 +1941,6 @@ msgstr "URI (降順)"
 msgid "Lists to Search"
 msgstr "検索対象"
 
-#: search/templates/NMZ.foot.php_tmpl:9
-msgid "This search system is powered by:"
-msgstr "この全文検索システムは:"
-
-#: search/templates/NMZ.foot.php_tmpl:13
-msgid "Server &amp; email outage reports to: "
-msgstr "サーバーおよび email の不具合に関する連絡先: "
-
-#: search/templates/NMZ.foot.php_tmpl:15
-msgid ""
-"Translation problems? Contact: <a href=\"mailto:gnucash-devel@gnucash.org"
-"\"><b>gnucash-devel@gnucash.org</b></a>"
-msgstr ""
-"翻訳に関する連絡先: <a href=\"mailto:gnucash-devel@gnucash.org\"><b>gnucash-"
-"devel@gnucash.org</b></a> <br>\n"
-"日本語チーム: <a href=\"mailto:translation-team-ja@lists.sourceforge.net"
-"\"><b>translation-team-ja@lists.sourceforge.net</b></a>"
-
 #: search/templates/NMZ.tips.php_tmpl:4
 msgid "Tips on searching"
 msgstr "検索のコツ"
@@ -2000,6 +2048,11 @@ msgstr ""
 "これは仕様です。 Namazu のフレイズ検索は精度が 100 % ではな\n"
 "いため、ときどき失敗します。"
 
+#: search/templates/NMZ.result.normal.php_tmpl:4
+#: search/templates/NMZ.result.short.php_tmpl:4
+msgid "score"
+msgstr "スコア"
+
 #: search/templates/NMZ.result.normal.php_tmpl:5
 msgid "Author"
 msgstr "著者"
@@ -2007,6 +2060,15 @@ msgstr "著者"
 #: search/templates/NMZ.result.normal.php_tmpl:6
 msgid "Date"
 msgstr "日付"
+
+#: search/templates/NMZ.result.normal.php_tmpl:9
+#: search/templates/NMZ.result.short.php_tmpl:6
+msgid "(${size} bytes)"
+msgstr "(${size} バイト)"
+
+#, fuzzy
+#~ msgid "Writing documentation"
+#~ msgstr "文書"
 
 #~ msgid "Documentation Project"
 #~ msgstr "文書プロジェクト"
