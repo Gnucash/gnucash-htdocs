@@ -5,7 +5,23 @@ $titleRSS = T_("Subscribe to RSS feed");
 $titledonation = T_("Support the GnuCash project with a donation");
 $titleuservoice = T_("Request or vote enhancements for GnuCash");
 $titlegplus = T_("GnuCash on Google +");
-$titlefb = T_("GnuCash on facebook");
+
+# This function will create a link to the given page
+# reusing the get parameters that were specified
+# with the option to override the language
+function make_lang_href ($page, $get_parms, $lang)
+{
+  if (isset($lang) && $lang != "")
+  {
+    $get_parms[lang] = $lang;
+  }
+  $url_get_query = http_build_query ($get_parms);
+  $lang_href = "$page"."?"."$url_get_query";
+  return $lang_href;
+
+}
+
+$get_parms = $_GET;
 ?>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -59,29 +75,34 @@ if (isset($homepage)) { ?>
 <p><img src="<?=$top_dir?>/images/gnucash-vert.png" alt="GnuCash" /></p>
 </div>
 
+<!--This is an image out of the view that is shown on google+ profile for GnuCash
+<div style="position:absolute;top:-1000px;left:-1000px;"><img src="<?=$home?>/images/gnc-download.png" alt="GnuCash small business accounting" height="152" width="125" /></div>-->
+
 <div id="googleplusone">
 
 <!--facebook like button-->
 <div style="padding:0 0 5px 0">
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<div class="fb-like" data-href="www.gnucash.org" data-send="false" data-layout="box_count" data-width="60" data-show-faces="true" data-font="verdana"></div>
+    <script type="text/javascript">
+    //<![CDATA[
+    (function() {
+        document.write('<fb:like width="200" data-href="www.gnucash.org" data-send="false" data-layout="box_count" data-width="60" data-show-faces="true" data-font="verdana"></fb:like>');
+        var s = document.createElement('SCRIPT'), s1 = document.getElementsByTagName('SCRIPT')[0];
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://connect.facebook.net/en_US/all.js#xfbml=1';
+        s1.parentNode.insertBefore(s, s1);
+    })();
+    //]]>
+    </script>
 </div>
 <!-- google +1 button-->
-<g:plusone size="tall" href="http://www.gnucash.org/"></g:plusone>
+<g:plusone size="tall" href="http://www.gnucash.org/beta/"></g:plusone>
 </div>
 
 <!-- the icons on the top right-->
 <div style="float:right;">
 <ul id="navlist">
-  <li id="fb-icon"><a href="https://www.facebook.com/Gnucash" title="<?php echo T_($titlefb);?>"></a></li>
   <li id="gplus-icon"><a href="https://plus.google.com/u/0/103666182558673867088/" title="<?php echo T_($titlegplus);?>"></a></li>
   <li id="uservoice-icon"><a href="http://gnucash.uservoice.com/" title="<?php echo T_($titleuservoice);?>"></a></li>
   <li id="donation-icon"><a href="http://sourceforge.net/donate/index.php?group_id=192" title="<?php echo T_($titledonation);?>"></a></li>
@@ -97,19 +118,18 @@ if (isset($homepage)) { ?>
 
 <span id="language">
 <?= T_("Language"); ?>:
-  <a class="nav" href="<?=$current_path;?>?lang=en_US">English</a>
-| <a class="nav" href="<?=$current_path;?>?lang=de_DE">Deutsch</a>
-<!--| <a class="nav" href="<?=$current_path;?>?lang=es_ES">Espa&ntilde;ol</a>-->
-| <a class="nav" href="<?=$current_path;?>?lang=fr_FR">Fran&ccedil;ais</a>
-| <a class="nav" href="<?=$current_path;?>?lang=it_IT">Italiano</a>
-| <a class="nav" href="<?=$current_path;?>?lang=ja_JP">日本語</a>
-| <a class="nav" href="<?=$current_path;?>?lang=hu_HU">Magyar</a>
-| <a class="nav" href="<?=$current_path;?>?lang=nl_NL">Nederlands</a>
-<!--| <a class="nav" href="<?=$current_path;?>?lang=nb_NO">Norsk Bokm&aring;l</a>-->
-<!-- | <a class="nav" href="<?=$current_path;?>?lang=pl_PL">Polska</a> -->
-<!--| <a class="nav" href="<?=$current_path;?>?lang=pt_PT">Portugu&ecirc;s</a>-->
-| <a class="nav" href="<?=$current_path;?>?lang=zh_CN">简体中文</a>
-| <a class="nav" href="<?=$current_path;?>?lang=zh_TW">繁體中文</a>
+  <a class="nav" href="<?= make_lang_href($current_page, $get_parms, "en_US"); ?>">English</a>
+| <a class="nav" href="<?= make_lang_href($current_page, $get_parms, "de_DE"); ?>">Deutsch</a>
+<!--| <a class="nav" href="<?= make_lang_href($current_page, $get_parms, "es_ES"); ?>">Espa&ntilde;ol</a>-->
+| <a class="nav" href="<?= make_lang_href($current_page, $get_parms, "fr_FR"); ?>">Fran&ccedil;ais</a>
+| <a class="nav" href="<?= make_lang_href($current_page, $get_parms, "it_IT"); ?>">Italiano</a>
+| <a class="nav" href="<?= make_lang_href($current_page, $get_parms, "ja_JP"); ?>">日本語</a>
+| <a class="nav" href="<?= make_lang_href($current_page, $get_parms, "hu_HU"); ?>">Magyar</a>
+| <a class="nav" href="<?= make_lang_href($current_page, $get_parms, "nl_NL"); ?>">Nederlands</a>
+<!--| <a class="nav" href="<?= make_lang_href($current_page, $get_parms, "nb_NO"); ?>">Norsk Bokm&aring;l</a>-->
+<!-- | <a class="nav" href="<?= make_lang_href($current_page, $get_parms, "pl_PL"); ?>">Polska</a> -->
+<!--| <a class="nav" href="<?= make_lang_href($current_page, $get_parms, "pt_PT"); ?>">Portugu&ecirc;s</a>-->
+| <a class="nav" href="<?= make_lang_href($current_page, $get_parms, "zh_CN"); ?>">中文</a>
 </span>
 <span id="location">&nbsp; <!-- <?= _("Continent"); ?>:
  (<a class="nav" href="http://www.gnucash.org/">US</a>)
