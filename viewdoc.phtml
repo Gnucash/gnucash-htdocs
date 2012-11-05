@@ -112,14 +112,15 @@ if ($showrev == "trunk") {
 <?php } ?>
 <?php if (! $req_rev_ok ) {
   $reqrev=$_GET["rev"]; ?>
-<p style="color: red;"><?= T_("The document requested is not available for the version $reqrev. Version $showrev will be displayed instead.")?></p>
+<p style="color: red;"><?php printf (T_("The document requested is not available for the version %s. Version %s will be displayed instead."),
+                                     $reqrev, $showrev); ?></p>
 <?php } ?>
 <?php if (! $req_lang_ok ) { ?>
 <p style="color: red;"><?= T_("The document requested is not available in the requested language. The English version will be displayed instead.")?></p>
 <?php } ?>
 
 <iframe src="<?php echo $showurl; ?>" style="border-width: 0px; width: 100%; min-width: 700px; height: 80em;">
-<?php echo T_("It seems your browser doesn't support iframes. To view the requested page in a separate windows, please <a href=\"" . $showurl . "\">click here</a>."); ?>
+<?php printf (T_("It seems your browser doesn't support iframes. To view the requested page in a separate windows, please <a href=\"%s\">click here</a>."), $showurl); ?>
 </iframe>
 
 </div>
