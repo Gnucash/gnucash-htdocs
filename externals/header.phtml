@@ -14,7 +14,7 @@ function make_lang_href ($page, $get_parms, $lang)
 {
   if (isset($lang) && $lang != "")
   {
-    $get_parms[lang] = $lang;
+    $get_parms["lang"] = $lang;
   }
   $url_get_query = http_build_query ($get_parms);
   $lang_href = "$page"."?"."$url_get_query";
