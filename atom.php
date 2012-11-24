@@ -4,10 +4,9 @@
   $top_dir = ".";
 
   $contentType = "application/atom+xml";
-  $overrideContentType = $_GET["content-type"];
-  if (isset($overrideContentType))
+  if (isset($_GET["content-type"]))
   {
-    $contentType = $overrideContentType;
+    $contentType = $_GET["content-type"];
   }
   $charset = "iso-8859-1";
   header("Content-Type: $contentType; charset=$charset");

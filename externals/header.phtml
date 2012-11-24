@@ -14,7 +14,7 @@ function make_lang_href ($page, $get_parms, $lang)
 {
   if (isset($lang) && $lang != "")
   {
-    $get_parms[lang] = $lang;
+    $get_parms["lang"] = $lang;
   }
   $url_get_query = http_build_query ($get_parms);
   $lang_href = "$page"."?"."$url_get_query";
@@ -46,6 +46,7 @@ if ($can_utf)
 <link rel="stylesheet" href="<?=$home?>/externals/gnucash.css" type="text/css" />
 <link rel="icon" href="<?=$home?>/favicon.ico" type="image/x-icon" />
 <link rel="shortcut icon" href="<?=$home?>/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon-precomposed" href="<?=$home?>/images/icons/gnc-icon-129x129.png" />
 <?php
 include("$top_dir/externals/global_params.php");
 $current_page = array_key_exists('HTTP_HOST', $_SERVER) ? ($top_dir . "/" . basename($_SERVER["SCRIPT_NAME"])) : "";

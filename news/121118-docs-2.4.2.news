@@ -1,0 +1,132 @@
+<b>Announcement:</b> GnuCash Documentation 2.4.2 Release
+2012-11-18
+
+<h2>GnuCash Documentation 2.4.2 released</h2>
+
+<p>The GnuCash documentation team proudly announces release 2.4.2 of the GnuCash help manual and concepts guide. This documentation is intended for the 2.4 series of GnuCash.</p>
+
+<h3>Reading the documentation online</h3>
+
+<p>An online version of the documentation is available on the <a href="http://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="http://www.gnucash.org/">GnuCash website</a>. The 2.4.2 documentation can be found under "GnuCash v2.4 (current stable release)" in multiple languages.</p>
+
+<h3>Getting GnuCash Documentation in pdf, epub or mobi formats</h3>
+
+<p>The documentation can equally be downloaded in pdf, epub or mobi formats from the <a href="http://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="http://www.gnucash.org/">GnuCash website</a>. The 2.4.2 documentation can be found under "GnuCash v2.4 (current stable release)" in multiple languages.</p>
+
+<h3>Getting GnuCash Documentation as source code</h3>
+
+<p>If you want to compile the GnuCash Documentation 2.4.2 for yourself, the source code can be downloaded from:</p>
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-docs-2.4.2.tar.gz">Sourceforge</a></li>
+<li>You can also checkout the sources directly from the subversion repository as <a href="http://wiki.gnucash.org/wiki/Subversion">described here.</a></li>
+</ul>
+
+<h3>Changes</h3>
+<p>Changes between 2.4.1 and 2.4.2 include</p>
+<ul>
+  <li>Bugs fixed
+  <ul>
+    <li>Bug #647197 - Add short note on report customisation</li>
+    <li>Bug #651498 - Add note about automatic price retrieval</li>
+    <li>Bug #651886 - Reword and simplify A/P and A/R warnings</li>
+    <li>Bug #654467 - Proof reading patch and many localized figures. Thanks to Yasuaki Taniguchi.</li>
+    <li>Bug #654467 - Add support to relative path for ipaexfont folder location. Thanks to Yasuaki Taniguchi.</li>
+    <li>Bug #654467 - Add handling of Japanese font for pdf generation. Thanks to Yasuaki Taniguchi.</li>
+    <li>Bug #654467 - Complete the update to Japanese Translation of the GnuCash guide. Thanks to Yasuaki Taniguchi.</li>
+    <li>Bug #659147 - Use Loan repayment calculator instead of financial calculator, fix some minor mistakes and add some tagging.</li>
+    <li>Bug #660379 - Add tip and note about customizable register view and transactions operations.</li>
+    <li>Bug #660871 - Correct spelling.</li>
+    <li>Bug #661705 - OMF files not installed at the right place: yelp doesn't see them</li>
+    <li>Bug #663208 - New method for running New Account Hierarchy</li>
+    <li>Bug #664054 - add a note about using Tab key instead of Enter key for the split in capital gain and losses.</li>
+    <li>Bug #670354 - [PATCH] Outdated Docs - Assign Starting Invoice Number</li>
+    <li>Bug #672668 - Add section explaining how to migrate data.</li>
+    <li>Bug #684709 - Cumulative patch to backport changes related to this bug.</li>
+    <li>Bug #688425 - Fix steps in putting it all together section.</li>
+  </ul>
+  </li>
+
+
+ <li>Translation updates
+ <ul>
+    <li>Update Italian translation of help and guide.</li>
+    <li>Add missing files to help/de../makefile as suggested by Dominique
+    Leuenberger on IRC.</li>
+    <li>Add  missing xml file for chapter 16 and 17 to Japanese guide.</li>
+ </ul>
+ </li>
+
+
+ <li>New or improved content
+ <ul>
+    <li>Change wording on section Online Assistance</li>
+    <li>Update in Help_tips Pseudo-symbols that can be used for TIAA-CREF quotes</li>
+    <li>Update in Help_tips Yahoo Codes for Exchanges and Markets.
+    As a side effect, I introduced more GDP conform id's.
+    I know, I should have done the formating in a separate patch - sorry for the inconvience.</li>
+    <li>Update in Help_tips Finance-Quote Sources to FQ 1.17 / gnc-commodity r22290
+    Additional change order: Sources overview before source specific tables</li>
+    <li>Fix capitalization in GnuCash word.</li>
+    <li>Small fixes to help files.</li>
+    <li>Add a non complete section for migrating GnuCash data.</li>
+    <li>Added item re. line chart for net worth.</li>
+    <li>guide: Slight clarification in meaning</li>
+    <li>Fix a typo.</li>
+ </ul>
+ </li>
+
+
+  <li>Markup releated changes
+  <ul>
+    <li>Fix tags to pass docbook validation.</li>
+    <li>Some tagging.</li>
+    <li>Use variable list.</li>
+    <li>Fix a missing slash.</li>
+    <li>Add proper markup for app name.</li>
+    <li>Adjust dpi of help figures for better pdf printing for all languages using the script documented in http://wiki.gnucash.org/wiki/Documentation_Update_Instructions#Images_and_screenshots </li>
+    <li>Adjust dpi of figures for better pdf printing for all languages using the script documented in http://wiki.gnucash.org/wiki/Documentation_Update_Instructions#Images_and_screenshots </li>
+ </ul>
+ </li>
+ 
+  <li>Other, non-visible changes
+  <ul>
+    <li>Update AUTHORS and NEWS</li>
+    <li>Clean up the revision history list</li>
+    <li>Copyright and contact changes
+    - Remove Yawar's e-mail adress from the author's listing (on his request)
+    - Remove my e-mail address from the author's listing
+    - Transfer my copyrights to the GnuCash Documentation team. I don't need personal copyright assignment.
+    - Start adding an e-mail address for the publisher (using gnucash-user@gnucash.org)</li>
+    <li>Make sure images are found when generating pdf out of tree</li>
+    <li>Add comment about modifications in xmldoc.make</li>
+    <li>Add links for backwards compatibility with older yelp versions
+    This is a follow up on r22373 which fixes the help file locations
+    for newer yelp versions. That fix was incompatible with older
+    yelp versions. With the links in place, both old and new yelp
+    versions should properly find the help files.
+    This change is deliberately committed to the 2.4 branch only.
+    It is expected that the older yelp versions won't be used anymore
+    by the time the current trunk gets stable.</li>
+    <li>Makefile cleanups</li>
+    <li>Update README:
+
+    Debian packaging,
+    non-latin PDF.
+    Explain the different way to contact the team.
+    Add a few pointer to related documents.</li>
+    <li>Fix out of tree build</li>
+    <li>Clean up indentation</li>
+    <li>Add openSUSEs font path for local installed IPA*.ttf</li>
+    <li>XML conversion: mark old step as for pre-2.0 files only</li>
+    <li>Fix uninstall error introduced by r21467</li>
+    <li>Fix commits of SASAKI Suguru patches for epub and mobi generation.</li>
+    <li>Patch by SASAKI Suguru - Implement mobi generation target.</li>
+    <li>Patch by SASAKI Suguru - Implement epub generation target</li>
+    <li>Add svnlog2ul script tailored to gnucash-docs</li>
+ </ul>
+ </li>
+</ul>
+
+
+<h3>About the Program</h3>
+<p>GnuCash is a free, open source accounting program released under the GNU General Public License (GPL) and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash began in 1997, and its first stable release was in 1998.</p>
