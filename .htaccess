@@ -17,3 +17,7 @@ RedirectMatch permanent /old-website/* http://www.gnucash.org
 # Images were once stored in /externals, while they are now in /images
 # Redirect some that get a lot of "not found hits"
 Redirect permanent /externals/banner5.png /images/banner5.png
+
+# Non-English versions of the site used to be accessed via
+# a language path specifier. This now uses a get variable.
+RedirectMatch permanent /nl/(.*)  /$1?lang=nl_NL
