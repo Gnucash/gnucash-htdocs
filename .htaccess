@@ -1,4 +1,3 @@
-DirectoryIndex index.phtml index.php index.html
 AddType application/x-httpd-php .phtml
 
 # Over time, files got moved around in the webdirectory
@@ -12,12 +11,58 @@ AddType application/x-httpd-php .phtml
 # The old website was kept here for historical purposes.
 # Any attempt to access it will be redirected to the
 # new site's main page.
+<<<<<<< HEAD
 RedirectMatch permanent /old-website/* http://www.gnucash.org
+=======
+RedirectMatch permanent /old-website/.* http://www.gnucash.org
+>>>>>>> trunk
 
 # Images were once stored in /externals, while they are now in /images
 # Redirect some that get a lot of "not found hits"
 Redirect permanent /externals/banner5.png /images/banner5.png
+Redirect permanent /externals/webding.png /images/webding.png
+
+# Other images have been replaced meanwhile
+Redirect permanent /images/icons/feed-icon-12x12.png /images/gc-rss.png
+
+# The french version of the website apparently used to have
+# lots of private pages. Not all of them have an equivalent
+# on the current site anymore. We'll just redirect them
+# as well as we can to sensible alternatives.
+Redirect permanent /fr/bios             /index.phtml?lang=fr_FR
+Redirect permanent /fr/components       /index.phtml?lang=fr_FR
+Redirect permanent /fr/contribute       http://wiki.gnucash.org/wiki/Development
+Redirect permanent /fr/data             /index.phtml?lang=fr_FR
+Redirect permanent /fr/Docs             /docs.phtml?lang=fr_FR
+Redirect permanent /fr/features_5.phtml /features.phtml?lang=fr_FR
+Redirect permanent /fr/irc.phtml        http://wiki.gnucash.org/wiki/IRC
+Redirect permanent /fr/links            /index.phtml?lang=fr_FR
+Redirect permanent /fr/menu             /index.phtml?lang=fr_FR
+
+# Some pages that don't exist anymore in the current website
+RedirectMatch permanent /.*/favicon.ico        /favicon.ico
+RedirectMatch permanent /.*/lists.phtml        http://wiki.gnucash.org/wiki/Mailing_Lists
+RedirectMatch permanent /(.*)/promote.phtml    /index.phtml?lang=$1
+RedirectMatch permanent /(.*)/required.phtml   /index.phtml?lang=$1
+RedirectMatch permanent /.*/roadmap.phtml      http://wiki.gnucash.org/wiki/Roadmap
+RedirectMatch permanent /(.*)/rss-feed.phtml   /atom.php?lang=$1
+RedirectMatch permanent /(.*)/state_of_the_gnucash_project.phtml   /sizing.phtml?lang=$1
+RedirectMatch permanent /.*/sql.phtml          http://wiki.gnucash.org/wiki/SQL
+RedirectMatch permanent /(.*)/t-shirt          /index.phtml?lang=$1
 
 # Non-English versions of the site used to be accessed via
 # a language path specifier. This now uses a get variable.
-RedirectMatch permanent /nl/(.*)  /$1?lang=nl_NL
+RedirectMatch permanent /de/(.*)     /$1?lang=de_DE
+RedirectMatch permanent /es/(.*)     /$1?lang=es_ES
+RedirectMatch permanent /en/(.*)     /$1?lang=en_US
+RedirectMatch permanent /fr/(.*)     /$1?lang=fr_FR
+RedirectMatch permanent /hu/(.*)     /$1?lang=hu_HU
+RedirectMatch permanent /it/(.*)     /$1?lang=it_IT
+RedirectMatch permanent /ja/(.*)     /$1?lang=ja_JP
+RedirectMatch permanent /nb/(.*)     /$1?lang=nb_NB
+RedirectMatch permanent /nl/(.*)     /$1?lang=nl_NL
+RedirectMatch permanent /pl/(.*)     /$1?lang=pl_PL
+RedirectMatch permanent /pt_PT/(.*)  /$1?lang=pt_PT
+RedirectMatch permanent /zh_CN/(.*)  /$1?lang=zh_CN
+RedirectMatch permanent /zh_TW/(.*)  /$1?lang=zh_TW
+
