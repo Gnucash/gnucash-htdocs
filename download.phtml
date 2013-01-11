@@ -41,6 +41,9 @@ include("externals/menu.phtml");
  </ul>
 <p><?php echo T_("For build instructions, please check the <span class=\"gnucash\">GnuCash</span> wiki which has <a href='http://wiki.gnucash.org/wiki/GnuCash#Installation'>guidelines for several distributions</a>.")?></p>
 
+<?php
+# Only show unstable download options if there really is an active unstable release
+if ($latest_unstable) { ?>
 <div class="featureborder">
 <h2 class="featuretitle"><?php printf (T_("Unstable/Development release (%s)"), $latest_unstable)?></h2>
 </div>
@@ -52,6 +55,7 @@ include("externals/menu.phtml");
   <li><?php printf (T_("GnuCash %s for"), $latest_unstable)?> Mac OS X <a href="<?php echo $download_path.$latest_unstable_mac_intel;?>">Intel</a> | <a href="<?php echo $download_path.$latest_unstable_mac_ppc;?>">PPC</a> | <a href="http://wiki.gnucash.org/wiki/MacOSX/<?php echo $latest_unstable;?>/Readme">Readme</a></li>
   <li><a href="<?php echo $download_path.$latest_unstable_source;?>">bzip2 compressed tarball</a> <?php printf (T_("for GnuCash %s"), $latest_unstable)?></li>
 </ul>
+<?php } ?>
 
 <div class="featureborder">
 <h2 class="featuretitle"><?php echo T_("Other")?></h2>
@@ -59,7 +63,13 @@ include("externals/menu.phtml");
 
 <ul>
  <li><a href="<?php echo $latest_stable_path;?>"><?php printf (T_("View all GnuCash %s downloads (stable)"), $latest_stable)?></a></li>
+
+<?php
+# Only show unstable download options if there is an active unstable release
+if ($latest_unstable) { ?>
  <li><a href="<?php echo $latest_unstable_path;?>"><?php printf (T_("View all GnuCash %s downloads (unstable)"), $latest_unstable)?></a></li>
+<?php } ?>
+
  <li><a href="http://sourceforge.net/projects/gnucash/files/"><?php echo T_("View all GnuCash downloads")?></a></li>
 </ul>
 
