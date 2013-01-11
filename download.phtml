@@ -50,7 +50,11 @@ include("externals/menu.phtml");
 
 <ul>
  <li><a href="<?php echo $latest_stable_path;?>"><?php printf (T_("View all GnuCash %s downloads (stable)"), $latest_stable)?></a></li>
+
+<?php if ($latest_unstable) { ?>
  <li><a href="<?php echo $latest_unstable_path;?>"><?php printf (T_("View all GnuCash %s downloads (unstable)"), $latest_unstable)?></a></li>
+<?php } ?>
+
  <li><a href="http://sourceforge.net/projects/gnucash/files/"><?php echo T_("View all GnuCash downloads")?></a></li>
 </ul>
 
