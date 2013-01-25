@@ -1,0 +1,39 @@
+<b>Announcement:</b> Github Repositories Will Be Regenerated Next Week
+2013-01-25
+
+<h2>Github Repositories Will Be Regenerated Next Week</h2>
+
+<p> As you may know, the core developers have been experimenting with
+Git for some time, using a <a
+href="http://github.com/Gnucash/gnucash.git">mirror repository</a> at
+<a href="http://github.com">Github</a>. This trial has been quite
+successful, and the developers are now preparing to make it an
+official mirror of the Subversion repository.</p>
+
+<p> Unfortunately in the course of preparing a direct link between the
+Subversion repository and Git we discovered that some of the author
+names weren't converted correctly during the original mirroring
+process. We're correcting that, but the result is that the hashes for
+most changesets in Git are different: A single change in a commit will
+cause every subsequent hash to be different, because the parent and
+tree hash values are included in the commit data which are hashed.</p>
+
+<p>As a result, we have generated a new set of repositories, and next
+week we will delete our existing repositories on Github and replace
+them with the new ones. <em>If you have a clone or fork of one of the
+current repositories you will need to delete it and re-clone from the
+new one. </em> If you have local branches which you want to transfer
+to the new repository, it's fairly easy, and instructions have already
+been added to <a
+href="http://wiki.gnucash.org/wiki/Git#Migration_Notice">the
+Gnucash-Git Wiki page</a>. <em>You can make the process much easier by keeping your clone/fork current with the base repository this week.</em></p>
+
+
+<p> We regret the necessity of this and wish to apologize for the extra work and inconvenience, and to apologize as well to the contributors whose changes were incorrectly attributed.</p>
+
+
+<h3>About the Program</h3> <p>GnuCash is a free, open source
+accounting program released under the GNU General Public License (GPL)
+and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft
+Windows.  Programming on GnuCash began in 1997, and its first stable
+release was in 1998.</p>
