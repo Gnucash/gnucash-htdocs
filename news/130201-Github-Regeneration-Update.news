@@ -1,0 +1,20 @@
+<b>Announcement:</b> Github Repositories Have Been Regenerated
+2013-02-01
+
+<h2>Github Repositories Have Been Regenerated</h2>
+
+<p> As we explained a week ago, we needed to regenerate the Github repositories to correct some errors in the original import from Subversion. The regeneration has been completed and the new repositories are ready for use.</p>
+
+<p> To ease the transition, instead of deleting the old repositories, we've renamed them by appending "-old" to the names, so gnucash.git is now gnucash-old.git. Both will be maintained in parallel for a couple of weeks to afford plenty of time to switch to the new ones. You can change your existing repositories with<br/>
+<code>
+  git remote set-url origin git://github.com/Gnucash/gnucash-old.git<br/>
+</code>then rename it and proceed with the instructions in <a href="http://wiki.gnucash.org/wiki/Git#Migration_Notice">the wiki</a>.</p>
+
+<p> We regret the necessity of this and wish to apologize for the extra work and inconvenience, and to apologize as well to the contributors whose changes were incorrectly attributed.</p>
+
+
+<h3>About the Program</h3> <p>GnuCash is a free, open source
+accounting program released under the GNU General Public License (GPL)
+and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft
+Windows.  Programming on GnuCash began in 1997, and its first stable
+release was in 1998.</p>
