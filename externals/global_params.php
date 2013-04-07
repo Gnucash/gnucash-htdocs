@@ -10,9 +10,9 @@
 #     $latest_stable_mac_intel   = $latest_stable."-2";
      $latest_stable_mac_intel   = $latest_stable;
  
-#     $latest_unstable           = "2.3.17";
+     $latest_unstable           = "2.5.0";
      // There's currently no unstable release being worked on, so disable it
-     $latest_unstable           = False;
+#     $latest_unstable           = False;
      $latest_unstable_win       = $latest_unstable;
      $latest_unstable_mac_ppc   = $latest_unstable;
      $latest_unstable_mac_intel = $latest_unstable;
