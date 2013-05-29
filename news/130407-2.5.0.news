@@ -1,0 +1,134 @@
+<b>Announcement:</b> GnuCash 2.5.0 (Unstable) Release
+2013-04-07
+
+<h2>GnuCash 2.5.0 (Unstable) released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.5.0,
+the first of several unstable 2.5.x releases of the GnuCash
+Free Accounting Software which will eventually lead to the stable
+version 2.6.0. It runs on GNU/Linux, *BSD, Solaris and Mac OSX.</p>
+
+<div class="dialog warning">
+<p><b>WARNING:</b> This is an *UNSTABLE* version of Gnucash.</p>
+
+<p> This release is intended for developers and testers who want to
+help tracking down all those bugs that are still in there.</p>
+
+<p> Make sure you make backups of any files used in testing versions
+of GnuCash in the 2.5.x series. Although the developers go to great
+lengths to ensure that no data will be lost we cannot guarantee that
+your data will not be affected if for some reason GnuCash crashes in
+testing these releases.</p>
+
+</div>
+
+<div class="dialog note">
+<p><b>NOTE:</b> The latest stable version is 2.4.12.</p>
+</div>
+
+<p>PLEASE TEST TEST AND TEST SOME MORE any and all features important to you.
+Then post any bugs you find to bugzilla</p>
+<p>Major changes in this release include:</p>
+<ul>
+
+<li> Robert Fewell has contributed a rewrite of the register (Gnucash's
+primary interface window) to use the GtkTreeModel (select "register 2"
+from the menu) as well as a new CSV import/export facility for account
+trees.<em>Take care not to try to open a single account in both the old and
+new registers at the same time. Doing so will crash Gncuash</em></li>
+
+<li> Gnucash now requires Gtk+-2.24 and GLib-2.26. We've removed most
+ of the dependencies on libraries obsoleted by project Ridley and will
+ be in position to move to Gtk+-3.x once the GtkTreeModel register
+ window work is complete. This means that Gnucash 2.5 requires Debian
+ 6, RHEL 6, or one of the more aggressive distributions like
+ Ubuntu.</li>
+
+<li> Gnucash now works with Guile-2.0. </li>
+
+<li> The business module has been revamped and we introduce some new features:
+     <ul>
+     <li> Credit Notes </li>
+     <li> Customer and Vendor Overview Pages</li>
+     <li> Customer Overview Reports </li>
+     <li> Existing Transactions may be reassigned as invoice payments </li>
+     <li> Support for duplicate invoices </li>
+     <li> Improved invoice and bill handling: Post, print, or duplicate
+     multiple items directly from a search results list </li>
+     <li> Better invoice printing setup: Choose a default invoice report as a
+     preference </li>
+     <li> Reorder invoice entries in the invoice window </li>
+     </ul>
+</li>
+<li> The "Num" field is now optionally per-split rather than
+ per-transaction.</li>
+
+<li> Gnucash can print to a PDF for reports and invoices </li>
+<li> Account "Filter By" settings can be saved and recalled </li>
+<li> Account entries in the Chart of Account can be colored </li>
+<li> When opening a locked "book" one now has the option of opening it
+ read-only. Note that Gnucash is still a single-user program and that
+ the database backends are still used only as a data store.</li>
+
+<li> Gnucash is no longer subject to the "2038" bug, so that 30-year
+ mortgages can now be entered correctly.</li>
+
+<li> By agreement of all authors we have relicensed Gnucash to the Gnu
+ Public License Version 2 or later from just Version 2.</li>
+
+</ul>
+
+<h3>Caveats for Testers</h3>
+
+<p>Any 2.5.x version might crash unexpectedly at any point during
+runtime. If you test some serious work in a 2.5.x release and are
+using the XML file backend for data storage, make sure you hit "Save"
+after every non-trivial workstep.  If you are using the SQL backend,
+this is not required as every change is saved immediately to the
+database.</p>
+
+<p>The documentation has had screenshots updated, however, many help
+text may refer to the 2.4 series. Everyone is invited to help improve
+the documentation; see http://wiki.gnucash.org/wiki/Development on how
+to get involved.</p>
+
+<h3>How can you help?</h3>
+
+<p>Testing: Test it and help us discover all bugs that might show up
+in there.  Please enter each and every bug into bugzilla.</p>
+
+<p>Translating: The new release comes with some new translation
+strings. If you consider contributing a translation, we invite you to
+test this release already. A string freeze will be announced in one of
+the later 2.5.x releases.  Please check
+http://wiki.gnucash.org/wiki/Translation_Status for updates on
+this.</p>
+
+<p></p>
+
+<p>We would like to encourage people to test this and any
+further releases as much as possible and submit bug reports in order
+that we can polish GnuCash to be as stable as possible for the 2.6.0
+release. Then post any bugs you find to <a
+href="http://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">bugzilla</a></p>
+
+<h3>Getting GnuCash</h3>
+<p>Source code for GnuCash 2.5.0 can be downloaded from multiple locations:</p>
+<ul>
+<li><a href="http://www.gnucash.org/download.phtml">The GnuCash website</a></li>
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.5.0.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.5.0.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/2.5.0/">all files</a>.</li>
+<li>You can also checkout the sources directly from the subversion repository with this command:<br/><br/><span style="font-family: monospace;">svn co http://svn.gnucash.org/repo/gnucash/trunk gnucash</span></li>
+</ul>
+
+<p>To install GnuCash, you will need Gnome 2, guile, slib. In addition you will need swig if compiling from subversion.</p>
+
+<h3>Win32 and MacOSX binary</h3>
+<p>The following pre-compiled application packages are also available:</p>
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/unstable/gnucash-2.5.0-setup.exe">Gnucash 2.5.0 Win32 setup executable</a></li>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/unstable/Gnucash-Intel-2.5.0.dmg">Gnucash 2.5.0 MacOSX dmg for Intel Macs</a></li>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/unstable/Gnucash-PPC-2.5.0.dmg">Gnucash 2.5.0 MacOSX dmg for PowerPC Macs</a></li>
+</ul>
+
+<h3>About the Program</h3>
+<p>GnuCash is a free, open source accounting program released under the GNU General Public License (GPL) and available for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash began in 1997, and its first stable release was in 1998.</p>

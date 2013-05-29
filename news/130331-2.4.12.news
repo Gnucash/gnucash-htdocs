@@ -1,0 +1,85 @@
+<b>Announcement:</b> GnuCash 2.4.12 Release
+2013-03-31
+
+<h2>GnuCash 2.4.12 released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.4.12, the ninth bug fix release in a series of stable of the GnuCash Free Accounting Software. With this release series, GnuCash can use an SQL database using SQLite3, MySQL or PostgreSQL. It runs on GNU/Linux, *BSD, Solaris, Microsoft Windows and Mac OSX.</p>
+
+<h3>Getting GnuCash for Windows (Win32 binary)</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.12-setup.exe">Gnucash 2.4.12 Win32 setup executable</a> can be downloaded from Sourceforge. It will install everything needed to run GnuCash.</p>
+
+<h3>Mac OSX binary</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.4.12.dmg">Gnucash 2.4.12 MacOSX package</a> can be downloaded from Sourceforge as well.</p>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.4.12 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.12.tar.bz2">bzip2</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.12.tar.gz">gzip</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.4.12/">all files</a>.</li>
+
+<li>You can also checkout the sources directly from the subversion repository as <a href="http://wiki.gnucash.org/wiki/Subversion">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need Gnome 2, guile, slib. In addition you will need swig if compiling from subversion.</p>
+
+<h3>Changes</h3>
+
+<p>Between 2.4.11 and 2.4.12, the following bugfixes were included:</p>
+<ul>
+<li>Bug #696469: Renumbering subaccounts does not preserve original order </li>
+<li>Bug #695423: Fix OFX Commodity Account handling. Patch by Burke. </li>
+<li>Bug #661832: MySQL database error after wireless reconnect
+    <p>After suggestion by Wang Xiaozhe &lt;chaoslawful@gmail.com&gt;</p>
+</li>
+
+<li> Bug #667093: Update taxtxf.scm to fix beginning balance sign and
+     signs for Transfer From/To amounts for liability/equity accounts
+</li>
+<li>Bug #680086: Each Tip of the Day has an n shown at the end</li>
+<li>Bug #672364: does not properly handle XML parse errors, leading to
+    possible data loss
+    <p>Author: Sébastien Villemot &lt;sebastien@debian.org&gt;</p>
+    <p>Bug-Debian: http://bugs.debian.org/696282</p>
+</li>
+<li>Fix #638955: Connect the `Help' button in the `Close Book' dialog
+    box (Tools &gt; Close Book) to newly-written help section on book
+    closing.
+</li>
+<li>Bug #638971: Multicolumn report does not show more than one graph</li>
+<li>Bug #680887: Updated RELAX NG schema for v2.4.11 XML file format</li>
+<li>Bug #677488: DROP INDEX missing ON &lt;table&gt;</li>
+<li>Bug #632931: Advanced portfolio: add "rate of gain" column
+    <p>Author: Sebastien Alborini &lt;salborini@gmail.com&gt;</p>
+</li>
+<li>Bug #610648: Change Reconciled Split Dialog ignores pressing Cancel
+    <p>Author: Robert Fewell &lt;14ubobit@gmail.com&gt;</p>
+</li>
+<li>Bug 680402: Tests fail due to unused translations
+    <p>Add all scheme files to POTFILES.skip so that intltool-update > 0.50
+    will ignore them. Scheme file translation strings are handled by intl-scm/.</p>
+</li>
+<li><p>Bug #680613: Date format setting seems to be ignored since version 2.4.9</p>
+    <p>Work around strange side-effect of r21665 which caused LC_TIME to be
+    changed after it had been set by setlocale(LC_ALL) in set_mac_locale().</p>
+</li>
+<li><p>Bug #680887: RELAX NG schema for 2.4.11 XML file format</p>
+    <p>Contributed by Baptiste Carvello</p>
+</li>
+<li><p>Bug #680576: Transaction report: date takes up two lines when using
+       Canadian locale format.</p>
+    <p>Change date cells type from text-cell to date-cell to apply
+    white-space: nowrap style.</p>
+</li>
+<li>Bug #680671: Configure should check for the python-devel package if
+    called with --enable-python
+</li>
+</ul>
+<p>In 2.4.12, the following languages had their translations updated:
+Russian, German, Ukrainian, Italian, Lithuanian</p>
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
