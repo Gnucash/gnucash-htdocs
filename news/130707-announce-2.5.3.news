@@ -46,11 +46,12 @@ new registers at the same time. Doing so will crash Gncuash</em></li>
  Ubuntu.</li>
 
 <li> Gnucash now works with Guile-2.0, but enabling Guile-2.0 support
-requires building Gnucash with the just-released (as in yesterday)
-<a href="http://downloads.sourceforge.net/swig/swig-2.0.10.tar.gz"> Swig-2.0.10</a>, which missed our deadline for this release. Consequently
-the Gnucash-2.5.3 tarballs <em>do not</em> work with Guile-2.0. If you
-need Guile-2.0 support you will have to build Gnucash-2.5.3 from the
-repo after installing Swig-2.0.10 on your system </li>
+requires building Gnucash with <a
+href="http://downloads.sourceforge.net/swig/swig-2.0.10.tar.gz">
+Swig-2.0.10</a>. The distribution tarballs were built with Swig 2.0.9,
+so they <em>do not</em> work with Guile-2.0. If you need Guile-2.0
+support you will have to build Gnucash-2.5.3 from the repo after
+installing Swig-2.0.10 on your system </li>
 
 <li> The business module has been revamped and we introduce some new features:
      <ul>
