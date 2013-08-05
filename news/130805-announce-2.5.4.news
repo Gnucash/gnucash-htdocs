@@ -9,7 +9,7 @@ Free Accounting Software which will eventually lead to the stable
 version 2.6.0. It runs on GNU/Linux, *BSD, Solaris and Mac OSX.</p>
 
 <div class="dialog warning">
-<p><b>WARNING:</b> This is an <b>UNSTABLE</b> version of Gnucash.</p>
+<p><b>WARNING:</b> This is an <b>UNSTABLE</b> version of GnuCash.</p>
 
 <p>This release is intended for developers and testers who want to
 help find bugs and other problems to make the eventual stable release
@@ -30,99 +30,119 @@ testing these releases.</p>
 <p><b>Please TEST, TEST, and TEST some more</b> any and all features important to you.
 Then post any bugs you find to <a href="https://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">Bugzilla</a></p>
 <h3>Major changes in the 2.5 series </h3>
+
 <ul>
+  <li> <p>Robert Fewell has contributed a rewrite of the register (GnuCash's
+  primary interface window) to use the GtkTreeModel (select "register 2"
+  from the menu) as well as a new CSV import/export facility for account
+  trees. <em>Take care not to try to open a single account in both the old and
+  new registers at the same time. Doing so will crash Gncuash</em></p>
+  <p> Note that this introduces some new preferences:</p>
 
-<li> <p>Robert Fewell has contributed a rewrite of the register (Gnucash's
-primary interface window) to use the GtkTreeModel (select "register 2"
-from the menu) as well as a new CSV import/export facility for account
-trees.<em>Take care not to try to open a single account in both the old and
-new registers at the same time. Doing so will crash Gncuash</em>
-<p> Note that this introduces some new preferences:
-<ul>
-<li> In the Accounts Pane:
-<ul>
-<li>Show the Account Color as background</li>
-<li>Show the Account Color on tabs</li>
-</ul>These both default to "off", which means that if you have account colors on tabs in an earlier version of Gnucash, you'll want to enable the second one.</li>
-<li>In the Register Defaults Pane:
-<ul>
-<li>Number of characters for auto complete</li>
-<li>Show entered and reconciled dates on selection</li>
-<li>Show the calendar buttons</li>
-<li>Move the selection to the blank split on expand</li>
-</ul>These affect the behavior of only the new Register2 windows.</li></ul>These new preferences have not yet been documented in the Help Manual.</li>
+  <ul>
+  <li>
+    In the Accounts Pane:
+    <ul>
+      <li>Show the Account Color as background</li>
+      <li>Show the Account Color on tabs</li>
+    </ul>
+    These both default to "off", which means that if you have account colors on tabs in an earlier version of GnuCash, you'll want to enable the second one.
+  </li>
+  <li>In the Register Defaults Pane:
+    <ul>
+      <li>Number of characters for auto complete</li>
+      <li>Show entered and reconciled dates on selection</li>
+      <li>Show the calendar buttons</li>
+      <li>Move the selection to the blank split on expand</li>
+    </ul>
+    These affect the behavior of only the new Register2 windows.
+  </li>
+  </ul>
+  These new preferences have not yet been documented in the Help Manual.
 
+  <li> GnuCash now requires Gtk+-2.24 and GLib-2.26. We've removed most
+  of the dependencies on libraries obsoleted by project Ridley and will
+  be in position to move to Gtk+-3.x once the GtkTreeModel register
+  window work is complete. This means that GnuCash 2.5 requires Debian
+  6, RHEL 6, or one of the more aggressive distributions like
+  Ubuntu.</li>
 
-<li> Gnucash now requires Gtk+-2.24 and GLib-2.26. We've removed most
- of the dependencies on libraries obsoleted by project Ridley and will
- be in position to move to Gtk+-3.x once the GtkTreeModel register
- window work is complete. This means that Gnucash 2.5 requires Debian
- 6, RHEL 6, or one of the more aggressive distributions like
- Ubuntu.</li>
+  <li> GnuCash now works with Guile-2.0, but enabling Guile-2.0 support
+  requires building GnuCash with <a
+  href="http://downloads.sourceforge.net/swig/swig-2.0.10.tar.gz">
+  Swig-2.0.10</a>. The distribution tarballs were built with this version and should work with Guile-2.0</li>
 
-<li> Gnucash now works with Guile-2.0, but enabling Guile-2.0 support
-requires building Gnucash with <a
-href="http://downloads.sourceforge.net/swig/swig-2.0.10.tar.gz">
-Swig-2.0.10</a>. The distribution tarballs were built with this version and should work with Guile-2.0</li>
-
-<li> The business module has been revamped and we introduce some new features:
+  <li> The business module has been revamped and we introduce some new features:
      <ul>
-     <li> Credit Notes </li>
-     <li> Customer and Vendor Overview Pages</li>
-     <li> Customer Overview Reports </li>
-     <li> Existing Transactions may be reassigned as invoice payments </li>
-     <li> Support for duplicate invoices </li>
-     <li> Improved invoice and bill handling: Post, print, or duplicate
-     multiple items directly from a search results list </li>
-     <li> Better invoice printing setup: Choose a default invoice report as a
-     preference </li>
-     <li> Reorder invoice entries in the invoice window </li>
+       <li> Credit Notes </li>
+       <li> Customer and Vendor Overview Pages</li>
+       <li> Customer Overview Reports </li>
+       <li> Existing Transactions may be reassigned as invoice payments </li>
+       <li> Support for duplicate invoices </li>
+       <li> Improved invoice and bill handling: Post, print, or duplicate
+       multiple items directly from a search results list </li>
+       <li> Better invoice printing setup: Choose a default invoice report as a
+       preference </li>
+       <li> Reorder invoice entries in the invoice window </li>
      </ul>
-</li>
-<li> The "Num" field is now optionally per-split rather than
- per-transaction.</li>
+  </li>
 
-<li> Gnucash can print to a PDF for reports and invoices </li>
-<li> Account "Filter By" settings can be saved and recalled </li>
-<li> Account entries in the Chart of Account can be colored </li>
-<li> When opening a locked "book" one now has the option of opening it
- read-only. Note that Gnucash is still a single-user program and that
- the database backends are still used only as a data store.</li>
+  <li> The "Num" field is now optionally per-split rather than
+  per-transaction.</li>
 
-<li>Tom Loft has contributed an initial version of REST API allowing minimal information about accounts, invoices and customers to be accessed in JSON format. Includes modifications to gnucash_core.py  to add additional functions.</li>
+  <li> GnuCash can print to a PDF for reports and invoices </li>
 
-<li> Gnucash is no longer subject to the "2038" bug, so that 30-year
- mortgages can now be entered correctly.</li>
+  <li> Account "Filter By" settings can be saved and recalled </li>
 
-<li> By agreement of all authors we have relicensed Gnucash to the Gnu
- Public License Version 2 or later from just Version 2.</li>
+  <li> Account entries in the Chart of Account can be colored </li>
+
+  <li> When opening a locked "book" one now has the option of opening it
+  read-only. Note that GnuCash is still a single-user program and that
+  the database backends are still used only as a data store.</li>
+
+  <li>Tom Loft has contributed an initial version of REST API allowing minimal information about accounts,
+  invoices and customers to be accessed in JSON format. Includes modifications to gnucash_core.py to add additional functions.</li>
+
+  <li> GnuCash is no longer subject to the "2038" bug, so that 30-year
+  mortgages can now be entered correctly.</li>
+
+  <li> By agreement of all authors we have relicensed GnuCash to the Gnu
+  Public License Version 2 or later from just Version 2.</li>
 
 </ul>
+
 <h3>Changes Since the Last Unstable Release</h3>
-<ul>
-<li>Register Rewrite Update:
 
 <ul>
-<li>Restore the delete-transaction-up/down feature</li>
-<li>Replace the filter-and-sort model with a qof query</li>
-<li>Date and Cursor improvements</li>
-</ul>
-Author: Robert Fewell</li>
-<li>Revert the Bitcoin support until the patch is rewritten for a better UI</li>
-<li>Localization Improvements:</li>
-<ul>
-<li>Make the CSV Account import table header tranlatable</li>
-<li>Fix translation of table headers</li>
-<li>Fix dash-marker usage</li>
-<li>Other translation issues</li>
-</ul>
-Author: Aurimas Fišeras
-</li>
+  <li>Register Rewrite Update:
 
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=703897">Bug #703897</a>: Functions which can return NULL always return a Python object (Tom Lofts)</li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=704183">Bug #704183</a>: OFX file import tries to match online_id against ACCTID[space]ACCTKEY even when ACCTKEY is empty. (G. Paul Ziemba)</li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=704185">Bug #704185</a>: Gnucash 2.5 doesn't build on FreeBSD</li>
-<li> Translations updated: Catalan, Danish, Italian, and Lithuanian</li>
+    <ul>
+      <li>Restore the delete-transaction-up/down feature</li>
+      <li>Replace the filter-and-sort model with a qof query</li>
+      <li>Date and Cursor improvements</li>
+    </ul>
+    Author: Robert Fewell</li>
+
+    <li>Revert the Bitcoin support until the patch is rewritten for a better UI</li>
+
+    <li>Localization Improvements:</li>
+
+    <ul>
+      <li>Make the CSV Account import table header tranlatable</li>
+      <li>Fix translation of table headers</li>
+      <li>Fix dash-marker usage</li>
+      <li>Other translation issues</li>
+    </ul>
+    Author: Aurimas Fišeras
+  </li>
+
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=703897">Bug #703897</a>: Functions which can return NULL always return a Python object (Tom Lofts)</li>
+
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=704183">Bug #704183</a>: OFX file import tries to match online_id against ACCTID[space]ACCTKEY even when ACCTKEY is empty. (G. Paul Ziemba)</li>
+
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=704185">Bug #704185</a>: GnuCash 2.5 doesn't build on FreeBSD</li>
+
+  <li> Translations updated: Catalan, Danish, Italian, and Lithuanian</li>
 </ul>
 
 <h3>Caveats for Testers</h3>
@@ -133,7 +153,7 @@ are using the SQL backend, this is not required as every change is
 saved immediately to the database.</p>
 
 <p>Although the screenshots have been updated in the documentation,
-much of the wording still describes Gnucash-2.4. Please help update
+much of the wording still describes GnuCash-2.4. Please help update
 the documentation: See <a
 href="http://wiki.gnucash.org/wiki/Development">the development wiki
 page</a> on how to get involved.</p>
@@ -141,40 +161,39 @@ page</a> on how to get involved.</p>
 <h3>How can you help?</h3>
 
 <ul>
-<li><b>Testing:</b> Please try out as many features as you can. Report
-problems either in <a
-href="https://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">bug
-reports</a>or on the <a
-href="https://lists.gnucash.org/mailman/listinfo/gnucash-devel">devel
-mailing list</a></li>
+  <li><b>Testing:</b> Please try out as many features as you can. Report
+  problems either in <a
+  href="https://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">bug
+  reports</a>or on the <a
+  href="https://lists.gnucash.org/mailman/listinfo/gnucash-devel">devel
+  mailing list</a></li>
 
-<li><b>Translating:</b> Translators may begin work on new strings at any time,
-though string freeze isn't planned until the 2.5.5 release in early
-September. Status of translations is shown on the <a
-href="http://wiki.gnucash.org/wiki/Translation_Status">translation
-status </a> page. If Gnucash isn't fully translated into your language
-and you'd like to pitch in, <a
-href="http://wiki.gnucash.org/wiki/Translation">here's how to get
-involved</a>.</li>
+  <li><b>Translating:</b> Translators may begin work on new strings at any time,
+  though string freeze isn't planned until the 2.5.5 release in early
+  September. Status of translations is shown on the <a
+  href="http://wiki.gnucash.org/wiki/Translation_Status">translation
+  status </a> page. If GnuCash isn't fully translated into your language
+  and you'd like to pitch in, <a
+  href="http://wiki.gnucash.org/wiki/Translation">here's how to get
+  involved</a>.</li>
 </ul>
 
 <h3>Getting GnuCash</h3>
 <p>Source code for GnuCash 2.5.4 can be downloaded from multiple locations:</p>
 <ul>
-<li><a href="http://www.gnucash.org/download.phtml">The GnuCash website</a></li>
-<li>Sourceforge: <a
-href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.5.4.tar.bz2">bzip2</a>,
-<a
-href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.5.4.tar.gz">gzip</a>,
-<a
-href="http://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/2.5.4/">all
-files</a>.</li>
-<li>You can also checkout the sources directly from the
-repository with subversion:<br/><br/><span style="font-family:
-monospace;">svn co http://svn.gnucash.org/repo/gnucash/trunk
-gnucash</span>
-<p>Or with git:</p><span style="font-family:
-monospace;">git clone git://github.com/Gnucash/gnucash.git</span></li>
+  <li><a href="http://www.gnucash.org/download.phtml">The GnuCash website</a></li>
+
+  <li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.5.4.tar.bz2">bzip2</a>,
+  <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.5.4.tar.gz">gzip</a>,
+  <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/2.5.4/">all
+  files</a>.</li>
+
+  <li>You can also checkout the sources directly from the
+  repository with subversion:<br/><br/><span style="font-family:
+  monospace;">svn co http://svn.gnucash.org/repo/gnucash/trunk
+  gnucash</span>
+  <p>Or with git:</p><span style="font-family:
+  monospace;">git clone git://github.com/GnuCash/gnucash.git</span></li>
 </ul>
 
 <p>To install GnuCash, you will need Gnome 2 and guile 1.8 or 2.0,
@@ -185,9 +204,11 @@ or git.</p>
 <h3>Win32 and MacOSX binary</h3>
 <p>The following pre-compiled application packages are also available:</p>
 <ul>
-<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/unstable/gnucash-2.5.4-setup.exe">Gnucash 2.5.4 Win32 setup executable</a></li>
-<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/unstable/Gnucash-Intel-2.5.4.dmg">Gnucash 2.5.4 MacOSX dmg for Intel Macs</a></li>
-<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/unstable/Gnucash-PPC-2.5.4.dmg">Gnucash 2.5.4 MacOSX dmg for PowerPC Macs</a></li>
+  <li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/unstable/gnucash-2.5.4-setup.exe">GnuCash 2.5.4 Win32 setup executable</a></li>
+
+  <li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/unstable/gnucash-Intel-2.5.4.dmg">GnuCash 2.5.4 MacOSX dmg for Intel Macs</a></li>
+
+  <li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/unstable/gnucash-PPC-2.5.4.dmg">GnuCash 2.5.4 MacOSX dmg for PowerPC Macs</a></li>
 </ul>
 
 <h3>About the Program</h3>
