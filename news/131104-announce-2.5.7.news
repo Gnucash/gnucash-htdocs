@@ -73,13 +73,10 @@ Then post any bugs you find to <a href="https://bugzilla.gnome.org/enter_bug.cgi
 	 allows us to remove several troublesome dependencies
 	 including GConf, ORBit, and DBus.</p>
 
-	 <p><em><b>WARNING: Preferences are not completely migrated
-	 from GConf</b></em> <br/>Some preferences are not yet
-	 migrated. What's more, the migration occurs every time you
-	 start up, over-writing anything that you've changed, so you
-	 may want to move ~/.gconf aside after the first time you run
-	 GnuCash-2.5.7. You can move it back when you need to use
-	 2.4.13 for real work.</p> </li>
+	 <p>Note that window position, column sizes, and sort orders
+	 will not be migrated from GConf. Those settings will revert
+	 to the default the first time you use Gnucash 2.5.6 or later,
+	 but they will be saved once you've reset them. </p> </li>
 
   <li> The "Num" field is now optionally per-split rather than
   per-transaction.</li>
@@ -130,7 +127,6 @@ Then post any bugs you find to <a href="https://bugzilla.gnome.org/enter_bug.cgi
 <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=710055">Bug #710055</a>: advanced portfolio report counts capital gains split as dividend. Author: Jason McCarty &lt;jmccarty@sent.com&gt;</li>
 <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=710311">Bug #710311</a>: Missing ChangeLogs</li>
 <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=710739">Bug #710739</a>: Fill in field for remote bank account information also for SEPA transfers.</li>
-<li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=710871">Bug #710871</a>: Fix for Python site-packages not found when not installed to default location.</li>
 <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=710979">Bug #710979</a>: Crash in gnc_plugin_page_invoice_summarybar_position_changed</li>
   <li> Translations updated: None</li>
 </ul>
@@ -158,15 +154,14 @@ page</a> on how to get involved.</p>
   href="https://lists.gnucash.org/mailman/listinfo/gnucash-devel">devel
   mailing list</a></li>
 
-  <li><b>Translating:</b> Translators may begin work on new strings at any time,
-  though string freeze isn't planned until the 2.5.7 release in early
-  September. Status of translations is shown on the <a
+  <li><b>Translating:</b> Translators may begin work on new strings at
+  any time, and while we haven't yet announced string freeze it's
+  imminent. Status of translations is shown on the <a
   href="http://wiki.gnucash.org/wiki/Translation_Status">translation
-  status </a> page. If GnuCash isn't fully translated into your language
-  and you'd like to pitch in, <a
+  status </a> page. If GnuCash isn't fully translated into your
+  language and you'd like to pitch in, <a
   href="http://wiki.gnucash.org/wiki/Translation">here's how to get
-  involved</a>.</li>
-</ul>
+  involved</a>.</li> </ul>
 
 <h3>Getting GnuCash</h3>
 <p>Source code for GnuCash 2.5.7 can be downloaded from multiple locations:</p>
