@@ -1,0 +1,220 @@
+<b>Announcement:</b> GnuCash 2.5.10 (Unstable) Release
+2013-12-15
+
+<h2>GnuCash 2.5.10 (Unstable) released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.5.10,
+the eleventh release in the 2.5.x series of the GnuCash
+Free Accounting Software. It runs on GNU/Linux, *BSD, Solaris and Mac OSX.</p>
+
+<div class="dialog warning">
+<p><b>WARNING:</b> This is an <b>UNSTABLE</b> version of GnuCash.</p>
+
+<p>This release is intended for everyone who wants to
+help find bugs and other problems to make the eventual stable release
+better.</p>
+
+<p> Make sure you make backups of any files used in testing versions
+of GnuCash in the 2.5.x series. Although the developers go to great
+lengths to ensure that no data will be lost we cannot guarantee that
+your data will not be affected if for some reason GnuCash crashes in
+testing these releases.</p>
+
+<p> This is the second "beta" release, with 2.6.0 planned for release 29 December. <em>String and Feature Freeze are now in effect.</em> No new features affecting strings, API, or UI should be committed until after 2.6.0 is released. </p>
+
+</div>
+
+<div class="dialog note">
+<p><b>NOTE:</b> The latest stable version is 2.4.13.</p>
+</div>
+
+<p><b>Please TEST, TEST, and TEST some more</b> any and all features important to you.
+Then post any bugs you find to <a href="https://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">Bugzilla</a></p>
+<h3>Major changes in the 2.5 series </h3>
+
+<ul>
+  <li> Register2 is now a configure option. Default builds, including
+  the Windows and Mac All-in-one packages, will use only the old
+  register. We've decided that it isn't ready for general use and the
+  principal author doesn't have time to make it ready in time for a
+  2.6 release.</li>
+
+
+  <li> GnuCash now requires Gtk+-2.24 and GLib-2.26. We've removed most
+  of the dependencies on libraries obsoleted by project Ridley and will
+  be in position to move to Gtk+-3.x once the GtkTreeModel register
+  window work is complete. This means that GnuCash 2.5 requires Debian
+  6, RHEL 6, or one of the more aggressive distributions like
+  Ubuntu.</li>
+
+  <li> GnuCash now works with Guile-2.0, but enabling Guile-2.0 support
+  requires building GnuCash with <a
+  href="http://downloads.sourceforge.net/swig/swig-2.0.10.tar.gz">
+  Swig-2.0.10</a>. The distribution tarballs were built with this version and should work with Guile-2.0</li>
+
+  <li> The business module has been revamped and we introduce some new features:
+     <ul>
+       <li> Credit Notes </li>
+       <li> Customer and Vendor Overview Pages</li>
+       <li> Customer Overview Reports </li>
+       <li> Existing Transactions may be reassigned as invoice payments </li>
+       <li> Support for duplicate invoices </li>
+       <li> Improved invoice and bill handling: Post, print, or duplicate
+       multiple items directly from a search results list </li>
+       <li> Better invoice printing setup: Choose a default invoice report as a
+       preference </li>
+       <li> Reorder invoice entries in the invoice window </li>
+     </ul>
+  </li>
+
+  <li><p>Geert Janssens has rewritten the preferences system to use
+	 GSettings from GIO (GLib) instead of GConf. This is a simpler
+	 and more robust backend which writes to the OS's native prefs
+	 &mdash; defaults on OS X and the Registry on MSWindows &mdash; and
+	 allows us to remove several troublesome dependencies
+	 including GConf, ORBit, and DBus.</p>
+
+	 <p>Note that window position, column sizes, and sort orders
+	 will not be migrated from GConf. Those settings will revert
+	 to the default the first time you use Gnucash 2.5.6 or later,
+	 but they will be saved once you've reset them. </p> </li>
+
+  <li> Patrick has contributed a new feature allowing one to link an
+  external file to a transaction. This long-requested feature is
+  available through the Transaction menu and a transaction's context
+  menu. The files are displayed in the default viewer for that file
+  type.</li>
+
+  <li> The "Num" field is now optionally per-split rather than
+  per-transaction.</li>
+
+  <li> GnuCash can print to a PDF for reports and invoices </li>
+
+  <li> Account "Filter By" settings can be saved and recalled </li>
+
+  <li> Account entries in the Chart of Account can be colored </li>
+
+  <li> When opening a locked "book" one now has the option of opening it
+  read-only. Note that GnuCash is still a single-user program and that
+  the database backends are still used only as a data store.</li>
+
+  <li>Tom Loft has contributed an initial version of REST API allowing
+  minimal information about accounts, invoices and customers to be
+  accessed in JSON format. Includes modifications to gnucash_core.py
+  to add additional functions.</li>
+
+  <li> GnuCash is no longer subject to the "2038" bug, so that 30-year
+  mortgages can now be entered correctly.</li>
+
+  <li> Frédéric Perrin has contributed a change to display currency
+  symbols whenever they are known and unambiguous.</li>
+
+  <li> By agreement of all authors we have relicensed GnuCash to the GNU
+  General Public License Version 2 or later from just Version 2.</li>
+
+</ul>
+
+<h3>Changes Since the Last Unstable Release</h3>
+<ul>
+
+  <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=336843">Bug #336843</a>: Attach images/files/urls to transactions: Disable the "show attachment" menu item if the transaction has no attached file.</li>
+ <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=619478">Bug #619478</a>:Build warning in html/gnc-html-webkit.c </li>
+<li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=627575">Bug #627575</a>: Stylesheet names with non-alphanumeric characters and saved-reports</li>
+<li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=630578">Bug #630578</a>: current date instead of posting date in exchange rate, when posting a bill </li>
+<li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=632588">Bug #632588</a>:  Scrub doesn't fix missing currency</li>
+<li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=639371">Bug #639371</a>: Welcome Sample Report reports wrong version and has a broken report</li>
+<li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=653594">Bug #653594</a>: wrong amount printed on checks </li>
+<li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=705714">Bug #705714</a>:   QIF Import - File selection pop-up is not on top during qif import.</li>
+<li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=708526">Bug #708526</a>: GnuCash Crashes when opening About page: Downgrade the error to a critical warning.</li>
+<li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=711317">Bug #711317</a>: Indian Rupee Symbol appears as "?" marks </li>
+<li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=715123">Bug #715123</a>: Post invoice problem, cannot unpost</li>
+<li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=719481">Bug #719481</a>: GnuCash report crashes with Guile2</li>
+<li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=719521">Bug #719521</a>: Missing radio button in "Edit security" dialog</li>
+<li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=719726">Bug #719726</a>: Click on File -> Open seg-faults</li>
+<li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=720235">Bug #720235</a>: Python bindings should load environment file just like gnucash does</li>
+<li> Fix Python tests to no longer require gsettings schemas installed.</li>
+<li> Fix the CuteCash (Qt GUI based) build</li>
+<li> Multi-currency "Post invoice" improvements</li>
+<li> Protect gnc_mktime against bad dates.</li>
+<li> Protect against null account pointers in a couple of place to avoid asserts.</li>
+<li> Qif Import Assistant: Don't disable the whole dialog, just the Forward button.</li>
+<li> QifImport: Fix crash from attempting to import an empty file.</li>
+<li> Add the ability to search for transactions that are, or are not, book closing entries.</li>
+<li> Move customer, bill, and invoice importers form the business menu to the file menu.</li>
+<li> Rename some directories in src/import-export so that the gschema.xml.in.in files within them don't have pathnames that are too long for tar when the GnuCash version exceeds 5 digits (e.g., 2.5.10).<li>
+
+  <li> Translations updated: German, Italian, French</li>
+  <li> New Translation: Arabic</li>
+</ul>
+
+<h3>Caveats for Testers</h3>
+<p><b>Any 2.5.x version might crash unexpectedly.</b> If you must test
+with important data in a 2.5.x release and are using the XML file
+backend for data storage, be sure to save the file frequently. If you
+are using the SQL backend, this is not required as every change is
+saved immediately to the database.</p>
+
+<p>Although the screenshots have been updated in the documentation,
+much of the wording still describes GnuCash-2.4. Please help update
+the documentation: See <a
+href="http://wiki.gnucash.org/wiki/Development">the development wiki
+page</a> on how to get involved.</p>
+
+<h3>How can you help?</h3>
+
+<ul>
+  <li><b>Testing:</b> Please try out as many features as you can. Report
+  problems either in <a
+  href="https://bugzilla.gnome.org/enter_bug.cgi?product=GnuCash">bug
+  reports</a>or on the <a
+  href="https://lists.gnucash.org/mailman/listinfo/gnucash-devel">devel
+  mailing list</a></li>
+
+  <li><b>Translating:</b> Translators may begin work on new strings at
+  any time, and while we haven't yet announced string freeze it's
+  imminent. Status of translations is shown on the <a
+  href="http://wiki.gnucash.org/wiki/Translation_Status">translation
+  status </a> page. If GnuCash isn't fully translated into your
+  language and you'd like to pitch in, <a
+  href="http://wiki.gnucash.org/wiki/Translation">here's how to get
+  involved</a>.</li> </ul>
+
+<h3>Getting GnuCash</h3>
+<p>Source code for GnuCash 2.5.10 can be downloaded from multiple locations:</p>
+<ul>
+  <li><a href="http://www.gnucash.org/download.phtml">The GnuCash website</a></li>
+
+  <li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.5.10.tar.bz2">bzip2</a>,
+  <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.5.10.tar.gz">gzip</a>,
+  <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/2.5.10/">all
+  files</a>.</li>
+
+  <li>You can also checkout the sources directly from the
+  repository with subversion:<br/><br/><span style="font-family:
+  monospace;">svn co http://svn.gnucash.org/repo/gnucash/trunk
+  gnucash</span>
+  <p>Or with git:</p><span style="font-family:
+  monospace;">git clone git://github.com/Gnucash/gnucash.git</span></li>
+</ul>
+
+<p>To install GnuCash, you will need Gnome 2 and guile 1.8 or 2.0,
+including devel packages. In addition you will need swig (swig-2.0.10
+for guile 2.0, see the note at the top) if compiling from subversion
+or git.</p>
+
+<h3>Win32 and MacOSX binary</h3>
+<p>The following pre-compiled application packages are also available:</p>
+<ul>
+  <li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/unstable/gnucash-2.5.10-setup.exe">GnuCash 2.5.10 Win32 setup executable</a></li>
+
+  <li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/unstable/gnucash-Intel-2.5.10-1.dmg">GnuCash 2.5.10 MacOSX dmg for Intel Macs</a></li>
+
+  <li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/unstable/gnucash-PPC-2.5.10-1.dmg">GnuCash 2.5.10 MacOSX dmg for PowerPC Macs</a></li>
+</ul>
+
+<h3>About the Program</h3>
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) Version 2 or Version 3 and available
+for GNU/Linux, *BSD, Solaris, Mac OSX and Microsoft Windows.
+Programming on GnuCash began in 1997, and its first stable release was
+in 1998.</p>
