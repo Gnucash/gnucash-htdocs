@@ -11,20 +11,18 @@ include("$top_dir/externals/menu.phtml");
 
 <div>
 <p>
-<?php echo T_("<span class=\"gnucash\">GnuCash</span> This tour will introduce you to new major features of <span class=\"gnucash\">GnuCash</span> 2.6.");?>
+<?php echo T_("This tour will introduce you to new major features of <span class=\"gnucash\">GnuCash</span> 2.6.");?>
 </p>
 </div>
 
 
 <h2 class="featuretitle"><?php echo T_("Jqplot Reports");?></h2>
-
 <p class="justify">
-<?php echo T_("<span class=\"gnucash\">GnuCash</span> now uses javascript jqplot to render reports. This gives more flexibility and a more professional look to all graphical reports (piechart, barchart, scatterplot).");?>
+<?php echo T_("<span class=\"gnucash\">GnuCash</span> now uses javascript jqplot to render reports. This gives a more professional look to all graphical reports (piechart, barchart, scatterplot).");?>
 </p>
-
 <table class="figure" align="center">
    <tr>
-     <td><img src="<?=$top_dir?>/images/2.6-release/2.6-jqplot-reports.png" alt="[Basic account relationship]" /></p>
+     <td><img src="<?=$top_dir?>/images/2.6-release/2.6-jqplot-reports.png" alt="[jqplot barchart]" /></p>
      </td>
    <tr>
      <th>A barchart rendered in GnuCash with jqplot.
@@ -33,14 +31,12 @@ include("$top_dir/externals/menu.phtml");
 </table>
 
 <h2 class="featuretitle"><?php echo T_("New predefined reports management system");?></h2>
-
 <p class="justify">
 <?php echo T_("The old <span class=\"gnucash\">GnuCash</span> custom report management system has been revised. You can save a report using the dedicated options in the File menu and rerun it later by selecting it from the menu Reports->Preconfigured Reports.");?>
 </p>
-
 <table class="figure" align="center">
    <tr>
-     <td><img src="<?=$top_dir?>/images/2.6-release/2.6-Pre-reports.png" alt="[Basic account relationship]" /></p>
+     <td><img src="<?=$top_dir?>/images/2.6-release/2.6-Pre-reports.png" alt="[Preconfigred reports window]" /></p>
      </td>
    <tr>
      <th>The Preconfigured Reports window. You can select and run a preconfigured report, edit it's name and delete it.
@@ -49,11 +45,24 @@ include("$top_dir/externals/menu.phtml");
 </table>
 
 <h2 class="featuretitle"><?php echo T_("Export any report directly to PDF");?></h2>
-
 <p class="justify">
 <?php echo T_("It is now possible to export any report directly in a PDF file without going thru the Print window.");?>
 </p>
 
+<h2 class="featuretitle"><?php echo T_("Attach file or location to any transaction");?></h2>
+<p class="justify">
+<?php echo T_("Patrick has contributed a new feature allowing one to link an external file or a location (URL) to a transaction. This long-requested feature is available through both the Transaction menu and rhe transaction's context menu. The files are displayed in the default viewer for that file type.");?>
+</p>
+
+<table class="figure" align="center">
+   <tr>
+     <td><img src="<?=$top_dir?>/images/2.6-release/2.6-file-location.png" alt="[Attach file/ location to transaction]" /></p>
+     </td>
+   <tr>
+     <th>You can now attach a file or a location to any transaction.
+     </th>
+   </tr>
+</table>
 
 <!--
 <h2 class="featuretitle"><?php echo T_("Checkbook-Style Register");?></h2>
