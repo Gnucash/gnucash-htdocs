@@ -16,24 +16,46 @@ include("$top_dir/externals/menu.phtml");
 </div>
 
 
-<h2 class="featuretitle"><?php echo T_("Double Entry");?></h2>
+<h2 class="featuretitle"><?php echo T_("Jqplot Reports");?></h2>
 
 <p class="justify">
-<?php echo T_("Every transaction must debit one account and credit others by an equal amount. This ensures the books balance: the difference between income and expenses exactly equals the sum of assets and liabilities.");?>
+<?php echo T_("<span class=\"gnucash\">GnuCash</span> now uses javascript jqplot to render reports. This gives more flexibility and a more professional look to all graphical reports (piechart, barchart, scatterplot).");?>
 </p>
 
 <table class="figure" align="center">
    <tr>
-     <td><img src="<?=$top_dir?>/images/features/basics_AccountRelationships.png" alt="[Basic account relationship]" /></p>
+     <td><img src="<?=$top_dir?>/images/2.6-release/2.6-jqplot-reports.png" alt="[Basic account relationship]" /></p>
      </td>
    <tr>
-     <th>The double Entry system.
+     <th>A barchart rendered in GnuCash with jqplot.
      </th>
    </tr>
 </table>
 
+<h2 class="featuretitle"><?php echo T_("New predefined reports management system");?></h2>
+
+<p class="justify">
+<?php echo T_("The old <span class=\"gnucash\">GnuCash</span> custom report management system has been revised. You can save a report using the dedicated options in the File menu and rerun it later by selecting it from the menu Reports->Preconfigured Reports.");?>
+</p>
+
+<table class="figure" align="center">
+   <tr>
+     <td><img src="<?=$top_dir?>/images/2.6-release/2.6-Pre-reports.png" alt="[Basic account relationship]" /></p>
+     </td>
+   <tr>
+     <th>The Preconfigured Reports window. You can select and run a preconfigured report, edit it's name and delete it.
+     </th>
+   </tr>
+</table>
+
+<h2 class="featuretitle"><?php echo T_("Export any report directly to PDF");?></h2>
+
+<p class="justify">
+<?php echo T_("It is now possible to export any report directly in a PDF file without going thru the Print window.");?>
+</p>
 
 
+<!--
 <h2 class="featuretitle"><?php echo T_("Checkbook-Style Register");?></h2>
 <p class="justify">
 <?php echo T_("The <span class=\"gnucash\">GnuCash</span> checkbook-style register provides a custom, convenient and familiar interface to entering financial transactions.");?></p>
@@ -58,6 +80,8 @@ include("$top_dir/externals/menu.phtml");
      </th>
    </tr>
 </table>
+-->
+
 
 </div>
 <?php include("externals/footer.phtml"); ?>
