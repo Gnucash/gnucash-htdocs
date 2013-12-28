@@ -91,7 +91,7 @@ include("$top_dir/externals/menu.phtml");
 
 <table class="figure" align="center">
    <tr>
-     <td><img src="<?=$top_dir?>/images/2.6-release/2.6-filter-save.png" alt="[Filter by save]" /></p>
+     <td><img src="<?=$top_dir?>/images/2.6-release/2.6-save-filter.png" alt="[Filter by save]" /></p>
      </td>
    <tr>
      <th><?php echo T_("Save the \"Filter By...\" settings by enabling the \"Save Filter\" checkbox.");?>
@@ -126,9 +126,9 @@ include("$top_dir/externals/menu.phtml");
 <h2 class="featuretitle"><?php echo T_("New preference system");?></h2>
 <p class="justify">
 <?php echo T_("The preferences system has been rewritten to use GSettings from GIO (GLib) instead of GConf. This is a simpler and more robust backend which writes to the OS's native prefs — defaults on OS X and the Registry on MSWindows — and allows us to remove several troublesome dependencies including GConf, ORBit, and DBus.");?></p>
-<note>
+<div class="dialog note">
 <p><?php echo T_("Note that window position, column sizes, and sort orders will not be migrated from GConf. Those settings will revert to the default the first time you use Gnucash 2.5.6 or later, but they will be saved once you've reset them. ");?></p>
-</note>
+</div>
 
 <h2 class="featuretitle"><?php echo T_("Relicensing");?></h2>
 <p class="justify">
@@ -140,7 +140,21 @@ include("$top_dir/externals/menu.phtml");
 
 <h2 class="featuretitle"><?php echo T_("Help");?></h2>
 <p class="justify">
-<?php echo T_("<span class=\"gnucash\">GnuCash</span> 2.6 comes with updated Help and Guide. If you can't find the answer to your questions in those documents, try with the <a href=\"http://wiki.gnucash.org/wiki/GnuCash\">GnuCash wiki</a>. If both options are unsatisfactory, you can send your questions to the <a href=\"http://wiki.gnucash.org/wiki/Mailing_Lists\">GnuCash mailing lists</a>: the GnuCash community is very friendly and experienced and someone will surely assist you");?></p>
+<?php echo T_("<span class=\"gnucash\">GnuCash</span> 2.6 comes with updated Help and Guide. If you can't find the answer to your questions in those documents, try with the <a href=\"http://wiki.gnucash.org/wiki/GnuCash\">GnuCash wiki</a>. If both options are unsatisfactory, you can send your questions to the <a href=\"http://wiki.gnucash.org/wiki/Mailing_Lists\">GnuCash mailing lists</a>: the <span class=\"gnucash\">GnuCash</span> community is very friendly and experienced and someone will surely assist you.");?></p>
 
+<h2 class="featuretitle"><?php echo T_("Want to Help?");?></h2>
+<p class="justify">
+<?php echo T_("<span class=\"gnucash\">GnuCash</span> is a program maintained by volunteers. If you want to be part of the effort, you can contribute in many ways:");?>
+<ul>
+<li><?php echo T_("By developing the source code");?></li>
+<li><?php echo T_("By testing the program and reporting bugs");?></li>
+<li><?php echo T_("By translating the program to your language");?></li>
+<li><?php echo T_("By creating documentation for the program");?></li>
+<li><?php echo T_("By partecipating in the <a href=\"http://wiki.gnucash.org/wiki/Mailing_Lists\">GnuCash mailing lists</a>");?></li>
+<li><?php echo T_("<a href=\"http://sourceforge.net/donate/index.php?group_id=192\">By making a donation</a>");?></li>
+<li><?php echo T_("By spreding the word");?></li>
+<li><?php echo T_("By liking our project page on <a href=\"https://www.facebook.com/Gnucash\">facebook</a> and <a href=\"http://plus.google.com/u/0/+gnucash\">Google+</a>");?></li>
+</ul>
+</p>
 </div>
 <?php include("externals/footer.phtml"); ?>
