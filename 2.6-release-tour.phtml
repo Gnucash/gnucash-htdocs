@@ -25,7 +25,7 @@ include("$top_dir/externals/menu.phtml");
      <td><img src="<?=$top_dir?>/images/2.6-release/2.6-jqplot-reports.png" alt="[jqplot barchart]" /></p>
      </td>
    <tr>
-     <th>A barchart rendered in GnuCash with jqplot.
+     <th><?php echo T_("A barchart rendered in GnuCash with jqplot.");?>
      </th>
    </tr>
 </table>
@@ -39,7 +39,7 @@ include("$top_dir/externals/menu.phtml");
      <td><img src="<?=$top_dir?>/images/2.6-release/2.6-Pre-reports.png" alt="[Preconfigred reports window]" /></p>
      </td>
    <tr>
-     <th>The Preconfigured Reports window. You can select and run a preconfigured report, edit it's name and delete it.
+     <th><?php echo T_("The Preconfigured Reports window. You can select and run a preconfigured report, edit it's name and delete it.");?>
      </th>
    </tr>
 </table>
@@ -51,7 +51,7 @@ include("$top_dir/externals/menu.phtml");
 
 <h2 class="featuretitle"><?php echo T_("Attach file or location to any transaction");?></h2>
 <p class="justify">
-<?php echo T_("Patrick has contributed a new feature allowing one to link an external file or a location (URL) to a transaction. This long-requested feature is available through both the Transaction menu and rhe transaction's context menu. The files are displayed in the default viewer for that file type.");?>
+<?php echo T_("It is now possible to link an external file or a location (URL) to a transaction. This long-requested feature is available through both the Transaction menu and rhe transaction's context menu. The files are displayed in the default viewer for that file type.");?>
 </p>
 
 <table class="figure" align="center">
@@ -59,7 +59,7 @@ include("$top_dir/externals/menu.phtml");
      <td><img src="<?=$top_dir?>/images/2.6-release/2.6-file-location.png" alt="[Attach file/ location to transaction]" /></p>
      </td>
    <tr>
-     <th>You can now attach a file or a location to any transaction.
+     <th><?php echo T_("You can now attach a file or a location to any transaction.");?>
      </th>
    </tr>
 </table>
@@ -74,7 +74,7 @@ include("$top_dir/externals/menu.phtml");
      <td><img src="<?=$top_dir?>/images/2.6-release/2.6-acc-colors.png" alt="[Account colors]" /></p>
      </td>
    <tr>
-     <th>The colors ease the lookup of specific accounts in the account tree and in tabs.
+     <th><?php echo T_("The colors ease the lookup of specific accounts in the account tree and in tabs.");?>
      </th>
    </tr>
 </table>
@@ -84,33 +84,63 @@ include("$top_dir/externals/menu.phtml");
 <?php echo T_("In the General tab of the <span class=\"gnucash\">GnuCash</span> Preferences is now possible to set a timeout for the \"Save changes on closing\" window. If enabled, the \"Save changes on closing\" question will only wait a limited number of seconds for an answer. If the user didn't answer within that time, the changes will be saved automatically and the question window closed.");?>
 </p>
 
-<!--
-<h2 class="featuretitle"><?php echo T_("Checkbook-Style Register");?></h2>
+<h2 class="featuretitle"><?php echo T_("Save \"Filter By\" settings");?></h2>
 <p class="justify">
-<?php echo T_("The <span class=\"gnucash\">GnuCash</span> checkbook-style register provides a custom, convenient and familiar interface to entering financial transactions.");?></p>
-<p class="justify">
-<?php echo T_("The register supports common checking and credit-card transactions, as well as income, stock and currency transactions. The following features are also provided:");?>
+<?php echo T_("It is now possible to save the \"Filter By...\" settings for an account register.");?>
 </p>
-<ul>
-<li><?php echo T_("The ability to enter <b>split transactions</b>");?></li>
-<li><?php echo T_("The ability to mark a transaction as <b>cleared</b> or <b>reconciled</b>");?></li>
-<li><?php echo T_("<b>Autofill</b> of entered transactions");?></li>
-<li><?php echo T_("The ability to display <b>multiple accounts</b> in a single register window");?></li>
-<li><?php echo T_("A <b>summary bar</b> that displays all of the relevant account's balance information");?></li>
-<li><?php echo T_("Many options to <b>customize</b> the appearance and the display style");?></li>
-</ul>
 
 <table class="figure" align="center">
    <tr>
-     <td><img src="<?=$top_dir?>/images/features/feature_register.png" alt="[Register]" /></p></p>
+     <td><img src="<?=$top_dir?>/images/2.6-release/2.6-filter-save.png" alt="[Filter by save]" /></p>
      </td>
    <tr>
-     <th>The transactions register.
+     <th><?php echo T_("Save the \"Filter By...\" settings by enabling the \"Save Filter\" checkbox.");?>
      </th>
    </tr>
 </table>
--->
 
+<h2 class="featuretitle"><?php echo T_("Improved business module");?></h2>
+<p class="justify">
+<?php echo T_("The business module has been revamped and we introduced some new features:");?>
+<ul>
+<li><?php echo T_("Credit Notes");?></li>
+<li><?php echo T_("Customer and Vendor Overview Pages");?></li>
+<li><?php echo T_("Customer Overview Reports");?></li>
+<li><?php echo T_("Existing Transactions may be reassigned as invoice payments");?></li>
+<li><?php echo T_("Support for duplicate invoices");?></li>
+<li><?php echo T_("Improved invoice and bill handling: Post, print, or duplicate multiple items directly from a search results list");?></li>
+<li><?php echo T_("Better invoice printing setup: Choose a default invoice report as a preference");?></li>
+<li><?php echo T_("Reorder invoice entries in the invoice window");?></li>
+</ul>
+</p>
+<table class="figure" align="center">
+   <tr>
+     <td><img src="<?=$top_dir?>/images/2.6-release/2.6-credit-customer-report.png" alt="[Customer report]" /></p>
+     </td>
+   <tr>
+     <th><?php echo T_("Customer report with an invoice and a credit note.");?>
+     </th>
+   </tr>
+</table>
+
+<h2 class="featuretitle"><?php echo T_("New preference system");?></h2>
+<p class="justify">
+<?php echo T_("The preferences system has been rewritten to use GSettings from GIO (GLib) instead of GConf. This is a simpler and more robust backend which writes to the OS's native prefs — defaults on OS X and the Registry on MSWindows — and allows us to remove several troublesome dependencies including GConf, ORBit, and DBus.");?></p>
+<note>
+<p><?php echo T_("Note that window position, column sizes, and sort orders will not be migrated from GConf. Those settings will revert to the default the first time you use Gnucash 2.5.6 or later, but they will be saved once you've reset them. ");?></p>
+</note>
+
+<h2 class="featuretitle"><?php echo T_("Relicensing");?></h2>
+<p class="justify">
+<?php echo T_("By agreement of all authors we have relicensed <span class=\"gnucash\">GnuCash</span> to the Gnu Public License Version 2 or later from just Version 2.");?></p>
+
+<h2 class="featuretitle"><?php echo T_("Download");?></h2>
+<p class="justify">
+<?php echo T_("You can download the new 2.6 version of <span class=\"gnucash\">GnuCash</span> from the <a href=\"http://gnucash.org\">GnuCash website main page</a>.");?></p>
+
+<h2 class="featuretitle"><?php echo T_("Help");?></h2>
+<p class="justify">
+<?php echo T_("<span class=\"gnucash\">GnuCash</span> 2.6 comes with updated Help and Guide. If you can't find the answer to your questions in those documents, try with the <a href=\"http://wiki.gnucash.org/wiki/GnuCash\">GnuCash wiki</a>. If both options are unsatisfactory, you can send your questions to the <a href=\"http://wiki.gnucash.org/wiki/Mailing_Lists\">GnuCash mailing lists</a>: the GnuCash community is very friendly and experienced and someone will surely assist you");?></p>
 
 </div>
 <?php include("externals/footer.phtml"); ?>
