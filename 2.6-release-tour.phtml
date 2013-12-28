@@ -84,6 +84,24 @@ include("$top_dir/externals/menu.phtml");
 <?php echo T_("In the General tab of the <span class=\"gnucash\">GnuCash</span> Preferences is now possible to set a timeout for the \"Save changes on closing\" window. If enabled, the \"Save changes on closing\" question will only wait a limited number of seconds for an answer. If the user didn't answer within that time, the changes will be saved automatically and the question window closed.");?>
 </p>
 
+<h2 class="featuretitle"><?php echo T_("Open datafile read-only");?></h2>
+<p class="justify">
+<?php echo T_("When opening a locked \"book\" one now has the option of opening it read-only.");?>
+</p>
+<div class="dialog note">
+<p><?php echo T_("Note that <span class=\"gnucash\">GnuCash</span> is still a single-user program and that the database backends are still used only as a data store.");?></p>
+</div>
+
+<table class="figure" align="center">
+   <tr>
+     <td><img src="<?=$top_dir?>/images/2.6-release/2.6-read-only.png" alt="Open read-only]" style="max-width:600px"/></p>
+     </td>
+   <tr>
+     <th><?php echo T_("The new button to open a <span class=\"gnucash\">GnuCash</span> datafile in read-only mode.");?>
+     </th>
+   </tr>
+</table>
+
 <h2 class="featuretitle"><?php echo T_("Save \"Filter By\" settings");?></h2>
 <p class="justify">
 <?php echo T_("It is now possible to save the \"Filter By...\" settings for an account register.");?>
@@ -123,6 +141,16 @@ include("$top_dir/externals/menu.phtml");
    </tr>
 </table>
 
+<table class="figure" align="center">
+   <tr>
+     <td><img src="<?=$top_dir?>/images/2.6-release/2.6-search-business.png" alt="[Search Invoice]" style="max-width:730px"/></p>
+     </td>
+   <tr>
+     <th><?php echo T_("Updated search window with buttons to process payment, duplicate, post and print multiple search results.");?>
+     </th>
+   </tr>
+</table>
+
 <h2 class="featuretitle"><?php echo T_("New preference system");?></h2>
 <p class="justify">
 <?php echo T_("The preferences system has been rewritten to use GSettings from GIO (GLib) instead of GConf. This is a simpler and more robust backend which writes to the OS's native prefs - defaults on OS X and the Registry on MSWindows - and allows us to remove several troublesome dependencies including GConf, ORBit, and DBus.");?></p>
@@ -152,8 +180,8 @@ include("$top_dir/externals/menu.phtml");
 <li><?php echo T_("By creating documentation for the program");?></li>
 <li><?php echo T_("By partecipating in the <a href=\"http://wiki.gnucash.org/wiki/Mailing_Lists\">GnuCash mailing lists</a>");?></li>
 <li><?php echo T_("<a href=\"http://sourceforge.net/donate/index.php?group_id=192\">By making a donation</a>");?></li>
-<li><?php echo T_("By spreding the word");?></li>
 <li><?php echo T_("By liking our project page on <a href=\"https://www.facebook.com/Gnucash\">facebook</a> and <a href=\"http://plus.google.com/u/0/+gnucash\">Google+</a>");?></li>
+<li><?php echo T_("By spreding the word");?></li>
 </ul>
 </p>
 </div>
