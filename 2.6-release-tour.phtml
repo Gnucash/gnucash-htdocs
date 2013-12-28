@@ -1,6 +1,6 @@
 <?php
 include("lang.php");
-$title = T_("Features");
+$title = T_("GnuCash 2.6 release tour");
 include("emulate_globals_on.php");
 include("$top_dir/externals/header.phtml");
 include("$top_dir/externals/menu.phtml");
@@ -17,10 +17,21 @@ include("$top_dir/externals/menu.phtml");
 
 
 <h2 class="featuretitle"><?php echo T_("Double Entry");?></h2>
-<p align="center"><img src="<?=$top_dir?>/images/features/basics_AccountRelationships.png" alt="[Basic account relationship]" /></p>
+
+
+<table class="figure">
+  <tbody>
+   <tr>
+     <td><p align="center"><img src="<?=$top_dir?>/images/features/basics_AccountRelationships.png" alt="[Basic account relationship]" /></p>
+     </td>
+   <tr>
+     <th>The double Entry system.
+     </th>
+   </tr>
 <p class="justify">
 <?php echo T_("Every transaction must debit one account and credit others by an equal amount. This ensures the books balance: the difference between income and expenses exactly equals the sum of assets and liabilities.");?>
 </p>
+  </tbody>
 
 <h2 class="featuretitle"><?php echo T_("Checkbook-Style Register");?></h2>
 <p align="center"><img src="<?=$top_dir?>/images/features/feature_register.png" alt="[Register]" /></p>
