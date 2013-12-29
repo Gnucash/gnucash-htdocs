@@ -2,7 +2,7 @@
      // This section defines the most recent version numbers for all platforms.
      // Each platform can define its own latest version or follow the default.
      // Both a latest stable version and a latest unstable version are defined.
-     $latest_stable             = "2.4.13";
+     $latest_stable             = "2.6.0";
 #     $latest_stable_win		= $latest_stable."-1";
      $latest_stable_win         = $latest_stable;
 #     $latest_stable_mac_ppc     = $latest_stable."-2";
@@ -10,12 +10,19 @@
 #     $latest_stable_mac_intel   = $latest_stable."-2";
      $latest_stable_mac_intel   = $latest_stable;
  
-     $latest_unstable           = "2.5.10";
+#     $latest_unstable           = "2.5.10";
      // There's currently no unstable release being worked on, so disable it
-#     $latest_unstable           = False;
+     $latest_unstable           = False;
      $latest_unstable_win       = $latest_unstable;
      $latest_unstable_mac_ppc   = $latest_unstable."-1";
      $latest_unstable_mac_intel = $latest_unstable."-1";
+
+     $old_stable           = "2.4.14";
+     // There's currently no unstable release being worked on, so disable it
+#     $old_stable           = False;
+     $old_stable_win       = $old_stable;
+     $old_stable_mac_ppc   = $old_stable."-1";
+     $old_stable_mac_intel = $old_stable."-1";
 
      // The definitions below use the latest version definitions above
      // to define several paths that will be used on several pages

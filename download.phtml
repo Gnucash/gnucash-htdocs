@@ -57,6 +57,22 @@ if ($latest_unstable) { ?>
 </ul>
 <?php } ?>
 
+<?php
+# Only show old stable download options if there really is an active unstable release
+if ($old_stable) { ?>
+<div class="featureborder">
+<h2 class="featuretitle"><?php printf (T_("Old Stable release (%s)"), $old_stable)?></h2>
+</div>
+<p class="justify"><?php echo T_("This old stable release is the final version of the previous stable series. It's available for users who aren't ready for a major upgrade but want to make sure that they have all of the bugfixes from the old series.")?></p>
+<p class="justify"><?php printf (T_("The last old stable release of <span class=\"gnucash\">GnuCash</span> is %s.  Choose the download for your operating system below."), $old_stable)?></p>
+
+<ul>
+  <li><?php printf (T_("GnuCash %s for"), $old_stable)?> <a href="<?php echo $download_path.$old_stable_win;?>">Microsoft Windows XP/Vista/7</a></li>
+  <li><?php printf (T_("GnuCash %s for"), $old_stable)?> Mac OS X <a href="<?php echo $download_path.$old_stable_mac_intel;?>">Intel</a> | <a href="<?php echo $download_path.$old_stable_mac_ppc;?>">PPC</a> | <a href="http://wiki.gnucash.org/wiki/MacOSX/<?php echo $old_stable;?>/Readme">Readme</a></li>
+  <li><a href="<?php echo $download_path.$old_stable_source;?>">bzip2 compressed tarball</a> <?php printf (T_("for GnuCash %s"), $old_stable)?></li>
+</ul>
+<?php } ?>
+
 <div class="featureborder">
 <h2 class="featuretitle"><?php echo T_("Other")?></h2>
 </div>
