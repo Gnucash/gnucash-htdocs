@@ -30,7 +30,7 @@ include("$top_dir/externals/menu.phtml");
    </tr>
 </table>
 
-<h2 class="featuretitle"><?php echo T_("New predefined reports management system");?></h2>
+<h2 class="featuretitle"><?php echo T_("New preconfigured reports management system");?></h2>
 <p class="justify">
 <?php echo T_("The old <span class=\"gnucash\">GnuCash</span> custom report management system has been revised. You can save a report using the dedicated options in the File menu and rerun it later by selecting it from the menu Reports->Preconfigured Reports.");?>
 </p>
@@ -39,7 +39,7 @@ include("$top_dir/externals/menu.phtml");
      <td><img src="<?=$top_dir?>/images/2.6-release/2.6-Pre-reports.png" alt="[Preconfigred reports window]" style="max-width:322px"/></p>
      </td>
    <tr>
-     <th><?php echo T_("The Preconfigured Reports window. You can select and run a preconfigured report, edit it's name and delete it.");?>
+     <th><?php echo T_("The Preconfigured Reports window. You can select and run a preconfigured report, edit its name and delete it.");?>
      </th>
    </tr>
 </table>
@@ -51,7 +51,7 @@ include("$top_dir/externals/menu.phtml");
 
 <h2 class="featuretitle"><?php echo T_("Attach file or location to any transaction");?></h2>
 <p class="justify">
-<?php echo T_("It is now possible to link an external file or a location (URL) to a transaction. This long-requested feature is available through both the Transaction menu and rhe transaction's context menu. The files are displayed in the default viewer for that file type.");?>
+<?php echo T_("It is now possible to link an external file or a location (URL) to a transaction. This long-requested feature is available through both the Transaction menu and the transaction's context menu. The files are displayed in the default viewer for that file type.");?>
 </p>
 
 <table class="figure" align="center">
@@ -125,7 +125,7 @@ include("$top_dir/externals/menu.phtml");
 <li><?php echo T_("Customer and Vendor Overview Pages");?></li>
 <li><?php echo T_("Customer Overview Reports");?></li>
 <li><?php echo T_("Existing Transactions may be reassigned as invoice payments");?></li>
-<li><?php echo T_("Support for duplicate invoices");?></li>
+<li><?php echo T_("One click duplication of invoinces");?></li>
 <li><?php echo T_("Improved invoice and bill handling: Post, print, or duplicate multiple items directly from a search results list");?></li>
 <li><?php echo T_("Better invoice printing setup: Choose a default invoice report as a preference");?></li>
 <li><?php echo T_("Reorder invoice entries in the invoice window");?></li>
@@ -155,7 +155,7 @@ include("$top_dir/externals/menu.phtml");
 <p class="justify">
 <?php echo T_("The preferences system has been rewritten to use GSettings from GIO (GLib) instead of GConf. This is a simpler and more robust backend which writes to the OS's native prefs - defaults on OS X and the Registry on MSWindows - and allows us to remove several troublesome dependencies including GConf, ORBit, and DBus.");?></p>
 <div class="dialog note">
-<p><?php echo T_("Note that window position, column sizes, and sort orders will not be migrated from GConf. Those settings will revert to the default the first time you use Gnucash 2.5.6 or later, but they will be saved once you've reset them. ");?></p>
+<p><?php echo T_("Note that window position, column sizes, and sort orders will not be migrated from GConf. Those settings will revert to the default the first time you use Gnucash 2.6 or later, but they will be saved once you've reset them. ");?></p>
 </div>
 
 <h2 class="featuretitle"><?php echo T_("Relicensing");?></h2>
@@ -174,14 +174,15 @@ include("$top_dir/externals/menu.phtml");
 <p class="justify">
 <?php echo T_("<span class=\"gnucash\">GnuCash</span> is a program maintained by volunteers. If you want to be part of the effort, you can contribute in many ways:");?>
 <ul>
-<li><?php echo T_("By developing the source code");?></li>
 <li><?php echo T_("By testing the program and reporting bugs");?></li>
-<li><?php echo T_("By translating the program to your language");?></li>
-<li><?php echo T_("By creating documentation for the program");?></li>
-<li><?php echo T_("By partecipating in the <a href=\"http://wiki.gnucash.org/wiki/Mailing_Lists\">GnuCash mailing lists</a>");?></li>
-<li><?php echo T_("<a href=\"http://sourceforge.net/donate/index.php?group_id=192\">By making a donation</a>");?></li>
 <li><?php echo T_("By liking our project page on <a href=\"https://www.facebook.com/Gnucash\">facebook</a> and <a href=\"http://plus.google.com/u/0/+gnucash\">Google+</a>");?></li>
-<li><?php echo T_("By spreding the word");?></li>
+<li><?php echo T_("By spreading the word");?></li>
+<li><?php echo T_("<a href=\"http://sourceforge.net/donate/index.php?group_id=192\">By making a donation</a>");?></li>
+<li><?php echo T_("By partecipating in the <a href=\"http://wiki.gnucash.org/wiki/Mailing_Lists\">GnuCash mailing lists</a> and <a href=\"http://wiki.gnucash.org/wiki/IRC\">IRC channel</a>");?></li>
+<li><?php echo T_("By reviewing and adding hints to the <a href=\"http://wiki.gnucash.org/wiki/\">wiki</a>");?></li>
+<li><?php echo T_("By improving the <a href=\"http://gnucash.org/docs.phtml\">released documentation</a>");?></li>
+<li><?php echo T_("By < a href=\"http://wiki.gnucash.org/wiki/Translation\">translating the program and documentation to your language</a>");?></li>
+<li><?php echo T_("By <a href=\"http://wiki.gnucash.org/wiki/Development\">developing the source code</a>");?></li>
 </ul>
 </p>
 </div>
