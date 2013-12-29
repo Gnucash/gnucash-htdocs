@@ -1,0 +1,55 @@
+<b>Announcement:</b> GnuCash 2.4.14 Release
+2014-01-01
+
+<h2>GnuCash 2.4.14 released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.4.14, the final bug fix release in a series of stable of the GnuCash Free Accounting Software. With this release series, GnuCash can use an SQL database using SQLite3, MySQL or PostgreSQL. It runs on GNU/Linux, *BSD, Solaris, Microsoft Windows and Mac OSX.</p>
+
+<h3>Getting GnuCash for Windows (Win32 binary)</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.14-setup.exe">Gnucash 2.4.14 Win32 setup executable</a> can be downloaded from Sourceforge. It will install everything needed to run GnuCash.</p>
+
+<h3>Mac OSX binary</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.4.14.dmg">Gnucash 2.4.14 MacOSX package</a> can be downloaded from Sourceforge as well.</p>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.4.14 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.4.14.tar.bz2">bzip2</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.4.14/">all files</a>.</li>
+
+<li>You can also checkout the sources directly from the subversion repository as <a href="http://wiki.gnucash.org/wiki/Subversion">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need Gnome 2, guile, slib. In addition you will need swig if compiling from subversion.</p>
+
+<h3>Changes</h3>
+
+<p>Between 2.4.13 and 2.4.14, the following bugfixes was included:</p>
+<ul>
+  <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=584869">Bug #584869</a>: Net change line in general journal report broken</li>
+  <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=589865">Bug #589685</a>: In the report "Budget flow" period it doesn't work ok change the report head line to show the period date for (- period 1). Author : Carsten Rinke</li>
+  <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=627575">Bug #627575</a>: Stylesheet names with non-alphanumeric characters and saved-reports -- addendum</li>
+  <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=632362">Bug #632362</a>: Unable to create "reversing transaction" again after it is removed</li>
+  <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=632588">Bug #632588</a>: Scrub doesn't fix missing currency</li>
+  <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=644044">Bug #644044</a>: Lots: SQL backend loses link to Gain/Loss Txn</li>
+  <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=653594">Bug #653594</a>: related to check printing.</li>
+  <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=674862">Bug #674862</a>: 2038 bug in libdbi</li>
+  <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=684670">Bug #684670</a>: Interest amount calculation is wrong in Sqlite3 format</li>
+  <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=699686">Bug #699686</a>:  Startup dialog windows should be top level windows Author: Simon Arlott</li>
+  <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=701670">Bug #701670</a>: Command-V in reconcile window pastes data in register</li>
+  <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=704183">Bug #704183</a>:  OFX file import tries to match online_id against ACCTID[space]ACCTKEY even when ACCTKEY is empty.</li>
+  <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=705123">Bug #705123</a>: qofbookmerge.c: bad if statement</li>
+  <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=710055">Bug #710055</a>:  advanced portfolio report counts capital gains split as dividend</li>
+  <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=710311">Bug #710311</a>: Missing ChangeLogs</li>
+  <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=711317">Bug #711317</a>: Indian Rupee Symbol appears as "?" marks</li>
+  <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=712528">Bug #712528</a>: Decompress zipped XML files ourself instead of letting libxml2 do it. As of version 2.9.1 it has a bug that causes it to fail to decompress certain files.</li>
+
+</ul>
+<p>In 2.4.14, the Danish translation was updated and a new Arabic translation was added.</p>
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
