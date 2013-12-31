@@ -8,9 +8,9 @@
 #     $latest_stable_win		= $latest_stable."-1";
      $latest_stable_win         = $latest_stable;
 #     $latest_stable_mac_ppc     = $latest_stable."-2";
-     $latest_stable_mac_ppc     = $latest_stable;
+     $latest_stable_mac_ppc     = $latest_stable."-1";
 #     $latest_stable_mac_intel   = $latest_stable."-2";
-     $latest_stable_mac_intel   = $latest_stable;
+     $latest_stable_mac_intel   = $latest_stable."-1";
 
 #     $major_latest_unstable		="2.5";
 #     $minor_latest_unstable		="10"; 
