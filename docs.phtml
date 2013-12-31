@@ -32,7 +32,7 @@ include("externals/menu.phtml");
 
 <div class="featurecontainer">
 <div class="featureborder">
-<h2 class="featuretitle"><?php printf (T_("GnuCash v%s (current stable release)"), $major_stable)?></h2>
+<h2 class="featuretitle"><?php printf (T_("GnuCash v%s"), $major_stable)?> <?php echo T_("(current stable release)");?></h2>
 </div>
 <h3><?= T_("Current <em>stable</em> user documentation and developer documentation");?></h3>
 <div id="stabledoc">
@@ -142,7 +142,7 @@ include("externals/menu.phtml");
 <!--Old stable documentation. Comment out if there is no old stable release-->
 <div class="featurecontainer">
 <div class="featureborder">
-<h2 class="featuretitle"><?php printf (T_("GnuCash v%s (old stable release)"), $major_old_stable)?></h2>
+<h2 class="featuretitle"><?php printf (T_("GnuCash v%s"), $major_old_stable)?> <?php echo T_("(old stable release)");?></h2>
 </div>
 <h3><?= T_("Old <em>stable</em> user documentation and developer documentation");?></h3>
 <div id="stabledoc">
