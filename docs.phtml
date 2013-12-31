@@ -139,7 +139,9 @@ include("externals/menu.phtml");
 <p class="justify"><?php echo T_("This is the latest stable release of the <span class=\"gnucash\">GnuCash</span> documentation. <em>Stable</em> means that this documentation is not necessarily the most up to date but it works without any problem.");?></p>
 </div>
 
-<!--Old stable documentation. Comment out if there is no old stable release-->
+<?php
+# Only show old stable docs download options if there really is an active unstable release
+if ($old_stable) { ?>
 <div class="featurecontainer">
 <div class="featureborder">
 <h2 class="featuretitle"><?php printf (T_("GnuCash v%s"), $major_old_stable)?> <?php echo T_("(old stable release)");?></h2>
@@ -248,7 +250,7 @@ include("externals/menu.phtml");
 
 <p class="justify"><?php printf (T_("This is the old stable release of the <span class=\"gnucash\">GnuCash</span> documentation, corresponding to the %s release of <span class=\"gnucash\">GnuCash</span> itself."), $old_stable)?></p>
 </div>
-<!--end of old_stable-->
+<?php } ?>
 
 <div class="featurecontainer">
 <div class="featureborder">
