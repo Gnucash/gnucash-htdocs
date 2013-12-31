@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-29 15:42+0100\n"
+"POT-Creation-Date: 2013-12-31 09:53+0100\n"
 "PO-Revision-Date: 2011-11-02 16:52+0100\n"
 "Last-Translator: Jérôme Rapinat <romjerome@yahoo.fr>\n"
 "Language-Team: French <gnomefr@traduc.org>\n"
@@ -22,7 +22,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: download.phtml:5 docs.phtml:40 docs.phtml:149 2.6-release-tour.phtml:165
+#: download.phtml:5 docs.phtml:40 docs.phtml:150 docs.phtml:260
+#: 2.6-release-tour.phtml:165
 msgid "Download"
 msgstr "Télécharger"
 
@@ -58,6 +59,7 @@ msgid "Installers"
 msgstr "Installeurs"
 
 #: download.phtml:22 download.phtml:23 download.phtml:54 download.phtml:55
+#: download.phtml:70 download.phtml:71
 #, php-format
 msgid "GnuCash %s for"
 msgstr "GnuCash %s pour"
@@ -148,7 +150,7 @@ msgstr ""
 msgid "Source code"
 msgstr "Code source"
 
-#: download.phtml:40 download.phtml:56
+#: download.phtml:40 download.phtml:56 download.phtml:72
 #, php-format
 msgid "for GnuCash %s"
 msgstr "pour GnuCash %s"
@@ -186,21 +188,43 @@ msgstr ""
 "la version %s. Choisissez le téléchargement correspondant à votre système "
 "d'exploitation."
 
-#: download.phtml:61
+#: download.phtml:64
+#, fuzzy, php-format
+msgid "Old Stable release (%s)"
+msgstr "Version stable (%s)"
+
+#: download.phtml:66
+msgid ""
+"This old stable release is the final version of the previous stable series. "
+"It's available for users who aren't ready for a major upgrade but want to "
+"make sure that they have all of the bugfixes from the old series."
+msgstr ""
+
+#: download.phtml:67
+#, fuzzy, php-format
+msgid ""
+"The last old stable release of <span class=\"gnucash\">GnuCash</span> is "
+"%s.  Choose the download for your operating system below."
+msgstr ""
+"La dernière version stable de <span class=\"gnucash\">GnuCash</span> est la "
+"version %s. Choisissez le téléchargement correspondant à votre système "
+"d'exploitation."
+
+#: download.phtml:77
 msgid "Other"
 msgstr "Autre"
 
-#: download.phtml:65
+#: download.phtml:81
 #, php-format
 msgid "View all GnuCash %s downloads (stable)"
 msgstr "Voir tous les téléchargements GnuCash %s (stable)"
 
-#: download.phtml:70
+#: download.phtml:86
 #, php-format
 msgid "View all GnuCash %s downloads (unstable)"
 msgstr "Voir tous les téléchargements GnuCash %s (instable)"
 
-#: download.phtml:73
+#: download.phtml:89
 msgid "View all GnuCash downloads"
 msgstr "Voir tous les téléchargements GnuCash"
 
@@ -1114,41 +1138,46 @@ msgid ""
 msgstr ""
 
 #: docs.phtml:35
-msgid "(current stable release)"
+#, fuzzy, php-format
+msgid "GnuCash v%s (current stable release)"
 msgstr "(dernière version stable)"
 
 #: docs.phtml:37
 msgid "Current <em>stable</em> user documentation and developer documentation"
 msgstr "Documentation <em>stable</em> de l'utilisateur et du développeur"
 
-#: docs.phtml:40
+#: docs.phtml:40 docs.phtml:150
 msgid "Stable"
 msgstr "Stable"
 
-#: docs.phtml:42 docs.phtml:151 docs.phtml:265 docs.phtml:287 docs.phtml:305
+#: docs.phtml:42 docs.phtml:152 docs.phtml:262 docs.phtml:385 docs.phtml:407
+#: docs.phtml:425
 msgid "Help Manual"
 msgstr "Manuel d'Aide"
 
-#: docs.phtml:46 docs.phtml:85 docs.phtml:155 docs.phtml:194 docs.phtml:266
-#: docs.phtml:277 docs.phtml:288 docs.phtml:297 docs.phtml:306 docs.phtml:325
+#: docs.phtml:46 docs.phtml:85 docs.phtml:156 docs.phtml:195 docs.phtml:266
+#: docs.phtml:305 docs.phtml:386 docs.phtml:397 docs.phtml:408 docs.phtml:417
+#: docs.phtml:426 docs.phtml:445
 msgid "English"
 msgstr "Anglais"
 
-#: docs.phtml:57 docs.phtml:96 docs.phtml:166 docs.phtml:205 docs.phtml:268
-#: docs.phtml:290 docs.phtml:310 docs.phtml:317 docs.phtml:326
+#: docs.phtml:57 docs.phtml:96 docs.phtml:167 docs.phtml:206 docs.phtml:277
+#: docs.phtml:316 docs.phtml:388 docs.phtml:410 docs.phtml:430 docs.phtml:437
+#: docs.phtml:446
 msgid "German"
 msgstr "Allemand"
 
-#: docs.phtml:68 docs.phtml:107 docs.phtml:177 docs.phtml:216 docs.phtml:270
-#: docs.phtml:279
+#: docs.phtml:68 docs.phtml:107 docs.phtml:178 docs.phtml:217 docs.phtml:288
+#: docs.phtml:327 docs.phtml:390 docs.phtml:399
 msgid "Italian"
 msgstr "Italien"
 
-#: docs.phtml:81 docs.phtml:190 docs.phtml:276 docs.phtml:296 docs.phtml:316
+#: docs.phtml:81 docs.phtml:191 docs.phtml:301 docs.phtml:396 docs.phtml:416
+#: docs.phtml:436
 msgid "Concepts Guide"
 msgstr "Guide des concepts"
 
-#: docs.phtml:118 docs.phtml:227
+#: docs.phtml:118 docs.phtml:228 docs.phtml:338
 msgid "Japanese"
 msgstr "Japonais"
 
@@ -1162,20 +1191,42 @@ msgstr ""
 "\">GnuCash</span>. <em>Stable</em> signifiant que la documentation n'est pas "
 "nécessairement la plus à jour mais elle fonctionne sans problème."
 
-#: docs.phtml:144
+#: docs.phtml:145
+#, fuzzy, php-format
+msgid "GnuCash v%s (old stable release)"
+msgstr "Voir tous les téléchargements GnuCash %s (stable)"
+
+#: docs.phtml:147
+#, fuzzy
+msgid "Old <em>stable</em> user documentation and developer documentation"
+msgstr "Documentation <em>stable</em> de l'utilisateur et du développeur"
+
+#: docs.phtml:249
+#, fuzzy, php-format
+msgid ""
+"This is the old stable release of the <span class=\"gnucash\">GnuCash</span> "
+"documentation, corresponding to the %s release of <span class=\"gnucash"
+"\">GnuCash</span> itself."
+msgstr ""
+"Cette page est consacrée au projet de documentation de <span class=\"gnucash"
+"\">GnuCash</span>. Notre objectif est de maintenir une communauté dédiée à "
+"la création d'une documentation de qualité sur <span class=\"gnucash"
+"\">GnuCash</span>."
+
+#: docs.phtml:255
 msgid "Nightly Documentation Builds"
 msgstr "Dernière documentation disponible"
 
-#: docs.phtml:146
+#: docs.phtml:257
 msgid ""
 "Current <em>unstable</em> user documentation and developer documentation"
 msgstr "Documentation <em>instable</em> de l'utilisateur et du développeur"
 
-#: docs.phtml:149
+#: docs.phtml:260
 msgid "Unstable"
 msgstr "Instable"
 
-#: docs.phtml:249
+#: docs.phtml:360
 msgid ""
 "Every night a server builds the documentation from the current contents of "
 "the <span class=\"gnucash\">GnuCash</span> subversion repository. This "
@@ -1189,18 +1240,18 @@ msgstr ""
 "<b>documentation utilisateur</b> pour la version <em>instable</em> de <span "
 "class=\"gnucash\">GnuCash</span>."
 
-#: docs.phtml:253
+#: docs.phtml:364
 msgid ""
 "<b>NOTE:</b> these documents might not be accessible from time to time "
 "because developers might be working on improvements. However they are the "
 "most up to date reference for <span class=\"gnucash\">GnuCash</span> users."
 msgstr ""
 
-#: docs.phtml:258
+#: docs.phtml:378
 msgid "Older GnuCash Documentation"
 msgstr "Ancienne documentation GnuCash"
 
-#: docs.phtml:260
+#: docs.phtml:380
 msgid ""
 "This section contains all the older <span class=\"gnucash\">GnuCash</span> "
 "documentation. If you are using one of these old versions of <span class="
@@ -1212,32 +1263,37 @@ msgstr ""
 "de ces anciennes versions de <span class=\"gnucash\">GnuCash</span>, nous "
 "vous conseillons plutôt de mettre à jour votre version."
 
-#: docs.phtml:327
+#: docs.phtml:382 docs.phtml:404 docs.phtml:422 docs.phtml:444
+#, fuzzy, php-format
+msgid "GnuCash v%s"
+msgstr "GnuCash %s pour"
+
+#: docs.phtml:447
 msgid "Spanish"
 msgstr "Espagnol"
 
-#: docs.phtml:328
+#: docs.phtml:448
 msgid "Portugese"
 msgstr "Portuguais"
 
-#: docs.phtml:334
+#: docs.phtml:454
 msgid "Unofficial documentation"
 msgstr "Documentation non-officielle"
 
-#: docs.phtml:336
+#: docs.phtml:456
 msgid "Some people have written HOWTO guides or tutorials."
 msgstr ""
 "Certaines personnes ont écrit des guides COMMENT FAIRE ou des tutoriels."
 
-#: docs.phtml:339
+#: docs.phtml:459
 msgid "Joe Mack's Tutorial"
 msgstr "Tutoriel de Joe Mack"
 
-#: docs.phtml:341
+#: docs.phtml:461
 msgid "Dave Gilbert's User Guide (Pdf)"
 msgstr "Guide de l'utilisateur (PDF) par Dave Gilbert"
 
-#: docs.phtml:345
+#: docs.phtml:465
 msgid ""
 "<b>NOTE:</b> the information presented in these sources may or may not be "
 "updated to the most recent version of <span class=\"gnucash\">GnuCash</"
@@ -1253,26 +1309,26 @@ msgstr ""
 msgid "View document"
 msgstr ""
 
-#: viewdoc.phtml:111
+#: viewdoc.phtml:114
 msgid ""
 "The document requested is not available. The tutorial and concepts guide "
 "will be displayed instead."
 msgstr ""
 
-#: viewdoc.phtml:115
+#: viewdoc.phtml:118
 #, php-format
 msgid ""
 "The document requested is not available for version %s. Version %s will be "
 "displayed instead."
 msgstr ""
 
-#: viewdoc.phtml:119
+#: viewdoc.phtml:122
 msgid ""
 "The document requested is not available in the requested language. The "
 "English version will be displayed instead."
 msgstr ""
 
-#: viewdoc.phtml:123
+#: viewdoc.phtml:126
 #, php-format
 msgid ""
 "It seems your browser doesn't support iframes. To view the requested page in "
@@ -2556,17 +2612,6 @@ msgstr "Date"
 
 #~ msgid "GnuCash Documentation Project"
 #~ msgstr "Projet de documentation de GnuCash"
-
-#~ msgid ""
-#~ "This page is the home of the <span class=\"gnucash\">GnuCash</span> "
-#~ "Documentation Project, our goal is to maintain a community of people "
-#~ "working towards creation of high quality documentation for <span class="
-#~ "\"gnucash\">GnuCash</span>."
-#~ msgstr ""
-#~ "Cette page est consacrée au projet de documentation de <span class="
-#~ "\"gnucash\">GnuCash</span>. Notre objectif est de maintenir une "
-#~ "communauté dédiée à la création d'une documentation de qualité sur <span "
-#~ "class=\"gnucash\">GnuCash</span>."
 
 #~ msgid "Documentation Development"
 #~ msgstr "Développement de la documentation"
