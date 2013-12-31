@@ -24,8 +24,6 @@
      $major_old_stable		="2.4";
      $minor_old_stable		="14";
      $old_stable           = $major_old_stable.".".$minor_old_stable;
-     // There's currently no unstable release being worked on, so disable it
-#     $old_stable           = False;
      $old_stable_win       = $old_stable;
      $old_stable_mac_ppc   = $old_stable."-1";
      $old_stable_mac_intel = $old_stable."-1";
@@ -41,6 +39,13 @@
      $latest_stable_mac_intel="Gnucash-Intel-".$latest_stable_mac_intel.".dmg";
      $latest_stable_mac_ppc="Gnucash-PPC-".$latest_stable_mac_ppc.".dmg";
      $latest_stable_source="gnucash-".$latest_stable.".tar.bz2";
+
+     $old_stable_path=$stable_path.$old_stable."/";
+     
+     $old_stable_win="gnucash-".$old_stable_win."-setup.exe";
+     $old_stable_mac_intel="Gnucash-Intel-".$old_stable_mac_intel.".dmg";
+     $old_stable_mac_ppc="Gnucash-PPC-".$old_stable_mac_ppc.".dmg";
+     $old_stable_source="gnucash-".$old_stable.".tar.bz2";
      
      $unstable_path="http://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/";
      $latest_unstable_path=$unstable_path.$latest_unstable."/";
