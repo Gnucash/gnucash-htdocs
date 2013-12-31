@@ -364,79 +364,88 @@ include("externals/menu.phtml");
 <p class="justify"><?php echo T_("<b>NOTE:</b> these documents might not be accessible from time to time because developers might be working on improvements. However they are the most up to date reference for <span class=\"gnucash\">GnuCash</span> users.");?></p>
 </div>
 
+<!--Documentation for older GnuCash release-->
+<!--Define variable for older documentation: add them here if needed-->
+<?php 
+$older1		="1.6";
+$older2		="1.8";
+$older3		="2.0";
+$older4		="2.2";
+?>
+
 <div class="featurecontainer">
 <div class="featureborder">
 <h2 class="featuretitle"><?php echo T_("Older GnuCash Documentation");?></h2>
 </div>
 <p class="justify"><?php echo T_("This section contains all the older <span class=\"gnucash\">GnuCash</span> documentation. If you are using one of these old versions of <span class=\"gnucash\">GnuCash</span>, it is highly recommended that you upgrade to the latest stable version.");?></p>
 <ul>
-  <li><b>GnuCash v2.2</b>:
+  <li><b><?php printf (T_("GnuCash v%s"), $older4)?></b>:
     <ul>
       <li>
         <b><?php echo T_("Help Manual");?></b>:
-        <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=2.2&lang=C&doc=help"
+        <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older4;?>&lang=C&doc=help"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>) |
-        <?php echo T_("German");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=2.2&lang=de_DE&doc=help"
+        <?php echo T_("German");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older4;?>&lang=de_DE&doc=help"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>) |
-        <?php echo T_("Italian");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=2.2&lang=it_IT&doc=help"
+        <?php echo T_("Italian");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older4;?>&lang=it_IT&doc=help"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>)
       </li>
     </ul>
     <ul>
       <li>
         <b><?= T_("Concepts Guide") ?></b>:
-        <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=2.2&lang=C&doc=guide"
+        <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older4;?>&lang=C&doc=guide"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>)
-        <?php echo T_("Italian");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=2.2&lang=it_IT&doc=guide"
+        <?php echo T_("Italian");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older4;?>&lang=it_IT&doc=guide"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>)
       </li>
     </ul>
   </li>
-  <li><b>GnuCash v2.0</b>:
+  <li><b><?php printf (T_("GnuCash v%s"), $older3)?></b>:
     <ul>
       <li>
         <b><?php echo T_("Help Manual");?></b>:
-        <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=2.0&lang=C&doc=help"
+        <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older3;?>&lang=C&doc=help"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>) |
-        <?php echo T_("German");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=2.0&lang=de_DE&doc=help"
+        <?php echo T_("German");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older3;?>&lang=de_DE&doc=help"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>)
       </li>
     </ul>
     <ul>
       <li>
         <b><?= T_("Concepts Guide") ?></b>:
-        <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=2.0&lang=C&doc=guide"
+        <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older3;?>&lang=C&doc=guide"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>)
       </li>
     </ul>
   </li>
-  <li><b>GnuCash v1.8</b>:
+  <li><b><?php printf (T_("GnuCash v%s"), $older2)?></b>:
     <ul>
       <li>
         <b><?php echo T_("Help Manual");?></b>:
-        <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=1.8&lang=C&doc=help"
+        <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older2;?>&lang=C&doc=help"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>,
-        <a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-help.pdf"
+        <a href="<?=$top_dir;?>/docs/v<?=$older2;?>/C/gnucash-help.pdf"
           ><img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a>) |
-        <?php echo T_("German");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=1.8&lang=de_DE&doc=help"
+        <?php echo T_("German");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older2;?>&lang=de_DE&doc=help"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>)
       </li>
     </ul>
     <ul>
       <li>
         <b><?= T_("Concepts Guide") ?></b>:     
-        <?php echo T_("German");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=1.8&lang=C&doc=guide"
+        <?php echo T_("German");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older2;?>&lang=C&doc=guide"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>,
-        <a href="<?=$top_dir;?>/docs/v1.8/C/gnucash-guide.pdf"
+        <a href="<?=$top_dir;?>/docs/v<?=$older2;?>/C/gnucash-guide.pdf"
           ><img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a>)
       </li>
     </ul>
   </li>
-  <li><b>GnuCash v1.6</b>: 
-  <a href="<?=$top_dir;?>/docs/v1.6/C/"><?php echo T_("English");?></a> | 
-  <a href="<?=$top_dir;?>/docs/v1.6/de_DE/"><?php echo T_("German");?></a> | 
-  <a href="<?=$top_dir;?>/docs/v1.6/es/"><?php echo T_("Spanish");?></a> | 
-  <a href="<?=$top_dir;?>/docs/v1.6/pt_PT/"><?php echo T_("Portugese");?></a></li>
+  <li><b><?php printf (T_("GnuCash v%s"), $older1)?></b>: 
+  <a href="<?=$top_dir;?>/docs/v<?=$older1;?>/C/"><?php echo T_("English");?></a> | 
+  <a href="<?=$top_dir;?>/docs/v<?=$older1;?>/de_DE/"><?php echo T_("German");?></a> | 
+  <a href="<?=$top_dir;?>/docs/v<?=$older1;?>/es/"><?php echo T_("Spanish");?></a> | 
+  <a href="<?=$top_dir;?>/docs/v<?=$older1;?>/pt_PT/"><?php echo T_("Portugese");?></a></li>
 </ul>
 </div>
 
