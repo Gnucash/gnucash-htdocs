@@ -32,7 +32,7 @@ include("externals/menu.phtml");
 
 <div class="featurecontainer">
 <div class="featureborder">
-<h2 class="featuretitle">GnuCash v2.6 <?=T_("(current stable release)");?></h2>
+<h2 class="featuretitle"><?php printf (T_("GnuCash v%s (current stable release)"), $major_stable)?></h2>
 </div>
 <h3><?= T_("Current <em>stable</em> user documentation and developer documentation");?></h3>
 <div id="stabledoc">
@@ -44,35 +44,35 @@ include("externals/menu.phtml");
     <tbody>
       <tr class="doctr">
       <td><?php echo T_("English");?> :</td><td>
-        <a href="<?=$top_dir;?>/viewdoc.phtml?rev=2.6&lang=C&doc=help">
+        <a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$major_stable;?>&lang=C&doc=help">
           <img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
-        <a href="<?=$top_dir;?>/docs/v2.6/C/gnucash-help.pdf">
+        <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/C/gnucash-help.pdf">
           <img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a> |
-        <a href="<?=$top_dir;?>/docs/v2.6/C/gnucash-help.epub">
+        <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/C/gnucash-help.epub">
           <img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> |
-        <a href="<?=$top_dir;?>/docs/v2.6/C/gnucash-help.mobi">
+        <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/C/gnucash-help.mobi">
           <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>
       </td></tr>
       <tr class="doctr">
       <td><?php echo T_("German");?> :</td><td>
-        <a href="<?=$top_dir;?>/viewdoc.phtml?rev=2.6&lang=de_DE&doc=help">
+        <a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$major_stable;?>&lang=de_DE&doc=help">
           <img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
-        <a href="<?=$top_dir;?>/docs/v2.6/de/gnucash-help.pdf">
+        <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/de/gnucash-help.pdf">
           <img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a> |
-        <a href="<?=$top_dir;?>/docs/v2.6/de/gnucash-help.epubf">
+        <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/de/gnucash-help.epubf">
           <img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> |
-        <a href="<?=$top_dir;?>/docs/v2.6/de/gnucash-help.mobi">
+        <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/de/gnucash-help.mobi">
           <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>
       </td></tr>
       <tr class="doctr">
       <td><?php echo T_("Italian");?> :</td><td>
-        <a href="<?=$top_dir;?>/viewdoc.phtml?rev=2.6&lang=it_IT&doc=help">
+        <a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$major_stable;?>&lang=it_IT&doc=help">
           <img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
-        <a href="<?=$top_dir;?>/docs/v2.6/it/gnucash-help.pdf">
+        <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/it/gnucash-help.pdf">
           <img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a> |
-        <a href="<?=$top_dir;?>/docs/v2.6/it/gnucash-help.epub">
+        <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/it/gnucash-help.epub">
           <img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> |
-        <a href="<?=$top_dir;?>/docs/v2.6/it/gnucash-help.mobi">
+        <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/it/gnucash-help.mobi">
           <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>
       </td></tr>
     </tbody>
@@ -83,46 +83,46 @@ include("externals/menu.phtml");
     <tbody>
       <tr class="doctr">
       <td><?php echo T_("English");?> :</td><td>
-        <a href="<?=$top_dir;?>/viewdoc.phtml?rev=2.6&lang=C&doc=guide">
+        <a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$major_stable;?>&lang=C&doc=guide">
           <img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
-        <a href="<?=$top_dir;?>/docs/v2.6/C/gnucash-guide.pdf">
+        <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/C/gnucash-guide.pdf">
           <img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a> |
-        <a href="<?=$top_dir;?>/docs/v2.6/C/gnucash-guide.epub">
+        <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/C/gnucash-guide.epub">
           <img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> |
-        <a href="<?=$top_dir;?>/docs/v2.6/C/gnucash-guide.mobi">
+        <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/C/gnucash-guide.mobi">
           <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>
       </td></tr>
       <tr class="doctr">
       <td><?php echo T_("German");?> :</td><td>
-        <a href="<?=$top_dir;?>/viewdoc.phtml?rev=2.6&lang=de_DE&doc=guide">
+        <a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$major_stable;?>&lang=de_DE&doc=guide">
           <img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
-        <a href="<?=$top_dir;?>/docs/v2.6/de/gnucash-guide.pdf">
+        <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/de/gnucash-guide.pdf">
           <img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a> |
-        <a href="<?=$top_dir;?>/docs/v2.6/de/gnucash-guide.epub">
+        <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/de/gnucash-guide.epub">
           <img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> |
-        <a href="<?=$top_dir;?>/docs/v2.6/de/gnucash-guide.mobi">
+        <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/de/gnucash-guide.mobi">
           <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>
       </td></tr>
       <tr class="doctr">
       <td><?php echo T_("Italian");?> :</td><td>
-        <a href="<?=$top_dir;?>/viewdoc.phtml?rev=2.6&lang=it_IT&doc=guide">
+        <a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$major_stable;?>&lang=it_IT&doc=guide">
           <img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
-        <a href="<?=$top_dir;?>/docs/v2.6/it/gnucash-guide.pdf">
+        <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/it/gnucash-guide.pdf">
           <img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a> |
-        <a href="<?=$top_dir;?>/docs/v2.6/it/gnucash-guide.epub">
+        <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/it/gnucash-guide.epub">
           <img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> |
-        <a href="<?=$top_dir;?>/docs/v2.6/it/gnucash-guide.mobi">
+        <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/it/gnucash-guide.mobi">
           <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>
       </td></tr>
       <tr class="doctr">
       <td><?php echo T_("Japanese");?> :</td><td>
-        <a href="<?=$top_dir;?>/viewdoc.phtml?rev=2.6&lang=ja_JP&doc=guide">
+        <a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$major_stable;?>&lang=ja_JP&doc=guide">
           <img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
-        <a href="<?=$top_dir;?>/docs/v2.6/ja/gnucash-guide.pdf">
+        <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/ja/gnucash-guide.pdf">
           <img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a> |
-        <a href="<?=$top_dir;?>/docs/v2.6/ja/gnucash-guide.epub">
+        <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/ja/gnucash-guide.epub">
           <img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> |
-        <a href="<?=$top_dir;?>/docs/v2.6/ja/gnucash-guide.mobi">
+        <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/ja/gnucash-guide.mobi">
           <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>
       </td></tr>
     </tbody>
