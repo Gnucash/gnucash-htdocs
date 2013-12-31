@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GnuCash ht-docs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-31 09:53+0100\n"
+"POT-Creation-Date: 2013-12-31 10:01+0100\n"
 "PO-Revision-Date: 2013-12-29 15:58+0100\n"
 "Last-Translator: Cristian Marchi <cri.penta@gmail.com>\n"
 "Language-Team: \n"
@@ -1198,9 +1198,15 @@ msgstr ""
 "\">pagina sulla scrittura della documentazione</a> per contribuire a questo "
 "progetto."
 
-#: docs.phtml:35
+#: docs.phtml:35 docs.phtml:145 docs.phtml:382 docs.phtml:404 docs.phtml:422
+#: docs.phtml:444
 #, fuzzy, php-format
-msgid "GnuCash v%s (current stable release)"
+msgid "GnuCash v%s"
+msgstr "GnuCash %s per"
+
+#: docs.phtml:35
+#, fuzzy
+msgid "(current stable release)"
 msgstr "(rilascio stabile attuale)"
 
 #: docs.phtml:37
@@ -1255,9 +1261,9 @@ msgstr ""
 "problemi."
 
 #: docs.phtml:145
-#, fuzzy, php-format
-msgid "GnuCash v%s (old stable release)"
-msgstr "Visualizza tutti i file scaricabili di GnuCash %s (stabile)"
+#, fuzzy
+msgid "(old stable release)"
+msgstr "Rilascio stabile (%s)"
 
 #: docs.phtml:147
 #, fuzzy
@@ -1331,11 +1337,6 @@ msgstr ""
 "\"gnucash\">GnuCash</span>. Se si sta utilizzando una di queste vecchie "
 "versioni di <span class=\"gnucash\">GnuCash</span>, si raccomanda caldamente "
 "di aggiornarla all'ultima versione stabile."
-
-#: docs.phtml:382 docs.phtml:404 docs.phtml:422 docs.phtml:444
-#, fuzzy, php-format
-msgid "GnuCash v%s"
-msgstr "GnuCash %s per"
 
 #: docs.phtml:447
 msgid "Spanish"
@@ -2831,6 +2832,10 @@ msgstr "Autore"
 #: search/templates/NMZ.result.normal.php_tmpl:6
 msgid "Date"
 msgstr "Data"
+
+#, fuzzy
+#~ msgid "GnuCash v%s (old stable release)"
+#~ msgstr "Visualizza tutti i file scaricabili di GnuCash %s (stabile)"
 
 #~ msgid "Support for duplicate invoices"
 #~ msgstr "Supporto per la duplicazione delle fatture"

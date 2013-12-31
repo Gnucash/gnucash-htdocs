@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-31 09:53+0100\n"
+"POT-Creation-Date: 2013-12-31 10:01+0100\n"
 "PO-Revision-Date: 2011-08-11 23:33+0100\n"
 "Last-Translator: Takó Kornél <takokornel@gmail.com>\n"
 "Language-Team: en_GB <en_GB@li.org>\n"
@@ -1013,9 +1013,15 @@ msgid ""
 "page</a> if you are interested in contributing to this effort."
 msgstr ""
 
-#: docs.phtml:35
+#: docs.phtml:35 docs.phtml:145 docs.phtml:382 docs.phtml:404 docs.phtml:422
+#: docs.phtml:444
 #, fuzzy, php-format
-msgid "GnuCash v%s (current stable release)"
+msgid "GnuCash v%s"
+msgstr "GnuCash %s for"
+
+#: docs.phtml:35
+#, fuzzy
+msgid "(current stable release)"
 msgstr "GnuCash v1.8 (current stable release)"
 
 #: docs.phtml:37
@@ -1065,9 +1071,9 @@ msgid ""
 msgstr ""
 
 #: docs.phtml:145
-#, fuzzy, php-format
-msgid "GnuCash v%s (old stable release)"
-msgstr "Összes GnuCash %s letöltés (stabil)"
+#, fuzzy
+msgid "(old stable release)"
+msgstr "Stabil kiadás (%s)"
 
 #: docs.phtml:147
 msgid "Old <em>stable</em> user documentation and developer documentation"
@@ -1128,11 +1134,6 @@ msgstr ""
 "This section contains all the older GnuCash documentation. If you are using "
 "one of these old versions of GnuCash, it is highly recommended that you "
 "upgrade to the latest stable version."
-
-#: docs.phtml:382 docs.phtml:404 docs.phtml:422 docs.phtml:444
-#, fuzzy, php-format
-msgid "GnuCash v%s"
-msgstr "GnuCash %s for"
 
 #: docs.phtml:447
 msgid "Spanish"
@@ -2422,6 +2423,10 @@ msgstr "Author"
 #: search/templates/NMZ.result.normal.php_tmpl:6
 msgid "Date"
 msgstr "Date"
+
+#, fuzzy
+#~ msgid "GnuCash v%s (old stable release)"
+#~ msgstr "Összes GnuCash %s letöltés (stabil)"
 
 #, fuzzy
 #~ msgid "Writing documentation"

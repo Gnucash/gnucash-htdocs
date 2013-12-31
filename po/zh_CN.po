@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs r18948\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-31 09:53+0100\n"
+"POT-Creation-Date: 2013-12-31 10:01+0100\n"
 "PO-Revision-Date: 2010-05-02 07:26+1000\n"
 "Last-Translator: Tao Wang <dancefire@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
@@ -1020,9 +1020,15 @@ msgid ""
 "page</a> if you are interested in contributing to this effort."
 msgstr ""
 
-#: docs.phtml:35
+#: docs.phtml:35 docs.phtml:145 docs.phtml:382 docs.phtml:404 docs.phtml:422
+#: docs.phtml:444
 #, fuzzy, php-format
-msgid "GnuCash v%s (current stable release)"
+msgid "GnuCash v%s"
+msgstr "GnuCash %s 运行于"
+
+#: docs.phtml:35
+#, fuzzy
+msgid "(current stable release)"
 msgstr "GnuCash v2.0 (当前稳定版本)"
 
 #: docs.phtml:37
@@ -1073,9 +1079,9 @@ msgid ""
 msgstr ""
 
 #: docs.phtml:145
-#, fuzzy, php-format
-msgid "GnuCash v%s (old stable release)"
-msgstr "查看所有 GnuCash %s 的下载 (稳定版)"
+#, fuzzy
+msgid "(old stable release)"
+msgstr "稳定版本 (%s)"
 
 #: docs.phtml:147
 #, fuzzy
@@ -1141,11 +1147,6 @@ msgid ""
 msgstr ""
 "这部分包含了所有早期的 GnuCash 的文档。如果您正在使用其中一个早期的版本，那么"
 "非常建议您升级到最新的稳定版本。"
-
-#: docs.phtml:382 docs.phtml:404 docs.phtml:422 docs.phtml:444
-#, fuzzy, php-format
-msgid "GnuCash v%s"
-msgstr "GnuCash %s 运行于"
 
 #: docs.phtml:447
 msgid "Spanish"
@@ -2418,6 +2419,10 @@ msgstr "作者"
 #: search/templates/NMZ.result.normal.php_tmpl:6
 msgid "Date"
 msgstr "日期"
+
+#, fuzzy
+#~ msgid "GnuCash v%s (old stable release)"
+#~ msgstr "查看所有 GnuCash %s 的下载 (稳定版)"
 
 #, fuzzy
 #~ msgid "Writing documentation"
