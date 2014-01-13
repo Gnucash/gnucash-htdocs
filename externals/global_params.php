@@ -22,7 +22,7 @@
      $latest_unstable_mac_intel = $latest_unstable."-1";
 
      $major_old_stable		="2.4";
-     $minor_old_stable		="14";
+     $minor_old_stable		="15";
      $old_stable           = $major_old_stable.".".$minor_old_stable;
      $old_stable_win       = $old_stable;
      $old_stable_mac_ppc   = $old_stable."-1";
