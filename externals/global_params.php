@@ -26,7 +26,7 @@
      $old_stable           = $major_old_stable.".".$minor_old_stable;
      $old_stable_win       = $old_stable;
      $old_stable_mac_ppc   = $old_stable."-1";
-     $old_stable_mac_intel = $old_stable."-1";
+     $old_stable_mac_intel = $old_stable."-2";
 
      // The definitions below use the latest version definitions above
      // to define several paths that will be used on several pages
