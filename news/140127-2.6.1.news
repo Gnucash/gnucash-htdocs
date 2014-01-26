@@ -1,0 +1,97 @@
+<b>Announcement:</b> GnuCash 2.6.1 Release
+2014-01-27
+
+<h2>GnuCash 2.6.1 released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.6.1, the first release in our new 2.6-stable series. Please <a href="http://gnucash.org/2.6-release-tour.phtml">take the tour</a> of all the new features.
+
+<h3>Changes</h3>
+<p> Mike Alexander has extensively reworked the Advanced Portfolio Report.</p>
+<p>Between 2.6.0 and 2.6.1, the following bugfixes were accomplished:</p>
+<ul>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=454827">Bug #454827: Reports: Incorrect share value of stocks in foreign currency</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=553020">Bug #553020: Reports: Incorrect share value of stocks in foreign currency</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=555182">Bug #555182: Security Type template hidden</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=605991">Bug #605991: Help button on New and Edit Job dialogs brings up wrong help page.</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=677489">Bug #677489: Critical error reported when initializing an Invoice</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=721211">Bug #721211: Reconciliation checkboxes fail to sync for split transactions across sub-accounts</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=721251">Bug #721251: Incorrect Transaction Dates</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=721260">Bug #721260: Crash on startup: gnucash cannot handle default locale</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=721290">Bug #721290: SX Editor: Pressing "Enter" too soon hides transaction</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=721306">Bug #721306: Account hierarchy column widths are reset when restarting a second time without changing the widths</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=721447">Bug #721447: Entries with values of ,50 are imported as ,51</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=721464">Bug #721464: Program won’t open the website link</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=721576">Bug #721576: Gnucash can not work with files, that have russian symbols in path.</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=721600">Bug #721600: Segmentation fault on startup if report Income/Expense Chart was opened since last running</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=721607">Bug #721607: fix GnuCash version numbers and remove/update links.</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=721667">Bug #721667: Accelerator key map loaded from one file and saved</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=721770">Bug #721770: "Choose accounts to create" has no effect</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=721791">Bug #721791: Segmentation fault when correcting invalid date</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=721825">Bug #721825: Online prices displayed as unreadable fractions in 2.6.0</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=721913">Bug #721913: Fetch Rate crashes application</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=721929">Bug #721929: Importing a customer list causes a crash.</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=721954">Bug #721954: Multiple Scheduled Transaction Editors</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=721966">Bug #721966: --add-price-quotes ignoring compress files preference</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=722035">Bug #722035: Missing space in the Spanish translation of msgid "Total For "</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=722123">Bug #722123: Zero price entry added to price database on stock purchase</a></li>
+
+</ul>
+<p>Translations Updated:  Catalan, Danish, German, Italian</p>
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of Gnucash 2.6.1 we're pleased to also release a new version 2.6.1 of the companion <em>Help</em> and <em>Tutorial and Concepts Guide</em>.</p>
+
+<p>Changes between documentation versions 2.6.0 and 2.6.1 include:</p>
+<ul>
+	<li>First documention updates for credit notes</li>
+	<li>Adapt migration documentation to gsettings introduction</li>
+	<li>Move most of the text regarding business features from guide to help, correct links and wording and many small improvements.</li>
+	<li>Add information about the Business tab in book options window.</li>
+	<li>Enable building Japanese PDF without requiring Debian or downloading fonts from anywhere.</li>
+	<li>Add Fedora font paths</li>
+	<li>Adjust image after [23668] update.</li>
+	<li>Doc/guide/C: add cash account to accts-examples-organization2</li>
+	<li>Docs/guide/de: minor corrections of spelling and an extension by Martin Mainka</li>
+	<li>Update Italian translation of guide.</li>
+	<li>Update instructions for Italian translation to adapt them to new generic langcode.</li>
+</ul>
+
+<h3>Getting GnuCash for Windows (Win32 binary)</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.1-setup.exe">Gnucash 2.6.1 Win32 setup executable</a> can be downloaded from Sourceforge. It will install everything needed to run GnuCash.</p>
+
+<h3>Mac OSX binary</h3>
+<p>The Gnucash 2.6.1 MacOS X <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.6.1-1.dmg">Intel</a> and <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-PPC-2.6.1-1.dmg">PPC</a> packages can be downloaded from Sourceforge as well.</p>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.6.1 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.1.tar.bz2">bzip2</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.6.1/">all files</a>.</li>
+
+<li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least Gnome 2, Guile, and slib. In addition you will need swig if compiling from git. Please consult the README file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Reading the documentation online</h3>
+
+<p>An online version of the documentation is available on the <a href="http://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="http://www.gnucash.org/">GnuCash website</a>. The 2.6.1 documentation can be found under "GnuCash v2.6 (current stable release)" in multiple languages.</p>
+
+<h3>Getting GnuCash Documentation in pdf, epub or mobi formats</h3>
+
+<p>The documentation can equally be downloaded in pdf, epub or mobi formats from the <a href="http://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="http://www.gnucash.org/">GnuCash website</a>. The 2.6.1 documentation can be found under "GnuCash v2.6 (current stable release)" in multiple languages.</p>
+
+<h3>Getting GnuCash Documentation as source code</h3>
+
+<p>If you want to compile the GnuCash Documentation 2.6.1 for yourself, the source code can be downloaded from:</p>
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-docs-2.6.1.tar.gz">Sourceforge</a></li>
+<li>You can also checkout the sources directly from the subversion repository as <a href="http://wiki.gnucash.org/wiki/Subversion">described here.</a></li>
+</ul>
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
