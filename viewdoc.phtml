@@ -86,8 +86,8 @@ if (isset ($_GET["rev"])) {
 # updated if list of languages in which the documentation is available changes
 if ($showrev == "trunk") {
   $basepath = "http://code.gnucash.org/docs";
-  $trunk_langs = array ( $helpdoc => array( "C", "de", "it"),
-                         $tcdoc   => array( "C", "de", "it", "ja"));
+  $trunk_langs = array ( $helpdoc => array( "C", "de_DE", "it_IT"),
+                         $tcdoc   => array( "C", "de_DE", "it_IT", "ja_JP"));
   if (!in_array ($showlang, $trunk_langs[$showdoc])) {
     $showlang    = "C";
     $req_lang_ok = false;
