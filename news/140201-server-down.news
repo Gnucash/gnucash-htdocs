@@ -1,0 +1,17 @@
+<b>Maintainance Announcement:</b> Scheduled GnuCash Server Downtime Feb 1
+2014-02-01
+
+<h2>Scheduled GnuCash Server Downtime</h2>
+
+<p>The GnuCash "everything" server will be unavailable Saturday, February 1, 2014, in order to migrate the server to a new VM with an updated OS.  The shutdown will start around 7:30pm US/EST (0030 UTC) on Feb 1 (Feb 2 UTC) and will hopefully last only 1-2 hours while the data syncs to the new location.  It may last longer in the event that testing on the new system does not go smoothly.</p>
+
+<p>This outage will affect all GnuCash services except for www.gnucash.org.  Affected services include Email, Email Archives, Subversion, Wiki, Trac, GNCbot, IRC Logs, and all other services run on lists, code, and svn.gnucash.org.</p>
+
+<p>Note to developers:  The SSH Key will be changing on the new server.  You will need to manually update your .ssh/known_hosts file after the migration is complete.  The new key fingerprints are:</p>
+
+<pre>
+  256 a0:35:2a:54:ce:df:1b:b8:82:5e:11:83:73:50:47:55   (ECDSA)
+  2048 20:23:3d:df:f3:13:34:c1:32:ca:11:77:24:21:98:01   (RSA)
+</pre>
+
+<p>Please stay tuned to this location for further updates.  For questions please ask on #gnucash on irc.gnome.org</p>
