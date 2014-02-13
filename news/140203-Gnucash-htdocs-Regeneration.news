@@ -1,34 +1,23 @@
-<b>Announcement:</b> Gnucash-htdocs Repository Will Be Regenerated Next Week
-2014-02-03
+<b>Announcement:</b> Gnucash-htdocs Repository Regeneration Complete
+2014-02-13
 
-<h2>Gnucash-htdocs Repository Will Be Regenerated Next Week</h2>
+<h2>Gnucash-htdocs Repository Regeneration Complete</h2>
 
-<p>The gnucash-htdocs repository is growing rather large fairly rapidly.
-This turns out to be due to the compiled docs that are included in it.
-To remedy this we will move the compiled documentation into its own
-repository and rebuild the gnucash-htdocs repository without the
-compiled docs. This will reduce the repository from over 800Mb to
-less than 30Mb.</p>
+<p>The gnucash-htdocs repository has been successfully split
+into gnucash-htdocs and gnucash-htdocs-docs. The first is to be
+used by anyone that wants to alter the content of the website,
+the second will only be used by the documentation release manager
+to update our binary versions of the GnuCash guide and help manuals.</p>
 
-<p>At the same time we will also deprecate the use of the "trunk"
-branch as main branch in that repository and instead use the "master"
-branch which is a more common habit in the git world.</p>
+<p>As said before if you have a clone of the gnucash-htdocs directory
+from before February 13th you will have to reclone the new repository.
+If you still have commits that had not yet been pushed upstream you
+can follow <a href="http://wiki.gnucash.org/wiki/Git#Conversion_Notice">
+these instructions</a> to move them over to the new repository.</p>
 
-<p>The side effect is that existing clones of gnucash-htdocs will
-no longer match with the history in the new gnucash-htdocs.
-<em>If you have a clone or fork of the
-current repository you will need to delete it and re-clone from the
-new one. </em> If you have local branches which you want to transfer
-to the new repository, it's fairly easy, and instructions have already
-been added to <a
-href="http://wiki.gnucash.org/wiki/Git#Conversion_Notice">the
-Gnucash-Git Wiki page</a>. <em>You can make the process much easier by
-keeping your clone/fork current with the base repository this week.</em></p>
-
-<p><em>Timing:</em>the rebuild is planned for next Thursday, February 13th
-around 6-8am PT (9-11am ET, 2-4pm UTC). During that time the gnucash-htdocs
-repos on both code.gnucash.org and github.com will be unstable. So avoid
-that time frame to push or pull any changes.</p>
+<p>Also remember that the primary branch is "master" from now on.
+The "trunk" branch has completely been removed. Please don't push
+to that branch anymore.</p>
 
 <h3>About the Program</h3> <p>GnuCash is a free, open source
 accounting program released under the GNU General Public License (GPL)
