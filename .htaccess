@@ -18,8 +18,9 @@ RedirectMatch permanent /old-website/.* http://www.gnucash.org
 Redirect permanent /externals/banner5.png /images/banner5.png
 Redirect permanent /externals/webding.png /images/webding.png
 
-# Other images have been replaced meanwhile
-Redirect permanent /images/icons/feed-icon-12x12.png /images/gc-rss.png
+# Other images we don't have an alternative for
+Redirect permanent /externals/feed-icon-12x12.png http://upload.wikimedia.org/wikipedia/commons/5/54/Social_icons-rss-feed-22x22.png
+Redirect permanent /images/icons/feed-icon-12x12.png http://upload.wikimedia.org/wikipedia/commons/5/54/Social_icons-rss-feed-22x22.png
 
 # The french version of the website apparently used to have
 # lots of private pages. Not all of them have an equivalent
@@ -34,6 +35,7 @@ Redirect permanent /fr/features_5.phtml /features.phtml?lang=fr_FR
 Redirect permanent /fr/irc.phtml        http://wiki.gnucash.org/wiki/IRC
 Redirect permanent /fr/links            /index.phtml?lang=fr_FR
 Redirect permanent /fr/menu             /index.phtml?lang=fr_FR
+Redirect permanent /docs/fr/            /docs.phtml?lang=fr_FR
 
 # Some pages that don't exist anymore in the current website
 RedirectMatch permanent /.*/favicon.ico        /favicon.ico
@@ -45,19 +47,20 @@ RedirectMatch permanent /(.*)/rss-feed.phtml   /atom.php?lang=$1
 RedirectMatch permanent /(.*)/state_of_the_gnucash_project.phtml   /sizing.phtml?lang=$1
 RedirectMatch permanent /.*/sql.phtml          http://wiki.gnucash.org/wiki/SQL
 RedirectMatch permanent /(.*)/t-shirt          /index.phtml?lang=$1
+RedirectMatch permanent /pipermail/(.*)        http://lists.gnucash.org/pipermail/$1
 
 # Non-English versions of the site used to be accessed via
 # a language path specifier. This now uses a get variable.
-RedirectMatch permanent /de/(.*)     /$1?lang=de_DE
-RedirectMatch permanent /es/(.*)     /$1?lang=es_ES
-RedirectMatch permanent /en/(.*)     /$1?lang=en_US
-RedirectMatch permanent /fr/(.*)     /$1?lang=fr_FR
-RedirectMatch permanent /hu/(.*)     /$1?lang=hu_HU
-RedirectMatch permanent /it/(.*)     /$1?lang=it_IT
-RedirectMatch permanent /ja/(.*)     /$1?lang=ja_JP
-RedirectMatch permanent /nb/(.*)     /$1?lang=nb_NB
-RedirectMatch permanent /nl/(.*)     /$1?lang=nl_NL
-RedirectMatch permanent /pl/(.*)     /$1?lang=pl_PL
-RedirectMatch permanent /pt_PT/(.*)  /$1?lang=pt_PT
-RedirectMatch permanent /zh_CN/(.*)  /$1?lang=zh_CN
-RedirectMatch permanent /zh_TW/(.*)  /$1?lang=zh_TW
+RedirectMatch permanent /de/?(.*)     /$1?lang=de_DE
+RedirectMatch permanent /es/?(.*)     /$1?lang=es_ES
+RedirectMatch permanent /en/?(.*)     /$1?lang=en_US
+RedirectMatch permanent /fr/?(.*)     /$1?lang=fr_FR
+RedirectMatch permanent /hu/?(.*)     /$1?lang=hu_HU
+RedirectMatch permanent /it/?(.*)     /$1?lang=it_IT
+RedirectMatch permanent /ja/?(.*)     /$1?lang=ja_JP
+RedirectMatch permanent /nb/?(.*)     /$1?lang=nb_NB
+RedirectMatch permanent /nl/?(.*)     /$1?lang=nl_NL
+RedirectMatch permanent /pl/?(.*)     /$1?lang=pl_PL
+RedirectMatch permanent /pt_PT/?(.*)  /$1?lang=pt_PT
+RedirectMatch permanent /zh_CN/?(.*)  /$1?lang=zh_CN
+RedirectMatch permanent /zh_TW/?(.*)  /$1?lang=zh_TW
