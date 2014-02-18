@@ -48,6 +48,7 @@ RedirectMatch permanent /(.*)/state_of_the_gnucash_project.phtml   /sizing.phtml
 RedirectMatch permanent /.*/sql.phtml          http://wiki.gnucash.org/wiki/SQL
 RedirectMatch permanent /(.*)/t-shirt          /index.phtml?lang=$1
 RedirectMatch permanent /pipermail/(.*)        http://lists.gnucash.org/pipermail/$1
+RedirectMatch permanent /screenshots.phtml(.*) /features.phtml$1
 
 # Non-English versions of the site used to be accessed via
 # a language path specifier. This now uses a get variable.
