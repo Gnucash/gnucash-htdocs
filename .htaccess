@@ -53,7 +53,7 @@ RedirectMatch permanent /screenshots.phtml(.*) /features.phtml$1
 # Non-English versions of the site used to be accessed via
 # a language path specifier. This now uses a get variable.
 RedirectMatch permanent /de/(.*)     /$1?lang=de_DE
-RedirectMatch permanent /de          /?lang=de_DE
+RedirectMatch permanent /de$         /?lang=de_DE
 RedirectMatch permanent /es/(.*)     /$1?lang=es_ES
 RedirectMatch permanent /en/(.*)     /$1?lang=en_US
 RedirectMatch permanent /fr/(.*)     /$1?lang=fr_FR
