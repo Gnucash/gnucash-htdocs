@@ -75,6 +75,11 @@ Note about folders
 - "externals" folder contains images linked to external sources (e.g. logo_w120.png
   is used on the wiki and packtpub_gnucash_2.4cov.png is linked to the external 
   book website)
+- "docs" is supposed to hold copies of the compiled documentation (html, pdf, epub,...)
+  This used to be a version managed directory inside this repository. It has been
+  moved into a separate repository in 2014. The php website code still assumes this directory
+  to exist though. So in order to satisfy this code a softlink should be set up
+  on the webserver: docs->"real location of compiled docs"
 
 ----------------------
 Preparing translations
