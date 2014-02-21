@@ -52,16 +52,17 @@ RedirectMatch permanent /screenshots.phtml(.*) /features.phtml$1
 
 # Non-English versions of the site used to be accessed via
 # a language path specifier. This now uses a get variable.
-RedirectMatch permanent /de/?(.*)     /$1?lang=de_DE
-RedirectMatch permanent /es/?(.*)     /$1?lang=es_ES
-RedirectMatch permanent /en/?(.*)     /$1?lang=en_US
-RedirectMatch permanent /fr/?(.*)     /$1?lang=fr_FR
-RedirectMatch permanent /hu/?(.*)     /$1?lang=hu_HU
-RedirectMatch permanent /it/?(.*)     /$1?lang=it_IT
-RedirectMatch permanent /ja/?(.*)     /$1?lang=ja_JP
-RedirectMatch permanent /nb/?(.*)     /$1?lang=nb_NB
-RedirectMatch permanent /nl/?(.*)     /$1?lang=nl_NL
-RedirectMatch permanent /pl/?(.*)     /$1?lang=pl_PL
-RedirectMatch permanent /pt_PT/?(.*)  /$1?lang=pt_PT
-RedirectMatch permanent /zh_CN/?(.*)  /$1?lang=zh_CN
-RedirectMatch permanent /zh_TW/?(.*)  /$1?lang=zh_TW
+RedirectMatch permanent /de/(.*)     /$1?lang=de_DE
+RedirectMatch permanent /de          /?lang=de_DE
+RedirectMatch permanent /es/(.*)     /$1?lang=es_ES
+RedirectMatch permanent /en/(.*)     /$1?lang=en_US
+RedirectMatch permanent /fr/(.*)     /$1?lang=fr_FR
+RedirectMatch permanent /hu/(.*)     /$1?lang=hu_HU
+RedirectMatch permanent /it/(.*)     /$1?lang=it_IT
+RedirectMatch permanent /ja/(.*)     /$1?lang=ja_JP
+RedirectMatch permanent /nb/(.*)     /$1?lang=nb_NB
+RedirectMatch permanent /nl/(.*)     /$1?lang=nl_NL
+RedirectMatch permanent /pl/(.*)     /$1?lang=pl_PL
+RedirectMatch permanent /pt_PT/(.*)  /$1?lang=pt_PT
+RedirectMatch permanent /zh_CN/(.*)  /$1?lang=zh_CN
+RedirectMatch permanent /zh_TW/(.*)  /$1?lang=zh_TW
