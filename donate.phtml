@@ -1,0 +1,50 @@
+<?php 
+include("lang.php");
+$title = T_("Donations");                                                
+include("emulate_globals_on.php");
+include("externals/header.phtml");
+include("externals/menu.phtml");
+?>
+
+<div id="content">
+
+<h1><?php echo T_("Donations");?></h1>
+
+<p class="justify"><?php echo T_("<span class=\"gnucash\">GnuCash</span> is Free Software and is made available free of charge. Your donation, which is purely optional, supports our worldwide community. If you like the software, please consider a donation. We are only a handfull of developers and other volunteers serving hundreds of users worldwide.");?></p>
+
+
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Various ways to donate");?></h2>
+</div>
+<h3><?= T_("You can make a donation via the Sourceforge tip jar");?></h3>
+
+<p><a href="http://sourceforge.net/donate/index.php?group_id=192"><?=T_("Sourceforg tip jar")?></a></p>
+
+<h3><?= T_("You can transfer a donation to our bank account");?></h3>
+
+<p><?php echo T_("Owner:");?> Geert Janssens,<br/>
+<?php echo T_("Purpose: Donation");?>,<br/>
+<?php echo T_("Account:");?> 973-0754570-41,<br/>
+<?php echo T_("Bank Code:");?> ARSPBE22XXX, <?php echo T_("Bank:");?>Argenta Bank Grimbergen<br/>
+<?php echo T_("IBAN:");?> IBAN BE88 9730 7545 7041,<br/>
+<?php echo T_("Address of bank:");?> Argenta, Lagesteenweg 96, 1850 Grimbergen, Belgium</p>
+
+
+<h3><?= T_("You can donate using bitcoin");?></h3>
+: 
+<p><a ref="bitcoin:1EEgyjqfBZ2ZgBHviLQuVAAsQfgVS1JUuy"><?php echo T_("Bitcoin address:");?></a> 1EEgyjqfBZ2ZgBHviLQuVAAsQfgVS1JUuy,<br/>
+<?php echo T_("Or scan this code with your smartphone:");?> <img src="<?=$home?>/images/gnucash-bitcoin-address.png" alt="[bitcoin]" /></p>
+</div>
+
+<div class="featurecontainer">
+<div class="featureborder">
+<h2 class="featuretitle"><?php echo T_("Why we appreciate your support");?></h2>
+</div>
+
+<p><?php echo T_("GnuCash is a volunteer effort. While we manage to keep our operational costs low there are inevitably expenses involved in keeping the servers running.");?></p>
+<p><?php echo T_("Your contribution will be used to cover these expenses.");?></p>
+<p><?php echo T_("Thank you for your support!");?></p>
+</div>
+
+<?php include("externals/footer.phtml"); ?></p>
