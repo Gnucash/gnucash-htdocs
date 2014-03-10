@@ -17,14 +17,16 @@ include("externals/menu.phtml");
 <div class="featureborder">
 <h2 class="featuretitle"><?php echo T_("Various ways to donate");?></h2>
 </div>
-<h3><?= T_("You can donate via the Sourceforge tip jar");?></h3>
 
+
+<h3><?= T_("You can donate via the Sourceforge tip jar");?></h3>
+<a style="float:left; margin: 0 10px 10px 0;" href="http://sourceforge.net/donate/index.php?group_id=192"><img src="<?=$home?>/images/gnucash-sf-donation.png" valign="center" alt="[Sourceforge]" /></a>
+<p><a href="http://sourceforge.net/donate/index.php?group_id=192"><?=T_("Sourceforge tip jar")?></a></p>
 <p><?= T_("The tip jar is run through Paypal into an account managed by IHTFP Consulting, owned by Derek Atkins. So don't be surprised when your payment goes there.");?></p>
 
-<p><a href="http://sourceforge.net/donate/index.php?group_id=192"><?=T_("Sourceforge tip jar")?></a></p>
 
 
-<h3><?= T_("You can donate using bitcoin");?></h3>
+<h3 style="clear:both;"><?= T_("You can donate using bitcoin");?></h3>
 <img style="float:left; margin: 0 10px 10px 0;" src="<?=$home?>/images/gnucash-bitcoin-address.png" valign="center" alt="[bitcoin]" />
 <p><a ref="bitcoin:1EEgyjqfBZ2ZgBHviLQuVAAsQfgVS1JUuy"><?php echo T_("Bitcoin address:");?></a><br/>1EEgyjqfBZ2ZgBHviLQuVAAsQfgVS1JUuy</p>
 
