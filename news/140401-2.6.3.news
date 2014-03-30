@@ -1,0 +1,74 @@
+<b>Announcement:</b> GnuCash 2.6.3 Release
+2014-04-01
+
+<h2>GnuCash 2.6.3 released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.6.3, the third maintenance release in the 2.6-stable series. Please <a href="http://gnucash.org/2.6-release-tour.phtml">take the tour</a> of all the new features.
+
+<h3>Changes</h3>
+<p> Mike Alexander has completed his reworking of the Advanced Portfolio Report. Thanks to all who provided feedback to help perfect it.</p>
+<p>Between 2.6.2 and 2.6.3, the following bugfixes were accomplished:</p>
+<ul>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=711567">Bug #711567: Cannot save a custom report if a path contain diacritic chars</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=721196">Bug #721196: Cannot import lines with empty fields for deposit or withdrawal in bank transaction download, </a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=721654">Bug #721654: Style sheet preference is not saved for a Preconfigured Report.</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=723975">Bug #723975: Dialog box displayed during QIF import has placeholder text.</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=724995">Bug #724995:Gnucash crashes due to assertion failed when opening sqlite file.</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=726430">Bug #726430: Python: account.getName() raises TypeError.</a></li>
+       <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=726891">Bug #726891: Segmentation fault on session.end().</a></li>
+</ul>
+<p>Some other fixes not associated with reported bugs were accomplished:
+<ul>
+       <li>Fix resizing of columns in budget view</li>
+       <li>Fix guile 2 stack overflow errors for large reports</li>
+       <li>Fix basis calculation for FIFO or LIFO when less than one lot is sold.</li>
+       <li>Update Window and Menu item from "Preconfigured-" to "Saved-" Report and add lables to the dialog with help texts</li>
+       <li>Aqbanking: SEPA transfer improvements - fix origin labels and add possibility to edit sender's name.</li>
+       <li>Prevent crash reported in Bug 711567. The bug itself wasn't fixed.</li>
+</ul>
+<p>Translations Updated:  Catalan, Danish, Italian</p>
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of Gnucash 2.6.3 we're pleased to also release a new version 2.6.3 of the companion <em>Help</em> and <em>Tutorial and Concepts Guide</em>.</p>
+
+<p>There were no changes between documentation versions 2.6.2 and 2.6.3.</p>
+
+<h3>Getting GnuCash for Windows (Win32 binary)</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.3-setup.exe">Gnucash 2.6.3 Win32 setup executable</a> can be downloaded from Sourceforge. It will install everything needed to run GnuCash.</p>
+
+<h3>Mac OSX binary</h3>
+<p>The Gnucash 2.6.3 MacOS X <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.6.3-1.dmg">Intel</a> and <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-PPC-2.6.3-1.dmg">PPC</a> packages can be downloaded from Sourceforge as well.</p>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.6.3 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.3.tar.bz2">bzip2</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.6.3/">all files</a>.</li>
+
+<li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least Gnome 2, Guile, and slib. In addition you will need swig if compiling from git. Please consult the README file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Reading the documentation online</h3>
+
+<p>An online version of the documentation is available on the <a href="http://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="http://www.gnucash.org/">GnuCash website</a>. The 2.6.3 documentation can be found under "GnuCash v2.6 (current stable release)" in multiple languages.</p>
+
+<h3>Getting GnuCash Documentation in pdf, epub or mobi formats</h3>
+
+<p>The documentation can equally be downloaded in pdf, epub or mobi formats from the <a href="http://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="http://www.gnucash.org/">GnuCash website</a>. The 2.6.3 documentation can be found under "GnuCash v2.6 (current stable release)" in multiple languages.</p>
+
+<h3>Getting GnuCash Documentation as source code</h3>
+
+<p>If you want to compile the GnuCash Documentation 2.6.3 for yourself, the source code can be downloaded from:</p>
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-docs-2.6.3.tar.gz">Sourceforge</a></li>
+<li>You can also checkout the sources directly from the subversion repository as <a href="http://wiki.gnucash.org/wiki/Subversion">described here.</a></li>
+</ul>
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
