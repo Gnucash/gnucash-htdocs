@@ -2,6 +2,7 @@
      // This section defines the most recent version numbers for all platforms.
      // Each platform can define its own latest version or follow the default.
      // Both a latest stable version and a latest unstable version are defined.
+// Dummy change
      $major_stable		="2.6";
      $minor_stable		="4";
      $latest_stable             = $major_stable.".".$minor_stable;
