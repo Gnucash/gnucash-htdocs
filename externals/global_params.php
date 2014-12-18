@@ -3,10 +3,10 @@
      // Each platform can define its own latest version or follow the default.
      // Both a latest stable version and a latest unstable version are defined.
      $major_stable		="2.6";
-     $minor_stable		="4";
+     $minor_stable		="5";
      $latest_stable             = $major_stable.".".$minor_stable;
-     $latest_stable_win		= $major_stable.".3";
-#     $latest_stable_win         = $latest_stable."-2";
+#     $latest_stable_win		= $major_stable.".3";
+     $latest_stable_win         = $latest_stable."-1";
      $latest_stable_mac_ppc     = $latest_stable."-4";
      $latest_stable_mac_intel   = $latest_stable."-5";
 

@@ -1,0 +1,93 @@
+<b>Announcement:</b> GnuCash 2.6.5 Release
+2014-12-16
+
+<h2>GnuCash 2.6.5 released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.6.5, the fifth maintenance release in the 2.6-stable series. Please <a href="http://gnucash.org/2.6-release-tour.phtml">take the tour</a> of all the new features.
+
+<h3>Changes</h3>
+<p>The primary reason for this release is that the problems which plagued 2.6.4 on Microsoft Windows have been resolved.</p>
+
+<p>Between 2.6.4 and 2.6.5, the following bugfixes were accomplished:</p>
+<ul>
+
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=736359">Bug #736359 - Date of 0000-00-00 in MySQL backend crashes GnuCash.</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=737815">Bug #737815 - Graphs Cannot Be Generated Correctly.</li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=738113">Bug #738113 - Crash on reload budget report.</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=738477">Bug #738477 - WebKit is broken on Win32.</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=741418">Bug #741418 - Freeze unposting bill, 100% cpu usage.</a></li>
+
+</ul>
+<p>Some other fixes not associated with reported bugs were accomplished:
+<ul>
+    <li>Pre-compile scm files when building with guile 2.</li>
+    <li>Fix build-time hard-coded path introduced by the guile2 compile changes.</li>
+    <li>Prevent crash when standards-report dir doesn't exist.</li>
+    <li>QIF Import crashes when closing via the 'X' button on the last page.</li>
+    <li>Omit file extension on calls to load-extension.</li>
+    <li>Use one common base directory to store all scheme files and modules.<li>
+    <li>Guile module structure cleanup.</li>
+    <li>Harmonize variable names used to refer to guile modules in all makefiles.</li>
+    <li>Add missing comma in call to gtk_tree_store_set(). Thanks to Frédéric Bière for finding and fixing the problem.</li>
+    <li>Revert to using numerical indexes for the x-axis on bar charts.</li>
+    <li>Aqbanking: Add display of aqbanking subaccountid in initial correspondence setup.</li>
+    <li>Aqbanking online SEPA transfer: Allow transfers without BIC, only IBAN. Also add IBAN checking.</li>
+    <li>Aqbanking transfer: Make IBAN and BIC text entry fields filter digits or alphas correctly as needed.</li>
+    <li>Adapt german SKR03 account template to updated tax rate.</li>
+    <li>Allow GUILE1_PROGS as m4 name. Patch by dimstar@opensuse.org.</li>
+    <li>Add sv_AX, sv_FI, zh_HK, and zh_TW to Makefiles & configure.</li>
+</ul>
+
+<p>Translations Updated: Danish, German, Italian</p>
+<p>New Translations: Assamese, Gujarati, Kannada, Konkani (Latin). Thanks to The Centre for Development of Advanced Computing (C-DAC), Pune, India.  Translation Team Leader: Chandrakant Dhutadmal</p>
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of Gnucash 2.6.5 we're pleased to also release a new version 2.6.5 of the companion <em>Help</em> and <em>Tutorial and Concepts Guide</em>.</p>
+    <ul>
+       <li> Fix a path of freshly added XML files</li>
+       <li> Add some comments about translation to the German documents where the translation wasn't updated to match the English version.</li>
+       <li> Apply &untranslated property in German translations.</li>
+       <li> Fix path of newly-added XML files.</li>
+       <li> Bug 739380 - Release tarball build fails. Git builds OK.</li>
+    </ul>
+</p>
+
+<h3>Getting GnuCash for Windows (Win32 binary)</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.5-setup.exe">Gnucash 2.6.5 Win32 setup executable</a> can be downloaded from Sourceforge. It will install everything needed to run GnuCash.</p>
+
+<h3>Mac OSX binary</h3>
+<p>The Gnucash 2.6.5 MacOS X <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.6.5-1.dmg">Intel</a> and <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-PPC-2.6.5-1.dmg">PPC</a> packages can be downloaded from Sourceforge as well.</p>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.6.5 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.5.tar.bz2">bzip2</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.6.5/">all files</a>.</li>
+
+<li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least Gnome 2, Guile, and slib. In addition you will need swig if compiling from git. Please consult the README file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Reading the documentation online</h3>
+
+<p>An online version of the documentation is available on the <a href="http://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="http://www.gnucash.org/">GnuCash website</a>. The 2.6.5 documentation can be found under "GnuCash v2.6 (current stable release)" in multiple languages.</p>
+
+<h3>Getting GnuCash Documentation in pdf, epub or mobi formats</h3>
+
+<p>The documentation can equally be downloaded in pdf, epub or mobi formats from the <a href="http://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="http://www.gnucash.org/">GnuCash website</a>. The 2.6.5 documentation can be found under "GnuCash v2.6 (current stable release)" in multiple languages.</p>
+
+<h3>Getting GnuCash Documentation as source code</h3>
+
+<p>If you want to compile the GnuCash Documentation 2.6.5 for yourself, the source code can be downloaded from:</p>
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-docs-2.6.5.tar.gz">Sourceforge</a></li>
+<li>You can also checkout the sources directly from the subversion repository as <a href="http://wiki.gnucash.org/wiki/Subversion">described here.</a></li>
+</ul>
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
