@@ -6,7 +6,7 @@
      $minor_stable		="5";
      $latest_stable             = $major_stable.".".$minor_stable;
 #     $latest_stable_win		= $major_stable.".3";
-     $latest_stable_win         = $latest_stable."-1";
+#     $latest_stable_win         = $latest_stable."-1";
      $latest_stable_mac_ppc     = $latest_stable."-1";
      $latest_stable_mac_intel   = $latest_stable."-1";
 
