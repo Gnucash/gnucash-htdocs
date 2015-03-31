@@ -1,0 +1,107 @@
+<b>Announcement:</b> GnuCash 2.6.6 Release
+2015-03-30
+
+<h2>GnuCash 2.6.6 released</h2>
+
+<p>The GnuCash development team proudly announces GnuCash 2.6.6, the sixth maintenance release in the 2.6-stable series. Please <a href="http://gnucash.org/2.6-release-tour.phtml">take the tour</a> of all the new features.
+
+<h3>Changes</h3>
+
+<p>Between 2.6.5 and 2.6.6, the following bugfixes were accomplished:</p>
+<ul>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=	619899">Bug #619899 - Use normal gettext or intltool toolchain also for scm files</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=649933">Bug #649933  - Creating cash flow report takes a long time</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=672760">Bug #672760 - Postponed transaction applied invalid date</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=721196">Bug #721196 - CSV. Cannot import lines with empty fields for deposit or withdrawal in bank transaction download.</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=723409">Bug #723409 - Incorrect symbol for Turkish lira</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=727466">Bug #727466 - The symbol of CNY changed to 元</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=727647">Bug #727647 - "gncInvoiceGetTotal" is not read-only function?</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=731889">Bug #731889 - guile 2 exports different autoconf macros than what is expected</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=733685">Bug #733685 - Fancy Date Format doesn't stick</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=738749">Bug #738749 - Broken account template en_GB/uk-vat.gnucash-xea.</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=739228">Bug #739228 - Advanced Portfolio report: wrong calculation of Value Correctly convert the value into the report's currency.</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=739584">Bug #739584 - gnucash-2.6.4 segfaults regularly on transfer .</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=740471">Bug #740471 - Applying payment to invoice Segmentation fault</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=741228">Bug #741228 - "Red line" threshold applies to Template scheduled transactions</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=	741810">Bug  - Compilation fails because of creating .gnucash</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=742089">Bug #742089 - Decimal places. Set the debit and credit cells' print_info to the account so that the decimal places are correct for the commodity.</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=742332">Bug #742332 - German tax report uses US tax quarters and not real quarters.</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=	742624">Bug #742624 - Scheduled Transaction Editor results in immediate segfault</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=743609">Bug #743609 - Add configure options to disable libsecret detection</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=743807">Bug #743807 - Stops critical error messages.</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=745265">Bug #745265 - Segfault in generate_statusbar_lastmodified_message on Windows. Actually change the default date format without AM/PM</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=745354">Bug #745354 - Enhance the Find Transactions dialog. Make it possible to define search criteria that consist of multiple terms anded or ored together. Use this to define a new criterion to look for specified text in any of the Description, Notes, or Memo fields</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=746517">Bug #746517 - gnc-sql-backend.c compile fails with -Werror=format-nonliteral. Use GCC pragma to disable the warning in the one place that trips it</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=746977">Bug #746977 - scm ccache files should be in pkglibdir not pkgdatadir.</a></li>
+
+</ul>
+<p>Some other fixes not associated with reported bugs were accomplished:
+<ul>
+      <li>Let CPAN and ActiveState package managers take care of dependencies instead of explicitly installing a few of them directly.</li>
+      <li>Correct the number field displayed in the reconcile window to correspond with the source specified in File->Options</li>
+      <li>Fix some bugs found by SWIG version 3.0.5. Prior to version 3.0.3 SWIG silently ignored invalid preprocessor directives</li>
+      <li>Scrubbing Improvements, including avoiding a potential infinite loop.</li>
+      <li>Remove build and run of no-longer-existant intl-scm/guile-strings.</li>
+      <li>Rewrite gnc-test-env in perl. This eliminates another guile dependency in the build chain.</li>
+      <li>Switch from guile to xml to manage our iso-currencies source file</li>
+      <li>Numeric values with more than commodity smallest fraction get silently dropped.</li>
+      <li>Update US Income Tax data to reflect minor changes for 2014</li>
+      <li>Advanced portfolio should respect report date when looking for other income/expense</li>
+      <li>Improve income and expense reporting in advanced portfolio report</li>
+      <li>Accept prices of the form n.nnne[+-]nn, i.e. with an exponent. An example requiring this is currency conversion from IDR to USD</li>
+      <li>Added Lithuanian language business accounts</li>
+      <li>Fix crash when running check & repair on an open AP/AR register</li>
+</ul>
+
+<p>Translations Updated: Danish, Dutch, German, Spanish</p>
+<p>New Translations:Maithili, Manipuri(Bengali Script), Manipuri (Meetei Mayek Script). Thanks to The Centre for Development of Advanced Computing (C-DAC), Pune, India.  Translation Team Leader: Chandrakant Dhutadmal</p>
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of Gnucash 2.6.6 we're pleased to also release a new version 2.6.6 of the companion <em>Help</em> and <em>Tutorial and Concepts Guide</em>.</p>
+    <ul>
+  	<li>Explain sorting by TXF code within Tax Form Sections</li>
+	<li>Insert Part designations and update the Basics Chapter</li>
+	<li>Document latest changes to the Advanced Portfolio Report</li>
+	<li>Remove obolete sections about "Cannot find default values" left over from gconf.</li>
+    </ul>
+</p>
+
+<h3>Getting GnuCash for Windows (Win32 binary)</h3>
+<p>The <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.6-setup.exe">Gnucash 2.6.6 Win32 setup executable</a> can be downloaded from Sourceforge. It will install everything needed to run GnuCash.</p>
+
+<h3>Mac OSX binary</h3>
+<p>The Gnucash 2.6.6 MacOS X <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.6.6-1.dmg">Intel</a> and <a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-PPC-2.6.6-1.dmg">PPC</a> packages can be downloaded from Sourceforge as well.</p>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.6.6 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.6.tar.bz2">bzip2</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.6.6/">all files</a>.</li>
+
+<li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least Gnome 2, Guile, and slib. In addition you will need swig if compiling from git. Please consult the README file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Reading the documentation online</h3>
+
+<p>An online version of the documentation is available on the <a href="http://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="http://www.gnucash.org/">GnuCash website</a>. The 2.6.6 documentation can be found under "GnuCash v2.6 (current stable release)" in multiple languages.</p>
+
+<h3>Getting GnuCash Documentation in pdf, epub or mobi formats</h3>
+
+<p>The documentation can equally be downloaded in pdf, epub or mobi formats from the <a href="http://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="http://www.gnucash.org/">GnuCash website</a>. The 2.6.6 documentation can be found under "GnuCash v2.6 (current stable release)" in multiple languages.</p>
+
+<h3>Getting GnuCash Documentation as source code</h3>
+
+<p>If you want to compile the GnuCash Documentation 2.6.6 for yourself, the source code can be downloaded from:</p>
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-docs-2.6.6.tar.gz">Sourceforge</a></li>
+<li>You can also checkout the sources directly from the subversion repository as <a href="http://wiki.gnucash.org/wiki/Subversion">described here.</a></li>
+</ul>
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
