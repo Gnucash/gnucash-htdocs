@@ -96,6 +96,33 @@ function generate_anchor($news_key)
   return urlencode(substr(strrchr($news_key, '/'), 1));
 }
 
+function print_news_item($fa, $n, $newsfile, $key, $anchor)
+{
+echo <<<ITEMEND
+<div class="newsborder">
+  <div class="newsheader" style="display:inline-block;background-color:#CACAF7;width:100%">
+    <div style="float:left;">
+    <img src="$top_dir/images/icons/document.txt.gif" width="16" height="16" alt="[news]" />&nbsp;
+    <a style="text-decoration:none;color:black;" onmouseover="this.style.backgroundColor='#cacaf7';" onmouseout="this.style.backgroundColor='#cacaf7';" id="n-$anchor">
+$fa[0] - <b> $newsfile[$key] </b></a>
+  </div>
+<!-- the next div could be used to add a date on the right of the news heading-->
+    <div style="float:right;">
+    </div>
+
+  </div>
+  <div class="newsinner">
+ITEMEND;
+
+   for ($i=2; $i<$n; $i++)  {
+          print $fa[$i];
+     }
+
+   echo "  </div> </div> ";
+}
+
+
+
 function emit_news($en_newspath, $lang_newspath, $oldnews)
 {
     global $top_dir;
@@ -127,26 +154,8 @@ function emit_news($en_newspath, $lang_newspath, $oldnews)
     {
         $fa = file($key);
         $n = count($fa);
-?>
-<div class="newsborder">
-  <div class="newsheader" style="display:inline-block;background-color:#CACAF7;width:100%">
-    <div style="float:left;">
-    <img src="<?=$top_dir?>/images/icons/document.txt.gif" width="16" height="16" alt="[news]" />&nbsp;
-    <a style="text-decoration:none;color:black;" onmouseover="this.style.backgroundColor='#cacaf7';" onmouseout="this.style.backgroundColor='#cacaf7';" id="n-<?=generate_anchor($key)?>"><?= $fa[0]; ?> - <b><?= $newsfile[$key] ?></b></a>
-  </div>
-<!-- the next div could be used to add a date on the right of the news heading-->
-    <div style="float:right;">
-    </div>
-
-  </div>
-  <div class="newsinner">
-  <? for ($i=2; $i<$n; $i++)  {
-          print $fa[$i];
-     } ?>
-
-  </div>
-</div>
-<?
+        $anchor = generate_anchor($key);
+        print_news_item($fa, $n, $newsfile, $key, $anchor);
     }
 }
 ?>
