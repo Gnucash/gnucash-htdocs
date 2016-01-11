@@ -1,0 +1,93 @@
+<b>Announcement:</b> GnuCash 2.6.11 Release
+2016-01-11
+
+<h2>GnuCash 2.6.11 released</h2>
+
+<p>The GnuCash development team announces GnuCash 2.6.11, a snap release to fix a QIF import regression and the eleventh maintenance release in the 2.6-stable series. Please <a href="http://gnucash.org/2.6-release-tour.phtml">take the tour</a> of all the new features.
+
+<h3>Changes</h3>
+
+<p>Between 2.6.10 and 2.6.11, the following bugfixes were accomplished:</p>
+<ul>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=680104">Bug 680104 - Scheduled Tranaction formula not calculated when variables are mixed with constants.</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=756335"> Bug 756335 - When importing, date selection causes exit crash.</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=759570"> Bug 759570 - Postponing a repeating SX skips over the instance.</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=759674"> Bug 759674 - GNUCash crashes when importing invoices or bills with delimited import.</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=759859"> Bug 759859 - Reconcilation does not convert transactions' currency to the main one making reconcilation impossible.</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=760052"> Bug 760052 - missing flag translatable in Custom Report.</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=760079"> Bug 760079 - Translations comments: Remove translatable flag from placeholder labels in dialog date-close.</a></li>
+      <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=760398"> Bug 760398 - Cancelling the creation of a duplicate bill or invoice doesn't reset the invoice number counter</a></li>
+
+</ul>
+<p>Some other fixes not associated with reported bugs:
+<ul>
+     <li>Add Account.AssignLots to python bindings.</li>
+     <li>Allow panel that provides information about TXF categories to be adjusted by the user in the Income Tax Information dialog under Edit->Tax Report Options.</li>
+     <li>Minor improvement to information provided about TXF categories in the Income Tax Information dialog under Edit->Tax Report Options.</li>
+
+</ul>
+<p>Translations Updated: German.</p>
+
+<h2>Important update notification</h2>
+<p>If you are updating from gnucash 2.6.0-2.6.4 on linux, you are advised to remove the guile user cache or several parts of gnucash may fail to work properly. This user cache can be found in <em>.cache/guile/ccache/2.0-LE-8-2.0/</em> in your home directory. It's safe to remove the whole contents of this directory.</p>
+<p>Note .cache is a hidden folder in your home directory. You may have to change your file manager's settings in order to view hidden files and folders.</p>
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of Gnucash 2.6.11 we're pleased to also release a new version 2.6.11 of the companion <em>Help</em> and <em>Tutorial and Concepts Guide</em>.</p>
+<ul>
+<li>More German Translation work from Mechtilde Stehmann.</li>
+<li>New German illustrations from Mechtilde Stehmann.</li>
+<li>Use letter size paper only in US or C locales. The rest of the world uses metric A4 paper. The locale detection is done at configure.</li>
+<li>Clarify that creating a postponed SX will use the original date.</li>
+<li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=759859">Bug 759859 - Reconcilation does not convert transactions' currency to the main one making reconcilation impossible.</a></li>
+<li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=760016">Bug 760016 - 2.6.10 and master dump script error while running
+	               configure.</a></li>
+<li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=760407"> Bug 760407 - Note account separator isn't always a colon.</a></li>
+</ul>
+
+<h3>Getting GnuCash for Windows and MacOS X</h3>
+<p>GnuCash is provided for both Microsoft Windows XP&reg; and later and MacOS X 10.5 (Leopard)&reg; and later in pre-built, all-in-one packages. An installer is provided for Microsoft Windows&reg; while the MacOS X&reg; package is disk image containing a drag-and-drop application bundle.</p>
+<ul>
+<li>SourceForge:
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.11-setup.exe">Win32</a></li>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.6.11-1.dmg">Intel</a></li>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-PPC-2.6.11-1.dmg">PPC</a></li>
+</ul></li>
+<li>Github
+<ul>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.11/gnucash-2.6.11-setup.exe">Win32</a></li>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.11/Gnucash-Intel-2.6.11-1.dmg">Intel</a></li>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.11/Gnucash-PPC-2.6.11-1.dmg">PPC</a></li>
+</ul></li>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.6.11 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.11.tar.bz2">bzip2</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.6.11/">all files</a>.</li>
+
+<li>Github: <a href="https://github.com/Gnucash/gnucash/archive/2.6.11.tar.gz">gzip</a></li>
+
+<li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least Gnome 2, Guile, and slib. In addition you will need swig if compiling from git. Please consult the README file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="http://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="http://www.gnucash.org/">GnuCash website</a>. The 2.6.11 documentation can be found under "GnuCash v2.6 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats.</p>
+
+<p>If you want to compile the GnuCash Documentation 2.6.11 for yourself, the source code can be downloaded from:</p>
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-docs-2.6.11.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash-docs/archive/2.6.11.tar.gz">GitHub</a></li>
+<li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
