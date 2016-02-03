@@ -17,13 +17,14 @@ po/gnucash-htdocs.pot: po/POTFILES
 
 msgmerge: po/gnucash-htdocs.pot
 	for f in ${languages} ; do \
-	  msgmerge -U po/$$f.po po/gnucash-htdocs.pot ; \
+	  echo -n $$f ; \
+	  msgmerge -U -s po/$$f.po po/gnucash-htdocs.pot ; \
 	done
 
 mos: ${languages}
 
 ${languages}: po/$$@.po
-	msgfmt $< -o locale/$@/LC_MESSAGES/gnucash-htdocs.mo
+	msgfmt -c --statistics $< -o locale/$@/LC_MESSAGES/gnucash-htdocs.mo
 
 ####################################################################
 #
