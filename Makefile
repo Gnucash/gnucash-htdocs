@@ -1,5 +1,5 @@
 iso_languages = de es fr
-languages = ${iso_languages} hu it ja nb nl pl pt_PT zh_CN zh_TW
+languages = ${iso_languages} hu it ja nb nl pl pt zh_CN zh_TW
 
 .SECONDEXPANSION:
 
