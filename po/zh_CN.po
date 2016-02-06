@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs r18948\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-31 10:01+0100\n"
+"POT-Creation-Date: 2016-02-06 08:57+0100\n"
 "PO-Revision-Date: 2010-05-02 07:26+1000\n"
 "Last-Translator: Tao Wang <dancefire@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
@@ -16,218 +16,210 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: download.phtml:5 docs.phtml:40 docs.phtml:150 docs.phtml:260
-#: 2.6-release-tour.phtml:165
-msgid "Download"
-msgstr "下载"
+#: search/templates/NMZ.result.short.php_tmpl:6
+#: search/templates/NMZ.result.normal.php_tmpl:9
+msgid "(${size} bytes)"
+msgstr "(${size} 字节)"
 
-#: download.phtml:12
-msgid "Download GnuCash"
-msgstr "下载 GnuCash"
+#: search/templates/NMZ.body.php_tmpl:147
+msgid ""
+"(Retrieves a certain document which contains specified\n"
+"<code>Message-Id:</code>)"
+msgstr ""
 
-#: download.phtml:15
-#, php-format
-msgid "Stable release (%s)"
+#: search/templates/NMZ.body.php_tmpl:136
+msgid ""
+"(Retrieves all documents which contain <code>GNU Emacs</code>\n"
+"in a <code>Subject:</code> field)"
+msgstr ""
+
+#: search/templates/NMZ.body.php_tmpl:131
+msgid ""
+"(Retrieves all documents which contain <code>Linux</code>\n"
+"in a <code>Subject:</code> field)"
+msgstr ""
+
+#: search/templates/NMZ.body.php_tmpl:141
+msgid ""
+"(Retrieves all documents which contain <code>foo@bar.jp</code>\n"
+"in a <code>From:</code> field)"
+msgstr ""
+
+#: docs.phtml:35
+#, fuzzy
+msgid "(current stable release)"
+msgstr "GnuCash v2.0 (当前稳定版本)"
+
+#: docs.phtml:147
+#, fuzzy
+msgid "(old stable release)"
 msgstr "稳定版本 (%s)"
 
-#: download.phtml:17
+#: search/templates/NMZ.body.php_tmpl:95
+msgid "(terms which begin with <code>inter</code>)"
+msgstr ""
+
+#: search/templates/NMZ.body.php_tmpl:97
+msgid "(terms which contain <code>text</code>)"
+msgstr ""
+
+#: search/templates/NMZ.body.php_tmpl:100
+msgid "(terms which terminated with <code>net</code>)"
+msgstr ""
+
+#: sizing.phtml:345
+msgid ""
+"*.c, *.h files in the src directory only (version 1.6 and earlier) or src/"
+"register/ledger-core (version 1.7 and later)"
+msgstr ""
+"只在 src 目录(版本1.6或更早)或 src/register/ledger-core (版本1.7或以后) 下的 "
+"*.c 和 *.h 文件。"
+
+#: index.phtml:43
+msgid ""
+", which are public, email-based discussion groups where you can ask and "
+"answer <span class=\"gnucash\">GnuCash</span> questions to other users."
+msgstr ""
+
+#: 2.6-release-tour.phtml:180
+msgid ""
+"<a href=\"http://sourceforge.net/donate/index.php?group_id=192\">By making a "
+"donation</a>"
+msgstr ""
+
+#: features.phtml:105
+msgid ""
+"<b>Account reconciliation</b> allows the user to compare the transactions "
+"entered in an account against a bank statement. This operation is very "
+"useful to spot untracked transactions or data entry errors and ensure that "
+"your books match the bank's."
+msgstr ""
+
+#: features.phtml:53
+msgid "<b>Autofill</b> of entered transactions"
+msgstr ""
+
+#: index.phtml:62
+msgid "<b>Discover more...</b>"
+msgstr ""
+
+#: develdocs.phtml:71
+msgid ""
+"<b>NOTE:</b> It used to be ok also to send your patch directly to the "
+"gnucash-devel list. This is discouraged now, as a patch is easily forgotten "
+"between the many list discussions. Attach patches to bugs in Bugzilla "
+"instead (either an existing bug or a new one). If you insist on sending a "
+"patch to gnucash-devel, it should be attached, not inlined."
+msgstr ""
+
+#: docs.phtml:467
 #, fuzzy
 msgid ""
-"A stable release is a version of <span class=\"gnucash\">GnuCash</span> that "
-"is well tested and considered appropriate for every day use."
+"<b>NOTE:</b> the information presented in these sources may or may not be "
+"updated to the most recent version of <span class=\"gnucash\">GnuCash</"
+"span>. If you are interested in doing development work on these documents, "
+"you should contact the original authors."
 msgstr ""
-"稳定版本是 GnuCash 的一个版本，这个版本的程序经过了很好的测试，并且被认为适合"
-"每天使用。"
+"有些人写了“如何做”向导或者教程。注意：这些信息来源不一定反映了当前 GnuCash 的"
+"最新版本。如果您对这些文档比较感兴趣，您应当联系其原作者。"
 
-#: download.phtml:18
-#, fuzzy, php-format
+#: docs.phtml:366
 msgid ""
-"The latest stable release of <span class=\"gnucash\">GnuCash</span> is %s. "
-"Choose the download for your operating system below."
-msgstr "GnuCash 的最新的稳定版本是 %s。请从下面选择您的操作系统。"
+"<b>NOTE:</b> these documents might not be accessible from time to time "
+"because developers might be working on improvements. However they are the "
+"most up to date reference for <span class=\"gnucash\">GnuCash</span> users."
+msgstr ""
 
-#: download.phtml:20
-msgid "Installers"
-msgstr "安装程序"
+#: 2.6-release-tour.phtml:171
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> 2.6 comes with updated Help and "
+"Guide. If you can't find the answer to your questions in those documents, "
+"try with the <a href=\"http://wiki.gnucash.org/wiki/GnuCash\">GnuCash wiki</"
+"a>. If both options are unsatisfactory, you can send your questions to the "
+"<a href=\"http://wiki.gnucash.org/wiki/Mailing_Lists\">GnuCash mailing "
+"lists</a>: the <span class=\"gnucash\">GnuCash</span> community is very "
+"friendly and experienced and someone will surely assist you."
+msgstr ""
 
-#: download.phtml:22 download.phtml:23 download.phtml:54 download.phtml:55
-#: download.phtml:70 download.phtml:71
-#, php-format
-msgid "GnuCash %s for"
-msgstr "GnuCash %s 运行于"
+#: features.phtml:86
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> also comes complete with a full suite "
+"of standard and customizeable reports, such as:"
+msgstr ""
 
-#: download.phtml:27
+#: features.phtml:166
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> by default stores data in an <b>xml</"
+"b> format. Starting with version 2.4, <span class=\"gnucash\">GnuCash</span> "
+"financial data can be stored in a <b>SQL database</b> using <b>SQLite3</b>, "
+"<b>MySQL</b> or <b>PostgreSQL</b>."
+msgstr ""
+
+#: sizing.phtml:17
 #, fuzzy
 msgid ""
-"Most linux distributions come bundled with a version of <span class=\"gnucash"
-"\">GnuCash</span>, though it's not always the most recent version and it may "
-"not have been installed by default. Still it is recommended to use the <span "
-"class=\"gnucash\">GnuCash</span> version that comes with your distribution."
+"<span class=\"gnucash\">GnuCash</span> currently consists of over a third of "
+"a million lines of code spread over more than a thousand files.  It has been "
+"translated into twenty-three languages and credits over 139 authors and "
+"contributors."
 msgstr ""
-"大多数 Linux 发行版都会包括了 GnuCash 的一个版本，不过它并不总是最新的版本，"
-"而且也不一定会默认的安装上。即使这样，仍旧建议您使用随您的 Linux 发布版一起发"
-"布的 GnuCash 版本。"
+"GnuCash 目前包含了一千多个文件，三十多万行代码。而且，已经被翻译成 36 种语"
+"言，并且有 139 名作者和贡献者贡献了自己的力量。"
 
-#: download.phtml:28
+#: features.phtml:130
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> gives you also a tool to manage your "
+"business' <b>budget</b> so that you can easily plan your financial strategy."
+msgstr ""
+
+#: features.phtml:209
 #, fuzzy
 msgid ""
-"Below are ways to install <span class=\"gnucash\">GnuCash</span> on some of "
-"the more popular distributions:"
-msgstr "下面是安装 GnuCash 到一些较流行的 Linux 发布版的方法："
+"<span class=\"gnucash\">GnuCash</span> handles internationalized dates and "
+"currencies. The application's menus and popups have been translated to 21 "
+"languages, including Chinese, Danish, French, German, Hungarian, Italian, "
+"Japanese, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, "
+"Ukrainian, and British English. Documentation is available in English, "
+"French, Portuguese and Spanish."
+msgstr ""
+"处理国际化的日期和货币。GnuCash 菜单和选项已经被翻译成 21 种语言，包括了中"
+"文、丹麦语、法语、德语、匈牙利语、意大利语、日语、挪威语、葡萄牙语、俄语、西"
+"班牙语、瑞典语、土耳其语、乌克兰语和英国英语及美国英语。而文档也翻译成了英"
+"语、法语、葡萄牙语和西班牙语。"
 
-#: download.phtml:31
+#: features.phtml:79
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> has an integrated module to display "
+"graphs of your financial data in the form of:"
+msgstr ""
+
+#: donate.phtml:13
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> is Free Software and is made "
+"available free of charge. Your donation, which is purely optional, supports "
+"our worldwide community. If you like the software, please consider a "
+"donation. We are only a handfull of developers and other volunteers serving "
+"hundreds of users worldwide."
+msgstr ""
+
+#: 2.6-release-tour.phtml:175
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> is a program maintained by "
+"volunteers. If you want to be part of the effort, you can contribute in many "
+"ways:"
+msgstr ""
+
+#: features.phtml:178
 #, fuzzy
 msgid ""
-"Fedora users can install <span class=\"gnucash\">GnuCash</span> through "
-"System->Administration->Add/Remove Software (Gnome) or Applications->System-"
-">Software Management (KDE)."
+"<span class=\"gnucash\">GnuCash</span> is also the first free software "
+"application to support the <b>OFX</b> (Open Financial Exchange) protocol "
+"that many banks and financial services are starting to use."
 msgstr ""
-"Fedora 的用户可以通过 系统->管理->添加/删除软件(Gnome) 或 应用程序->系统->软"
-"件管理器 (KDE) 来安装 GnuCash。"
+"GnuCash 是第一个支持开放金融信息交换(Open Financial Exchange)协议的免费的软"
+"件，现在很多银行和金融机构都开始使用 OFX 这种格式的数据文件了。"
 
-#: download.phtml:32
-#, fuzzy
-msgid ""
-"Mandriva users can install <span class=\"gnucash\">GnuCash</span> through "
-"the Software Management in the Mandriva Linux Control Center."
-msgstr ""
-"Mandriva 的用户可以通过 Mandriva Linux 控制中心里面的软件管理来安装 GnuCash。"
-
-#: download.phtml:33
-#, fuzzy
-msgid ""
-"Redhat and CentOS don't have <span class=\"gnucash\">GnuCash</span> in their "
-"repositories by default. It can be installed however from the third-party "
-"Epel repository. For more details on configuring this additional software "
-"repository for your setup, see"
-msgstr ""
-"Redhat 和 CentOS 在它们的软件库里面默认没有 GnuCash。但是，它可以通过第三方的"
-"软件库 Epel 来进行安装。如果需要配置这个额外的软件库用以安装的更多信息，请见 "
-
-#: download.phtml:33
-msgid "Epel's wiki page"
-msgstr "Epel 的 wiki 页面"
-
-#: download.phtml:34
-#, fuzzy
-msgid ""
-"Ubuntu users can install <span class=\"gnucash\">GnuCash</span> through the "
-"Software Center. This will install <span class=\"gnucash\">GnuCash</span> "
-"under the Office category in the Applications menu."
-msgstr ""
-"Ubuntu 9.10 的用户可以通过软件中心(在应用程序菜单里)安装 GnuCash。这会将 "
-"GnuCash 安装在应用程序->办公软件下面。"
-
-#: download.phtml:36
-msgid ""
-"If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> or "
-"you wish to install a different version than it ships with, you could try to "
-"build <span class=\"gnucash\">GnuCash</span> directly from the source code. "
-"The <span class=\"gnucash\">GnuCash</span> wiki has <a href='http://wiki."
-"gnucash.org/wiki/GnuCash#Installation'>guidelines for several distributions</"
-"a>."
-msgstr ""
-
-#: download.phtml:38
-msgid "Source code"
-msgstr "源代码"
-
-#: download.phtml:40 download.phtml:56 download.phtml:72
-#, php-format
-msgid "for GnuCash %s"
-msgstr "版本为 GnuCash %s"
-
-#: download.phtml:42
-msgid ""
-"For build instructions, please check the <span class=\"gnucash\">GnuCash</"
-"span> wiki which has <a href='http://wiki.gnucash.org/wiki/"
-"GnuCash#Installation'>guidelines for several distributions</a>."
-msgstr ""
-
-#: download.phtml:48
-#, php-format
-msgid "Unstable/Development release (%s)"
-msgstr "不稳定/开发版本 (%s)"
-
-#: download.phtml:50
-msgid ""
-"Unstable (development) releases are for testing purposes only. They contain "
-"the newest features and improvements, but may also contain serious bugs "
-"still. Don't install these releases for everyday use."
-msgstr ""
-"不稳定版(开发版本)是只为了测试而发布的。它们包含了最新的功能和改进，但是可能"
-"会有很严重的 Bug。建议不要在日常工作中安装这些发布版本。"
-
-#: download.phtml:51
-#, fuzzy, php-format
-msgid ""
-"The latest unstable release of <span class=\"gnucash\">GnuCash</span> is "
-"%s.  Choose the download for your operating system below."
-msgstr "最新的开发版本为 GnuCash %s。请在下面选择您的操作系统。"
-
-#: download.phtml:64
-#, fuzzy, php-format
-msgid "Old Stable release (%s)"
-msgstr "稳定版本 (%s)"
-
-#: download.phtml:66
-msgid ""
-"This old stable release is the final version of the previous stable series. "
-"It's available for users who aren't ready for a major upgrade but want to "
-"make sure that they have all of the bugfixes from the old series."
-msgstr ""
-
-#: download.phtml:67
-#, fuzzy, php-format
-msgid ""
-"The last old stable release of <span class=\"gnucash\">GnuCash</span> is "
-"%s.  Choose the download for your operating system below."
-msgstr "GnuCash 的最新的稳定版本是 %s。请从下面选择您的操作系统。"
-
-#: download.phtml:77
-msgid "Other"
-msgstr "其它版本"
-
-#: download.phtml:81
-#, php-format
-msgid "View all GnuCash %s downloads (stable)"
-msgstr "查看所有 GnuCash %s 的下载 (稳定版)"
-
-#: download.phtml:86
-#, php-format
-msgid "View all GnuCash %s downloads (unstable)"
-msgstr "查看所有 GnuCash %s 的下载 (不稳定版)"
-
-#: download.phtml:89
-msgid "View all GnuCash downloads"
-msgstr "查看所有的 GnuCash 下载"
-
-#: index.phtml:5 oldnews.phtml:4 externals/header.phtml:113
-msgid "Free Accounting Software"
-msgstr "免费的财务软件"
-
-#: index.phtml:12
-msgid "Welcome to GnuCash.org"
-msgstr "欢迎来到 GnuCash.org"
-
-#: index.phtml:18
-#, php-format
-msgid "Download GnuCash %s"
-msgstr "下载 GnuCash %s"
-
-#: index.phtml:21
-msgid "Source"
-msgstr "源代码"
-
-#: index.phtml:21
-msgid "Via distribution"
-msgstr "通过各种 Linux 发行版"
-
-#: index.phtml:24
-msgid "More downloads (Source, Development,...)"
-msgstr "更多下载 (源代码、开发版本...)"
-
-#: index.phtml:33
+#: index.phtml:34
 #, fuzzy
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is personal and small-business "
@@ -239,7 +231,434 @@ msgstr ""
 "\">GNU</a> GPL的软件，它支持多种操作系统，包括GNU/Linux、BSD、Solaris、Mac "
 "OS X 以及微软的 Windows。"
 
-#: index.phtml:35
+#: features.phtml:14
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> is powerful accounting software. "
+"Below are details of some of the numerous features that <span class=\"gnucash"
+"\">GnuCash</span> has to offer to its users."
+msgstr ""
+
+#: features.phtml:190
+#, fuzzy
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> is the first free software "
+"application to support the German <b>Home Banking Computer Information</b> "
+"protocol, allowing German users to perform statement download and initiate "
+"bank transfers and direct debits."
+msgstr ""
+"GnuCash 也是第一个支持德国家庭银行业务处理计算机信息(Home Banking Computre "
+"Information)协议，允许德国用户下载和发起银行转账交易以及直接付款。"
+
+#: features.phtml:242
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> is very well documented: along the "
+"application <b>Manual</b>, new users can take full advantage of the "
+"<b>Tutorial and Concepts guide</b>. This document gives background "
+"information on accounting principles and how they are reflected in <span "
+"class=\"gnucash\">GnuCash</span> with many practical examples described step "
+"by step."
+msgstr ""
+
+#: 2.6-release-tour.phtml:21
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> now uses javascript jqplot to render "
+"reports. This gives a more professional look to all graphical reports "
+"(piechart, barchart, scatterplot)."
+msgstr ""
+
+#: features.phtml:201
+msgid ""
+"<span class=\"gnucash\">GnuCash</span> runs on many different operating "
+"systems including <b>Windows</b>, <b>MacOSX</b> and <b>Linux</b>."
+msgstr ""
+
+#: docs.phtml:30
+msgid ""
+"<span class=\"gnucash\">GnuCash</span>'s documentation has been created by "
+"its community. See the <a href=\"develdocs.phtml\">Writing Documentation "
+"page</a> if you are interested in contributing to this effort."
+msgstr ""
+
+#: features.phtml:55
+msgid ""
+"A <b>summary bar</b> that displays all of the relevant account's balance "
+"information"
+msgstr ""
+
+#: 2.6-release-tour.phtml:28
+msgid "A barchart rendered in GnuCash with jqplot."
+msgstr ""
+
+#: develdocs.phtml:35
+msgid ""
+"A detailed guide on how to work with documentation (update and maintenance)."
+msgstr ""
+
+#: features.phtml:233
+msgid ""
+"A guided dialogue for setting up loan payments as scheduled transactions."
+msgstr "有一个向导式的对话框，用以建立以计划的交易的形式存在的贷款还款。"
+
+#: features.phtml:217
+msgid ""
+"A powerful transaction query dialogue can help you quickly locate a needle "
+"in a haystack."
+msgstr "强大的交易查询对话框可以帮助您定位，大海捞针不再困难。"
+
+#: download.phtml:17
+#, fuzzy
+msgid ""
+"A stable release is a version of <span class=\"gnucash\">GnuCash</span> that "
+"is well tested and considered appropriate for every day use."
+msgstr ""
+"稳定版本是 GnuCash 的一个版本，这个版本的程序经过了很好的测试，并且被认为适合"
+"每天使用。"
+
+#: features.phtml:181
+msgid ""
+"A transaction matching system ensures that duplicate transactions are "
+"accurately recognized and automatically deleted during file import."
+msgstr ""
+
+#: search/templates/NMZ.body.php_tmpl:16
+msgid "AND query"
+msgstr "AND 查询"
+
+#: externals/menu.phtml:9
+msgid "About / News"
+msgstr "关于 / 新闻"
+
+#: 2.6-release-tour.phtml:67
+msgid "Account colors"
+msgstr ""
+
+#: donate.phtml:37
+msgid "Account:"
+msgstr ""
+
+#: search/templates/NMZ.tips.php_tmpl:15
+msgid "Add keywords"
+msgstr "添加关键字"
+
+#: docs.phtml:25
+#, fuzzy
+msgid ""
+"Additionally, you can talk to someone via IRC at <i>irc.gnome.org</i> "
+"channel <b>#gnucash</b> about your question. Another resource is the <a href="
+"\"http://wiki.gnucash.org/wiki/\">English</a> or <a href=\"http://linuxwiki."
+"de/GnuCash\">Deutsch</a> <span class=\"gnucash\">GnuCash</span> wikis."
+msgstr ""
+"此外，您也可以在 irc.gnome.org 频道“#gnucash”中找个人问您的问题。其它的资源还"
+"有<a href='http://wiki.gnucash.org/wiki/'>English</a> 或 <a href='http://"
+"linuxwiki.de/GnuCash'>Deutsch</a> 的 GnuCash 的 Wiki。Wiki 是一个交互性的网"
+"站，注册的用户可以在那里提问或者回答问题。"
+
+#: donate.phtml:40
+msgid "Address of bank:"
+msgstr ""
+
+#: features.phtml:18 features.phtml:117
+msgid "Advanced features"
+msgstr ""
+
+#: features.phtml:69
+msgid ""
+"An assistant that runs when <span class=\"gnucash\">GnuCash</span> is "
+"started allows scheduled transactions to be postponed without canceling or "
+"entering them before the due date."
+msgstr ""
+
+#: develdocs.phtml:44
+#, fuzzy
+msgid ""
+"As stated earlier, the new docs are based on the GNOME2 XML docbook system. "
+"Everyone wishing to help please follow these guides where possible when "
+"reviewing and/or writing docs."
+msgstr ""
+"请阅读下列指南。新文档是基于 GNOME2 XML Docbook 系统。每一个希望帮助写文档"
+"的，请在评论或者撰写文档时尽量遵循这些指南。"
+
+#: 2.6-release-tour.phtml:52
+msgid "Attach file or location to any transaction"
+msgstr ""
+
+#: search/templates/NMZ.result.normal.php_tmpl:5
+msgid "Author"
+msgstr "作者"
+
+#: sizing.phtml:59 sizing.phtml:402
+msgid "Author Credits"
+msgstr "贡献的作者"
+
+#: features.phtml:88
+msgid "Balance Sheet"
+msgstr ""
+
+#: donate.phtml:38
+msgid "Bank Code:"
+msgstr ""
+
+#: donate.phtml:38
+msgid "Bank:"
+msgstr ""
+
+#: features.phtml:82
+msgid "Barcharts"
+msgstr ""
+
+#: download.phtml:28
+#, fuzzy
+msgid ""
+"Below are ways to install <span class=\"gnucash\">GnuCash</span> on some of "
+"the more popular distributions:"
+msgstr "下面是安装 GnuCash 到一些较流行的 Linux 发布版的方法："
+
+#: 2.6-release-tour.phtml:130
+msgid ""
+"Better invoice printing setup: Choose a default invoice report as a "
+"preference"
+msgstr ""
+
+#: donate.phtml:31
+msgid "Bitcoin address:"
+msgstr ""
+
+#: externals/menu.phtml:50
+msgid "Browse Source Code"
+msgstr "浏览源代码"
+
+#: docs.phtml:4
+#, fuzzy
+msgid "Browse documentation online"
+msgstr "每夜文档构建"
+
+#: externals/menu.phtml:39
+msgid "Bug Reports"
+msgstr "报告 Bug"
+
+#: 2.6-release-tour.phtml:185
+msgid ""
+"By <a href=\"http://wiki.gnucash.org/wiki/Development\">developing the "
+"source code</a>"
+msgstr ""
+
+#: 2.6-release-tour.phtml:184
+msgid ""
+"By <a href=\"http://wiki.gnucash.org/wiki/Translation\">translating the "
+"program and documentation to your language</a>"
+msgstr ""
+
+#: 2.6-release-tour.phtml:163
+msgid ""
+"By agreement of all authors we have relicensed <span class=\"gnucash"
+"\">GnuCash</span> to the Gnu Public License Version 2 or later from just "
+"Version 2."
+msgstr ""
+
+#: 2.6-release-tour.phtml:183
+msgid ""
+"By improving the <a href=\"http://gnucash.org/docs.phtml\">released "
+"documentation</a>"
+msgstr ""
+
+#: 2.6-release-tour.phtml:178
+msgid ""
+"By liking our project page on <a href=\"https://www.facebook.com/Gnucash"
+"\">facebook</a> and <a href=\"http://plus.google.com/u/0/+gnucash\">Google+</"
+"a>"
+msgstr ""
+
+#: 2.6-release-tour.phtml:181
+msgid ""
+"By partecipating in the <a href=\"http://wiki.gnucash.org/wiki/Mailing_Lists"
+"\">GnuCash mailing lists</a> and <a href=\"http://wiki.gnucash.org/wiki/IRC"
+"\">IRC channel</a>"
+msgstr ""
+
+#: 2.6-release-tour.phtml:182
+msgid ""
+"By reviewing and adding hints to the <a href=\"http://wiki.gnucash.org/wiki/"
+"\">wiki</a>"
+msgstr ""
+
+#: 2.6-release-tour.phtml:179
+msgid "By spreading the word"
+msgstr ""
+
+#: 2.6-release-tour.phtml:177
+msgid ""
+"By testing the program and <a href=\"http://wiki.gnucash.org/wiki/Bugzilla"
+"\">reporting bugs</a>"
+msgstr ""
+
+#: features.phtml:222
+msgid "Check Printing"
+msgstr "支票打印"
+
+#: search/templates/NMZ.tips.php_tmpl:11
+msgid ""
+"Check a spelling of your keyword<br>\n"
+"Namazu can't find anything with wrong spelling."
+msgstr ""
+"检查您的关键字的拼写<br>\n"
+"Namazu 无法找到任何错误的拼写。"
+
+#: features.phtml:40
+msgid "Checkbook-Style Register"
+msgstr "纸质账簿风格的界面"
+
+#: features.phtml:225
+msgid ""
+"Checks may be printed in standard formats on common check stocks. A "
+"customization GUI allows custom check layouts to be developed."
+msgstr ""
+"支票可以用标准格式打印在通用的支票上。可定制图形界面允许要打印的定制的支票布"
+"局。"
+
+#: index.phtml:99
+msgid "Click <a href=\"oldnews.phtml\">here</a> for older announcements..."
+msgstr ""
+
+#: sizing.phtml:378
+msgid ""
+"Code to add small-business features: contents of the src/business directory."
+msgstr "添加的小型企业功能的代码：src/business 目录的内容。"
+
+#: sizing.phtml:368
+msgid ""
+"Code to generate reports and graphs: contents of the src/reports directory."
+msgstr "生成报告和图表的代码：src/reports 目录下的内容。"
+
+#: sizing.phtml:363
+msgid ""
+"Code to import and export various file formats: contents of the src/import-"
+"export directory."
+msgstr "导入/导出各种文件格式的代码：src/import-export 目录下的内容。"
+
+#: sizing.phtml:383
+msgid ""
+"Code to peform automated regression tests: contents of the src/*/test "
+"directories."
+msgstr "执行自动回归测试的代码：src/*/test 目录下的内容。"
+
+#: docs.phtml:81 docs.phtml:193 docs.phtml:303 docs.phtml:398 docs.phtml:418
+#: docs.phtml:438
+msgid "Concepts Guide"
+msgstr "概念指南"
+
+#: sizing.phtml:358
+msgid ""
+"Contents of miscellanous application-related directories (version 1.7 and "
+"later): src/app-file, src/app-utils, src/calculation, src/core-utils, src/"
+"gnc-module, src/network-utils, src/tax/us"
+msgstr ""
+"与应用程序相关的一些杂项的目录 (1.7及以后)：src/app-file、src/app-utils、src/"
+"calculation、src/core-utils、src/gnu-module、src/network-utils 和 src/tax/"
+"us。"
+
+#: sizing.phtml:353
+msgid ""
+"Contents of src/gnome plus src/register/gnome (version 1.6 and earlier). For "
+"version 1.7 and later, this consists of src/gnome, src/gnome-search and src/"
+"gnome-util"
+msgstr ""
+"src/gnome 和 src/register/gnome (版本1.6或更早)，或者 src/gnome、src/gnome-"
+"search 和 src/gnome-util 目录(版本1.7及以后)下的内容。"
+
+#: sizing.phtml:337
+msgid ""
+"Contents of the src/backend directory (version 1.7 and later) or of src/"
+"engine/file, src/engine/sql (version 1.6 and earlier)"
+msgstr ""
+"src/backend 目录(版本 1.7 或以后)、src/engine/file、src/engine/sql (版本1.6或"
+"更早)的内容。"
+
+#: sizing.phtml:333
+msgid ""
+"Contents of the src/engine and the include directories. The engine was split "
+"out from the motif code in version 1.1. The data storage backend (file-io, "
+"sql) was split out in the course of version 1.5"
+msgstr ""
+"src/engine 及 include 目录的内容。版本 1.1 中，引擎从 motif 中分离了。数据存"
+"储后台 (文件IO、SQL) 从版本 1.5 中分割出去了。"
+
+#: sizing.phtml:349
+msgid ""
+"Contents of the src/motif directory (version 1.2 and earlier).  The motif "
+"version of the code was discontinued after version 1.2, after most of the "
+"non-gui code was moved to either the engine, the register or the ledger."
+msgstr ""
+"src/motif 目录 (版本 1.2 或更早)下的内容。在版本 1.2 以后 motif 的代码就不再"
+"继续了，之后大多数非图形界面的代码，或者被移到了 engine，或者被移到了账簿或总"
+"账下。"
+
+#: sizing.phtml:341
+msgid ""
+"Contents of the src/register directory (version 1.6 and earlier) or src/"
+"register/register-core (version 1.7 and later).  The register was split out "
+"as a separate component from the motif code in version 1.1. As can be seen "
+"from the stats, the register code has been fairly stable. At version 1.7 and "
+"later, this cell shows a second count: the number of lines of code in src/"
+"register/register-gnome (previously counted as part of gnome)"
+msgstr ""
+"src/register 目录(版本 1.6或更早) 或 src/register/register-core (版本 1.7 或"
+"以后) 的内容。账簿在版本 1.1 时从 motif 中分离出来。就像从统计中所看到的一"
+"样，账簿代码已经趋于稳定。在版本 1.7 和以后，这个单元格显示了第二个数字：即 "
+"src/register/register-gnome (之前作为 gnome 的一部分计算) 中的代码行数。"
+
+#: externals/header.phtml:132
+msgid "Continent"
+msgstr "大陆"
+
+#: 2.6-release-tour.phtml:124
+msgid "Credit Notes"
+msgstr ""
+
+#: docs.phtml:37
+#, fuzzy
+msgid "Current <em>stable</em> user documentation and developer documentation"
+msgstr "当前不稳定版用户文档和开发者文档"
+
+#: docs.phtml:259
+#, fuzzy
+msgid ""
+"Current <em>unstable</em> user documentation and developer documentation"
+msgstr "当前不稳定版用户文档和开发者文档"
+
+#: 2.6-release-tour.phtml:126
+msgid "Customer Overview Reports"
+msgstr ""
+
+#: 2.6-release-tour.phtml:125
+msgid "Customer and Vendor Overview Pages"
+msgstr ""
+
+#: 2.6-release-tour.phtml:139
+msgid "Customer report with an invoice and a credit note."
+msgstr ""
+
+#: features.phtml:160
+msgid "Data storage and exchange features"
+msgstr ""
+
+#: features.phtml:19
+msgid "Data storing and exchange features"
+msgstr ""
+
+#: search/templates/NMZ.result.normal.php_tmpl:6
+msgid "Date"
+msgstr "日期"
+
+#: docs.phtml:463
+#, fuzzy
+msgid "Dave Gilbert's User Guide (Pdf)"
+msgstr "Dave Gilbert 的用户手册 (PDF)"
+
+#: search/templates/NMZ.head.php_tmpl:43
+msgid "Description"
+msgstr "描述"
+
+#: index.phtml:36
 #, fuzzy
 msgid ""
 "Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash"
@@ -252,334 +671,109 @@ msgstr ""
 "和支出。就像日常纸质账簿一样可以直观并且快速的使用。它基于专业的会计理念，以"
 "确保平衡的账簿和精准的报表。"
 
-#: index.phtml:41
-msgid "Need Help?"
-msgstr ""
-
-#: index.phtml:42
-msgid ""
-"Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? "
-"Try the"
-msgstr ""
-
-#: index.phtml:42 externals/menu.phtml:33
-msgid "Mailing Lists"
-msgstr "邮件列表"
-
-#: index.phtml:42
-msgid ""
-", which are public, email-based discussion groups where you can ask and "
-"answer <span class=\"gnucash\">GnuCash</span> questions to other users."
-msgstr ""
-
-#: index.phtml:48
-msgid "Feature Highlights"
-msgstr "主要功能"
-
-#: index.phtml:53
-msgid "Double-Entry Accounting"
-msgstr "复式会计记账"
-
-#: index.phtml:54
-msgid "Stock/Bond/Mutual Fund Accounts"
-msgstr "股票、债券、基金账户"
-
-#: index.phtml:55
-msgid "Small-Business Accounting"
-msgstr "小型企业会计"
-
-#: index.phtml:56 features.phtml:75
-msgid "Reports, Graphs"
-msgstr "报告、图表"
-
-#: index.phtml:57
-msgid "QIF/OFX/HBCI Import, Transaction Matching"
-msgstr "QIF、OFX、HBCI 导入数据以及交易匹配"
-
-#: index.phtml:58 features.phtml:62
-msgid "Scheduled Transactions"
-msgstr "计划的交易"
-
-#: index.phtml:59
+#: externals/menu.phtml:46
 #, fuzzy
-msgid "Financial Calculations"
-msgstr "财务计算"
-
-#: index.phtml:61
-msgid "<b>Discover more...</b>"
-msgstr ""
-
-#: index.phtml:71
-#, fuzzy
-msgid "Info and development"
+msgid "Development"
 msgstr "开发人员信息"
 
-#: index.phtml:73
+#: features.phtml:140
 msgid ""
-"The GnuCash team recommends the GnuCash for Android app. This app allows you "
-"to keep track of your financial transactions on the go for later import into "
-"the desktop version of GnuCash."
+"Different accounts can be denominated in different currencies. Currency "
+"movements between accounts are fully balanced when double-entry is enabled."
 msgstr ""
+"不同的科目可以使用不同的货币。当复式记账启用之后，资金在不同货币的科目见流动"
+"会完全的保持平衡。"
 
-#: index.phtml:74
-msgid ""
-"Note that GnuCash for Android is not a port of the GnuCash program to "
-"Android."
-msgstr ""
+#: search/templates/NMZ.head.php_tmpl:35
+msgid "Display"
+msgstr "显示"
 
-#: index.phtml:80
-msgid "News"
-msgstr "新闻"
-
-#: index.phtml:95
-#, fuzzy
-msgid "Older Announcements ..."
-msgstr "以前的公告"
-
-#: index.phtml:98
-msgid "Click <a href=\"oldnews.phtml\">here</a> for older announcements..."
-msgstr ""
-
-#: develdocs.phtml:3 externals/menu.phtml:53
-#, fuzzy
-msgid "Writing Documentation"
+#: docs.phtml:3 externals/menu.phtml:23 externals/menu.phtml:30
+msgid "Documentation"
 msgstr "文档"
 
-#: develdocs.phtml:11
-#, fuzzy
-msgid "Writing GnuCash Documentation"
-msgstr "早期的 GnuCash 的文档"
-
-#: develdocs.phtml:13
-msgid ""
-"If you are interested in improving the <span class=\"gnucash\">GnuCash</"
-"span> documentation, you have come to the right place. This page will "
-"provide you with the necessary information to get started."
-msgstr ""
-
-#: develdocs.phtml:15
-msgid ""
-"Just as the <span class=\"gnucash\">GnuCash</span> application has been "
-"developed over time by volunteers, so too has the documentation been written "
-"by volunteer developers and users to help others learn how <span class="
-"\"gnucash\">GnuCash</span> works. This collaborative effort has resulted in "
-"the creation of two major documents, the <b>Help Manual</b> and the "
-"<b>Tutorial and Concepts Guide</b>."
-msgstr ""
-
-#: develdocs.phtml:17
-msgid ""
-"The <span class=\"gnucash\">GnuCash</span> community welcomes assistance in "
-"maintaining and improving both the program and its documentation. If you are "
-"interested in helping write, edit or translate <span class=\"gnucash"
-"\">GnuCash</span>'s documentation, this page gives guidance on how to get "
-"set up to join the effort."
-msgstr ""
-
-#: develdocs.phtml:20
-msgid ""
-"The <span class=\"gnucash\">GnuCash</span> documentation can be viewed and "
-"downloaded from the <a href=\"docs.phtml\">Documentation page</a>."
-msgstr ""
-
-#: develdocs.phtml:25
-#, fuzzy
-msgid "Introduction"
-msgstr "信息"
-
-#: develdocs.phtml:27
-msgid ""
-"The <span class=\"gnucash\">GnuCash</span> documentation is stored in "
-"<b>xml</b> files. More precisely, it uses the <b>GNOME2 XML docbook system</"
-"b>. This is a relatively flexible system that takes xml files as input and "
-"can generate documentation in several different output formats (html, "
-"pdf,...)."
-msgstr ""
-
-#: develdocs.phtml:28
-msgid ""
-"If you wish to review or write <span class=\"gnucash\">GnuCash</span> "
-"documentation, you will need to know xml. Some basic knowledge of the "
-"docbook system may be useful as well"
-msgstr ""
-
-#: develdocs.phtml:29
-msgid ""
-"The following links are for further sites that can help with the "
-"documentation and review process."
-msgstr "下面这些链接对进一步寻找文档和评论有帮助。"
-
-#: develdocs.phtml:34
-msgid ""
-"While this <span class=\"gnucash\">GnuCash</span> wiki page is really about "
-"translating the documentation, it holds some useful information on working "
-"with docbook files."
-msgstr ""
-
-#: develdocs.phtml:35
-msgid ""
-"A detailed guide on how to work with documentation (update and maintenance)."
-msgstr ""
-
-#: develdocs.phtml:37
-#, fuzzy
-msgid "We suggest also subscribing to"
-msgstr "我们建议同样订阅"
-
-#: develdocs.phtml:42
-#, fuzzy
-msgid "Gnome Documentation guidelines"
-msgstr "每夜文档构建"
-
-#: develdocs.phtml:44
-#, fuzzy
-msgid ""
-"As stated earlier, the new docs are based on the GNOME2 XML docbook system. "
-"Everyone wishing to help please follow these guides where possible when "
-"reviewing and/or writing docs."
-msgstr ""
-"请阅读下列指南。新文档是基于 GNOME2 XML Docbook 系统。每一个希望帮助写文档"
-"的，请在评论或者撰写文档时尽量遵循这些指南。"
-
-#: develdocs.phtml:53
-msgid "Where to get the documentation source"
-msgstr ""
-
-#: develdocs.phtml:55
-msgid ""
-"You will need a recent copy of the documentation source. For this you can "
-"check out the documentation module from the <span class=\"gnucash\">GnuCash</"
-"span> svn. Reviewers could also start from the <a href='http://sourceforge."
-"net/projects/gnucash/files/gnucash-docs/'>current docs tarball</a>."
-msgstr ""
-
-#: develdocs.phtml:56
-#, fuzzy
-msgid ""
-"For those not familiar with svn, the <span class=\"gnucash\">GnuCash</span> "
-"wiki has a <a href='http://wiki.gnucash.org/wiki/Subversion'>description</a> "
-"tailored to the <span class=\"gnucash\">GnuCash</span> code. To get the "
-"documentation source instead of the program source, replace 'gnucash' with "
-"'gnucash-docs' in the mentioned svn commands, like this:"
-msgstr ""
-"请从 GnuCash 的 svn 中 check out 文档模块: gnucash-docs。对那些不熟悉 svn 的"
-"人，GnuCash wiki 后关于<a href='http://wiki.gnucash.org/wiki/"
-"Subversion'>Subversion 的介绍</a>。相对于check out 源代码，唯一的改变就是从 "
-"gnucash 变到 gnucash-docs。您也可以从当前文档的压缩文件开始。"
-
-#: develdocs.phtml:59
-#, fuzzy
-msgid ""
-"There are two major <span class=\"gnucash\">GnuCash</span> documentation "
-"packages to help users: the <b>Help Manual</b> and the <b>Tutorial and "
-"Concepts Guide</b>. With the above command, the source code of both will be "
-"downloaded."
-msgstr ""
-"如果您对使用 GnuCash 有任何疑问，那么你找对地方了。你首先需要做的是阅读《帮助"
-"手册》和《概念指南》，绝大多数的问题都会在里面找到答案。"
-
-#: develdocs.phtml:65
-msgid "Writers"
-msgstr "作者"
-
-#: develdocs.phtml:67
-msgid ""
-"Get a copy of the documentation source as described above and start making "
-"changes. When you are satisfied with your changes you can create a patch by "
-"running the following command in the base directory of the documentation "
-"(usually gnucash-docs, unless you renamed it):"
-msgstr ""
-
-#: develdocs.phtml:69
-msgid ""
-"Next attach your patch to a bug report against the documentation component "
-"for the <span class=\"gnucash\">GnuCash</span> project in <a href='http://"
-"bugzilla.gnome.org/'>Gnome's bugzilla database</a> and send an email to <a "
-"href='mailto:gnucash-devel@gnucash.org'>gnucash-devel</a> mailing list to "
-"inform other developers on your work. See also <a href='http://wiki.gnucash."
-"org/wiki/Bugzilla'>GnuCash' wiki page on bugzilla</a> for more details about "
-"patch submission."
-msgstr ""
-
-#: develdocs.phtml:71
-msgid ""
-"<b>NOTE:</b> It used to be ok also to send your patch directly to the "
-"gnucash-devel list. This is discouraged now, as a patch is easily forgotten "
-"between the many list discussions. Attach patches to bugs in Bugzilla "
-"instead (either an existing bug or a new one). If you insist on sending a "
-"patch to gnucash-devel, it should be attached, not inlined."
-msgstr ""
-
-#: develdocs.phtml:72
-msgid ""
-"Please let other writers know which section you wish to tackle. Please "
-"forward this to <a href='mailto:gnucash-devel@gnucash.org'>gnucash-devel</a> "
-"so that people can say 'hey I'm doing that already' or 'go ahead and do it'."
-msgstr ""
-"请告诉其他作者您正在撰写哪一个部分。请转发给 <a href='mailto:gnucash-"
-"devel@gnucash.org'>gnucash-devel</a>，这样人们就可以说“嘿，我已经做了那个"
-"了”，或者“好吧，去做吧”。"
-
-#: develdocs.phtml:73
-msgid ""
-"You may also want to retain a local copy of the old documentation to refer "
-"to when writing. This still has a lot of useful information in it which "
-"hasn't been transferred to the new docs"
-msgstr ""
-"您也可以为老文档保留一个本地副本。里面还是有大量的信息未被转移到新文档中。"
-
-#: develdocs.phtml:79
-msgid "Reviewers"
-msgstr "评论人员"
-
-#: develdocs.phtml:81
-msgid ""
-"Get a copy of the documentation source as described above and start "
-"commenting on it."
-msgstr ""
-
-#: develdocs.phtml:82
-msgid ""
-"The best way of retaining comments about docs in an easy to find way for "
-"everyone would be to use <a href='http://bugzilla.gnome.org/'>bugzilla.gnome."
-"org</a> to file the bugs under documentation. This can also be done using "
-"bug-buddy."
-msgstr ""
-"对于所有人都可以使用的，关于文档中某部分提出意见最好的方式就是在 <a "
-"href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> 中提交一个关于文档"
-"的 Bug。这也可以通过使用 Bug-buddy 来实现。"
-
-#: features.phtml:3
-msgid "Features"
-msgstr "特色"
-
-#: features.phtml:14
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> is powerful accounting software. "
-"Below are details of some of the numerous features that <span class=\"gnucash"
-"\">GnuCash</span> has to offer to its users."
-msgstr ""
-
-#: features.phtml:17 features.phtml:24
-#, fuzzy
-msgid "Main features"
-msgstr "特色"
-
-#: features.phtml:18 features.phtml:117
-msgid "Advanced features"
-msgstr ""
-
-#: features.phtml:19
-msgid "Data storing and exchange features"
-msgstr ""
-
-#: features.phtml:20 features.phtml:193
-msgid "Other goodies"
-msgstr ""
+#: donate.phtml:3 donate.phtml:11 externals/menu.phtml:13
+msgid "Donations"
+msgstr "捐款"
 
 #: features.phtml:28
 msgid "Double Entry"
 msgstr "复式记账法"
+
+#: index.phtml:54
+msgid "Double-Entry Accounting"
+msgstr "复式会计记账"
+
+#: 2.6-release-tour.phtml:165 download.phtml:5 docs.phtml:40 docs.phtml:152
+#: docs.phtml:262
+msgid "Download"
+msgstr "下载"
+
+#: download.phtml:12
+msgid "Download GnuCash"
+msgstr "下载 GnuCash"
+
+#: index.phtml:18
+#, php-format
+msgid "Download GnuCash %s"
+msgstr "下载 GnuCash %s"
+
+#: docs.phtml:5
+#, fuzzy
+msgid "Download documentation as PDF"
+msgstr "文档"
+
+#: docs.phtml:6
+#, fuzzy
+msgid "Download documentation as epub"
+msgstr "文档"
+
+#: docs.phtml:7
+msgid "Download documentation as mobipocket"
+msgstr ""
+
+#: externals/menu.phtml:19
+msgid "Downloads"
+msgstr "下载"
+
+#: sizing.phtml:318
+msgid "Each cell displays the following:"
+msgstr "每个单元格显示如下信息：<br />"
+
+#: docs.phtml:46 docs.phtml:85 docs.phtml:158 docs.phtml:197 docs.phtml:268
+#: docs.phtml:307 docs.phtml:388 docs.phtml:399 docs.phtml:410 docs.phtml:419
+#: docs.phtml:428 docs.phtml:447
+msgid "English"
+msgstr "英语"
+
+#: sizing.phtml:388
+msgid ""
+"English-language-only user documentation, including on-line help and manual "
+"(html, sgml or xml). For version 1.8.4 and later, the number below the bar "
+"counts the translated, non-english docs (currently de, es, fr, pt_PT).  Both "
+"of these numbers are somewhat hard to count, because of fairly large format "
+"churns, and multiple competing versions."
+msgstr ""
+"英语文档，包括在线帮助和手册 (html, sgml 或 xml)。对于 1.8.4 及以后，计算了翻"
+"译的、非英语的文档 (包括 de, es, fr, pt_PT)。这些数字很难计算，因为大量的格式"
+"信息以及多种不同的版本。"
+
+#: download.phtml:33
+msgid "Epel's wiki page"
+msgstr "Epel 的 wiki 页面"
+
+#: docs.phtml:362
+#, fuzzy
+msgid ""
+"Every night a server builds the documentation from the current contents of "
+"the <span class=\"gnucash\">GnuCash</span> git repository. This includes the "
+"<b>Developer Documentation</b> from <b>Doxygen</b> and <b>User "
+"Documentation</b> for the current <em>stable</em> version of <span class="
+"\"gnucash\">GnuCash</span>."
+msgstr ""
+"每晚都会有一个服务器从 GnuCash Subversion的软件库中下载当前的文档内容，并且构"
+"建最新的文档。这包括了从 Doxygen 生成的《开发人员文档》和为当前不稳定版本撰写"
+"的《用户文档》。"
 
 #: features.phtml:34
 #, fuzzy
@@ -592,105 +786,163 @@ msgstr ""
 "相等。这样才能确保“账簿平衡”：在收入和支出的差值恰好等于所有的资产和所有者权"
 "益的总和。"
 
-#: features.phtml:40
-msgid "Checkbook-Style Register"
-msgstr "纸质账簿风格的界面"
+#: 2.6-release-tour.phtml:127
+msgid "Existing Transactions may be reassigned as invoice payments"
+msgstr ""
 
-#: features.phtml:46
+#: features.phtml:164
+msgid "Experimental database support"
+msgstr ""
+
+#: 2.6-release-tour.phtml:47
+msgid "Export any report directly to PDF"
+msgstr ""
+
+#: externals/menu.phtml:31
+msgid "FAQ"
+msgstr "常见问题(FAQ)"
+
+#: index.phtml:49
+msgid "Feature Highlights"
+msgstr "主要功能"
+
+#: features.phtml:3
+msgid "Features"
+msgstr "特色"
+
+#: download.phtml:31
+#, fuzzy
 msgid ""
-"The <span class=\"gnucash\">GnuCash</span> checkbook-style register provides "
-"a custom, convenient and familiar interface to entering financial "
-"transactions."
+"Fedora users can install <span class=\"gnucash\">GnuCash</span> through "
+"System->Administration->Add/Remove Software (Gnome) or Applications->System-"
+">Software Management (KDE)."
 msgstr ""
+"Fedora 的用户可以通过 系统->管理->添加/删除软件(Gnome) 或 应用程序->系统->软"
+"件管理器 (KDE) 来安装 GnuCash。"
 
-#: features.phtml:48
+#: search/templates/NMZ.body.php_tmpl:121
+msgid "Field-specified searching"
+msgstr "指定字段搜索"
+
+#: index.phtml:60
+#, fuzzy
+msgid "Financial Calculations"
+msgstr "财务计算"
+
+#: download.phtml:42
 msgid ""
-"The register supports common checking and credit-card transactions, as well "
-"as income, stock and currency transactions. The following features are also "
-"provided:"
+"For build instructions, please check the <span class=\"gnucash\">GnuCash</"
+"span> wiki which has <a href='http://wiki.gnucash.org/wiki/"
+"GnuCash#Installation'>guidelines for several distributions</a>."
 msgstr ""
 
-#: features.phtml:51
-msgid "The ability to enter <b>split transactions</b>"
-msgstr ""
-
-#: features.phtml:52
+#: develdocs.phtml:56
+#, fuzzy
 msgid ""
-"The ability to mark a transaction as <b>cleared</b> or <b>reconciled</b>"
+"For those not familiar with git, the <span class=\"gnucash\">GnuCash</span> "
+"wiki has a <a href='http://wiki.gnucash.org/wiki/Git'>description</a> "
+"tailored to the <span class=\"gnucash\">GnuCash</span> code. To get the "
+"documentation source instead of the program source, replace 'gnucash' with "
+"'gnucash-docs' in the mentioned git commands, like this:"
+msgstr ""
+"请从 GnuCash 的 svn 中 check out 文档模块: gnucash-docs。对那些不熟悉 svn 的"
+"人，GnuCash wiki 后关于<a href='http://wiki.gnucash.org/wiki/"
+"Subversion'>Subversion 的介绍</a>。相对于check out 源代码，唯一的改变就是从 "
+"gnucash 变到 gnucash-docs。您也可以从当前文档的压缩文件开始。"
+
+#: oldnews.phtml:4 index.phtml:5 externals/header.phtml:113
+msgid "Free Accounting Software"
+msgstr "免费的财务软件"
+
+#: docs.phtml:57 docs.phtml:96 docs.phtml:169 docs.phtml:208 docs.phtml:279
+#: docs.phtml:318 docs.phtml:390 docs.phtml:412 docs.phtml:432 docs.phtml:439
+#: docs.phtml:448
+msgid "German"
 msgstr ""
 
-#: features.phtml:53
-msgid "<b>Autofill</b> of entered transactions"
-msgstr ""
-
-#: features.phtml:54
+#: features.phtml:157
 msgid ""
-"The ability to display <b>multiple accounts</b> in a single register window"
+"Get Stock &amp; Mutual Fund quotes from various web sites, update portfolio "
+"automatically. Additional pricing sources are added regularly."
 msgstr ""
+"从各种网站取得股票和基金的报价，自动更新组合投资的信息。并且，会定期的添加额"
+"外的价格来源。"
 
-#: features.phtml:55
+#: develdocs.phtml:81
 msgid ""
-"A <b>summary bar</b> that displays all of the relevant account's balance "
-"information"
+"Get a copy of the documentation source as described above and start "
+"commenting on it."
 msgstr ""
 
-#: features.phtml:56
-msgid "Many options to <b>customize</b> the appearance and the display style"
-msgstr ""
-
-#: features.phtml:66
+#: develdocs.phtml:67
 msgid ""
-"You can create recurring transactions with a high level of customization of "
-"amounts and timeline. You can also set an automatic reminder when a "
-"transaction is due."
+"Get a copy of the documentation source as described above and start making "
+"changes. When you are satisfied with your changes you can create a patch by "
+"running the following command in the base directory of the documentation "
+"(usually gnucash-docs, unless you renamed it):"
 msgstr ""
 
-#: features.phtml:69
+#: externals/menu.phtml:51
+msgid "Git Access"
+msgstr ""
+
+#: sizing.phtml:29
 msgid ""
-"An assistant that runs when <span class=\"gnucash\">GnuCash</span> is "
-"started allows scheduled transactions to be postponed without canceling or "
-"entering them before the due date."
+"Given that we have about 400 outstanding bugs in bugzilla, that works out to "
+"about one bug per thousand lines of code, or one bug per 50 pages of "
+"printout.  This bug count is actually not atypical for software projects; "
+"its near the norm."
+msgstr ""
+"基于我们的 Bugzilla 系统中有400个突出的 Bug，可以算出每一千行才会有一个 Bug，"
+"或者可以理解为每打印出50页代码才有一个 Bug。在软件项目中，这样的数量实际上并"
+"不特殊，可以说接近正常。"
+
+#: develdocs.phtml:42
+#, fuzzy
+msgid "Gnome Documentation guidelines"
+msgstr "每夜文档构建"
+
+#: download.phtml:22 download.phtml:23 download.phtml:54 download.phtml:55
+#: download.phtml:70 download.phtml:71
+#, php-format
+msgid "GnuCash %s for"
+msgstr "GnuCash %s 运行于"
+
+#: externals/menu.phtml:66
+msgid "GnuCash 2.4 Small Business Accounting, by Ashok Ramachandran"
 msgstr ""
 
-#: features.phtml:79
+#: 2.6-release-tour.phtml:3 index.phtml:19
+#, fuzzy
+msgid "GnuCash 2.6 release tour"
+msgstr "GnuCash %s 运行于"
+
+#: docs.phtml:15
+#, fuzzy
+msgid "GnuCash Documentation"
+msgstr "早期的 GnuCash 的文档"
+
+#: donate.phtml:49
 msgid ""
-"<span class=\"gnucash\">GnuCash</span> has an integrated module to display "
-"graphs of your financial data in the form of:"
+"GnuCash is a volunteer effort. While we manage to keep our operational costs "
+"low there are inevitably expenses involved in keeping the servers running."
 msgstr ""
 
-#: features.phtml:82
-msgid "Barcharts"
-msgstr ""
+#: externals/header.phtml:7
+#, fuzzy
+msgid "GnuCash on Google +"
+msgstr "GnuCash %s 运行于"
 
-#: features.phtml:83
-msgid "Piecharts"
-msgstr ""
+#: externals/header.phtml:8
+#, fuzzy
+msgid "GnuCash on facebook"
+msgstr "GnuCash %s 运行于"
 
-#: features.phtml:84
-msgid "Scatter plots"
-msgstr ""
-
-#: features.phtml:86
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> also comes complete with a full suite "
-"of standard and customizeable reports, such as:"
-msgstr ""
-
-#: features.phtml:88
-msgid "Balance Sheet"
-msgstr ""
-
-#: features.phtml:89
-msgid "Profit &amp; Loss"
-msgstr ""
-
-#: features.phtml:90
-msgid "Portfolio Valuation"
-msgstr ""
-
-#: features.phtml:91
-msgid "and many others."
-msgstr ""
+#: docs.phtml:35 docs.phtml:147 docs.phtml:384 docs.phtml:406 docs.phtml:424
+#: docs.phtml:446
+#, fuzzy, php-format
+msgid "GnuCash v%s"
+msgstr "GnuCash %s 运行于"
 
 #: features.phtml:94
 msgid ""
@@ -698,27 +950,142 @@ msgid ""
 "contents, in order to fullfill every user's need."
 msgstr ""
 
-#: features.phtml:100
-msgid "Statement Reconciliation"
-msgstr "账单对帐"
+#: search/templates/NMZ.body.php_tmpl:58
+msgid "Grouping"
+msgstr "分组"
 
-#: features.phtml:105
-msgid ""
-"<b>Account reconciliation</b> allows the user to compare the transactions "
-"entered in an account against a bank statement. This operation is very "
-"useful to spot untracked transactions or data entry errors and ensure that "
-"your books match the bank's."
+#: features.phtml:187
+msgid "HBCI Support"
+msgstr "HBCI 支持"
+
+#: 2.6-release-tour.phtml:169
+msgid "Help"
 msgstr ""
 
-#: features.phtml:106
-#, fuzzy
-msgid ""
-"The <span class=\"gnucash\">GnuCash</span> reconcile tool with running "
-"reconciled and cleared balances makes reconciling against bank statements an "
-"easy task."
+#: docs.phtml:42 docs.phtml:154 docs.phtml:264 docs.phtml:387 docs.phtml:409
+#: docs.phtml:427
+msgid "Help Manual"
+msgstr "帮助手册"
+
+#: externals/menu.phtml:12
+msgid "How to help"
+msgstr "如何来帮忙"
+
+#: donate.phtml:39
+msgid "IBAN:"
 msgstr ""
-"对账窗口可以进行对账与结清余额，可以很轻松的让您将您记录的账单与银行的明细进"
-"行对比，并且将其平衡。"
+
+#: externals/menu.phtml:40
+msgid "IRC (Chat)"
+msgstr "IRC (聊天)"
+
+#: develdocs.phtml:13
+msgid ""
+"If you are interested in improving the <span class=\"gnucash\">GnuCash</"
+"span> documentation, you have come to the right place. This page will "
+"provide you with the necessary information to get started."
+msgstr ""
+
+#: features.phtml:175
+msgid ""
+"If you are migrating from other financial software, <span class=\"gnucash"
+"\">GnuCash</span>  can import Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> "
+"<b>QIF</b> files using a practical assistant."
+msgstr ""
+
+#: search/templates/NMZ.tips.php_tmpl:17
+msgid ""
+"If you gained no results or too few results, you can add one\n"
+"or more related keywords with <code\n"
+"class=\"operator\">or</code> operator.  You should get more results.\n"
+"e.g.,"
+msgstr ""
+"如果您没有得到结果或者太少的结果，您可以使用<code class=\"operator\">or</"
+"code>操作符添加一个或多个相关关键字。您应该会得到更多的结果。如，"
+
+#: search/templates/NMZ.tips.php_tmpl:31
+msgid ""
+"If you gained no results or too few results, you can try\n"
+"substring matching."
+msgstr "如果您没得到结果或者太少的结果，您可以尝试子字符串匹配。"
+
+#: search/templates/NMZ.tips.php_tmpl:23
+msgid ""
+"If you gained too many results, you can add one or more\n"
+"related keywords with <code class=\"operator\">and</code>\n"
+"operator. It makes your search more limited. e.g.,"
+msgstr ""
+"如果您得到了太多的结果，您可以使用<code class=\"operator\">and</code>添加一个"
+"或多个关键字。这样的搜索就更局限。如，"
+
+#: search/templates/NMZ.tips.php_tmpl:7
+msgid "If you have trouble with searching, you can check the following tips."
+msgstr "如果您碰到搜索上的问题，您可以检查下列技巧。"
+
+#: search/templates/NMZ.body.php_tmpl:182 search/templates/NMZ.tips.php_tmpl:60
+msgid ""
+"If you want to use <code class=\"operator\">and</code>,\n"
+"<code class=\"operator\">or</code> or <code\n"
+"class=\"operator\">not</code> as ordinary keywords<br>\n"
+"You can surround them respectively with double quotes like <code\n"
+"class=\"operator\">\"...\"</code> or braces like <code\n"
+"class=\"operator\">{...}</code>."
+msgstr ""
+
+#: develdocs.phtml:28
+msgid ""
+"If you wish to review or write <span class=\"gnucash\">GnuCash</span> "
+"documentation, you will need to know xml. Some basic knowledge of the "
+"docbook system may be useful as well"
+msgstr ""
+
+#: sizing.phtml:23
+msgid ""
+"If you've had trouble swimming through that mass of source code, think of it "
+"this way: printed out on paper, and bound into volumes, it would amount to "
+"several dozen copies of Tolstoy's \"War and Peace\", roughly a bookshelf-"
+"width's worth of source code."
+msgstr ""
+"如果您还是对如此巨大的源代码没有概念的话，可以换个角度想想，想想将其打印在纸"
+"上并且装订好，这将相当于数十本托尔斯泰的《战争与和平》，相当于整整一书架宽的"
+"源代码。"
+
+#: download.phtml:36
+msgid ""
+"If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> or "
+"you wish to install a different version than it ships with, you could try to "
+"build <span class=\"gnucash\">GnuCash</span> directly from the source code. "
+"The <span class=\"gnucash\">GnuCash</span> wiki has <a href='http://wiki."
+"gnucash.org/wiki/GnuCash#Installation'>guidelines for several distributions</"
+"a>."
+msgstr ""
+
+#: 2.6-release-tour.phtml:120
+msgid "Improved business module"
+msgstr ""
+
+#: 2.6-release-tour.phtml:129
+msgid ""
+"Improved invoice and bill handling: Post, print, or duplicate multiple items "
+"directly from a search results list"
+msgstr ""
+
+#: search/templates/NMZ.body.php_tmpl:155
+msgid ""
+"In any queries, Namazu ignores case distinctions of\n"
+"alphabet characters; i.e. Namazu does\n"
+"case-insensitive pattern matching."
+msgstr ""
+
+#: 2.6-release-tour.phtml:84
+msgid ""
+"In the General tab of the <span class=\"gnucash\">GnuCash</span> Preferences "
+"is now possible to set a timeout for the \"Save changes on closing\" window. "
+"If enabled, the \"Save changes on closing\" question will only wait a "
+"limited number of seconds for an answer. If the user didn't answer within "
+"that time, the changes will be saved automatically and the question window "
+"closed."
+msgstr ""
 
 #: features.phtml:111
 msgid "Income/Expense Account Types"
@@ -735,500 +1102,27 @@ msgstr ""
 "式记账功能和所有者权益科目时，这将允许您生成报表，比如损益表，这是普通的系统"
 "无法处理的。"
 
-#: features.phtml:121
-msgid "Small Business Accounting Features"
-msgstr "小型企业会计功能"
-
-#: features.phtml:124
+#: index.phtml:72
 #, fuzzy
-msgid ""
-"Simplify managing a small business with <b>Customer</b> and <b>Vendor</b> "
-"tracking, <b>Jobs</b>, <b>Invoicing</b> and <b>Bill</b> Payment, and <b>Tax</"
-"b> and <b>Billing Terms</b>."
-msgstr ""
-"简化了小型企业的管理，包括客户和供应商跟踪、开发票、账单，以及税和账单术语。"
+msgid "Info and development"
+msgstr "开发人员信息"
 
-#: features.phtml:127
-msgid ""
-"Using A/Receivable and A/Payable accounts you can even manage <b>payrolls</"
-"b> for your employees."
-msgstr ""
+#: externals/menu.phtml:6
+msgid "Information"
+msgstr "信息"
 
-#: features.phtml:130
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> gives you also a tool to manage your "
-"business' <b>budget</b> so that you can easily plan your financial strategy."
-msgstr ""
+#: search/templates/NMZ.body.php_tmpl:96
+msgid "Inside matching"
+msgstr "中间匹配"
 
-#: features.phtml:136
-msgid "Multiple Currencies"
-msgstr "多国货币"
-
-#: features.phtml:140
-msgid ""
-"Different accounts can be denominated in different currencies. Currency "
-"movements between accounts are fully balanced when double-entry is enabled."
-msgstr ""
-"不同的科目可以使用不同的货币。当复式记账启用之后，资金在不同货币的科目见流动"
-"会完全的保持平衡。"
-
-#: features.phtml:146
-msgid "Stock/Mutual Fund Portfolios"
-msgstr "股票、基金投资组合"
-
-#: features.phtml:149
-msgid ""
-"Track stocks individually (one per account) or in portfolio of accounts (a "
-"group of accounts that can be displayed together)."
-msgstr ""
-"跟踪一支股票 (每个科目一个)，或在一个组合科目中 (一组科目可以同时显示)。"
-
-#: features.phtml:154
-msgid "Online Stock &amp; Mutual Fund Quotes"
-msgstr "在线股票、基金报价查询"
-
-#: features.phtml:157
-msgid ""
-"Get Stock &amp; Mutual Fund quotes from various web sites, update portfolio "
-"automatically. Additional pricing sources are added regularly."
-msgstr ""
-"从各种网站取得股票和基金的报价，自动更新组合投资的信息。并且，会定期的添加额"
-"外的价格来源。"
-
-#: features.phtml:160
-msgid "Data storage and exchange features"
-msgstr ""
-
-#: features.phtml:164
-msgid "Database support"
-msgstr ""
-
-#: features.phtml:166
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> by default stores data in an <b>xml</"
-"b> format. Starting with version 2.4, <span class=\"gnucash\">GnuCash</span> "
-"financial data can be stored in a <b>SQL database</b> using <b>SQLite3</b>, "
-"<b>MySQL</b> or <b>PostgreSQL</b>."
-msgstr ""
-
-#: features.phtml:171
-#, fuzzy
-msgid "QIF and OFX Import"
-msgstr "OFX 导入"
-
-#: features.phtml:174
-msgid ""
-"If you are migrating from other financial software, <span class=\"gnucash"
-"\">GnuCash</span>  can import Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> "
-"<b>QIF</b> files using a practical assistant."
-msgstr ""
-
-#: features.phtml:177
-#, fuzzy
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> is also the first free software "
-"application to support the <b>OFX</b> (Open Financial Exchange) protocol "
-"that many banks and financial services are starting to use."
-msgstr ""
-"GnuCash 是第一个支持开放金融信息交换(Open Financial Exchange)协议的免费的软"
-"件，现在很多银行和金融机构都开始使用 OFX 这种格式的数据文件了。"
-
-#: features.phtml:180
-msgid ""
-"A transaction matching system ensures that duplicate transactions are "
-"accurately recognized and automatically deleted during file import."
-msgstr ""
-
-#: features.phtml:186
-msgid "HBCI Support"
-msgstr "HBCI 支持"
-
-#: features.phtml:189
-#, fuzzy
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> is the first free software "
-"application to support the German <b>Home Banking Computer Information</b> "
-"protocol, allowing German users to perform statement download and initiate "
-"bank transfers and direct debits."
-msgstr ""
-"GnuCash 也是第一个支持德国家庭银行业务处理计算机信息(Home Banking Computre "
-"Information)协议，允许德国用户下载和发起银行转账交易以及直接付款。"
-
-#: features.phtml:197
-msgid "Multiplatform"
-msgstr ""
-
-#: features.phtml:200
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> runs on many different operating "
-"systems including <b>Windows</b>, <b>MacOSX</b> and <b>Linux</b>."
-msgstr ""
-
-#: features.phtml:205
-msgid "Localization"
-msgstr "本地化"
-
-#: features.phtml:208
-#, fuzzy
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> handles internationalized dates and "
-"currencies. The application's menus and popups have been translated to 21 "
-"languages, including Chinese, Danish, French, German, Hungarian, Italian, "
-"Japanese, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Turkish, "
-"Ukrainian, and British English. Documentation is available in English, "
-"French, Portuguese and Spanish."
-msgstr ""
-"处理国际化的日期和货币。GnuCash 菜单和选项已经被翻译成 21 种语言，包括了中"
-"文、丹麦语、法语、德语、匈牙利语、意大利语、日语、挪威语、葡萄牙语、俄语、西"
-"班牙语、瑞典语、土耳其语、乌克兰语和英国英语及美国英语。而文档也翻译成了英"
-"语、法语、葡萄牙语和西班牙语。"
-
-#: features.phtml:213
-msgid "Transaction Finder"
-msgstr "交易搜索"
-
-#: features.phtml:216
-msgid ""
-"A powerful transaction query dialogue can help you quickly locate a needle "
-"in a haystack."
-msgstr "强大的交易查询对话框可以帮助您定位，大海捞针不再困难。"
-
-#: features.phtml:221
-msgid "Check Printing"
-msgstr "支票打印"
-
-#: features.phtml:224
-msgid ""
-"Checks may be printed in standard formats on common check stocks. A "
-"customization GUI allows custom check layouts to be developed."
-msgstr ""
-"支票可以用标准格式打印在通用的支票上。可定制图形界面允许要打印的定制的支票布"
-"局。"
-
-#: features.phtml:229
-#, fuzzy
-msgid "Mortgage &amp; Loan Repayment Assistant"
-msgstr "按揭贷款及贷款还款向导"
-
-#: features.phtml:232
-msgid ""
-"A guided dialogue for setting up loan payments as scheduled transactions."
-msgstr "有一个向导式的对话框，用以建立以计划的交易的形式存在的贷款还款。"
-
-#: features.phtml:238
-#, fuzzy
-msgid "User Manual and Help"
-msgstr "新用户手册和帮助"
-
-#: features.phtml:241
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> is very well documented: along the "
-"application <b>Manual</b>, new users can take full advantage of the "
-"<b>Tutorial and Concepts guide</b>. This document gives background "
-"information on accounting principles and how they are reflected in <span "
-"class=\"gnucash\">GnuCash</span> with many practical examples described step "
-"by step."
-msgstr ""
-
-#: docs.phtml:3 externals/menu.phtml:23 externals/menu.phtml:30
-msgid "Documentation"
-msgstr "文档"
-
-#: docs.phtml:4
-#, fuzzy
-msgid "Browse documentation online"
-msgstr "每夜文档构建"
-
-#: docs.phtml:5
-#, fuzzy
-msgid "Download documentation as PDF"
-msgstr "文档"
-
-#: docs.phtml:6
-#, fuzzy
-msgid "Download documentation as epub"
-msgstr "文档"
-
-#: docs.phtml:7
-msgid "Download documentation as mobipocket"
-msgstr ""
-
-#: docs.phtml:15
-#, fuzzy
-msgid "GnuCash Documentation"
-msgstr "早期的 GnuCash 的文档"
-
-#: docs.phtml:17
-#, fuzzy
-msgid ""
-"There are two major <span class=\"gnucash\">GnuCash</span> documentation "
-"packages to help users:"
-msgstr "下面是安装 GnuCash 到一些较流行的 Linux 发布版的方法："
-
-#: docs.phtml:19
-#, fuzzy
-msgid "The Help Manual"
-msgstr "帮助手册"
-
-#: docs.phtml:20
-#, fuzzy
-msgid "The Tutorial and Concepts Guide"
-msgstr "概念指南"
-
-#: docs.phtml:23
-#, fuzzy
-msgid ""
-"The <b>Help Manual</b> is designed to be a quick reference of how to "
-"accomplish specific tasks and how to use the features in <span class="
-"\"gnucash\">GnuCash</span>. The <b>Concepts Guide</b> is designed to be an "
-"in depth guide to the concepts behind using <span class=\"gnucash\">GnuCash</"
-"span> with a tutorial to show how to put those concepts into practice."
-msgstr ""
-"《帮助手册》是一个关于如何完成特定任务以及如何使用 GnuCash 某项功能的快速参"
-"考。《概念指南》是使用 GnuCash 背后更深层次的概念，包括了一个教程用以显示如何"
-"将这些概念用于实际。"
-
-#: docs.phtml:25
-#, fuzzy
-msgid ""
-"Additionally, you can talk to someone via IRC at <i>irc.gnome.org</i> "
-"channel <b>#gnucash</b> about your question. Another resource is the <a href="
-"\"http://wiki.gnucash.org/wiki/\">English</a> or <a href=\"http://linuxwiki."
-"de/GnuCash\">Deutsch</a> <span class=\"gnucash\">GnuCash</span> wikis."
-msgstr ""
-"此外，您也可以在 irc.gnome.org 频道“#gnucash”中找个人问您的问题。其它的资源还"
-"有<a href='http://wiki.gnucash.org/wiki/'>English</a> 或 <a href='http://"
-"linuxwiki.de/GnuCash'>Deutsch</a> 的 GnuCash 的 Wiki。Wiki 是一个交互性的网"
-"站，注册的用户可以在那里提问或者回答问题。"
-
-#: docs.phtml:27
-msgid ""
-"You can also send an email to the <a href=\"mailto:gnucash-user@gnucash.org"
-"\">gnucash-user</a> mailing list if you cannot find a satisfactory answer to "
-"your question within either the <b>Help Manual</b> or the <b>Tutorial and "
-"Concepts Guide</b>. We <b>want</b> feedback from you, it is also through "
-"your comments that we know how to improve the documentation."
-msgstr ""
-"如果您不能在《帮助手册》或《概念指南》中找到满意答案，请发邮件到 <a "
-"href='mailto:gnucash-user@gnucash.org'>gnucash-user</a> 邮件列表。我们<b>希望"
-"</b>得到您的反馈，只有通过您的评论，我们才能够知道应当如何修改文档。"
-
-#: docs.phtml:30
-msgid ""
-"<span class=\"gnucash\">GnuCash</span>'s documentation has been created by "
-"its community. See the <a href=\"develdocs.phtml\">Writing Documentation "
-"page</a> if you are interested in contributing to this effort."
-msgstr ""
-
-#: docs.phtml:35 docs.phtml:145 docs.phtml:382 docs.phtml:404 docs.phtml:422
-#: docs.phtml:444
-#, fuzzy, php-format
-msgid "GnuCash v%s"
-msgstr "GnuCash %s 运行于"
-
-#: docs.phtml:35
-#, fuzzy
-msgid "(current stable release)"
-msgstr "GnuCash v2.0 (当前稳定版本)"
-
-#: docs.phtml:37
-#, fuzzy
-msgid "Current <em>stable</em> user documentation and developer documentation"
-msgstr "当前不稳定版用户文档和开发者文档"
-
-#: docs.phtml:40 docs.phtml:150
-msgid "Stable"
-msgstr ""
-
-#: docs.phtml:42 docs.phtml:152 docs.phtml:262 docs.phtml:385 docs.phtml:407
-#: docs.phtml:425
-msgid "Help Manual"
-msgstr "帮助手册"
-
-#: docs.phtml:46 docs.phtml:85 docs.phtml:156 docs.phtml:195 docs.phtml:266
-#: docs.phtml:305 docs.phtml:386 docs.phtml:397 docs.phtml:408 docs.phtml:417
-#: docs.phtml:426 docs.phtml:445
-msgid "English"
-msgstr "英语"
-
-#: docs.phtml:57 docs.phtml:96 docs.phtml:167 docs.phtml:206 docs.phtml:277
-#: docs.phtml:316 docs.phtml:388 docs.phtml:410 docs.phtml:430 docs.phtml:437
-#: docs.phtml:446
-msgid "German"
-msgstr ""
-
-#: docs.phtml:68 docs.phtml:107 docs.phtml:178 docs.phtml:217 docs.phtml:288
-#: docs.phtml:327 docs.phtml:390 docs.phtml:399
-msgid "Italian"
-msgstr ""
-
-#: docs.phtml:81 docs.phtml:191 docs.phtml:301 docs.phtml:396 docs.phtml:416
-#: docs.phtml:436
-msgid "Concepts Guide"
-msgstr "概念指南"
-
-#: docs.phtml:118 docs.phtml:228 docs.phtml:338
-msgid "Japanese"
-msgstr ""
-
-#: docs.phtml:139
-msgid ""
-"This is the latest stable release of the <span class=\"gnucash\">GnuCash</"
-"span> documentation. <em>Stable</em> means that this documentation is not "
-"necessarily the most up to date but it works without any problem."
-msgstr ""
-
-#: docs.phtml:145
-#, fuzzy
-msgid "(old stable release)"
-msgstr "稳定版本 (%s)"
-
-#: docs.phtml:147
-#, fuzzy
-msgid "Old <em>stable</em> user documentation and developer documentation"
-msgstr "当前不稳定版用户文档和开发者文档"
-
-#: docs.phtml:249
-#, fuzzy, php-format
-msgid ""
-"This is the old stable release of the <span class=\"gnucash\">GnuCash</span> "
-"documentation, corresponding to the %s release of <span class=\"gnucash"
-"\">GnuCash</span> itself."
-msgstr ""
-"这个页面是 GnuCash 文档项目的大本营。我们的目标是维护一个为 GnuCash 创建高质"
-"量文档的社区。"
-
-#: docs.phtml:255
-msgid "Nightly Documentation Builds"
-msgstr "每夜文档构建"
-
-#: docs.phtml:257
-#, fuzzy
-msgid ""
-"Current <em>unstable</em> user documentation and developer documentation"
-msgstr "当前不稳定版用户文档和开发者文档"
-
-#: docs.phtml:260
-#, fuzzy
-msgid "Unstable"
+#: download.phtml:20
+msgid "Installers"
 msgstr "安装程序"
 
-#: docs.phtml:360
+#: develdocs.phtml:25
 #, fuzzy
-msgid ""
-"Every night a server builds the documentation from the current contents of "
-"the <span class=\"gnucash\">GnuCash</span> subversion repository. This "
-"includes the <b>Developer Documentation</b> from <b>Doxygen</b> and <b>User "
-"Documentation</b> for the current <em>unstable</em> version of <span class="
-"\"gnucash\">GnuCash</span>."
-msgstr ""
-"每晚都会有一个服务器从 GnuCash Subversion的软件库中下载当前的文档内容，并且构"
-"建最新的文档。这包括了从 Doxygen 生成的《开发人员文档》和为当前不稳定版本撰写"
-"的《用户文档》。"
-
-#: docs.phtml:364
-msgid ""
-"<b>NOTE:</b> these documents might not be accessible from time to time "
-"because developers might be working on improvements. However they are the "
-"most up to date reference for <span class=\"gnucash\">GnuCash</span> users."
-msgstr ""
-
-#: docs.phtml:378
-msgid "Older GnuCash Documentation"
-msgstr "早期的 GnuCash 的文档"
-
-#: docs.phtml:380
-#, fuzzy
-msgid ""
-"This section contains all the older <span class=\"gnucash\">GnuCash</span> "
-"documentation. If you are using one of these old versions of <span class="
-"\"gnucash\">GnuCash</span>, it is highly recommended that you upgrade to the "
-"latest stable version."
-msgstr ""
-"这部分包含了所有早期的 GnuCash 的文档。如果您正在使用其中一个早期的版本，那么"
-"非常建议您升级到最新的稳定版本。"
-
-#: docs.phtml:447
-msgid "Spanish"
-msgstr ""
-
-#: docs.phtml:448
-#, fuzzy
-msgid "Portugese"
-msgstr "葡萄牙文"
-
-#: docs.phtml:454
-#, fuzzy
-msgid "Unofficial documentation"
-msgstr "文档"
-
-#: docs.phtml:456
-msgid "Some people have written HOWTO guides or tutorials."
-msgstr ""
-
-#: docs.phtml:459
-msgid "Joe Mack's Tutorial"
-msgstr "Joe Mack 的教程"
-
-#: docs.phtml:461
-#, fuzzy
-msgid "Dave Gilbert's User Guide (Pdf)"
-msgstr "Dave Gilbert 的用户手册 (PDF)"
-
-#: docs.phtml:465
-#, fuzzy
-msgid ""
-"<b>NOTE:</b> the information presented in these sources may or may not be "
-"updated to the most recent version of <span class=\"gnucash\">GnuCash</"
-"span>. If you are interested in doing development work on these documents, "
-"you should contact the original authors."
-msgstr ""
-"有些人写了“如何做”向导或者教程。注意：这些信息来源不一定反映了当前 GnuCash 的"
-"最新版本。如果您对这些文档比较感兴趣，您应当联系其原作者。"
-
-#: viewdoc.phtml:4
-msgid "View document"
-msgstr ""
-
-#: viewdoc.phtml:114
-msgid ""
-"The document requested is not available. The tutorial and concepts guide "
-"will be displayed instead."
-msgstr ""
-
-#: viewdoc.phtml:118
-#, php-format
-msgid ""
-"The document requested is not available for version %s. Version %s will be "
-"displayed instead."
-msgstr ""
-
-#: viewdoc.phtml:122
-msgid ""
-"The document requested is not available in the requested language. The "
-"English version will be displayed instead."
-msgstr ""
-
-#: viewdoc.phtml:126
-#, php-format
-msgid ""
-"It seems your browser doesn't support iframes. To view the requested page in "
-"a separate window, please <a href=\"%s\" target=\"_new\">click here</a>."
-msgstr ""
-
-#: oldnews.phtml:11
-msgid "Older Announcements"
-msgstr "以前的公告"
-
-#: oldnews.phtml:14
-msgid ""
-"This is an archive of announcements that once appeared on the GnuCash home "
-"page."
-msgstr "这是一个公告的存档，曾经出现在 GnuCash 的首页上。"
-
-#: sizing.phtml:3 externals/menu.phtml:54
-msgid "Sizing"
-msgstr "大小"
+msgid "Introduction"
+msgstr "信息"
 
 #: sizing.phtml:14
 #, fuzzy
@@ -1243,27 +1137,133 @@ msgstr ""
 "是一种会计。多年来，GnuCash 从一个小型轻巧的电子账簿，发展到今天相当大，并且"
 "多功能的桌面应用程序。"
 
-#: sizing.phtml:17
+#: 2.6-release-tour.phtml:69
+msgid ""
+"It is now possible to associate to any account a unique color from the edit "
+"account window. This color can then be displayed as account name and account "
+"register tab background easing the lookup of a specific account."
+msgstr ""
+
+#: 2.6-release-tour.phtml:54
+msgid ""
+"It is now possible to link an external file or a location (URL) to a "
+"transaction. This long-requested feature is available through both the "
+"Transaction menu and the transaction's context menu. The files are displayed "
+"in the default viewer for that file type."
+msgstr ""
+
+#: 2.6-release-tour.phtml:107
+msgid ""
+"It is now possible to save the \"Filter By...\" settings for an account "
+"register."
+msgstr ""
+
+#: viewdoc.phtml:126
+#, php-format
+msgid ""
+"It seems your browser doesn't support iframes. To view the requested page in "
+"a separate window, please <a href=\"%s\" target=\"_new\">click here</a>."
+msgstr ""
+
+#: search/templates/NMZ.tips.php_tmpl:56
+msgid ""
+"It's a defect of Namazu. Precision of phrase searching is\n"
+"not 100%, so it cause wrong results occasionally."
+msgstr ""
+
+#: docs.phtml:68 docs.phtml:107 docs.phtml:180 docs.phtml:219 docs.phtml:290
+#: docs.phtml:329 docs.phtml:392 docs.phtml:401
+msgid "Italian"
+msgstr ""
+
+#: docs.phtml:118 docs.phtml:230 docs.phtml:340
+msgid "Japanese"
+msgstr ""
+
+#: search/templates/NMZ.body.php_tmpl:160
+msgid ""
+"Japanese phrases are automatically segmented into\n"
+"morphemes and are handled as <a\n"
+"href=\"#query-phrase\">phrase searching</a>. This process occasionally\n"
+"causes invalid segmentation."
+msgstr ""
+
+#: docs.phtml:461
+msgid "Joe Mack's Tutorial"
+msgstr "Joe Mack 的教程"
+
+#: 2.6-release-tour.phtml:19
+#, fuzzy
+msgid "Jqplot Reports"
+msgstr "报告 Bug"
+
+#: develdocs.phtml:15
+msgid ""
+"Just as the <span class=\"gnucash\">GnuCash</span> application has been "
+"developed over time by volunteers, so too has the documentation been written "
+"by volunteer developers and users to help others learn how <span class="
+"\"gnucash\">GnuCash</span> works. This collaborative effort has resulted in "
+"the creation of two major documents, the <b>Help Manual</b> and the "
+"<b>Tutorial and Concepts Guide</b>."
+msgstr ""
+
+#: externals/header.phtml:117
+msgid "Language"
+msgstr "语言"
+
+#: externals/menu.phtml:52
+msgid "Language Translations"
+msgstr "语言翻译"
+
+#: sizing.phtml:58 sizing.phtml:397
+msgid "Languages"
+msgstr "语言"
+
+#: search/templates/NMZ.body.php_tmpl:166
+msgid ""
+"Letters, numbers or parts of symbols (duplicated in\n"
+"ASCII) which are defined in JIS X 0208 (Japanese\n"
+"Industrial Standards) are handled as ASCII characters."
+msgstr ""
+
+#: search/templates/NMZ.head.php_tmpl:65
+msgid "Lists to Search"
+msgstr "要搜索的列表"
+
+#: features.phtml:206
+msgid "Localization"
+msgstr "本地化"
+
+#: index.phtml:43
+msgid ""
+"Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? "
+"Try the"
+msgstr ""
+
+#: search/templates/NMZ.head.php_tmpl:4
+msgid "Mailing List Search"
+msgstr "邮件列表搜索"
+
+#: index.phtml:43 externals/menu.phtml:33
+msgid "Mailing Lists"
+msgstr "邮件列表"
+
+#: features.phtml:17 features.phtml:24
+#, fuzzy
+msgid "Main features"
+msgstr "特色"
+
+#: download.phtml:32
 #, fuzzy
 msgid ""
-"<span class=\"gnucash\">GnuCash</span> currently consists of over a third of "
-"a million lines of code spread over more than a thousand files.  It has been "
-"translated into twenty-three languages and credits over 139 authors and "
-"contributors."
+"Mandriva users can install <span class=\"gnucash\">GnuCash</span> through "
+"the Software Management in the Mandriva Linux Control Center."
 msgstr ""
-"GnuCash 目前包含了一千多个文件，三十多万行代码。而且，已经被翻译成 36 种语"
-"言，并且有 139 名作者和贡献者贡献了自己的力量。"
+"Mandriva 的用户可以通过 Mandriva Linux 控制中心里面的软件管理来安装 GnuCash。"
 
-#: sizing.phtml:23
-msgid ""
-"If you've had trouble swimming through that mass of source code, think of it "
-"this way: printed out on paper, and bound into volumes, it would amount to "
-"several dozen copies of Tolstoy's \"War and Peace\", roughly a bookshelf-"
-"width's worth of source code."
+#: features.phtml:56
+msgid "Many options to <b>customize</b> the appearance and the display style"
 msgstr ""
-"如果您还是对如此巨大的源代码没有概念的话，可以换个角度想想，想想将其打印在纸"
-"上并且装订好，这将相当于数十本托尔斯泰的《战争与和平》，相当于整整一书架宽的"
-"源代码。"
 
 #: sizing.phtml:26
 #, fuzzy
@@ -1278,36 +1278,86 @@ msgstr ""
 "的代码。工具(如 Glade、g-wrap)是可以自动产生很多行代码，但我可没有包括那些。"
 "每一行这里统计的，都是由人手动录入、编辑、缩进、调整了很多次的。"
 
-#: sizing.phtml:29
-msgid ""
-"Given that we have about 400 outstanding bugs in bugzilla, that works out to "
-"about one bug per thousand lines of code, or one bug per 50 pages of "
-"printout.  This bug count is actually not atypical for software projects; "
-"its near the norm."
-msgstr ""
-"基于我们的 Bugzilla 系统中有400个突出的 Bug，可以算出每一千行才会有一个 Bug，"
-"或者可以理解为每打印出50页代码才有一个 Bug。在软件项目中，这样的数量实际上并"
-"不特殊，可以说接近正常。"
+#: index.phtml:25
+msgid "More downloads (Source, Development,...)"
+msgstr "更多下载 (源代码、开发版本...)"
 
-#: sizing.phtml:32
+#: features.phtml:230
+#, fuzzy
+msgid "Mortgage &amp; Loan Repayment Assistant"
+msgstr "按揭贷款及贷款还款向导"
+
+#: download.phtml:27
 #, fuzzy
 msgid ""
-"The table below shows some historical lines-of-code and number-of-files "
-"metrics for the <span class=\"gnucash\">GnuCash</span> development project.  "
-"Note that not all of the code is counted: for instance, the Makefiles and "
-"configure.in and autogen.sh are not counted. Also, files that are "
-"automatically generated are not counted, nor are files that have been "
-"'borrowed' from other projects. Also not counted are experimental files, "
-"miscellaneous perl scripts, various converters, addons and utilities.  "
-"Finally, <tt>glade</tt> files are not counted, although large parts of the "
-"overall GUI are described in <tt>glade</tt> files."
+"Most linux distributions come bundled with a version of <span class=\"gnucash"
+"\">GnuCash</span>, though it's not always the most recent version and it may "
+"not have been installed by default. Still it is recommended to use the <span "
+"class=\"gnucash\">GnuCash</span> version that comes with your distribution."
 msgstr ""
-"下列的表中显示了 GnuCash 开发项目一些历史的代码行和文件数目的数据。注意不是所"
-"有的代码都被统计了：比如说，Makefile 和 Configure.in 以及 autogen.sh 都不会记"
-"录在内。还有所有自动生成的代码都不会统计在内。也不包括从其它项目中借来的代"
-"码。而且还没有记录试验用的文件、辅助的 Perl 脚本、各种转换器、插件以及一些工"
-"具。最后，<tt>glade</tt>也没有被统计，虽然绝大多数的界面都定义在了<tt>glade</"
-"tt>文件中。"
+"大多数 Linux 发行版都会包括了 GnuCash 的一个版本，不过它并不总是最新的版本，"
+"而且也不一定会默认的安装上。即使这样，仍旧建议您使用随您的 Linux 发布版一起发"
+"布的 GnuCash 版本。"
+
+#: features.phtml:198
+msgid "Multiplatform"
+msgstr ""
+
+#: features.phtml:136
+msgid "Multiple Currencies"
+msgstr "多国货币"
+
+#: search/templates/NMZ.body.php_tmpl:45
+msgid "NOT query"
+msgstr "NOT 查询"
+
+#: search/templates/NMZ.body.php_tmpl:171
+msgid ""
+"Namazu can handle a term which contains symbols like\n"
+"<code>TCP/IP</code>.  Since this method of handling isn't complete,\n"
+"you can also describe the term as <code>TCP and IP</code> instead of\n"
+"<code>TCP/IP</code>, but it may cause noisy results."
+msgstr ""
+
+#: index.phtml:42
+msgid "Need Help?"
+msgstr ""
+
+#: externals/menu.phtml:61
+#, fuzzy
+msgid "New Book: GnuCash 2.4 Small Business Accounting"
+msgstr "小型企业会计"
+
+#: 2.6-release-tour.phtml:33
+msgid "New preconfigured reports management system"
+msgstr ""
+
+#: 2.6-release-tour.phtml:154
+msgid "New preference system"
+msgstr ""
+
+#: index.phtml:81
+msgid "News"
+msgstr "新闻"
+
+#: externals/menu.phtml:10
+msgid "News Feed"
+msgstr "新闻供稿"
+
+#: develdocs.phtml:69
+msgid ""
+"Next attach your patch to a bug report against the documentation component "
+"for the <span class=\"gnucash\">GnuCash</span> project in <a href='http://"
+"bugzilla.gnome.org/'>Gnome's bugzilla database</a> and send an email to <a "
+"href='mailto:gnucash-devel@gnucash.org'>gnucash-devel</a> mailing list to "
+"inform other developers on your work. See also <a href='http://wiki.gnucash."
+"org/wiki/Bugzilla'>GnuCash' wiki page on bugzilla</a> for more details about "
+"patch submission."
+msgstr ""
+
+#: docs.phtml:257
+msgid "Nightly Documentation Builds"
+msgstr "每夜文档构建"
 
 #: sizing.phtml:35
 msgid ""
@@ -1331,173 +1381,524 @@ msgstr ""
 "了避免人为的夸大代码的数量(这就是为什么glade不被统计的原因，因为它们是自动产"
 "生的而且很大)。"
 
+#: 2.6-release-tour.phtml:92
+msgid ""
+"Note that <span class=\"gnucash\">GnuCash</span> is still a single-user "
+"program and that the database backends are still used only as a data store."
+msgstr ""
+
+#: index.phtml:75
+msgid ""
+"Note that GnuCash for Android is not a port of the GnuCash program to "
+"Android."
+msgstr ""
+
+#: 2.6-release-tour.phtml:158
+msgid ""
+"Note that window position, column sizes, and sort orders will not be "
+"migrated from GConf. Those settings will revert to the default the first "
+"time you use Gnucash 2.6 or later, but they will be saved once you've reset "
+"them. "
+msgstr ""
+
+#: features.phtml:167
+msgid ""
+"Note this feature is considered experimental.  It works for most of the "
+"common use cases but some corner cases have been reported to result in data "
+"loss. The <span class=\"gnucash\">GnuCash</span> developers fix each issue "
+"as it gets reported. There is however no full test coverage so there may "
+"still be scenarios left that result in data loss."
+msgstr ""
+
+#: search/templates/NMZ.body.php_tmpl:152
+msgid "Notes"
+msgstr "说明"
+
+#: search/templates/NMZ.body.php_tmpl:33
+msgid "OR query"
+msgstr "OR 查询"
+
+#: docs.phtml:149
+#, fuzzy
+msgid "Old <em>stable</em> user documentation and developer documentation"
+msgstr "当前不稳定版用户文档和开发者文档"
+
+#: download.phtml:64
+#, fuzzy, php-format
+msgid "Old Stable release (%s)"
+msgstr "稳定版本 (%s)"
+
+#: oldnews.phtml:11
+msgid "Older Announcements"
+msgstr "以前的公告"
+
+#: index.phtml:96
+#, fuzzy
+msgid "Older Announcements ..."
+msgstr "以前的公告"
+
+#: docs.phtml:380
+msgid "Older GnuCash Documentation"
+msgstr "早期的 GnuCash 的文档"
+
+#: 2.6-release-tour.phtml:128
+msgid "One click duplication of invoices"
+msgstr ""
+
+#: features.phtml:154
+msgid "Online Stock &amp; Mutual Fund Quotes"
+msgstr "在线股票、基金报价查询"
+
+#: 2.6-release-tour.phtml:87
+msgid "Open datafile read-only"
+msgstr ""
+
+#: download.phtml:77
+msgid "Other"
+msgstr "其它版本"
+
+#: features.phtml:20 features.phtml:194
+msgid "Other goodies"
+msgstr ""
+
+#: externals/menu.phtml:68
+msgid ""
+"Our own developer Christian Stimming has been contributing to this book as a "
+"reviewer, and we can wholeheartly recommend the outcome of this fruitful "
+"collaboration. Feel free to have a look at this book over at <a href="
+"\"http://link.packtpub.com/6FDDUr\">packtpub.com</a>, and, best of all, the "
+"publisher has committed to allocate some percentage of the book sales back "
+"to the GnuCash project. Have fun with this book!"
+msgstr ""
+
+#: donate.phtml:35
+msgid "Owner:"
+msgstr ""
+
+#: search/templates/NMZ.body.php_tmpl:69
+msgid "Phrase searching"
+msgstr "短语搜索"
+
+#: features.phtml:83
+msgid "Piecharts"
+msgstr ""
+
+#: develdocs.phtml:72
+msgid ""
+"Please let other writers know which section you wish to tackle. Please "
+"forward this to <a href='mailto:gnucash-devel@gnucash.org'>gnucash-devel</a> "
+"so that people can say 'hey I'm doing that already' or 'go ahead and do it'."
+msgstr ""
+"请告诉其他作者您正在撰写哪一个部分。请转发给 <a href='mailto:gnucash-"
+"devel@gnucash.org'>gnucash-devel</a>，这样人们就可以说“嘿，我已经做了那个"
+"了”，或者“好吧，去做吧”。"
+
+#: features.phtml:90
+msgid "Portfolio Valuation"
+msgstr ""
+
+#: docs.phtml:450
+#, fuzzy
+msgid "Portugese"
+msgstr "葡萄牙文"
+
+#: search/templates/NMZ.body.php_tmpl:94
+msgid "Prefix matching"
+msgstr "前缀匹配"
+
+#: features.phtml:89
+msgid "Profit &amp; Loss"
+msgstr ""
+
+#: externals/menu.phtml:22
+msgid "Program"
+msgstr ""
+
+#: donate.phtml:36
+#, fuzzy
+msgid "Purpose: Donation"
+msgstr "捐款"
+
+#: features.phtml:172
+#, fuzzy
+msgid "QIF and OFX Import"
+msgstr "OFX 导入"
+
+#: index.phtml:58
+msgid "QIF/OFX/HBCI Import, Transaction Matching"
+msgstr "QIF、OFX、HBCI 导入数据以及交易匹配"
+
+#: search/templates/NMZ.head.php_tmpl:28 search/templates/NMZ.body.php_tmpl:4
+msgid "Query"
+msgstr "查询"
+
+#: download.phtml:33
+#, fuzzy
+msgid ""
+"Redhat and CentOS don't have <span class=\"gnucash\">GnuCash</span> in their "
+"repositories by default. It can be installed however from the third-party "
+"Epel repository. For more details on configuring this additional software "
+"repository for your setup, see"
+msgstr ""
+"Redhat 和 CentOS 在它们的软件库里面默认没有 GnuCash。但是，它可以通过第三方的"
+"软件库 Epel 来进行安装。如果需要配置这个额外的软件库用以安装的更多信息，请见 "
+
+#: search/templates/NMZ.body.php_tmpl:104
+msgid "Regular expressions"
+msgstr "正则表达式"
+
+#: 2.6-release-tour.phtml:161
+msgid "Relicensing"
+msgstr ""
+
+#: 2.6-release-tour.phtml:131
+msgid "Reorder invoice entries in the invoice window"
+msgstr ""
+
+#: 2.6-release-tour.phtml:49
+msgid ""
+"Reports and invoices can be exported directly in a PDF file without going "
+"thru the Print window."
+msgstr ""
+
+#: index.phtml:57 features.phtml:75
+msgid "Reports, Graphs"
+msgstr "报告、图表"
+
+#: externals/header.phtml:6
+msgid "Request or vote enhancements for GnuCash"
+msgstr ""
+
+#: develdocs.phtml:79
+msgid "Reviewers"
+msgstr "评论人员"
+
+#: 2.6-release-tour.phtml:105
+msgid "Save \"Filter By\" settings"
+msgstr ""
+
+#: 2.6-release-tour.phtml:115
+msgid ""
+"Save the \"Filter By...\" settings by enabling the \"Save Filter\" checkbox."
+msgstr ""
+
+#: features.phtml:84
+msgid "Scatter plots"
+msgstr ""
+
+#: index.phtml:59 features.phtml:62
+msgid "Scheduled Transactions"
+msgstr "计划的交易"
+
+#: externals/menu.phtml:11
+msgid "Screenshots, Features"
+msgstr "屏幕截图、特色"
+
+#: externals/menu.phtml:36
+msgid "Search"
+msgstr "搜索"
+
+#: search/templates/NMZ.head.php_tmpl:30
+msgid "Search!"
+msgstr "搜索！"
+
+#: externals/footer.phtml:10
+#, fuzzy
+msgid "Server &amp; email outage reports to:"
+msgstr "服务器或电子邮件故障请报告："
+
+#: search/templates/NMZ.foot.php_tmpl:13
+msgid "Server &amp; email outage reports to: "
+msgstr "服务器或电子邮件故障请报告："
+
+#: features.phtml:124
+#, fuzzy
+msgid ""
+"Simplify managing a small business with <b>Customer</b> and <b>Vendor</b> "
+"tracking, <b>Jobs</b>, <b>Invoicing</b> and <b>Bill</b> Payment, and <b>Tax</"
+"b> and <b>Billing Terms</b>."
+msgstr ""
+"简化了小型企业的管理，包括客户和供应商跟踪、开发票、账单，以及税和账单术语。"
+
+#: search/templates/NMZ.body.php_tmpl:6
+msgid "Single term query"
+msgstr "一个词的查询"
+
+#: sizing.phtml:3 externals/menu.phtml:54
+msgid "Sizing"
+msgstr "大小"
+
+#: features.phtml:121
+msgid "Small Business Accounting Features"
+msgstr "小型企业会计功能"
+
+#: index.phtml:56
+msgid "Small-Business Accounting"
+msgstr "小型企业会计"
+
+#: docs.phtml:458
+msgid "Some people have written HOWTO guides or tutorials."
+msgstr ""
+
+#: search/templates/NMZ.head.php_tmpl:48
+msgid "Sort"
+msgstr "排序"
+
+#: index.phtml:22
+msgid "Source"
+msgstr "源代码"
+
+#: externals/menu.phtml:49
+msgid "Source Docs"
+msgstr "源文档"
+
+#: download.phtml:38
+msgid "Source code"
+msgstr "源代码"
+
+#: donate.phtml:24
+msgid "Sourceforge tip jar"
+msgstr ""
+
+#: docs.phtml:449
+msgid "Spanish"
+msgstr ""
+
+#: docs.phtml:40 docs.phtml:152
+msgid "Stable"
+msgstr ""
+
+#: download.phtml:15
+#, php-format
+msgid "Stable release (%s)"
+msgstr "稳定版本 (%s)"
+
+#: features.phtml:100
+msgid "Statement Reconciliation"
+msgstr "账单对帐"
+
+#: index.phtml:55
+msgid "Stock/Bond/Mutual Fund Accounts"
+msgstr "股票、债券、基金账户"
+
+#: features.phtml:146
+msgid "Stock/Mutual Fund Portfolios"
+msgstr "股票、基金投资组合"
+
+#: externals/header.phtml:4
+msgid "Subscribe to RSS feed"
+msgstr ""
+
+#: search/templates/NMZ.body.php_tmpl:88
+msgid "Substring matching"
+msgstr "子字符串匹配"
+
+#: search/templates/NMZ.body.php_tmpl:178
+msgid ""
+"Substring matching and field-specified searching takes\n"
+"more time than other methods."
+msgstr ""
+
+#: search/templates/NMZ.body.php_tmpl:98
+msgid "Suffix matching"
+msgstr "后缀匹配"
+
+#: externals/menu.phtml:28
+#, fuzzy
+msgid "Support"
+msgstr "HBCI 支持"
+
+#: externals/header.phtml:5
+msgid "Support the GnuCash project with a donation"
+msgstr ""
+
 #: sizing.phtml:38
 msgid "Table 1.  Historical Development Stats"
 msgstr "表一：历史开发状态图"
-
-#: sizing.phtml:42
-msgid "Version"
-msgstr "版本"
-
-#: sizing.phtml:49 sizing.phtml:357
-msgid "misc app"
-msgstr "其它应用"
-
-#: sizing.phtml:56 sizing.phtml:392
-msgid "internal txt"
-msgstr "内部文本文件"
-
-#: sizing.phtml:57
-msgid "Total"
-msgstr "合计"
-
-#: sizing.phtml:58 sizing.phtml:397
-msgid "Languages"
-msgstr "语言"
-
-#: sizing.phtml:59 sizing.phtml:402
-msgid "Author Credits"
-msgstr "贡献的作者"
-
-#: sizing.phtml:318
-msgid "Each cell displays the following:"
-msgstr "每个单元格显示如下信息：<br />"
-
-#: sizing.phtml:322
-msgid ""
-"number of *c and *.h and *.scm files (KLOCS in *.c + KLOCS in *.h + KLOCS in "
-"*.scm).  If there are no *.scm files in the directory, then only (KLOCS in *."
-"c + KLOCS in *.h) are displayed.  If there is only one number in the "
-"parenthesis, it is the approriate KLOC count for that statistic."
-msgstr ""
-"\"*.c, *.h, *.scm\"文件的数量 (*.c 的代码量 + *.h 的代码量 + *.scm 的代码"
-"量)，以千行为单位计算代码量。如果目录中没有*.scm文件，就不显示最后一部分“+ *."
-"scm 的代码量”。如果括号中只有一个数字，那么这是一个适于该相的统计数字。"
-
-#: sizing.phtml:326
-msgid ""
-"where KLOC == kilo-lines-of-code, as reported by <code>wc</code>. As noted "
-"above, wc is not a terribly good code metric, but its what we have handy."
-msgstr ""
-"KLOC 是指 千行代码数，由<code>wc</code>报告。如上述说明的一样，<code>wc</"
-"code>虽然不是一个好的度量标准，但是这是我们手里现有的。"
 
 #: sizing.phtml:329
 msgid "Table Column Legend"
 msgstr "表栏说明"
 
-#: sizing.phtml:333
-msgid ""
-"Contents of the src/engine and the include directories. The engine was split "
-"out from the motif code in version 1.1. The data storage backend (file-io, "
-"sql) was split out in the course of version 1.5"
+#: donate.phtml:51
+msgid "Thank you for your support!"
 msgstr ""
-"src/engine 及 include 目录的内容。版本 1.1 中，引擎从 motif 中分离了。数据存"
-"储后台 (文件IO、SQL) 从版本 1.5 中分割出去了。"
 
-#: sizing.phtml:337
+#: docs.phtml:23
+#, fuzzy
 msgid ""
-"Contents of the src/backend directory (version 1.7 and later) or of src/"
-"engine/file, src/engine/sql (version 1.6 and earlier)"
+"The <b>Help Manual</b> is designed to be a quick reference of how to "
+"accomplish specific tasks and how to use the features in <span class="
+"\"gnucash\">GnuCash</span>. The <b>Concepts Guide</b> is designed to be an "
+"in depth guide to the concepts behind using <span class=\"gnucash\">GnuCash</"
+"span> with a tutorial to show how to put those concepts into practice."
 msgstr ""
-"src/backend 目录(版本 1.7 或以后)、src/engine/file、src/engine/sql (版本1.6或"
-"更早)的内容。"
+"《帮助手册》是一个关于如何完成特定任务以及如何使用 GnuCash 某项功能的快速参"
+"考。《概念指南》是使用 GnuCash 背后更深层次的概念，包括了一个教程用以显示如何"
+"将这些概念用于实际。"
 
-#: sizing.phtml:341
+#: features.phtml:46
 msgid ""
-"Contents of the src/register directory (version 1.6 and earlier) or src/"
-"register/register-core (version 1.7 and later).  The register was split out "
-"as a separate component from the motif code in version 1.1. As can be seen "
-"from the stats, the register code has been fairly stable. At version 1.7 and "
-"later, this cell shows a second count: the number of lines of code in src/"
-"register/register-gnome (previously counted as part of gnome)"
+"The <span class=\"gnucash\">GnuCash</span> checkbook-style register provides "
+"a custom, convenient and familiar interface to entering financial "
+"transactions."
 msgstr ""
-"src/register 目录(版本 1.6或更早) 或 src/register/register-core (版本 1.7 或"
-"以后) 的内容。账簿在版本 1.1 时从 motif 中分离出来。就像从统计中所看到的一"
-"样，账簿代码已经趋于稳定。在版本 1.7 和以后，这个单元格显示了第二个数字：即 "
-"src/register/register-gnome (之前作为 gnome 的一部分计算) 中的代码行数。"
 
-#: sizing.phtml:345
+#: develdocs.phtml:17
 msgid ""
-"*.c, *.h files in the src directory only (version 1.6 and earlier) or src/"
-"register/ledger-core (version 1.7 and later)"
+"The <span class=\"gnucash\">GnuCash</span> community welcomes assistance in "
+"maintaining and improving both the program and its documentation. If you are "
+"interested in helping write, edit or translate <span class=\"gnucash"
+"\">GnuCash</span>'s documentation, this page gives guidance on how to get "
+"set up to join the effort."
 msgstr ""
-"只在 src 目录(版本1.6或更早)或 src/register/ledger-core (版本1.7或以后) 下的 "
-"*.c 和 *.h 文件。"
 
-#: sizing.phtml:349
+#: develdocs.phtml:20
 msgid ""
-"Contents of the src/motif directory (version 1.2 and earlier).  The motif "
-"version of the code was discontinued after version 1.2, after most of the "
-"non-gui code was moved to either the engine, the register or the ledger."
+"The <span class=\"gnucash\">GnuCash</span> documentation can be viewed and "
+"downloaded from the <a href=\"docs.phtml\">Documentation page</a>."
 msgstr ""
-"src/motif 目录 (版本 1.2 或更早)下的内容。在版本 1.2 以后 motif 的代码就不再"
-"继续了，之后大多数非图形界面的代码，或者被移到了 engine，或者被移到了账簿或总"
-"账下。"
 
-#: sizing.phtml:353
+#: develdocs.phtml:27
 msgid ""
-"Contents of src/gnome plus src/register/gnome (version 1.6 and earlier). For "
-"version 1.7 and later, this consists of src/gnome, src/gnome-search and src/"
-"gnome-util"
+"The <span class=\"gnucash\">GnuCash</span> documentation is stored in "
+"<b>xml</b> files. More precisely, it uses the <b>GNOME2 XML docbook system</"
+"b>. This is a relatively flexible system that takes xml files as input and "
+"can generate documentation in several different output formats (html, "
+"pdf,...)."
 msgstr ""
-"src/gnome 和 src/register/gnome (版本1.6或更早)，或者 src/gnome、src/gnome-"
-"search 和 src/gnome-util 目录(版本1.7及以后)下的内容。"
 
-#: sizing.phtml:358
+#: features.phtml:106
+#, fuzzy
 msgid ""
-"Contents of miscellanous application-related directories (version 1.7 and "
-"later): src/app-file, src/app-utils, src/calculation, src/core-utils, src/"
-"gnc-module, src/network-utils, src/tax/us"
+"The <span class=\"gnucash\">GnuCash</span> reconcile tool with running "
+"reconciled and cleared balances makes reconciling against bank statements an "
+"easy task."
 msgstr ""
-"与应用程序相关的一些杂项的目录 (1.7及以后)：src/app-file、src/app-utils、src/"
-"calculation、src/core-utils、src/gnu-module、src/network-utils 和 src/tax/"
-"us。"
+"对账窗口可以进行对账与结清余额，可以很轻松的让您将您记录的账单与银行的明细进"
+"行对比，并且将其平衡。"
 
-#: sizing.phtml:363
-msgid ""
-"Code to import and export various file formats: contents of the src/import-"
-"export directory."
-msgstr "导入/导出各种文件格式的代码：src/import-export 目录下的内容。"
-
-#: sizing.phtml:368
-msgid ""
-"Code to generate reports and graphs: contents of the src/reports directory."
-msgstr "生成报告和图表的代码：src/reports 目录下的内容。"
-
-#: sizing.phtml:373
-msgid ""
-"scheme and guile code in directories src/scm plus src/guile (version 1.6 and "
-"earlier). In version 1.7 and later, much of this code went into reports, "
-"import/export, and into indiovidual modules; thus only miscellaneous code "
-"remains."
+#: 2.6-release-tour.phtml:188
+msgid "The GnuCash developers team"
 msgstr ""
-"scheme 和 guile 的代码。在版本1.6或更早，是在 src/scm 和 src/guile 下；在1.7"
-"或以后，大部分代码进入到了 reports、导入/导出以及进入到独立的模块中了，因此这"
-"里只有一部分代码。"
 
-#: sizing.phtml:378
+#: externals/menu.phtml:65
 msgid ""
-"Code to add small-business features: contents of the src/business directory."
-msgstr "添加的小型企业功能的代码：src/business 目录的内容。"
-
-#: sizing.phtml:383
-msgid ""
-"Code to peform automated regression tests: contents of the src/*/test "
-"directories."
-msgstr "执行自动回归测试的代码：src/*/test 目录下的内容。"
-
-#: sizing.phtml:388
-msgid ""
-"English-language-only user documentation, including on-line help and manual "
-"(html, sgml or xml). For version 1.8.4 and later, the number below the bar "
-"counts the translated, non-english docs (currently de, es, fr, pt_PT).  Both "
-"of these numbers are somewhat hard to count, because of fairly large format "
-"churns, and multiple competing versions."
+"The GnuCash development team received notice about a new book published by "
+"PacktPub, UK:"
 msgstr ""
-"英语文档，包括在线帮助和手册 (html, sgml 或 xml)。对于 1.8.4 及以后，计算了翻"
-"译的、非英语的文档 (包括 de, es, fr, pt_PT)。这些数字很难计算，因为大量的格式"
-"信息以及多种不同的版本。"
+
+#: index.phtml:74
+msgid ""
+"The GnuCash team recommends the GnuCash for Android app. This app allows you "
+"to keep track of your financial transactions on the go for later import into "
+"the desktop version of GnuCash."
+msgstr ""
+
+#: docs.phtml:19
+#, fuzzy
+msgid "The Help Manual"
+msgstr "帮助手册"
+
+#: 2.6-release-tour.phtml:42
+msgid ""
+"The Preconfigured Reports window. You can select and run a preconfigured "
+"report, edit its name and delete it."
+msgstr ""
+
+#: docs.phtml:20
+#, fuzzy
+msgid "The Tutorial and Concepts Guide"
+msgstr "概念指南"
+
+#: features.phtml:54
+msgid ""
+"The ability to display <b>multiple accounts</b> in a single register window"
+msgstr ""
+
+#: features.phtml:51
+msgid "The ability to enter <b>split transactions</b>"
+msgstr ""
+
+#: features.phtml:52
+msgid ""
+"The ability to mark a transaction as <b>cleared</b> or <b>reconciled</b>"
+msgstr ""
+
+#: develdocs.phtml:82
+msgid ""
+"The best way of retaining comments about docs in an easy to find way for "
+"everyone would be to use <a href='http://bugzilla.gnome.org/'>bugzilla.gnome."
+"org</a> to file the bugs under documentation. This can also be done using "
+"bug-buddy."
+msgstr ""
+"对于所有人都可以使用的，关于文档中某部分提出意见最好的方式就是在 <a "
+"href='http://bugzilla.gnome.org/'>bugzilla.gnome.org</a> 中提交一个关于文档"
+"的 Bug。这也可以通过使用 Bug-buddy 来实现。"
+
+#: 2.6-release-tour.phtml:122
+msgid ""
+"The business module has been revamped and we introduced some new features:"
+msgstr ""
+
+#: 2.6-release-tour.phtml:77
+msgid ""
+"The colors ease the lookup of specific accounts in the account tree and in "
+"tabs."
+msgstr ""
+
+#: viewdoc.phtml:118
+#, php-format
+msgid ""
+"The document requested is not available for version %s. Version %s will be "
+"displayed instead."
+msgstr ""
+
+#: viewdoc.phtml:122
+msgid ""
+"The document requested is not available in the requested language. The "
+"English version will be displayed instead."
+msgstr ""
+
+#: viewdoc.phtml:114
+msgid ""
+"The document requested is not available. The tutorial and concepts guide "
+"will be displayed instead."
+msgstr ""
+
+#: develdocs.phtml:29
+msgid ""
+"The following links are for further sites that can help with the "
+"documentation and review process."
+msgstr "下面这些链接对进一步寻找文档和评论有帮助。"
+
+#: download.phtml:67
+#, fuzzy, php-format
+msgid ""
+"The last old stable release of <span class=\"gnucash\">GnuCash</span> is "
+"%s.  Choose the download for your operating system below."
+msgstr "GnuCash 的最新的稳定版本是 %s。请从下面选择您的操作系统。"
+
+#: download.phtml:18
+#, fuzzy, php-format
+msgid ""
+"The latest stable release of <span class=\"gnucash\">GnuCash</span> is %s. "
+"Choose the download for your operating system below."
+msgstr "GnuCash 的最新的稳定版本是 %s。请从下面选择您的操作系统。"
+
+#: download.phtml:51
+#, fuzzy, php-format
+msgid ""
+"The latest unstable release of <span class=\"gnucash\">GnuCash</span> is "
+"%s.  Choose the download for your operating system below."
+msgstr "最新的开发版本为 GnuCash %s。请在下面选择您的操作系统。"
+
+#: 2.6-release-tour.phtml:100
+#, fuzzy
+msgid ""
+"The new button to open a <span class=\"gnucash\">GnuCash</span> datafile in "
+"read-only mode."
+msgstr "下面是安装 GnuCash 到一些较流行的 Linux 发布版的方法："
 
 #: sizing.phtml:393
 msgid ""
@@ -1531,203 +1932,12 @@ msgstr ""
 "是来自于README中的人数。这包含了未能列在 gnucash/AUTHORS 中但列在了 gnucash-"
 "docs/AUTHORS 中的其他的贡献者。"
 
-#: 2.6-release-tour.phtml:3
-#, fuzzy
-msgid "GnuCash 2.6 release tour"
-msgstr "GnuCash %s 运行于"
-
-#: 2.6-release-tour.phtml:14
-msgid ""
-"This tour will introduce you to new major features in <span class=\"gnucash"
-"\">GnuCash</span> 2.6."
-msgstr ""
-
-#: 2.6-release-tour.phtml:19
-#, fuzzy
-msgid "Jqplot Reports"
-msgstr "报告 Bug"
-
-#: 2.6-release-tour.phtml:21
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> now uses javascript jqplot to render "
-"reports. This gives a more professional look to all graphical reports "
-"(piechart, barchart, scatterplot)."
-msgstr ""
-
-#: 2.6-release-tour.phtml:28
-msgid "A barchart rendered in GnuCash with jqplot."
-msgstr ""
-
-#: 2.6-release-tour.phtml:33
-msgid "New preconfigured reports management system"
-msgstr ""
-
 #: 2.6-release-tour.phtml:35
 msgid ""
 "The old <span class=\"gnucash\">GnuCash</span> custom report management "
 "system has been revised. You can save a report using the dedicated options "
 "in the File menu and rerun it later by selecting it from the menu Reports-"
 ">Preconfigured Reports."
-msgstr ""
-
-#: 2.6-release-tour.phtml:42
-msgid ""
-"The Preconfigured Reports window. You can select and run a preconfigured "
-"report, edit its name and delete it."
-msgstr ""
-
-#: 2.6-release-tour.phtml:47
-msgid "Export any report directly to PDF"
-msgstr ""
-
-#: 2.6-release-tour.phtml:49
-msgid ""
-"Reports and invoices can be exported directly in a PDF file without going "
-"thru the Print window."
-msgstr ""
-
-#: 2.6-release-tour.phtml:52
-msgid "Attach file or location to any transaction"
-msgstr ""
-
-#: 2.6-release-tour.phtml:54
-msgid ""
-"It is now possible to link an external file or a location (URL) to a "
-"transaction. This long-requested feature is available through both the "
-"Transaction menu and the transaction's context menu. The files are displayed "
-"in the default viewer for that file type."
-msgstr ""
-
-#: 2.6-release-tour.phtml:62
-msgid "You can now attach a file or a location to any transaction."
-msgstr ""
-
-#: 2.6-release-tour.phtml:67
-msgid "Account colors"
-msgstr ""
-
-#: 2.6-release-tour.phtml:69
-msgid ""
-"It is now possible to associate to any account a unique color from the edit "
-"account window. This color can then be displayed as account name and account "
-"register tab background easing the lookup of a specific account."
-msgstr ""
-
-#: 2.6-release-tour.phtml:77
-msgid ""
-"The colors ease the lookup of specific accounts in the account tree and in "
-"tabs."
-msgstr ""
-
-#: 2.6-release-tour.phtml:82
-msgid "Timout on \"Save changes on closing\""
-msgstr ""
-
-#: 2.6-release-tour.phtml:84
-msgid ""
-"In the General tab of the <span class=\"gnucash\">GnuCash</span> Preferences "
-"is now possible to set a timeout for the \"Save changes on closing\" window. "
-"If enabled, the \"Save changes on closing\" question will only wait a "
-"limited number of seconds for an answer. If the user didn't answer within "
-"that time, the changes will be saved automatically and the question window "
-"closed."
-msgstr ""
-
-#: 2.6-release-tour.phtml:87
-msgid "Open datafile read-only"
-msgstr ""
-
-#: 2.6-release-tour.phtml:89
-msgid ""
-"When opening a locked \"book\" one now has the option of opening it read-"
-"only."
-msgstr ""
-
-#: 2.6-release-tour.phtml:92
-msgid ""
-"Note that <span class=\"gnucash\">GnuCash</span> is still a single-user "
-"program and that the database backends are still used only as a data store."
-msgstr ""
-
-#: 2.6-release-tour.phtml:100
-#, fuzzy
-msgid ""
-"The new button to open a <span class=\"gnucash\">GnuCash</span> datafile in "
-"read-only mode."
-msgstr "下面是安装 GnuCash 到一些较流行的 Linux 发布版的方法："
-
-#: 2.6-release-tour.phtml:105
-msgid "Save \"Filter By\" settings"
-msgstr ""
-
-#: 2.6-release-tour.phtml:107
-msgid ""
-"It is now possible to save the \"Filter By...\" settings for an account "
-"register."
-msgstr ""
-
-#: 2.6-release-tour.phtml:115
-msgid ""
-"Save the \"Filter By...\" settings by enabling the \"Save Filter\" checkbox."
-msgstr ""
-
-#: 2.6-release-tour.phtml:120
-msgid "Improved business module"
-msgstr ""
-
-#: 2.6-release-tour.phtml:122
-msgid ""
-"The business module has been revamped and we introduced some new features:"
-msgstr ""
-
-#: 2.6-release-tour.phtml:124
-msgid "Credit Notes"
-msgstr ""
-
-#: 2.6-release-tour.phtml:125
-msgid "Customer and Vendor Overview Pages"
-msgstr ""
-
-#: 2.6-release-tour.phtml:126
-msgid "Customer Overview Reports"
-msgstr ""
-
-#: 2.6-release-tour.phtml:127
-msgid "Existing Transactions may be reassigned as invoice payments"
-msgstr ""
-
-#: 2.6-release-tour.phtml:128
-msgid "One click duplication of invoices"
-msgstr ""
-
-#: 2.6-release-tour.phtml:129
-msgid ""
-"Improved invoice and bill handling: Post, print, or duplicate multiple items "
-"directly from a search results list"
-msgstr ""
-
-#: 2.6-release-tour.phtml:130
-msgid ""
-"Better invoice printing setup: Choose a default invoice report as a "
-"preference"
-msgstr ""
-
-#: 2.6-release-tour.phtml:131
-msgid "Reorder invoice entries in the invoice window"
-msgstr ""
-
-#: 2.6-release-tour.phtml:139
-msgid "Customer report with an invoice and a credit note."
-msgstr ""
-
-#: 2.6-release-tour.phtml:149
-msgid ""
-"Updated search window with buttons to process payment, duplicate, post and "
-"print multiple search results."
-msgstr ""
-
-#: 2.6-release-tour.phtml:154
-msgid "New preference system"
 msgstr ""
 
 #: 2.6-release-tour.phtml:156
@@ -1739,306 +1949,101 @@ msgid ""
 "and DBus."
 msgstr ""
 
-#: 2.6-release-tour.phtml:158
+#: features.phtml:48
 msgid ""
-"Note that window position, column sizes, and sort orders will not be "
-"migrated from GConf. Those settings will revert to the default the first "
-"time you use Gnucash 2.6 or later, but they will be saved once you've reset "
-"them. "
+"The register supports common checking and credit-card transactions, as well "
+"as income, stock and currency transactions. The following features are also "
+"provided:"
 msgstr ""
 
-#: 2.6-release-tour.phtml:161
-msgid "Relicensing"
-msgstr ""
-
-#: 2.6-release-tour.phtml:163
-msgid ""
-"By agreement of all authors we have relicensed <span class=\"gnucash"
-"\">GnuCash</span> to the Gnu Public License Version 2 or later from just "
-"Version 2."
-msgstr ""
-
-#: 2.6-release-tour.phtml:167
-msgid ""
-"You can download the new 2.6 version of <span class=\"gnucash\">GnuCash</"
-"span> from the <a href=\"http://gnucash.org\">GnuCash website main page</a>."
-msgstr ""
-
-#: 2.6-release-tour.phtml:169
-msgid "Help"
-msgstr ""
-
-#: 2.6-release-tour.phtml:171
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> 2.6 comes with updated Help and "
-"Guide. If you can't find the answer to your questions in those documents, "
-"try with the <a href=\"http://wiki.gnucash.org/wiki/GnuCash\">GnuCash wiki</"
-"a>. If both options are unsatisfactory, you can send your questions to the "
-"<a href=\"http://wiki.gnucash.org/wiki/Mailing_Lists\">GnuCash mailing "
-"lists</a>: the <span class=\"gnucash\">GnuCash</span> community is very "
-"friendly and experienced and someone will surely assist you."
-msgstr ""
-
-#: 2.6-release-tour.phtml:173
-msgid "Want to Help?"
-msgstr ""
-
-#: 2.6-release-tour.phtml:175
-msgid ""
-"<span class=\"gnucash\">GnuCash</span> is a program maintained by "
-"volunteers. If you want to be part of the effort, you can contribute in many "
-"ways:"
-msgstr ""
-
-#: 2.6-release-tour.phtml:177
-msgid ""
-"By testing the program and <a href=\"http://wiki.gnucash.org/wiki/Bugzilla"
-"\">reporting bugs</a>"
-msgstr ""
-
-#: 2.6-release-tour.phtml:178
-msgid ""
-"By liking our project page on <a href=\"https://www.facebook.com/Gnucash"
-"\">facebook</a> and <a href=\"http://plus.google.com/u/0/+gnucash\">Google+</"
-"a>"
-msgstr ""
-
-#: 2.6-release-tour.phtml:179
-msgid "By spreading the word"
-msgstr ""
-
-#: 2.6-release-tour.phtml:180
-msgid ""
-"<a href=\"http://sourceforge.net/donate/index.php?group_id=192\">By making a "
-"donation</a>"
-msgstr ""
-
-#: 2.6-release-tour.phtml:181
-msgid ""
-"By partecipating in the <a href=\"http://wiki.gnucash.org/wiki/Mailing_Lists"
-"\">GnuCash mailing lists</a> and <a href=\"http://wiki.gnucash.org/wiki/IRC"
-"\">IRC channel</a>"
-msgstr ""
-
-#: 2.6-release-tour.phtml:182
-msgid ""
-"By reviewing and adding hints to the <a href=\"http://wiki.gnucash.org/wiki/"
-"\">wiki</a>"
-msgstr ""
-
-#: 2.6-release-tour.phtml:183
-msgid ""
-"By improving the <a href=\"http://gnucash.org/docs.phtml\">released "
-"documentation</a>"
-msgstr ""
-
-#: 2.6-release-tour.phtml:184
-msgid ""
-"By <a href=\"http://wiki.gnucash.org/wiki/Translation\">translating the "
-"program and documentation to your language</a>"
-msgstr ""
-
-#: 2.6-release-tour.phtml:185
-msgid ""
-"By <a href=\"http://wiki.gnucash.org/wiki/Development\">developing the "
-"source code</a>"
-msgstr ""
-
-#: 2.6-release-tour.phtml:188
-msgid "The GnuCash developers team"
-msgstr ""
-
-#: externals/menu.phtml:6
-msgid "Information"
-msgstr "信息"
-
-#: externals/menu.phtml:9
-msgid "About / News"
-msgstr "关于 / 新闻"
-
-#: externals/menu.phtml:10
-msgid "News Feed"
-msgstr "新闻供稿"
-
-#: externals/menu.phtml:11
-msgid "Screenshots, Features"
-msgstr "屏幕截图、特色"
-
-#: externals/menu.phtml:12
-msgid "How to help"
-msgstr "如何来帮忙"
-
-#: externals/menu.phtml:13
-msgid "Donations"
-msgstr "捐款"
-
-#: externals/menu.phtml:19
-msgid "Downloads"
-msgstr "下载"
-
-#: externals/menu.phtml:22
-msgid "Program"
-msgstr ""
-
-#: externals/menu.phtml:28
+#: sizing.phtml:32
 #, fuzzy
-msgid "Support"
-msgstr "HBCI 支持"
-
-#: externals/menu.phtml:31
-msgid "FAQ"
-msgstr "常见问题(FAQ)"
-
-#: externals/menu.phtml:32
-msgid "Wiki"
-msgstr "Wiki"
-
-#: externals/menu.phtml:36
-msgid "Search"
-msgstr "搜索"
-
-#: externals/menu.phtml:39
-msgid "Bug Reports"
-msgstr "报告 Bug"
-
-#: externals/menu.phtml:40
-msgid "IRC (Chat)"
-msgstr "IRC (聊天)"
-
-#: externals/menu.phtml:46
-#, fuzzy
-msgid "Development"
-msgstr "开发人员信息"
-
-#: externals/menu.phtml:49
-msgid "Source Docs"
-msgstr "源文档"
-
-#: externals/menu.phtml:50
-msgid "Browse Source Code"
-msgstr "浏览源代码"
-
-#: externals/menu.phtml:51
-msgid "Subversion Access"
-msgstr "Subversion 访问"
-
-#: externals/menu.phtml:52
-msgid "Language Translations"
-msgstr "语言翻译"
-
-#: externals/menu.phtml:61
-#, fuzzy
-msgid "New Book: GnuCash 2.4 Small Business Accounting"
-msgstr "小型企业会计"
-
-#: externals/menu.phtml:65
 msgid ""
-"The GnuCash development team received notice about a new book published by "
-"PacktPub, UK:"
+"The table below shows some historical lines-of-code and number-of-files "
+"metrics for the <span class=\"gnucash\">GnuCash</span> development project.  "
+"Note that not all of the code is counted: for instance, the Makefiles and "
+"configure.in and autogen.sh are not counted. Also, files that are "
+"automatically generated are not counted, nor are files that have been "
+"'borrowed' from other projects. Also not counted are experimental files, "
+"miscellaneous perl scripts, various converters, addons and utilities.  "
+"Finally, <tt>glade</tt> files are not counted, although large parts of the "
+"overall GUI are described in <tt>glade</tt> files."
+msgstr ""
+"下列的表中显示了 GnuCash 开发项目一些历史的代码行和文件数目的数据。注意不是所"
+"有的代码都被统计了：比如说，Makefile 和 Configure.in 以及 autogen.sh 都不会记"
+"录在内。还有所有自动生成的代码都不会统计在内。也不包括从其它项目中借来的代"
+"码。而且还没有记录试验用的文件、辅助的 Perl 脚本、各种转换器、插件以及一些工"
+"具。最后，<tt>glade</tt>也没有被统计，虽然绝大多数的界面都定义在了<tt>glade</"
+"tt>文件中。"
+
+#: donate.phtml:25
+msgid ""
+"The tip jar is run through Paypal into an account managed by IHTFP "
+"Consulting, owned by Derek Atkins. So don't be surprised when your payment "
+"goes there."
 msgstr ""
 
-#: externals/menu.phtml:66
-msgid "GnuCash 2.4 Small Business Accounting, by Ashok Ramachandran"
+#: search/templates/NMZ.body.php_tmpl:90
+msgid "There are three types of searching by substring matching."
 msgstr ""
+
+#: docs.phtml:17
+#, fuzzy
+msgid ""
+"There are two major <span class=\"gnucash\">GnuCash</span> documentation "
+"packages to help users:"
+msgstr "下面是安装 GnuCash 到一些较流行的 Linux 发布版的方法："
+
+#: develdocs.phtml:59
+#, fuzzy
+msgid ""
+"There are two major <span class=\"gnucash\">GnuCash</span> documentation "
+"packages to help users: the <b>Help Manual</b> and the <b>Tutorial and "
+"Concepts Guide</b>. With the above command, the source code of both will be "
+"downloaded."
+msgstr ""
+"如果您对使用 GnuCash 有任何疑问，那么你找对地方了。你首先需要做的是阅读《帮助"
+"手册》和《概念指南》，绝大多数的问题都会在里面找到答案。"
 
 #: externals/menu.phtml:67
 msgid "This is a Beginner's Guide for managing your accounts."
 msgstr ""
 
-#: externals/menu.phtml:68
+#: oldnews.phtml:14
 msgid ""
-"Our own developer Christian Stimming has been contributing to this book as a "
-"reviewer, and we can wholeheartly recommend the outcome of this fruitful "
-"collaboration. Feel free to have a look at this book over at <a href="
-"\"http://link.packtpub.com/6FDDUr\">packtpub.com</a>, and, best of all, the "
-"publisher has committed to allocate some percentage of the book sales back "
-"to the GnuCash project. Have fun with this book!"
+"This is an archive of announcements that once appeared on the GnuCash home "
+"page."
+msgstr "这是一个公告的存档，曾经出现在 GnuCash 的首页上。"
+
+#: docs.phtml:139
+msgid ""
+"This is the latest stable release of the <span class=\"gnucash\">GnuCash</"
+"span> documentation. <em>Stable</em> means that this documentation is not "
+"necessarily the most up to date but it works without any problem."
 msgstr ""
 
-#: externals/header.phtml:4
-msgid "Subscribe to RSS feed"
+#: docs.phtml:251
+#, fuzzy, php-format
+msgid ""
+"This is the old stable release of the <span class=\"gnucash\">GnuCash</span> "
+"documentation, corresponding to the %s release of <span class=\"gnucash"
+"\">GnuCash</span> itself."
 msgstr ""
+"这个页面是 GnuCash 文档项目的大本营。我们的目标是维护一个为 GnuCash 创建高质"
+"量文档的社区。"
 
-#: externals/header.phtml:5
-msgid "Support the GnuCash project with a donation"
+#: download.phtml:66
+msgid ""
+"This old stable release is the final version of the previous stable series. "
+"It's available for users who aren't ready for a major upgrade but want to "
+"make sure that they have all of the bugfixes from the old series."
 msgstr ""
-
-#: externals/header.phtml:6
-msgid "Request or vote enhancements for GnuCash"
-msgstr ""
-
-#: externals/header.phtml:7
-#, fuzzy
-msgid "GnuCash on Google +"
-msgstr "GnuCash %s 运行于"
-
-#: externals/header.phtml:8
-#, fuzzy
-msgid "GnuCash on facebook"
-msgstr "GnuCash %s 运行于"
-
-#: externals/header.phtml:117
-msgid "Language"
-msgstr "语言"
-
-#: externals/header.phtml:132
-msgid "Continent"
-msgstr "大陆"
-
-#: externals/footer.phtml:10
-#, fuzzy
-msgid "Server &amp; email outage reports to:"
-msgstr "服务器或电子邮件故障请报告："
-
-#: externals/footer.phtml:11
-msgid "Translation problems? Contact:"
-msgstr ""
-
-#: search/templates/NMZ.result.short.php_tmpl:4
-#: search/templates/NMZ.result.normal.php_tmpl:4
-msgid "score"
-msgstr "得分"
-
-#: search/templates/NMZ.result.short.php_tmpl:6
-#: search/templates/NMZ.result.normal.php_tmpl:9
-msgid "(${size} bytes)"
-msgstr "(${size} 字节)"
-
-#: search/templates/NMZ.body.php_tmpl:4 search/templates/NMZ.head.php_tmpl:28
-msgid "Query"
-msgstr "查询"
-
-#: search/templates/NMZ.body.php_tmpl:6
-msgid "Single term query"
-msgstr "一个词的查询"
 
 #: search/templates/NMZ.body.php_tmpl:8
 msgid ""
 "This query specifies only one term for retrieving all of the\n"
 "documents which contain that term, for example:"
 msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:16
-msgid "AND query"
-msgstr "AND 查询"
-
-#: search/templates/NMZ.body.php_tmpl:19
-msgid ""
-"This query specifies two or more terms for retrieving all of the\n"
-"documents which contain both terms. Insert the\n"
-"<code class=\"operator\">and</code> operator between the terms, e.g."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:29
-msgid ""
-"You can omit the <code class=\"operator\">and</code> operator.  Terms which "
-"are\n"
-"separated by one or more spaces are assumed to be an AND query."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:33
-msgid "OR query"
-msgstr "OR 查询"
 
 #: search/templates/NMZ.body.php_tmpl:35
 msgid ""
@@ -2048,10 +2053,6 @@ msgid ""
 "e.g."
 msgstr ""
 
-#: search/templates/NMZ.body.php_tmpl:45
-msgid "NOT query"
-msgstr "NOT 查询"
-
 #: search/templates/NMZ.body.php_tmpl:47
 msgid ""
 "This query specifies two or more terms for retrieving all of the\n"
@@ -2060,9 +2061,238 @@ msgid ""
 "operator between the terms, for example:"
 msgstr ""
 
-#: search/templates/NMZ.body.php_tmpl:58
-msgid "Grouping"
-msgstr "分组"
+#: search/templates/NMZ.body.php_tmpl:19
+msgid ""
+"This query specifies two or more terms for retrieving all of the\n"
+"documents which contain both terms. Insert the\n"
+"<code class=\"operator\">and</code> operator between the terms, e.g."
+msgstr ""
+
+#: search/templates/NMZ.foot.php_tmpl:9
+msgid "This search system is powered by:"
+msgstr "这个搜索系统是使用："
+
+#: docs.phtml:382
+#, fuzzy
+msgid ""
+"This section contains all the older <span class=\"gnucash\">GnuCash</span> "
+"documentation. If you are using one of these old versions of <span class="
+"\"gnucash\">GnuCash</span>, it is highly recommended that you upgrade to the "
+"latest stable version."
+msgstr ""
+"这部分包含了所有早期的 GnuCash 的文档。如果您正在使用其中一个早期的版本，那么"
+"非常建议您升级到最新的稳定版本。"
+
+#: 2.6-release-tour.phtml:14
+msgid ""
+"This tour will introduce you to new major features in <span class=\"gnucash"
+"\">GnuCash</span> 2.6."
+msgstr ""
+
+#: 2.6-release-tour.phtml:82
+msgid "Timout on \"Save changes on closing\""
+msgstr ""
+
+#: search/templates/NMZ.tips.php_tmpl:4
+msgid "Tips on searching"
+msgstr "搜索技巧"
+
+#: sizing.phtml:57
+msgid "Total"
+msgstr "合计"
+
+#: features.phtml:149
+msgid ""
+"Track stocks individually (one per account) or in portfolio of accounts (a "
+"group of accounts that can be displayed together)."
+msgstr ""
+"跟踪一支股票 (每个科目一个)，或在一个组合科目中 (一组科目可以同时显示)。"
+
+#: features.phtml:214
+msgid "Transaction Finder"
+msgstr "交易搜索"
+
+#: externals/footer.phtml:11
+msgid "Translation problems? Contact:"
+msgstr ""
+
+#: search/templates/NMZ.foot.php_tmpl:15
+msgid ""
+"Translation problems? Contact: <a href=\"mailto:gnucash-devel@gnucash.org"
+"\"><b>gnucash-devel@gnucash.org</b></a>"
+msgstr ""
+"翻译问题？请联系：<a href=\"mailto:gnucash-devel@gnucash.org\"><b>gnucash-"
+"devel@gnucash.org</b></a>"
+
+#: search/templates/NMZ.tips.php_tmpl:29
+msgid "Try substring matching"
+msgstr "尝试子字符串匹配"
+
+#: download.phtml:34
+#, fuzzy
+msgid ""
+"Ubuntu users can install <span class=\"gnucash\">GnuCash</span> through the "
+"Software Center. This will install <span class=\"gnucash\">GnuCash</span> "
+"under the Office category in the Applications menu."
+msgstr ""
+"Ubuntu 9.10 的用户可以通过软件中心(在应用程序菜单里)安装 GnuCash。这会将 "
+"GnuCash 安装在应用程序->办公软件下面。"
+
+#: docs.phtml:456
+#, fuzzy
+msgid "Unofficial documentation"
+msgstr "文档"
+
+#: docs.phtml:262
+#, fuzzy
+msgid "Unstable"
+msgstr "安装程序"
+
+#: download.phtml:50
+msgid ""
+"Unstable (development) releases are for testing purposes only. They contain "
+"the newest features and improvements, but may also contain serious bugs "
+"still. Don't install these releases for everyday use."
+msgstr ""
+"不稳定版(开发版本)是只为了测试而发布的。它们包含了最新的功能和改进，但是可能"
+"会有很严重的 Bug。建议不要在日常工作中安装这些发布版本。"
+
+#: download.phtml:48
+#, php-format
+msgid "Unstable/Development release (%s)"
+msgstr "不稳定/开发版本 (%s)"
+
+#: 2.6-release-tour.phtml:149
+msgid ""
+"Updated search window with buttons to process payment, duplicate, post and "
+"print multiple search results."
+msgstr ""
+
+#: features.phtml:239
+#, fuzzy
+msgid "User Manual and Help"
+msgstr "新用户手册和帮助"
+
+#: features.phtml:127
+msgid ""
+"Using A/Receivable and A/Payable accounts you can even manage <b>payrolls</"
+"b> for your employees."
+msgstr ""
+
+#: donate.phtml:18
+msgid "Various ways to donate"
+msgstr ""
+
+#: sizing.phtml:42
+msgid "Version"
+msgstr "版本"
+
+#: index.phtml:22
+msgid "Via distribution"
+msgstr "通过各种 Linux 发行版"
+
+#: download.phtml:81
+#, php-format
+msgid "View all GnuCash %s downloads (stable)"
+msgstr "查看所有 GnuCash %s 的下载 (稳定版)"
+
+#: download.phtml:86
+#, php-format
+msgid "View all GnuCash %s downloads (unstable)"
+msgstr "查看所有 GnuCash %s 的下载 (不稳定版)"
+
+#: download.phtml:89
+msgid "View all GnuCash downloads"
+msgstr "查看所有的 GnuCash 下载"
+
+#: viewdoc.phtml:4
+msgid "View document"
+msgstr ""
+
+#: 2.6-release-tour.phtml:173
+msgid "Want to Help?"
+msgstr ""
+
+#: develdocs.phtml:37
+#, fuzzy
+msgid "We suggest also subscribing to"
+msgstr "我们建议同样订阅"
+
+#: index.phtml:12
+msgid "Welcome to GnuCash.org"
+msgstr "欢迎来到 GnuCash.org"
+
+#: 2.6-release-tour.phtml:89
+msgid ""
+"When opening a locked \"book\" one now has the option of opening it read-"
+"only."
+msgstr ""
+
+#: develdocs.phtml:53
+msgid "Where to get the documentation source"
+msgstr ""
+
+#: develdocs.phtml:34
+msgid ""
+"While this <span class=\"gnucash\">GnuCash</span> wiki page is really about "
+"translating the documentation, it holds some useful information on working "
+"with docbook files."
+msgstr ""
+
+#: donate.phtml:46
+msgid "Why we appreciate your support"
+msgstr ""
+
+#: externals/menu.phtml:32
+msgid "Wiki"
+msgstr "Wiki"
+
+#: develdocs.phtml:65
+msgid "Writers"
+msgstr "作者"
+
+#: develdocs.phtml:3 externals/menu.phtml:53
+#, fuzzy
+msgid "Writing Documentation"
+msgstr "文档"
+
+#: develdocs.phtml:11
+#, fuzzy
+msgid "Writing GnuCash Documentation"
+msgstr "早期的 GnuCash 的文档"
+
+#: docs.phtml:27
+msgid ""
+"You can also send an email to the <a href=\"mailto:gnucash-user@gnucash.org"
+"\">gnucash-user</a> mailing list if you cannot find a satisfactory answer to "
+"your question within either the <b>Help Manual</b> or the <b>Tutorial and "
+"Concepts Guide</b>. We <b>want</b> feedback from you, it is also through "
+"your comments that we know how to improve the documentation."
+msgstr ""
+"如果您不能在《帮助手册》或《概念指南》中找到满意答案，请发邮件到 <a "
+"href='mailto:gnucash-user@gnucash.org'>gnucash-user</a> 邮件列表。我们<b>希望"
+"</b>得到您的反馈，只有通过您的评论，我们才能够知道应当如何修改文档。"
+
+#: features.phtml:66
+msgid ""
+"You can create recurring transactions with a high level of customization of "
+"amounts and timeline. You can also set an automatic reminder when a "
+"transaction is due."
+msgstr ""
+
+#: donate.phtml:29
+msgid "You can donate using bitcoin"
+msgstr ""
+
+#: donate.phtml:22
+msgid "You can donate via the Sourceforge tip jar"
+msgstr ""
+
+#: 2.6-release-tour.phtml:167
+msgid ""
+"You can download the new 2.6 version of <span class=\"gnucash\">GnuCash</"
+"span> from the <a href=\"http://gnucash.org\">GnuCash website main page</a>."
+msgstr ""
 
 #: search/templates/NMZ.body.php_tmpl:60
 msgid ""
@@ -2071,9 +2301,24 @@ msgid ""
 "more spaces. e.g."
 msgstr ""
 
-#: search/templates/NMZ.body.php_tmpl:69
-msgid "Phrase searching"
-msgstr "短语搜索"
+#: search/templates/NMZ.body.php_tmpl:123
+msgid ""
+"You can limit your search to specific fields such as\n"
+"<code>Subject:</code>, <code>From:</code>,\n"
+"<code>Message-Id:</code>. This feature is especially convenient for\n"
+"Mail/News documents, for example:"
+msgstr ""
+
+#: 2.6-release-tour.phtml:62
+msgid "You can now attach a file or a location to any transaction."
+msgstr ""
+
+#: search/templates/NMZ.body.php_tmpl:29
+msgid ""
+"You can omit the <code class=\"operator\">and</code> operator.  Terms which "
+"are\n"
+"separated by one or more spaces are assumed to be an AND query."
+msgstr ""
 
 #: search/templates/NMZ.body.php_tmpl:71
 msgid ""
@@ -2085,298 +2330,13 @@ msgid ""
 "so wrong results may occasionally occur.  Example:"
 msgstr ""
 
-#: search/templates/NMZ.body.php_tmpl:88
-msgid "Substring matching"
-msgstr "子字符串匹配"
-
-#: search/templates/NMZ.body.php_tmpl:90
-msgid "There are three types of searching by substring matching."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:94
-msgid "Prefix matching"
-msgstr "前缀匹配"
-
-#: search/templates/NMZ.body.php_tmpl:95
-msgid "(terms which begin with <code>inter</code>)"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:96
-msgid "Inside matching"
-msgstr "中间匹配"
-
-#: search/templates/NMZ.body.php_tmpl:97
-msgid "(terms which contain <code>text</code>)"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:98
-msgid "Suffix matching"
-msgstr "后缀匹配"
-
-#: search/templates/NMZ.body.php_tmpl:100
-msgid "(terms which terminated with <code>net</code>)"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:104
-msgid "Regular expressions"
-msgstr "正则表达式"
-
-#: search/templates/NMZ.body.php_tmpl:107
+#: search/templates/NMZ.tips.php_tmpl:48
 msgid ""
-"You can use regular expressions for pattern matching. The\n"
-"regular expressions must be surrounded by slashes like <code\n"
-"class=\"operator\">/.../</code>. Namazu uses <a\n"
-"href=\"http://www.ruby-lang.org/\">Ruby</a>'s regular\n"
-"regular expressions engine. It generally offers a <a\n"
-"href=\"http://www.perl.com/\">Perl</a> compatible flavor.\n"
-"e.g.,"
+"You can specify <code class=\"example\">*tex*</code> to\n"
+"search for terms which contain <code>tex</code> (many)."
 msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:121
-msgid "Field-specified searching"
-msgstr "指定字段搜索"
-
-#: search/templates/NMZ.body.php_tmpl:123
-msgid ""
-"You can limit your search to specific fields such as\n"
-"<code>Subject:</code>, <code>From:</code>,\n"
-"<code>Message-Id:</code>. This feature is especially convenient for\n"
-"Mail/News documents, for example:"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:131
-msgid ""
-"(Retrieves all documents which contain <code>Linux</code>\n"
-"in a <code>Subject:</code> field)"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:136
-msgid ""
-"(Retrieves all documents which contain <code>GNU Emacs</code>\n"
-"in a <code>Subject:</code> field)"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:141
-msgid ""
-"(Retrieves all documents which contain <code>foo@bar.jp</code>\n"
-"in a <code>From:</code> field)"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:147
-msgid ""
-"(Retrieves a certain document which contains specified\n"
-"<code>Message-Id:</code>)"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:152
-msgid "Notes"
-msgstr "说明"
-
-#: search/templates/NMZ.body.php_tmpl:155
-msgid ""
-"In any queries, Namazu ignores case distinctions of\n"
-"alphabet characters; i.e. Namazu does\n"
-"case-insensitive pattern matching."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:160
-msgid ""
-"Japanese phrases are automatically segmented into\n"
-"morphemes and are handled as <a\n"
-"href=\"#query-phrase\">phrase searching</a>. This process occasionally\n"
-"causes invalid segmentation."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:166
-msgid ""
-"Letters, numbers or parts of symbols (duplicated in\n"
-"ASCII) which are defined in JIS X 0208 (Japanese\n"
-"Industrial Standards) are handled as ASCII characters."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:171
-msgid ""
-"Namazu can handle a term which contains symbols like\n"
-"<code>TCP/IP</code>.  Since this method of handling isn't complete,\n"
-"you can also describe the term as <code>TCP and IP</code> instead of\n"
-"<code>TCP/IP</code>, but it may cause noisy results."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:178
-msgid ""
-"Substring matching and field-specified searching takes\n"
-"more time than other methods."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:182
-#: search/templates/NMZ.tips.php_tmpl:60
-msgid ""
-"If you want to use <code class=\"operator\">and</code>,\n"
-"<code class=\"operator\">or</code> or <code\n"
-"class=\"operator\">not</code> as ordinary keywords<br>\n"
-"You can surround them respectively with double quotes like <code\n"
-"class=\"operator\">\"...\"</code> or braces like <code\n"
-"class=\"operator\">{...}</code>."
-msgstr ""
-
-#: search/templates/NMZ.head.php_tmpl:4
-msgid "Mailing List Search"
-msgstr "邮件列表搜索"
-
-#: search/templates/NMZ.head.php_tmpl:30
-msgid "Search!"
-msgstr "搜索！"
-
-#: search/templates/NMZ.head.php_tmpl:32
-msgid "[How to search]"
-msgstr "【如何搜索】"
-
-#: search/templates/NMZ.head.php_tmpl:35
-msgid "Display"
-msgstr "显示"
-
-#: search/templates/NMZ.head.php_tmpl:43
-msgid "Description"
-msgstr "描述"
-
-#: search/templates/NMZ.head.php_tmpl:45
-msgid "normal"
-msgstr "正常"
-
-#: search/templates/NMZ.head.php_tmpl:46
-msgid "short"
-msgstr "简短"
-
-#: search/templates/NMZ.head.php_tmpl:48
-msgid "Sort"
-msgstr "排序"
-
-#: search/templates/NMZ.head.php_tmpl:50
-msgid "by score"
-msgstr "按得分"
-
-#: search/templates/NMZ.head.php_tmpl:51
-msgid "by date in late order"
-msgstr "按日期(最新的)"
-
-#: search/templates/NMZ.head.php_tmpl:52
-msgid "by date in early order"
-msgstr "按日期(最老的)"
-
-#: search/templates/NMZ.head.php_tmpl:53
-msgid "by title in ascending order"
-msgstr "按标题(升序)"
-
-#: search/templates/NMZ.head.php_tmpl:54
-msgid "by title in descending order"
-msgstr "按标题(降序)"
-
-#: search/templates/NMZ.head.php_tmpl:55
-msgid "by author in ascending order"
-msgstr "按作者(升序)"
-
-#: search/templates/NMZ.head.php_tmpl:56
-msgid "by author in descending order"
-msgstr "按作者(降序)"
-
-#: search/templates/NMZ.head.php_tmpl:57
-msgid "by size in ascending order"
-msgstr "按大小(升序)"
-
-#: search/templates/NMZ.head.php_tmpl:58
-msgid "by size in descending order"
-msgstr "按大小(降序)"
-
-#: search/templates/NMZ.head.php_tmpl:59
-msgid "by URI in ascending order"
-msgstr "按 URL (升序)"
-
-#: search/templates/NMZ.head.php_tmpl:60
-msgid "by URI in descending order"
-msgstr "按 URL (降序)"
-
-#: search/templates/NMZ.head.php_tmpl:65
-msgid "Lists to Search"
-msgstr "要搜索的列表"
-
-#: search/templates/NMZ.foot.php_tmpl:9
-msgid "This search system is powered by:"
-msgstr "这个搜索系统是使用："
-
-#: search/templates/NMZ.foot.php_tmpl:13
-msgid "Server &amp; email outage reports to: "
-msgstr "服务器或电子邮件故障请报告："
-
-#: search/templates/NMZ.foot.php_tmpl:15
-msgid ""
-"Translation problems? Contact: <a href=\"mailto:gnucash-devel@gnucash.org"
-"\"><b>gnucash-devel@gnucash.org</b></a>"
-msgstr ""
-"翻译问题？请联系：<a href=\"mailto:gnucash-devel@gnucash.org\"><b>gnucash-"
-"devel@gnucash.org</b></a>"
-
-#: search/templates/NMZ.tips.php_tmpl:4
-msgid "Tips on searching"
-msgstr "搜索技巧"
-
-#: search/templates/NMZ.tips.php_tmpl:7
-msgid "If you have trouble with searching, you can check the following tips."
-msgstr "如果您碰到搜索上的问题，您可以检查下列技巧。"
-
-#: search/templates/NMZ.tips.php_tmpl:11
-msgid ""
-"Check a spelling of your keyword<br>\n"
-"Namazu can't find anything with wrong spelling."
-msgstr ""
-"检查您的关键字的拼写<br>\n"
-"Namazu 无法找到任何错误的拼写。"
-
-#: search/templates/NMZ.tips.php_tmpl:15
-msgid "Add keywords"
-msgstr "添加关键字"
-
-#: search/templates/NMZ.tips.php_tmpl:17
-msgid ""
-"If you gained no results or too few results, you can add one\n"
-"or more related keywords with <code\n"
-"class=\"operator\">or</code> operator.  You should get more results.\n"
-"e.g.,"
-msgstr ""
-"如果您没有得到结果或者太少的结果，您可以使用<code class=\"operator\">or</"
-"code>操作符添加一个或多个相关关键字。您应该会得到更多的结果。如，"
-
-#: search/templates/NMZ.tips.php_tmpl:23
-msgid ""
-"If you gained too many results, you can add one or more\n"
-"related keywords with <code class=\"operator\">and</code>\n"
-"operator. It makes your search more limited. e.g.,"
-msgstr ""
-"如果您得到了太多的结果，您可以使用<code class=\"operator\">and</code>添加一个"
-"或多个关键字。这样的搜索就更局限。如，"
-
-#: search/templates/NMZ.tips.php_tmpl:29
-msgid "Try substring matching"
-msgstr "尝试子字符串匹配"
-
-#: search/templates/NMZ.tips.php_tmpl:31
-msgid ""
-"If you gained no results or too few results, you can try\n"
-"substring matching."
-msgstr "如果您没得到结果或者太少的结果，您可以尝试子字符串匹配。"
-
-#: search/templates/NMZ.tips.php_tmpl:34
-msgid ""
-"You can specify <code class=\"example\">tex*</code> to\n"
-"search for terms which begin with\n"
-"<code>tex</code> (e.g., <code>tex</code>,\n"
-"<code>texi2html</code>,\n"
-"<code>texindex</code>, <code>text</code>)."
-msgstr ""
-"您可以指定 <code class=\"example\">tex*</code> to\n"
-"以查找开始于\n"
-"<code>tex</code> (e.g., <code>tex</code>,\n"
-"<code>texi2html</code>,\n"
-"<code>texindex</code>, <code>text</code>)."
+"您可以指定 <code class=\"example\">*tex*</code> to\n"
+"搜索包含 <code>tex</code> (many)."
 
 #: search/templates/NMZ.tips.php_tmpl:41
 msgid ""
@@ -2392,13 +2352,42 @@ msgstr ""
 "<code>jlatex</code>, <code>latex</code>,\n"
 "<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
 
-#: search/templates/NMZ.tips.php_tmpl:48
+#: search/templates/NMZ.tips.php_tmpl:34
 msgid ""
-"You can specify <code class=\"example\">*tex*</code> to\n"
-"search for terms which contain <code>tex</code> (many)."
+"You can specify <code class=\"example\">tex*</code> to\n"
+"search for terms which begin with\n"
+"<code>tex</code> (e.g., <code>tex</code>,\n"
+"<code>texi2html</code>,\n"
+"<code>texindex</code>, <code>text</code>)."
 msgstr ""
-"您可以指定 <code class=\"example\">*tex*</code> to\n"
-"搜索包含 <code>tex</code> (many)."
+"您可以指定 <code class=\"example\">tex*</code> to\n"
+"以查找开始于\n"
+"<code>tex</code> (e.g., <code>tex</code>,\n"
+"<code>texi2html</code>,\n"
+"<code>texindex</code>, <code>text</code>)."
+
+#: donate.phtml:34
+msgid "You can transfer a donation to our bank account"
+msgstr ""
+
+#: search/templates/NMZ.body.php_tmpl:107
+msgid ""
+"You can use regular expressions for pattern matching. The\n"
+"regular expressions must be surrounded by slashes like <code\n"
+"class=\"operator\">/.../</code>. Namazu uses <a\n"
+"href=\"http://www.ruby-lang.org/\">Ruby</a>'s regular\n"
+"regular expressions engine. It generally offers a <a\n"
+"href=\"http://www.perl.com/\">Perl</a> compatible flavor.\n"
+"e.g.,"
+msgstr ""
+
+#: develdocs.phtml:73
+msgid ""
+"You may also want to retain a local copy of the old documentation to refer "
+"to when writing. This still has a lot of useful information in it which "
+"hasn't been transferred to the new docs"
+msgstr ""
+"您也可以为老文档保留一个本地副本。里面还是有大量的信息未被转移到新文档中。"
 
 #: search/templates/NMZ.tips.php_tmpl:53
 msgid ""
@@ -2406,43 +2395,153 @@ msgid ""
 "didn't contain your phrase."
 msgstr "您尝试了短语搜索，但是找到的文档不包含您的短语。"
 
-#: search/templates/NMZ.tips.php_tmpl:56
+#: develdocs.phtml:55
 msgid ""
-"It's a defect of Namazu. Precision of phrase searching is\n"
-"not 100%, so it cause wrong results occasionally."
+"You will need a recent copy of the documentation source. For this you can "
+"check out the documentation module from the gnucash-docs git repository. "
+"Reviewers could also start from the <a href='http://sourceforge.net/projects/"
+"gnucash/files/gnucash-docs/'>current docs tarball</a>."
 msgstr ""
 
-#: search/templates/NMZ.result.normal.php_tmpl:5
-msgid "Author"
-msgstr "作者"
+#: donate.phtml:50
+msgid "Your contribution will be used to cover these expenses."
+msgstr ""
 
-#: search/templates/NMZ.result.normal.php_tmpl:6
-msgid "Date"
-msgstr "日期"
+#: search/templates/NMZ.head.php_tmpl:32
+msgid "[How to search]"
+msgstr "【如何搜索】"
 
-#, fuzzy
-#~ msgid "GnuCash v%s (old stable release)"
-#~ msgstr "查看所有 GnuCash %s 的下载 (稳定版)"
+#: features.phtml:91
+msgid "and many others."
+msgstr ""
 
-#, fuzzy
-#~ msgid "Writing documentation"
-#~ msgstr "文档"
+#: search/templates/NMZ.head.php_tmpl:59
+msgid "by URI in ascending order"
+msgstr "按 URL (升序)"
 
-#~ msgid "Documentation Project"
-#~ msgstr "文档项目"
+#: search/templates/NMZ.head.php_tmpl:60
+msgid "by URI in descending order"
+msgstr "按 URL (降序)"
 
-#~ msgid "GnuCash Documentation Project"
-#~ msgstr "GnuCash 文档项目"
+#: search/templates/NMZ.head.php_tmpl:55
+msgid "by author in ascending order"
+msgstr "按作者(升序)"
+
+#: search/templates/NMZ.head.php_tmpl:56
+msgid "by author in descending order"
+msgstr "按作者(降序)"
+
+#: search/templates/NMZ.head.php_tmpl:52
+msgid "by date in early order"
+msgstr "按日期(最老的)"
+
+#: search/templates/NMZ.head.php_tmpl:51
+msgid "by date in late order"
+msgstr "按日期(最新的)"
+
+#: search/templates/NMZ.head.php_tmpl:50
+msgid "by score"
+msgstr "按得分"
+
+#: search/templates/NMZ.head.php_tmpl:57
+msgid "by size in ascending order"
+msgstr "按大小(升序)"
+
+#: search/templates/NMZ.head.php_tmpl:58
+msgid "by size in descending order"
+msgstr "按大小(降序)"
+
+#: search/templates/NMZ.head.php_tmpl:53
+msgid "by title in ascending order"
+msgstr "按标题(升序)"
+
+#: search/templates/NMZ.head.php_tmpl:54
+msgid "by title in descending order"
+msgstr "按标题(降序)"
+
+#: download.phtml:40 download.phtml:56 download.phtml:72
+#, php-format
+msgid "for GnuCash %s"
+msgstr "版本为 GnuCash %s"
+
+#: sizing.phtml:56 sizing.phtml:392
+msgid "internal txt"
+msgstr "内部文本文件"
+
+#: sizing.phtml:49 sizing.phtml:357
+msgid "misc app"
+msgstr "其它应用"
+
+#: search/templates/NMZ.head.php_tmpl:45
+msgid "normal"
+msgstr "正常"
+
+#: sizing.phtml:322
+msgid ""
+"number of *c and *.h and *.scm files (KLOCS in *.c + KLOCS in *.h + KLOCS in "
+"*.scm).  If there are no *.scm files in the directory, then only (KLOCS in *."
+"c + KLOCS in *.h) are displayed.  If there is only one number in the "
+"parenthesis, it is the approriate KLOC count for that statistic."
+msgstr ""
+"\"*.c, *.h, *.scm\"文件的数量 (*.c 的代码量 + *.h 的代码量 + *.scm 的代码"
+"量)，以千行为单位计算代码量。如果目录中没有*.scm文件，就不显示最后一部分“+ *."
+"scm 的代码量”。如果括号中只有一个数字，那么这是一个适于该相的统计数字。"
+
+#: sizing.phtml:373
+msgid ""
+"scheme and guile code in directories src/scm plus src/guile (version 1.6 and "
+"earlier). In version 1.7 and later, much of this code went into reports, "
+"import/export, and into indiovidual modules; thus only miscellaneous code "
+"remains."
+msgstr ""
+"scheme 和 guile 的代码。在版本1.6或更早，是在 src/scm 和 src/guile 下；在1.7"
+"或以后，大部分代码进入到了 reports、导入/导出以及进入到独立的模块中了，因此这"
+"里只有一部分代码。"
+
+#: search/templates/NMZ.result.short.php_tmpl:4
+#: search/templates/NMZ.result.normal.php_tmpl:4
+msgid "score"
+msgstr "得分"
+
+#: search/templates/NMZ.head.php_tmpl:46
+msgid "short"
+msgstr "简短"
+
+#: sizing.phtml:326
+msgid ""
+"where KLOC == kilo-lines-of-code, as reported by <code>wc</code>. As noted "
+"above, wc is not a terribly good code metric, but its what we have handy."
+msgstr ""
+"KLOC 是指 千行代码数，由<code>wc</code>报告。如上述说明的一样，<code>wc</"
+"code>虽然不是一个好的度量标准，但是这是我们手里现有的。"
+
+#~ msgid ""
+#~ "A new help subsystem that focuses on how to do tasks is now available, in "
+#~ "addition to a Tutorial and Concepts guide that gives the user background "
+#~ "information on accounting principles and how they are reflected in "
+#~ "GnuCash."
+#~ msgstr ""
+#~ "一个关注于如何执行任务的帮助子系统现在可以使用了。这是除教程和概念指南外，"
+#~ "另一个方式，可以给用户关于会计原理的背景知识，以及它们是如何表现在 "
+#~ "GnuCash 中的。"
+
+#~ msgid "Customers, Vendors, Jobs, <br>Invoices, A/P, A/R"
+#~ msgstr "客户、供应商、任务、<br />发票、应付账款、应收账款"
+
+#~ msgid "Deutsch"
+#~ msgstr "德语"
 
 #~ msgid "Documentation Development"
 #~ msgstr "文档开发"
 
-#, fuzzy
-#~ msgid "Free Acconting Software"
-#~ msgstr "免费的财务软件"
+#~ msgid "Documentation Project"
+#~ msgstr "文档项目"
 
-#~ msgid "USA Mirror"
-#~ msgstr "美国镜像站点"
+#~ msgid "Doxygen Developer Documentation"
+#~ msgstr "Doxygen 开发人员文档"
+
+#~ msgid "Espagnol"
+#~ msgstr "西班牙文"
 
 #~ msgid "European Mirror"
 #~ msgstr "欧洲镜像站点"
@@ -2456,35 +2555,21 @@ msgstr "日期"
 #~ "件给 <a href='mailto:gnucash-devel@gnucash.org'>gnucash-devel</a> 我们会添"
 #~ "加它的。"
 
-#~ msgid "Doxygen Developer Documentation"
-#~ msgstr "Doxygen 开发人员文档"
+#~ msgid "For both reviewers and documentation writers"
+#~ msgstr "包括评论人员和文档作者"
 
-#~ msgid "Deutsch"
-#~ msgstr "德语"
+#, fuzzy
+#~ msgid "Free Acconting Software"
+#~ msgstr "免费的财务软件"
 
-#~ msgid "Neil Williams GnuCash documentation"
-#~ msgstr "Neil Williams GnuCash 文档"
+#~ msgid "General Ledger"
+#~ msgstr "总账"
+
+#~ msgid "GnuCash Documentation Project"
+#~ msgstr "GnuCash 文档项目"
 
 #~ msgid "GnuCash for Business Users"
 #~ msgstr "商业用户与 GnuCash"
-
-#~ msgid "mirror"
-#~ msgstr "镜像"
-
-#~ msgid "Espagnol"
-#~ msgstr "西班牙文"
-
-#~ msgid "Customers, Vendors, Jobs, <br>Invoices, A/P, A/R"
-#~ msgstr "客户、供应商、任务、<br />发票、应付账款、应收账款"
-
-#~ msgid ""
-#~ "The checkbook-style register provides a custom, convenient and familiar "
-#~ "interface to entering financial transactions.   The register supports "
-#~ "common checking and credit-card transactions, as well as income, stock "
-#~ "and currency transactions."
-#~ msgstr ""
-#~ "纸质账簿风格提供了一个可定制的、方便的并且熟悉的界面来输入财务交易。账簿支"
-#~ "持普通的支票、现金账户以及信用卡交易，另外，也支持收入、股票和外币交易。"
 
 #~ msgid ""
 #~ "GnuCash has an integrated reporting and graphing module, and comes "
@@ -2494,8 +2579,15 @@ msgstr "日期"
 #~ "GnuCash 集成了报表和绘图的功能，并配有一整套标准和可定制的报表，比如资产负"
 #~ "债表、损益表、组合资产估值等等。"
 
-#~ msgid "QIF Import"
-#~ msgstr "QIF Import"
+#, fuzzy
+#~ msgid "GnuCash v%s (old stable release)"
+#~ msgstr "查看所有 GnuCash %s 的下载 (稳定版)"
+
+#~ msgid "Improved Import Transaction Matching"
+#~ msgstr "改进的导入交易匹配"
+
+#~ msgid "Interesting Links"
+#~ msgstr "有意思的链接"
 
 #~ msgid ""
 #~ "Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> QIF files can be imported, "
@@ -2503,20 +2595,6 @@ msgstr "日期"
 #~ msgstr ""
 #~ "Intuit<sup>&reg;</sup>公司的 Quicken<sup>&reg;</sup>软件所支持的 QIF 文件"
 #~ "可以被导入，并且会自动的合并以消除重复的交易。"
-
-#~ msgid "Improved Import Transaction Matching"
-#~ msgstr "改进的导入交易匹配"
-
-#~ msgid ""
-#~ "The development of OFX and HBCI support has also resulted in an improved "
-#~ "transaction matching system that more accurately recognizes duplicate "
-#~ "transactions during file import."
-#~ msgstr ""
-#~ "OFX 和 HBCI 支持的开发过程也创造了一个更好的交易匹配系统，它可以更精确的识"
-#~ "别出用户导入数据中存在的与现有交易重复的数据。"
-
-#~ msgid "General Ledger"
-#~ msgstr "总账"
 
 #~ msgid ""
 #~ "Multiple accounts can be displayed in one register window at the same "
@@ -2528,24 +2606,31 @@ msgstr "日期"
 #~ "它还提供了一个查看许多股票的组合投资的快捷的方式，即可以在组合投资中显示所"
 #~ "有的交易。"
 
-#~ msgid ""
-#~ "You can now create recurring transactions, including automatic reminders "
-#~ "when a transaction is due, the ability to postpone a scheduled "
-#~ "transaction without canceling it, and the ability to specify only a "
-#~ "limited number of transactions."
-#~ msgstr ""
-#~ "您现在可以创建一个反复发生的交易，包括交易到期时的自动提醒，允许推迟计划的"
-#~ "交易而不必取消它，以及指定交易只能发生多少次的限制。"
+#~ msgid "Neil Williams GnuCash documentation"
+#~ msgstr "Neil Williams GnuCash 文档"
+
+#~ msgid "QIF Import"
+#~ msgstr "QIF Import"
+
+#~ msgid "Subversion Access"
+#~ msgstr "Subversion 访问"
 
 #~ msgid ""
-#~ "A new help subsystem that focuses on how to do tasks is now available, in "
-#~ "addition to a Tutorial and Concepts guide that gives the user background "
-#~ "information on accounting principles and how they are reflected in "
-#~ "GnuCash."
+#~ "The checkbook-style register provides a custom, convenient and familiar "
+#~ "interface to entering financial transactions.   The register supports "
+#~ "common checking and credit-card transactions, as well as income, stock "
+#~ "and currency transactions."
 #~ msgstr ""
-#~ "一个关注于如何执行任务的帮助子系统现在可以使用了。这是除教程和概念指南外，"
-#~ "另一个方式，可以给用户关于会计原理的背景知识，以及它们是如何表现在 "
-#~ "GnuCash 中的。"
+#~ "纸质账簿风格提供了一个可定制的、方便的并且熟悉的界面来输入财务交易。账簿支"
+#~ "持普通的支票、现金账户以及信用卡交易，另外，也支持收入、股票和外币交易。"
+
+#~ msgid ""
+#~ "The development of OFX and HBCI support has also resulted in an improved "
+#~ "transaction matching system that more accurately recognizes duplicate "
+#~ "transactions during file import."
+#~ msgstr ""
+#~ "OFX 和 HBCI 支持的开发过程也创造了一个更好的交易匹配系统，它可以更精确的识"
+#~ "别出用户导入数据中存在的与现有交易重复的数据。"
 
 #, fuzzy
 #~ msgid ""
@@ -2560,8 +2645,21 @@ msgstr "日期"
 #~ "丁。我们将会帮您提交到 svn 系统中，知道你被分配了一个帐户。如果您愿意，您"
 #~ "也可以在 Bugzilla 中的 Bug 报告中提交补丁。"
 
-#~ msgid "Interesting Links"
-#~ msgstr "有意思的链接"
+#~ msgid "USA Mirror"
+#~ msgstr "美国镜像站点"
 
-#~ msgid "For both reviewers and documentation writers"
-#~ msgstr "包括评论人员和文档作者"
+#, fuzzy
+#~ msgid "Writing documentation"
+#~ msgstr "文档"
+
+#~ msgid ""
+#~ "You can now create recurring transactions, including automatic reminders "
+#~ "when a transaction is due, the ability to postpone a scheduled "
+#~ "transaction without canceling it, and the ability to specify only a "
+#~ "limited number of transactions."
+#~ msgstr ""
+#~ "您现在可以创建一个反复发生的交易，包括交易到期时的自动提醒，允许推迟计划的"
+#~ "交易而不必取消它，以及指定交易只能发生多少次的限制。"
+
+#~ msgid "mirror"
+#~ msgstr "镜像"
