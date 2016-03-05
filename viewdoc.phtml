@@ -6,7 +6,7 @@ include("externals/header.phtml");
 include("externals/menu.phtml");
 
 # Some base parameters used later on
-$basepath       = "https://www.gnucash.org/docs";
+$basepath       = "http://www.gnucash.org/docs";
 $helpdoc        = "gnucash-help/help.html";
 $tcdoc          = "gnucash-guide/index.html";
 $current_stable = "2.6";
@@ -85,7 +85,7 @@ if (isset ($_GET["rev"])) {
 # To avoid network traffic, the available languages are hard-coded here and should be
 # updated if list of languages in which the documentation is available changes
 if ($showrev == "trunk") {
-  $basepath = "https://code.gnucash.org/docs";
+  $basepath = "http://code.gnucash.org/docs";
   $trunk_langs = array ( $helpdoc => array( "C", "de_DE", "it_IT"),
                          $tcdoc   => array( "C", "de_DE", "it_IT", "ja_JP"));
   if (!in_array ($showlang, $trunk_langs[$showdoc])) {
