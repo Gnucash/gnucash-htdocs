@@ -1,0 +1,113 @@
+<b>Announcement:</b> GnuCash 2.6.12 Release
+2016-03-28
+
+<h2>GnuCash 2.6.12 released</h2>
+
+<p>The GnuCash development team announces GnuCash 2.6.12, the twelfth maintenance release in the 2.6-stable series. Please <a href="http://gnucash.org/2.6-release-tour.phtml">take the tour</a> of all the new features.
+
+<h3>Changes</h3>
+
+<p>Between 2.6.11 and 2.6.12, the following bugfixes were accomplished:</p>
+<ul>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=482186">Bug 482186 - Customer and vendor report for partners who get invoiced/paid in foreign currency show total labeled with the symbol of the default currency</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=620281">Bug 620281 - Adding reversing transaction to bill transactions creates undeleteable transactions</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=642292">Bug 642292 - General Ledger report - 'Primary Sort Key' value is not persistent</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=687504">Bug 687504 - Not possible to reset an invoice/bill counter format</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=693342">Bug 693342 - Print (bottom) prints to middle for 3-check pages</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=719904">Bug 719904 - Decide payment type only based on the account type involved</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=720934">Bug 720934 - Barcharts with many data points have overlapping x-axis labels</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=722996">Bug 722996 - Cannot add stock price on Price Editor</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=723689">Bug 723689 - Splash screen doesn't set the floating hint.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=728074">Bug 728074 - Posting bill converts currency to itself using 0 rate</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=728722">Bug 728722 - Setting number format details appear wrong in Help, section 10.3.4. Counters Book Options Tab</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=733164">Bug 733164 - [MacOSX] Command-H Invokes Help->Help Contents</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=742352">Bug 742352 - Budget Summary section does not show expense totals</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=744157">Bug 744157 - Tip about subaccount is confusing</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=754209">Bug 754209 - Bills can be posted from "find bill" search results even if bill is already posted and results in extra $ posted to A/P</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=754856">Bug 754856 - scheduled transaction <gnc.app-utils.sx> fails without warning</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=756469">Bug 756469 - CSV Invoice Import - Items with double quote escape not imported.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=760015">Bug 760015 - guile support is automagic</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=760529">Bug 760529 - Get Quotes updates value just once per day</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=760711">Bug 760711 - Non-ASCII characters not shown in Report Name when a report is created with 2.6.12</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=762971">Bug 762971 - Duplicating multiple invoices results in invoices without an ID number</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=763111">Bug 763111 - commodities prices editor creates hidden db entries</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=763146">Bug 763146 - Invalid exchange rate is recorded when entering multi-currency transaction</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=763279">Bug 763279 - GnuCash has empty reports in recent Gentoo builds.</a></li>
+
+</ul>
+<p>Some other fixes not associated with reported bugs:
+<ul>
+     <li>Various memory leaks.</li>
+     <li> More multi-currency fixes related to bug 763146.</li>
+     <li>Be more liberal in accepting business counter custom formats: li, lli, I64i, and whatever is defined to G_GINT_64 or PRIx64 on the system on which GnuCash is compiled.</li>
+     <li> Correctly re-value splits when the transaction currency is changed.</li>
+     <li>Reset the transaction currency to match the currently open account when auto-completing.</lli>
+     <li>Refine the MacOS X localization when the system-generated POSIX locale isn't a supported locale: Prefer the country to language when selecting an alternate locale, but still pass the original language to gettext.</li>
+     <li>Check printing: extract address from invoice/bill for payment transactions.</li>
+</ul>
+<p>Robert Fewell has contributed changes needed to allow the 2.6 series to read files from future major versions which use GUIDs instead of names to identify matched accounts with the Bayesian import matcher.</p>
+<p>Translations Updated:Azeri, Basque, Catalan, Chinese (Simplified), Czech, Danish, Dutch, Farsi, Japanese, Kinyarwandan, Portuguese, Slovak, Serbian, Swedish, Turkish, Ukrainian.</p>
+
+<h2>Important update notification</h2>
+<p>If you are updating from gnucash 2.6.0-2.6.4 on linux, you are advised to remove the guile user cache or several parts of gnucash may fail to work properly. This user cache can be found in <em>.cache/guile/ccache/2.0-LE-8-2.0/</em> in your home directory. It's safe to remove the whole contents of this directory.</p>
+<p>Note .cache is a hidden folder in your home directory. You may have to change your file manager's settings in order to view hidden files and folders.</p>
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of Gnucash 2.6.12 we're pleased to also release a new version 2.6.12 of the companion <em>Help</em> and <em>Tutorial and Concepts Guide</em>.</p>
+<ul>
+    <li>New Portuguese Translations from Pedro Albuquerque!</li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=639776">Bug 639776 - Update instructions for updating quote prices by cron.</a></li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=649283">Bug 649283 - Add links to where common report preferences are set.</a></li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=728722">Bug 728722 - Setting number format details appear wrong in Help, section 10.3.4. Counters Book Options Tab</a></li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=729265">Bug 729265 - Update documentation for Invoice and Bill payments to reflect the new features.</a></li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=761025">Bug 761025 - Add missing sect Guide ch2.8: New book options in New Acct Hierarchy.</a></li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=762088">Bug 762088 - Remove Section 9.4.3 From Guide that offered simplistic advice about money and life that does nothing to explain GnuCash functionality or use.</a></li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=762656">Bug 762656 - Add note to Guide section 2.3.3 For Column Widths</a></li>
+</ul>
+
+<h3>Getting GnuCash for Windows and MacOS X</h3>
+<p>GnuCash is provided for both Microsoft Windows XP&reg; and later and MacOS X 10.5 (Leopard)&reg; and later in pre-built, all-in-one packages. An installer is provided for Microsoft Windows&reg; while the MacOS X&reg; package is disk image containing a drag-and-drop application bundle.</p>
+<ul>
+<li>SourceForge:
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.12-setup.exe">Win32</a></li>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.6.12-1.dmg">Intel</a></li>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-PPC-2.6.12-1.dmg">PPC</a></li>
+</ul></li>
+<li>Github
+<ul>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.12/gnucash-2.6.12-setup.exe">Win32</a></li>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.12/Gnucash-Intel-2.6.12-1.dmg">Intel</a></li>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.12/Gnucash-PPC-2.6.12-1.dmg">PPC</a></li>
+</ul></li>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.6.12 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.12.tar.bz2">bzip2</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.6.12/">all files</a>.</li>
+
+<li>Github: <a href="https://github.com/Gnucash/gnucash/archive/2.6.12.tar.gz">gzip</a></li>
+
+<li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least Gnome 2, Guile, and slib. In addition you will need swig if compiling from git. Please consult the README file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 2.6.12 documentation can be found under "GnuCash v2.6 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats.</p>
+
+<p>If you want to compile the GnuCash Documentation 2.6.12 for yourself, the source code can be downloaded from:</p>
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-docs-2.6.12.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash-docs/archive/2.6.12.tar.gz">GitHub</a></li>
+<li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
