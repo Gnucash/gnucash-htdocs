@@ -1,0 +1,113 @@
+<b>Announcement:</b> GnuCash 2.6.13 Release
+2016-06-28
+
+<h2>GnuCash 2.6.13 released</h2>
+
+<p>The GnuCash development team announces GnuCash 2.6.13, the twelfth maintenance release in the 2.6-stable series. Please <a href="http://gnucash.org/2.6-release-tour.phtml">take the tour</a> of all the new features.
+
+<h3>Changes</h3>
+
+<p>Between 2.6.12 and 2.6.13, the following bugfixes were accomplished:</p>
+<ul>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=637004"> Bug 637004 - Optionally allow customer and vendor address info to display.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=736352"> Bug 736352 - Expense Voucher adds tax automatically.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=748983"> Bug 748983 - Crash after opening money transfer dialog twice.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=760021"> Bug 760021 - File "Save As" to an existing file...overwrites without warning.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=761672"> Bug 761672 - Transfer made to placeholder account.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=764248"> Bug 764248 - saved-reports-2.4-backup line endings unconventional.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=764871"> Bug 764871 - Crash starting gnu cash.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=765859"> Bug 765859 - The budget reports missing in Hungarian edition</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=723689"> Bug 766028 - crash on manual addition of price entry in Price Editor.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=766200"> Bug 766200 - Three-up printing does not position the third check properly.</a>
+     A few bugs in the calculation of check positions while printing
+     checks have been corrected. If you manually edited the check
+     formats to compensate for these positioning errors in previous
+     versions of gnucash, you may have to undo these changes. Please
+     check this before printing your next check.
+     </li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=766688"> Bug 766688 - Minimal fraction of BYN should be 1/100.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=766960"> Bug 766960 - gnucash-make-guids fails to run due to hardcoded paths.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=767824"> Bug 767824 - Some UTC timezones incorrectly recognized on Windows 7</a></li>
+
+</ul>
+<p>Some other fixes not associated with reported bugs:
+<ul>
+
+  <li>The gnc_gui_refresh_all statement in gnc_book_options_dialog_apply_cb causes the 'apply' and 'OK' buttons to be set to sensitive on the open Book Options dialog in some circumstances; this commit causes them to be reset to insensitive, as they should be.</li>
+  <li>Check printing: make logic easier to follow.</li>
+  <li>Fix adjust_sql_option_string test on Windows.</li>
+  <li>Don't try to compile test_adjust_sql_options on windows, it won't link.</li>
+  <li>Fix the CMake build by linking gnc-backend-dbi for test-backend-dbi.</li>
+  <li>Improved adjust_sql_options_string, added tests.</li>
+  <li>Improve quickfill performance on huge registers.</li>
+  <li>Mac Localization: Prefer the country to the language for fall-back locales, on the theory that in countries where multiple languages are in use similar date and number formats will apply regardless of language, and especially that the default currency will be the same regardless of language. Also ensure that the specified language is in the list passed to gettext; the net effect of which is that the user will effectively get the requested localization behavior.
+  </li>
+  <li>Update README to refer to wiki Submitting_Patches and regarding pull request policy.</li>
+</ul></p>
+<p>Translation Updates: Dutch, Russian, Serbian</p>
+
+<p>Standard Chart-of-Accounts Localizations Updates: Finnish, Sweden_Finnish, and &Aring;land Islands Finnish.</p>
+
+<h2>Important update notification</h2>
+<p>If you are updating from gnucash 2.6.0-2.6.4 on linux, you are advised to remove the guile user cache or several parts of gnucash may fail to work properly. This user cache can be found in <em>.cache/guile/ccache/2.0-LE-8-2.0/</em> in your home directory. It's safe to remove the whole contents of this directory.</p>
+<p>Note .cache is a hidden folder in your home directory. You may have to change your file manager's settings in order to view hidden files and folders.</p>
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of Gnucash 2.6.13 we're pleased to also release a new version 2.6.13 of the companion <em>Help</em> and <em>Tutorial and Concepts Guide</em>.</p>
+<ul>
+  <li>Fix the very stale Release Schedule link in the Guide.</li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id="63704"> Bug 637004 - Document Payable/Receivable Aging Rpts and new options for  allowing customer and vendor address info to display.</a></li>
+    <li>Fix unclear statement re docbook stylesheets in README.</li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id="712764"> Bug 712764 - Clarify Account type designations in the Tutorial.</a></li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id="751686"> Bug 751686 - Explain how to use Find Transaction to report per-employee.</a></li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id="754239"> Bug 754239 - Fix order of Report menu items.</a></li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id="754239"> Bug 754239 - Update Report menu item names to Save Report Configuration.</a></li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id="765131"> Bug 765131 - Document Investment Return of Capital in the Guide.</a></li>
+</ul>
+
+<h3>Getting GnuCash for Windows and MacOS X</h3>
+<p>GnuCash is provided for both Microsoft Windows XP&reg; and later and MacOS X 10.5 (Leopard)&reg; and later in pre-built, all-in-one packages. An installer is provided for Microsoft Windows&reg; while the MacOS X&reg; package is disk image containing a drag-and-drop application bundle.</p>
+<ul>
+<li>SourceForge:
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.13-setup.exe">Win32</a></li>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.6.13-1.dmg">Intel</a></li>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-PPC-2.6.13-1.dmg">PPC</a></li>
+</ul></li>
+<li>Github
+<ul>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.13/gnucash-2.6.13-setup.exe">Win32</a></li>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.13/Gnucash-Intel-2.6.13-1.dmg">Intel</a></li>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.13/Gnucash-PPC-2.6.13-1.dmg">PPC</a></li>
+</ul></li>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.6.13 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.13.tar.bz2">bzip2</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.6.13/">all files</a>.</li>
+
+<li>Github: <a href="https://github.com/Gnucash/gnucash/archive/2.6.13.tar.gz">gzip</a></li>
+
+<li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least Gnome 2, Guile, and slib. In addition you will need swig if compiling from git. Please consult the README file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 2.6.13 documentation can be found under "GnuCash v2.6 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats.</p>
+
+<p>If you want to compile the GnuCash Documentation 2.6.13 for yourself, the source code can be downloaded from:</p>
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-docs-2.6.13.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash-docs/archive/2.6.13.tar.gz">GitHub</a></li>
+<li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
