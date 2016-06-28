@@ -9,7 +9,8 @@
 #     $latest_stable_win         = $latest_stable."-1";
      $latest_stable_mac_ppc     = $latest_stable."-1";
      $latest_stable_mac_intel   = $latest_stable."-1";
-
+     $tarball                   = $latest_stable."b";
+     
 #     $major_latest_unstable		="2.5";
 #     $minor_latest_unstable		="10"; 
 #     $latest_unstable           = $major_latest_unstable.".".$minor_latest_unstable;
@@ -36,7 +37,7 @@
      $latest_stable_win="gnucash-".$latest_stable_win."-setup.exe";
      $latest_stable_mac_intel="Gnucash-Intel-".$latest_stable_mac_intel.".dmg";
      $latest_stable_mac_ppc="Gnucash-PPC-".$latest_stable_mac_ppc.".dmg";
-     $latest_stable_source="gnucash-".$latest_stable.".tar.bz2";
+     $latest_stable_source="gnucash-".tarball.".tar.bz2";
 
      $old_stable_path=$stable_path.$old_stable."/";
      
