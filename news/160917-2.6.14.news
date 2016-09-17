@@ -1,0 +1,103 @@
+<b>Announcement:</b> GnuCash 2.6.14 Release
+2016-09-17
+
+<h2>GnuCash 2.6.14 released</h2>
+
+<p>The GnuCash development team announces GnuCash 2.6.14, the fourteenth maintenance release in the 2.6-stable series. Please <a href="http://gnucash.org/2.6-release-tour.phtml">take the tour</a> of all the new features.
+
+<h3>Changes</h3>
+
+<p>Between 2.6.13 and 2.6.14, the following bugfixes were accomplished:</p>
+<ul>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=643025">Bug 643025 - RFE: Ability to select and open multiple invoices.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=733153">Bug 733153 - Ambiguous view of buttons in search dialog Linux version.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=742461"> Bug 742461 - SQL backend doesn't update customer info.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=756416"> Bug 756416 - CSV data with Posted information will always have last invoice not posted</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=761667"> Bug 761667 - Crash opening associated location that has no scheme.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=762901"> Bug 762901 - [PATCH] Fix saving Account Treeview sort order.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=769730"> Bug 769730 - Investments: Lots in This Account, Closed column shows date 25/11/1833 instead of Open.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=769746"> Bug 769746 - Zero interest loan formula fails.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=770113"> Bug 770113 - compiling issue with libdbi.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=770136"> Bug 770136 - 'Reverse Order' in 'View'->'Sort by' is not saved.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=770181"> Bug 770181 - gnc-fq-dump incorrectly says "quote cannot be used...</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=770196"> Bug 770196 - cppcheck va_list not closed.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=770303"> Bug 770303 - Incorrect commodity match during import OFX and possible solution.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=771246"> Bug 771246 - Set Invoice/Bill items date correctly from imported CSV.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=771379"> Bug 771379 - GnuCash doesn't support Russian Ruble Symbol.</a></li>
+
+</ul>
+<p>Some other fixes not associated with reported bugs:
+<ul>
+    <li>Build improvements with CMake, accomodation for Guile-2.0.12 on Gentoo.</li>
+    <li>Change the date_posted timestamp from midnight local to 11:00 AM GMT, which will be the same date in nearly all timezones.</li>
+    <li>SX - Recalculate all occurrences of all SX if the calendar is updated to start on another month</li>
+     <li>SX Window: correctly show first sx on calendar when it is moved to next weekday.</li>
+     <li>Work around libofx bug which caused OFX imports to have the wrong date_posted when in an eastern-hemisphere timezone and not daylight time.</li>
+     <li>Indicate in the register when a transaction has an associated file or URI. The indicator will appear in the "reconciled" column in the second transaction line (enable double-line view to see it).</li>
+</ul></p>
+<p>Translation Updates: Dutch, German, Serbian, Spanish</p>
+
+<h2>Important update notification</h2>
+<p>If you are updating from gnucash 2.6.0-2.6.4 on linux, you are advised to remove the guile user cache or several parts of gnucash may fail to work properly. This user cache can be found in <em>.cache/guile/ccache/2.0-LE-8-2.0/</em> in your home directory. It's safe to remove the whole contents of this directory.</p>
+<p>Note .cache is a hidden folder in your home directory. You may have to change your file manager's settings in order to view hidden files and folders.</p>
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of Gnucash 2.6.14 we're pleased to also release a new version 2.6.14 of the companion <em>Help</em> and <em>Tutorial and Concepts Guide</em>.</p>
+<ul>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=115461">Bug 115461 - Highlight need to select Account Type when adding new stock account.</a></li>
+        <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=687290"> Bug 687290 - Add new chapter for expense type accounts.</a></li>
+        <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=769457"> Bug 769457 - Add note to 4.3 of Guide.</a></li>
+        <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=769746"> Bug 769746 - Zero interest loan formula fails.</a></li>
+        <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=771230"> Bug 771230 - Modify Windows portion of 8.6.3 of Guide.</a></li>
+        <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=769663"> Bug 769663 - Link update on Tutorial and concepts guide</a></li>
+	<li>Updated german translation of the F::Q appendix.</li>
+	<li>Update the list of Finance::Quote methods to 1.38.</li>
+
+</ul>
+
+<h3>Getting GnuCash for Windows and MacOS X</h3>
+<p>GnuCash is provided for both Microsoft Windows XP&reg; and later and MacOS X 10.5 (Leopard)&reg; and later in pre-built, all-in-one packages. An installer is provided for Microsoft Windows&reg; while the MacOS X&reg; package is disk image containing a drag-and-drop application bundle.</p>
+<ul>
+<li>SourceForge:
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.14-setup.exe">Win32</a></li>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.6.14-1.dmg">Intel</a></li>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-PPC-2.6.14-1.dmg">PPC</a></li>
+</ul></li>
+<li>Github
+<ul>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.14/gnucash-2.6.14-setup.exe">Win32</a></li>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.14/Gnucash-Intel-2.6.14-1.dmg">Intel</a></li>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.14/Gnucash-PPC-2.6.14-1.dmg">PPC</a></li>
+</ul></li>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.6.14 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.14.tar.bz2">bzip2</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.6.14/">all files</a>.</li>
+
+<li>Github: <a href="https://github.com/Gnucash/gnucash/archive/2.6.14.tar.gz">gzip</a></li>
+
+<li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least Gnome 2, Guile, and slib. In addition you will need swig if compiling from git. Please consult the README file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 2.6.14 documentation can be found under "GnuCash v2.6 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats.</p>
+
+<p>If you want to compile the GnuCash Documentation 2.6.14 for yourself, the source code can be downloaded from:</p>
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-docs-2.6.14.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash-docs/archive/2.6.14.tar.gz">GitHub</a></li>
+<li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
