@@ -1,0 +1,127 @@
+<b>Announcement:</b> GnuCash 2.6.15 Release
+2016-12-18
+
+<h2>GnuCash 2.6.15 released</h2>
+
+<p>The GnuCash development team announces GnuCash 2.6.15, the fifteenth maintenance release in the 2.6-stable series.
+<h3>Changes</h3>
+
+<p>Between 2.6.14 and 2.6.15, the following bugfixes were accomplished:</p>
+<ul>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=340991">Bug 340991 - Default price source for reports not good.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=516920"> Bug 516920 - Scheduled trasaction calendar popup off screen.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=685329">Bug 685329 - Crashes on non-existent date.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=769124">Bug 769124 - Australian (GMT-10) OFX transactions imported have previous day's date.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=770364">Bug 770364 - Sign of Value in Lots in Account window seems inconsistent.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=771246">Bug 771246 - Set Invoice/Bill items date correctly from imported CSV.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=771617">Bug 771617 - Build fails because test test-report-utilities is sensitive to time of day/timezone.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=772313">Bug 772313 - Invalid DOCTYPE in report generation.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=772369">Bug 772369 - Replace use of guile's internal date/time functions.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=772382">Bug 772382 - Date off-by-one after DST change.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=772484">Bug 772484 - Segfault on Transaction edit.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=773808">Bug 773808 - Export Report Crash.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=774237">Bug 774237 - FTBFS under some timezones (eg. GMT-14).</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=775368">Bug 775368 - "Average cost" price source problem.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=775385">Bug 775385 - Confusing error message which includes the text "file file".</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=775567">Bug 775567 - Importing QIF file from PayPal crashes GnuCash 2.6.14 on Windows XP service pack 3.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=775912">Bug 775912 - Tips of the Day shows content only once very 3 times.</a></li>
+
+</ul>
+<p>Some other fixes not associated with reported bugs:
+<ul>
+      <li>Fix report html header</li>
+      <li>Changed the default value for date format in Business Options</li>
+      <li>Change report resizing when not in view</li>
+      <li>Add an image for the report tab</li>
+      <li>Show empty business splits in lot viewer</li>
+      <li>Business check &amp; repair - correct lot invoice state</li>
+      <li>When juggling business splits while scrubbing set both value and amount</li>
+      <li>Update progress bar while running Check &amp; Repair</li>
+      <li>Remove lot from account while deleting the lot</li>
+      <li>Ensure that the Namespace combo box is initialized to a valid iter.</li>
+      <li>Fix CSV importer to handle GMT + 13 Timezone (New Zealand Daylight</li>
+      <li>Fix broken german account template 'Kontenrahmen für Wohnungswirtschaft'.Time).</li>
+
+</ul></p>
+<p>Translation Updates: Dutch, German, Serbian</p>
+
+<h2>Important update notification</h2>
+<p>If you are updating from gnucash 2.6.0-2.6.4 on linux, you are advised to remove the guile user cache or several parts of gnucash may fail to work properly. This user cache can be found in <em>.cache/guile/ccache/2.0-LE-8-2.0/</em> in your home directory. It's safe to remove the whole contents of this directory.</p>
+<p>Note .cache is a hidden folder in your home directory. You may have to change your file manager's settings in order to view hidden files and folders.</p>
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of Gnucash 2.6.15 we're pleased to also release a new version 2.6.15 of the companion <em>Help</em> and <em>Tutorial and Concepts Guide</em>.</p>
+<ul>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=115461">
+      Bug 115461 - Highlight need to select Account Type when adding new stock account.
+    </a></li>
+        <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=397135">Bug 397135 - Hidden Accounts Show in ComboBox.	</a></li>
+        <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=633590">Bug 633590 - Add a Reports Chapter to the Tutorial and Guide. </a></li>
+        <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=743671">Bug 743671 - Add glossary to Tutorial and Guide.</a></li>
+        <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=755174">Bug 755174 - Document using Lots to create investment capital gains transactions. </a></li>
+        <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=770371">Bug 770371 - Add note to documentation regarding Sort order options.	</a></li>
+        <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=775592">Bug 775592 - General Rewrite of Guide Chapter on Multiple Currencies.</a></li>
+        <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=775919">Bug 775919 - Change Documentation of contributors.</a></li>
+	<li>Update German Translation (Mechtilde Stehmann)</li>
+	<li>Fix resolution of screenshots.</li>
+</ul>
+
+<h3>Getting GnuCash for Windows and MacOS X</h3>
+<p>GnuCash is provided for both Microsoft Windows XP&reg; and later
+and MacOS X 10.5 (Leopard)&reg; and later in pre-built, all-in-one
+packages. An installer is provided for Microsoft Windows&reg; while
+the MacOS X&reg; package is a disk image containing a drag-and-drop
+application bundle.</p>
+<p>The SHA256 Hashes for the downloadable files are:
+<ul>
+<li><code>1619eb8263439f547dd12afdc0b05b9a50593d5cd3d3e9ee5b05edaec3b6dbae</code>&nbsp;&nbsp;gnucash-2.6.15.tar.bz2</li>
+<li><code>8602b7e5f610a112536d7a183dc08cffb6c83990879a416a180a922c6dfdb588</code>&nbsp;&nbsp;gnucash-2.6.15.tar.gz</li>
+<li><code>822d4c99e402cf9526c5ec1f2f246ded704eefd96185e7e18712ab06f12b00e9</code>&nbsp;&nbsp;gnucash-2.6.15.setup.exe</li>
+<li><code>009a33dc8d0ac6dd73a380085a62900fcc469e290c0d5001970c87c7a9d7d9a5</code>&nbsp;&nbsp;Gnucash-Intel-2.6.15-1.dmg</li>
+<li><code>9d6d040ca7acd50b47ce1e9dd7313dc7236837a128928595ca0c411efcea844a</code>&nbsp;&nbsp;Gnucash-PPC-2.6.15-1.dmg</li>
+</ul></p>
+
+<ul>
+<li>SourceForge:
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.15-setup.exe">Win32</a></li>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.6.15-1.dmg">Intel</a></li>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-PPC-2.6.15-1.dmg">PPC</a></li>
+</ul></li>
+<li>Github
+<ul>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.15/gnucash-2.6.15-setup.exe">Win32</a></li>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.15/Gnucash-Intel-2.6.15-1.dmg">Intel</a></li>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.15/Gnucash-PPC-2.6.15-1.dmg">PPC</a></li>
+</ul></li>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.6.15 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.15.tar.bz2">bzip2</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.6.15/">all files</a>.</li>
+
+<li>Github: <a href="https://github.com/Gnucash/gnucash/archive/2.6.15.tar.gz">gzip</a></li>
+
+<li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least Gnome 2, Guile, and slib. In addition you will need swig if compiling from git. Please consult the README file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 2.6.15 documentation can be found under "GnuCash v2.6 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats.</p>
+
+<p>If you want to compile the GnuCash Documentation 2.6.15 for yourself, the source code can be downloaded from:</p>
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-docs-2.6.15.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash-docs/archive/2.6.15.tar.gz">GitHub</a></li>
+<li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
