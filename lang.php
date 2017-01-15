@@ -52,7 +52,7 @@ if (strlen($locale) == 2) {
 
 # Find the locale from Client Accept language
 if ($locale == "") {
-        # Get user prefered languages, and match agasint supported language
+        # Get user preferred languages, and match agasint supported language
         if ( isset( $_SERVER["HTTP_ACCEPT_LANGUAGE"] ) )
         {
                 # tolower() => remove space => '-' -> '_'
