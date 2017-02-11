@@ -34,7 +34,7 @@ include("externals/menu.phtml");
 <div class="featureborder">
 <h2 class="featuretitle"><?php printf (T_("GnuCash v%s"), $major_stable)?> <?php echo T_("(current stable release)");?></h2>
 </div>
-<h3><?= T_("Current <em>stable</em> user documentation and developer documentation");?></h3>
+<h3><?= T_("Current <em>stable</em> user documentation");?></h3>
 <div id="stabledoc">
 <div style="float:left;">
 <h2 class="download-title"><?php echo T_("Download");?> (<em><?php echo T_("Stable");?></em>)</h2>
@@ -168,7 +168,7 @@ if ($old_stable) { ?>
 <div class="featureborder">
 <h2 class="featuretitle"><?php printf (T_("GnuCash v%s"), $major_old_stable)?> <?php echo T_("(old stable release)");?></h2>
 </div>
-<h3><?= T_("Old <em>stable</em> user documentation and developer documentation");?></h3>
+<h3><?= T_("Old <em>stable</em> user documentation");?></h3>
 <div id="stabledoc">
 <div style="float:left;">
 <h2 class="download-title"><?php echo T_("Download");?> (<em><?php echo T_("Stable");?></em>)</h2>
@@ -394,6 +394,20 @@ if ($old_stable) { ?>
     </tbody>
     </table>
   </li>
+  <li><b><?= T_("API") ?></b>
+    <table class="doctable">
+    <tbody>
+      <tr class="doctr">
+      <td><a href="http://code.gnucash.org/docs/MAINT">MAINT</a> :</td><td> |
+        <?php echo T_("current bugfix branch");?>
+      </td></tr>
+      <tr class="doctr">
+      <td><a href="http://code.gnucash.org/docs/MASTER">MASTER</a> :</td><td> |
+        <?php echo T_("future feature branch");?>
+      </td></tr>
+    </tbody>
+    </table>
+  </li>
 </ul>
 </div>
 
@@ -402,7 +416,6 @@ if ($old_stable) { ?>
 </div>
 
 </div>
-
 <p class="justify"><?php echo T_("Every night a server builds the documentation from the current contents of the <span class=\"gnucash\">GnuCash</span> git repository. This includes the <b>Developer Documentation</b> from <b>Doxygen</b> and <b>User Documentation</b> for the current <em>stable</em> version of <span class=\"gnucash\">GnuCash</span>.");?></p>
 </div>
 
