@@ -1,4 +1,9 @@
 <?php                                                    
+# Determine which documentation to show based on 3 parameters:
+# - language (lang)
+# - help or guide (doc)
+# - doc version (rev)
+
 include("emulate_globals_on.php");
 include("lang.php");
 $title = T_("View document");
@@ -11,24 +16,23 @@ $helpdoc        = "gnucash-help/help.html";
 $tcdoc          = "gnucash-guide/index.html";
 $current_stable = "2.6";
 
-# Determine which documentation to show based on 3 parameters:
-# - language
-# - help or guide (doc)
-# - doc version (rev)
-
 # Show current stable helpdoc, in overall set language by default
 $showdoc     = $tcdoc;
 $req_doc_ok  = true;
 $showrev     = $current_stable;
 $req_rev_ok  = true;
 
-# Requested language is set in $locale by included lang.php
-if ($locale == "en_US") {
-  $showlang  = "C";
-} else {
-  $showlang  = $locale;
-}
+if (isset ($_GET["lang"])) {
+	$showlang  = $_GET["lang"];
+  }	else {
+  # Fallback: Requested language is set in $locale by included lang.php
+  if ($locale == "en_US") {
+    $showlang  = "C";
+  } else {
+    $showlang  = $locale;
+  }
 $req_lang_ok = true;
+
 
 # Parse requested document
 if (isset ($_GET["doc"])) {
@@ -86,8 +90,8 @@ if (isset ($_GET["rev"])) {
 # updated if list of languages in which the documentation is available changes
 if ($showrev == "trunk") {
   $basepath = "https://lists.gnucash.org/docs";
-  $trunk_langs = array ( $helpdoc => array( "C", "de_DE", "it_IT"),
-                         $tcdoc   => array( "C", "de_DE", "it_IT", "ja_JP"));
+  $trunk_langs = array ( $helpdoc => array( "C", "de", "it"),
+                         $tcdoc   => array( "C", "de", "it", "ja"));
   if (!in_array ($showlang, $trunk_langs[$showdoc])) {
     $showlang    = "C";
     $req_lang_ok = false;
