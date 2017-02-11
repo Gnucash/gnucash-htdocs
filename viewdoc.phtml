@@ -24,13 +24,14 @@ $req_rev_ok  = true;
 
 if (isset ($_GET["lang"])) {
 	$showlang  = $_GET["lang"];
-  }	else {
+} else {
   # Fallback: Requested language is set in $locale by included lang.php
   if ($locale == "en_US") {
     $showlang  = "C";
   } else {
     $showlang  = $locale;
   }
+}
 $req_lang_ok = true;
 
 
