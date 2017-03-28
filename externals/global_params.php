@@ -5,7 +5,7 @@
      $major_stable		="2.6";
      $minor_stable		="16";
      $latest_stable             = $major_stable.".".$minor_stable;
-     $latest_stable_win		= $latest_stable;
+#     $latest_stable_win		= $latest_stable;
      $latest_stable_win         = $latest_stable."-1";
      $latest_stable_mac_ppc     = $latest_stable."-1";
      $latest_stable_mac_intel   = $latest_stable."-1";
@@ -36,7 +36,7 @@
      $stable_path="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/";
      $latest_stable_path=$stable_path.$latest_stable."/";
      
-     $latest_stable_win="gnucash-".$latest_stable_win."-setup.exe";
+     $latest_stable_win="gnucash-".$latest_stable_win.".setup.exe";
      $latest_stable_mac_intel="Gnucash-Intel-".$latest_stable_mac_intel.".dmg";
      $latest_stable_mac_ppc="Gnucash-PPC-".$latest_stable_mac_ppc.".dmg";
      $latest_stable_source="gnucash-".$tarball.".tar.bz2";
