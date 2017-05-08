@@ -1,5 +1,6 @@
 iso_languages = de es fr
 languages = ${iso_languages} hu it ja nb nl pl pt zh_CN zh_TW
+# keep the languages synchron with  <span id="language"> in external/header.phtml
 
 .SECONDEXPANSION:
 
