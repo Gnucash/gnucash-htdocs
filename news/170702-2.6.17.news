@@ -1,0 +1,112 @@
+<b>Announcement:</b> GnuCash 2.6.17 Release
+2017-07-02
+
+<h2>GnuCash 2.6.17 released</h2>
+
+<p>The GnuCash development team announces GnuCash 2.6.17, the seventeenth maintenance release in the 2.6-stable series.
+<h3>Changes</h3>
+
+<p>Between 2.6.16 and 2.6.17, the following bugfixes were accomplished:</p>
+<ul>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=603379"> Bug 603379 - Prevent changing some Account Options if it has transactions</a> Relax the account type change restrictions. In the new implementation account types can't be changed for an account with splits:
+		   <ul><li>if the change woud force a commodity change e.g. from type STOCK to BANK as the former takes only non-currency commodities and the latter only currency.</li>
+		   <li>for immutable accounts</li></ul>
+		   At the time of this commit the following account types are considered immutable:
+		   <ul><li>Accounts Receivable</li>
+		   <li>Accounts Payable</li>
+		   <li>Trading accounts</li></ul></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=776396"> Bug 776396 - Foreign currency reports, amounts are not aligned correctly</a> Improve the styling of the table element used for foreign currencies in the Balance sheet report so they end up aligned with the other currencies.</li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=780845"> Bug 780845 - link in github repo README file needs correction/editing</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=780889"> Bug 780889 - Split-register transactions result in invalid price:type "transaction"</a> Add 'transaction' to the schema and document it in gnc-pricedb.h.</li>
+     <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=781476"> Bug 781476 - Online Banking Wizard Crashes for Windows</a> (gnucash-on-windows)</li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=781634">Bug 781634 - Alert on missing account currency when opening account</a> Also separate translatable commodity namespace strings from those used in storage: There is now a separate GNC_COMMODITY_NS_ISO_GUI label to be used everywhere the user needs to read 'Currency namespace'. It's currently set to 'Currencies' and can be translated.</li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=782274"> Bug 782274 - Transactions produced by Transfer Funds or Process Payment dialogs sort to beginning of day and do not honor NUM field for custom sorting.</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=782897">Bug 782897 - Stock Split Assistant crashes GnuCash if you enter a New Price and that already exists in the Price DB</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=783095">Bug 783095 - gnucash-2.6.16 segfaults on startup</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=784317">Bug 784317 - typo in 'import customers or vendors from text file' dialog</a></li>
+
+</ul>
+<p>Some other fixes not associated with reported bugs:
+<ul>
+      <li>Fix crash on Mac when trying to create or edit an AQBanking
+      User. (gnucash-on-osx)</li>
+      <li>Properly define the template namespace rather than using a local string everywhere</li>
+      <li>Correctly store time64 0 in the SQL backend: The SQL backend ignored time64 0 when saving dates. time64 is a perfectly valid timestamp (1970-01-01 00:00:00) and should be stored.</li>
+      <li>Clamp time64 values passed to GDateTime functions to the valid range. Fixes a bug reported on the mailing list wherein a date of 0000-00-00 in a MySql database would crash GnuCash. Such dates may come from a bad conversion of 1970-01-01 or from a crash.</li>
+      <li>Add XSU to iso-4217-currencies</li>
+      <li>Some banks include additional purpose information for a transaction in non-swift-section 17 (aka transaction text). If available, this transaction text is put in front of the other purpose texts to provide full transaction information. Adds a preference to control import behaivour of transaction text.</li>
+</ul></p>
+<p>Translation Updates:  Arabic, Japanese, Serbian, Spanish, Turkish
+
+<h2>Important update notification</h2>
+<p>If you are updating from gnucash 2.6.0-2.6.4 on linux, you are advised to remove the guile user cache or several parts of gnucash may fail to work properly. This user cache can be found in <em>.cache/guile/ccache/2.0-LE-8-2.0/</em> in your home directory. It's safe to remove the whole contents of this directory.</p>
+<p>Note .cache is a hidden folder in your home directory. You may have to change your file manager's settings in order to view hidden files and folders.</p>
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of Gnucash 2.6.17 we're pleased to also release a new version 2.6.17 of the companion <em>Help</em> and <em>Tutorial and Concepts Guide</em>.</p>
+<ul>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=781711">Bug 781711: Add reversing transaction definition</a></li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=781714">Bug 781714: Add Reversing Transaction text for Help document</a></li>
+    <li>Improve German translation of gnucash-guidem fix some typos, reconstruct some rev. history</li>
+</ul>
+
+<h3>Getting GnuCash for Windows and MacOS X</h3>
+<p>GnuCash is provided for both Microsoft Windows XP&reg; and later
+and MacOS X 10.5 (Leopard)&reg; and later in pre-built, all-in-one
+packages. An installer is provided for Microsoft Windows&reg; while
+the MacOS X&reg; package is a disk image containing a drag-and-drop
+application bundle.</p>
+<p>The SHA256 Hashes for the downloadable files are:
+<ul>
+<li><code>db965f39b6c5181810a064a1d1f5bb719722ac3b54dfce0cecf43ee7b38e593c</code>&nbsp;&nbsp;gnucash-2.6.17.tar.bz2</li>
+<li><code>4fa7b851b854f8b07e9fd5662374cea25658c207deaf4812884731892899ef20</code>&nbsp;&nbsp;gnucash-2.6.17.tar.gz</li>
+<li><code>ba57a15d4b89dc7a6b447569e4214f96cc545c9dd3124e859e76890699f68550</code>&nbsp;&nbsp;gnucash-2.6.17.setup.exe</li>
+<li><code>f60238bc7bced79bc50e223ba0d4047d3235e71a7f815a375745242977ecfdeb</code>&nbsp;&nbsp;Gnucash-Intel-2.6.17-1.dmg</li>
+<li><code>1d41e4e9d818a66a166ae6def9a9ac7add42da148d3a6c058b12d79701497416</code>&nbsp;&nbsp;Gnucash-PPC-2.6.17-1.dmg</li>
+<li><code>84c79c333937ccfdcc0b94f9eec78b707e27043402560c3fbc85a3eefa211c56</code>&nbsp;&nbsp;gnucash-docs-2.6.17.tar.gz</li>
+</ul></p>
+
+<ul>
+<li>SourceForge:
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.17-1.setup.exe">Win32</a></li>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.6.17-1.dmg">Intel</a></li>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-PPC-2.6.17-1.dmg">PPC</a></li>
+</ul></li>
+<li>Github
+<ul>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.17/gnucash-2.6.17-1.setup.exe">Win32</a></li>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.17/Gnucash-Intel-2.6.17-1.dmg">Intel</a></li>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.17/Gnucash-PPC-2.6.17-1.dmg">PPC</a></li>
+</ul></li>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.6.17 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.17.tar.bz2">bzip2</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.6.17/">all files</a>.</li>
+
+<li>Github: <a href="https://github.com/Gnucash/gnucash/archive/2.6.17.tar.gz">gzip</a></li>
+
+<li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least Gnome 2, Guile, and slib. In addition you will need swig if compiling from git. Please consult the README file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 2.6.17 documentation can be found under "GnuCash v2.6 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats.</p>
+
+<p>If you want to compile the GnuCash Documentation 2.6.17 for yourself, the source code can be downloaded from:</p>
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-docs-2.6.17.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash-docs/archive/2.6.17.tar.gz">GitHub</a></li>
+<li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
