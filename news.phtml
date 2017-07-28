@@ -1,0 +1,34 @@
+<?php 
+include("emulate_globals_on.php");
+include("lang.php");
+$title = T_("News");
+include("externals/header.phtml");
+include("externals/menu.phtml");
+?>
+
+<div id="content">
+  <div id="newscontainer">
+    <h1><?php echo T_("GnuCash News"); ?></h1>
+    <?php
+      echo("<!-- top_dir = $top_dir , home = $home -->\n");
+      # News will continue to be translated separately because 
+      # of the .txt format. 
+      # for english, the lang and en news path are identical
+      $en_newspath  =  $top_dir."/news";
+      $lang_newspath  =  $top_dir."/news/".$lang_dir;
+      $oldnews = false;
+      include("$top_dir/news/news-script.php");
+      emit_news($en_newspath, $lang_newspath, $oldnews);
+    ?>
+    <div class="newsborder">
+      <div class="newsheader"><img alt="news panel" src="<?=$top_dir;?>/images/icons/document.txt.gif" />&nbsp;
+        <a href="oldnews.phtml"><?php echo T_("Older Announcements ...");?></a>
+      </div>
+      <div class="newsinner">
+        <?php echo T_("Click <a href=\"oldnews.phtml\">here</a> for older announcements...");?>
+      </div>
+    </div>
+  </div>
+</div>
+
+<?php include("externals/footer.phtml"); ?>

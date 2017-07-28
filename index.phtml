@@ -75,29 +75,6 @@ include("externals/menu.phtml");
   <p><i><b><?php echo T_("Note that GnuCash for Android is not a port of the GnuCash program to Android.");?></b></i></p>
 </div>
 <!-- end Android app info -->
-
-
-<div id="newscontainer">
-<h1><?php echo T_("News"); ?></h1>
-
-<?php
-  echo("<!-- top_dir = $top_dir , home = $home -->\n");
-  # News will continue to be translated separately because 
-  # of the .txt format. 
-  # for english, the lang and en news path are identical
-  $en_newspath  =  $top_dir."/news";
-  $lang_newspath  =  $top_dir."/news/".$lang_dir;
-  $oldnews = false;
-  include("$top_dir/news/news-script.php");
-  emit_news($en_newspath, $lang_newspath, $oldnews);
-?>
-<div class="newsborder">
-<div class="newsheader"><img alt="news panel" src="<?=$top_dir;?>/images/icons/document.txt.gif" />&nbsp;
-<a href="oldnews.phtml"><?php echo T_("Older Announcements ...");?></a>
-
-</div><div class="newsinner">
-<?php echo T_("Click <a href=\"oldnews.phtml\">here</a> for older announcements...");?>
-</div></div>
 </div>
 </div>
 
