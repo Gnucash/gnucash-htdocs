@@ -6,7 +6,7 @@
      $minor_stable		="18";
      $latest_stable             = $major_stable.".".$minor_stable;
 #     $latest_stable_win		= $latest_stable;
-     $latest_stable_win         = $latest_stable."-2";
+     $latest_stable_win         = $latest_stable."-3";
      $latest_stable_mac_ppc     = $latest_stable."-1";
      $latest_stable_mac_intel   = $latest_stable."-1";
 // Change this when there has been a re-tag to add the re-tag letter,
