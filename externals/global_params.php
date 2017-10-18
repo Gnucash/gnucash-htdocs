@@ -13,20 +13,18 @@
 // e.g. if one retagged 2.6.13 to 2.6.13a, make $tarball = $latest_stable."a".
      $tarball                   = $latest_stable."-1";
      
-#     $major_latest_unstable		="2.5";
-#     $minor_latest_unstable		="10"; 
-#     $latest_unstable           = $major_latest_unstable.".".$minor_latest_unstable;
+     $major_latest_unstable		="2.7";
+     $minor_latest_unstable		="0"; 
+     $latest_unstable           = $major_latest_unstable.".".$minor_latest_unstable;
      // There's currently no unstable release being worked on, so disable it
      $latest_unstable           = False;
      $latest_unstable_win       = $latest_unstable;
-     $latest_unstable_mac_ppc   = $latest_unstable."-1";
      $latest_unstable_mac_intel = $latest_unstable."-1";
 
      $major_old_stable		="2.4";
      $minor_old_stable		="15";
      $old_stable           = $major_old_stable.".".$minor_old_stable;
      $old_stable_win       = $old_stable;
-     $old_stable_mac_ppc   = $old_stable."-1";
      $old_stable_mac_intel = $old_stable."-2";
 
      // The definitions below use the latest version definitions above

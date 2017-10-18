@@ -1,0 +1,100 @@
+<b>Announcement:</b> GnuCash 2.7.0 Release
+2017-10-17
+
+<h2>GnuCash 2.7.0 released</h2>
+
+<p>The Gnucash Development Team is pleased to release Gnucash 2.7.0, the first release of an unstable series leading to Gnucash 2.8.0.</p>
+
+<p style=" font-weight: bold;">This release is UNSTABLE and SHOULD NOT BE USED in production. </p>
+<p style="font-weight: bold;">See the <a href="#known_problems">KNOWN PROBLEMS</a> list at the bottom of the announcement.</p>
+
+<p><b>Note:</b> Version information in the splash screen and About dialog will now reflect the date of the last commit used to build GnuCash rather than the date it was compiled. This is to assist quality assurance and debugging efforts by Linux distribution maintainers.</p>
+<h3>For Users</h3>
+<ul>
+<li>The headline item for this release is that GnuCash now uses the Gtk+-3.0 Toolkit and the WebKit2Gtk API. This change was forced on us by some major Linux distributions dropping support for the WebKit1 API. Unfortunately the Webkit project doesn't support Microsoft Windows with the newer API so that platform will continue to use the WebKit1 API, though with Gtk3. We've selected Gtk+-3.14.0 as the minimum version because it fully supports CSS theming. (Geert Janssens, Robert Fewell, and John Ralls)</li>
+
+<li>There's a new CSV importer largely rewritten in C++, adding new features including the ability to re-import CSV files exported from GnuCash. (Geert Janssens)</li>
+
+<li>Data file directories are now located appropriately to the operating system's conventions by default. It's still possible to overried with the environment variable GNC_DOC_PATH, which replaces GNC_DOT_DIR in earlier versions of GnuCash. (Geert Janssens)</li>
+
+<li>Accounts in the Bayes import map are now linked by GUID instead of names so that the matcher won't have to be retrained if you rename an account. <b><em>This will make your file unreadable by previous versions of gnucash</em></b>. There's a new editor to remove outdated or incorrect match data from the import maps, a new user interfacs for managing files associated with transactions, an improved facility for removing old prices from the price database, and a way to remove deleted files from the history list in the file menu. (All from Robert Fewell!)</li>
+
+<li>Numerics are rewritten to allow for more significant digits. The old 6-digit-maximum fraction will be a 9-digit maximum by 2.8. there is still some cleanup required before the limit can actually change. (John Ralls)</li>
+
+<li>New Income GST Report and some improvements to the Transaction report. (Christopher Lam)</li>
+
+<li>Chart Reports appearance is improved (Carsten Rinke)</li>
+</ul>
+<h3>For Developers</h3>
+<ul>
+<li>The code is reorganized into a core library directory, libgnucash, and applications-specific directory, gnucash. Code lifted from other projects is in borrowed. (Geert Janssens)</li>
+
+<li>Several parts of the engine and the SQL backend are rewritten in C++, an effort that will continue in the next development cycle. KVP is now private to libgncmod-engine. Object properties stored using KVP are generally accessible using g_object_get and g_object_set; there is also a more direct access available via qof_instance_get and qof_instance_set. (John Ralls and Aaron Laws)</li>
+
+<li>KVP and GUID are reimplemnted in C++ using boost::variant and boost::UUID respectively (Aaron Laws).</li>
+
+<li>The date implementation is migrated to boost::date-time, replacing a Glib GDateTime implementation. This makes the earliest date recordable 1 January 1400CE instead of 1 January 1CE. (John Ralls)</li>
+
+<li>Distribution tarballs can now be built with CMake as well as Autotools. (Rob Gowin)</li>
+
+<li>The CuteCash front end has been removed. The code we need from GOffice has been brought into the GnuCash code base so GOffice is no longer a dependency.</li>
+
+<li>A new Russian translation of the Guide has been started by Dmitriy Mandel. Downloads in the usual formats are available at https://code.gnucash.org/docs/ru/; the HTML is at https://code.gnucash.org/docs/ru/gnucash-guide/.</li>
+
+<li>There will be no unstable documentation release at this time. There have been very few relatively minor changes to the master documentation branch; those documents may be viewed in the nightly builds at https://www.gnucash.org/docs.phtml.</li>
+</ul>
+
+ <h3 id="known_problems">KNOWN PROBLEMS:</h3>
+<ul>
+<li>On Microsoft Windows starting the AQBanking Setup Wizard crashes GnuCash.</li>
+<li>test-import-bayes built with autotools intermittently fails at line 381, where the returned value is 1 instead of the expected 6.</li>
+</ul>
+<h3>Getting GnuCash for Windows and MacOS X</h3>
+<p>GnuCash is provided for both Microsoft Windows XP&reg; and later
+and MacOS X 10.9 (Mavericks)&reg; and later in pre-built, all-in-one
+packages. An installer is provided for Microsoft Windows&reg; while
+the MacOS X&reg; package is a disk image containing a drag-and-drop
+application bundle.</p>
+<p>The SHA256 Hashes for the downloadable files are:
+<ul>
+<li><code>429f9aef704fe9378aa400d3e29c22e383e184d54ed4bc364406e38356ac01ef</code>&nbsp;&nbsp;gnucash-2.6.18.tar.bz2</li>
+<li><code>afa303bfbc183a700f77013b214f0b25843ee5a8da83994daae1926af990e525</code>&nbsp;&nbsp;gnucash-2.6.18.tar.gz</li>
+<li><code>2c83e8f79042e997f624efdb1abd154f50aafa5c7afa30e837f34dd16e381d85</code>&nbsp;&nbsp;gnucash-2.6.18.setup.exe</li>
+<li><code>1b2fd8157c077dd2f2da2b1b1a7ffc88a57583ad931b0b4ed0e30a15fc2e7193</code>&nbsp;&nbsp;Gnucash-Intel-2.7.0-1.dmg</li>
+</ul></p>
+
+<ul>
+<li>SourceForge:
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.7.0.setup.exe">Win32</a></li>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.7.0-1.dmg">Mac-Intel</a></li>
+</ul></li>
+<li>Github
+<ul>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.18/gnucash-2.7.0.setup.exe">Win32</a></li>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.18/Gnucash-Intel-2.7.0-1.dmg">Mac-Intel</a></li>
+</ul></li>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.6.18 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.7.0.tar.bz2">bzip2</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.7.0/">all files</a>.</li>
+
+<li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/2.7.0/gnucash-2.7.0-1.tar.bz2">bzip</a> <b>WARNING</b> Do not try to use the github-generated files labelled "Source Code". They have not been processed with swig and will not build.</li>
+
+<li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least Gnome 2, Guile, and slib. In addition you will need swig if compiling from git. Please consult the README file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. Please refer to the "Nightly Builds" section at the bottom of the page.</p>
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
