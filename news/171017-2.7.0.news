@@ -43,6 +43,53 @@
 
 <li>There will be no unstable documentation release at this time. There have been very few relatively minor changes to the master documentation branch; those documents may be viewed in the nightly builds at https://www.gnucash.org/docs.phtml.</li>
 </ul>
+<h3>BUGS FIXED (excluding those fixed in the stable branch)</h3>
+<ul>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=87652">Bug 87652 - KVP modification does not change 'dirty' flag.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=120250">Bug 120250 - KVP XML loader ignores '0' timestamps?</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=122895">Bug 122895 - general ledger should be named journal</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=343227">Bug 343227 - Summary bar alignment patch.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=388500">Bug 388500 - Add option to remove deleted files from the history list.</a>
+  <p>Allows removing files from the MRU list if they no longer exist.</p></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=541541">Bug 541541 - RFE: auto-hide unused accounts</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=608098">Bug 608098 - Option is hard to find: Change Transaction Report to show account names in multirow txn</a>
+  <p>On the Transaction report the General->Style option has been replaced with a similar Display->Detail Level option. This was done in order to make the display of some columns dependent on the value of this option.</p>
+  <p>When upgrading from 2.6.x or earlier to 2.8.x and you had saved or open reports that had set General->Style to 'Multi-line' you will have to update these reports to set 'Multi-line' on the Display->Detail Level option instead and optionally resave your report.</p></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=639401">Bug 639401 - Invoices Due Reminder.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=645786">Bug 645786 - Fancy invoice report still doesn't use fancy date format preference.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=647230">Bug 647230 - Display the blank split after the "now" line instead of at the end.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=679791">Bug 679791 - Import Template for importing CSV files - part2</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=684719">Bug 684719 - Man pages for gnc-fq-* perl scripts.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=689489">Bug 689489 - Be able to show file location</a>
+  <p>The file location is now visible in the status bar while hovering over the recent file list of the File menu. The currently open file is the top-most file in this list so its location can be seen by hovering over it with the mouse.</p></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=695610">Bug 695610 - GnuCash Tax Invoice for Australia</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=706021">Bug 706021 - Test match text for valid account path</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=726535">Bug 726535 - Budget BarChart Report - add option to change to a line chart</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=728136">Bug 728136 - Rate in Job</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=729001">Bug 729001 - Fix a minor typo affecting the profile option in the previous commit.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=731589">Bug 731589 - Add account level selection on accounts option tab.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=733186">Bug 733186 - [PATCH] Extend account tree view search function.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=734168">Bug 734168 - Tax invoice can be a bill too.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=737171">Bug 737171 - After account creation wizard and saving, empty account window is shown.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=738462">Bug 738462 - Fixes Report Scheme error.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=738477">Bug 738477 - WebKit is broken on Win32.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=741810">Bug 741810 - Compilation fails because of creating .gnucash.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=747377">Bug 747377 - Fix overly restrictive input validation for IBAN of SEPA transfer.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=752686">Bug 752686 - Initialize temp GValues in xaccAccountGetReconcileLastInterval.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=754530">Bug 754530 - Add CSV Export Simple Layout.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=754533">Bug 754533 - Change finish page text for Search and General Journal register exports.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=756373">Bug 756373 - Typos in Transaction Rpt options mouse-over text.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=757532">Bug 757532 - [PATCH] Make start and end rows editable by keyboard.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=759674">Bug 759674 - GNUCash crashes when importing invoices or bills with delimited import.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=760107">Bug 760107 - Change default date completion to sliding window.</a>
+  <p>The default date completion when entering partial dates has been changed from "always complete in current calendar year" to "complete to a sliding window starting 11 months before current month". For example if you enter "1/23" (January 23rd) while today is December 10th 2015, the date will be expanded to January 23rd 2016 rather than 2015. If you prefer to keep the old behaviour, you can restore to it via Edit->Preferences->Date/Time->Date Completion. In addition if you were already using the sliding window before, but didn't change the previous 6 months before default, you will now also get the new default 11 months before. Again if you prefer the old behaviour it can be restored via the same Preference.</p></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=764268">Bug 764268 - MT940 import select account based on transaction info.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=769115">Bug 769115 - db name isn't escaped well.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=769576">Bug 769576 - Seg Fault on Editing Scheduled Transaction's Amount.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=778042">Bug 778042 - These are the script changes for jqplot reports.</a>
+  <p>Adds resize function to graphical reports.</p></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=780845">Bug 780845 - link in github repo README file needs correction/editing.</a></li>
+</ul>
 
  <h3 id="known_problems">KNOWN PROBLEMS:</h3>
 <ul>
