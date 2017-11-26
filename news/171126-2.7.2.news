@@ -1,0 +1,110 @@
+<b>Announcement:</b> GnuCash 2.7.2 Release&mdash;2017-10-29
+
+<h2>GnuCash 2.7.2 released</h2>
+
+<p>The Gnucash Development Team is pleased to release Gnucash 2.7.2, the third release of an unstable series leading to Gnucash 2.8.0.</p>
+
+<p style=" font-weight: bold;">This release is UNSTABLE and SHOULD NOT BE USED in production. </p>
+<p style="font-weight: bold;">This release changes file locations, binding APIs, report options, and can make your data file no longer compatible with previous versions. See the <a href="https://wiki.gnucash.org/wiki/UpdateNotes">Update Notes Page</a> for details.
+</p>
+<p style="font-weight: bold;">See the <a href="#known_problems">KNOWN PROBLEMS</a> list at the bottom of the announcement.</p>
+
+<h3>Bugs fixed in this release</h3>
+<ul>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=734865">Bug 734865 - Assign as Payment... can silently 'unpay' a payed invoice</a><ul>
+  <li>if the selected transaction is already linked to an existing payment, the payment dialog will present this payment again (same partner, post-to account, same selected document(s), same amount, memo, and transfer account).</li>
+  <li>if the selected transaction is not linked to an existing business transaction the logic will make a best guess as to whether the payment should be for a customer or vendor.</li>
+  <li>in both situations if the existing transaction has multiple splits that can be considered as transfer (or 'payment') splits the payment dialog can't work with it (it can only deal with one transfer split). In this case the user will be informed that only one valid transfer split will be retained and the others ignored.</li>
+  <li>the other thing the payment dialog can't handle are APAR type splits that are not associated to a lot at all. In case of transactions not part of a business transaction they will be silently ignored on the assumptions these were manually entered transactions with the intention to be linked to business transactions. On the other hand if such a split is part of a transaction that is also linked to a business payment already, a warning will be issued these splits will be removed from the new payment.</li></ul></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=778692">Bug 778692 - Assign as payment should work for employee expense vouchers</a><ul>
+  <li>if gnucash can deduce a partner from the transaction that partner will be proposed this works for all transactions that are part of a business transaction already and will correctly detect pre-existing customer, vendor and employee payments</li>
+  <li>if no partner can be deduced gnucash will assume the transaction to be a vendor or customer payment based on the sign</li>
+  <li>in all cases the user can change the partner type in the payment window that's presented to any of customer, vendor or employee to correct gnucash' suggestion.</li></ul></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=784623">Bug 784623 - GNUCash does not work with sql backend.</a><p> Wherin the problem is that MySQL's TIMESTAMP has a date range of 1970-01-01 00:00:01 to 2038-01-19 03:14:07 and is unable to handle time_t of 0. MySQL's TIMESTAMP also assumes that input is in the server's timezone and adjusts it to UTC. GnuCash has already done that conversion.</p></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=789608">Bug 789608 - Compilation problems when linking libraries.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=789928">Bug 789928 - FTBFS with libdbi 0.9.0-5 on Debian.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=790550">Bug 790550 - FTBFS: missing __init__.py</a></li>
+
+</ul>
+<h3>Some other fixes not associated with reported bugs:</h3>
+<ul>
+
+  <li>  SQL parameter quoting is corrected in the backend so that only string
+  parameters are quoted. This caused trouble when trying to store SQL NULL;
+  the string 'NULL' is different from the value NULL.
+  </li><li>
+  SQL table versions weren't set consistently and a bogus version test could
+  cause some tables to be not loaded.
+  </li><li>
+  Better, more targeted handling of MySQL's penchant for setting
+  date-time fields to "0000-00-00 00:00:00" if it doesn't like the
+  input. This should be much less common thanks to fixing Bug
+  784623.
+  </li><li>
+  Major repairs to the "Dense Calendar" date selector.
+  </li><li>
+  Fix colors on graph reports so that the selections work and the defaults
+  are no longer transparent.
+  </li><li>
+  Two large batches of styling fixes for Gtk3 from Bob Fewell.
+  </li><li>
+  Fix the guile-compiled path in the environment file so that
+  GnuCash can start on Windows.
+  </li><li>
+  Convert the graphical reports to use GnuCash's rational numbers instead of
+  doubles for better accuracy.
+  </li>
+</ul>
+
+<h3 id="known_problems">KNOWN PROBLEMS:</h3>
+<ul>
+  <li>On Microsoft Windows starting the AQBanking Setup Wizard crashes GnuCash.</li>
+  <li>test-import-bayes built with autotools intermittently fails at line 381, where the returned value is 1 instead of the expected 6.</li>
+</ul>
+<h3>Getting GnuCash for Windows and MacOS X</h3>
+<p>GnuCash is provided for both Microsoft Windows XP&reg; and later
+and MacOS X 10.9 (Mavericks)&reg; and later in pre-built, all-in-one
+packages. An installer is provided for Microsoft Windows&reg; while
+the MacOS X&reg; package is a disk image containing a drag-and-drop
+application bundle.</p>
+  <h5>SourceForge:</h5>
+  <ul>
+    <li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.7.2.setup.exe">Download GnuCash for Win32</a></li>
+    <li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.7.2-1.dmg">Download GnuCash for Mac-Intel</a></li>
+  </ul>
+  <h5>Github</h5>
+  <ul>
+    <li><a href="https://github.com/Gnucash/gnucash/releases/download/2.7.2/gnucash-2.7.2.setup.exe">Download GnuCash for Win32</a></li>
+    <li><a href="https://github.com/Gnucash/gnucash/releases/download/2.7.2/Gnucash-Intel-2.7.2-1.dmg">Download GnuCash for Mac-Intel</a></li>
+  </ul>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.7.2 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+  <li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.7.2.tar.bz2">bzip2 tarball</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.7.2.tar.gz">gzip tarball</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.7.2/">all files</a>.</li>
+
+  <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/2.7.2/gnucash-2.7.2.tar.bz2">bzip2 tarball</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/2.7.2/gnucash-2.7.2.tar.gz">gzip tarball</a> <b>WARNING</b> Do not try to use the github-generated files labelled "Source Code". They have not been processed with swig and will not build.</li>
+
+  <li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+<p>The SHA256 Hashes for the downloadable files are:
+<ul>
+  <li><code>baa6bae13918da62be58fe09d904ccf38893607e57dae4eba53db4ff96ab61b3</code>&nbsp;&nbsp;gnucash-2.7.2.tar.bz2</li>
+  <li><code>567e654f24e611a780ef66d3e92c0da695196594c7611bbfa99e550e04a2ca87</code>&nbsp;&nbsp;gnucash-2.7.2.tar.gz</li>
+  <li><code>ea5ec52e896e05eec4659088866dca5132374f5e9ed424a4e2ad4d4d072b7be5</code>&nbsp;&nbsp;gnucash-2.7.2.setup.exe</li>
+  <li><code>5fe6fab0374ca77a86257ee83ee07288909c8f6b256b790ab8b1ff6e054eafff</code>&nbsp;&nbsp;Gnucash-Intel-2.7.2-1.dmg</li>
+</ul></p>
+
+<p>Please consult the README.dependencies file in the sources for the required dependencies and versions needed to build GnuCash from source. Additional information on building GnuCash may be found in the <a href="https://wiki.gnucash.org/wiki/Building">Wiki</a></p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. Please refer to the "Nightly Builds" section at the bottom of the page.</p>
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
