@@ -40,7 +40,7 @@
   <logo>http://www.gnucash.org/images/icons/gnc-icon.png</logo>
   <link rel="alternate" href="http://www.gnucash.org/" />
   <link rel="self" href="http://www.gnucash.org/atom.php" />
-  <id>https://www.gnucash.org</id>
+  <id>https://www.gnucash.org/</id>
   <?php
   $news_items = get_news($newsdir, $newsdir);
   $news_items = array_slice($news_items, 0, $entry_count);
