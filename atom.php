@@ -1,7 +1,7 @@
 <?php
   // TODO:
   // - reasonable permalinks
-  $top_dir = ".";
+  $top_dir = "..";
 
   $contentType = "application/atom+xml";
   if (isset($_GET["content-type"]))
@@ -12,7 +12,7 @@
   header("Content-Type: $contentType; charset=$charset");
 
   $entry_count = 10;
-  $newsdir = "${top_dir}/news";
+  $newsdir = "news";
 
   /**
    * In php5, this is simply: date(DATE_ATOM, strtotime($news_date)).
@@ -30,7 +30,7 @@
 ?>
 <?="<?xml version=\"1.0\" encoding=\"$charset\"?>"?>
 <?php
-  include("$top_dir/news/news-script.php");
+  include("$newsdir/news-script.php");
 ?>
 
 <feed xmlns="http://www.w3.org/2005/Atom">
