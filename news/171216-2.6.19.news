@@ -1,0 +1,96 @@
+<b>Announcement:</b> GnuCash 2.6.19 Release
+2017-12-16
+
+<h2>GnuCash 2.6.19 released</h2>
+
+<p>The GnuCash development team announces GnuCash 2.6.19, the nineteenth maintenance release in the 2.6-stable series.
+<h3>Changes</h3>
+
+<p>Between 2.6.18 and 2.6.19, the following bugfixes were accomplished:</p>
+<ul>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=787497">Bug 787497 - Disabling OFX, AqBanking or python-bindings support cripples the dist build target.</a> (Partial: The requisite files for AQB and OFX are provided. There remain ways to break the distribution.)</li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=789928">Bug 789928 - FTBFS with libdbi 0.9.0-5 on Debian</a></li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=771246">Bug 771246 - Failed to create file "/usr/share/glib-2.0/schemas/gschemas.compiled.XY789Y".</a></li>
+</ul>
+<p>Some other fixes not associated with reported bugs:
+<ul>
+  <li>A better way to handle MySQL's 0000-00-00 invalid date indicator.</li>
+  <li>Fix python build and test errors on Mac.</li>
+  <li>Add translator hint comments to C and glade files.</li>
+  <li>Improve type of bank accounts in SKR03</li>
+  <li>Stop testing GObject's handling of invalid parameters</li>
+</ul>
+<p>Translation Updates: Dutch, German, Serbian
+
+<h2>Important update notification</h2>
+<p>If you are updating from gnucash 2.6.0-2.6.4 on linux, you are advised to remove the guile user cache or several parts of gnucash may fail to work properly. This user cache can be found in <em>.cache/guile/ccache/2.0-LE-8-2.0/</em> in your home directory. It's safe to remove the whole contents of this directory.</p>
+<p>Note .cache is a hidden folder in your home directory. You may have to change your file manager's settings in order to view hidden files and folders.</p>
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of Gnucash 2.6.19 we're pleased to also release a new version 2.6.19 of the companion <em>Help</em> and <em>Tutorial and Concepts Guide</em>.</p>
+<ul>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=782423">Bug 782423 - Help 10.2. Setting Preferences is outdated.</a></li>
+  <li>Changing text in Help to reflect changes in Preferences dialogs.</li>
+  <li>Translation of the german guides metafile</li>
+</ul>
+
+<h3>Getting GnuCash for Windows and MacOS X</h3>
+<p>GnuCash is provided for both Microsoft Windows XP&reg; and later
+and MacOS X 10.5 (Leopard)&reg; and later in pre-built, all-in-one
+packages. An installer is provided for Microsoft Windows&reg; while
+the MacOS X&reg; package is a disk image containing a drag-and-drop
+application bundle.</p>
+<p>The SHA256 Hashes for the downloadable files are:
+<ul>
+<li><code>50b89367246ec2d51e9765bd6bd8c669e35ceb4ac5ab92636f76758a9f3f7fd1</code>&nbsp;&nbsp;gnucash-2.6.19.tar.bz2</li>
+<li><code>758adf10a75abfabc0b0d9a4858c0b79438c3e2157f4240e1a84a6b93d1111c3</code>&nbsp;&nbsp;gnucash-2.6.19.tar.gz</li>
+<li><code>1fa83d9578e8c62bd7dcef3b953e0e7610bf03bed9c1a037a72a6eee1ac79e37</code>&nbsp;&nbsp;gnucash-2.6.19-3.setup.exe</li>
+<li><code>d40de55c75fdb754c717ae37e25de5e411fce4ce1f7684f071fc492f939408d2</code>&nbsp;&nbsp;Gnucash-Intel-2.6.19-1.dmg</li>
+<li><code>0b9d7e80d4887b70f027d6bdd552b6ffa4a6f299df3cfb1860eae5bad207ae2d</code>&nbsp;&nbsp;Gnucash-PPC-2.6.19-1.dmg</li>
+<li><code>268415157d80ea70f339e74d1bd05e4550d36f77b22aa98aadeadec04a4ba9c7</code>&nbsp;&nbsp;gnucash-docs-2.6.19.tar.gz</li>
+</ul></p>
+
+<ul>
+<li>SourceForge:
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.19-3.setup.exe">Win32</a></li>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.6.19-1.dmg">Mac-Intel</a></li>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-PPC-2.6.19-1.dmg">Mac-PPC</a></li>
+</ul></li>
+<li>Github
+<ul>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.19/gnucash-2.6.19-3.setup.exe">Win32</a></li>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.19/Gnucash-Intel-2.6.19-1.dmg">Mac-Intel</a></li>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.19/Gnucash-PPC-2.6.19-1.dmg">Mac-PPC</a></li>
+</ul></li>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.6.19 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.19-1.tar.bz2">bzip2</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.6.19/">all files</a>.</li>
+
+<li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/2.6.19/gnucash-2.6.19-1.tar.bz2">bzip</a> <b>WARNING</b> Do not try to use the github-generated files labelled "Source Code". They have not been processed with swig and will not build.</li>
+
+<li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least Gnome 2, Guile, and slib. In addition you will need swig if compiling from git. Please consult the README file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 2.6.19 documentation can be found under "GnuCash v2.6 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats.</p>
+
+<p>If you want to compile the GnuCash Documentation 2.6.19 for yourself, the source code can be downloaded from:</p>
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-docs-2.6.19.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/2.6.19/gnucash-docs-2.6.19.tar.gz">GitHub</a></li>
+<li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
