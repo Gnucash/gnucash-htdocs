@@ -1,0 +1,110 @@
+<b>Announcement:</b> GnuCash 2.7.3 Release
+2017-12-31
+
+<h2>GnuCash 2.7.3 released</h2>
+
+<p>The Gnucash Development Team is pleased to release Gnucash 2.7.3, the fourth release of an unstable series leading to Gnucash 3.0</p>
+
+<p>Notice that we've decided that beginning with the upcoming major release we will use two-digit release numbers and that the next stable release will be 3.0. Maintenance releases will be 3.1, 3.2, etc. The next unstable release will be 3.900 and will lead to 4.0.</p>
+
+<p style=" font-weight: bold;">This release is UNSTABLE and SHOULD NOT BE USED in production. </p>
+<p style="font-weight: bold;">This release changes file locations, binding APIs, report options, and can make your data file no longer compatible with previous versions. See the <a href="https://wiki.gnucash.org/wiki/UpdateNotes">Update Notes Page</a> for details.
+</p>
+<p style="font-weight: bold;">See the <a href="#known_problems">KNOWN PROBLEMS</a> list at the bottom of the announcement.</p>
+
+<p>With this release we set <b>feature freeze</b> and <b>string freeze</b>. Translators and documentors are implored to begin work so that the localization and documentation will be ready for the 3.0 release.</p>
+
+<h3>New Features for Users</h3>
+<ul>
+  <li> A greatly enhanced Transaction report with many new options and features including a reconciliation report thanks to Chris Lam.</li>
+  <li> Removed 6-figure rounding from price calculations, allowing prices to have up to 18 digit precision.</li>
+  <li> A flatter storage scheme for Bayes account-matching scores, thanks to Aaron Laws. This is a compatibility change guarded by a feature.</li>
+  <li> GnuCash no longer supports Guile-1.8 and now does support Guile-2.2</li>
+  <li> A CSV Price importer, thanks to Bob Fewell.</li>
+  <li> Enhanced python bindings exposing more GnuCash API thanks to Guy Taylor</li>
+</ul>
+<h3>Bugs fixed in this release</h3>
+<ul>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=616709">Bug 616709 - Pressing delete key while editing account name offers to delete account.</a>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=771667"> Bug 771667 - Change reconciled splits warning.</a>
+  <p> This patch displays two distinct warnings when changing protected fields of a transaction that contains reconciled splits. If the fields date, num and description are changed, then the warning list the accounts that have reconciled splits and also advises that they will be unreconciled after editing the transaction. If the fields account, transfer, debit or credit are changed then the warning advises that the split will be unreconciled after editing the transaction. There is still just one warning preference as it is all to do with fields protected by reconciliation.</p></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=787497"> Bug 787497 - Disabling options cripples dist package</a><p><b> PARTIAL FIX:</b> WITH_OFX, WITH_SQL and WITH_AQBANKING handling is fixed. The dist files for these features are always included in the dist tarball.</p></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=790526">Bug 790526 - Mathematical bug.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=791848">Bug 791848 - GC 2.6.x does not handle ISO dates introduced with GC 2.7.</a>
+  <p> Set a feature to prevent versions older that 2.6.20 from loading a database from which they cannot read the dates. Ideally we would do this only if the database is written to, but the current persistence design includes committing back to the database during the load so the net effect is that the flag would be set anyway. This is a compatibility change guarded by a feature.</p></li>
+
+</ul>
+<h3>Some other fixes not associated with reported bugs:</h3>
+<ul>
+  <li> Tests now pass in all timezones.</li>
+  <li> More dialogs are made "transient for" so that they pop up centered on the main Gnucash window instead of somewhere on the left edge of the screen.</li>
+  <li> A lot of Gtk3 issues and errors are fixed, thanks to Bob Fewell.</li>
+  <li> Test struct tm* returns from gnc_gmtime and gnc_localtime to ensure that we don't crash for dereffing a nullptr.</li>
+  <li> Removed the gnc:numeric type from Scheme code in favor of Scheme's own rational numbers. This allows direct conversion between Scheme numbers and gnc_numeric without the performance or accuracy penalties arising from using doubles as an intermediary.</li>
+  <li> Pass KVP paths as a collection of elements instead of a delimited string. This allows keys to contain '/'. Thanks to Aaron Laws.</li>
+  <li> Added a frameowrk for migrating preferences.</li>
+  <li> Made separate functions for finding a widget's parent window: gnc_ui_get_gtk_window tries to find the immediate parent and gnc_ui_get_main_window tries to find the widget's parent toplevel, returning the first-mapped window.</li>
+  <li> Make the splash/lock screen the transient parent for dialog boxes if the main window is not yet mapped.</li>
+  <li> Rework directory determination in CMake builds.
+  <p> Sets paths for finding componenents depending on the state of ENABLE_BINRELOC, GNC_UNINSTALLED, GNC_BUILDDIR and whether any install paths have been set outside of CMAKE_INSTALL_PREFIX.</p>
+  <p>GNUInstallDirs changes the name of CMAKE_INSTALL_LIBDIR depending on the operating system and distro. When CMAKE_INSTALL_PREFIX is /usr, /usr/local, or any subdirectory of /opt it also changes CMAKE_INSTALL_FULL_SYSCONFDIR to /etc. An earlier commit by Aaron Laws mirrors the name of CMAKE_INSTALL_LIBDIR to the build library directory.</p>
+  <p>It's possible for builders to set any of the install directories anywhere they please. Setting any directory outside of CMAKE_INSTALL_PREFIX breaks Binreloc so the toplevel CMakeLists.txt now detects that and disables Binreloc.  If Binreloc is enabled then all path queries use it to find paths. This works in the build directory because the gnucash executable and all of the test programs are in build_directory/bin and LIBDIR, DATADIR, and SYSCONFDIR can be found in the same root path.  If Binreloc is disabled then in order to build or run programs from the build directory one must set GNC_UNINSTALLED and set GNC_BUILDDIR to the absolute path of the build directory. When those are set GNC_BUILDDIR replaces CMAKE_INSTALL_PREFIX in all paths that are subdirectories of CMAKE_INSTALL_PREFIX; paths that are not in CMAKE_INSTALL_PREFIX are appended whole to GNC_BUILDDIR. This process is constent between CMake and gnc_path_get_foo. GnuCash is unlikely to run from a DESTDIR without Binreloc.</p></li>
+
+</ul>
+
+<h3 id="known_problems">KNOWN PROBLEMS:</h3>
+<ul>
+  <li>On Microsoft Windows starting the AQBanking Setup Wizard crashes GnuCash.</li>
+  <li>test-import-bayes built with autotools intermittently fails at line 381, where the returned value is 1 instead of the expected 6.</li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=789594">Bug 789594 - Unable to overwrite splite3 database file</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=791283">Bug 791823 - There is no Gtk3 theme-setting tool for Windows.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=791825">Bug 791825 - Accounting period dates off-by-1 </a></li>
+
+</ul>
+<h3>Getting GnuCash for Windows and MacOS X</h3>
+<p>GnuCash is provided for both Microsoft Windows XP&reg; and later
+and MacOS X 10.9 (Mavericks)&reg; and later in pre-built, all-in-one
+packages. An installer is provided for Microsoft Windows&reg; while
+the MacOS X&reg; package is a disk image containing a drag-and-drop
+application bundle.</p>
+<h5>SourceForge:</h5>
+<ul>
+  <li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.7.3.setup.exe">Download GnuCash for Win32</a></li>
+  <li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.7.3-1.dmg">Download GnuCash for Mac-Intel</a></li>
+</ul>
+<h5>Github</h5>
+<ul>
+  <li><a href="https://github.com/Gnucash/gnucash/releases/download/2.7.3/gnucash-2.7.3.setup.exe">Download GnuCash for Win32</a></li>
+  <li><a href="https://github.com/Gnucash/gnucash/releases/download/2.7.3/Gnucash-Intel-2.7.3-1.dmg">Download GnuCash for Mac-Intel</a></li>
+</ul>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.7.3 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+  <li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.7.3.tar.bz2">bzip2 tarball</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.7.3.tar.gz">gzip tarball</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.7.3/">all files</a>.</li>
+
+  <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/2.7.3/gnucash-2.7.3.tar.bz2">bzip2 tarball</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/2.7.3/gnucash-2.7.3.tar.gz">gzip tarball</a> <b>WARNING</b> Do not try to use the github-generated files labelled "Source Code". They have not been processed with swig and will not build.</li>
+
+  <li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+<p>The SHA256 Hashes for the downloadable files are:
+<ul>
+  <li><code>5ea0912a527874f8410e80f63d94d63608ead2ff4c3ae25a8b203c25d1ee4749</code>&nbsp;&nbsp;gnucash-2.7.3.tar.bz2</li>
+  <li><code>3420546911e5cc6aa4ec595cd0566aba49aab4e9b7a5086acf366aaf3edb0288</code>&nbsp;&nbsp;gnucash-2.7.3.tar.gz</li>
+  <li><code>71f2d6e16fea330967fc11fcf4a7ee811851ab751913768cae431de6a9f087d1</code>&nbsp;&nbsp;gnucash-2.7.3.setup.exe</li>
+  <li><code>47246f9b0da50a80a3d7bb7a894a997d94f3e0bfa1517d0cfc83f97e980fee71</code>&nbsp;&nbsp;Gnucash-Intel-2.7.3-1.dmg</li>
+</ul></p>
+
+<p>Please consult the README.dependencies file in the sources for the required dependencies and versions needed to build GnuCash from source. Additional information on building GnuCash may be found in the <a href="https://wiki.gnucash.org/wiki/Building">Wiki</a></p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. Please refer to the "Nightly Builds" section at the bottom of the page.</p>
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
