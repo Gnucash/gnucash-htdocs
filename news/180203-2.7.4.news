@@ -1,0 +1,129 @@
+<b>Announcement:</b> GnuCash 2.7.4 Release
+2018-02-03
+
+<h2>GnuCash 2.7.4 released</h2>
+
+<p>The Gnucash Development Team is pleased to release Gnucash 2.7.4, the fifth release of an unstable series leading to Gnucash 3.0</p>
+
+<p>Notice that we've decided that beginning with the upcoming major release we will use two-digit release numbers and that the next stable release will be 3.0. Maintenance releases will be 3.1, 3.2, etc. The next unstable release will be 3.900 and will lead to 4.0.</p>
+
+<p style=" font-weight: bold;">This release is UNSTABLE and SHOULD NOT BE USED in production. </p>
+<p style="font-weight: bold;">This release changes file locations, binding APIs, report options, and can make your data file no longer compatible with previous versions. See the <a href="https://wiki.gnucash.org/wiki/UpdateNotes">Update Notes Page</a> for details.
+</p>
+<p style="font-weight: bold;">See the <a href="#known_problems">KNOWN PROBLEMS</a> list at the bottom of the announcement.</p>
+
+<p>We appologize to translators, this release includes a few string changes: A couple of documentation strings for the Alphavantage API Key preference and some button mnemonic changes which change the msgid by adding an underscore.</p>
+
+<h3>New Features for Users</h3>
+<ul>
+   <li> A new preference panel for the Alphavantage API key so that Finance::Quote users need not edit /etc/gnucash/environment.</li>
+    <li>On Macs the Reconcile Window's menu moved to the menubar.</li>
+    <li>The detected Finance::Quote version is displayed in the About box.</li>
+    <li>Removed all references to the various Yahoo! quote sources and made Alphavantage the default.</li>
+</ul>
+<h3>For Developers and Distro packagers:</h3>
+<ul>
+    <li>The autotools build system has been removed.</li>
+    <li>Add a "pot" target to the build system so that translators can easily generate a new gnucash.pot from a git repository.</li>
+    <li>Improve handling of generated distributable files</li>
+    <li>Fix make dist on a clean checkout:
+        <p>cmake with unix makefiles fails to resolve dist dependencies
+        added from COPY_FROM_BUILD if these dependencies aren't built
+        yet. This commit replaces the COPY_FROM_BUILD based logic with
+        two new functions 'dist_add_configured' and
+        'dist_add_generated' to indicate which files should be
+        included in the dist tarball. The latter also adds a target
+        level dependency to the dist tarball custom command. Hence the
+        former should be used for files that get generated during a
+        cmake run while the latter should be used for files generated
+        as the result of a 'make/ninja-build' run (like files for
+        which an add_custom_command rule exists). Note: this commit
+        also temporarily disables the dist target when building from a
+        tarball (and hence it won't be tested in distcheck
+        either). This will be handled in a future commit.</p></li>
+    <li>Add DL_LIBS to gncmod-gnome-utils target. Fixes a build problem in FreeBSD.</li>
+    <li>Detect presence or absence of libxml2 and makeinfo during configuration;
+        abort if the first is missing and don't build the (mostly
+        obsolete) texinfo documentation if the latter is. Document
+        both in README.dependencies.</li>
+    <li>Replaced Timespec with time64 in the Scheme and Python bindings,
+       introducing many new C time64 functions to accomodate the
+       replacement. Timespec will eventually be removed from the C API
+       as well.</li>
+</ul>
+<h3>Bugs fixed in this release</h3>
+<ul>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=787497">Bug 787497 - Disabling OFX, AqBanking or python-bindings support cripples the dist build target</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=790526">Bug 790526 - Mathematical bug</a> Actually about the number of weeks from/to 1 Jan 1970.</li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=790845">Bug 790845 - 2.7.3: massive test failures on some architectures</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=792106">Bug 792106 - Wrong dates displayed</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=792809">Bug 792809 - Register text difficult to read with GTK 3.0 dark themes</a> Add a foreground css class to override the theme value.</li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=792947">Bug 792947 - Missing translatable strings</a></li>
+</ul>
+<h3>Some other fixes not associated with reported bugs:</h3>
+<ul>
+    <li>The long-standing known problem, AQBanking setup crashing on Windows.</li>
+    <li>Webkit crashing the MacOS Gnucash.app.</li>
+    <li>Some Guile 2.2 issues are resolved.</li>
+    <li>Some bugs in the new Transaction Report.</li>
+    <li>Correct setting of WebKit version during configuration when the version is cached.</li>
+    <li>The change to the Average Cost calulation introduced in 2.6.12 is reverted. See the extensive discussion in <a href="https://bugzilla.gnome.org/show_bug.cgi?id=775368">Bug 775368</a> for more information.</li>
+    <li>Fix our appstream id as per the appstream recommendation</li>
+    <li>Fix incorrect minimum dates in the net-linechart and net-barchart reports.</li>
+    <li>Fix a report crash if the Account Depth is too low.</li>
+</ul>
+
+<h3 id="known_problems">KNOWN PROBLEMS:</h3>
+<ul>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=789594">Bug 789594 - Unable to overwrite splite3 database file</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=791283">Bug 791823 - There is no Gtk3 theme-setting tool for Windows.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=791825">Bug 791825 - Accounting period dates off-by-1 </a></li>
+
+</ul>
+<h3>Getting GnuCash for Windows and MacOS X</h3>
+<p>GnuCash is provided for both Microsoft Windows XP&reg; and later
+and MacOS X 10.9 (Mavericks)&reg; and later in pre-built, all-in-one
+packages. An installer is provided for Microsoft Windows&reg; while
+the MacOS X&reg; package is a disk image containing a drag-and-drop
+application bundle.</p>
+<h5>SourceForge:</h5>
+<ul>
+  <li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.7.4.setup.exe">Download GnuCash for Win32</a></li>
+  <li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.7.4-1.dmg">Download GnuCash for Mac-Intel</a></li>
+</ul>
+<h5>Github</h5>
+<ul>
+  <li><a href="https://github.com/Gnucash/gnucash/releases/download/2.7.4/gnucash-2.7.4.setup.exe">Download GnuCash for Win32</a></li>
+  <li><a href="https://github.com/Gnucash/gnucash/releases/download/2.7.4/Gnucash-Intel-2.7.4-1.dmg">Download GnuCash for Mac-Intel</a></li>
+</ul>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.7.4 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+  <li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.7.4.tar.bz2">bzip2 tarball</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.7.4.tar.gz">gzip tarball</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.7.4/">all files</a>.</li>
+
+  <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/2.7.4/gnucash-2.7.4.tar.bz2">bzip2 tarball</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/2.7.4/gnucash-2.7.4.tar.gz">gzip tarball</a> <b>WARNING</b> Do not try to use the github-generated files labelled "Source Code". They have not been processed with swig and will not build.</li>
+
+  <li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+<p>The SHA256 Hashes for the downloadable files are:
+<ul>
+  <li><code>a00d1ba3e12f406a90a852543c56b9116ccbade264ada44aa6b8e0936c895891</code>&nbsp;&nbsp;gnucash-2.7.4.tar.bz2</li>
+  <li><code>ca65cc02c7580d0a43084d2c5872cd05e7f696fefaeb143010c493ba3ad7c7f6</code>&nbsp;&nbsp;gnucash-2.7.4.tar.gz</li>
+  <li><code>69de2ff60b39f565aa636c33696c4e194a18caa6bd85c942829a8c678569c23a</code>&nbsp;&nbsp;gnucash-2.7.4.setup.exe</li>
+  <li><code>266c457e32d5509ecd971920b5658c617d6e4dd0f3aedfd1d987e901c540cb2a</code>&nbsp;&nbsp;GnuCash-Intel-2.7.4-1.dmg</li>
+</ul></p>
+
+<p>Please consult the README.dependencies file in the sources for the required dependencies and versions needed to build GnuCash from source. Additional information on building GnuCash may be found in the <a href="https://wiki.gnucash.org/wiki/Building">Wiki</a></p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. Please refer to the "Nightly Builds" section at the bottom of the page.</p>
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
