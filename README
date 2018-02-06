@@ -81,6 +81,29 @@ Note about folders
   to exist though. So in order to satisfy this code a softlink should be set up
   on the webserver: docs->"real location of compiled docs"
 
+----------------------------------
+Get a local copy of our repository
+----------------------------------
+
+Note: This step is requred for all following sections.
+
+Create a local git repository in the directory gnucash-htdocs:
+
+    $ git clone https://github.com/Gnucash/gnucash-htdocs
+
+and enter it:
+
+    $ cd gnucash-htdocs
+
+Now you can edit files, run make commands, git commands ...
+But before you change anything else than translations read:
+
+https://wiki.gnucash.org/wiki/Website_Maintenance
+
+For more details about git see:
+
+ https://wiki.gnucash.org/wiki/Git.    
+
 ----------------------
 Preparing translations
 ----------------------
@@ -117,7 +140,13 @@ Which will build an individual translation, or:
 
     $ make mos
 
-Which will make all the known translations.
+Which will make all the translations known to Makefile.
+So, if your language is new, add it there to 
+languages = ...
+
+See also:
+https://wiki.gnucash.org/wiki/Translation#How_to_translate_the_website.
+It is usually more recent.
 
 ----------------------
 Publishing the website
@@ -135,10 +164,12 @@ website. There is a beta website available as well on
 
 http://www.gnucash.org/beta/
 
-To work in this beta environment, checkout the beta branch from svn:
-
-svn checkout http://svn.gnucash.org/repo/htdocs/branches/beta htdocs-beta
-
-WARNING: this branch is currently not kept in sync with trunk. So if you
+WARNING: this branch is currently not kept in sync with master. So if you
          intend to experiment with the current content in master, please ask
-         one of the devs to merge the current master to beta first !
+         one of the devs to merge the current master to beta first!
+
+To work in this beta environment, checkout the beta branch in your local repo:
+
+     $ git checkout beta
+
+Have fun!
