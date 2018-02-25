@@ -1,0 +1,141 @@
+<b>Announcement:</b> GnuCash 2.7.5 Release
+2018-02-25
+
+<h2>GnuCash 2.7.5 released</h2>
+
+<p>The Gnucash Development Team is pleased to release Gnucash 2.7.5, the sixth release of an unstable series leading to Gnucash 3.0</p>
+
+<p>Notice that we've decided that beginning with the upcoming major release we will use two-digit release numbers and that the next stable release will be 3.0. Maintenance releases will be 3.1, 3.2, etc. The next unstable release will be 3.900 and will lead to 4.0.</p>
+
+<p style=" font-weight: bold;">This release is UNSTABLE and SHOULD NOT BE USED in production. </p>
+<p style="font-weight: bold;">This release changes file locations, binding APIs, report options, and can make your data file no longer compatible with previous versions. See the <a href="https://wiki.gnucash.org/wiki/UpdateNotes">Update Notes Page</a> for details.
+</p>
+<p style="font-weight: bold;">See the <a href="#known_problems">KNOWN PROBLEMS</a> list at the bottom of the announcement.</p>
+
+<h3>New Features for Users</h3>
+<ul>
+  <li>Locate all user data and configuration files to platform-dependent standard locations:
+    <ul><li>Windows: CSIDL_APPDATA/Gnucash</li>
+    <li>MacOS: $HOME/Library/Application Support/Gnucash</li>
+    <li>Linux: $XDG_CONFIG_HOME/gnucash (or the default $HOME/.config/gnucash)</li></ul>
+    GnuCash currently uses the following files in this directory:
+    <ul>
+     <li>log.conf (to set what gets logged to gnucash.trace)</li>
+     <li>config-user.scm (to add custom scheme code like custom reports; replaces config.user and config-&lt;version&gt;.user)</li>
+     <li> gtk-3.0.css (For theming)</li>
+    </ul>
+    On Windows and with the MacOS Gnucash.app we distribute the files will already be in the correct locations; users will need to rename any config*.user files to config-user.scm.  On other platforms except MacOS, where those files were previously stored in $HOME/.gnucash, GnuCash will move log.conf (if it exists) and the most recent config*.user, renaming the latter, automatically. MacOS installations other than our Gnucash.app bundle will have their data and configuration files in $HOME/.gnucash but users will have to copy the files to $HOME/Library/Application Support/Gnucash themselves.
+  </li>
+
+    <li>Further improvements to the Transaction and Income-GST-statement reports.</li>
+
+    <li>Transaction Report: omit display of $0 in subtotals in other currencies. Previously in dual-subtotal columns, the dual-subtotal would attempt to print all commodities in the row. This meant if user chose common-currency thereby triggering additional commodities, the dual-subtotal would attempt to add amounts in other commodities which would be 0, and display the 0 amount.</li>
+</ul>
+<h3>For Developers and Distro packagers:</h3>
+<ul>
+  <li>Some cruft removal in libgnucash/scm plus moving some code to its only use location. "main.scm" is renamed to "utilities.scm".</li>
+
+  <li>The "printf" family of Scheme custom functions is replaced with the built-in "format" facility.</li>
+
+  <li>Change a generally unnecessary warning about being unable to open a module (usually because the file is still being created) to a debug message. It appears mostly during highly parallel builds and was distracting.</li>
+
+  <li>Added dependency information to all CMake targets, replacing a dependency on build order that was carried over from autotools. Highly parallel builds in ninja now complete without interuption.</li>
+
+  <li>Ensure that all GtkBuilder and GtkUIManager files are correctly installed and that no configuration of build products in those directories are.</li>
+
+  <li>Appstream configuration is updated to the latest spec.</li>
+
+  <li>Fix installation of a gnucash-only gschemas.compiled overwriting
+    the system one. Note that if you install to a DESTDIR you'll need
+    to re-run glib-compile-scemas after moving the contents of
+    $DESTDIR$PREFIX/share/glib-2.0/schemas to $PREFIX.</li>
+
+    <li>Added two functions to the Scheme option API:
+    <ul><li>gnc:option-make-internal! will hide an existing option. e.g.  a
+      derived report can set the value for a Display/* option and hide
+      it from the user.</li>
+      <li>gnc:unregister-option will unregister option. This is primarily
+      useful for derived options e.g. another report copies from
+      transaction.scm and removes some options and recreates them with
+      different parameters.</li></ul>
+    For example, unregister existing option from section "Accounts" name "Accounts", and recreate with different parameters e.g. limited account types.</li>
+
+</ul>
+<h3>Bugs fixed in this release</h3>
+<ul>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=787095">Bug 787095 - Gnucash Crashes when opening old XML file.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=792157">Bug 792157 - Cannot create account with different currency</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=792833">Bug 792833 - User specifies source of 'num' field'; either transaction number or split action (requires at least GnuCash 2.5.0)</a> Strip leading delimiters from KVP keys when reading them from the database. Leading delimiters are incorrectly included in databases created with GnuCash 2.6.x. </li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=792883"> Bug 792883 - cmake: no way to turn off -Werror</a> Prepend settings to CMAKE_C_FLAGS and CMAKE_CXX_FLAGS so that values supplied on the command line can override the fixed settings.</li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=792884">Bug 792884 - cmake: gschemas.compiled missing</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=793122">Bug 793122 - 2.7.3: ninja build fails.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=793155">Bug 793155 - Gnucash 2.7.4 crashes on launch MacOS 10.13.4 PB1</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=793278"> Bug 793278 - wrong data in charts with accumulated values (like "net-linechart", "net-barchart" and "liabilities barchart")</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=793568">Bug 793568 - "Cash Flow" report crashes</a></li>
+</ul>
+<h3>Some other fixes not associated with reported bugs:</h3>
+<ul>
+    <li>An optimization in the GncDateTime string constructor provides substantial speed up of loading SQL databases, and one in Scheduled Transaction creation will speed up creation of large numbers of scheduled transactions.</li>
+    <li>More dialogs have transient-for set so that they pop up over the window instead of in the upper left-hand corner of the monitor.</li>
+
+</ul>
+
+<h3 id="known_problems">KNOWN PROBLEMS:</h3>
+<ul>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=789594">Bug 789594 - Unable to overwrite splite3 database file</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=791283">Bug 791823 - There is no Gtk3 theme-setting tool for Windows.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=791825">Bug 791825 - Accounting period dates off-by-1 </a></li>
+</ul>
+<h3>Updated Translations:</h3>
+<p>German, Greek, Slovak, Spanish</p>
+
+<p>A new set of business account templates for India's new GST; use
+    locale en_IN to enable them.</p>
+
+<h3>Getting GnuCash for Windows&reg; and MacOS&reg;</h3>
+<p>GnuCash is provided for both Microsoft Windows XP&reg; and later
+and MacOS X 10.9 (Mavericks)&reg; and later in pre-built, all-in-one
+packages. An installer is provided for Microsoft Windows&reg; while
+the MacOS&reg; package is a disk image containing a drag-and-drop
+application bundle.</p>
+<h5>SourceForge:</h5>
+<ul>
+  <li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.7.5.setup.exe">Download GnuCash for Win32</a></li>
+  <li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.7.5-1.dmg">Download GnuCash for Mac-Intel</a></li>
+</ul>
+<h5>Github</h5>
+<ul>
+  <li><a href="https://github.com/Gnucash/gnucash/releases/download/2.7.5/gnucash-2.7.5.setup.exe">Download GnuCash for Win32</a></li>
+  <li><a href="https://github.com/Gnucash/gnucash/releases/download/2.7.5/Gnucash-Intel-2.7.5-1.dmg">Download GnuCash for Mac-Intel</a></li>
+</ul>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.7.5 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+  <li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.7.5.tar.bz2">bzip2 tarball</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.7.5.tar.gz">gzip tarball</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.7.5/">all files</a>.</li>
+
+  <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/2.7.5/gnucash-2.7.5.tar.bz2">bzip2 tarball</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/2.7.5/gnucash-2.7.5.tar.gz">gzip tarball</a> <b>WARNING</b> Do not try to use the github-generated files labelled "Source Code". They have not been processed with swig and will not build.</li>
+
+  <li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+<p>The SHA256 Hashes for the downloadable files are:
+<ul>
+  <li><code>1d1596ce367e4e027ff63cb6b3502a1306a3045882caa567ca82e76c28ef224e</code>&nbsp;&nbsp;gnucash-2.7.5.tar.bz2</li>
+  <li><code>550fbfea9ad417cfb2483e7f42e4b6e32f78d96c334d885fca0b5d97a6ac6d44</code>&nbsp;&nbsp;gnucash-2.7.5.tar.gz</li>
+  <li><code>be055982eaf042bd6082da782d64cb575a58f755175a50188e912693e3caf795</code>&nbsp;&nbsp;gnucash-2.7.5.setup.exe</li>
+  <li><code>4ceea581ed870f8a2aa949d0aa10340d9577e100df0d398271d8faabb67ec2f6</code>&nbsp;&nbsp;GnuCash-Intel-2.7.5-1.dmg</li>
+</ul></p>
+
+<p>Please consult the README.dependencies file in the sources for the required dependencies and versions needed to build GnuCash from source. Additional information on building GnuCash may be found in the <a href="https://wiki.gnucash.org/wiki/Building">Wiki</a></p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. Please refer to the "Nightly Builds" section at the bottom of the page.</p>
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris&reg;, MacOS&reg; and Microsoft Windows&reg;.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
