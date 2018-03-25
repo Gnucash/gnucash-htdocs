@@ -1,0 +1,78 @@
+<b>Announcement:</b> GnuCash 2.7.8 Release
+2018-03-25
+
+<h2>GnuCash 2.7.8 released: Release Candidate</h2>
+
+<p>The Gnucash Development Team is pleased to release Gnucash 2.7.8, the ninth release of an unstable series leading to Gnucash 3.0. This release is a release candidate; if no bugs requiring major work are reported in the next few days we'll release 3.0 next weekend.</p>
+
+<p style="font-weight: bold;">This release changes file locations, binding APIs, report options, and can make your data file no longer compatible with previous versions. See the <a href="https://wiki.gnucash.org/wiki/UpdateNotes">Update Notes Page</a> for details.
+</p>
+</ul>
+<h3>Bugs fixed in this release:</h3>
+<ul>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=787439">Bug 787439 - Segmentation Fault in Transfer dialog after clearing Date field and pressing escape.</a></li>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=794242">Bug 794242 - Remove keep above setting for assistant hierarchy</a></li>
+</ul>
+<h3>Some other fixes not associated with reported bugs:</h3>
+<ul>
+  <li>When doing a file save from the a new start we have no key file</li>
+  
+  <li>Stop critical error due to testing null filename</li>
+  <li>Change dialog-new-user to use a GtkWindow </li>
+  <li>More transient-parent fixes.</li>
+  <li>Add missing response section to the account picker dialog.</li>
+  <li>Glade 3.20 adds surplus padding option to action area.</li>
+  <li>Add XML namespaces for all Account Hierarchy Templates. </li>
+  <li>Increase default options dialog size </li>
+</ul>
+
+<h3>Updated Translations:</h3>
+<p>None.</p>
+
+<h3>Getting GnuCash for Windows&reg; and MacOS&reg;</h3>
+<p>GnuCash is provided for both Microsoft Windows XP&reg; and later
+and MacOS X 10.9 (Mavericks)&reg; and later in pre-built, all-in-one
+packages. An installer is provided for Microsoft Windows&reg; while
+the MacOS&reg; package is a disk image containing a drag-and-drop
+application bundle.</p>
+<h5>SourceForge:</h5>
+<ul>
+  <li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.7.8.setup.exe">Download GnuCash for Win32</a></li>
+  <li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.7.8-1.dmg">Download GnuCash for Mac-Intel</a></li>
+</ul>
+<h5>Github</h5>
+<ul>
+  <li><a href="https://github.com/Gnucash/gnucash/releases/download/2.7.8/gnucash-2.7.8.setup.exe">Download GnuCash for Win32</a></li>
+  <li><a href="https://github.com/Gnucash/gnucash/releases/download/2.7.8/Gnucash-Intel-2.7.8-1.dmg">Download GnuCash for Mac-Intel</a></li>
+</ul>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.7.8 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+  <li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.7.8.tar.bz2">bzip2 tarball</a>, <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.7.8.tar.gz">gzip tarball</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.7.8/">all files</a>.</li>
+
+  <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/2.7.8/gnucash-2.7.8.tar.bz2">bzip2 tarball</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/2.7.8/gnucash-2.7.8.tar.gz">gzip tarball</a> <b>WARNING</b> Do not try to use the github-generated files labelled "Source Code". They have not been processed with swig and will not build.</li>
+
+  <li>You can also checkout the sources directly from the git repository as <a href="http://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+<p>The SHA256 Hashes for the downloadable files are:
+<ul>
+  <li><code>380c08d73b91d381a0197c108e672c20341c894bebb4ae98e9ab74df2a659797</code>&nbsp;&nbsp;gnucash-2.7.8.tar.bz2</li>
+  <li><code>758f822d62d1249455f3580f1f587ed80fc30e915a56b36095ae545e9a38b4da</code>&nbsp;&nbsp;gnucash-2.7.8.tar.gz</li>
+  <li><code>3126e50a4194fe747efb6f8385d2c224a4c31c103cf523ffc54e7df1a29c976b</code>&nbsp;&nbsp;gnucash-2.7.8.setup.exe</li>
+  <li><code>e1c4e66401d2d69d71bb592c33a2c45a20298b518936dedcc6b9ededf7ae6bdc</code>&nbsp;&nbsp;GnuCash-Intel-2.7.8-1.dmg</li>
+</ul></p>
+
+<p>Please consult the README.dependencies file in the sources for the required dependencies and versions needed to build GnuCash from source. Additional information on building GnuCash may be found in the <a href="https://wiki.gnucash.org/wiki/Building">Wiki</a></p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. Please refer to the "Nightly Builds" section at the bottom of the page.</p>
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris&reg;, MacOS&reg; and Microsoft Windows&reg;.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
