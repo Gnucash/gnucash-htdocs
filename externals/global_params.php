@@ -2,8 +2,8 @@
      // This section defines the most recent version numbers for all platforms.
      // Each platform can define its own latest version or follow the default.
      // Both a latest stable version and a latest unstable version are defined.
-     $major_stable		="2.6";
-     $minor_stable		="19";
+     $major_stable		="3";
+     $minor_stable		="0";
      $latest_stable             = $major_stable.".".$minor_stable;
      $latest_stable_win		= $latest_stable;
 #     $latest_stable_win         = $latest_stable."-1";
@@ -11,21 +11,21 @@
      $latest_stable_mac_intel   = $latest_stable."-1";
 // Change this when there has been a re-tag to add the re-tag letter,
 // e.g. if one retagged 2.6.13 to 2.6.13a, make $tarball = $latest_stable."a".
-     $tarball                   = $latest_stable."-1";
+     $tarball                   = $latest_stable;
      
-     $major_latest_unstable		="2.7";
-     $minor_latest_unstable		="8";
+     $major_latest_unstable		="3";
+     $minor_latest_unstable		="900";
      $latest_unstable           = $major_latest_unstable.".".$minor_latest_unstable;
      // There's currently no unstable release being worked on, so disable it
-#     $latest_unstable           = False;
+     $latest_unstable           = False;
      $latest_unstable_win       = $latest_unstable;
      $latest_unstable_mac_intel = $latest_unstable."-1";
 
-     $major_old_stable		="2.4";
-     $minor_old_stable		="15";
+     $major_old_stable		="2.6";
+     $minor_old_stable		="19";
      $old_stable           = $major_old_stable.".".$minor_old_stable;
      $old_stable_win       = $old_stable;
-     $old_stable_mac_intel = $old_stable."-2";
+     $old_stable_mac_intel = $old_stable."-1";
 
      // The definitions below use the latest version definitions above
      // to define several paths that will be used on several pages
