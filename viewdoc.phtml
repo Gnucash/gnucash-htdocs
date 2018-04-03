@@ -14,7 +14,7 @@ include("externals/menu.phtml");
 $basepath       = "https://www.gnucash.org/docs";
 $helpdoc        = "gnucash-help/help.html";
 $tcdoc          = "gnucash-guide/index.html";
-$current_stable = "2.6";
+$current_stable = $major_stable;
 
 # Show current stable helpdoc, in overall set language by default
 $showdoc     = $tcdoc;
@@ -67,6 +67,9 @@ if (isset ($_GET["rev"])) {
         break;
     case "2.6":
         $showrev = "2.6";
+        break;
+    case "3":
+        $showrev = "3";
         break;
     case "current":
         $showrev = $current_stable;

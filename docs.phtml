@@ -430,6 +430,7 @@ $older1		="1.6";
 $older2		="1.8";
 $older3		="2.0";
 $older4		="2.2";
+$older5		="2.4";
 ?>
 
 <div class="featurecontainer">
@@ -438,6 +439,28 @@ $older4		="2.2";
 </div>
 <p class="justify"><?php echo T_("This section contains all the older <span class=\"gnucash\">GnuCash</span> documentation. If you are using one of these old versions of <span class=\"gnucash\">GnuCash</span>, it is highly recommended that you upgrade to the latest stable version.");?></p>
 <ul>
+  <li><b><?php printf (T_("GnuCash v%s"), $older5)?></b>:
+    <ul>
+      <li>
+        <b><?php echo T_("Help Manual");?></b>:
+        <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older5;?>&lang=C&doc=help"
+          ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>) |
+        <?php echo T_("German");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older5;?>&lang=de_DE&doc=help"
+          ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>) |
+        <?php echo T_("Italian");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older5;?>&lang=it_IT&doc=help"
+          ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>)
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <b><?= T_("Concepts Guide") ?></b>:
+        <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older5;?>&lang=C&doc=guide"
+          ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>)
+        <?php echo T_("Italian");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older5;?>&lang=it_IT&doc=guide"
+          ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>)
+      </li>
+    </ul>
+  </li>
   <li><b><?php printf (T_("GnuCash v%s"), $older4)?></b>:
     <ul>
       <li>
