@@ -23,9 +23,15 @@
 
      $major_old_stable		="2.6";
      $minor_old_stable		="19";
-     $old_stable           = $major_old_stable.".".$minor_old_stable;
-     $old_stable_win       = $old_stable;
-     $old_stable_mac_intel = $old_stable."-1";
+// FIXME: with release 2.6.20 freeze $latest_stable_xp_vista & $latest_stable_mac_ppc
+// until we remove them from the start page. Sources:
+// https://wiki.gnucash.org/wiki/Windows#Q:_Which_Windows_versions_are_supported.3F
+// https://wiki.gnucash.org/wiki/MacOSX/Quartz#Downloads
+     $old_stable            = $major_old_stable.".".$minor_old_stable;
+     $old_stable_win        = $old_stable;
+     $latest_stable_xp_vista = $old_stable;
+     $latest_stable_mac_ppc  = $old_stable;
+     $old_stable_mac_intel  = $old_stable."-1";
 
      // The definitions below use the latest version definitions above
      // to define several paths that will be used on several pages
@@ -35,6 +41,7 @@
      $latest_stable_path=$stable_path.$latest_stable."/";
      
      $latest_stable_win="gnucash-".$latest_stable_win.".setup.exe";
+     $latest_stable_xp_vista="gnucash-".$latest_stable_xp_vista.".setup.exe";
      $latest_stable_mac_intel="Gnucash-Intel-".$latest_stable_mac_intel.".dmg";
      $latest_stable_mac_ppc="Gnucash-PPC-".$latest_stable_mac_ppc.".dmg";
      $latest_stable_source="gnucash-".$tarball.".tar.bz2";
