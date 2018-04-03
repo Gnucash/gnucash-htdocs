@@ -15,15 +15,16 @@ include("externals/menu.phtml");
 
 <div id="download">
 <div style="float:left;">
-<h2 id="dwnld-box"><?php printf (T_("Download GnuCash %s"), $latest_stable)?></h2>
-<h3><a style="margin-left:10px" href="2.6-release-tour.phtml"><em><?php echo T_("GnuCash 2.6 release tour")?></em></a></h3>
+ <h2 id="dwnld-box"><?php printf (T_("Download GnuCash %s"), $latest_stable)?></h2>
+ <h3><a style="margin-left:10px" href="2.6-release-tour.phtml"><em><?php echo T_("GnuCash 2.6 release tour")?></em></a></h3>
 
-<ul>
-<li><img alt="linux" src="<?=$top_dir?>/images/icons/linux.png" /> Linux <a href="<?php echo $download_path.$latest_stable_source;?>"><?php echo T_("Source");?></a> | <a href="<?=$home?>/download.phtml#distribution"><?php echo T_("Via distribution");?></a></li>
-<li><img alt="windows" src="<?=$top_dir?>/images/icons/windows.png" /> Microsoft Windows <a href="<?php echo $download_path.$latest_stable_xp_vista;?>">XP/Vista</a></li> | <a href="<?php echo $download_path.$latest_stable_win;?>">7/8/10</a>
-<li><img alt="macosx" src="<?=$top_dir?>/images/icons/macosx.png" /> Mac OS X <a href="<?php echo $download_path.$latest_stable_mac_intel;?>">Intel</a> | <a href="<?php echo $download_path.$latest_stable_mac_ppc;?>">Power PC</a></li>
-<li><a href="<?=$home?>/download.phtml" style="font-size: 80%;"><?=T_("More downloads (Source, Development,...)")?></a></li>
-</ul>
+ <ul>
+  <li><img alt="linux" src="<?=$top_dir?>/images/icons/linux.png" /> Linux <a href="<?php echo $download_path.$latest_stable_source;?>"><?php echo T_("Source");?></a> | <a href="<?=$home?>/download.phtml#distribution"><?php echo T_("Via distribution");?></a></li>
+  <li><img alt="windows" src="<?=$top_dir?>/images/icons/windows.png" /> Microsoft Windows <a href="<?php echo $download_path.$latest_stable_xp_vista;?>">XP/Vista</a></li> | <a href="<?php echo $download_path.$latest_stable_win;?>">7/8/10</a>
+  <li><img alt="macosx" src="<?=$top_dir?>/images/icons/macosx.png" /> Mac OS X <a href="<?php echo $download_path.$latest_stable_mac_intel;?>">Intel</a> | <a href="<?php echo $download_path.$latest_stable_mac_ppc;?>">Power PC</a></li>
+  <li><a href="<?=$home?>/download.phtml" style="font-size: 80%;"><?=T_("More downloads (Source, Development,...)")?></a></li>
+ </ul>
+ <p class="justify"><?php echo T_("Goodbye! <span class=\"gnucash\">GnuCash</span> 2.6.20 is the last version for Windows XP/Vista and MacOS X 10.8 and earlier, and so the last version that will run on PowerPC Macs.");?></p>
 </div>
 
 <div class="downloadimage">

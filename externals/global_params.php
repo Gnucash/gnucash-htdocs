@@ -7,7 +7,6 @@
      $latest_stable             = $major_stable.".".$minor_stable;
      $latest_stable_win		= $latest_stable;
 #     $latest_stable_win         = $latest_stable."-1";
-     $latest_stable_mac_ppc     = $latest_stable."-1";
      $latest_stable_mac_intel   = $latest_stable."-1";
 // Change this when there has been a re-tag to add the re-tag letter,
 // e.g. if one retagged 2.6.13 to 2.6.13a, make $tarball = $latest_stable."a".
@@ -30,7 +29,8 @@
      $old_stable            = $major_old_stable.".".$minor_old_stable;
      $old_stable_win        = $old_stable;
      $latest_stable_xp_vista = $old_stable;
-     $latest_stable_mac_ppc  = $old_stable;
+     $latest_stable_mac_ppc  = $old_stable."-1";
+     $old_stable_mac_ppc  = $old_stable."-1";
      $old_stable_mac_intel  = $old_stable."-1";
 
      // The definitions below use the latest version definitions above
@@ -58,7 +58,6 @@
      
      $latest_unstable_win="gnucash-".$latest_unstable_win."-setup.exe";
      $latest_unstable_mac_intel="Gnucash Intel ".$latest_unstable_mac_intel.".dmg";
-     $latest_unstable_mac_ppc="Gnucash-PPC-".$latest_unstable_mac_ppc.".dmg";
      $latest_unstable_source="gnucash-".$latest_unstable.".tar.bz2";
      
      $download_path="http://downloads.sourceforge.net/sourceforge/gnucash/";
