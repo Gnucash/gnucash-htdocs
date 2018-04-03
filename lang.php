@@ -4,7 +4,7 @@ $locale_dir = "locale";
 
 if (!array_key_exists('HTTP_HOST', $_SERVER) || ($_SERVER["HTTP_HOST"] == "lists.gnucash.org"))
 {
-    $home = "http://www.gnucash.org";
+    $home = "https://www.gnucash.org";
 }else{
     $home = $top_dir;
 }

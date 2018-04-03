@@ -95,7 +95,7 @@ if (isset ($_GET["rev"])) {
 if ($showrev == "maint") {
   $basepath = "https://lists.gnucash.org/docs";
   $trunk_langs = array ( $helpdoc => array( "C", "de", "it", "pt"),
-                         $tcdoc   => array( "C", "de", "it", "ja", "pt"));
+                         $tcdoc   => array( "C", "de", "it", "ja", "pt", "ru"));
   if (!in_array ($showlang, $trunk_langs[$showdoc])) {
     $showlang    = "C";
     $req_lang_ok = false;

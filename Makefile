@@ -39,7 +39,7 @@ URLBASE=
 FILETAIL=
 LOCALE=
 FILE=
-HOME=http://www.gnucash.org$(URLBASE)
+HOME=https://www.gnucash.org$(URLBASE)
 TMPLBASE=search/templates/NMZ.
 
 # add when we have utf-8 translations: iconv -f UTF-8 -t ISO8859-1 
