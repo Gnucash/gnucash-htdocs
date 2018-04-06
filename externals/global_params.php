@@ -21,15 +21,11 @@
      $latest_unstable_mac_intel = $latest_unstable."-1";
 
      $major_old_stable		="2.6";
-     $minor_old_stable		="19";
-// FIXME: with release 2.6.20 freeze $latest_stable_xp_vista & $latest_stable_mac_ppc
-// until we remove them from the start page. Sources:
-// https://wiki.gnucash.org/wiki/Windows#Q:_Which_Windows_versions_are_supported.3F
-// https://wiki.gnucash.org/wiki/MacOSX/Quartz#Downloads
+     $minor_old_stable		="20";
      $old_stable            = $major_old_stable.".".$minor_old_stable;
      $old_stable_win        = $old_stable;
-     $latest_stable_xp_vista = $old_stable;
-     $latest_stable_mac_ppc  = $old_stable."-1";
+     $latest_stable_xp_vista = "2.6.20";
+     $latest_stable_mac_ppc  = "2.6.20-1";
      $old_stable_mac_ppc  = $old_stable."-1";
      $old_stable_mac_intel  = $old_stable."-1";
 

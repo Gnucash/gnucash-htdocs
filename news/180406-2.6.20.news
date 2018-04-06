@@ -1,0 +1,104 @@
+<b>Announcement:</b> GnuCash 2.6.20 Release
+2018-04-06
+
+<h2>GnuCash 2.6.20 released</h2>
+
+<p>The GnuCash development team announces GnuCash 2.6.20, the twenty-first and final maintenance release in the 2.6-stable series.<b> Note:</b> This is the last version of GnuCash that will support MacOS X versions earlier than 10.9 or Microsoft Windows versions earlier than Windows 7.</p>
+<h3>Changes</h3>
+
+<p>Between 2.6.19 and 2.6.20, the following bugfixes were accomplished:</p>
+<ul>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=787497"> Bug 765846 - Expense Over Time for subaccounts: An error occurred while running the report</a>: Fix crash if acc-depth too low.</li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=787497">Bug 791848 - GC 2.6.x does not handle ISO dates introduced with GC 2.7</a> Enable reading ISO-formatted dates, recognize GNC_FEATURE_SQLITE3_ISO_DATES.</li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=787497">Bug 792008 - gnucash 2.6.19 fails to build</a> Replace g_assert_true with g_assert for now</li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=787497">Bug 793278 - wrong data in charts with accumulated values (like "net-linechart", "net-barchart" and "liabilities barchart")</a></li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=787497">Bug 794030 - relative date functions compute wrong day of month</a></li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=787497">Bug 790526 - Mathematical bug</a> This change will fix 'num-of-weeks-since-1/jan/1970' which formerly used quotient to remove the fractional part of the division. For negative values of num-of-weeks, the number is truncated in the wrong direction (i.e. towards 0). This change uses floor instead to ensure the num-of-weeks found is the nearest integer LESS than the fractional number.</li>
+</ul>
+<p>Some other fixes not associated with reported bugs:
+<ul>
+    <li>Online HBCI actions: Remove outdated non-SEPA menu items.</li>
+    <li>Add XML namespaces for all Account Hierarchy Templates.</li>
+    <li>General cleanup of Account Hierarchy Templates.</li>
+    <li>Fix auto-selection of splits in reconcile. Really use all splits of any given day. Up to now usually the splits of the given date were not or not all included, as the time comparison didn't correctly ignore any given time-of-day of the splits. Instead, all possible time-of-days should be included.</li>
+    <li>Properly detect git in case of linked worktree.</li>
+    <li>Account Hierarchy for India: Set LANGUAGE=hi and LANG=en_IN to access it.</li>
+    <li>Improve Import menu entries Customer & vendors use same menu label as others, replace template by tooltip, add ellipsis to entry, add comments to distinguish "Import" as verb and substantive.</li>
+    <li>Provide preference panel to set the Alpha Vantage API key needed for Finance::Quote.</li>
+    <li>Correct the appstream definition to match the current spec.</li>
+    <li>Fix collectors and min-date handling in reports.</li>
+</ul>
+<p>Translation Updates: Dutch, German, Spanish, Russian
+
+<h2>Important update notification</h2>
+<p>If you are updating from gnucash 2.6.0-2.6.4 on linux, you are advised to remove the guile user cache or several parts of gnucash may fail to work properly. This user cache can be found in <em>.cache/guile/ccache/2.0-LE-8-2.0/</em> in your home directory. It's safe to remove the whole contents of this directory.</p>
+<p>Note .cache is a hidden folder in your home directory. You may have to change your file manager's settings in order to view hidden files and folders.</p>
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of Gnucash 2.6.20 we're pleased to also release a new version 2.6.20 of the companion <em>Help</em> and <em>Tutorial and Concepts Guide</em>.</p>
+<ul>
+  <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=782423">Bug 782423 - Help 10.2. Setting Preferences is outdated.</a></li>
+  <li>Changing text in Help to reflect changes in Preferences dialogs.</li>
+  <li>Translation of the german guides metafile</li>
+</ul>
+
+<h3>Getting GnuCash for Windows and MacOS X</h3>
+<p>GnuCash is provided for both Microsoft Windows XP&reg; and later
+and MacOS X 10.5 (Leopard)&reg; and later in pre-built, all-in-one
+packages. An installer is provided for Microsoft Windows&reg; while
+the MacOS X&reg; package is a disk image containing a drag-and-drop
+application bundle.</p>
+<p>The SHA256 Hashes for the downloadable files are:
+<ul>
+<li><code>44baf7d0133b8bdc9fcb819ee4360afaca2f03a1a254c0221d02e23f35c93025</code>&nbsp;&nbsp;gnucash-2.6.20.tar.bz2</li>
+<li><code>64b463a1c029e42983d8daebc332964ef6a98a2101a6f3b85a047e45c03a5eef</code>&nbsp;&nbsp;gnucash-2.6.20.tar.gz</li>
+<li><code>d985cb4147d3a347ab10090ed12583c65293324d821a45db4f6c0bc5a3718637</code>&nbsp;&nbsp;gnucash-2.6.20.setup.exe</li>
+<li><code>65b188c993a3e53ba8ebb52dcf6f5e153021df529bb34e1e5b33f45d3c34523d</code>&nbsp;&nbsp;Gnucash-Intel-2.6.20-1.dmg</li>
+<li><code>4986d87bfac7b4ad3b8526d4337697c0cdb3ef447f510ced110f764ea4f68ad8</code>&nbsp;&nbsp;Gnucash-PPC-2.6.20-1.dmg</li>
+<li><code>65c9ecf2d45ff432d35f8c955d36475c0f3ccecd271dc21435b091f50c6b08ea</code>&nbsp;&nbsp;gnucash-docs-2.6.20.tar.gz</li>
+</ul></p>
+
+<ul>
+<li>SourceForge:
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.20-setup.exe">Win32</a></li>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-2.6.20-1.dmg">Mac-Intel</a></li>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-PPC-2.6.20-1.dmg">Mac-PPC</a></li>
+</ul></li>
+<li>Github
+<ul>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.20/gnucash-2.6.20-setup.exe">Win32</a></li>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.20/Gnucash-Intel-2.6.20-1.dmg">Mac-Intel</a></li>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/2.6.20/Gnucash-PPC-2.6.20-1.dmg">Mac-PPC</a></li>
+</ul></li></ul>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 2.6.20 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-2.6.20.tar.bz2">bzip2</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/2.6.20/">all files</a>.</li>
+
+<li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/2.6.20/gnucash-2.6.20.tar.bz2">bzip</a> <b>WARNING</b> Do not try to use the github-generated files labelled "Source Code". They have not been processed with swig and will not build.</li>
+
+<li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least Gnome 2, Guile, and slib. In addition you will need swig if compiling from git. Please consult the README file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 2.6.20 documentation can be found under "GnuCash v2.6 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats.</p>
+
+<p>If you want to compile the GnuCash Documentation 2.6.20 for yourself, the source code can be downloaded from:</p>
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-docs-2.6.20.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/2.6.20/gnucash-docs-2.6.20.tar.gz">GitHub</a></li>
+<li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
