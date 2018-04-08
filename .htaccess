@@ -11,7 +11,7 @@ AddType application/x-httpd-php .phtml
 # The old website was kept here for historical purposes.
 # Any attempt to access it will be redirected to the
 # new site's main page.
-RedirectMatch permanent /old-website/.* http://www.gnucash.org
+RedirectMatch permanent /old-website/.* https://www.gnucash.org
 
 # Images were once stored in /externals, while they are now in /images
 # Redirect some that get a lot of "not found hits"
@@ -19,8 +19,8 @@ Redirect permanent /externals/banner5.png /images/banner5.png
 Redirect permanent /externals/webding.png /images/webding.png
 
 # Other images we don't have an alternative for
-Redirect permanent /externals/feed-icon-12x12.png http://upload.wikimedia.org/wikipedia/commons/5/54/Social_icons-rss-feed-22x22.png
-Redirect permanent /images/icons/feed-icon-12x12.png http://upload.wikimedia.org/wikipedia/commons/5/54/Social_icons-rss-feed-22x22.png
+Redirect permanent /externals/feed-icon-12x12.png https://upload.wikimedia.org/wikipedia/commons/5/54/Social_icons-rss-feed-22x22.png
+Redirect permanent /images/icons/feed-icon-12x12.png https://upload.wikimedia.org/wikipedia/commons/5/54/Social_icons-rss-feed-22x22.png
 
 # The french version of the website apparently used to have
 # lots of private pages. Not all of them have an equivalent
@@ -28,26 +28,26 @@ Redirect permanent /images/icons/feed-icon-12x12.png http://upload.wikimedia.org
 # as well as we can to sensible alternatives.
 Redirect permanent /fr/bios             /index.phtml?lang=fr_FR
 Redirect permanent /fr/components       /index.phtml?lang=fr_FR
-Redirect permanent /fr/contribute       http://wiki.gnucash.org/wiki/Development
+Redirect permanent /fr/contribute       https://wiki.gnucash.org/wiki/Development
 Redirect permanent /fr/data             /index.phtml?lang=fr_FR
 Redirect permanent /fr/Docs             /docs.phtml?lang=fr_FR
 Redirect permanent /fr/features_5.phtml /features.phtml?lang=fr_FR
-Redirect permanent /fr/irc.phtml        http://wiki.gnucash.org/wiki/IRC
+Redirect permanent /fr/irc.phtml        https://wiki.gnucash.org/wiki/IRC
 Redirect permanent /fr/links            /index.phtml?lang=fr_FR
 Redirect permanent /fr/menu             /index.phtml?lang=fr_FR
 Redirect permanent /docs/fr/            /docs.phtml?lang=fr_FR
 
 # Some pages that don't exist anymore in the current website
 RedirectMatch permanent /.*/favicon.ico        /favicon.ico
-RedirectMatch permanent /.*/lists.phtml        http://wiki.gnucash.org/wiki/Mailing_Lists
+RedirectMatch permanent /.*/lists.phtml        https://wiki.gnucash.org/wiki/Mailing_Lists
 RedirectMatch permanent /(.*)/promote.phtml    /index.phtml?lang=$1
 RedirectMatch permanent /(.*)/required.phtml   /index.phtml?lang=$1
-RedirectMatch permanent /.*/roadmap.phtml      http://wiki.gnucash.org/wiki/Roadmap
+RedirectMatch permanent /.*/roadmap.phtml      https://wiki.gnucash.org/wiki/Roadmap
 RedirectMatch permanent /(.*)/rss-feed.phtml   /atom.php?lang=$1
 RedirectMatch permanent /(.*)/state_of_the_gnucash_project.phtml   /sizing.phtml?lang=$1
-RedirectMatch permanent /.*/sql.phtml          http://wiki.gnucash.org/wiki/SQL
+RedirectMatch permanent /.*/sql.phtml          https://wiki.gnucash.org/wiki/SQL
 RedirectMatch permanent /(.*)/t-shirt          /index.phtml?lang=$1
-RedirectMatch permanent /pipermail/(.*)        http://lists.gnucash.org/pipermail/$1
+RedirectMatch permanent /pipermail/(.*)        https://lists.gnucash.org/pipermail/$1
 RedirectMatch permanent /screenshots.phtml(.*) /features.phtml$1
 
 # Non-English versions of the site used to be accessed via

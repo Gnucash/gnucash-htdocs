@@ -33,7 +33,7 @@
   include("$newsdir/news-script.php");
 ?>
 
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="https://www.w3.org/2005/Atom">
   <title>GnuCash News</title>
   <subtitle>GnuCash is personal and small-business financial-accounting software, freely licensed under the GNU GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.</subtitle>
   <generator>GnuCash htdocs/master/atom.php 1.0 &lt;gnucash-devel@gnucash.org&gt;</generator>

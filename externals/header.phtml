@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "https://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
 
 <?php
 $titleRSS = T_("Subscribe to RSS feed");
@@ -25,7 +25,7 @@ function make_lang_href ($page, $get_parms, $lang)
 $get_parms = $_GET;
 ?>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head>
 <?php
 if (!isset($can_utf)) { $can_utf = true; }
@@ -36,8 +36,8 @@ if ($can_utf)
 <!--meta properties for facebook Open Graph-->
 <meta property="og:title" content="Free Accounting Software | GnuCash"/>
 <meta property="og:type" content="website"/>
-<meta property="og:url" content="http://www.gnucash.org/"/>
-<meta property="og:image" content="http://www.gnucash.org/externals/logo_w120.png"/>
+<meta property="og:url" content="https://www.gnucash.org/"/>
+<meta property="og:image" content="https://www.gnucash.org/externals/logo_w120.png"/>
 <meta property="og:site_name" content="GnuCash"/>
 <meta property="og:description" content="A personal and small-business financial-accounting software, licensed under GNU/GPL and available for Linux, Windows, Mac OS X, BSD, and Solaris."/>
 <!--end of Open Graph properties-->
@@ -90,10 +90,10 @@ if (isset($homepage)) { ?>
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="fb-like" data-href="http://www.gnucash.org" data-send="false" data-layout="box_count" data-width="60" data-show-faces="true" data-font="verdana"></div>
+<div class="fb-like" data-href="https://www.gnucash.org" data-send="false" data-layout="box_count" data-width="60" data-show-faces="true" data-font="verdana"></div>
 </div>
 <!-- google +1 button-->
-<g:plusone size="tall" href="http://www.gnucash.org/"></g:plusone>
+<g:plusone size="tall" href="https://www.gnucash.org/"></g:plusone>
 </div>
 
 <!-- the icons on the top right-->
@@ -101,8 +101,8 @@ if (isset($homepage)) { ?>
 <ul id="navlist">
   <li id="fb-icon"><a href="https://www.facebook.com/Gnucash" title="<?php echo T_($titlefb);?>"></a></li>
   <li id="gplus-icon"><a href="https://plus.google.com/u/0/103666182558673867088/" title="<?php echo T_($titlegplus);?>"></a></li>
-  <li id="uservoice-icon"><a href="http://gnucash.uservoice.com/" title="<?php echo T_($titleuservoice);?>"></a></li>
-  <li id="donation-icon"><a href="http://gnucash.org/donate.phtml" title="<?php echo T_($titledonation);?>"></a></li>
+  <li id="uservoice-icon"><a href="https://gnucash.uservoice.com/" title="<?php echo T_($titleuservoice);?>"></a></li>
+  <li id="donation-icon"><a href="https://gnucash.org/donate.phtml" title="<?php echo T_($titledonation);?>"></a></li>
   <li id="rss-icon"><a href="<?=$home?>/atom.php" title="<?php echo T_($titleRSS);?>"></a></li>
 </ul>
 </div>
@@ -130,9 +130,10 @@ if (isset($homepage)) { ?>
 | <a class="nav" href="<?= make_lang_href($current_page, $get_parms, "zh_CN"); ?>">简体中文</a>
 | <a class="nav" href="<?= make_lang_href($current_page, $get_parms, "zh_TW"); ?>">繁體中文</a>
 </span>
-<span id="location">&nbsp; <!-- <?= _("Continent"); ?>:
- (<a class="nav" href="http://www.gnucash.org/">US</a>)
- (<a class="nav" href="http://www.at.gnucash.org/">EU</a>)
+<span id="location">&nbsp; <!-- The mirrors currently not exist
+ <?= _("Continent"); ?>:
+ (<a class="nav" href="https://www.gnucash.org/">US</a>)
+ (<a class="nav" href="http://www.at.gnucash.org/">EU</a>) 
  (<a class="nav" href="http://www.au.gnucash.org/">AU</a>) -->
 </span>
 </div>

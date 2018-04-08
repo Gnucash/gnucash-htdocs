@@ -35,7 +35,7 @@ There are three main classes of links:
 
 - navigation [$home]
   - www: relative
-  - !www: url-prefixed ("http://www.gnucash.org/file.phtml")
+  - !www: url-prefixed ("https://www.gnucash.org/file.phtml")
 
                         | www.gnucash.org  |  lists.gnucash.org        |
                         +------------------+---------------------------+
@@ -43,8 +43,8 @@ There are three main classes of links:
         external (lang) |  ../[externals/] | ../[externals/]           |  \,- $top_dir
         translation (C) |   ./[lang]       |  ./[lang]                 |  / 
      translation (lang) |  ../[lang]       | ../[lang]                 | /
-         navigation (C) |   ./             | http://www.[...]/         |  \,- $home
-      navigation (lang) |   ./             | http://www.[...]/[lang]/  |  /
+         navigation (C) |   ./             | https://www.[...]/         |  \,- $home
+      navigation (lang) |   ./             | https://www.[...]/[lang]/  |  /
                         +------------------+---------------------------+
 
 As such:
@@ -55,7 +55,7 @@ As such:
 
   $home := a prefix for navigational URLs; for everything but
     lists.gnucash.org, this'll be ".", but for lists.gnucash.org it'll
-    be "http://www.gnucash.org/".
+    be "https://www.gnucash.org/".
 
 As well, the following variables should be set:
 
@@ -162,7 +162,7 @@ Website beta environment
 Some changes may be too drastic or experimental to push to the public
 website. There is a beta website available as well on
 
-http://www.gnucash.org/beta/
+https://www.gnucash.org/beta/
 
 WARNING: this branch is currently not kept in sync with master. So if you
          intend to experiment with the current content in master, please ask
