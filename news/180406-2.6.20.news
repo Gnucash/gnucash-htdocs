@@ -8,12 +8,12 @@
 
 <p>Between 2.6.19 and 2.6.20, the following bugfixes were accomplished:</p>
 <ul>
-     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=787497"> Bug 765846 - Expense Over Time for subaccounts: An error occurred while running the report</a>: Fix crash if acc-depth too low.</li>
-    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=787497">Bug 791848 - GC 2.6.x does not handle ISO dates introduced with GC 2.7</a> Enable reading ISO-formatted dates, recognize GNC_FEATURE_SQLITE3_ISO_DATES.</li>
-    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=787497">Bug 792008 - gnucash 2.6.19 fails to build</a> Replace g_assert_true with g_assert for now</li>
-    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=787497">Bug 793278 - wrong data in charts with accumulated values (like "net-linechart", "net-barchart" and "liabilities barchart")</a></li>
-    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=787497">Bug 794030 - relative date functions compute wrong day of month</a></li>
-    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=787497">Bug 790526 - Mathematical bug</a> This change will fix 'num-of-weeks-since-1/jan/1970' which formerly used quotient to remove the fractional part of the division. For negative values of num-of-weeks, the number is truncated in the wrong direction (i.e. towards 0). This change uses floor instead to ensure the num-of-weeks found is the nearest integer LESS than the fractional number.</li>
+     <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=765946"> Bug 765846 - Expense Over Time for subaccounts: An error occurred while running the report</a>: Fix crash if acc-depth too low.</li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=790526">Bug 790526 - Mathematical bug</a> This change will fix 'num-of-weeks-since-1/jan/1970' which formerly used quotient to remove the fractional part of the division. For negative values of num-of-weeks, the number is truncated in the wrong direction (i.e. towards 0). This change uses floor instead to ensure the num-of-weeks found is the nearest integer LESS than the fractional number.</li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=791848">Bug 791848 - GC 2.6.x does not handle ISO dates introduced with GC 2.7</a> Enable reading ISO-formatted dates, recognize GNC_FEATURE_SQLITE3_ISO_DATES.</li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=782008">Bug 792008 - gnucash 2.6.19 fails to build</a> Replace g_assert_true with g_assert for now</li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=793278">Bug 793278 - wrong data in charts with accumulated values (like "net-linechart", "net-barchart" and "liabilities barchart")</a></li>
+    <li> <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794030">Bug 794030 - relative date functions compute wrong day of month</a></li>
 </ul>
 <p>Some other fixes not associated with reported bugs:
 <ul>
