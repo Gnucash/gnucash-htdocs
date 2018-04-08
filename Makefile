@@ -14,7 +14,7 @@ po/POTFILES: .potfiles
 .potfiles:
 
 po/gnucash-htdocs.pot: po/POTFILES
-	xgettext -f po/POTFILES -L PHP --keyword="T_" -o po/gnucash-htdocs.pot \
+	xgettext -f po/POTFILES -L PHP --keyword="T_" -o po/gnucash-htdocs.pot -F -c \
 	  --package-name=gnucash-htdocs \
 	  --copyright-holder="The GnuCash Website Team" \
 	  --msgid-bugs-address='https://bugzilla.gnome.org/page.cgi?id=browse.html&product=GnuCash'
@@ -22,7 +22,7 @@ po/gnucash-htdocs.pot: po/POTFILES
 msgmerge: po/gnucash-htdocs.pot
 	for f in ${languages} ; do \
 	  echo -n $$f ; \
-	  msgmerge -U -s po/$$f.po po/gnucash-htdocs.pot ; \
+	  msgmerge -U -F po/$$f.po po/gnucash-htdocs.pot ; \
 	done
 
 mos: ${languages}
