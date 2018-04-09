@@ -27,7 +27,7 @@
      $latest_stable_xp_vista = "2.6.20";
      $latest_stable_mac_ppc  = "2.6.20-1";
      $old_stable_mac_ppc  = $old_stable."-1";
-     $old_stable_mac_intel  = $old_stable."-1";
+     $old_stable_mac_intel  = $old_stable."-2";
 
      // The definitions below use the latest version definitions above
      // to define several paths that will be used on several pages
