@@ -21,13 +21,13 @@
      $latest_unstable_mac_intel = $latest_unstable."-1";
 
      $major_old_stable		="2.6";
-     $minor_old_stable		="20";
+     $minor_old_stable		="21";
      $old_stable            = $major_old_stable.".".$minor_old_stable;
      $old_stable_win        = $old_stable;
-     $latest_stable_xp_vista = "2.6.20";
-     $latest_stable_mac_ppc  = "2.6.20-1";
+     $latest_stable_xp_vista = "2.6.21";
+     $latest_stable_mac_ppc  = "2.6.21-1";
      $old_stable_mac_ppc  = $old_stable."-1";
-     $old_stable_mac_intel  = $old_stable."-2";
+     $old_stable_mac_intel  = $old_stable."-1";
 
      // The definitions below use the latest version definitions above
      // to define several paths that will be used on several pages
