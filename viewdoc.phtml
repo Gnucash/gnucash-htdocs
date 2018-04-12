@@ -107,7 +107,9 @@ if ($showrev == "maint") {
   # on the same server
   $checkpath="docs/v".$showrev."/".$showlang."/".$showdoc;
   if (!file_exists ($checkpath)) {
+  	# Try Lang only codes
   	$showlang = substr($showlang,1,2);
+  	if ($showlang="en") $showlang="C";
     $checkpath="docs/v".$showrev."/".$showlang."/".$showdoc;
     if (!file_exists ($checkpath)) {
       $showlang    = "C";
