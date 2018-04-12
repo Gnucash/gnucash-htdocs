@@ -107,9 +107,13 @@ if ($showrev == "maint") {
   # on the same server
   $checkpath="docs/v".$showrev."/".$showlang."/".$showdoc;
   if (!file_exists ($checkpath)) {
-    $showlang    = "C";
-    $req_lang_ok = false;
-  }
+  	$showlang = substr($showlang,1,2);
+    $checkpath="docs/v".$showrev."/".$showlang."/".$showdoc;
+    if (!file_exists ($checkpath)) {
+      $showlang    = "C";
+      $req_lang_ok = false;
+      }
+    }
   
   $showurl=$basepath."/v".$showrev."/".$showlang."/".$showdoc;
 }

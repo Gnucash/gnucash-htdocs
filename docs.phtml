@@ -1,3 +1,10 @@
+/* Some notes:
+LANG tag: 1.6-2.2: ll_RR, but "es", later: ll
+Encoding: 1.6-1.8: ISO-8859-1, >=2.0: UTF-8
+DocTypes: always HTML,
+		PDF:1.8 en only, 2.0-.2 no, 
+		since 2.4: PDF, ePub, Mobi
+ */
 <?php 
 include("lang.php");
 $title = T_("Documentation");
@@ -552,8 +559,8 @@ $older5		="2.4"; // region code no longer required
     </ul>
     <ul>
       <li>
-        <b><?= T_("Concepts Guide") ?></b>:     
-        <?php echo T_("German");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older2;?>&lang=C&doc=guide"
+        <b><?= T_("Concepts Guide") ?></b>:
+        <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older2;?>&lang=C&doc=guide"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>,
         <a href="<?=$top_dir;?>/docs/v<?=$older2;?>/C/gnucash-guide.pdf"
           ><img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a>)
