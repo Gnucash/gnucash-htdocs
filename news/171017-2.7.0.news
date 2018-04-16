@@ -15,7 +15,7 @@
 
 <li>There's a new CSV importer largely rewritten in C++, adding new features including the ability to re-import CSV files exported from GnuCash. (Geert Janssens)</li>
 
-<li>Data file directories are now located appropriately to the operating system's conventions by default. It's still possible to override with the environment variable GNC_DOC_PATH, which replaces GNC_DOT_DIR in earlier versions of GnuCash. (Geert Janssens)</li>
+<li>Data file directories are now located appropriately to the operating system's conventions by default. It's still possible to override with the environment variable GNC_DATA_HOME, which replaces GNC_DOT_DIR in earlier versions of GnuCash. (Geert Janssens)</li>
 
 <li>Accounts in the Bayes import map are now linked by GUID instead of names so that the matcher won't have to be retrained if you rename an account. <b><em>This will make your file unreadable by previous versions of gnucash</em></b>. There's a new editor to remove outdated or incorrect match data from the import maps, a new user interface for managing files associated with transactions, an improved facility for removing old prices from the price database, and a way to remove deleted files from the history list in the file menu. (All from Robert Fewell!)</li>
 
