@@ -168,11 +168,11 @@
   <li>The Bayes account matcher can take a long time to convert the accounts from name string to guids. This is a one-off, happening only the first time one imports into an account on GnuCash 3.0. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794334">Bug 794334</a>.</li>
   <li>The new CSV importer's numeric parser can't parse numbers of the form x + y/z. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=793556">Bug 793556</a>.</li>
   <li>Python bindings may not work in some installations because the bindings are unable to find the backend modules (libgncmod-backend-dbi and libgncmod-backend-xml). <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794526">Bug 794526</a>.</li>
+  <li>An open register is not immediately updated when the Since Last Run dialog creates transaction splits in the register's account. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794584">Bug 794584</a>.</li>
   <li>Get Quotes can be slow if one has a large number of saved prices. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794644">Bug 794644</a>.</li>
   <li>Some users see 1 January 1970 instead of the default date in the New Invoice or New Bill dialog and on the unposted bill and invoice. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794767">Bug 794767</a>.</li>
   <li>The Mac localization code can set the wrong encoding for strftime causing the register's date picker to label months "Null" in some locales. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794807">Bug 794807</a>.</li>
   <li>On Mac, the File Open dialog will crash if one types anything. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794809">Bug 794809</a>.</li>
-  <li>An open register is not immediately updated when the Since Last Run dialog creates transaction splits in the register's account. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794854">Bug 794854</a>.</li>
   <li>GnuCash asks if one wants to save changes when quitting or opening a file even if there's no book open. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794870">Bug 794870</a>.</li>
   <li>The Online Actions menu includes some obsolete and non-functional selections.<a href="https://bugzilla.gnome.org/show_bug.cgi?id=794880"> Bug 794880</a>.</li>
 </ul>
