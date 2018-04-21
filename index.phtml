@@ -1,83 +1,81 @@
 <?php 
-$homepage = true;
-include("emulate_globals_on.php");
-include("lang.php");
-$title = T_("Free Accounting Software");
-include("externals/header.phtml");
-include("externals/menu.phtml"); 
+  $homepage = true;
+  include("emulate_globals_on.php");
+  include("lang.php");
+  $title = T_("Free Accounting Software");
+  include("externals/header.phtml");
+  include("externals/menu.phtml"); 
 ?>
 
 <div id="content">
 
-<h1><?php echo T_("Welcome to GnuCash.org")?></h1>
+  <h1><?php echo T_("Welcome to GnuCash.org")?></h1>
 
-<div style="width:100%;float:left">
+  <div style="width:100%;float:left">
 
-<div class="download">
- <div style="float:left;">
-  <h2 id="dwnld-box"><?php printf (T_("Download GnuCash %s"), $latest_stable)?></h2>
-  <h3><a style="margin-left:10px" href="2.6-release-tour.phtml"><em><?php echo T_("GnuCash 2.6 release tour")?></em></a></h3>
+    <div class="download">
+      <div style="float:left;">
+        <h2 id="dwnld-box"><?php printf (T_("Download GnuCash %s"), $latest_stable)?></h2>
+        <h3><a style="margin-left:10px" href="2.6-release-tour.phtml"><em><?php echo T_("GnuCash 2.6 release tour")?></em></a></h3>
 
-  <ul>
-   <li><img alt="linux" src="<?=$top_dir?>/images/icons/linux.png" /> Linux <a href="<?php echo $download_path.$latest_stable_source;?>"><?php echo T_("Source");?></a> | <a href="<?=$home?>/download.phtml#distribution"><?php echo T_("Via distribution");?></a></li>
-   <li><img alt="windows" src="<?=$top_dir?>/images/icons/windows.png" /> Microsoft Windows <a href="<?php echo $download_path.$latest_stable_xp_vista;?>">XP/Vista</a> | <a href="<?php echo $download_path.$latest_stable_win;?>">7/8/10</a></li>
-   <li><img alt="macosx" src="<?=$top_dir?>/images/icons/macosx.png" /> Mac OS X <a href="<?php echo $download_path.$latest_stable_mac_intel;?>">Intel</a> | <a href="<?php echo $download_path.$latest_stable_mac_ppc;?>">Power PC</a></li>
-   <li><a href="<?=$home?>/download.phtml" style="font-size: 80%;"><?=T_("More downloads (Source, Development,...)")?></a></li>
-  </ul>
- </div>
+        <ul>
+         <li><img alt="linux" src="<?=$top_dir?>/images/icons/linux.png" /> Linux <a href="<?php echo $download_path.$latest_stable_source;?>"><?php echo T_("Source");?></a> | <a href="<?=$home?>/download.phtml#distribution"><?php echo T_("Via distribution");?></a></li>
+         <li><img alt="windows" src="<?=$top_dir?>/images/icons/windows.png" /> Microsoft Windows <a href="<?php echo $download_path.$latest_stable_xp_vista;?>">XP/Vista</a> | <a href="<?php echo $download_path.$latest_stable_win;?>">7/8/10</a></li>
+         <li><img alt="macosx" src="<?=$top_dir?>/images/icons/macosx.png" /> Mac OS X <a href="<?php echo $download_path.$latest_stable_mac_intel;?>">Intel</a> | <a href="<?php echo $download_path.$latest_stable_mac_ppc;?>">Power PC</a></li>
+         <li><a href="<?=$home?>/download.phtml" style="font-size: 80%;"><?=T_("More downloads (Source, Development,...)")?></a></li>
+        </ul>
+      </div>
 
- <div class="downloadimage">
-  <img alt="download" src="<?=$top_dir;?>/images/gnc-download.png" />
- </div>
+      <div class="downloadimage">
+        <img alt="download" src="<?=$top_dir;?>/images/gnc-download.png" />
+      </div>
 
- <div style="float:left;">
-  <p><?php echo T_("Version 2.6.20 is the last version for Windows XP/Vista and MacOS X 10.8 and earlier, and so the last version that will run on PowerPC Macs.");?></p>
- </div>
-</div>
+      <div style="float:left;">
+        <p><?php echo T_("Version 2.6.20 is the last version for Windows XP/Vista and MacOS X 10.8 and earlier, and so the last version that will run on PowerPC Macs.");?></p>
+      </div>
+    </div>
 
-<p class="justify"><?php echo T_("<span class=\"gnucash\">GnuCash</span> is personal and small-business financial-accounting software, freely licensed under the <a href=\"https://www.gnu.org/\">GNU</a> GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.");?></p>
+    <p class="justify"><?php echo T_("<span class=\"gnucash\">GnuCash</span> is personal and small-business financial-accounting software, freely licensed under the <a href=\"https://www.gnu.org/\">GNU</a> GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.");?></p>
 
-<p class="justify"><?php echo T_("Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash\">GnuCash</span> allows you to track bank accounts, stocks, income and expenses.  As quick and intuitive to use as a checkbook register, it is based on professional accounting principles to ensure balanced books and accurate reports. "); ?></p>
-</div>
-
-<!--Start of Need help section -->
-<div style="float:right">
-  <div class="dialog note">
-  <h1><?php echo T_("Need Help?");?></h1>
-    <p class="justify"><?php echo T_("Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? Try the");?> <a href="https://wiki.gnucash.org/wiki/Mailing_Lists"><?php echo T_("Mailing Lists");?></a><?php echo T_(", which are public, email-based discussion groups where you can ask and answer <span class=\"gnucash\">GnuCash</span> questions to other users.");?></p>
+    <p class="justify"><?php echo T_("Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash\">GnuCash</span> allows you to track bank accounts, stocks, income and expenses.  As quick and intuitive to use as a checkbook register, it is based on professional accounting principles to ensure balanced books and accurate reports. "); ?></p>
   </div>
-</div>
-<!-- end of Need Help section --> 
 
-<div style="width:100%">
-<h2 style="margin-bottom:1px; margin-top:0px"><?php echo T_("Feature Highlights"); ?></h2>
-</div>
-
-<div id="mainfeature">
-<ul>
-<li><?php echo T_("Double-Entry Accounting");?></li>
-<li><?php echo T_("Stock/Bond/Mutual Fund Accounts");?></li>
-<li><?php echo T_("Small-Business Accounting");?></li>
-<li><?php echo T_("Reports, Graphs");?></li>
-<li><?php echo T_("QIF/OFX/HBCI Import, Transaction Matching");?></li>
-<li><?php echo T_("Scheduled Transactions");?></li>
-<li><?php echo T_("Financial Calculations"); ?></li>
-</ul>
-<a href="<?=$home?>/features.phtml"><?php echo T_("<b>Discover more...</b>");?></a>
-</div>
-
-<!-- Android app info -->
-<div class="download" style="margin-top:2em">
-<h3 style="margin-bottom:1px; margin-top:0px">GnuCash for Android</h3>
-  <div style="width:172px; height:100%; float:right; margin-left:15px; margin-right:15px">
-  <a href="https://play.google.com/store/apps/details?id=org.gnucash.android" target="_blank">
-    <img alt="Get it on Google Play" src="https://developer.android.com/images/brand/en_generic_rgb_wo_60.png" />
-  </a>
-  <p style="text-align:center"><a href="https://github.com/codinguser/gnucash-android/blob/master/README.md" target="_blank"><?php echo T_("Info and development");?></a></p>
+  <!--Start of Need help section -->
+  <div style="float:right">
+    <div class="dialog note">
+      <h1><?php echo T_("Need Help?");?></h1>
+      <p class="justify"><?php echo T_("Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? Try the");?> <a href="https://wiki.gnucash.org/wiki/Mailing_Lists"><?php echo T_("Mailing Lists");?></a><?php echo T_(", which are public, email-based discussion groups where you can ask and answer <span class=\"gnucash\">GnuCash</span> questions to other users.");?></p>
+    </div>
+  </div> <!-- end of Need Help section --> 
+  
+  <div style="width:100%">
+    <h2 style="margin-bottom:1px; margin-top:0px"><?php echo T_("Feature Highlights"); ?></h2>
   </div>
-  <p><?php echo T_("The GnuCash team recommends the GnuCash for Android app. This app allows you to keep track of your financial transactions on the go for later import into the desktop version of GnuCash.");?></p>
-  <p><i><b><?php echo T_("Note that GnuCash for Android is not a port of the GnuCash program to Android.");?></b></i></p>
-</div>
-<!-- end Android app info -->
+
+  <div id="mainfeature">
+    <ul>
+      <li><?php echo T_("Double-Entry Accounting");?></li>
+      <li><?php echo T_("Stock/Bond/Mutual Fund Accounts");?></li>
+      <li><?php echo T_("Small-Business Accounting");?></li>
+      <li><?php echo T_("Reports, Graphs");?></li>
+      <li><?php echo T_("QIF/OFX/HBCI Import, Transaction Matching");?></li>
+      <li><?php echo T_("Scheduled Transactions");?></li>
+      <li><?php echo T_("Financial Calculations"); ?></li>
+    </ul>
+    <a href="<?=$home?>/features.phtml"><?php echo T_("<b>Discover more...</b>");?></a>
+  </div> <!-- mainfeature -->
+
+  <!-- Android app info -->
+  <div class="download" style="margin-top:2em">
+  <h3 style="margin-bottom:1px; margin-top:0px">GnuCash for Android</h3>
+    <div style="width:172px; height:100%; float:right; margin-left:15px; margin-right:15px">
+      <a href="https://play.google.com/store/apps/details?id=org.gnucash.android" target="_blank">
+        <img alt="Get it on Google Play" src="https://developer.android.com/images/brand/en_generic_rgb_wo_60.png" />
+      </a>
+      <p style="text-align:center"><a href="https://github.com/codinguser/gnucash-android/blob/master/README.md" target="_blank"><?php echo T_("Info and development");?></a></p>
+    </div>
+    <p><?php echo T_("The GnuCash team recommends the GnuCash for Android app. This app allows you to keep track of your financial transactions on the go for later import into the desktop version of GnuCash.");?></p>
+    <p><i><b><?php echo T_("Note that GnuCash for Android is not a port of the GnuCash program to Android.");?></b></i></p>
+  </div> <!-- end Android app info -->
 
 <?php include("externals/footer.phtml"); ?>
