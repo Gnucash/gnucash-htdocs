@@ -73,6 +73,18 @@
       </ul>
   <?php } ?>
 
+  <?php
+    # Only show historical download options if enabled
+    if ($show_historical) { ?>
+      <div class="featureborder">
+        <h2 class="featuretitle"><?php echo T_("Latest versions for historical operating systems") ?></h2>
+      </div>
+      <p class="justify"><?php echo T_("This versions are really old. Do not expect any support.")?></p>
+      <ul>
+        <li><?php printf (T_("GnuCash %s for"), $latest_stable_win2k_version)?> <a href="<?php echo $download_path.$latest_stable_win2k;?>">Microsoft Windows 2000</a></li>
+      </ul>
+  <?php } ?>
+
   <div class="featureborder">
     <h2 class="featuretitle"><?php echo T_("Other")?></h2>
   </div>

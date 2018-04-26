@@ -11,7 +11,7 @@
 // Change this when there has been a re-tag to add the re-tag letter,
 // e.g. if one retagged 2.6.13 to 2.6.13a, make $tarball = $latest_stable."a".
      $tarball                   = $latest_stable;
-     
+
      $major_latest_unstable		="3";
      $minor_latest_unstable		="900";
      $latest_unstable           = $major_latest_unstable.".".$minor_latest_unstable;
@@ -24,10 +24,14 @@
      $minor_old_stable		="21";
      $old_stable            = $major_old_stable.".".$minor_old_stable;
      $old_stable_win        = $old_stable;
-     $latest_stable_xp_vista = "2.6.21";
-     $latest_stable_mac_ppc  = "2.6.21-1";
      $old_stable_mac_ppc  = $old_stable."-1";
      $old_stable_mac_intel  = $old_stable."-2";
+
+     // Frozen versions:
+     $latest_stable_xp_vista_version = "2.6.21"; // used also in text
+     $latest_stable_mac_ppc  = "2.6.21-1";
+     $show_historical=true
+     $latest_stable_win2k_version = "2.2.9";
 
      // The definitions below use the latest version definitions above
      // to define several paths that will be used on several pages
@@ -37,7 +41,8 @@
      $latest_stable_path=$stable_path.$latest_stable."/";
      
      $latest_stable_win="gnucash-".$latest_stable_win.".setup.exe";
-     $latest_stable_xp_vista="gnucash-".$latest_stable_xp_vista.".setup.exe";
+     $latest_stable_xp_vista="gnucash-".$latest_stable_xp_vista_version.".setup.exe";
+     $latest_stable_win2k="gnucash-".$latest_stable_win2k_version.".setup.exe";
      $latest_stable_mac_intel="Gnucash-Intel-".$latest_stable_mac_intel.".dmg";
      $latest_stable_mac_ppc="Gnucash-PPC-".$latest_stable_mac_ppc.".dmg";
      $latest_stable_source="gnucash-".$tarball.".tar.bz2";
