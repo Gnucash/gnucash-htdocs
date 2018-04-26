@@ -30,7 +30,7 @@
      // Frozen versions:
      $latest_stable_xp_vista_version = "2.6.21"; // used also in text
      $latest_stable_mac_ppc  = "2.6.21-1";
-     $show_historical=true
+     $show_historical = True;
      $latest_stable_win2k_version = "2.2.9";
 
      // The definitions below use the latest version definitions above
