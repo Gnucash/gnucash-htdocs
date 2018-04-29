@@ -1,0 +1,168 @@
+<b>Announcement:</b> GnuCash 3.1 Release
+2018-04-29
+
+<h2>GnuCash 3.1 released</h2>
+
+<p>The GnuCash development team announces GnuCash 3.1, the second release of the 3.x stable release series.</p>
+<h3>Changes</h3>
+
+
+<p>Between 3.0 and 3.1, the following bugfixes were accomplished:</p>
+<ul>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=118391">Bug 118391 - Long currency names untranslated.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=769686">Bug 769686 - Notes not imported when using update and reconcile in import transactions from CSV.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=772776">Bug 772776 - VERY large queries (over 11000 fields in IN clause) slow down GnuCash.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=782144">Bug 782144 - git-master - Save Corrupts Data File / Not Open Data File.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=792105">Bug 792105 - Startup takes several minutes.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=793461">Bug 793461 - Transaction matcher window blank when importing QFX.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=794767">Bug 794767 - Dates default to 01/01/1970.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=794916">Bug 794916 - Fails to find environment file at startup when installation prefix is '/opt'.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=794936">Bug 794936 - 3.0 does not open previously saved sqlite3 files properly - corrupted business data.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=794941">Bug 794941 - Both print icons export to pdf.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=794953">Bug 794953 - Ellipsize on short tab labels.</a><br/> Correct error on when to ellipsize tab labels. Also as this is used in two places separate out this to new function so it is not duplicated.</li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=794990">Bug 794990 - Double click does not work on saved reports.</a><br/> When you double click on the saved report description nothing happens. This was down to a conflict on a couple of call backs and one of them was incorrectly setup.</li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=794994">Bug 794994 - Display Alphavantage key in full.</a><br/> Set the entry to expand so all the space is used to display.</li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795031">Bug 795031 - 3.0 Crashes on loading when opening 2.6.19 file.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795039">Bug 795039 - Crash on startup using Technicolor Style sheet in report.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795040">Bug 795040 - GnuCash crashes when searching for a newly created bill.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795049">Bug 795049 - GnuCash 2.6.20-1 (Fedora Linux package) is unable to open MariaDB.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795064">Bug 795064 - Enable subtotal-only if either sortkeys are dates.</a><br/> This will allow 'show subtotals only' if sortkeys are date-types. This allows, for example, prime-sortkey=date, yearly. sec-sortkey=date, monthly.</li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795068">Bug 795068 - src/optional/python-bindings missing several files.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795080">Bug 795080 - Some dates reset to 01/01/1970.</a><br/> An odd corner case: BST apparently came off of DST at 23:00 26 Oct 2014, so midnight that day was ambiguous about being DST or not; that causes the local_date_time constructor to throw in spite of the tm.is_dst element being 0 (meaning pick standard time). Instead of just failing in that case, try constructing a local_date_time three hours later then adjust it back three hours. If *that* doesn't work then throw a std::invalid argument.</li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795082">Bug 795082 - CSV import crashes if a transaction's 'Account' field is empty and no default Account set.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795101">Bug 795101 - Scrollbar floats and covers toggle buttons.</a><br/> When the scrollbar appears for the reconcile windows it can float above the reconcile toggle button which make it difficult to toggle. Move this column to the start which has the advantage of aligning the amount column above the Total value.</li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795142">Bug 795142 - Unable to enter account codes in business sheets.</a><br/> In Bills, Invoices and Expense vouchers you can not enter an account code in an account field like you can on a normal register, enable this.</li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795155">Bug 795155 - CSV import does not distinguish between deposit and withdrawal.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795347">Bug 795347 - Australian (GMT+10) OFX transactions imported have previous days date</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795377">Bug 795377 - Reads and saves Gnucash 2.6.19 XML file, then can't reread it, due to bad date in old file.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795389">Bug 795389 - Hard to see figures in the budget window</a><br/> The budget view had hard coded black for normal values and dark grey for other values. Changed this so normal values are reset to default color and adjusted the grey based on default color for theme.</li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795405">Bug 795405 - All Dates in Price Database Off-By-One After 3.0 Upgrade</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795446">Bug 795446 - On Windows there is a blank tip of the day</a><br/> When the tip_of_the_day.list is created a new line is appended to the list file and on Windows this causes a blank tip so remove the adding of the extra line.</li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795471">Bug 795471 - Budget window scrolls edited cell out of site</a><br/> When editing cells that have been revealed on the right by scrolling the window snaps back to the left hiding the cell being edited. This may be due to an underlying gtk issue but these changes fix the issue visually.</li>
+
+</ul>
+
+<p> The Following fixes and improvemts were not associated with bug reports:</p>
+<ul>
+    <li>On Windows the tooltip for saved reports was incorrect<br />
+        When the mouse was placed over a saved report description on Windows an
+        empty tooltip was displayed. Setup the query tooltip callback so it does
+        not display a tooltip for description column.</li>
+    <li>Fix crash when loading sql book with posted transactions.</li>
+    <li>Add ability to recognize and use a pre-compiled libgmock.so.</li>
+    <li>html-font: add default font family<br/>
+        Windows ships with GTK2 in which the default font styles are named
+        "Sans" "Sans Bold" "Sans Normal" etc. There is no "Sans" font in
+        Windows; I vote to add a default "Sans-Serif" font-family which is
+        valid CSS. This ensures exported reports are shown as intended.</li>
+    <li>Several improvements to the Transaction and GST reports.</li>
+    <li>csv-impport - Allow empty amount fields<br/>
+        Treat empty amount fields as 0. This is necessary for example in
+        the case the csv import file has both a deposit and a withdrawal
+        column.</li>
+    <li>Remove the set transient parent setting for Reconcile window<br/>
+        The Reconcile option is already a window so it is not necessary to set
+        this value which allows the jump to transaction to work properly.</li>
+    <li>Date Format dialog flashes up when file/properties used<br/>
+        When you select the File/Properties dialog, in the construction of that
+        a 'Date Format' dialog flashes up while the date component is moved to
+        the properties dialog. Can mainly be seen on Windows so remove the
+        visible setting in glade file.</li>
+    <li>Prevent throw in gnc-pricedb.<br/>
+        If a price lookup is given an invalid time64/timespec (i.e. INT64_MAX)
+        then just return NULL instead of trying to find the nearest price.</li>
+    <li>Set GNC_VCS at build time instead of when making the tarball.<br/>
+        Because the tarball is always made from a VCS repo.</li>
+    <li>If there are no prices in the db, critical errors are flagged<br/>
+        When dialog transfer is used between two commodities and there are no
+        prices in the db a critical error is logged. Test for price object
+        being NULL before retrieving the price for the error message.</li>
+
+</ul>
+
+<p>The following translations are updated: Slovak, Spanish</p>
+<h2>Known Issues</h2>
+<p>The following are open bug reports new to the 3.x series considered significant by the development team:</p>
+<ul>
+    <li>It is not possible to overwrite SQL Databases from within GnuCash, even though GnuCash will ask if you want to. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=789594">Bug 789594</a></li>
+    <li>Several dates, including Accounting Period, are subject to change with time zone and daylight-time changes. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=791825">Bug 791825</a></li>
+    <li>Some HBCI information is not loaded correctly so the first transaction download will re-retrieve transactions unless the beginning date is set explicitly. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=792397">Bug 792397.</a></li>
+    <li>The new CSV importer's Price of Shares column doesn't work. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=793306">Bug 793306</a></li>
+    <li>The new CSV importer's numeric parser can't parse numbers of the form x + y/z. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=793556">Bug 793556.</a></li>
+    <li>Python bindings may not work in some installations because the bindings are unable to find the backend modules (libgncmod-backend-dbi and libgncmod-backend-xml). <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794526">Bug 794526</a></li>
+    <li>Get Quotes can be slow if one has a large number of saved prices. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794644">Bug 794644.</a></li>
+    <li>The Mac localization code can set the wrong encoding for strftime causing the register's date picker to label months "Null" in some locales. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794807">Bug 794807</a></li>
+    <li>On Mac, the File Open dialog will crash if one types anything. (This is a Gtk+ bug). <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794809">Bug 794809</a></li>
+    <li>An open register is not immediately updated when the Since Last Run dialog creates transaction splits in the register's account. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794854">Bug 794854</a></li>
+    <li>GnuCash asks if one wants to save changes when quitting or opening a file even if there's no book open. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794870">Bug 794870</a></li>
+    <li>Windows Defender falsly identifies the GnuCash installer as a Trojan. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794967">Bug 794967</a></li>
+    <li>Some Windows users have trouble using Chinese input methods on the Register; other controls work. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=795253">Bug 795253</a></li>
+    <li>On Microsoft Windows the Tab key does not work in the register if the caps-lock key is on. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=795294">Bug 795294</a></li>
+    <li>GnuCash will crash if one attempts to import a CSV file with more than 1400 transactions. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=795383">Bug 795383</a></li>
+    <li>Invalid input into a formula (Debit/Credit) field is inconsistent depending on the input. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=795614">Bug 795614.</a></li>
+
+</ul>
+<h2>Documentation</h2>
+<p>Concurrent with the release of Gnucash 3.1 we're pleased to also release a new version 3.1 of the companion <em>Help</em> and <em>Tutorial and Concepts Guide</em>.</p>
+<p>Documentation changes:</p>
+<ul>
+  <li>Update supported platforms for version 3.x.</li>
+</ul>
+
+<h3>Getting GnuCash for Windows and MacOS X</h3>
+<p>GnuCash is provided for both Microsoft Windows XP&reg; and later
+and MacOS X 10.9 (Mavericks)&reg; and later in pre-built, all-in-one
+packages. An installer is provided for Microsoft Windows&reg; while
+the MacOS X&reg; package is a disk image containing a drag-and-drop
+application bundle.</p>
+<p>The SHA256 Hashes for the downloadable files are:
+<ul>
+<li><code>48f72fb3bc2d92ca23e5a26277ddd6e6311b304c84a1a80b72ac8dc2dfe54edc</code>&nbsp;&nbsp;gnucash-3.1.tar.bz2</li>
+<li><code>90d849fb900613ea962b1ea9cc7e5d313e8e4c6d1218dacc3425e1bb57201471</code>&nbsp;&nbsp;gnucash-3.1.tar.gz</li>
+<li><code>699070d8e895e80f1d1042b506dfe38be1707493eeea856987e5b04e198bf5e2</code>&nbsp;&nbsp;gnucash-3.1.setup.exe</li>
+<li><code>5eeb24f4578247896e24e82ca77b5d4630c2cba3b0b4b138cf4aee1187c8a0ff</code>&nbsp;&nbsp;Gnucash-Intel-3.1-2.dmg</li>
+<li><code>52852ed90ccdf27b76deb1b4095b9e457c807c5598a2eea31e00560bb0c3531c</code>&nbsp;&nbsp;gnucash-docs-3.1.tar.gz</li>
+</ul></p>
+
+<ul>
+<li>SourceForge:
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-3.1-setup.exe">Win32</a></li>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-3.1-1.dmg">Mac-Intel</a></li>
+</ul></li>
+<li>Github
+<ul>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/3.1/gnucash-3.1-setup.exe">Win32</a></li>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/3.1/Gnucash-Intel-3.1-2.dmg">Mac-Intel</a></li>
+</ul></li></ul>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 3.1 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-3.1.tar.bz2">bzip2</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/3.1/">all files</a>.</li>
+
+<li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/3.1/gnucash-3.1.tar.bz2">bzip</a> <b>WARNING</b> Do not try to use the github-generated files labelled "Source Code". They have not been processed with swig and will not build.</li>
+
+<li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https:www.gtk.org">Gtk+</a> 3.10, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0, <a href="https://www.boost.org/">Boost</a> 1.54, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, and <a href="https://github.com/google/googletest">GoogleTest</a> 1.7.0. In addition you will need <a href="http://www.swig.org/">SWIG</a> 2.0.10 if compiling from git. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 3.1 documentation can be found under "GnuCash v3 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats. The documentation is included in the MacOS and Windows application bundles.</p>
+
+<p>If you want to compile the GnuCash Documentation 3.1 for yourself, the source code can be downloaded from:</p>
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-docs-3.1.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/3.1/gnucash-docs-3.1.tar.gz">GitHub</a></li>
+<li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, Mac OSX and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
