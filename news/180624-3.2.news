@@ -1,0 +1,240 @@
+<b>Announcement:</b> GnuCash 3.2 Release
+2018-06-28
+
+<h2>GnuCash 3.2 released</h2>
+
+<p>The GnuCash development team announces GnuCash 3.2, the second release of the 3.x stable release series.</p>
+<h3>Changes</h3>
+
+
+<p>Between 3.0 and 3.2, the following bugfixes were accomplished:</p>
+<ul>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=787401">Bug 787401 - Test Report System - Report Definition.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=794617">Bug 794617 - Can't compile with -DWITH_GNUCASH=NO due to scm-gnome-utils.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795101">Bug 795101 - Scroll Bar in Reconcile Window Floats in and covers the check boxes.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795247">Bug 795247 - datepicker broken in Persian.</a>
+             GnuCash passes dates as integer y/m/d without using locale-specific
+             formats, so we need to strip out 'E' and 'O' from the format when
+             scanning dates or determining separators in gnc-date. None of '-',
+             'E', or 'O' are supported by boost (and '-' causes errors), so
+             strip them out from formatters in gnc-datetime as well.</li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795253">Bug 795253 - Have problems input Chinese.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795272">Bug 795272 - QIF importer causes application crash if action is invalid.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795276">Bug 795276 - Invalid date on price stops file from being parsed.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795362">Bug 795362 - Special variable "i" not parsed in function calls.</a>
+             Due to balance tests with insane random values.</li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795471">Bug 795471 - Impossible to Edit Budget Unless Maximized.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795519">Bug 795519 - Credit card payment after reconciliation.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795666">Bug 795666 - Backslash '\' in Description field spoils CSV Import without helpful error message.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795831">Bug 795831 - When read only threshold set, dates are silently changed.</a>
+             Display a message box informing the user of the change.</li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795944">Bug 795944 - Cannot store change to Business Suppliers data.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796079">Bug 796079 - Repeatable Crash in Tax Report Options.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796081">Bug 796081 - Tax Schedule Report - An error occurred while running the report.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796083">Bug 796083 - Reconcile Selection Doesn't Work Anymore.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796117">Bug 796117 - Connecting 3.1 to an existing mysql db drops all data.</a>
+             Provide a backup recovery function that instead of dropping
+             primaries and restoring backups merges the primaries and
+             backups. This should handle a worst-case safe-save failure where
+             the backup tables don't have a complete set of rows for some
+             reason.</li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796256">Bug 796256 - Main Window stays hidden when starting after closing main window while minimized.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796369">Bug 796369 - Notes lost or perhaps just not displaying when using SQLite backend.</a>
+             This bug caused data loss if you saved your SQLite3 database to a
+             different file or database.  The problem is that in SQLite3 (though
+             not in MySQL or PgSQL) the subquery ((SELECT DISTINCT guid FROM
+             transactions)) (note the double parentheses) returns only the first
+             guid in the subquery's results.  Some transactions are loaded by
+             special queries and those queries are also used to retrieve the
+             transaction's slots so they weren't affected.</li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796398">Bug 796398 - Restrict accelerator keys to valid date range.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796409">Bug 796409 - Incorrect Current Value for Stocks.</a>
+             Missed calculating the value in the register summary bar.</li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796423">Bug 796423 - Cannot Input Chinese, seems does not work with other IME too.</a>
+             Toggles not in view with all rows selected weren't being redrawn.</li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796484">Bug 796484 - csv import: iostream error.</a>
+             Unfortunately it turns out that we can't use filestreams because
+             they can't take path arguments containing Unicode on Windows.</li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796527">Bug 796527 - invalid currency on scheduled transactions.</a>
+             <ul>
+             <li>Don't even check for price/exchange rate on template
+               transactions, there's no point.</li>
+             <li>Check all split commodities are valid, abort transaction
+               creation if not.</li>
+             <li>If the template transaction's currency isn't used by any of the
+               splits set the new transaction's currency to the first-found
+               currency if there is one, otherwise to the first-found commodity.</li>
+             </ul></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796537">Bug 796537 - Transaction Report cannot sort by "num".</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796586">Bug 796586 - QIF import incorrectly converts unicode characters from UTF8 encoded file.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796595">Bug 796595 - QIF Import Select Account button to add a new account is labled gnc-account-new but should be New.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796600">Bug 796600 - stock split cash-in-lieu income/asset labels backwards.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796614">Bug 796614 - Reconciliation report contains incorrect transactions.</a></li>
+    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796638">Bug 796638 - configuration not properly saved for CSV transactions import form.</a></li>
+
+</ul>
+
+<p> The Following fixes and improvemts were not associated with bug reports:</p>
+<ul>
+  <li>Transaction report improvements:<ul>
+      <li>Performance: Do all filtering ops before sorting.</li>
+      <li>Move the options summary before the subtotals table.</li>
+      <li>New unit tests</li>
+      <li>Enable computing averages in subtotal grid.</li>
+      <li>Generate the subtotal grid only if the primary sort key enables
+        subtotals.</li>
+      <li>Fix subtotal grid to support multiple commodities.</li>
+      <li>New filters.</li>
+      <li>Much cleaning and refactoring of the internals.</li>
+      </ul>
+    <li>Cache the num-split-action book option to avoid thousands of KVP queries
+      for the same value when loading a register.</li>
+    <li>Create a static string for book option KVPs to save an extra malloc/free
+      on old compilers without small-string optimization.</li>
+    <li>Add tooltip support for register cells.</li>
+    <li>New unit tests for the balance sheet report and invoices.</li>
+    <li>Consolidate charting code into a single module.</li>
+    <li>Removed an incomplete and abandoned C implementation of QIF import.</li>
+    <li>Restored libsecret support that had been left out of CMake.</li>
+    <li>Replace old-style html style attributes with css.</li>
+    <li>Modify emitted html to be parseable by the Guile SXML module for testing.</li>
+    <li>Remove support for long-gone gtkhtml renderer.</li>
+    <li>Clean up code generating html tables.</li>
+    <li>Ensure full precision of doubles is saved to SQL.
+      std::iostream's operator<<(double) uses only 6 digits of precision by
+      default.</li>
+    <li>Make float database operations more consistent, working around dbd-sqlite3's
+      failure to support doubles (dbd-sqlite3, not sqlite3 itself).</li>
+    <li>Prevent crash in gnc-tree-view.c: When getting information from the state
+      file, protect against the key not having a '_' which is used to split the
+      string.</li>
+    <li>Add the full account name to the saved register settings
+      If you need to delete the layout for a register in the settings file,
+      the only thing identifying it is the account guid. To make it easier
+      for humans, add the full account name also.</li>
+    <li>When register pages are restored it uses the full account name.
+      When register pages are restored, the account is found from the full
+      name so if the separator changes it will fail. Instead, also save the
+      account guid and use that as default to find the account falling back
+      to the full name.</li>
+    <li>Fix misplaced try block that caused unhandled exception if year out of
+      range.</li>
+    <li>Fix permanent storage of vendor details: Since the data types did not match
+      for the billterms and taxtable, those references/guids were not saved to
+      the database.</li>
+    <li>Update invoice reports to use totals calculate by gncInvoice. This should
+      give a consistent representation of invoice data across the application.</li>
+    <li>Ensure gncEntry rounding is consistent. Internally calculated values in the
+      entry are never rounded. Consumers of gncEntry's calculated values can
+      request them either rounded or not. Next use a pragmatical approach for
+      calculating values on invoices based on the entry values: do the rounding
+      such that we never create an unbalanced transaction while posting.
+      That means:<ul>
+      <li>round each entry's net value before summing them in net total</li>
+      <li>accumulate all tax totals on invoice level per tax account before
+        rounding</li></ul>
+      and round before before summing them in a global tax total
+      Hopefully this will catch a few more rounding issues in this area.
+      A complete solution can only offered if we allow users to manually correct
+      tax entries. This requires changes to user interface and data format so
+      that's not going to happen in gnucash 3.x.</li>
+    <li>Use Scheme SRFI-64 test framework for new Scheme unit tests.</li>
+    <li>New compilers (gcc-8.0 and Xcode 9) bring new warnings, so several fixups to
+      mollify them.</li>
+    <li>Lowercase all cmake commands for better readability.</li>
+    <li>Metadate migration (2.6.x->3.x) fixes for Windows.</li>
+    <li>Ensure timezone is set correctly in FreeBSD.</li>
+</ul>
+
+<p>The following translations are updated: Dutch</p>
+<h2>Known Issues</h2>
+<p>The following are open bug reports new to the 3.x series considered significant by the development team:</p>
+<ul>
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=789594">789594 - Unable to overwrite sqlite3 database file</a></li>
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=791825">791825 - Accounting Period dates (among others) stored with a TZ-sensitive time.<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796484">
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=792397">792397 - Incomplete Update to 2.7.x - not all online banking data is available.</a></li>
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=793306">793306 - Price is not imported from CSV
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=793556">793556 - CSV export/import creates unbalanced transaction for fractional price.</a></li>
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=794755">794755 - Commodity Register displays fractional prices</a>
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795383">795383 - Gnucash crashes on import of a 1400-transaction (or more) CSV file</a>
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795614">795614 - Unicode handling in amount fields.</a></li>
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795804">795804 - Extremely slow save
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796054">796054 - Unposting and reposting invoice doubles amounts.</a></li>
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796084">796084 - Frequent Crashes During Data Entry.</a></li>
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796100">796100 - Autosave Doesn't Always Work.</a></li>
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796248">796248	Editing Scheduled Transaction.</a></li>
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796474">796474 - Segmentation fault while setting up online banking</a>
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796492">796492 - Wrong calculation of the first occurrence</a>
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796500">796500	Scalability issue - importing large CSV to large book won't finish.</a></li>
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796520">796520 - Layout overlapping in Income & Expense Chart.</a></li>
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796537">796537 - Transaction Report cannot sort by "num".</a></li>
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796579">796579 - Cannot go forward with empty duplicates screen.</a></li>
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796591">796591 - Crash on keyboard entry in register when not clicking or tabbing first.</a></li>
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796614">796614 - Reconciliation report contains incorrect transactions.</a></li>
+<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796656">796656 - GnuCash frequently crashes, usually involving unsaved transactions.</a></li>
+</ul>
+<h2>Documentation</h2>
+<p>Concurrent with the release of Gnucash 3.2 we're pleased to also release a new version 3.2 of the companion <em>Help</em> and <em>Tutorial and Concepts Guide</em>.</p>
+<p>Documentation changes:</p>
+<ul>
+        <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796484">Bug 796098 - V 3.1 Missing images in Tutorial and Concepts Guide in PDF and Online Help pages.</a></li>
+        <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796484">Bug 795980 - Void Reason Has No Visible Purpose.</a></li>
+</ul>
+
+<h3>Getting GnuCash for Windows and MacOS X</h3>
+<p>GnuCash is provided for both Microsoft Windows XP&reg; and later
+and MacOS X 10.9 (Mavericks)&reg; and later in pre-built, all-in-one
+packages. An installer is provided for Microsoft Windows&reg; while
+the MacOS X&reg; package is a disk image containing a drag-and-drop
+application bundle.</p>
+<p>The SHA256 Hashes for the downloadable files are:
+<ul>
+<li><code>63e5b00c148ed0f7021ebc03e4e70c4a9c549feb3ea49d6c810f2abaaf592452</code>&nbsp;&nbsp;gnucash-3.2.tar.bz2</li>
+<li><code>beb028b6933f57a6dad89f0c0a54ffe7b5dd42bbd3f532405f4ffd01cc5eaa5c</code>&nbsp;&nbsp;gnucash-3.2.tar.gz</li>
+<li><code>0e06acfe7a9746eacf5282ba27919625b51c3d51fd548e6a529f78ff759ed70f</code>&nbsp;&nbsp;gnucash-3.2.setup.exe</li>
+<li><code>05e51cf24d0d85b9aef40f90d70ea118ef0cee2dee342af98ca64609524c4b9f</code>&nbsp;&nbsp;Gnucash-Intel-3.2-1.dmg</li>
+<li><code>469a524352a3b0e5308ba68a3c0fac79a501998b29db9c16a714ce879aa9c39c</code>&nbsp;&nbsp;gnucash-docs-3.2.tar.gz</li>
+</ul></p>
+
+<ul>
+<li>SourceForge:
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-3.2.setup.exe">Win32</a></li>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-3.2-1.dmg">Mac-Intel</a></li>
+</ul></li>
+<li>Github
+<ul>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/3.2/gnucash-3.2.setup.exe">Win32</a></li>
+<li><a href="https://github.com/Gnucash/gnucash/releases/download/3.2/Gnucash-Intel-3.2-1.dmg">Mac-Intel</a></li>
+</ul></li></ul>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 3.2 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+<li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-3.2-1.tar.bz2">bzip2</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/3.2/">all files</a>.</li>
+
+<li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/3.2/gnucash-3.2-1.tar.bz2">bzip</a> <b>WARNING</b> Do not try to use the github-generated files labelled "Source Code". They have not been processed with swig and will not build.</li>
+
+<li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https:www.gtk.org">Gtk+</a> 3.20, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0, <a href="https://www.boost.org/">Boost</a> 1.54, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, and <a href="https://github.com/google/googletest">GoogleTest</a> 1.7.0. In addition you will need <a href="http://www.swig.org/">SWIG</a> 2.0.10 if compiling from git. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 3.2 documentation can be found under "GnuCash v3 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats. The documentation is included in the MacOS and Windows application bundles.</p>
+
+<p>If you want to compile the GnuCash Documentation 3.2 for yourself, the source code can be downloaded from:</p>
+<ul>
+<li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-docs-3.2.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/3.2/gnucash-docs-3.2.tar.gz">GitHub</a></li>
+<li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, Mac OSX, and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
