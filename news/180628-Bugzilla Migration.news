@@ -1,0 +1,38 @@
+<h2>Bugzilla Migration 29 June 2018 at 20:00 UTC</h2>
+<p>As anyone who's used Bugzilla in the last few months already knows, Gnome has moved their git repositories to a Gitlab instance at gitlab.gnome.org and migrated bug tracking for Gnome projects there as well. They've left Bugzilla alone for non-Gnome projects like GnuCash but they're closing it to new bugs on Sunday, 1 July.</P>
+
+<p>Most users and contributors know that to get ready we've set up a new Bugzilla instance at <a href="https://bugs.gnucash.org">https://bugs.gnucash.org</a> and copied all of the bugs and their history and all user accounts. We'll do a final fetch from bugzilla.gnome.org at 2018-06-29 22:00:00 UTC (That's tomorrow at 8PM UTC/10PM European Daylight Time/4PM US Eastern Daylight Time). We expect to be able to "turn on" https://bugs.gnucash.org within a couple of hours. </p>
+
+<p>The process will be:
+<ul>
+<li>Close bug creation on bugzilla.gnome.org. Unfortunately we can't prevent updating already-created bugs, but any changes to bugs on bugzilla.gnome.org after this will probably be lost.</li>
+<li>Fetch the latest bug status from bugzilla.gnome.org</li>
+<li>Close all open bugs on bugzilla.gnome.org as "RESOLVED OBSOLETE" with a comment pointing to https://bugs.gnucash.org for further discussion. We're using RESOLVED OBSOLETE to be consistent with the Gnome project bugs.</li>
+<li>Import the changes to bugs.gnucash.org</li>
+<li>Re-enable updates in the bugzilla code; that's disabled now because imports don't work if it's enabled.</li>
+</ul></p>
+<p>User accounts are preserved, but passwords are obviously not preserved. Existing bugzilla.gnome.org users should use the "forgot my password" link on https://bugs.gnucash.org to get a password reset and to enable their accounts after the migration is complete.</p>
+
+<p>Bug CC lists *are* preserved so you will get email notifications for changes to bugs that you've commented on or otherwise added yourself to the CC list. "Watching" links are *not* preserved so if you were watching another user or one of the category users you'll need to reset that in Email Preferences (click the Preferences link at the top of the page after you log in).</p>
+
+<p>The category users are:
+<table style="width: 50%;">
+<tr style="width: 30%;"><td style="width: 50%;">gnucash-core-maint@gnucash.bugs</td><td>GnuCash/Backend-SQL, Backend-XML, Budgets, Build system, Business, Currency and Commodity, Engine</td></tr>
+<tr><td>gnucash-documentation-maint@gnucash.bugs</td><td>Documentation, Website, GnuCash/Translations</td></tr>
+<tr><td>gnucash-general-maint@gnucash.bugs</td><td>GnuCash/General</td></tr>
+<tr><td>gnucash-import-maint@gnucash.bugs</td><td>GnuCash/Import - *, TXF Export</td></tr>
+<tr><td>gnucash-mac-maint@gnucash.bugs</td><td>Packaging/MacOS, GnuCash/MacOS</td></tr>
+<tr><td>gnucash-reports-maint@gnucash.bugs</td><td>GnuCash/Check Printing, Reports</td></tr>
+<tr><td>gnucash-ui-maint@gnucash.bugs</td><td>GnuCash/Regist2, Register, User Interface General</td></tr>
+<tr><td>gnucash-win-maint@gnucash.bugs</td><td>Packaging/Windows, GnuCash Windows</td></tr>
+<tr><td>gnucash-all-maint@gnucash.bugs</td><td>All bugs</td></tr>
+</table></p>
+<p>Since we have the whole bug tracker to ourselves we've created some new products and moved some bugs into them:
+<table style="width: 50%;">
+<tr style="width: 20%;"><td>GnuCash</td><td style="width: 75%;">continues to collect reports on the application itself.</td></tr>
+<tr><td>Documentation</td><td>collects documentation reports</td></tr>
+<tr><td>Packaging</td><td>collects reports about the all-in-one Windows and MacOS packages that are not about GnuCash application code.</td></tr>
+<tr> <td>Website</td><td>collects reports about www.gnucash.org.</td></tr>
+</table></p>
+<p>More information in <a href="https://wiki.gnucash.org/wiki/Bugzilla">the Wiki</a>.
+</p>
