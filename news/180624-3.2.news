@@ -9,37 +9,37 @@
 
 <p>Between 3.1 and 3.2, the following bugfixes were accomplished:</p>
 <ul>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=787401">Bug 787401 - Test Report System - Report Definition.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=794617">Bug 794617 - Can't compile with -DWITH_GNUCASH=NO due to scm-gnome-utils.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795101">Bug 795101 - Scroll Bar in Reconcile Window Floats in and covers the check boxes.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795247">Bug 795247 - datepicker broken in Persian.</a>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=787401">Bug 787401 - Test Report System - Report Definition.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=794617">Bug 794617 - Can't compile with -DWITH_GNUCASH=NO due to scm-gnome-utils.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795101">Bug 795101 - Scroll Bar in Reconcile Window Floats in and covers the check boxes.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795247">Bug 795247 - datepicker broken in Persian.</a>
              GnuCash passes dates as integer y/m/d without using locale-specific
              formats, so we need to strip out 'E' and 'O' from the format when
              scanning dates or determining separators in gnc-date. None of '-',
              'E', or 'O' are supported by boost (and '-' causes errors), so
              strip them out from formatters in gnc-datetime as well.</li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795253">Bug 795253 - Have problems input Chinese.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795272">Bug 795272 - QIF importer causes application crash if action is invalid.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795276">Bug 795276 - Invalid date on price stops file from being parsed.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795362">Bug 795362 - Special variable "i" not parsed in function calls.</a>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795253">Bug 795253 - Have problems input Chinese.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795272">Bug 795272 - QIF importer causes application crash if action is invalid.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795276">Bug 795276 - Invalid date on price stops file from being parsed.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795362">Bug 795362 - Special variable "i" not parsed in function calls.</a>
              Due to balance tests with insane random values.</li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795471">Bug 795471 - Impossible to Edit Budget Unless Maximized.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795519">Bug 795519 - Credit card payment after reconciliation.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795666">Bug 795666 - Backslash '\' in Description field spoils CSV Import without helpful error message.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795831">Bug 795831 - When read only threshold set, dates are silently changed.</a>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795471">Bug 795471 - Impossible to Edit Budget Unless Maximized.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795519">Bug 795519 - Credit card payment after reconciliation.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795666">Bug 795666 - Backslash '\' in Description field spoils CSV Import without helpful error message.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795831">Bug 795831 - When read only threshold set, dates are silently changed.</a>
              Display a message box informing the user of the change.</li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795944">Bug 795944 - Cannot store change to Business Suppliers data.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796079">Bug 796079 - Repeatable Crash in Tax Report Options.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796081">Bug 796081 - Tax Schedule Report - An error occurred while running the report.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796083">Bug 796083 - Reconcile Selection Doesn't Work Anymore.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796117">Bug 796117 - Connecting 3.1 to an existing mysql db drops all data.</a>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795944">Bug 795944 - Cannot store change to Business Suppliers data.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796079">Bug 796079 - Repeatable Crash in Tax Report Options.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796081">Bug 796081 - Tax Schedule Report - An error occurred while running the report.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796083">Bug 796083 - Reconcile Selection Doesn't Work Anymore.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796117">Bug 796117 - Connecting 3.1 to an existing mysql db drops all data.</a>
              Provide a backup recovery function that instead of dropping
              primaries and restoring backups merges the primaries and
              backups. This should handle a worst-case safe-save failure where
              the backup tables don't have a complete set of rows for some
              reason.</li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796256">Bug 796256 - Main Window stays hidden when starting after closing main window while minimized.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796369">Bug 796369 - Notes lost or perhaps just not displaying when using SQLite backend.</a>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796256">Bug 796256 - Main Window stays hidden when starting after closing main window while minimized.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796369">Bug 796369 - Notes lost or perhaps just not displaying when using SQLite backend.</a>
              This bug caused data loss if you saved your SQLite3 database to a
              different file or database.  The problem is that in SQLite3 (though
              not in MySQL or PgSQL) the subquery ((SELECT DISTINCT guid FROM
@@ -47,15 +47,15 @@
              guid in the subquery's results.  Some transactions are loaded by
              special queries and those queries are also used to retrieve the
              transaction's slots so they weren't affected.</li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796398">Bug 796398 - Restrict accelerator keys to valid date range.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796409">Bug 796409 - Incorrect Current Value for Stocks.</a>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796398">Bug 796398 - Restrict accelerator keys to valid date range.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796409">Bug 796409 - Incorrect Current Value for Stocks.</a>
              Missed calculating the value in the register summary bar.</li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796423">Bug 796423 - Cannot Input Chinese, seems does not work with other IME too.</a>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796423">Bug 796423 - Cannot Input Chinese, seems does not work with other IME too.</a>
              Toggles not in view with all rows selected weren't being redrawn.</li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796484">Bug 796484 - csv import: iostream error.</a>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796484">Bug 796484 - csv import: iostream error.</a>
              Unfortunately it turns out that we can't use filestreams because
              they can't take path arguments containing Unicode on Windows.</li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796527">Bug 796527 - invalid currency on scheduled transactions.</a>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796527">Bug 796527 - invalid currency on scheduled transactions.</a>
              <ul>
              <li>Don't even check for price/exchange rate on template
                transactions, there's no point.</li>
@@ -65,12 +65,12 @@
                splits set the new transaction's currency to the first-found
                currency if there is one, otherwise to the first-found commodity.</li>
              </ul></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796537">Bug 796537 - Transaction Report cannot sort by "num".</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796586">Bug 796586 - QIF import incorrectly converts unicode characters from UTF8 encoded file.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796595">Bug 796595 - QIF Import Select Account button to add a new account is labled gnc-account-new but should be New.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796600">Bug 796600 - stock split cash-in-lieu income/asset labels backwards.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796614">Bug 796614 - Reconciliation report contains incorrect transactions.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796638">Bug 796638 - configuration not properly saved for CSV transactions import form.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796537">Bug 796537 - Transaction Report cannot sort by "num".</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796586">Bug 796586 - QIF import incorrectly converts unicode characters from UTF8 encoded file.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796595">Bug 796595 - QIF Import Select Account button to add a new account is labled gnc-account-new but should be New.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796600">Bug 796600 - stock split cash-in-lieu income/asset labels backwards.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796614">Bug 796614 - Reconciliation report contains incorrect transactions.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796638">Bug 796638 - configuration not properly saved for CSV transactions import form.</a></li>
 
 </ul>
 
@@ -150,35 +150,35 @@
 <h2>Known Issues</h2>
 <p>The following are open bug reports new to the 3.x series considered significant by the development team:</p>
 <ul>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=789594">789594 - Unable to overwrite sqlite3 database file</a></li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=791825">791825 - Accounting Period dates (among others) stored with a TZ-sensitive time.</a></li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=792397">792397 - Incomplete Update to 2.7.x - not all online banking data is available.</a></li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=793306">793306 - Price is not imported from CSV</a></li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=793556">793556 - CSV export/import creates unbalanced transaction for fractional price.</a></li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=794755">794755 - Commodity Register displays fractional prices</a></li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795383">795383 - Gnucash crashes on import of a 1400-transaction (or more) CSV file</a></li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795614">795614 - Unicode handling in amount fields.</a></li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795804">795804 - Extremely slow save</a></li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796054">796054 - Unposting and reposting invoice doubles amounts.</a></li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796084">796084 - Frequent Crashes During Data Entry.</a></li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796100">796100 - Autosave Doesn't Always Work.</a></li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796248">796248 - Editing Scheduled Transaction.</a></li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796474">796474 - Segmentation fault while setting up online banking</a></li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796492">796492 - Wrong calculation of the first occurrence</a></li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796500">796500 - Scalability issue - importing large CSV to large book won't finish.</a></li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796520">796520 - Layout overlapping in Income & Expense Chart.</a></li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796537">796537 - Transaction Report cannot sort by "num".</a></li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796579">796579 - Cannot go forward with empty duplicates screen.</a></li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796591">796591 - Crash on keyboard entry in register when not clicking or tabbing first.</a></li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796614">796614 - Reconciliation report contains incorrect transactions.</a></li>
-<li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796656">796656 - GnuCash frequently crashes, usually involving unsaved transactions.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=789594">789594 - Unable to overwrite sqlite3 database file</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=791825">791825 - Accounting Period dates (among others) stored with a TZ-sensitive time.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=792397">792397 - Incomplete Update to 2.7.x - not all online banking data is available.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=793306">793306 - Price is not imported from CSV</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=793556">793556 - CSV export/import creates unbalanced transaction for fractional price.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=794755">794755 - Commodity Register displays fractional prices</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795383">795383 - Gnucash crashes on import of a 1400-transaction (or more) CSV file</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795614">795614 - Unicode handling in amount fields.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795804">795804 - Extremely slow save</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796054">796054 - Unposting and reposting invoice doubles amounts.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796084">796084 - Frequent Crashes During Data Entry.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796100">796100 - Autosave Doesn't Always Work.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796248">796248 - Editing Scheduled Transaction.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796474">796474 - Segmentation fault while setting up online banking</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796492">796492 - Wrong calculation of the first occurrence</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796500">796500 - Scalability issue - importing large CSV to large book won't finish.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796520">796520 - Layout overlapping in Income & Expense Chart.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796537">796537 - Transaction Report cannot sort by "num".</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796579">796579 - Cannot go forward with empty duplicates screen.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796591">796591 - Crash on keyboard entry in register when not clicking or tabbing first.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796614">796614 - Reconciliation report contains incorrect transactions.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796656">796656 - GnuCash frequently crashes, usually involving unsaved transactions.</a></li>
 </ul>
 <h2>Documentation</h2>
 <p>Concurrent with the release of Gnucash 3.2 we're pleased to also release a new version 3.2 of the companion <em>Help</em> and <em>Tutorial and Concepts Guide</em>.</p>
 <p>Documentation changes:</p>
 <ul>
-        <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=796098">Bug 796098 - V 3.1 Missing images in Tutorial and Concepts Guide in PDF and Online Help pages.</a></li>
-        <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795980">Bug 795980 - Void Reason Has No Visible Purpose.</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796098">Bug 796098 - V 3.1 Missing images in Tutorial and Concepts Guide in PDF and Online Help pages.</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795980">Bug 795980 - Void Reason Has No Visible Purpose.</a></li>
 </ul>
 
 <h3>Getting GnuCash for Windows and MacOS X</h3>

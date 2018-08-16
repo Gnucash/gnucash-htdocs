@@ -9,37 +9,37 @@
 
 <p>Between 3.0 and 3.1, the following bugfixes were accomplished:</p>
 <ul>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=118391">Bug 118391 - Long currency names untranslated.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=769686">Bug 769686 - Notes not imported when using update and reconcile in import transactions from CSV.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=772776">Bug 772776 - VERY large queries (over 11000 fields in IN clause) slow down GnuCash.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=782144">Bug 782144 - git-master - Save Corrupts Data File / Not Open Data File.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=792105">Bug 792105 - Startup takes several minutes.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=793461">Bug 793461 - Transaction matcher window blank when importing QFX.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=794767">Bug 794767 - Dates default to 01/01/1970.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=794916">Bug 794916 - Fails to find environment file at startup when installation prefix is '/opt'.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=794936">Bug 794936 - 3.0 does not open previously saved sqlite3 files properly - corrupted business data.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=794941">Bug 794941 - Both print icons export to pdf.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=794953">Bug 794953 - Ellipsize on short tab labels.</a><br/> Correct error on when to ellipsize tab labels. Also as this is used in two places separate out this to new function so it is not duplicated.</li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=794976">Bug 794976 - Context Menu looks like it's from GTK, no GnuCash functions in it.</li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=794990">Bug 794990 - Double click does not work on saved reports.</a><br/> When you double click on the saved report description nothing happens. This was down to a conflict on a couple of call backs and one of them was incorrectly setup.</li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=794994">Bug 794994 - Display Alphavantage key in full.</a><br/> Set the entry to expand so all the space is used to display.</li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795031">Bug 795031 - 3.0 Crashes on loading when opening 2.6.19 file.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795039">Bug 795039 - Crash on startup using Technicolor Style sheet in report.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795040">Bug 795040 - GnuCash crashes when searching for a newly created bill.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795049">Bug 795049 - GnuCash 2.6.20-1 (Fedora Linux package) is unable to open MariaDB.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795064">Bug 795064 - Enable subtotal-only if either sortkeys are dates.</a><br/> This will allow 'show subtotals only' if sortkeys are date-types. This allows, for example, prime-sortkey=date, yearly. sec-sortkey=date, monthly.</li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795068">Bug 795068 - src/optional/python-bindings missing several files.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795080">Bug 795080 - Some dates reset to 01/01/1970.</a><br/> An odd corner case: BST apparently came off of DST at 23:00 26 Oct 2014, so midnight that day was ambiguous about being DST or not; that causes the local_date_time constructor to throw in spite of the tm.is_dst element being 0 (meaning pick standard time). Instead of just failing in that case, try constructing a local_date_time three hours later then adjust it back three hours. If *that* doesn't work then throw a std::invalid argument.</li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795082">Bug 795082 - CSV import crashes if a transaction's 'Account' field is empty and no default Account set.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795101">Bug 795101 - Scrollbar floats and covers toggle buttons.</a><br/> When the scrollbar appears for the reconcile windows it can float above the reconcile toggle button which make it difficult to toggle. Move this column to the start which has the advantage of aligning the amount column above the Total value.</li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795142">Bug 795142 - Unable to enter account codes in business sheets.</a><br/> In Bills, Invoices and Expense vouchers you can not enter an account code in an account field like you can on a normal register, enable this.</li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795155">Bug 795155 - CSV import does not distinguish between deposit and withdrawal.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795347">Bug 795347 - Australian (GMT+10) OFX transactions imported have previous days date</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795377">Bug 795377 - Reads and saves Gnucash 2.6.19 XML file, then can't reread it, due to bad date in old file.</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795389">Bug 795389 - Hard to see figures in the budget window</a><br/> The budget view had hard coded black for normal values and dark grey for other values. Changed this so normal values are reset to default color and adjusted the grey based on default color for theme.</li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795405">Bug 795405 - All Dates in Price Database Off-By-One After 3.0 Upgrade</a></li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795446">Bug 795446 - On Windows there is a blank tip of the day</a><br/> When the tip_of_the_day.list is created a new line is appended to the list file and on Windows this causes a blank tip so remove the adding of the extra line.</li>
-    <li><a href="https://bugzilla.gnome.org/show_bug.cgi?id=795471">Bug 795471 - Budget window scrolls edited cell out of site</a><br/> When editing cells that have been revealed on the right by scrolling the window snaps back to the left hiding the cell being edited. This may be due to an underlying gtk issue but these changes fix the issue visually.</li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=118391">Bug 118391 - Long currency names untranslated.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=769686">Bug 769686 - Notes not imported when using update and reconcile in import transactions from CSV.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=772776">Bug 772776 - VERY large queries (over 11000 fields in IN clause) slow down GnuCash.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=782144">Bug 782144 - git-master - Save Corrupts Data File / Not Open Data File.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=792105">Bug 792105 - Startup takes several minutes.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=793461">Bug 793461 - Transaction matcher window blank when importing QFX.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=794767">Bug 794767 - Dates default to 01/01/1970.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=794916">Bug 794916 - Fails to find environment file at startup when installation prefix is '/opt'.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=794936">Bug 794936 - 3.0 does not open previously saved sqlite3 files properly - corrupted business data.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=794941">Bug 794941 - Both print icons export to pdf.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=794953">Bug 794953 - Ellipsize on short tab labels.</a><br/> Correct error on when to ellipsize tab labels. Also as this is used in two places separate out this to new function so it is not duplicated.</li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=794976">Bug 794976 - Context Menu looks like it's from GTK, no GnuCash functions in it.</li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=794990">Bug 794990 - Double click does not work on saved reports.</a><br/> When you double click on the saved report description nothing happens. This was down to a conflict on a couple of call backs and one of them was incorrectly setup.</li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=794994">Bug 794994 - Display Alphavantage key in full.</a><br/> Set the entry to expand so all the space is used to display.</li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795031">Bug 795031 - 3.0 Crashes on loading when opening 2.6.19 file.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795039">Bug 795039 - Crash on startup using Technicolor Style sheet in report.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795040">Bug 795040 - GnuCash crashes when searching for a newly created bill.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795049">Bug 795049 - GnuCash 2.6.20-1 (Fedora Linux package) is unable to open MariaDB.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795064">Bug 795064 - Enable subtotal-only if either sortkeys are dates.</a><br/> This will allow 'show subtotals only' if sortkeys are date-types. This allows, for example, prime-sortkey=date, yearly. sec-sortkey=date, monthly.</li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795068">Bug 795068 - src/optional/python-bindings missing several files.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795080">Bug 795080 - Some dates reset to 01/01/1970.</a><br/> An odd corner case: BST apparently came off of DST at 23:00 26 Oct 2014, so midnight that day was ambiguous about being DST or not; that causes the local_date_time constructor to throw in spite of the tm.is_dst element being 0 (meaning pick standard time). Instead of just failing in that case, try constructing a local_date_time three hours later then adjust it back three hours. If *that* doesn't work then throw a std::invalid argument.</li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795082">Bug 795082 - CSV import crashes if a transaction's 'Account' field is empty and no default Account set.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795101">Bug 795101 - Scrollbar floats and covers toggle buttons.</a><br/> When the scrollbar appears for the reconcile windows it can float above the reconcile toggle button which make it difficult to toggle. Move this column to the start which has the advantage of aligning the amount column above the Total value.</li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795142">Bug 795142 - Unable to enter account codes in business sheets.</a><br/> In Bills, Invoices and Expense vouchers you can not enter an account code in an account field like you can on a normal register, enable this.</li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795155">Bug 795155 - CSV import does not distinguish between deposit and withdrawal.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795347">Bug 795347 - Australian (GMT+10) OFX transactions imported have previous days date</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795377">Bug 795377 - Reads and saves Gnucash 2.6.19 XML file, then can't reread it, due to bad date in old file.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795389">Bug 795389 - Hard to see figures in the budget window</a><br/> The budget view had hard coded black for normal values and dark grey for other values. Changed this so normal values are reset to default color and adjusted the grey based on default color for theme.</li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795405">Bug 795405 - All Dates in Price Database Off-By-One After 3.0 Upgrade</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795446">Bug 795446 - On Windows there is a blank tip of the day</a><br/> When the tip_of_the_day.list is created a new line is appended to the list file and on Windows this causes a blank tip so remove the adding of the extra line.</li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795471">Bug 795471 - Budget window scrolls edited cell out of site</a><br/> When editing cells that have been revealed on the right by scrolling the window snaps back to the left hiding the cell being edited. This may be due to an underlying gtk issue but these changes fix the issue visually.</li>
 
 </ul>
 
@@ -85,22 +85,22 @@
 <h2>Known Issues</h2>
 <p>The following are open bug reports new to the 3.x series considered significant by the development team:</p>
 <ul>
-    <li>It is not possible to overwrite SQL Databases from within GnuCash, even though GnuCash will ask if you want to. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=789594">Bug 789594</a></li>
-    <li>Several dates, including Accounting Period, are subject to change with time zone and daylight-time changes. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=791825">Bug 791825</a></li>
-    <li>Some HBCI information is not loaded correctly so the first transaction download will re-retrieve transactions unless the beginning date is set explicitly. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=792397">Bug 792397.</a></li>
-    <li>The new CSV importer's Price of Shares column doesn't work. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=793306">Bug 793306</a></li>
-    <li>The new CSV importer's numeric parser can't parse numbers of the form x + y/z. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=793556">Bug 793556.</a></li>
-    <li>Python bindings may not work in some installations because the bindings are unable to find the backend modules (libgncmod-backend-dbi and libgncmod-backend-xml). <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794526">Bug 794526</a></li>
-    <li>Get Quotes can be slow if one has a large number of saved prices. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794644">Bug 794644.</a></li>
-    <li>The Mac localization code can set the wrong encoding for strftime causing the register's date picker to label months "Null" in some locales. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794807">Bug 794807</a></li>
+    <li>It is not possible to overwrite SQL Databases from within GnuCash, even though GnuCash will ask if you want to. <a href="https://bugs.gnucash.org/show_bug.cgi?id=789594">Bug 789594</a></li>
+    <li>Several dates, including Accounting Period, are subject to change with time zone and daylight-time changes. <a href="https://bugs.gnucash.org/show_bug.cgi?id=791825">Bug 791825</a></li>
+    <li>Some HBCI information is not loaded correctly so the first transaction download will re-retrieve transactions unless the beginning date is set explicitly. <a href="https://bugs.gnucash.org/show_bug.cgi?id=792397">Bug 792397.</a></li>
+    <li>The new CSV importer's Price of Shares column doesn't work. <a href="https://bugs.gnucash.org/show_bug.cgi?id=793306">Bug 793306</a></li>
+    <li>The new CSV importer's numeric parser can't parse numbers of the form x + y/z. <a href="https://bugs.gnucash.org/show_bug.cgi?id=793556">Bug 793556.</a></li>
+    <li>Python bindings may not work in some installations because the bindings are unable to find the backend modules (libgncmod-backend-dbi and libgncmod-backend-xml). <a href="https://bugs.gnucash.org/show_bug.cgi?id=794526">Bug 794526</a></li>
+    <li>Get Quotes can be slow if one has a large number of saved prices. <a href="https://bugs.gnucash.org/show_bug.cgi?id=794644">Bug 794644.</a></li>
+    <li>The Mac localization code can set the wrong encoding for strftime causing the register's date picker to label months "Null" in some locales. <a href="https://bugs.gnucash.org/show_bug.cgi?id=794807">Bug 794807</a></li>
     <li>On Mac, the File Open dialog will crash if one types anything. (This is a Gtk+ bug). <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794809">Bug 794809</a></li>
-    <li>An open register is not immediately updated when the Since Last Run dialog creates transaction splits in the register's account. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794854">Bug 794854</a></li>
-    <li>GnuCash asks if one wants to save changes when quitting or opening a file even if there's no book open. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794870">Bug 794870</a></li>
-    <li>Windows Defender falsly identifies the GnuCash installer as a Trojan. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794967">Bug 794967</a></li>
-    <li>Some Windows users have trouble using Chinese input methods on the Register; other controls work. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=795253">Bug 795253</a></li>
-    <li>The scroll wheel can't be used to switch tabs in the gnucash gui. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=795294">Bug 795294</a></li>
-    <li>GnuCash will crash if one attempts to import a CSV file with more than 1400 transactions. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=795383">Bug 795383</a></li>
-    <li>Invalid input into a formula (Debit/Credit) field is inconsistent depending on the input. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=795614">Bug 795614.</a></li>
+    <li>An open register is not immediately updated when the Since Last Run dialog creates transaction splits in the register's account. <a href="https://bugs.gnucash.org/show_bug.cgi?id=794854">Bug 794854</a></li>
+    <li>GnuCash asks if one wants to save changes when quitting or opening a file even if there's no book open. <a href="https://bugs.gnucash.org/show_bug.cgi?id=794870">Bug 794870</a></li>
+    <li>Windows Defender falsly identifies the GnuCash installer as a Trojan. <a href="https://bugs.gnucash.org/show_bug.cgi?id=794967">Bug 794967</a></li>
+    <li>Some Windows users have trouble using Chinese input methods on the Register; other controls work. <a href="https://bugs.gnucash.org/show_bug.cgi?id=795253">Bug 795253</a></li>
+    <li>The scroll wheel can't be used to switch tabs in the gnucash gui. <a href="https://bugs.gnucash.org/show_bug.cgi?id=795294">Bug 795294</a></li>
+    <li>GnuCash will crash if one attempts to import a CSV file with more than 1400 transactions. <a href="https://bugs.gnucash.org/show_bug.cgi?id=795383">Bug 795383</a></li>
+    <li>Invalid input into a formula (Debit/Credit) field is inconsistent depending on the input. <a href="https://bugs.gnucash.org/show_bug.cgi?id=795614">Bug 795614.</a></li>
 
 </ul>
 <h2>Documentation</h2>

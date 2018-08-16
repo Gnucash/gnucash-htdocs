@@ -158,25 +158,25 @@
 <h3> Known Problems</h3>
 <p> There's no such thing as bug-free software and if we held the release until all the bugs were fixed we'd never release anything. Here are the open bugs particular to GnuCash 3.0 at the time of this release:</p>
 <ul>
-  <li>It is not possible to overwrite SQL Databases from within GnuCash, even though GnuCash will ask if you want to. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=789594">Bug 789594</a>.</li>
-  <li>There is no theming tool for Windows or Macs so users of those platforms must apply theming by hand. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=791823">Bug 791823</a>.</li>
-  <li>Accounting Period dates are subject to change with time zone and daylight-time changes. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=791825">Bug 791825</a>.</li>
-  <li>Opening a large SQL database on Windows is very slow on some machines, merely slow on others. Bugs <a href="https://bugzilla.gnome.org/show_bug.cgi?id=792105">792105</a>, <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794482">794482</a>.</li>
-  <li>Some HBCI information is not loaded correctly so the first transaction download will re-retrieve transactions unless the beginning date is set explicitly. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=792397">Bug 792397</a>.</li>
-  <li>The new CSV importer's Price of Shares column doesn't work. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=793306">Bug 793306</a>.</li>
-  <li>Importing an OFX file on Windows fails with an empty matcher window.<a href="https://bugzilla.gnome.org/show_bug.cgi?id=793461"> Bug 793461</a>.</li>
-  <li>The Bayes account matcher can take a long time to convert the accounts from name string to guids. This is a one-off, happening only the first time one imports into an account on GnuCash 3.0. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794334">Bug 794334</a>.</li>
-  <li>The new CSV importer's numeric parser can't parse numbers of the form x + y/z. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=793556">Bug 793556</a>.</li>
-  <li>Python bindings may not work in some installations because the bindings are unable to find the backend modules (libgncmod-backend-dbi and libgncmod-backend-xml). <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794526">Bug 794526</a>.</li>
-  <li>An open register is not immediately updated when the Since Last Run dialog creates transaction splits in the register's account. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794584">Bug 794584</a>.</li>
-  <li>Get Quotes can be slow if one has a large number of saved prices. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794644">Bug 794644</a>.</li>
-  <li>Some users see 1 January 1970 instead of the default date in the New Invoice or New Bill dialog and on the unposted bill and invoice. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794767">Bug 794767</a>.</li>
-  <li>The Mac localization code can set the wrong encoding for strftime causing the register's date picker to label months "Null" in some locales. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794807">Bug 794807</a>.</li>
-  <li>On Mac, the File Open dialog will crash if one types anything. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794809">Bug 794809</a>.</li>
-  <li>GnuCash asks if one wants to save changes when quitting or opening a file even if there's no book open. <a href="https://bugzilla.gnome.org/show_bug.cgi?id=794870">Bug 794870</a>.</li>
-  <li>The Online Actions menu includes some obsolete and non-functional selections.<a href="https://bugzilla.gnome.org/show_bug.cgi?id=794880"> Bug 794880</a>.</li>
+  <li>It is not possible to overwrite SQL Databases from within GnuCash, even though GnuCash will ask if you want to. <a href="https://bugs.gnucash.org/show_bug.cgi?id=789594">Bug 789594</a>.</li>
+  <li>There is no theming tool for Windows or Macs so users of those platforms must apply theming by hand. <a href="https://bugs.gnucash.org/show_bug.cgi?id=791823">Bug 791823</a>.</li>
+  <li>Accounting Period dates are subject to change with time zone and daylight-time changes. <a href="https://bugs.gnucash.org/show_bug.cgi?id=791825">Bug 791825</a>.</li>
+  <li>Opening a large SQL database on Windows is very slow on some machines, merely slow on others. Bugs <a href="https://bugs.gnucash.org/show_bug.cgi?id=792105">792105</a>, <a href="https://bugs.gnucash.org/show_bug.cgi?id=794482">794482</a>.</li>
+  <li>Some HBCI information is not loaded correctly so the first transaction download will re-retrieve transactions unless the beginning date is set explicitly. <a href="https://bugs.gnucash.org/show_bug.cgi?id=792397">Bug 792397</a>.</li>
+  <li>The new CSV importer's Price of Shares column doesn't work. <a href="https://bugs.gnucash.org/show_bug.cgi?id=793306">Bug 793306</a>.</li>
+  <li>Importing an OFX file on Windows fails with an empty matcher window.<a href="https://bugs.gnucash.org/show_bug.cgi?id=793461"> Bug 793461</a>.</li>
+  <li>The Bayes account matcher can take a long time to convert the accounts from name string to guids. This is a one-off, happening only the first time one imports into an account on GnuCash 3.0. <a href="https://bugs.gnucash.org/show_bug.cgi?id=794334">Bug 794334</a>.</li>
+  <li>The new CSV importer's numeric parser can't parse numbers of the form x + y/z. <a href="https://bugs.gnucash.org/show_bug.cgi?id=793556">Bug 793556</a>.</li>
+  <li>Python bindings may not work in some installations because the bindings are unable to find the backend modules (libgncmod-backend-dbi and libgncmod-backend-xml). <a href="https://bugs.gnucash.org/show_bug.cgi?id=794526">Bug 794526</a>.</li>
+  <li>An open register is not immediately updated when the Since Last Run dialog creates transaction splits in the register's account. <a href="https://bugs.gnucash.org/show_bug.cgi?id=794584">Bug 794584</a>.</li>
+  <li>Get Quotes can be slow if one has a large number of saved prices. <a href="https://bugs.gnucash.org/show_bug.cgi?id=794644">Bug 794644</a>.</li>
+  <li>Some users see 1 January 1970 instead of the default date in the New Invoice or New Bill dialog and on the unposted bill and invoice. <a href="https://bugs.gnucash.org/show_bug.cgi?id=794767">Bug 794767</a>.</li>
+  <li>The Mac localization code can set the wrong encoding for strftime causing the register's date picker to label months "Null" in some locales. <a href="https://bugs.gnucash.org/show_bug.cgi?id=794807">Bug 794807</a>.</li>
+  <li>On Mac, the File Open dialog will crash if one types anything. <a href="https://bugs.gnucash.org/show_bug.cgi?id=794809">Bug 794809</a>.</li>
+  <li>GnuCash asks if one wants to save changes when quitting or opening a file even if there's no book open. <a href="https://bugs.gnucash.org/show_bug.cgi?id=794870">Bug 794870</a>.</li>
+  <li>The Online Actions menu includes some obsolete and non-functional selections.<a href="https://bugs.gnucash.org/show_bug.cgi?id=794880"> Bug 794880</a>.</li>
 </ul>
-<p> The list doesn't include the many bugs carried over from previous versions. For a complete list of bugs search for the product Gnucash at <a href="https://bugzilla.gnome.org/query.cgi?format=advanced">Gnome Bugzilla</a></p>
+<p> The list doesn't include the many bugs carried over from previous versions. For a complete list of bugs search for the product Gnucash at <a href="https://bugs.gnucash.org/query.cgi?format=advanced">Gnome Bugzilla</a></p>
 
 <h2>Documentation</h2>
 <p>Concurrent with the release of Gnucash 3.0 we're pleased to also release a new version 3.0 of the companion <em>Help</em> and <em>Tutorial and Concepts Guide</em>.</p>
