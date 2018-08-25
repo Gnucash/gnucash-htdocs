@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: gnucash-htdocs\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/page.cgi?id=browse."
 "html&product=GnuCash\n"
-"POT-Creation-Date: 2018-04-26 14:53+0200\n"
+"POT-Creation-Date: 2018-08-25 14:06-0700\n"
 "PO-Revision-Date: 2011-11-02 16:52+0100\n"
 "Last-Translator: Jérôme Rapinat <romjerome@yahoo.fr>\n"
 "Language-Team: French <gnomefr@traduc.org>\n"
@@ -252,7 +252,7 @@ msgid ""
 "just Version 2."
 msgstr ""
 
-#: 2.6-release-tour.phtml:165 docs.phtml:47 docs.phtml:181 docs.phtml:313
+#: 2.6-release-tour.phtml:165 docs.phtml:50 docs.phtml:195 docs.phtml:327
 #: download.phtml:5
 msgid "Download"
 msgstr "Télécharger"
@@ -516,7 +516,7 @@ msgstr ""
 msgid ""
 "Next attach your patch to a bug report against the documentation component "
 "for the <span class=\"gnucash\">GnuCash</span> project in <a href='https://"
-"bugzilla.gnome.org/'>Gnome's bugzilla database</a> and send an email to <a "
+"bugs.gnucash.org/'>Gnome's bugzilla database</a> and send an email to <a "
 "href='mailto:gnucash-devel@gnucash.org'>gnucash-devel</a> mailing list to "
 "inform other developers on your work. See also <a href='https://wiki.gnucash."
 "org/wiki/Bugzilla'>GnuCash' wiki page on bugzilla</a> for more details about "
@@ -559,11 +559,12 @@ msgstr ""
 "et commencez à la commenter."
 
 #: develdocs.phtml:82
+#, fuzzy
 msgid ""
 "The best way of retaining comments about docs in an easy to find way for "
-"everyone would be to use <a href='https://bugzilla.gnome.org/'>bugzilla."
-"gnome.org</a> to file the bugs under documentation. This can also be done "
-"using bug-buddy."
+"everyone would be to use <a href='https://bugs.gnucash.org/'>bugs.gnucash."
+"org</a> to file the bugs under documentation. This can also be done using "
+"bug-buddy."
 msgstr ""
 "Le meilleur moyen de conserver des commentaires sur la documentation est de "
 "les enregistrer sur <a href=\"https://bugzilla.gnome.org/\">bugzilla.gnome."
@@ -594,7 +595,14 @@ msgstr "Télécharger la documentation en mobipocket"
 msgid "GnuCash Documentation"
 msgstr "Ancienne documentation GnuCash"
 
-#: docs.phtml:24
+#: docs.phtml:26
+msgid ""
+"The following links are to the <strong>English HTML editions of the current "
+"stable branch</strong> documentation. See further down the page for other "
+"<span class=\"gnucash\">GnuCash</span> versions, languages, and formats."
+msgstr ""
+
+#: docs.phtml:27
 #, fuzzy
 msgid ""
 "There are two major <span class=\"gnucash\">GnuCash</span> documentation "
@@ -603,17 +611,17 @@ msgstr ""
 "Voici quelques liens pour installer <span class=\"gnucash\">GnuCash</span> "
 "sur quelques distributions les plus populaires :"
 
-#: docs.phtml:26
+#: docs.phtml:29
 #, fuzzy
 msgid "The Help Manual"
 msgstr "Manuel d'Aide"
 
-#: docs.phtml:27
+#: docs.phtml:30
 #, fuzzy
 msgid "The Tutorial and Concepts Guide"
 msgstr "Guide des concepts"
 
-#: docs.phtml:30
+#: docs.phtml:33
 msgid ""
 "The <b>Help Manual</b> is designed to be a quick reference of how to "
 "accomplish specific tasks and how to use the features in <span class="
@@ -627,7 +635,7 @@ msgstr ""
 "leçons sur chacun des concepts de la comptabilité avec <span class=\"gnucash"
 "\">GnuCash</span> par l'entremise de tutoriels."
 
-#: docs.phtml:32
+#: docs.phtml:35
 #, fuzzy
 msgid ""
 "Additionally, you can talk to someone via IRC at <i>irc.gnome.org</i> "
@@ -642,7 +650,7 @@ msgstr ""
 "GnuCash'>germanophones</a>. Un wiki est un site internet interactif où les "
 "utilisateurs enregistrés peuvent poser et répondre à des questions."
 
-#: docs.phtml:34
+#: docs.phtml:37
 msgid ""
 "You can also send an email to the <a href=\"mailto:gnucash-user@gnucash.org"
 "\">gnucash-user</a> mailing list if you cannot find a satisfactory answer to "
@@ -656,72 +664,76 @@ msgstr ""
 "FAQ, le Wiki... C'est avec vos remarques constructives et vos retours que "
 "nous pouvons savoir comment améliorer la documentaiton."
 
-#: docs.phtml:37
+#: docs.phtml:40
 msgid ""
 "<span class=\"gnucash\">GnuCash</span>'s documentation has been created by "
 "its community. See the <a href=\"develdocs.phtml\">Writing Documentation "
 "page</a> if you are interested in contributing to this effort."
 msgstr ""
 
-#: docs.phtml:42
+#: docs.phtml:45
 #, fuzzy
 msgid "(current stable release)"
 msgstr "(dernière version stable)"
 
 #. Only show old stable docs download options if there really is an active unstable release
-#: docs.phtml:42 docs.phtml:176 docs.phtml:482 docs.phtml:508 docs.phtml:530
-#: docs.phtml:548 docs.phtml:570
+#: docs.phtml:45 docs.phtml:190 docs.phtml:496 docs.phtml:522 docs.phtml:544
+#: docs.phtml:562 docs.phtml:584
 #, fuzzy, php-format
 msgid "GnuCash v%s"
 msgstr "GnuCash %s pour"
 
-#: docs.phtml:44
+#: docs.phtml:47
 #, fuzzy
 msgid "Current <em>stable</em> user documentation"
 msgstr "Documentation <em>stable</em> de l'utilisateur et du développeur"
 
-#: docs.phtml:47 docs.phtml:181
+#: docs.phtml:50 docs.phtml:195
 msgid "Stable"
 msgstr "Stable"
 
-#: docs.phtml:49 docs.phtml:183 docs.phtml:315 docs.phtml:485 docs.phtml:511
-#: docs.phtml:533 docs.phtml:551
+#: docs.phtml:52 docs.phtml:197 docs.phtml:329 docs.phtml:499 docs.phtml:525
+#: docs.phtml:547 docs.phtml:565
 msgid "Help Manual"
 msgstr "Manuel d'Aide"
 
-#: docs.phtml:53 docs.phtml:103 docs.phtml:187 docs.phtml:237 docs.phtml:319
-#: docs.phtml:369 docs.phtml:486 docs.phtml:497 docs.phtml:512 docs.phtml:523
-#: docs.phtml:534 docs.phtml:543 docs.phtml:552 docs.phtml:563 docs.phtml:571
+#: docs.phtml:56 docs.phtml:106 docs.phtml:201 docs.phtml:251 docs.phtml:333
+#: docs.phtml:383 docs.phtml:500 docs.phtml:511 docs.phtml:526 docs.phtml:537
+#: docs.phtml:548 docs.phtml:557 docs.phtml:566 docs.phtml:577 docs.phtml:585
 msgid "English"
 msgstr "Anglais"
 
-#: docs.phtml:64 docs.phtml:114 docs.phtml:198 docs.phtml:248 docs.phtml:330
-#: docs.phtml:380 docs.phtml:488 docs.phtml:499 docs.phtml:514 docs.phtml:536
-#: docs.phtml:556 docs.phtml:572
+#: docs.phtml:67 docs.phtml:117 docs.phtml:212 docs.phtml:262 docs.phtml:344
+#: docs.phtml:394 docs.phtml:502 docs.phtml:513 docs.phtml:528 docs.phtml:550
+#: docs.phtml:570 docs.phtml:586
 msgid "German"
 msgstr "Allemand"
 
-#: docs.phtml:75 docs.phtml:125 docs.phtml:209 docs.phtml:259 docs.phtml:341
-#: docs.phtml:391 docs.phtml:490 docs.phtml:501 docs.phtml:516 docs.phtml:525
+#: docs.phtml:78 docs.phtml:128 docs.phtml:223 docs.phtml:273 docs.phtml:355
+#: docs.phtml:405 docs.phtml:504 docs.phtml:515 docs.phtml:530 docs.phtml:539
 msgid "Italian"
 msgstr "Italien"
 
-#: docs.phtml:86 docs.phtml:147 docs.phtml:220 docs.phtml:281 docs.phtml:352
-#: docs.phtml:413
+#: docs.phtml:89 docs.phtml:150 docs.phtml:234 docs.phtml:295 docs.phtml:366
+#: docs.phtml:427
 #, fuzzy
 msgid "Portuguese"
 msgstr "Portuguais"
 
-#: docs.phtml:99 docs.phtml:233 docs.phtml:365 docs.phtml:496 docs.phtml:522
-#: docs.phtml:542 docs.phtml:562
+#: docs.phtml:102 docs.phtml:247 docs.phtml:379 docs.phtml:510 docs.phtml:536
+#: docs.phtml:556 docs.phtml:576
 msgid "Concepts Guide"
 msgstr "Guide des concepts"
 
-#: docs.phtml:136 docs.phtml:270 docs.phtml:402 docs.phtml:503
+#: docs.phtml:139 docs.phtml:284 docs.phtml:416 docs.phtml:517
 msgid "Japanese"
 msgstr "Japonais"
 
-#: docs.phtml:168
+#: docs.phtml:161 docs.phtml:438
+msgid "Russian"
+msgstr ""
+
+#: docs.phtml:182
 msgid ""
 "This is the latest stable release of the <span class=\"gnucash\">GnuCash</"
 "span> documentation. <em>Stable</em> means that this documentation is not "
@@ -731,17 +743,17 @@ msgstr ""
 "\">GnuCash</span>. <em>Stable</em> signifiant que la documentation n'est pas "
 "nécessairement la plus à jour mais elle fonctionne sans problème."
 
-#: docs.phtml:176
+#: docs.phtml:190
 #, fuzzy
 msgid "(old stable release)"
 msgstr "Version stable (%s)"
 
-#: docs.phtml:178
+#: docs.phtml:192
 #, fuzzy
 msgid "Old <em>stable</em> user documentation"
 msgstr "Documentation <em>stable</em> de l'utilisateur et du développeur"
 
-#: docs.phtml:302
+#: docs.phtml:316
 #, fuzzy, php-format
 msgid ""
 "This is the old stable release of the <span class=\"gnucash\">GnuCash</span> "
@@ -753,36 +765,32 @@ msgstr ""
 "la création d'une documentation de qualité sur <span class=\"gnucash"
 "\">GnuCash</span>."
 
-#: docs.phtml:308
+#: docs.phtml:322
 msgid "Nightly Documentation Builds"
 msgstr "Dernière documentation disponible"
 
-#: docs.phtml:310
+#: docs.phtml:324
 msgid ""
 "Current <em>unstable</em> user documentation and developer documentation"
 msgstr "Documentation <em>instable</em> de l'utilisateur et du développeur"
 
-#: docs.phtml:313
+#: docs.phtml:327
 msgid "Unstable"
 msgstr "Instable"
 
-#: docs.phtml:424
-msgid "Russian"
-msgstr ""
-
-#: docs.phtml:437
+#: docs.phtml:451
 msgid "API"
 msgstr ""
 
-#: docs.phtml:442 externals/menu.phtml:57
+#: docs.phtml:456 externals/menu.phtml:57
 msgid "current bugfix branch"
 msgstr ""
 
-#: docs.phtml:446 externals/menu.phtml:58
+#: docs.phtml:460 externals/menu.phtml:58
 msgid "future feature branch"
 msgstr ""
 
-#: docs.phtml:459
+#: docs.phtml:473
 #, fuzzy
 msgid ""
 "Every night a server builds the documentation from the current contents of "
@@ -797,7 +805,7 @@ msgstr ""
 "<b>documentation utilisateur</b> pour la version <em>instable</em> de <span "
 "class=\"gnucash\">GnuCash</span>."
 
-#: docs.phtml:463
+#: docs.phtml:477
 msgid ""
 "<b>NOTE:</b> these documents might not be accessible from time to time "
 "because developers might be working on improvements. However they are the "
@@ -806,11 +814,11 @@ msgstr ""
 
 #. until here region code in LANG required
 #. region code no longer required
-#: docs.phtml:478
+#: docs.phtml:492
 msgid "Older GnuCash Documentation"
 msgstr "Ancienne documentation GnuCash"
 
-#: docs.phtml:480
+#: docs.phtml:494
 msgid ""
 "This section contains all the older <span class=\"gnucash\">GnuCash</span> "
 "documentation. If you are using one of these old versions of <span class="
@@ -822,32 +830,32 @@ msgstr ""
 "de ces anciennes versions de <span class=\"gnucash\">GnuCash</span>, nous "
 "vous conseillons plutôt de mettre à jour votre version."
 
-#: docs.phtml:573
+#: docs.phtml:587
 msgid "Spanish"
 msgstr "Espagnol"
 
-#: docs.phtml:574
+#: docs.phtml:588
 msgid "Portugese"
 msgstr "Portuguais"
 
-#: docs.phtml:580
+#: docs.phtml:594
 msgid "Unofficial documentation"
 msgstr "Documentation non-officielle"
 
-#: docs.phtml:582
+#: docs.phtml:596
 msgid "Some people have written HOWTO guides or tutorials."
 msgstr ""
 "Certaines personnes ont écrit des guides COMMENT FAIRE ou des tutoriels."
 
-#: docs.phtml:585
+#: docs.phtml:599
 msgid "Joe Mack's Tutorial"
 msgstr "Tutoriel de Joe Mack"
 
-#: docs.phtml:588
+#: docs.phtml:602
 msgid "Dave Gilbert's User Guide (Pdf)"
 msgstr "Guide de l'utilisateur (PDF) par Dave Gilbert"
 
-#: docs.phtml:592
+#: docs.phtml:606
 msgid ""
 "<b>NOTE:</b> the information presented in these sources may or may not be "
 "updated to the most recent version of <span class=\"gnucash\">GnuCash</"
@@ -974,8 +982,8 @@ msgstr ""
 msgid "Installers"
 msgstr "Installeurs"
 
-#: download.phtml:22 download.phtml:23 download.phtml:54 download.phtml:55
-#: download.phtml:70 download.phtml:71 download.phtml:84
+#: download.phtml:22 download.phtml:23 download.phtml:55 download.phtml:56
+#: download.phtml:71 download.phtml:72 download.phtml:85
 #, php-format
 msgid "GnuCash %s for"
 msgstr "GnuCash %s pour"
@@ -1037,6 +1045,16 @@ msgstr ""
 "ce dépôt logiciel supplémentaire, voir"
 
 #: download.phtml:34
+#, fuzzy
+msgid ""
+"Solus users can install <span class=\"gnucash\">GnuCash</span> through the "
+"Software Center(Office Software -> Financial Software -> gnucash)."
+msgstr ""
+"Les utilisateurs de Mandriva peuvent installer <span class=\"gnucash"
+"\">GnuCash</span> via le gestionnaire de logiciel du centre de contôle "
+"Mandriva Linux."
+
+#: download.phtml:35
 msgid ""
 "Ubuntu users can install <span class=\"gnucash\">GnuCash</span> through the "
 "Software Center. This will install <span class=\"gnucash\">GnuCash</span> "
@@ -1046,7 +1064,7 @@ msgstr ""
 "span> via le centre logiciel. Ceci installera <span class=\"gnucash"
 "\">GnuCash</span> dans la catégorie Bureautique du menu Applications."
 
-#: download.phtml:36
+#: download.phtml:37
 #, fuzzy
 msgid ""
 "If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> or "
@@ -1062,16 +1080,16 @@ msgstr ""
 "fournit des <a href='https://wiki.gnucash.org/wiki/"
 "GnuCash#Installation'>aides pour différentes distributions</a>."
 
-#: download.phtml:38
+#: download.phtml:39
 msgid "Source code"
 msgstr "Code source"
 
-#: download.phtml:40 download.phtml:56 download.phtml:72
+#: download.phtml:41 download.phtml:57 download.phtml:73
 #, php-format
 msgid "for GnuCash %s"
 msgstr "pour GnuCash %s"
 
-#: download.phtml:42
+#: download.phtml:43
 msgid ""
 "For build instructions, please check the <span class=\"gnucash\">GnuCash</"
 "span> wiki which has <a href='https://wiki.gnucash.org/wiki/"
@@ -1083,19 +1101,19 @@ msgstr ""
 "a>."
 
 #. Only show unstable download options if there really is an active unstable release
-#: download.phtml:48
+#: download.phtml:49
 #, php-format
 msgid "Unstable/Development release (%s)"
 msgstr "Version instable/en développement (%s)"
 
-#: download.phtml:50
+#: download.phtml:51
 msgid ""
 "Unstable (development) releases are for testing purposes only. They contain "
 "the newest features and improvements, but may also contain serious bugs "
 "still. Don't install these releases for everyday use."
 msgstr ""
 
-#: download.phtml:51
+#: download.phtml:52
 #, php-format
 msgid ""
 "The latest unstable release of <span class=\"gnucash\">GnuCash</span> is "
@@ -1106,19 +1124,19 @@ msgstr ""
 "d'exploitation."
 
 #. Only show old stable download options if there really is an active unstable release
-#: download.phtml:64
+#: download.phtml:65
 #, fuzzy, php-format
 msgid "Old Stable release (%s)"
 msgstr "Version stable (%s)"
 
-#: download.phtml:66
+#: download.phtml:67
 msgid ""
 "This old stable release is the final version of the previous stable series. "
 "It's available for users who aren't ready for a major upgrade but want to "
 "make sure that they have all of the bugfixes from the old series."
 msgstr ""
 
-#: download.phtml:67
+#: download.phtml:68
 #, fuzzy, php-format
 msgid ""
 "The last old stable release of <span class=\"gnucash\">GnuCash</span> is "
@@ -1129,30 +1147,30 @@ msgstr ""
 "d'exploitation."
 
 #. Only show historical download options if enabled
-#: download.phtml:80
+#: download.phtml:81
 msgid "Latest versions for historical operating systems"
 msgstr ""
 
-#: download.phtml:82
+#: download.phtml:83
 msgid "This versions are really old. Do not expect any support."
 msgstr ""
 
-#: download.phtml:89
+#: download.phtml:90
 msgid "Other"
 msgstr "Autre"
 
-#: download.phtml:93
+#: download.phtml:94
 #, php-format
 msgid "View all GnuCash %s downloads (stable)"
 msgstr "Voir tous les téléchargements GnuCash %s (stable)"
 
 #. Only show unstable download options if there is an active unstable release
-#: download.phtml:98
+#: download.phtml:99
 #, php-format
 msgid "View all GnuCash %s downloads (unstable)"
 msgstr "Voir tous les téléchargements GnuCash %s (instable)"
 
-#: download.phtml:101
+#: download.phtml:102
 msgid "View all GnuCash downloads"
 msgstr "Voir tous les téléchargements GnuCash"
 
@@ -2760,8 +2778,140 @@ msgid ""
 "a separate window, please <a href=\"%s\" target=\"_new\">click here</a>."
 msgstr ""
 
+#~ msgid "user docs"
+#~ msgstr "docs utilisateurs"
+
+#~ msgid "test"
+#~ msgstr "test"
+
+# attention, scheme désigne le langage de programmation
+#~ msgid "scheme (misc)"
+#~ msgstr "scheme (divers)"
+
+#~ msgid "scheme"
+#~ msgstr "scheme"
+
+#~ msgid "reports"
+#~ msgstr "rapports"
+
+#~ msgid "register"
+#~ msgstr "livre"
+
+#~ msgid "mirror"
+#~ msgstr "site miroir"
+
+#~ msgid "ledger"
+#~ msgstr "grand livre"
+
+#~ msgid "gnome"
+#~ msgstr "gnome"
+
+#~ msgid "engine"
+#~ msgstr "moteur"
+
+#~ msgid "docs"
+#~ msgstr "docs"
+
+#~ msgid "business"
+#~ msgstr "commerce"
+
+#~ msgid "General Ledger"
+#~ msgstr "Grand livre"
+
+#, fuzzy
+#~ msgid "USA Mirror"
+#~ msgstr "site miroir"
+
+#~ msgid "For both reviewers and documentation writers"
+#~ msgstr "À la fois pour les relecteurs et les rédacteurs de la documentation"
+
+#~ msgid "Doxygen Developer Documentation"
+#~ msgstr "Informations pour développeur"
+
+#~ msgid ""
+#~ "The development of OFX and HBCI support has also resulted in an improved "
+#~ "transaction matching system that more accurately recognizes duplicate "
+#~ "transactions during file import."
+#~ msgstr ""
+#~ "Le développement du support OFX et HBCI a permis une amélioration de la "
+#~ "précision du mécanisme de détection des doublons dans les opérations "
+#~ "financières enregistrées."
+
+#~ msgid "Europe"
+#~ msgstr "Europe"
+
+#~ msgid ""
+#~ "The checkbook-style register provides a custom, convenient and familiar "
+#~ "interface to entering financial transactions.   The register supports "
+#~ "common checking and credit-card transactions, as well as income, stock "
+#~ "and currency transactions."
+#~ msgstr ""
+#~ "Le registre livre de compte fournit une interface intuitive, pratique et "
+#~ "familère pour inscrire des opérations financières. Il supporte des "
+#~ "opérations habituelles de compte chèque ou de carte de crédit, de même "
+#~ "que des opérations de revenus, de bourse ou de devises."
+
+#, fuzzy
+#~ msgid "Source code only (USA)"
+#~ msgstr "Code source"
+
+#~ msgid ""
+#~ "Everything you need concerning GnuCash documentation should be here, if "
+#~ "you notice something missing, email <a href='mailto:gnucash-devel@gnucash."
+#~ "org'>gnucash-devel</a> and we will add it."
+#~ msgstr ""
+#~ "Toute la documentation de GnuCash dont vous pourriez avoir besoin se "
+#~ "trouve ici. Si vous remarquez des lacunes, écrivez nous à: "
+#~ "<a·href='mailto:gnucash-devel@gnucash.org'>gnucash-devel</a>·et nous "
+#~ "ajouterons l'information manquante."
+
+#~ msgid "Documentation Development"
+#~ msgstr "Développement de la documentation"
+
+#~ msgid "Source code, Windows binary"
+#~ msgstr "Code source, exécutables windows"
+
+#~ msgid "Customers, Vendors, Jobs, <br>Invoices, A/P, A/R"
+#~ msgstr ""
+#~ "Clients, Fournisseurs, Tâches,<br>Factures, Avis de paiement et de "
+#~ "réception, "
+
+#~ msgid "Subversion Access"
+#~ msgstr "Accès à Subversion"
+
 #~ msgid "About / News"
 #~ msgstr "Sommaire / Actualités"
+
+#~ msgid "Improved Import Transaction Matching"
+#~ msgstr "Améliorations du rapprochement de Transactions Importées"
+
+#~ msgid ""
+#~ "GnuCash has an integrated reporting and graphing module, and comes "
+#~ "complete with a full suite of standard and customizeable reports, such as "
+#~ "Balance Sheet, Profit &amp; Loss, Portfolio Valuation, and many others."
+#~ msgstr ""
+#~ "Gnucash intègre un module de génération de rapports et de graphiques "
+#~ "incluant de nombreux rapports prédéfinis standards et adaptables tel "
+#~ "qu'un Bilan, un Compte de Résultat, une évaluation de portefeuille, etc."
+
+#~ msgid "GnuCash Documentation Project"
+#~ msgstr "Projet de documentation de GnuCash"
+
+#, fuzzy
+#~ msgid "Free Acconting Software"
+#~ msgstr "Logiciel Libre de finances personnelles"
+
+#~ msgid "USA (master site)"
+#~ msgstr "USA (site principal)"
+
+#~ msgid "Espagnol"
+#~ msgstr "Espagnol"
+
+#~ msgid "Documentation Project"
+#~ msgstr "Projet de documentation"
+
+#~ msgid "Deutsch"
+#~ msgstr "Allemand"
 
 #~ msgid ""
 #~ "A new help subsystem that focuses on how to do tasks is now available, in "
@@ -2774,81 +2924,15 @@ msgstr ""
 #~ "de concepts qui fournit à l'utilisateur les informations de base sur les "
 #~ "règles de comptabilité et comment elles sont gérées par GnuCash."
 
-#~ msgid "Customers, Vendors, Jobs, <br>Invoices, A/P, A/R"
-#~ msgstr ""
-#~ "Clients, Fournisseurs, Tâches,<br>Factures, Avis de paiement et de "
-#~ "réception, "
-
-#~ msgid "Deutsch"
-#~ msgstr "Allemand"
-
-#~ msgid "Documentation Development"
-#~ msgstr "Développement de la documentation"
-
-#~ msgid "Documentation Project"
-#~ msgstr "Projet de documentation"
-
-#~ msgid "Doxygen Developer Documentation"
-#~ msgstr "Informations pour développeur"
-
-#~ msgid "Espagnol"
-#~ msgstr "Espagnol"
-
-#~ msgid "Europe"
-#~ msgstr "Europe"
-
-#~ msgid ""
-#~ "Everything you need concerning GnuCash documentation should be here, if "
-#~ "you notice something missing, email <a href='mailto:gnucash-devel@gnucash."
-#~ "org'>gnucash-devel</a> and we will add it."
-#~ msgstr ""
-#~ "Toute la documentation de GnuCash dont vous pourriez avoir besoin se "
-#~ "trouve ici. Si vous remarquez des lacunes, écrivez nous à: "
-#~ "<a·href='mailto:gnucash-devel@gnucash.org'>gnucash-devel</a>·et nous "
-#~ "ajouterons l'information manquante."
-
-#~ msgid "For both reviewers and documentation writers"
-#~ msgstr "À la fois pour les relecteurs et les rédacteurs de la documentation"
-
 #, fuzzy
-#~ msgid "Free Acconting Software"
-#~ msgstr "Logiciel Libre de finances personnelles"
+#~ msgid "Source code only (Europe)"
+#~ msgstr "Code source"
 
-#~ msgid "General Ledger"
-#~ msgstr "Grand livre"
+#~ msgid "QIF Import"
+#~ msgstr "Importation de fichier QIF"
 
-#~ msgid "GnuCash Documentation Project"
-#~ msgstr "Projet de documentation de GnuCash"
-
-#~ msgid "GnuCash for Business Users"
-#~ msgstr "GnuCash pour Entreprises"
-
-#~ msgid ""
-#~ "GnuCash has an integrated reporting and graphing module, and comes "
-#~ "complete with a full suite of standard and customizeable reports, such as "
-#~ "Balance Sheet, Profit &amp; Loss, Portfolio Valuation, and many others."
-#~ msgstr ""
-#~ "Gnucash intègre un module de génération de rapports et de graphiques "
-#~ "incluant de nombreux rapports prédéfinis standards et adaptables tel "
-#~ "qu'un Bilan, un Compte de Résultat, une évaluation de portefeuille, etc."
-
-#, fuzzy
-#~ msgid "GnuCash v%s (old stable release)"
-#~ msgstr "Voir tous les téléchargements GnuCash %s (stable)"
-
-#~ msgid "Improved Import Transaction Matching"
-#~ msgstr "Améliorations du rapprochement de Transactions Importées"
-
-#~ msgid "Interesting Links"
-#~ msgstr "Liens d'intérêt"
-
-#~ msgid ""
-#~ "Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> QIF files can be imported, "
-#~ "and are automatically merged to eliminate duplicate transactions."
-#~ msgstr ""
-#~ "Les fichiers Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> QIF peuvent "
-#~ "être importés, et sont automatiquement fusionnés pour éliminer les "
-#~ "transactions doubles."
+#~ msgid "Neil Williams GnuCash documentation"
+#~ msgstr "Documentation GnuCash de Neil Williams"
 
 #~ msgid ""
 #~ "Multiple accounts can be displayed in one register window at the same "
@@ -2862,56 +2946,23 @@ msgstr ""
 #~ "portefeuille contenant beaucoup d'actions, en montrant toutes les "
 #~ "transactions de ce portefeuille. "
 
-#~ msgid "Neil Williams GnuCash documentation"
-#~ msgstr "Documentation GnuCash de Neil Williams"
-
-#~ msgid "QIF Import"
-#~ msgstr "Importation de fichier QIF"
-
-#, fuzzy
-#~ msgid "Source code only (Europe)"
-#~ msgstr "Code source"
-
-#, fuzzy
-#~ msgid "Source code only (USA)"
-#~ msgstr "Code source"
-
-#~ msgid "Source code, Windows binary"
-#~ msgstr "Code source, exécutables windows"
-
-#~ msgid "Subversion Access"
-#~ msgstr "Accès à Subversion"
-
 #~ msgid ""
-#~ "The checkbook-style register provides a custom, convenient and familiar "
-#~ "interface to entering financial transactions.   The register supports "
-#~ "common checking and credit-card transactions, as well as income, stock "
-#~ "and currency transactions."
+#~ "Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> QIF files can be imported, "
+#~ "and are automatically merged to eliminate duplicate transactions."
 #~ msgstr ""
-#~ "Le registre livre de compte fournit une interface intuitive, pratique et "
-#~ "familère pour inscrire des opérations financières. Il supporte des "
-#~ "opérations habituelles de compte chèque ou de carte de crédit, de même "
-#~ "que des opérations de revenus, de bourse ou de devises."
+#~ "Les fichiers Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> QIF peuvent "
+#~ "être importés, et sont automatiquement fusionnés pour éliminer les "
+#~ "transactions doubles."
 
-#~ msgid ""
-#~ "The development of OFX and HBCI support has also resulted in an improved "
-#~ "transaction matching system that more accurately recognizes duplicate "
-#~ "transactions during file import."
-#~ msgstr ""
-#~ "Le développement du support OFX et HBCI a permis une amélioration de la "
-#~ "précision du mécanisme de détection des doublons dans les opérations "
-#~ "financières enregistrées."
+#~ msgid "Interesting Links"
+#~ msgstr "Liens d'intérêt"
 
-#~ msgid "USA (master site)"
-#~ msgstr "USA (site principal)"
+#~ msgid "backend"
+#~ msgstr "stockage"
 
 #, fuzzy
-#~ msgid "USA Mirror"
-#~ msgstr "site miroir"
-
-#, fuzzy
-#~ msgid "Writing documentation"
-#~ msgstr "Documentation non-officielle"
+#~ msgid "GnuCash v%s (old stable release)"
+#~ msgstr "Voir tous les téléchargements GnuCash %s (stable)"
 
 #~ msgid ""
 #~ "You can now create recurring transactions, including automatic reminders "
@@ -2923,42 +2974,9 @@ msgstr ""
 #~ "automatiques quand une transaction est due, reporter une opération sans "
 #~ "l'annuler et préciser un nombre limité d'opérations."
 
-#~ msgid "backend"
-#~ msgstr "stockage"
+#~ msgid "GnuCash for Business Users"
+#~ msgstr "GnuCash pour Entreprises"
 
-#~ msgid "business"
-#~ msgstr "commerce"
-
-#~ msgid "docs"
-#~ msgstr "docs"
-
-#~ msgid "engine"
-#~ msgstr "moteur"
-
-#~ msgid "gnome"
-#~ msgstr "gnome"
-
-#~ msgid "ledger"
-#~ msgstr "grand livre"
-
-#~ msgid "mirror"
-#~ msgstr "site miroir"
-
-#~ msgid "register"
-#~ msgstr "livre"
-
-#~ msgid "reports"
-#~ msgstr "rapports"
-
-#~ msgid "scheme"
-#~ msgstr "scheme"
-
-# attention, scheme désigne le langage de programmation
-#~ msgid "scheme (misc)"
-#~ msgstr "scheme (divers)"
-
-#~ msgid "test"
-#~ msgstr "test"
-
-#~ msgid "user docs"
-#~ msgstr "docs utilisateurs"
+#, fuzzy
+#~ msgid "Writing documentation"
+#~ msgstr "Documentation non-officielle"

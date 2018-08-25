@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: gnucash-htdocs\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/page.cgi?id=browse."
 "html&product=GnuCash\n"
-"POT-Creation-Date: 2018-04-26 14:53+0200\n"
+"POT-Creation-Date: 2018-08-25 14:06-0700\n"
 "PO-Revision-Date: 2017-10-01 11:09+0200\n"
 "Last-Translator: Josep-Maria Prat i Filella <jpftgn@gmail.com>\n"
 "Language-Team: \n"
@@ -300,7 +300,7 @@ msgstr ""
 "\"gnucash\">GnuCash</span> a la Versió 2 o posterior de la llicència pública "
 "de Gnu des de només versió 2."
 
-#: 2.6-release-tour.phtml:165 docs.phtml:47 docs.phtml:181 docs.phtml:313
+#: 2.6-release-tour.phtml:165 docs.phtml:50 docs.phtml:195 docs.phtml:327
 #: download.phtml:5
 msgid "Download"
 msgstr "Descàrrega"
@@ -616,10 +616,11 @@ msgstr ""
 "documentació (normalment gnucash-docs, llevat que l'hagueu canviat de nom):"
 
 #: develdocs.phtml:69
+#, fuzzy
 msgid ""
 "Next attach your patch to a bug report against the documentation component "
 "for the <span class=\"gnucash\">GnuCash</span> project in <a href='https://"
-"bugzilla.gnome.org/'>Gnome's bugzilla database</a> and send an email to <a "
+"bugs.gnucash.org/'>Gnome's bugzilla database</a> and send an email to <a "
 "href='mailto:gnucash-devel@gnucash.org'>gnucash-devel</a> mailing list to "
 "inform other developers on your work. See also <a href='https://wiki.gnucash."
 "org/wiki/Bugzilla'>GnuCash' wiki page on bugzilla</a> for more details about "
@@ -683,11 +684,12 @@ msgstr ""
 "començar a comentar-la."
 
 #: develdocs.phtml:82
+#, fuzzy
 msgid ""
 "The best way of retaining comments about docs in an easy to find way for "
-"everyone would be to use <a href='https://bugzilla.gnome.org/'>bugzilla."
-"gnome.org</a> to file the bugs under documentation. This can also be done "
-"using bug-buddy."
+"everyone would be to use <a href='https://bugs.gnucash.org/'>bugs.gnucash."
+"org</a> to file the bugs under documentation. This can also be done using "
+"bug-buddy."
 msgstr ""
 "La millor manera de conservar comentaris sobre documents de manera fàcil de "
 "trobar per a tothom seria emprar <a href='https://bugzilla.gnome."
@@ -718,7 +720,14 @@ msgstr "Descarregueu la documentació en mobipocket"
 msgid "GnuCash Documentation"
 msgstr "Documentació del GnuCash"
 
-#: docs.phtml:24
+#: docs.phtml:26
+msgid ""
+"The following links are to the <strong>English HTML editions of the current "
+"stable branch</strong> documentation. See further down the page for other "
+"<span class=\"gnucash\">GnuCash</span> versions, languages, and formats."
+msgstr ""
+
+#: docs.phtml:27
 msgid ""
 "There are two major <span class=\"gnucash\">GnuCash</span> documentation "
 "packages to help users:"
@@ -726,15 +735,15 @@ msgstr ""
 "Hi ha dues importants fonts de documentació de <span class=\"gnucash"
 "\">GnuCash</span> per ajudar els usuaris:"
 
-#: docs.phtml:26
+#: docs.phtml:29
 msgid "The Help Manual"
 msgstr "El manual d'ajuda"
 
-#: docs.phtml:27
+#: docs.phtml:30
 msgid "The Tutorial and Concepts Guide"
 msgstr "El tutorial i la guia de conceptes"
 
-#: docs.phtml:30
+#: docs.phtml:33
 msgid ""
 "The <b>Help Manual</b> is designed to be a quick reference of how to "
 "accomplish specific tasks and how to use the features in <span class="
@@ -749,7 +758,7 @@ msgstr ""
 "\"gnucash\">GnuCash</span> amb un tutorial per mostrar com posar aquests "
 "conceptes a la pràctica."
 
-#: docs.phtml:32
+#: docs.phtml:35
 #, fuzzy
 msgid ""
 "Additionally, you can talk to someone via IRC at <i>irc.gnome.org</i> "
@@ -763,7 +772,7 @@ msgstr ""
 "<span class=\"gnucash\">GnuCash</span> en <a href=\"https://wiki.gnucash.org/"
 "wiki/\">anglès</a> o <a href=\"https://linuxwiki.de/GnuCash\">alemany</a>."
 
-#: docs.phtml:34
+#: docs.phtml:37
 msgid ""
 "You can also send an email to the <a href=\"mailto:gnucash-user@gnucash.org"
 "\">gnucash-user</a> mailing list if you cannot find a satisfactory answer to "
@@ -778,7 +787,7 @@ msgstr ""
 "retroalimentació, és també a través dels vostres comentaris que sabem com "
 "millorar la documentació."
 
-#: docs.phtml:37
+#: docs.phtml:40
 msgid ""
 "<span class=\"gnucash\">GnuCash</span>'s documentation has been created by "
 "its community. See the <a href=\"develdocs.phtml\">Writing Documentation "
@@ -789,62 +798,66 @@ msgstr ""
 "l'escriptura de documentació</a> si esteu interessats en contribuir en "
 "aquest aspecte."
 
-#: docs.phtml:42
+#: docs.phtml:45
 msgid "(current stable release)"
 msgstr "(llançament estable actual)"
 
 #. Only show old stable docs download options if there really is an active unstable release
-#: docs.phtml:42 docs.phtml:176 docs.phtml:482 docs.phtml:508 docs.phtml:530
-#: docs.phtml:548 docs.phtml:570
+#: docs.phtml:45 docs.phtml:190 docs.phtml:496 docs.phtml:522 docs.phtml:544
+#: docs.phtml:562 docs.phtml:584
 #, php-format
 msgid "GnuCash v%s"
 msgstr "GnuCash v%s"
 
-#: docs.phtml:44
+#: docs.phtml:47
 msgid "Current <em>stable</em> user documentation"
 msgstr "Documentació d'usuari <em>estable</em> actual"
 
-#: docs.phtml:47 docs.phtml:181
+#: docs.phtml:50 docs.phtml:195
 msgid "Stable"
 msgstr "Estable"
 
-#: docs.phtml:49 docs.phtml:183 docs.phtml:315 docs.phtml:485 docs.phtml:511
-#: docs.phtml:533 docs.phtml:551
+#: docs.phtml:52 docs.phtml:197 docs.phtml:329 docs.phtml:499 docs.phtml:525
+#: docs.phtml:547 docs.phtml:565
 msgid "Help Manual"
 msgstr "Manual d'ajuda"
 
-#: docs.phtml:53 docs.phtml:103 docs.phtml:187 docs.phtml:237 docs.phtml:319
-#: docs.phtml:369 docs.phtml:486 docs.phtml:497 docs.phtml:512 docs.phtml:523
-#: docs.phtml:534 docs.phtml:543 docs.phtml:552 docs.phtml:563 docs.phtml:571
+#: docs.phtml:56 docs.phtml:106 docs.phtml:201 docs.phtml:251 docs.phtml:333
+#: docs.phtml:383 docs.phtml:500 docs.phtml:511 docs.phtml:526 docs.phtml:537
+#: docs.phtml:548 docs.phtml:557 docs.phtml:566 docs.phtml:577 docs.phtml:585
 msgid "English"
 msgstr "Anglès"
 
-#: docs.phtml:64 docs.phtml:114 docs.phtml:198 docs.phtml:248 docs.phtml:330
-#: docs.phtml:380 docs.phtml:488 docs.phtml:499 docs.phtml:514 docs.phtml:536
-#: docs.phtml:556 docs.phtml:572
+#: docs.phtml:67 docs.phtml:117 docs.phtml:212 docs.phtml:262 docs.phtml:344
+#: docs.phtml:394 docs.phtml:502 docs.phtml:513 docs.phtml:528 docs.phtml:550
+#: docs.phtml:570 docs.phtml:586
 msgid "German"
 msgstr "Alemany"
 
-#: docs.phtml:75 docs.phtml:125 docs.phtml:209 docs.phtml:259 docs.phtml:341
-#: docs.phtml:391 docs.phtml:490 docs.phtml:501 docs.phtml:516 docs.phtml:525
+#: docs.phtml:78 docs.phtml:128 docs.phtml:223 docs.phtml:273 docs.phtml:355
+#: docs.phtml:405 docs.phtml:504 docs.phtml:515 docs.phtml:530 docs.phtml:539
 msgid "Italian"
 msgstr "Italià"
 
-#: docs.phtml:86 docs.phtml:147 docs.phtml:220 docs.phtml:281 docs.phtml:352
-#: docs.phtml:413
+#: docs.phtml:89 docs.phtml:150 docs.phtml:234 docs.phtml:295 docs.phtml:366
+#: docs.phtml:427
 msgid "Portuguese"
 msgstr "Portuguès"
 
-#: docs.phtml:99 docs.phtml:233 docs.phtml:365 docs.phtml:496 docs.phtml:522
-#: docs.phtml:542 docs.phtml:562
+#: docs.phtml:102 docs.phtml:247 docs.phtml:379 docs.phtml:510 docs.phtml:536
+#: docs.phtml:556 docs.phtml:576
 msgid "Concepts Guide"
 msgstr "Guia de conceptes"
 
-#: docs.phtml:136 docs.phtml:270 docs.phtml:402 docs.phtml:503
+#: docs.phtml:139 docs.phtml:284 docs.phtml:416 docs.phtml:517
 msgid "Japanese"
 msgstr "Japonès"
 
-#: docs.phtml:168
+#: docs.phtml:161 docs.phtml:438
+msgid "Russian"
+msgstr ""
+
+#: docs.phtml:182
 msgid ""
 "This is the latest stable release of the <span class=\"gnucash\">GnuCash</"
 "span> documentation. <em>Stable</em> means that this documentation is not "
@@ -855,15 +868,15 @@ msgstr ""
 "documentació no és necessàriament la més actualitzada però funciona sense "
 "cap problema."
 
-#: docs.phtml:176
+#: docs.phtml:190
 msgid "(old stable release)"
 msgstr "(llançament estable antic)"
 
-#: docs.phtml:178
+#: docs.phtml:192
 msgid "Old <em>stable</em> user documentation"
 msgstr "Documentació d'usuari <em>estable</em> antiga"
 
-#: docs.phtml:302
+#: docs.phtml:316
 #, php-format
 msgid ""
 "This is the old stable release of the <span class=\"gnucash\">GnuCash</span> "
@@ -874,38 +887,34 @@ msgstr ""
 "\"gnucash\">GnuCash</span>, que correspon al llançament %s de <span class="
 "\"gnucash\">GnuCash</span>."
 
-#: docs.phtml:308
+#: docs.phtml:322
 msgid "Nightly Documentation Builds"
 msgstr "Compilacions nocturnes de documentació"
 
-#: docs.phtml:310
+#: docs.phtml:324
 msgid ""
 "Current <em>unstable</em> user documentation and developer documentation"
 msgstr ""
 "Actual <em>inestable</em> Documentació de l'usuari i Documentació per a "
 "desenvolupadors"
 
-#: docs.phtml:313
+#: docs.phtml:327
 msgid "Unstable"
 msgstr "Inestable"
 
-#: docs.phtml:424
-msgid "Russian"
-msgstr ""
-
-#: docs.phtml:437
+#: docs.phtml:451
 msgid "API"
 msgstr "Interfície de programació d'aplicacions (API en anglès)"
 
-#: docs.phtml:442 externals/menu.phtml:57
+#: docs.phtml:456 externals/menu.phtml:57
 msgid "current bugfix branch"
 msgstr "branca actual de correcció d'errors"
 
-#: docs.phtml:446 externals/menu.phtml:58
+#: docs.phtml:460 externals/menu.phtml:58
 msgid "future feature branch"
 msgstr "branca de característiques futures"
 
-#: docs.phtml:459
+#: docs.phtml:473
 msgid ""
 "Every night a server builds the documentation from the current contents of "
 "the <span class=\"gnucash\">GnuCash</span> source repository. This includes "
@@ -919,7 +928,7 @@ msgstr ""
 "<b>Documentació d'usuari</b > per a la versió <em>estable</em> de <span "
 "class=\"gnucash\">Gnucash</span>."
 
-#: docs.phtml:463
+#: docs.phtml:477
 msgid ""
 "<b>NOTE:</b> these documents might not be accessible from time to time "
 "because developers might be working on improvements. However they are the "
@@ -932,11 +941,11 @@ msgstr ""
 
 #. until here region code in LANG required
 #. region code no longer required
-#: docs.phtml:478
+#: docs.phtml:492
 msgid "Older GnuCash Documentation"
 msgstr "Documentació del Gnucash més antiga"
 
-#: docs.phtml:480
+#: docs.phtml:494
 msgid ""
 "This section contains all the older <span class=\"gnucash\">GnuCash</span> "
 "documentation. If you are using one of these old versions of <span class="
@@ -948,31 +957,31 @@ msgstr ""
 "anteriors de <span class=\"gnucash\">GnuCash</span>, us recomanem que "
 "l'actualitzeu a la versió estable més recent."
 
-#: docs.phtml:573
+#: docs.phtml:587
 msgid "Spanish"
 msgstr "Castellà"
 
-#: docs.phtml:574
+#: docs.phtml:588
 msgid "Portugese"
 msgstr "Portuguès"
 
-#: docs.phtml:580
+#: docs.phtml:594
 msgid "Unofficial documentation"
 msgstr "Documentació no oficial"
 
-#: docs.phtml:582
+#: docs.phtml:596
 msgid "Some people have written HOWTO guides or tutorials."
 msgstr "Algunes persones han escrit guies HOWTO o tutorials."
 
-#: docs.phtml:585
+#: docs.phtml:599
 msgid "Joe Mack's Tutorial"
 msgstr "Tutorial de Joe Mack"
 
-#: docs.phtml:588
+#: docs.phtml:602
 msgid "Dave Gilbert's User Guide (Pdf)"
 msgstr "Guia d'usuari de Dave Gilbert (Pdf)"
 
-#: docs.phtml:592
+#: docs.phtml:606
 msgid ""
 "<b>NOTE:</b> the information presented in these sources may or may not be "
 "updated to the most recent version of <span class=\"gnucash\">GnuCash</"
@@ -1108,8 +1117,8 @@ msgstr ""
 msgid "Installers"
 msgstr "Instal·ladors"
 
-#: download.phtml:22 download.phtml:23 download.phtml:54 download.phtml:55
-#: download.phtml:70 download.phtml:71 download.phtml:84
+#: download.phtml:22 download.phtml:23 download.phtml:55 download.phtml:56
+#: download.phtml:71 download.phtml:72 download.phtml:85
 #, php-format
 msgid "GnuCash %s for"
 msgstr "GnuCash %s per a"
@@ -1171,6 +1180,16 @@ msgstr ""
 "programari addicional per a la vostra configuració, vegeu"
 
 #: download.phtml:34
+#, fuzzy
+msgid ""
+"Solus users can install <span class=\"gnucash\">GnuCash</span> through the "
+"Software Center(Office Software -> Financial Software -> gnucash)."
+msgstr ""
+"Els usuaris de Mandriva poden instal·lar <span class=\"gnucash\">Gnucash</"
+"span> mitjançant la gestió de programari al centre de Control de Mandriva "
+"Linux."
+
+#: download.phtml:35
 msgid ""
 "Ubuntu users can install <span class=\"gnucash\">GnuCash</span> through the "
 "Software Center. This will install <span class=\"gnucash\">GnuCash</span> "
@@ -1180,7 +1199,7 @@ msgstr ""
 "a través del centre de programari. Això instal·larà <span class=\"gnucash"
 "\">Gnucash</span> sota la categoria d'oficina al menú d'aplicacions."
 
-#: download.phtml:36
+#: download.phtml:37
 msgid ""
 "If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> or "
 "you wish to install a different version than it ships with, you could try to "
@@ -1195,16 +1214,16 @@ msgstr ""
 "href='https://wiki.gnucash.org/wiki/Building'> directrius per a diverses "
 "distribucions </a>."
 
-#: download.phtml:38
+#: download.phtml:39
 msgid "Source code"
 msgstr "Codi font"
 
-#: download.phtml:40 download.phtml:56 download.phtml:72
+#: download.phtml:41 download.phtml:57 download.phtml:73
 #, php-format
 msgid "for GnuCash %s"
 msgstr "per a Gnucash %s"
 
-#: download.phtml:42
+#: download.phtml:43
 msgid ""
 "For build instructions, please check the <span class=\"gnucash\">GnuCash</"
 "span> wiki which has <a href='https://wiki.gnucash.org/wiki/"
@@ -1215,12 +1234,12 @@ msgstr ""
 "GnuCash#Installation'>directrius per a diverses distribucions</a>."
 
 #. Only show unstable download options if there really is an active unstable release
-#: download.phtml:48
+#: download.phtml:49
 #, php-format
 msgid "Unstable/Development release (%s)"
 msgstr "Llançament (%s) inestable/desenvolupament"
 
-#: download.phtml:50
+#: download.phtml:51
 msgid ""
 "Unstable (development) releases are for testing purposes only. They contain "
 "the newest features and improvements, but may also contain serious bugs "
@@ -1230,7 +1249,7 @@ msgstr ""
 "Contenen els trets nous i les millores, però també poden contenir errors "
 "seriosos encara. No instal·li aquests llançaments per a ús diari."
 
-#: download.phtml:51
+#: download.phtml:52
 #, php-format
 msgid ""
 "The latest unstable release of <span class=\"gnucash\">GnuCash</span> is "
@@ -1240,12 +1259,12 @@ msgstr ""
 "%s. Seleccioneu la descàrrega per al vostre sistema a continuació."
 
 #. Only show old stable download options if there really is an active unstable release
-#: download.phtml:64
+#: download.phtml:65
 #, php-format
 msgid "Old Stable release (%s)"
 msgstr "Llançament (%s) estable antic"
 
-#: download.phtml:66
+#: download.phtml:67
 msgid ""
 "This old stable release is the final version of the previous stable series. "
 "It's available for users who aren't ready for a major upgrade but want to "
@@ -1256,7 +1275,7 @@ msgstr ""
 "major actualització però volen assegurar-se que tenen totes les correccions "
 "d'errors de la sèrie antiga ."
 
-#: download.phtml:67
+#: download.phtml:68
 #, php-format
 msgid ""
 "The last old stable release of <span class=\"gnucash\">GnuCash</span> is "
@@ -1267,30 +1286,30 @@ msgstr ""
 "continuació."
 
 #. Only show historical download options if enabled
-#: download.phtml:80
+#: download.phtml:81
 msgid "Latest versions for historical operating systems"
 msgstr ""
 
-#: download.phtml:82
+#: download.phtml:83
 msgid "This versions are really old. Do not expect any support."
 msgstr ""
 
-#: download.phtml:89
+#: download.phtml:90
 msgid "Other"
 msgstr "Altres"
 
-#: download.phtml:93
+#: download.phtml:94
 #, php-format
 msgid "View all GnuCash %s downloads (stable)"
 msgstr "Veure totes les descàrregues de Gnucash %s (estable)"
 
 #. Only show unstable download options if there is an active unstable release
-#: download.phtml:98
+#: download.phtml:99
 #, php-format
 msgid "View all GnuCash %s downloads (unstable)"
 msgstr "Veure totes les descàrregues de Gnucash %s (inestable)"
 
-#: download.phtml:101
+#: download.phtml:102
 msgid "View all GnuCash downloads"
 msgstr "Veure totes les descàrregues de GnuCash"
 
