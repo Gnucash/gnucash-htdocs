@@ -1,9 +1,9 @@
-<?php 
+<?php
   /* Some notes:
   LANG tag: 1.6-2.2: ll_RR, but "es", later: ll
   Encoding: 1.6-1.8: ISO-8859-1, >=2.0: UTF-8
   DocTypes: always HTML,
-  		PDF:1.8 en only, 2.0-.2 no, 
+  		PDF:1.8 en only, 2.0-.2 no,
   		since 2.4: PDF, ePub, Mobi
    */
   include("lang.php");
@@ -11,7 +11,7 @@
   $online = T_("Browse documentation online");
   $pdf = T_("Download documentation as PDF");
   $epub = T_("Download documentation as epub");
-  $mobi = T_("Download documentation as mobipocket");                                                   
+  $mobi = T_("Download documentation as mobipocket");
   include("emulate_globals_on.php");
   include("externals/header.phtml");
   include("externals/menu.phtml");
@@ -20,7 +20,7 @@
 <div id="content">
 
   <h1><?php echo T_("GnuCash Documentation");?></h1>
-  
+
   <p class="justify"><?php
 
   echo T_("The following links are to the <strong>English HTML editions of the current stable branch</strong> documentation. See further down the page for other <span class=\"gnucash\">GnuCash</span> versions, languages, and formats.");
@@ -29,17 +29,17 @@
     <li><a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$major_stable;?>&amp;lang=C&amp;doc=help"><b><?php echo T_("The Help Manual");?></b></a></li>
     <li><a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$major_stable;?>&amp;lang=C&amp;doc=guide"><b><?php echo T_("The Tutorial and Concepts Guide");?></b></a></li>
   </ul>
-  
+
   <p class="justify"><?php echo T_("The <b>Help Manual</b> is designed to be a quick reference of how to accomplish specific tasks and how to use the features in <span class=\"gnucash\">GnuCash</span>. The <b>Concepts Guide</b> is designed to be an in depth guide to the concepts behind using <span class=\"gnucash\">GnuCash</span> with a tutorial to show how to put those concepts into practice.");?></p>
-  
+
   <p class="justify"><?php echo T_("Additionally, you can talk to someone via IRC at <i>irc.gnome.org</i> channel <b>#gnucash</b> about your question. Another resource is the <a href=\"https://wiki.gnucash.org/wiki/\">English</a> or <a href=\"https://wiki.gnucash.org/wiki/De/\">Deutsch</a> <span class=\"gnucash\">GnuCash</span> wikis.");?></p>
-  
+
   <p class="justify"><?php echo T_("You can also send an email to the <a href=\"mailto:gnucash-user@gnucash.org\">gnucash-user</a> mailing list if you cannot find a satisfactory answer to your question within either the <b>Help Manual</b> or the <b>Tutorial and Concepts Guide</b>. We <b>want</b> feedback from you, it is also through your comments that we know how to improve the documentation.");?></p>
-  
+
   <div class="dialog note">
     <p class="justify"><?php echo T_("<span class=\"gnucash\">GnuCash</span>'s documentation has been created by its community. See the <a href=\"develdocs.phtml\">Writing Documentation page</a> if you are interested in contributing to this effort.");?></p>
   </div>
-  
+
   <div class="featurecontainer">
     <div class="featureborder">
       <h2 class="featuretitle"><?php printf (T_("GnuCash v%s"), $major_stable)?> <?php echo T_("(current stable release)");?></h2>
@@ -479,7 +479,7 @@
 
 <!--Documentation for older GnuCash release-->
 <!--Define variable for older documentation: add them here if needed-->
-<?php 
+<?php
 $older1		="1.6";
 $older2		="1.8";
 $older3		="2.0";
@@ -581,10 +581,10 @@ $older5		="2.4"; // region code no longer required
       </li>
     </ul>
   </li>
-  <li><b><?php printf (T_("GnuCash v%s"), $older1)?></b>: 
-  <a href="<?=$top_dir;?>/docs/v<?=$older1;?>/C/"><?php echo T_("English");?></a> | 
-  <a href="<?=$top_dir;?>/docs/v<?=$older1;?>/de_DE/"><?php echo T_("German");?></a> | 
-  <a href="<?=$top_dir;?>/docs/v<?=$older1;?>/es/"><?php echo T_("Spanish");?></a> | 
+  <li><b><?php printf (T_("GnuCash v%s"), $older1)?></b>:
+  <a href="<?=$top_dir;?>/docs/v<?=$older1;?>/C/"><?php echo T_("English");?></a> |
+  <a href="<?=$top_dir;?>/docs/v<?=$older1;?>/de_DE/"><?php echo T_("German");?></a> |
+  <a href="<?=$top_dir;?>/docs/v<?=$older1;?>/es/"><?php echo T_("Spanish");?></a> |
   <a href="<?=$top_dir;?>/docs/v<?=$older1;?>/pt_PT/"><?php echo T_("Portugese");?></a></li>
 </ul>
 </div>
