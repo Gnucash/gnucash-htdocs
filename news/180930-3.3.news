@@ -1,0 +1,254 @@
+<b>Announcement:</b> GnuCash 3.3 Release
+2018-09-30
+
+<h2>GnuCash 3.3 released</h2>
+
+<p>The GnuCash development team announces GnuCash 3.3, the fourth release of the 3.x stable release series.</p>
+<h3>Changes</h3>
+
+
+<p>Between 3.2 and 3.3, the following bugfixes were accomplished:</p>
+<ul>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=771667">Bug 771667 - Different warnings when changing reconciled splits vs. splits linked to reconciled splits.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=784420">Bug 784420 - "Save changes on closing" window waits 2^32 seconds when "Time to wait for answer" is set 0.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=786708">Bug 786708 - GnuCash won't load currency fractions larger than 1000000.</a>
+  Also create larger fractions for the account dialog.</li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=787439">Bug 787439 - Segmentation Fault in Transfer dialog after clearing Date field and pressing escape.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=789594">Bug 789594 - Unable to overwrite sqlite3 database file.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=792446">Bug 792446 - Mixed languages in error dialog.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=794526">Bug 794526 - Python bindings can't find loadable modules.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=794755">Bug 794755 - Commodity Register displays fractional prices.</a>
+  <p>Prices will now be displayed in decimal, rounded to two more places than the currency's smallest unit.</p></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=794870">Bug 794870 - If no book is opened, gnucash still asks if the user wants to save changes when opening a file.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795821">Bug 795821 - GnuCash could not obtain the lock for file://C:\Users\username\Documents\GnuCash\2.6.21\xxxx\xxxx.gnucash</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796054">Bug 796054 - Unposting and reposting invoice doubles amounts.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796137">Bug 796137 - query.search_for outputs critical qof.object errors and prevents queries being run.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796248">Bug 796248 - Editing Scheduled Transaction.</a>
+  <p>In addition to not begining to edit already-loaded transactions, don't try to load splits that are already loaded. It shouldn't be possible to load a transaction without also loading its splits.</p></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796474">Bug 796474 - Segmentation fault while setting up online banking.</a>
+  <p>Allow only a single instance of the assistant.</p></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796509">Bug 796509 - Saved reports don't respect *some* 'Edit report options'.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796579">Bug 796579 - Cannot go forward with empty duplicates screen.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796665">Bug 796665 - Backspace Key Inoperable After Ctrl+V.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796669">Bug 796669 - Dark Theme Text Colors Hard to Read.</a>
+  <p>Only add the register-foreground class when using Gnucash built in colours. When this setting not used, the foreground colour by default will be what ever the theme has set and will be down to the user to over ride along with the other register colours.</p></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796724">Bug 796724 - Can't overwrite gnucash DB on MariaDB.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796725">Bug 796725 - 4 of 6 Date Posted options fail to return matching transactions.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796734">Bug 796734 - Auto-complete entry not highlighting to allow for incremental entry.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796737">Bug 796737 - Patch to restore gncmod-python.c.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796739">Bug 796739 - Toolbar buttons have no labels.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796751">Bug 796751 - reconcile window usability - R column should be next to Amount.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796755">Bug 796755 - buggy window handling at startup.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796756">Bug 796756 - OFX import fails to recognize associated income accounts.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796759">Bug 796759 - --add-price-quotes <sql file> leaves a lock on the file.
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796762">Bug 796762 - Scrollbar partially hides the delete button in the Saved Report Configurations window.</a>
+  <p>The vertical scrollbar obscures the delete button in the tree view so add a dummy blank column to the end and set it to the width of the vertical scrollbar.</p></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796766">Bug 796766 - Credit note creating 'imbalance' with wrong entries.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796777">Bug 796777 - CVE-2008-1391: Integer overflow in included strfmon function.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796788">Bug 796788 - Strange behaviour in options of multicolumn report.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796792">Bug 796792 - SaveAs Overwrite dialogue in background and not visible.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796812">Bug 796812 - gnc_date_cell_get_date and gnc_date_cell_get_date_gdate have different date validation behaviour.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796813">Bug 796813 - Date validation inconsistent.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796814">Bug 796814 - Changing a book's read-only threshold doesn't immediately affect open registers.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796816">Bug 796816 - Notes field in Duplicate Invoice dialogue is 'read-only'.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796819">Bug 796819 - Bad icon with Spanish localization.</a>
+  <p>Drop translations of the 'gnucash-icon' string from our po files and add a note for translators to not translate this string or use the literal 'gnucash-icon' as translation.</p></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796820">Bug 796820 - References to 'Gnome Bugzilla' should be changed to 'GnuCash Bugzilla'.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796833">Bug 796833 - Excel csv Format misprocessed.</a>
+  <p>Convert all line ending styles to the one expected by the C++ standard library before starting to parse a csv file.</p></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796839">Bug 796839 - Find transaction won't filter on Date Posted.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796858">Bug 796858 - TypeError: in method 'qof_query_int32_predicate', argument 2 of type 'gint32' on gnucash.gnucash_core.QueryInt32Predicate.</a></li>
+
+</ul>
+
+<p> The Following fixes and improvemts were not associated with bug reports:</p>
+<ul>
+  <li>Set toolbar buttons to show both icon and text.
+  <p>And make the icon small to recover some vertical screen estate. The
+  motivation for this is that Gtk has dropped the ability for users
+  to change a toolbar's appearance. And as our icons are often less than
+  descriptive many users benefit from having textual descriptions as
+  well. This is the best compromise we can make until the gui gets an
+  in-depth redesign.</p></li>
+  <li>Add preference for forcing prices to decimal display.
+  <p>Anticipating that some users might prefer to see exact prices, add
+  a preference to General>Numbers to configure whether prices are
+  rounded to decimals or are displayed as exact fractions.</p></li>
+  <li>Revert the "Average Cost" pricing changes made in 2.6.17.
+  <p>These changes broke trial balances in many books.</p></li>
+  <li>Allow saving to xml over an existing sqlite3 file and the other way around.</li>
+  <li>Add customer/vendor ID in client section of invoices.
+  <p>Partly fixes bugs 430259 and 742086; full fixes would require
+  not-backward-compatible data model changes.</p></li>
+  <li>Change the default filter for General Ledger.
+  <p>The General Ledger default for the number of days shown is 30 but
+  for the Register it is 0, meaning show all. So change the default
+  filter based on ledger type and use this when determining if the
+  setting should be saved or removed.</p></li>
+  <li>Fix gtk accelerator mixups by explicitly disabling actions that are not
+  relevant.
+  <p>For example, File->Print and its variants for various page
+  types all use the same '&lt;primar&gt;p' as global accelerator. It was
+  possible to have gnucash invoke the 'Print Report...' action instead
+  of the 'Print Invoice...' action when hitting &lt;primary&gt;p on an invoice
+  page. If no report page was open at this point, gnucash would crash.
+  If a report was open, gnucash would invoke the print action on that
+  report instead of opening an invoice report for the invoice.</p></li>
+  <li>[job-report] Prevent Crash if there is no AR account</li>
+  <li>Add the ability to cascade account colours in account tree.
+  <p>The colour on an account that has sub-accounts can be applied to its
+  sub-accounts; by default only those sub-accounts that don't have a
+  colour set are affected, but there's a preference to override that.</p></li>
+  <li>Speed up loading the preference dialog by blocking register updates until the dialog is fully loaded.</li>
+  <li>Update change_tax_code.py, add basic test for python query.</li>
+  <li>Simplify GNCQueryView's data model: It was managing a number of redudant
+  parameters which were leaking memory all over the place. The information
+  that was tracked could easily be extracted from the underlying
+  GtkTreeView, GtkTreeModel or GtkTreeSelection when needed.</li>
+  <li>Open customer/vendor/employee report when double-clicking an the
+  respective owner the cust/vend/empl overview page.</li>
+  <li>Update Overview of README based on https://lists.gnucash.org/pipermail/gnucash-devel/2018-September/042748.html</li>
+  <li>Many new tests for reports.</li>
+  <li>Some substantial speedups when loading large amounts of business
+  transactions from a SQL backend.</li>
+  <li>Clean up a lot of memory leaks.</li>
+  <li>Remove all use of Timespec in the program. Provide deprecated wrapper
+  functions supporting timespecs for custom reports; users should update
+  the reports as soonas possible.</li>
+</ul>
+
+<p>The following translations are updated: Farsi, Ukrainian</p>
+<h2>Known Issues</h2>
+<p>The following are open bug reports new to the 3.x series considered significant by the development team:</p>
+<ul>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=788332">Bug 788332 - Last Reconcile Date column sorts by day of month not date.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=791825">Bug 791825 - Accounting Period dates (among others) stored with a TZ-sensitive time.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=793156">Bug 793156 - Incorrect sort order in Generic import transaction matcher window.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=793306">Bug 793306 - Price is not imported from CSV.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=793556">Bug 793556 - CSV export/import creates unbalanced transaction for fractional price.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=794584">Bug 794584 - Register not updated when scheduled transactions created.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=794644">Bug 794644 - Remove Old Prices is very slow.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=794807">Bug 794807 - Calendar widget current month shown as (null).</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795071">Bug 795071 - new account entry screen keeps on disappearing and coming back.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795253">Bug 795253 - Have problems input Chinese.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795294">Bug 795294 - Can't navigate between tabs using the scroll wheel.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795362">Bug 795362 - Special variable "i" not parsed in function calls.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795383">Bug 795383 - Gnucash crashes on import of a 1400-transaction (or more) CSV file.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795384">Bug 795384 - GnuCash 3 is tremendously memory hungry on macOs.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795729">Bug 795729 - Advanced Portfolio Report - Percentage rates not displaying leading zeroes.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795753">Bug 795753 - Initial save into MySQL should use bulk inserts.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795804">Bug 795804 - Extremely slow save.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795961">Bug 795961 - CSV importer doesn't match any rows.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796100">Bug 796100 - Autosave Doesn't Always Work.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796122">Bug 796122 - Poor Performance Scanning Old Files During Autosave.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796492">Bug 796492 - Wrong calculation of the first occurrence.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796496">Bug 796496 - CSV Importer: Column Selectors invisible on Windows</a></li>.
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796500">Bug 796500 - Scalability issue - importing large CSV to large book won't finish.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796520">Bug 796520 - Layout overlapping in Income &amp; Expense Chart.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796656">Bug 796656 - GnuCash frequently crashes, usually involving unsaved transactions.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796687">Bug 796687 - Tax Entity name and type for an account won't work under "Tax Reporting Options" in Gnucash 3.2</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796688">Bug 796688 - "Next" Button Moves Repeatedly During New File Wizard.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796698">Bug 796698 - Transaction can't be updated on MariaDB 10.2.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796728">Bug 796728 - GnuCash 3.0-3.2 crashes when starting up under Windows.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796736">Bug 796736 - Column Widths calculator need to allow more padding.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796740">Bug 796740 - Selecting register value with mouse fails.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796746">Bug 796746 - Cannot copy and paste anything into the amount field (both credit and debit)
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796750">Bug 796750 - qof_query_search_for stores pointer of type string argument.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796754">Bug 796754 - Guile encoding certain strings not as UTF-8.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796758">Bug 796758 - Improve error messages, why one can not remove a tax table.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796761">Bug 796761 - Newline (char(10) is inserted into the end of the string if copy & paste text from excel into the description field of transaction.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796767">Bug 796767 - The importer shows read-only and placeholder accounts.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796772">Bug 796772 - Receivable Ageing Report invalid URL for Totals column.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796773">Bug 796773 - Display of Negative numbers.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796774">Bug 796774 - Investment account QIF Import does not import transaction.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796775">Bug 796775 - Auto fill not working correctly (only match the first char you type ...)</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796779">Bug 796779 - Window size in SEPA transaction.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796782">Bug 796782 - Cannot import OFX file in new 3.2.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796789">Bug 796789 - Unable to access mounted USB sticks and/or network locations from File Open/File Save As dialogs Ubuntu/Linux Mint.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796790">Bug 796790 - Crash on MacOS on brand new installation without any transactions entered yet.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796799">Bug 796799 - After Deleting Transaction Price, Enter Required 2x.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796804">Bug 796804 - Nonenglish characters problem in Book Options.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796806">Bug 796806 - Crash after OFX import if line item dragged.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796810">Bug 796810 - Account creation and editing dialogs do not allow entering umlaut-u.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796824">Bug 796824 - took more than 2 hours to import 220 transactions.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796842">Bug 796842 - Add new employee window may not fit on screen.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796844">Bug 796844 - Amount column of Customer Report should net Credits and Debits.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796847">Bug 796847 - Error trying to do CSV import doesn't recognize account specification.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796849">Bug 796849 - Load another QIF file causes "that file already loaded" dialog.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796850">Bug 796850 - Auto-decimal-point causes incorrect price to display when amount is edited.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796857">Bug 796857 - Import of QIF duplicates transfer transactions.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796867">Bug 796867 - GNUCash crashes on startup with Mac Mojave 10.14 Dark mode.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796869">Bug 796869 - Find Transaction Description pulldown does not work.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796870">Bug 796870 - Cannot (occasionally) undo invoice billing.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796871">Bug 796871 - Some file chooser buttons don't understand UNC paths on Windows.</a></li>
+</ul>
+<h2>Documentation</h2>
+<p>Concurrent with the release of Gnucash 3.3 we're pleased to also release a new version 3.3 of the companion <em>Help</em> and <em>Tutorial and Concepts Guide</em>.</p>
+<p>Documentation changes:</p>
+<ul>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=777893">Bug 777893 - Add information to Guide about file formats, esp. SQL.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=791169">Bug 791169 - Add Reconciliation definition to glossary.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796800">Bug 796800 - None of the "GnuCash Tutorial and Concepts Guide" graphics (.png files) display.</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796820">Bug 796820 - References to "Gnome Bugzilla" should be changed to "GnuCash Bugzilla".</a></li>
+  <li>Add travis continuous integration to docs.</li>
+  <li>Add tax tables to documentation.</li>
+  <li>Document Filter/Closing transactions feature.</li>
+</ul>
+
+<h3>Getting GnuCash for Windows and MacOS X</h3>
+<p>GnuCash is provided for both Microsoft Windows XP&reg; and later
+and MacOS X 10.9 (Mavericks)&reg; and later in pre-built, all-in-one
+packages. An installer is provided for Microsoft Windows&reg; while
+the MacOS X&reg; package is a disk image containing a drag-and-drop
+application bundle.</p>
+<p>The SHA256 Hashes for the downloadable files are:
+<ul>
+  <li><code>8396ed8d2a88ac358ecf458c253cf38f55a13aaba7958e4fde3dd85c222e393f</code>&nbsp;&nbsp;gnucash-3.3.tar.bz2</li>
+  <li><code>491735df36cb7ba9d04de28e28df53c3e5d928bda52009708d2f83ab9a42f820</code>&nbsp;&nbsp;gnucash-3.3.tar.gz</li>
+  <li><code>869a227120e20e805b5c0455b0312b826b4bb3e305d4a4b477c93ed9aba1e668</code>&nbsp;&nbsp;gnucash-3.3.setup.exe</li>
+  <li><code>c1d97818e9f34e5113d030b4d9a850a297cb2d2ffb871e7cb9b80d5cf3ff2336</code>&nbsp;&nbsp;Gnucash-Intel-3.3-1.dmg</li>
+  <li><code>0cf34e858a6e13fbef3c3987109bed895deb94a60bcd42d61dca43c36f716dab</code>&nbsp;&nbsp;gnucash-docs-3.3.tar.gz</li>
+</ul></p>
+
+<ul>
+  <li>SourceForge:
+  <ul>
+    <li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-3.3.setup.exe">Win32</a></li>
+    <li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/Gnucash-Intel-3.3-1.dmg">Mac-Intel</a></li>
+  </ul></li>
+  <li>Github
+  <ul>
+    <li><a href="https://github.com/Gnucash/gnucash/releases/download/3.3/gnucash-3.3.setup.exe">Win32</a></li>
+    <li><a href="https://github.com/Gnucash/gnucash/releases/download/3.3/Gnucash-Intel-3.3-1.dmg">Mac-Intel</a></li>
+</ul></li></ul>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 3.3 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+  <li>Sourceforge: <a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-3.3.tar.bz2">bzip2</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/3.3/">all files</a>.</li>
+
+  <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/3.3/gnucash-3.3.tar.bz2">bzip</a> <b>WARNING</b> Do not try to use the github-generated files labelled "Source Code". They have not been processed with swig and will not build.</li>
+
+  <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https:www.gtk.org">Gtk+</a> 3.10, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0, <a href="https://www.boost.org/">Boost</a> 1.54, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, and <a href="https://github.com/google/googletest">GoogleTest</a> 1.7.0. In addition you will need <a href="http://www.swig.org/">SWIG</a> 2.0.10 if compiling from git. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 3.3 documentation can be found under "GnuCash v3 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats. The documentation is included in the MacOS and Windows application bundles.</p>
+
+<p>If you want to compile the GnuCash Documentation 3.3 for yourself, the source code can be downloaded from:</p>
+<ul>
+  <li><a href="http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-docs-3.3.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/3.3/gnucash-docs-3.3.tar.gz">GitHub</a></li>
+  <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, Mac OSX, and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>

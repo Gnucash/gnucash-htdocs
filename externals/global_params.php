@@ -3,11 +3,11 @@
      // Each platform can define its own latest version or follow the default.
      // Both a latest stable version and a latest unstable version are defined.
      $major_stable		="3";
-     $minor_stable		="2";
+     $minor_stable		="3";
      $latest_stable             = $major_stable.".".$minor_stable;
      $latest_stable_win		= $latest_stable;
 #     $latest_stable_win         = $latest_stable."-2";
-     $latest_stable_mac_intel   = $latest_stable."-2";
+     $latest_stable_mac_intel   = $latest_stable."-1";
 // Change this when there has been a re-tag to add the re-tag letter,
 // e.g. if one retagged 2.6.13 to 2.6.13a, make $tarball = $latest_stable."a".
      $tarball                   = $latest_stable;
