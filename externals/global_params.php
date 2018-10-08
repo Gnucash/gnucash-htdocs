@@ -3,6 +3,8 @@
      // Each platform can define its own latest version or follow the default.
      // Both a latest stable version and a latest unstable version are defined.
      $major_stable		="3";
+     // FIXME: on major_stable 4 copy in download.phtml into the historical
+     // section: $latest_stable_xp_vista_version and $latest_stable_mac_ppc
      $minor_stable		="3";
      $latest_stable             = $major_stable.".".$minor_stable;
      $latest_stable_win		= $latest_stable;
