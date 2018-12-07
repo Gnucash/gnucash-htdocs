@@ -27,7 +27,7 @@
      $old_stable            = $major_old_stable.".".$minor_old_stable;
      $old_stable_win        = $old_stable;
      $old_stable_mac_ppc  = $old_stable."-1";
-     $old_stable_mac_intel  = $old_stable."-2";
+     $old_stable_mac_intel  = $old_stable."-3";
 
      // Frozen versions:
      $latest_stable_xp_vista_version = "2.6.21"; // used also in text
