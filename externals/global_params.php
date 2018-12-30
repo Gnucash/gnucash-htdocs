@@ -14,7 +14,7 @@
 // e.g. if one retagged 2.6.13 to 2.6.13a, make $tarball = $latest_stable."a".
      $tarball                   = $latest_stable;
 
-     $major_latest_unstable		="3";
+     $major_latest_unstable		="4";
      $minor_latest_unstable		="900";
      $latest_unstable           = $major_latest_unstable.".".$minor_latest_unstable;
      // There's currently no unstable release being worked on, so disable it
