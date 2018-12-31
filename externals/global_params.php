@@ -5,7 +5,7 @@
      $major_stable		="3";
      // FIXME: on major_stable 4 copy in download.phtml into the historical
      // section: $latest_stable_xp_vista_version and $latest_stable_mac_ppc
-     $minor_stable		="3";
+     $minor_stable		="4";
      $latest_stable             = $major_stable.".".$minor_stable;
      $latest_stable_win		= $latest_stable;
 #     $latest_stable_win         = $latest_stable."-2";
@@ -14,7 +14,7 @@
 // e.g. if one retagged 2.6.13 to 2.6.13a, make $tarball = $latest_stable."a".
      $tarball                   = $latest_stable;
 
-     $major_latest_unstable		="4";
+     $major_latest_unstable		="3";
      $minor_latest_unstable		="900";
      $latest_unstable           = $major_latest_unstable.".".$minor_latest_unstable;
      // There's currently no unstable release being worked on, so disable it
