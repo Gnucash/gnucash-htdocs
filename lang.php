@@ -31,7 +31,7 @@ if (array_key_exists('lang', $_GET)) { $locale = $_GET["lang"]; }
 # key: locale, value: lang_dir
 $supported_languages = array(
         'ca_ES' => 'ca',
-        'de_DE' => 'de', 'es_ES' => 'es', 'fr_FR' => 'fr',
+        'de_DE' => 'de', 'es_ES' => 'es', 'fr_FR' => 'fr', 'hr_HR' => 'hr',
         'hu_HU' => 'hu', 'it_IT' => 'it', 'ja_JP' => 'ja', 'nb_NO' => 'nb',
         'nl_NL' => 'nl', 'pl_PL' => 'pl', 'pt_PT' => 'pt',
         'zh_CN' => 'zh_CN', 'zh_TW' => 'zh_TW', 'en_US' => 'en',
