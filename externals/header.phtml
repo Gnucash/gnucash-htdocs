@@ -4,7 +4,6 @@
   $titleRSS = T_("Subscribe to RSS feed");
   $titledonation = T_("Support the GnuCash project with a donation");
   $titleuservoice = T_("Request or vote enhancements for GnuCash");
-  $titlegplus = T_("GnuCash on Google +");
   $titlefb = T_("GnuCash on facebook");
   
   # This function will create a link to the given page
@@ -55,18 +54,7 @@
         <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="<?=$home?>/atom.php" />
     <?php } ?>
 
-    <!--This is the description shown on google+ profile for GnuCash-->
-    <meta name="description" content="A personal and small-business financial-accounting software, licensed under GNU/GPL and available for Linux, Windows, Mac OS X, BSD, and Solaris." />
-
     <title><?= T_($title); ?> | GnuCash</title>
-    <!--script for Google+1 button-->
-    <script type="text/javascript">
-      (function() {
-        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-        po.src = 'https://apis.google.com/js/plusone.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-      })();
-    </script>
   </head>
 
   <body>
@@ -77,7 +65,7 @@
         <p><img src="<?=$top_dir?>/images/gnucash-vert.png" alt="GnuCash" /></p>
       </div>
   
-      <div id="googleplusone">
+      <div id="socialbuttons">
   
         <!--facebook like button-->
         <div style="padding:0 0 5px 0">
@@ -91,27 +79,19 @@
               fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
           </script>
-          
-          <div class="fb-like" data-href="https://www.gnucash.org" data-send="false" data-layout="box_count" data-width="60" data-show-faces="true" data-font="verdana"></div>
-        </div> <!-- google +1 button-->
 
-<!-- HTML5:
-        <g:plusone size="tall" href="https://www.gnucash.org/"></g:plusone>
-      </div>
-      The following was taken from https://productforums.google.com/forum/#!topic/webmasters/UHu945nsdEM for older forms.
- -->
-        <div class="g-plusone" id="my_plusone" size="tall" >
-          <script type="text/javascript">
-            document.getElementById("my_plusone").setAttribute("data-href", "https://www.gnucash.org/");
-          </script>
-        </div>
-      </div> <!-- googleplusone -->
+          <div class="fb-like" data-href="https://www.gnucash.org"
+               data-send="false" data-layout="box_count" data-width="60"
+               data-show-faces="true" data-font="verdana">
+          </div>
+        </div> <!-- facebook like button-->
+
+      </div> <!-- socialbuttons -->
 
       <!-- the icons on the top right-->
       <div style="float:right;">
         <ul id="navlist">
           <li id="fb-icon"><a href="https://www.facebook.com/Gnucash" title="<?php echo T_($titlefb);?>"></a></li>
-          <li id="gplus-icon"><a href="https://plus.google.com/u/0/103666182558673867088/" title="<?php echo T_($titlegplus);?>"></a></li>
           <li id="uservoice-icon"><a href="https://gnucash.uservoice.com/" title="<?php echo T_($titleuservoice);?>"></a></li>
           <li id="donation-icon"><a href="https://gnucash.org/donate.phtml" title="<?php echo T_($titledonation);?>"></a></li>
           <li id="rss-icon"><a href="<?=$home?>/atom.php" title="<?php echo T_($titleRSS);?>"></a></li>
