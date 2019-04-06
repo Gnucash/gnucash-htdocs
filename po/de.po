@@ -1,7 +1,7 @@
 # German translations for gnucash-htdocs package.
 # Copyright (C) 2017 The GnuCash Development Team
 # This file is distributed under the same license as the gnucash-htdocs package.
-# Frank H. Ellenberger <frank.h.ellenberger@gmail.com>, 2017-2018.
+# Frank H. Ellenberger <frank.h.ellenberger@gmail.com>, 2017-2019.
 # Johannes Kapune <technik@kapune.de>, 2011.
 # Frank H. Ellenberger <f.ellenberger@online.de>, 2010.
 # Christian Stimming <stimming@tuhh.de>, 2007.
@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2018-10-06 05:06+0200\n"
-"PO-Revision-Date: 2018-10-05 22:17+0000\n"
+"POT-Creation-Date: 2019-04-06 05:23+0200\n"
+"PO-Revision-Date: 2019-04-06 06:03+0200\n"
 "Last-Translator: Johannes Kapune <technik@kapune.de>\n"
 "Language-Team: deutschsprachige GnuCash Website-Übersetzer <gnucash-"
 "de@gnucash.org>\n"
@@ -584,8 +584,8 @@ msgid ""
 msgstr ""
 "Als nächstes fügen sie Ihren Patch gegen die entsprechende Komponente des "
 "Produkts Dokumentation in die <a href='https://bugs.gnucash.org/'> <span "
-"class=\"gnucash\">GnuCash</span> Fehlerdatenbank</a>. Siehe auch "
-"<a href='https://wiki.gnucash.org/wiki/Bugzilla'>GnuCash's Wiki Seite über "
+"class=\"gnucash\">GnuCash</span> Fehlerdatenbank</a>. Siehe auch <a "
+"href='https://wiki.gnucash.org/wiki/Bugzilla'>GnuCash's Wiki Seite über "
 "bugzilla</a> für weitergehende Informationen zum Einreichen von Patches "
 "(englisch)."
 
@@ -1080,8 +1080,8 @@ msgstr ""
 msgid "Installers"
 msgstr "Installationsprogramme"
 
-#: download.phtml:22 download.phtml:23 download.phtml:55 download.phtml:56
-#: download.phtml:71 download.phtml:72 download.phtml:85
+#: download.phtml:22 download.phtml:23 download.phtml:54 download.phtml:55
+#: download.phtml:70 download.phtml:71 download.phtml:84
 #, php-format
 msgid "GnuCash %s for"
 msgstr "GnuCash %s für"
@@ -1181,29 +1181,18 @@ msgstr ""
 msgid "Source code"
 msgstr "Quelltext"
 
-#: download.phtml:41 download.phtml:57 download.phtml:73
+#: download.phtml:41 download.phtml:56 download.phtml:72
 #, php-format
 msgid "for GnuCash %s"
 msgstr "für GnuCash %s"
 
-#: download.phtml:43
-msgid ""
-"For build instructions, please check the <span class=\"gnucash\">GnuCash</"
-"span> wiki which has <a href='https://wiki.gnucash.org/wiki/"
-"GnuCash#Installation'>guidelines for several distributions</a>."
-msgstr ""
-"Anleitungen zum Selbsterstellen von <span class=\"gnucash\">GnuCash</span> "
-"für verschiedene Distributionen findet man im Wiki unter<a href='https://"
-"wiki.gnucash.org/wiki/GnuCash#Installation'> guidelines for several "
-"distributions</a>. (englisch)"
-
 #. Only show unstable download options if there really is an active unstable release
-#: download.phtml:49
+#: download.phtml:48
 #, php-format
 msgid "Unstable/Development release (%s)"
 msgstr "Instabil/Testversion (%s)"
 
-#: download.phtml:51
+#: download.phtml:50
 msgid ""
 "Unstable (development) releases are for testing purposes only. They contain "
 "the newest features and improvements, but may also contain serious bugs "
@@ -1214,7 +1203,7 @@ msgstr ""
 "noch gravierende Fehler enthalten. Sie sollten sie nicht für die tägliche "
 "Arbeit mit Ihren wertvollen Daten verwenden."
 
-#: download.phtml:52
+#: download.phtml:51
 #, php-format
 msgid ""
 "The latest unstable release of <span class=\"gnucash\">GnuCash</span> is "
@@ -1225,12 +1214,12 @@ msgstr ""
 "herunterladen unten aus."
 
 #. Only show old stable download options if there really is an active unstable release
-#: download.phtml:65
+#: download.phtml:64
 #, php-format
 msgid "Old Stable release (%s)"
 msgstr "Frühere Ausgabe (%s)"
 
-#: download.phtml:67
+#: download.phtml:66
 msgid ""
 "This old stable release is the final version of the previous stable series. "
 "It's available for users who aren't ready for a major upgrade but want to "
@@ -1241,7 +1230,7 @@ msgstr ""
 "größeres Upgrade sind, aber sicherstellen wollen, daß sie über alle Bugfixes "
 "aus der alten Serie verfügen."
 
-#: download.phtml:68
+#: download.phtml:67
 #, php-format
 msgid ""
 "The last old stable release of <span class=\"gnucash\">GnuCash</span> is "
@@ -1251,40 +1240,40 @@ msgstr ""
 "ist %s. Wählen Sie die passende Version für Ihr Betriebssystem unten aus."
 
 #. Only show historical download options if enabled
-#: download.phtml:81
+#: download.phtml:80
 msgid "Latest versions for historical operating systems"
 msgstr "Letzte Versionen für historische Betriebssysteme"
 
-#: download.phtml:83
+#: download.phtml:82
 msgid "This versions are really old. Do not expect any support."
 msgstr ""
 "Diese Versionen sind wirklich sehr alt. Erwarten sie keinerlei Unterstützung "
 "mehr."
 
-#: download.phtml:90
+#: download.phtml:89
 msgid "Other"
 msgstr "Andere Auswahlmöglichkeiten"
 
-#: download.phtml:94
+#: download.phtml:93
 #, php-format
 msgid "View all GnuCash %s downloads (stable)"
 msgstr "Zeige alle herunterladbaren stabilen GnuCash %s Dateien"
 
 #. Only show unstable download options if there is an active unstable release
-#: download.phtml:99
+#: download.phtml:98
 #, php-format
 msgid "View all GnuCash %s downloads (unstable)"
 msgstr "Zeige alle herunterladbaren instabilen GnuCash %s Dateien"
 
-#: download.phtml:102
+#: download.phtml:101
 msgid "View all GnuCash downloads"
 msgstr "Zeige alle herunterladbaren GnuCash Dateien"
 
-#: externals/footer.phtml:13
+#: externals/footer.phtml:14
 msgid "Server &amp; email outage reports to:"
 msgstr "Anfragen zu Server-Problemem an: "
 
-#: externals/footer.phtml:14
+#: externals/footer.phtml:15
 msgid "Translation problems? Contact:"
 msgstr "Übersetzungsprobleme? Kontaktiere:"
 
@@ -1301,22 +1290,18 @@ msgid "Request or vote enhancements for GnuCash"
 msgstr "Für neue oder schon vorhandene Erweiterungen stimmen"
 
 #: externals/header.phtml:7
-msgid "GnuCash on Google +"
-msgstr "GnuCash bei Google +"
-
-#: externals/header.phtml:8
 msgid "GnuCash on facebook"
 msgstr "GnuCash bei Facebook"
 
-#: externals/header.phtml:124 index.phtml:5 oldnews.phtml:4
+#: externals/header.phtml:104 index.phtml:5 oldnews.phtml:4
 msgid "Free Accounting Software"
 msgstr "Freie Finanzsoftware"
 
-#: externals/header.phtml:128
+#: externals/header.phtml:108
 msgid "Language"
 msgstr "Sprache"
 
-#: externals/header.phtml:145
+#: externals/header.phtml:126
 msgid "Continent"
 msgstr "Kontinent"
 
@@ -1413,10 +1398,8 @@ msgid "Sizing"
 msgstr "Programmgröße"
 
 #: externals/menu.phtml:72
-msgid "New Book: GnuCash 2.4 Small Business Accounting"
-msgstr ""
-"Neuerscheinung: GnuCash 2.4 Small Business Accounting, Autor: Ashok "
-"Ramachandran"
+msgid "GnuCash 2.4 Small Business Accounting"
+msgstr "GnuCash 2.4 Small Business Accounting"
 
 #: externals/menu.phtml:76
 msgid ""
@@ -1436,14 +1419,20 @@ msgid "This is a Beginner's Guide for managing your accounts."
 msgstr ""
 "Dies ist ein Leitfaden für Anfänger, der hilft Ihre Konten zu verwalten."
 
-#: externals/menu.phtml:79
-msgid "Our own developer Christian Stimming has been contributing to this book as a reviewer, and we can wholeheartly recommend the outcome of this fruitful collaboration. Feel free to have a look at this book over at %s, and, best of all, the publisher has committed to allocate some percentage of the book sales back to the GnuCash project. Have fun with this book!"
+#: externals/menu.phtml:80
+#, php-format
+msgid ""
+"Our own developer Christian Stimming has been contributing to this book as a "
+"reviewer, and we can wholeheartly recommend the outcome of this fruitful "
+"collaboration. Feel free to have a look at this book over at %s, and, best "
+"of all, the publisher has committed to allocate some percentage of the book "
+"sales back to the GnuCash project. Have fun with this book!"
 msgstr ""
 "Einer unserer Entwickler, Christian Stimming, hat bei diesem Buch als Lektor "
 "mitgewirkt und wir freuen uns über diese fruchtbare Zusammenarbeit. Sie "
-"können einen kleinen Auszug aus diesem Buch anlesen unter %s. Der Autor hat zugesagt einen "
-"kleinen Prozentsatz des Erlöses aus diesem Buch dem <span class=\"gnucash"
-"\">GnuCash</span> Projekt zufließen zu lassen. "
+"können einen kleinen Auszug aus diesem Buch anlesen unter %s. Der Autor hat "
+"zugesagt einen kleinen Prozentsatz des Erlöses aus diesem Buch dem GnuCash "
+"Projekt zufließen zu lassen. Viel Spaß mit dem Buch!"
 
 #: features.phtml:3
 msgid "Features"
