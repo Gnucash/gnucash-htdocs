@@ -68,6 +68,10 @@
       <div id="socialbuttons">
   
         <!--facebook like button-->
+        <!-- FIXME: It does not conform
+           https://curia.europa.eu/jcms/upload/docs/application/pdf/2019-07/cp190099en.pdf
+           potential fix: an improve version of
+           https://www.heise.de/ct/ausgabe/2014-26-Social-Media-Buttons-datenschutzkonform-nutzen-2463330.html
         <div style="padding:0 0 5px 0">
           <div id="fb-root"></div>
           <script type="text/javascript">
@@ -79,19 +83,19 @@
               fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
           </script>
-
+        
           <div class="fb-like" data-href="https://www.gnucash.org"
                data-send="false" data-layout="box_count" data-width="60"
                data-show-faces="true" data-font="verdana">
           </div>
         </div> <!-- facebook like button-->
-
+        End of FIXME ->
       </div> <!-- socialbuttons -->
 
       <!-- the icons on the top right-->
       <div style="float:right;">
         <ul id="navlist">
-          <li id="fb-icon"><a href="https://www.facebook.com/Gnucash" title="<?php echo T_($titlefb);?>"></a></li>
+          <!-- see FIXME above <li id="fb-icon"><a href="https://www.facebook.com/Gnucash" title="<?php echo T_($titlefb);?>"></a></li> -->
           <li id="uservoice-icon"><a href="https://gnucash.uservoice.com/" title="<?php echo T_($titleuservoice);?>"></a></li>
           <li id="donation-icon"><a href="https://gnucash.org/donate.phtml" title="<?php echo T_($titledonation);?>"></a></li>
           <li id="rss-icon"><a href="<?=$home?>/atom.php" title="<?php echo T_($titleRSS);?>"></a></li>
