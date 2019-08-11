@@ -8,11 +8,6 @@ AddType application/x-httpd-php .phtml
 # users will get due to external sites linking
 # to obsolete locations.
 
-# Rewrite incoming HTTP to HTTPS
-RewriteEngine On 
-RewriteCond %{SERVER_PORT} 80 
-RewriteRule ^(.*)$ https://www.gnucash.org/$1 [R,L]
-
 # The old website was kept here for historical purposes.
 # Any attempt to access it will be redirected to the
 # new site's main page.
