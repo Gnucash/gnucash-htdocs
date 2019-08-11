@@ -8,6 +8,11 @@ AddType application/x-httpd-php .phtml
 # users will get due to external sites linking
 # to obsolete locations.
 
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 # The old website was kept here for historical purposes.
 # Any attempt to access it will be redirected to the
 # new site's main page.
