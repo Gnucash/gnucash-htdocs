@@ -16,7 +16,7 @@ echo list_system_locales();
 ?>
 </pre>
 <hr />
-<?
+<?php
 phpinfo();
 ?>
 </body>
