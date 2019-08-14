@@ -9,6 +9,13 @@ TODO
 - update features screenshots
 - fix double-slash on langdir='' mlist search menu URLs
 
+------------
+Requirements
+------------
+
+- gettext
+- PHP (7 recommended)
+
 -------------------------------------------------
 Notes about multi-lingual gnucash website content
 -------------------------------------------------
@@ -37,15 +44,15 @@ There are three main classes of links:
   - www: relative
   - !www: url-prefixed ("https://www.gnucash.org/file.phtml")
 
-                        | www.gnucash.org  |  lists.gnucash.org        |
-                        +------------------+---------------------------+
-           external (C) |   ./[externals/] |  ./[externals/]           | \
-        external (lang) |  ../[externals/] | ../[externals/]           |  \,- $top_dir
-        translation (C) |   ./[lang]       |  ./[lang]                 |  / 
-     translation (lang) |  ../[lang]       | ../[lang]                 | /
-         navigation (C) |   ./             | https://www.[...]/         |  \,- $home
-      navigation (lang) |   ./             | https://www.[...]/[lang]/  |  /
-                        +------------------+---------------------------+
+                   | www.gnucash.org  |  lists.gnucash.org        |
+                   +------------------+---------------------------+
+      external (C) |   ./[externals/] |  ./[externals/]           | \
+   external (lang) |  ../[externals/] | ../[externals/]           |  \,- $top_dir
+   translation (C) |   ./[lang]       |  ./[lang]                 |  / 
+translation (lang) |  ../[lang]       | ../[lang]                 | /
+    navigation (C) |   ./             | https://www.[...]/        |  \,- $home
+ navigation (lang) |   ./             | https://www.[...]/[lang]/ |  /
+                   +------------------+---------------------------+
 
 As such:
 
@@ -85,7 +92,7 @@ Note about folders
 Get a local copy of our repository
 ----------------------------------
 
-Note: This step is requred for all following sections.
+Note: This step is required for all following sections.
 
 Create a local git repository in the directory gnucash-htdocs:
 
