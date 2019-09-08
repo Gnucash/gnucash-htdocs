@@ -5,7 +5,7 @@
      $major_stable		="3";
      // FIXME: on major_stable 4 copy in download.phtml into the historical
      // section: $latest_stable_xp_vista_version and $latest_stable_mac_ppc
-     $minor_stable		="6";
+     $minor_stable		="7";
      $latest_stable             = $major_stable.".".$minor_stable;
      $latest_stable_win		= $latest_stable;
      // $latest_stable_win         = $latest_stable."-1";
