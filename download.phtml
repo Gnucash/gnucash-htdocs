@@ -33,10 +33,17 @@
     <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/redhat.png);"><b>Redhat/Centos: </b><?php echo T_("Redhat and CentOS don't have <span class=\"gnucash\">GnuCash</span> in their repositories by default. It can be installed however from the third-party Epel repository. For more details on configuring this additional software repository for your setup, see");?> <a href="https://fedoraproject.org/wiki/EPEL"><?php echo T_("Epel's wiki page");?></a>.</li>
     <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/solus.png);"><b>Solus: </b><?php echo T_("Solus users can install <span class=\"gnucash\">GnuCash</span> through the Software Center (Office Software -> Financial Software -> gnucash).")?></li>
     <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/ubuntu.png);"><b>Ubuntu: </b><?php echo T_("Ubuntu users can install <span class=\"gnucash\">GnuCash</span> through the Software Center. This will install <span class=\"gnucash\">GnuCash</span> under the Office category in the Applications menu.")?></li>
+    <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/flatpak.png);"><b>Flatpak: </b></li>
   </ul>
-  <p class="justify"><?php echo T_("If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> or you wish to install a different version than it ships with, you could try to build <span class=\"gnucash\">GnuCash</span> directly from the source code. The <span class=\"gnucash\">GnuCash</span> wiki has <a href='https://wiki.gnucash.org/wiki/Building'>guidelines for several distributions</a>.")?></p>
+
+  <h3><?php echo T_("Sandbox")?></h3>
+  <p class="justify"><?php echo T_("Flatpaks are bundles, which contain beneath the program also all required libraries. If your distribution is too old, to offer all required libraries, but has the package <span class=\"bold\">Flatpak</span>, you can install a recent version of <span class=\"gnucash\">GnuCash</span> from")?></p>
+  <ul class="imagelist">
+    <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/flatpak.png);"><a href="<?php echo $URL_FLATHUB;?>">Flathub</a></li>
+  </ul>
 
   <h3><?php echo T_("Source code")?></h3>
+  <p class="justify"><?php echo T_("If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> or you wish to install a different version than it ships with, you could try to build <span class=\"gnucash\">GnuCash</span> directly from the source code. The <span class=\"gnucash\">GnuCash</span> wiki has <a href='https://wiki.gnucash.org/wiki/Building'>guidelines for several distributions</a>.")?></p>
   <ul class="imagelist">
     <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/package.png);"><a href="<?php echo $download_path.$latest_stable_source;?>">bzip2 compressed tarball</a> <?php printf (T_("for GnuCash %s"), $latest_stable)?></li>
   </ul>
