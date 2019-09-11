@@ -38,7 +38,7 @@
   <h3><?php echo T_("Sandbox")?></h3>
   <ul class="imagelist">
     <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/flatpak.png);">
-      <p class="justify"><?php echo T_("Flatpaks are bundles, which contain beneath the program also all required libraries. If your distribution is too old, to offer all required libraries, but has the package <a href="<?php echo $URL_FLATPAK;?>">Flatpak</a>, you can install a recent version of <span class=\"gnucash\">GnuCash</span> from")?></p>
+      <p class="justify"><?php printf (T_("Flatpaks are bundles, which contain beneath the program also all required libraries. If your distribution is too old, to offer all required libraries, but has the package <a href=\"%s\">Flatpak</a>, you can install a recent version of <span class=\"gnucash\">GnuCash</span> from"), $URL_FLATPAK)?></p>
       <p class="justify"><a href="<?php echo $URL_FLATHUB;?>"><img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/></a></p>
     </li>
   </ul>
