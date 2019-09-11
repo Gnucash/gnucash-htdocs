@@ -66,5 +66,6 @@
      $download_path="https://downloads.sourceforge.net/sourceforge/gnucash/";
      // TODO: gets redirected to https://sourceforge.net/projects/gnucash/files/ replace?
      
-     $URL_FLATHUB="https://flathub.org/apps/details/org.gnucash.GnuCash"
+     $URL_FLATHUB="https://flathub.org/apps/details/org.gnucash.GnuCash";
+     $URL_FLATPAK="https://flatpak.org/";
 ?>
