@@ -68,4 +68,5 @@
      
      $URL_FLATHUB="https://flathub.org/apps/details/org.gnucash.GnuCash";
      $URL_FLATPAK="https://flatpak.org/";
-?>
+     $URL_WIKI="https://wiki.gnucash.org/wiki/";
+     ?>
