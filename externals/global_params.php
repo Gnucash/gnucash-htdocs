@@ -5,14 +5,14 @@
      $major_stable		="3";
      // FIXME: on major_stable 4 copy in download.phtml into the historical
      // section: $latest_stable_xp_vista_version and $latest_stable_mac_ppc
-     $minor_stable		="7";
+     $minor_stable		="8";
      $latest_stable             = $major_stable.".".$minor_stable;
      $latest_stable_win		= $latest_stable;
      // $latest_stable_win         = $latest_stable."-1";
      $latest_stable_mac_intel   = $latest_stable."-1";
 // Change this when there has been a re-tag to add the re-tag letter,
 // e.g. if one retagged 2.6.13 to 2.6.13a, make $tarball = $latest_stable."a".
-     $tarball                   = $latest_stable;
+     $tarball                   = $latest_stable."b";
 
      $major_latest_unstable		="3";
      $minor_latest_unstable		="900";

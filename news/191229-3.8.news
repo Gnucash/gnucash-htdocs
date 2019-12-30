@@ -1,0 +1,214 @@
+<b>Announcement:</b> GnuCash 3.8 Release
+2019-12-29
+
+<h2>GnuCash 3.8 released</h2>
+
+<p>The GnuCash development team announces GnuCash 3.8, the eighth release of the 3.x stable release series.</p>
+<h3>Changes</h3>
+
+
+<p>Between 3.7 and 3.8, the following bugfixes were accomplished:</p>
+<ul>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=412151">Bug 412151 - Not handling exception when guile is compiled w/o regexp support</a><br/>disable qif-import and make-regexp if guile is compiled without regex</li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=724219">Bug 724219 - Customer Summary includes Closing Entries when reporting across the end of year</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=743943">Bug 743943 - "Edit->Post Invoice" is ambiguous Read invoice type and set label and tooltip texts to the translations of static definitions. Remove unnecessary list counts.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=759005">Bug 759005 - Print negatives in red</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=787295">Bug 787295 - Allow UI jump from Business accounts to their relevant invoice/bill/voucher</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796530">Bug 796530 - [txn csv importer] usability suggestions</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796736">Bug 796736 - Register cell pop up columns width to narrow</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796945">Bug 796945 - Search dialog update</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797078">Bug 797078 - "Automatic decimal point" Should Not Cause 2 Different Behaviors</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797086">Bug 797086 - Import customer dialog – headers not translated</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797279">Bug 797279 - Reports RTL do not support RTL</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797326">Bug 797326 - Enhancement: budget's Estimate tool should ignore Closing Entries</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797356">Bug 797356 - ninja check fails with GCC-9</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797390">Bug 797390 - xaccAccountRecomputeBalance also tallies no-closing balances</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797397">Bug 797397 - Import Map Editor, Ctrl-A with filter</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797401">Bug 797401 - Invoice Reports need an overall page width set</a><br/>Use html5 @media to set main-table to page width. </li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797405">Bug 797405 - : Fix hiding PIN entry window behind online banking log window</a><br/>If there is a log window, make the PIN entry transient_for that one instead of its parent.</li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797408">Bug 797408 - Find Transaction Window -> Search Criteria Section -> Add Search Criteria -> Section does not expand to new size to include a newly added Search Criteria</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797416">Bug 797416 - Enter key does not move to blank tx or next line</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797418">Bug 797418 - In budget report, column with Actual Totals for Liabilities and Income are reversed</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797453">Bug 797453 - Chart of Accounts is slow to update / redraw</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797459">Bug 797459 - Installation (for 3.7) Readme Version number shows 2.2.x</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797462">Bug 797462 - gnc:strify reports the amount and value incorrectly</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797468">Bug 797468 - Receivable Aging report - phantom company with negative total</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797473">Bug 797473 - UTF8 characters not processed correctly with aqbanking6</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797481">Bug 797481 - crash on close of unsaved tabs by pressing [X]</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797482">Bug 797482 - Can't edit date when using Edit Payment function</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797492">Bug 797492 - Lock up on 'Find Account'</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797500">Bug 797500 - valgrind errors - new/delete vs malloc/free</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797506">Bug 797506 - New Aging errors out with guile backtrace in case of a few uncommon transactions</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797519">Bug 797519 - Budget Viewer Totals do not redraw upon to Sign-Reversal changes</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797520">Bug 797520 - ] Balance Sheet (Multicolumn) the retained earnings amount in the equity section has its sign reversed</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797521">Bug 797521 - Receivable Aging (beta): prepayments logic doesn't work, appears to use incorrect absolute value logic</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797532">Bug 797532 - Crash/Coredump Lots</a></li>
+</ul>
+
+<p> The following fixes and improvements were not associated with bug reports:</p>
+<ul>
+  <li>The Customer/Employee/Vendor reports have been rewritten. The new versions may be found in Reports>Experimental.</li>
+  <li>[stylesheet-css] a user-customisable CSS based stylesheet New stylesheet.<br/>Exposes a single text box for full CSS customisability.</li>
+  <li>Allow account selection by typing into the post-to field of the payment window</li>
+  <li>When sizing some register columns take account of 'Tot' being added.</li>
+  <li>Take account for the pop up button border in the register.</li>
+  <li>Change the date sample so it has the maximum text width possible</li>
+  <li>[new-owner-report] bugfix: balance row needs variable linked cols</li>
+  <li>Improve translations by scriptedly removing the removed colon suffix.</li>
+  <li>[report-utilities] bugfix: aging-list was incorrect. off-by-1 error.</li>
+  <li>[report-utilities] bugfix: overpayment works for AP accounts.</li>
+  <li>Swap the buttons around on the Budget Open dialogue<br/> Swap the OK and Cancel buttons so they conform to the normal layout.</li>
+  <li>[report-utilities] bugfix: fix overpayment detection<br/> For 1 payment to &gt;1 invoices, previously would miscalculate overpayment.</li>
+  <li>[budgets.scm] Budget reports handle both natural & reversed budgets.<br/>This change is protected by a Feature: Using it will prevent the file from being opened by earlier versions of GnuCash.</li>
+  <li>[gnc-budget-view.c] totals - 5 fundamental types<br/>previous showed income/expense/transfers/totals budget totals, of uncertain meaning. now shows income/expense/asset/liability/equity budget totals. The 5 lines also become sensitive to the global sign-reverse property.</li>
+  <li>bindings-python - drop references to gnucash-env<br/> We no longer ship a gnucash-env script, directly use python(3) instead</li>
+  <li>[balsheet-pnl] fix: single-date balsheet missed printing date
+  <li>[balsheet-pnl] fix: hide Equity sections when not needed
+  <ul>
+    <li>If currencies are not converted, Unrealized Gains are meaningless. Hide them.</li>
+    <li>If there are no income/expense accounts, retained earnings will be nil. Remove row.</li>
+  </ul></li>
+  <li>Ignore trailing noise on imported transaction account numbers.<br/> AQBanking6 uses a separate method for retrieving account numbers for account info and transactions, where the transactions method can have additional characters, most often the ISO4217 currency code. That results in match failures when importing. As a work-around, compare only the length of the account-info-generated online id when comparing it to the transaction-generated one. Note that this is only a partial solution: At least one German bank also appends characters to the transaction-generated bank id and that will still cause the match to fail.</li>
+  <li>[dialog-payment] Add warning label if payment is unattached<br/> Completing a payment for a customer without associating with an open invoice is allowable and is used for prepayments. Enable a warning to inform that the payment does not have an invoice/bill document attached.</li>
+  <li>[aging] update error reporting<br/> This error handling was for transactions in APAR accounts whereby Transaction Currency != Owner Currency. An example is a manually entered transaction, then assigned as payment to a customer with a different currency. </li>
+  <li>Fixed German IBAN error message</li>
+  <li>Allow edit of some fields for posted invoice<br/> Allow editing of some fields for posted invoice. For reasons, see bug report: https://bugs.gnucash.org/show_bug.cgi?id=797400</li>
+  <li>[average-balance] show monetaries instead of numbers in data table</li>
+  <li>UK VAT template: replace obsolete EEC and EC by EU</li>
+  <li>Implement the presentation of static optical TAN challenges (photoTAN and QR) inside the enter TAN dialogue.</li>
+  <li>[budget] fixcrash: fix crasher for some periods<br/> eg. the following combo would previously crash: - periods from next to current - use accumulated amounts </li>
+  <li>[budget] fixcrash: prevent crash if periods start &gt; end<br/> It's silly to input start-period &gt; end-period. Nevertheless handle it by swapping them instead of crashing. i.e. report budget periods from end to start. </li>
+  <li>[budget-flow] fixcrash: exchange-fn needs to specify exchange date<br/> because some exchange-fn *do* require date eg. pricedb-nearest. use the period end-date for the exchange date. </li>
+  <li>[portfolio report] There's no report-currency. Use currency.</li>
+  <li>[window-report] show backtrace when report crashes
+  <ul>
+    <li>Exposes a SCM string last-captured-error containing last backtrace</li>
+    <li>when rendering report-crash window, include it</li>
+  </ul></li>
+</ul>
+<h3>New Scheme Functions:</h3>
+<ul>
+  <li>gnc:html-markup-ol: creates an HTML ordered list.</li>
+  <li>gnc:multiline-to-html-textt: creates html-text with <br/> elements.</li>
+  <li>gnc:make-html-table-cell/min-width: Create a table-cell with min-width style attribute</li>
+  <li>gnc:collector+ and gnc:collector-</li>
+</ul>
+<h3>API Deprecations:</h3>
+<ul>
+  <li>gnc:html-table-append-ruler/at!</li>
+  <li>gnc:html-table-remove-last-row!</li>
+</ul>
+
+<p>We have revised translations for Chinese(Simplified), Croatian, German, Hebrew, Ukrainian
+<h2>Known Issues</h2>
+<p>The following are open bug reports to the 3.x series considered significant by the development team:</p>
+<ul>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795383">Bug 795383 - Gnucash crashes on import of a 1400-transaction (or more) CSV file</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796955">Bug 796955 - Import CSV - Single-line two-currency transactions can't be imported</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796992">Bug 796992 - gnucash --add-price-quotes can't parse drive letters on Windows.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796997">Bug 796997 - Currency Conversion Dialog appears when recording transactions between same currency accounts.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797006">Bug 797006 - Balance is misleading in "open subaccounts" when different currencies are involved</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797037">Bug 797037 - Counter formats not saving</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797064">Bug 797064 - crash when try print report</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797083">Bug 797083 - Gnucash crashes when trying to rename budget</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797092">Bug 797092 - Save As fails: tries to save to reserved directory if path contains spaces</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797113">Bug 797113 - Scrubbing crashes when creating small splits that round to value 0.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797114">Bug 797114 - Fixing an SX due to deleted account stuck in an error loop</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797115">Bug 797115 - Can't 're-activate' an expired SX</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797133">Bug 797133 - CSV Import of multicurrency transaction export in multiline form</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797211">Bug 797211 - Very slow UI - dependent on window size</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797220">Bug 797220 - delete account allows move of all transactions to account having non-matching currency</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797236">Bug 797236 - Regression: Reconcile window transaction list resets to top when new transaction created in account</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797264">Bug 797264 - 3.5 can't use Chinese IME input</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797283">Bug 797283 - Permanent hang on clicking on report tabs</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797285">Bug 797285 - QIF import fails and then crashes</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797293">Bug 797293 - Crash when import "U+R" or "R"</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797294">Bug 797294 - Billing functions freezing</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797318">Bug 797318 - Amounts ending in zero displayed as fractions</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797325">Bug 797325 - [Windows 7] Reports with charts will not load</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797329">Bug 797329 - Using Japanese IME to enter transactions results in unexpected field jumps</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797334">Bug 797334 - Crash on attempting to change account separator character</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797335">Bug 797335 - Crash on subsequent Open after accidentally Opening the current file</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797336">Bug 797336 - CSV Accounts import fails on UTF-8 e-acute in account name</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797345">Bug 797345 - Selecting item in tax table causes gnucash to crash</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797348">Bug 797348 - Wrong column order for RTL writing in GUI elements</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797351">Bug 797351 - General ledger register transaction becomes "zombie" after deletion</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797363">Bug 797363 - Consistent Silent Crash on Converting Saved Reports from 2.6 to 3.6</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797368">Bug 797368 - Cannot download Quantity information from a CSV to a mutual</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797384">Bug 797384 - Gnucash doesn't handle commodity prices with big numerator/denominator properly</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797385">Bug 797385 - Report html files NOT opening in Reports tab or window due to webkit Frame Load Interrupted error</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id="796492">Bug 796492 - Wrong calculation of the first occurrence</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id= "797512">Bug 797512 - Transaction with stock symbol XLU won't balance, symbol IXLU does.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id="797514">Bug 797514 - Changing transaction unreconciles a split inconsistently</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id="797518">Bug 797518- 3.7 Opening another file and cancelling on unsaved transaction hangs/crashes</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id="797522">Bug 797522 - Focus after reconcile jumps to a different account</a></li>
+</ul>
+<h2>Documentation</h2>
+<p>Concurrent with the release of Gnucash 3.8 we're pleased to also release a new version 3.8 of the companion <em>Help</em> and <em>Tutorial and Concepts Guide</em>.</p>
+<p>Documentation changes:</p>
+<ul>
+  <li>Replace web links with entities.</li>
+  <li>Replace &lt;code&gt; tag with &lt;command&gt;. The latter is correct for Docbook.</li>
+  <li>Change the app entity to <app>GnuCash</app> for Gnome conformance.
+  <li>Use &amp;app; for this case and &amp;appname; for the undecorated "GnuCash".</li>
+  <li>Series of updates to the Help manual Importing Transactions section to change the orientation more towards a description of the interface functionality in the help manual</li>
+  <li>More work on cmake build system.</li>
+</ul>
+
+<h3>Getting GnuCash for Windows and MacOS</h3>
+<p>GnuCash is provided for both Microsoft Windows 7&reg; and later
+and MacOS X 10.9 (Mavericks)&reg; and later in pre-built, all-in-one
+packages. An installer is provided for Microsoft Windows&reg; while
+the MacOS&reg; package is a disk image containing a drag-and-drop
+application bundle.</p>
+<p>The SHA256 Hashes for the downloadable files are:
+<ul>
+  <li><code>0f5eca83d8836a325d9a02c6ed7b4d53e59abcff974e5d90914c9e15d7a87f37</code>&nbsp;&nbsp;gnucash-3.8b.tar.bz2</li>
+  <li><code>2a4ff781ec905ebe7e00f16a0a50358268d1bc5ebd7e5f70a50a44bcea5bffaf</code>&nbsp;&nbsp;gnucash-3.8b.tar.gz</li>
+  <li><code>fee1609b35eb217dfeceb9a90b30d6782d84d204742760db2d07828e4ab0c34e</code>&nbsp;&nbsp;gnucash-3.8.setup.exe</li>
+  <li><code>4997e15b5163227890a1ad8fdd178fe646dd13af688689dbeadc787f902294f5</code>&nbsp;&nbsp;Gnucash-Intel-3.8-1.dmg</li>
+  <li><code>a2504c9a0e66db154dd6498a0019ccf13219c4cb8553fee6ec441cd5209b66a7</code>&nbsp;&nbsp;gnucash-docs-3.8-1.tar.gz</li>
+</ul></p>
+
+<ul>
+  <li>SourceForge:
+  <ul>
+    <li><a href="http://downloads.sourceforge.net/gnucash/stable/gnucash-3.8.setup.exe">Win32</a></li>
+    <li><a href="http://downloads.sourceforge.net/gnucash/stable/Gnucash-Intel-3.8-1.dmg">Mac-Intel</a></li>
+  </ul></li>
+  <li>Github
+  <ul>
+    <li><a href="https://github.com/Gnucash/gnucash/releases/download/3.8/gnucash-3.8.setup.exe">Win32</a></li>
+    <li><a href="https://github.com/Gnucash/gnucash/releases/download/3.8/Gnucash-Intel-3.8-1.dmg">Mac-Intel</a></li>
+</ul></li></ul>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 3.8 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+  <li>Sourceforge: <a href="http://downloads.sourceforge.net/gnucash/stable/gnucash-3.8.tar.bz2">bzip2</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/3.8/">all files</a>.</li>
+
+  <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/3.8/gnucash-3.8.tar.bz2">bzip</a> <b>WARNING</b> Do not try to use the github-generated files labelled "Source Code". They have not been processed with swig and will not build.</li>
+
+  <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https:www.gtk.org">Gtk+</a> 3.10, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0, <a href="https://www.boost.org/">Boost</a> 1.54, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, and <a href="https://github.com/google/googletest">GoogleTest</a> 1.7.0. In addition you will need <a href="http://www.swig.org/">SWIG</a> 2.0.10 if compiling from git. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 3.8 documentation can be found under "GnuCash v3 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats. The documentation is included in the MacOS and Windows application bundles.</p>
+
+<p>If you want to compile the GnuCash Documentation 3.8 for yourself, the source code can be downloaded from:</p>
+<ul>
+  <li><a href="http://downloads.sourceforge.net/gnucash/stable/gnucash-docs-3.8-1.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/3.8/gnucash-docs-3.8-1.tar.gz">GitHub</a></li>
+  <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, MacOS, and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
