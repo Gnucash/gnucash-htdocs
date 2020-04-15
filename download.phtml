@@ -19,8 +19,8 @@
 
   <h3><?php echo T_("Installers")?></h3>
   <ul class="imagelist">
-    <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/windows.png);"><?php printf (T_("GnuCash %s for"), $latest_stable)?> <a href="<?php echo $stable_path.$latest_stable_win;?>">Microsoft Windows 7/8/10</a></li>
-    <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/macosx.png);"><?php printf (T_("GnuCash %s for"), $latest_stable)?> Mac OS X <a href="<?php echo $stable_path.$latest_stable_mac_intel;?>">Intel >= 10.9 (Mavericks)</a></li>
+    <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/windows.png);"><?php printf (T_("GnuCash %s for"), $latest_stable)?> <a href="<?php echo $latest_stable_path.$latest_stable_win;?>">Microsoft Windows 7/8/10</a></li>
+    <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/macosx.png);"><?php printf (T_("GnuCash %s for"), $latest_stable)?> Mac OS X <a href="<?php echo $latest_stable_path.$latest_stable_mac_intel;?>">Intel >= 10.9 (Mavericks)</a></li>
   </ul>
 
   <a id="distribution"></a><h3>Linux</h3>
@@ -49,7 +49,7 @@
   <h3><?php echo T_("Source code")?></h3>
   <p class="justify"><?php echo T_("If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> or you wish to install a different version than it ships with, you could try to build <span class=\"gnucash\">GnuCash</span> directly from the source code. The <span class=\"gnucash\">GnuCash</span> wiki has <a href='https://wiki.gnucash.org/wiki/Building'>guidelines for several distributions</a>.")?></p>
   <ul class="imagelist">
-    <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/package.png);"><a href="<?php echo $stable_path.$latest_stable_source;?>">bzip2 compressed tarball</a> <?php printf (T_("for GnuCash %s"), $latest_stable)?></li>
+    <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/package.png);"><a href="<?php echo $latest_stable_path.$latest_stable_source;?>">bzip2 compressed tarball</a> <?php printf (T_("for GnuCash %s"), $latest_stable)?></li>
   </ul>
 
   <?php
@@ -62,9 +62,9 @@
       <p class="justify"><?php printf (T_("The latest unstable release of <span class=\"gnucash\">GnuCash</span> is %s.  Choose the download for your operating system below."), $latest_unstable)?></p>
       
       <ul>
-        <li><?php printf (T_("GnuCash %s for"), $latest_unstable)?> <a href="<?php echo $download_path.$latest_unstable_win;?>">Microsoft Windows 7/8/10</a></li>
-        <li><?php printf (T_("GnuCash %s for"), $latest_unstable)?> Mac OS X <a href="<?php echo $stable_path.$latest_unstable_mac_intel;?>">Intel >= 10.9 (Mavericks)</a></li>
-        <li><a href="<?php echo $stable_path.$latest_unstable_source;?>">bzip2 compressed tarball</a> <?php printf (T_("for GnuCash %s"), $latest_unstable)?></li>
+        <li><?php printf (T_("GnuCash %s for"), $latest_unstable)?> <a href="<?php echo $latest_unstable_path.$latest_unstable_win;?>">Microsoft Windows 7/8/10</a></li>
+        <li><?php printf (T_("GnuCash %s for"), $latest_unstable)?> Mac OS X <a href="<?php echo $latest_unstable_path.$latest_unstable_mac_intel;?>">Intel >= 10.9 (Mavericks)</a></li>
+        <li><a href="<?php echo $latest_unstable_path.$latest_unstable_source;?>">bzip2 compressed tarball</a> <?php printf (T_("for GnuCash %s"), $latest_unstable)?></li>
       </ul>
   <?php } ?>
 
@@ -78,9 +78,9 @@
       <p class="justify"><?php printf (T_("The last old stable release of <span class=\"gnucash\">GnuCash</span> is %s.  Choose the download for your operating system below."), $old_stable)?></p>
       
       <ul>
-        <li><?php printf (T_("GnuCash %s for"), $old_stable)?> <a href="<?php echo $stable_path.$old_stable_win;?>">Microsoft Windows XP/Vista/7/8/10</a></li>
-        <li><?php printf (T_("GnuCash %s for"), $old_stable)?> Mac OS X <a href="<?php echo $stable_path.$old_stable_mac_intel;?>">Intel</a> | <a href="<?php echo $stable_path.$old_stable_mac_ppc;?>">PPC</a></li>
-        <li><a href="<?php echo $stable_path.$old_stable_source;?>">bzip2 compressed tarball</a> <?php printf (T_("for GnuCash %s"), $old_stable)?></li>
+        <li><?php printf (T_("GnuCash %s for"), $old_stable)?> <a href="<?php echo $old_stable_path.$old_stable_win;?>">Microsoft Windows XP/Vista/7/8/10</a></li>
+        <li><?php printf (T_("GnuCash %s for"), $old_stable)?> Mac OS X <a href="<?php echo $old_stable_path.$old_stable_mac_intel;?>">Intel</a> | <a href="<?php echo $old_stable_path.$old_stable_mac_ppc;?>">PPC</a></li>
+        <li><a href="<?php echo $old_stable_path.$old_stable_source;?>">bzip2 compressed tarball</a> <?php printf (T_("for GnuCash %s"), $old_stable)?></li>
       </ul>
   <?php } ?>
 
@@ -92,7 +92,7 @@
       </div>
       <p class="justify"><?php echo T_("This versions are really old. Do not expect any support.")?></p>
       <ul>
-        <li><?php printf (T_("GnuCash %s for"), $latest_stable_win2k_version)?> <a href="<?php echo $stable_path.$latest_stable_win2k;?>">Microsoft Windows 2000</a></li>
+        <li><?php printf (T_("GnuCash %s for"), $latest_stable_win2k_version)?> <a href="<?php echo $latest_stable_path.$latest_stable_win2k;?>">Microsoft Windows 2000</a></li>
       </ul>
   <?php } ?>
 
