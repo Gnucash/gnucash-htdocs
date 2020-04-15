@@ -39,7 +39,8 @@
      // to define several paths that will be used on several pages
      // on the website.
      // Please don't make changes below unless you know what you are doing.
-     $stable_path="https://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/";
+     $base_path="https://sourceforge.net/projects/gnucash/files"
+     $stable_path=$base_path. "/gnucash%20(stable)/";
      $latest_stable_path=$stable_path.$latest_stable."/";
      
      $latest_stable_win="gnucash-".$latest_stable_win.".setup.exe";
@@ -56,15 +57,12 @@
      $old_stable_mac_ppc="Gnucash-PPC-".$old_stable_mac_ppc.".dmg";
      $old_stable_source="gnucash-".$old_stable.".tar.bz2";
      
-     $unstable_path="https://sourceforge.net/projects/gnucash/files/gnucash%20(unstable)/";
+     $unstable_path=$base+path . "/gnucash%20(unstable)/";
      $latest_unstable_path=$unstable_path.$latest_unstable."/";
      
      $latest_unstable_win="gnucash-".$latest_unstable_win."-setup.exe";
      $latest_unstable_mac_intel="Gnucash Intel ".$latest_unstable_mac_intel.".dmg";
      $latest_unstable_source="gnucash-".$latest_unstable.".tar.bz2";
-     
-     $download_path="https://downloads.sourceforge.net/sourceforge/gnucash/";
-     // TODO: gets redirected to https://sourceforge.net/projects/gnucash/files/ replace?
      
      $URL_FLATHUB="https://flathub.org/apps/details/org.gnucash.GnuCash";
      $URL_FLATPAK="https://flatpak.org/";
