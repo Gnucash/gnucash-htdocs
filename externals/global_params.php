@@ -57,7 +57,7 @@
      $old_stable_mac_ppc="Gnucash-PPC-".$old_stable_mac_ppc.".dmg";
      $old_stable_source="gnucash-".$old_stable.".tar.bz2";
      
-     $unstable_path=$base+path . "/gnucash%20(unstable)/";
+     $unstable_path=$base_path . "/gnucash%20(unstable)/";
      $latest_unstable_path=$unstable_path.$latest_unstable."/";
      
      $latest_unstable_win="gnucash-".$latest_unstable_win."-setup.exe";
