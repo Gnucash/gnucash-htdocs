@@ -39,8 +39,8 @@
      // to define several paths that will be used on several pages
      // on the website.
      // Please don't make changes below unless you know what you are doing.
-     $base_path="https://sourceforge.net/projects/gnucash/files"
-     $stable_path=$base_path. "/gnucash%20(stable)/";
+     $base_path="https://sourceforge.net/projects/gnucash/files";
+     $stable_path=$base_path."/gnucash%20(stable)/";
      $latest_stable_path=$stable_path.$latest_stable."/";
      
      $latest_stable_win="gnucash-".$latest_stable_win.".setup.exe";
