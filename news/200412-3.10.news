@@ -18,9 +18,8 @@ balance and making it impossible to reconcile the book.
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=620848">Bug 620848 - Transfer Funds window - add Notes field</a></li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797006">Bug 797006 - Balance is misleading in open subaccounts when different currencies are involved</a></li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797318">Bug 797318 - Amounts ending in zero displayed as fractions</a></li>
-<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797659">Bug 797659 - Liabilities in budget report no longer calculate correctly</a><p>candidate fix </p></li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797666">Bug 797666 - libgnucash/engine/test/test-recurrence.c: In function 'check_valid': 'result' may be used uninitialized</a></li>
-<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797676">Bug 797676 - Register displays amount in transaction currency...</a><p>instead of register currency. </p></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797676">Bug 797676 - Register displays amount in transaction currency instead of register currency.</li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797674">Bug 797674 - 3.9: "test-gnc-path-util" failed on Debian amd64</a></li>
 </ul>
 
@@ -32,7 +31,6 @@ balance and making it impossible to reconcile the book.
 <li>[window-reconcile] when inputing statement_date, warn if it's after today</li>
 <li>[find-transactions] add search for reconciled date</li>
 <li>Show transaction value, not amount, for registers with subaccounts.<p>If the register has subaccounts in different currencies and a transaction has splits in more than one, the transaction will incorrectly appear to be unbalanced if we total amounts because the balancing logic works on split values. </p></li>
-<li>Revert "Bug 797659 - Liabilities in budget report no longer calculate correctly"<p>Reverted for snap release. Not tested thoroughly yet. </p></li>
 <li>Add instance argument to Session constructor<p> Enables a python console to connect to the running GnuCash's session.</p></li>
 <li>Make python console less noisy without --debug.</li>
 <li>Provide locals and globals of calling context to the python console's shell on shell init</li>
@@ -92,13 +90,10 @@ Bug 797659 - Liabilities in budget report no longer calculate correctly
 <p>Concurrent with the release of Gnucash 3.10 we're pleased to also release a new version 3.10 of the companion <em>Help</em> and <em>Tutorial and Concepts Guide</em>.</p>
 <p>Documentation changes:</p>
 <ul>
-<li>Rewrite the translation paragraph in Overview, updating it to match the current status.</li>
-<li>Book options->Trading Accounts: link tutorial</li>
-<li>Remove obsolete basics_main[_]win*.{xcf|png} from guide</li>
-<li>In Business Account Setup of A/R and A/P emphasise 'for each currency'</li>
-<li>Remove redundant leading words in the admonition blocks</li>
-<li>Distinguish 2 "Process Payment" sections</li>
-</ul>
+  <li>Bug 797056 - Chapter 2 - Putting it All Together - Screen Order Incorrect</li>
+  <li> Convert Wikipedia links to an entity.</li>
+  <li> Update some screenshots.</li>
+ </ul>
 
 <h3>Getting GnuCash for Windows and MacOS</h3>
 <p>GnuCash is provided for both Microsoft Windows 7&reg; and later
@@ -108,11 +103,11 @@ the MacOS&reg; package is a disk image containing a drag-and-drop
 application bundle.</p>
 <p>The SHA256 Hashes for the downloadable files are:
 <ul>
-  <li><code></code>&nbsp;&nbsp;gnucash-3.10.tar.bz2</li>
-  <li><code></code>&nbsp;&nbsp;gnucash-3.10.tar.gz</li>
-  <li><code></code>&nbsp;&nbsp;gnucash-3.10.setup.exe</li>
-  <li><code></code>&nbsp;&nbsp;Gnucash-Intel-3.10-1.dmg</li>
-  <li><code></code>&nbsp;&nbsp;gnucash-docs-3.10.tar.gz</li>
+  <li><code>b60772c276a63639964d1e24c795fbb9a7c0c6c45959168fe5cdfe08eb796f16</code>&nbsp;&nbsp;gnucash-3.10.tar.bz2</li>
+  <li><code>57f111625f3d5c68e373fa9505af855354647e7cf00d5a962920a9afaa36f94e</code>&nbsp;&nbsp;gnucash-3.10.tar.gz</li>
+  <li><code>5e9eec7694cc6bdf26f143c9b5239aa520d781a58f545d1645539596d984a441</code>&nbsp;&nbsp;gnucash-3.10.setup.exe</li>
+  <li><code>053764da1b4f87e2851372912ad503447bf96cd111b819a92f02319343f592f6</code>&nbsp;&nbsp;Gnucash-Intel-3.10-1.dmg</li>
+  <li><code>25c74fd5a1a1ba58c7e6d732a3e4ad607f0b94283266f0195c7986b8352a790d</code>&nbsp;&nbsp;gnucash-docs-3.10.tar.gz</li>
 </ul></p>
 
 <ul>
