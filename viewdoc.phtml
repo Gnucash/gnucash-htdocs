@@ -32,7 +32,6 @@ if (isset ($_GET["lang"])) {
     $showlang  = $locale;
   }
 }
-$req_lang_ok = true;
 
 
 # Parse requested document
@@ -89,26 +88,41 @@ if (isset ($_GET["rev"])) {
 # Now check if the requested combination of doc, revision and language actually exists
 # If not, try the default C locale instead.
 
+# Web locales may have a country code but the documentation doesn't at the moment
+# So test both the full locale and the version stripped down to language code only.
+list($shortlang,$rest) = explode ("_", $showlang);
+$reqlangs = array ($showlang);
+
 # First evaluate the nightly builds, they are located on a different server
 # To avoid network traffic, the available languages are hard-coded here and should be
 # updated if list of languages in which the documentation is available changes
 if ($showrev == "maint") {
+  $req_lang_ok = false;
   $basepath = "https://lists.gnucash.org/docs";
   $trunk_langs = array ( $helpdoc => array( "C", "de", "it", "pt"),
                          $tcdoc   => array( "C", "de", "it", "ja", "pt", "ru"));
-  if (!in_array ($showlang, $trunk_langs[$showdoc])) {
-    $showlang    = "C";
-    $req_lang_ok = false;
+
+  if (in_array ($showlang, $trunk_langs[$showdoc])) {
+    $req_lang_ok = true;
+  }
+  else if (in_array ($shortlang, $trunk_langs[$showdoc])) {
+    $req_lang_ok = true;
+    $showlang    = $shortlang;
+    array_push ($reqlangs, $showlang);
+  } else {
+    $showlang = "C";
   }
   
   $showurl=$basepath."/".$showlang."/".$showdoc;
 } else {
   # For the stable versions, we can simply check file availability because we're
   # on the same server
+  $req_lang_ok = true;
   $checkpath="docs/v".$showrev."/".$showlang."/".$showdoc;
   if (!file_exists ($checkpath)) {
   	# Try Lang only codes
   	$showlang = substr($showlang,1,2);
+        array_push ($reqlangs, $showlang);
   	if ($showlang == "en") $showlang = "C";
     $checkpath="docs/v".$showrev."/".$showlang."/".$showdoc;
     if (!file_exists ($checkpath)) {
@@ -133,7 +147,7 @@ if ($showrev == "maint") {
                                      $reqrev, $showrev); ?></p>
 <?php } ?>
 <?php if (! $req_lang_ok ) { ?>
-<p style="color: red;"><?= T_("The document requested is not available in the requested language. The English version will be displayed instead.")?></p>
+<p style="color: red;"><?= T_("The document requested is not available in the requested language (tried [".join(",", $reqlangs)."]). The English version will be displayed instead.")?></p>
 <?php } ?>
 
 <iframe src="<?php echo $showurl; ?>" style="border-width: 0px; width: 100%; min-width: 700px; height: 80em;">
