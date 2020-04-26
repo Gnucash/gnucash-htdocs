@@ -121,7 +121,7 @@ if ($showrev == "maint") {
   $checkpath="docs/v".$showrev."/".$showlang."/".$showdoc;
   if (!file_exists ($checkpath)) {
   	# Try Lang only codes
-  	$showlang = substr($showlang,1,2);
+  	$showlang = $shortlang;
         array_push ($reqlangs, $showlang);
   	if ($showlang == "en") $showlang = "C";
     $checkpath="docs/v".$showrev."/".$showlang."/".$showdoc;
