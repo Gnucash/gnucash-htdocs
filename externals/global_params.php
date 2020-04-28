@@ -17,7 +17,7 @@
      $major_latest_unstable		="3";
      $minor_latest_unstable		="902";
      $latest_unstable           = $major_latest_unstable.".".$minor_latest_unstable;
-// When there's an unstable release going on uncomment the line setting it to false.
+// When there's no unstable release going on uncomment the next line.
 //     $latest_unstable           = False;
      $latest_unstable_win       = $latest_unstable;
      $latest_unstable_mac_intel = $latest_unstable."-1";
