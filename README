@@ -5,8 +5,11 @@ TODO
 ----
 
 - re-work page content for new-style translations (one big block)
-  - re-flow existing po-file content.
+
+  + re-flow existing po-file content.
+
 - update features screenshots
+
 - fix double-slash on langdir='' mlist search menu URLs
 
 ------------
@@ -33,27 +36,33 @@ www.gnucash.org coding conventions/notes
 There are three main classes of links:
 
 - external resources [$top_dir[/externals]]
-  - www: relative
-  - !www: relative
+
+  + www: relative
+
+  + !www: relative
 
 - translations [$top_dir/[<lang>]]
-  - www: relative
-  - !www: relative
+
+  + www: relative
+
+  + !www: relative
 
 - navigation [$home]
-  - www: relative
-  - !www: url-prefixed ("https://www.gnucash.org/file.phtml")
 
-===================  ===============  =========================
-                     www.gnucash.org   lists.gnucash.org       
-===================  ===============  =========================
-       external (C)   ./[externals/]   ./[externals/]            \
-    external (lang)  ../[externals/]  ../[externals/]             \,- $top_dir
-    translation (C)   ./[lang]         ./[lang]                   / 
- translation (lang)  ../[lang]        ../[lang]                  /
-     navigation (C)   ./              https://www.[...]/         \,- $home
-  navigation (lang)   ./              https://www.[...]/[lang]/  /
--------------------  ---------------  -------------------------
+  + www: relative
+
+  + !www: url-prefixed ("https://www.gnucash.org/file.phtml")
+
+===================  ===============  ========================= ===========
+Type of Link         www.gnucash.org   lists.gnucash.org        Relative to 
+===================  ===============  ========================= ===========
+       external (C)   ./[externals/]   ./[externals/]           $top_dir 
+    external (lang)  ../[externals/]  ../[externals/]           $top_dir
+    translation (C)   ./[lang]         ./[lang]                 $top_dir
+ translation (lang)  ../[lang]        ../[lang]                 $top_dir
+     navigation (C)   ./              https://www.[...]/        $home
+  navigation (lang)   ./              https://www.[...]/[lang]/ $home
+===================  ===============  ========================= ===========
 
 As such:
 
