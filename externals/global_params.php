@@ -2,28 +2,28 @@
      // This section defines the most recent version numbers for all platforms.
      // Each platform can define its own latest version or follow the default.
      // Both a latest stable version and a latest unstable version are defined.
-     $major_stable		="3";
+     $major_stable              ="3";
      // FIXME: on major_stable 4 copy in download.phtml into the historical
      // section: $latest_stable_xp_vista_version and $latest_stable_mac_ppc
-     $minor_stable		="10";
+     $minor_stable              ="10";
      $latest_stable             = $major_stable.".".$minor_stable;
-     $latest_stable_win		= $latest_stable;
+     $latest_stable_win         = $latest_stable;
      // $latest_stable_win         = $latest_stable."-1";
      $latest_stable_mac_intel   = $latest_stable."-1";
 // Change this when there has been a re-tag to add the re-tag letter,
 // e.g. if one retagged 2.6.13 to 2.6.13a, make $tarball = $latest_stable."a".
      $tarball                   = $latest_stable."";
 
-     $major_latest_unstable		="3";
-     $minor_latest_unstable		="902";
+     $major_latest_unstable             ="3";
+     $minor_latest_unstable             ="903";
      $latest_unstable           = $major_latest_unstable.".".$minor_latest_unstable;
 // When there's no unstable release going on uncomment the next line.
 //     $latest_unstable           = False;
      $latest_unstable_win       = $latest_unstable;
      $latest_unstable_mac_intel = $latest_unstable."-1";
 
-     $major_old_stable		="2.6";
-     $minor_old_stable		="21";
+     $major_old_stable          ="2.6";
+     $minor_old_stable          ="21";
      $old_stable            = $major_old_stable.".".$minor_old_stable;
      $old_stable_win        = $old_stable;
      $old_stable_mac_ppc  = $old_stable."-1";
@@ -42,7 +42,7 @@
      $base_path="https://sourceforge.net/projects/gnucash/files";
      $stable_path=$base_path."/gnucash%20(stable)/";
      $latest_stable_path=$stable_path.$latest_stable."/";
-     
+
      $latest_stable_win="gnucash-".$latest_stable_win.".setup.exe";
      $latest_stable_xp_vista="gnucash-".$latest_stable_xp_vista_version."-setup.exe";
      $latest_stable_win2k="gnucash-".$latest_stable_win2k_version.".setup.exe";
@@ -51,20 +51,21 @@
      $latest_stable_source="gnucash-".$tarball.".tar.bz2";
 
      $old_stable_path=$stable_path.$old_stable."/";
-     
+
      $old_stable_win="gnucash-".$old_stable_win."-setup.exe";
      $old_stable_mac_intel="Gnucash-Intel-".$old_stable_mac_intel.".dmg";
      $old_stable_mac_ppc="Gnucash-PPC-".$old_stable_mac_ppc.".dmg";
      $old_stable_source="gnucash-".$old_stable.".tar.bz2";
-     
+
      $unstable_path=$base_path . "/gnucash%20(unstable)/";
      $latest_unstable_path=$unstable_path.$latest_unstable."/";
-     
+
      $latest_unstable_win="gnucash-".$latest_unstable_win."-setup.exe";
      $latest_unstable_mac_intel="Gnucash Intel ".$latest_unstable_mac_intel.".dmg";
      $latest_unstable_source="gnucash-".$latest_unstable.".tar.bz2";
-     
+
      $URL_FLATHUB="https://flathub.org/apps/details/org.gnucash.GnuCash";
      $URL_FLATPAK="https://flatpak.org/";
      $URL_WIKI="https://wiki.gnucash.org/wiki/";
+
      ?>
