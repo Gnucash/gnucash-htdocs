@@ -60,7 +60,7 @@
      $unstable_path=$base_path . "/gnucash%20(unstable)/";
      $latest_unstable_path=$unstable_path.$latest_unstable."/";
 
-     $latest_unstable_win="gnucash-".$latest_unstable_win."-setup.exe";
+     $latest_unstable_win="gnucash-".$latest_unstable_win.".setup.exe";
      $latest_unstable_mac_intel="Gnucash Intel ".$latest_unstable_mac_intel.".dmg";
      $latest_unstable_source="gnucash-".$latest_unstable.".tar.bz2";
 
