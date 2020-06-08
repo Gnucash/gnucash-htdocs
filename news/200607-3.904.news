@@ -41,9 +41,9 @@
 <ul>
   <li>A new separate executable, <tt>gnucash-cli</tt> (<tt>gnucash-cli.exe</tt> on Microsoft Windows) for doing command-line things like updating the prices in your book. <tt>gnucash-cli</tt> gains the ability to run reports from the command line. Specify reports to run by name or guid. It also provides an export format and an output file name without which it will output the report to stdout.
   <ul>
-    <li><code>gnucash --report run --name=[reportname/guid] datafile.gnucash</code></li>
-    <li><code>gnucash --report run --name=[reportname/guid] --output-file=x.html datafile.gnucash</code></li>
-    <li><code>gnucash --report run --name=[reportname/guid] --output-file=x.html --export-type=TYPE datafile.gnucash</code></li>
+    <li><code>gnucash-cli --report run --name=[reportname/guid] datafile.gnucash</code></li>
+    <li><code>gnucash-cli --report run --name=[reportname/guid] --output-file=x.html datafile.gnucash</code></li>
+    <li><code>gnucash-cli --report run --name=[reportname/guid] --output-file=x.html --export-type=TYPE datafile.gnucash</code></li>
   </ul>
   </li>
   <li>When deleting accounts the destination accounts of moved splits will be checked to ensure that they have the same commodity as the source account. If they don't you'll get a warning and the opportunity to pick another account or to carry on regardless.</li>
@@ -57,7 +57,7 @@
   <li> A new report menu supbmenu <B>Multicolumn</B> contains the old custom-multicolumn report and a new <B>Dashboard</B> report containing Account reports for expenses and income, an income-expense chart, and an account summary.</li>
   <li>When importing, the matcher will no longer offer to match a transaction to one that has already matched in a previous import, nor will it offer to match more than one imported transaction to a single existing transaction.</li>
   <li> Support for UK VAT and Australian GST added to the Income-GST report. The reports options are changed from source accounts to source sales and purchase accounts to permit proper reporting of capital purchases. <B>N.B.</B> This is incompatible with previous versions of the report and will require regenerating saved configurations.</li>
-  <li>Add option to save Layout for Business items<p>Add two menu items under windows, one to save an existing layout for Invoices, Bills and Vouchers to their respective default layouts so the user set column widths will be used. The second menu item will reset the column widths to defaults and remove the default layout. Open Business items will also save there column widths to the page section so these can temporarily have different widths. </p></li>
+  <li>Add option to save Layout for Business items<p>Add two menu items under windows, one to save an existing layout for Invoices, Bills and Vouchers to their respective default layouts so the user set column widths will be used. The second menu item will reset the column widths to defaults and remove the default layout. Open Business items will also save their column widths to the page section so these can temporarily have different widths. </p></li>
   <li>The matcher window columns are changed from R to C and from U+R to U+C, reflecting that the matcher marks transactions cleared but doesn't reconcile them. (Bug 797338)</li>
   <li>OFX imports having balance information will now offer to immediately reconcile, passing the balance information in the file to the reconcile info.</li>
   <li>Improve quickfill in the account pickers to filter the choices based on any part of the name.</li>
