@@ -15,7 +15,7 @@
      $tarball                   = $latest_stable."";
 
      $major_latest_unstable             ="3";
-     $minor_latest_unstable             ="904";
+     $minor_latest_unstable             ="905";
      $latest_unstable           = $major_latest_unstable.".".$minor_latest_unstable;
 // When there's no unstable release going on uncomment the next line.
 //     $latest_unstable           = False;
