@@ -49,8 +49,7 @@
   <li>A symbol is now displayed on transactions in the register when they have an attachment and the selected font supports the symbol.</li>
   <li>The OFX file importer can now import more than one file at a time.</li>
   <li> A new report menu supbmenu <B>Multicolumn</B> contains the old custom-multicolumn report and a new <B>Dashboard</B> report containing Account reports for expenses and income, an income-expense chart, and an account summary.</li>
-  <li>When importing, the matcher will no longer offer to match a transaction to one that has already matched in a previous import, nor will it offer to match more than one imported transaction to a single existing transaction.</li>
-  <li> Support for UK VAT and Australian GST added to the Income-GST report. The reports options are changed from source accounts to source sales and purchase accounts to permit proper reporting of capital purchases. <B>N.B.</B> This is incompatible with previous versions of the report and will require regenerating saved configurations.</li>
+  <li> Support for UK VAT and Australian GST added to the Income-GST report. The reports options are changed from source accounts to source sales and purchase accounts to permit proper reporting of capital purchases. <B>N.B.</B> This is incompatible with previous versions of the report and will require regenerating saved configurations.</li><
   <li>Add option to save Layout for Business items<p>Add two menu items under windows, one to save an existing layout for Invoices, Bills and Vouchers to their respective default layouts so the user set column widths will be used. The second menu item will reset the column widths to defaults and remove the default layout. Open Business items will also save their column widths to the page section so these can temporarily have different widths. </p></li>
   <li>The matcher window columns are changed from R to C and from U+R to U+C, reflecting that the matcher marks transactions cleared but doesn't reconcile them. (Bug 797338)</li>
   <li>OFX imports having balance information will now offer to immediately reconcile, passing the balance information in the file to the reconcile info.</li>
@@ -67,7 +66,7 @@
   <li>GnuCash 4.x will not migrate old gconf settings from GnuCash 2.4.x.</li>
   <li> Reversing transactions will now pop a dialog box to request a posting date. (Bug 782455)</li>
   <li>The Accounts page has a new optional column for the hidden property to make it easier to toggle it. Note that in order to see hidden accounts you must still enable that in the Filter by... dialog. (Bug 797486)</li>
-  <li>The Customer, Vender, and Employee overviews have a process-payment toolbar. (Bug 797605).
+  <li>The Customer, Vender, and Employee overviews have a process-payment toolbar. (Bug 797605).</li>
   <li>Account codes may now optionally be displayed in the Budget Tree View. (Bug 797489).</li>
 </ul>
 <h3>New/Revised Reports</h3>
@@ -91,10 +90,10 @@
   </ul></li>
   <li> A new mock facility for several engine classes to permit better-isolated unit testing of components that depend on those classes.</li>
   <li>Register filter and sort values are saved in the book's state file (book.gcm) in the user's configdir instead of in the book.</li>
-  <li>QofSession no longer creates its book, instead one must create a book first and pass that to <code>qof_session_new()</code>/<code>QofSession::QofSession()</code>.
+  <li>QofSession no longer creates its book, instead one must create a book first and pass that to <code>qof_session_new()</code>/<code>QofSession::QofSession()</code>.</li>
   <li>Add option to save Layout for Register items<p>Add two menu items under windows, one to save an existing register layout based on the register type to there respective default layouts so the user set column widths will be used when opening registers. The second menu item will reset the column widths to defaults and remove the associated default layout. Open registers will also save their column widths to the page section so these can temporarily have different widths. </p></li>
   <li> Input Method handling in the register is moved to the GtkEntry where it belongs.</li>
-  <li><code>gnc_get_current_session()</code> no longer creates an empty session if there isn't one already open.
+  <li><code>gnc_get_current_session()</code> no longer creates an empty session if there isn't one already open.</li>
   <li>The source directories have been rearranged and most of the loadable modules (e.g. libgncmod-engine.so) are now normal dynamic libraries (libgnc-engine.so), shorn of their gnc-module adapters. Make sure that you clean and rebuild your build directory.</li>
   <li>All functions marked as deprecated in 3.x are now removed. If you have custom reports be sure to examine <kbd>gnucash.trace</kbd> for deprecation warnings and update your reports before trying them in GnuCash 3.905.</li>
   <li>libgncmod-generic-import is now libgnc-generic-import.</li>
@@ -145,7 +144,7 @@
   <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797786">Bug 797786 - New Balance Sheet does not balance when multiple currencies and commodities (stock holdings) are included</a></li>
   <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797800">Bug 797800 - [help screen items] clarification welcome</a></li>
 </ul>
-<p><a href="https://bugs.gnucash.org/buglist.cgi?bug_severity=blocker&bug_severity=critical&bug_severity=major&bug_severity=normal&bug_severity=minor&bug_severity=trivial&bug_status=NEW&bug_status=ASSIGNED&bug_status=NEEDINFO&bug_status=REOPENED&limit=0&list_id=8149&order=priority%2Cbug_severity&query_format=advanced">Complete list of all open bugs.</a></p>.
+<p><a href="https://bugs.gnucash.org/buglist.cgi?bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;limit=0&amp;list_id=8149&amp;order=priority%2Cbug_severity&amp;query_format=advanced">Complete list of all open bugs.</a></p>.
 
 <h2>Documentation</h2>
 <h6>Between 3.904 and 3.905, the following bugfixes were accomplished:</h6>
