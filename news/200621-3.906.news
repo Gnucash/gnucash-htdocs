@@ -35,13 +35,10 @@
     <li><code>gnucash-cli --report run --name=[reportname/guid] datafile.gnucash</code></li>
     <li><code>gnucash-cli --report run --name=[reportname/guid] --output-file=x.html datafile.gnucash</code></li>
     <li><code>gnucash-cli --report run --name=[reportname/guid] --output-file=x.html --export-type=TYPE datafile.gnucash</code></li>
-  </ul>
-<p>The GUI command, <code>gnucash</code> responds to the same command line arguments. In order to provide more options its syntax (and <code>gnucash-cli</code>'s) for quote retrieval is changed from <code>--add-quotes</code> to <code>--quotes get</code>.</p>
-  </li>
+  </ul></li>
   <li>When deleting accounts the destination accounts of moved splits will be checked to ensure that they have the same commodity as the source account. If they don't you'll get a warning and the opportunity to pick another account or to carry on regardless.</li>
   <li>New type-ahead search added to sequential search when selecting an account in the register: Instead of typing the first few characters of a top level account, the separator, the first few characters of the next level account and so on you may instead type a few characters of any part of a full account name and the drop-list will be filtered to contain only matching accounts. Once you have a small enough list you can use the arrow keys to select the account that you want.</li>
   <li> Python bindings are now localized and their strings available for translation.</li>
-  <li> The new reports introduced in the <B>Experimental</B> Reports menu are moved to the main menu and the old reports hidden; the old reports can be unhidden by running GnuCash from the commandline with the <kbd>--extra</kbd> argument. That will cause the old reports to appear in their regular locations on the menu labeled <B>(legacy)</B>. Note that new reports use different options and layouts and you may need to adjust your saved report configurations.</li>
   <li> A new <B>Transaction Association</B> dialog, available from the <B>Update Association for Transaction</B> menu item that has replaced the two association items in 3.x, allows setting, changing, and deleting associations.</li>
   <li>Allow Associations to be added to invoices. The actual association when present is added as a link button which is shown below the notes. </li>
   <li>A symbol is now displayed on transactions in the register when they have an attachment and the selected font supports the symbol.</li>
