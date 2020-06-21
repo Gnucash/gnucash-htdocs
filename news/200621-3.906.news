@@ -1,0 +1,202 @@
+<b>Announcement:</b> GnuCash 3.906 Released
+2020-06-21
+
+<h2>GnuCash 3.906 Released</h2>
+
+<p>The GnuCash development team announces GnuCash 3.906, the fifth testing release for what will soon be GnuCash 4.0. This is the release-candidate: Barring any serious bugs it's what we'll release as 4.0 next weekend.
+
+<h3>Changes</h3>
+
+<h3>Baseline requirements</h3>
+<p> Operating Systems:</p>
+<ul>
+  <li>Linux: Ubuntu 18.04LTS</li>
+  <li>MacOS: 10.13</li>
+  <li>Windows: 8.1</li>
+</ul>
+<p>Software Dependencies:
+<ul>
+  <li>C++ standard is now C++17, requires gcc 8.0 or clang 6.0.</li>
+  <li>Cmake 3.10</li>
+  <li>boost 1.67.0</li>
+  <li>gettext 0.19.6 for general use, 0.20 to generate gnucash.pot.</li>
+  <li>glib-2.0 2.56.1, gtk 3.22.30</li>
+  <li>googletest 1.8.0</li>
+  <li>ICU, any version.</li>
+  <li>libdbi 0.8.3</li>
+  <li>libxml2 2.9.4</li>
+  <li>swig 3.0.12  Now required for building from tarballs as well as from git.</li>
+  <li>Webkit 2.4.11 Mac &amp; Win32, 2.14.1 Linux/BSD</li>
+</ul>
+<h3>New Features</h3>
+<p> The intent is to have command categories with subcommands to better enable a richer command line capability as illustrated with the new report commands <kbd>list</kbd> and <kbd>show</kbd>.</p>
+
+<ul>
+    <li>A new separate executable, <kbd>gnucash-cli</kbd> (<kbd>gnucash-cli.exe</kbd> on Microsoft Windows) for doing command-line things like updating the prices in your book. <kbd>gnucash-cli</kbd> gains the ability to run reports from the command line. Specify reports to run by name or guid. It also provides an export format and an output file name without which it will output the report to stdout.
+  <ul>
+    <li><code>gnucash-cli --report run --name=[reportname/guid] datafile.gnucash</code></li>
+    <li><code>gnucash-cli --report run --name=[reportname/guid] --output-file=x.html datafile.gnucash</code></li>
+    <li><code>gnucash-cli --report run --name=[reportname/guid] --output-file=x.html --export-type=TYPE datafile.gnucash</code></li>
+  </ul>
+<p>The GUI command, <code>gnucash</code> responds to the same command line arguments. In order to provide more options its syntax (and <code>gnucash-cli</code>'s) for quote retrieval is changed from <code>--add-quotes</code> to <code>--quotes get</code>.</p>
+  </li>
+  <li>When deleting accounts the destination accounts of moved splits will be checked to ensure that they have the same commodity as the source account. If they don't you'll get a warning and the opportunity to pick another account or to carry on regardless.</li>
+  <li>New type-ahead search added to sequential search when selecting an account in the register: Instead of typing the first few characters of a top level account, the separator, the first few characters of the next level account and so on you may instead type a few characters of any part of a full account name and the drop-list will be filtered to contain only matching accounts. Once you have a small enough list you can use the arrow keys to select the account that you want.</li>
+  <li> Python bindings are now localized and their strings available for translation.</li>
+  <li> The new reports introduced in the <B>Experimental</B> Reports menu are moved to the main menu and the old reports hidden; the old reports can be unhidden by running GnuCash from the commandline with the <kbd>--extra</kbd> argument. That will cause the old reports to appear in their regular locations on the menu labeled <B>(legacy)</B>. Note that new reports use different options and layouts and you may need to adjust your saved report configurations.</li>
+  <li> A new <B>Transaction Association</B> dialog, available from the <B>Update Association for Transaction</B> menu item that has replaced the two association items in 3.x, allows setting, changing, and deleting associations.</li>
+  <li>Allow Associations to be added to invoices. The actual association when present is added as a link button which is shown below the notes. </li>
+  <li>A symbol is now displayed on transactions in the register when they have an attachment and the selected font supports the symbol.</li>
+  <li>The OFX file importer can now import more than one file at a time.</li>
+  <li> A new report menu supbmenu <B>Multicolumn</B> contains the old custom-multicolumn report and a new <B>Dashboard</B> report containing Account reports for expenses and income, an income-expense chart, and an account summary.</li>
+  <li> Support for UK VAT and Australian GST added to the Income-GST report. The reports options are changed from source accounts to source sales and purchase accounts to permit proper reporting of capital purchases. <B>N.B.</B> This is incompatible with previous versions of the report and will require regenerating saved configurations.</li><
+  <li>Add option to save Layout for Business items<p>Add two menu items under windows, one to save an existing layout for Invoices, Bills and Vouchers to their respective default layouts so the user set column widths will be used. The second menu item will reset the column widths to defaults and remove the default layout. Open Business items will also save their column widths to the page section so these can temporarily have different widths. </p></li>
+  <li>The matcher window columns are changed from R to C and from U+R to U+C, reflecting that the matcher marks transactions cleared but doesn't reconcile them. (Bug 797338)</li>
+  <li>OFX imports having balance information will now offer to immediately reconcile, passing the balance information in the file to the reconcile info.</li>
+  <li>Improve quickfill in the account pickers to filter the choices based on any part of the name.</li>
+  <li>The GnuCash widget hierarchy for CSS has been revised to be more consistent with Gtk practice. You may need to spend some time with the GtkInspector to get your custom CSS back the way you like it.</li>
+  <li>When creating a new account hierarchy it's now possible to load account templates from locales other than the one set for the user interface. (Bug 797472)</li>
+  <li>New Account - Online Account match list to the Import Map Editor.</li>
+  <li>New invalid maps dialog in the Import Map Editor. (Bug 797612)</li>
+  <li>Optionally include the account code option in budget view.</li>
+  <li>Account matcher will decline to match accounts with a different commodity from the imported split if the import information includes the commodity.</li>
+  <li>Ellipsize the Description and Memo fields in the account matcher.</li>
+  <li>Enable adding notes to budgets. (Bug 693180)</li>
+  <li>Support for AQBanking Version 6. This is required to support new FinTS protocols for the European Payment Services Directive (PSD2).</li>
+  <li>GnuCash 4.x will not migrate old gconf settings from GnuCash 2.4.x.</li>
+  <li> Reversing transactions will now pop a dialog box to request a posting date. (Bug 782455)</li>
+  <li>The Accounts page has a new optional column for the hidden property to make it easier to toggle it. Note that in order to see hidden accounts you must still enable that in the Filter by... dialog. (Bug 797486)</li>
+  <li>The Customer, Vendor, and Employee overviews have a process-payment toolbar. (Bug 797605).</li>
+  <li>Account codes may now optionally be displayed in the Budget Tree View. (Bug 797489).</li>
+</ul>
+<h3>New/Revised Reports</h3>
+<ul>
+  <li>Income-GST</li>
+  <li>Owner Report</li>
+</ul>
+<h3>Significant Code Changes</h3>
+<h4> In 3.906</h4>
+<p> None </p>
+<h4>In previous 3.9xx releases</h4>
+<ul>
+  <li> The signature for <code>qof_session_begin()</code>, <code>QofSession::begin()</code>, and <code>QofBackend::begin()</code> are changed to use an enum <code>SessionOpenMode</code> instead of three booleans.</li>
+  <li><kbd>gnucash-bin.c</kbd> has been split into 4 parts, mostly C++:
+  <ul>
+    <li><kbd>gnucash.cpp</kbd>, the GUI executable.</li>
+    <li><kbd>gnucash-cli.cpp</kbd>, the command-line executable.</li>
+    <li><kbd>gnucash-commands.cpp</kbd>, implementation for the commands that can be run from the command-line.</li>
+    <li><kbd>gnucash-app-core.cpp</kbd>, common code required by both the command line and gui programs.</li>
+    <li>There's also an auxiliary file, <kbd>gnucash-windows-locale.c</kbd> because the localization code proved resistant to compiling as C++. We're planning another auxiliary file for the MacOS localization.</li>
+  </ul></li>
+  <li> A new mock facility for several engine classes to permit better-isolated unit testing of components that depend on those classes.</li>
+  <li>Register filter and sort values are saved in the book's state file (book.gcm) in the user's configdir instead of in the book.</li>
+  <li>QofSession no longer creates its book, instead one must create a book first and pass that to <code>qof_session_new()</code>/<code>QofSession::QofSession()</code>.</li>
+  <li>Add option to save Layout for Register items<p>Add two menu items under windows, one to save an existing register layout based on the register type to there respective default layouts so the user set column widths will be used when opening registers. The second menu item will reset the column widths to defaults and remove the associated default layout. Open registers will also save their column widths to the page section so these can temporarily have different widths. </p></li>
+  <li> Input Method handling in the register is moved to the GtkEntry where it belongs.</li>
+  <li><code>gnc_get_current_session()</code> no longer creates an empty session if there isn't one already open.</li>
+  <li>The source directories have been rearranged and most of the loadable modules (e.g. libgncmod-engine.so) are now normal dynamic libraries (libgnc-engine.so), shorn of their gnc-module adapters. Make sure that you clean and rebuild your build directory.</li>
+  <li>All functions marked as deprecated in 3.x are now removed. If you have custom reports be sure to examine <kbd>gnucash.trace</kbd> for deprecation warnings and update your reports before trying them in GnuCash 3.906.</li>
+  <li>libgncmod-generic-import is now libgnc-generic-import.</li>
+  <li>Scheme no longer uses libgncmodule, always do <code>(use-modules (gnucash foo))</code></li>
+  <li>Autocompletion improvements for the transfer-account field.</li>
+  <li>New test for invalid mappings for online accounts and a dialog to fix them.</li>
+  <li>jqplot is replaced by chartjs.</li>
+  <li>Separate most Guile binding code from the code that it wraps. It's now located in bindings/guile.</li>
+  <li>Improve Google test integration in cmake. CMake now requires only GTEST_ROOT and only when cmake isn't able to find Google test without help.</li>
+  <li>Unit tests for Scheme code with SRFI64.</li>
+</ul>
+<h4>Deprecations (will be removed in GnuCash 5.0</h4>
+<ul>
+  <li>gnc:substring-replace-from-to</li>
+</ul>
+
+<p>Between 3.905 and 3.906, the following bugfixes were accomplished. Some of these will also be fixed in GnuCash 3.11, some are for 4.0 only.</p>
+<ul>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797808">Bug 797808 - Caps Lock Breaks Almost Everything</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797811">Bug 797811 - GnuCash crashes with segfault when saving to mysql when database already exists.</a></li>
+</ul>
+
+
+<p> The following fixes and improvements were not associated with bug reports or new features:</p>
+<ul>
+  <li>Add missing #includes into gnc-imp-settings-csv-price.cpp</li>
+  <li>[business-core] string-hash doesn't guarantee unique hash, use guid string instead.</li>
+</ul>
+
+<p>Updated Translations: Ukrainian</p>
+
+<h4> Known Problems </h4>
+<ul>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797786">Bug 797786 - New Balance Sheet does not balance when multiple currencies and commodities (stock holdings) are included</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797800">Bug 797800 - [help screen items] clarification welcome</a></li>
+</ul>
+<p><a href="https://bugs.gnucash.org/buglist.cgi?bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;limit=0&amp;list_id=8149&amp;order=priority%2Cbug_severity&amp;query_format=advanced">Complete list of all open bugs.</a></p>.
+
+<h2>Documentation</h2>
+<h4>Between 3.905 and 3.906, the following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+  <li>Get rid of ulink type="http". It is the default.</li>
+  <li>Remove obsolete Docbook declaration comments from docs</li>
+  <li>Update bug URL in currently unused */it/it.po to avoid false alarm when grepping obsolete URLS.</li>
+</ul>
+
+<h3>Getting GnuCash for Windows and MacOS</h3>
+<p>GnuCash is provided for both Microsoft Windows 8.1&reg; and later
+and MacOS 10.13 (High Sierra)&reg; and later in pre-built, all-in-one
+packages. An installer is provided for Microsoft Windows&reg; while
+the MacOS&reg; package is a disk image containing a drag-and-drop
+application bundle.</p>
+<p>The SHA256 Hashes for the downloadable files are:</p>
+<ul>
+  <li><code>55fc87a9f4fae8c6b58ea05766c387f2a6c94113d5f8533ce31944e079648b7b</code>&nbsp;&nbsp;gnucash-3.906.tar.bz2</li>
+  <li><code>d27aca7e810a637b7597e9222e1292a2786adf38226db6cac729a2e2d39ecc46</code>&nbsp;&nbsp;gnucash-3.906.tar.gz</li>
+  <li><code>37c6850744b2ead0c2a6e038d90770bc1794e9c6571cb91731669e6e870fc722</code>&nbsp;&nbsp;gnucash-3.906.setup.exe</li>
+  <li><code>3490cc6a523ade179ccea7199fdb7760569ceacd4b832c03b880f796fec5a277</code>&nbsp;&nbsp;Gnucash-Intel-3.906-1.dmg</li>
+  <li><code>0c60e935e0c9c308c66829a6633217b309baa27cb156043daedbd46b9f93dc92</code>&nbsp;&nbsp;gnucash-docs-3.906.tar.gz</li>
+</ul>
+
+<ul>
+  <li>SourceForge:
+  <ul>
+    <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28unstable%29/gnucash-3.906.setup.exe">Win32</a></li>
+    <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28unstable%29/Gnucash-Intel-3.906-1.dmg">Mac-Intel</a></li>
+  </ul></li>
+  <li>Github
+  <ul>
+    <li><a href="https://github.com/Gnucash/gnucash/releases/download/3.906/gnucash-3.906.setup.exe">Win32</a></li>
+    <li><a href="https://github.com/Gnucash/gnucash/releases/download/3.906/Gnucash-Intel-3.906-1.dmg">Mac-Intel</a></li>
+</ul></li></ul>
+
+<p>GnuCash is now available as a flatpak from Flathub.org. <a href="https://wiki.gnucash.org/wiki/Flatpak">Instructions for installing and running.</a></p>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 3.906 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+  <li>Sourceforge: <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28unstable%29/gnucash-3.906.tar.bz2">bzip2</a>, <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28unstable%29/3.906/gnucash-3.906.tar.gz">gzip</a>.</li>
+
+  <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/3.906/gnucash-3.906.tar.bz2">bzip</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/3.906/gnucash-3.906.tar.gz">gzip</a></li>
+
+  <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https:www.gtk.org">Gtk+</a> 3.22.29, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0, <a href="https://www.boost.org/">Boost</a> 1.67, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, <a href="https://github.com/google/googletest">GoogleTest</a> 1.8.0, <a href="https://cmake.org/">cmake 3.10</a> and <a href="http://www.swig.org/">SWIG</a> 2.0.12. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p><b>Note that the documentation for unstable releases is not on <a href="https://www.gnucash.org">the GnuCash website</a>.</b> It is built daily and may be found on the <a href="https://code.gnucash.org/docs">development server</a> under the locale directory; "C" is English, "de" is German, and so on.</p>
+<p>The documentation is included in the MacOS and Windows application bundles.</p>
+
+<p>If you want to compile the GnuCash Documentation 3.906 for yourself, the source code can be downloaded from:</p>
+<ul>
+  <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28unstable%29/gnucash-docs-3.906-1.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/3.906/gnucash-docs-3.906.tar.gz">GitHub</a></li>
+  <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, MacOS, and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
