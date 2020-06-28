@@ -1,0 +1,129 @@
+<b>Announcement:</b> GnuCash 3.11 Release
+2020-06-28
+
+<h2>GnuCash 3.11 released</h2>
+
+<p>The GnuCash development team announces GnuCash 3.11, the twelfth and final release of the 3.x stable release series.</p>
+<h3>Changes</h3>
+
+</p>
+<p>Between 3.10 and 3.11, the following bugfixes were accomplished:</p>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=782455">Bug 782455 - Modify Add Reversing Transaction feature.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797114">Bug 797114 - Fixing an SX due to deleted account stuck in an error loop</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797351">Bug 797351 - General ledger register transaction becomes "zombie" after deletion.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797648">Bug 797648 - Cannot reconcile both splits of a transaction with 2 splits for bank account subaccounts if only 1 is cleared .</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797659">Bug 797659 - Liabilities in budget report no longer calculate correctly.</a><p>Restores budget-3.7 behaviour for current budgets. Fixes future budget behaviour. Restore budget-3.7 headings "Income/Expense/Transfer" Renamed budget-3.7 heading Total to "Remaining" </p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797670">Bug 797670 - scheduled transaction editor can remain open when switching file, which causes seg fault when later closed</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797677">Bug 797677 - Price Database Saving Wrong Price for Foreign Currency.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797684">Bug 797684 - GTK_DEBUG=interactive - Bail out - gdk_window_set_cursor_internal.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797697">Bug 797697 - Enable DEP and ASLR for the Windows build.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797707">Bug 797707 - CSV Transaction Export: custom dates should be insensitive by default.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797717">Bug 797717 - Summary bar changes height when opening a menu or scrolling over an option.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797737">Bug 797737 - Import matching can match an imported transaction to an existing, previously matched transaction.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797748">Bug 797748 - missing header "algorithm".</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797750">Bug 797750 - SIGSEV in swig-engine.c</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797761">Bug 797761 - Customer report beta: opening balance tax column shows garbage string.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797799">Bug 797799 - Add Tip of the Day for "Notes" field</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797811">Bug 797811 - GnuCash crashes with segfault when saving to mysql when database already exists.</a></li>
+</ul>
+<p>Other fixes and improvements were not associated with bug reports:</p>
+<ul>
+    <li>[eguile-utilities] fmtnumeric displays decimal instead of fraction.</li>
+    <li>L12N: merge recent messages into all po files.</li>
+    <li>Add missing std c++ #includes into gnc-imp-settings-csv-price.cpp.</li>
+    <li>I18N: Improve tooltip about double-line-mode.</li>
+    <li>Update description of gnc_gnome_help and gnc_launch_assoc</li>
+    <li>Remove obsolete documentation files.</li>
+    <li>Move the Windows README files to gnucash-on-windows where they belong.</li>
+    <li>I18N: Fix several issuse with 'Help not found' strings.</li>
+    <li>Fix the crash that occurs when opening a new book when the transaction-matching dialog has been opened then closed.</li>
+    <li>Display report zoom factor with one decimal space to match the paramter.</li>
+    <li>Invoices were setting the transaction post date to midnight local instead of 10:59 UTC normalized time.</li>
+    <li>Add a tip about announcements and other mailing lists to the Tip of the Day list.</li>
+    <li>Fix three problems with setting dates in the Scheduled Transaction editor:
+        <ul><li>If the recurrence date is before the start date in the current month the SX summary dialog would show the next occurrence in the current month, before the start date.</li>
+            <li>If the recurrence date is one day before the start date the calendar control would incorrectly mark the first instance in the starting month.</li>
+            <li>Set a monthly recurrence on the 18th, with a start date on the 20th and an end date on the 17 of the following month. The calendar should show no mark, but fails to erase the marks that were present.</li> </ul></li>
+    <li>Improve python shell output and explanatory comments.</li>
+    <li>Ensure that python help displays help.</li>
+    <li>[fin.scm] return #f instead of -1 if n is out of range</li>
+    <li>Add a "Delete Budget" menu item to Actions>Budgets.</li>
+    <li>[gnc-exp-parser] If gnc:fn returns anything other than a number, abort rather than crash.</li>
+    <li>[window-reconcile] Refactor common actions into WidgetSetAmount.</li>
+    <li>Force WITH_PYTHON=YES for distcheck to ensure that it works from the tarball. </li>
+</ul>
+
+<p>Updated Translations: Croatian, Finnish, German, Hebrew, Ukrainian</p>
+<h2>Documentation</h2>
+<p>Concurrent with the release of Gnucash 3.11 we're pleased to also release a new version 3.11 of the companion <em>Help</em> and <em>Tutorial and Concepts Guide</em>.</p>
+<p>Documentation changes:</p>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=770132">Bug 770132 - Price editor does not find ASX:XRO</a><p>Ammend last commit German translation Patch other translations Update pt for easier synchronization</p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797783">Bug 797783 - [PATCH] The "over" and "under" estimate in the unrealized capital gain chapter should be reversed</a></li>
+    <li>Right align numerical column in fq-spec-tiaa</li>
+    <li>Fix obsolete guide cross-reference.</li>
+    <li>Appendix: add "Ticker" to distinguish from security numbers</li>
+    <li>Note on dots in yahoo symbols</li>
+    <li>Minor Correction to Help Manual<p>Correct reconciliation action on U+C entry in table from 'n' to 'c' Modification of PR #137</p></li>
+    <li>Improve links to Selingers tutorials<p>Use entities, also for titles</p></li>
+    <li>Modifications to Guide Ch12 to include multi-currency transactions using trading accounts.<p>Split the multi-currency transaction after the initial introduction into two sections. The first is the original dealing with the treatment of multicurrency transactions using manual recording of the gains and losses.</p></li>
+</ul>
+
+<h3>Getting GnuCash for Windows and MacOS</h3>
+<p>GnuCash is provided for both Microsoft Windows 7&reg; and later
+    and MacOS X 10.9 (Mavericks)&reg; and later in pre-built, all-in-one
+    packages. An installer is provided for Microsoft Windows&reg; while
+    the MacOS&reg; package is a disk image containing a drag-and-drop
+    application bundle.</p>
+<p>The SHA256 Hashes for the downloadable files are:
+    <ul>
+        <li><code>3e0df1781864350c051006fd49bbb3e8d6237d74fd55c9649a9e7c0f5cbd159b</code>&nbsp;&nbsp;gnucash-3.11.tar.bz2</li>
+        <li><code>621ea0662ebb8bca189877a30c616798afee3741495abfc293b4c39bc4303423</code>&nbsp;&nbsp;gnucash-3.11.tar.gz</li>
+        <li><code>6cd2b3b38db264940d84ec5460128dd249d8a7394dd3f8dc128ffe4d454f5c82</code>&nbsp;&nbsp;gnucash-3.11.setup.exe</li>
+        <li><code>840eb08731a58e463efaf640bd011637d3f23a6125ee313c167de1f1640424dd</code>&nbsp;&nbsp;Gnucash-Intel-3.11-1.dmg</li>
+        <li><code>8682dd969e5bec5745e4d8ebf7695973cc445d8975a369887d9aad07771a1d27</code>&nbsp;&nbsp;gnucash-docs-3.11.tar.gz</li>
+</ul></p>
+
+<ul>
+  <li>SourceForge:
+  <ul>
+    <li><a href="http://downloads.sourceforge.net/gnucash/stable/gnucash-3.11.setup.exe">Win32</a></li>
+    <li><a href="http://downloads.sourceforge.net/gnucash/stable/Gnucash-Intel-3.11-1.dmg">Mac-Intel</a></li>
+  </ul></li>
+  <li>Github
+  <ul>
+    <li><a href="https://github.com/Gnucash/gnucash/releases/download/3.11/gnucash-3.11.setup.exe">Win32</a></li>
+    <li><a href="https://github.com/Gnucash/gnucash/releases/download/3.11/Gnucash-Intel-3.11-3.dmg">Mac-Intel</a></li>
+</ul></li></ul>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 3.11 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+  <li>Sourceforge: <a href="http://downloads.sourceforge.net/gnucash/stable/gnucash-3.11.tar.bz2">bzip2</a>, <a href="http://sourceforge.net/projects/gnucash/files/gnucash%20(stable)/3.11/">all files</a>.</li>
+
+  <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/3.11/gnucash-3.11.tar.bz2">bzip</a> <b>WARNING</b> Do not try to use the github-generated files labelled "Source Code". They have not been processed with swig and will not build.</li>
+
+  <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https:www.gtk.org">Gtk+</a> 3.11, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0, <a href="https://www.boost.org/">Boost</a> 1.54, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, and <a href="https://github.com/google/googletest">GoogleTest</a> 1.7.0. In addition you will need <a href="http://www.swig.org/">SWIG</a> 2.0.10 if compiling from git. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 3.11 documentation can be found under "GnuCash v3 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats. The documentation is included in the MacOS and Windows application bundles.</p>
+
+<p>If you want to compile the GnuCash Documentation 3.11 for yourself, the source code can be downloaded from:</p>
+<ul>
+  <li><a href="http://downloads.sourceforge.net/gnucash/stable/gnucash-docs-3.11-1.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/3.11/gnucash-docs-3.11.tar.gz">GitHub</a></li>
+  <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, MacOS, and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>

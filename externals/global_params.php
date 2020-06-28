@@ -2,10 +2,10 @@
      // This section defines the most recent version numbers for all platforms.
      // Each platform can define its own latest version or follow the default.
      // Both a latest stable version and a latest unstable version are defined.
-     $major_stable              ="3";
+     $major_stable              ="4";
      // FIXME: on major_stable 4 copy in download.phtml into the historical
      // section: $latest_stable_xp_vista_version and $latest_stable_mac_ppc
-     $minor_stable              ="10";
+     $minor_stable              ="0";
      $latest_stable             = $major_stable.".".$minor_stable;
      $latest_stable_win         = $latest_stable;
      // $latest_stable_win         = $latest_stable."-1";
@@ -17,17 +17,17 @@
      $major_latest_unstable             ="3";
      $minor_latest_unstable             ="906";
      $latest_unstable           = $major_latest_unstable.".".$minor_latest_unstable;
-// When there's no unstable release going on uncomment the next line.
-//     $latest_unstable           = False;
+// To publicize an unstable release comment out the next line or change the value to True:
+     $latest_unstable           = False;
      $latest_unstable_win       = $latest_unstable;
      $latest_unstable_mac_intel = $latest_unstable."-1";
 
-     $major_old_stable          ="2.6";
-     $minor_old_stable          ="21";
+     $major_old_stable          ="3";
+     $minor_old_stable          ="11";
      $old_stable            = $major_old_stable.".".$minor_old_stable;
      $old_stable_win        = $old_stable;
      $old_stable_mac_ppc  = $old_stable."-1";
-     $old_stable_mac_intel  = $old_stable."-3";
+     $old_stable_mac_intel  = $old_stable."-1";
 
      // Frozen versions:
      $latest_stable_xp_vista_version = "2.6.21"; // used also in text
