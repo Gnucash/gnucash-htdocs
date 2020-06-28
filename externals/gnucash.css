@@ -38,6 +38,9 @@ BODY {
    height: 280px;
 }
 
+.row {
+    display: table-row;
+}
 .center {
    text-align:center;
 }
@@ -69,7 +72,8 @@ BODY {
 }
 
 .featurecontainer {
-   clear:right;
+    display: table;
+    clear: right;
 }
 
 h1.featuresection {
