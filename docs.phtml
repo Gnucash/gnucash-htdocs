@@ -157,17 +157,6 @@
               <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/pt/gnucash-guide.mobi">
                 <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>
             </td></tr>
-            <tr class="doctr">
-            <td><?php echo T_("Russian");?> :</td><td>
-              <a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$major_stable;?>&amp;lang=ru&amp;doc=guide">
-                <img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
-              <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/ru/gnucash-guide.pdf">
-                <img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a> |
-              <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/ru/gnucash-guide.epub">
-                <img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> |
-              <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/ru/gnucash-guide.mobi">
-                <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>
-            </td></tr>
           </tbody>
           </table>
         </li>
@@ -434,17 +423,6 @@
         <a href="https://code.gnucash.org/docs/pt/gnucash-guide.mobi">
           <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>
       </td></tr>
-      <tr class="doctr">
-      <td><?php echo T_("Russian");?> :</td><td>
-        <a href="<?=$top_dir;?>/viewdoc.phtml?rev=nightly&amp;lang=ru&amp;doc=guide">
-          <img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
-        <a href="https://code.gnucash.org/docs/ru/gnucash-guide.pdf">
-          <img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a> |
-        <a href="https://code.gnucash.org/docs/ru/gnucash-guide.epub">
-          <img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> |
-        <a href="https://code.gnucash.org/docs/ru/gnucash-guide.mobi">
-          <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>
-      </td></tr>
     </tbody>
     </table>
   </li>
@@ -500,24 +478,86 @@ $older7		="3";
             <li>
                 <b><?php echo T_("Help Manual");?></b>:
                 <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older6;?>&amp;lang=C&amp;doc=help"
-                                             ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>) |
-                <?php echo T_("German");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older6;?>&amp;lang=de&amp;doc=help"
-                                            ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>) |
-                <?php echo T_("Italian");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older6;?>&amp;lang=it&amp;doc=help"
-                                             ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>)
+                                             ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
+                <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/C/gnucash-help.pdf">
+                    <img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a> |
+                    <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/C/gnucash-help.epub">
+                        <img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> |
+                        <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/C/gnucash-help.mobi">
+                            <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>) |
+                            <?php echo T_("German");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older6;?>&amp;lang=de&amp;doc=help"
+                                                        ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
+                            <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/de/gnucash-help.pdf">
+                                <img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a> |
+                                <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/de/gnucash-help.epub">
+                                    <img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> |
+                                    <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/de/gnucash-help.mobi">
+                                        <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>) |
+                                        <?php echo T_("Italian");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older6;?>&amp;lang=it&amp;doc=help"
+                                                                     ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
+                                        <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/it/gnucash-help.pdf">
+                                            <img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a> |
+                                            <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/it/gnucash-help.epub">
+                                                <img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> |
+                                                <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/it/gnucash-help.mobi">
+                                                    <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>)
+                                                    <?php echo T_("Portuguese");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older6;?>&amp;lang=pt&amp;doc=help"
+                                                                                    ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
+                                                    <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/pt/gnucash-help.pdf">
+                                                        <img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a> |
+                                                        <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/pt/gnucash-help.epub">
+                                                            <img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> |
+                                                            <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/pt/gnucash-help.mobi">
+                                                                <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>)
             </li>
             <li>
                 <b><?= T_("Concepts Guide") ?></b>:
                 <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older6;?>&amp;lang=C&amp;doc=guide"
-                                         ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>)
-                <?php echo T_("German");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older6;?>&amp;lang=de&amp;doc=guide"
-                                        ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>)
-                <?php echo T_("Italian");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older6;?>&amp;lang=it&amp;doc=guide"
-                                         ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>)
-                <?php echo T_("Japanese");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older6;?>&amp;lang=ja&amp;doc=guide"
-                                          ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>)
-                <?php echo T_("Portuguese");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older6;?>&amp;lang=pt&amp;doc=guide">
-                    <img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>)
+                                             ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
+                <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/C/gnucash-guide.pdf">
+                    <img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a> |
+                    <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/C/gnucash-guide.epub">
+                        <img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> |
+                        <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/C/gnucash-guide.mobi">
+                            <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>
+                            )
+                            <?php echo T_("German");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older6;?>&amp;lang=de&amp;doc=guide"
+                                                        ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
+                            <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/de/gnucash-guide.pdf">
+                                <img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a> |
+                                <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/de/gnucash-guide.epub">
+                                    <img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> |
+                                    <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/de/gnucash-guide.mobi">
+                                        <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>
+                                        )
+                                        <?php echo T_("Italian");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older6;?>&amp;lang=it&amp;doc=guide"
+                                                                     ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
+                                        <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/it/gnucash-guide.pdf">
+                                            <img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a> |
+                                            <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/it/gnucash-guide.epub">
+                                                <img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> |
+                                                <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/it/gnucash-guide.mobi">
+                                                    <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>
+                                                    )
+                                                    <?php echo T_("Japanese");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older6;?>&amp;lang=ja&amp;doc=guide"
+                                                                                  ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
+                                                    <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/ja/gnucash-guide.pdf">
+                                                        <img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a> |
+                                                        <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/ja/gnucash-guide.epub">
+                                                            <img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> |
+                                                            <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/ja/gnucash-guide.mobi">
+                                                                <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>
+                                                                )
+                                                                <?php echo T_("Portuguese");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older6;?>&amp;lang=pt&amp;doc=guide">
+                                                                    <img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>
+                                |
+                                <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/pt/gnucash-guide.pdf">
+                                    <img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a> |
+                                    <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/pt/gnucash-guide.epub">
+                            <img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> |
+                            <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/pt/gnucash-guide.mobi">
+                                <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>
+                                )
             </li>
         </ul>
     </li>
