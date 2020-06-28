@@ -30,6 +30,7 @@
      $old_stable_mac_intel  = $old_stable."-1";
 
      // Frozen versions:
+     $last_stable_win7_version = "3.11"; //Used in download block on index.phtml
      $latest_stable_xp_vista_version = "2.6.21"; // used also in text
      $latest_stable_mac_ppc  = "2.6.21-1";
      $show_historical = True;
