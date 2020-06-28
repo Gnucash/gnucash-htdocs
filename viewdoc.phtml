@@ -23,66 +23,69 @@ $showrev     = $current_stable;
 $req_rev_ok  = true;
 
 if (isset ($_GET["lang"])) {
-	$showlang  = $_GET["lang"];
+    $showlang  = $_GET["lang"];
 } else {
-  # Fallback: Requested language is set in $locale by included lang.php
-  if ($locale == "en_US") {
-    $showlang  = "C";
-  } else {
-    $showlang  = $locale;
-  }
+    # Fallback: Requested language is set in $locale by included lang.php
+    if ($locale == "en_US") {
+        $showlang  = "C";
+    } else {
+        $showlang  = $locale;
+    }
 }
 
 
 # Parse requested document
 if (isset ($_GET["doc"])) {
-  switch ($_GET["doc"]) {
-    case "help":
-        $showdoc = $helpdoc;
-        break;
-    case "guide":
-        $showdoc = $tcdoc;
-        break;
-    default:  /* unknown document requested, will present help by default */
-        $req_doc_ok = false;
-        break;
-  }
+    switch ($_GET["doc"]) {
+        case "help":
+            $showdoc = $helpdoc;
+            break;
+        case "guide":
+            $showdoc = $tcdoc;
+            break;
+        default:  /* unknown document requested, will present help by default */
+            $req_doc_ok = false;
+            break;
+    }
 }
 
 # Parse requested version
 if (isset ($_GET["rev"])) {
-  switch ($_GET["rev"]) {
-    case "1.8":
-        $showrev = "1.8";
-        break;
-    case "2.0":
-        $showrev = "2.0";
-        break;
-    case "2.2":
-        $showrev = "2.2";
-        break;
-    case "2.4":
-        $showrev = "2.4";
-        break;
-    case "2.6":
-        $showrev = "2.6";
-        break;
-    case "3":
-        $showrev = "3";
-        break;
-    case "current":
-        $showrev = $current_stable;
-        break;
-    case "maint":
-        $showrev = "maint";
-        break;
-    case "nightly":
-        $showrev = "maint";
-        break;
-    default:  /* unknown version requested, will current stable by default */
-        $req_rev_ok = false;
-        break;
-  }
+    switch ($_GET["rev"]) {
+        case "1.8":
+            $showrev = "1.8";
+            break;
+        case "2.0":
+            $showrev = "2.0";
+            break;
+        case "2.2":
+            $showrev = "2.2";
+            break;
+        case "2.4":
+            $showrev = "2.4";
+            break;
+        case "2.6":
+            $showrev = "2.6";
+            break;
+        case "3":
+            $showrev = "3";
+            break;
+        case "4":
+            $showrev = "4";
+            break;
+        case "current":
+            $showrev = $current_stable;
+            break;
+        case "maint":
+            $showrev = "maint";
+            break;
+        case "nightly":
+            $showrev = "maint";
+            break;
+        default:  /* unknown version requested, will current stable by default */
+            $req_rev_ok = false;
+            break;
+    }
 }
 
 # Now check if the requested combination of doc, revision and language actually exists
@@ -97,62 +100,62 @@ $reqlangs = array ($showlang);
 # To avoid network traffic, the available languages are hard-coded here and should be
 # updated if list of languages in which the documentation is available changes
 if ($showrev == "maint") {
-  $req_lang_ok = false;
-  $basepath = "https://lists.gnucash.org/docs";
-  $trunk_langs = array ( $helpdoc => array( "C", "de", "it", "pt"),
-                         $tcdoc   => array( "C", "de", "it", "ja", "pt", "ru"));
+    $req_lang_ok = false;
+    $basepath = "https://lists.gnucash.org/docs";
+    $trunk_langs = array ( $helpdoc => array( "C", "de", "it", "pt"),
+                           $tcdoc   => array( "C", "de", "it", "ja", "pt", "ru"));
 
-  if (in_array ($showlang, $trunk_langs[$showdoc])) {
-    $req_lang_ok = true;
-  }
-  else if (in_array ($shortlang, $trunk_langs[$showdoc])) {
-    $req_lang_ok = true;
-    $showlang    = $shortlang;
-    array_push ($reqlangs, $showlang);
-  } else {
-    $showlang = "C";
-  }
-  
-  $showurl=$basepath."/".$showlang."/".$showdoc;
+    if (in_array ($showlang, $trunk_langs[$showdoc])) {
+        $req_lang_ok = true;
+    }
+    else if (in_array ($shortlang, $trunk_langs[$showdoc])) {
+        $req_lang_ok = true;
+        $showlang    = $shortlang;
+        array_push ($reqlangs, $showlang);
+    } else {
+        $showlang = "C";
+    }
+    
+    $showurl=$basepath."/".$showlang."/".$showdoc;
 } else {
-  # For the stable versions, we can simply check file availability because we're
-  # on the same server
-  $req_lang_ok = true;
-  $checkpath="docs/v".$showrev."/".$showlang."/".$showdoc;
-  if (!file_exists ($checkpath)) {
+    # For the stable versions, we can simply check file availability because we're
+    # on the same server
+    $req_lang_ok = true;
+    $checkpath="docs/v".$showrev."/".$showlang."/".$showdoc;
+    if (!file_exists ($checkpath)) {
   	# Try Lang only codes
   	$showlang = $shortlang;
         array_push ($reqlangs, $showlang);
   	if ($showlang == "en") $showlang = "C";
-    $checkpath="docs/v".$showrev."/".$showlang."/".$showdoc;
-    if (!file_exists ($checkpath)) {
-      $showlang    = "C";
-      $req_lang_ok = false;
-      }
+        $checkpath="docs/v".$showrev."/".$showlang."/".$showdoc;
+        if (!file_exists ($checkpath)) {
+            $showlang    = "C";
+            $req_lang_ok = false;
+        }
     }
-  
-  $showurl=$basepath."/v".$showrev."/".$showlang."/".$showdoc;
+    
+    $showurl=$basepath."/v".$showrev."/".$showlang."/".$showdoc;
 }
 
 ?>
 
 <div id="content">
 
-<?php if (! $req_doc_ok ) { ?>
-<p style="color: red;"><?= T_("The document requested is not available. The tutorial and concepts guide will be displayed instead.")?></p>
-<?php } ?>
-<?php if (! $req_rev_ok ) {
-  $reqrev=$_GET["rev"]; ?>
-<p style="color: red;"><?php printf (T_("The document requested is not available for version %s. Version %s will be displayed instead."),
-                                     $reqrev, $showrev); ?></p>
-<?php } ?>
-<?php if (! $req_lang_ok ) { ?>
-<p style="color: red;"><?= T_("The document requested is not available in the requested language (tried [".join(",", $reqlangs)."]). The English version will be displayed instead.")?></p>
-<?php } ?>
+    <?php if (! $req_doc_ok ) { ?>
+        <p style="color: red;"><?= T_("The document requested is not available. The tutorial and concepts guide will be displayed instead.")?></p>
+    <?php } ?>
+    <?php if (! $req_rev_ok ) {
+        $reqrev=$_GET["rev"]; ?>
+        <p style="color: red;"><?php printf (T_("The document requested is not available for version %s. Version %s will be displayed instead."),
+                                             $reqrev, $showrev); ?></p>
+    <?php } ?>
+    <?php if (! $req_lang_ok ) { ?>
+        <p style="color: red;"><?= T_("The document requested is not available in the requested language (tried [".join(",", $reqlangs)."]). The English version will be displayed instead.")?></p>
+    <?php } ?>
 
-<iframe src="<?php echo $showurl; ?>" style="border-width: 0px; width: 100%; min-width: 700px; height: 80em;">
-<?php printf (T_("It seems your browser doesn't support iframes. To view the requested page in a separate window, please <a href=\"%s\" target=\"_new\">click here</a>."), $showurl); ?>
-</iframe>
+    <iframe src="<?php echo $showurl; ?>" style="border-width: 0px; width: 100%; min-width: 700px; height: 80em;">
+        <?php printf (T_("It seems your browser doesn't support iframes. To view the requested page in a separate window, please <a href=\"%s\" target=\"_new\">click here</a>."), $showurl); ?>
+    </iframe>
 
 </div>
 <?php include("externals/footer.phtml"); ?>
