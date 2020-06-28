@@ -36,85 +36,76 @@
     <li><code>gnucash-cli --report run --name=[reportname/guid] --output-file=x.html datafile.gnucash</code></li>
     <li><code>gnucash-cli --report run --name=[reportname/guid] --output-file=x.html --export-type=TYPE datafile.gnucash</code></li>
   </ul></li>
-  <li>Register Column Widths
-  <p> Register column widths are no longer saved per-account except for open tabs and even widths for open tabs will be reset after upgrading from 3.x or earlier. Instead widths are saved by register type group. The type groups are:
-  <ul><li>Currency: Ledgers that display amount in debit and credit columns.</li>
-  <li>APAR: Accounts Payable and Accounts Receivable accounts.</li>
-  <li>Stock: Ledgers that display amount in a single column with additional columns for Price and Value, the last in Debit and Credit columns.</li>
-  <li>Journal: Ledgers displaying transactions from multiple accounts where all accounts would be displayed with a Currency type ledger.</li>
-  <li>Portfolio: Ledgers displaying transactions from multiple accounts where one or more accounts would be displayed with a Stock type ledger.</li>
-  <li>Customer: Ledgers embedded in invoices.</li>
-  <li>Employee: Ledgers embedded in expense vouchers.</li>
-  <li>Vendor: Ledgers embedded in bills.</li>
-  </ul>
-  <p> Two menu items are added to the Windows menu when a Register, Bill, Invoice, or Voucher tab has focus:
-  <ul>
-    <li>Use as Default Layout for this Register Group</li>
-    <li>Reset Default Layout for this Register Group</li>
-  </ul> The first saves the currently focused register's column widths and saves them for use by all registers in the same type group. Note that currently open registers will not be affected until they are closed and reopened, and that open registers widths will persist through quitting and restarting GnuCash. The second menu item removes the customization and registers of that type group will therafter use the computed default widths.</p></p></li>
-
-  <li>When deleting accounts the destination accounts of moved splits will be checked to ensure that they have the same commodity as the source account. If they don't you'll get a warning and the opportunity to pick another account or to carry on regardless.</li>
-  <li>New type-ahead search added to sequential search when selecting an account in the register: Instead of typing the first few characters of a top level account, the separator, the first few characters of the next level account and so on you may instead type a few characters of any part of a full account name and the drop-list will be filtered to contain only matching accounts. Once you have a small enough list you can use the arrow keys to select the account that you want.</li>
-  <li> Python bindings are now localized and their strings available for translation.</li>
-  <li> A new <B>Transaction Association</B> dialog, available from the <B>Update Association for Transaction</B> menu item that has replaced the two association items in 3.x, allows setting, changing, and deleting associations.</li>
-  <li>Allow Associations to be added to invoices. The actual association when present is added as a link button which is shown below the notes. </li>
-  <li>A symbol is now displayed on transactions in the register when they have an attachment and the selected font supports the symbol.</li>
-  <li>The OFX file importer can now import more than one file at a time.</li>
-  <li> A new report menu supbmenu <B>Multicolumn</B> contains the old custom-multicolumn report and a new <B>Dashboard</B> report containing Account reports for expenses and income, an income-expense chart, and an account summary.</li>
-  <li> Support for UK VAT and Australian GST added to the Income-GST report. The reports options are changed from source accounts to source sales and purchase accounts to permit proper reporting of capital purchases. <B>N.B.</B> This is incompatible with previous versions of the report and will require regenerating saved configurations.</li>
-  <li>The matcher window columns are changed from R to C and from U+R to U+C, reflecting that the matcher marks transactions cleared but doesn't reconcile them. (Bug 797338)</li>
-  <li>OFX imports having balance information will now offer to immediately reconcile, passing the balance information in the file to the reconcile info.</li>
-  <li>Improve quickfill in the account pickers to filter the choices based on any part of the name.</li>
-  <li>The GnuCash widget hierarchy for CSS has been revised to be more consistent with Gtk practice. You may need to spend some time with the GtkInspector to get your custom CSS back the way you like it.</li>
-  <li>When creating a new account hierarchy it's now possible to load account templates from locales other than the one set for the user interface. (Bug 797472)</li>
-  <li>New Account - Online Account match list to the Import Map Editor.</li>
-  <li>New invalid maps dialog in the Import Map Editor. (Bug 797612)</li>
-  <li>Optionally include the account code option in budget view.</li>
-  <li>Account matcher will decline to match accounts with a different commodity from the imported split if the import information includes the commodity.</li>
-  <li>Ellipsize the Description and Memo fields in the account matcher.</li>
-  <li>Enable adding notes to budgets. (Bug 693180)</li>
-  <li>Support for AQBanking Version 6. This is required to support new FinTS protocols for the European Payment Services Directive (PSD2).</li>
-  <li>GnuCash 4.x will not migrate old gconf settings from GnuCash 2.4.x.</li>
-  <li> Reversing transactions will now pop a dialog box to request a posting date. (Bug 782455)</li>
-  <li>The Accounts page has a new optional column for the hidden property to make it easier to toggle it. Note that in order to see hidden accounts you must still enable that in the Filter by... dialog. (Bug 797486)</li>
-  <li>The Customer, Vendor, and Employee overviews have a process-payment toolbar. (Bug 797605).</li>
-  <li>Account codes may now optionally be displayed in the Budget Tree View. (Bug 797489).</li>
+    <li>Business Document Column Widths:
+        <p>Entry column widths in Invoices, Bills, and Employee Vouchers may now be saved as defaults for each type of document.</p>
+        <p>Two menu items are added to the View menu when a Bill, Invoice, or Voucher tab has focus:
+        <ul>
+            <li>Use as Default Layout for Vendor Documents</li>
+            <li>Reset Default Layout for Vendor Documents</li>
+        </ul><p>Vendor Documents is for Bills and is replaced by Customer or Employee Documents for Invoices or Vouchers respectively. The first saves the current document's column widths and makes them the default for all documents in the same type. The second menu item removes the customization and documents of that type will therafter use the computed default widths.</p>
+    </li>
+    <li>When deleting accounts the destination accounts of moved splits will be checked to ensure that they have the same commodity as the source account. If they don't you'll get a warning and the opportunity to pick another account or to carry on regardless.</li>
+    <li>New type-ahead search added to sequential search when selecting an account in the register: Instead of typing the first few characters of a top level account, the separator, the first few characters of the next level account and so on you may instead type a few characters of any part of a full account name and the drop-list will be filtered to contain only matching accounts. Once you have a small enough list you can use the arrow keys to select the account that you want.</li>
+    <li> Python bindings are now localized and their strings available for translation.</li>
+    <li> A new <B>Transaction Association</B> dialog, available from the <B>Update Association for Transaction</B> menu item that has replaced the two association items in 3.x, allows setting, changing, and deleting associations.</li>
+    <li>Allow Associations to be added to invoices. The actual association when present is added as a link button which is shown below the notes. </li>
+    <li>A symbol is now displayed on transactions in the register when they have an attachment and the selected font supports the symbol.</li>
+    <li>The OFX file importer can now import more than one file at a time.</li>
+    <li> A new report menu supbmenu <B>Multicolumn</B> contains the old custom-multicolumn report and a new <B>Dashboard</B> report containing Account reports for expenses and income, an income-expense chart, and an account summary.</li>
+    <li> Support for UK VAT and Australian GST added to the Income-GST report. The reports options are changed from source accounts to source sales and purchase accounts to permit proper reporting of capital purchases. <B>N.B.</B> This is incompatible with previous versions of the report and will require regenerating saved configurations.</li>
+    <li>The matcher window columns are changed from R to C and from U+R to U+C, reflecting that the matcher marks transactions cleared but doesn't reconcile them. (Bug 797338)</li>
+    <li>OFX imports having balance information will now offer to immediately reconcile, passing the balance information in the file to the reconcile info.</li>
+    <li>Improve quickfill in the account pickers to filter the choices based on any part of the name.</li>
+    <li>The GnuCash widget hierarchy for CSS has been revised to be more consistent with Gtk practice. You may need to spend some time with the GtkInspector to get your custom CSS back the way you like it.</li>
+    <li>When creating a new account hierarchy it's now possible to load account templates from locales other than the one set for the user interface. (Bug 797472)</li>
+    <li>New Account - Online Account match list to the Import Map Editor.</li>
+    <li>New invalid maps dialog in the Import Map Editor. (Bug 797612)</li>
+    <li>Optionally include the account code option in budget view.</li>
+    <li>Account matcher will decline to match accounts with a different commodity from the imported split if the import information includes the commodity.</li>
+    <li>Ellipsize the Description and Memo fields in the account matcher.</li>
+    <li>Enable adding notes to budgets. (Bug 693180)</li>
+    <li>Support for AQBanking Version 6. This is required to support new FinTS protocols for the European Payment Services Directive (PSD2).</li>
+    <li>GnuCash 4.x will not migrate old gconf settings from GnuCash 2.4.x.</li>
+    <li> Reversing transactions will now pop a dialog box to request a posting date. (Bug 782455)</li>
+    <li>The Accounts page has a new optional column for the hidden property to make it easier to toggle it. Note that in order to see hidden accounts you must still enable that in the Filter by... dialog. (Bug 797486)</li>
+    <li>The Customer, Vendor, and Employee overviews have a process-payment toolbar. (Bug 797605).</li>
+    <li>Account codes may now optionally be displayed in the Budget Tree View. (Bug 797489).</li>
 </ul>
 <h3>New/Revised Reports</h3>
 <ul>
-  <li>Income-GST</li>
-  <li>Owner Report</li>
+    <li>Income-GST</li>
+    <li>Owner Report</li>
 </ul>
 <h3>Significant Code Changes</h3>
 <ul>
-  <li> The signature for <code>qof_session_begin()</code>, <code>QofSession::begin()</code>, and <code>QofBackend::begin()</code> are changed to use an enum <code>SessionOpenMode</code> instead of three booleans.</li>
-  <li><kbd>gnucash-bin.c</kbd> has been split into 4 parts, mostly C++:
-  <ul>
-    <li><kbd>gnucash.cpp</kbd>, the GUI executable.</li>
-    <li><kbd>gnucash-cli.cpp</kbd>, the command-line executable.</li>
-    <li><kbd>gnucash-commands.cpp</kbd>, implementation for the commands that can be run from the command-line.</li>
-    <li><kbd>gnucash-app-core.cpp</kbd>, common code required by both the command line and gui programs.</li>
-    <li>There's also an auxiliary file, <kbd>gnucash-windows-locale.c</kbd> because the localization code proved resistant to compiling as C++. We're planning another auxiliary file for the MacOS localization.</li>
-  </ul></li>
-  <li> A new mock facility for several engine classes to permit better-isolated unit testing of components that depend on those classes.</li>
-  <li>Register filter and sort values are saved in the book's state file (book.gcm) in the user's configdir instead of in the book.</li>
-  <li>QofSession no longer creates its book, instead one must create a book first and pass that to <code>qof_session_new()</code>/<code>QofSession::QofSession()</code>.</li>
-  <li> Input Method handling in the register is moved to the GtkEntry where it belongs.</li>
-  <li><code>gnc_get_current_session()</code> no longer creates an empty session if there isn't one already open.</li>
-  <li>The source directories have been rearranged and most of the loadable modules (e.g. libgncmod-engine.so) are now normal dynamic libraries (libgnc-engine.so), shorn of their gnc-module adapters. Make sure that you clean and rebuild your build directory.</li>
-  <li>All functions marked as deprecated in 3.x are now removed. If you have custom reports be sure to examine <kbd>gnucash.trace</kbd> for deprecation warnings and update your reports before trying them in GnuCash 4.0.</li>
-  <li>libgncmod-generic-import is now libgnc-generic-import.</li>
-  <li>Scheme no longer uses libgncmodule, always do <code>(use-modules (gnucash foo))</code></li>
-  <li>Autocompletion improvements for the transfer-account field.</li>
-  <li>New test for invalid mappings for online accounts and a dialog to fix them.</li>
-  <li>jqplot is replaced by chartjs.</li>
-  <li>Separate most Guile binding code from the code that it wraps. It's now located in bindings/guile.</li>
-  <li>Improve Google test integration in cmake. CMake now requires only GTEST_ROOT and only when cmake isn't able to find Google test without help.</li>
-  <li>Unit tests for Scheme code with SRFI64.</li>
+    <li> The signature for <code>qof_session_begin()</code>, <code>QofSession::begin()</code>, and <code>QofBackend::begin()</code> are changed to use an enum <code>SessionOpenMode</code> instead of three booleans.</li>
+    <li><kbd>gnucash-bin.c</kbd> has been split into 4 parts, mostly C++:
+        <ul>
+            <li><kbd>gnucash.cpp</kbd>, the GUI executable.</li>
+            <li><kbd>gnucash-cli.cpp</kbd>, the command-line executable.</li>
+            <li><kbd>gnucash-commands.cpp</kbd>, implementation for the commands that can be run from the command-line.</li>
+            <li><kbd>gnucash-app-core.cpp</kbd>, common code required by both the command line and gui programs.</li>
+            <li>There's also an auxiliary file, <kbd>gnucash-windows-locale.c</kbd> because the localization code proved resistant to compiling as C++. We're planning another auxiliary file for the MacOS localization.</li>
+        </ul></li>
+    <li> A new mock facility for several engine classes to permit better-isolated unit testing of components that depend on those classes.</li>
+    <li>Register filter and sort values are saved in the book's state file (book.gcm) in the user's configdir instead of in the book.</li>
+    <li>QofSession no longer creates its book, instead one must create a book first and pass that to <code>qof_session_new()</code>/<code>QofSession::QofSession()</code>.</li>
+    <li> Input Method handling in the register is moved to the GtkEntry where it belongs.</li>
+    <li><code>gnc_get_current_session()</code> no longer creates an empty session if there isn't one already open.</li>
+    <li>The source directories have been rearranged and most of the loadable modules (e.g. libgncmod-engine.so) are now normal dynamic libraries (libgnc-engine.so), shorn of their gnc-module adapters. Make sure that you clean and rebuild your build directory.</li>
+    <li>All functions marked as deprecated in 3.x are now removed. If you have custom reports be sure to examine <kbd>gnucash.trace</kbd> for deprecation warnings and update your reports before trying them in GnuCash 4.0.</li>
+    <li>libgncmod-generic-import is now libgnc-generic-import.</li>
+    <li>Scheme no longer uses libgncmodule, always do <code>(use-modules (gnucash foo))</code></li>
+    <li>Autocompletion improvements for the transfer-account field.</li>
+    <li>New test for invalid mappings for online accounts and a dialog to fix them.</li>
+    <li>jqplot is replaced by chartjs.</li>
+    <li>Separate most Guile binding code from the code that it wraps. It's now located in bindings/guile.</li>
+    <li>Improve Google test integration in cmake. CMake now requires only GTEST_ROOT and only when cmake isn't able to find Google test without help.</li>
+    <li>Unit tests for Scheme code with SRFI64.</li>
 </ul>
 <h4>Deprecations (will be removed in GnuCash 5.0</h4>
 <ul>
-  <li>gnc:substring-replace-from-to</li>
+    <li>gnc:substring-replace-from-to</li>
 </ul>
 
 
@@ -126,16 +117,16 @@
 
 <h3>Getting GnuCash for Windows and MacOS</h3>
 <p>GnuCash is provided for both Microsoft Windows 8.1&reg; and later
-and MacOS 10.13 (High Sierra)&reg; and later in pre-built, all-in-one
-packages. An installer is provided for Microsoft Windows&reg; while
-the MacOS&reg; package is a disk image containing a drag-and-drop
-application bundle.</p>
+    and MacOS 10.13 (High Sierra)&reg; and later in pre-built, all-in-one
+    packages. An installer is provided for Microsoft Windows&reg; while
+    the MacOS&reg; package is a disk image containing a drag-and-drop
+    application bundle.</p>
 <p>The SHA256 Hashes for the downloadable files are:</p>
 <ul>
     <li><code>aa523c4f1721b19ff51ac534c049644f175e3c3c01139555eb3d9cfa50949bb7</code>&nbsp;&nbsp;gnucash-4.0.tar.bz2</li>
     <li><code>956da4f9e0301f02291d0b840c2ef2027c5b65a03bd42cf8df966d2407eb5330</code>&nbsp;&nbsp;gnucash-4.0.tar.gz</li>
     <li><code>66dae273935f57714ee36e0b761f00f63f3802598752b9cc02b568a0a07d2032</code>&nbsp;&nbsp;gnucash-4.0.setup.exe</li>
-    <li><code>f49fbcca3766104d7dcf5ef6d65bf9b6deceee3afc9f472c64cfc62e67b32e22</code>&nbsp;&nbsp;Gnucash-Intel-4.0-1.dmg</li>
+    <li><code>519f4e83d964be92b0cfcda93b8322eb38d3e3626e52070505c4a28b65302ce0</code>&nbsp;&nbsp;Gnucash-Intel-4.0-2.dmg</li>
     <li><code>519f4e83d964be92b0cfcda93b8322eb38d3e3626e52070505c4a28b65302ce0</code>&nbsp;&nbsp;gnucash-docs-4.0.tar.gz</li>
 </ul>
 
