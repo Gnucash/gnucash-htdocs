@@ -49,7 +49,7 @@
     <li> Python bindings are now localized and their strings available for translation.</li>
     <li> A new <B>Transaction Association</B> dialog, available from the <B>Update Association for Transaction</B> menu item that has replaced the two association items in 3.x, allows setting, changing, and deleting associations.</li>
     <li>Allow Associations to be added to invoices. The actual association when present is added as a link button which is shown below the notes. </li>
-    <li>A symbol is now displayed on transactions in the register when they have an attachment and the selected font supports the symbol.</li>
+    <li>A symbol is now displayed on transactions in the register when they have an attachment and the selected font supports the symbol. This does not work on MacOS, which will continue to use a letter.</li>
     <li>The OFX file importer can now import more than one file at a time.</li>
     <li> A new report menu supbmenu <B>Multicolumn</B> contains the old custom-multicolumn report and a new <B>Dashboard</B> report containing Account reports for expenses and income, an income-expense chart, and an account summary.</li>
     <li> Support for UK VAT and Australian GST added to the Income-GST report. The reports options are changed from source accounts to source sales and purchase accounts to permit proper reporting of capital purchases. <B>N.B.</B> This is incompatible with previous versions of the report and will require regenerating saved configurations.</li>
