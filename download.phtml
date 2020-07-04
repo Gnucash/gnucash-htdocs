@@ -71,7 +71,7 @@
   <?php
     # Only show old stable download options if there really is an active unstable release
     if ($old_stable) { ?>
-      <div class="featureborder">
+      <div id="previous" class="featureborder">
         <h2 class="featuretitle"><?php printf (T_("Old Stable release (%s)"), $old_stable)?></h2>
       </div>
       <p class="justify"><?php echo T_("This old stable release is the final version of the previous stable series. It's available for users who aren't ready for a major upgrade but want to make sure that they have all of the bugfixes from the old series.")?></p>
@@ -87,7 +87,7 @@
   <?php
     # Only show historical download options if enabled
     if ($show_historical) { ?>
-      <div class="featureborder">
+      <div id="historical" class="featureborder">
         <h2 class="featuretitle"><?php echo T_("Latest versions for historical operating systems") ?></h2>
       </div>
       <p class="justify"><?php echo T_("This versions are really old. Do not expect any support.")?></p>
