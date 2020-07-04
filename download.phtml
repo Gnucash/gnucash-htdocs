@@ -20,7 +20,7 @@
   <h3><?php echo T_("Installers")?></h3>
   <ul class="imagelist">
     <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/windows.png);"><?php printf (T_("GnuCash %s for"), $latest_stable)?> <a href="<?php echo $latest_stable_path.$latest_stable_win;?>">Microsoft Windows 7/8/10</a></li>
-    <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/macosx.png);"><?php printf (T_("GnuCash %s for"), $latest_stable)?> Mac OS X <a href="<?php echo $latest_stable_path.$latest_stable_mac_intel;?>">Intel >= 10.9 (Mavericks)</a></li>
+    <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/macosx.png);"><?php printf (T_("GnuCash %s for"), $latest_stable)?> <a href="<?php echo $latest_stable_path.$latest_stable_mac_intel;?>">Apple macOS >= 10.9 "Mavericks" (Intel PC)</a></li>
   </ul>
 
   <a id="distribution"></a><h3>Linux</h3>
@@ -79,7 +79,7 @@
       
       <ul>
         <li><?php printf (T_("GnuCash %s for"), $old_stable)?> <a href="<?php echo $old_stable_path.$old_stable_win;?>">Microsoft Windows 7/8/10</a></li>
-        <li><?php printf (T_("GnuCash %s for"), $old_stable)?> Apple macOS <a href="<?php echo $old_stable_path.$old_stable_mac_intel;?>">Intel PC</a></li>
+        <li><?php printf (T_("GnuCash %s for"), $old_stable)?> <a href="<?php echo $old_stable_path.$old_stable_mac_intel;?>">Apple macOS >= 10.9 "Mavericks" (Intel PC)</a></li>
         <li><a href="<?php echo $old_stable_path.$old_stable_source;?>">bzip2 compressed tarball</a> <?php printf (T_("for GnuCash %s"), $old_stable)?></li>
       </ul>
   <?php } ?>
