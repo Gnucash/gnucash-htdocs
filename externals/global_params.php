@@ -43,7 +43,10 @@
      $base_path="https://sourceforge.net/projects/gnucash/files";
      $stable_path=$base_path."/gnucash%20(stable)/";
      $latest_stable_path=$stable_path.$latest_stable."/";
-
+     $last_2_2_path=$stable_path."/".$last_win2k_version."/";
+     $last_2_6_path=$stable_path."/".$last_xp_vista_version."/";
+     $last_3_path=$stable_path."/".$last_win7_version."/";
+     
      $latest_stable_win="gnucash-".$latest_stable_win.".setup.exe";
      $last_win7="gnucash-".$last_win7.".setup.exe";
      $last_xp_vista="gnucash-".$last_xp_vista_version."-setup.exe";
