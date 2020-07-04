@@ -50,7 +50,7 @@
      $latest_stable_win="gnucash-".$latest_stable_win.".setup.exe";
      $last_win7="gnucash-".$last_win7.".setup.exe";
      $last_xp_vista="gnucash-".$last_xp_vista_version."-setup.exe";
-     $last_win2k="gnucash-".$last_win2k_version.".setup.exe";
+     $last_win2k="gnucash-".$last_win2k_version."-setup.exe";
      $latest_stable_mac_intel="Gnucash-Intel-".$latest_stable_mac_intel.".dmg";
      $last_mac_sierra="Gnucash-Intel-".$last_mac_sierra.".dmg";
      $last_mac_ppc="Gnucash-PPC-".$last_mac_ppc.".dmg";
@@ -58,7 +58,7 @@
 
      $old_stable_path=$stable_path.$old_stable."/";
 
-     $old_stable_win="gnucash-".$old_stable_win."-setup.exe";
+     $old_stable_win="gnucash-".$old_stable_win.".setup.exe";
      $old_stable_mac_intel="Gnucash-Intel-".$old_stable_mac_intel.".dmg";
      $old_stable_source="gnucash-".$old_stable.".tar.bz2";
 
