@@ -3,8 +3,8 @@
      // Each platform can define its own latest version or follow the default.
      // Both a latest stable version and a latest unstable version are defined.
      $major_stable              ="4";
-     // FIXME: on major_stable 4 copy in download.phtml into the historical
-     // section: $latest_stable_xp_vista_version and $latest_stable_mac_ppc
+     // TODO: on major_stable 5 in download.phtml copy from $old_stable into the historical
+     // section: last_win7 and $last_mac_sierra
      $minor_stable              ="0";
      $latest_stable             = $major_stable.".".$minor_stable;
      $latest_stable_win         = $latest_stable;
@@ -14,11 +14,11 @@
 // e.g. if one retagged 2.6.13 to 2.6.13a, make $tarball = $latest_stable."a".
      $tarball                   = $latest_stable."";
 
-     $major_latest_unstable             ="3";
-     $minor_latest_unstable             ="906";
-     $latest_unstable           = $major_latest_unstable.".".$minor_latest_unstable;
-// To publicize an unstable release comment out the next line or change the value to True:
-     $latest_unstable           = False;
+     $major_unstable            ="3";
+     $minor_latest_unstable     ="906";
+     $latest_unstable           = $major_unstable.".".$minor_latest_unstable;
+// To publicize an unstable release:
+     $show_unstable             = $major_unstable >= $major_stable;
      $latest_unstable_win       = $latest_unstable;
      $latest_unstable_mac_intel = $latest_unstable."-1";
 
@@ -26,15 +26,15 @@
      $minor_old_stable          ="11";
      $old_stable            = $major_old_stable.".".$minor_old_stable;
      $old_stable_win        = $old_stable;
-     $old_stable_mac_ppc  = $old_stable."-1";
      $old_stable_mac_intel  = $old_stable."-1";
 
      // Frozen versions:
-     $last_stable_win7_version = "3.11"; //Used in download block on index.phtml
-     $latest_stable_xp_vista_version = "2.6.21"; // used also in text
-     $latest_stable_mac_ppc  = "2.6.21-1";
      $show_historical = True;
-     $latest_stable_win2k_version = "2.2.9";
+     $last_win7_version = "3.11"; //Still used in download block on index.phtml
+     $last_mac_sierra  = "3.11-1";
+     $last_xp_vista_version = "2.6.21"; // used also in text
+     $last_mac_ppc  = "2.6.21-1";
+     $last_win2k_version = "2.2.9";
 
      // The definitions below use the latest version definitions above
      // to define several paths that will be used on several pages
@@ -45,17 +45,18 @@
      $latest_stable_path=$stable_path.$latest_stable."/";
 
      $latest_stable_win="gnucash-".$latest_stable_win.".setup.exe";
-     $latest_stable_xp_vista="gnucash-".$latest_stable_xp_vista_version."-setup.exe";
-     $latest_stable_win2k="gnucash-".$latest_stable_win2k_version.".setup.exe";
+     $last_win7="gnucash-".$last_win7.".setup.exe";
+     $last_xp_vista="gnucash-".$last_xp_vista_version."-setup.exe";
+     $last_win2k="gnucash-".$last_win2k_version.".setup.exe";
      $latest_stable_mac_intel="Gnucash-Intel-".$latest_stable_mac_intel.".dmg";
-     $latest_stable_mac_ppc="Gnucash-PPC-".$latest_stable_mac_ppc.".dmg";
+     $last_mac_sierra="Gnucash-Intel-".$last_mac_sierra.".dmg";
+     $last_mac_ppc="Gnucash-PPC-".$last_mac_ppc.".dmg";
      $latest_stable_source="gnucash-".$tarball.".tar.bz2";
 
      $old_stable_path=$stable_path.$old_stable."/";
 
      $old_stable_win="gnucash-".$old_stable_win."-setup.exe";
      $old_stable_mac_intel="Gnucash-Intel-".$old_stable_mac_intel.".dmg";
-     $old_stable_mac_ppc="Gnucash-PPC-".$old_stable_mac_ppc.".dmg";
      $old_stable_source="gnucash-".$old_stable.".tar.bz2";
 
      $unstable_path=$base_path . "/gnucash%20(unstable)/";

@@ -54,7 +54,7 @@
 
   <?php
     # Only show unstable download options if there really is an active unstable release
-    if ($latest_unstable) { ?>
+    if ($show_unstable) { ?>
       <div class="featureborder">
       <h2 class="featuretitle"><?php printf (T_("Unstable/Development release (%s)"), $latest_unstable)?></h2>
       </div>
@@ -78,8 +78,8 @@
       <p class="justify"><?php printf (T_("The last old stable release of <span class=\"gnucash\">GnuCash</span> is %s.  Choose the download for your operating system below."), $old_stable)?></p>
       
       <ul>
-        <li><?php printf (T_("GnuCash %s for"), $old_stable)?> <a href="<?php echo $old_stable_path.$old_stable_win;?>">Microsoft Windows XP/Vista/7/8/10</a></li>
-        <li><?php printf (T_("GnuCash %s for"), $old_stable)?> Mac OS X <a href="<?php echo $old_stable_path.$old_stable_mac_intel;?>">Intel</a> | <a href="<?php echo $old_stable_path.$old_stable_mac_ppc;?>">PPC</a></li>
+        <li><?php printf (T_("GnuCash %s for"), $old_stable)?> <a href="<?php echo $old_stable_path.$old_stable_win;?>">Microsoft Windows 7/8/10</a></li>
+        <li><?php printf (T_("GnuCash %s for"), $old_stable)?> Apple macOS <a href="<?php echo $old_stable_path.$old_stable_mac_intel;?>">Intel</a></li>
         <li><a href="<?php echo $old_stable_path.$old_stable_source;?>">bzip2 compressed tarball</a> <?php printf (T_("for GnuCash %s"), $old_stable)?></li>
       </ul>
   <?php } ?>
@@ -92,7 +92,12 @@
       </div>
       <p class="justify"><?php echo T_("This versions are really old. Do not expect any support.")?></p>
       <ul>
-        <li><?php printf (T_("GnuCash %s for"), $latest_stable_win2k_version)?> <a href="<?php echo $latest_stable_path.$latest_stable_win2k;?>">Microsoft Windows 2000</a></li>
+        <li><?php printf (T_("GnuCash %s for"), $last_xp_vista_version)?>
+          <ul>
+            <li><a href="<?php echo $latest_stable_path.$last_xp_vista;?>">Microsoft Windows XP/Vista</a></li>
+            <li><a href="<?php echo $latest_stable_path.$last_mac_ppc;?>">Mac OS X Power PC</a></li>
+        </ul>
+        <li><?php printf (T_("GnuCash %s for"), $last_win2k_version)?> <a href="<?php echo $latest_stable_path.$last_win2k;?>">Microsoft Windows 2000</a></li>
       </ul>
   <?php } ?>
 

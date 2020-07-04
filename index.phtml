@@ -19,8 +19,8 @@
 
         <ul>
          <li><img alt="linux" src="<?=$top_dir?>/images/icons/linux.png" /> Linux <a href="<?php echo $latest_stable_path.$latest_stable_source;?>"><?php echo T_("Source");?></a> | <a href="<?=$home?>/download.phtml#distribution"><?php echo T_("Via distribution");?></a></li>
-         <li><img alt="windows" src="<?=$top_dir?>/images/icons/windows.png" /> Microsoft Windows <a href="<?php echo $latest_stable_path.$latest_stable_xp_vista;?>">XP/Vista</a> | <a href="<?php echo $latest_stable_path.$latest_stable_win;?>">7/8/10</a></li>
-         <li><img alt="macosx" src="<?=$top_dir?>/images/icons/macosx.png" /> Mac OS X <a href="<?php echo $latest_stable_path.$latest_stable_mac_intel;?>">Intel</a> | <a href="<?php echo $latest_stable_path.$latest_stable_mac_ppc;?>">Power PC</a></li>
+         <li><img alt="windows" src="<?=$top_dir?>/images/icons/windows.png" /> Microsoft Windows <a href="<?php echo $latest_stable_path.$latest_stable_win;?>">8/10</a></li>
+         <li><img alt="macosx" src="<?=$top_dir?>/images/icons/macosx.png" /> Apple macOS <a href="<?php echo $latest_stable_path.$latest_stable_mac_intel;?>">>= 10.13 (High Sierra)</a></li>
          <li><a href="<?=$home?>/download.phtml" style="font-size: 80%;"><?=T_("More downloads (Source, Development,...)")?></a></li>
         </ul>
       </div>
@@ -30,9 +30,9 @@
       </div>
 
       <div style="float:left;">
-          <p><?php printf (T_("Version %s is the last version for Windows 7 and MacOS 10.12 and earlier."), $last_stable_win7_version);?></p>
+        <p><?php printf (T_("Version %s is the last version for Windows 7 and MacOS 10.12 and earlier."), $last_stable_win7_version);?></p>
         <p><?php printf (T_("Version %s is the last version for Windows XP/Vista and MacOS X 10.8 and earlier, and so the last version that will run on PowerPC Macs."),
-                  $latest_stable_xp_vista_version);?></p>
+                  $last_xp_vista_version);?></p>
       </div>
     </div>
 
