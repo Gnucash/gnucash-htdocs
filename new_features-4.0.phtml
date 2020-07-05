@@ -7,7 +7,7 @@ include("$top_dir/externals/menu.phtml");
 ?>
 
 <div id="content">
-    <h1><?php echo T_("What's New in GnuCash 4.0");?></h1>
+    <h1><?php printf (T_("What's New in GnuCash %s"),"4.0");?></h1>
 
     <div class="featurecontainer">
         <div class="featureborder">
@@ -90,7 +90,7 @@ include("$top_dir/externals/menu.phtml");
             <li><?php echo T_("The OFX file importer can now import more than one file at a time.");?></li>
             <li><?php echo T_("OFX imports having balance information will now offer to immediately reconcile, passing the balance information in the file to the reconcile info.");?></li>
             <li><?php echo T_("The import transaction matcher window column headings are changed from R to C and from U+R to U+C, reflecting that the matcher marks transactions cleared but doesn't reconcile them.");?></li>
-            <li<?php echo T_(">Account matcher will decline to match accounts with a different commodity from the imported split if the import information includes the commodity.");?></li>
+            <li><?php echo T_("Account matcher will decline to match accounts with a different commodity from the imported split if the import information includes the commodity.");?></li>
             <li><?php echo T_("Ellipsize the Description and Memo fields in the account matcher.");?></li>
         </ul>
     </div>
@@ -118,7 +118,7 @@ include("$top_dir/externals/menu.phtml");
             <h2 class="featuretitle"><?php echo T_("Compatibility");?></h2>
         </div>
         <ul>
-            <li><?php echo T_("GnuCash 4.x will not migrate old gconf settings from GnuCash 2.4.x.");?></li>
+            <li><?php echo T_("GnuCash 4.x and later will no longer migrate old gconf settings from GnuCash 2.4.x.");?></li>
         </ul>
     </div>
 
@@ -131,5 +131,5 @@ include("$top_dir/externals/menu.phtml");
             <li><?php echo T_("Python bindings are now localized and their strings available for translation.");?></li>
         </ul>
     </div>
-    <p>For a complete list of new features and API changes see the <a href="<?=$home?>/news.phtml#n-200628-4.0.news">Release Notes</a></p>
+    <p><?php printf (T_("For a complete list of new features and API changes see the %s."), printf ("<a href=\"<?=$home?>/news.phtml#n-200628-4.0.news\">%s</a>", T_("Release Notes")));?></p>
 </div>

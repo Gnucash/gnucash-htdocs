@@ -30,9 +30,10 @@
       </div>
 
       <div style="float:left;">
-        <p><?php printf (T_("Version %s is the last version for Windows 7 and MacOS 10.12 and earlier."), "<a href=\"download.phtml#previous\">".$last_win7_version."</a>");?></p>
+        <p><?php printf (T_("Version %s is the last version for %s and %s and earlier."),
+                         "<a href=\"download.phtml#previous\">".$last_win7_version."</a>", "Windows 7", "MacOS 10.12");?></p>
         <p><?php printf (T_("Version %s is the last version for Windows XP/Vista and MacOS X 10.8 and earlier, and so the last version that will run on PowerPC Macs."),
-        		"<a href=\"download.phtml#historical\">".$last_xp_vista_version."</a>");?></p>
+                         "<a href=\"download.phtml#historical\">".$last_xp_vista_version."</a>");?></p>
       </div>
     </div>
 
@@ -66,8 +67,9 @@
     <a href="<?=$home?>/features.phtml"><?php echo T_("<b>Discover more...</b>");?></a>
   </div> <!-- mainfeature -->
   <div id="newfeatures">
-      <h1><?php echo T_("GnuCash 4.0 Released"); ?></h1>
-      <p><?php echo T_("We've released GnuCash 4.0 with many bugfixes and improvements including some <a href=\"" . $home . "/new_features-4.0.phtml\">great new features!</a>");?></p>
+      <h1><?php printf (T_("GnuCash %s Released"), "4.0"); ?></h1>
+      <p><?php printf (T_("We've released GnuCash %s with many bugfixes and improvements including some <a href=\"%s\">great new features!</a>"),
+      		           "4.0", $home."/new_features-4.0.phtml");?></p>
   </div> <!-- newfeatures -->
 
 
