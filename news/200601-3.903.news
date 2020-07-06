@@ -31,7 +31,7 @@
 <h3>New Features</h3>
 <h4>For 3.903</h4>
 <ul>
-  <li>A new separate executable, <tt>gnucash-cli</tt> (<tt>gnucash-cli.exe</tt> on Microsoft Windows) for doing command-line things like updating the prices in your book. <tt>gnucash-cli</tt> gains the ability to run reports from the command line. Specify reports to run by name or guid. It also provides an export format and an output file name without which it will output the report to stdout.
+  <li>A new separate executable, <kbd>gnucash-cli</kbd> (<kbd>gnucash-cli.exe</kbd> on Microsoft Windows) for doing command-line things like updating the prices in your book. <kbd>gnucash-cli</kbd> gains the ability to run reports from the command line. Specify reports to run by name or guid. It also provides an export format and an output file name without which it will output the report to stdout.
   <ul>
     <li>gnucash --run-report=[reportname/guid] datafile.gnucash</li>
     <li>gnucash --run-report=[reportname/guid] --output-file=x.html datafile.gnucash</li>
@@ -41,7 +41,7 @@
   <li>When deleting accounts the destination accounts of moved splits will be checked to ensure that they have the same commodity as the source account. If they don't you'll get a warning and the opportunity to pick another account or to carry on regardless.</li>
   <li>New type-ahead search added to sequential search when selecting an account in the register: Instead of typing the first few characters of a top level account, the separator, the first few characters of the next level account and so on you may instead type a few characters of any part of a full account name and the drop-list will be filtered to contain only matching accounts. Once you have a small enough list you can use the arrow keys to select the account that you want.</li>
   <li> Python bindings are now localized and their strings available for translation.</li>
-  <li> The new reports introduced in the <b>Experimental</b> Reports menu are moved to the main menu and the old reports hidden; the old reports can be unhidden by running GnuCash from the commandline with the <tt>--extra</tt> argument. That will cause the old reports to appear in their regular locations on the menu labeled <b>(legacy)</b>. Note that new reports use different options and layouts and you may need to adjust your saved report configurations.</li>
+  <li> The new reports introduced in the <b>Experimental</b> Reports menu are moved to the main menu and the old reports hidden; the old reports can be unhidden by running GnuCash from the commandline with the <kbd>--extra</kbd> argument. That will cause the old reports to appear in their regular locations on the menu labeled <b>(legacy)</b>. Note that new reports use different options and layouts and you may need to adjust your saved report configurations.</li>
   <li> A new <b>Transaction Association</b> dialog, available from the new <b>Update Transaction Association</b> item in the register context menu, provides the ability to have multiple associations for a single transaction. Associations may now be easily removed.</li>
   <li>Allow Associations to be added to invoices. The actual association when present is added as a link button which is shown below the notes. </li>
   <li>A symbol is now displayed on transactions in the register when they have an attachment and the selected font supports the symbol.</li>
@@ -80,37 +80,37 @@
 <h3>Significant Code Changes</h3>
 <h4> In 3.903</h4>
 <ul>
-  <li><tt>gnucash-bin.c</tt> has been split into 4 parts, mostly C++:
+  <li><samp>gnucash-bin.c</samp> has been split into 4 parts, mostly C++:
   <ul>
-    <li><tt>gnucash.cpp</tt>, the GUI executable.</li>
-    <li><tt>gnucash-cli.cpp</tt>, the command-line executable.</li>
-    <li><tt>gnucash-commands.cpp</tt>, implementation for the commands that can be run from the command-line.</li>
-    <li><tt>gnucash-app-core.cpp</tt>, common code required by both the command line and gui programs.</li>
-    <li>There's also an auxiliary file, <tt>gnucash-windows-locale.c</tt> because the localization code proved resistant to compiling as C++. We're planning another auxiliary file for the MacOS localization.</li>
+    <li><samp>gnucash.cpp</samp>, the GUI executable.</li>
+    <li><samp>gnucash-cli.cpp</samp>, the command-line executable.</li>
+    <li><samp>gnucash-commands.cpp</samp>, implementation for the commands that can be run from the command-line.</li>
+    <li><samp>gnucash-app-core.cpp</samp>, common code required by both the command line and gui programs.</li>
+    <li>There's also an auxiliary file, <samp>gnucash-windows-locale.c</samp> because the localization code proved resistant to compiling as C++. We're planning another auxiliary file for the MacOS localization.</li>
   </ul></li>
   <li> A new mock facility for several engine classes to permit better-isolated unit testing of components that depend on those classes.</li>
   <li>Register filter and sort values are saved in the book's state file (book.gcm) in the user's configdir instead of in the book.</li>
-  <li>QofSession no longer creates its book, instead one must create a book first and pass that to <tt>qof_session_new()</tt>/<tt>QofSession::QofSession()</tt>.
+  <li>QofSession no longer creates its book, instead one must create a book first and pass that to <code>qof_session_new()</code>/<code>QofSession::QofSession()</code>.
   <li>Add option to save Layout for Register items<p>Add two menu items under windows, one to save an existing register layout based on the register type to there respective default layouts so the user set column widths will be used when opening registers. The second menu item will reset the column widths to defaults and remove the associated default layout. Open registers will also save their column widths to the page section so these can temporarily have different widths. </p></li>
   <li> Input Method handling in the register is moved to the GtkEntry where it belongs.</li>
-  <li><tt>gnc_get_current_session()</tt> no longer creates an empty session if there isn't one already open.
+  <li><code>gnc_get_current_session()</code> no longer creates an empty session if there isn't one already open.
 </ul>
 <h4>In previous 3.9xx releases</h4>
 <ul>
   <li>The source directories have been rearranged and most of the loadable modules (e.g. libgncmod-engine.so) are now normal dynamic libraries (libgnc-engine.so), shorn of their gnc-module adapters. Make sure that you clean and rebuild your build directory.</li>
-  <li>All functions marked as deprecated in 3.x are now removed. If you have custom reports be sure to examine <tt>gnucash.trace</tt> for deprecation warnings and update your reports before trying them in GnuCash 3.903.</li>
-  <li>libgncmod-generic-import is now libgnc-generic-import.</li>
-  <li>Scheme no longer uses libgncmodule, always do <tt>(use-modules (gnucash foo))</li></tt></li>
+  <li>All functions marked as deprecated in 3.x are now removed. If you have custom reports be sure to examine <samp>gnucash.trace</samp> for deprecation warnings and update your reports before trying them in GnuCash 3.903.</li>
+  <li><samp>libgncmod-generic-import</samp> is now <samp>libgnc-generic-import</samp>.</li>
+  <li>Scheme no longer uses libgncmodule, always do <code>(use-modules (gnucash foo))</code></li>
   <li>Autocompletion improvements for the transfer-account field.</li>
   <li>New test for invalid mappings for online accounts and a dialog to fix them.</li>
-  <li>jqplot is replaced by chartjs.</li>
+  <li><samp>jqplot</samp> is replaced by <samp>chartjs</samp>.</li>
   <li>Separate most Guile binding code from the code that it wraps. It's now located in bindings/guile.</li>
   <li>Improve Google test integration in cmake. CMake now requires only GTEST_ROOT and only when cmake isn't able to find Google test without help.</li>
   <li>Unit tests for Scheme code with SRFI64.</li>
 </ul>
 <h4>Deprecations (will be removed in GnuCash 5.0</h4>
 <ul>
-  <li>gnc:substring-replace-from-to</li>
+  <li><code>gnc:substring-replace-from-to</code></li>
 </ul>
 
 <p>Between 3.902 and 3.903, the following bugfixes were accomplished. Some of these will also be fixed in GnuCash 3.11, some are for 4.0 only.</p>

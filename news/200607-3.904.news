@@ -31,15 +31,15 @@
 <h3>New Features</h3>
 <p>3.903 was the feature-freeze release. However, the command-line arguments for both gnucash and gnucash-cli have been adjusted as follows:</p>
 <ul>
-  <li><tt>--add-price-quotes</tt> is changed to <tt>--quotes get</tt></li>
-  <li><tt>--run-reports</tt> is changed to <tt>--report run --name &lt;report name&gt;</tt></li>
-  <li>Added <tt>--report list</tt> to produce a list of available reports.</li>
-  <li>Added <tt>--report show --name</tt> to describe the options changed from the default values in the named report.</li>
+  <li><kbd>--add-price-quotes</kbd> is changed to <kbd>--quotes get</kbd></li>
+  <li><kbd>--run-reports</kbd> is changed to <kbd>--report run --name &lt;report name&gt;</kbd></li>
+  <li>Added <kbd>--report list</kbd> to produce a list of available reports.</li>
+  <li>Added <kbd>--report show --name</kbd> to describe the options changed from the default values in the named report.</li>
 </ul>
-<p> The intent is to have command categories with subcommands to better enable a richer command line capability as illustrated with the new report commands <tt>list</tt> and <tt>show</tt>.</p>
+<p> The intent is to have command categories with subcommands to better enable a richer command line capability as illustrated with the new report commands <kbd>list</kbd> and <kbd>show</kbd>.</p>
 
 <ul>
-  <li>A new separate executable, <tt>gnucash-cli</tt> (<tt>gnucash-cli.exe</tt> on Microsoft Windows) for doing command-line things like updating the prices in your book. <tt>gnucash-cli</tt> gains the ability to run reports from the command line. Specify reports to run by name or guid. It also provides an export format and an output file name without which it will output the report to stdout.
+  <li>A new separate executable, <kbd>gnucash-cli</kbd> (<kbd>gnucash-cli.exe</kbd> on Microsoft Windows) for doing command-line things like updating the prices in your book. <kbd>gnucash-cli</kbd> gains the ability to run reports from the command line. Specify reports to run by name or guid. It also provides an export format and an output file name without which it will output the report to stdout.
   <ul>
     <li><code>gnucash-cli --report run --name=[reportname/guid] datafile.gnucash</code></li>
     <li><code>gnucash-cli --report run --name=[reportname/guid] --output-file=x.html datafile.gnucash</code></li>
@@ -84,28 +84,28 @@
 <h3>Significant Code Changes</h3>
 <h4> In 3.904</h4>
 <ul>
-  <li> The signature for <tt>qof_session_begin()</tt>, <tt>QofSession::begin()</tt>, and <tt>QofBackend::begin()</tt> are changed to use an enum <tt>SessionOpenMode</tt> instead of three booleans.</li>
+  <li> The signature for <code>qof_session_begin()</code>, <code>QofSession::begin()</code>, and <code>QofBackend::begin()</code> are changed to use an enum <code>SessionOpenMode</code> instead of three booleans.</li>
 </ul>
 <h4>In previous 3.9xx releases</h4>
 <ul>
-  <li><tt>gnucash-bin.c</tt> has been split into 4 parts, mostly C++:
+  <li><samp>gnucash-bin.c</samp> has been split into 4 parts, mostly C++:
   <ul>
-    <li><tt>gnucash.cpp</tt>, the GUI executable.</li>
-    <li><tt>gnucash-cli.cpp</tt>, the command-line executable.</li>
-    <li><tt>gnucash-commands.cpp</tt>, implementation for the commands that can be run from the command-line.</li>
-    <li><tt>gnucash-app-core.cpp</tt>, common code required by both the command line and gui programs.</li>
-    <li>There's also an auxiliary file, <tt>gnucash-windows-locale.c</tt> because the localization code proved resistant to compiling as C++. We're planning another auxiliary file for the MacOS localization.</li>
+    <li><samp>gnucash.cpp</samp>, the GUI executable.</li>
+    <li><samp>gnucash-cli.cpp</samp>, the command-line executable.</li>
+    <li><samp>gnucash-commands.cpp</samp>, implementation for the commands that can be run from the command-line.</li>
+    <li><samp>gnucash-app-core.cpp</samp>, common code required by both the command line and gui programs.</li>
+    <li>There's also an auxiliary file, <samp>gnucash-windows-locale.c</samp> because the localization code proved resistant to compiling as C++. We're planning another auxiliary file for the MacOS localization.</li>
   </ul></li>
   <li> A new mock facility for several engine classes to permit better-isolated unit testing of components that depend on those classes.</li>
   <li>Register filter and sort values are saved in the book's state file (book.gcm) in the user's configdir instead of in the book.</li>
-  <li>QofSession no longer creates its book, instead one must create a book first and pass that to <tt>qof_session_new()</tt>/<tt>QofSession::QofSession()</tt>.
+  <li>QofSession no longer creates its book, instead one must create a book first and pass that to <code>qof_session_new()</code>/<code>QofSession::QofSession()</code>.
   <li>Add option to save Layout for Register items<p>Add two menu items under windows, one to save an existing register layout based on the register type to there respective default layouts so the user set column widths will be used when opening registers. The second menu item will reset the column widths to defaults and remove the associated default layout. Open registers will also save their column widths to the page section so these can temporarily have different widths. </p></li>
   <li> Input Method handling in the register is moved to the GtkEntry where it belongs.</li>
-  <li><tt>gnc_get_current_session()</tt> no longer creates an empty session if there isn't one already open.
+  <li><code>gnc_get_current_session()</code> no longer creates an empty session if there isn't one already open.
   <li>The source directories have been rearranged and most of the loadable modules (e.g. libgncmod-engine.so) are now normal dynamic libraries (libgnc-engine.so), shorn of their gnc-module adapters. Make sure that you clean and rebuild your build directory.</li>
-  <li>All functions marked as deprecated in 3.x are now removed. If you have custom reports be sure to examine <tt>gnucash.trace</tt> for deprecation warnings and update your reports before trying them in GnuCash 3.904.</li>
-  <li>libgncmod-generic-import is now libgnc-generic-import.</li>
-  <li>Scheme no longer uses libgncmodule, always do <tt>(use-modules (gnucash foo))</li></tt></li>
+  <li>All functions marked as deprecated in 3.x are now removed. If you have custom reports be sure to examine <samp>gnucash.trace</samp> for deprecation warnings and update your reports before trying them in GnuCash 3.904.</li>
+  <li><samp>libgncmod-generic-import</samp> is now <samp>libgnc-generic-import</samp>.</li>
+  <li>Scheme no longer uses libgncmodule, always do <code>(use-modules (gnucash foo))</code></li>
   <li>Autocompletion improvements for the transfer-account field.</li>
   <li>New test for invalid mappings for online accounts and a dialog to fix them.</li>
   <li>jqplot is replaced by chartjs.</li>
