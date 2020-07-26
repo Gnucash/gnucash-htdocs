@@ -1,0 +1,129 @@
+<b>Announcement:</b> GnuCash 4.1 Released
+2020-07-26
+
+<h2>GnuCash 4.1 Released</h2>
+
+<p>The GnuCash development team announces GnuCash 4.1, the second release in the stable 4.x series</p>
+
+<h4>Between 4.0 and 4.1, the following bugfixes were accomplished:</h4>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=775582">Bug 775582 - Change &quot;Petrol&quot; (or Gas if seen in USA) to &quot;Fuel&quot;</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797759">Bug 797759 - Some transactions are not highlighted in the matching window</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797787">Bug 797787 - Feature request: preference setting to open new tabs adjacent to currently active tab (as opposed to at the end of the tab list) </a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797825">Bug 797825 - OFX import crashes on import of investment transaction</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797827">Bug 797827 - 4.0.1 gnucash-cli seg faults on macOS Catalina</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797828">Bug 797828 - Budget Barchart was not upgraded</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797830">Bug 797830 - Expense over time has extra empty row</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797831">Bug 797831 - Printer not found</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797834">Bug 797834 - Ctrl+A in account register fields chimes after any element newly focussed.</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797835">Bug 797835 - Zero Crossing in 4.0 that wasn&#39;t in 3.10</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797842">Bug 797842 - Windows: Insertion cursor invisible in Edit Account or New Account windows until text fields have content </a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797843">Bug 797843 - Quickfill broken with Cyrillic input language</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797844">Bug 797844 - Typing account number to select account fails</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797845">Bug 797845 - Backspace key produces incorrect result</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797847">Bug 797847 - Best match probability calculation on import is too pessimistic</a><p> Lowering the minimum value for the auto-clear preference. This is to  allow user to still auto clear even when date don&#39;t match quite  exactly. </p></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797850">Bug 797850 - Account register credit/debit column headings untranslated</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797853">Bug 797853 - Crash on &#39;Save As&#39; in MacOS Mojave and Gnucash 4</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797854">Bug 797854 - Global Register Preference to prompt for interest payment is not being honored.</a><p>Replace the global preference item with a per-account option, enabled only on those account types where interest might be paid or charged.</p></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797858">Bug 797858 - Transaction date is one day too early from SWIFT MT940 import.</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797861">Bug 797861 - Yearly / Monthly average reporting displays zeros</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797873">Bug 797873 - New Account Hierarchy selects en_US</a></li>
+</ul>
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>Accommodate Guile-3.0 in Scheme code.</li>
+    <li>[html-style-info] Display fractional amounts as decimal in price-render</li>
+    <li>Warn against using xaccTransGetSplit for iteration instead of encouraging it.</li>
+    <li>Quickfill cells: Remove the selection after a delete.</li>
+    <li>Accommodate AQBanking &lt; 6 use of GWEN_TIME instead of GWEN_DATE.</li>
+    <li>ensure averaging-multipler returns exact numbers rather than floats</li>
+    <li>[gnucash-cli] improve &quot;-R show&quot; to describe report</li>
+    <li>Don't leak the libofx contexts in gnc_file_ofx_import_process_file/</li>
+    <li>Make the edit dialog refresh the auto-interest flag display based on pref</li>
+    <li>Remove global preference for auto-interest-transfer</li>
+    <li>[Reports] Use SRFI-9 records for HTML styling.</li>
+    <li>[html-style-sheet] combine 2 similar functions</li>
+    <li>Let environment override AppleLanguages on Macs.</li>
+    <li>[balsheet-eg] remove unused functions</li>
+    <li>[balsheet-eg] modernize accrec to use srfi-9 record</li>
+    <li>[account.cpp] prevent crash in gnc_account_get_currency_or_parent.</li>
+    <li>CMakeLists: mark deprecation of .scm files</li>
+    <li>[eguile-utilities] Ensure that fmtnumeric renders numbers as decimals instead of exact fractions.</li>
+    <li>[Python Bindings] Implement keyword paramters to selected functions.</li>
+    <li>[Python Bindings] Adapt to use of sessionOpenMode in qof_session_begin</li>
+    <li>introduce python submodule deprecation.</li>
+    <li>Link with libm.so on those platforms that require it.</li>
+    <li>[account-piecharts] round account-&gt;balance to report-currency SCU</li>
+    <li>[report-utilities] ensure commodity-collector doesn&#39;t round amounts</li>
+    <li>[advanced-portfolio] simplify basis functions</li>
+    <li>[advanced-portfolio] simplify basis-builder and use scheme division which is more accurate than gnc_numeric_div. tests need to change slightly.</li>
+    <li>[git-release-notes.pl] html-escape strings in the html output.</li>
+</ul>
+
+<p>Updated Translations: Croatian, Hebrew, Italian, Japanese, Romanian, Ukrainian
+
+<h4> Known Problems </h4>
+<p><a href="https://bugs.gnucash.org/buglist.cgi?bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;limit=0&amp;list_id=8149&amp;order=priority%2Cbug_severity&amp;query_format=advanced">Complete list of all open bugs.</a></p>.
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of GnuCash 4.1 we're pleased to also release a new version of the companion Help and Tutorial and Concepts Guide</p>
+<p> The only changes to the documentation since 4.1 were improvements to the build system.</p>
+<h3>Getting GnuCash for Windows and MacOS</h3>
+<p>GnuCash is provided for both Microsoft Windows 8.1&reg; and later
+    and MacOS 10.13 (High Sierra)&reg; and later in pre-built, all-in-one
+    packages. An installer is provided for Microsoft Windows&reg; while
+    the MacOS&reg; package is a disk image containing a drag-and-drop
+    application bundle.</p>
+<p>The SHA256 Hashes for the downloadable files are:</p>
+<ul>
+    <li><code>a40fc37122e1466c8085ad2be914f0687a111065f15c5d952faede78802225aa</code>&nbsp;&nbsp;gnucash-4.1.tar.bz2</li>
+    <li><code>071b4b40f5ca773ec35cee4b785da5548e82645ba57de3c4bb12a5374c19e74b</code>&nbsp;&nbsp;gnucash-4.1.tar.gz</li>
+    <li><code>836b36be639caf61321c2df24dda48691e57ddeb6b7aa13db49f8eddd5b096e0</code>&nbsp;&nbsp;gnucash-4.1.setup.exe</li>
+    <li><code>2750e0391b545544f54aaa11117a1b999a82f178452c01d018c00642e82cf2b1</code>&nbsp;&nbsp;Gnucash-Intel-4.1-2.dmg</li>
+    <li><code>6eb1504b189ed187ae19ce4a5a39adb83ebe7810c26d30f58ee10928ac4ef8f4</code>&nbsp;&nbsp;gnucash-docs-4.1.tar.gz</li>
+</ul>
+
+<ul>
+    <li>SourceForge:
+        <ul>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28unstable%29/gnucash-4.1.setup.exe">Win32</a></li>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28unstable%29/Gnucash-Intel-4.1-1.dmg">Mac-Intel</a></li>
+        </ul></li>
+    <li>Github
+        <ul>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/4.1/gnucash-4.1.setup.exe">Win32</a></li>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/4.1/Gnucash-Intel-4.1-1.dmg">Mac-Intel</a></li>
+        </ul></li></ul>
+
+<p>GnuCash is now available as a flatpak from Flathub.org. <a href="https://wiki.gnucash.org/wiki/Flatpak">Instructions for installing and running.</a></p>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 4.1 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+    <li>Sourceforge: <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28unstable%29/gnucash-4.1.tar.bz2">bzip2</a>, <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28unstable%29/4.1/gnucash-4.1.tar.gz">gzip</a>.</li>
+
+    <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/4.1/gnucash-4.1.tar.bz2">bzip</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/4.1/gnucash-4.1.tar.gz">gzip</a></li>
+
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https:www.gtk.org">Gtk+</a> 3.22.29, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0, <a href="https://www.boost.org/">Boost</a> 1.67, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, <a href="https://github.com/google/googletest">GoogleTest</a> 1.8.0, <a href="https://cmake.org/">cmake 3.10</a> and <a href="http://www.swig.org/">SWIG</a> 2.0.12. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 4.1 documentation can be found under "GnuCash v4 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats. The documentation is included in the MacOS and Windows application bundles.</p>
+
+<p>If you want to compile the GnuCash Documentation 4.1 for yourself, the source code can be downloaded from:</p>
+<ul>
+  <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28unstable%29/gnucash-docs-4.1-1.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/4.1/gnucash-docs-4.1.tar.gz">GitHub</a></li>
+  <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, MacOS, and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
