@@ -150,7 +150,8 @@ if ($showrev == "maint") {
                                              $reqrev, $showrev); ?></p>
     <?php } ?>
     <?php if (! $req_lang_ok ) { ?>
-        <p style="color: red;"><?= T_("The document requested is not available in the requested language (tried [".join(",", $reqlangs)."]). The English version will be displayed instead.")?></p>
+        <p style="color: red;"><?php printf (T_("The document requested is not available in the requested language (tried [%s]). The English version will be displayed instead."),
+                                             join(",", $reqlangs)); ?></p>
     <?php } ?>
 
     <iframe src="<?php echo $showurl; ?>" style="border-width: 0px; width: 100%; min-width: 700px; height: 80em;">
