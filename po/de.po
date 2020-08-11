@@ -1,7 +1,7 @@
 # German translations for gnucash-htdocs package.
 # Copyright (C) 2017 The GnuCash Development Team
 # This file is distributed under the same license as the gnucash-htdocs package.
-# Frank H. Ellenberger <frank.h.ellenberger@gmail.com>, 2017-2019.
+# Frank H. Ellenberger <frank.h.ellenberger@gmail.com>, 2017-2020.
 # Johannes Kapune <technik@kapune.de>, 2011.
 # Frank H. Ellenberger <f.ellenberger@online.de>, 2010.
 # Christian Stimming <stimming@tuhh.de>, 2007.
@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2020-08-11 00:48+0200\n"
-"PO-Revision-Date: 2019-04-06 06:03+0200\n"
+"PO-Revision-Date: 2020-08-11 01:18+0200\n"
 "Last-Translator: Johannes Kapune <technik@kapune.de>\n"
 "Language-Team: deutschsprachige GnuCash Website-Übersetzer <gnucash-"
 "de@gnucash.org>\n"
@@ -1159,7 +1159,7 @@ msgstr ""
 
 #: download.phtml:38
 msgid "Sandbox"
-msgstr ""
+msgstr "Sandkasten"
 
 #: download.phtml:41
 #, php-format
@@ -1169,16 +1169,21 @@ msgid ""
 "but has the package <a href=\"%s\">Flatpak</a>, you can install a recent "
 "version of <span class=\"gnucash\">GnuCash</span> from"
 msgstr ""
+"Flatpaks sind Bündel, welche neben dem Programm auch alle erforderlichen "
+"Bibliotheken enthalten. Falls Ihre Distribution zu alt ist, um alle "
+"erforderlichen Bibliotheken mitzubringen, aber das Paket "
+"<a href=\"%s\">Flatpak</a> hat, können Sie eine aktuelle Version von "
+"<span class=\"gnucash\">GnuCash</span> von "
 
 #. Translators: %s is the wiki url, change this only, if you created a localized instance of ...wiki/Flatpak
 #: download.phtml:45
 #, php-format
 msgid "%sFlatpak"
-msgstr ""
+msgstr "%sDe/Flatpak"
 
 #: download.phtml:45
 msgid "Known Issues and other details ..."
-msgstr ""
+msgstr "Bekannte Probleme und andere Details …"
 
 #: download.phtml:49
 msgid "Source code"
@@ -1948,7 +1953,7 @@ msgstr ""
 #: index.phtml:33
 #, php-format
 msgid "Version %s is the last version for %s and %s and earlier."
-msgstr ""
+msgstr "Version %s ist die letzte Version für %s und %s und älter."
 
 #: index.phtml:35
 #, php-format
@@ -2020,7 +2025,7 @@ msgstr "Doppelte Buchführung"
 
 #: index.phtml:60
 msgid "Stock/Bond/Mutual Fund Accounts"
-msgstr "Aktienkonten, Währungskonten"
+msgstr "Aktien, Bonds, Fonds, Fremdwährungen"
 
 #: index.phtml:61
 msgid "Small-Business Accounting"
@@ -2028,7 +2033,7 @@ msgstr "Geschäftsbuchführung"
 
 #: index.phtml:63
 msgid "QIF/OFX/HBCI Import, Transaction Matching"
-msgstr "HBCI Online-Banking, QIF/OFX/MT940 Import"
+msgstr "FinTS Online-Banking, QIF/OFX/MT940 Import"
 
 #: index.phtml:65
 msgid "Financial Calculations"
@@ -2049,8 +2054,8 @@ msgid ""
 "We've released GnuCash %s with many bugfixes and improvements including some "
 "%s!"
 msgstr ""
-"Wir haben GnuCash %s herausgegeben mit vielen behobenen Fehlern und "
-"Verbesserungen einschließlich einiger %s!"
+"Wir haben GnuCash %s mit vielen behobenen Fehlern und Verbesserungen "
+"einschließlich einiger %s herausgegeben!"
 
 #: index.phtml:72
 msgid "great new features"
@@ -2079,9 +2084,9 @@ msgstr ""
 "Android ist."
 
 #: new_features-4.0.phtml:10
-#, fuzzy, php-format
+#, php-format
 msgid "What's New in GnuCash %s"
-msgstr "GnuCash %s herunterladen"
+msgstr "Neuheiten in GnuCash %s"
 
 #: new_features-4.0.phtml:14
 #, fuzzy
@@ -2140,7 +2145,7 @@ msgstr ""
 msgid ""
 "will display a screen listing all of the available commands and their "
 "options."
-msgstr ""
+msgstr "listet alle verfügbaren Kommandos und ihre Optionen auf."
 
 #: new_features-4.0.phtml:48
 msgid ""
@@ -2151,13 +2156,16 @@ msgstr ""
 
 #: new_features-4.0.phtml:53
 msgid "Graphic User Interface"
-msgstr ""
+msgstr "Grafische Benutzerschnittstelle"
 
 #: new_features-4.0.phtml:57
 msgid ""
 "When creating a new account hierarchy it's now possible to load account "
 "templates from locales other than the one set for the user interface."
 msgstr ""
+"Bei der Erstellung des Kontenplans ist es jetzt auch möglich, Kontenrahmen "
+"anderer Regionen oder Sprachen als der in der Umgebung oder dem "
+"Betriebssystem gesetzten, auszuwählen."
 
 #: new_features-4.0.phtml:58
 msgid ""
@@ -2181,9 +2189,8 @@ msgid ""
 msgstr ""
 
 #: new_features-4.0.phtml:68
-#, fuzzy
 msgid "Business Functions"
-msgstr "Geschäftsbuchführung"
+msgstr "Funktionen für geschäftliche Nutzung"
 
 #: new_features-4.0.phtml:71
 msgid "Business Document Column Widths"
@@ -2224,9 +2231,8 @@ msgid ""
 msgstr ""
 
 #: new_features-4.0.phtml:85
-#, fuzzy
 msgid "Importing Transactions"
-msgstr "Übersetzungen"
+msgstr "Import von Buchungen"
 
 #: new_features-4.0.phtml:88
 msgid ""
@@ -2270,9 +2276,8 @@ msgid "Ellipsize the Description and Memo fields in the account matcher."
 msgstr ""
 
 #: new_features-4.0.phtml:99
-#, fuzzy
 msgid "Reports"
-msgstr "Fehlerberichte"
+msgstr "Berichte"
 
 #: new_features-4.0.phtml:102
 msgid ""
@@ -2293,7 +2298,7 @@ msgstr ""
 
 #: new_features-4.0.phtml:108
 msgid "Budgets"
-msgstr ""
+msgstr "Budgets"
 
 #: new_features-4.0.phtml:111
 msgid "Optionally include the account code option in budget view."
@@ -2309,13 +2314,14 @@ msgstr ""
 
 #: new_features-4.0.phtml:118
 msgid "Compatibility"
-msgstr ""
+msgstr "Kompatibilität"
 
 #: new_features-4.0.phtml:121
 msgid ""
 "GnuCash 4.x and later will no longer migrate old gconf settings from GnuCash "
 "2.4.x."
-msgstr ""
+msgstr "GnuCash 4.x und später migrieren nicht mehr länger die alten "
+"Einstellungen von GConf aus GnuCash 2.4.x und zuvor."
 
 #: new_features-4.0.phtml:127
 msgid "Customization and Scripting"
@@ -2338,6 +2344,8 @@ msgstr ""
 #, php-format
 msgid "For a complete list of new features and API changes see the %s."
 msgstr ""
+"Für die vollständige Liste neuer Merkmale und Schnittstellenänderungen siehe "
+"%s."
 
 #: new_features-4.0.phtml:135
 msgid "Release Notes"
@@ -3224,13 +3232,13 @@ msgstr ""
 "wird Version %s angezeigt."
 
 #: viewdoc.phtml:153
-#, fuzzy, php-format
+#, php-format
 msgid ""
 "The document requested is not available in the requested language (tried "
 "[%s]). The English version will be displayed instead."
 msgstr ""
-"Das angeforderte Dokument ist nicht in Version %s verfügbar. Stattdessen "
-"wird Version %s angezeigt."
+"Das angeforderte Dokument ist nicht in der gewünschten Sprache (versucht "
+"wurden [%s]) verfügbar. Stattdessen wird die englische Version angezeigt."
 
 #: viewdoc.phtml:158
 #, php-format
@@ -3238,13 +3246,9 @@ msgid ""
 "It seems your browser doesn't support iframes. To view the requested page in "
 "a separate window, please <a href=\"%s\" target=\"_new\">click here</a>."
 msgstr ""
+"Es scheint, Ihr Browser unterstützt keine iframes. Um die angeforderte Seite "
+"in einem eigenen Fenster anzuzeigen, klicken Sie bitte "
+"<a href=\"%s\" target=\"_new\">hier</a>."
 
 #~ msgid "Russian"
 #~ msgstr "Russisch"
-
-#, fuzzy
-#~ msgid ""
-#~ "The document requested is not available in the requested language (tried ["
-#~ msgstr ""
-#~ "Das angeforderte Dokument ist nicht in der gewünschten Sprache verfügbar. "
-#~ "Stattdessen wird die englische Version angezeigt."
