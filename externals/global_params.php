@@ -48,7 +48,7 @@
      $last_3_path=$stable_path."/".$last_win7_version."/";
      
      $latest_stable_win="gnucash-".$latest_stable_win.".setup.exe";
-     $last_win7="gnucash-".$last_win7.".setup.exe";
+     $last_win7="gnucash-".$last_win7_version.".setup.exe";
      $last_xp_vista="gnucash-".$last_xp_vista_version."-setup.exe";
      $last_win2k="gnucash-".$last_win2k_version."-setup.exe";
      $latest_stable_mac_intel="Gnucash-Intel-".$latest_stable_mac_intel.".dmg";
