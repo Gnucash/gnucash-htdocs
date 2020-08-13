@@ -4,7 +4,11 @@ languages = ${iso_languages} ca hr hu it ja nb nl pl pt zh_CN zh_TW
 
 .SECONDEXPANSION:
 
-.PHONY: pot mos msgmerge ${languages} nmz nmz.lang nmz nmz.onefile nmz.locale
+.PHONY: check pot mos msgmerge ${languages} nmz nmz.lang nmz nmz.onefile nmz.locale
+
+check:
+# Currently only our working files
+	( find . -type f \( -name '*.php' -o -name '*.phtml' \) -exec php -l '{}' \; )
 
 pot: po/POTFILES po/gnucash-htdocs.pot
 
