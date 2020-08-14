@@ -1,49 +1,54 @@
-<?php 
-include("lang.php");
-$title = T_("Donations");
-include("emulate_globals_on.php");
-include("externals/header.phtml");
-include("externals/menu.phtml");
+<?php
+  include ("lang.php");
+  $title = T_ ( "Donations" );
+  include ("emulate_globals_on.php");
+  include ("externals/header.phtml");
+  include ("externals/menu.phtml");
 ?>
 
 <div id="content">
 
-<h1><?php echo T_("Donations");?></h1>
+  <h1><?=T_("Donations")?></h1>
 
-<p class="justify"><?php echo T_("<span class=\"gnucash\">GnuCash</span> is Free Software and is made available free of charge. Your donation, which is purely optional, supports our worldwide community. If you like the software, please consider a donation. We are only a handfull of developers and other volunteers serving countless users worldwide.");?></p>
-
-
-<div class="featurecontainer">
-<div class="featureborder">
-<h2 class="featuretitle"><?php echo T_("Various ways to donate");?></h2>
-</div>
+  <p class="justify"><?=T_("<span class=\"gnucash\">GnuCash</span> is Free Software and is made available free of charge. Your donation, which is purely optional, supports our worldwide community. If you like the software, please consider a donation. We are only a handfull of developers and other volunteers serving countless users worldwide.")?></p>
 
 
-<h3><?= T_("You can donate via the Sourceforge tip jar");?></h3>
-<a style="float:left; margin: 0 10px 10px 0; valign:center;" href="https://sourceforge.net/donate/index.php?group_id=192"><img src="<?=$home?>/images/gnucash-sf-donation.png" alt="[Sourceforge]" /></a>
-<p><a href="https://sourceforge.net/donate/index.php?group_id=192"><?=T_("Sourceforge tip jar")?></a></p>
-<p><?= T_("The tip jar is run through Paypal into an account managed by IHTFP Consulting, owned by Derek Atkins. So don't be surprised when your payment goes there.");?></p>
+  <div class="featurecontainer">
+    <div class="featureborder">
+      <h2 class="featuretitle"><?=T_("Various ways to donate")?></h2>
+    </div>
 
 
+    <h3><?=T_("You can donate via the Sourceforge tip jar")?></h3>
+    <a style="float: left; margin: 0 10px 10px 0; valign: center;"
+      href="https://sourceforge.net/donate/index.php?group_id=192"><img
+      src="<?=$home?>/images/gnucash-sf-donation.png" alt="[Sourceforge]" /></a>
+    <p>
+      <a href="https://sourceforge.net/donate/index.php?group_id=192"><?=T_("Sourceforge tip jar")?></a>
+    </p>
+    <p><?=T_("The tip jar is run through Paypal into an account managed by IHTFP Consulting, owned by Derek Atkins. So don't be surprised when your payment goes there.")?></p>
 
-<h3 style="clear:both;"><?= T_("You can transfer a donation to our bank account");?></h3>
-<p><?php echo T_("Owner:");?> Geert Janssens<br/>
-<?php echo T_("Purpose: Donation");?><br/>
-<?php echo T_("Account:");?> 973-0754570-41<br/>
-<?php echo T_("Bank Identifier Code (BIC):");?> ARSPBE22XXX, <?php echo T_("Bank:");?> Argenta Bank Grimbergen<br/>
-<?php echo T_("IBAN:");?> BE88 9730 7545 7041<br/>
-<?php echo T_("Address of bank:");?> Argenta, Lagesteenweg 96, 1850 Grimbergen, Belgium</p>
-</div>
+
+    <h3 style="clear: both;"><?= T_("You can transfer a donation to our bank account")?></h3>
+    <p><?=T_("Owner:")?> Geert Janssens<br />
+      <?=T_("Purpose: Donation")?><br />
+      <?=T_("Account:")?> 973-0754570-41<br />
+      <?=T_("Bank Identifier Code (BIC):")?> ARSPBE22XXX, <?=T_("Bank:")?> Argenta Bank Grimbergen<br />
+      <?=T_("IBAN:")?> BE88 9730 7545 7041<br />
+      <?=T_("Address of bank:")?> Argenta, Lagesteenweg 96, 1850 Grimbergen, Belgium</p>
+  </div> <!-- featurecontainer -->
 
 
-<div class="featurecontainer">
-<div class="featureborder">
-<h2 class="featuretitle"><?php echo T_("Why we appreciate your support");?></h2>
-</div>
+  <div class="featurecontainer">
+    <div class="featureborder">
+      <h2 class="featuretitle"><?=T_("Why we appreciate your support")?></h2>
+    </div>
 
-<p><?php echo T_("GnuCash is a volunteer effort. While we manage to keep our operational costs low there are inevitably expenses involved in keeping the servers running.");?></p>
-<p><?php echo T_("Your contribution will be used to cover these expenses.");?></p>
-<p><?php echo T_("Thank you for your support!");?></p>
-</div>
+    <p><?=T_("GnuCash is a volunteer effort. While we manage to keep our operational costs low there are inevitably expenses involved in keeping the servers running.")?></p>
+    <p><?=T_("Your contribution will be used to cover these expenses.")?></p>
+    <p><?=T_("Thank you for your support!")?></p>
+  </div> <!-- featurecontainer -->
+</div> <!-- content -->
+
 
 <?php include("externals/footer.phtml"); ?>
