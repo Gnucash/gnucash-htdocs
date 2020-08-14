@@ -19,6 +19,7 @@ po/POTFILES: .potfiles
 
 po/gnucash-htdocs.pot: po/POTFILES
 	xgettext -f po/POTFILES -L PHP --keyword="T_" -o po/gnucash-htdocs.pot -F -c \
+	  --add-comments=Translators \
 	  --package-name=gnucash-htdocs \
 	  --copyright-holder="The GnuCash Website Team" \
 	  --msgid-bugs-address='https://bugs.gnucash.org/buglist.cgi?component=Translations&product=Website&resolution=---'
