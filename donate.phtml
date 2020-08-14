@@ -1,6 +1,6 @@
 <?php 
 include("lang.php");
-$title = T_("Donations");                                                
+$title = T_("Donations");
 include("emulate_globals_on.php");
 include("externals/header.phtml");
 include("externals/menu.phtml");
@@ -20,7 +20,7 @@ include("externals/menu.phtml");
 
 
 <h3><?= T_("You can donate via the Sourceforge tip jar");?></h3>
-<a style="float:left; margin: 0 10px 10px 0;" href="https://sourceforge.net/donate/index.php?group_id=192"><img src="<?=$home?>/images/gnucash-sf-donation.png" valign="center" alt="[Sourceforge]" /></a>
+<a style="float:left; margin: 0 10px 10px 0; valign:center;" href="https://sourceforge.net/donate/index.php?group_id=192"><img src="<?=$home?>/images/gnucash-sf-donation.png" alt="[Sourceforge]" /></a>
 <p><a href="https://sourceforge.net/donate/index.php?group_id=192"><?=T_("Sourceforge tip jar")?></a></p>
 <p><?= T_("The tip jar is run through Paypal into an account managed by IHTFP Consulting, owned by Derek Atkins. So don't be surprised when your payment goes there.");?></p>
 
@@ -46,4 +46,4 @@ include("externals/menu.phtml");
 <p><?php echo T_("Thank you for your support!");?></p>
 </div>
 
-<?php include("externals/footer.phtml"); ?></p>
+<?php include("externals/footer.phtml"); ?>
