@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: gnucash-htdocs\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2020-08-11 00:48+0200\n"
+"POT-Creation-Date: 2020-08-14 23:12+0200\n"
 "PO-Revision-Date: 2017-10-01 11:09+0200\n"
 "Last-Translator: Josep-Maria Prat i Filella <jpftgn@gmail.com>\n"
 "Language-Team: \n"
@@ -801,7 +801,6 @@ msgstr ""
 msgid "(current stable release)"
 msgstr "(llançament estable actual)"
 
-#. Only show old stable docs download options if there really is an active unstable release
 #: docs.phtml:45 docs.phtml:179 docs.phtml:476 docs.phtml:593 docs.phtml:619
 #: docs.phtml:641 docs.phtml:659 docs.phtml:681
 #, php-format
@@ -1015,11 +1014,11 @@ msgstr "Diferents maneres de donar"
 msgid "You can donate via the Sourceforge tip jar"
 msgstr "Podeu fer una donació a través del pot de propines de Sourceforge"
 
-#: donate.phtml:24
+#: donate.phtml:27
 msgid "Sourceforge tip jar"
 msgstr "Pot de propines"
 
-#: donate.phtml:25
+#: donate.phtml:29
 msgid ""
 "The tip jar is run through Paypal into an account managed by IHTFP "
 "Consulting, owned by Derek Atkins. So don't be surprised when your payment "
@@ -1029,43 +1028,43 @@ msgstr ""
 "Consulting, propietat de Derek Atkins. Així que no us sorprengueu quan el "
 "vostre càrrec vagi allà."
 
-#: donate.phtml:29
+#: donate.phtml:32
 msgid "You can transfer a donation to our bank account"
 msgstr "Podeu transferir una donació al nostre compte bancari"
 
-#: donate.phtml:30
+#: donate.phtml:33
 msgid "Owner:"
 msgstr "Propietari:"
 
-#: donate.phtml:31
+#: donate.phtml:34
 msgid "Purpose: Donation"
 msgstr "Propòsit: Donació"
 
-#: donate.phtml:32
+#: donate.phtml:35
 msgid "Account:"
 msgstr "Compte:"
 
-#: donate.phtml:33
+#: donate.phtml:36
 msgid "Bank Identifier Code (BIC):"
 msgstr "Identificador de compte bancari (BIC):"
 
-#: donate.phtml:33
+#: donate.phtml:36
 msgid "Bank:"
 msgstr "Banc:"
 
-#: donate.phtml:34
+#: donate.phtml:37
 msgid "IBAN:"
 msgstr "IBAN:"
 
-#: donate.phtml:35
+#: donate.phtml:38
 msgid "Address of bank:"
 msgstr "Adreça del banc:"
 
-#: donate.phtml:41
+#: donate.phtml:44
 msgid "Why we appreciate your support"
 msgstr "Agraïm el vostre suport"
 
-#: donate.phtml:44
+#: donate.phtml:47
 msgid ""
 "GnuCash is a volunteer effort. While we manage to keep our operational costs "
 "low there are inevitably expenses involved in keeping the servers running."
@@ -1074,11 +1073,11 @@ msgstr ""
 "costos operatius, hi ha, inevitablement, despeses relacionades amb mantenir "
 "els servidors en funcionament."
 
-#: donate.phtml:45
+#: donate.phtml:48
 msgid "Your contribution will be used to cover these expenses."
 msgstr "La seva contribució s'emprarà per cobrir aquestes despeses."
 
-#: donate.phtml:46
+#: donate.phtml:49
 msgid "Thank you for your support!"
 msgstr "Moltes gràcies pel vostre suport!"
 
@@ -1113,7 +1112,7 @@ msgid "Installers"
 msgstr "Instal·ladors"
 
 #: download.phtml:22 download.phtml:23 download.phtml:65 download.phtml:66
-#: download.phtml:81 download.phtml:82 download.phtml:95 download.phtml:100
+#: download.phtml:81 download.phtml:82 download.phtml:95 download.phtml:101
 #, php-format
 msgid "GnuCash %s for"
 msgstr "GnuCash %s per a"
@@ -1241,7 +1240,6 @@ msgstr ""
 msgid "for GnuCash %s"
 msgstr "per a Gnucash %s"
 
-#. Only show unstable download options if there really is an active unstable release
 #: download.phtml:59
 #, php-format
 msgid "Unstable/Development release (%s)"
@@ -1266,7 +1264,6 @@ msgstr ""
 "L'últim llançament inestable de <span class=\"gnucash\">GnuCash</span> és "
 "%s. Seleccioneu la descàrrega per al vostre sistema a continuació."
 
-#. Only show old stable download options if there really is an active unstable release
 #: download.phtml:75
 #, php-format
 msgid "Old Stable release (%s)"
@@ -1293,7 +1290,6 @@ msgstr ""
 "és %s. Seleccioneu la descàrrega per al vostre sistema operatiu a "
 "continuació."
 
-#. Only show historical download options if enabled
 #: download.phtml:91
 msgid "Latest versions for historical operating systems"
 msgstr ""
@@ -1302,30 +1298,29 @@ msgstr ""
 msgid "This versions are really old. Do not expect any support."
 msgstr ""
 
-#: download.phtml:105
+#: download.phtml:106
 msgid "Other"
 msgstr "Altres"
 
-#: download.phtml:109
+#: download.phtml:110
 #, php-format
 msgid "View all GnuCash %s downloads (stable)"
 msgstr "Veure totes les descàrregues de Gnucash %s (estable)"
 
-#. Only show unstable download options if there is an active unstable release
-#: download.phtml:114
+#: download.phtml:115
 #, php-format
 msgid "View all GnuCash %s downloads (unstable)"
 msgstr "Veure totes les descàrregues de Gnucash %s (inestable)"
 
-#: download.phtml:117
+#: download.phtml:118
 msgid "View all GnuCash downloads"
 msgstr "Veure totes les descàrregues de GnuCash"
 
-#: externals/footer.phtml:21
+#: externals/footer.phtml:20
 msgid "Server &amp; email outage reports to:"
 msgstr "Informes d'interrupció del servidor i del correu electrònic a:"
 
-#: externals/footer.phtml:22
+#: externals/footer.phtml:23
 msgid "Translation problems? Contact:"
 msgstr "Problemes de traducció? Contacteu:"
 
@@ -1405,7 +1400,7 @@ msgstr "Preguntes freqüents"
 msgid "Wiki"
 msgstr "Wiki"
 
-#: externals/menu.phtml:38 index.phtml:49
+#: externals/menu.phtml:38 index.phtml:61
 msgid "Mailing Lists"
 msgstr "Llistes de correu"
 
@@ -1504,7 +1499,7 @@ msgstr ""
 msgid "Main features"
 msgstr "Característiques principals"
 
-#: features.phtml:18 features.phtml:117
+#: features.phtml:18 features.phtml:120
 msgid "Advanced features"
 msgstr "Funcions avançades"
 
@@ -1512,7 +1507,7 @@ msgstr "Funcions avançades"
 msgid "Data storing and exchange features"
 msgstr "Emmagatzematge de dades i funcions d'intercanvi"
 
-#: features.phtml:20 features.phtml:194
+#: features.phtml:20 features.phtml:197
 msgid "Other goodies"
 msgstr "Altres beneficis"
 
@@ -1520,7 +1515,12 @@ msgstr "Altres beneficis"
 msgid "Double Entry"
 msgstr "Doble entrada"
 
-#: features.phtml:34
+#. Translators: If you already translated the guide, you can copy the image into /images/features/ as e.g. basics_AccountRelationships.ll.png
+#: features.phtml:33
+msgid "basics_AccountRelationships.C.png"
+msgstr ""
+
+#: features.phtml:37
 msgid ""
 "Every transaction must debit one account and credit others by an equal "
 "amount. This ensures the books balance: the difference between income and "
@@ -1530,11 +1530,11 @@ msgstr ""
 "d'altres per una quantitat igual. Això garanteix el saldo dels llibres: la "
 "diferència entre ingressos i despeses equival a la suma d'actius i passius."
 
-#: features.phtml:40
+#: features.phtml:43
 msgid "Checkbook-Style Register"
 msgstr "Registre tipus talonari de xecs"
 
-#: features.phtml:46
+#: features.phtml:49
 msgid ""
 "The <span class=\"gnucash\">GnuCash</span> checkbook-style register provides "
 "a custom, convenient and familiar interface to entering financial "
@@ -1544,7 +1544,7 @@ msgstr ""
 "proporciona una interfície familiar, còmoda i personalitzada per introduir "
 "transaccions financeres."
 
-#: features.phtml:48
+#: features.phtml:51
 msgid ""
 "The register supports common checking and credit-card transactions, as well "
 "as income, stock and currency transactions. The following features are also "
@@ -1554,29 +1554,29 @@ msgstr ""
 "amb targeta de crèdit, així com les transaccions d'ingressos, accions i "
 "divises. També es proporcionen les següents funcions:"
 
-#: features.phtml:51
+#: features.phtml:54
 msgid "The ability to enter <b>split transactions</b>"
 msgstr "Capacitat d'introduir una <b>transacció dividida</b>"
 
-#: features.phtml:52
+#: features.phtml:55
 msgid ""
 "The ability to mark a transaction as <b>cleared</b> or <b>reconciled</b>"
 msgstr ""
 "La possibilitat de marcar una transacció com <b>liquidada</b> o "
 "<b>conciliada</b>"
 
-#: features.phtml:53
+#: features.phtml:56
 msgid "<b>Autofill</b> of entered transactions"
 msgstr "<b>Autocompleció</b> de transaccions introduïdes"
 
-#: features.phtml:54
+#: features.phtml:57
 msgid ""
 "The ability to display <b>multiple accounts</b> in a single register window"
 msgstr ""
 "La capacitat de mostrar <b>comptes múltiples</b> en una finestra de registre "
 "senzill"
 
-#: features.phtml:55
+#: features.phtml:58
 msgid ""
 "A <b>summary bar</b> that displays all of the relevant account's balance "
 "information"
@@ -1584,16 +1584,16 @@ msgstr ""
 "Una <b>barra de resum</b> que mostra tota la informació rellevant del saldo "
 "del compte"
 
-#: features.phtml:56
+#: features.phtml:59
 msgid "Many options to <b>customize</b> the appearance and the display style"
 msgstr ""
 "Moltes opcions per <b>personalitzar</b> l'aparença i l'estil de visualització"
 
-#: features.phtml:62 index.phtml:64
+#: features.phtml:65 index.phtml:78
 msgid "Scheduled Transactions"
 msgstr "Assentaments programats"
 
-#: features.phtml:66
+#: features.phtml:69
 msgid ""
 "You can create recurring transactions with a high level of customization of "
 "amounts and timeline. You can also set an automatic reminder when a "
@@ -1603,7 +1603,7 @@ msgstr ""
 "tant de quantitats com de terminis. També podeu definir un recordatori "
 "automàtic quan caduqui una transacció."
 
-#: features.phtml:69
+#: features.phtml:72
 msgid ""
 "An assistant that runs when <span class=\"gnucash\">GnuCash</span> is "
 "started allows scheduled transactions to be postponed without canceling or "
@@ -1613,11 +1613,11 @@ msgstr ""
 "span> permet posposar sense cancel·lar o introduir abans de la data de "
 "venciment les operacions planificades."
 
-#: features.phtml:75 index.phtml:62
+#: features.phtml:78 index.phtml:76
 msgid "Reports, Graphs"
 msgstr "Informes, gràfics"
 
-#: features.phtml:79
+#: features.phtml:82
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> has an integrated module to display "
 "graphs of your financial data in the form of:"
@@ -1625,19 +1625,19 @@ msgstr ""
 "<span class=\"gnucash\">GnuCash</span> té un mòdul integrat per mostrar els "
 "gràfics de les seves dades financeres en forma de:"
 
-#: features.phtml:82
+#: features.phtml:85
 msgid "Barcharts"
 msgstr "Gràfics de barres"
 
-#: features.phtml:83
+#: features.phtml:86
 msgid "Piecharts"
 msgstr "Gràfics circulars"
 
-#: features.phtml:84
+#: features.phtml:87
 msgid "Scatter plots"
 msgstr "Gràfics de dispersió"
 
-#: features.phtml:86
+#: features.phtml:89
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> also comes complete with a full suite "
 "of standard and customizeable reports, such as:"
@@ -1645,23 +1645,23 @@ msgstr ""
 "<span class=\"gnucash\">GnuCash</span> també incorpora tot un conjunt "
 "complet d'informes estàndards i personalitzables, com ara:"
 
-#: features.phtml:88
+#: features.phtml:91
 msgid "Balance Sheet"
 msgstr "Balanç de Situació"
 
-#: features.phtml:89
+#: features.phtml:92
 msgid "Profit &amp; Loss"
 msgstr "Pèrdues i guanys"
 
-#: features.phtml:90
+#: features.phtml:93
 msgid "Portfolio Valuation"
 msgstr "Valoració de cartera"
 
-#: features.phtml:91
+#: features.phtml:94
 msgid "and many others."
 msgstr "i molts altres."
 
-#: features.phtml:94
+#: features.phtml:97
 msgid ""
 "Graphs and reports can be highly and easily customized in appearance and "
 "contents, in order to fullfill every user's need."
@@ -1669,11 +1669,11 @@ msgstr ""
 "Els gràfics i els informes poden ser fàcilment personalitzats en aparença i "
 "contingut, per adaptar-se a les necessitats de cada usuari."
 
-#: features.phtml:100
+#: features.phtml:103
 msgid "Statement Reconciliation"
 msgstr "Conciliació amb l'extracte del compte"
 
-#: features.phtml:105
+#: features.phtml:108
 msgid ""
 "<b>Account reconciliation</b> allows the user to compare the transactions "
 "entered in an account against a bank statement. This operation is very "
@@ -1685,7 +1685,7 @@ msgstr ""
 "útil per detectar transaccions errònies o errors d'entrada de dades i "
 "assegurar que els vostres llibres quadren amb els del Banc."
 
-#: features.phtml:106
+#: features.phtml:109
 msgid ""
 "The <span class=\"gnucash\">GnuCash</span> reconcile tool with running "
 "reconciled and cleared balances makes reconciling against bank statements an "
@@ -1695,11 +1695,11 @@ msgstr ""
 "saldo conciliat i liquidat fa molt més fàcil la tasca de conciliar els "
 "extractes bancaris."
 
-#: features.phtml:111
+#: features.phtml:114
 msgid "Income/Expense Account Types"
 msgstr "Tipus de comptes d'ingressos/despeses"
 
-#: features.phtml:113
+#: features.phtml:116
 msgid ""
 "Income/Expense Account Types (Categories) allow you to categorize your cash "
 "flow.  When used properly with the double-entry feature and equity accounts, "
@@ -1711,11 +1711,11 @@ msgstr ""
 "i comptes d'equitat, permeten generar informes com ara pèrdues i guanys, que "
 "d'altres sistemes no poden processar."
 
-#: features.phtml:121
+#: features.phtml:124
 msgid "Small Business Accounting Features"
 msgstr "Característiques de comptabilitat de petites empreses"
 
-#: features.phtml:124
+#: features.phtml:127
 msgid ""
 "Simplify managing a small business with <b>Customer</b> and <b>Vendor</b> "
 "tracking, <b>Jobs</b>, <b>Invoicing</b> and <b>Bill</b> Payment, and <b>Tax</"
@@ -1725,7 +1725,7 @@ msgstr ""
 "b> i <b>Proveïdors</b>, <b>Feines</b >, <b>Facturació</b> i Pagament de "
 "<b>Factures</b >, <b>Impostos</b> i <b>Terminis</b>."
 
-#: features.phtml:127
+#: features.phtml:130
 msgid ""
 "Using A/Receivable and A/Payable accounts you can even manage <b>payrolls</"
 "b> for your employees."
@@ -1733,7 +1733,7 @@ msgstr ""
 "Fins i tot podeu gestionar les <b>nòmines</b > per als vostres treballadors "
 "emprant comptes A/Per cobrar i A/Per pagar."
 
-#: features.phtml:130
+#: features.phtml:133
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> gives you also a tool to manage your "
 "business' <b>budget</b> so that you can easily plan your financial strategy."
@@ -1742,11 +1742,11 @@ msgstr ""
 "el vostre <b>pressupost</b> empresarial per tal que pogueu planificar "
 "fàcilment l'estratègia financera."
 
-#: features.phtml:136
+#: features.phtml:139
 msgid "Multiple Currencies"
 msgstr "Múltiples monedes"
 
-#: features.phtml:140
+#: features.phtml:143
 msgid ""
 "Different accounts can be denominated in different currencies. Currency "
 "movements between accounts are fully balanced when double-entry is enabled."
@@ -1755,11 +1755,11 @@ msgstr ""
 "de moneda entre comptes estan totalment equilibrats quan la doble entrada "
 "està habilitada."
 
-#: features.phtml:146
+#: features.phtml:149
 msgid "Stock/Mutual Fund Portfolios"
 msgstr "Carteres d'accions/fons"
 
-#: features.phtml:149
+#: features.phtml:152
 msgid ""
 "Track stocks individually (one per account) or in portfolio of accounts (a "
 "group of accounts that can be displayed together)."
@@ -1767,11 +1767,11 @@ msgstr ""
 "Feu el seguiment d'accions individualment (una per compte) o d'una cartera "
 "de comptes (un grup de comptes que es poden visualitzar junts)."
 
-#: features.phtml:154
+#: features.phtml:157
 msgid "Online Stock &amp; Mutual Fund Quotes"
 msgstr "Accions i fons d'inversió en línia"
 
-#: features.phtml:157
+#: features.phtml:160
 msgid ""
 "Get Stock &amp; Mutual Fund quotes from various web sites, update portfolio "
 "automatically. Additional pricing sources are added regularly."
@@ -1780,15 +1780,15 @@ msgstr ""
 "diversos llocs web automàticament. Regularment s'afegeixen fonts de preus "
 "addicionals."
 
-#: features.phtml:160
+#: features.phtml:163
 msgid "Data storage and exchange features"
 msgstr "Característiques d'emmagatzematge i intercanvi de dades"
 
-#: features.phtml:164
+#: features.phtml:167
 msgid "Experimental database support"
 msgstr "Suport de base de dades experimental"
 
-#: features.phtml:166
+#: features.phtml:169
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> by default stores data in an <b>xml</"
 "b> format. Starting with version 2.4, <span class=\"gnucash\">GnuCash</span> "
@@ -1800,7 +1800,7 @@ msgstr ""
 "\"gnucash\">GnuCash</span> poden ser emmagatzemades en <b>Bases de dades "
 "SQL</b> emprant <b>SQLite3</b>, <b>MySQL</b> o <b>PostgreSQL</b>."
 
-#: features.phtml:167
+#: features.phtml:170
 msgid ""
 "Note this feature is considered experimental.  It works for most of the "
 "common use cases but some corner cases have been reported to result in data "
@@ -1816,11 +1816,11 @@ msgstr ""
 "cap prova completa, així doncs encara hi pot haver escenaris que resultin en "
 "pèrdua de dades."
 
-#: features.phtml:172
+#: features.phtml:175
 msgid "QIF and OFX Import"
 msgstr "Importar QIF i OFX"
 
-#: features.phtml:175
+#: features.phtml:178
 msgid ""
 "If you are migrating from other financial software, <span class=\"gnucash"
 "\">GnuCash</span>  can import Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> "
@@ -1830,7 +1830,7 @@ msgstr ""
 "\">GnuCash</span> pot importar Intuit<sup>&reg;</sup> Quicken<sup>&reg;</"
 "sup> <b>QIF</b> mitjançant un pràctic auxiliar."
 
-#: features.phtml:178
+#: features.phtml:181
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is also the first free software "
 "application to support the <b>OFX</b> (Open Financial Exchange) protocol "
@@ -1840,7 +1840,7 @@ msgstr ""
 "programari lliure que suporta el protocol <b>OFX</b> (intercanvi financer "
 "obert) que molts bancs i serveis financers estan començant a implantar."
 
-#: features.phtml:181
+#: features.phtml:184
 msgid ""
 "A transaction matching system ensures that duplicate transactions are "
 "accurately recognized and automatically deleted during file import."
@@ -1849,11 +1849,11 @@ msgstr ""
 "precisió les transaccions duplicades i s'eliminen automàticament durant la "
 "importació de fitxers."
 
-#: features.phtml:187
+#: features.phtml:190
 msgid "HBCI Support"
 msgstr "Suport d'HBCI"
 
-#: features.phtml:190
+#: features.phtml:193
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is the first free software "
 "application to support the German <b>Home Banking Computer Information</b> "
@@ -1866,11 +1866,11 @@ msgstr ""
 "descàrrega de l'extracte del compte i iniciar transferències i "
 "domiciliacions."
 
-#: features.phtml:198
+#: features.phtml:201
 msgid "Multiplatform"
 msgstr "Multiplataforma"
 
-#: features.phtml:201
+#: features.phtml:204
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> runs on many different operating "
 "systems including <b>Windows</b>, <b>MacOSX</b> and <b>Linux</b>."
@@ -1878,11 +1878,11 @@ msgstr ""
 "<span class=\"gnucash\">Gnucash</span> funciona en molts sistemes operatius "
 "diferents incloent-hi <b>Windows</b >, <b>MacOSX</b> i <b>Linux</b>."
 
-#: features.phtml:206
+#: features.phtml:209
 msgid "Localization"
 msgstr "Localització"
 
-#: features.phtml:209
+#: features.phtml:212
 #, php-format
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> handles internationalized dates and "
@@ -1898,11 +1898,11 @@ msgstr ""
 "portuguès, rus, castellà, suec, turc, ucraïnès i anglès. La documentació "
 "està disponible en anglès, francès, portuguès, castellà i italià."
 
-#: features.phtml:214
+#: features.phtml:217
 msgid "Transaction Finder"
 msgstr "Cercador de transaccions"
 
-#: features.phtml:217
+#: features.phtml:220
 msgid ""
 "A powerful transaction query dialogue can help you quickly locate a needle "
 "in a haystack."
@@ -1910,11 +1910,11 @@ msgstr ""
 "Un potent diàleg de consulta de transaccions pot ajudar a localitzar "
 "ràpidament una agulla en un paller."
 
-#: features.phtml:222
+#: features.phtml:225
 msgid "Check Printing"
 msgstr "Impressió de xecs"
 
-#: features.phtml:225
+#: features.phtml:228
 msgid ""
 "Checks may be printed in standard formats on common check stocks. A "
 "customization GUI allows custom check layouts to be developed."
@@ -1923,22 +1923,22 @@ msgstr ""
 "gràfica d'usuari de personalització permet desenvolupar dissenys de xecs "
 "personalitzats."
 
-#: features.phtml:230
+#: features.phtml:233
 msgid "Mortgage &amp; Loan Repayment Assistant"
 msgstr "Assistent per a reemborsament d'Hipoteca i Préstecs"
 
-#: features.phtml:233
+#: features.phtml:236
 msgid ""
 "A guided dialogue for setting up loan payments as scheduled transactions."
 msgstr ""
 "Un diàleg guiat per configurar el pagament de préstecs com a operacions "
 "planificades."
 
-#: features.phtml:239
+#: features.phtml:242
 msgid "User Manual and Help"
 msgstr "Manual d'usuari i ajuda"
 
-#: features.phtml:242
+#: features.phtml:245
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is very well documented: along with "
 "the application <b>Manual</b>, new users can take full advantage of the "
@@ -1963,31 +1963,31 @@ msgstr "Benvinguts a GnuCash.org"
 msgid "Download GnuCash %s"
 msgstr "Descarregueu GnuCash %s"
 
-#: index.phtml:21
+#: index.phtml:22
 msgid "Source"
 msgstr "Font"
 
-#: index.phtml:21
+#: index.phtml:23
 msgid "Via distribution"
 msgstr "Via distribució"
 
-#: index.phtml:24
+#: index.phtml:31
 msgid "More downloads (Source, Development,...)"
 msgstr "Més descàrregues (Codi font, Desenvolupament,... )"
 
-#: index.phtml:33
+#: index.phtml:40
 #, php-format
 msgid "Version %s is the last version for %s and %s and earlier."
 msgstr ""
 
-#: index.phtml:35
+#: index.phtml:43
 #, php-format
 msgid ""
 "Version %s is the last version for Windows XP/Vista and MacOS X 10.8 and "
 "earlier, and so the last version that will run on PowerPC Macs."
 msgstr ""
 
-#: index.phtml:40
+#: index.phtml:49
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is personal and small-business "
 "financial-accounting software, freely licensed under the <a href=\"https://"
@@ -1999,7 +1999,7 @@ msgstr ""
 "href=\"https://www.gnu.org/\">GNU</a> GPL i està disponible per a GNU/Linux, "
 "BSD, Solaris, Mac OS X i Microsoft Windows."
 
-#: index.phtml:42
+#: index.phtml:52
 msgid ""
 "Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash"
 "\">GnuCash</span> allows you to track bank accounts, stocks, income and "
@@ -2013,11 +2013,19 @@ msgstr ""
 "talonari de xecs, es basa en els principis fonamentals de la comptabilitat "
 "per garantir l'equilibri dels comptes i l'exactitud dels informes. "
 
-#: index.phtml:48
+#: index.phtml:57
 msgid "Need Help?"
 msgstr "Necessiteu ajuda?"
 
-#: index.phtml:49
+#: index.phtml:60
+msgid ""
+"Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? "
+"Try the"
+msgstr ""
+"Per posar-vos en contacte amb algú i demanar ajuda en l'ús de <span class="
+"\"gnucash\">GnuCash</span>, empreu les"
+
+#: index.phtml:62
 msgid ""
 ", which are public, email-based discussion groups where you can ask and "
 "answer <span class=\"gnucash\">GnuCash</span> questions to other users."
@@ -2026,64 +2034,56 @@ msgstr ""
 "podeu adreçar les vostres preguntes i respostes de <span class=\"gnucash"
 "\">GnuCash</span> a d'altres usuaris."
 
-#: index.phtml:49
-msgid ""
-"Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? "
-"Try the"
-msgstr ""
-"Per posar-vos en contacte amb algú i demanar ajuda en l'ús de <span class="
-"\"gnucash\">GnuCash</span>, empreu les"
-
-#: index.phtml:54
+#: index.phtml:68
 msgid "Feature Highlights"
 msgstr "Característiques principals"
 
-#: index.phtml:59
+#: index.phtml:73
 msgid "Double-Entry Accounting"
 msgstr "Comptabilitat per mètode de partida doble"
 
-#: index.phtml:60
+#: index.phtml:74
 msgid "Stock/Bond/Mutual Fund Accounts"
 msgstr "Comptes d'accions/bons/fons"
 
-#: index.phtml:61
+#: index.phtml:75
 msgid "Small-Business Accounting"
 msgstr "Comptabilitat per a petita empresa"
 
-#: index.phtml:63
+#: index.phtml:77
 msgid "QIF/OFX/HBCI Import, Transaction Matching"
 msgstr "Importació de QIF/OFX/HBCI, Concordança de transaccions"
 
-#: index.phtml:65
+#: index.phtml:79
 msgid "Financial Calculations"
 msgstr "Càlculs financers"
 
-#: index.phtml:67
+#: index.phtml:81
 msgid "<b>Discover more...</b>"
 msgstr "<b>Descobriu més...</b>"
 
-#: index.phtml:70
+#: index.phtml:85
 #, fuzzy, php-format
 msgid "GnuCash %s Released"
 msgstr "Recorregut pel llançament de Gnucash 2.6"
 
-#: index.phtml:71
+#: index.phtml:86
 #, php-format
 msgid ""
 "We've released GnuCash %s with many bugfixes and improvements including some "
 "%s!"
 msgstr ""
 
-#: index.phtml:72
+#: index.phtml:87
 #, fuzzy
 msgid "great new features"
 msgstr "Característiques principals"
 
-#: index.phtml:84
+#: index.phtml:100
 msgid "Info and development"
 msgstr "Informació i desenvolupament"
 
-#: index.phtml:86
+#: index.phtml:102
 msgid ""
 "The GnuCash team recommends the GnuCash for Android app. This app allows you "
 "to keep track of your financial transactions on the go for later import into "
@@ -2093,7 +2093,7 @@ msgstr ""
 "permet fer un seguiment de les vostres transaccions financeres sobre la "
 "marxa per a la posterior importació a la versió d'escriptori de GnuCash."
 
-#: index.phtml:87
+#: index.phtml:103
 msgid ""
 "Note that GnuCash for Android is not a port of the GnuCash program to "
 "Android."

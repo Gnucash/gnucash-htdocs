@@ -28,7 +28,10 @@ include("$top_dir/externals/menu.phtml");
 <h2 class="featuretitle"><?php echo T_("Double Entry");?></h2>
 </div>
 <div class="center">
-<img class="featureimage" src="<?=$top_dir?>/images/features/basics_AccountRelationships.png" alt="[Basic account relationship]" />
+<img class="featureimage" src="<?=$top_dir?>/images/features/<?PHP 
+//Translators: If you already translated the guide, you can copy the image into /images/features/ as e.g. basics_AccountRelationships.ll.png
+echo T_("basics_AccountRelationships.C.png");
+?>" alt="[Basic account relationship]" />
 </div>
 <p class="justify">
 <?php echo T_("Every transaction must debit one account and credit others by an equal amount. This ensures the books balance: the difference between income and expenses exactly equals the sum of assets and liabilities.");?>

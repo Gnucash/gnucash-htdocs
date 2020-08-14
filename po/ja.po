@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: gnucash-htdocs r18581\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2020-08-11 00:48+0200\n"
+"POT-Creation-Date: 2020-08-14 23:12+0200\n"
 "PO-Revision-Date: 2014-11-07 19:25+0000\n"
 "Last-Translator: Yasuaki Taniguchi <yasuakit@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
@@ -698,7 +698,6 @@ msgstr ""
 msgid "(current stable release)"
 msgstr "GnuCash v2.2 (現在の安定版)"
 
-#. Only show old stable docs download options if there really is an active unstable release
 #: docs.phtml:45 docs.phtml:179 docs.phtml:476 docs.phtml:593 docs.phtml:619
 #: docs.phtml:641 docs.phtml:659 docs.phtml:681
 #, fuzzy, php-format
@@ -905,65 +904,65 @@ msgstr ""
 msgid "You can donate via the Sourceforge tip jar"
 msgstr ""
 
-#: donate.phtml:24
+#: donate.phtml:27
 msgid "Sourceforge tip jar"
 msgstr ""
 
-#: donate.phtml:25
+#: donate.phtml:29
 msgid ""
 "The tip jar is run through Paypal into an account managed by IHTFP "
 "Consulting, owned by Derek Atkins. So don't be surprised when your payment "
 "goes there."
 msgstr ""
 
-#: donate.phtml:29
+#: donate.phtml:32
 msgid "You can transfer a donation to our bank account"
 msgstr ""
 
-#: donate.phtml:30
+#: donate.phtml:33
 msgid "Owner:"
 msgstr ""
 
-#: donate.phtml:31
+#: donate.phtml:34
 #, fuzzy
 msgid "Purpose: Donation"
 msgstr "寄付"
 
-#: donate.phtml:32
+#: donate.phtml:35
 msgid "Account:"
 msgstr ""
 
-#: donate.phtml:33
+#: donate.phtml:36
 msgid "Bank Identifier Code (BIC):"
 msgstr ""
 
-#: donate.phtml:33
+#: donate.phtml:36
 msgid "Bank:"
 msgstr ""
 
-#: donate.phtml:34
+#: donate.phtml:37
 msgid "IBAN:"
 msgstr ""
 
-#: donate.phtml:35
+#: donate.phtml:38
 msgid "Address of bank:"
 msgstr ""
 
-#: donate.phtml:41
+#: donate.phtml:44
 msgid "Why we appreciate your support"
 msgstr ""
 
-#: donate.phtml:44
+#: donate.phtml:47
 msgid ""
 "GnuCash is a volunteer effort. While we manage to keep our operational costs "
 "low there are inevitably expenses involved in keeping the servers running."
 msgstr ""
 
-#: donate.phtml:45
+#: donate.phtml:48
 msgid "Your contribution will be used to cover these expenses."
 msgstr ""
 
-#: donate.phtml:46
+#: donate.phtml:49
 msgid "Thank you for your support!"
 msgstr ""
 
@@ -997,7 +996,7 @@ msgid "Installers"
 msgstr "インストーラー"
 
 #: download.phtml:22 download.phtml:23 download.phtml:65 download.phtml:66
-#: download.phtml:81 download.phtml:82 download.phtml:95 download.phtml:100
+#: download.phtml:81 download.phtml:82 download.phtml:95 download.phtml:101
 #, php-format
 msgid "GnuCash %s for"
 msgstr "GnuCash %s for"
@@ -1103,7 +1102,6 @@ msgstr ""
 msgid "for GnuCash %s"
 msgstr "for GnuCash %s"
 
-#. Only show unstable download options if there really is an active unstable release
 #: download.phtml:59
 #, php-format
 msgid "Unstable/Development release (%s)"
@@ -1128,7 +1126,6 @@ msgstr ""
 "最新の GnuCash 開発版は %s です。オペレーティングシステムにあったダウンロード"
 "ファイルを下記から選択してください。"
 
-#. Only show old stable download options if there really is an active unstable release
 #: download.phtml:75
 #, fuzzy, php-format
 msgid "Old Stable release (%s)"
@@ -1150,7 +1147,6 @@ msgstr ""
 "最新の GnuCash 安定版は %s です。オペレーティングシステムにあったダウンロード"
 "ファイルを下記から選択してください。"
 
-#. Only show historical download options if enabled
 #: download.phtml:91
 msgid "Latest versions for historical operating systems"
 msgstr ""
@@ -1159,30 +1155,29 @@ msgstr ""
 msgid "This versions are really old. Do not expect any support."
 msgstr ""
 
-#: download.phtml:105
+#: download.phtml:106
 msgid "Other"
 msgstr "その他"
 
-#: download.phtml:109
+#: download.phtml:110
 #, php-format
 msgid "View all GnuCash %s downloads (stable)"
 msgstr "すべての GnuCash %s ダウンロードファイルを見る (安定版)"
 
-#. Only show unstable download options if there is an active unstable release
-#: download.phtml:114
+#: download.phtml:115
 #, php-format
 msgid "View all GnuCash %s downloads (unstable)"
 msgstr "すべての GnuCash %s ダウンロードファイルを見る (開発版)"
 
-#: download.phtml:117
+#: download.phtml:118
 msgid "View all GnuCash downloads"
 msgstr "すべての GnuCash ダウンロードファイルを見る"
 
-#: externals/footer.phtml:21
+#: externals/footer.phtml:20
 msgid "Server &amp; email outage reports to:"
 msgstr "サーバーおよび email の不具合に関する連絡先: "
 
-#: externals/footer.phtml:22
+#: externals/footer.phtml:23
 msgid "Translation problems? Contact:"
 msgstr "翻訳の問題に関する連絡先:"
 
@@ -1263,7 +1258,7 @@ msgstr "FAQ"
 msgid "Wiki"
 msgstr "Wiki"
 
-#: externals/menu.phtml:38 index.phtml:49
+#: externals/menu.phtml:38 index.phtml:61
 msgid "Mailing Lists"
 msgstr "メーリングリスト"
 
@@ -1355,7 +1350,7 @@ msgstr ""
 msgid "Main features"
 msgstr "主な機能"
 
-#: features.phtml:18 features.phtml:117
+#: features.phtml:18 features.phtml:120
 msgid "Advanced features"
 msgstr "高度な機能"
 
@@ -1363,7 +1358,7 @@ msgstr "高度な機能"
 msgid "Data storing and exchange features"
 msgstr "データ保存と交換機能"
 
-#: features.phtml:20 features.phtml:194
+#: features.phtml:20 features.phtml:197
 msgid "Other goodies"
 msgstr "他の良いところ"
 
@@ -1371,7 +1366,12 @@ msgstr "他の良いところ"
 msgid "Double Entry"
 msgstr "複式記帳法"
 
-#: features.phtml:34
+#. Translators: If you already translated the guide, you can copy the image into /images/features/ as e.g. basics_AccountRelationships.ll.png
+#: features.phtml:33
+msgid "basics_AccountRelationships.C.png"
+msgstr ""
+
+#: features.phtml:37
 msgid ""
 "Every transaction must debit one account and credit others by an equal "
 "amount. This ensures the books balance: the difference between income and "
@@ -1381,11 +1381,11 @@ msgstr ""
 "これで帳簿の釣り合いが確実に保たれます。収益と費用の差異は資産と負債の合計と"
 "厳密に等しくなります。"
 
-#: features.phtml:40
+#: features.phtml:43
 msgid "Checkbook-Style Register"
 msgstr "小切手帳スタイルの記録簿"
 
-#: features.phtml:46
+#: features.phtml:49
 msgid ""
 "The <span class=\"gnucash\">GnuCash</span> checkbook-style register provides "
 "a custom, convenient and familiar interface to entering financial "
@@ -1394,7 +1394,7 @@ msgstr ""
 "<span class=\"gnucash\">GnuCash</span> の小切手帳様式の勘定科目記録簿はカスタ"
 "マイズでき、便利で自分に合った、財務取引を入力しやすいインターフェースです。"
 
-#: features.phtml:48
+#: features.phtml:51
 msgid ""
 "The register supports common checking and credit-card transactions, as well "
 "as income, stock and currency transactions. The following features are also "
@@ -1403,57 +1403,57 @@ msgstr ""
 "この記録簿は一般的な小切手やクレジットカード取引に加え、収益、株式、通貨取引"
 "もサポートします。次の機能もサポートされます:"
 
-#: features.phtml:51
+#: features.phtml:54
 msgid "The ability to enter <b>split transactions</b>"
 msgstr "<b>スプリット取引</b>の入力機能"
 
-#: features.phtml:52
+#: features.phtml:55
 msgid ""
 "The ability to mark a transaction as <b>cleared</b> or <b>reconciled</b>"
 msgstr "取引を<b>清算済</b>または<b>照合済(消込済)</b>にする機能"
 
-#: features.phtml:53
+#: features.phtml:56
 msgid "<b>Autofill</b> of entered transactions"
 msgstr "入力中の取引の<b>補完</b>"
 
-#: features.phtml:54
+#: features.phtml:57
 msgid ""
 "The ability to display <b>multiple accounts</b> in a single register window"
 msgstr "一つの記録簿ウインドウに<b>複数の勘定科目</b>を表示する機能"
 
-#: features.phtml:55
+#: features.phtml:58
 msgid ""
 "A <b>summary bar</b> that displays all of the relevant account's balance "
 "information"
 msgstr "対応する勘定科目の全ての残高情報を表示する<b>サマリバー</b>"
 
-#: features.phtml:56
+#: features.phtml:59
 msgid "Many options to <b>customize</b> the appearance and the display style"
 msgstr "見え方や表示を<b>カスタマイズ</b>する多くのオプション"
 
-#: features.phtml:62 index.phtml:64
+#: features.phtml:65 index.phtml:78
 msgid "Scheduled Transactions"
 msgstr "予定取引"
 
-#: features.phtml:66
+#: features.phtml:69
 msgid ""
 "You can create recurring transactions with a high level of customization of "
 "amounts and timeline. You can also set an automatic reminder when a "
 "transaction is due."
 msgstr ""
 
-#: features.phtml:69
+#: features.phtml:72
 msgid ""
 "An assistant that runs when <span class=\"gnucash\">GnuCash</span> is "
 "started allows scheduled transactions to be postponed without canceling or "
 "entering them before the due date."
 msgstr ""
 
-#: features.phtml:75 index.phtml:62
+#: features.phtml:78 index.phtml:76
 msgid "Reports, Graphs"
 msgstr "帳票、グラフ"
 
-#: features.phtml:79
+#: features.phtml:82
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> has an integrated module to display "
 "graphs of your financial data in the form of:"
@@ -1461,19 +1461,19 @@ msgstr ""
 "<span class=\"gnucash\">GnuCash</span> には財務データをグラフ表示する機能が組"
 "み込まれています。次の形式で表示できます。"
 
-#: features.phtml:82
+#: features.phtml:85
 msgid "Barcharts"
 msgstr "棒グラフ"
 
-#: features.phtml:83
+#: features.phtml:86
 msgid "Piecharts"
 msgstr "円グラフ"
 
-#: features.phtml:84
+#: features.phtml:87
 msgid "Scatter plots"
 msgstr "散布図"
 
-#: features.phtml:86
+#: features.phtml:89
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> also comes complete with a full suite "
 "of standard and customizeable reports, such as:"
@@ -1481,33 +1481,33 @@ msgstr ""
 "<span class=\"gnucash\">GnuCash</span>は標準的およびカスタマイズ可能な完全な"
 "レポーを作成機能を備えています。次のようなレポートが作成できます。"
 
-#: features.phtml:88
+#: features.phtml:91
 msgid "Balance Sheet"
 msgstr "貸借対照表"
 
-#: features.phtml:89
+#: features.phtml:92
 msgid "Profit &amp; Loss"
 msgstr "損益計算書"
 
-#: features.phtml:90
+#: features.phtml:93
 msgid "Portfolio Valuation"
 msgstr "資産構成評価"
 
-#: features.phtml:91
+#: features.phtml:94
 msgid "and many others."
 msgstr ""
 
-#: features.phtml:94
+#: features.phtml:97
 msgid ""
 "Graphs and reports can be highly and easily customized in appearance and "
 "contents, in order to fullfill every user's need."
 msgstr ""
 
-#: features.phtml:100
+#: features.phtml:103
 msgid "Statement Reconciliation"
 msgstr "明細書の照合"
 
-#: features.phtml:105
+#: features.phtml:108
 msgid ""
 "<b>Account reconciliation</b> allows the user to compare the transactions "
 "entered in an account against a bank statement. This operation is very "
@@ -1519,7 +1519,7 @@ msgstr ""
 "引やデータ入力エラーが無いかに焦点を当て、帳簿が銀行口座と合っていることを確"
 "実なものにすることができます。"
 
-#: features.phtml:106
+#: features.phtml:109
 msgid ""
 "The <span class=\"gnucash\">GnuCash</span> reconcile tool with running "
 "reconciled and cleared balances makes reconciling against bank statements an "
@@ -1528,11 +1528,11 @@ msgstr ""
 "<span class=\"gnucash\">GnuCash</span> 照合ツールには現在の照合済残高と清算済"
 "残高が表示されるため、銀行の取引明細との照合は簡単な作業です。"
 
-#: features.phtml:111
+#: features.phtml:114
 msgid "Income/Expense Account Types"
 msgstr "収益/費用勘定科目タイプ"
 
-#: features.phtml:113
+#: features.phtml:116
 msgid ""
 "Income/Expense Account Types (Categories) allow you to categorize your cash "
 "flow.  When used properly with the double-entry feature and equity accounts, "
@@ -1544,11 +1544,11 @@ msgstr ""
 "では取り扱うことができないような損益計算書などの帳票を作成することができま"
 "す。"
 
-#: features.phtml:121
+#: features.phtml:124
 msgid "Small Business Accounting Features"
 msgstr "小規模ビジネス向け会計機能"
 
-#: features.phtml:124
+#: features.phtml:127
 #, fuzzy
 msgid ""
 "Simplify managing a small business with <b>Customer</b> and <b>Vendor</b> "
@@ -1558,23 +1558,23 @@ msgstr ""
 "得意先と仕入先の追跡、得意先請求書と仕入先請求書の支払、税金と支払条件の管理"
 "など小規模ビジネスの管理が簡単になります。"
 
-#: features.phtml:127
+#: features.phtml:130
 msgid ""
 "Using A/Receivable and A/Payable accounts you can even manage <b>payrolls</"
 "b> for your employees."
 msgstr ""
 
-#: features.phtml:130
+#: features.phtml:133
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> gives you also a tool to manage your "
 "business' <b>budget</b> so that you can easily plan your financial strategy."
 msgstr ""
 
-#: features.phtml:136
+#: features.phtml:139
 msgid "Multiple Currencies"
 msgstr "複数通貨"
 
-#: features.phtml:140
+#: features.phtml:143
 msgid ""
 "Different accounts can be denominated in different currencies. Currency "
 "movements between accounts are fully balanced when double-entry is enabled."
@@ -1582,11 +1582,11 @@ msgstr ""
 "異なる勘定科目に対しては異なる通貨単位で表示することができます。勘定科目間で"
 "の通貨の移動は複式記帳法を利用することで釣り合いが完全に保たれます。"
 
-#: features.phtml:146
+#: features.phtml:149
 msgid "Stock/Mutual Fund Portfolios"
 msgstr "株式 / 投資信託のポートフォリオ"
 
-#: features.phtml:149
+#: features.phtml:152
 msgid ""
 "Track stocks individually (one per account) or in portfolio of accounts (a "
 "group of accounts that can be displayed together)."
@@ -1594,11 +1594,11 @@ msgstr ""
 "株式を個別 (勘定科目単位) または勘定科目のポートフォリオ (一緒に表示可能な勘"
 "定科目グループ) として追跡することができます。"
 
-#: features.phtml:154
+#: features.phtml:157
 msgid "Online Stock &amp; Mutual Fund Quotes"
 msgstr "オンライン株式・投資信託相場表取得"
 
-#: features.phtml:157
+#: features.phtml:160
 msgid ""
 "Get Stock &amp; Mutual Fund quotes from various web sites, update portfolio "
 "automatically. Additional pricing sources are added regularly."
@@ -1606,15 +1606,15 @@ msgstr ""
 "株式・投資信託の相場表を様々なウェブサイトから取得して、自動的にポートフォリ"
 "オをアップデートします。相場情報源は定期的に追加されます。"
 
-#: features.phtml:160
+#: features.phtml:163
 msgid "Data storage and exchange features"
 msgstr ""
 
-#: features.phtml:164
+#: features.phtml:167
 msgid "Experimental database support"
 msgstr ""
 
-#: features.phtml:166
+#: features.phtml:169
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> by default stores data in an <b>xml</"
 "b> format. Starting with version 2.4, <span class=\"gnucash\">GnuCash</span> "
@@ -1622,7 +1622,7 @@ msgid ""
 "<b>MySQL</b> or <b>PostgreSQL</b>."
 msgstr ""
 
-#: features.phtml:167
+#: features.phtml:170
 msgid ""
 "Note this feature is considered experimental.  It works for most of the "
 "common use cases but some corner cases have been reported to result in data "
@@ -1631,19 +1631,19 @@ msgid ""
 "still be scenarios left that result in data loss."
 msgstr ""
 
-#: features.phtml:172
+#: features.phtml:175
 #, fuzzy
 msgid "QIF and OFX Import"
 msgstr "OFXのインポート"
 
-#: features.phtml:175
+#: features.phtml:178
 msgid ""
 "If you are migrating from other financial software, <span class=\"gnucash"
 "\">GnuCash</span>  can import Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> "
 "<b>QIF</b> files using a practical assistant."
 msgstr ""
 
-#: features.phtml:178
+#: features.phtml:181
 #, fuzzy
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is also the first free software "
@@ -1654,17 +1654,17 @@ msgstr ""
 "トウェアです。このプロトコルは多くの銀行や財務サービスで利用され始めていま"
 "す。"
 
-#: features.phtml:181
+#: features.phtml:184
 msgid ""
 "A transaction matching system ensures that duplicate transactions are "
 "accurately recognized and automatically deleted during file import."
 msgstr ""
 
-#: features.phtml:187
+#: features.phtml:190
 msgid "HBCI Support"
 msgstr "HBCI サポート"
 
-#: features.phtml:190
+#: features.phtml:193
 #, fuzzy
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is the first free software "
@@ -1676,21 +1676,21 @@ msgstr ""
 "上初のフリーソフトウェアです。ドイツの利用者は明細書のダウンロード、口座振"
 "替、直接入金を行うことができます。"
 
-#: features.phtml:198
+#: features.phtml:201
 msgid "Multiplatform"
 msgstr ""
 
-#: features.phtml:201
+#: features.phtml:204
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> runs on many different operating "
 "systems including <b>Windows</b>, <b>MacOSX</b> and <b>Linux</b>."
 msgstr ""
 
-#: features.phtml:206
+#: features.phtml:209
 msgid "Localization"
 msgstr "地域化対応"
 
-#: features.phtml:209
+#: features.phtml:212
 #, fuzzy, php-format
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> handles internationalized dates and "
@@ -1706,21 +1706,21 @@ msgstr ""
 "ガル語、ロシア語、スペイン語、スウェーデン語、トルコ語、ウクライナ語、および"
 "英国英語です。英語、フランス語、ポルトガル語、スペイン語の文書も存在します。"
 
-#: features.phtml:214
+#: features.phtml:217
 msgid "Transaction Finder"
 msgstr "取引検索"
 
-#: features.phtml:217
+#: features.phtml:220
 msgid ""
 "A powerful transaction query dialogue can help you quickly locate a needle "
 "in a haystack."
 msgstr "強力な取引検索ダイアログで素早く取引を検索することができます。"
 
-#: features.phtml:222
+#: features.phtml:225
 msgid "Check Printing"
 msgstr "小切手の印刷"
 
-#: features.phtml:225
+#: features.phtml:228
 msgid ""
 "Checks may be printed in standard formats on common check stocks. A "
 "customization GUI allows custom check layouts to be developed."
@@ -1728,22 +1728,22 @@ msgstr ""
 "一般的な小切手テンプレートにより小切手を標準形式で印刷することができます。GUI"
 "を利用して小切手レイアウトをカスタマイズすることもできます。"
 
-#: features.phtml:230
+#: features.phtml:233
 #, fuzzy
 msgid "Mortgage &amp; Loan Repayment Assistant"
 msgstr "担保付きローン・ローン支払いウィザード"
 
-#: features.phtml:233
+#: features.phtml:236
 msgid ""
 "A guided dialogue for setting up loan payments as scheduled transactions."
 msgstr "ウィザードを利用してローン支払いの予定取引を作成することができます。"
 
-#: features.phtml:239
+#: features.phtml:242
 #, fuzzy
 msgid "User Manual and Help"
 msgstr "新しいユーザーマニュアルとヘルプ"
 
-#: features.phtml:242
+#: features.phtml:245
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is very well documented: along with "
 "the application <b>Manual</b>, new users can take full advantage of the "
@@ -1762,31 +1762,31 @@ msgstr "GnuCash.orgにようこそ"
 msgid "Download GnuCash %s"
 msgstr "GnuCash %s のダウンロード"
 
-#: index.phtml:21
+#: index.phtml:22
 msgid "Source"
 msgstr "ソース"
 
-#: index.phtml:21
+#: index.phtml:23
 msgid "Via distribution"
 msgstr "ディストリビューションでの入手"
 
-#: index.phtml:24
+#: index.phtml:31
 msgid "More downloads (Source, Development,...)"
 msgstr "他のダウンロード (ソース、開発版、…)"
 
-#: index.phtml:33
+#: index.phtml:40
 #, php-format
 msgid "Version %s is the last version for %s and %s and earlier."
 msgstr ""
 
-#: index.phtml:35
+#: index.phtml:43
 #, php-format
 msgid ""
 "Version %s is the last version for Windows XP/Vista and MacOS X 10.8 and "
 "earlier, and so the last version that will run on PowerPC Macs."
 msgstr ""
 
-#: index.phtml:40
+#: index.phtml:49
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is personal and small-business "
 "financial-accounting software, freely licensed under the <a href=\"https://"
@@ -1798,7 +1798,7 @@ msgstr ""
 "きフリーで提供されています。GNU/Linux、 BSD、 Solaris、 Mac OS X および "
 "Microsoft Windows で利用できます。"
 
-#: index.phtml:42
+#: index.phtml:52
 msgid ""
 "Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash"
 "\">GnuCash</span> allows you to track bank accounts, stocks, income and "
@@ -1811,11 +1811,18 @@ msgstr ""
 "することができます。小切手帳のように素早く、直感的に利用できる一方、プロの会"
 "計原理に基づいているため確実に帳簿の釣り合を保ち、正確な帳票を作成できます。"
 
-#: index.phtml:48
+#: index.phtml:57
 msgid "Need Help?"
 msgstr "助けが必要ですか?"
 
-#: index.phtml:49
+# ここの翻訳は細切れになる
+#: index.phtml:60
+msgid ""
+"Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? "
+"Try the"
+msgstr "<span class=\"gnucash\">GnuCash</span> に関して連絡をしたいですか?"
+
+#: index.phtml:62
 msgid ""
 ", which are public, email-based discussion groups where you can ask and "
 "answer <span class=\"gnucash\">GnuCash</span> questions to other users."
@@ -1824,63 +1831,56 @@ msgstr ""
 "<span class=\"gnucash\">GnuCash</span>に関する質問をしたり、答えたりすること"
 "ができます。"
 
-# ここの翻訳は細切れになる
-#: index.phtml:49
-msgid ""
-"Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? "
-"Try the"
-msgstr "<span class=\"gnucash\">GnuCash</span> に関して連絡をしたいですか?"
-
-#: index.phtml:54
+#: index.phtml:68
 msgid "Feature Highlights"
 msgstr "主な特徴"
 
-#: index.phtml:59
+#: index.phtml:73
 msgid "Double-Entry Accounting"
 msgstr "複式記帳法会計処理"
 
-#: index.phtml:60
+#: index.phtml:74
 msgid "Stock/Bond/Mutual Fund Accounts"
 msgstr "株式/債券/投資信託勘定科目"
 
-#: index.phtml:61
+#: index.phtml:75
 msgid "Small-Business Accounting"
 msgstr "小規模ビジネスの会計処理"
 
-#: index.phtml:63
+#: index.phtml:77
 msgid "QIF/OFX/HBCI Import, Transaction Matching"
 msgstr "QIF/OFX/HBCI 形式のインポート、取引を一致させる処理"
 
-#: index.phtml:65
+#: index.phtml:79
 msgid "Financial Calculations"
 msgstr "財務計算"
 
-#: index.phtml:67
+#: index.phtml:81
 msgid "<b>Discover more...</b>"
 msgstr "<b>さらに詳しく知るには...</b>"
 
-#: index.phtml:70
+#: index.phtml:85
 #, fuzzy, php-format
 msgid "GnuCash %s Released"
 msgstr "GnuCash %s for"
 
-#: index.phtml:71
+#: index.phtml:86
 #, php-format
 msgid ""
 "We've released GnuCash %s with many bugfixes and improvements including some "
 "%s!"
 msgstr ""
 
-#: index.phtml:72
+#: index.phtml:87
 #, fuzzy
 msgid "great new features"
 msgstr "主な機能"
 
-#: index.phtml:84
+#: index.phtml:100
 msgid "Info and development"
 msgstr "情報および開発について"
 
-#: index.phtml:86
+#: index.phtml:102
 msgid ""
 "The GnuCash team recommends the GnuCash for Android app. This app allows you "
 "to keep track of your financial transactions on the go for later import into "
@@ -1889,7 +1889,7 @@ msgstr ""
 "GnuCash チームは GnuCash Android アプリを推奨します。このアプリは財務取引をそ"
 "の場で追跡し、後でデスクトップ版のGnuCashにインポートすることができます。"
 
-#: index.phtml:87
+#: index.phtml:103
 msgid ""
 "Note that GnuCash for Android is not a port of the GnuCash program to "
 "Android."

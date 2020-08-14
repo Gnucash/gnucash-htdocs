@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: nl\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2020-08-11 00:48+0200\n"
+"POT-Creation-Date: 2020-08-14 23:12+0200\n"
 "PO-Revision-Date: 2018-10-05 22:58+0200\n"
 "Last-Translator: Mark Haanen <i18n@haanen.net>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
@@ -720,7 +720,6 @@ msgstr ""
 msgid "(current stable release)"
 msgstr "(actuele stabiele uitgave)"
 
-#. Only show old stable docs download options if there really is an active unstable release
 #: docs.phtml:45 docs.phtml:179 docs.phtml:476 docs.phtml:593 docs.phtml:619
 #: docs.phtml:641 docs.phtml:659 docs.phtml:681
 #, php-format
@@ -931,11 +930,11 @@ msgstr "Diverse manieren om te doneren"
 msgid "You can donate via the Sourceforge tip jar"
 msgstr "Je kan een donatie doen via de Sourceforge tip jar"
 
-#: donate.phtml:24
+#: donate.phtml:27
 msgid "Sourceforge tip jar"
 msgstr "Sourceforge tip jar"
 
-#: donate.phtml:25
+#: donate.phtml:29
 msgid ""
 "The tip jar is run through Paypal into an account managed by IHTFP "
 "Consulting, owned by Derek Atkins. So don't be surprised when your payment "
@@ -945,43 +944,43 @@ msgstr ""
 "eigendom van Derek Atkins. Wees dus niet verrast als je betaling naar deze "
 "firma gaat."
 
-#: donate.phtml:29
+#: donate.phtml:32
 msgid "You can transfer a donation to our bank account"
 msgstr "Je kan een donatie overschrijven naar onze bank rekening"
 
-#: donate.phtml:30
+#: donate.phtml:33
 msgid "Owner:"
 msgstr "Eigenaar:"
 
-#: donate.phtml:31
+#: donate.phtml:34
 msgid "Purpose: Donation"
 msgstr "Doel: Donatie"
 
-#: donate.phtml:32
+#: donate.phtml:35
 msgid "Account:"
 msgstr "Rekeningnummer:"
 
-#: donate.phtml:33
+#: donate.phtml:36
 msgid "Bank Identifier Code (BIC):"
 msgstr "BIC:"
 
-#: donate.phtml:33
+#: donate.phtml:36
 msgid "Bank:"
 msgstr "Bank:"
 
-#: donate.phtml:34
+#: donate.phtml:37
 msgid "IBAN:"
 msgstr "IBAN:"
 
-#: donate.phtml:35
+#: donate.phtml:38
 msgid "Address of bank:"
 msgstr "Bankadres:"
 
-#: donate.phtml:41
+#: donate.phtml:44
 msgid "Why we appreciate your support"
 msgstr "Waarom we jouw ondersteuning waarderen"
 
-#: donate.phtml:44
+#: donate.phtml:47
 msgid ""
 "GnuCash is a volunteer effort. While we manage to keep our operational costs "
 "low there are inevitably expenses involved in keeping the servers running."
@@ -990,11 +989,11 @@ msgstr ""
 "laag kunnen houden zijn er onvermijdelijk toch uitgaven om de servers "
 "draaiende te houden."
 
-#: donate.phtml:45
+#: donate.phtml:48
 msgid "Your contribution will be used to cover these expenses."
 msgstr "Jouw bijdrage zal gebruikt worden om deze kosten te dekken."
 
-#: donate.phtml:46
+#: donate.phtml:49
 msgid "Thank you for your support!"
 msgstr "Dank voor je steun!"
 
@@ -1029,7 +1028,7 @@ msgid "Installers"
 msgstr "Installatieprogramma's"
 
 #: download.phtml:22 download.phtml:23 download.phtml:65 download.phtml:66
-#: download.phtml:81 download.phtml:82 download.phtml:95 download.phtml:100
+#: download.phtml:81 download.phtml:82 download.phtml:95 download.phtml:101
 #, php-format
 msgid "GnuCash %s for"
 msgstr "GnuCash %s voor"
@@ -1156,7 +1155,6 @@ msgstr ""
 msgid "for GnuCash %s"
 msgstr "voor GnuCash %s"
 
-#. Only show unstable download options if there really is an active unstable release
 #: download.phtml:59
 #, php-format
 msgid "Unstable/Development release (%s)"
@@ -1182,7 +1180,6 @@ msgstr ""
 "De meest actuele instabiele <span class=\"gnucash\">GnuCash</span>-versie is "
 "%s. Kies de download voor uw besturingssysteem hieronder."
 
-#. Only show old stable download options if there really is an active unstable release
 #: download.phtml:75
 #, php-format
 msgid "Old Stable release (%s)"
@@ -1208,7 +1205,6 @@ msgstr ""
 "De laatste oude stabiele <span class=\"gnucash\">GnuCash</span>-uitgave is "
 "versie %s. Kies de download voor uw besturingssysteem hieronder."
 
-#. Only show historical download options if enabled
 #: download.phtml:91
 msgid "Latest versions for historical operating systems"
 msgstr "Recentste versies voor historische besturingssystemen"
@@ -1217,30 +1213,29 @@ msgstr "Recentste versies voor historische besturingssystemen"
 msgid "This versions are really old. Do not expect any support."
 msgstr "Deze versies zijn heel oud. Verwacht geen verdere ondersteuning."
 
-#: download.phtml:105
+#: download.phtml:106
 msgid "Other"
 msgstr "Overige"
 
-#: download.phtml:109
+#: download.phtml:110
 #, php-format
 msgid "View all GnuCash %s downloads (stable)"
 msgstr "Alle GnuCash %s downloads bekijken (stabiel)"
 
-#. Only show unstable download options if there is an active unstable release
-#: download.phtml:114
+#: download.phtml:115
 #, php-format
 msgid "View all GnuCash %s downloads (unstable)"
 msgstr "Alle GnuCash %s downloads bekijken (instabiel)"
 
-#: download.phtml:117
+#: download.phtml:118
 msgid "View all GnuCash downloads"
 msgstr "Alle GnuCash downloads bekijken"
 
-#: externals/footer.phtml:21
+#: externals/footer.phtml:20
 msgid "Server &amp; email outage reports to:"
 msgstr "Storingsmeldingen server &amp; e-mail naar:"
 
-#: externals/footer.phtml:22
+#: externals/footer.phtml:23
 msgid "Translation problems? Contact:"
 msgstr "Vertaalproblemen? Meld het op:"
 
@@ -1322,7 +1317,7 @@ msgstr "Veelgestelde vragen"
 msgid "Wiki"
 msgstr "Wiki"
 
-#: externals/menu.phtml:38 index.phtml:49
+#: externals/menu.phtml:38 index.phtml:61
 msgid "Mailing Lists"
 msgstr "Mailinglijsten"
 
@@ -1422,7 +1417,7 @@ msgstr ""
 msgid "Main features"
 msgstr "Basisfuncties"
 
-#: features.phtml:18 features.phtml:117
+#: features.phtml:18 features.phtml:120
 msgid "Advanced features"
 msgstr "Geavanceerde functies"
 
@@ -1430,7 +1425,7 @@ msgstr "Geavanceerde functies"
 msgid "Data storing and exchange features"
 msgstr "Functies voor gegevensopslag en -uitwisseling"
 
-#: features.phtml:20 features.phtml:194
+#: features.phtml:20 features.phtml:197
 msgid "Other goodies"
 msgstr "Overige kenmerken"
 
@@ -1438,7 +1433,12 @@ msgstr "Overige kenmerken"
 msgid "Double Entry"
 msgstr "Dubbel boekhouden"
 
-#: features.phtml:34
+#. Translators: If you already translated the guide, you can copy the image into /images/features/ as e.g. basics_AccountRelationships.ll.png
+#: features.phtml:33
+msgid "basics_AccountRelationships.C.png"
+msgstr ""
+
+#: features.phtml:37
 msgid ""
 "Every transaction must debit one account and credit others by an equal "
 "amount. This ensures the books balance: the difference between income and "
@@ -1449,11 +1449,11 @@ msgstr ""
 "boekhouding sluitend blijft: het saldo van inkomsten en uitgaven is zo "
 "altijd exact gelijk aan het saldo van bezittingen en schulden."
 
-#: features.phtml:40
+#: features.phtml:43
 msgid "Checkbook-Style Register"
 msgstr "Rekeningdetails in dagboekvorm"
 
-#: features.phtml:46
+#: features.phtml:49
 msgid ""
 "The <span class=\"gnucash\">GnuCash</span> checkbook-style register provides "
 "a custom, convenient and familiar interface to entering financial "
@@ -1463,7 +1463,7 @@ msgstr ""
 "rekeningdetails in de vorm van een dagboek, waardoor het mogelijk is om "
 "boekingen op een eenvoudige, voor de hand liggende manier in te voeren."
 
-#: features.phtml:48
+#: features.phtml:51
 msgid ""
 "The register supports common checking and credit-card transactions, as well "
 "as income, stock and currency transactions. The following features are also "
@@ -1473,30 +1473,30 @@ msgstr ""
 "de ontvangst van inkomsten en de aankoop van effecten en/of vreemde valuta. "
 "De volgende functionaliteiten zijn ook beschikbaar:"
 
-#: features.phtml:51
+#: features.phtml:54
 msgid "The ability to enter <b>split transactions</b>"
 msgstr ""
 "De mogelijkheid om <b>boekingen met meerdere tegenrekeningen</b> in te voeren"
 
-#: features.phtml:52
+#: features.phtml:55
 msgid ""
 "The ability to mark a transaction as <b>cleared</b> or <b>reconciled</b>"
 msgstr ""
 "De mogelijkheid om boekingen als <b>bevestigd</b> of <b>afgestemd</b> aan te "
 "merken"
 
-#: features.phtml:53
+#: features.phtml:56
 msgid "<b>Autofill</b> of entered transactions"
 msgstr "<b>Automatisch aanvullen</b> bij invoer van boekingen"
 
-#: features.phtml:54
+#: features.phtml:57
 msgid ""
 "The ability to display <b>multiple accounts</b> in a single register window"
 msgstr ""
 "De mogelijkheid om <b>meerdere rekeningen tegelijkertijd</b> in één dagboek "
 "weer te geven"
 
-#: features.phtml:55
+#: features.phtml:58
 msgid ""
 "A <b>summary bar</b> that displays all of the relevant account's balance "
 "information"
@@ -1504,16 +1504,16 @@ msgstr ""
 "Een <b>samenvattingsbalk</b> die alle relevante saldo-informatie van de "
 "rekening toont"
 
-#: features.phtml:56
+#: features.phtml:59
 msgid "Many options to <b>customize</b> the appearance and the display style"
 msgstr ""
 "Veel opties om het uiterlijk en de weergavestijl <b>zelf aan te passen</b>"
 
-#: features.phtml:62 index.phtml:64
+#: features.phtml:65 index.phtml:78
 msgid "Scheduled Transactions"
 msgstr "Periodiek terugkerende boekingen"
 
-#: features.phtml:66
+#: features.phtml:69
 msgid ""
 "You can create recurring transactions with a high level of customization of "
 "amounts and timeline. You can also set an automatic reminder when a "
@@ -1523,7 +1523,7 @@ msgstr ""
 "in hoge mate zelf aan kunt passen. Ook kunt u een automatische herinnering "
 "instellen wanneer een boeking plaats dient te vinden."
 
-#: features.phtml:69
+#: features.phtml:72
 msgid ""
 "An assistant that runs when <span class=\"gnucash\">GnuCash</span> is "
 "started allows scheduled transactions to be postponed without canceling or "
@@ -1534,11 +1534,11 @@ msgstr ""
 "stellen (zonder deze te annuleren) of juist vóór de eerder ingeplande datum "
 "uit te voeren."
 
-#: features.phtml:75 index.phtml:62
+#: features.phtml:78 index.phtml:76
 msgid "Reports, Graphs"
 msgstr "Rapporten en grafieken"
 
-#: features.phtml:79
+#: features.phtml:82
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> has an integrated module to display "
 "graphs of your financial data in the form of:"
@@ -1546,19 +1546,19 @@ msgstr ""
 "<span class=\"gnucash\">GnuCash</span> heeft een geïntegreerde module om "
 "grafieken van uw financiële gegevens weer te geven als:"
 
-#: features.phtml:82
+#: features.phtml:85
 msgid "Barcharts"
 msgstr "Staafdiagram"
 
-#: features.phtml:83
+#: features.phtml:86
 msgid "Piecharts"
 msgstr "Cirkeldiagram"
 
-#: features.phtml:84
+#: features.phtml:87
 msgid "Scatter plots"
 msgstr "Puntenwolk"
 
-#: features.phtml:86
+#: features.phtml:89
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> also comes complete with a full suite "
 "of standard and customizeable reports, such as:"
@@ -1566,23 +1566,23 @@ msgstr ""
 "<span class=\"gnucash\">GnuCash</span> wordt tevens geleverd met een groot "
 "aantal standaard- en maatwerkrapporten, zoals:"
 
-#: features.phtml:88
+#: features.phtml:91
 msgid "Balance Sheet"
 msgstr "Balans"
 
-#: features.phtml:89
+#: features.phtml:92
 msgid "Profit &amp; Loss"
 msgstr "Winst-en-verliesrekening"
 
-#: features.phtml:90
+#: features.phtml:93
 msgid "Portfolio Valuation"
 msgstr "Waardebepaling portefeuille"
 
-#: features.phtml:91
+#: features.phtml:94
 msgid "and many others."
 msgstr "en vele andere."
 
-#: features.phtml:94
+#: features.phtml:97
 msgid ""
 "Graphs and reports can be highly and easily customized in appearance and "
 "contents, in order to fullfill every user's need."
@@ -1590,11 +1590,11 @@ msgstr ""
 "Grafieken en rapporten kunnen qua uiterlijk en inhoud zeer eenvoudig worden "
 "aangepast aan de behoefte van elke gebruiker."
 
-#: features.phtml:100
+#: features.phtml:103
 msgid "Statement Reconciliation"
 msgstr "Afstemmen met brondocumenten"
 
-#: features.phtml:105
+#: features.phtml:108
 msgid ""
 "<b>Account reconciliation</b> allows the user to compare the transactions "
 "entered in an account against a bank statement. This operation is very "
@@ -1607,7 +1607,7 @@ msgstr ""
 "name zinvol om de volledige en juiste invoer van alle boekingen vast te "
 "stellen."
 
-#: features.phtml:106
+#: features.phtml:109
 msgid ""
 "The <span class=\"gnucash\">GnuCash</span> reconcile tool with running "
 "reconciled and cleared balances makes reconciling against bank statements an "
@@ -1617,11 +1617,11 @@ msgstr ""
 "doorlopend het afgestemde en het verwerkte saldo toont, maakt het afstemmen "
 "met rekeningafschriften tot een eenvoudige taak."
 
-#: features.phtml:111
+#: features.phtml:114
 msgid "Income/Expense Account Types"
 msgstr "Rekeningsoorten Opbrengsten en Kosten"
 
-#: features.phtml:113
+#: features.phtml:116
 msgid ""
 "Income/Expense Account Types (Categories) allow you to categorize your cash "
 "flow.  When used properly with the double-entry feature and equity accounts, "
@@ -1634,11 +1634,11 @@ msgstr ""
 "genereren die bij standaardsystemen niet mogelijk zijn (zoals een winst-en-"
 "verliesrekening)."
 
-#: features.phtml:121
+#: features.phtml:124
 msgid "Small Business Accounting Features"
 msgstr "Boekhoudfuncties voor kleine ondernemingen"
 
-#: features.phtml:124
+#: features.phtml:127
 msgid ""
 "Simplify managing a small business with <b>Customer</b> and <b>Vendor</b> "
 "tracking, <b>Jobs</b>, <b>Invoicing</b> and <b>Bill</b> Payment, and <b>Tax</"
@@ -1649,7 +1649,7 @@ msgstr ""
 "tarieven</b> en <b>betalingsvoorwaarden</b> met hieraan gekoppelde "
 "<b>opdrachten</b>, <b>facturen</b> en <b>betalingen</b>."
 
-#: features.phtml:127
+#: features.phtml:130
 msgid ""
 "Using A/Receivable and A/Payable accounts you can even manage <b>payrolls</"
 "b> for your employees."
@@ -1657,7 +1657,7 @@ msgstr ""
 "In theorie kan met creatief gebruik van debiteuren- en crediteurenrekeningen "
 "zelfs een <b>salarisadministratie</b> voor uw medewerkers worden opgezet."
 
-#: features.phtml:130
+#: features.phtml:133
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> gives you also a tool to manage your "
 "business' <b>budget</b> so that you can easily plan your financial strategy."
@@ -1666,11 +1666,11 @@ msgstr ""
 "een <b>budget</b> voor uw onderneming in te voeren, waardoor het eenvoudiger "
 "wordt om uw financiële strategie uit te plannen."
 
-#: features.phtml:136
+#: features.phtml:139
 msgid "Multiple Currencies"
 msgstr "Meerdere munteenheden"
 
-#: features.phtml:140
+#: features.phtml:143
 msgid ""
 "Different accounts can be denominated in different currencies. Currency "
 "movements between accounts are fully balanced when double-entry is enabled."
@@ -1680,11 +1680,11 @@ msgstr ""
 "blijft de boekhouding sluitend bij transacties waarbij verschillende "
 "munteenheden betrokken zijn."
 
-#: features.phtml:146
+#: features.phtml:149
 msgid "Stock/Mutual Fund Portfolios"
 msgstr "Portefeuilles voor aandelen en beleggingsfondsen"
 
-#: features.phtml:149
+#: features.phtml:152
 msgid ""
 "Track stocks individually (one per account) or in portfolio of accounts (a "
 "group of accounts that can be displayed together)."
@@ -1693,11 +1693,11 @@ msgstr ""
 "rekening) of als portefeuille (een groep rekeningen die samen kan worden "
 "weergegeven) te volgen."
 
-#: features.phtml:154
+#: features.phtml:157
 msgid "Online Stock &amp; Mutual Fund Quotes"
 msgstr "Online koersen voor aandelen en beleggingsfondsen"
 
-#: features.phtml:157
+#: features.phtml:160
 msgid ""
 "Get Stock &amp; Mutual Fund quotes from various web sites, update portfolio "
 "automatically. Additional pricing sources are added regularly."
@@ -1707,15 +1707,15 @@ msgstr ""
 "automatisch bijgewerkt. Regelmatig worden nieuwe bronnen voor "
 "koersinformatie toegevoegd."
 
-#: features.phtml:160
+#: features.phtml:163
 msgid "Data storage and exchange features"
 msgstr "Functies voor gegevensopslag en -uitwisseling"
 
-#: features.phtml:164
+#: features.phtml:167
 msgid "Experimental database support"
 msgstr "Experimentele databank-ondersteuning"
 
-#: features.phtml:166
+#: features.phtml:169
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> by default stores data in an <b>xml</"
 "b> format. Starting with version 2.4, <span class=\"gnucash\">GnuCash</span> "
@@ -1726,7 +1726,7 @@ msgstr ""
 "mogelijk uw <span class=\"gnucash\">GnuCash</span>-gegevens op te slaan in "
 "een <b>SQL-databank</b> met behulp van SQLite3, MySQL of PostgreSQL."
 
-#: features.phtml:167
+#: features.phtml:170
 msgid ""
 "Note this feature is considered experimental.  It works for most of the "
 "common use cases but some corner cases have been reported to result in data "
@@ -1741,11 +1741,11 @@ msgstr ""
 "dekking, dus er kunnen nog steeds scenario's zijn waarin gegevens verloren "
 "gaan."
 
-#: features.phtml:172
+#: features.phtml:175
 msgid "QIF and OFX Import"
 msgstr "Importeren van QIF en OFX"
 
-#: features.phtml:175
+#: features.phtml:178
 msgid ""
 "If you are migrating from other financial software, <span class=\"gnucash"
 "\">GnuCash</span>  can import Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> "
@@ -1756,7 +1756,7 @@ msgstr ""
 "Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> <b>QIF</b>-bestandsformaat te "
 "importeren met behulp van een praktische assistent."
 
-#: features.phtml:178
+#: features.phtml:181
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is also the first free software "
 "application to support the <b>OFX</b> (Open Financial Exchange) protocol "
@@ -1767,7 +1767,7 @@ msgstr ""
 "Financial eXchange) dat veel banken en financiële instellingen beginnen te "
 "gebruiken."
 
-#: features.phtml:181
+#: features.phtml:184
 msgid ""
 "A transaction matching system ensures that duplicate transactions are "
 "accurately recognized and automatically deleted during file import."
@@ -1776,11 +1776,11 @@ msgstr ""
 "reeds bestaande boekingen worden herkend en automatisch worden verwijderd "
 "tijdens het importeren."
 
-#: features.phtml:187
+#: features.phtml:190
 msgid "HBCI Support"
 msgstr "Ondersteuning voor HBCI"
 
-#: features.phtml:190
+#: features.phtml:193
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is the first free software "
 "application to support the German <b>Home Banking Computer Information</b> "
@@ -1793,11 +1793,11 @@ msgstr ""
 "rekeningverloop te downloaden en om rechtstreeks vanuit <span class=\"gnucash"
 "\">GnuCash</span> betalingsopdrachten te geven."
 
-#: features.phtml:198
+#: features.phtml:201
 msgid "Multiplatform"
 msgstr "Multiplatform"
 
-#: features.phtml:201
+#: features.phtml:204
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> runs on many different operating "
 "systems including <b>Windows</b>, <b>MacOSX</b> and <b>Linux</b>."
@@ -1806,11 +1806,11 @@ msgstr ""
 "verschillende besturingssystemen, waaronder <b>Windows</b>, <b>Mac OS X</b> "
 "en <b>Linux</b>."
 
-#: features.phtml:206
+#: features.phtml:209
 msgid "Localization"
 msgstr "Lokalisatie"
 
-#: features.phtml:209
+#: features.phtml:212
 #, php-format
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> handles internationalized dates and "
@@ -1826,11 +1826,11 @@ msgstr ""
 "Nederlands, Noors, Pools, Portugees, Russisch, Spaans en Turks. Documentatie "
 "is beschikbaar in het Engels, Frans, Portugees en Spaans."
 
-#: features.phtml:214
+#: features.phtml:217
 msgid "Transaction Finder"
 msgstr "Boekingen opzoeken"
 
-#: features.phtml:217
+#: features.phtml:220
 msgid ""
 "A powerful transaction query dialogue can help you quickly locate a needle "
 "in a haystack."
@@ -1839,11 +1839,11 @@ msgstr ""
 "class=\"gnucash\">GnuCash</span> kan je helpen om snel de spreekwoordelijke "
 "naald in de hooiberg te vinden."
 
-#: features.phtml:222
+#: features.phtml:225
 msgid "Check Printing"
 msgstr "Cheques afdrukken"
 
-#: features.phtml:225
+#: features.phtml:228
 msgid ""
 "Checks may be printed in standard formats on common check stocks. A "
 "customization GUI allows custom check layouts to be developed."
@@ -1852,22 +1852,22 @@ msgstr ""
 "formaten chequepapier. Een dialoogvenster ondersteunt bij het instellen van "
 "de gewenste chequeopmaak."
 
-#: features.phtml:230
+#: features.phtml:233
 msgid "Mortgage &amp; Loan Repayment Assistant"
 msgstr "Hypotheek- en lening-assistent"
 
-#: features.phtml:233
+#: features.phtml:236
 msgid ""
 "A guided dialogue for setting up loan payments as scheduled transactions."
 msgstr ""
 "Een interactief hulpmiddel om alle met leningen samenhangende betalingen in "
 "te stellen als periodiek terugkerende boekingen."
 
-#: features.phtml:239
+#: features.phtml:242
 msgid "User Manual and Help"
 msgstr "Handleiding en andere ondersteuning"
 
-#: features.phtml:242
+#: features.phtml:245
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is very well documented: along with "
 "the application <b>Manual</b>, new users can take full advantage of the "
@@ -1892,24 +1892,24 @@ msgstr "Welkom op GnuCash.org"
 msgid "Download GnuCash %s"
 msgstr "GnuCash %s downloaden"
 
-#: index.phtml:21
+#: index.phtml:22
 msgid "Source"
 msgstr "Broncode"
 
-#: index.phtml:21
+#: index.phtml:23
 msgid "Via distribution"
 msgstr "Via distributie"
 
-#: index.phtml:24
+#: index.phtml:31
 msgid "More downloads (Source, Development,...)"
 msgstr "Overige downloads (broncode, ontwikkelversies, ...)"
 
-#: index.phtml:33
+#: index.phtml:40
 #, php-format
 msgid "Version %s is the last version for %s and %s and earlier."
 msgstr ""
 
-#: index.phtml:35
+#: index.phtml:43
 #, php-format
 msgid ""
 "Version %s is the last version for Windows XP/Vista and MacOS X 10.8 and "
@@ -1918,7 +1918,7 @@ msgstr ""
 "Versie %s is de laatste versie voor Windows XP/Vista en MacOS X 10.8 en "
 "ouder, dus de laatste versie die op PowerPC Macs werkt."
 
-#: index.phtml:40
+#: index.phtml:49
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is personal and small-business "
 "financial-accounting software, freely licensed under the <a href=\"https://"
@@ -1930,7 +1930,7 @@ msgstr ""
 "X en Microsoft WIndows onder de voorwaarden van de vrije <a href=\"https://"
 "www.gnu.org/\">GNU</a> General Public License."
 
-#: index.phtml:42
+#: index.phtml:52
 msgid ""
 "Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash"
 "\">GnuCash</span> allows you to track bank accounts, stocks, income and "
@@ -1944,11 +1944,19 @@ msgstr ""
 "als een dagboek, maar gestoeld op boekhoudkundige principes om te zorgen "
 "voor een sluitende boekhouding en accurate rapporten. "
 
-#: index.phtml:48
+#: index.phtml:57
 msgid "Need Help?"
 msgstr "Hulp Nodig ?"
 
-#: index.phtml:49
+#: index.phtml:60
+msgid ""
+"Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? "
+"Try the"
+msgstr ""
+"Op zoek naar iemand om te contacteren over <span class=\"gnucash\">GnuCash</"
+"span> ? Probeer de"
+
+#: index.phtml:62
 msgid ""
 ", which are public, email-based discussion groups where you can ask and "
 "answer <span class=\"gnucash\">GnuCash</span> questions to other users."
@@ -1957,66 +1965,58 @@ msgstr ""
 "class=\"gnucash\">GnuCash</span> vragen kan stellen aan en beantwoorden van "
 "andere gebruikers."
 
-#: index.phtml:49
-msgid ""
-"Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? "
-"Try the"
-msgstr ""
-"Op zoek naar iemand om te contacteren over <span class=\"gnucash\">GnuCash</"
-"span> ? Probeer de"
-
-#: index.phtml:54
+#: index.phtml:68
 msgid "Feature Highlights"
 msgstr "Belangrijkste functies"
 
-#: index.phtml:59
+#: index.phtml:73
 msgid "Double-Entry Accounting"
 msgstr "Dubbel boekhouden"
 
-#: index.phtml:60
+#: index.phtml:74
 msgid "Stock/Bond/Mutual Fund Accounts"
 msgstr "Ondersteunt aandelen, obligaties en beleggingsfondsen"
 
-#: index.phtml:61
+#: index.phtml:75
 msgid "Small-Business Accounting"
 msgstr "Functies voor kleine ondernemingen"
 
-#: index.phtml:63
+#: index.phtml:77
 msgid "QIF/OFX/HBCI Import, Transaction Matching"
 msgstr ""
 "Import vanuit QIF-bestanden of Online bankieren (OFX/HCBI), herkenning van "
 "bestaande boekingen"
 
-#: index.phtml:65
+#: index.phtml:79
 msgid "Financial Calculations"
 msgstr "Financiële berekeningen"
 
-#: index.phtml:67
+#: index.phtml:81
 msgid "<b>Discover more...</b>"
 msgstr "<b>Ontdek meer...</b>"
 
-#: index.phtml:70
+#: index.phtml:85
 #, fuzzy, php-format
 msgid "GnuCash %s Released"
 msgstr "GnuCash 2.6 uitgave rondleiding"
 
-#: index.phtml:71
+#: index.phtml:86
 #, php-format
 msgid ""
 "We've released GnuCash %s with many bugfixes and improvements including some "
 "%s!"
 msgstr ""
 
-#: index.phtml:72
+#: index.phtml:87
 #, fuzzy
 msgid "great new features"
 msgstr "Basisfuncties"
 
-#: index.phtml:84
+#: index.phtml:100
 msgid "Info and development"
 msgstr "Informatie en ontwikkeling"
 
-#: index.phtml:86
+#: index.phtml:102
 msgid ""
 "The GnuCash team recommends the GnuCash for Android app. This app allows you "
 "to keep track of your financial transactions on the go for later import into "
@@ -2026,7 +2026,7 @@ msgstr ""
 "financiële transacties onderweg bij te houden om ze later in de desktop "
 "versie van GnuCash te importeren."
 
-#: index.phtml:87
+#: index.phtml:103
 msgid ""
 "Note that GnuCash for Android is not a port of the GnuCash program to "
 "Android."
