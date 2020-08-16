@@ -41,7 +41,7 @@
      <li> More multi-currency fixes related to bug 763146.</li>
      <li>Be more liberal in accepting business counter custom formats: li, lli, I64i, and whatever is defined to G_GINT_64 or PRIx64 on the system on which GnuCash is compiled.</li>
      <li> Correctly re-value splits when the transaction currency is changed.</li>
-     <li>Reset the transaction currency to match the currently open account when auto-completing.</lli>
+     <li>Reset the transaction currency to match the currently open account when auto-completing.</li>
      <li>Refine the MacOS X localization when the system-generated POSIX locale isn't a supported locale: Prefer the country to language when selecting an alternate locale, but still pass the original language to gettext.</li>
      <li>Check printing: extract address from invoice/bill for payment transactions.</li>
 </ul>
