@@ -3,7 +3,7 @@
 
 <h2>GnuCash 3.904 Released</h2>
 
-<p>The GnuCash development team announces GnuCash 3.904, the third testing release for what will soon be GnuCash 4.0.
+<p>The GnuCash development team announces GnuCash 3.904, the third testing release for what will soon be GnuCash 4.0.</p>
 
 <h3>Changes</h3>
 
@@ -48,15 +48,15 @@
   </li>
   <li>When deleting accounts the destination accounts of moved splits will be checked to ensure that they have the same commodity as the source account. If they don't you'll get a warning and the opportunity to pick another account or to carry on regardless.</li>
   <li>New type-ahead search added to sequential search when selecting an account in the register: Instead of typing the first few characters of a top level account, the separator, the first few characters of the next level account and so on you may instead type a few characters of any part of a full account name and the drop-list will be filtered to contain only matching accounts. Once you have a small enough list you can use the arrow keys to select the account that you want.</li>
-  <li> Python bindings are now localized and their strings available for translation.</li>
-  <li> The new reports introduced in the <b>Experimental</b> Reports menu are moved to the main menu and the old reports hidden; the old reports can be unhidden by running GnuCash from the commandline with the <kbd>--extra</kbd> argument. That will cause the old reports to appear in their regular locations on the menu labeled <b>(legacy)</b>. Note that new reports use different options and layouts and you may need to adjust your saved report configurations.</li>
-  <li> A new <b>Transaction Association</b> dialog, available from the new <b>Update Transaction Association</b> item in the register context menu, provides the ability to have multiple associations for a single transaction. Associations may now be easily removed.</li>
+  <li>Python bindings are now localized and their strings available for translation.</li>
+  <li>The new reports introduced in the <b>Experimental</b> Reports menu are moved to the main menu and the old reports hidden; the old reports can be unhidden by running GnuCash from the commandline with the <kbd>--extra</kbd> argument. That will cause the old reports to appear in their regular locations on the menu labeled <b>(legacy)</b>. Note that new reports use different options and layouts and you may need to adjust your saved report configurations.</li>
+  <li>A new <b>Transaction Association</b> dialog, available from the new <b>Update Transaction Association</b> item in the register context menu, provides the ability to have multiple associations for a single transaction. Associations may now be easily removed.</li>
   <li>Allow Associations to be added to invoices. The actual association when present is added as a link button which is shown below the notes. </li>
   <li>A symbol is now displayed on transactions in the register when they have an attachment and the selected font supports the symbol.</li>
   <li>The OFX file importer can now import more than one file at a time.</li>
-  <li> A new report menu supbmenu <b>Multicolumn</b> contains the old custom-multicolumn report and a new <b>Dashboard</b> report containing Account reports for expenses and income, an income-expense chart, and an account summary.</li>
+  <li>A new report menu supbmenu <b>Multicolumn</b> contains the old custom-multicolumn report and a new <b>Dashboard</b> report containing Account reports for expenses and income, an income-expense chart, and an account summary.</li>
   <li>When importing, the matcher will no longer offer to match a transaction to one that has already matched in a previous import, nor will it offer to match more than one imported transaction to a single existing transaction.</li>
-  <li> Support for UK VAT and Australian GST added to the Income-GST report. The reports options are changed from source accounts to source sales and purchase accounts to permit proper reporting of capital purchases. <b>N.B.</b> This is incompatible with previous versions of the report and will require regenerating saved configurations.</li>
+  <li>Support for UK VAT and Australian GST added to the Income-GST report. The reports options are changed from source accounts to source sales and purchase accounts to permit proper reporting of capital purchases. <b>N.B.</b> This is incompatible with previous versions of the report and will require regenerating saved configurations.</li>
   <li>Add option to save Layout for Business items<p>Add two menu items under windows, one to save an existing layout for Invoices, Bills and Vouchers to their respective default layouts so the user set column widths will be used. The second menu item will reset the column widths to defaults and remove the default layout. Open Business items will also save their column widths to the page section so these can temporarily have different widths. </p></li>
   <li>The matcher window columns are changed from R to C and from U+R to U+C, reflecting that the matcher marks transactions cleared but doesn't reconcile them. (Bug 797338)</li>
   <li>OFX imports having balance information will now offer to immediately reconcile, passing the balance information in the file to the reconcile info.</li>
@@ -71,9 +71,9 @@
   <li>Enable adding notes to budgets. (Bug 693180)</li>
   <li>Support for AQBanking Version 6. This is required to support new FinTS protocols and the European Privacy Directive.</li>
   <li>GnuCash 4.x will not migrate old gconf settings from GnuCash 2.4.x.</li>
-  <li> Reversing transactions will now pop a dialog box to request a posting date. (Bug 782455)</li>
+  <li>Reversing transactions will now pop a dialog box to request a posting date. (Bug 782455)</li>
   <li>The Accounts page has a new optional column for the hidden property to make it easier to toggle it. Note that in order to see hidden accounts you must still enable that in the Filter by... dialog. (Bug 797486)</li>
-  <li>The Customer, Vender, and Employee overviews have a process-payment toolbar. (Bug 797605).
+  <li>The Customer, Vender, and Employee overviews have a process-payment toolbar. (Bug 797605).</li>
   <li>Account codes may now optionally be displayed in the Budget Tree View. (Bug 797489).</li>
 </ul>
 <h3>New/Revised Reports</h3>
@@ -82,9 +82,9 @@
   <li>Owner Report</li>
 </ul>
 <h3>Significant Code Changes</h3>
-<h4> In 3.904</h4>
+<h4>In 3.904</h4>
 <ul>
-  <li> The signature for <code>qof_session_begin()</code>, <code>QofSession::begin()</code>, and <code>QofBackend::begin()</code> are changed to use an enum <code>SessionOpenMode</code> instead of three booleans.</li>
+  <li>The signature for <code>qof_session_begin()</code>, <code>QofSession::begin()</code>, and <code>QofBackend::begin()</code> are changed to use an enum <code>SessionOpenMode</code> instead of three booleans.</li>
 </ul>
 <h4>In previous 3.9xx releases</h4>
 <ul>
@@ -96,12 +96,12 @@
     <li><samp>gnucash-app-core.cpp</samp>, common code required by both the command line and gui programs.</li>
     <li>There's also an auxiliary file, <samp>gnucash-windows-locale.c</samp> because the localization code proved resistant to compiling as C++. We're planning another auxiliary file for the MacOS localization.</li>
   </ul></li>
-  <li> A new mock facility for several engine classes to permit better-isolated unit testing of components that depend on those classes.</li>
+  <li>A new mock facility for several engine classes to permit better-isolated unit testing of components that depend on those classes.</li>
   <li>Register filter and sort values are saved in the book's state file (book.gcm) in the user's configdir instead of in the book.</li>
-  <li>QofSession no longer creates its book, instead one must create a book first and pass that to <code>qof_session_new()</code>/<code>QofSession::QofSession()</code>.
-  <li>Add option to save Layout for Register items<p>Add two menu items under windows, one to save an existing register layout based on the register type to there respective default layouts so the user set column widths will be used when opening registers. The second menu item will reset the column widths to defaults and remove the associated default layout. Open registers will also save their column widths to the page section so these can temporarily have different widths. </p></li>
-  <li> Input Method handling in the register is moved to the GtkEntry where it belongs.</li>
-  <li><code>gnc_get_current_session()</code> no longer creates an empty session if there isn't one already open.
+  <li>QofSession no longer creates its book, instead one must create a book first and pass that to <code>qof_session_new()</code>/<code>QofSession::QofSession()</code>.</li>
+  <li>Add option to save Layout for Register items<p>Add two menu items under windows, one to save an existing register layout based on the register type to there respective default layouts so the user set column widths will be used when opening registers. The second menu item will reset the column widths to defaults and remove the associated default layout. Open registers will also save their column widths to the page section so these can temporarily have different widths.</p></li>
+  <li>Input Method handling in the register is moved to the GtkEntry where it belongs.</li>
+  <li><code>gnc_get_current_session()</code> no longer creates an empty session if there isn't one already open.</li>
   <li>The source directories have been rearranged and most of the loadable modules (e.g. libgncmod-engine.so) are now normal dynamic libraries (libgnc-engine.so), shorn of their gnc-module adapters. Make sure that you clean and rebuild your build directory.</li>
   <li>All functions marked as deprecated in 3.x are now removed. If you have custom reports be sure to examine <samp>gnucash.trace</samp> for deprecation warnings and update your reports before trying them in GnuCash 3.904.</li>
   <li><samp>libgncmod-generic-import</samp> is now <samp>libgnc-generic-import</samp>.</li>

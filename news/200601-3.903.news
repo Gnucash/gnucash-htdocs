@@ -69,7 +69,7 @@
   <li>GnuCash 4.x will not migrate old gconf settings from GnuCash 2.4.x.</li>
   <li> Reversing transactions will now pop a dialog box to request a posting date. (Bug 782455)</li>
   <li>The Accounts page has a new optional column for the hidden property to make it easier to toggle it. Note that in order to see hidden accounts you must still enable that in the Filter by... dialog. (Bug 797486)</li>
-  <li>The Customer, Vender, and Employee overviews have a process-payment toolbar. (Bug 797605).
+  <li>The Customer, Vender, and Employee overviews have a process-payment toolbar. (Bug 797605).</li>
   <li>Account codes may now optionally be displayed in the Budget Tree View. (Bug 797489).</li>
 </ul>
 <h3>New/Revised Reports</h3>
@@ -90,7 +90,7 @@
   </ul></li>
   <li> A new mock facility for several engine classes to permit better-isolated unit testing of components that depend on those classes.</li>
   <li>Register filter and sort values are saved in the book's state file (book.gcm) in the user's configdir instead of in the book.</li>
-  <li>QofSession no longer creates its book, instead one must create a book first and pass that to <code>qof_session_new()</code>/<code>QofSession::QofSession()</code>.
+  <li>QofSession no longer creates its book, instead one must create a book first and pass that to <code>qof_session_new()</code>/<code>QofSession::QofSession()</code>.</li>
   <li>Add option to save Layout for Register items<p>Add two menu items under windows, one to save an existing register layout based on the register type to there respective default layouts so the user set column widths will be used when opening registers. The second menu item will reset the column widths to defaults and remove the associated default layout. Open registers will also save their column widths to the page section so these can temporarily have different widths. </p></li>
   <li> Input Method handling in the register is moved to the GtkEntry where it belongs.</li>
   <li><code>gnc_get_current_session()</code> no longer creates an empty session if there isn't one already open.
@@ -223,14 +223,14 @@ and MacOS 10.13 (High Sierra)&reg; and later in pre-built, all-in-one
 packages. An installer is provided for Microsoft Windows&reg; while
 the MacOS&reg; package is a disk image containing a drag-and-drop
 application bundle.</p>
-<p>The SHA256 Hashes for the downloadable files are:
+<p>The SHA256 Hashes for the downloadable files are:</p>
 <ul>
   <li><code>ebf67b2182426ff486a5e92bdc57cffc5de160f112014294f210a70ed9172950</code>&nbsp;&nbsp;gnucash-3.903.tar.bz2</li>
   <li><code>fef6f3545618b6506c8e4459532673065f8d235c8b55ae368d4cb5ff50724110</code>&nbsp;&nbsp;gnucash-3.903.tar.gz</li>
   <li><code>1295dbcde5bcb5dd179f4a936081f107fd3a75c91a4f73b6f2b5741a69cd46eb</code>&nbsp;&nbsp;gnucash-3.903.setup.exe</li>
   <li><code>237d0cae6df20ec0e08a140f2a0e40f6f7e314db8199780c99011cfe9c85c31f</code>&nbsp;&nbsp;Gnucash-Intel-3.903-1.dmg</li>
   <li><code>4a68abaded80a73da8b6ad2b2c2dd561e892e633a9eabfda5c2737042467d1ea</code>&nbsp;&nbsp;gnucash-docs-3.903.tar.gz</li>
-</ul></p>
+</ul>
 
 <ul>
   <li>SourceForge:
@@ -262,7 +262,7 @@ application bundle.</p>
 <h3>Getting the documentation</h3>
 
 <p><b>Note that the documentation for unstable releases is not on <a href="https://www.gnucash.org">the GnuCash website</a>.</b> It is built daily and may be found on the <a href="https://code.gnucash.org/docs">development server</a> under the locale directory; "C" is English, "de" is German, and so on.</p>
-The documentation is included in the MacOS and Windows application bundles.</p>
+<p>The documentation is included in the MacOS and Windows application bundles.</p>
 
 <p>If you want to compile the GnuCash Documentation 3.903 for yourself, the source code can be downloaded from:</p>
 <ul>
