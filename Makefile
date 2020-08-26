@@ -27,7 +27,7 @@ po/gnucash-htdocs.pot: po/POTFILES
 msgmerge: po/gnucash-htdocs.pot
 	for f in ${languages} ; do \
 	  echo -n $$f ; \
-	  msgmerge -U -F po/$$f.po po/gnucash-htdocs.pot ; \
+	  msgmerge -F --previous -U po/$$f.po po/gnucash-htdocs.pot ; \
 	done
 
 mos: ${languages}
