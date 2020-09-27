@@ -30,12 +30,12 @@
 </ul>
 <h3>New Features</h3>
 <ul>
-    <li>A new separate executable, <kbd>gnucash-cli</kbd> (<kbd>gnucash-cli.exe</kbd> on Microsoft Windows) for doing command-line things like updating the prices in your book. <kbd>gnucash-cli</kbd> gains the ability to run reports from the command line. Specify reports to run by name or guid. It also provides an export format and an output file name without which it will output the report to stdout.</li>
+    <li>A new separate executable, <kbd>gnucash-cli</kbd> (<kbd>gnucash-cli.exe</kbd> on Microsoft Windows) for doing command-line things like updating the prices in your book. <kbd>gnucash-cli</kbd> gains the ability to run reports from the command line. Specify reports to run by name or guid. It also provides an export format and an output file name without which it will output the report to stdout.
   <ul>
     <li><code>gnucash-cli --report run --name=[reportname/guid] datafile.gnucash</code></li>
     <li><code>gnucash-cli --report run --name=[reportname/guid] --output-file=x.html datafile.gnucash</code></li>
     <li><code>gnucash-cli --report run --name=[reportname/guid] --output-file=x.html --export-type=TYPE datafile.gnucash</code></li>
-  </ul>
+  </ul></li>
   <li>When deleting accounts the destination accounts of moved splits will be checked to ensure that they have the same commodity as the source account. If they don't you'll get a warning and the opportunity to pick another account or to carry on regardless.</li>
   <li>New type-ahead search added to sequential search when selecting an account in the register: Instead of typing the first few characters of a top level account, the separator, the first few characters of the next level account and so on you may instead type a few characters of any part of a full account name and the drop-list will be filtered to contain only matching accounts. Once you have a small enough list you can use the arrow keys to select the account that you want.</li>
   <li> Python bindings are now localized and their strings available for translation.</li>

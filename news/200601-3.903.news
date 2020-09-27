@@ -93,7 +93,7 @@
   <li>QofSession no longer creates its book, instead one must create a book first and pass that to <code>qof_session_new()</code>/<code>QofSession::QofSession()</code>.</li>
   <li>Add option to save Layout for Register items<p>Add two menu items under windows, one to save an existing register layout based on the register type to there respective default layouts so the user set column widths will be used when opening registers. The second menu item will reset the column widths to defaults and remove the associated default layout. Open registers will also save their column widths to the page section so these can temporarily have different widths. </p></li>
   <li> Input Method handling in the register is moved to the GtkEntry where it belongs.</li>
-  <li><code>gnc_get_current_session()</code> no longer creates an empty session if there isn't one already open.
+  <li><code>gnc_get_current_session()</code> no longer creates an empty session if there isn't one already open.</li>
 </ul>
 <h4>In previous 3.9xx releases</h4>
 <ul>
