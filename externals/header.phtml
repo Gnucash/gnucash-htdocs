@@ -22,9 +22,10 @@
   }
   
   $get_parms = $_GET;
+  if (isset($locale)) { $locale_str = substr($locale, 0, 2); } else { $locale_str = "en"; }
 ?>
 
-<html lang="en">
+<html lang="<?php echo $locale_str; ?>">
   <head>
     <?php
       if (!isset($can_utf)) { $can_utf = true; }
