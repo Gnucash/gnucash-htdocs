@@ -22,7 +22,16 @@
   }
   
   $get_parms = $_GET;
-  if (isset($locale)) { $locale_str = substr($locale, 0, 2); } else { $locale_str = "en"; }
+
+  if (isset($locale)) {
+    if (substr($locale, 0, 2) != 'zh') {
+      $locale_str = substr($locale, 0, 2);
+    } else {
+      $locale_str = $locale  == 'zh_TW' ? 'zh-Hant' : 'zh-Hans';
+    }
+  } else {
+    $locale_str = "en";
+  }
 ?>
 
 <html lang="<?php echo $locale_str; ?>">
