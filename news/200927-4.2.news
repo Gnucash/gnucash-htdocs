@@ -1,0 +1,141 @@
+<b>Announcement:</b> GnuCash 4.2 Released
+2020-09-27
+
+<h2>GnuCash 4.2 Released</h2>
+
+<p>The GnuCash development team announces GnuCash 4.2, the third release in the stable 4.x series</p>
+
+<h4>Between 4.1 and 4.2, the following bugfixes were accomplished:</h4>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=102787">Bug 102787 - Currency selection should do autocompletion</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=476114">Bug 476114 - Goto register by date feature req</a><p>Adds ability to jump to arbitrary date.</p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=554391">Bug 554391 - Tax Options dialog - can only assign one TXF category at a time</a><p>If the Tax options dialog is opened from the Chart of Accounts and an account is selected then the tax dialog will preselect that account. </p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=787295">Bug 787295 - Allow UI jump from Business accounts to their relevant invoice/bill/voucher</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797514">Bug 797514 - Changing transaction unreconciles a split inconsistently</a><p>Partial: This make sure that the split&#39;s reconcile status gets updated before the transaction is committed. </p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797730">Bug 797730 - Transaction matching can match multiple imported transactions to the same existing one</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797839">Bug 797839 - Auto-complete prevents entering non-ASCII transaction descriptions</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797852">Bug 797852 - Error in Accounts Payable Aging re cut off dates</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797857">Bug 797857 - Edit->Preferences: Help/Close buttons unreachable</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797874">Bug 797874 - Errors in register and new-account UI </a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797878">Bug 797878 - Pie chart displays fractions and long decimal representations</a><p>Ensure amounts rendering is rounded to report-currency SCU </p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797880">Bug 797880 - [gnucash-cli] encoding and font differing from manually exported reports (Win10, German locale).</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797883">Bug 797883 - [Transaction Report] non-localized string</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797889">Bug 797889 - editing amounts in dr / cr behaving oddly</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797893">Bug 797893 - Unable to change font size in charts</a><p>Use the stylesheet font values instead of hard-coded ones.</p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797895">Bug 797895 - Hang for a long time (9 minutes per account) importing a QFX file.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797896">Bug 797896 - [HBCI] crash when downloading transactions</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797897">Bug 797897 - Cannot select multiple accounts in Tax Report Options</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797898">Bug 797898 - [reconciliation] calculated balance amount per reconcilation date depending on actual time.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797900">Bug 797900 - Crash caused by Quitting while Check and Repair All is running</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797923">Bug 797923 - Running employee report results in &quot;Unbound variable: txn&quot;</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797924">Bug 797924 - Crash when searching for customer to process payment.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797935">Bug 797935 - Strange formal register headers</a><p>In languages other than English because of poorly constructed translatable strings.</p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797936">Bug 797936 - Lot viewer notes field too narrow</a</li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797945">Bug 797945 - Tools -&gt; Import Map Editor causes GnuCash to lock up</a></li>
+</ul>
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>Update version in README, add Boost::program_options to dependencies.</li>
+    <li>[report-utilities] compact functions</li>
+    <li>Small fixes for various translation issues:
+        <ul>
+            <li>Deduplicate translatable strings</li>
+            <li>Add context to one-letter strings in guile code</li>
+            <li>Fix typo in linked document gui Align translatable strings</li></ul></li>
+    <li>Expose C_ function (gettext with context string) to guile code, first use is for the document link short code (L) </li>
+    <li>Improve and repair progress bar display on a variety of reports and windows, improving performance on several by reducing the number of progressbar calls.</li>
+    <li>[gnc-main-window] enable show_text for progressbar, allowing gtk_progress_bar_set_text to actually display the progress text. </li>
+    <li>Fix help_label of dialog-doclink.glade, remove question mark from Available, and insert missing spaces into the Business Item variant.</li>
+    <li>Rename all Transaction and Invoice Association identifiers to DocLink to better reflect the purpose and for consistency with other software (e.g. Libre Office). </li>
+    <li>Rename Transaction and Invoice Associations to Document Links. More clearly describes the actions and is more consistent with other software (e.g. Libre Office).</li>
+    <li>RRemove the Remove Linked Document context menu item because that can be done in the Manage dialog box.</li>
+    <li>Fix the horizontal scrollbar in the linked docs window.</li>
+    <li>I18n - deduplicate translatable strings</li>
+    <li>macOS: Give GnuCash time to shut down gracefully instead of letting macOS pull the rug out.</li>
+    <li>I18N: Align glossary to gnucash.pot. Create a similar copyright header. Add missing Report-Msgid-Bugs-To.</li>
+    <li>[report-utilities] More dump data functions:<ul>
+        <li>gnc:dump-book             - splits grouped by account</li>
+        <li>gnc:dump-all-transactions - splits grouped by transaction</li>
+        <li>gnc:dump-split - dumps single split</li></ul></li>
+    <li>[business-urls] link to owner report with enddate</li>
+    <li>[dialog-invoice] gnc_business_call_owner_report_with_enddate</li>
+    <li>[new-owner-report][api] owner-report-create-with-enddate; accepts enddate argument like owner-report-create.</li>
+    <li>Enable exporting the tables in charts and some reports as CSV.</li>
+    <li>Tweak a few strings to reuse translations</li>
+    <li>Exported gnc:cmdline-template-export and gnc:cmdline-get-report-id. Handle ambiguous reportnames by returning #f.</li>
+    <li>[price-quotes.scm] ensure missing-alphavantage message can show on console</li>
+    <li>[budget.scm] Fix report crash on books with unreversed budgets</li>
+    <li>[gnucash-cli] -R show should accept &amp; try to load datafile</li>
+    <li>Speed up computation of import match lists by running query only once, committing accounts only once, and doing a bulk insert into the GtkTreeview.</li>
+    <li>Add Python example export_account_totals.py. Exports acount totals of all accounts into a CSV file.</li>
+
+</ul>
+
+<P>Updated Translations: Dutch, German, Italian, Ukrainian<br />
+New Translations: Estonian, Indonesian</p>
+
+<h4>Known Problems</h4>
+<p><a href="https://bugs.gnucash.org/buglist.cgi?bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;limit=0&amp;list_id=8149&amp;order=priority%2Cbug_severity&amp;query_format=advanced">Complete list of all open bugs.</a></p>.
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of GnuCash 4.2 we're pleased to also release a new version of the companion Help and Tutorial and Concepts Guide</p>
+<p> The only changes to the documentation since 4.1 were improvements to the build system.</p>
+<h3>Getting GnuCash for Windows and MacOS</h3>
+<p>GnuCash is provided for both Microsoft Windows 8.1&reg; and later
+    and MacOS 10.13 (High Sierra)&reg; and later in pre-built, all-in-one
+    packages. An installer is provided for Microsoft Windows&reg; while
+    the MacOS&reg; package is a disk image containing a drag-and-drop
+    application bundle.</p>
+<p>The SHA256 Hashes for the downloadable files are:</p>
+<ul>
+    <li><code>56d8ab039ef7784303ca9eab14bfc20f593f7a3f9b682a8a7eac25906a0d1308</code>&nbsp;&nbsp;gnucash-4.2.tar.bz2</li>
+    <li><code>934f3432bc8d1f98223275d278f4cb2918970f50647ee6643dfb92369080dc68</code>&nbsp;&nbsp;gnucash-4.2.tar.gz</li>
+    <li><code>2cb2d9c1ebe746d6d9c8da517b0bdfcca22ed10e22e4eb2ca1890df3d7559892</code>&nbsp;&nbsp;gnucash-4.2.setup.exe</li>
+    <li><code>66f48acf1aa002e2de86865bb56f6a695cecf1fd3734b4a7e85fc170cf14c6f5</code>&nbsp;&nbsp;Gnucash-Intel-4.2-1.dmg</li>
+    <li><code>051f6a038d2f2d9fb0bad9ac1b9597d3186e48ed63c27f0bb40744ffc05e39dc</code>&nbsp;&nbsp;gnucash-docs-4.2.tar.gz</li>
+</ul>
+
+<ul>
+    <li>SourceForge:
+        <ul>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.2/gnucash-4.2.setup.exe">Win32</a></li>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.2/Gnucash-Intel-4.2-3.dmg">Mac-Intel</a></li>
+        </ul></li>
+    <li>Github
+        <ul>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/4.2/gnucash-4.2.setup.exe">Win32</a></li>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/4.2/Gnucash-Intel-4.2-3.dmg">Mac-Intel</a></li>
+        </ul></li></ul>
+
+<p>GnuCash is now available as a flatpak from Flathub.org. <a href="https://wiki.gnucash.org/wiki/Flatpak">Instructions for installing and running.</a></p>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 4.2 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+    <li>Sourceforge: <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.2/gnucash-4.2.tar.bz2">bzip2</a>, <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.2/gnucash-4.2.tar.gz">gzip</a>.</li>
+
+    <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/4.2/gnucash-4.2.tar.bz2">bzip</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/4.2/gnucash-4.2.tar.gz">gzip</a></li>
+
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https:www.gtk.org">Gtk+</a> 3.22.29, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0, <a href="https://www.boost.org/">Boost</a> 1.67, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, <a href="https://github.com/google/googletest">GoogleTest</a> 1.8.0, <a href="https://cmake.org/">cmake 3.10</a> and <a href="http://www.swig.org/">SWIG</a> 2.0.12. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 4.2 documentation can be found under "GnuCash v4 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats. The documentation is also included in the MacOS and Windows application bundles.</p>
+
+<p>If you want to compile the GnuCash Documentation 4.2 for yourself, the source code can be downloaded from:</p>
+<ul>
+  <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.2/gnucash-docs-4.2-1.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/4.2/gnucash-docs-4.2.tar.gz">GitHub</a></li>
+  <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, MacOS, and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
