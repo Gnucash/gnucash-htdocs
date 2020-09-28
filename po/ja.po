@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: gnucash-htdocs r18581\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2020-08-14 23:12+0200\n"
+"POT-Creation-Date: 2020-09-28 19:54+0200\n"
 "PO-Revision-Date: 2014-11-07 19:25+0000\n"
 "Last-Translator: Yasuaki Taniguchi <yasuakit@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
@@ -1173,11 +1173,11 @@ msgstr "すべての GnuCash %s ダウンロードファイルを見る (開発�
 msgid "View all GnuCash downloads"
 msgstr "すべての GnuCash ダウンロードファイルを見る"
 
-#: externals/footer.phtml:20
+#: externals/footer.phtml:12
 msgid "Server &amp; email outage reports to:"
 msgstr "サーバーおよび email の不具合に関する連絡先: "
 
-#: externals/footer.phtml:23
+#: externals/footer.phtml:15
 msgid "Translation problems? Contact:"
 msgstr "翻訳の問題に関する連絡先:"
 
@@ -1197,15 +1197,15 @@ msgstr "GnuCash の機能拡張に関する要望・投票"
 msgid "GnuCash on facebook"
 msgstr "Facebook の GnuCash ページ"
 
-#: externals/header.phtml:107 index.phtml:5 oldnews.phtml:4
+#: externals/header.phtml:128 index.phtml:5 oldnews.phtml:4
 msgid "Free Accounting Software"
 msgstr "フリーの財務ソフトウェア"
 
-#: externals/header.phtml:111
+#: externals/header.phtml:132
 msgid "Language"
 msgstr "言語"
 
-#: externals/header.phtml:129
+#: externals/header.phtml:150
 msgid "Continent"
 msgstr "大陸"
 
@@ -2943,24 +2943,132 @@ msgid ""
 "a separate window, please <a href=\"%s\" target=\"_new\">click here</a>."
 msgstr ""
 
-#~ msgid "mirror"
-#~ msgstr "ミラー"
+#~ msgid ""
+#~ "Everything you need concerning GnuCash documentation should be here, if "
+#~ "you notice something missing, email <a href='mailto:gnucash-devel@gnucash."
+#~ "org'>gnucash-devel</a> and we will add it."
+#~ msgstr ""
+#~ "あなたが必要とするGnuCashに関係した情報はすべてここにあります。もしここに"
+#~ "存在しない物があれば、<a href='mailto:gnucash-devel@gnucash.org'>gnucash-"
+#~ "devel</a> にメールを送ってください。そうすると私たちが追加します。"
 
 #~ msgid ""
-#~ "You can now create recurring transactions, including automatic reminders "
-#~ "when a transaction is due, the ability to postpone a scheduled "
-#~ "transaction without canceling it, and the ability to specify only a "
-#~ "limited number of transactions."
+#~ "Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> QIF files can be imported, "
+#~ "and are automatically merged to eliminate duplicate transactions."
 #~ msgstr ""
-#~ "取引期日に自動的に通知する機能、予定取引を中止せずに延期する機能や取引回数"
-#~ "を指定する機能などが含まれる繰り返し取引を作成することができます。"
+#~ "Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> QIF ファイルをインポートす"
+#~ "ることができます。併合時には自動的に重複した取引が削除されます。"
 
 #, fuzzy
-#~ msgid "Writing documentation"
-#~ msgstr "文書"
+#~ msgid "Free Acconting Software"
+#~ msgstr "フリーの財務ソフトウェア"
 
-#~ msgid "USA Mirror"
-#~ msgstr "米国のミラーサイト"
+#~ msgid "General Ledger"
+#~ msgstr "総勘定元帳"
+
+#~ msgid "GnuCash Documentation Project"
+#~ msgstr "GnuCash 文書プロジェクト"
+
+#~ msgid "GnuCash for Business Users"
+#~ msgstr "ビジネス利用者向け GnuCash 文書"
+
+#~ msgid "About / News"
+#~ msgstr "GnuCashについて / ニュース"
+
+#~ msgid "Customers, Vendors, Jobs, <br>Invoices, A/P, A/R"
+#~ msgstr "得意先、仕入先、請求のまとめ <br> 請求書、買掛金、売掛金"
+
+#~ msgid "Documentation Development"
+#~ msgstr "文書作成"
+
+#~ msgid "Doxygen Developer Documentation"
+#~ msgstr "Doxygen 開発文書"
+
+#, fuzzy
+#~ msgid "GnuCash v%s (old stable release)"
+#~ msgstr "すべての GnuCash %s ダウンロードファイルを見る (安定版)"
+
+#~ msgid "For both reviewers and documentation writers"
+#~ msgstr "文書の著者および査読者のための文書"
+
+#~ msgid ""
+#~ "A new help subsystem that focuses on how to do tasks is now available, in "
+#~ "addition to a Tutorial and Concepts guide that gives the user background "
+#~ "information on accounting principles and how they are reflected in "
+#~ "GnuCash."
+#~ msgstr ""
+#~ "会計原則に関する背景情報およびそれがどのように GnuCash に反映されているか"
+#~ "を説明する GnuCash チュートリアル・コンセプトガイドに加えて、作業をどのよ"
+#~ "うに行うかに関して集中して記述した新しいヘルプサブシステムが使用可能になり"
+#~ "ました。"
+
+#~ msgid ""
+#~ "GnuCash has an integrated reporting and graphing module, and comes "
+#~ "complete with a full suite of standard and customizeable reports, such as "
+#~ "Balance Sheet, Profit &amp; Loss, Portfolio Valuation, and many others."
+#~ msgstr ""
+#~ "GnuCash には統合された帳票・グラフモジュールがあり、貸借対照表、損益計算"
+#~ "書、ポートフォリオ評価などの標準およびカスタマイズ可能な帳票の一式を作成す"
+#~ "ることが出来ます。"
+
+#~ msgid "Improved Import Transaction Matching"
+#~ msgstr "インポートした取引に対する一致処理の強化"
+
+#~ msgid "Deutsch"
+#~ msgstr "ドイツ語"
+
+#~ msgid "Interesting Links"
+#~ msgstr "関連リンク"
+
+#~ msgid "Documentation Project"
+#~ msgstr "文書プロジェクト"
+
+#~ msgid "Espagnol"
+#~ msgstr "スペイン語"
+
+#~ msgid "European Mirror"
+#~ msgstr "ヨーロッパのミラーサイト"
+
+#~ msgid ""
+#~ "Multiple accounts can be displayed in one register window at the same "
+#~ "time. This can ease the trouble of tracking down typing/entry errors. It "
+#~ "also provides a convenient way of viewing a portfolio of many stocks, by "
+#~ "showing all transactions in that portfolio."
+#~ msgstr ""
+#~ "複数の勘定科目を同時に一つの記録簿ウィンドウに表示することができます。これ"
+#~ "によりタイピング/入力エラーを見つけ出すことが簡単になります。また複数株式"
+#~ "のポートフォリオを参照することが、すべての取引をポートフォリオに含めること"
+#~ "ができるため便利になります。"
+
+#~ msgid "Italiano"
+#~ msgstr "イタリア語"
+
+#~ msgid "Neil Williams GnuCash documentation"
+#~ msgstr "Neil Williams 氏による GnuCash 文書"
+
+#~ msgid "QIF Import"
+#~ msgstr "QIFのインポート"
+
+#~ msgid "Subversion Access"
+#~ msgstr "Subversion アクセス"
+
+#~ msgid ""
+#~ "The checkbook-style register provides a custom, convenient and familiar "
+#~ "interface to entering financial transactions.   The register supports "
+#~ "common checking and credit-card transactions, as well as income, stock "
+#~ "and currency transactions."
+#~ msgstr ""
+#~ "財務取引を入力するインターフェースはカスタマイズ可能で、便利かつ親しみやす"
+#~ "い、小切手帳スタイルの記録簿になっています。記録簿は通常の小切手やクレジッ"
+#~ "トカード取引に加えて収益、株式、通貨取引をサポートします。"
+
+#~ msgid ""
+#~ "The development of OFX and HBCI support has also resulted in an improved "
+#~ "transaction matching system that more accurately recognizes duplicate "
+#~ "transactions during file import."
+#~ msgstr ""
+#~ "OFX と HBCI サポートを開発した結果として取引一致処理が強化され、ファイルイ"
+#~ "ンポート時により正確に重複した取引を検出することができるようになりました。"
 
 #~ msgid ""
 #~ "The usual procedure for contributors to GnuCash is to initially submit "
@@ -2975,129 +3083,21 @@ msgstr ""
 #~ "加します。あなたが望むなら bugzilla でバグレポートとしてパッチを加えること"
 #~ "もできます。"
 
-#~ msgid ""
-#~ "The development of OFX and HBCI support has also resulted in an improved "
-#~ "transaction matching system that more accurately recognizes duplicate "
-#~ "transactions during file import."
-#~ msgstr ""
-#~ "OFX と HBCI サポートを開発した結果として取引一致処理が強化され、ファイルイ"
-#~ "ンポート時により正確に重複した取引を検出することができるようになりました。"
-
-#~ msgid ""
-#~ "The checkbook-style register provides a custom, convenient and familiar "
-#~ "interface to entering financial transactions.   The register supports "
-#~ "common checking and credit-card transactions, as well as income, stock "
-#~ "and currency transactions."
-#~ msgstr ""
-#~ "財務取引を入力するインターフェースはカスタマイズ可能で、便利かつ親しみやす"
-#~ "い、小切手帳スタイルの記録簿になっています。記録簿は通常の小切手やクレジッ"
-#~ "トカード取引に加えて収益、株式、通貨取引をサポートします。"
-
-#~ msgid "Subversion Access"
-#~ msgstr "Subversion アクセス"
-
-#~ msgid "QIF Import"
-#~ msgstr "QIFのインポート"
-
-#~ msgid "Neil Williams GnuCash documentation"
-#~ msgstr "Neil Williams 氏による GnuCash 文書"
-
-#~ msgid "Italiano"
-#~ msgstr "イタリア語"
-
-#~ msgid ""
-#~ "Multiple accounts can be displayed in one register window at the same "
-#~ "time. This can ease the trouble of tracking down typing/entry errors. It "
-#~ "also provides a convenient way of viewing a portfolio of many stocks, by "
-#~ "showing all transactions in that portfolio."
-#~ msgstr ""
-#~ "複数の勘定科目を同時に一つの記録簿ウィンドウに表示することができます。これ"
-#~ "によりタイピング/入力エラーを見つけ出すことが簡単になります。また複数株式"
-#~ "のポートフォリオを参照することが、すべての取引をポートフォリオに含めること"
-#~ "ができるため便利になります。"
-
-#~ msgid "European Mirror"
-#~ msgstr "ヨーロッパのミラーサイト"
-
-#~ msgid "Espagnol"
-#~ msgstr "スペイン語"
-
-#~ msgid "Documentation Project"
-#~ msgstr "文書プロジェクト"
-
-#~ msgid "Interesting Links"
-#~ msgstr "関連リンク"
-
-#~ msgid "Deutsch"
-#~ msgstr "ドイツ語"
-
-#~ msgid "Improved Import Transaction Matching"
-#~ msgstr "インポートした取引に対する一致処理の強化"
-
-#~ msgid ""
-#~ "GnuCash has an integrated reporting and graphing module, and comes "
-#~ "complete with a full suite of standard and customizeable reports, such as "
-#~ "Balance Sheet, Profit &amp; Loss, Portfolio Valuation, and many others."
-#~ msgstr ""
-#~ "GnuCash には統合された帳票・グラフモジュールがあり、貸借対照表、損益計算"
-#~ "書、ポートフォリオ評価などの標準およびカスタマイズ可能な帳票の一式を作成す"
-#~ "ることが出来ます。"
-
-#~ msgid ""
-#~ "A new help subsystem that focuses on how to do tasks is now available, in "
-#~ "addition to a Tutorial and Concepts guide that gives the user background "
-#~ "information on accounting principles and how they are reflected in "
-#~ "GnuCash."
-#~ msgstr ""
-#~ "会計原則に関する背景情報およびそれがどのように GnuCash に反映されているか"
-#~ "を説明する GnuCash チュートリアル・コンセプトガイドに加えて、作業をどのよ"
-#~ "うに行うかに関して集中して記述した新しいヘルプサブシステムが使用可能になり"
-#~ "ました。"
-
-#~ msgid "For both reviewers and documentation writers"
-#~ msgstr "文書の著者および査読者のための文書"
+#~ msgid "USA Mirror"
+#~ msgstr "米国のミラーサイト"
 
 #, fuzzy
-#~ msgid "GnuCash v%s (old stable release)"
-#~ msgstr "すべての GnuCash %s ダウンロードファイルを見る (安定版)"
-
-#~ msgid "Doxygen Developer Documentation"
-#~ msgstr "Doxygen 開発文書"
-
-#~ msgid "Documentation Development"
-#~ msgstr "文書作成"
-
-#~ msgid "Customers, Vendors, Jobs, <br>Invoices, A/P, A/R"
-#~ msgstr "得意先、仕入先、請求のまとめ <br> 請求書、買掛金、売掛金"
-
-#~ msgid "About / News"
-#~ msgstr "GnuCashについて / ニュース"
-
-#~ msgid "GnuCash for Business Users"
-#~ msgstr "ビジネス利用者向け GnuCash 文書"
-
-#~ msgid "GnuCash Documentation Project"
-#~ msgstr "GnuCash 文書プロジェクト"
-
-#~ msgid "General Ledger"
-#~ msgstr "総勘定元帳"
-
-#, fuzzy
-#~ msgid "Free Acconting Software"
-#~ msgstr "フリーの財務ソフトウェア"
+#~ msgid "Writing documentation"
+#~ msgstr "文書"
 
 #~ msgid ""
-#~ "Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> QIF files can be imported, "
-#~ "and are automatically merged to eliminate duplicate transactions."
+#~ "You can now create recurring transactions, including automatic reminders "
+#~ "when a transaction is due, the ability to postpone a scheduled "
+#~ "transaction without canceling it, and the ability to specify only a "
+#~ "limited number of transactions."
 #~ msgstr ""
-#~ "Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> QIF ファイルをインポートす"
-#~ "ることができます。併合時には自動的に重複した取引が削除されます。"
+#~ "取引期日に自動的に通知する機能、予定取引を中止せずに延期する機能や取引回数"
+#~ "を指定する機能などが含まれる繰り返し取引を作成することができます。"
 
-#~ msgid ""
-#~ "Everything you need concerning GnuCash documentation should be here, if "
-#~ "you notice something missing, email <a href='mailto:gnucash-devel@gnucash."
-#~ "org'>gnucash-devel</a> and we will add it."
-#~ msgstr ""
-#~ "あなたが必要とするGnuCashに関係した情報はすべてここにあります。もしここに"
-#~ "存在しない物があれば、<a href='mailto:gnucash-devel@gnucash.org'>gnucash-"
-#~ "devel</a> にメールを送ってください。そうすると私たちが追加します。"
+#~ msgid "mirror"
+#~ msgstr "ミラー"
