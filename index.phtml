@@ -2,7 +2,6 @@
 $homepage = true;
 include ("emulate_globals_on.php");
 include ("lang.php");
-$title = T_ ( "Free Accounting Software" );
 include ("externals/header.phtml");
 include ("externals/menu.phtml");
 ?>
@@ -46,7 +45,7 @@ include ("externals/menu.phtml");
       </div>
     </div>
 
-    <p class="justify"><?=T_("<span class=\"gnucash\">GnuCash</span> is personal and small-business financial-accounting software, freely licensed under the <a href=\"https://www.gnu.org/\">GNU</a> GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.")?></p>
+    <p class="justify"><?=$GLOBALS ["default_description"]?></p>
 
     <!-- FIXME: I18N spaces, markup-->
     <p class="justify"><?=T_("Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash\">GnuCash</span> allows you to track bank accounts, stocks, income and expenses.  As quick and intuitive to use as a checkbook register, it is based on professional accounting principles to ensure balanced books and accurate reports. "); ?></p>
