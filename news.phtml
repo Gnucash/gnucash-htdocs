@@ -2,6 +2,7 @@
 include("emulate_globals_on.php");
 include("lang.php");
 $title = T_("News");
+$description = T_("Announcement of New Releases, Server Maintenance,…");
 include("externals/header.phtml");
 include("externals/menu.phtml");
 ?>
@@ -9,7 +10,9 @@ include("externals/menu.phtml");
 <div id="content">
   <div id="newscontainer">
     <h1><?php echo T_("GnuCash News"); ?></h1>
+    <p><?=$description?></p>
     <?php
+    if (!isset($top_dir)) { $top_dir = $GLOBALS["top_dir"]; }
       echo("<!-- top_dir = $top_dir , home = $home -->\n");
       # News will continue to be translated separately because 
       # of the .txt format. 

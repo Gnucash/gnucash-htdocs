@@ -1,6 +1,7 @@
 <?php
   include ("lang.php");
   $title = T_ ( "Donations" );
+  $description = T_("<span class=\"gnucash\">GnuCash</span> is Free Software and is made available free of charge. Your donation, which is purely optional, supports our worldwide community. If you like the software, please consider a donation. We are only a handfull of developers and other volunteers serving countless users worldwide.");
   include ("emulate_globals_on.php");
   include ("externals/header.phtml");
   include ("externals/menu.phtml");
@@ -8,9 +9,9 @@
 
 <div id="content">
 
-  <h1><?=T_("Donations")?></h1>
+  <h1><?=$title?></h1>
 
-  <p class="justify"><?=T_("<span class=\"gnucash\">GnuCash</span> is Free Software and is made available free of charge. Your donation, which is purely optional, supports our worldwide community. If you like the software, please consider a donation. We are only a handfull of developers and other volunteers serving countless users worldwide.")?></p>
+  <p class="justify"><?=$description?></p>
 
 
   <div class="featurecontainer">

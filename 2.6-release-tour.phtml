@@ -1,20 +1,18 @@
 <?php
 include("lang.php");
 $title = T_("GnuCash 2.6 release tour");
+$description = T_("This tour will introduce you to new major features in <span class=\"gnucash\">GnuCash</span> 2.6.");
 include("emulate_globals_on.php");
 include("$top_dir/externals/header.phtml");
 include("$top_dir/externals/menu.phtml");
 ?>
 
 <div id="content">
-<h1><?php echo T_($title);?></h1>
+<h1><?=$title?></h1>
 
 <div>
-<p>
-<?php echo T_("This tour will introduce you to new major features in <span class=\"gnucash\">GnuCash</span> 2.6.");?>
-</p>
+  <p><?=$description?></p>
 </div>
-
 
 <h2 class="featuretitle"><?php echo T_("Jqplot Reports");?></h2>
 <p class="justify">

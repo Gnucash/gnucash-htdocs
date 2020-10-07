@@ -8,6 +8,7 @@
    */
   include("lang.php");
   $title = T_("Documentation");
+  $description = T_("The following links are to the <strong>English HTML editions of the current stable branch</strong> documentation. See further down the page for other <span class=\"gnucash\">GnuCash</span> versions, languages, and formats.");
   $online = T_("Browse documentation online");
   $pdf = T_("Download documentation as PDF");
   $epub = T_("Download documentation as epub");
@@ -19,11 +20,11 @@
 
 <div id="content">
 
-  <h1><?php echo T_("GnuCash Documentation");?></h1>
+  <h1><?=$title?></h1>
 
   <p class="justify"><?php
 
-  echo T_("The following links are to the <strong>English HTML editions of the current stable branch</strong> documentation. See further down the page for other <span class=\"gnucash\">GnuCash</span> versions, languages, and formats.");
+  echo $description;
   echo T_("There are two major <span class=\"gnucash\">GnuCash</span> documentation packages to help users:");?></p>
   <ul>
     <li><a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$major_stable;?>&amp;lang=C&amp;doc=help"><b><?php echo T_("The Help Manual");?></b></a></li>

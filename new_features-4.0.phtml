@@ -1,13 +1,14 @@
 <?php
 include("lang.php");
-$title = T_("Features");
+$title = T_("Features");;
+$description = sprintf (T_("What's New in GnuCash %s"),"4.0");
 include("emulate_globals_on.php");
 include("$top_dir/externals/header.phtml");
 include("$top_dir/externals/menu.phtml");
 ?>
 
 <div id="content">
-    <h1><?php printf (T_("What's New in GnuCash %s"),"4.0");?></h1>
+    <h1><?$description?></h1>
 
     <div class="featurecontainer">
         <div class="featureborder">
@@ -17,13 +18,13 @@ include("$top_dir/externals/menu.phtml");
             <img class="featureimage"
                  src="<?=$top_dir?>/images/4.0-release/trans-assoc.png"
                  alt="[Transaction Association Dialog]"/>
-            <p class="justify">
+            <div class="center">
                 <ul>
                     <li><?php echo T_("A new <b>Transaction Association</b> dialog, available from the <b>Update Association for Transaction</b> menu item that has replaced the two association items in 3.x, allows setting, changing, and deleting associations.");?></li>
                     <li><?php echo T_("A symbol (paperclip for files, chain links for URLS) is now displayed in the Associations column (visible in double-line mode) in the register in place of the letters when a transaction has an association. This doesn't work on MacOS.");?></li>
                     <li><?php echo T_("Associations may now be added to bills, credit notes, invoices, and vouchers. The actual association when present is added as a link button which is shown below the notes.");?> </li>
                 </ul>
-            </p>
+            </div>
         </div>
         <div class="row">
             <video class="featureimage" controls>

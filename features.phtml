@@ -1,18 +1,17 @@
 <?php
 include("lang.php");
 $title = T_("Features");
+$description = T_("<span class=\"gnucash\">GnuCash</span> is powerful accounting software. Below are details of some of the numerous features that <span class=\"gnucash\">GnuCash</span> has to offer to its users.");
 include("emulate_globals_on.php");
 include("$top_dir/externals/header.phtml");
 include("$top_dir/externals/menu.phtml");
 ?>
 
 <div id="content">
-<h1><?php echo T_($title);?></h1>
+<h1><?=$title?></h1>
 
 <div>
-<p>
-<?php echo T_("<span class=\"gnucash\">GnuCash</span> is powerful accounting software. Below are details of some of the numerous features that <span class=\"gnucash\">GnuCash</span> has to offer to its users.");?>
-</p>
+<p><?=$description?></p>
 <ul>
 <li><a href="#main-feat"><?php echo T_("Main features");?></a></li>
 <li><a href="#advan-feat"><?php echo T_("Advanced features");?></a></li>

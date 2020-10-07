@@ -3,6 +3,7 @@
   include("emulate_globals_on.php");
   include("lang.php");
   $title = T_("Download");
+  $description = T_("Download executable bundles of the <span class=\"gnucash\">GnuCash</span> program inclusive documentation or the source files here. Several versions are available for recent and older operating systems.");
   include("externals/header.phtml");
   include("externals/menu.phtml"); 
 ?>
@@ -10,6 +11,7 @@
 <div id="content">
 
   <h1><?php echo T_("Download GnuCash")?></h1>
+    <p class="justify"><?=$description?></p>
 
   <div class="featureborder">
     <h2 class="featuretitle"><?php printf (T_("Stable release (%s)"), $latest_stable)?></h2>
