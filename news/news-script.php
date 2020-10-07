@@ -98,7 +98,8 @@ function generate_anchor($news_key)
 
 function print_news_item($fa, $n, $newsfile, $key, $anchor)
 {
-echo <<<ITEMEND
+  global $top_dir;
+  echo <<<ITEMEND
 <div class="newsborder">
   <div class="newsheader" style="display:inline-block;background-color:#CACAF7;width:100%">
     <div style="float:left;">
