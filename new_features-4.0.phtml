@@ -1,139 +1,140 @@
 <?php
-include("lang.php");
-$title = T_("Features");;
-$description = sprintf (T_("What's New in GnuCash %s"),"4.0");
-include("emulate_globals_on.php");
-include("$top_dir/externals/header.phtml");
-include("$top_dir/externals/menu.phtml");
+  include("emulate_globals_on.php");
+  include("lang.php");
+  $title = T_("Features");;
+  $description = sprintf (T_("What's New in GnuCash %s"),"4.0");
+  $page = $_SERVER['PHP_SELF'];
+  include("$top_dir/externals/header.phtml");
+  include("$top_dir/externals/menu.phtml");
 ?>
 
 <div id="content">
-    <h1><?$description?></h1>
+  <h1><?$description?></h1>
 
-    <div class="featurecontainer">
-        <div class="featureborder">
-            <h2 class="featuretitle"><?php echo T_("Major Highlights");?></h2>
-        </div>
-        <div class="row">
-            <img class="featureimage"
-                 src="<?=$top_dir?>/images/4.0-release/trans-assoc.png"
-                 alt="[Transaction Association Dialog]"/>
-            <div class="center">
-                <ul>
-                    <li><?php echo T_("A new <b>Transaction Association</b> dialog, available from the <b>Update Association for Transaction</b> menu item that has replaced the two association items in 3.x, allows setting, changing, and deleting associations.");?></li>
-                    <li><?php echo T_("A symbol (paperclip for files, chain links for URLS) is now displayed in the Associations column (visible in double-line mode) in the register in place of the letters when a transaction has an association. This doesn't work on MacOS.");?></li>
-                    <li><?php echo T_("Associations may now be added to bills, credit notes, invoices, and vouchers. The actual association when present is added as a link button which is shown below the notes.");?> </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <video class="featureimage" controls>
-                <source src="<?=$top_dir?>/images/4.0-release/select_account.mp4" type="video/mp4">
-                <source src="<?=$top_dir?>/images/4.0-release/select_account.webm" type="video/webm">
-                <?php echo T_("[Video showing two ways to filter accounts]");?>
-            </video>
-            <p class="justify">
-                <ul>
-                    <li><?php echo T_("New type-ahead search is added to sequential search when selecting an account or an Action in the register: Instead of typing the first few characters of a top level account, the separator, the first few characters of the next level account and so on you may instead type a few characters of any part of a full account name and the drop-list will be filtered to contain only matching accounts. Once you have a small enough list you can use the arrow keys to select the account that you want.");?></li>
-                </ul></p>
-        </div>
-        <div class="row">
-            <img class="featureimage" src="<?=$top_dir?>/images/4.0-release/gnucash-cli.png" alt="Command-Line" />
-            <p class="justify"><?php echo T_("A new separate executable, <kbd>gnucash-cli</kbd> (<kbd>gnucash-cli.exe</kbd> on Microsoft Windows) for doing command-line things like updating the prices in your book. <kbd>gnucash-cli</kbd> gains the ability to run reports from the command line. Specify reports to run by name or guid. It also provides an export format and an output file name without which it will output the report to stdout.");?>
-                <ul>
-                    <li><code>gnucash-cli --report run --name=[reportname/guid] datafile.gnucash</code></li>
-                    <li><code>gnucash-cli --report run --name=[reportname/guid] --output-file=x.html datafile.gnucash</code></li>
-                    <li><code>gnucash-cli --report run --name=[reportname/guid] --output-file=x.html --export-type=TYPE datafile.gnucash</code></li>
-                </ul></p>
-            <p class="justify"><kbd>gnucash-cli --help</kbd> <?php echo T_("will display a screen listing all of the available commands and their options.");?></p>
-            <p><?php echo T_("The GUI program, <kbd>gnucash</kbd>, still responds to the options it always has, though <kbd>--get-price-quotes</kbd> is deprecated in  favor of <kbd>gnucash-cli --quotes get</kbd>.");?></p>
-        </div>
+  <div class="featurecontainer">
+    <div class="featureborder">
+      <h2 class="featuretitle"><?php echo T_("Major Highlights");?></h2>
     </div>
-    <div class="featurecontainer">
-        <div class="featureborder">
-            <h2 class="featuretitle"><?php echo T_("Graphic User Interface");?></h2>
-        </div>
-        <p>
-            <ul>
-                <li><p><?php echo T_("When creating a new account hierarchy it's now possible to load account templates from locales other than the one set for the user interface.");?></p>
-                    <p><?php echo T_("On the <b>Choose Accounts to Create</b> page there are two drop-downs above the <b>Account Types</b> selector, one for language and one for country, the choices in the latter depending on the former. The default is the current locale but they may be used to select account templates from any locale.");?></p>
-                </li>
-                <li><?php echo T_("When deleting accounts the destination accounts of moved splits will be checked to ensure that they have the same commodity as the source account. If they don't you'll get a warning and the opportunity to pick another account or to carry on regardless.");?></li>
-                <li><?php echo T_("Reversing transactions will now pop a dialog box to request a posting date.");?></li>
-            </ul>
-        </p>
+    <div class="row">
+      <img class="featureimage"
+         src="<?=$top_dir?>/images/4.0-release/trans-assoc.png"
+         alt="[Transaction Association Dialog]"/>
+      <div class="center">
+        <ul>
+          <li><?php echo T_("A new <b>Transaction Association</b> dialog, available from the <b>Update Association for Transaction</b> menu item that has replaced the two association items in 3.x, allows setting, changing, and deleting associations.");?></li>
+          <li><?php echo T_("A symbol (paperclip for files, chain links for URLS) is now displayed in the Associations column (visible in double-line mode) in the register in place of the letters when a transaction has an association. This doesn't work on MacOS.");?></li>
+          <li><?php echo T_("Associations may now be added to bills, credit notes, invoices, and vouchers. The actual association when present is added as a link button which is shown below the notes.");?> </li>
+        </ul>
+      </div>
     </div>
+    <div class="row">
+      <video class="featureimage" controls>
+        <source src="<?=$top_dir?>/images/4.0-release/select_account.mp4" type="video/mp4">
+        <source src="<?=$top_dir?>/images/4.0-release/select_account.webm" type="video/webm">
+        <?php echo T_("[Video showing two ways to filter accounts]");?>
+      </video>
+      <p class="justify">
+        <ul>
+          <li><?php echo T_("New type-ahead search is added to sequential search when selecting an account or an Action in the register: Instead of typing the first few characters of a top level account, the separator, the first few characters of the next level account and so on you may instead type a few characters of any part of a full account name and the drop-list will be filtered to contain only matching accounts. Once you have a small enough list you can use the arrow keys to select the account that you want.");?></li>
+        </ul></p>
+    </div>
+    <div class="row">
+      <img class="featureimage" src="<?=$top_dir?>/images/4.0-release/gnucash-cli.png" alt="Command-Line" />
+      <p class="justify"><?php echo T_("A new separate executable, <kbd>gnucash-cli</kbd> (<kbd>gnucash-cli.exe</kbd> on Microsoft Windows) for doing command-line things like updating the prices in your book. <kbd>gnucash-cli</kbd> gains the ability to run reports from the command line. Specify reports to run by name or guid. It also provides an export format and an output file name without which it will output the report to stdout.");?>
+        <ul>
+          <li><code>gnucash-cli --report run --name=[reportname/guid] datafile.gnucash</code></li>
+          <li><code>gnucash-cli --report run --name=[reportname/guid] --output-file=x.html datafile.gnucash</code></li>
+          <li><code>gnucash-cli --report run --name=[reportname/guid] --output-file=x.html --export-type=TYPE datafile.gnucash</code></li>
+        </ul></p>
+      <p class="justify"><kbd>gnucash-cli --help</kbd> <?php echo T_("will display a screen listing all of the available commands and their options.");?></p>
+      <p><?php echo T_("The GUI program, <kbd>gnucash</kbd>, still responds to the options it always has, though <kbd>--get-price-quotes</kbd> is deprecated in  favor of <kbd>gnucash-cli --quotes get</kbd>.");?></p>
+    </div>
+  </div>
+  <div class="featurecontainer">
+    <div class="featureborder">
+      <h2 class="featuretitle"><?php echo T_("Graphic User Interface");?></h2>
+    </div>
+    <p>
+      <ul>
+        <li><p><?php echo T_("When creating a new account hierarchy it's now possible to load account templates from locales other than the one set for the user interface.");?></p>
+          <p><?php echo T_("On the <b>Choose Accounts to Create</b> page there are two drop-downs above the <b>Account Types</b> selector, one for language and one for country, the choices in the latter depending on the former. The default is the current locale but they may be used to select account templates from any locale.");?></p>
+        </li>
+        <li><?php echo T_("When deleting accounts the destination accounts of moved splits will be checked to ensure that they have the same commodity as the source account. If they don't you'll get a warning and the opportunity to pick another account or to carry on regardless.");?></li>
+        <li><?php echo T_("Reversing transactions will now pop a dialog box to request a posting date.");?></li>
+      </ul>
+    </p>
+  </div>
 
-    <div class="featurecontainer">
-        <div class="featureborder">
-            <h2 class="featuretitle"><?php echo T_("Business Functions");?></h2>
-        </div>
-        <ul>
-            <li><?php echo T_("Business Document Column Widths");?>
-                <p><?php echo T_("Entry column widths in Invoices, Bills, and Employee Vouchers may now be saved as defaults for each type of document.");?></p></li>
-            <li><?php echo T_("Two menu items are added to the View menu when a Bill, Invoice, or Voucher tab has focus:");?>
-                <ul>
-                    <li><?php echo T_("Use as Default Layout for Vendor Documents");?></li>
-                    <li><?php echo T_("Reset Default Layout for Vendor Documents");?></li>
-                </ul><?php echo T_("Vendor Documents is for Bills and is replaced by Customer or Employee Documents for Invoices or Vouchers respectively.");?>
-            </li>
-            <li><?php echo T_("The first saves the current document's column widths and makes them the default for all documents in the same type. The second menu item removes the customization and documents of that type will therafter use the computed default widths.");?>
-            </li>
-        </ul>
+  <div class="featurecontainer">
+    <div class="featureborder">
+      <h2 class="featuretitle"><?php echo T_("Business Functions");?></h2>
     </div>
-    <div class="featurecontainer">
-        <div class="featureborder">
-            <h2 class="featuretitle"><?php echo T_("Importing Transactions");?></h2>
-        </div>
+    <ul>
+      <li><?php echo T_("Business Document Column Widths");?>
+        <p><?php echo T_("Entry column widths in Invoices, Bills, and Employee Vouchers may now be saved as defaults for each type of document.");?></p></li>
+      <li><?php echo T_("Two menu items are added to the View menu when a Bill, Invoice, or Voucher tab has focus:");?>
         <ul>
-            <li><?php echo T_("Support for AQBanking Version 6. This is required to support new FinTS protocols for the European Payment Services Directive (PSD2).");?></li>
-            <li><?php echo T_("The <b>Import Map Editor</b> (Tools>Edit Import Maps) will scan for Bayesian associations with non-existent accounts and display a dialog offering to remove any that are found. It also adds a button at the bottom of the Import Map Editor to delete them if one chooses not to use the dialog.");?></li>
-            <li><?php echo T_("The OFX file importer can now import more than one file at a time.");?></li>
-            <li><?php echo T_("OFX imports having balance information will now offer to immediately reconcile, passing the balance information in the file to the reconcile info.");?></li>
-            <li><?php echo T_("The import transaction matcher window column headings are changed from R to C and from U+R to U+C, reflecting that the matcher marks transactions cleared but doesn't reconcile them.");?></li>
-            <li><?php echo T_("Account matcher will decline to match accounts with a different commodity from the imported split if the import information includes the commodity.");?></li>
-            <li><?php echo T_("Ellipsize the Description and Memo fields in the account matcher.");?></li>
-        </ul>
+          <li><?php echo T_("Use as Default Layout for Vendor Documents");?></li>
+          <li><?php echo T_("Reset Default Layout for Vendor Documents");?></li>
+        </ul><?php echo T_("Vendor Documents is for Bills and is replaced by Customer or Employee Documents for Invoices or Vouchers respectively.");?>
+      </li>
+      <li><?php echo T_("The first saves the current document's column widths and makes them the default for all documents in the same type. The second menu item removes the customization and documents of that type will therafter use the computed default widths.");?>
+      </li>
+    </ul>
+  </div>
+  <div class="featurecontainer">
+    <div class="featureborder">
+      <h2 class="featuretitle"><?php echo T_("Importing Transactions");?></h2>
     </div>
-    <div class="featurecontainer">
-        <div class="featureborder">
-            <h2 class="featuretitle"><?php echo T_("Reports");?></h2>
-        </div>
-        <ul>
-            <li><?php echo T_("A new report menu supbmenu <b>Multicolumn</b> contains the old custom-multicolumn report and a new <b>Dashboard</b> report containing Account reports for expenses and income, an income-expense chart, and an account summary.");?></li>
-            <li><?php echo T_("Support for UK VAT and Australian GST have been added to the Income-GST report. The report's options are changed from source accounts to source sales and purchase accounts to permit proper reporting of capital purchases. <b>N.B.</b> This is incompatible with previous versions of the report and will require regenerating saved configurations.");?></li>
-        </ul>
+    <ul>
+      <li><?php echo T_("Support for AQBanking Version 6. This is required to support new FinTS protocols for the European Payment Services Directive (PSD2).");?></li>
+      <li><?php echo T_("The <b>Import Map Editor</b> (Tools>Edit Import Maps) will scan for Bayesian associations with non-existent accounts and display a dialog offering to remove any that are found. It also adds a button at the bottom of the Import Map Editor to delete them if one chooses not to use the dialog.");?></li>
+      <li><?php echo T_("The OFX file importer can now import more than one file at a time.");?></li>
+      <li><?php echo T_("OFX imports having balance information will now offer to immediately reconcile, passing the balance information in the file to the reconcile info.");?></li>
+      <li><?php echo T_("The import transaction matcher window column headings are changed from R to C and from U+R to U+C, reflecting that the matcher marks transactions cleared but doesn't reconcile them.");?></li>
+      <li><?php echo T_("Account matcher will decline to match accounts with a different commodity from the imported split if the import information includes the commodity.");?></li>
+      <li><?php echo T_("Ellipsize the Description and Memo fields in the account matcher.");?></li>
+    </ul>
+  </div>
+  <div class="featurecontainer">
+    <div class="featureborder">
+      <h2 class="featuretitle"><?php echo T_("Reports");?></h2>
     </div>
-    <div class="featurecontainer">
-        <div class="featureborder">
-            <h2 class="featuretitle"><?php echo T_("Budgets");?></h2>
-        </div>
-        <ul>
-            <li><?php echo T_("Optionally include the account code option in budget view.");?></li>
-            <li><?php echo T_("Enable adding notes to budgets.");?></li>
-            <li><?php echo T_("Account codes may now optionally be displayed in the Budget Tree View..");?></li>
-        </ul>
+    <ul>
+      <li><?php echo T_("A new report menu supbmenu <b>Multicolumn</b> contains the old custom-multicolumn report and a new <b>Dashboard</b> report containing Account reports for expenses and income, an income-expense chart, and an account summary.");?></li>
+      <li><?php echo T_("Support for UK VAT and Australian GST have been added to the Income-GST report. The report's options are changed from source accounts to source sales and purchase accounts to permit proper reporting of capital purchases. <b>N.B.</b> This is incompatible with previous versions of the report and will require regenerating saved configurations.");?></li>
+    </ul>
+  </div>
+  <div class="featurecontainer">
+    <div class="featureborder">
+      <h2 class="featuretitle"><?php echo T_("Budgets");?></h2>
     </div>
-    <div class="featurecontainer">
-        <div class="featureborder">
-            <h2 class="featuretitle"><?php echo T_("Compatibility");?></h2>
-        </div>
-        <ul>
-            <li><?php echo T_("GnuCash 4.x and later will no longer migrate old gconf settings from GnuCash 2.4.x.");?></li>
-        </ul>
+    <ul>
+      <li><?php echo T_("Optionally include the account code option in budget view.");?></li>
+      <li><?php echo T_("Enable adding notes to budgets.");?></li>
+      <li><?php echo T_("Account codes may now optionally be displayed in the Budget Tree View..");?></li>
+    </ul>
+  </div>
+  <div class="featurecontainer">
+    <div class="featureborder">
+      <h2 class="featuretitle"><?php echo T_("Compatibility");?></h2>
     </div>
+    <ul>
+      <li><?php echo T_("GnuCash 4.x and later will no longer migrate old gconf settings from GnuCash 2.4.x.");?></li>
+    </ul>
+  </div>
 
-    <div class="featurecontainer">
-        <div class="featureborder">
-            <h2 class="featuretitle"><?php echo T_("Customization and Scripting");?></h2>
-        </div>
-        <ul>
-            <li><?php echo T_("The GnuCash widget hierarchy for CSS has been revised to be more consistent with Gtk practice. You may need to spend some time with the GtkInspector to get your custom CSS back the way you like it.");?></li>
-            <li><?php echo T_("Python bindings are now localized and their strings available for translation.");?></li>
-        </ul>
+  <div class="featurecontainer">
+    <div class="featureborder">
+      <h2 class="featuretitle"><?php echo T_("Customization and Scripting");?></h2>
     </div>
-    <p><?php printf (T_("For a complete list of new features and API changes see the %s."),
-                     sprintf ("<a href=\"%s/news.phtml#n-200628-4.0.news\">%s</a>", $home, T_("Release Notes"))
-                    );?></p>
+    <ul>
+      <li><?php echo T_("The GnuCash widget hierarchy for CSS has been revised to be more consistent with Gtk practice. You may need to spend some time with the GtkInspector to get your custom CSS back the way you like it.");?></li>
+      <li><?php echo T_("Python bindings are now localized and their strings available for translation.");?></li>
+    </ul>
+  </div>
+  <p><?php printf (T_("For a complete list of new features and API changes see the %s."),
+                   sprintf ("<a href=\"%s/news.phtml#n-200628-4.0.news\">%s</a>", $home, T_("Release Notes"))
+                  );?></p>
 </div>
 <?php include("externals/footer.phtml"); ?>

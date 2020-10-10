@@ -1,18 +1,18 @@
 <?php
+include("emulate_globals_on.php");
 include("lang.php");
 $title = T_("Sizing");
-$description = T_("This is a very old page about Gnucash's code size.");
-include("emulate_globals_on.php");
+$description = T_("This is an ancient page about Gnucash's code size.");
+$page = $_SERVER['PHP_SELF'];
 include("externals/header.phtml");
 include("externals/menu.phtml");
 ?>
 
 <div id="content">
+  <h1><?=$title?></h1>
+  <p><?=$description?></p>
 
-<h1><?=$title?></h1>
-<p><?=$description?></p>
-
-<p class="justify">
+  <p class="justify">
 <?php echo T_("It can often be quite interesting to study the source code metrics behind a software development project.   Not a surprising interest: its accounting afterall. <span class=\"gnucash\">GnuCash</span> has grown, over the years, from a small handy electronic checkbook to a rather large and multi-featured desktop app.");?>
 </p>
 <p class="justify">

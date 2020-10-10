@@ -3,17 +3,14 @@ include("emulate_globals_on.php");
 include("lang.php");
 $title = T_("Older Announcements");
 $description = T_("This is an archive of announcements that once appeared on the GnuCash home page.");
+$page = $_SERVER['PHP_SELF'];
 include("externals/header.phtml");
 include("externals/menu.phtml");
 ?>
 
 <div id="content">
-
-<h1><?=$title?></h1>
-
-<p>
-<?=$description?>
-</p>
+  <h1><?=$title?></h1>
+  <p><?=$description?></p>
 
 <?php
   echo("<!-- top_dir = $top_dir , home = $home -->\n");
