@@ -29,7 +29,9 @@ if (isset ($_GET["lang"])) {
 } else {
     # Fallback: Requested language is set in $locale by included lang.php
     if ($locale == "en_US") {
-        $showlang  = "C";
+      $showlang  = "C"; # Fixme: causes a PHP Notice:
+      # Undefined offset: 1 in /home/frank/git/gnucash-htdocs/viewdoc.phtml on line 98
+      # list($shortlang,$rest) = explode ("_", $showlang);
     } else {
         $showlang  = $locale;
     }
