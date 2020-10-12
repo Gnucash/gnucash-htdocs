@@ -41,15 +41,15 @@
 
 <html prefix="og: https://ogp.me/ns#" lang="<?=$locale_str?>">
   <head>
-    <!-- Primary Meta Tags -->
-<?php
+<?php // Primary Meta Tags
       if (!isset($can_utf)) { $can_utf = true; }
       if ($can_utf)
-    { ?>
+      { ?>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<?php } //if ($can_utf) ?>
 
-    <!-- Useful for mobile devices: Zoom out and allow scaling. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+    <title><?=$full_title?></title>
+    <meta name="description" content="<?=strip_tags($description)?>"/>
 
     <!--meta properties for facebook Open Graph-->
     <meta property="og:locale" content="<?=$locale_str?>"/>
@@ -65,12 +65,14 @@
     <meta property="og:image" content="<?=$default_url."externals/logo_w120.png"?>"/>
     <meta property="og:site_name" content="GnuCash"/>
     <meta property="og:description" content="<?=strip_tags($description)?>"/>
-    <!--end of Open Graph properties-->
+<?php // end of Open Graph properties ?>
 
-<?php } //if ($can_utf) ?>
     <link rel="stylesheet" href="<?=$home?>/externals/gnucash.css" type="text/css" />
 
-    <!-- FavIcons for many different devices -->
+<?php // Device specific:
+      // Useful for mobile devices: Zoom out and allow scaling. ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+<?php // FavIcons for many different devices ?>
     <link rel="icon" href="<?=$home?>/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" sizes="180x180" href="<?=$home?>/apple-touch-icon.png?v=gAXA7A9nAq"/>
     <link rel="icon" type="image/png" sizes="32x32" href="<?=$home?>/favicon-32x32.png?v=gAXA7A9nAq"/>
@@ -81,32 +83,26 @@
     <meta name="msapplication-TileColor" content="#da532c"/>
     <meta name="theme-color" content="#ffffff"/>
 
-    <?php
-      $current_page = array_key_exists('HTTP_HOST', $_SERVER) ? ($top_dir . "/" . basename($_SERVER["SCRIPT_NAME"])) : "";
-      
-      if (isset($homepage)) { ?>
-        <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="<?=$home?>/atom.php" />
-    <?php } ?>
-
-    <title><?=$full_title?></title>
-    <meta name="description" content="<?=strip_tags($description)?>"/>
+<?php
+  $current_page = array_key_exists('HTTP_HOST', $_SERVER) ? ($top_dir . "/" . basename($_SERVER["SCRIPT_NAME"])) : "";
+  
+  if (isset($homepage)) { ?>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="<?=$home?>/atom.php" />
+<?php } ?>
   </head>
 
   <body>
-
     <div id="head">
-
       <div id="branding">
         <p><img src="<?=$top_dir?>/images/gnucash-vert.png" alt="GnuCash" /></p>
       </div>
-  
+
+<?php /* FIXME: It does not conform to
+         https://curia.europa.eu/jcms/upload/docs/application/pdf/2019-07/cp190099en.pdf
+         potential fix: an improved version of
+         https://www.heise.de/ct/ausgabe/2014-26-Social-Media-Buttons-datenschutzkonform-nutzen-2463330.html
       <div id="socialbuttons">
-  
         <!--facebook like button-->
-        <!-- FIXME: It does not conform to
-           https://curia.europa.eu/jcms/upload/docs/application/pdf/2019-07/cp190099en.pdf
-           potential fix: an improve version of
-           https://www.heise.de/ct/ausgabe/2014-26-Social-Media-Buttons-datenschutzkonform-nutzen-2463330.html
         <div style="padding:0 0 5px 0">
           <div id="fb-root"></div>
           <script type="text/javascript">
@@ -123,9 +119,9 @@
                data-send="false" data-layout="box_count" data-width="60"
                data-show-faces="true" data-font="verdana">
           </div>
-        </div> End of FIXME --> <!-- facebook like button-->
+        </div> <!-- facebook like button-->
       </div> <!-- socialbuttons -->
-
+*/ ?>
       <!-- the icons on the top right-->
       <div style="float:right;">
         <ul id="navlist">
@@ -160,10 +156,10 @@
         | <a class="nav" href="<?= make_lang_href($current_page, $get_parms, "zh_CN"); ?>">简体中文</a>
         | <a class="nav" href="<?= make_lang_href($current_page, $get_parms, "zh_TW"); ?>">繁體中文</a>
       </span> <!-- language -->
-      <span id="location">&nbsp; <!-- The mirrors currently not exist
+      <span id="location">&nbsp; <?php /* The mirrors currently not exist
          <?= _("Continent"); ?>:
          (<a class="nav" href="https://www.gnucash.org/">US</a>)
          (<a class="nav" href="http://www.at.gnucash.org/">EU</a>) 
-         (<a class="nav" href="http://www.au.gnucash.org/">AU</a>) -->
+         (<a class="nav" href="http://www.au.gnucash.org/">AU</a>)  */ ?>
       </span> <!-- Continent -->
     </div> <!-- head -->
