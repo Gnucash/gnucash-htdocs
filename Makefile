@@ -19,6 +19,7 @@ po/POTFILES: .potfiles
 
 po/gnucash-htdocs.pot: po/POTFILES
 	xgettext -f po/POTFILES -L PHP --keyword="T_" -o po/gnucash-htdocs.pot -F -c \
+	  --from-code=UTF-8 \
 	  --add-comments=Translators \
 	  --package-name=gnucash-htdocs \
 	  --copyright-holder="The GnuCash Website Team" \
