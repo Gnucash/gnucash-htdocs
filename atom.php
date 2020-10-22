@@ -1,8 +1,11 @@
 <?php
   // TODO:
   // - reasonable permalinks
-  $top_dir = ".";
+  // - I18N, charset?
 
+  $top_dir = ".";
+  require_once $top_dir.'/externals/global_params.php';
+  
   $contentType = "application/atom+xml";
   if (isset($_GET["content-type"]))
   {
@@ -35,12 +38,12 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>GnuCash News</title>
-  <subtitle>GnuCash is personal and small-business financial-accounting software, freely licensed under the GNU GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.</subtitle>
+  <subtitle><?=strip_tags($default_description)?></subtitle>
   <generator>GnuCash htdocs/master/atom.php 1.0 &lt;gnucash-devel@gnucash.org&gt;</generator>
-  <logo>https://www.gnucash.org/images/icons/gnc-icon.png</logo>
-  <link rel="alternate" href="https://www.gnucash.org/" />
-  <link rel="self" href="https://www.gnucash.org/atom.php" />
-  <id>https://www.gnucash.org/</id>
+  <logo><?=\DEFAULT_URL?>images/icons/gnc-icon.png</logo>
+  <link rel="alternate" href="<?=\DEFAULT_URL?>" />
+  <link rel="self" href="<?=\DEFAULT_URL?>atom.php" />
+  <id><?=\DEFAULT_URL?></id>
   <?php
   $news_items = get_news($newsdir, $newsdir);
   $news_items = array_slice($news_items, 0, $entry_count);
@@ -60,7 +63,7 @@
   <entry>
     <id>urn:x-gnucash:news:<?= urlencode($key) ?></id>
     <title><?= $title ?></title>
-    <link rel="alternate" href="https://www.gnucash.org/news.phtml#n-<?=generate_anchor($key);?>" />
+    <link rel="alternate" href="<?=\DEFAULT_URL?>news.phtml#n-<?=generate_anchor($key);?>" />
     <author>
       <name>GnuCash Developers</name>
       <email>gnucash-devel@gnucash.org</email>

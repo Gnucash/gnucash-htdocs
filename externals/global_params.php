@@ -1,4 +1,5 @@
 <?php
+  require_once 'lang.php';
      // This section defines the most recent version numbers for all platforms.
      // Each platform can define its own latest version or follow the default.
      // Both a latest stable version and a latest unstable version are defined.
@@ -72,12 +73,13 @@
      $latest_unstable_mac_intel="Gnucash Intel ".$latest_unstable_mac_intel.".dmg";
      $latest_unstable_source="gnucash-".$latest_unstable.".tar.bz2";
 
+     // The URLs, we use:
+     define("DEFAULT_URL", "https://www.gnucash.org/"); // The main webserver
      $URL_FLATHUB="https://flathub.org/apps/details/org.gnucash.GnuCash";
      $URL_FLATPAK="https://flatpak.org/";
      $URL_WIKI="https://wiki.gnucash.org/wiki/";
 
      // some defaults for metatags in case the page does not set them
-     $default_url= "https://www.gnucash.org/";
-     $default_title= T_ ( "Free Accounting Software" );
+     $default_title= T_("Free Accounting Software");
      $default_description= T_("<span class=\"gnucash\">GnuCash</span> is personal and small-business financial-accounting software, freely licensed under the <a href=\"https://www.gnu.org/\">GNU</a> GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.");
      ?>

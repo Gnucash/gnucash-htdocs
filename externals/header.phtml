@@ -59,8 +59,8 @@
     ?>
     <meta property="og:title" content="<?=$full_title?>"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="<?=$default_url.$page?>"/>
-    <meta property="og:image" content="<?=$default_url."externals/logo_w120.png"?>"/>
+    <meta property="og:url" content="<?=\DEFAULT_URL.$page?>"/>
+    <meta property="og:image" content="<?=\DEFAULT_URL."externals/logo_w120.png"?>"/>
     <meta property="og:site_name" content="GnuCash"/>
     <meta property="og:description" content="<?=strip_tags($description)?>"/>
 <?php // end of Open Graph properties ?>
@@ -154,7 +154,7 @@
       </span> <!-- language -->
       <span id="location">&nbsp; <?php /* The mirrors currently not exist
          <?= _("Continent"); ?>:
-         (<a class="nav" href="https://www.gnucash.org/">US</a>)
+         (<a class="nav" href="<?=\DEFAULT_URL?>">US</a>)
          (<a class="nav" href="http://www.at.gnucash.org/">EU</a>) 
          (<a class="nav" href="http://www.au.gnucash.org/">AU</a>)  */ ?>
       </span> <!-- Continent -->
