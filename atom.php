@@ -1,7 +1,7 @@
 <?php
   // TODO:
   // - reasonable permalinks
-  // - I18N, charset?
+  // - I18N?
 
   $top_dir = ".";
   require_once $top_dir.'/externals/global_params.php';
@@ -11,7 +11,7 @@
   {
     $contentType = $_GET["content-type"];
   }
-  $charset = "iso-8859-1";
+  $charset = "utf-8";
   header("Content-Type: $contentType; charset=$charset");
 
   $entry_count = 10;
