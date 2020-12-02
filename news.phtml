@@ -2,7 +2,7 @@
 include("emulate_globals_on.php");
 include("lang.php");
 $title = T_("News");
-$description = T_("Announcement of New Releases, Server Maintenance,…");
+$description = T_("Announcement of New Releases, Server Maintenance …");
 $page = $_SERVER['PHP_SELF'];
 include("externals/header.phtml");
 include("externals/menu.phtml");
@@ -26,10 +26,10 @@ include("externals/menu.phtml");
     ?>
     <div class="newsborder">
       <div class="newsheader"><img alt="news panel" src="<?=$top_dir;?>/images/icons/document.txt.gif" />&nbsp;
-        <a href="oldnews.phtml"><?php echo T_("Older Announcements ...");?></a>
+        <a href="oldnews.phtml"><?php echo T_("Older Announcements");?></a>
       </div>
       <div class="newsinner">
-        <?php echo T_("Click <a href=\"oldnews.phtml\">here</a> for older announcements...");?>
+        <?php echo T_("Click <a href=\"oldnews.phtml\">here</a> for older announcements.");?>
       </div> <!-- newsinner -->
     </div> <!-- newsborder -->
   </div>  <!-- newscontainer -->
