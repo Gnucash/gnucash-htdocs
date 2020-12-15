@@ -2,7 +2,7 @@
 include("emulate_globals_on.php");
 include("lang.php");
 $title = T_("Writing Documentation");
-$description = T_("If you are interested in improving the <span class=\"gnucash\">GnuCash</span> documentation, you have come to the right place. This page will provide you with the necessary information to get started.");
+$description = T_("If you are interested in improving the <span class=\"gnucash\">GnuCash</span> documentation, you have come to the right place.");
 $page = $_SERVER['PHP_SELF'];
 include("externals/header.phtml");
 include("externals/menu.phtml");
@@ -14,7 +14,7 @@ include("externals/menu.phtml");
 
 <p class="justify"><?=$description?></p>
 
-<p class="justify"><?php echo T_("Just as the <span class=\"gnucash\">GnuCash</span> application has been developed over time by volunteers, so too has the documentation been written by volunteer developers and users to help others learn how <span class=\"gnucash\">GnuCash</span> works. This collaborative effort has resulted in the creation of two major documents, the <b>Help Manual</b> and the <b>Tutorial and Concepts Guide</b>.");?></p>
+<p class="justify"><?php echo T_("Just as <span class=\"gnucash\">GnuCash</span> has taken form over time, so too has the documentation to help others learn how it works. There are two major documents, the <b>Help Manual</b> and the <b>Tutorial and Concepts Guide</b>.");?></p>
 
 <p class="justify"><?php echo T_("The <span class=\"gnucash\">GnuCash</span> community welcomes assistance in maintaining and improving both the program and its documentation. If you are interested in helping write, edit or translate <span class=\"gnucash\">GnuCash</span>'s documentation, this page gives guidance on how to get set up to join the effort.");?></p>
 
@@ -26,8 +26,8 @@ include("externals/menu.phtml");
 <div class="featureborder">
 <h2 class="featuretitle"><?php echo T_("Introduction");?></h2>
 </div>
-<p class="justify"><?php echo T_("The <span class=\"gnucash\">GnuCash</span> documentation is stored in <b>xml</b> files. More precisely, it uses the <b>docbook system</b>. This is a relatively flexible system that takes xml files as input and can generate documentation in several different output formats (html, pdf …).");?></p>
-<p class="justify"><?php echo T_("If you wish to review or write <span class=\"gnucash\">GnuCash</span> documentation, you will need to know xml. Some basic knowledge of the docbook system may be useful as well.");?></p>
+<p class="justify"><?php echo T_("The <span class=\"gnucash\">GnuCash</span> documentation is stored in <b>xml</b> files. More precisely, it uses the <b>docbook system</b>. This is a relatively flexible system that takes xml files as input and can generate documentation in several different output formats (HTML, PDF …).");?></p>
+<p class="justify"><?php echo T_("If you wish to review or write <span class=\"gnucash\">GnuCash</span> documentation, you will need to know XML. Some basic knowledge of the docbook system may be useful as well.");?></p>
 <p class="justify"><?php echo T_("The following links are for further sites that can help with the documentation and review process.");?></p>
 <ul>
 <li><a href='https://www.docbook.org'> DocBook: The Definitive Guide</a></li>
@@ -41,7 +41,7 @@ include("externals/menu.phtml");
 
 <div class="featurecontainer">
 <div class="featureborder">
-<h2 class="featuretitle"><?php echo T_("Gnome Documentation guidelines");?></h2>
+<h2 class="featuretitle"><?php echo T_("GNOME Documentation guidelines");?></h2>
 </div>
 <p class="justify"><?php echo T_("As stated earlier, the new docs are based on the docbook system. Everyone wishing to help please follow these guides where possible when reviewing and/or writing docs.");?></p>
 <ul> <!-- with Gnome 3 the next disappeared -->
@@ -55,7 +55,7 @@ include("externals/menu.phtml");
 <h2 class="featuretitle"><?php echo T_("Where to get the documentation source");?></h2>
 </div>
 <p class="justify"><?php echo T_("You will need a recent copy of the documentation source. For this you can check out the documentation module from the gnucash-docs git repository. Reviewers could also start from the <a href='https://sourceforge.net/projects/gnucash/files/gnucash-docs/'>current docs tarball</a>.");?></p>
-<p class="justify"><?php echo T_("For those not familiar with git, the <span class=\"gnucash\">GnuCash</span> wiki has a <a href='https://wiki.gnucash.org/wiki/Git'>description</a> tailored to the <span class=\"gnucash\">GnuCash</span> code. To get the documentation source instead of the program source, replace 'gnucash' with 'gnucash-docs' in the mentioned git commands, like this:");?></p>
+<p class="justify"><?php echo T_("For those not familiar with Git, the <span class=\"gnucash\">GnuCash</span> wiki has a <a href='https://wiki.gnucash.org/wiki/Git'>description</a> tailored to the <span class=\"gnucash\">GnuCash</span> code. To get the documentation source instead of the program source, replace 'gnucash' with 'gnucash-docs' in the mentioned Git commands, like this:");?></p>
 <pre class="command">git clone https://github.com/Gnucash/gnucash-docs.git</pre>
 <div class="dialog note">
 <p class="justify"><?php echo T_("There are two major <span class=\"gnucash\">GnuCash</span> documentation packages to help users: the <b>Help Manual</b> and the <b>Tutorial and Concepts Guide</b>. With the above command, the source code of both will be downloaded.");?></p>
@@ -68,11 +68,11 @@ include("externals/menu.phtml");
 </div>
 <p class="justify"><?php echo T_("Get a copy of the documentation source as described above and start making changes. When you are satisfied with your changes you can create a patch by running the following command in the base directory of the documentation (usually gnucash-docs, unless you renamed it):");?></p>
 <pre class="command">git diff > my-patch-name.patch</pre>
-<p class="justify"><?php echo T_("Next attach your patch to a bug report against the proper component for the Documentation product in <a href='https://bugs.gnucash.org/'><span class=\"gnucash\">GnuCash</span>' bug database</a>. See also <a href='https://wiki.gnucash.org/wiki/Bugzilla'>GnuCash' wiki page on bugzilla</a> for more details about patch submission.");?></p>
+<p class="justify"><?php echo T_("Next, attach your patch to a bug-report against the proper component for the \"Documentation\" product in the <a href='https://bugs.gnucash.org/'><span class=\"gnucash\">GnuCash</span>' bug database</a>. See also <a href='https://wiki.gnucash.org/wiki/Bugzilla'>GnuCash' wiki page on bugzilla</a> for more details about patch submission.");?></p>
 <div class="dialog note">
-<p class="justify"><?php echo T_("<b>NOTE:</b> It used to be ok also to send your patch directly to the gnucash-devel list. This is discouraged now, as a patch is easily forgotten between the many list discussions. Attach patches to bugs in Bugzilla instead (either an existing bug or a new one). If you insist on sending a patch to gnucash-devel, it should be attached, not inlined.");?></p>
+<p class="justify"><?php echo T_("<b>Note:</b> It used to be OK to also send your patch directly to the gnucash-devel list. This is discouraged now, as a patch is easily forgotten between the many list discussions. Attach patches to bugs in Bugzilla instead (either an existing bug or a new one). If you insist on sending a patch to gnucash-devel, it should be attached, not inlined.");?></p>
 <p class="justify"><?php echo T_("Please let other writers know which section you wish to tackle. Please forward this to <a href='mailto:gnucash-devel@gnucash.org'>gnucash-devel</a> so that people can say 'hey I'm doing that already' or 'go ahead and do it'.");?></p>
-<p class="justify"><?php echo T_("You may also want to retain a local copy of the old documentation to refer to when writing. This still has a lot of useful information in it which hasn't been transferred to the new docs.");?></p>
+<p class="justify"><?php echo T_("You may also want to retain a local copy of the old documentation to refer to when writing. This still has a lot of useful info in it which hasn't been transferred to the new docs.");?></p>
 </div>
 </div>
 
