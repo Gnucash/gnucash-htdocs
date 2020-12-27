@@ -1,0 +1,177 @@
+<b>Announcement:</b> GnuCash 4.3 Released
+2020-12-27
+
+<h2>GnuCash 4.3 Released</h2>
+
+<p>The GnuCash development team announces GnuCash 4.3, the fourth release in the stable 4.x series</p>
+
+<h4>Between 4.2 and 4.3, the following bugfixes were accomplished:</h4>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=106746">Bug 106746 - In Mort. Repay. druid, creating New acct should also select it.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=128772">Bug 128772 - Account Help Button does not work</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=309943">Bug 309943 - When unable to obtain a lock, no option to open another database.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=330930">Bug 330930 - Financial Calculator resets payment period to zero if automatic decimal places used</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=343647">Bug 343647 - [rfe] save tab/report location</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=345924">Bug 345924 - RFE: don't disable "OK" button after using "Apply" to modify chart options</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=355496">Bug 355496 - Mark placeholder accounts in account tree window visibly.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=355498">Bug 355498 - When there is only one result from a &#39;Find&#39;, select it.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=571697">Bug 571697 - Transaction Status in Since Last Run needs to look clickable.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=644242">Bug 644242 - Window Panning Oddity.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=645379">Bug 645379 - When duplicating a transaction, any non-numeric value entered in the "Number" field is discarded.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=667490">Bug 667490 - Support image-based TAN methods QR, photoTAN, and chipTAN optical "Flicker code"</a><p>Partial: Implements the display of flashing optical TAN challenges (aka flicker) in the &quot;Enter TAN&quot; dialog box.</p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=688917">Bug 688917 - Help button not working when editing style sheets.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=720564">Bug 720564 - Search in General Ledger cannot be cleared.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=794807">Bug 794807 - Calendar widget current month shown as (null).</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797901">Bug 797901 - List of Recently Used Files not updated until GnuCash is closed and reopened.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797944">Bug 797944 - Crash on use of File-Open</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797953">Bug 797953 - RFE: provide access to filter-by on right-mouse-click in Accounts register.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797956">Bug 797956 - dialog-report-style-sheet.c stylesheet editor does not set transient_for correctly.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797959">Bug 797959 - &quot;Exception&quot; when value greater than one million with commas and periods is pasted to register.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797967">Bug 797967 - minor ui niggles - some dialogs don't respond to GDK_KEY_Escape</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797971">Bug 797971 - odd cursor behaviour in register Description.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797972">Bug 797972 - Crash on export report CSV</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797982">Bug 797982 - exchange rates&#39; decimal places (bis)</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797983">Bug 797983 - v4.2 report numbers change over gnucash restarts; Price Database dropping user:price-editor entries.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797984">Bug 797984 - Infinite loop while Check&amp;Repair AR and AP accounts</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797989">Bug 797989 - Sorting columns by alphabet with non-ASCII characters</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797993">Bug 797993 - Reverse balance option does not apply to an Account Report</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797994">Bug 797994 - Account type-ahead search doesn&#39;t match accented characters.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798005">Bug 798005 - Import of QIF file sets expenses to zero, deposits are fine</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798008">Bug 798008 - Option &#39;--log&#39; cannot be specified more than once.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798015">Bug 798015 - cash flow numerical-overflow</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798031">Bug 798031 - Date goes to prior year with mm/dd entry to transaction duplicate.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798036">Bug 798036 - Transaction Report should offer price source</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798038">Bug 798038 - Incorrect spelling in german account templates &#39;common&#39; and &#39;full&#39;</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798039">Bug 798039 - Using &#39;Consolidate Transactions&#39; option on Consolidate Transaction Report returns Error</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798041">Bug 798041 - Open invoices in new window.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798047">Bug 798047 - Crash on delete account.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798050">Bug 798050 - error using Reports-&gt;Experimental-&gt;Income Statement (Multicolumn)</a></li>
+</ul>
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>Add custom unbound-variable exception reporter in guile that identifies what module provides the missing symbol.</li>
+    <li>Balsheet-pnl report: show most recent period first by default</li>
+    <li>Change register page icon to a padlock if read only</li>
+    <li>When a resister is read only make whole sheet insensitive.</li>
+    <li>Add account name to the read-only-register dialog box because under some circumstances it may be unclear to which register the message applies.</li>
+    <li>Strictly use use-modules to import Scheme symbols: Guile 3.0 doesn't like the alternatives. This can cause problems resolving symbols if the source of those symbols isn't yet compiled and hasn't been symlinked into the builddir.</li>
+    <li>Don't try to reload report if the first attempt raised an html error.</li>
+    <li>Barcharts: Limit account drill-down depth to 6.</li>
+    <li>I18N:glossary: add mortgage terms ARM, APR, FRM</li>
+    <li>Change the icons used for the file locked dialog box.</li>
+    <li>Add support for the opening balance accounts flag<p>Up to now, opening balance accounts have been identified by means of fixed names and their translations. Support Replacing this with a consistent non-translated tag. The actual replacement will be added to Gnucash 4.4; this change is to ensure a migration path.    </p></li>
+    <li>Replace TravisCI with Github actions for CI testing. TravisCI sharply restricted their free support of Free Software projects.</li>
+    <li>Use LTDL_LIBRARY_PATH instead of (DY)LD_LIBRARY_PATH in environment file.</li>
+    <li>Add a few more CSS classes for labels</li>
+    <li>Add GoogleMocks of some engine objects and refine Import-export unit tests using them.</li>
+    <li>Add auto-clear to register page</li>
+    <li>Change source files dialog-dup-trans.* for space and tabs</li>
+    <li>Fix exception when converting to decimal values that reduce to N/1.</li>
+    <li>Add confirmation of Main Window close when more than one window is displayed</li>
+    <li>Add keyboard shortcuts <bold>&lt;Ctrl&gt;&lt;Alt&gt;&lt;Menu&gt;</bold> for the notebook page selection menu and <bold>&lt;Ctrl&gt;&lt;Alt&gt;A</bold> to jump to the Accounts page.</li>
+    <li>Allow using the Ctrl+Alt+PgUp/Down to scroll the report view.</li>
+    <li>Fix report page keyboard focus in the scroll window.</li>
+    <li>Fix some incorrect links to the help file</li>
+    <li>Fix section help on windows not working.</li>
+    <li>Set the visibility of the account column in import-main-matcher depending upon the nubmer of accounts being displayed.</li>
+    <li>Add option to hide memo column on import-main-matcher</li>
+    <li>Fix pressing help button in OFX importer causing main-import-matcher to disappear </li>
+    <li>Preferences dialog: Display the invalid account separator message box only when the user closes the Preferences Dialog instead of after every change to any control.</li>
+    <li>Expose ngettext as gnc:ngettext</li>
+    <li>Add tooltip in import matcher window for description and memo column.</li>
+    <li>Put Macs back on WebKit2.</li>
+    <li>CMake: Mute guile-2.2 again</li>
+    <li>Fix several report stylesheet font-handling issues especially on macOS.</li>
+    <li>Fix price-renderer not converting to decimal.</li>
+
+    <li>Add some additional places where Check&amp;Repair can be aborted</li>
+    <li>Make the price database list obey the force-prices-to-decimal preference.</li>
+    <li>Several improvements to the auto-clear dialog.</li>
+    <li>Fix some errors found by i18nspector in po files</li>
+    <li>Tax Report Options appeared twice on menu for Chart of Accounts</li>
+    <li>General Journal Report: Allow Report Options&gt;General Title to render document title.</li>
+    <li>[options.scm] rename new-owner-report &quot;Links&quot; to &quot;Transaction Links&quot;</li>
+    <li>[new-owner-report] enable doclink links</li>
+    <li>[html-utilities][API] add function gnc:html-invoice-doclink-anchor</li>
+    <li>Disable chart animation that prevented visual comparison of state before and after reload</li>
+    <li>Select the register account if Tax Options dialog opened from a register tab.</li>
+</ul>
+<h4>Deprecations</h4>
+<ul>
+    <li>xaccAccountCountSplits.</li>
+    <li>gnc:html-make-exchangerates</li>
+</ul>
+<p>Updated Translations: Croatian, Dutch, Finnish, German, Indonesian, Italian, Japanese, Norwegian (Bokmal), Portuguese, Portuguese (Brazil), Ukrainian</p>
+<figure>
+    <img src="https://camo.githubusercontent.com/c2fea28e21f9012f6c7443c5cf928e24d98e98d24f75cb0bc19af15ccb979b7c/68747470733a2f2f686f737465642e7765626c6174652e6f72672f776964676574732f676e75636173682f2d2f676e75636173682f686f72697a6f6e74616c2d6175746f2e737667" alt="Weblate Translation Status Graph"/>
+    <figcaption>Weblate Translation Status</figcaption>
+</figure>
+<h4>Known Problems</h4>
+<p><a href="https://bugs.gnucash.org/buglist.cgi?bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;limit=0&amp;list_id=8149&amp;order=priority%2Cbug_severity&amp;query_format=advanced">Complete list of all open bugs.</a></p>.
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of GnuCash 4.3 we're pleased to also release a new version of the companion Help and Tutorial and Concepts Guide</p>
+<h6>Between 4.2 and 4.3, the following bugfixes were accomplished:</h6>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798031">Bug 798031 - : Update default of Date Completion</a></li>
+</ul>
+
+<h3>Getting GnuCash for Windows and MacOS</h3>
+<p>GnuCash is provided for both Microsoft Windows 8.1&reg; and later
+    and MacOS 10.13 (High Sierra)&reg; and later in pre-built, all-in-one
+    packages. An installer is provided for Microsoft Windows&reg; while
+    the MacOS&reg; package is a disk image containing a drag-and-drop
+    application bundle.</p>
+<p>The SHA256 Hashes for the downloadable files are:</p>
+<ul>
+    <li><code>117e307deaf8de20b09f3aaa0036f6059131d482eaafa8094a1f8f450b75bcc4</code>&nbsp;&nbsp;gnucash-4.3.tar.bz2</li>
+    <li><code>0bd671dc192f6267beaea004af2e2ed6b6e82a96efc96ce67772901f50a22d33</code>&nbsp;&nbsp;gnucash-4.3.tar.gz</li>
+    <li><code>1e54572f4361e2bd5a61c5c4585e781db1d361ef4961fb7e09ab58083dbcb06e</code>&nbsp;&nbsp;gnucash-4.3.setup.exe</li>
+    <li><code>5cb50bb9a377fedeeef33f0582f87aa06a21590d5b60b803465684224344486c</code>&nbsp;&nbsp;Gnucash-Intel-4.3-1.dmg</li>
+    <li><code>86eb5a52fc331dc9e2ef61d5f69ad8c050d7220091f48c9b7af31022b4b5b2f4</code>&nbsp;&nbsp;gnucash-docs-4.3.tar.gz</li>
+</ul>
+
+<ul>
+    <li>SourceForge:
+        <ul>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.3/gnucash-4.3.setup.exe">Win32</a></li>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.3/Gnucash-Intel-4.3-3.dmg">Mac-Intel</a></li>
+        </ul></li>
+    <li>Github
+        <ul>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/4.3/gnucash-4.3.setup.exe">Win32</a></li>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/4.3/Gnucash-Intel-4.3-3.dmg">Mac-Intel</a></li>
+        </ul></li></ul>
+
+<p>GnuCash is now available as a flatpak from Flathub.org. <a href="https://wiki.gnucash.org/wiki/Flatpak">Instructions for installing and running.</a></p>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 4.3 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+    <li>Sourceforge: <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.3/gnucash-4.3.tar.bz2">bzip2</a>, <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.3/gnucash-4.3.tar.gz">gzip</a>.</li>
+
+    <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/4.3/gnucash-4.3.tar.bz2">bzip</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/4.3/gnucash-4.3.tar.gz">gzip</a></li>
+
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https://www.gtk.org">Gtk+</a> 3.22.29, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0, <a href="https://www.boost.org/">Boost</a> 1.67, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, <a href="https://github.com/google/googletest">GoogleTest</a> 1.8.0, <a href="https://cmake.org/">cmake 3.10</a> and <a href="http://www.swig.org/">SWIG</a> 2.0.12. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 4.3 documentation can be found under "GnuCash v4 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats. The documentation is also included in the MacOS and Windows application bundles.</p>
+
+<p>If you want to compile the GnuCash Documentation 4.3 for yourself, the source code can be downloaded from:</p>
+<ul>
+  <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.3/gnucash-docs-4.3-1.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/4.3/gnucash-docs-4.3.tar.gz">GitHub</a></li>
+  <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, MacOS, and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
