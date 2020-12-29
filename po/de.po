@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2020-12-04 00:47+0100\n"
-"PO-Revision-Date: 2020-12-29 02:29+0000\n"
+"PO-Revision-Date: 2020-12-29 15:29+0000\n"
 "Last-Translator: Christian Wehling <christian.wehling@web.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnucash/website/"
 "de/>\n"
@@ -162,7 +162,7 @@ msgstr ""
 
 #: 2.6-release-tour.phtml:85
 msgid "Open datafile read-only"
-msgstr "Dateien schreibgeschützt öffnen"
+msgstr "Datei schreibgeschützt öffnen"
 
 #: 2.6-release-tour.phtml:87
 msgid ""
@@ -266,6 +266,8 @@ msgid ""
 "Updated search window with buttons to process payment, duplicate, post and "
 "print multiple search results."
 msgstr ""
+"Verbessertes Suchfenster mit Schaltflächen zum Ausführen von Zahlungen, "
+"Duplizieren, Buchen und Drucken mehrerer Suchergebnisse."
 
 #: 2.6-release-tour.phtml:152
 msgid "New preference system"
@@ -360,9 +362,9 @@ msgid ""
 "volunteers. If you want to be part of the effort, you can contribute in many "
 "ways:"
 msgstr ""
-"<span class=\"gnucash\">GnuCash</span> ist ein von Freiwilligen gepflegtes "
-"Programm. Falls Sie Teil dieser Leistung werden möchten, gibt es "
-"verschiedene Möglichkeiten, etwas beizutragen:"
+"<span class=\"gnucash\">GnuCash</span> ist ein Programm, das von "
+"Freiwilligen gepflegt wird. Wenn Sie unterstützen wollen, können Sie auf "
+"viele Arten dazu beitragen:"
 
 # Wir haben eine entsprechende deutsche Seite im Wiki
 #: 2.6-release-tour.phtml:175
@@ -2149,23 +2151,21 @@ msgstr ""
 "Dies funktioniert nicht unter MacOS."
 
 #: new_features-4.0.phtml:26
-#, fuzzy
 msgid ""
 "Associations may now be added to bills, credit notes, invoices, and "
 "vouchers. The actual association when present is added as a link button "
 "which is shown below the notes."
 msgstr ""
-"Assoziationen können nun zu Rechnungen, Gutschriften, Rechnungen und Belegen "
-"hinzugefügt werden. Die aktuelle Assoziation wird, wenn vorhanden, als "
-"Verknüpfungsschaltfläche hinzugefügt, die unterhalb der Notizen angezeigt "
-"wird."
+"Assoziationen können nun zu Lieferantenrechnungen, Gutschriften, Rechnungen "
+"und Belegen hinzugefügt werden. Die aktuelle Assoziation wird, wenn "
+"vorhanden, als Verknüpfungsschaltfläche hinzugefügt, die unterhalb der "
+"Notizen angezeigt wird."
 
 #: new_features-4.0.phtml:34
 msgid "[Video showing two ways to filter accounts]"
 msgstr "[Video zeigt zwei Möglichkeiten zum Filtern von Konten]"
 
 #: new_features-4.0.phtml:38
-#, fuzzy
 msgid ""
 "New type-ahead search is added to sequential search when selecting an "
 "account or an Action in the register: Instead of typing the first few "
@@ -2276,12 +2276,18 @@ msgid ""
 "Entry column widths in Invoices, Bills, and Employee Vouchers may now be "
 "saved as defaults for each type of document."
 msgstr ""
+"Die Breite der Eingabespalte in Lieferatenrechnungen, Rechnungen und "
+"Mitarbeiterdokumente können jetzt als Standardwerte für jeden Dokumenttyp "
+"gespeichert werden."
 
 #: new_features-4.0.phtml:75
 msgid ""
 "Two menu items are added to the View menu when a Bill, Invoice, or Voucher "
 "tab has focus:"
 msgstr ""
+"Dem Menü \"Ansicht\" werden zwei Menüpunkte hinzugefügt, wenn die "
+"Registerkarte \"Lieferatenrechnung\", \"Rechnung\" oder \"Beleg\" den Fokus "
+"hat:"
 
 #: new_features-4.0.phtml:77
 msgid "Use as Default Layout for Vendor Documents"
@@ -2292,12 +2298,11 @@ msgid "Reset Default Layout for Vendor Documents"
 msgstr "Voreingestelltes Layout für Lieferantendokumente zurücksetzen"
 
 #: new_features-4.0.phtml:79
-#, fuzzy
 msgid ""
 "Vendor Documents is for Bills and is replaced by Customer or Employee "
 "Documents for Invoices or Vouchers respectively."
 msgstr ""
-"Lieferantendokumente sind für Rechnungen und werden durch Kunden- oder "
+"Lieferantendokumente bezieht sich auf Rechnungen und wird durch Kunden- oder "
 "Mitarbeiterdokumente für Rechnungen bzw. Belege ersetzt."
 
 #: new_features-4.0.phtml:81
@@ -2349,9 +2354,11 @@ msgid ""
 "OFX imports having balance information will now offer to immediately "
 "reconcile, passing the balance information in the file to the reconcile info."
 msgstr ""
+"OFX-Importe mit Kontosalden bieten nun einen sofortigen Abgleich an, wobei "
+"die Saldoinformationen aus der Datei als Abgleichsinformation übergeben "
+"werden."
 
 #: new_features-4.0.phtml:94
-#, fuzzy
 msgid ""
 "The import transaction matcher window column headings are changed from R to "
 "C and from U+R to U+C, reflecting that the matcher marks transactions "
@@ -2359,7 +2366,7 @@ msgid ""
 msgstr ""
 "Die Spaltenüberschriften des Fensters des Import-Transaktionsabgleichers "
 "wurden von R auf C und von U+R auf U+C geändert, was widerspiegelt, dass der "
-"Abgleicher Transaktionen als ausgeglichen markiert, aber nicht abgleicht."
+"Abgleicher die Transaktionen als ausgeglichen markiert, aber nicht abgleicht."
 
 #: new_features-4.0.phtml:95
 msgid ""
@@ -2384,6 +2391,10 @@ msgid ""
 "reports for expenses and income, an income-expense chart, and an account "
 "summary."
 msgstr ""
+"Ein neues Berichts-Untermenü <b>Mehrspaltig</b> enthält den alten "
+"benutzerdefinierten mehrspaltigen Bericht und einen neuen <b>Dashboard</b>-"
+"Bericht, der Kontenberichte für Ausgaben und Einnahmen, ein Einnahmen-"
+"Ausgaben-Diagramm und eine Kontenübersicht enthält."
 
 #: new_features-4.0.phtml:105
 msgid ""
@@ -2407,10 +2418,9 @@ msgid "Enable adding notes to budgets."
 msgstr "Aktivieren Sie das Hinzufügen von Notizen zu Budgets."
 
 #: new_features-4.0.phtml:115
-#, fuzzy
 msgid "Account codes may now optionally be displayed in the Budget Tree View."
 msgstr ""
-"Kontoschlüssel können jetzt optional in der Budgetstrukturansicht angezeigt "
+"Kontoschlüssel können jetzt optional in der Budget-Baumstruktur angezeigt "
 "werden."
 
 #: new_features-4.0.phtml:120
