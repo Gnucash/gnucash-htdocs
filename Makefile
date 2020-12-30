@@ -13,7 +13,7 @@ check:
 pot: po/POTFILES po/gnucash-htdocs.pot
 
 po/POTFILES: .potfiles
-	( find . -maxdepth 1 -type f -name '*.php' -o -name '*.phtml'; find externals -name '*.php' -o -name '*.phtml'; find search/templates -name '*.php_tmpl'; ) > po/POTFILES
+	( find . -maxdepth 1 -type f -name '*.php' -o -name '*.phtml'; find externals -name '*.php' -o -name '*.phtml'; ) > po/POTFILES
 
 .potfiles:
 
