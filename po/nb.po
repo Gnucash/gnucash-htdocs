@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
-"cgi?component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2020-12-04 00:47+0100\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
+"component=Translations&product=Website&resolution=---\n"
+"POT-Creation-Date: 2020-12-30 04:52+0100\n"
 "PO-Revision-Date: 2020-12-17 13:31+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/gnucash/"
@@ -1960,497 +1960,6 @@ msgid ""
 "page."
 msgstr ""
 
-#: search/templates/NMZ.body.php_tmpl:4 search/templates/NMZ.head.php_tmpl:28
-msgid "Query"
-msgstr "Søk"
-
-#: search/templates/NMZ.body.php_tmpl:6
-msgid "Single term query"
-msgstr "Enkelt ord søk"
-
-#: search/templates/NMZ.body.php_tmpl:8
-msgid ""
-"This query specifies only one term for retrieving all of the\n"
-"documents which contain that term, for example:"
-msgstr ""
-"Dette søket er for å finne alle dokumenter som inneholder det ene ordet/"
-"uttrykket\n"
-"for eksempel:"
-
-#: search/templates/NMZ.body.php_tmpl:16
-msgid "AND query"
-msgstr "OG søk"
-
-#: search/templates/NMZ.body.php_tmpl:19
-msgid ""
-"This query specifies two or more terms for retrieving all of the\n"
-"documents which contain both terms. Insert the\n"
-"<code class=\"operator\">and</code> operator between the terms, e.g."
-msgstr ""
-"Dette søket inneholder to eller flere ord/uttrykk, og vil finne alle "
-"dokumenter \n"
-"som inneholder begge disse. Sett inn\n"
-"<code class=\"operator\">and</code> mellom søkeordene, f.eks."
-
-#: search/templates/NMZ.body.php_tmpl:29
-msgid ""
-"You can omit the <code class=\"operator\">and</code> operator.  Terms which "
-"are\n"
-"separated by one or more spaces are assumed to be an AND query."
-msgstr ""
-"Du kan også utelate <code class=\"operator\">and</code> koden.  Søkeord som "
-"er\n"
-"adskilt med mellomrom er antatt å være og søk."
-
-#: search/templates/NMZ.body.php_tmpl:33
-msgid "OR query"
-msgstr "ELLER søk"
-
-#: search/templates/NMZ.body.php_tmpl:35
-msgid ""
-"This query specifies two or more terms for retrieving all\n"
-"documents which contain any one term. Insert the\n"
-"<code class=\"operator\">or</code> operator between the terms,\n"
-"e.g."
-msgstr ""
-"Dette søket inneholder to eller flere ord/uttrykk, og vil finne alle "
-"dokumenter\n"
-"som inneholder minst ett av ordene. Sett inn\n"
-"<code class=\"operator\">or</code> mellom ordene,\n"
-"f.eks."
-
-#: search/templates/NMZ.body.php_tmpl:45
-msgid "NOT query"
-msgstr "IKKE søk"
-
-#: search/templates/NMZ.body.php_tmpl:47
-msgid ""
-"This query specifies two or more terms for retrieving all of the\n"
-"documents which contain a first term but do not contain the\n"
-"following terms. Insert the <code class=\"operator\">not</code>\n"
-"operator between the terms, for example:"
-msgstr ""
-"Dette søket finner alle dokumenter som inneholder ett ord,\n"
-"men ikke de andre.\n"
-"Sett inn <code class=\"operator\">not</code>\n"
-"mellom ordene, f.eks."
-
-#: search/templates/NMZ.body.php_tmpl:58
-msgid "Grouping"
-msgstr "Gruppering"
-
-#: search/templates/NMZ.body.php_tmpl:60
-msgid ""
-"You can group queries by surrounding them by\n"
-"parentheses. The parentheses should be separated by one or\n"
-"more spaces. e.g."
-msgstr ""
-"Du kan gruppere søkeord ved å sette de inne i\n"
-"paranteser. Parantesene skal være separert av ett eller\n"
-"flere mellomrom. f.eks."
-
-#: search/templates/NMZ.body.php_tmpl:69
-msgid "Phrase searching"
-msgstr "Frase søk"
-
-#: search/templates/NMZ.body.php_tmpl:71
-msgid ""
-"You can search for a phrase that consists of two or more terms\n"
-"by surrounding them with double quotation marks or braces such as\n"
-"<code class=\"operator\">\"...\"</code> and <code class=\"operator\">{...}</"
-"code>.\n"
-"In Namazu, the precision of phrase searching is not 100%,\n"
-"so wrong results may occasionally occur.  Example:"
-msgstr ""
-"Du kan søke etter en frase som inneholder to eller flere ord\n"
-"ved å sette de inne i anførselstegn eller klammeparanteser som\n"
-"<code class=\"operator\">\"...\"</code> og <code class=\"operator\">{...}</"
-"code>.\n"
-"I Namazu, frase søket virker ikke helt 100%,\n"
-"Feil resultat kan derfor dukke opp.  Eksempel:"
-
-#: search/templates/NMZ.body.php_tmpl:88
-msgid "Substring matching"
-msgstr "Delstreng søk"
-
-#: search/templates/NMZ.body.php_tmpl:90
-msgid "There are three types of searching by substring matching."
-msgstr "Det er tre typer delstreng søk."
-
-#: search/templates/NMZ.body.php_tmpl:94
-msgid "Prefix matching"
-msgstr "Prefiks søk"
-
-#: search/templates/NMZ.body.php_tmpl:95
-msgid "(terms which begin with <code>inter</code>)"
-msgstr "(ord som begynner med <code>inter</code>)"
-
-#: search/templates/NMZ.body.php_tmpl:96
-msgid "Inside matching"
-msgstr "Midtdel søk"
-
-#: search/templates/NMZ.body.php_tmpl:97
-msgid "(terms which contain <code>text</code>)"
-msgstr "(ord som inneholder <code>text</code>)"
-
-#: search/templates/NMZ.body.php_tmpl:98
-msgid "Suffix matching"
-msgstr "Suffiks søk"
-
-#: search/templates/NMZ.body.php_tmpl:100
-#, fuzzy
-msgid "(terms which terminated with <code>net</code>)"
-msgstr ""
-"(ord som slutter\n"
-"med <code>net</code>)"
-
-#: search/templates/NMZ.body.php_tmpl:104
-msgid "Regular expressions"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:107
-msgid ""
-"You can use regular expressions for pattern matching. The\n"
-"regular expressions must be surrounded by slashes like <code\n"
-"class=\"operator\">/.../</code>. Namazu uses <a\n"
-"href=\"http://www.ruby-lang.org/\">Ruby</a>'s regular\n"
-"regular expressions engine. It generally offers a <a\n"
-"href=\"http://www.perl.com/\">Perl</a> compatible flavor.\n"
-"e.g.,"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:121
-msgid "Field-specified searching"
-msgstr "Felt spesifisert søk"
-
-#: search/templates/NMZ.body.php_tmpl:123
-msgid ""
-"You can limit your search to specific fields such as\n"
-"<code>Subject:</code>, <code>From:</code>,\n"
-"<code>Message-Id:</code>. This feature is especially convenient for\n"
-"Mail/News documents, for example:"
-msgstr ""
-"Du kan begrense ditt søk til enkelte felter slik som\n"
-"<code>Subject:</code>, <code>From:</code>,\n"
-"<code>Message-Id:</code>. Denne funksjonaliteten er utmerket for\n"
-"Mail/News dokumenter, f.eks.:"
-
-#: search/templates/NMZ.body.php_tmpl:131
-msgid ""
-"(Retrieves all documents which contain <code>Linux</code>\n"
-"in a <code>Subject:</code> field)"
-msgstr ""
-"(Finner alle dokumenter som inneholder <code>Linux</code>\n"
-"i et <code>Subject:</code> felt)"
-
-#: search/templates/NMZ.body.php_tmpl:136
-msgid ""
-"(Retrieves all documents which contain <code>GNU Emacs</code>\n"
-"in a <code>Subject:</code> field)"
-msgstr ""
-"(Finner alle dokumenter som inneholder <code>GNU Emacs</code>\n"
-"i et <code>Subject:</code> felt)"
-
-#: search/templates/NMZ.body.php_tmpl:141
-msgid ""
-"(Retrieves all documents which contain <code>foo@bar.jp</code>\n"
-"in a <code>From:</code> field)"
-msgstr ""
-"(Finner alle dokumenter som inneholder <code>foo@bar.jp</code>\n"
-"i et <code>From:</code> felt)"
-
-#: search/templates/NMZ.body.php_tmpl:147
-msgid ""
-"(Retrieves a certain document which contains specified\n"
-"<code>Message-Id:</code>)"
-msgstr ""
-"(Finner et dokument som inneholder\n"
-"<code>Message-Id:</code>)"
-
-#: search/templates/NMZ.body.php_tmpl:152
-msgid "Notes"
-msgstr "Notat"
-
-#: search/templates/NMZ.body.php_tmpl:155
-msgid ""
-"In any queries, Namazu ignores case distinctions of\n"
-"alphabet characters; i.e. Namazu does\n"
-"case-insensitive pattern matching."
-msgstr "I alle søk, Namazu ignores om det er store eller små bokstaver"
-
-#: search/templates/NMZ.body.php_tmpl:160
-msgid ""
-"Japanese phrases are automatically segmented into\n"
-"morphemes and are handled as <a\n"
-"href=\"#query-phrase\">phrase searching</a>. This process occasionally\n"
-"causes invalid segmentation."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:166
-msgid ""
-"Letters, numbers or parts of symbols (duplicated in\n"
-"ASCII) which are defined in JIS X 0208 (Japanese\n"
-"Industrial Standards) are handled as ASCII characters."
-msgstr ""
-"Bokstaver, tall eller deler av symboler (duplisert i\n"
-"ASCII) som er definert i JIS X 0208 (Japanese\n"
-"Industrial Standards) blir betraktet som ASCII tegn."
-
-#: search/templates/NMZ.body.php_tmpl:171
-msgid ""
-"Namazu can handle a term which contains symbols like\n"
-"<code>TCP/IP</code>.  Since this method of handling isn't complete,\n"
-"you can also describe the term as <code>TCP and IP</code> instead of\n"
-"<code>TCP/IP</code>, but it may cause noisy results."
-msgstr ""
-"Namazu kan håndtere ord/uttrykk som inneholder symboler slik som\n"
-"<code>TCP/IP</code>.  Siden denne håndteringen ikke er ferdigutviklet,\n"
-"kan du også skrive dette som <code>TCP og IP</code> isteden for\n"
-"<code>TCP/IP</code>, men det kan gi feil / rotete resultat."
-
-#: search/templates/NMZ.body.php_tmpl:178
-msgid ""
-"Substring matching and field-specified searching takes\n"
-"more time than other methods."
-msgstr ""
-"Delstreng og felt spesifike søk tar\n"
-"lenger tid enn andre søk."
-
-#: search/templates/NMZ.body.php_tmpl:182 search/templates/NMZ.tips.php_tmpl:60
-msgid ""
-"If you want to use <code class=\"operator\">and</code>,\n"
-"<code class=\"operator\">or</code> or <code\n"
-"class=\"operator\">not</code> as ordinary keywords<br>\n"
-"You can surround them respectively with double quotes like <code\n"
-"class=\"operator\">\"...\"</code> or braces like <code\n"
-"class=\"operator\">{...}</code>."
-msgstr ""
-"Det kan hende du vil bruke <code class=\"operator\">og</code>,\n"
-"<code class=\"operator\">eller</code> eller <code\n"
-"class=\"operator\">ikke</code> som vanlige søkeord<br>\n"
-"Det kan gjøres ved at du setter disse inne i anførselstegn slik som <code\n"
-"class=\"operator\">\"...\"</code> eller klammeparanteser slik som <code\n"
-"class=\"operator\">{...}</code>."
-
-#: search/templates/NMZ.foot.php_tmpl:9
-msgid "This search system is powered by:"
-msgstr "Dette søkesystemet er styrt av:"
-
-#: search/templates/NMZ.foot.php_tmpl:13
-msgid "Server &amp; email outage reports to: "
-msgstr ""
-
-#: search/templates/NMZ.foot.php_tmpl:15
-msgid ""
-"Translation problems? Contact: <a href=\"mailto:gnucash-devel@gnucash.org"
-"\"><b>gnucash-devel@gnucash.org</b></a>"
-msgstr ""
-
-#: search/templates/NMZ.head.php_tmpl:4
-#, fuzzy
-msgid "Mailing List Search"
-msgstr "Lister som skal søkes"
-
-#: search/templates/NMZ.head.php_tmpl:30
-msgid "Search!"
-msgstr "Søk!"
-
-#: search/templates/NMZ.head.php_tmpl:32
-msgid "[How to search]"
-msgstr "[Hvordan søke]"
-
-#: search/templates/NMZ.head.php_tmpl:35
-msgid "Display"
-msgstr "Vis"
-
-#: search/templates/NMZ.head.php_tmpl:43
-msgid "Description"
-msgstr "Beskrivelse"
-
-#: search/templates/NMZ.head.php_tmpl:45
-msgid "normal"
-msgstr ""
-
-#: search/templates/NMZ.head.php_tmpl:46
-msgid "short"
-msgstr "kort"
-
-#: search/templates/NMZ.head.php_tmpl:48
-msgid "Sort"
-msgstr "Sortering"
-
-#: search/templates/NMZ.head.php_tmpl:50
-msgid "by score"
-msgstr "etter treff"
-
-#: search/templates/NMZ.head.php_tmpl:51
-msgid "by date in late order"
-msgstr "etter dato, eldste først"
-
-#: search/templates/NMZ.head.php_tmpl:52
-msgid "by date in early order"
-msgstr "etter dato, siste først"
-
-#: search/templates/NMZ.head.php_tmpl:53
-msgid "by title in ascending order"
-msgstr "etter tittel, (a-z)"
-
-#: search/templates/NMZ.head.php_tmpl:54
-msgid "by title in descending order"
-msgstr "etter tittel, (z-a)"
-
-#: search/templates/NMZ.head.php_tmpl:55
-msgid "by author in ascending order"
-msgstr "etter forfatter, (a-z)"
-
-#: search/templates/NMZ.head.php_tmpl:56
-msgid "by author in descending order"
-msgstr "etter forfatter, (z-a)"
-
-#: search/templates/NMZ.head.php_tmpl:57
-msgid "by size in ascending order"
-msgstr "etter størrelse, størst først"
-
-#: search/templates/NMZ.head.php_tmpl:58
-msgid "by size in descending order"
-msgstr "etter størrelse, minst først"
-
-#: search/templates/NMZ.head.php_tmpl:59
-msgid "by URI in ascending order"
-msgstr "etter URI, (a-z)"
-
-#: search/templates/NMZ.head.php_tmpl:60
-msgid "by URI in descending order"
-msgstr "etter URI (z-a)"
-
-#: search/templates/NMZ.head.php_tmpl:65
-msgid "Lists to Search"
-msgstr "Lister som skal søkes"
-
-#: search/templates/NMZ.result.normal.php_tmpl:4
-#: search/templates/NMZ.result.short.php_tmpl:4
-msgid "score"
-msgstr ""
-
-#: search/templates/NMZ.result.normal.php_tmpl:5
-msgid "Author"
-msgstr "Forfatter"
-
-#: search/templates/NMZ.result.normal.php_tmpl:6
-msgid "Date"
-msgstr "Dato"
-
-#: search/templates/NMZ.result.normal.php_tmpl:9
-#: search/templates/NMZ.result.short.php_tmpl:6
-msgid "(${size} bytes)"
-msgstr ""
-
-#: search/templates/NMZ.tips.php_tmpl:4
-msgid "Tips on searching"
-msgstr "Søke Tips"
-
-#: search/templates/NMZ.tips.php_tmpl:7
-msgid "If you have trouble with searching, you can check the following tips."
-msgstr "Hvis du har problemer med søket, kan du prøve følgende tips."
-
-#: search/templates/NMZ.tips.php_tmpl:11
-msgid ""
-"Check a spelling of your keyword<br>\n"
-"Namazu can't find anything with wrong spelling."
-msgstr ""
-"Kontoller stavingen av søkeordene<br>\n"
-"Namazu kan ikke finne noe som er feil stavet."
-
-#: search/templates/NMZ.tips.php_tmpl:15
-msgid "Add keywords"
-msgstr "Legg til flere søkeord"
-
-#: search/templates/NMZ.tips.php_tmpl:17
-msgid ""
-"If you gained no results or too few results, you can add one\n"
-"or more related keywords with <code\n"
-"class=\"operator\">or</code> operator.  You should get more results.\n"
-"e.g.,"
-msgstr ""
-"Ved få eller ingen resultater, kan det legges til en eller\n"
-"flere relaterte søkeord med <code\n"
-"class=\"operator\">eller</code> operator.  Du burde da få flere resultater.\n"
-"e.g.,"
-
-#: search/templates/NMZ.tips.php_tmpl:23
-msgid ""
-"If you gained too many results, you can add one or more\n"
-"related keywords with <code class=\"operator\">and</code>\n"
-"operator. It makes your search more limited. e.g.,"
-msgstr ""
-"Hvis du fikk for mange resultater, kan du legge til en eller\n"
-"flere relaterte søkeord med <code class=\"operator\">og</code>\n"
-"operator. Det vil begrense søket. e.g.,"
-
-#: search/templates/NMZ.tips.php_tmpl:29
-msgid "Try substring matching"
-msgstr ""
-
-#: search/templates/NMZ.tips.php_tmpl:31
-msgid ""
-"If you gained no results or too few results, you can try\n"
-"substring matching."
-msgstr ""
-"Hvis du fikk ingen eller få resultater, kan du prøve\n"
-"delstreng søk."
-
-#: search/templates/NMZ.tips.php_tmpl:34
-msgid ""
-"You can specify <code class=\"example\">tex*</code> to\n"
-"search for terms which begin with\n"
-"<code>tex</code> (e.g., <code>tex</code>,\n"
-"<code>texi2html</code>,\n"
-"<code>texindex</code>, <code>text</code>)."
-msgstr ""
-"Du kan skrive <code class=\"example\">tex*</code> for\n"
-"å søke etter ord som begynner med\n"
-"<code>tex</code> (f.eks., <code>tex</code>,\n"
-"<code>texi2html</code>,\n"
-"<code>texindex</code>, <code>text</code>)."
-
-#: search/templates/NMZ.tips.php_tmpl:41
-msgid ""
-"You can specify <code class=\"example\">*tex</code> to\n"
-"search for terms which terminated with <code>tex</code> (e.g.,\n"
-"<code>bibtex</code>,\n"
-"<code>jlatex</code>, <code>latex</code>,\n"
-"<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
-msgstr ""
-"Du kan skrive <code class=\"example\">*tex</code> for\n"
-"å søke etter ord som slutter med <code>tex</code> (f.eks.,\n"
-"<code>bibtex</code>,\n"
-"<code>jlatex</code>, <code>latex</code>,\n"
-"<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
-
-#: search/templates/NMZ.tips.php_tmpl:48
-msgid ""
-"You can specify <code class=\"example\">*tex*</code> to\n"
-"search for terms which contain <code>tex</code> (many)."
-msgstr ""
-"Du kan skrive <code class=\"example\">*tex*</code> for\n"
-"å søke etter ord som inneholder <code>tex</code> (mange)."
-
-#: search/templates/NMZ.tips.php_tmpl:53
-msgid ""
-"You tried phrase searching but it hit documents which\n"
-"didn't contain your phrase."
-msgstr ""
-"Du prøvde frase søk, men fant ingen dokumenter som\n"
-"inneholdt din frase."
-
-#: search/templates/NMZ.tips.php_tmpl:56
-msgid ""
-"It's a defect of Namazu. Precision of phrase searching is\n"
-"not 100%, so it cause wrong results occasionally."
-msgstr ""
-"Dette er ikke Namazu sterke side. Presisjonen på frase søk er\n"
-"ikke 100%, så den kan til tider gi feil resultat."
-
 #: sizing.phtml:5
 msgid "This is an ancient page about Gnucash's code size."
 msgstr ""
@@ -2719,3 +2228,378 @@ msgid ""
 "It seems your browser doesn't support iframes. To view the requested page in "
 "a separate window, please <a href=\"%s\" target=\"_blank\">click here</a>."
 msgstr ""
+
+#~ msgid ""
+#~ "(Retrieves a certain document which contains specified\n"
+#~ "<code>Message-Id:</code>)"
+#~ msgstr ""
+#~ "(Finner et dokument som inneholder\n"
+#~ "<code>Message-Id:</code>)"
+
+#~ msgid ""
+#~ "(Retrieves all documents which contain <code>GNU Emacs</code>\n"
+#~ "in a <code>Subject:</code> field)"
+#~ msgstr ""
+#~ "(Finner alle dokumenter som inneholder <code>GNU Emacs</code>\n"
+#~ "i et <code>Subject:</code> felt)"
+
+#~ msgid ""
+#~ "(Retrieves all documents which contain <code>Linux</code>\n"
+#~ "in a <code>Subject:</code> field)"
+#~ msgstr ""
+#~ "(Finner alle dokumenter som inneholder <code>Linux</code>\n"
+#~ "i et <code>Subject:</code> felt)"
+
+#~ msgid ""
+#~ "(Retrieves all documents which contain <code>foo@bar.jp</code>\n"
+#~ "in a <code>From:</code> field)"
+#~ msgstr ""
+#~ "(Finner alle dokumenter som inneholder <code>foo@bar.jp</code>\n"
+#~ "i et <code>From:</code> felt)"
+
+#~ msgid "(terms which begin with <code>inter</code>)"
+#~ msgstr "(ord som begynner med <code>inter</code>)"
+
+#~ msgid "(terms which contain <code>text</code>)"
+#~ msgstr "(ord som inneholder <code>text</code>)"
+
+#, fuzzy
+#~ msgid "(terms which terminated with <code>net</code>)"
+#~ msgstr ""
+#~ "(ord som slutter\n"
+#~ "med <code>net</code>)"
+
+#~ msgid "AND query"
+#~ msgstr "OG søk"
+
+#~ msgid "Add keywords"
+#~ msgstr "Legg til flere søkeord"
+
+#~ msgid "Author"
+#~ msgstr "Forfatter"
+
+#~ msgid ""
+#~ "Check a spelling of your keyword<br>\n"
+#~ "Namazu can't find anything with wrong spelling."
+#~ msgstr ""
+#~ "Kontoller stavingen av søkeordene<br>\n"
+#~ "Namazu kan ikke finne noe som er feil stavet."
+
+#~ msgid "Date"
+#~ msgstr "Dato"
+
+#~ msgid "Description"
+#~ msgstr "Beskrivelse"
+
+#~ msgid "Display"
+#~ msgstr "Vis"
+
+#~ msgid "Field-specified searching"
+#~ msgstr "Felt spesifisert søk"
+
+#~ msgid "Grouping"
+#~ msgstr "Gruppering"
+
+#~ msgid ""
+#~ "If you gained no results or too few results, you can add one\n"
+#~ "or more related keywords with <code\n"
+#~ "class=\"operator\">or</code> operator.  You should get more results.\n"
+#~ "e.g.,"
+#~ msgstr ""
+#~ "Ved få eller ingen resultater, kan det legges til en eller\n"
+#~ "flere relaterte søkeord med <code\n"
+#~ "class=\"operator\">eller</code> operator.  Du burde da få flere "
+#~ "resultater.\n"
+#~ "e.g.,"
+
+#~ msgid ""
+#~ "If you gained no results or too few results, you can try\n"
+#~ "substring matching."
+#~ msgstr ""
+#~ "Hvis du fikk ingen eller få resultater, kan du prøve\n"
+#~ "delstreng søk."
+
+#~ msgid ""
+#~ "If you gained too many results, you can add one or more\n"
+#~ "related keywords with <code class=\"operator\">and</code>\n"
+#~ "operator. It makes your search more limited. e.g.,"
+#~ msgstr ""
+#~ "Hvis du fikk for mange resultater, kan du legge til en eller\n"
+#~ "flere relaterte søkeord med <code class=\"operator\">og</code>\n"
+#~ "operator. Det vil begrense søket. e.g.,"
+
+#~ msgid ""
+#~ "If you have trouble with searching, you can check the following tips."
+#~ msgstr "Hvis du har problemer med søket, kan du prøve følgende tips."
+
+#~ msgid ""
+#~ "If you want to use <code class=\"operator\">and</code>,\n"
+#~ "<code class=\"operator\">or</code> or <code\n"
+#~ "class=\"operator\">not</code> as ordinary keywords<br>\n"
+#~ "You can surround them respectively with double quotes like <code\n"
+#~ "class=\"operator\">\"...\"</code> or braces like <code\n"
+#~ "class=\"operator\">{...}</code>."
+#~ msgstr ""
+#~ "Det kan hende du vil bruke <code class=\"operator\">og</code>,\n"
+#~ "<code class=\"operator\">eller</code> eller <code\n"
+#~ "class=\"operator\">ikke</code> som vanlige søkeord<br>\n"
+#~ "Det kan gjøres ved at du setter disse inne i anførselstegn slik som "
+#~ "<code\n"
+#~ "class=\"operator\">\"...\"</code> eller klammeparanteser slik som <code\n"
+#~ "class=\"operator\">{...}</code>."
+
+#~ msgid ""
+#~ "In any queries, Namazu ignores case distinctions of\n"
+#~ "alphabet characters; i.e. Namazu does\n"
+#~ "case-insensitive pattern matching."
+#~ msgstr "I alle søk, Namazu ignores om det er store eller små bokstaver"
+
+#~ msgid "Inside matching"
+#~ msgstr "Midtdel søk"
+
+#~ msgid ""
+#~ "It's a defect of Namazu. Precision of phrase searching is\n"
+#~ "not 100%, so it cause wrong results occasionally."
+#~ msgstr ""
+#~ "Dette er ikke Namazu sterke side. Presisjonen på frase søk er\n"
+#~ "ikke 100%, så den kan til tider gi feil resultat."
+
+#~ msgid ""
+#~ "Letters, numbers or parts of symbols (duplicated in\n"
+#~ "ASCII) which are defined in JIS X 0208 (Japanese\n"
+#~ "Industrial Standards) are handled as ASCII characters."
+#~ msgstr ""
+#~ "Bokstaver, tall eller deler av symboler (duplisert i\n"
+#~ "ASCII) som er definert i JIS X 0208 (Japanese\n"
+#~ "Industrial Standards) blir betraktet som ASCII tegn."
+
+#~ msgid "Lists to Search"
+#~ msgstr "Lister som skal søkes"
+
+#, fuzzy
+#~ msgid "Mailing List Search"
+#~ msgstr "Lister som skal søkes"
+
+#~ msgid "NOT query"
+#~ msgstr "IKKE søk"
+
+#~ msgid ""
+#~ "Namazu can handle a term which contains symbols like\n"
+#~ "<code>TCP/IP</code>.  Since this method of handling isn't complete,\n"
+#~ "you can also describe the term as <code>TCP and IP</code> instead of\n"
+#~ "<code>TCP/IP</code>, but it may cause noisy results."
+#~ msgstr ""
+#~ "Namazu kan håndtere ord/uttrykk som inneholder symboler slik som\n"
+#~ "<code>TCP/IP</code>.  Siden denne håndteringen ikke er ferdigutviklet,\n"
+#~ "kan du også skrive dette som <code>TCP og IP</code> isteden for\n"
+#~ "<code>TCP/IP</code>, men det kan gi feil / rotete resultat."
+
+#~ msgid "Notes"
+#~ msgstr "Notat"
+
+#~ msgid "OR query"
+#~ msgstr "ELLER søk"
+
+#~ msgid "Phrase searching"
+#~ msgstr "Frase søk"
+
+#~ msgid "Prefix matching"
+#~ msgstr "Prefiks søk"
+
+#~ msgid "Query"
+#~ msgstr "Søk"
+
+#~ msgid "Search!"
+#~ msgstr "Søk!"
+
+#~ msgid "Single term query"
+#~ msgstr "Enkelt ord søk"
+
+#~ msgid "Sort"
+#~ msgstr "Sortering"
+
+#~ msgid "Substring matching"
+#~ msgstr "Delstreng søk"
+
+#~ msgid ""
+#~ "Substring matching and field-specified searching takes\n"
+#~ "more time than other methods."
+#~ msgstr ""
+#~ "Delstreng og felt spesifike søk tar\n"
+#~ "lenger tid enn andre søk."
+
+#~ msgid "Suffix matching"
+#~ msgstr "Suffiks søk"
+
+#~ msgid "There are three types of searching by substring matching."
+#~ msgstr "Det er tre typer delstreng søk."
+
+#~ msgid ""
+#~ "This query specifies only one term for retrieving all of the\n"
+#~ "documents which contain that term, for example:"
+#~ msgstr ""
+#~ "Dette søket er for å finne alle dokumenter som inneholder det ene ordet/"
+#~ "uttrykket\n"
+#~ "for eksempel:"
+
+#~ msgid ""
+#~ "This query specifies two or more terms for retrieving all\n"
+#~ "documents which contain any one term. Insert the\n"
+#~ "<code class=\"operator\">or</code> operator between the terms,\n"
+#~ "e.g."
+#~ msgstr ""
+#~ "Dette søket inneholder to eller flere ord/uttrykk, og vil finne alle "
+#~ "dokumenter\n"
+#~ "som inneholder minst ett av ordene. Sett inn\n"
+#~ "<code class=\"operator\">or</code> mellom ordene,\n"
+#~ "f.eks."
+
+#~ msgid ""
+#~ "This query specifies two or more terms for retrieving all of the\n"
+#~ "documents which contain a first term but do not contain the\n"
+#~ "following terms. Insert the <code class=\"operator\">not</code>\n"
+#~ "operator between the terms, for example:"
+#~ msgstr ""
+#~ "Dette søket finner alle dokumenter som inneholder ett ord,\n"
+#~ "men ikke de andre.\n"
+#~ "Sett inn <code class=\"operator\">not</code>\n"
+#~ "mellom ordene, f.eks."
+
+#~ msgid ""
+#~ "This query specifies two or more terms for retrieving all of the\n"
+#~ "documents which contain both terms. Insert the\n"
+#~ "<code class=\"operator\">and</code> operator between the terms, e.g."
+#~ msgstr ""
+#~ "Dette søket inneholder to eller flere ord/uttrykk, og vil finne alle "
+#~ "dokumenter \n"
+#~ "som inneholder begge disse. Sett inn\n"
+#~ "<code class=\"operator\">and</code> mellom søkeordene, f.eks."
+
+#~ msgid "This search system is powered by:"
+#~ msgstr "Dette søkesystemet er styrt av:"
+
+#~ msgid "Tips on searching"
+#~ msgstr "Søke Tips"
+
+#~ msgid ""
+#~ "You can group queries by surrounding them by\n"
+#~ "parentheses. The parentheses should be separated by one or\n"
+#~ "more spaces. e.g."
+#~ msgstr ""
+#~ "Du kan gruppere søkeord ved å sette de inne i\n"
+#~ "paranteser. Parantesene skal være separert av ett eller\n"
+#~ "flere mellomrom. f.eks."
+
+#~ msgid ""
+#~ "You can limit your search to specific fields such as\n"
+#~ "<code>Subject:</code>, <code>From:</code>,\n"
+#~ "<code>Message-Id:</code>. This feature is especially convenient for\n"
+#~ "Mail/News documents, for example:"
+#~ msgstr ""
+#~ "Du kan begrense ditt søk til enkelte felter slik som\n"
+#~ "<code>Subject:</code>, <code>From:</code>,\n"
+#~ "<code>Message-Id:</code>. Denne funksjonaliteten er utmerket for\n"
+#~ "Mail/News dokumenter, f.eks.:"
+
+#~ msgid ""
+#~ "You can omit the <code class=\"operator\">and</code> operator.  Terms "
+#~ "which are\n"
+#~ "separated by one or more spaces are assumed to be an AND query."
+#~ msgstr ""
+#~ "Du kan også utelate <code class=\"operator\">and</code> koden.  Søkeord "
+#~ "som er\n"
+#~ "adskilt med mellomrom er antatt å være og søk."
+
+#~ msgid ""
+#~ "You can search for a phrase that consists of two or more terms\n"
+#~ "by surrounding them with double quotation marks or braces such as\n"
+#~ "<code class=\"operator\">\"...\"</code> and <code class=\"operator\">{...}"
+#~ "</code>.\n"
+#~ "In Namazu, the precision of phrase searching is not 100%,\n"
+#~ "so wrong results may occasionally occur.  Example:"
+#~ msgstr ""
+#~ "Du kan søke etter en frase som inneholder to eller flere ord\n"
+#~ "ved å sette de inne i anførselstegn eller klammeparanteser som\n"
+#~ "<code class=\"operator\">\"...\"</code> og <code class=\"operator\">{...}"
+#~ "</code>.\n"
+#~ "I Namazu, frase søket virker ikke helt 100%,\n"
+#~ "Feil resultat kan derfor dukke opp.  Eksempel:"
+
+#~ msgid ""
+#~ "You can specify <code class=\"example\">*tex*</code> to\n"
+#~ "search for terms which contain <code>tex</code> (many)."
+#~ msgstr ""
+#~ "Du kan skrive <code class=\"example\">*tex*</code> for\n"
+#~ "å søke etter ord som inneholder <code>tex</code> (mange)."
+
+#~ msgid ""
+#~ "You can specify <code class=\"example\">*tex</code> to\n"
+#~ "search for terms which terminated with <code>tex</code> (e.g.,\n"
+#~ "<code>bibtex</code>,\n"
+#~ "<code>jlatex</code>, <code>latex</code>,\n"
+#~ "<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
+#~ msgstr ""
+#~ "Du kan skrive <code class=\"example\">*tex</code> for\n"
+#~ "å søke etter ord som slutter med <code>tex</code> (f.eks.,\n"
+#~ "<code>bibtex</code>,\n"
+#~ "<code>jlatex</code>, <code>latex</code>,\n"
+#~ "<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
+
+#~ msgid ""
+#~ "You can specify <code class=\"example\">tex*</code> to\n"
+#~ "search for terms which begin with\n"
+#~ "<code>tex</code> (e.g., <code>tex</code>,\n"
+#~ "<code>texi2html</code>,\n"
+#~ "<code>texindex</code>, <code>text</code>)."
+#~ msgstr ""
+#~ "Du kan skrive <code class=\"example\">tex*</code> for\n"
+#~ "å søke etter ord som begynner med\n"
+#~ "<code>tex</code> (f.eks., <code>tex</code>,\n"
+#~ "<code>texi2html</code>,\n"
+#~ "<code>texindex</code>, <code>text</code>)."
+
+#~ msgid ""
+#~ "You tried phrase searching but it hit documents which\n"
+#~ "didn't contain your phrase."
+#~ msgstr ""
+#~ "Du prøvde frase søk, men fant ingen dokumenter som\n"
+#~ "inneholdt din frase."
+
+#~ msgid "[How to search]"
+#~ msgstr "[Hvordan søke]"
+
+#~ msgid "by URI in ascending order"
+#~ msgstr "etter URI, (a-z)"
+
+#~ msgid "by URI in descending order"
+#~ msgstr "etter URI (z-a)"
+
+#~ msgid "by author in ascending order"
+#~ msgstr "etter forfatter, (a-z)"
+
+#~ msgid "by author in descending order"
+#~ msgstr "etter forfatter, (z-a)"
+
+#~ msgid "by date in early order"
+#~ msgstr "etter dato, siste først"
+
+#~ msgid "by date in late order"
+#~ msgstr "etter dato, eldste først"
+
+#~ msgid "by score"
+#~ msgstr "etter treff"
+
+#~ msgid "by size in ascending order"
+#~ msgstr "etter størrelse, størst først"
+
+#~ msgid "by size in descending order"
+#~ msgstr "etter størrelse, minst først"
+
+#~ msgid "by title in ascending order"
+#~ msgstr "etter tittel, (a-z)"
+
+#~ msgid "by title in descending order"
+#~ msgstr "etter tittel, (z-a)"
+
+#~ msgid "short"
+#~ msgstr "kort"

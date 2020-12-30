@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gnucash-htdocs r18948\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2020-12-04 00:47+0100\n"
+"POT-Creation-Date: 2020-12-30 04:52+0100\n"
 "PO-Revision-Date: 2010-05-02 07:26+1000\n"
 "Last-Translator: Tao Wang <dancefire@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
@@ -2096,431 +2096,6 @@ msgid ""
 "page."
 msgstr "这是一个公告的存档，曾经出现在 GnuCash 的首页上。"
 
-#: search/templates/NMZ.body.php_tmpl:4 search/templates/NMZ.head.php_tmpl:28
-msgid "Query"
-msgstr "查询"
-
-#: search/templates/NMZ.body.php_tmpl:6
-msgid "Single term query"
-msgstr "一个词的查询"
-
-#: search/templates/NMZ.body.php_tmpl:8
-msgid ""
-"This query specifies only one term for retrieving all of the\n"
-"documents which contain that term, for example:"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:16
-msgid "AND query"
-msgstr "AND 查询"
-
-#: search/templates/NMZ.body.php_tmpl:19
-msgid ""
-"This query specifies two or more terms for retrieving all of the\n"
-"documents which contain both terms. Insert the\n"
-"<code class=\"operator\">and</code> operator between the terms, e.g."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:29
-msgid ""
-"You can omit the <code class=\"operator\">and</code> operator.  Terms which "
-"are\n"
-"separated by one or more spaces are assumed to be an AND query."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:33
-msgid "OR query"
-msgstr "OR 查询"
-
-#: search/templates/NMZ.body.php_tmpl:35
-msgid ""
-"This query specifies two or more terms for retrieving all\n"
-"documents which contain any one term. Insert the\n"
-"<code class=\"operator\">or</code> operator between the terms,\n"
-"e.g."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:45
-msgid "NOT query"
-msgstr "NOT 查询"
-
-#: search/templates/NMZ.body.php_tmpl:47
-msgid ""
-"This query specifies two or more terms for retrieving all of the\n"
-"documents which contain a first term but do not contain the\n"
-"following terms. Insert the <code class=\"operator\">not</code>\n"
-"operator between the terms, for example:"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:58
-msgid "Grouping"
-msgstr "分组"
-
-#: search/templates/NMZ.body.php_tmpl:60
-msgid ""
-"You can group queries by surrounding them by\n"
-"parentheses. The parentheses should be separated by one or\n"
-"more spaces. e.g."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:69
-msgid "Phrase searching"
-msgstr "短语搜索"
-
-#: search/templates/NMZ.body.php_tmpl:71
-msgid ""
-"You can search for a phrase that consists of two or more terms\n"
-"by surrounding them with double quotation marks or braces such as\n"
-"<code class=\"operator\">\"...\"</code> and <code class=\"operator\">{...}</"
-"code>.\n"
-"In Namazu, the precision of phrase searching is not 100%,\n"
-"so wrong results may occasionally occur.  Example:"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:88
-msgid "Substring matching"
-msgstr "子字符串匹配"
-
-#: search/templates/NMZ.body.php_tmpl:90
-msgid "There are three types of searching by substring matching."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:94
-msgid "Prefix matching"
-msgstr "前缀匹配"
-
-#: search/templates/NMZ.body.php_tmpl:95
-msgid "(terms which begin with <code>inter</code>)"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:96
-msgid "Inside matching"
-msgstr "中间匹配"
-
-#: search/templates/NMZ.body.php_tmpl:97
-msgid "(terms which contain <code>text</code>)"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:98
-msgid "Suffix matching"
-msgstr "后缀匹配"
-
-#: search/templates/NMZ.body.php_tmpl:100
-msgid "(terms which terminated with <code>net</code>)"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:104
-msgid "Regular expressions"
-msgstr "正则表达式"
-
-#: search/templates/NMZ.body.php_tmpl:107
-msgid ""
-"You can use regular expressions for pattern matching. The\n"
-"regular expressions must be surrounded by slashes like <code\n"
-"class=\"operator\">/.../</code>. Namazu uses <a\n"
-"href=\"http://www.ruby-lang.org/\">Ruby</a>'s regular\n"
-"regular expressions engine. It generally offers a <a\n"
-"href=\"http://www.perl.com/\">Perl</a> compatible flavor.\n"
-"e.g.,"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:121
-msgid "Field-specified searching"
-msgstr "指定字段搜索"
-
-#: search/templates/NMZ.body.php_tmpl:123
-msgid ""
-"You can limit your search to specific fields such as\n"
-"<code>Subject:</code>, <code>From:</code>,\n"
-"<code>Message-Id:</code>. This feature is especially convenient for\n"
-"Mail/News documents, for example:"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:131
-msgid ""
-"(Retrieves all documents which contain <code>Linux</code>\n"
-"in a <code>Subject:</code> field)"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:136
-msgid ""
-"(Retrieves all documents which contain <code>GNU Emacs</code>\n"
-"in a <code>Subject:</code> field)"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:141
-msgid ""
-"(Retrieves all documents which contain <code>foo@bar.jp</code>\n"
-"in a <code>From:</code> field)"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:147
-msgid ""
-"(Retrieves a certain document which contains specified\n"
-"<code>Message-Id:</code>)"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:152
-msgid "Notes"
-msgstr "说明"
-
-#: search/templates/NMZ.body.php_tmpl:155
-msgid ""
-"In any queries, Namazu ignores case distinctions of\n"
-"alphabet characters; i.e. Namazu does\n"
-"case-insensitive pattern matching."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:160
-msgid ""
-"Japanese phrases are automatically segmented into\n"
-"morphemes and are handled as <a\n"
-"href=\"#query-phrase\">phrase searching</a>. This process occasionally\n"
-"causes invalid segmentation."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:166
-msgid ""
-"Letters, numbers or parts of symbols (duplicated in\n"
-"ASCII) which are defined in JIS X 0208 (Japanese\n"
-"Industrial Standards) are handled as ASCII characters."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:171
-msgid ""
-"Namazu can handle a term which contains symbols like\n"
-"<code>TCP/IP</code>.  Since this method of handling isn't complete,\n"
-"you can also describe the term as <code>TCP and IP</code> instead of\n"
-"<code>TCP/IP</code>, but it may cause noisy results."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:178
-msgid ""
-"Substring matching and field-specified searching takes\n"
-"more time than other methods."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:182 search/templates/NMZ.tips.php_tmpl:60
-msgid ""
-"If you want to use <code class=\"operator\">and</code>,\n"
-"<code class=\"operator\">or</code> or <code\n"
-"class=\"operator\">not</code> as ordinary keywords<br>\n"
-"You can surround them respectively with double quotes like <code\n"
-"class=\"operator\">\"...\"</code> or braces like <code\n"
-"class=\"operator\">{...}</code>."
-msgstr ""
-
-#: search/templates/NMZ.foot.php_tmpl:9
-msgid "This search system is powered by:"
-msgstr "这个搜索系统是使用："
-
-#: search/templates/NMZ.foot.php_tmpl:13
-msgid "Server &amp; email outage reports to: "
-msgstr "服务器或电子邮件故障请报告："
-
-#: search/templates/NMZ.foot.php_tmpl:15
-msgid ""
-"Translation problems? Contact: <a href=\"mailto:gnucash-devel@gnucash.org"
-"\"><b>gnucash-devel@gnucash.org</b></a>"
-msgstr ""
-"翻译问题？请联系：<a href=\"mailto:gnucash-devel@gnucash.org\"><b>gnucash-"
-"devel@gnucash.org</b></a>"
-
-#: search/templates/NMZ.head.php_tmpl:4
-msgid "Mailing List Search"
-msgstr "邮件列表搜索"
-
-#: search/templates/NMZ.head.php_tmpl:30
-msgid "Search!"
-msgstr "搜索！"
-
-#: search/templates/NMZ.head.php_tmpl:32
-msgid "[How to search]"
-msgstr "【如何搜索】"
-
-#: search/templates/NMZ.head.php_tmpl:35
-msgid "Display"
-msgstr "显示"
-
-#: search/templates/NMZ.head.php_tmpl:43
-msgid "Description"
-msgstr "描述"
-
-#: search/templates/NMZ.head.php_tmpl:45
-msgid "normal"
-msgstr "正常"
-
-#: search/templates/NMZ.head.php_tmpl:46
-msgid "short"
-msgstr "简短"
-
-#: search/templates/NMZ.head.php_tmpl:48
-msgid "Sort"
-msgstr "排序"
-
-#: search/templates/NMZ.head.php_tmpl:50
-msgid "by score"
-msgstr "按得分"
-
-#: search/templates/NMZ.head.php_tmpl:51
-msgid "by date in late order"
-msgstr "按日期(最新的)"
-
-#: search/templates/NMZ.head.php_tmpl:52
-msgid "by date in early order"
-msgstr "按日期(最老的)"
-
-#: search/templates/NMZ.head.php_tmpl:53
-msgid "by title in ascending order"
-msgstr "按标题(升序)"
-
-#: search/templates/NMZ.head.php_tmpl:54
-msgid "by title in descending order"
-msgstr "按标题(降序)"
-
-#: search/templates/NMZ.head.php_tmpl:55
-msgid "by author in ascending order"
-msgstr "按作者(升序)"
-
-#: search/templates/NMZ.head.php_tmpl:56
-msgid "by author in descending order"
-msgstr "按作者(降序)"
-
-#: search/templates/NMZ.head.php_tmpl:57
-msgid "by size in ascending order"
-msgstr "按大小(升序)"
-
-#: search/templates/NMZ.head.php_tmpl:58
-msgid "by size in descending order"
-msgstr "按大小(降序)"
-
-#: search/templates/NMZ.head.php_tmpl:59
-msgid "by URI in ascending order"
-msgstr "按 URL (升序)"
-
-#: search/templates/NMZ.head.php_tmpl:60
-msgid "by URI in descending order"
-msgstr "按 URL (降序)"
-
-#: search/templates/NMZ.head.php_tmpl:65
-msgid "Lists to Search"
-msgstr "要搜索的列表"
-
-#: search/templates/NMZ.result.normal.php_tmpl:4
-#: search/templates/NMZ.result.short.php_tmpl:4
-msgid "score"
-msgstr "得分"
-
-#: search/templates/NMZ.result.normal.php_tmpl:5
-msgid "Author"
-msgstr "作者"
-
-#: search/templates/NMZ.result.normal.php_tmpl:6
-msgid "Date"
-msgstr "日期"
-
-#: search/templates/NMZ.result.normal.php_tmpl:9
-#: search/templates/NMZ.result.short.php_tmpl:6
-msgid "(${size} bytes)"
-msgstr "(${size} 字节)"
-
-#: search/templates/NMZ.tips.php_tmpl:4
-msgid "Tips on searching"
-msgstr "搜索技巧"
-
-#: search/templates/NMZ.tips.php_tmpl:7
-msgid "If you have trouble with searching, you can check the following tips."
-msgstr "如果您碰到搜索上的问题，您可以检查下列技巧。"
-
-#: search/templates/NMZ.tips.php_tmpl:11
-msgid ""
-"Check a spelling of your keyword<br>\n"
-"Namazu can't find anything with wrong spelling."
-msgstr ""
-"检查您的关键字的拼写<br>\n"
-"Namazu 无法找到任何错误的拼写。"
-
-#: search/templates/NMZ.tips.php_tmpl:15
-msgid "Add keywords"
-msgstr "添加关键字"
-
-#: search/templates/NMZ.tips.php_tmpl:17
-msgid ""
-"If you gained no results or too few results, you can add one\n"
-"or more related keywords with <code\n"
-"class=\"operator\">or</code> operator.  You should get more results.\n"
-"e.g.,"
-msgstr ""
-"如果您没有得到结果或者太少的结果，您可以使用<code class=\"operator\">or</"
-"code>操作符添加一个或多个相关关键字。您应该会得到更多的结果。如，"
-
-#: search/templates/NMZ.tips.php_tmpl:23
-msgid ""
-"If you gained too many results, you can add one or more\n"
-"related keywords with <code class=\"operator\">and</code>\n"
-"operator. It makes your search more limited. e.g.,"
-msgstr ""
-"如果您得到了太多的结果，您可以使用<code class=\"operator\">and</code>添加一个"
-"或多个关键字。这样的搜索就更局限。如，"
-
-#: search/templates/NMZ.tips.php_tmpl:29
-msgid "Try substring matching"
-msgstr "尝试子字符串匹配"
-
-#: search/templates/NMZ.tips.php_tmpl:31
-msgid ""
-"If you gained no results or too few results, you can try\n"
-"substring matching."
-msgstr "如果您没得到结果或者太少的结果，您可以尝试子字符串匹配。"
-
-#: search/templates/NMZ.tips.php_tmpl:34
-msgid ""
-"You can specify <code class=\"example\">tex*</code> to\n"
-"search for terms which begin with\n"
-"<code>tex</code> (e.g., <code>tex</code>,\n"
-"<code>texi2html</code>,\n"
-"<code>texindex</code>, <code>text</code>)."
-msgstr ""
-"您可以指定 <code class=\"example\">tex*</code> to\n"
-"以查找开始于\n"
-"<code>tex</code> (e.g., <code>tex</code>,\n"
-"<code>texi2html</code>,\n"
-"<code>texindex</code>, <code>text</code>)."
-
-#: search/templates/NMZ.tips.php_tmpl:41
-msgid ""
-"You can specify <code class=\"example\">*tex</code> to\n"
-"search for terms which terminated with <code>tex</code> (e.g.,\n"
-"<code>bibtex</code>,\n"
-"<code>jlatex</code>, <code>latex</code>,\n"
-"<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
-msgstr ""
-"您可以指定 <code class=\"example\">*tex</code> to\n"
-"搜索结束于 <code>tex</code> (e.g.,\n"
-"<code>bibtex</code>,\n"
-"<code>jlatex</code>, <code>latex</code>,\n"
-"<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
-
-#: search/templates/NMZ.tips.php_tmpl:48
-msgid ""
-"You can specify <code class=\"example\">*tex*</code> to\n"
-"search for terms which contain <code>tex</code> (many)."
-msgstr ""
-"您可以指定 <code class=\"example\">*tex*</code> to\n"
-"搜索包含 <code>tex</code> (many)."
-
-#: search/templates/NMZ.tips.php_tmpl:53
-msgid ""
-"You tried phrase searching but it hit documents which\n"
-"didn't contain your phrase."
-msgstr "您尝试了短语搜索，但是找到的文档不包含您的短语。"
-
-#: search/templates/NMZ.tips.php_tmpl:56
-msgid ""
-"It's a defect of Namazu. Precision of phrase searching is\n"
-"not 100%, so it cause wrong results occasionally."
-msgstr ""
-
 #: sizing.phtml:5
 msgid "This is an ancient page about Gnucash's code size."
 msgstr ""
@@ -2857,6 +2432,9 @@ msgid ""
 "a separate window, please <a href=\"%s\" target=\"_blank\">click here</a>."
 msgstr ""
 
+#~ msgid "(${size} bytes)"
+#~ msgstr "(${size} 字节)"
+
 #~ msgid ""
 #~ "A new help subsystem that focuses on how to do tasks is now available, in "
 #~ "addition to a Tutorial and Concepts guide that gives the user background "
@@ -2867,8 +2445,24 @@ msgstr ""
 #~ "另一个方式，可以给用户关于会计原理的背景知识，以及它们是如何表现在 "
 #~ "GnuCash 中的。"
 
+#~ msgid "AND query"
+#~ msgstr "AND 查询"
+
 #~ msgid "About / News"
 #~ msgstr "关于 / 新闻"
+
+#~ msgid "Add keywords"
+#~ msgstr "添加关键字"
+
+#~ msgid "Author"
+#~ msgstr "作者"
+
+#~ msgid ""
+#~ "Check a spelling of your keyword<br>\n"
+#~ "Namazu can't find anything with wrong spelling."
+#~ msgstr ""
+#~ "检查您的关键字的拼写<br>\n"
+#~ "Namazu 无法找到任何错误的拼写。"
 
 #~ msgid "Continent"
 #~ msgstr "大陆"
@@ -2876,8 +2470,17 @@ msgstr ""
 #~ msgid "Customers, Vendors, Jobs, <br>Invoices, A/P, A/R"
 #~ msgstr "客户、供应商、任务、<br />发票、应付账款、应收账款"
 
+#~ msgid "Date"
+#~ msgstr "日期"
+
+#~ msgid "Description"
+#~ msgstr "描述"
+
 #~ msgid "Deutsch"
 #~ msgstr "德语"
+
+#~ msgid "Display"
+#~ msgstr "显示"
 
 #~ msgid "Documentation Development"
 #~ msgstr "文档开发"
@@ -2902,6 +2505,9 @@ msgstr ""
 #~ "每一个你需要考虑的 GnuCash 的文档应该都在这里。如果你看到缺了什么，请发邮"
 #~ "件给 <a href='mailto:gnucash-devel@gnucash.org'>gnucash-devel</a> 我们会添"
 #~ "加它的。"
+
+#~ msgid "Field-specified searching"
+#~ msgstr "指定字段搜索"
 
 #~ msgid "For both reviewers and documentation writers"
 #~ msgstr "包括评论人员和文档作者"
@@ -2935,12 +2541,44 @@ msgstr ""
 #~ msgid "GnuCash v%s (old stable release)"
 #~ msgstr "查看所有 GnuCash %s 的下载 (稳定版)"
 
+#~ msgid "Grouping"
+#~ msgstr "分组"
+
+#~ msgid ""
+#~ "If you gained no results or too few results, you can add one\n"
+#~ "or more related keywords with <code\n"
+#~ "class=\"operator\">or</code> operator.  You should get more results.\n"
+#~ "e.g.,"
+#~ msgstr ""
+#~ "如果您没有得到结果或者太少的结果，您可以使用<code class=\"operator\">or</"
+#~ "code>操作符添加一个或多个相关关键字。您应该会得到更多的结果。如，"
+
+#~ msgid ""
+#~ "If you gained no results or too few results, you can try\n"
+#~ "substring matching."
+#~ msgstr "如果您没得到结果或者太少的结果，您可以尝试子字符串匹配。"
+
+#~ msgid ""
+#~ "If you gained too many results, you can add one or more\n"
+#~ "related keywords with <code class=\"operator\">and</code>\n"
+#~ "operator. It makes your search more limited. e.g.,"
+#~ msgstr ""
+#~ "如果您得到了太多的结果，您可以使用<code class=\"operator\">and</code>添加"
+#~ "一个或多个关键字。这样的搜索就更局限。如，"
+
+#~ msgid ""
+#~ "If you have trouble with searching, you can check the following tips."
+#~ msgstr "如果您碰到搜索上的问题，您可以检查下列技巧。"
+
 #~ msgid "Improved Import Transaction Matching"
 #~ msgstr "改进的导入交易匹配"
 
 #, fuzzy
 #~ msgid "Info and development"
 #~ msgstr "开发人员信息"
+
+#~ msgid "Inside matching"
+#~ msgstr "中间匹配"
 
 #~ msgid "Interesting Links"
 #~ msgstr "有意思的链接"
@@ -2952,6 +2590,12 @@ msgstr ""
 #~ "Intuit<sup>&reg;</sup>公司的 Quicken<sup>&reg;</sup>软件所支持的 QIF 文件"
 #~ "可以被导入，并且会自动的合并以消除重复的交易。"
 
+#~ msgid "Lists to Search"
+#~ msgstr "要搜索的列表"
+
+#~ msgid "Mailing List Search"
+#~ msgstr "邮件列表搜索"
+
 #~ msgid ""
 #~ "Multiple accounts can be displayed in one register window at the same "
 #~ "time. This can ease the trouble of tracking down typing/entry errors. It "
@@ -2962,20 +2606,59 @@ msgstr ""
 #~ "它还提供了一个查看许多股票的组合投资的快捷的方式，即可以在组合投资中显示所"
 #~ "有的交易。"
 
+#~ msgid "NOT query"
+#~ msgstr "NOT 查询"
+
 #~ msgid "Neil Williams GnuCash documentation"
 #~ msgstr "Neil Williams GnuCash 文档"
 
 #~ msgid "News Feed"
 #~ msgstr "新闻供稿"
 
+#~ msgid "Notes"
+#~ msgstr "说明"
+
+#~ msgid "OR query"
+#~ msgstr "OR 查询"
+
+#~ msgid "Phrase searching"
+#~ msgstr "短语搜索"
+
+#~ msgid "Prefix matching"
+#~ msgstr "前缀匹配"
+
 #~ msgid "QIF Import"
 #~ msgstr "QIF Import"
+
+#~ msgid "Query"
+#~ msgstr "查询"
+
+#~ msgid "Regular expressions"
+#~ msgstr "正则表达式"
 
 #~ msgid "Search"
 #~ msgstr "搜索"
 
+#~ msgid "Search!"
+#~ msgstr "搜索！"
+
+#~ msgid "Server &amp; email outage reports to: "
+#~ msgstr "服务器或电子邮件故障请报告："
+
+#~ msgid "Single term query"
+#~ msgstr "一个词的查询"
+
+#~ msgid "Sort"
+#~ msgstr "排序"
+
+#~ msgid "Substring matching"
+#~ msgstr "子字符串匹配"
+
 #~ msgid "Subversion Access"
 #~ msgstr "Subversion 访问"
+
+#~ msgid "Suffix matching"
+#~ msgstr "后缀匹配"
 
 #~ msgid ""
 #~ "The checkbook-style register provides a custom, convenient and familiar "
@@ -3007,6 +2690,22 @@ msgstr ""
 #~ "丁。我们将会帮您提交到 svn 系统中，知道你被分配了一个帐户。如果您愿意，您"
 #~ "也可以在 Bugzilla 中的 Bug 报告中提交补丁。"
 
+#~ msgid "This search system is powered by:"
+#~ msgstr "这个搜索系统是使用："
+
+#~ msgid "Tips on searching"
+#~ msgstr "搜索技巧"
+
+#~ msgid ""
+#~ "Translation problems? Contact: <a href=\"mailto:gnucash-devel@gnucash.org"
+#~ "\"><b>gnucash-devel@gnucash.org</b></a>"
+#~ msgstr ""
+#~ "翻译问题？请联系：<a href=\"mailto:gnucash-devel@gnucash.org\"><b>gnucash-"
+#~ "devel@gnucash.org</b></a>"
+
+#~ msgid "Try substring matching"
+#~ msgstr "尝试子字符串匹配"
+
 #~ msgid "USA Mirror"
 #~ msgstr "美国镜像站点"
 
@@ -3023,5 +2722,88 @@ msgstr ""
 #~ "您现在可以创建一个反复发生的交易，包括交易到期时的自动提醒，允许推迟计划的"
 #~ "交易而不必取消它，以及指定交易只能发生多少次的限制。"
 
+#~ msgid ""
+#~ "You can specify <code class=\"example\">*tex*</code> to\n"
+#~ "search for terms which contain <code>tex</code> (many)."
+#~ msgstr ""
+#~ "您可以指定 <code class=\"example\">*tex*</code> to\n"
+#~ "搜索包含 <code>tex</code> (many)."
+
+#~ msgid ""
+#~ "You can specify <code class=\"example\">*tex</code> to\n"
+#~ "search for terms which terminated with <code>tex</code> (e.g.,\n"
+#~ "<code>bibtex</code>,\n"
+#~ "<code>jlatex</code>, <code>latex</code>,\n"
+#~ "<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
+#~ msgstr ""
+#~ "您可以指定 <code class=\"example\">*tex</code> to\n"
+#~ "搜索结束于 <code>tex</code> (e.g.,\n"
+#~ "<code>bibtex</code>,\n"
+#~ "<code>jlatex</code>, <code>latex</code>,\n"
+#~ "<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
+
+#~ msgid ""
+#~ "You can specify <code class=\"example\">tex*</code> to\n"
+#~ "search for terms which begin with\n"
+#~ "<code>tex</code> (e.g., <code>tex</code>,\n"
+#~ "<code>texi2html</code>,\n"
+#~ "<code>texindex</code>, <code>text</code>)."
+#~ msgstr ""
+#~ "您可以指定 <code class=\"example\">tex*</code> to\n"
+#~ "以查找开始于\n"
+#~ "<code>tex</code> (e.g., <code>tex</code>,\n"
+#~ "<code>texi2html</code>,\n"
+#~ "<code>texindex</code>, <code>text</code>)."
+
+#~ msgid ""
+#~ "You tried phrase searching but it hit documents which\n"
+#~ "didn't contain your phrase."
+#~ msgstr "您尝试了短语搜索，但是找到的文档不包含您的短语。"
+
+#~ msgid "[How to search]"
+#~ msgstr "【如何搜索】"
+
+#~ msgid "by URI in ascending order"
+#~ msgstr "按 URL (升序)"
+
+#~ msgid "by URI in descending order"
+#~ msgstr "按 URL (降序)"
+
+#~ msgid "by author in ascending order"
+#~ msgstr "按作者(升序)"
+
+#~ msgid "by author in descending order"
+#~ msgstr "按作者(降序)"
+
+#~ msgid "by date in early order"
+#~ msgstr "按日期(最老的)"
+
+#~ msgid "by date in late order"
+#~ msgstr "按日期(最新的)"
+
+#~ msgid "by score"
+#~ msgstr "按得分"
+
+#~ msgid "by size in ascending order"
+#~ msgstr "按大小(升序)"
+
+#~ msgid "by size in descending order"
+#~ msgstr "按大小(降序)"
+
+#~ msgid "by title in ascending order"
+#~ msgstr "按标题(升序)"
+
+#~ msgid "by title in descending order"
+#~ msgstr "按标题(降序)"
+
 #~ msgid "mirror"
 #~ msgstr "镜像"
+
+#~ msgid "normal"
+#~ msgstr "正常"
+
+#~ msgid "score"
+#~ msgstr "得分"
+
+#~ msgid "short"
+#~ msgstr "简短"

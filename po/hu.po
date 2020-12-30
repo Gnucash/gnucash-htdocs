@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gnucash-htdocs 0.0.1\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2020-12-04 00:47+0100\n"
+"POT-Creation-Date: 2020-12-30 04:52+0100\n"
 "PO-Revision-Date: 2011-08-11 23:33+0100\n"
 "Last-Translator: Takó Kornél <takokornel@gmail.com>\n"
 "Language-Team: en_GB <en_GB@li.org>\n"
@@ -2093,411 +2093,6 @@ msgstr ""
 "This is an archive of announcements that once appeared on the GnuCash home "
 "page."
 
-#: search/templates/NMZ.body.php_tmpl:4 search/templates/NMZ.head.php_tmpl:28
-msgid "Query"
-msgstr "Lekérdezés"
-
-#: search/templates/NMZ.body.php_tmpl:6
-msgid "Single term query"
-msgstr "Single term query"
-
-#: search/templates/NMZ.body.php_tmpl:8
-msgid ""
-"This query specifies only one term for retrieving all of the\n"
-"documents which contain that term, for example:"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:16
-msgid "AND query"
-msgstr "AND lekérdezés"
-
-#: search/templates/NMZ.body.php_tmpl:19
-msgid ""
-"This query specifies two or more terms for retrieving all of the\n"
-"documents which contain both terms. Insert the\n"
-"<code class=\"operator\">and</code> operator between the terms, e.g."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:29
-msgid ""
-"You can omit the <code class=\"operator\">and</code> operator.  Terms which "
-"are\n"
-"separated by one or more spaces are assumed to be an AND query."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:33
-msgid "OR query"
-msgstr "OR lekérdezés"
-
-#: search/templates/NMZ.body.php_tmpl:35
-msgid ""
-"This query specifies two or more terms for retrieving all\n"
-"documents which contain any one term. Insert the\n"
-"<code class=\"operator\">or</code> operator between the terms,\n"
-"e.g."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:45
-msgid "NOT query"
-msgstr "NOT lekérdezés"
-
-#: search/templates/NMZ.body.php_tmpl:47
-msgid ""
-"This query specifies two or more terms for retrieving all of the\n"
-"documents which contain a first term but do not contain the\n"
-"following terms. Insert the <code class=\"operator\">not</code>\n"
-"operator between the terms, for example:"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:58
-msgid "Grouping"
-msgstr "Csoportosítás"
-
-#: search/templates/NMZ.body.php_tmpl:60
-msgid ""
-"You can group queries by surrounding them by\n"
-"parentheses. The parentheses should be separated by one or\n"
-"more spaces. e.g."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:69
-msgid "Phrase searching"
-msgstr "Kifejezés keresése"
-
-#: search/templates/NMZ.body.php_tmpl:71
-msgid ""
-"You can search for a phrase that consists of two or more terms\n"
-"by surrounding them with double quotation marks or braces such as\n"
-"<code class=\"operator\">\"...\"</code> and <code class=\"operator\">{...}</"
-"code>.\n"
-"In Namazu, the precision of phrase searching is not 100%,\n"
-"so wrong results may occasionally occur.  Example:"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:88
-msgid "Substring matching"
-msgstr "szövegrész egyeztetés"
-
-#: search/templates/NMZ.body.php_tmpl:90
-msgid "There are three types of searching by substring matching."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:94
-msgid "Prefix matching"
-msgstr "Előtag egyeztetés"
-
-#: search/templates/NMZ.body.php_tmpl:95
-msgid "(terms which begin with <code>inter</code>)"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:96
-msgid "Inside matching"
-msgstr "Belső egyezés"
-
-#: search/templates/NMZ.body.php_tmpl:97
-msgid "(terms which contain <code>text</code>)"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:98
-msgid "Suffix matching"
-msgstr "Suffix egyeztetés"
-
-#: search/templates/NMZ.body.php_tmpl:100
-msgid "(terms which terminated with <code>net</code>)"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:104
-msgid "Regular expressions"
-msgstr "Reguláris kifejezés"
-
-#: search/templates/NMZ.body.php_tmpl:107
-msgid ""
-"You can use regular expressions for pattern matching. The\n"
-"regular expressions must be surrounded by slashes like <code\n"
-"class=\"operator\">/.../</code>. Namazu uses <a\n"
-"href=\"http://www.ruby-lang.org/\">Ruby</a>'s regular\n"
-"regular expressions engine. It generally offers a <a\n"
-"href=\"http://www.perl.com/\">Perl</a> compatible flavor.\n"
-"e.g.,"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:121
-msgid "Field-specified searching"
-msgstr "Mező specifikus keresés"
-
-#: search/templates/NMZ.body.php_tmpl:123
-msgid ""
-"You can limit your search to specific fields such as\n"
-"<code>Subject:</code>, <code>From:</code>,\n"
-"<code>Message-Id:</code>. This feature is especially convenient for\n"
-"Mail/News documents, for example:"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:131
-msgid ""
-"(Retrieves all documents which contain <code>Linux</code>\n"
-"in a <code>Subject:</code> field)"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:136
-msgid ""
-"(Retrieves all documents which contain <code>GNU Emacs</code>\n"
-"in a <code>Subject:</code> field)"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:141
-msgid ""
-"(Retrieves all documents which contain <code>foo@bar.jp</code>\n"
-"in a <code>From:</code> field)"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:147
-msgid ""
-"(Retrieves a certain document which contains specified\n"
-"<code>Message-Id:</code>)"
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:152
-msgid "Notes"
-msgstr "Notes"
-
-#: search/templates/NMZ.body.php_tmpl:155
-msgid ""
-"In any queries, Namazu ignores case distinctions of\n"
-"alphabet characters; i.e. Namazu does\n"
-"case-insensitive pattern matching."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:160
-msgid ""
-"Japanese phrases are automatically segmented into\n"
-"morphemes and are handled as <a\n"
-"href=\"#query-phrase\">phrase searching</a>. This process occasionally\n"
-"causes invalid segmentation."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:166
-msgid ""
-"Letters, numbers or parts of symbols (duplicated in\n"
-"ASCII) which are defined in JIS X 0208 (Japanese\n"
-"Industrial Standards) are handled as ASCII characters."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:171
-msgid ""
-"Namazu can handle a term which contains symbols like\n"
-"<code>TCP/IP</code>.  Since this method of handling isn't complete,\n"
-"you can also describe the term as <code>TCP and IP</code> instead of\n"
-"<code>TCP/IP</code>, but it may cause noisy results."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:178
-msgid ""
-"Substring matching and field-specified searching takes\n"
-"more time than other methods."
-msgstr ""
-
-#: search/templates/NMZ.body.php_tmpl:182 search/templates/NMZ.tips.php_tmpl:60
-msgid ""
-"If you want to use <code class=\"operator\">and</code>,\n"
-"<code class=\"operator\">or</code> or <code\n"
-"class=\"operator\">not</code> as ordinary keywords<br>\n"
-"You can surround them respectively with double quotes like <code\n"
-"class=\"operator\">\"...\"</code> or braces like <code\n"
-"class=\"operator\">{...}</code>."
-msgstr ""
-
-#: search/templates/NMZ.foot.php_tmpl:9
-msgid "This search system is powered by:"
-msgstr "A kereső rendszert támogatja:"
-
-#: search/templates/NMZ.foot.php_tmpl:13
-msgid "Server &amp; email outage reports to: "
-msgstr ""
-
-#: search/templates/NMZ.foot.php_tmpl:15
-msgid ""
-"Translation problems? Contact: <a href=\"mailto:gnucash-devel@gnucash.org"
-"\"><b>gnucash-devel@gnucash.org</b></a>"
-msgstr ""
-
-#: search/templates/NMZ.head.php_tmpl:4
-msgid "Mailing List Search"
-msgstr "Mailing List Search"
-
-#: search/templates/NMZ.head.php_tmpl:30
-msgid "Search!"
-msgstr "Keresés"
-
-#: search/templates/NMZ.head.php_tmpl:32
-msgid "[How to search]"
-msgstr "[Hogyan keress]"
-
-#: search/templates/NMZ.head.php_tmpl:35
-msgid "Display"
-msgstr "Kijelzés"
-
-#: search/templates/NMZ.head.php_tmpl:43
-msgid "Description"
-msgstr "Description"
-
-#: search/templates/NMZ.head.php_tmpl:45
-msgid "normal"
-msgstr "normál"
-
-#: search/templates/NMZ.head.php_tmpl:46
-msgid "short"
-msgstr "rövid"
-
-#: search/templates/NMZ.head.php_tmpl:48
-msgid "Sort"
-msgstr "Rendezés"
-
-#: search/templates/NMZ.head.php_tmpl:50
-msgid "by score"
-msgstr "pont szerint"
-
-#: search/templates/NMZ.head.php_tmpl:51
-msgid "by date in late order"
-msgstr "Dátum szerint csökkenő"
-
-#: search/templates/NMZ.head.php_tmpl:52
-msgid "by date in early order"
-msgstr "Dátum szerint növekvő"
-
-#: search/templates/NMZ.head.php_tmpl:53
-msgid "by title in ascending order"
-msgstr "Cím szerint növekvő"
-
-#: search/templates/NMZ.head.php_tmpl:54
-msgid "by title in descending order"
-msgstr "Cím szerint csökkenő"
-
-#: search/templates/NMZ.head.php_tmpl:55
-msgid "by author in ascending order"
-msgstr "Szerkesztő szerint növekvő"
-
-#: search/templates/NMZ.head.php_tmpl:56
-msgid "by author in descending order"
-msgstr "Szerkesztő szerint csökkenő"
-
-#: search/templates/NMZ.head.php_tmpl:57
-msgid "by size in ascending order"
-msgstr "Méret szerint növekvő "
-
-#: search/templates/NMZ.head.php_tmpl:58
-msgid "by size in descending order"
-msgstr "Méret szerint csökkenő "
-
-#: search/templates/NMZ.head.php_tmpl:59
-msgid "by URI in ascending order"
-msgstr "URI szerint növekvő "
-
-#: search/templates/NMZ.head.php_tmpl:60
-msgid "by URI in descending order"
-msgstr "URI szerint csökkenő"
-
-#: search/templates/NMZ.head.php_tmpl:65
-msgid "Lists to Search"
-msgstr ""
-
-#: search/templates/NMZ.result.normal.php_tmpl:4
-#: search/templates/NMZ.result.short.php_tmpl:4
-msgid "score"
-msgstr "pont"
-
-#: search/templates/NMZ.result.normal.php_tmpl:5
-msgid "Author"
-msgstr "Author"
-
-#: search/templates/NMZ.result.normal.php_tmpl:6
-msgid "Date"
-msgstr "Date"
-
-#: search/templates/NMZ.result.normal.php_tmpl:9
-#: search/templates/NMZ.result.short.php_tmpl:6
-msgid "(${size} bytes)"
-msgstr "(${size} bytes)"
-
-#: search/templates/NMZ.tips.php_tmpl:4
-msgid "Tips on searching"
-msgstr "Keresési tippek"
-
-#: search/templates/NMZ.tips.php_tmpl:7
-msgid "If you have trouble with searching, you can check the following tips."
-msgstr ""
-
-#: search/templates/NMZ.tips.php_tmpl:11
-msgid ""
-"Check a spelling of your keyword<br>\n"
-"Namazu can't find anything with wrong spelling."
-msgstr ""
-
-#: search/templates/NMZ.tips.php_tmpl:15
-msgid "Add keywords"
-msgstr "Adjon meg kulcsszavakat"
-
-#: search/templates/NMZ.tips.php_tmpl:17
-msgid ""
-"If you gained no results or too few results, you can add one\n"
-"or more related keywords with <code\n"
-"class=\"operator\">or</code> operator.  You should get more results.\n"
-"e.g.,"
-msgstr ""
-
-#: search/templates/NMZ.tips.php_tmpl:23
-msgid ""
-"If you gained too many results, you can add one or more\n"
-"related keywords with <code class=\"operator\">and</code>\n"
-"operator. It makes your search more limited. e.g.,"
-msgstr ""
-
-#: search/templates/NMZ.tips.php_tmpl:29
-msgid "Try substring matching"
-msgstr "Szövegrész egyeztetés próbálása"
-
-#: search/templates/NMZ.tips.php_tmpl:31
-msgid ""
-"If you gained no results or too few results, you can try\n"
-"substring matching."
-msgstr ""
-
-#: search/templates/NMZ.tips.php_tmpl:34
-msgid ""
-"You can specify <code class=\"example\">tex*</code> to\n"
-"search for terms which begin with\n"
-"<code>tex</code> (e.g., <code>tex</code>,\n"
-"<code>texi2html</code>,\n"
-"<code>texindex</code>, <code>text</code>)."
-msgstr ""
-
-#: search/templates/NMZ.tips.php_tmpl:41
-msgid ""
-"You can specify <code class=\"example\">*tex</code> to\n"
-"search for terms which terminated with <code>tex</code> (e.g.,\n"
-"<code>bibtex</code>,\n"
-"<code>jlatex</code>, <code>latex</code>,\n"
-"<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
-msgstr ""
-
-#: search/templates/NMZ.tips.php_tmpl:48
-msgid ""
-"You can specify <code class=\"example\">*tex*</code> to\n"
-"search for terms which contain <code>tex</code> (many)."
-msgstr ""
-
-#: search/templates/NMZ.tips.php_tmpl:53
-msgid ""
-"You tried phrase searching but it hit documents which\n"
-"didn't contain your phrase."
-msgstr ""
-
-#: search/templates/NMZ.tips.php_tmpl:56
-msgid ""
-"It's a defect of Namazu. Precision of phrase searching is\n"
-"not 100%, so it cause wrong results occasionally."
-msgstr ""
-
 #: sizing.phtml:5
 msgid "This is an ancient page about Gnucash's code size."
 msgstr ""
@@ -2876,6 +2471,9 @@ msgstr ""
 #~ msgstr ""
 #~ "&quot;eval&quot; changed API on guile-1.6.  Use the existing API to "
 #~ "convert a delta symbol to a delta time."
+
+#~ msgid "(${size} bytes)"
+#~ msgstr "(${size} bytes)"
 
 #~ msgid ""
 #~ "(As noted earlier I had the opportunity to give a presentation at a local "
@@ -3358,6 +2956,9 @@ msgstr ""
 #~ "based on gtk1.2/gnome1. The developers are working on a gtk2/gnome2 "
 #~ "version of GnuCash, but it still takes a lot of time."
 
+#~ msgid "AND query"
+#~ msgstr "AND lekérdezés"
+
 #~ msgid "Ability to reparent accounts"
 #~ msgstr "Ability to reparent accounts"
 
@@ -3648,6 +3249,9 @@ msgstr ""
 
 #~ msgid "Add icons to gtk only windows."
 #~ msgstr "Add icons to gtk only windows."
+
+#~ msgid "Add keywords"
+#~ msgstr "Adjon meg kulcsszavakat"
 
 #~ msgid ""
 #~ "Add menu items and code so a user can limit transactions in a register to "
@@ -4007,6 +3611,9 @@ msgstr ""
 #~ "that its the brand and model number, and get a new third disk.  When the "
 #~ "errors don't abate, it suddenly becomes clear that its not the drives, "
 #~ "its the controller or cable)."
+
+#~ msgid "Author"
+#~ msgstr "Author"
 
 #~ msgid "Autodetect OFX and use it if we find it."
 #~ msgstr "Autodetect OFX and use it if we find it."
@@ -4506,6 +4113,9 @@ msgstr ""
 #~ msgid "Danish and Spanish translation of new account files"
 #~ msgstr "Danish and Spanish translation of new account files"
 
+#~ msgid "Date"
+#~ msgstr "Date"
+
 #~ msgid "Deal properly when there are no prices for a commodity."
 #~ msgstr "Deal properly when there are no prices for a commodity."
 
@@ -4542,6 +4152,9 @@ msgstr ""
 #~ "Default the exports directory to the directory of the last file exported, "
 #~ "or the user's home dir for the first export. Remembered across "
 #~ "invocations of gnucash."
+
+#~ msgid "Description"
+#~ msgstr "Description"
 
 #~ msgid "Destroy the transient window when the widget is destroyed."
 #~ msgstr "Destroy the transient window when the widget is destroyed."
@@ -4584,6 +4197,9 @@ msgstr ""
 #~ msgstr ""
 #~ "Disallow the deletion of accounts with ReadOnly Transacation in them. You "
 #~ "must first \"delete\" the RO Txns before you delete the account."
+
+#~ msgid "Display"
+#~ msgstr "Kijelzés"
 
 #~ msgid ""
 #~ "Display Balance Sheet, Profit &amp; Loss, Portfolio Valuation, and "
@@ -4808,6 +4424,9 @@ msgstr ""
 
 #~ msgid "Features Survey"
 #~ msgstr "Features Survey"
+
+#~ msgid "Field-specified searching"
+#~ msgstr "Mező specifikus keresés"
 
 #~ msgid "File permission fix."
 #~ msgstr "File permission fix."
@@ -5472,6 +5091,9 @@ msgstr ""
 #~ msgid "Gnucash Personal Finance Software"
 #~ msgstr "Gnucash Personal Finance Software"
 
+#~ msgid "Grouping"
+#~ msgstr "Csoportosítás"
+
 #~ msgid "Guile-1.6 requires empty lists to be quoted."
 #~ msgstr "Guile-1.6 requires empty lists to be quoted."
 
@@ -5860,6 +5482,9 @@ msgstr ""
 #~ msgid "Info and development"
 #~ msgstr "Fejlesztői információ"
 
+#~ msgid "Inside matching"
+#~ msgstr "Belső egyezés"
+
 #~ msgid "Interesting Links"
 #~ msgstr "Interesting Links"
 
@@ -6071,6 +5696,9 @@ msgstr ""
 
 #~ msgid "MIRROR AT SOURCEFORGE.NET"
 #~ msgstr "MIRROR AT SOURCEFORGE.NET"
+
+#~ msgid "Mailing List Search"
+#~ msgstr "Mailing List Search"
 
 #~ msgid "Major bugfixes include"
 #~ msgstr "Majo bugfixes include"
@@ -6332,6 +5960,9 @@ msgstr ""
 #~ "real soon now.  (which is why the qof objects get setters as well as "
 #~ "getters in the CVS tree)."
 
+#~ msgid "NOT query"
+#~ msgstr "NOT lekérdezés"
+
 #~ msgid "NOTE: As of now you ABSOLUTELY REQUIRE G-WRAP >= 1.3.3"
 #~ msgstr "NOTE: As of now you ABSOLUTELY REQUIRE G-WRAP &gt;= 1.3.3"
 
@@ -6443,6 +6074,9 @@ msgstr ""
 #~ msgid "Note: this is an unstable development release and may be buggy!"
 #~ msgstr "Note: this is an unstable development release and may be buggy!"
 
+#~ msgid "Notes"
+#~ msgstr "Notes"
+
 #~ msgid ""
 #~ "Now for the details.  This release signifies the switch from Motif to "
 #~ "Gnome as our GUI toolkit.  The build process should also be a lot easier."
@@ -6488,6 +6122,9 @@ msgstr ""
 
 #~ msgid "OFX support"
 #~ msgstr "OFX Support"
+
+#~ msgid "OR query"
+#~ msgstr "OR lekérdezés"
 
 #~ msgid ""
 #~ "Of interest to current &amp; future GnuCash developers might be two "
@@ -6643,6 +6280,9 @@ msgstr ""
 #~ msgid "Phil Longstaff's patch to prevent duplicate pricedb entries."
 #~ msgstr "Phil Longstaff's patch to prevent duplicate pricedb entries."
 
+#~ msgid "Phrase searching"
+#~ msgstr "Kifejezés keresése"
+
 #~ msgid ""
 #~ "Please be aware that the 1.5 series of GnuCash is a <em> development</em> "
 #~ "release. This means you can expect instabilities and dependency problems "
@@ -6724,6 +6364,9 @@ msgstr ""
 #~ msgid "Postgres fix for PG-7.3.x"
 #~ msgstr "Postgres fix for PG-7.3.x"
 
+#~ msgid "Prefix matching"
+#~ msgstr "Előtag egyeztetés"
+
 #~ msgid "Preliminary Survey Results"
 #~ msgstr "Preliminary Survey Results"
 
@@ -6794,6 +6437,9 @@ msgstr ""
 #~ msgid "Qof fixes"
 #~ msgstr "QOF fixes"
 
+#~ msgid "Query"
+#~ msgstr "Lekérdezés"
+
 #~ msgid "RJ marquette writes:"
 #~ msgstr "RJ marquette writes:"
 
@@ -6844,6 +6490,9 @@ msgstr ""
 
 #~ msgid "Register fixes"
 #~ msgstr "Register fixes"
+
+#~ msgid "Regular expressions"
+#~ msgstr "Reguláris kifejezés"
 
 #~ msgid "Release of new stable version 1.8.0"
 #~ msgstr "Release of new stable version 1.8.0"
@@ -7010,6 +6659,9 @@ msgstr ""
 #~ "Search on NOTES add code to prevent searching on template-txn accounts so "
 #~ "SXes don't show up in find results."
 
+#~ msgid "Search!"
+#~ msgstr "Keresés"
+
 #~ msgid "Second beta release"
 #~ msgstr "Second beta release"
 
@@ -7064,6 +6716,9 @@ msgstr ""
 #~ "Show your appreciation by donating to the GnuCash Project today! "
 #~ "Currently, we can only accept PayPal donations made through the "
 
+#~ msgid "Single term query"
+#~ msgstr "Single term query"
+
 #~ msgid ""
 #~ "Skip the case when a token is the empty string. This caused many warnings "
 #~ "about a NULL kvp_frame lookup."
@@ -7101,6 +6756,9 @@ msgstr ""
 #~ "'designated' trading lots).  The current default uses a FIFO policy to "
 #~ "figure out the cap gains."
 
+#~ msgid "Sort"
+#~ msgstr "Rendezés"
+
 #~ msgid ""
 #~ "Sort the bills before displaying them, so they appear in a consistent "
 #~ "order (by date due)."
@@ -7122,8 +6780,14 @@ msgstr ""
 #~ msgstr ""
 #~ "SuSE 7.1 packages for GnuCash-1.6.0, Guppi ad g-wrap are now available."
 
+#~ msgid "Substring matching"
+#~ msgstr "szövegrész egyeztetés"
+
 #~ msgid "Subversion Access"
 #~ msgstr "Subversion Access"
+
+#~ msgid "Suffix matching"
+#~ msgstr "Suffix egyeztetés"
 
 #~ msgid ""
 #~ "Summarybar can now display a grand total of all commodities, profits of a "
@@ -8065,6 +7729,12 @@ msgstr ""
 #~ msgid "This release requires the gnome-print and gtkhtml libraries."
 #~ msgstr "This release requires the gnome-print and gtkhtml libraries."
 
+#~ msgid "This search system is powered by:"
+#~ msgstr "A kereső rendszert támogatja:"
+
+#~ msgid "Tips on searching"
+#~ msgstr "Keresési tippek"
+
 #~ msgid ""
 #~ "To try out this feature, you will have to get the CVS code and compile it "
 #~ "yourself.  Remember, this code is still beta: it may be buggy (although I "
@@ -8103,6 +7773,9 @@ msgstr ""
 
 #~ msgid "Translators Needed!"
 #~ msgstr "Translators Needed!"
+
+#~ msgid "Try substring matching"
+#~ msgstr "Szövegrész egyeztetés próbálása"
 
 #~ msgid "Turkish translation"
 #~ msgstr "Turkish translation"
@@ -8768,6 +8441,9 @@ msgstr ""
 #~ "help attract more developers, more translators, and more accountants to "
 #~ "help answer your questions on the mailing lists!"
 
+#~ msgid "[How to search]"
+#~ msgstr "[Hogyan keress]"
+
 #~ msgid "a few bug fixes"
 #~ msgstr "a few bug fixes"
 
@@ -8846,6 +8522,39 @@ msgstr ""
 
 #~ msgid "business"
 #~ msgstr "business"
+
+#~ msgid "by URI in ascending order"
+#~ msgstr "URI szerint növekvő "
+
+#~ msgid "by URI in descending order"
+#~ msgstr "URI szerint csökkenő"
+
+#~ msgid "by author in ascending order"
+#~ msgstr "Szerkesztő szerint növekvő"
+
+#~ msgid "by author in descending order"
+#~ msgstr "Szerkesztő szerint csökkenő"
+
+#~ msgid "by date in early order"
+#~ msgstr "Dátum szerint növekvő"
+
+#~ msgid "by date in late order"
+#~ msgstr "Dátum szerint csökkenő"
+
+#~ msgid "by score"
+#~ msgstr "pont szerint"
+
+#~ msgid "by size in ascending order"
+#~ msgstr "Méret szerint növekvő "
+
+#~ msgid "by size in descending order"
+#~ msgstr "Méret szerint csökkenő "
+
+#~ msgid "by title in ascending order"
+#~ msgstr "Cím szerint növekvő"
+
+#~ msgid "by title in descending order"
+#~ msgstr "Cím szerint csökkenő"
 
 #~ msgid ""
 #~ "change the gtkhtml order to search for >= 1.1 before < 1.1, in order to "
@@ -9047,6 +8756,9 @@ msgstr ""
 #~ msgid "next slide"
 #~ msgstr "next slide"
 
+#~ msgid "normal"
+#~ msgstr "normál"
+
 #~ msgid "online price quotes now work"
 #~ msgstr "online price quotes now work"
 
@@ -9075,6 +8787,9 @@ msgstr ""
 #~ msgid "scheme (misc)"
 #~ msgstr "scheme (misc)"
 
+#~ msgid "score"
+#~ msgstr "pont"
+
 #~ msgid ""
 #~ "send an event when a payment is processed so the invoice gets updated as "
 #~ "\"paid\" in the search window."
@@ -9084,6 +8799,9 @@ msgstr ""
 
 #~ msgid "several new &amp; improved reports/graphs"
 #~ msgstr "several new &amp; improved reports/graphs"
+
+#~ msgid "short"
+#~ msgstr "rövid"
 
 #~ msgid "some support for the euro"
 #~ msgstr "some support for the euro"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gnucash-htdocs\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2020-12-04 00:47+0100\n"
+"POT-Creation-Date: 2020-12-30 04:52+0100\n"
 "PO-Revision-Date: 2006-05-29 00:20-0400\n"
 "Last-Translator:  unknown, NAMAZU(?)\n"
 "Language-Team: Polish <no email>\n"
@@ -1951,529 +1951,6 @@ msgid ""
 "page."
 msgstr ""
 
-#: search/templates/NMZ.body.php_tmpl:4 search/templates/NMZ.head.php_tmpl:28
-msgid "Query"
-msgstr "Zapytania"
-
-#: search/templates/NMZ.body.php_tmpl:6
-msgid "Single term query"
-msgstr "Zapytanie pojedyńcze"
-
-#: search/templates/NMZ.body.php_tmpl:8
-msgid ""
-"This query specifies only one term for retrieving all of the\n"
-"documents which contain that term, for example:"
-msgstr ""
-"To zapytanie wyszczególnia tylko jedno określenie dla wyszukiwania "
-"wszystkich\n"
-"dokumentów, które zawierają to określenie, np.:"
-
-#: search/templates/NMZ.body.php_tmpl:16
-msgid "AND query"
-msgstr "Zapytanie typu AND(logiczne i)"
-
-#: search/templates/NMZ.body.php_tmpl:19
-msgid ""
-"This query specifies two or more terms for retrieving all of the\n"
-"documents which contain both terms. Insert the\n"
-"<code class=\"operator\">and</code> operator between the terms, e.g."
-msgstr ""
-"To zapytanie wyszczególnia 2 lub więcej określeń dla wyszukiwania "
-"wszystkich\n"
-"dokumentów, które zawierają wszystkie podane określenia. Możesz wpisać "
-"operator\n"
-"<code class=\"operator\">and</code> pomiędzy dwoma lub więcej określeniami, "
-"np.:"
-
-#: search/templates/NMZ.body.php_tmpl:29
-msgid ""
-"You can omit the <code class=\"operator\">and</code> operator.  Terms which "
-"are\n"
-"separated by one or more spaces are assumed to be an AND query."
-msgstr ""
-"Możesz pominąć operator\n"
-"<code class=\"operator\">and</code> .\n"
-"Określenia, które są oddzielone jedną lub więcej spacją są uważane za "
-"zapytanie typu AND."
-
-#: search/templates/NMZ.body.php_tmpl:33
-msgid "OR query"
-msgstr "Zapytanie typu OR(logiczne lub)"
-
-#: search/templates/NMZ.body.php_tmpl:35
-msgid ""
-"This query specifies two or more terms for retrieving all\n"
-"documents which contain any one term. Insert the\n"
-"<code class=\"operator\">or</code> operator between the terms,\n"
-"e.g."
-msgstr ""
-"To zapytanie wyszczególnia 2 lub więcej określeń dla wyszukiwania "
-"wszystkich\n"
-"dokumentów, które zawierają jakiekolwiek z podanych określeń. Możesz wpisać "
-"operator\n"
-"<code class=\"operator\">or</code> pomiędzy dwoma lub więcej określeniami, "
-"np.:"
-
-#: search/templates/NMZ.body.php_tmpl:45
-msgid "NOT query"
-msgstr "Zapytanie typu NOT(przeczenie)"
-
-#: search/templates/NMZ.body.php_tmpl:47
-msgid ""
-"This query specifies two or more terms for retrieving all of the\n"
-"documents which contain a first term but do not contain the\n"
-"following terms. Insert the <code class=\"operator\">not</code>\n"
-"operator between the terms, for example:"
-msgstr ""
-"To zapytanie wyszczególnia 2 lub więcej określeń dla wyszukiwania "
-"wszystkich\n"
-"dokumentów, które zawierają pierwsze określenie, ale nie zawierają\n"
-"następnych określeń. Możesz wpisać operator <code class=\"operator\">not</"
-"code>\n"
-" pomiędzy dwoma lub więcej określeniami, np.:"
-
-#: search/templates/NMZ.body.php_tmpl:58
-msgid "Grouping"
-msgstr "Grupowanie"
-
-#: search/templates/NMZ.body.php_tmpl:60
-msgid ""
-"You can group queries by surrounding them by\n"
-"parentheses. The parentheses should be separated by one or\n"
-"more spaces. e.g."
-msgstr ""
-"Możesz grupować zapytania przez zawarcie ich\n"
-"w nawiasach okragłych. Nawiasy powinny być oddzielone przez jedną lub\n"
-"więcej spacji, np.:"
-
-#: search/templates/NMZ.body.php_tmpl:69
-msgid "Phrase searching"
-msgstr "Wyszukiwanie fraz"
-
-#: search/templates/NMZ.body.php_tmpl:71
-msgid ""
-"You can search for a phrase that consists of two or more terms\n"
-"by surrounding them with double quotation marks or braces such as\n"
-"<code class=\"operator\">\"...\"</code> and <code class=\"operator\">{...}</"
-"code>.\n"
-"In Namazu, the precision of phrase searching is not 100%,\n"
-"so wrong results may occasionally occur.  Example:"
-msgstr ""
-"Możesz szukać wyrażenia, które składa się z dwóch lub więcej określeń\n"
-"otaczając je podwójnym cudzysłowem jak\n"
-"<code class=\"operator\">\"...\"</code> lub klamrami jak <code class="
-"\"operator\">{...}</code>.\n"
-"Precyzja Namazu  w wyszukiwaniu fraz nie jest 100%,\n"
-"lecz błędne wyniki trafiają się bardzo rzadko, np.:"
-
-#: search/templates/NMZ.body.php_tmpl:88
-msgid "Substring matching"
-msgstr "Wyszukiwanie okrojonych słów"
-
-#: search/templates/NMZ.body.php_tmpl:90
-msgid "There are three types of searching by substring matching."
-msgstr "Są trzy typy wyszukiwania okrojonych słów."
-
-#: search/templates/NMZ.body.php_tmpl:94
-msgid "Prefix matching"
-msgstr "Przedrostkowe dopasowanie"
-
-#: search/templates/NMZ.body.php_tmpl:95
-msgid "(terms which begin with <code>inter</code>)"
-msgstr "(określenia rozpoczynające się na <code>inter</code>)"
-
-#: search/templates/NMZ.body.php_tmpl:96
-msgid "Inside matching"
-msgstr "Wewnętrzne dopasowanie"
-
-#: search/templates/NMZ.body.php_tmpl:97
-msgid "(terms which contain <code>text</code>)"
-msgstr "(określenia zawierające się wewnątrz <code>text</code>)"
-
-#: search/templates/NMZ.body.php_tmpl:98
-msgid "Suffix matching"
-msgstr "Przyrostkowe dopasowanie"
-
-#: search/templates/NMZ.body.php_tmpl:100
-msgid "(terms which terminated with <code>net</code>)"
-msgstr "(określenia kończące się na <code>net</code>)"
-
-#: search/templates/NMZ.body.php_tmpl:104
-msgid "Regular expressions"
-msgstr "Wyrażenia regularne (man grep)"
-
-#: search/templates/NMZ.body.php_tmpl:107
-#, fuzzy
-msgid ""
-"You can use regular expressions for pattern matching. The\n"
-"regular expressions must be surrounded by slashes like <code\n"
-"class=\"operator\">/.../</code>. Namazu uses <a\n"
-"href=\"http://www.ruby-lang.org/\">Ruby</a>'s regular\n"
-"regular expressions engine. It generally offers a <a\n"
-"href=\"http://www.perl.com/\">Perl</a> compatible flavor.\n"
-"e.g.,"
-msgstr ""
-"Możesz używać wyrażeń regularnych jako wzór do dopasowywania.\n"
-"Wyrażenia regularne muszą być otoczone przez ukośniki tak, jak\n"
-"<code\n"
-"class=\"operator\">/.../</code>. Namazu wykorzystuje silnik wyrażeń "
-"regularnych\n"
-"<ahref=\"https://www.ruby-lang.org/\">Ruby</a>. Ogólnie jest on kompatybilny "
-"z <a\n"
-"href=\"https://www.perl.com/\">Perl</a> ,\n"
-"np.:"
-
-#: search/templates/NMZ.body.php_tmpl:121
-msgid "Field-specified searching"
-msgstr "Wyszukiwanie po wyspecyfikowanych polach"
-
-#: search/templates/NMZ.body.php_tmpl:123
-msgid ""
-"You can limit your search to specific fields such as\n"
-"<code>Subject:</code>, <code>From:</code>,\n"
-"<code>Message-Id:</code>. This feature is especially convenient for\n"
-"Mail/News documents, for example:"
-msgstr ""
-"Możesz ograniczyć przeszukiwanie do określonych pól jak\n"
-"<code>Subject:</code>, <code>From:</code>,\n"
-"<code>Message-Id:</code>. Jest to zwłaszcza dogodne dla dokumentów typu\n"
-"Mail/News, np.:"
-
-#: search/templates/NMZ.body.php_tmpl:131
-msgid ""
-"(Retrieves all documents which contain <code>Linux</code>\n"
-"in a <code>Subject:</code> field)"
-msgstr ""
-"(Zwraca wszystkie dokument zawierające pola <code>Linux</code>\n"
-"w <code>Subject:</code> )"
-
-#: search/templates/NMZ.body.php_tmpl:136
-msgid ""
-"(Retrieves all documents which contain <code>GNU Emacs</code>\n"
-"in a <code>Subject:</code> field)"
-msgstr ""
-"(Zwraca wszystkie dokumenty zawierające pola <code>GNU Emacs</code>\n"
-"w <code>Subject:</code> )"
-
-#: search/templates/NMZ.body.php_tmpl:141
-msgid ""
-"(Retrieves all documents which contain <code>foo@bar.jp</code>\n"
-"in a <code>From:</code> field)"
-msgstr ""
-"(Zwraca wszystkie dokument zawierające pola <code>foo@bar.jp</code>\n"
-"w <code>From:</code> )"
-
-#: search/templates/NMZ.body.php_tmpl:147
-msgid ""
-"(Retrieves a certain document which contains specified\n"
-"<code>Message-Id:</code>)"
-msgstr ""
-"(Zwraca pewien dokument zawierający wyszczególnione\n"
-"<code>Message-Id:</code>)"
-
-#: search/templates/NMZ.body.php_tmpl:152
-msgid "Notes"
-msgstr "Uwagi"
-
-#: search/templates/NMZ.body.php_tmpl:155
-msgid ""
-"In any queries, Namazu ignores case distinctions of\n"
-"alphabet characters; i.e. Namazu does\n"
-"case-insensitive pattern matching."
-msgstr "We wszystkich zapytaniach, Namazu ignoruje wielkość znaków alfabetu."
-
-#: search/templates/NMZ.body.php_tmpl:160
-msgid ""
-"Japanese phrases are automatically segmented into\n"
-"morphemes and are handled as <a\n"
-"href=\"#query-phrase\">phrase searching</a>. This process occasionally\n"
-"causes invalid segmentation."
-msgstr ""
-"Japanese phrases are forced to be segmented into\n"
-"morphemes automatically and are handled them as <a\n"
-"href=\"#query-phrase\">phrase searching</a>. This processing\n"
-"causes invalid segmentation occasionally.\n"
-"<br>Po cholere to tłumaczyli na angielski? Ja. w każdym bądź razie nie będę, "
-"bo nie zamierzam posługiwać\n"
-"się jęz. japońskim."
-
-#: search/templates/NMZ.body.php_tmpl:166
-msgid ""
-"Letters, numbers or parts of symbols (duplicated in\n"
-"ASCII) which are defined in JIS X 0208 (Japanese\n"
-"Industrial Standards) are handled as ASCII characters."
-msgstr ""
-"Letters, numbers or a part of symbols (duplicated in\n"
-"ASCII) characters which defined in JIS X 0208 (Japanese\n"
-"Industrial Standards) are handled as ASCII characters.\n"
-"<br>Już mam skośne oczy według normy przemysłowej JIS X 0208."
-
-#: search/templates/NMZ.body.php_tmpl:171
-msgid ""
-"Namazu can handle a term which contains symbols like\n"
-"<code>TCP/IP</code>.  Since this method of handling isn't complete,\n"
-"you can also describe the term as <code>TCP and IP</code> instead of\n"
-"<code>TCP/IP</code>, but it may cause noisy results."
-msgstr ""
-"Namazu radzi sobie z określeniami zawierającymi znaki takie jak\n"
-"<code>TCP/IP</code>, ale to radzenie sobie nie jest kompletne\n"
-"możesz opisać\n"
-"<code>TCP and IP</code> zamiast\n"
-"<code>TCP/IP</code>, ale może to być powodem zbyt wielu dopasowań (szumu "
-"informacyjnego)"
-
-#: search/templates/NMZ.body.php_tmpl:178
-msgid ""
-"Substring matching and field-specified searching takes\n"
-"more time than other methods."
-msgstr ""
-"Dopasowania okrojonych słów i szukania po wybranych polach zabierają\n"
-"więcej czasu, niż inne metody."
-
-#: search/templates/NMZ.body.php_tmpl:182 search/templates/NMZ.tips.php_tmpl:60
-msgid ""
-"If you want to use <code class=\"operator\">and</code>,\n"
-"<code class=\"operator\">or</code> or <code\n"
-"class=\"operator\">not</code> as ordinary keywords<br>\n"
-"You can surround them respectively with double quotes like <code\n"
-"class=\"operator\">\"...\"</code> or braces like <code\n"
-"class=\"operator\">{...}</code>."
-msgstr ""
-"Jeżeli chcesz użyć <code class=\"operator\">and</code>,\n"
-"<code class=\"operator\">or</code> lub <code\n"
-"class=\"operator\">not</code> jako zwykłych słów kluczowych <br>\n"
-"możesz otoczyć je odpowiednio podwójnymi cudzysłowami tak, jak\n"
-"<code\n"
-"class=\"operator\">\"...\"</code> lub takimi nawiasami <code\n"
-"class=\"operator\">{...}</code>."
-
-#: search/templates/NMZ.foot.php_tmpl:9
-msgid "This search system is powered by:"
-msgstr "Ten system wyszukiwania jest oparty na:"
-
-#: search/templates/NMZ.foot.php_tmpl:13
-msgid "Server &amp; email outage reports to: "
-msgstr ""
-
-#: search/templates/NMZ.foot.php_tmpl:15
-msgid ""
-"Translation problems? Contact: <a href=\"mailto:gnucash-devel@gnucash.org"
-"\"><b>gnucash-devel@gnucash.org</b></a>"
-msgstr ""
-
-#: search/templates/NMZ.head.php_tmpl:4
-msgid "Mailing List Search"
-msgstr ""
-
-#: search/templates/NMZ.head.php_tmpl:30
-msgid "Search!"
-msgstr "Szukaj!"
-
-#: search/templates/NMZ.head.php_tmpl:32
-msgid "[How to search]"
-msgstr "[Jak szukać, żeby znaleźć a nie zabłądzić]"
-
-#: search/templates/NMZ.head.php_tmpl:35
-msgid "Display"
-msgstr "Pokazuj"
-
-#: search/templates/NMZ.head.php_tmpl:43
-msgid "Description"
-msgstr "Opis"
-
-#: search/templates/NMZ.head.php_tmpl:45
-msgid "normal"
-msgstr "normalny"
-
-#: search/templates/NMZ.head.php_tmpl:46
-msgid "short"
-msgstr "skrócony"
-
-#: search/templates/NMZ.head.php_tmpl:48
-msgid "Sort"
-msgstr "Kryterium sortowania"
-
-#: search/templates/NMZ.head.php_tmpl:50
-msgid "by score"
-msgstr "wynik"
-
-#: search/templates/NMZ.head.php_tmpl:51
-msgid "by date in late order"
-msgstr "data, od najnowszych"
-
-#: search/templates/NMZ.head.php_tmpl:52
-msgid "by date in early order"
-msgstr "data, od najstarszych"
-
-#: search/templates/NMZ.head.php_tmpl:53
-msgid "by title in ascending order"
-msgstr "tytuł, w porządku rosnącym"
-
-#: search/templates/NMZ.head.php_tmpl:54
-msgid "by title in descending order"
-msgstr "tytuł, w porządku malejącym"
-
-#: search/templates/NMZ.head.php_tmpl:55
-msgid "by author in ascending order"
-msgstr "autor, w porządku rosnącym"
-
-#: search/templates/NMZ.head.php_tmpl:56
-msgid "by author in descending order"
-msgstr "autor, w porządku malejącym"
-
-#: search/templates/NMZ.head.php_tmpl:57
-msgid "by size in ascending order"
-msgstr "rozmiar, w porządku rosnącym"
-
-#: search/templates/NMZ.head.php_tmpl:58
-msgid "by size in descending order"
-msgstr "rozmiar, w porządku malejącym"
-
-#: search/templates/NMZ.head.php_tmpl:59
-msgid "by URI in ascending order"
-msgstr "URI, w porządku rosnącym"
-
-#: search/templates/NMZ.head.php_tmpl:60
-msgid "by URI in descending order"
-msgstr "URI, w porządku malejącym"
-
-#: search/templates/NMZ.head.php_tmpl:65
-msgid "Lists to Search"
-msgstr ""
-
-#: search/templates/NMZ.result.normal.php_tmpl:4
-#: search/templates/NMZ.result.short.php_tmpl:4
-msgid "score"
-msgstr "wynik"
-
-#: search/templates/NMZ.result.normal.php_tmpl:5
-msgid "Author"
-msgstr "Autor"
-
-#: search/templates/NMZ.result.normal.php_tmpl:6
-msgid "Date"
-msgstr "Data"
-
-#: search/templates/NMZ.result.normal.php_tmpl:9
-#: search/templates/NMZ.result.short.php_tmpl:6
-msgid "(${size} bytes)"
-msgstr "(${size} bajtów)"
-
-#: search/templates/NMZ.tips.php_tmpl:4
-msgid "Tips on searching"
-msgstr "Porady dotyczące wyszukiwania"
-
-#: search/templates/NMZ.tips.php_tmpl:7
-msgid "If you have trouble with searching, you can check the following tips."
-msgstr ""
-"Jeżeli masz problem ze znalezieniem podanej przez Ciebie informacji, spróbuj "
-"zastosować poniższe rady"
-
-#: search/templates/NMZ.tips.php_tmpl:11
-msgid ""
-"Check a spelling of your keyword<br>\n"
-"Namazu can't find anything with wrong spelling."
-msgstr ""
-"Sprawdź pisownię podanych słów kluczowych<br>\n"
-"Namazu nic nie znajdzie z błędami w pisowni."
-
-#: search/templates/NMZ.tips.php_tmpl:15
-msgid "Add keywords"
-msgstr "Dodaj słów-kluczy"
-
-#: search/templates/NMZ.tips.php_tmpl:17
-msgid ""
-"If you gained no results or too few results, you can add one\n"
-"or more related keywords with <code\n"
-"class=\"operator\">or</code> operator.  You should get more results.\n"
-"e.g.,"
-msgstr ""
-"Jeżeli nie otrzymujesz wyników, lub otrzymujesz ich za mało, możesz dodać "
-"jedno\n"
-"lub więcej pokrewnych słów z operatorem\n"
-"<code\n"
-"class=\"operator\">or</code> . Powinieneś otrzymać więcej rezultatów np.:"
-
-#: search/templates/NMZ.tips.php_tmpl:23
-msgid ""
-"If you gained too many results, you can add one or more\n"
-"related keywords with <code class=\"operator\">and</code>\n"
-"operator. It makes your search more limited. e.g.,"
-msgstr ""
-"Jezeli otrzymujesz za dużo wynikow, możesz dodać jedno lub więcej\n"
-"pokrewnych słów z operatorem\n"
-"<code class=\"operator\">and</code>\n"
-". To ograniczy bardziej zakres przeszukiwania np.:"
-
-#: search/templates/NMZ.tips.php_tmpl:29
-msgid "Try substring matching"
-msgstr "Spróbuj wyszukiwania okrojonych słów"
-
-#: search/templates/NMZ.tips.php_tmpl:31
-msgid ""
-"If you gained no results or too few results, you can try\n"
-"substring matching."
-msgstr ""
-"Jeżeli nie otrzymujesz wyników, lub otrzymujesz ich za mało, możesz "
-"spróbować\n"
-"dopasowywania okrojonych słów."
-
-#: search/templates/NMZ.tips.php_tmpl:34
-msgid ""
-"You can specify <code class=\"example\">tex*</code> to\n"
-"search for terms which begin with\n"
-"<code>tex</code> (e.g., <code>tex</code>,\n"
-"<code>texi2html</code>,\n"
-"<code>texindex</code>, <code>text</code>)."
-msgstr ""
-"Możesz wyszczególnić<code class=\"example\">tex*</code> dla wyszukania "
-"określeń zaczynających się na\n"
-"<code>tex</code> (e.g., <code>tex</code>,\n"
-"<code>texi2html</code>,\n"
-"<code>texindex</code>, <code>text</code>)."
-
-#: search/templates/NMZ.tips.php_tmpl:41
-msgid ""
-"You can specify <code class=\"example\">*tex</code> to\n"
-"search for terms which terminated with <code>tex</code> (e.g.,\n"
-"<code>bibtex</code>,\n"
-"<code>jlatex</code>, <code>latex</code>,\n"
-"<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
-msgstr ""
-"Możesz wyszczególnić<code class=\"example\">*tex</code> to\n"
-"wyszukiwanie dla określeń kończących się na\n"
-"<code>tex</code> (np.:\n"
-"<code>bibtex</code>,\n"
-"<code>jlatex</code>, <code>latex</code>,\n"
-"<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
-
-#: search/templates/NMZ.tips.php_tmpl:48
-msgid ""
-"You can specify <code class=\"example\">*tex*</code> to\n"
-"search for terms which contain <code>tex</code> (many)."
-msgstr ""
-"Możesz wyszczególnić\n"
-"<code class=\"example\">*tex*</code> to\n"
-"wyszukiwanie dla określeń zawierających\n"
-"<code>tex</code> (wiele)."
-
-#: search/templates/NMZ.tips.php_tmpl:53
-msgid ""
-"You tried phrase searching but it hit documents which\n"
-"didn't contain your phrase."
-msgstr ""
-"You tried phrase searching but it hit documents which\n"
-"Spróbowałeś wyszukiwania fraz, ale to nie zwróciło żadnych wyników "
-"zawierających twoją frazę?"
-
-#: search/templates/NMZ.tips.php_tmpl:56
-msgid ""
-"It's a defect of Namazu. Precision of phrase searching is\n"
-"not 100%, so it cause wrong results occasionally."
-msgstr ""
-"To jest usterka Namazu. Precyzja wyszukiwania fraz nie jest\n"
-"100%, ale złe wyniki są rzadkie."
-
 #: sizing.phtml:5
 msgid "This is an ancient page about Gnucash's code size."
 msgstr ""
@@ -2742,3 +2219,435 @@ msgid ""
 "It seems your browser doesn't support iframes. To view the requested page in "
 "a separate window, please <a href=\"%s\" target=\"_blank\">click here</a>."
 msgstr ""
+
+#~ msgid "(${size} bytes)"
+#~ msgstr "(${size} bajtów)"
+
+#~ msgid ""
+#~ "(Retrieves a certain document which contains specified\n"
+#~ "<code>Message-Id:</code>)"
+#~ msgstr ""
+#~ "(Zwraca pewien dokument zawierający wyszczególnione\n"
+#~ "<code>Message-Id:</code>)"
+
+#~ msgid ""
+#~ "(Retrieves all documents which contain <code>GNU Emacs</code>\n"
+#~ "in a <code>Subject:</code> field)"
+#~ msgstr ""
+#~ "(Zwraca wszystkie dokumenty zawierające pola <code>GNU Emacs</code>\n"
+#~ "w <code>Subject:</code> )"
+
+#~ msgid ""
+#~ "(Retrieves all documents which contain <code>Linux</code>\n"
+#~ "in a <code>Subject:</code> field)"
+#~ msgstr ""
+#~ "(Zwraca wszystkie dokument zawierające pola <code>Linux</code>\n"
+#~ "w <code>Subject:</code> )"
+
+#~ msgid ""
+#~ "(Retrieves all documents which contain <code>foo@bar.jp</code>\n"
+#~ "in a <code>From:</code> field)"
+#~ msgstr ""
+#~ "(Zwraca wszystkie dokument zawierające pola <code>foo@bar.jp</code>\n"
+#~ "w <code>From:</code> )"
+
+#~ msgid "(terms which begin with <code>inter</code>)"
+#~ msgstr "(określenia rozpoczynające się na <code>inter</code>)"
+
+#~ msgid "(terms which contain <code>text</code>)"
+#~ msgstr "(określenia zawierające się wewnątrz <code>text</code>)"
+
+#~ msgid "(terms which terminated with <code>net</code>)"
+#~ msgstr "(określenia kończące się na <code>net</code>)"
+
+#~ msgid "AND query"
+#~ msgstr "Zapytanie typu AND(logiczne i)"
+
+#~ msgid "Add keywords"
+#~ msgstr "Dodaj słów-kluczy"
+
+#~ msgid "Author"
+#~ msgstr "Autor"
+
+#~ msgid ""
+#~ "Check a spelling of your keyword<br>\n"
+#~ "Namazu can't find anything with wrong spelling."
+#~ msgstr ""
+#~ "Sprawdź pisownię podanych słów kluczowych<br>\n"
+#~ "Namazu nic nie znajdzie z błędami w pisowni."
+
+#~ msgid "Date"
+#~ msgstr "Data"
+
+#~ msgid "Description"
+#~ msgstr "Opis"
+
+#~ msgid "Display"
+#~ msgstr "Pokazuj"
+
+#~ msgid "Field-specified searching"
+#~ msgstr "Wyszukiwanie po wyspecyfikowanych polach"
+
+#~ msgid "Grouping"
+#~ msgstr "Grupowanie"
+
+#~ msgid ""
+#~ "If you gained no results or too few results, you can add one\n"
+#~ "or more related keywords with <code\n"
+#~ "class=\"operator\">or</code> operator.  You should get more results.\n"
+#~ "e.g.,"
+#~ msgstr ""
+#~ "Jeżeli nie otrzymujesz wyników, lub otrzymujesz ich za mało, możesz dodać "
+#~ "jedno\n"
+#~ "lub więcej pokrewnych słów z operatorem\n"
+#~ "<code\n"
+#~ "class=\"operator\">or</code> . Powinieneś otrzymać więcej rezultatów np.:"
+
+#~ msgid ""
+#~ "If you gained no results or too few results, you can try\n"
+#~ "substring matching."
+#~ msgstr ""
+#~ "Jeżeli nie otrzymujesz wyników, lub otrzymujesz ich za mało, możesz "
+#~ "spróbować\n"
+#~ "dopasowywania okrojonych słów."
+
+#~ msgid ""
+#~ "If you gained too many results, you can add one or more\n"
+#~ "related keywords with <code class=\"operator\">and</code>\n"
+#~ "operator. It makes your search more limited. e.g.,"
+#~ msgstr ""
+#~ "Jezeli otrzymujesz za dużo wynikow, możesz dodać jedno lub więcej\n"
+#~ "pokrewnych słów z operatorem\n"
+#~ "<code class=\"operator\">and</code>\n"
+#~ ". To ograniczy bardziej zakres przeszukiwania np.:"
+
+#~ msgid ""
+#~ "If you have trouble with searching, you can check the following tips."
+#~ msgstr ""
+#~ "Jeżeli masz problem ze znalezieniem podanej przez Ciebie informacji, "
+#~ "spróbuj zastosować poniższe rady"
+
+#~ msgid ""
+#~ "If you want to use <code class=\"operator\">and</code>,\n"
+#~ "<code class=\"operator\">or</code> or <code\n"
+#~ "class=\"operator\">not</code> as ordinary keywords<br>\n"
+#~ "You can surround them respectively with double quotes like <code\n"
+#~ "class=\"operator\">\"...\"</code> or braces like <code\n"
+#~ "class=\"operator\">{...}</code>."
+#~ msgstr ""
+#~ "Jeżeli chcesz użyć <code class=\"operator\">and</code>,\n"
+#~ "<code class=\"operator\">or</code> lub <code\n"
+#~ "class=\"operator\">not</code> jako zwykłych słów kluczowych <br>\n"
+#~ "możesz otoczyć je odpowiednio podwójnymi cudzysłowami tak, jak\n"
+#~ "<code\n"
+#~ "class=\"operator\">\"...\"</code> lub takimi nawiasami <code\n"
+#~ "class=\"operator\">{...}</code>."
+
+#~ msgid ""
+#~ "In any queries, Namazu ignores case distinctions of\n"
+#~ "alphabet characters; i.e. Namazu does\n"
+#~ "case-insensitive pattern matching."
+#~ msgstr ""
+#~ "We wszystkich zapytaniach, Namazu ignoruje wielkość znaków alfabetu."
+
+#~ msgid "Inside matching"
+#~ msgstr "Wewnętrzne dopasowanie"
+
+#~ msgid ""
+#~ "It's a defect of Namazu. Precision of phrase searching is\n"
+#~ "not 100%, so it cause wrong results occasionally."
+#~ msgstr ""
+#~ "To jest usterka Namazu. Precyzja wyszukiwania fraz nie jest\n"
+#~ "100%, ale złe wyniki są rzadkie."
+
+#~ msgid ""
+#~ "Japanese phrases are automatically segmented into\n"
+#~ "morphemes and are handled as <a\n"
+#~ "href=\"#query-phrase\">phrase searching</a>. This process occasionally\n"
+#~ "causes invalid segmentation."
+#~ msgstr ""
+#~ "Japanese phrases are forced to be segmented into\n"
+#~ "morphemes automatically and are handled them as <a\n"
+#~ "href=\"#query-phrase\">phrase searching</a>. This processing\n"
+#~ "causes invalid segmentation occasionally.\n"
+#~ "<br>Po cholere to tłumaczyli na angielski? Ja. w każdym bądź razie nie "
+#~ "będę, bo nie zamierzam posługiwać\n"
+#~ "się jęz. japońskim."
+
+#~ msgid ""
+#~ "Letters, numbers or parts of symbols (duplicated in\n"
+#~ "ASCII) which are defined in JIS X 0208 (Japanese\n"
+#~ "Industrial Standards) are handled as ASCII characters."
+#~ msgstr ""
+#~ "Letters, numbers or a part of symbols (duplicated in\n"
+#~ "ASCII) characters which defined in JIS X 0208 (Japanese\n"
+#~ "Industrial Standards) are handled as ASCII characters.\n"
+#~ "<br>Już mam skośne oczy według normy przemysłowej JIS X 0208."
+
+#~ msgid "NOT query"
+#~ msgstr "Zapytanie typu NOT(przeczenie)"
+
+#~ msgid ""
+#~ "Namazu can handle a term which contains symbols like\n"
+#~ "<code>TCP/IP</code>.  Since this method of handling isn't complete,\n"
+#~ "you can also describe the term as <code>TCP and IP</code> instead of\n"
+#~ "<code>TCP/IP</code>, but it may cause noisy results."
+#~ msgstr ""
+#~ "Namazu radzi sobie z określeniami zawierającymi znaki takie jak\n"
+#~ "<code>TCP/IP</code>, ale to radzenie sobie nie jest kompletne\n"
+#~ "możesz opisać\n"
+#~ "<code>TCP and IP</code> zamiast\n"
+#~ "<code>TCP/IP</code>, ale może to być powodem zbyt wielu dopasowań (szumu "
+#~ "informacyjnego)"
+
+#~ msgid "Notes"
+#~ msgstr "Uwagi"
+
+#~ msgid "OR query"
+#~ msgstr "Zapytanie typu OR(logiczne lub)"
+
+#~ msgid "Phrase searching"
+#~ msgstr "Wyszukiwanie fraz"
+
+#~ msgid "Prefix matching"
+#~ msgstr "Przedrostkowe dopasowanie"
+
+#~ msgid "Query"
+#~ msgstr "Zapytania"
+
+#~ msgid "Regular expressions"
+#~ msgstr "Wyrażenia regularne (man grep)"
+
+#~ msgid "Search!"
+#~ msgstr "Szukaj!"
+
+#~ msgid "Single term query"
+#~ msgstr "Zapytanie pojedyńcze"
+
+#~ msgid "Sort"
+#~ msgstr "Kryterium sortowania"
+
+#~ msgid "Substring matching"
+#~ msgstr "Wyszukiwanie okrojonych słów"
+
+#~ msgid ""
+#~ "Substring matching and field-specified searching takes\n"
+#~ "more time than other methods."
+#~ msgstr ""
+#~ "Dopasowania okrojonych słów i szukania po wybranych polach zabierają\n"
+#~ "więcej czasu, niż inne metody."
+
+#~ msgid "Suffix matching"
+#~ msgstr "Przyrostkowe dopasowanie"
+
+#~ msgid "There are three types of searching by substring matching."
+#~ msgstr "Są trzy typy wyszukiwania okrojonych słów."
+
+#~ msgid ""
+#~ "This query specifies only one term for retrieving all of the\n"
+#~ "documents which contain that term, for example:"
+#~ msgstr ""
+#~ "To zapytanie wyszczególnia tylko jedno określenie dla wyszukiwania "
+#~ "wszystkich\n"
+#~ "dokumentów, które zawierają to określenie, np.:"
+
+#~ msgid ""
+#~ "This query specifies two or more terms for retrieving all\n"
+#~ "documents which contain any one term. Insert the\n"
+#~ "<code class=\"operator\">or</code> operator between the terms,\n"
+#~ "e.g."
+#~ msgstr ""
+#~ "To zapytanie wyszczególnia 2 lub więcej określeń dla wyszukiwania "
+#~ "wszystkich\n"
+#~ "dokumentów, które zawierają jakiekolwiek z podanych określeń. Możesz "
+#~ "wpisać operator\n"
+#~ "<code class=\"operator\">or</code> pomiędzy dwoma lub więcej "
+#~ "określeniami, np.:"
+
+#~ msgid ""
+#~ "This query specifies two or more terms for retrieving all of the\n"
+#~ "documents which contain a first term but do not contain the\n"
+#~ "following terms. Insert the <code class=\"operator\">not</code>\n"
+#~ "operator between the terms, for example:"
+#~ msgstr ""
+#~ "To zapytanie wyszczególnia 2 lub więcej określeń dla wyszukiwania "
+#~ "wszystkich\n"
+#~ "dokumentów, które zawierają pierwsze określenie, ale nie zawierają\n"
+#~ "następnych określeń. Możesz wpisać operator <code class=\"operator\">not</"
+#~ "code>\n"
+#~ " pomiędzy dwoma lub więcej określeniami, np.:"
+
+#~ msgid ""
+#~ "This query specifies two or more terms for retrieving all of the\n"
+#~ "documents which contain both terms. Insert the\n"
+#~ "<code class=\"operator\">and</code> operator between the terms, e.g."
+#~ msgstr ""
+#~ "To zapytanie wyszczególnia 2 lub więcej określeń dla wyszukiwania "
+#~ "wszystkich\n"
+#~ "dokumentów, które zawierają wszystkie podane określenia. Możesz wpisać "
+#~ "operator\n"
+#~ "<code class=\"operator\">and</code> pomiędzy dwoma lub więcej "
+#~ "określeniami, np.:"
+
+#~ msgid "This search system is powered by:"
+#~ msgstr "Ten system wyszukiwania jest oparty na:"
+
+#~ msgid "Tips on searching"
+#~ msgstr "Porady dotyczące wyszukiwania"
+
+#~ msgid "Try substring matching"
+#~ msgstr "Spróbuj wyszukiwania okrojonych słów"
+
+#~ msgid ""
+#~ "You can group queries by surrounding them by\n"
+#~ "parentheses. The parentheses should be separated by one or\n"
+#~ "more spaces. e.g."
+#~ msgstr ""
+#~ "Możesz grupować zapytania przez zawarcie ich\n"
+#~ "w nawiasach okragłych. Nawiasy powinny być oddzielone przez jedną lub\n"
+#~ "więcej spacji, np.:"
+
+#~ msgid ""
+#~ "You can limit your search to specific fields such as\n"
+#~ "<code>Subject:</code>, <code>From:</code>,\n"
+#~ "<code>Message-Id:</code>. This feature is especially convenient for\n"
+#~ "Mail/News documents, for example:"
+#~ msgstr ""
+#~ "Możesz ograniczyć przeszukiwanie do określonych pól jak\n"
+#~ "<code>Subject:</code>, <code>From:</code>,\n"
+#~ "<code>Message-Id:</code>. Jest to zwłaszcza dogodne dla dokumentów typu\n"
+#~ "Mail/News, np.:"
+
+#~ msgid ""
+#~ "You can omit the <code class=\"operator\">and</code> operator.  Terms "
+#~ "which are\n"
+#~ "separated by one or more spaces are assumed to be an AND query."
+#~ msgstr ""
+#~ "Możesz pominąć operator\n"
+#~ "<code class=\"operator\">and</code> .\n"
+#~ "Określenia, które są oddzielone jedną lub więcej spacją są uważane za "
+#~ "zapytanie typu AND."
+
+#~ msgid ""
+#~ "You can search for a phrase that consists of two or more terms\n"
+#~ "by surrounding them with double quotation marks or braces such as\n"
+#~ "<code class=\"operator\">\"...\"</code> and <code class=\"operator\">{...}"
+#~ "</code>.\n"
+#~ "In Namazu, the precision of phrase searching is not 100%,\n"
+#~ "so wrong results may occasionally occur.  Example:"
+#~ msgstr ""
+#~ "Możesz szukać wyrażenia, które składa się z dwóch lub więcej określeń\n"
+#~ "otaczając je podwójnym cudzysłowem jak\n"
+#~ "<code class=\"operator\">\"...\"</code> lub klamrami jak <code class="
+#~ "\"operator\">{...}</code>.\n"
+#~ "Precyzja Namazu  w wyszukiwaniu fraz nie jest 100%,\n"
+#~ "lecz błędne wyniki trafiają się bardzo rzadko, np.:"
+
+#~ msgid ""
+#~ "You can specify <code class=\"example\">*tex*</code> to\n"
+#~ "search for terms which contain <code>tex</code> (many)."
+#~ msgstr ""
+#~ "Możesz wyszczególnić\n"
+#~ "<code class=\"example\">*tex*</code> to\n"
+#~ "wyszukiwanie dla określeń zawierających\n"
+#~ "<code>tex</code> (wiele)."
+
+#~ msgid ""
+#~ "You can specify <code class=\"example\">*tex</code> to\n"
+#~ "search for terms which terminated with <code>tex</code> (e.g.,\n"
+#~ "<code>bibtex</code>,\n"
+#~ "<code>jlatex</code>, <code>latex</code>,\n"
+#~ "<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
+#~ msgstr ""
+#~ "Możesz wyszczególnić<code class=\"example\">*tex</code> to\n"
+#~ "wyszukiwanie dla określeń kończących się na\n"
+#~ "<code>tex</code> (np.:\n"
+#~ "<code>bibtex</code>,\n"
+#~ "<code>jlatex</code>, <code>latex</code>,\n"
+#~ "<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
+
+#~ msgid ""
+#~ "You can specify <code class=\"example\">tex*</code> to\n"
+#~ "search for terms which begin with\n"
+#~ "<code>tex</code> (e.g., <code>tex</code>,\n"
+#~ "<code>texi2html</code>,\n"
+#~ "<code>texindex</code>, <code>text</code>)."
+#~ msgstr ""
+#~ "Możesz wyszczególnić<code class=\"example\">tex*</code> dla wyszukania "
+#~ "określeń zaczynających się na\n"
+#~ "<code>tex</code> (e.g., <code>tex</code>,\n"
+#~ "<code>texi2html</code>,\n"
+#~ "<code>texindex</code>, <code>text</code>)."
+
+#, fuzzy
+#~ msgid ""
+#~ "You can use regular expressions for pattern matching. The\n"
+#~ "regular expressions must be surrounded by slashes like <code\n"
+#~ "class=\"operator\">/.../</code>. Namazu uses <a\n"
+#~ "href=\"http://www.ruby-lang.org/\">Ruby</a>'s regular\n"
+#~ "regular expressions engine. It generally offers a <a\n"
+#~ "href=\"http://www.perl.com/\">Perl</a> compatible flavor.\n"
+#~ "e.g.,"
+#~ msgstr ""
+#~ "Możesz używać wyrażeń regularnych jako wzór do dopasowywania.\n"
+#~ "Wyrażenia regularne muszą być otoczone przez ukośniki tak, jak\n"
+#~ "<code\n"
+#~ "class=\"operator\">/.../</code>. Namazu wykorzystuje silnik wyrażeń "
+#~ "regularnych\n"
+#~ "<ahref=\"https://www.ruby-lang.org/\">Ruby</a>. Ogólnie jest on "
+#~ "kompatybilny z <a\n"
+#~ "href=\"https://www.perl.com/\">Perl</a> ,\n"
+#~ "np.:"
+
+#~ msgid ""
+#~ "You tried phrase searching but it hit documents which\n"
+#~ "didn't contain your phrase."
+#~ msgstr ""
+#~ "You tried phrase searching but it hit documents which\n"
+#~ "Spróbowałeś wyszukiwania fraz, ale to nie zwróciło żadnych wyników "
+#~ "zawierających twoją frazę?"
+
+#~ msgid "[How to search]"
+#~ msgstr "[Jak szukać, żeby znaleźć a nie zabłądzić]"
+
+#~ msgid "by URI in ascending order"
+#~ msgstr "URI, w porządku rosnącym"
+
+#~ msgid "by URI in descending order"
+#~ msgstr "URI, w porządku malejącym"
+
+#~ msgid "by author in ascending order"
+#~ msgstr "autor, w porządku rosnącym"
+
+#~ msgid "by author in descending order"
+#~ msgstr "autor, w porządku malejącym"
+
+#~ msgid "by date in early order"
+#~ msgstr "data, od najstarszych"
+
+#~ msgid "by date in late order"
+#~ msgstr "data, od najnowszych"
+
+#~ msgid "by score"
+#~ msgstr "wynik"
+
+#~ msgid "by size in ascending order"
+#~ msgstr "rozmiar, w porządku rosnącym"
+
+#~ msgid "by size in descending order"
+#~ msgstr "rozmiar, w porządku malejącym"
+
+#~ msgid "by title in ascending order"
+#~ msgstr "tytuł, w porządku rosnącym"
+
+#~ msgid "by title in descending order"
+#~ msgstr "tytuł, w porządku malejącym"
+
+#~ msgid "normal"
+#~ msgstr "normalny"
+
+#~ msgid "score"
+#~ msgstr "wynik"
+
+#~ msgid "short"
+#~ msgstr "skrócony"

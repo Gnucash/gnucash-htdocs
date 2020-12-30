@@ -8,9 +8,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GnuCash ht-docs\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
-"cgi?component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2020-12-04 00:47+0100\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
+"component=Translations&product=Website&resolution=---\n"
+"POT-Creation-Date: 2020-12-30 04:52+0100\n"
 "PO-Revision-Date: 2020-12-26 22:11+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/gnucash/website/"
@@ -1702,9 +1702,8 @@ msgid ""
 "b> and <b>Billing Terms</b>."
 msgstr ""
 "Pojednostavljeno upravljanje malim poduzećima: uređivanje i praćenje razvoja "
-"<b>kupaca</b> i <b>dobavljača</b>, <b>nalozi</b>, plaćanja "
-"<b>izlaznih</b>/<b>ulaznih</b> računa te određivanje <b>poreza</b> i "
-"<b>uvjeta plaćanja</b>."
+"<b>kupaca</b> i <b>dobavljača</b>, <b>nalozi</b>, plaćanja <b>izlaznih</b>/"
+"<b>ulaznih</b> računa te određivanje <b>poreza</b> i <b>uvjeta plaćanja</b>."
 
 #: features.phtml:130
 msgid ""
@@ -2410,504 +2409,6 @@ msgid ""
 "page."
 msgstr "Ovo je arhiv prijašnjih najava na GnuCash web-stranici."
 
-#: search/templates/NMZ.body.php_tmpl:4 search/templates/NMZ.head.php_tmpl:28
-msgid "Query"
-msgstr "Upit"
-
-#: search/templates/NMZ.body.php_tmpl:6
-msgid "Single term query"
-msgstr "Upit jednog pojma"
-
-#: search/templates/NMZ.body.php_tmpl:8
-msgid ""
-"This query specifies only one term for retrieving all of the\n"
-"documents which contain that term, for example:"
-msgstr ""
-"Ovaj upit određuje samo jedan pojam za traženje u svim\n"
-"dokumentima koji sadrže taj pojam, npr.:"
-
-#: search/templates/NMZ.body.php_tmpl:16
-msgid "AND query"
-msgstr "AND upit (logički I)"
-
-#: search/templates/NMZ.body.php_tmpl:19
-msgid ""
-"This query specifies two or more terms for retrieving all of the\n"
-"documents which contain both terms. Insert the\n"
-"<code class=\"operator\">and</code> operator between the terms, e.g."
-msgstr ""
-"Ovaj upit određuje dva ili više pojmova za pronalaženje svih\n"
-"dokumenata koji sadrže te pojmove. Umetni\n"
-"operator <code class=\"operator\">and</code> između pojmova, npr."
-
-#: search/templates/NMZ.body.php_tmpl:29
-msgid ""
-"You can omit the <code class=\"operator\">and</code> operator.  Terms which "
-"are\n"
-"separated by one or more spaces are assumed to be an AND query."
-msgstr ""
-"Operator <code class=\"operator\">and</code> možeš izostaviti. Uvjeti koji "
-"su\n"
-"odvojeni jednim ili više razmacima uzimaju se kao AND upit."
-
-#: search/templates/NMZ.body.php_tmpl:33
-msgid "OR query"
-msgstr "OR upit (logički ILI)"
-
-#: search/templates/NMZ.body.php_tmpl:35
-msgid ""
-"This query specifies two or more terms for retrieving all\n"
-"documents which contain any one term. Insert the\n"
-"<code class=\"operator\">or</code> operator between the terms,\n"
-"e.g."
-msgstr ""
-"Ovaj upit određuje dva ili više pojmova za pronalaženje svih\n"
-"dokumenata koji sadrže te pojmove. Umetni operator <code class=\"operator\""
-">or</code>\n"
-"između pojmova, npr."
-
-#: search/templates/NMZ.body.php_tmpl:45
-msgid "NOT query"
-msgstr "NOT upit (negacija)"
-
-#: search/templates/NMZ.body.php_tmpl:47
-msgid ""
-"This query specifies two or more terms for retrieving all of the\n"
-"documents which contain a first term but do not contain the\n"
-"following terms. Insert the <code class=\"operator\">not</code>\n"
-"operator between the terms, for example:"
-msgstr ""
-"Ovaj upit određuje dva ili više pojmova za pronalaženje svih\n"
-"dokumenata koji sadrže prvi pojam, ali ne slijedeće pojmove.\n"
-"Umetni operator <code class=\"operator\">NOT</code> između pojmova, npr.:"
-
-#: search/templates/NMZ.body.php_tmpl:58
-msgid "Grouping"
-msgstr "Grupiranje"
-
-#: search/templates/NMZ.body.php_tmpl:60
-msgid ""
-"You can group queries by surrounding them by\n"
-"parentheses. The parentheses should be separated by one or\n"
-"more spaces. e.g."
-msgstr ""
-"Upite možeš grupirati tako da ih staviš u zagrade. \n"
-"Zagrade moraju biti odvojene jednim ili više razmacima, npr."
-
-#: search/templates/NMZ.body.php_tmpl:69
-msgid "Phrase searching"
-msgstr "Traženje izraza"
-
-#: search/templates/NMZ.body.php_tmpl:71
-msgid ""
-"You can search for a phrase that consists of two or more terms\n"
-"by surrounding them with double quotation marks or braces such as\n"
-"<code class=\"operator\">\"...\"</code> and <code class=\"operator\">{...}</"
-"code>.\n"
-"In Namazu, the precision of phrase searching is not 100%,\n"
-"so wrong results may occasionally occur.  Example:"
-msgstr ""
-"Možeš tražiti izraz koji se sastoji od dva ili više pojmova\n"
-"stavljajući ih pod dvostruke navodnike ili vitičaste zagrade, npr.\n"
-"<code class=\"operator\">\"…\"</code> i <code class=\"operator\""
-">{...}</code>.\n"
-"U Namazu, preciznost pretraživanja izraza nije sto postotna,\n"
-"tako da povremeno može doći do grešaka u rezultatima. Primjer:"
-
-#: search/templates/NMZ.body.php_tmpl:88
-msgid "Substring matching"
-msgstr "Uspoređivanje podnizova"
-
-#: search/templates/NMZ.body.php_tmpl:90
-msgid "There are three types of searching by substring matching."
-msgstr "Postoje tri vrste pretraživanja pomoću uspoređivanja podnizova."
-
-#: search/templates/NMZ.body.php_tmpl:94
-msgid "Prefix matching"
-msgstr "Uspoređivanje početka"
-
-#: search/templates/NMZ.body.php_tmpl:95
-msgid "(terms which begin with <code>inter</code>)"
-msgstr "(izrazi koji započinju s <code>inter</code>)"
-
-#: search/templates/NMZ.body.php_tmpl:96
-msgid "Inside matching"
-msgstr "Uspoređivanje sredine"
-
-#: search/templates/NMZ.body.php_tmpl:97
-msgid "(terms which contain <code>text</code>)"
-msgstr "(izrazi koji sadrže <code>text</code>)"
-
-#: search/templates/NMZ.body.php_tmpl:98
-msgid "Suffix matching"
-msgstr "Uspoređivanje završetka"
-
-#: search/templates/NMZ.body.php_tmpl:100
-msgid "(terms which terminated with <code>net</code>)"
-msgstr "(izrazi koji završavaju s <code>net</code>)"
-
-#: search/templates/NMZ.body.php_tmpl:104
-msgid "Regular expressions"
-msgstr "Regularni izrazi"
-
-#: search/templates/NMZ.body.php_tmpl:107
-msgid ""
-"You can use regular expressions for pattern matching. The\n"
-"regular expressions must be surrounded by slashes like <code\n"
-"class=\"operator\">/.../</code>. Namazu uses <a\n"
-"href=\"http://www.ruby-lang.org/\">Ruby</a>'s regular\n"
-"regular expressions engine. It generally offers a <a\n"
-"href=\"http://www.perl.com/\">Perl</a> compatible flavor.\n"
-"e.g.,"
-msgstr ""
-"Možeš koristiti regularne izraze za uspoređivanje uzoraka.\n"
-"Regularni izrazi moraju biti okruženi kosim crtama poput \n"
-"<code class=\"operator\">/…/</code>. Namazu koristi \n"
-"<a href=\"http://www.ruby-lang.org/\">Ruby</a>-ev mehanizam regularnih "
-"izraza.\n"
-"Općenito nudi kompatibilan <a href=\"http://www.perl.com/\">Perl</a> način.\n"
-"npr.,"
-
-#: search/templates/NMZ.body.php_tmpl:121
-msgid "Field-specified searching"
-msgstr "Pretraživanje određenih polja"
-
-#: search/templates/NMZ.body.php_tmpl:123
-msgid ""
-"You can limit your search to specific fields such as\n"
-"<code>Subject:</code>, <code>From:</code>,\n"
-"<code>Message-Id:</code>. This feature is especially convenient for\n"
-"Mail/News documents, for example:"
-msgstr ""
-"Možeš ograničiti pretraživanje na određena polja, npr.\n"
-"<code>Tema:</code>, <code>Od:</code>,\n"
-"<code>ID poruke:</code>. Ova je funkcija posebno prikladna za\n"
-"dokumente e‑pošte/novosti, na primjer:"
-
-#: search/templates/NMZ.body.php_tmpl:131
-msgid ""
-"(Retrieves all documents which contain <code>Linux</code>\n"
-"in a <code>Subject:</code> field)"
-msgstr ""
-"(Nalazi sve dokumente koji sadrže <code>Linux</code>\n"
-"u polju <code>Predmet:</code>)"
-
-#: search/templates/NMZ.body.php_tmpl:136
-msgid ""
-"(Retrieves all documents which contain <code>GNU Emacs</code>\n"
-"in a <code>Subject:</code> field)"
-msgstr ""
-"(Nalazi sve dokumente koji sadrže <code>GNU Emacs</code>\n"
-"u polju <code>Predmet:</code>)"
-
-#: search/templates/NMZ.body.php_tmpl:141
-msgid ""
-"(Retrieves all documents which contain <code>foo@bar.jp</code>\n"
-"in a <code>From:</code> field)"
-msgstr ""
-"(Nalazi sve dokumente koji sadrže <code>foo@bar.jp</code>\n"
-"u polju <code>Od:</code>)"
-
-#: search/templates/NMZ.body.php_tmpl:147
-msgid ""
-"(Retrieves a certain document which contains specified\n"
-"<code>Message-Id:</code>)"
-msgstr ""
-"(Nalazi određeni dokument koji sadrži određeni\n"
-"<code>ID poruke:</code>)"
-
-#: search/templates/NMZ.body.php_tmpl:152
-msgid "Notes"
-msgstr "Napomene"
-
-#: search/templates/NMZ.body.php_tmpl:155
-msgid ""
-"In any queries, Namazu ignores case distinctions of\n"
-"alphabet characters; i.e. Namazu does\n"
-"case-insensitive pattern matching."
-msgstr ""
-"U bilo kojem upitu, Namazu zanemaruje pisanje\n"
-"velikih/malih slova, tj. Namazu uspoređuje uzorke \n"
-"neovisno o veličini slova."
-
-#: search/templates/NMZ.body.php_tmpl:160
-msgid ""
-"Japanese phrases are automatically segmented into\n"
-"morphemes and are handled as <a\n"
-"href=\"#query-phrase\">phrase searching</a>. This process occasionally\n"
-"causes invalid segmentation."
-msgstr ""
-"Japanski se izrazi automatski segmentiraju na\n"
-"morfeme i obrađuju se kao <a href=\"# query-phrase\">\n"
-"pretraživanje izraza</a>. Ovaj proces ponekad\n"
-"uzrokuje nevažeću segmentaciju."
-
-#: search/templates/NMZ.body.php_tmpl:166
-msgid ""
-"Letters, numbers or parts of symbols (duplicated in\n"
-"ASCII) which are defined in JIS X 0208 (Japanese\n"
-"Industrial Standards) are handled as ASCII characters."
-msgstr ""
-"Slova, brojevi ili dijelovi simbola (duplikati u\n"
-"ASCII kodu) koji su definirani u JIS X 0208 (japanski\n"
-"Industrijski standardi) obrađuju se kao ASCII znakovi."
-
-#: search/templates/NMZ.body.php_tmpl:171
-msgid ""
-"Namazu can handle a term which contains symbols like\n"
-"<code>TCP/IP</code>.  Since this method of handling isn't complete,\n"
-"you can also describe the term as <code>TCP and IP</code> instead of\n"
-"<code>TCP/IP</code>, but it may cause noisy results."
-msgstr ""
-"Namazu može obraditi pojam koji sadrži simbole, kao što je\n"
-"<code>TCP/IP</code>. Budući da ovaj način rukovanja nije dovršen,\n"
-"pojam možeš opisati i kao <code>TCP i IP</code> umjesto\n"
-"<code>TCP/IP</code>, ali to može stvoriti previše rezultata."
-
-#: search/templates/NMZ.body.php_tmpl:178
-msgid ""
-"Substring matching and field-specified searching takes\n"
-"more time than other methods."
-msgstr ""
-"Uspoređivanje podnizova i pretraživanje određenih polja\n"
-"traje duže od drugih metoda."
-
-#: search/templates/NMZ.body.php_tmpl:182 search/templates/NMZ.tips.php_tmpl:60
-msgid ""
-"If you want to use <code class=\"operator\">and</code>,\n"
-"<code class=\"operator\">or</code> or <code\n"
-"class=\"operator\">not</code> as ordinary keywords<br>\n"
-"You can surround them respectively with double quotes like <code\n"
-"class=\"operator\">\"...\"</code> or braces like <code\n"
-"class=\"operator\">{...}</code>."
-msgstr ""
-"Ako želiš koristiti operator <code class=\"operator\">and</code>,\n"
-"<code class=\"operator\">or</code> ili <code class=\"operator\">not</code>\n"
-"kao obične ključne riječi, možeš ih staviti pod dvostruke navodnike\n"
-"<code class=\"operator\">\"…\"</code> ili vitičaste zagrade <code class="
-"\"operator\">{…}</code>."
-
-#: search/templates/NMZ.foot.php_tmpl:9
-msgid "This search system is powered by:"
-msgstr "Ovaj se sustav pretraživanja pokreće pomoću:"
-
-#: search/templates/NMZ.foot.php_tmpl:13
-msgid "Server &amp; email outage reports to: "
-msgstr "Izvještaje o prekidu rada servera i e‑pošte na: "
-
-#: search/templates/NMZ.foot.php_tmpl:15
-msgid ""
-"Translation problems? Contact: <a href=\"mailto:gnucash-devel@gnucash.org"
-"\"><b>gnucash-devel@gnucash.org</b></a>"
-msgstr ""
-"Problemi s prijevodom? Kontaktiraj: <a href=\"mailto:gnucash-devel@gnucash."
-"org\"><b>gnucash-devel@gnucash.org</b></a>"
-
-#: search/templates/NMZ.head.php_tmpl:4
-msgid "Mailing List Search"
-msgstr "Pretraži pretplatničku listu"
-
-#: search/templates/NMZ.head.php_tmpl:30
-msgid "Search!"
-msgstr "Traži!"
-
-#: search/templates/NMZ.head.php_tmpl:32
-msgid "[How to search]"
-msgstr "[Kako tražiti]"
-
-#: search/templates/NMZ.head.php_tmpl:35
-msgid "Display"
-msgstr "Prikaz"
-
-#: search/templates/NMZ.head.php_tmpl:43
-msgid "Description"
-msgstr "Opis"
-
-#: search/templates/NMZ.head.php_tmpl:45
-msgid "normal"
-msgstr "normalno"
-
-#: search/templates/NMZ.head.php_tmpl:46
-msgid "short"
-msgstr "kratko"
-
-#: search/templates/NMZ.head.php_tmpl:48
-msgid "Sort"
-msgstr "Razvrstaj"
-
-#: search/templates/NMZ.head.php_tmpl:50
-msgid "by score"
-msgstr "po rezultatu"
-
-#: search/templates/NMZ.head.php_tmpl:51
-msgid "by date in late order"
-msgstr "po datumu silazno"
-
-#: search/templates/NMZ.head.php_tmpl:52
-msgid "by date in early order"
-msgstr "po datumu uzlazno"
-
-#: search/templates/NMZ.head.php_tmpl:53
-msgid "by title in ascending order"
-msgstr "po naslovu uzlazno"
-
-#: search/templates/NMZ.head.php_tmpl:54
-msgid "by title in descending order"
-msgstr "po naslovu silazno"
-
-#: search/templates/NMZ.head.php_tmpl:55
-msgid "by author in ascending order"
-msgstr "po autoru uzlazno"
-
-#: search/templates/NMZ.head.php_tmpl:56
-msgid "by author in descending order"
-msgstr "po autoru silazno"
-
-#: search/templates/NMZ.head.php_tmpl:57
-msgid "by size in ascending order"
-msgstr "po veličini uzlazno"
-
-#: search/templates/NMZ.head.php_tmpl:58
-msgid "by size in descending order"
-msgstr "po veličini silazno"
-
-#: search/templates/NMZ.head.php_tmpl:59
-msgid "by URI in ascending order"
-msgstr "po URI uzlazno"
-
-#: search/templates/NMZ.head.php_tmpl:60
-msgid "by URI in descending order"
-msgstr "po URI silazno"
-
-#: search/templates/NMZ.head.php_tmpl:65
-msgid "Lists to Search"
-msgstr "Traži u popisima"
-
-#: search/templates/NMZ.result.normal.php_tmpl:4
-#: search/templates/NMZ.result.short.php_tmpl:4
-msgid "score"
-msgstr "rezultat"
-
-#: search/templates/NMZ.result.normal.php_tmpl:5
-msgid "Author"
-msgstr "Autor"
-
-#: search/templates/NMZ.result.normal.php_tmpl:6
-msgid "Date"
-msgstr "Datum"
-
-#: search/templates/NMZ.result.normal.php_tmpl:9
-#: search/templates/NMZ.result.short.php_tmpl:6
-msgid "(${size} bytes)"
-msgstr "(${size} bajtova)"
-
-#: search/templates/NMZ.tips.php_tmpl:4
-msgid "Tips on searching"
-msgstr "Savjeti za pretragu"
-
-#: search/templates/NMZ.tips.php_tmpl:7
-msgid "If you have trouble with searching, you can check the following tips."
-msgstr "Ako imaš poteškoća s pretraživanjem, probaj sljedeće savjete."
-
-#: search/templates/NMZ.tips.php_tmpl:11
-msgid ""
-"Check a spelling of your keyword<br>\n"
-"Namazu can't find anything with wrong spelling."
-msgstr ""
-"Provjeri pravopis ključne riječi<br>\n"
-"Namazu ne može pronaći riječi s neispravnim pravopisom."
-
-#: search/templates/NMZ.tips.php_tmpl:15
-msgid "Add keywords"
-msgstr "Dodaj ključne riječi"
-
-#: search/templates/NMZ.tips.php_tmpl:17
-msgid ""
-"If you gained no results or too few results, you can add one\n"
-"or more related keywords with <code\n"
-"class=\"operator\">or</code> operator.  You should get more results.\n"
-"e.g.,"
-msgstr ""
-"Ako ne dobiješ rezultate ili ako dobiješ premalo rezultata,\n"
-"možeš dodati jednu ili više srodnih ključnih riječi pomoću\n"
-"operatora <code class=\"operator\">or</code>. Vjerojatno ćeš dobiti više "
-"rezultata.\n"
-"Npr.,"
-
-#: search/templates/NMZ.tips.php_tmpl:23
-msgid ""
-"If you gained too many results, you can add one or more\n"
-"related keywords with <code class=\"operator\">and</code>\n"
-"operator. It makes your search more limited. e.g.,"
-msgstr ""
-"Ako dobiješ previše rezultata, možeš dodati jednu ili više\n"
-"srodnih ključnih riječi pomoću operatora <code class=\n"
-"\"operator\">i</code>. To će ograničiti tvoju pretragu. Npr.,"
-
-#: search/templates/NMZ.tips.php_tmpl:29
-msgid "Try substring matching"
-msgstr "Pokušaj usporediti podnizove"
-
-#: search/templates/NMZ.tips.php_tmpl:31
-msgid ""
-"If you gained no results or too few results, you can try\n"
-"substring matching."
-msgstr ""
-"Ako ne dobiješ nikakve rezultate ili premalo rezultata, \n"
-"možeš pokušati uspoređivati podnizove."
-
-#: search/templates/NMZ.tips.php_tmpl:34
-msgid ""
-"You can specify <code class=\"example\">tex*</code> to\n"
-"search for terms which begin with\n"
-"<code>tex</code> (e.g., <code>tex</code>,\n"
-"<code>texi2html</code>,\n"
-"<code>texindex</code>, <code>text</code>)."
-msgstr ""
-"Možeš zadati <code class=\"example\">tex*</code> za\n"
-"traženje pojmova koji počinju s\n"
-"<code>tex</code> (npr., <code>tex</code>,\n"
-"<code>texi2html</code>,\n"
-"<code>texindex</code>, <code>text</code>)."
-
-#: search/templates/NMZ.tips.php_tmpl:41
-msgid ""
-"You can specify <code class=\"example\">*tex</code> to\n"
-"search for terms which terminated with <code>tex</code> (e.g.,\n"
-"<code>bibtex</code>,\n"
-"<code>jlatex</code>, <code>latex</code>,\n"
-"<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
-msgstr ""
-"Možeš zadati <code class=\"example\">*tex</code> za\n"
-"traženje pojmova koji završavaju s<code>tex</code> (e.g.,\n"
-"<code>bibtex</code>,\n"
-"<code>jlatex</code>, <code>latex</code>,\n"
-"<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
-
-#: search/templates/NMZ.tips.php_tmpl:48
-msgid ""
-"You can specify <code class=\"example\">*tex*</code> to\n"
-"search for terms which contain <code>tex</code> (many)."
-msgstr ""
-"Možeš zadati <code class=\"example\">*tex*</code> za\n"
-"traženje pojmova koji sadržavaju <code>tex</code> (višestruko)."
-
-#: search/templates/NMZ.tips.php_tmpl:53
-msgid ""
-"You tried phrase searching but it hit documents which\n"
-"didn't contain your phrase."
-msgstr ""
-"Pokušavaš tražiti pojam, ali tražiš u dokumentima, koji\n"
-"ne sadržavaju tvoj pojam."
-
-#: search/templates/NMZ.tips.php_tmpl:56
-msgid ""
-"It's a defect of Namazu. Precision of phrase searching is\n"
-"not 100%, so it cause wrong results occasionally."
-msgstr ""
-"To je greška u Namazu. Točnost pretraživanja izraza\n"
-"nije 100 %, pa povremeno dolazi do pogrešnih rezultata."
-
 #: sizing.phtml:5
 msgid "This is an ancient page about Gnucash's code size."
 msgstr "Ovo je stara stranica o količini kodova za program Gnucash."
@@ -3147,8 +2648,8 @@ msgid ""
 "gnc-module, src/network-utils, src/tax/us"
 msgstr ""
 "Sadržaj raznih programskih direktorija (verzija 1.7 i novija): src/app‑file, "
-"src/app‑utils, src/calculation, src/core‑utils, src/gnc‑modul, src/network‑"
-"utils, src/tax/us"
+"src/app‑utils, src/calculation, src/core‑utils, src/gnc‑modul, src/"
+"network‑utils, src/tax/us"
 
 #: sizing.phtml:365
 msgid ""
@@ -3221,8 +2722,8 @@ msgid ""
 "thousands."
 msgstr ""
 "Broj jezika, na koje su prevedene poruke programa (broj <tt>po/*.po </tt> "
-"datoteka). U zagradama, broj poruka u datotekama poruka (<tt>grep msgstr po/*"
-".po |wc</tt>), u tisućama."
+"datoteka). U zagradama, broj poruka u datotekama poruka (<tt>grep msgstr po/"
+"*.po |wc</tt>), u tisućama."
 
 #: sizing.phtml:405
 msgid ""
@@ -3277,3 +2778,425 @@ msgstr ""
 "Čini se da tvoj web preglednik ne podržava iframes. Za prikaz tražene "
 "stranice u odvojenom prozoru <a href=\"%s\" target=\"_blank\">klikni ovdje</"
 "a>."
+
+#~ msgid "(${size} bytes)"
+#~ msgstr "(${size} bajtova)"
+
+#~ msgid ""
+#~ "(Retrieves a certain document which contains specified\n"
+#~ "<code>Message-Id:</code>)"
+#~ msgstr ""
+#~ "(Nalazi određeni dokument koji sadrži određeni\n"
+#~ "<code>ID poruke:</code>)"
+
+#~ msgid ""
+#~ "(Retrieves all documents which contain <code>GNU Emacs</code>\n"
+#~ "in a <code>Subject:</code> field)"
+#~ msgstr ""
+#~ "(Nalazi sve dokumente koji sadrže <code>GNU Emacs</code>\n"
+#~ "u polju <code>Predmet:</code>)"
+
+#~ msgid ""
+#~ "(Retrieves all documents which contain <code>Linux</code>\n"
+#~ "in a <code>Subject:</code> field)"
+#~ msgstr ""
+#~ "(Nalazi sve dokumente koji sadrže <code>Linux</code>\n"
+#~ "u polju <code>Predmet:</code>)"
+
+#~ msgid ""
+#~ "(Retrieves all documents which contain <code>foo@bar.jp</code>\n"
+#~ "in a <code>From:</code> field)"
+#~ msgstr ""
+#~ "(Nalazi sve dokumente koji sadrže <code>foo@bar.jp</code>\n"
+#~ "u polju <code>Od:</code>)"
+
+#~ msgid "(terms which begin with <code>inter</code>)"
+#~ msgstr "(izrazi koji započinju s <code>inter</code>)"
+
+#~ msgid "(terms which contain <code>text</code>)"
+#~ msgstr "(izrazi koji sadrže <code>text</code>)"
+
+#~ msgid "(terms which terminated with <code>net</code>)"
+#~ msgstr "(izrazi koji završavaju s <code>net</code>)"
+
+#~ msgid "AND query"
+#~ msgstr "AND upit (logički I)"
+
+#~ msgid "Add keywords"
+#~ msgstr "Dodaj ključne riječi"
+
+#~ msgid "Author"
+#~ msgstr "Autor"
+
+#~ msgid ""
+#~ "Check a spelling of your keyword<br>\n"
+#~ "Namazu can't find anything with wrong spelling."
+#~ msgstr ""
+#~ "Provjeri pravopis ključne riječi<br>\n"
+#~ "Namazu ne može pronaći riječi s neispravnim pravopisom."
+
+#~ msgid "Date"
+#~ msgstr "Datum"
+
+#~ msgid "Description"
+#~ msgstr "Opis"
+
+#~ msgid "Display"
+#~ msgstr "Prikaz"
+
+#~ msgid "Field-specified searching"
+#~ msgstr "Pretraživanje određenih polja"
+
+#~ msgid "Grouping"
+#~ msgstr "Grupiranje"
+
+#~ msgid ""
+#~ "If you gained no results or too few results, you can add one\n"
+#~ "or more related keywords with <code\n"
+#~ "class=\"operator\">or</code> operator.  You should get more results.\n"
+#~ "e.g.,"
+#~ msgstr ""
+#~ "Ako ne dobiješ rezultate ili ako dobiješ premalo rezultata,\n"
+#~ "možeš dodati jednu ili više srodnih ključnih riječi pomoću\n"
+#~ "operatora <code class=\"operator\">or</code>. Vjerojatno ćeš dobiti više "
+#~ "rezultata.\n"
+#~ "Npr.,"
+
+#~ msgid ""
+#~ "If you gained no results or too few results, you can try\n"
+#~ "substring matching."
+#~ msgstr ""
+#~ "Ako ne dobiješ nikakve rezultate ili premalo rezultata, \n"
+#~ "možeš pokušati uspoređivati podnizove."
+
+#~ msgid ""
+#~ "If you gained too many results, you can add one or more\n"
+#~ "related keywords with <code class=\"operator\">and</code>\n"
+#~ "operator. It makes your search more limited. e.g.,"
+#~ msgstr ""
+#~ "Ako dobiješ previše rezultata, možeš dodati jednu ili više\n"
+#~ "srodnih ključnih riječi pomoću operatora <code class=\n"
+#~ "\"operator\">i</code>. To će ograničiti tvoju pretragu. Npr.,"
+
+#~ msgid ""
+#~ "If you have trouble with searching, you can check the following tips."
+#~ msgstr "Ako imaš poteškoća s pretraživanjem, probaj sljedeće savjete."
+
+#~ msgid ""
+#~ "If you want to use <code class=\"operator\">and</code>,\n"
+#~ "<code class=\"operator\">or</code> or <code\n"
+#~ "class=\"operator\">not</code> as ordinary keywords<br>\n"
+#~ "You can surround them respectively with double quotes like <code\n"
+#~ "class=\"operator\">\"...\"</code> or braces like <code\n"
+#~ "class=\"operator\">{...}</code>."
+#~ msgstr ""
+#~ "Ako želiš koristiti operator <code class=\"operator\">and</code>,\n"
+#~ "<code class=\"operator\">or</code> ili <code class=\"operator\">not</"
+#~ "code>\n"
+#~ "kao obične ključne riječi, možeš ih staviti pod dvostruke navodnike\n"
+#~ "<code class=\"operator\">\"…\"</code> ili vitičaste zagrade <code class="
+#~ "\"operator\">{…}</code>."
+
+#~ msgid ""
+#~ "In any queries, Namazu ignores case distinctions of\n"
+#~ "alphabet characters; i.e. Namazu does\n"
+#~ "case-insensitive pattern matching."
+#~ msgstr ""
+#~ "U bilo kojem upitu, Namazu zanemaruje pisanje\n"
+#~ "velikih/malih slova, tj. Namazu uspoređuje uzorke \n"
+#~ "neovisno o veličini slova."
+
+#~ msgid "Inside matching"
+#~ msgstr "Uspoređivanje sredine"
+
+#~ msgid ""
+#~ "It's a defect of Namazu. Precision of phrase searching is\n"
+#~ "not 100%, so it cause wrong results occasionally."
+#~ msgstr ""
+#~ "To je greška u Namazu. Točnost pretraživanja izraza\n"
+#~ "nije 100 %, pa povremeno dolazi do pogrešnih rezultata."
+
+#~ msgid ""
+#~ "Japanese phrases are automatically segmented into\n"
+#~ "morphemes and are handled as <a\n"
+#~ "href=\"#query-phrase\">phrase searching</a>. This process occasionally\n"
+#~ "causes invalid segmentation."
+#~ msgstr ""
+#~ "Japanski se izrazi automatski segmentiraju na\n"
+#~ "morfeme i obrađuju se kao <a href=\"# query-phrase\">\n"
+#~ "pretraživanje izraza</a>. Ovaj proces ponekad\n"
+#~ "uzrokuje nevažeću segmentaciju."
+
+#~ msgid ""
+#~ "Letters, numbers or parts of symbols (duplicated in\n"
+#~ "ASCII) which are defined in JIS X 0208 (Japanese\n"
+#~ "Industrial Standards) are handled as ASCII characters."
+#~ msgstr ""
+#~ "Slova, brojevi ili dijelovi simbola (duplikati u\n"
+#~ "ASCII kodu) koji su definirani u JIS X 0208 (japanski\n"
+#~ "Industrijski standardi) obrađuju se kao ASCII znakovi."
+
+#~ msgid "Lists to Search"
+#~ msgstr "Traži u popisima"
+
+#~ msgid "Mailing List Search"
+#~ msgstr "Pretraži pretplatničku listu"
+
+#~ msgid "NOT query"
+#~ msgstr "NOT upit (negacija)"
+
+#~ msgid ""
+#~ "Namazu can handle a term which contains symbols like\n"
+#~ "<code>TCP/IP</code>.  Since this method of handling isn't complete,\n"
+#~ "you can also describe the term as <code>TCP and IP</code> instead of\n"
+#~ "<code>TCP/IP</code>, but it may cause noisy results."
+#~ msgstr ""
+#~ "Namazu može obraditi pojam koji sadrži simbole, kao što je\n"
+#~ "<code>TCP/IP</code>. Budući da ovaj način rukovanja nije dovršen,\n"
+#~ "pojam možeš opisati i kao <code>TCP i IP</code> umjesto\n"
+#~ "<code>TCP/IP</code>, ali to može stvoriti previše rezultata."
+
+#~ msgid "Notes"
+#~ msgstr "Napomene"
+
+#~ msgid "OR query"
+#~ msgstr "OR upit (logički ILI)"
+
+#~ msgid "Phrase searching"
+#~ msgstr "Traženje izraza"
+
+#~ msgid "Prefix matching"
+#~ msgstr "Uspoređivanje početka"
+
+#~ msgid "Query"
+#~ msgstr "Upit"
+
+#~ msgid "Regular expressions"
+#~ msgstr "Regularni izrazi"
+
+#~ msgid "Search!"
+#~ msgstr "Traži!"
+
+#~ msgid "Server &amp; email outage reports to: "
+#~ msgstr "Izvještaje o prekidu rada servera i e‑pošte na: "
+
+#~ msgid "Single term query"
+#~ msgstr "Upit jednog pojma"
+
+#~ msgid "Sort"
+#~ msgstr "Razvrstaj"
+
+#~ msgid "Substring matching"
+#~ msgstr "Uspoređivanje podnizova"
+
+#~ msgid ""
+#~ "Substring matching and field-specified searching takes\n"
+#~ "more time than other methods."
+#~ msgstr ""
+#~ "Uspoređivanje podnizova i pretraživanje određenih polja\n"
+#~ "traje duže od drugih metoda."
+
+#~ msgid "Suffix matching"
+#~ msgstr "Uspoređivanje završetka"
+
+#~ msgid "There are three types of searching by substring matching."
+#~ msgstr "Postoje tri vrste pretraživanja pomoću uspoređivanja podnizova."
+
+#~ msgid ""
+#~ "This query specifies only one term for retrieving all of the\n"
+#~ "documents which contain that term, for example:"
+#~ msgstr ""
+#~ "Ovaj upit određuje samo jedan pojam za traženje u svim\n"
+#~ "dokumentima koji sadrže taj pojam, npr.:"
+
+#~ msgid ""
+#~ "This query specifies two or more terms for retrieving all\n"
+#~ "documents which contain any one term. Insert the\n"
+#~ "<code class=\"operator\">or</code> operator between the terms,\n"
+#~ "e.g."
+#~ msgstr ""
+#~ "Ovaj upit određuje dva ili više pojmova za pronalaženje svih\n"
+#~ "dokumenata koji sadrže te pojmove. Umetni operator <code class=\"operator"
+#~ "\">or</code>\n"
+#~ "između pojmova, npr."
+
+#~ msgid ""
+#~ "This query specifies two or more terms for retrieving all of the\n"
+#~ "documents which contain a first term but do not contain the\n"
+#~ "following terms. Insert the <code class=\"operator\">not</code>\n"
+#~ "operator between the terms, for example:"
+#~ msgstr ""
+#~ "Ovaj upit određuje dva ili više pojmova za pronalaženje svih\n"
+#~ "dokumenata koji sadrže prvi pojam, ali ne slijedeće pojmove.\n"
+#~ "Umetni operator <code class=\"operator\">NOT</code> između pojmova, npr.:"
+
+#~ msgid ""
+#~ "This query specifies two or more terms for retrieving all of the\n"
+#~ "documents which contain both terms. Insert the\n"
+#~ "<code class=\"operator\">and</code> operator between the terms, e.g."
+#~ msgstr ""
+#~ "Ovaj upit određuje dva ili više pojmova za pronalaženje svih\n"
+#~ "dokumenata koji sadrže te pojmove. Umetni\n"
+#~ "operator <code class=\"operator\">and</code> između pojmova, npr."
+
+#~ msgid "This search system is powered by:"
+#~ msgstr "Ovaj se sustav pretraživanja pokreće pomoću:"
+
+#~ msgid "Tips on searching"
+#~ msgstr "Savjeti za pretragu"
+
+#~ msgid ""
+#~ "Translation problems? Contact: <a href=\"mailto:gnucash-devel@gnucash.org"
+#~ "\"><b>gnucash-devel@gnucash.org</b></a>"
+#~ msgstr ""
+#~ "Problemi s prijevodom? Kontaktiraj: <a href=\"mailto:gnucash-"
+#~ "devel@gnucash.org\"><b>gnucash-devel@gnucash.org</b></a>"
+
+#~ msgid "Try substring matching"
+#~ msgstr "Pokušaj usporediti podnizove"
+
+#~ msgid ""
+#~ "You can group queries by surrounding them by\n"
+#~ "parentheses. The parentheses should be separated by one or\n"
+#~ "more spaces. e.g."
+#~ msgstr ""
+#~ "Upite možeš grupirati tako da ih staviš u zagrade. \n"
+#~ "Zagrade moraju biti odvojene jednim ili više razmacima, npr."
+
+#~ msgid ""
+#~ "You can limit your search to specific fields such as\n"
+#~ "<code>Subject:</code>, <code>From:</code>,\n"
+#~ "<code>Message-Id:</code>. This feature is especially convenient for\n"
+#~ "Mail/News documents, for example:"
+#~ msgstr ""
+#~ "Možeš ograničiti pretraživanje na određena polja, npr.\n"
+#~ "<code>Tema:</code>, <code>Od:</code>,\n"
+#~ "<code>ID poruke:</code>. Ova je funkcija posebno prikladna za\n"
+#~ "dokumente e‑pošte/novosti, na primjer:"
+
+#~ msgid ""
+#~ "You can omit the <code class=\"operator\">and</code> operator.  Terms "
+#~ "which are\n"
+#~ "separated by one or more spaces are assumed to be an AND query."
+#~ msgstr ""
+#~ "Operator <code class=\"operator\">and</code> možeš izostaviti. Uvjeti "
+#~ "koji su\n"
+#~ "odvojeni jednim ili više razmacima uzimaju se kao AND upit."
+
+#~ msgid ""
+#~ "You can search for a phrase that consists of two or more terms\n"
+#~ "by surrounding them with double quotation marks or braces such as\n"
+#~ "<code class=\"operator\">\"...\"</code> and <code class=\"operator\">{...}"
+#~ "</code>.\n"
+#~ "In Namazu, the precision of phrase searching is not 100%,\n"
+#~ "so wrong results may occasionally occur.  Example:"
+#~ msgstr ""
+#~ "Možeš tražiti izraz koji se sastoji od dva ili više pojmova\n"
+#~ "stavljajući ih pod dvostruke navodnike ili vitičaste zagrade, npr.\n"
+#~ "<code class=\"operator\">\"…\"</code> i <code class=\"operator\">{...}</"
+#~ "code>.\n"
+#~ "U Namazu, preciznost pretraživanja izraza nije sto postotna,\n"
+#~ "tako da povremeno može doći do grešaka u rezultatima. Primjer:"
+
+#~ msgid ""
+#~ "You can specify <code class=\"example\">*tex*</code> to\n"
+#~ "search for terms which contain <code>tex</code> (many)."
+#~ msgstr ""
+#~ "Možeš zadati <code class=\"example\">*tex*</code> za\n"
+#~ "traženje pojmova koji sadržavaju <code>tex</code> (višestruko)."
+
+#~ msgid ""
+#~ "You can specify <code class=\"example\">*tex</code> to\n"
+#~ "search for terms which terminated with <code>tex</code> (e.g.,\n"
+#~ "<code>bibtex</code>,\n"
+#~ "<code>jlatex</code>, <code>latex</code>,\n"
+#~ "<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
+#~ msgstr ""
+#~ "Možeš zadati <code class=\"example\">*tex</code> za\n"
+#~ "traženje pojmova koji završavaju s<code>tex</code> (e.g.,\n"
+#~ "<code>bibtex</code>,\n"
+#~ "<code>jlatex</code>, <code>latex</code>,\n"
+#~ "<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
+
+#~ msgid ""
+#~ "You can specify <code class=\"example\">tex*</code> to\n"
+#~ "search for terms which begin with\n"
+#~ "<code>tex</code> (e.g., <code>tex</code>,\n"
+#~ "<code>texi2html</code>,\n"
+#~ "<code>texindex</code>, <code>text</code>)."
+#~ msgstr ""
+#~ "Možeš zadati <code class=\"example\">tex*</code> za\n"
+#~ "traženje pojmova koji počinju s\n"
+#~ "<code>tex</code> (npr., <code>tex</code>,\n"
+#~ "<code>texi2html</code>,\n"
+#~ "<code>texindex</code>, <code>text</code>)."
+
+#~ msgid ""
+#~ "You can use regular expressions for pattern matching. The\n"
+#~ "regular expressions must be surrounded by slashes like <code\n"
+#~ "class=\"operator\">/.../</code>. Namazu uses <a\n"
+#~ "href=\"http://www.ruby-lang.org/\">Ruby</a>'s regular\n"
+#~ "regular expressions engine. It generally offers a <a\n"
+#~ "href=\"http://www.perl.com/\">Perl</a> compatible flavor.\n"
+#~ "e.g.,"
+#~ msgstr ""
+#~ "Možeš koristiti regularne izraze za uspoređivanje uzoraka.\n"
+#~ "Regularni izrazi moraju biti okruženi kosim crtama poput \n"
+#~ "<code class=\"operator\">/…/</code>. Namazu koristi \n"
+#~ "<a href=\"http://www.ruby-lang.org/\">Ruby</a>-ev mehanizam regularnih "
+#~ "izraza.\n"
+#~ "Općenito nudi kompatibilan <a href=\"http://www.perl.com/\">Perl</a> "
+#~ "način.\n"
+#~ "npr.,"
+
+#~ msgid ""
+#~ "You tried phrase searching but it hit documents which\n"
+#~ "didn't contain your phrase."
+#~ msgstr ""
+#~ "Pokušavaš tražiti pojam, ali tražiš u dokumentima, koji\n"
+#~ "ne sadržavaju tvoj pojam."
+
+#~ msgid "[How to search]"
+#~ msgstr "[Kako tražiti]"
+
+#~ msgid "by URI in ascending order"
+#~ msgstr "po URI uzlazno"
+
+#~ msgid "by URI in descending order"
+#~ msgstr "po URI silazno"
+
+#~ msgid "by author in ascending order"
+#~ msgstr "po autoru uzlazno"
+
+#~ msgid "by author in descending order"
+#~ msgstr "po autoru silazno"
+
+#~ msgid "by date in early order"
+#~ msgstr "po datumu uzlazno"
+
+#~ msgid "by date in late order"
+#~ msgstr "po datumu silazno"
+
+#~ msgid "by score"
+#~ msgstr "po rezultatu"
+
+#~ msgid "by size in ascending order"
+#~ msgstr "po veličini uzlazno"
+
+#~ msgid "by size in descending order"
+#~ msgstr "po veličini silazno"
+
+#~ msgid "by title in ascending order"
+#~ msgstr "po naslovu uzlazno"
+
+#~ msgid "by title in descending order"
+#~ msgstr "po naslovu silazno"
+
+#~ msgid "normal"
+#~ msgstr "normalno"
+
+#~ msgid "score"
+#~ msgstr "rezultat"
+
+#~ msgid "short"
+#~ msgstr "kratko"
