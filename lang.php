@@ -34,6 +34,7 @@ $supported_languages = array(
         'de_DE' => 'de',
 //        'es_ES' => 'es',
         'fr_FR' => 'fr',
+        'he_IL' => 'he',
         'hr_HR' => 'hr',
         'hu_HU' => 'hu',
         'it_IT' => 'it',
