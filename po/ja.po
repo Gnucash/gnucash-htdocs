@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: gnucash-htdocs r18581\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2020-12-30 04:52+0100\n"
+"POT-Creation-Date: 2020-12-31 18:54+0100\n"
 "PO-Revision-Date: 2020-12-29 15:29+0000\n"
 "Last-Translator: YOSHINO Yoshihito <yy.y.ja.jp@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnucash/website/"
@@ -80,19 +80,20 @@ msgid ""
 msgstr ""
 
 #: 2.6-release-tour.phtml:50
-msgid "Attach file or location to any transaction"
+msgid "Associate a local file or remote location with any transaction"
 msgstr ""
 
 #: 2.6-release-tour.phtml:52
 msgid ""
-"It is now possible to link an external file or a location (URL) to a "
-"transaction. This long-requested feature is available through both the "
-"Transaction menu and the transaction's context menu. The files are displayed "
-"in the default viewer for that file type."
+"It is now possible to link an external local file or a remote location (URL) "
+"with a transaction. This long-requested feature is available through both "
+"the Transaction menu and the transaction's context menu. The files are "
+"displayed in the default viewer for that file type."
 msgstr ""
 
 #: 2.6-release-tour.phtml:60
-msgid "You can now attach a file or a location to any transaction."
+msgid ""
+"You can now associate a local file or a remote location with any transaction."
 msgstr ""
 
 #: 2.6-release-tour.phtml:65
@@ -253,7 +254,7 @@ msgid ""
 "just Version 2."
 msgstr ""
 
-#: 2.6-release-tour.phtml:163 docs.phtml:55 docs.phtml:189 docs.phtml:321
+#: 2.6-release-tour.phtml:163 docs.phtml:62 docs.phtml:196 docs.phtml:328
 #: download.phtml:5
 msgid "Download"
 msgstr "ダウンロード"
@@ -646,12 +647,17 @@ msgstr ""
 
 #. Translators: If wiki pages in your laguage exists, consider to replace "De"/"Deutsch" by your language.
 #: docs.phtml:39
+#, fuzzy
+#| msgid ""
+#| "Additionally, you can talk to someone via IRC at <i>irc.gnome.org</i> "
+#| "channel <b>#gnucash</b> about your question. Another resource is the <a "
+#| "href=\"https://wiki.gnucash.org/wiki/\">English</a> or <a href=\"https://"
+#| "wiki.gnucash.org/wiki/De/\">Deutsch</a> <span class=\"gnucash\">GnuCash</"
+#| "span> wikis."
 msgid ""
-"Additionally, you can talk to someone via IRC at <i>irc.gnome.org</i> "
-"channel <b>#gnucash</b> about your question. Another resource is the <a href="
-"\"https://wiki.gnucash.org/wiki/\">English</a> or <a href=\"https://wiki."
-"gnucash.org/wiki/De/\">Deutsch</a> <span class=\"gnucash\">GnuCash</span> "
-"wikis."
+"Another resource is the <a href=\"https://wiki.gnucash.org/wiki/\">English</"
+"a> or <a href=\"https://wiki.gnucash.org/wiki/De/\">Deutsch</a> <span class="
+"\"gnucash\">GnuCash</span> wikis."
 msgstr ""
 "これに加えて、IRC を使用して英語で他の誰かに質問をすることができます。<i>irc."
 "gnome.org</i> サーバーの <b>#gnucash</b> チャンネルを使用してください。他のリ"
@@ -659,7 +665,7 @@ msgstr ""
 "\"https://wiki.gnucash.org/wiki/De/\">ドイツ語</a>の <span class=\"gnucash"
 "\">GnuCash</span> wiki があります。"
 
-#: docs.phtml:42
+#: docs.phtml:43
 msgid ""
 "You can also send an email to the <a href=\"mailto:gnucash-user@gnucash.org"
 "\">gnucash-user</a> mailing list if you cannot find a satisfactory answer to "
@@ -673,85 +679,97 @@ msgstr ""
 "はあなたたちのフィードバックを<b>求めています</b>。あなたのコメントを通しての"
 "み私たちはどのように文書を変更するべきか知ることができます。"
 
+#. Translators: %s is a link
 #: docs.phtml:45
+#, php-format
+msgid ""
+"Additionally, you can talk to someone via IRC at %s about your question."
+msgstr ""
+
+#. Translators: IRC channel
+#: docs.phtml:48
+msgid "channel"
+msgstr ""
+
+#: docs.phtml:52
 msgid ""
 "<span class=\"gnucash\">GnuCash</span>'s documentation has been created by "
 "its community. See the <a href=\"develdocs.phtml\">Writing Documentation "
 "page</a> if you are interested in contributing to this effort."
 msgstr ""
 
-#: docs.phtml:50
+#: docs.phtml:57
 msgid "(current stable release)"
 msgstr "(現在の安定版リリース)"
 
-#: docs.phtml:50 docs.phtml:184 docs.phtml:481 docs.phtml:598 docs.phtml:624
-#: docs.phtml:646 docs.phtml:664 docs.phtml:686
+#: docs.phtml:57 docs.phtml:191 docs.phtml:488 docs.phtml:605 docs.phtml:631
+#: docs.phtml:653 docs.phtml:671 docs.phtml:693
 #, php-format
 msgid "GnuCash v%s"
 msgstr "GnuCash バージョン %s"
 
-#: docs.phtml:52
+#: docs.phtml:59
 msgid "Current <em>stable</em> user documentation"
 msgstr "現在の<em>安定版</em>ユーザー文書"
 
-#: docs.phtml:55 docs.phtml:189
+#: docs.phtml:62 docs.phtml:196
 msgid "Stable"
 msgstr "安定版"
 
-#: docs.phtml:57 docs.phtml:191 docs.phtml:323 docs.phtml:484 docs.phtml:601
-#: docs.phtml:627 docs.phtml:649 docs.phtml:667
+#: docs.phtml:64 docs.phtml:198 docs.phtml:330 docs.phtml:491 docs.phtml:608
+#: docs.phtml:634 docs.phtml:656 docs.phtml:674
 msgid "Help Manual"
 msgstr "ヘルプマニュアル"
 
-#: docs.phtml:61 docs.phtml:111 docs.phtml:195 docs.phtml:245 docs.phtml:327
-#: docs.phtml:377 docs.phtml:485 docs.phtml:536 docs.phtml:602 docs.phtml:613
-#: docs.phtml:628 docs.phtml:639 docs.phtml:650 docs.phtml:659 docs.phtml:668
-#: docs.phtml:679 docs.phtml:687
+#: docs.phtml:68 docs.phtml:118 docs.phtml:202 docs.phtml:252 docs.phtml:334
+#: docs.phtml:384 docs.phtml:492 docs.phtml:543 docs.phtml:609 docs.phtml:620
+#: docs.phtml:635 docs.phtml:646 docs.phtml:657 docs.phtml:666 docs.phtml:675
+#: docs.phtml:686 docs.phtml:694
 msgid "English"
 msgstr "英語"
 
-#: docs.phtml:72 docs.phtml:122 docs.phtml:206 docs.phtml:256 docs.phtml:338
-#: docs.phtml:388 docs.phtml:497 docs.phtml:547 docs.phtml:604 docs.phtml:615
-#: docs.phtml:630 docs.phtml:652 docs.phtml:672 docs.phtml:688
+#: docs.phtml:79 docs.phtml:129 docs.phtml:213 docs.phtml:263 docs.phtml:345
+#: docs.phtml:395 docs.phtml:504 docs.phtml:554 docs.phtml:611 docs.phtml:622
+#: docs.phtml:637 docs.phtml:659 docs.phtml:679 docs.phtml:695
 msgid "German"
 msgstr "ドイツ語"
 
-#: docs.phtml:83 docs.phtml:133 docs.phtml:217 docs.phtml:267 docs.phtml:349
-#: docs.phtml:399 docs.phtml:509 docs.phtml:559 docs.phtml:606 docs.phtml:617
-#: docs.phtml:632 docs.phtml:641
+#: docs.phtml:90 docs.phtml:140 docs.phtml:224 docs.phtml:274 docs.phtml:356
+#: docs.phtml:406 docs.phtml:516 docs.phtml:566 docs.phtml:613 docs.phtml:624
+#: docs.phtml:639 docs.phtml:648
 msgid "Italian"
 msgstr "イタリア語"
 
-#: docs.phtml:94 docs.phtml:155 docs.phtml:228 docs.phtml:289 docs.phtml:360
-#: docs.phtml:421 docs.phtml:521 docs.phtml:583
+#: docs.phtml:101 docs.phtml:162 docs.phtml:235 docs.phtml:296 docs.phtml:367
+#: docs.phtml:428 docs.phtml:528 docs.phtml:590
 msgid "Portuguese"
 msgstr "ポルトガル語"
 
-#: docs.phtml:107 docs.phtml:241 docs.phtml:373 docs.phtml:535 docs.phtml:612
-#: docs.phtml:638 docs.phtml:658 docs.phtml:678
+#: docs.phtml:114 docs.phtml:248 docs.phtml:380 docs.phtml:542 docs.phtml:619
+#: docs.phtml:645 docs.phtml:665 docs.phtml:685
 msgid "Concepts Guide"
 msgstr "コンセプトガイド"
 
-#: docs.phtml:144 docs.phtml:278 docs.phtml:410 docs.phtml:571 docs.phtml:619
+#: docs.phtml:151 docs.phtml:285 docs.phtml:417 docs.phtml:578 docs.phtml:626
 msgid "Japanese"
 msgstr "日本語"
 
-#: docs.phtml:176
+#: docs.phtml:183
 msgid ""
 "This is the latest stable release of the <span class=\"gnucash\">GnuCash</"
 "span> documentation. <em>Stable</em> means that this documentation is not "
 "necessarily the most up to date but it works without any problem."
 msgstr ""
 
-#: docs.phtml:184
+#: docs.phtml:191
 msgid "(old stable release)"
 msgstr "(旧安定版リリース)"
 
-#: docs.phtml:186
+#: docs.phtml:193
 msgid "Old <em>stable</em> user documentation"
 msgstr "旧<em>安定版</em>のユーザー文書"
 
-#: docs.phtml:310
+#: docs.phtml:317
 #, fuzzy, php-format
 msgid ""
 "This is the old stable release of the <span class=\"gnucash\">GnuCash</span> "
@@ -762,32 +780,32 @@ msgstr ""
 "GnuCash に関する高品質な文書を作成するために作業をしている人々のコミュニ"
 "ティーを維持することです。"
 
-#: docs.phtml:316
+#: docs.phtml:323
 msgid "Nightly Documentation Builds"
 msgstr "日次夜間文書ビルド"
 
-#: docs.phtml:318
+#: docs.phtml:325
 msgid ""
 "Current <em>unstable</em> user documentation and developer documentation"
 msgstr "現在の<em>不安定版</em>ユーザー文書および開発文書"
 
-#: docs.phtml:321
+#: docs.phtml:328
 msgid "Unstable"
 msgstr "不安定版"
 
-#: docs.phtml:434
+#: docs.phtml:441
 msgid "API"
 msgstr ""
 
-#: docs.phtml:439 externals/menu.phtml:58
+#: docs.phtml:446 externals/menu.phtml:58
 msgid "current bugfix branch"
 msgstr ""
 
-#: docs.phtml:443 externals/menu.phtml:59
+#: docs.phtml:450 externals/menu.phtml:59
 msgid "future feature branch"
 msgstr ""
 
-#: docs.phtml:456
+#: docs.phtml:463
 msgid ""
 "Every night a server builds the documentation from the current contents of "
 "the <span class=\"gnucash\">GnuCash</span> source repository. This includes "
@@ -800,18 +818,18 @@ msgstr ""
 "書</b>および現在の<em>安定</em>バージョンの <span class=\"gnucash\">GnuCash</"
 "span> の<b>ユーザー文書</b>が含まれます。"
 
-#: docs.phtml:460
+#: docs.phtml:467
 msgid ""
 "<b>NOTE:</b> these documents might not be accessible from time to time "
 "because developers might be working on improvements. However they are the "
 "most up to date reference for <span class=\"gnucash\">GnuCash</span> users."
 msgstr ""
 
-#: docs.phtml:477
+#: docs.phtml:484
 msgid "Older GnuCash Documentation"
 msgstr "過去の GnuCash 文書"
 
-#: docs.phtml:479
+#: docs.phtml:486
 msgid ""
 "This section contains all the older <span class=\"gnucash\">GnuCash</span> "
 "documentation. If you are using one of these old versions of <span class="
@@ -823,31 +841,33 @@ msgstr ""
 "\">GnuCash</span> を使用している場合は、最新の安定バージョンにアップグレード"
 "することを推奨します。"
 
-#: docs.phtml:689
+#: docs.phtml:696
 msgid "Spanish"
 msgstr "スペイン語"
 
-#: docs.phtml:690
+#: docs.phtml:697
 msgid "Portugese"
 msgstr "ポルトガル語"
 
-#: docs.phtml:696
+#: docs.phtml:703
 msgid "Unofficial documentation"
 msgstr "非公式文書"
 
-#: docs.phtml:698
-msgid "Some people have written HOWTO guides or tutorials."
+#: docs.phtml:705
+#, fuzzy
+#| msgid "Some people have written HOWTO guides or tutorials."
+msgid "Some people have written HOWTO guides or tutorials:"
 msgstr "何名かの人々が HOWTO ガイドやチュートリアルを書いています。"
 
-#: docs.phtml:701
+#: docs.phtml:708
 msgid "Joe Mack's Tutorial"
 msgstr "Joe Mack 氏によるチュートリアル"
 
-#: docs.phtml:704
+#: docs.phtml:711
 msgid "Dave Gilbert's User Guide (Pdf)"
 msgstr "Dave Gilbert 氏によるユーザーガイド (Pdf)"
 
-#: docs.phtml:708
+#: docs.phtml:715
 msgid ""
 "<b>NOTE:</b> the information presented in these sources may or may not be "
 "updated to the most recent version of <span class=\"gnucash\">GnuCash</"
@@ -1163,15 +1183,15 @@ msgstr "すべての GnuCash ダウンロードファイルを見る"
 msgid "Server &amp; email outage reports to:"
 msgstr "サーバーおよび電子メールの不具合に関する連絡先:"
 
-#: externals/footer.phtml:15
+#: externals/footer.phtml:14
 msgid "Translation problems? Contact:"
 msgstr "翻訳の問題に関する連絡先:"
 
-#: externals/global_params.php:83 externals/header.phtml:134
+#: externals/global_params.php:85 externals/header.phtml:134
 msgid "Free Accounting Software"
 msgstr "フリーの財務ソフトウェア"
 
-#: externals/global_params.php:84
+#: externals/global_params.php:86
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is personal and small-business "
 "financial-accounting software, freely licensed under the <a href=\"https://"
