@@ -2,15 +2,15 @@
 # Copyright (C) 2010, 2014 The GnuCash Project
 # This file is distributed under the same license as the gnucash-htdocs package.
 # Yasuaki Taniguchi <yasuakit@gmail.com>, 2010, 2014.
-# YOSHINO Yoshihito <yy.y.ja.jp@gmail.com>, 2020.
+# YOSHINO Yoshihito <yy.y.ja.jp@gmail.com>, 2020, 2021.
 # Takuro Onoue <kusanaginoturugi@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs r18581\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
-"component=Translations&product=Website&resolution=---\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
+"cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2020-12-31 19:20+0100\n"
-"PO-Revision-Date: 2020-12-29 15:29+0000\n"
+"PO-Revision-Date: 2021-01-01 16:29+0000\n"
 "Last-Translator: YOSHINO Yoshihito <yy.y.ja.jp@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnucash/website/"
 "ja/>\n"
@@ -647,23 +647,14 @@ msgstr ""
 
 #. Translators: If wiki pages in your laguage exists, consider to replace "De"/"Deutsch" by your language.
 #: docs.phtml:39
-#, fuzzy
-#| msgid ""
-#| "Additionally, you can talk to someone via IRC at <i>irc.gnome.org</i> "
-#| "channel <b>#gnucash</b> about your question. Another resource is the <a "
-#| "href=\"https://wiki.gnucash.org/wiki/\">English</a> or <a href=\"https://"
-#| "wiki.gnucash.org/wiki/De/\">Deutsch</a> <span class=\"gnucash\">GnuCash</"
-#| "span> wikis."
 msgid ""
 "Other resources are the <a href=\"https://wiki.gnucash.org/wiki/\">English</"
 "a> or <a href=\"https://wiki.gnucash.org/wiki/De/\">Deutsch</a> <span class="
 "\"gnucash\">GnuCash</span> wikis."
 msgstr ""
-"これに加えて、IRC を使用して英語で他の誰かに質問をすることができます。<i>irc."
-"gnome.org</i> サーバーの <b>#gnucash</b> チャンネルを使用してください。他のリ"
-"ソースとして<a href=\"https://wiki.gnucash.org/wiki/\">英語</a>および<a href="
-"\"https://wiki.gnucash.org/wiki/De/\">ドイツ語</a>の <span class=\"gnucash"
-"\">GnuCash</span> wiki があります。"
+"他のリソースとして<a href=\"https://wiki.gnucash.org/wiki/\">英語</a>および<a href=\"https"
+"://wiki.gnucash.org/wiki/De/\">ドイツ語</a>の <span class=\"gnucash\">GnuCash</"
+"span> wiki があります。"
 
 #: docs.phtml:43
 msgid ""
@@ -684,12 +675,12 @@ msgstr ""
 #, php-format
 msgid ""
 "Additionally, you can talk to someone via IRC at %s about your question."
-msgstr ""
+msgstr "これに加えて、IRC を使用して英語で他の誰かに質問をすることができます。%sを使用してください。"
 
 #. Translators: IRC channel
 #: docs.phtml:48
 msgid "channel"
-msgstr ""
+msgstr "チャンネル"
 
 #: docs.phtml:52
 msgid ""
@@ -854,10 +845,8 @@ msgid "Unofficial documentation"
 msgstr "非公式文書"
 
 #: docs.phtml:705
-#, fuzzy
-#| msgid "Some people have written HOWTO guides or tutorials."
 msgid "Some people have written HOWTO guides or tutorials:"
-msgstr "何名かの人々が HOWTO ガイドやチュートリアルを書いています。"
+msgstr "何名かの人々が HOWTO ガイドやチュートリアルを書いています:"
 
 #: docs.phtml:708
 msgid "Joe Mack's Tutorial"
@@ -1899,9 +1888,8 @@ msgid "What's New in GnuCash %s"
 msgstr "GnuCash %s の最新情報"
 
 #: new_features-4.0.phtml:16
-#, fuzzy
 msgid "Major Highlights"
-msgstr "主な特徴"
+msgstr "主なハイライト"
 
 #: new_features-4.0.phtml:24
 msgid ""
@@ -1966,7 +1954,7 @@ msgstr ""
 
 #: new_features-4.0.phtml:55
 msgid "Graphic User Interface"
-msgstr ""
+msgstr "グラフィカルユーザーインターフェース"
 
 #: new_features-4.0.phtml:59
 msgid ""
@@ -1996,9 +1984,8 @@ msgid ""
 msgstr ""
 
 #: new_features-4.0.phtml:70
-#, fuzzy
 msgid "Business Functions"
-msgstr "小規模ビジネスの会計処理"
+msgstr "ビジネス機能"
 
 #: new_features-4.0.phtml:73
 msgid "Business Document Column Widths"
@@ -2106,7 +2093,7 @@ msgstr ""
 
 #: new_features-4.0.phtml:110
 msgid "Budgets"
-msgstr ""
+msgstr "予算"
 
 #: new_features-4.0.phtml:113
 msgid "Optionally include the account code option in budget view."
@@ -2122,7 +2109,7 @@ msgstr ""
 
 #: new_features-4.0.phtml:120
 msgid "Compatibility"
-msgstr ""
+msgstr "互換性"
 
 #: new_features-4.0.phtml:123
 msgid ""
@@ -2132,7 +2119,7 @@ msgstr ""
 
 #: new_features-4.0.phtml:129
 msgid "Customization and Scripting"
-msgstr ""
+msgstr "カスタマイズおよびスクリプティング"
 
 #: new_features-4.0.phtml:132
 msgid ""
@@ -2150,7 +2137,7 @@ msgstr ""
 #: new_features-4.0.phtml:136
 #, php-format
 msgid "For a complete list of new features and API changes see the %s."
-msgstr ""
+msgstr "新機能および API の変更点の完全なリストは%sをご覧ください。"
 
 #: new_features-4.0.phtml:137
 msgid "Release Notes"
