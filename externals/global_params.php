@@ -83,5 +83,5 @@
 
      // some defaults for metatags in case the page does not set them
      $default_title= T_("Copylefted Libre Software");
-     $default_description= T_("<span class=\"gnucash\">GnuCash</span> is financial-accounting software for personal and small-business use. Freely licensed <a href=\"https://www.gnu.org/\">GPLv2+</a>. Available for GNU/Linux, BSD, Solaris, macOS and Windows.");
+     $default_description= T_("<span class=\"gnucash\">GnuCash</span> is double-entry accounting software for personal and small-business use. Freely licensed <a href=\"https://www.gnu.org/\">GPLv2+</a>. Available for GNU/Linux, BSD, macOS and Windows.");
      ?>
