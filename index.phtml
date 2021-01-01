@@ -24,7 +24,7 @@ include ("externals/menu.phtml");
             Apple macOS <a
             href="<?=$latest_stable_path.$latest_stable_mac_intel?>"> &ge; 10.13
               "High Sierra"</a></li>
-          <li><a href="<?=$home?>/download.phtml" style="font-size: 80%;"><?=T_("More downloads (Source, Development …)")?></a></li>
+          <li><a href="<?=$home?>/download.phtml" style="font-size: 80%;"><?=T_("More downloads (source code, development…)")?></a></li>
         </ul>
       </div>
       <div class="downloadimage">
@@ -32,9 +32,9 @@ include ("externals/menu.phtml");
       </div>
       <div style="float: left;">
         <p><?php printf(T_( "Version %s is the last version for %s and %s and earlier." ),
-           "<a href=\"download.phtml#previous\">".$last_win7_version."</a>", "Windows 7", "MacOS 10.12" )?>
+           "<a href=\"download.phtml#previous\">".$last_win7_version."</a>", "Windows 7", "macOS 10.12" )?>
         </p>
-        <p><?php printf(T_("Version %s is the last version for Windows XP/Vista and MacOS X 10.8 and earlier, and so the last version that will run on PowerPC Macs."),
+        <p><?php printf(T_("Version %s is the last version for Windows XP/Vista and macOS 10.8 and earlier, and so the last version that will run on PowerPC Macs."),
             "<a href=\"download.phtml#historical\">".$last_xp_vista_version."</a>" )?>
         </p>
       </div>
@@ -53,7 +53,7 @@ include ("externals/menu.phtml");
 <?php // FIXME: I18N printf, markup: ?>
         <?=T_("Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? Try the")?>
           <a href="https://wiki.gnucash.org/wiki/Mailing_Lists"><?=T_("Mailing Lists")?></a>
-          <?=T_(", which are public, email-based discussion groups where you can ask and answer <span class=\"gnucash\">GnuCash</span> questions to other users.")?>
+          <?=T_(", which are public, e-mail-based discussion groups where you can ask and answer <span class=\"gnucash\">GnuCash</span> questions to other users.")?>
       </p>
     </div>
   </div> <!-- Need Help section -->
@@ -72,12 +72,12 @@ include ("externals/menu.phtml");
       <li><?=T_("Scheduled Transactions")?></li>
       <li><?=T_("Financial Calculations"); ?></li>
     </ul>
-    <a href="<?=$home?>/features.phtml"><?=T_("<b>Discover more …</b>")?></a>
+    <a href="<?=$home?>/features.phtml"><?=T_("<b>Discover more…</b>")?></a>
   </div>
   <!-- mainfeature -->
   <div id="newfeatures">
     <h1><?php printf(T_("GnuCash %s Released"), "4.0"); ?></h1>
-    <p><?php printf(T_("We've released GnuCash %s with many bugfixes and improvements including some %s!"), "4.0",
+    <p><?php printf(T_("GnuCash %s brings many bugfixes and improvements, including some %s!"), "4.0",
                     sprintf("<a href=\"%s\">%s</a>", $home . "/new_features-4.0.phtml", T_("great new features")))?>
     </p>
   </div> <!-- newfeatures -->
