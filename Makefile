@@ -34,6 +34,7 @@ msgmerge: po/gnucash-htdocs.pot
 mos: ${languages}
 
 ${languages}: po/$$@.po
+	mkdir -p locale/$@/LC_MESSAGES ;
 	msgfmt -c --statistics $< -o locale/$@/LC_MESSAGES/gnucash-htdocs.mo
 
 ####################################################################
