@@ -8,7 +8,7 @@
    */
   include("lang.php");
   $title = T_("Documentation");
-  $description = T_("The following links go to the <strong>English HTML editions of the current stable branch</strong> documentation. Other <span class=\"gnucash\">GnuCash</span> versions, languages, and formats are below that.");
+  $description = T_("The <strong>English HTML documentation of the current stable branch</strong> is linked. Other <span class=\"gnucash\">GnuCash</span> versions, languages, and formats are at the bottom.");
   $online = T_("Browse documentation online");
   $pdf = T_("Download documentation as PDF");
   $epub = T_("Download documentation as EPUB");
@@ -31,16 +31,16 @@
     <li><a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$major_stable;?>&amp;lang=C&amp;doc=guide"><b><?php echo T_("The Tutorial and Concepts Guide");?></b></a></li>
   </ul>
 
-  <p class="justify"><?php echo T_("The <b>Help Manual</b> details specific tasks and how to use features <span class=\"gnucash\">GnuCash</span>. The <b>Concepts Guide</b> is an in-depth guide to <span class=\"gnucash\">GnuCash</span> tutorial.");?></p>
+  <p class="justify"><?php echo T_("The <b>Help Manual</b> details specific tasks and features of <span class=\"gnucash\">GnuCash</span>, while the <b>Concepts Guide</b> is an in-depth guide.");?></p>
 
   <p class="justify"><?php
     /* Todo: menu.phtml has a similar link. They should be unified with the other language stuff.*/
     /* Translators: If wiki pages in your laguage exists, consider to replace "De"/"Deutsch" by your language.*/
-    echo T_("Other resources are to be found in the <a href=\"https://wiki.gnucash.org/wiki/\">English</a> or <a href=\"https://wiki.gnucash.org/wiki/De/\">Deutsch</a> <span class=\"gnucash\">GnuCash</span> wikis.");
+    echo T_("Other resources available in the <a href=\"https://wiki.gnucash.org/wiki/\">English</a> or <a href=\"https://wiki.gnucash.org/wiki/De/\">Deutsch</a> <span class=\"gnucash\">GnuCash</span> wikis.");
     ?></p>
 
   <p class="justify"><?php
-  echo T_("Send an e-mail to the <a href=\"mailto:gnucash-user@gnucash.org\">gnucash-user</a> mailing list if you have tried the <b>Help Manual</b> and the <b>Tutorial and Concepts Guide</b>. Feedback and hints on what resources are missing is greatly appreciated.");
+  echo T_("Use the <a href=\"mailto:gnucash-user@gnucash.org\">gnucash-user</a> mailing list if the <b>Help Manual</b> and <b>Tutorial and Concepts Guide</b> doesn't solve your problem. Feedback, help and hints on what resources are missing is greatly appreciated.");
   /* Translators: %s is a link */
   printf (T_("Additionally, you can talk to someone by posting your question on IRC at %s."),
       sprintf ("<a href='%s'><i>irc.gnome.org</i> %s <b>#gnucash</b></a>", \URL_IRC,
@@ -483,7 +483,7 @@ $older7		="3";
 <div class="featureborder">
 <h2 class="featuretitle"><?php echo T_("Older GnuCash Documentation");?></h2>
 </div>
-<p class="justify"><?php echo T_("This section contains all the older <span class=\"gnucash\">GnuCash</span> documentation. If you are using one of these old versions of <span class=\"gnucash\">GnuCash</span>, it is highly recommended you upgrade to the latest stable one.");?></p>
+<p class="justify"><?php echo T_("This is the documentation for older <span class=\"gnucash\">GnuCash</span> versions. Upgrade if you can.");?></p>
 <ul>
     <li><b><?php printf (T_("GnuCash v%s"), $older6)?></b>:
         <ul>
