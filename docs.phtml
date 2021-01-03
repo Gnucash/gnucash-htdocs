@@ -8,7 +8,7 @@
    */
   include("lang.php");
   $title = T_("Documentation");
-  $description = T_("<strong>HTML documentation of the current stable branch</strong> is provided in English. At the bottom of the page there are other <span class=\"gnucash\">GnuCash</span> versions, languages, and formats.");
+  $description = T_("<strong>There are two major <span class=\"gnucash\">GnuCash</span> documentation packages to help users.");
   $online = T_("Browse documentation online");
   $pdf = T_("Download documentation as PDF");
   $epub = T_("Download documentation as EPUB");
@@ -25,38 +25,38 @@
   <p class="justify"><?php
 
   echo $description;
-  echo T_("There are two major <span class=\"gnucash\">GnuCash</span> documentation packages to help users:");?></p>
+  echo T_("(Other langauges available below)");?></p>
   <ul>
-    <li><a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$major_stable;?>&amp;lang=C&amp;doc=help"><b><?php echo T_("The Help Manual");?></b></a></li>
-    <li><a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$major_stable;?>&amp;lang=C&amp;doc=guide"><b><?php echo T_("The Tutorial and Concepts Guide");?></b></a></li>
+    <li><a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$major_stable;?>&amp;lang=C&amp;doc=help"><b><?php echo T_("Help");?></b></a> (en HTML)</li>
+    <li><a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$major_stable;?>&amp;lang=C&amp;doc=guide"><b><?php echo T_("Concepts");?></b></a>(en HTML)</li>
   </ul>
 
-  <p class="justify"><?php echo T_("The <b>Help Manual</b> details specific tasks and features of <span class=\"gnucash\">GnuCash</span>, while the <b>Concepts Guide</b> is an in-depth guide.");?></p>
+  <p class="justify"><?php echo T_("<b>Help</b> details specific tasks and features, while <b>Concepts</b> is an in-depth guide.");?></p>
 
-  <p class="justify"><?php
-    /* Todo: menu.phtml has a similar link. They should be unified with the other language stuff.*/
-    /* Translators: If wiki pages in your laguage exists, consider to replace "De"/"Deutsch" by your language.*/
-    echo T_("Other resources available in the <a href=\"https://wiki.gnucash.org/wiki/\">English</a> or <a href=\"https://wiki.gnucash.org/wiki/De/\">Deutsch</a> <span class=\"gnucash\">GnuCash</span> wikis.");
-    ?></p>
-
-  <p class="justify"><?php
-  echo T_("Use the <a href=\"mailto:gnucash-user@gnucash.org\">gnucash-user</a> mailing list if the <b>Help Manual</b> and <b>Tutorial and Concepts Guide</b> doesn't solve your problem. Feedback, help and hints on what resources are missing is greatly appreciated.");
+    <p class="justify"><?php
+  echo T_("Use the <a href=\"mailto:gnucash-user@gnucash.org\">gnucash-user</a> mailing list if the <b>Help</b>, <b>Concepts</b> or wikis doesn't solve your problem. Feedback, help and hints on what resources are missing is greatly appreciated.");
   /* Translators: %s is a link */
-  printf (T_("Additionally, you can talk to someone by posting your question on IRC at %s."),
+  printf (T_("Talk to someone on IRC about your problem at %s."),
       sprintf ("<a href='%s'><i>irc.gnome.org</i> %s <b>#gnucash</b></a>", \URL_IRC,
           /* Translators: IRC channel */
           T_("channel")));
   ?></p>
+  
+  <p class="justify"><?php
+    /* Todo: menu.phtml has a similar link. They should be unified with the other language stuff.*/
+    /* Translators: If wiki pages in your laguage exists, consider to replace "De"/"Deutsch" by your language.*/
+    echo T_("The <a href=\"https://wiki.gnucash.org/wiki/\">English</a> and <a href=\"https://wiki.gnucash.org/wiki/De/\">German</a> <span class=\"gnucash\">GnuCash</span> wikis has other info.");
+    ?></p>
 
   <div class="dialog note">
-    <p class="justify"><?php echo T_("The <span class=\"gnucash\">GnuCash</span> documentation is a community effort you can improve with the help of the <a href=\"develdocs.phtml\">Writing Documentation page</a>.");?></p>
+    <p class="justify"><?php echo T_("You can improve the documentation with the help of <a href=\"develdocs.phtml\">Writing Documentation</a>.");?></p>
   </div>
 
   <div class="featurecontainer">
     <div class="featureborder">
       <h2 class="featuretitle"><?php printf (T_("GnuCash v%s"), $major_stable)?> <?php echo T_("(current stable release)");?></h2>
     </div>
-    <h3><?= T_("Current <em>stable</em> user documentation");?></h3>
+    <h3><?= T_("Current user documentation");?></h3>
     <div class="stabledoc">
       <div style="float:left;">
         <h2 class="download-title"><?php echo T_("Download");?> (<em><?php echo T_("Stable");?></em>)</h2>
@@ -111,7 +111,7 @@
           </tbody>
           </table>
         </li>
-        <li><b><?= T_("Concepts Guide") ?></b>
+        <li><b><?= T_("Concepts") ?></b>
           <table class="doctable">
           <tbody>
             <tr class="doctr">
@@ -180,7 +180,7 @@
     </div>
   </div> <!-- stabledoc -->
 
-  <p class="justify"><?php echo T_("This is the latest stable release of the <span class=\"gnucash\">GnuCash</span> documentation, meaning not necessarily up-to-date, but works without problems.");?></p>
+  <p class="justify"><?php echo T_("This is the latest documentation release.");?></p>
 </div> <!-- featurecontainer -->
  <!-- content -->
 <?php
@@ -188,9 +188,9 @@
   if ($old_stable) { ?>
 <div class="featurecontainer">
 <div class="featureborder">
-  <h2 class="featuretitle"><?php printf (T_("GnuCash v%s"), $major_old_stable)?> <?php echo T_("(old stable documentation release)");?></h2>
+  <h2 class="featuretitle"><?php printf (T_("GnuCash v%s"), $major_old_stable)?> <?php echo T_("(old documentation release)");?></h2>
 </div>
-<h3><?= T_("Old <em>stable</em> user documentation");?></h3>
+<h3><?= T_("Old user documentation");?></h3>
 <div class="stabledoc">
   <div style="float:left;">
     <h2 class="download-title"><?php echo T_("Download");?> (<em><?php echo T_("Stable");?></em>)</h2>
@@ -245,7 +245,7 @@
       </tbody>
       </table>
     </li>
-    <li><b><?= T_("Concepts Guide") ?></b>
+    <li><b><?= T_("Concepts") ?></b>
       <table class="doctable">
       <tbody>
         <tr class="doctr">
@@ -314,18 +314,18 @@
 </div>
 </div>
 
-<p class="justify"><?php printf (T_("This is the old stable documentation release of <span class=\"gnucash\">GnuCash</span>, from the %s release."), $old_stable)?></p>
+<p class="justify"><?php printf (T_("Documentation for version %s."), $old_stable)?></p>
 </div>
 <?php } ?>
 
 <div class="featurecontainer">
 <div class="featureborder">
-<h2 class="featuretitle"><?= T_("Nightly Documentation Builds");?></h2>
+<h2 class="featuretitle"><?= T_("Documentation made every night");?></h2>
 </div>
-<h3><?= T_("Current <em>unstable</em> user and developer documentation");?></h3>
+<h3><?= T_("Work-in-progress user and developer documentation");?></h3>
 <div id="develdoc">
 <div style="float:left;">
-<h2 class="download-title"><?php echo T_("Download");?> (<em><?php echo T_("Unstable");?></em>)</h2>
+<h2 class="download-title"><?php echo T_("Download");?> (<em><?php echo T_("Work-in-progress");?></em>)</h2>
 <ul>
   <li><b><?php echo T_("Help Manual");?></b>
     <table class="doctable">
@@ -377,7 +377,7 @@
     </tbody>
     </table>
   </li>
-  <li><b><?= T_("Concepts Guide") ?></b>
+  <li><b><?= T_("Concepts") ?></b>
     <table class="doctable">
     <tbody>
       <tr class="doctr">
@@ -460,11 +460,11 @@
 </div>
 
 </div>
-<p class="justify"><?php echo T_("Every night a server builds the documentation from the current contents of the <span class=\"gnucash\">GnuCash</span> source repository. This includes the <b>Developer Documentation</b> from <b>Doxygen</b> and <b>User Documentation</b> for the current <em>stable</em> version of <span class=\"gnucash\">GnuCash</span>.");?></p>
+<p class="justify"><?php echo T_("Every night what is in the source code repository gets assembled into a work-in-progress version of the documentation. This includes the <b>Developer Documentation</b> from <b>Doxygen</b> and <b>User Documentation</b> for the current version.");?></p>
 </div>
 
 <div class="dialog warning">
-    <p class="justify"><?php echo T_("<b>Note:</b> these documents might not be accessible from time to time because developers might be working on improvements. However they are the most up-to-date reference for <span class=\"gnucash\">GnuCash</span> users.");?></p>
+    <p class="justify"><?php echo T_("<b>Note:</b> If unavailable, it means developers are working on improving it.");?></p>
 </div>
 
 <!--Documentation for older GnuCash release-->
@@ -481,9 +481,9 @@ $older7		="3";
 
 <div class="featurecontainer">
 <div class="featureborder">
-<h2 class="featuretitle"><?php echo T_("Older GnuCash Documentation");?></h2>
+<h2 class="featuretitle"><?php echo T_("Older Documentation");?></h2>
 </div>
-<p class="justify"><?php echo T_("This is the documentation for older <span class=\"gnucash\">GnuCash</span> versions. Upgrade if you can.");?></p>
+<p class="justify"><?php echo T_("You shouldn't use versions this old. Upgrade if you can.");?></p>
 <ul>
     <li><b><?php printf (T_("GnuCash v%s"), $older6)?></b>:
         <ul>
@@ -539,7 +539,7 @@ $older7		="3";
                 </a>)
             </li>
             <li>
-                <b><?= T_("Concepts Guide") ?></b>:
+                <b><?= T_("Concepts") ?></b>:
                 <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older6;?>&amp;lang=C&amp;doc=guide">
                     <img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
                 <a href="<?=$top_dir;?>/docs/v<?=$older6;?>/C/gnucash-guide.pdf">
@@ -616,7 +616,7 @@ $older7		="3";
             </ul>
             <ul>
       <li>
-        <b><?= T_("Concepts Guide") ?></b>:
+        <b><?= T_("Concepts") ?></b>:
         <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older5;?>&amp;lang=C&amp;doc=guide"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>)
         <?php echo T_("German");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older5;?>&amp;lang=de&amp;doc=guide"
@@ -631,7 +631,7 @@ $older7		="3";
   <li><b><?php printf (T_("GnuCash v%s"), $older4)?></b>:
     <ul>
       <li>
-        <b><?php echo T_("Help Manual");?></b>:
+        <b><?php echo T_("Help");?></b>:
         <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older4;?>&amp;lang=C&amp;doc=help"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>) |
         <?php echo T_("German");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older4;?>&amp;lang=de_DE&amp;doc=help"
@@ -642,7 +642,7 @@ $older7		="3";
     </ul>
     <ul>
       <li>
-        <b><?= T_("Concepts Guide") ?></b>:
+        <b><?= T_("Concepts") ?></b>:
         <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older4;?>&amp;lang=C&amp;doc=guide"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>)
         <?php echo T_("Italian");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older4;?>&amp;lang=it_IT&amp;doc=guide"
@@ -653,7 +653,7 @@ $older7		="3";
   <li><b><?php printf (T_("GnuCash v%s"), $older3)?></b>:
     <ul>
       <li>
-        <b><?php echo T_("Help Manual");?></b>:
+        <b><?php echo T_("Help");?></b>:
         <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older3;?>&amp;lang=C&amp;doc=help"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>) |
         <?php echo T_("German");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older3;?>&amp;lang=de_DE&amp;doc=help"
@@ -662,7 +662,7 @@ $older7		="3";
     </ul>
     <ul>
       <li>
-        <b><?= T_("Concepts Guide") ?></b>:
+        <b><?= T_("Concepts") ?></b>:
         <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older3;?>&amp;lang=C&amp;doc=guide"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>)
       </li>
@@ -671,7 +671,7 @@ $older7		="3";
   <li><b><?php printf (T_("GnuCash v%s"), $older2)?></b>:
     <ul>
       <li>
-        <b><?php echo T_("Help Manual");?></b>:
+        <b><?php echo T_("Help");?></b>:
         <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older2;?>&amp;lang=C&amp;doc=help"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>,
         <a href="<?=$top_dir;?>/docs/v<?=$older2;?>/C/gnucash-help.pdf"
@@ -682,7 +682,7 @@ $older7		="3";
     </ul>
     <ul>
       <li>
-        <b><?= T_("Concepts Guide") ?></b>:
+        <b><?= T_("Concepts") ?></b>:
         <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older2;?>&amp;lang=C&amp;doc=guide"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>,
         <a href="<?=$top_dir;?>/docs/v<?=$older2;?>/C/gnucash-guide.pdf"
