@@ -1,7 +1,7 @@
 <?php
 include("lang.php");
 $title = T_("GnuCash 2.6 release tour");
-$description = T_("This tour will introduce you to new major features in <span class=\"gnucash\">GnuCash</span> 2.6.");
+$description = T_("These are the new major features in <span class=\"gnucash\">GnuCash</span> 2.6.");
 include("emulate_globals_on.php");
 include("$top_dir/externals/header.phtml");
 include("$top_dir/externals/menu.phtml");
@@ -14,23 +14,23 @@ include("$top_dir/externals/menu.phtml");
   <p><?=$description?></p>
 </div>
 
-<h2 class="featuretitle"><?php echo T_("Jqplot Reports");?></h2>
+<h2 class="featuretitle"><?php echo T_("jqPlot Reports");?></h2>
 <p class="justify">
-<?php echo T_("<span class=\"gnucash\">GnuCash</span> now uses javascript jqplot to render reports. This gives a more professional look to all graphical reports (piechart, barchart, scatterplot).");?>
+<?php echo T_("<span class=\"gnucash\">GnuCash</span> now uses JavaScript jqPlot to render reports. This gives a more professional look to all graphical reports (pie chart, bar chart, scatter plot).");?>
 </p>
 <table class="figure" align="center">
    <tr>
      <td><img src="<?=$top_dir?>/images/2.6-release/2.6-jqplot-reports.png" alt="[jqplot barchart]" style="max-width:649px; max-height:457px"/></p>
      </td>
    <tr>
-     <th><?php echo T_("A barchart rendered in GnuCash with jqplot.");?>
+     <th><?php echo T_("A barchart rendered in GnuCash with jqPlot.");?>
      </th>
    </tr>
 </table>
 
 <h2 class="featuretitle"><?php echo T_("New preconfigured reports management system");?></h2>
 <p class="justify">
-<?php echo T_("The old <span class=\"gnucash\">GnuCash</span> custom report management system has been revised. You can save a report using the dedicated options in the File menu and rerun it later by selecting it from the menu Reports->Preconfigured Reports.");?>
+<?php echo T_("The old <span class=\"gnucash\">GnuCash</span> custom report management system has been revised. You can save a report using the dedicated options in the \"File\" menu and rerun it later by selecting it from the menu \"Reports\"→\"Preconfigured Reports\".");?>
 </p>
 <table class="figure" align="center">
    <tr>
@@ -44,12 +44,12 @@ include("$top_dir/externals/menu.phtml");
 
 <h2 class="featuretitle"><?php echo T_("Export any report directly to PDF");?></h2>
 <p class="justify">
-<?php echo T_("Reports and invoices can be exported directly in a PDF file without going thru the Print window.");?>
+<?php echo T_("Reports and invoices can be exported to a PDF file directly without going thru the \"Print\" window.");?>
 </p>
 
 <h2 class="featuretitle"><?php echo T_("Associate a local file or remote location with any transaction");?></h2>
 <p class="justify">
-<?php echo T_("It is now possible to link an external local file or a remote location (URL) with a transaction. This long-requested feature is available through both the Transaction menu and the transaction's context menu. The files are displayed in the default viewer for that file type.");?>
+<?php echo T_("Link an external local file or a remote location (URL) with a transaction. This long-requested feature is available through both the \"Transaction\" menu and the transaction's context menu. The files are displayed in the default viewer for that file type.");?>
 </p>
 
 <table class="figure" align="center">
@@ -64,7 +64,7 @@ include("$top_dir/externals/menu.phtml");
 
 <h2 class="featuretitle"><?php echo T_("Account colors");?></h2>
 <p class="justify">
-<?php echo T_("It is now possible to associate to any account a unique color from the edit account window. This color can then be displayed as account name and account register tab background easing the lookup of a specific account.");?>
+<?php echo T_("It is now possible to associate to any account a unique color from the \"Edit Account\" window. This color can then be displayed as account name and account register tab background, easing lookup of a specific account.");?>
 </p>
 
 <table class="figure" align="center">
@@ -72,22 +72,22 @@ include("$top_dir/externals/menu.phtml");
      <td><img src="<?=$top_dir?>/images/2.6-release/2.6-acc-colors.png" alt="[Account colors]" style="max-width:783px; max-height:455px"/></p>
      </td>
    <tr>
-     <th><?php echo T_("The colors ease the lookup of specific accounts in the account tree and in tabs.");?>
+     <th><?php echo T_("The colors ease lookup of specific accounts in the account tree and in tabs.");?>
      </th>
    </tr>
 </table>
 
-<h2 class="featuretitle"><?php echo T_("Timout on \"Save changes on closing\"");?></h2>
+<h2 class="featuretitle"><?php echo T_("Timeout on \"Save changes before closing\"");?></h2>
 <p class="justify">
-<?php echo T_("In the General tab of the <span class=\"gnucash\">GnuCash</span> Preferences is now possible to set a timeout for the \"Save changes on closing\" window. If enabled, the \"Save changes on closing\" question will only wait a limited number of seconds for an answer. If the user didn't answer within that time, the changes will be saved automatically and the question window closed.");?>
+<?php echo T_("In the \"General tab\" of the <span class=\"gnucash\">GnuCash</span> preferences is now possible to set a timeout for the \"Save changes on closing\" window. If enabled, the \"Save changes on closing\" question will only wait a limited number of seconds for an answer. If the user didn't answer within that time, the changes will be saved automatically and the question window closed.");?>
 </p>
 
 <h2 class="featuretitle"><?php echo T_("Open datafile read-only");?></h2>
 <p class="justify">
-<?php echo T_("When opening a locked \"book\" one now has the option of opening it read-only.");?>
+<?php echo T_("When opening a locked \"book\", it can be opened read-only.");?>
 </p>
 <div class="dialog note">
-<p><?php echo T_("Note that <span class=\"gnucash\">GnuCash</span> is still a single-user program and that the database backends are still used only as a data store.");?></p>
+<p><?php echo T_("Note that <span class=\"gnucash\">GnuCash</span> is still a single-user program and that the database back-ends are still used only as a data store.");?></p>
 </div>
 
 <table class="figure" align="center">
@@ -110,21 +110,21 @@ include("$top_dir/externals/menu.phtml");
      <td><img src="<?=$top_dir?>/images/2.6-release/2.6-save-filter.png" alt="[Filter by save]" style="max-width:366px; max-height:396px"/></p>
      </td>
    <tr>
-     <th><?php echo T_("Save the \"Filter By…\" settings by enabling the \"Save Filter\" checkbox.");?>
+     <th><?php echo T_("Save the \"Filter By…\" settings with the \"Save Filter\" checkbox.");?>
      </th>
    </tr>
 </table>
 
 <h2 class="featuretitle"><?php echo T_("Improved business module");?></h2>
 <p class="justify">
-<?php echo T_("The business module has been revamped and we introduced some new features:");?>
+<?php echo T_("Revamped business module and new features:");?>
 <ul>
 <li><?php echo T_("Credit Notes");?></li>
 <li><?php echo T_("Customer and Vendor Overview Pages");?></li>
 <li><?php echo T_("Customer Overview Reports");?></li>
 <li><?php echo T_("Existing Transactions may be reassigned as invoice payments");?></li>
-<li><?php echo T_("One click duplication of invoices");?></li>
-<li><?php echo T_("Improved invoice and bill handling: Post, print, or duplicate multiple items directly from a search results list");?></li>
+<li><?php echo T_("One-click duplication of invoices");?></li>
+<li><?php echo T_("Improved invoice and bill handling: Post, print, or duplicate multiple items directly from a search-result list");?></li>
 <li><?php echo T_("Better invoice printing setup: Choose a default invoice report as a preference");?></li>
 <li><?php echo T_("Reorder invoice entries in the invoice window");?></li>
 </ul>
@@ -151,38 +151,37 @@ include("$top_dir/externals/menu.phtml");
 
 <h2 class="featuretitle"><?php echo T_("New preference system");?></h2>
 <p class="justify">
-<?php echo T_("The preferences system has been rewritten to use GSettings from GIO (GLib) instead of GConf. This is a simpler and more robust backend which writes to the OS's native prefs - defaults on OS X and the Registry on MSWindows - and allows us to remove several troublesome dependencies including GConf, ORBit, and DBus.");?></p>
+<?php echo T_("The preferences system has been rewritten to use GSettings from GIO (GLib) instead of GConf. This is a simpler and more robust back-end which writes to the OS's native prefs—defaults on macOS and the Registry on MSWindows—and allows removal of several troublesome dependencies including GConf, ORBit, and D-Bus.");?></p>
 <div class="dialog note">
-<p><?php echo T_("Note that window position, column sizes, and sort orders will not be migrated from GConf. Those settings will revert to the default the first time you use Gnucash 2.6 or later, but they will be saved once you've reset them.");?></p>
+<p><?php echo T_("Note that window position, column sizes, and sort orders will not be migrated from GConf. Those settings will revert to the default the first time you use GnuCash 2.6 or later, but they will be saved once reset.");?></p>
 </div>
 
 <h2 class="featuretitle"><?php echo T_("Relicensing");?></h2>
 <p class="justify">
-<?php echo T_("By agreement of all authors we have relicensed <span class=\"gnucash\">GnuCash</span> to the GNU General Public License Version 2 or later from just Version 2.");?></p>
+<?php echo T_("By agreement of all authors <span class=\"gnucash\">GnuCash</span> is relicensed GNU General Public License Version 2 or later, instead of just Version 2.");?></p>
 
 <h2 class="featuretitle"><?php echo T_("Download");?></h2>
 <p class="justify">
-<?php echo T_("You can download the new 2.6 version of <span class=\"gnucash\">GnuCash</span> from the <a href=\"https://www.gnucash.org\">GnuCash website main page</a>.");?></p>
+<?php echo T_("You can download the new 2.6 version of <span class=\"gnucash\">GnuCash</span> from the main page of the <a href=\"https://www.gnucash.org\">GnuCash website</a>.");?></p>
 
 <h2 class="featuretitle"><?php echo T_("Help");?></h2>
 <p class="justify">
-<?php echo T_("<span class=\"gnucash\">GnuCash</span> 2.6 comes with updated Help and Guide. If you can't find the answer to your questions in those documents, try with the <a href=\"https://wiki.gnucash.org/wiki/GnuCash\">GnuCash wiki</a>. If both options are unsatisfactory, you can send your questions to the <a href=\"https://wiki.gnucash.org/wiki/Mailing_Lists\">GnuCash mailing lists</a>: the <span class=\"gnucash\">GnuCash</span> community is very friendly and experienced and someone will surely assist you.");?></p>
+<?php echo T_("<span class=\"gnucash\">GnuCash</span> 2.6 brings an updated Help and Guide. If you can't find the answer to your questions in those documents, try the <a href=\"https://wiki.gnucash.org/wiki/GnuCash\">GnuCash wiki</a>, or the <a href=\"https://wiki.gnucash.org/wiki/Mailing_Lists\">GnuCash mailing lists</a>: the <span class=\"gnucash\">GnuCash</span> community is very friendly and experienced.");?></p>
 
 <h2 class="featuretitle"><?php echo T_("Want to Help?");?></h2>
 <p class="justify">
-<?php echo T_("<span class=\"gnucash\">GnuCash</span> is a program maintained by volunteers. If you want to be part of the effort, you can contribute in many ways:");?>
+<?php echo T_("<span class=\"gnucash\">GnuCash</span> is a program maintained by volunteers. Contribute in one of many ways to take part:");?>
 <ul>
 <li><?php echo T_("By testing the program and <a href=\"https://wiki.gnucash.org/wiki/Bugzilla\">reporting bugs</a>");?></li>
-<li><?php echo T_("By liking our project page on <a href=\"https://www.facebook.com/Gnucash\">facebook</a> and <a href=\"https://plus.google.com/u/0/+gnucash\">Google+</a>");?></li>
 <li><?php echo T_("By spreading the word");?></li>
 <li><?php echo T_("<a href=\"https://sourceforge.net/donate/index.php?group_id=192\">By making a donation</a>");?></li>
 <li><?php echo T_("By partecipating in the <a href=\"https://wiki.gnucash.org/wiki/Mailing_Lists\">GnuCash mailing lists</a> and <a href=\"https://wiki.gnucash.org/wiki/IRC\">IRC channel</a>");?></li>
 <li><?php echo T_("By reviewing and adding hints to the <a href=\"https://wiki.gnucash.org/wiki/\">wiki</a>");?></li>
 <li><?php echo T_("By improving the <a href=\"https://gnucash.org/docs.phtml\">released documentation</a>");?></li>
-<li><?php echo T_("By <a href=\"https://wiki.gnucash.org/wiki/Translation\">translating the program and documentation to your language</a>");?></li>
+<li><?php echo T_("By <a href=\"https://hosted.weblate.org/projects/gnucash\">translating the program and documentation to your language</a>");?></li>
 <li><?php echo T_("By <a href=\"https://wiki.gnucash.org/wiki/Development\">developing the source code</a>");?></li>
 </ul>
 </p>
-<p style="text-align:right; font-size:14px; margin:6%"><i><?php echo T_("The GnuCash developers team");?></i></p>
+<p style="text-align:right; font-size:14px; margin:6%"><i><?php echo T_("The GnuCash developer team");?></i></p>
 </div>
 <?php include("externals/footer.phtml"); ?>
