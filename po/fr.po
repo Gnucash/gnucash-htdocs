@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: gnucash-htdocs\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2020-12-31 19:20+0100\n"
+"POT-Creation-Date: 2021-01-09 13:14+0100\n"
 "PO-Revision-Date: 2020-12-17 13:31+0000\n"
 "Last-Translator: K. Herbert <herbert.ka@mailo.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnucash/website/"
@@ -127,6 +127,14 @@ msgid "Timout on \"Save changes on closing\""
 msgstr "Délai pour « Enregistrer les changements à la fermeture »"
 
 #: 2.6-release-tour.phtml:82
+#, fuzzy
+#| msgid ""
+#| "In the General tab of the <span class=\"gnucash\">GnuCash</span> "
+#| "Preferences is now possible to set a timeout for the \"Save changes on "
+#| "closing\" window. If enabled, the \"Save changes on closing\" question "
+#| "will only wait a limited number of seconds for an answer. If the user "
+#| "didn't answer within that time, the changes will be saved automatically "
+#| "and the question window closed."
 msgid ""
 "In the General tab of the <span class=\"gnucash\">GnuCash</span> Preferences "
 "is now possible to set a timeout for the \"Save changes on closing\" window. "
@@ -156,6 +164,11 @@ msgstr ""
 "l'ouvrir en lecture seule."
 
 #: 2.6-release-tour.phtml:90
+#, fuzzy
+#| msgid ""
+#| "Note that <span class=\"gnucash\">GnuCash</span> is still a single-user "
+#| "program and that the database backends are still used only as a data "
+#| "store."
 msgid ""
 "Note that <span class=\"gnucash\">GnuCash</span> is still a single-user "
 "program and that the database backends are still used only as a data store."
@@ -872,29 +885,23 @@ msgstr "Documentation non-officielle"
 #: docs.phtml:705
 #, fuzzy
 #| msgid "Some people have written HOWTO guides or tutorials."
-msgid "Some people have written HOWTO guides or tutorials:"
+msgid "Some people have written and puplished  their own documentation."
 msgstr ""
 "Certaines personnes ont écrit des guides COMMENT FAIRE ou des tutoriels."
 
+#. Translators: %s is a wiki link
 #: docs.phtml:708
-msgid "Joe Mack's Tutorial"
-msgstr "Tutoriel de Joe Mack"
-
-#: docs.phtml:711
-msgid "Dave Gilbert's User Guide (Pdf)"
-msgstr "Guide de l'utilisateur (PDF) par Dave Gilbert"
-
-#: docs.phtml:715
+#, php-format
 msgid ""
-"<b>NOTE:</b> the information presented in these sources may or may not be "
-"updated to the most recent version of <span class=\"gnucash\">GnuCash</"
-"span>. If you are interested in doing development work on these documents, "
-"you should contact the original authors."
+"When this collection grew and became polyglot, it moved to %s. There you can "
+"also add more links."
 msgstr ""
-"<b>NOTE :</b> l'information présentée dans ces sources peut être mise à jour "
-"ou pas vers la version la plus récente de <span class=\"gnucash\">GnuCash</"
-"span>. Si vous êtes intéressé(e) dans le travail de développement pour ces "
-"documents, alors vous devriez contacter les premiers auteurs."
+
+#: docs.phtml:710
+#, fuzzy
+#| msgid "Documentation"
+msgid "wiki:Documentation"
+msgstr "Documentation"
 
 #: donate.phtml:4 externals/menu.phtml:18
 msgid "Donations"
@@ -1895,6 +1902,13 @@ msgid ""
 msgstr ""
 
 #: index.phtml:46
+#, fuzzy
+#| msgid ""
+#| "Designed to be easy to use, yet powerful and flexible, <span class="
+#| "\"gnucash\">GnuCash</span> allows you to track bank accounts, stocks, "
+#| "income and expenses.  As quick and intuitive to use as a checkbook "
+#| "register, it is based on professional accounting principles to ensure "
+#| "balanced books and accurate reports. "
 msgid ""
 "Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash"
 "\">GnuCash</span> allows you to track bank accounts, stocks, income and "
@@ -1914,12 +1928,22 @@ msgid "Need Help?"
 msgstr ""
 
 #: index.phtml:54
+#, fuzzy
+#| msgid ""
+#| "This tour will introduce you to new major features in <span class="
+#| "\"gnucash\">GnuCash</span> 2.6."
 msgid ""
 "Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? "
 "Try the"
 msgstr ""
+"Cette visite vous présentera les nouvelles fonctionnalités majeures de <span "
+"class=\"gnucash\">GnuCash</span> 2.6."
 
 #: index.phtml:56
+#, fuzzy
+#| msgid ""
+#| ", which are public, email-based discussion groups where you can ask and "
+#| "answer <span class=\"gnucash\">GnuCash</span> questions to other users."
 msgid ""
 ", which are public, email-based discussion groups where you can ask and "
 "answer <span class=\"gnucash\">GnuCash</span> questions to other users."
@@ -2575,6 +2599,11 @@ msgid ""
 "a separate window, please <a href=\"%s\" target=\"_blank\">click here</a>."
 msgstr ""
 
+#, fuzzy, php-format
+#~| msgid "for GnuCash %s"
+#~ msgid "%s | GnuCash"
+#~ msgstr "pour GnuCash %s"
+
 #~ msgid "(${size} bytes)"
 #~ msgstr "(${size} octets)"
 
@@ -2616,6 +2645,18 @@ msgstr ""
 #~ msgstr "(les termes qui finissent par <code>net</code>)"
 
 #~ msgid ""
+#~ "<b>NOTE:</b> the information presented in these sources may or may not be "
+#~ "updated to the most recent version of <span class=\"gnucash\">GnuCash</"
+#~ "span>. If you are interested in doing development work on these "
+#~ "documents, you should contact the original authors."
+#~ msgstr ""
+#~ "<b>NOTE :</b> l'information présentée dans ces sources peut être mise à "
+#~ "jour ou pas vers la version la plus récente de <span class=\"gnucash"
+#~ "\">GnuCash</span>. Si vous êtes intéressé(e) dans le travail de "
+#~ "développement pour ces documents, alors vous devriez contacter les "
+#~ "premiers auteurs."
+
+#~ msgid ""
 #~ "A new help subsystem that focuses on how to do tasks is now available, in "
 #~ "addition to a Tutorial and Concepts guide that gives the user background "
 #~ "information on accounting principles and how they are reflected in "
@@ -2655,6 +2696,9 @@ msgstr ""
 
 #~ msgid "Date"
 #~ msgstr "Date"
+
+#~ msgid "Dave Gilbert's User Guide (Pdf)"
+#~ msgstr "Guide de l'utilisateur (PDF) par Dave Gilbert"
 
 #~ msgid "Description"
 #~ msgstr "Description"
@@ -2723,8 +2767,17 @@ msgstr ""
 #~ "qu'un Bilan, un Compte de Résultat, une évaluation de portefeuille, etc."
 
 #, fuzzy
+#~| msgid "Mailing Lists"
+#~ msgid "GnuCash mailing lists"
+#~ msgstr "Listes de diffusion"
+
+#, fuzzy
 #~ msgid "GnuCash v%s (old stable release)"
 #~ msgstr "Voir tous les téléchargements GnuCash %s (stable)"
+
+#, fuzzy
+#~ msgid "GnuCash wiki"
+#~ msgstr "GnuCash %s pour"
 
 #~ msgid "Grouping"
 #~ msgstr "Regroupement"
@@ -2827,6 +2880,9 @@ msgstr ""
 #~ "href=\"#query-phrase\">une recherche de phrase</a>. Ce procédé\n"
 #~ "conduit parfois à des segmentations invalides."
 
+#~ msgid "Joe Mack's Tutorial"
+#~ msgstr "Tutoriel de Joe Mack"
+
 #~ msgid ""
 #~ "Letters, numbers or parts of symbols (duplicated in\n"
 #~ "ASCII) which are defined in JIS X 0208 (Japanese\n"
@@ -2842,6 +2898,11 @@ msgstr ""
 
 #~ msgid "Mailing List Search"
 #~ msgstr "Recherche de liste de distribution"
+
+#, fuzzy
+#~| msgid "Mailing Lists"
+#~ msgid "Mailing lists"
+#~ msgstr "Listes de diffusion"
 
 #~ msgid ""
 #~ "Multiple accounts can be displayed in one register window at the same "
@@ -3026,10 +3087,6 @@ msgstr ""
 #~ msgid "USA Mirror"
 #~ msgstr "site miroir"
 
-#, fuzzy
-#~ msgid "Writing documentation"
-#~ msgstr "Documentation non-officielle"
-
 #~ msgid ""
 #~ "You can group queries by surrounding them by\n"
 #~ "parentheses. The parentheses should be separated by one or\n"
@@ -3193,6 +3250,11 @@ msgstr ""
 #~ msgid "docs"
 #~ msgstr "docs"
 
+#, fuzzy
+#~| msgid "Donations"
+#~ msgid "donation"
+#~ msgstr "Dons"
+
 #~ msgid "engine"
 #~ msgstr "moteur"
 
@@ -3202,6 +3264,11 @@ msgstr ""
 #~ msgid "ledger"
 #~ msgstr "grand livre"
 
+#, fuzzy
+#~| msgid "Localization"
+#~ msgid "localizing"
+#~ msgstr "Localisation"
+
 #~ msgid "mirror"
 #~ msgstr "site miroir"
 
@@ -3210,6 +3277,10 @@ msgstr ""
 
 #~ msgid "register"
 #~ msgstr "livre"
+
+#, fuzzy
+#~ msgid "released documentation"
+#~ msgstr "Documentation non-officielle"
 
 #~ msgid "scheme"
 #~ msgstr "scheme"

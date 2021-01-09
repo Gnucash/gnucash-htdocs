@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gnucash-htdocs r22051\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2020-12-31 19:20+0100\n"
+"POT-Creation-Date: 2021-01-09 13:14+0100\n"
 "PO-Revision-Date: 2012-03-18 00:13+0800\n"
 "Last-Translator: Kuang-che Wu <kcwu@csie.org>\n"
 "Language-Team: \n"
@@ -795,26 +795,22 @@ msgstr "非正式文件"
 #: docs.phtml:705
 #, fuzzy
 #| msgid "Some people have written HOWTO guides or tutorials."
-msgid "Some people have written HOWTO guides or tutorials:"
+msgid "Some people have written and puplished  their own documentation."
 msgstr "有人寫了 HOWTO 指南或教學。"
 
+#. Translators: %s is a wiki link
 #: docs.phtml:708
-msgid "Joe Mack's Tutorial"
-msgstr "Joe Mack 的教程"
-
-#: docs.phtml:711
-msgid "Dave Gilbert's User Guide (Pdf)"
-msgstr "Dave Gilbert 的使用手冊 (Pdf)"
-
-#: docs.phtml:715
+#, php-format
 msgid ""
-"<b>NOTE:</b> the information presented in these sources may or may not be "
-"updated to the most recent version of <span class=\"gnucash\">GnuCash</"
-"span>. If you are interested in doing development work on these documents, "
-"you should contact the original authors."
+"When this collection grew and became polyglot, it moved to %s. There you can "
+"also add more links."
 msgstr ""
-"<b>注意：</b>這些文件裡的資訊不一定有隨著最新版的 <span class=\"gnucash"
-"\">GnuCash</span> 更新。您若有興趣幫忙完善這些文件，應直接聯絡原作者。"
+
+#: docs.phtml:710
+#, fuzzy
+#| msgid "Documentation"
+msgid "wiki:Documentation"
+msgstr "文件"
 
 #: donate.phtml:4 externals/menu.phtml:18
 msgid "Donations"
@@ -1712,6 +1708,13 @@ msgid ""
 msgstr ""
 
 #: index.phtml:46
+#, fuzzy
+#| msgid ""
+#| "Designed to be easy to use, yet powerful and flexible, <span class="
+#| "\"gnucash\">GnuCash</span> allows you to track bank accounts, stocks, "
+#| "income and expenses.  As quick and intuitive to use as a checkbook "
+#| "register, it is based on professional accounting principles to ensure "
+#| "balanced books and accurate reports. "
 msgid ""
 "Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash"
 "\">GnuCash</span> allows you to track bank accounts, stocks, income and "
@@ -2341,18 +2344,38 @@ msgid ""
 "a separate window, please <a href=\"%s\" target=\"_blank\">click here</a>."
 msgstr ""
 
+#, fuzzy, php-format
+#~ msgid "%s | GnuCash"
+#~ msgstr "下載 GnuCash %s"
+
+#~ msgid ""
+#~ "<b>NOTE:</b> the information presented in these sources may or may not be "
+#~ "updated to the most recent version of <span class=\"gnucash\">GnuCash</"
+#~ "span>. If you are interested in doing development work on these "
+#~ "documents, you should contact the original authors."
+#~ msgstr ""
+#~ "<b>注意：</b>這些文件裡的資訊不一定有隨著最新版的 <span class=\"gnucash"
+#~ "\">GnuCash</span> 更新。您若有興趣幫忙完善這些文件，應直接聯絡原作者。"
+
 #~ msgid "About / News"
 #~ msgstr "關於 / 新聞"
 
 #~ msgid "Ask for Help"
 #~ msgstr "尋求幫助"
 
-#~ msgid "GnuCash Documentation"
-#~ msgstr "GnuCash 文件"
+#~ msgid "Dave Gilbert's User Guide (Pdf)"
+#~ msgstr "Dave Gilbert 的使用手冊 (Pdf)"
+
+#, fuzzy
+#~ msgid "GnuCash wiki"
+#~ msgstr "下載 GnuCash %s"
 
 #, fuzzy
 #~ msgid "Info and development"
 #~ msgstr "開發"
+
+#~ msgid "Joe Mack's Tutorial"
+#~ msgstr "Joe Mack 的教程"
 
 #~ msgid "Search"
 #~ msgstr "搜尋"
@@ -2363,3 +2386,18 @@ msgstr ""
 #~ msgstr ""
 #~ "翻譯問題？請聯絡：<a href=\"mailto:gnucash-devel@gnucash.org\"><b>gnucash-"
 #~ "devel@gnucash.org</b></a>"
+
+#, fuzzy
+#~| msgid "Donations"
+#~ msgid "donation"
+#~ msgstr "捐款"
+
+#, fuzzy
+#~| msgid "Localization"
+#~ msgid "localizing"
+#~ msgstr "本地化"
+
+#, fuzzy
+#~| msgid "GnuCash Documentation"
+#~ msgid "released documentation"
+#~ msgstr "GnuCash 文件"

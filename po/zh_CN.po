@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gnucash-htdocs r18948\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2020-12-31 19:20+0100\n"
+"POT-Creation-Date: 2021-01-09 13:14+0100\n"
 "PO-Revision-Date: 2010-05-02 07:26+1000\n"
 "Last-Translator: Tao Wang <dancefire@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
@@ -819,28 +819,22 @@ msgid "Unofficial documentation"
 msgstr "文档"
 
 #: docs.phtml:705
-msgid "Some people have written HOWTO guides or tutorials:"
+msgid "Some people have written and puplished  their own documentation."
 msgstr ""
 
+#. Translators: %s is a wiki link
 #: docs.phtml:708
-msgid "Joe Mack's Tutorial"
-msgstr "Joe Mack 的教程"
-
-#: docs.phtml:711
-#, fuzzy
-msgid "Dave Gilbert's User Guide (Pdf)"
-msgstr "Dave Gilbert 的用户手册 (PDF)"
-
-#: docs.phtml:715
-#, fuzzy
+#, php-format
 msgid ""
-"<b>NOTE:</b> the information presented in these sources may or may not be "
-"updated to the most recent version of <span class=\"gnucash\">GnuCash</"
-"span>. If you are interested in doing development work on these documents, "
-"you should contact the original authors."
+"When this collection grew and became polyglot, it moved to %s. There you can "
+"also add more links."
 msgstr ""
-"有些人写了“如何做”向导或者教程。注意：这些信息来源不一定反映了当前 GnuCash 的"
-"最新版本。如果您对这些文档比较感兴趣，您应当联系其原作者。"
+
+#: docs.phtml:710
+#, fuzzy
+#| msgid "Documentation"
+msgid "wiki:Documentation"
+msgstr "文档"
 
 #: donate.phtml:4 externals/menu.phtml:18
 msgid "Donations"
@@ -2443,8 +2437,23 @@ msgid ""
 "a separate window, please <a href=\"%s\" target=\"_blank\">click here</a>."
 msgstr ""
 
+#, fuzzy, php-format
+#~| msgid "for GnuCash %s"
+#~ msgid "%s | GnuCash"
+#~ msgstr "版本为 GnuCash %s"
+
 #~ msgid "(${size} bytes)"
 #~ msgstr "(${size} 字节)"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>NOTE:</b> the information presented in these sources may or may not be "
+#~ "updated to the most recent version of <span class=\"gnucash\">GnuCash</"
+#~ "span>. If you are interested in doing development work on these "
+#~ "documents, you should contact the original authors."
+#~ msgstr ""
+#~ "有些人写了“如何做”向导或者教程。注意：这些信息来源不一定反映了当前 "
+#~ "GnuCash 的最新版本。如果您对这些文档比较感兴趣，您应当联系其原作者。"
 
 #~ msgid ""
 #~ "A new help subsystem that focuses on how to do tasks is now available, in "
@@ -2483,6 +2492,10 @@ msgstr ""
 
 #~ msgid "Date"
 #~ msgstr "日期"
+
+#, fuzzy
+#~ msgid "Dave Gilbert's User Guide (Pdf)"
+#~ msgstr "Dave Gilbert 的用户手册 (PDF)"
 
 #~ msgid "Description"
 #~ msgstr "描述"
@@ -2549,8 +2562,17 @@ msgstr ""
 #~ "债表、损益表、组合资产估值等等。"
 
 #, fuzzy
+#~| msgid "Mailing Lists"
+#~ msgid "GnuCash mailing lists"
+#~ msgstr "邮件列表"
+
+#, fuzzy
 #~ msgid "GnuCash v%s (old stable release)"
 #~ msgstr "查看所有 GnuCash %s 的下载 (稳定版)"
+
+#, fuzzy
+#~ msgid "GnuCash wiki"
+#~ msgstr "GnuCash %s 运行于"
 
 #~ msgid "Grouping"
 #~ msgstr "分组"
@@ -2601,11 +2623,19 @@ msgstr ""
 #~ "Intuit<sup>&reg;</sup>公司的 Quicken<sup>&reg;</sup>软件所支持的 QIF 文件"
 #~ "可以被导入，并且会自动的合并以消除重复的交易。"
 
+#~ msgid "Joe Mack's Tutorial"
+#~ msgstr "Joe Mack 的教程"
+
 #~ msgid "Lists to Search"
 #~ msgstr "要搜索的列表"
 
 #~ msgid "Mailing List Search"
 #~ msgstr "邮件列表搜索"
+
+#, fuzzy
+#~| msgid "Mailing Lists"
+#~ msgid "Mailing lists"
+#~ msgstr "邮件列表"
 
 #~ msgid ""
 #~ "Multiple accounts can be displayed in one register window at the same "
@@ -2720,10 +2750,6 @@ msgstr ""
 #~ msgid "USA Mirror"
 #~ msgstr "美国镜像站点"
 
-#, fuzzy
-#~ msgid "Writing documentation"
-#~ msgstr "文档"
-
 #~ msgid ""
 #~ "You can now create recurring transactions, including automatic reminders "
 #~ "when a transaction is due, the ability to postpone a scheduled "
@@ -2807,11 +2833,25 @@ msgstr ""
 #~ msgid "by title in descending order"
 #~ msgstr "按标题(降序)"
 
+#, fuzzy
+#~| msgid "Donations"
+#~ msgid "donation"
+#~ msgstr "捐款"
+
+#, fuzzy
+#~| msgid "Localization"
+#~ msgid "localizing"
+#~ msgstr "本地化"
+
 #~ msgid "mirror"
 #~ msgstr "镜像"
 
 #~ msgid "normal"
 #~ msgstr "正常"
+
+#, fuzzy
+#~ msgid "released documentation"
+#~ msgstr "文档"
 
 #~ msgid "score"
 #~ msgstr "得分"

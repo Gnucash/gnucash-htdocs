@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: nl\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2020-12-31 19:20+0100\n"
+"POT-Creation-Date: 2021-01-09 13:14+0100\n"
 "PO-Revision-Date: 2018-10-05 22:58+0200\n"
 "Last-Translator: Mark Haanen <i18n@haanen.net>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
@@ -38,6 +38,11 @@ msgid "Jqplot Reports"
 msgstr "Rapporten gebaseerd op jqplot"
 
 #: 2.6-release-tour.phtml:19
+#, fuzzy
+#| msgid ""
+#| "<span class=\"gnucash\">GnuCash</span> now uses javascript jqplot to "
+#| "render reports. This gives a more professional look to all graphical "
+#| "reports (piechart, barchart, scatterplot)."
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> now uses javascript jqplot to render "
 "reports. This gives a more professional look to all graphical reports "
@@ -144,6 +149,10 @@ msgid ""
 msgstr ""
 
 #: 2.6-release-tour.phtml:98
+#, fuzzy
+#| msgid ""
+#| "The new button to open a <span class=\"gnucash\">GnuCash</span> datafile "
+#| "in read-only mode."
 msgid ""
 "The new button to open a <span class=\"gnucash\">GnuCash</span> datafile in "
 "read-only mode."
@@ -482,6 +491,12 @@ msgid "Where to get the documentation source"
 msgstr "Waar vind ik de documentatiebestanden"
 
 #: develdocs.phtml:57
+#, fuzzy
+#| msgid ""
+#| "You will need a recent copy of the documentation source. For this you can "
+#| "check out the documentation module from the gnucash-docs git repository. "
+#| "Reviewers could also start from the <a href='https://sourceforge.net/"
+#| "projects/gnucash/files/gnucash-docs/'>current docs tarball</a>."
 msgid ""
 "You will need a recent copy of the documentation source. For this you can "
 "check out the documentation module from the gnucash-docs git repository. "
@@ -495,6 +510,13 @@ msgstr ""
 "documentatie-tarball</a>."
 
 #: develdocs.phtml:58
+#, fuzzy
+#| msgid ""
+#| "For those not familiar with git, the <span class=\"gnucash\">GnuCash</"
+#| "span> wiki has a <a href='https://wiki.gnucash.org/wiki/Git'>description</"
+#| "a> tailored to the <span class=\"gnucash\">GnuCash</span> code. To get "
+#| "the documentation source instead of the program source, replace 'gnucash' "
+#| "with 'gnucash-docs' in the mentioned git commands, like this:"
 msgid ""
 "For those not familiar with git, the <span class=\"gnucash\">GnuCash</span> "
 "wiki has a <a href='https://wiki.gnucash.org/wiki/Git'>description</a> "
@@ -538,6 +560,13 @@ msgstr ""
 "gewijzigd):"
 
 #: develdocs.phtml:71
+#, fuzzy
+#| msgid ""
+#| "Next attach your patch to a bug report against the proper component for "
+#| "the Documentation product in <a href='https://bugs.gnucash.org/'><span "
+#| "class=\"gnucash\">GnuCash</span>' bug database</a>. See also <a "
+#| "href='https://wiki.gnucash.org/wiki/Bugzilla'>GnuCash' wiki page on "
+#| "bugzilla</a> for more details about patch submission."
 msgid ""
 "Next attach your patch to a bug report against the proper component for the "
 "Documentation product in <a href='https://bugs.gnucash.org/'><span class="
@@ -602,6 +631,12 @@ msgstr ""
 "en begin met het leveren van opmerkingen."
 
 #: develdocs.phtml:84
+#, fuzzy
+#| msgid ""
+#| "The best way of retaining comments about docs in an easy to find way for "
+#| "everyone would be to use <a href='https://bugs.gnucash.org/'>bugs.gnucash."
+#| "org</a> to file the bugs under documentation. This can also be done using "
+#| "bug-buddy."
 msgid ""
 "The best way of retaining comments about docs in an easy to find way for "
 "everyone would be to use <a href='https://bugs.gnucash.org/'>bugs.gnucash."
@@ -894,29 +929,23 @@ msgstr "Officieuze documentatie"
 #: docs.phtml:705
 #, fuzzy
 #| msgid "Some people have written HOWTO guides or tutorials."
-msgid "Some people have written HOWTO guides or tutorials:"
+msgid "Some people have written and puplished  their own documentation."
 msgstr ""
 "Sommige mensen hebben zelf handleidingen of zelfstudie-gidsen geschreven."
 
+#. Translators: %s is a wiki link
 #: docs.phtml:708
-msgid "Joe Mack's Tutorial"
-msgstr "Zelfstudie-gids (Engelstalig, geschreven door Joe Mack)"
-
-#: docs.phtml:711
-msgid "Dave Gilbert's User Guide (Pdf)"
-msgstr "Gebruikershandleiding (Engelstalige PDF, geschreven door Dave Gilbert)"
-
-#: docs.phtml:715
+#, php-format
 msgid ""
-"<b>NOTE:</b> the information presented in these sources may or may not be "
-"updated to the most recent version of <span class=\"gnucash\">GnuCash</"
-"span>. If you are interested in doing development work on these documents, "
-"you should contact the original authors."
+"When this collection grew and became polyglot, it moved to %s. There you can "
+"also add more links."
 msgstr ""
-"<b>OPMERKING:</b> deze informatiebronnen zijn niet noodzakelijkerwijs "
-"aangepast aan de actuele versie van <span class=\"gnucash\">GnuCash</span>. "
-"Als je geïnteresseerd bent om aan deze documenten te werken, neem dan "
-"contact op met de oorspronkelijke auteurs."
+
+#: docs.phtml:710
+#, fuzzy
+#| msgid "Documentation"
+msgid "wiki:Documentation"
+msgstr "Documentatie"
 
 #: donate.phtml:4 externals/menu.phtml:18
 msgid "Donations"
@@ -1158,6 +1187,14 @@ msgid "Source code"
 msgstr "Broncode"
 
 #: download.phtml:54
+#, fuzzy
+#| msgid ""
+#| "If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> "
+#| "or you wish to install a different version than it ships with, you could "
+#| "try to build <span class=\"gnucash\">GnuCash</span> directly from the "
+#| "source code. The <span class=\"gnucash\">GnuCash</span> wiki has <a "
+#| "href='https://wiki.gnucash.org/wiki/Building'>guidelines for several "
+#| "distributions</a>."
 msgid ""
 "If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> or "
 "you wish to install a different version than it ships with, you could try to "
@@ -1941,6 +1978,13 @@ msgstr ""
 "ouder, dus de laatste versie die op PowerPC Macs werkt."
 
 #: index.phtml:46
+#, fuzzy
+#| msgid ""
+#| "Designed to be easy to use, yet powerful and flexible, <span class="
+#| "\"gnucash\">GnuCash</span> allows you to track bank accounts, stocks, "
+#| "income and expenses.  As quick and intuitive to use as a checkbook "
+#| "register, it is based on professional accounting principles to ensure "
+#| "balanced books and accurate reports. "
 msgid ""
 "Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash"
 "\">GnuCash</span> allows you to track bank accounts, stocks, income and "
@@ -1967,6 +2011,10 @@ msgstr ""
 "span> ? Probeer de"
 
 #: index.phtml:56
+#, fuzzy
+#| msgid ""
+#| ", which are public, email-based discussion groups where you can ask and "
+#| "answer <span class=\"gnucash\">GnuCash</span> questions to other users."
 msgid ""
 ", which are public, email-based discussion groups where you can ask and "
 "answer <span class=\"gnucash\">GnuCash</span> questions to other users."
@@ -2691,6 +2739,11 @@ msgstr ""
 "een apart venster te bekijken, kan je <a href=\"%s\" target=\"_new\">hier "
 "klikken</a>."
 
+#, fuzzy, php-format
+#~| msgid "for GnuCash %s"
+#~ msgid "%s | GnuCash"
+#~ msgstr "voor GnuCash %s"
+
 #~ msgid "(${size} bytes)"
 #~ msgstr "(${size} bytes)"
 
@@ -2732,6 +2785,17 @@ msgstr ""
 #~ msgstr "(termen die op <code>net</code> eindigen)"
 
 #~ msgid ""
+#~ "<b>NOTE:</b> the information presented in these sources may or may not be "
+#~ "updated to the most recent version of <span class=\"gnucash\">GnuCash</"
+#~ "span>. If you are interested in doing development work on these "
+#~ "documents, you should contact the original authors."
+#~ msgstr ""
+#~ "<b>OPMERKING:</b> deze informatiebronnen zijn niet noodzakelijkerwijs "
+#~ "aangepast aan de actuele versie van <span class=\"gnucash\">GnuCash</"
+#~ "span>. Als je geïnteresseerd bent om aan deze documenten te werken, neem "
+#~ "dan contact op met de oorspronkelijke auteurs."
+
+#~ msgid ""
 #~ "A new help subsystem that focuses on how to do tasks is now available, in "
 #~ "addition to a Tutorial and Concepts guide that gives the user background "
 #~ "information on accounting principles and how they are reflected in "
@@ -2768,6 +2832,10 @@ msgstr ""
 
 #~ msgid "Date"
 #~ msgstr "Datum"
+
+#~ msgid "Dave Gilbert's User Guide (Pdf)"
+#~ msgstr ""
+#~ "Gebruikershandleiding (Engelstalige PDF, geschreven door Dave Gilbert)"
 
 #~ msgid "Description"
 #~ msgstr "Omschrijving"
@@ -2832,8 +2900,18 @@ msgstr ""
 #~ "Balans, Winst &amp; Verlies, Portfolio rapporten en vele andere."
 
 #, fuzzy
+#~| msgid "Mailing Lists"
+#~ msgid "GnuCash mailing lists"
+#~ msgstr "Mailinglijsten"
+
+#, fuzzy
 #~ msgid "GnuCash v%s (old stable release)"
 #~ msgstr "Alle GnuCash %s downloads bekijken (stabiel)"
+
+#, fuzzy
+#~| msgid "GnuCash News"
+#~ msgid "GnuCash wiki"
+#~ msgstr "GnuCash Nieuws"
 
 #~ msgid "Grouping"
 #~ msgstr "Groeperen van zoekopdrachten"
@@ -2931,6 +3009,9 @@ msgstr ""
 #~ "die als <a href=\"#query-phrase\">exacte tekst</a> wordt opgezocht.\n"
 #~ "Soms leidt dit proces tot segmentatiefouten."
 
+#~ msgid "Joe Mack's Tutorial"
+#~ msgstr "Zelfstudie-gids (Engelstalig, geschreven door Joe Mack)"
+
 #~ msgid ""
 #~ "Letters, numbers or parts of symbols (duplicated in\n"
 #~ "ASCII) which are defined in JIS X 0208 (Japanese\n"
@@ -2945,6 +3026,11 @@ msgstr ""
 
 #~ msgid "Mailing List Search"
 #~ msgstr "Zoeken in mailinglijsten"
+
+#, fuzzy
+#~| msgid "Mailing Lists"
+#~ msgid "Mailing lists"
+#~ msgstr "Mailinglijsten"
 
 #~ msgid ""
 #~ "Multiple accounts can be displayed in one register window at the same "
@@ -3155,10 +3241,6 @@ msgstr ""
 #~ msgid "USA Mirror"
 #~ msgstr "Alternatieve bron Amerika"
 
-#, fuzzy
-#~ msgid "Writing documentation"
-#~ msgstr "Officieuze documentatie"
-
 #~ msgid ""
 #~ "You can group queries by surrounding them by\n"
 #~ "parentheses. The parentheses should be separated by one or\n"
@@ -3314,11 +3396,25 @@ msgstr ""
 #~ msgid "by title in descending order"
 #~ msgstr "op titel (aflopend)"
 
+#, fuzzy
+#~| msgid "Donations"
+#~ msgid "donation"
+#~ msgstr "Donaties"
+
+#, fuzzy
+#~| msgid "Localization"
+#~ msgid "localizing"
+#~ msgstr "Lokalisatie"
+
 #~ msgid "mirror"
 #~ msgstr "alternatieve bron"
 
 #~ msgid "normal"
 #~ msgstr "normaal"
+
+#, fuzzy
+#~ msgid "released documentation"
+#~ msgstr "Officieuze documentatie"
 
 #~ msgid "score"
 #~ msgstr "score"

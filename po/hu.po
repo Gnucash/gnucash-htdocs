@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gnucash-htdocs 0.0.1\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2020-12-31 19:20+0100\n"
+"POT-Creation-Date: 2021-01-09 13:14+0100\n"
 "PO-Revision-Date: 2020-12-30 09:29+0000\n"
 "Last-Translator: Frank H. Ellenberger <frank.h.ellenberger@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnucash/"
@@ -826,30 +826,22 @@ msgstr "Updated documentation"
 #: docs.phtml:705
 #, fuzzy
 #| msgid "Some people have written HOWTO guides or tutorials."
-msgid "Some people have written HOWTO guides or tutorials:"
+msgid "Some people have written and puplished  their own documentation."
 msgstr "néhányan írtak Hogyan -okat és bemutatókat."
 
+#. Translators: %s is a wiki link
 #: docs.phtml:708
-msgid "Joe Mack's Tutorial"
-msgstr "Joe Mack bemutatója"
-
-#: docs.phtml:711
-#, fuzzy
-msgid "Dave Gilbert's User Guide (Pdf)"
-msgstr "Dave Gilbert's User Guide (PDF)"
-
-#: docs.phtml:715
-#, fuzzy
+#, php-format
 msgid ""
-"<b>NOTE:</b> the information presented in these sources may or may not be "
-"updated to the most recent version of <span class=\"gnucash\">GnuCash</"
-"span>. If you are interested in doing development work on these documents, "
-"you should contact the original authors."
+"When this collection grew and became polyglot, it moved to %s. There you can "
+"also add more links."
 msgstr ""
-"Some people have written HOWTO guides or tutorials. Note: the information "
-"presented in these sources may or may not be updated to the most recent "
-"version of GnuCash. If you are interested in doing development work on these "
-"documents, you should contact the original authors."
+
+#: docs.phtml:710
+#, fuzzy
+#| msgid "Documentation"
+msgid "wiki:Documentation"
+msgstr "Dokumentáció"
 
 #: donate.phtml:4 externals/menu.phtml:18
 msgid "Donations"
@@ -2478,6 +2470,11 @@ msgstr ""
 #~ msgid " Used to setup a variable payment loan scheduled transaction."
 #~ msgstr " Used to setup a variable payment loan scheduled transaction."
 
+#, fuzzy, php-format
+#~| msgid "for GnuCash %s"
+#~ msgid "%s | GnuCash"
+#~ msgstr "for GnuCash %s"
+
 #~ msgid ""
 #~ "&quot;eval&quot; changed API on guile-1.6.  Use the existing API to "
 #~ "convert a delta symbol to a delta time."
@@ -2803,6 +2800,18 @@ msgstr ""
 
 #~ msgid "<b>Mini-Announce:</b> Auto Cap-Gains Beta"
 #~ msgstr "<b>Mini-Announce:</b> Auto Cap-Gains Beta"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>NOTE:</b> the information presented in these sources may or may not be "
+#~ "updated to the most recent version of <span class=\"gnucash\">GnuCash</"
+#~ "span>. If you are interested in doing development work on these "
+#~ "documents, you should contact the original authors."
+#~ msgstr ""
+#~ "Some people have written HOWTO guides or tutorials. Note: the information "
+#~ "presented in these sources may or may not be updated to the most recent "
+#~ "version of GnuCash. If you are interested in doing development work on "
+#~ "these documents, you should contact the original authors."
 
 #~ msgid "<b>QOF-0.4.1:</b> The Query Object Framework"
 #~ msgstr "<b>QOF-0.4.1:</b> The Query Object Framework"
@@ -4129,6 +4138,10 @@ msgstr ""
 #~ msgid "Date"
 #~ msgstr "Date"
 
+#, fuzzy
+#~ msgid "Dave Gilbert's User Guide (Pdf)"
+#~ msgstr "Dave Gilbert's User Guide (PDF)"
+
 #~ msgid "Deal properly when there are no prices for a commodity."
 #~ msgstr "Deal properly when there are no prices for a commodity."
 
@@ -5041,6 +5054,11 @@ msgstr ""
 #~ "in an improved transaction matching system that more accurately picks "
 #~ "duplicate transactions."
 
+#, fuzzy
+#~| msgid "Mailing Lists"
+#~ msgid "GnuCash mailing lists"
+#~ msgstr "Levelező listák"
+
 #~ msgid ""
 #~ "GnuCash no longer requires separate currency exchange accounts to handle "
 #~ "multiple currency transfers."
@@ -5100,6 +5118,10 @@ msgstr ""
 #, fuzzy
 #~ msgid "GnuCash v%s (old stable release)"
 #~ msgstr "Összes GnuCash %s letöltés (stabil)"
+
+#, fuzzy
+#~ msgid "GnuCash wiki"
+#~ msgstr "GnuCash %s for"
 
 #~ msgid "Gnucash Personal Finance Software"
 #~ msgstr "Gnucash Personal Finance Software"
@@ -5576,6 +5598,9 @@ msgstr ""
 #~ "for a cleaner, fresher feel. Please test it out, and let us know about "
 #~ "any bugs, layout problems, dead links, etc."
 
+#~ msgid "Joe Mack's Tutorial"
+#~ msgstr "Joe Mack bemutatója"
+
 #~ msgid "Jon Lapham now primary author of Guide"
 #~ msgstr "Jon Lapham now primary author of Guide"
 
@@ -5712,6 +5737,11 @@ msgstr ""
 
 #~ msgid "Mailing List Search"
 #~ msgstr "Mailing List Search"
+
+#, fuzzy
+#~| msgid "Mailing Lists"
+#~ msgid "Mailing lists"
+#~ msgstr "Levelező listák"
 
 #~ msgid "Major bugfixes include"
 #~ msgstr "Majo bugfixes include"
@@ -8598,6 +8628,11 @@ msgstr ""
 #~ "don't automatically try to (require 'format), so gnucash will build on an "
 #~ "slib-3 system."
 
+#, fuzzy
+#~| msgid "Donations"
+#~ msgid "donation"
+#~ msgstr "Adakozás"
+
 #~ msgid "dump-finance-quote - Be more explicit when a lookup fails."
 #~ msgstr "dump-finance-quote - Be more explicit when a lookup fails."
 
@@ -8673,6 +8708,11 @@ msgstr ""
 
 #~ msgid "ledger"
 #~ msgstr "ledger"
+
+#, fuzzy
+#~| msgid "Localization"
+#~ msgid "localizing"
+#~ msgstr "Többnyelvűsítés"
 
 #~ msgid "log-replay - Increase read buffer size."
 #~ msgstr "log-replay - Increase read buffer size."
@@ -8791,7 +8831,14 @@ msgstr ""
 #~ msgid "register"
 #~ msgstr "register"
 
-#~ msgid "reporting improvements"
+#, fuzzy
+#~| msgid "updated api documentation"
+#~ msgid "released documentation"
+#~ msgstr "updated api documentation"
+
+#, fuzzy
+#~| msgid "reporting improvements"
+#~ msgid "reporting bugs"
 #~ msgstr "reporting improvements"
 
 #~ msgid "scheme"
@@ -8881,9 +8928,6 @@ msgstr ""
 
 #~ msgid "updated Swedish, German, and Portuguese translations"
 #~ msgstr "updated Swedish, German, and Portuguese translations"
-
-#~ msgid "updated api documentation"
-#~ msgstr "updated api documentation"
 
 #~ msgid "updated documentation (English &amp; Portuguese)"
 #~ msgstr "updated documentation (English &amp; Portuguese)"
