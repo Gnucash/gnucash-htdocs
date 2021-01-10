@@ -6,55 +6,59 @@
   $titlefb = T_("GnuCash on facebook");
 
   include("$top_dir/externals/global_params.php");
-  if (!isset($title)) { $title = $GLOBALS["default_title"]; };
+  if (!isset($title)) {
+      $title = $GLOBALS["default_title"];
+  };
   $full_title = $title." | GnuCash";
-  if (!isset($description)) { $description = $default_description; };
+  if (!isset($description)) {
+      $description = $default_description;
+  };
 
   # This function will create a link to the given page
   # reusing the get parameters that were specified
   # with the option to override the language
-  function make_lang_href ($page, $get_parms, $lang)
+  function make_lang_href($page, $get_parms, $lang)
   {
-    if (isset($lang) && $lang != "")
-    {
-      $get_parms["lang"] = $lang;
-    }
-    $url_get_query = http_build_query ($get_parms);
-    $lang_href = "$page"."?"."$url_get_query";
-    return $lang_href;
-  
+      if (isset($lang) && $lang != "") {
+          $get_parms["lang"] = $lang;
+      }
+      $url_get_query = http_build_query($get_parms);
+      $lang_href = "$page"."?"."$url_get_query";
+      return $lang_href;
   }
   
   $get_parms = $_GET;
 
   if (isset($locale)) {
-    if (substr($locale, 0, 2) != 'zh') {
-      $locale_str = substr($locale, 0, 2);
-    } else {
-      $locale_str = $locale  == 'zh_TW' ? 'zh-Hant' : 'zh-Hans';
-    }
+      if (substr($locale, 0, 2) != 'zh') {
+          $locale_str = substr($locale, 0, 2);
+      } else {
+          $locale_str = $locale  == 'zh_TW' ? 'zh-Hant' : 'zh-Hans';
+      }
   } else {
-    $locale_str = "en";
+      $locale_str = "en";
   }
 ?>
-<html prefix="og: https://ogp.me/ns#" lang="<?=$locale_str?>">
+<html dir="auto" lang="<?=$locale_str?>" prefix="og: https://ogp.me/ns#">
   <head>
 <?php // Primary Meta Tags
-      if (!isset($can_utf)) { $can_utf = true; }
-      if ($can_utf)
-      { ?>
+      if (!isset($can_utf)) {
+          $can_utf = true;
+      }
+      if ($can_utf) { ?>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<?php } //if ($can_utf) ?>
+<?php } //if ($can_utf)?>
 
     <title><?=$full_title?></title>
     <meta name="description" content="<?=strip_tags($description)?>"/>
 
     <!--meta properties for facebook Open Graph-->
     <meta property="og:locale" content="<?=$locale_str?>"/>
-<?php // add og:locale:alternate(s) 
+<?php // add og:locale:alternate(s)
     foreach ($GLOBALS ["supported_languages"] as $key => $value) {
-      if ($value != $locale_str)
-      { echo "    <meta property=\"og:locale:alternate\" content=\"{$value}\"/>\n"; }
+        if ($value != $locale_str) {
+            echo "    <meta property=\"og:locale:alternate\" content=\"{$value}\"/>\n";
+        }
     }
     ?>
     <meta property="og:title" content="<?=$full_title?>"/>
@@ -63,14 +67,14 @@
     <meta property="og:image" content="<?=\DEFAULT_URL."externals/logo_w120.png"?>"/>
     <meta property="og:site_name" content="GnuCash"/>
     <meta property="og:description" content="<?=strip_tags($description)?>"/>
-<?php // end of Open Graph properties ?>
+<?php // end of Open Graph properties?>
 
     <link rel="stylesheet" href="<?=$home?>/externals/gnucash.css" type="text/css" />
 
 <?php // Device specific:
-      // Useful for mobile devices: Zoom out and allow scaling. ?>
+      // Useful for mobile devices: Zoom out and allow scaling.?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
-<?php // FavIcons for many different devices ?>
+<?php // FavIcons for many different devices?>
     <link rel="icon" href="<?=$home?>/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" sizes="180x180" href="<?=$home?>/apple-touch-icon.png?v=gAXA7A9nAq"/>
     <link rel="icon" type="image/png" sizes="32x32" href="<?=$home?>/favicon-32x32.png?v=gAXA7A9nAq"/>
@@ -110,7 +114,7 @@
               fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
           </script>
-        
+
           <div class="fb-like" data-href="https://www.gnucash.org"
                data-send="false" data-layout="box_count" data-width="60"
                data-show-faces="true" data-font="verdana">
@@ -118,7 +122,7 @@
         </div> <!-- facebook like button-->
       </div> <!-- socialbuttons -->
 */ ?>
-<?php // the icons on the top right: ?>
+<?php // the icons on the top right:?>
       <div style="float:right;">
         <ul id="navlist">
           <li id="fb-icon"><a href="https://www.facebook.com/Gnucash" title="<?php echo T_($titlefb);?>"></a></li>
@@ -156,7 +160,7 @@
       <span id="location">&nbsp; <?php /* The mirrors currently not exist
          <?= _("Continent"); ?>:
          (<a class="nav" href="<?=\DEFAULT_URL?>">US</a>)
-         (<a class="nav" href="http://www.at.gnucash.org/">EU</a>) 
+         (<a class="nav" href="http://www.at.gnucash.org/">EU</a>)
          (<a class="nav" href="http://www.au.gnucash.org/">AU</a>)  */ ?>
       </span> <!-- Continent -->
     </div> <!-- head -->
