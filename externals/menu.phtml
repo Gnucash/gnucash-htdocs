@@ -1,24 +1,20 @@
-<div id="maincol"><!-- begin main content area -->
+<div id="maincol"><?php // begin main content area ?>
 
   <div id="news">
-    <div class="othernews">
+    <div class="menu1">
       <span class="linktop">
         <b><?= T_("Information")?></b>
       </span>
       <ul>
         <li><a href="<?=$home?>/index.phtml"><?= T_("Home")?></a></li>
         <li><a href="<?=$home?>/news.phtml"><?= T_("News")?></a></li>    
-<?PHP /* RSS atom feed link is now on the top-right of the header
-          <li><a href="<?=$home?>/atom.php">
-            <img src="<?=$home?>/images/icons/feed-icon-12x12.png" width="12" height="12" alt="[atom feed]" /> <?= T_("News Feed")?></a></li>
-      */ ?>
         <li><a href="<?=$home?>/features.phtml"><?=T_("Screenshots, Features")?></a></li>
         <li><a href="https://wiki.gnucash.org/wiki/Installation"><?=T_("Installation")?></a></li>
         <li><a href="https://wiki.gnucash.org/wiki/Getting_Help"><?= T_("Getting help")?></a></li>
         <li><a href="<?=$home?>/donate.phtml"><?=T_("Donations")?></a></li>
       </ul>
     </div>
-    <div class="othernews">
+    <div class="menu1">
       <span class="linktop">
         <b><?=T_("Downloads")?></b>
       </span>
@@ -27,7 +23,7 @@
         <li><a href="<?=$home?>/docs.phtml"><?=T_("Documentation")?></a></li>
       </ul>
     </div>
-    <div class="othernews">
+    <div class="menu1">
       <span class="linktop">
         <b><?=T_("Support")?></b></span>
         <ul>
@@ -35,19 +31,12 @@
           <li><a href="https://wiki.gnucash.org/wiki/FAQ"><?=T_("FAQ")?></a></li>
           <li><a href="https://wiki.gnucash.org/wiki/"><?=T_("Wiki")?></a>&nbsp;<a href="https://wiki.gnucash.org/wiki/De/GnuCash">[de]</a></li>
           <li><a href="https://wiki.gnucash.org/wiki/Mailing_Lists"><?=T_("Mailing Lists")?></a></li>
-<?PHP /* http://www.namazu.org/ made the last release 2011-07-18
-          <li style="list-style-image:none;list-style-type:none;">
-            <ul style="padding-bottom:0px;  margin-top:0px; margin-bottom:5px;">
-              <li><a href="https://lists.gnucash.org/search/<? if ($locale != "") { echo "?lang=$locale"; } ?>"><?=T_("Search")?></a></li>
-            </ul>
-          </li>
-      */ ?>
           <li><a href="https://wiki.gnucash.org/wiki/Bugzilla"><?=T_("Bug Reports")?></a></li>
           <li><a href="https://wiki.gnucash.org/wiki/IRC"><?=T_("IRC (Chat)")?></a></li>
         </ul>
     </div>
-    <div class="othernews">
-      <!-- ?php include("$top_dir/externals/menu-developer.phtml");? -->
+    <div class="menu1">
+      <?php // include("$top_dir/externals/menu-developer.phtml");?>
       <span class="linktop">
         <b><?=T_("Development")?></b>
       </span>
@@ -67,7 +56,7 @@
       </ul>
     </div>
     
-    <!-- ADS start: GnuCash small business accounting book-->
+    <?php // ADS start: GnuCash small business accounting book ?>
     <div class="adscontainer">
       
     <h2 class="adstitle"><?= T_("GnuCash 2.4 Small Business Accounting")?></h2>
@@ -80,9 +69,8 @@
     <?php
     echo '<p class="adstext">' . sprintf(T_("Our own developer Christian Stimming has been contributing to this book as a reviewer, and we can wholeheartly recommend the outcome of this fruitful collaboration. Feel free to have a look at this book over at %s, and, best of all, the publisher has committed to allocate some percentage of the book sales back to the GnuCash project. Have fun with this book!"), '<a href="https://www.packtpub.com/hardware-and-creative/gnucash-24-small-business-accounting-beginners-guide">packtpub.com</a>') . '</p>';
     ?>
-    
     </div>
   
-  </div><!-- ADS end: GnuCash small business accounting book-->
-</div><!-- maincol -->
+  </div><?php // ADS end: GnuCash small business accounting book ?>
+</div><?php // maincol ?>
 
