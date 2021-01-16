@@ -32,6 +32,7 @@ if (array_key_exists('lang', $_GET)) { $locale = $_GET["lang"]; }
 $supported_languages = array(
         'ca_ES' => 'ca',
         'de_DE' => 'de',
+        'en_US' => 'en',
 //        'es_ES' => 'es',
         'fr_FR' => 'fr',
         'he_IL' => 'he',
@@ -45,9 +46,7 @@ $supported_languages = array(
 //        'pl_PL' => 'pl',
         'pt_PT' => 'pt',
         'zh_CN' => 'zh_CN', 
-        'zh_TW' => 'zh_TW',
-        'en_US' => 'en',
-        'C' => 'en'
+        'zh_TW' => 'zh_TW'
         );
 
 # Find the full locale name for short language name.
@@ -70,6 +69,10 @@ if ($locale == "") {
         {
                 # tolower() => remove space => '-' -> '_'
                 # "fr-ch;q=0.3, en, zh-cn;q=0.7" => "fr_ch;q=0.3,en,zh_cn;q=0.7"
+                /* Todo: use Locale::canonicalize ( string $locale ) : string instead
+                 * See https://www.php.net/manual/en/locale.canonicalize.php
+                 * Full description: https://unicode-org.github.io/icu/userguide/locale/#canonicalization
+                 * if ICU is installed on the server */
                 $languages = str_replace('-','_', str_replace(' ', '', strtolower($_SERVER['HTTP_ACCEPT_LANGUAGE'])));
                 $languages = explode(",", $languages);
                 foreach ($languages as $item)
