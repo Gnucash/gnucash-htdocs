@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gnucash-htdocs r22051\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2021-03-20 07:48+0100\n"
+"POT-Creation-Date: 2021-03-30 16:16+0200\n"
 "PO-Revision-Date: 2012-03-18 00:13+0800\n"
 "Last-Translator: Kuang-che Wu <kcwu@csie.org>\n"
 "Language-Team: \n"
@@ -340,7 +340,7 @@ msgstr ""
 msgid "The GnuCash developers team"
 msgstr ""
 
-#: develdocs.phtml:4 externals/menu.phtml:65
+#: develdocs.phtml:4 externals/menu.phtml:54
 msgid "Writing Documentation"
 msgstr ""
 
@@ -529,7 +529,7 @@ msgid ""
 "bug-buddy."
 msgstr ""
 
-#: docs.phtml:10 externals/menu.phtml:27 externals/menu.phtml:34
+#: docs.phtml:10 externals/menu.phtml:23 externals/menu.phtml:30
 msgid "Documentation"
 msgstr "文件"
 
@@ -733,11 +733,11 @@ msgstr "不穩定版"
 msgid "API"
 msgstr ""
 
-#: docs.phtml:447 externals/menu.phtml:58
+#: docs.phtml:447 externals/menu.phtml:47
 msgid "current bugfix branch"
 msgstr ""
 
-#: docs.phtml:451 externals/menu.phtml:59
+#: docs.phtml:451 externals/menu.phtml:48
 msgid "future feature branch"
 msgstr ""
 
@@ -812,7 +812,7 @@ msgstr ""
 msgid "wiki:Documentation"
 msgstr "文件"
 
-#: donate.phtml:4 externals/menu.phtml:18
+#: donate.phtml:4 externals/menu.phtml:14
 msgid "Donations"
 msgstr "捐款"
 
@@ -1154,98 +1154,98 @@ msgstr ""
 msgid "News"
 msgstr "新聞"
 
-#: externals/menu.phtml:15
+#: externals/menu.phtml:11
 msgid "Screenshots, Features"
 msgstr "螢幕截圖，功能特色"
 
-#: externals/menu.phtml:16
+#: externals/menu.phtml:12
 #, fuzzy
 msgid "Installation"
 msgstr "安裝檔"
 
-#: externals/menu.phtml:17
+#: externals/menu.phtml:13
 msgid "Getting help"
 msgstr ""
 
-#: externals/menu.phtml:23
+#: externals/menu.phtml:19
 msgid "Downloads"
 msgstr "下載"
 
-#: externals/menu.phtml:26
+#: externals/menu.phtml:22
 msgid "Program"
 msgstr "程式"
 
-#: externals/menu.phtml:32
+#: externals/menu.phtml:28
 msgid "Support"
 msgstr ""
 
-#: externals/menu.phtml:35
+#: externals/menu.phtml:31
 msgid "FAQ"
 msgstr "常見問題(FAQ)"
 
-#: externals/menu.phtml:36
+#: externals/menu.phtml:32
 msgid "Wiki"
 msgstr "Wiki"
 
-#: externals/menu.phtml:37 index.phtml:55
+#: externals/menu.phtml:33 index.phtml:55
 msgid "Mailing Lists"
 msgstr ""
 
-#: externals/menu.phtml:45
+#: externals/menu.phtml:34
 msgid "Bug Reports"
 msgstr "Bug 回報"
 
-#: externals/menu.phtml:46
+#: externals/menu.phtml:35
 msgid "IRC (Chat)"
 msgstr "IRC (聊天室)"
 
-#: externals/menu.phtml:52
+#: externals/menu.phtml:41
 msgid "Development"
 msgstr "開發"
 
-#: externals/menu.phtml:55
+#: externals/menu.phtml:44
 msgid "How to help"
 msgstr "如何來幫忙"
 
-#: externals/menu.phtml:56
+#: externals/menu.phtml:45
 msgid "Source Docs"
 msgstr "程式碼文件"
 
-#: externals/menu.phtml:62
+#: externals/menu.phtml:51
 msgid "Browse Source Code"
 msgstr "瀏覽程式碼"
 
-#: externals/menu.phtml:63
+#: externals/menu.phtml:52
 msgid "Git Access"
 msgstr ""
 
-#: externals/menu.phtml:64
+#: externals/menu.phtml:53
 msgid "Language Translations"
 msgstr "語言翻譯"
 
-#: externals/menu.phtml:66 sizing.phtml:4
+#: externals/menu.phtml:55 sizing.phtml:4
 msgid "Sizing"
 msgstr ""
 
-#: externals/menu.phtml:73
+#: externals/menu.phtml:62
 msgid "GnuCash 2.4 Small Business Accounting"
 msgstr "GnuCash 2.4 Small Business Accounting"
 
-#: externals/menu.phtml:77
+#: externals/menu.phtml:66
 msgid ""
 "The GnuCash development team received notice about a new book published by "
 "PacktPub, UK:"
 msgstr "GnuCash 開發團隊收到了英國 PacktPub 出版社的新書通知："
 
-#: externals/menu.phtml:78
+#: externals/menu.phtml:67
 msgid "GnuCash 2.4 Small Business Accounting, by Ashok Ramachandran"
 msgstr "《GnuCash 2.4 Small Business Accounting》, Ashok Ramachandran 著"
 
-#: externals/menu.phtml:79
+#: externals/menu.phtml:68
 msgid "This is a Beginner's Guide for managing your accounts."
 msgstr "這是一本教您管理帳目的初學指南。"
 
-#: externals/menu.phtml:81
+#: externals/menu.phtml:70
 #, php-format
 msgid ""
 "Our own developer Christian Stimming has been contributing to this book as a "
@@ -1706,19 +1706,12 @@ msgid ""
 msgstr ""
 
 #: index.phtml:46
-#, fuzzy
-#| msgid ""
-#| "Designed to be easy to use, yet powerful and flexible, <span class="
-#| "\"gnucash\">GnuCash</span> allows you to track bank accounts, stocks, "
-#| "income and expenses.  As quick and intuitive to use as a checkbook "
-#| "register, it is based on professional accounting principles to ensure "
-#| "balanced books and accurate reports. "
 msgid ""
 "Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash"
 "\">GnuCash</span> allows you to track bank accounts, stocks, income and "
-"expenses.  As quick and intuitive to use as a checkbook register, it is "
-"based on professional accounting principles to ensure balanced books and "
-"accurate reports. "
+"expenses. As quick and intuitive to use as a checkbook register, it is based "
+"on professional accounting principles to ensure balanced books and accurate "
+"reports."
 msgstr ""
 "<span class=\"gnucash\">GnuCash</span> 不僅設計成易於使用，而且功能強大又有彈"
 "性。它可以追蹤銀行帳戶、股票、收入與支出，就像用帳簿一樣快捷、直覺。基於專業"
