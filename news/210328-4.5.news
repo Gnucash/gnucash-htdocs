@@ -1,0 +1,191 @@
+<b>Announcement:</b> GnuCash 4.5 Released
+2021-03-28
+
+<h2>GnuCash 4.5 Released</h2>
+
+<p>The GnuCash development team announces GnuCash 4.5, the sixth release in the stable 4.x series</p>
+
+<h4>Between 4.4 and 4.5, the following bugfixes were accomplished:</h4>
+<ul>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=783283">Bug 783283 - Multi-Currency payments use wrong date</a><p>Also properly handles the user clicking the cancel button on the transfer dialog. It will now just return to the payment window, waiting for further user input. </p></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797621">Bug 797621 - GnuCash freezes temporarily and sometimes crashes when selecting Sales Tax Table in Invoices</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797630">Bug 797630 - Check for missing dependencies of &#39;Get Quotes&#39; to avoid Gnucash crash.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797906">Bug 797906 - GnuCash data file is locked after a &quot;save-as&quot; to mysql database.</a><p>It&#39;s more general, any save-as to a different backend type, i.e. xml-&gt;sql or sql-&gt;xml, left the previous book locked.</p></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797924">Bug 797924 - Crash when searching for customer to process payment.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797997">Bug 797997 - File gnucash could note be found</a><p>On Microsoft Windows when run from a CMD shell and passing a path that contains non-ASCII characters.</p></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798019">Bug 798019 - Currency rates in OFX file are ignored</a><p>Use currency_rate information from OFX file if available. Requires LibOFX v 0.10.0 or later. </p></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798044">Bug 798044 - Adding splits to a lot is extremely slow</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798060">Bug 798060 - Invoices are missing on Customer report after upgrade</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798070">Bug 798070 - Opening balance does not update when creating account from Account Hierarchy</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798078">Bug 798078 - Report &#39;Income Chart&#39; prints stacktrace when end date before start date</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798085">Bug 798085 - Incorrect transactions import of entires with large number amount</a><p>Quicken 2005 introduces U amount which sometimes differs from T amount. U amount has larger range, and must override T amount whenever they&#39;re not equal. </p></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798093">Bug 798093 - Changing the symbol/abbreviation of a security after the trading account was created breaks GnuCash.</a><p>Makes it possible for the user to rename trading accounts or securities independent of each other.</p></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798096">Bug 798096 - can&#39;t duplicate TX previous to red line threshold</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798098">Bug 798098 - Crash popup show when have 3 Windows in OSX</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798100">Bug 798100 - Equity totals calculating incorrectly</a><p>Prevents creation of non-currency opening balance accounts. </p></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798101">Bug 798101 - Do not #undef __STRICT_ANSI__</a><p>Remove defines and undefines for Windows, they were needed with MinGW classic but are not with MinGW-w64. </p></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798104">Bug 798104 - Menu item for &quot;Import Account&quot; is wrong in danish</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798112">Bug 798112 - An error occurred while processing mysql ...</a><p>A &quot;Feature&quot; of MYSQL is that it allows C-style backslash escapes in string constants and replaces them with the actual character (e.g. \n is converted to 0x0a). This causes round trip problems if the escape is one of the allowed ones and a MYSQL error if it isn&#39;t.  Disable the feature so that MYSQL follows the SQL standard. </p></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798132">Bug 798132 - Invoice Importing crashes when importing low quantity values.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798135">Bug 798135 - GtkEntry text with search list: shows selected entry again for no reason</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798147">Bug 798147 - Notes entry crashes program </a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798149">Bug 798149 - CSV transaction Import setting loses account name if it is changed after setting is memorized</a><p>Account guid is saved as well as the full account name and when recalled the account is looked up first by guid, if this fails the full account name is checked which if successful immediately updates the saved base account setting with the account guid for future use. If unsuccessful the account combo is blank with a error message as before. When save CSV settings button is used, both the Guid and full paths are saved so previous versions can still use the full path as before. </p></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798150">Bug 798150 - Error on report over time</a><p>Caused by incorrect handling of Daylight Savings beginning at midnight.</p></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798154">Bug 798154 - Tooltips wrong when multiple charts in one report</a></li>
+</ul>
+
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+<li>Fix building based on unix makefiles</li>
+<li>Make the chart on the report page icon larger to align better with the account page icon.</li>
+<li>Allow the context menu when GncCellRendererTextView is in edit mode.</li>
+<li>Restructure early locale initialization<ul><li>Move macOS specific bits to its own source file. As this is objective-c use .mm extension</li><li>Use common function signature for macOS and Windows init function and include via common header file </li></ul></li>
+<li>Fix GncDateTime::format_zulu to emit the UTC timezone instead of the GncDateTime&#39;s timezone with the UTC timestamp. </li>
+<li>Fix the implementations of gnc_foo_get_day_neutral. As implemented these returned 10:59 AM local on the day but neutral time is 10:59 UTC. </li>
+<li>gnc_invoice_window_print_invoice return NULL if invoice is NULL.</li>
+<li>[dialog-invoice] invoice editor reuses invoice report tab.</li>
+<li>Allow for Header Bar use in CSV transaction Assistant<p>There are a couple of action buttons that are added to the CSV transaction assistant with added alignment based on the action area being a GtkBox which causes errors if the header bar is used so test for the action area type and use appropriate specific functions. </p></li>
+<li>Drop default locale currency special case for euro<p>The condition mentioned in the comment no longer applies. All European locales on Windows (MingW64) properly present EUR as currency these days </p></li>
+<li>Fix fencepost error in calculating the week_num for POSIX timezone rules.</li>
+<li>Include the contents of PROJECT_DESCRIPTION in the PACKAGE_PREFIX.<p>If it&#39;s defined. PACKAGE_PREFIX is used to name tarballs and set their base directory. The translation project has requested that we name freeze-string tarballs with a pre1 suffix; this makes that possible. </p></li>
+<li>Update python/gnucash_business.py to reflect rename of gncOwnerApplyPayment.</li>
+<li>I18N: don&#39;t mark &quot;&lt;&lt;&quot;, &quot;&gt;&gt;&quot; translatable<p>They get properly reversed for RTL writing</p></li>
+<li>From Budget editor, add toolbar and Edit menu to run budget report<p>This parallels the invoice editor &quot;Print Invoice&quot; functionality.  Runs the budget report using current budget. </p></li>
+<li>[gnc-plugin-page-budget] change note icon to a note page</li>
+<li>Allow the find account dialog position to be saved when using &#39;X&#39;</li>
+<li>Update price database for imported transactions.</li>
+<li>Replace g_memdup by memcpy<p>GLib is deprecating g_memdup and will immediately remove it in the next micro-release because of a CVE.</p></li>
+<li>[html-fonts] Prevent sup/sub from affecting baseline<p>Source: https://css-tricks.com/snippets/css/prevent-superscripts-and-subscripts-from-affecting-line-height/  Previously &lt;sup&gt; and &lt;sub&gt; would cause the baseline to move vertically. </p></li>
+<li>Replace stat calls with GFile to retrieve last modified info<p>Avoids code-page problems with non-ASCII characters on Microsoft Windows.</p></li>
+<li>[gnc-tree-model-split-reg.c] use xaccSplitListGetUniqueTransactionsReversed<p>which is then reversed if required. this removes the need for double reversal. </p></li>
+<li>[Split.c]New function xaccSplitListGetUniqueTransactionsReversed<p>Same as xaccSplitListGetUniqueTransactions but doesn&#39;t reverse the list prior to returning. To be used by gnc-tree-model-split-reg.c  Several optimizations
+<ul>
+<li>doesn&#39;t call g_list_find and g_list_append for every iteration</li>
+<li>uses g_hash_table to cache list of txns already added instead of g_list_find.</li>
+<li>does not reverse the result, thereby returning a reversed list.</li></ul> </li>
+<li>[gnc-recurrence.c] avoid O(N^2) children traversal</li>
+<li>Ensure that any GncMainWindows containing no tabs are destroyed at shutdown.</li>
+<li>I18N: drop translatable flag from &quot;xxx&quot; dummies and remove trailing spaces from translatable strings</li>
+<li>Update Form/Schedule line references for 2020 for the US Income Tax Report.</li>
+<li>Fix build with glib2 2.67.x.<p>glib headers should not be included with &#39;extern &quot;C&quot;&#39;. </p></li>
+<li>[balsheet-pnl] Use last day of the month prices instead of first day of next month.</li>
+<li>[options.scm API] Remove canonically-tabbed parent-subtotal-mode<p>This mode had been marked experimental for 17 years and was never improved. Any saved reports with this option will be switched to parent-subtotal-mode enabled.</p></li>
+<li>Accommodate Gwenhywfar 5.5.0 signature change for some GUI callbacks.<p>This is a breaking change that matters only in Win32. No ifdeffing because Win32 builds and dependencies are well synchronized. </p></li>
+<li>L10N: Move translation authority for Turkish from the GNU Translation Project to Weblate.</li>
+<li>Make prototypes static for autoclear unit test, fixes build on Debian Buster.</li>
+<li>[income-gst-statement] trep-engine currency section moved<p>From &quot;General&quot; to &quot;Currency&quot;.  Missed out in 854c11782 commit </p></li>
+<li>[test-scm-utilities] test-end properly so that test failures set the exit code correctly</li>
+<li>Create opening balance accounts only when there are opening balances.</li>
+<li>[qif-file.scm] Don&#39;t use match as an identifier<p>It is a (ice-9 match) keyword. </p></li>
+<li>Change the CSV export account tree header line<p>Change the headings of the CSV account export header line to be more friendly which uses existing translations. </p></li>
+<li>[new-owner-report] Don't create empty rows on report when splits have no entry in the memo field.</li>
+<li>[gnc-report] dump backtrace to console when report crashes<p>because gnc:backtrace-if-exception, not used anymore, would dump guile backtrace to console. restore this behaviour. </p></li>
+<li>[report-core] remove 2.6/2.4 compatibility code</li>
+<li>[gnucash-commands.cpp] display report errors to stderr</li>
+</ul>
+<h4>New API</h4>
+<ul>
+  <li>[report-core.scm] create and expose gnc:render-report<p>similar to gnc:report-run but *always* returns a 2-element list containing data OR captured_error </p></li>
+  <li>[report-core.scm] create and expose gnc:render-report<p>similar to gnc:report-run but *always* returns a 2-element list containing data OR captured_error </p></li>
+<li>[gnc-plugin-page-report] add gnc_plugin_page_report_reload<p>refreshes the report </p></li>
+</ul>
+<h4>Deprecations</h4>
+<ul>
+  <li>[c-interface.scm] deprecate gnc:last-captured-error</li>
+  <li>[report-core] deprecate gnc:restore-report-by-guid</li>
+  <li>gnc:get-three-months-ago</li>
+  <li>gnc:get-six-months-ago</li>
+  <li>gnc:get-one-year-ago</li>
+  <li>gnc:get-three-months-ahead</li>
+  <li>gnc:get-six-months-ahead</li>
+  <li>gnc:get-one-year-ahead</li>
+  <li>traverse-list->vec</li>
+  <li>traverse-vec->list</li>
+</ul>
+<p>New and Updated Translations: Bodo, Croatian, Danish, Dutch, English (United Kingdom), Finnish, French, German, Greek, Hebrew, Hindi, Indonesian, Italian, Japanese, Lithuanian, Norwegian Bokmål, Polish, Portuguese, Portuguese (Brazil), Russian, Spanish, Turkish, Ukrainian, Urdu, Vietnamese</p>
+
+<h4>Known Problems</h4>
+<p><a href="https://bugs.gnucash.org/buglist.cgi?bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;limit=0&amp;list_id=8149&amp;order=priority%2Cbug_severity&amp;query_format=advanced">Complete list of all open bugs.</a></p>.
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of GnuCash 4.5 we're pleased to also release a new version of the companion Help and Tutorial and Concepts Guide</p>
+<h6>Between 4.4 and 4.5, the following bugfixes were accomplished:</h6>
+<ul>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798089">Bug 798089 - Starting &quot;Tutorial and Concepts Guide&quot; writes namespace error to console</a></li>
+</ul>
+<h6>The following fixes and improvements were not associated with bug reports:</h6>
+<ul>
+<li>Add wiki links about Online Banking Setup</li>
+<li>Online banking: Table of protocols</li>
+<li>Rewording of tools abstract</li>
+<li>Add IDs to all html chunks of help</li>
+<li>Explain default sort order and a partial review of the register view menus.</li>
+<li>Update links about tax report …</li>
+<li>New section &quot;Country Specific Reports&quot;<p>Moved US:TXF, added de:ElStEr</p></li>
+<li>Report: Join several notes in one footnote</li>
+<li>Several updates in report-create</li>
+<li>Guide: New year</li>
+<li>Update saved-reports location</li>
+<li>Update copyright year of german guide</li>
+<li>Specify ISO currencies in overview (English, German)</li>
+</ul>
+
+<h3>Getting GnuCash for Windows and MacOS</h3>
+<p>GnuCash is provided for both Microsoft Windows 8.1&reg; and later
+    and MacOS 10.13 (High Sierra)&reg; and later in pre-built, all-in-one
+    packages. An installer is provided for Microsoft Windows&reg; while
+    the MacOS&reg; package is a disk image containing a drag-and-drop
+    application bundle.</p>
+<p>The SHA256 Hashes for the downloadable files are:</p>
+<ul>
+    <li><code>bc1f48a8453488a2e9f6b83b68613aa55caebe4d2983460bdac7e084b46cffdc</code>&nbsp;&nbsp;gnucash-4.5.tar.bz2</li>
+    <li><code>ba645cca45d5354b4a2e25b5a3f5fb1e06eaaf6b72cf07b29c4818e2d5e0a084</code>&nbsp;&nbsp;gnucash-4.5.tar.gz</li>
+    <li><code>dc0f48cc6a606bf0e7780777dbef34dc8fd5a0eb8014ce79042cbada0f171839</code>&nbsp;&nbsp;gnucash-4.5.setup.exe</li>
+    <li><code>9b8dd368d8c8b8879938830f129f2abf5014182c84d0cb8fc133b5d0d1d321a9</code>&nbsp;&nbsp;Gnucash-Intel-4.5-1.dmg</li>
+    <li><code>91fd04afc8d9b700e9f034321aa782b52adf13c559e3a94410e0774c180afa43</code>&nbsp;&nbsp;gnucash-docs-4.5.tar.gz</li>
+</ul>
+
+<ul>
+    <li>SourceForge:
+        <ul>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.5/gnucash-4.5.setup.exe">Win32</a></li>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.5/Gnucash-Intel-4.5-1.dmg">Mac-Intel</a></li>
+        </ul></li>
+    <li>Github
+        <ul>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/4.5/gnucash-4.5.setup.exe">Win32</a></li>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/4.5/Gnucash-Intel-4.5-1.dmg">Mac-Intel</a></li>
+        </ul></li></ul>
+
+<p>GnuCash is now available as a flatpak from Flathub.org. <a href="https://wiki.gnucash.org/wiki/Flatpak">Instructions for installing and running.</a></p>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 4.5 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+    <li>Sourceforge: <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.5/gnucash-4.5.tar.bz2">bzip2</a>, <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.5/gnucash-4.5.tar.gz">gzip</a>.</li>
+
+    <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/4.5/gnucash-4.5.tar.bz2">bzip</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/4.5/gnucash-4.5.tar.gz">gzip</a></li>
+
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https://www.gtk.org">Gtk+</a> 3.22.29, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0, <a href="https://www.boost.org/">Boost</a> 1.67, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, <a href="https://github.com/google/googletest">GoogleTest</a> 1.8.0, <a href="https://cmake.org/">cmake 3.10</a> and <a href="http://www.swig.org/">SWIG</a> 2.0.12. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 4.5 documentation can be found under "GnuCash v4 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats. The documentation is also included in the MacOS and Windows application bundles.</p>
+
+<p>If you want to compile the GnuCash Documentation 4.5 for yourself, the source code can be downloaded from:</p>
+<ul>
+  <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.5/gnucash-docs-4.5-1.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/4.5/gnucash-docs-4.5.tar.gz">GitHub</a></li>
+  <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, MacOS, and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
