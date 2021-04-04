@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: GnuCash ht-docs\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2021-03-30 16:16+0200\n"
+"POT-Creation-Date: 2021-04-04 04:40+0200\n"
 "PO-Revision-Date: 2021-03-25 15:29+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/gnucash/website/"
@@ -1494,7 +1494,7 @@ msgstr ""
 msgid "Main features"
 msgstr "Glavne karakteristike"
 
-#: features.phtml:18 features.phtml:120
+#: features.phtml:18 features.phtml:125
 msgid "Advanced features"
 msgstr "Napredne karakteristike"
 
@@ -1502,7 +1502,7 @@ msgstr "Napredne karakteristike"
 msgid "Data storing and exchange features"
 msgstr "Spremanje i razmjena podataka"
 
-#: features.phtml:20 features.phtml:197
+#: features.phtml:20 features.phtml:202
 msgid "Other goodies"
 msgstr "Ostale osobitosti"
 
@@ -1510,12 +1510,17 @@ msgstr "Ostale osobitosti"
 msgid "Double Entry"
 msgstr "Dvojno knjigovodstvo"
 
-#. Translators: If you already translated the guide, you can copy the image into /images/features/ as e.g. basics_AccountRelationships.ll.png
-#: features.phtml:33
+#. Translators: This is an image name. Do not translate it!
+#. Instead you can submit a translated image, like https://github.com/Gnucash/gnucash-htdocs/tree/master/images/features
+#. If you already translated the guide, you can copy the image into /images/features/ as e.g. basics_AccountRelationships.ll.png
+#. Else you can edit https://github.com/Gnucash/gnucash-docs/blob/maint/guide/C/figures/basics_AccountRelationships.svg,
+#. create a png from it and submit that.
+#. See also https://wiki.gnucash.org/wiki/Documentation_Update_Instructions
+#: features.phtml:38
 msgid "basics_AccountRelationships.C.png"
 msgstr "basics_AccountRelationships.C.png"
 
-#: features.phtml:37
+#: features.phtml:42
 msgid ""
 "Every transaction must debit one account and credit others by an equal "
 "amount. This ensures the books balance: the difference between income and "
@@ -1525,11 +1530,11 @@ msgstr ""
 "na potražnu stranu drugog konta. Time se osiguravaju bilancirane knjige: "
 "razlika između prihoda i rashoda je jednaka zbroju imovine i obveza."
 
-#: features.phtml:43
+#: features.phtml:48
 msgid "Checkbook-Style Register"
 msgstr "Pregledan registar konta"
 
-#: features.phtml:49
+#: features.phtml:54
 msgid ""
 "The <span class=\"gnucash\">GnuCash</span> checkbook-style register provides "
 "a custom, convenient and familiar interface to entering financial "
@@ -1538,7 +1543,7 @@ msgstr ""
 "<span class=\"gnucash\">GnuCashov</span> pregledan registar konta pruži "
 "jednostavno, podesivo i poznato sučelje za unos financijskih transakcija."
 
-#: features.phtml:51
+#: features.phtml:56
 msgid ""
 "The register supports common checking and credit-card transactions, as well "
 "as income, stock and currency transactions. The following features are also "
@@ -1548,41 +1553,41 @@ msgstr ""
 "karticama, kao i prihodne, dionične ili valutne transakcije. Dodatno tome su "
 "ugrađene i ove karakteristike:"
 
-#: features.phtml:54
+#: features.phtml:59
 msgid "The ability to enter <b>split transactions</b>"
 msgstr "Mogućnost unosa <b>višedjelne transakcije</b>"
 
-#: features.phtml:55
+#: features.phtml:60
 msgid ""
 "The ability to mark a transaction as <b>cleared</b> or <b>reconciled</b>"
 msgstr ""
 "Mogućnost označivanja transakcije kao <b>potvrđene</b> ili <b>usklađene</b>"
 
-#: features.phtml:56
+#: features.phtml:61
 msgid "<b>Autofill</b> of entered transactions"
 msgstr "<b>Automatsko dopunjavanje</b> prilikom unosa transakcije"
 
-#: features.phtml:57
+#: features.phtml:62
 msgid ""
 "The ability to display <b>multiple accounts</b> in a single register window"
 msgstr ""
 "Mogućnost istovremenog prikaza <b>više konta</b> u jednom prozoru registra"
 
-#: features.phtml:58
+#: features.phtml:63
 msgid ""
 "A <b>summary bar</b> that displays all of the relevant account's balance "
 "information"
 msgstr "<b>Traka sažetka</b> s prikazom svih važnih informacija o stanju konta"
 
-#: features.phtml:59
+#: features.phtml:64
 msgid "Many options to <b>customize</b> the appearance and the display style"
 msgstr "Mnoge opcije za <b>prilagođavanje</b> izgleda i stila prikaza"
 
-#: features.phtml:65 index.phtml:72
+#: features.phtml:70 index.phtml:72
 msgid "Scheduled Transactions"
 msgstr "Terminirane transakcije"
 
-#: features.phtml:69
+#: features.phtml:74
 msgid ""
 "You can create recurring transactions with a high level of customization of "
 "amounts and timeline. You can also set an automatic reminder when a "
@@ -1592,7 +1597,7 @@ msgstr ""
 "iznosa i vremenskih razdoblja. Postoji i mogućnost postavljanja automatskog "
 "podsjetnika o dospijeću transakcija."
 
-#: features.phtml:72
+#: features.phtml:77
 msgid ""
 "An assistant that runs when <span class=\"gnucash\">GnuCash</span> is "
 "started allows scheduled transactions to be postponed without canceling or "
@@ -1602,11 +1607,11 @@ msgstr ""
 "omogućava odgađanje terminiranih transakcija ili njihovo izvršavanje prije "
 "dospijeća."
 
-#: features.phtml:78 index.phtml:70
+#: features.phtml:83 index.phtml:70
 msgid "Reports, Graphs"
 msgstr "Izvještaji i dijagrami"
 
-#: features.phtml:82
+#: features.phtml:87
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> has an integrated module to display "
 "graphs of your financial data in the form of:"
@@ -1614,19 +1619,19 @@ msgstr ""
 "<span class=\"gnucash\">GnuCash</span> ima integrirani modul za prikaz "
 "dijagrama financijskih podataka u raznim oblicima:"
 
-#: features.phtml:85
+#: features.phtml:90
 msgid "Barcharts"
 msgstr "Stupčani dijagrami"
 
-#: features.phtml:86
+#: features.phtml:91
 msgid "Piecharts"
 msgstr "Kružni dijagrami"
 
-#: features.phtml:87
+#: features.phtml:92
 msgid "Scatter plots"
 msgstr "Raspršeni dijagrami"
 
-#: features.phtml:89
+#: features.phtml:94
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> also comes complete with a full suite "
 "of standard and customizeable reports, such as:"
@@ -1634,23 +1639,23 @@ msgstr ""
 "<span class=\"gnucash\">GnuCash</span> uz to sadržava kompletan skup "
 "standardiziranih i podešavajućih izvještaja, kao što su:"
 
-#: features.phtml:91
+#: features.phtml:96
 msgid "Balance Sheet"
 msgstr "Bilanca"
 
-#: features.phtml:92
+#: features.phtml:97
 msgid "Profit &amp; Loss"
 msgstr "Račun dobiti i gubitka"
 
-#: features.phtml:93
+#: features.phtml:98
 msgid "Portfolio Valuation"
 msgstr "Vrednovanje portfelja"
 
-#: features.phtml:94
+#: features.phtml:99
 msgid "and many others."
 msgstr "i još mnoge druge."
 
-#: features.phtml:97
+#: features.phtml:102
 msgid ""
 "Graphs and reports can be highly and easily customized in appearance and "
 "contents, in order to fullfill every user's need."
@@ -1658,11 +1663,11 @@ msgstr ""
 "Izgled i sadržaj dijagrama i izvještaja mogu se lako podesiti, čime se "
 "zadovoljavaju potrebe svih korisnika."
 
-#: features.phtml:103
+#: features.phtml:108
 msgid "Statement Reconciliation"
 msgstr "Usklađivanje stanja"
 
-#: features.phtml:108
+#: features.phtml:113
 msgid ""
 "<b>Account reconciliation</b> allows the user to compare the transactions "
 "entered in an account against a bank statement. This operation is very "
@@ -1674,7 +1679,7 @@ msgstr ""
 "naročito korisna za pronalaženje grešaka u transakcijama i u unosima "
 "podataka, čime osigurava jednakost knjiga i bankovnih podataka."
 
-#: features.phtml:109
+#: features.phtml:114
 msgid ""
 "The <span class=\"gnucash\">GnuCash</span> reconcile tool with running "
 "reconciled and cleared balances makes reconciling against bank statements an "
@@ -1683,11 +1688,11 @@ msgstr ""
 "<span class=\"gnucash\">GnuCashov</span> ugrađeni alat za usklađivanje i "
 "potvrđivanje, pojednostavlja usklađivanje GnuCash konta s bankovnim stanjima."
 
-#: features.phtml:114
+#: features.phtml:119
 msgid "Income/Expense Account Types"
 msgstr "Vrste konta prihoda/rashoda"
 
-#: features.phtml:116
+#: features.phtml:121
 msgid ""
 "Income/Expense Account Types (Categories) allow you to categorize your cash "
 "flow.  When used properly with the double-entry feature and equity accounts, "
@@ -1699,11 +1704,11 @@ msgstr ""
 "omogućuju izradu izvještaja, kao što je račun dobiti i gubitka, što "
 "jednostavniji sustavi nisu u stanju izraditi."
 
-#: features.phtml:124
+#: features.phtml:129
 msgid "Small Business Accounting Features"
 msgstr "Karakteristike za poslovno računovodstvo"
 
-#: features.phtml:127
+#: features.phtml:132
 msgid ""
 "Simplify managing a small business with <b>Customer</b> and <b>Vendor</b> "
 "tracking, <b>Jobs</b>, <b>Invoicing</b> and <b>Bill</b> Payment, and <b>Tax</"
@@ -1713,7 +1718,7 @@ msgstr ""
 "<b>kupaca</b> i <b>dobavljača</b>, <b>nalozi</b>, plaćanja <b>izlaznih</b>/"
 "<b>ulaznih</b> računa te određivanje <b>poreza</b> i <b>uvjeta plaćanja</b>."
 
-#: features.phtml:130
+#: features.phtml:135
 msgid ""
 "Using A/Receivable and A/Payable accounts you can even manage <b>payrolls</"
 "b> for your employees."
@@ -1721,7 +1726,7 @@ msgstr ""
 "Pomoću konta potraživanja i dugovanja, može se upravljati čak i <b>plaćama</"
 "b> zaposlenika."
 
-#: features.phtml:133
+#: features.phtml:138
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> gives you also a tool to manage your "
 "business' <b>budget</b> so that you can easily plan your financial strategy."
@@ -1729,11 +1734,11 @@ msgstr ""
 "<span class=\"gnucash\">GnuCash</span> ima i alat za upravljanje poslovnim "
 "<b>proračunom</b>. S njime se lako planira financijsk strategija."
 
-#: features.phtml:139
+#: features.phtml:144
 msgid "Multiple Currencies"
 msgstr "Višestruke valute"
 
-#: features.phtml:143
+#: features.phtml:148
 msgid ""
 "Different accounts can be denominated in different currencies. Currency "
 "movements between accounts are fully balanced when double-entry is enabled."
@@ -1741,11 +1746,11 @@ msgstr ""
 "Različita konta mogu se denominirati u različite valute. Promjena valuta u "
 "kontima obračunava se kad je dvojno knjigovodstvo aktivirano."
 
-#: features.phtml:149
+#: features.phtml:154
 msgid "Stock/Mutual Fund Portfolios"
 msgstr "Portfelji dionica/investicijskih fondova"
 
-#: features.phtml:152
+#: features.phtml:157
 msgid ""
 "Track stocks individually (one per account) or in portfolio of accounts (a "
 "group of accounts that can be displayed together)."
@@ -1753,11 +1758,11 @@ msgstr ""
 "Praćenje dionica pojedinačno (po jedan konto za svaku) ili u portfelju konta "
 "(kao grupa konta, koji se mogu zajednički prikazati)."
 
-#: features.phtml:157
+#: features.phtml:162
 msgid "Online Stock &amp; Mutual Fund Quotes"
 msgstr "Internetski tečajevi dionica i financijskih fondova"
 
-#: features.phtml:160
+#: features.phtml:165
 msgid ""
 "Get Stock &amp; Mutual Fund quotes from various web sites, update portfolio "
 "automatically. Additional pricing sources are added regularly."
@@ -1766,15 +1771,15 @@ msgstr ""
 "aktualiziraj portfelj automatski. Dodatni izvori cijena se redovito "
 "nadodavaju."
 
-#: features.phtml:163
+#: features.phtml:168
 msgid "Data storage and exchange features"
 msgstr "Spremanje i razmjena podataka"
 
-#: features.phtml:167
+#: features.phtml:172
 msgid "Experimental database support"
 msgstr "Podrška za eksperimentalnu bazu podataka"
 
-#: features.phtml:169
+#: features.phtml:174
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> by default stores data in an <b>xml</"
 "b> format. Starting with version 2.4, <span class=\"gnucash\">GnuCash</span> "
@@ -1786,7 +1791,7 @@ msgstr ""
 "span> financijski podaci mogu se spremati u <b>SQL bazu podataka</b>, "
 "koristeći <b>SQLite3</b>, <b>MySQL</b> ili <b>PostgreSQL</b>."
 
-#: features.phtml:170
+#: features.phtml:175
 msgid ""
 "Note this feature is considered experimental.  It works for most of the "
 "common use cases but some corner cases have been reported to result in data "
@@ -1800,11 +1805,11 @@ msgstr ""
 "greške po redoslijedu njihovih prijava. Zasad još nije izvršeno cjelovito "
 "testiranje, zbog čega može doći do sporadičnog gubitka podataka."
 
-#: features.phtml:175
+#: features.phtml:180
 msgid "QIF and OFX Import"
 msgstr "QIF i OFX uvoz"
 
-#: features.phtml:178
+#: features.phtml:183
 msgid ""
 "If you are migrating from other financial software, <span class=\"gnucash"
 "\">GnuCash</span>  can import Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> "
@@ -1814,7 +1819,7 @@ msgstr ""
 "\">GnuCash</span> može uvesti Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> "
 "<b>QIF</b> datoteke uz pomoć praktičnog pomoćnika."
 
-#: features.phtml:181
+#: features.phtml:186
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is also the first free software "
 "application to support the <b>OFX</b> (Open Financial Exchange) protocol "
@@ -1824,7 +1829,7 @@ msgstr ""
 "softvera koji podržava <b>OFX</b> (Open Financial Exchange) protokol, koji "
 "mnoge banke i poduzeća financijskih usluga počinju koristiti."
 
-#: features.phtml:184
+#: features.phtml:189
 msgid ""
 "A transaction matching system ensures that duplicate transactions are "
 "accurately recognized and automatically deleted during file import."
@@ -1832,11 +1837,11 @@ msgstr ""
 "Ugrađeni sustav za uspoređivanje transakcija, osigurava prepoznavanje i "
 "automatsko brisanje duplih transakcija prilikom uvoza."
 
-#: features.phtml:190
+#: features.phtml:195
 msgid "HBCI Support"
 msgstr "HBCI podrška"
 
-#: features.phtml:193
+#: features.phtml:198
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is the first free software "
 "application to support the German <b>Home Banking Computer Information</b> "
@@ -1848,11 +1853,11 @@ msgstr ""
 "Information) protokol, koji dozvoljava izravno preuzimanje bankovnih stanja, "
 "kao i inicijaliziranje bankovnih transakcija i izravnih terećenja."
 
-#: features.phtml:201
+#: features.phtml:206
 msgid "Multiplatform"
 msgstr "Višeplatformska namjena"
 
-#: features.phtml:204
+#: features.phtml:209
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> runs on many different operating "
 "systems including <b>Windows</b>, <b>MacOSX</b> and <b>Linux</b>."
@@ -1860,11 +1865,11 @@ msgstr ""
 "<span class=\"gnucash\">GnuCash</span> je dostupan za razne operacijske "
 "sustave, uključujući <b>Windows</b>, <b>MacOS X</b> i <b>Linux</b>."
 
-#: features.phtml:209
+#: features.phtml:214
 msgid "Localization"
 msgstr "Lokalizacije"
 
-#: features.phtml:212
+#: features.phtml:217
 #, php-format
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> handles internationalized dates and "
@@ -1881,11 +1886,11 @@ msgstr ""
 "španjolski, švedski, turski, ukrajinski i britanski engleski. Dokumentacija "
 "postoji na enlgeskom, francuskom, portugalskom i španjolskom jeziku."
 
-#: features.phtml:217
+#: features.phtml:222
 msgid "Transaction Finder"
 msgstr "Pronalaženje transakcija"
 
-#: features.phtml:220
+#: features.phtml:225
 msgid ""
 "A powerful transaction query dialogue can help you quickly locate a needle "
 "in a haystack."
@@ -1893,11 +1898,11 @@ msgstr ""
 "Moćan dijalog za traženje transakcija pomaže u potrazi za iglom u plastu "
 "sjena."
 
-#: features.phtml:225
+#: features.phtml:230
 msgid "Check Printing"
 msgstr "Ispis čekova"
 
-#: features.phtml:228
+#: features.phtml:233
 msgid ""
 "Checks may be printed in standard formats on common check stocks. A "
 "customization GUI allows custom check layouts to be developed."
@@ -1905,22 +1910,22 @@ msgstr ""
 "Čekovi se mogu ispisati u standardnom formatu na uobičajenim predlošcima. "
 "Grafičko sučelje dozvoljava izradu prilagođenih čekova."
 
-#: features.phtml:233
+#: features.phtml:238
 msgid "Mortgage &amp; Loan Repayment Assistant"
 msgstr "Pomoćnik za otplaćivanje kredita"
 
-#: features.phtml:236
+#: features.phtml:241
 msgid ""
 "A guided dialogue for setting up loan payments as scheduled transactions."
 msgstr ""
 "Dijalog vodi kroz postavke za postavljanje terminiranih transakcija za "
 "otplaćivanje kredita."
 
-#: features.phtml:242
+#: features.phtml:247
 msgid "User Manual and Help"
 msgstr "Korisnički priručnik i pomoć"
 
-#: features.phtml:245
+#: features.phtml:250
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is very well documented: along with "
 "the application <b>Manual</b>, new users can take full advantage of the "
