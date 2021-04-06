@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 小高 <2926295173@qq.com>, 2021.
 # TianXing Yi <duguqiubailee@gmail.com>, 2021.
+# TianXing_Yi <duguqiubailee@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs r18948\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2021-04-04 04:40+0200\n"
-"PO-Revision-Date: 2021-04-05 16:26+0000\n"
-"Last-Translator: TianXing Yi <duguqiubailee@gmail.com>\n"
+"PO-Revision-Date: 2021-04-06 17:26+0000\n"
+"Last-Translator: TianXing_Yi <duguqiubailee@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "gnucash/website/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -79,7 +80,7 @@ msgstr "报表和发票可以直接导出为PDF，无需通过“打印”界面
 
 #: 2.6-release-tour.phtml:51
 msgid "Associate a local file or remote location with any transaction"
-msgstr "关联交易事项与本地文件或链接"
+msgstr "链接交易事项和文件（本地或远程），比如链接发票、收据、凭证，方便查看、验证交易真伪"
 
 #: 2.6-release-tour.phtml:53
 msgid ""
@@ -87,12 +88,12 @@ msgid ""
 "with a transaction. This long-requested feature is available through both "
 "the Transaction menu and the transaction's context menu. The files are "
 "displayed in the default viewer for that file type."
-msgstr "通过交易事项菜单，关联外部文件或链接（URL），文件会在商业->已链接文件中显示。"
+msgstr "交易事项菜单（或右键）->管理文件链接，添加文件链接或地址（URL），该文件会在商业->已链接文件中显示。"
 
 #: 2.6-release-tour.phtml:61
 msgid ""
 "You can now associate a local file or a remote location with any transaction."
-msgstr "现在支持交易事项关联本地文件或链接。"
+msgstr "链接交易事项和文件（本地或远程）。"
 
 #: 2.6-release-tour.phtml:66
 msgid "Account colors"
@@ -397,8 +398,8 @@ msgid ""
 "the creation of two major documents, the <b>Help Manual</b> and the "
 "<b>Tutorial and Concepts Guide</b>."
 msgstr ""
-"和<span class=\"gnucash\">程序</span>一样，指南也是由开发者和使用者维护的，两个<span class=\"gnucash"
-"\">指北</span>文件：<b>帮助手册</b>、<b>教程和概念</b>。"
+"和<span class=\"gnucash\">程序</span>一样，指南也是由开发者和使用者维护的，两份<span class=\"gnucash"
+"\">主要</span>文件：<b>帮助手册</b>、<b>教程概念</b>。"
 
 #: develdocs.phtml:19
 msgid ""
@@ -501,7 +502,7 @@ msgid ""
 msgstr ""
 "不熟悉 git ，<span class=\"gnucash\">GnuCash Wiki</span> 有详细 <a "
 "href='https://wiki.gnucash.org/wiki/Git'>讲解</a>，是为 <span class=\"gnucash\""
-">GnuCash</span> 量身定制的。获取源文件而非源代码，请用如下指令："
+">GnuCash</span> 量身定制的。获取指南而非源代码，请用如下指令："
 
 #: develdocs.phtml:61
 msgid ""
@@ -511,7 +512,7 @@ msgid ""
 "downloaded."
 msgstr ""
 "<span class=\"gnucash\">GnuCash</span> "
-"的主要指北：<b>帮助手册</b>和<b>教程和概念</b>，使用上述命令，获取这两个文件。"
+"的主要指北：<b>帮助手册</b>和<b>教程概念</b>，使用上述命令获取。"
 
 #: develdocs.phtml:67
 msgid "Writers"
@@ -523,7 +524,7 @@ msgid ""
 "changes. When you are satisfied with your changes you can create a patch by "
 "running the following command in the base directory of the documentation "
 "(usually gnucash-docs, unless you renamed it):"
-msgstr "如上所述获取源文件、编辑，若感觉合适，可以在文件（通常为gnucash-docs，除非其重命名了）目录运行命令提交："
+msgstr "如上所述获取指南、编辑，若感觉合适，可以在文件（通常为gnucash-docs，除非其重命名了）目录运行命令提交："
 
 #: develdocs.phtml:71
 msgid ""
@@ -563,7 +564,7 @@ msgid ""
 "You may also want to retain a local copy of the old documentation to refer "
 "to when writing. This still has a lot of useful information in it which "
 "hasn't been transferred to the new docs."
-msgstr "可能你还得保留一份旧指南、以便写作时参考，它里面仍然有很多信息没有同步。"
+msgstr "可能你还得保留一份旧指南、以便写作时参考，它里面仍然有很多有用的信息。"
 
 #: develdocs.phtml:81
 msgid "Reviewers"
@@ -1739,7 +1740,7 @@ msgstr ""
 
 #: index.phtml:51
 msgid "Need Help?"
-msgstr "需要帮助？"
+msgstr "寻求帮助？"
 
 #: index.phtml:54
 msgid ""
@@ -1814,7 +1815,7 @@ msgid ""
 "Association for Transaction</b> menu item that has replaced the two "
 "association items in 3.x, allows setting, changing, and deleting "
 "associations."
-msgstr "新的<b>交易关联</b>在交易事项-><b>管理文件链接</b>，它取代了3.x版本中的两个关联项，可以设置、更改或删除。"
+msgstr "新<b>链接</b>在交易事项菜单（或右键）<b>管理文件链接</b>，它取代了3.x版本中的两个关联项，可以设置、更改或删除。"
 
 #: new_features-4.0.phtml:25
 msgid ""
@@ -1822,18 +1823,18 @@ msgid ""
 "Associations column (visible in double-line mode) in the register in place "
 "of the letters when a transaction has an association. This doesn't work on "
 "MacOS."
-msgstr "当交易有关联时，回形针符号（URLS的链式链接）会出现在交易事项表中的关联栏（双行模式），过去是字母。注：MacOS上不适用。"
+msgstr "交易有链接时，关联栏（双行模式）会有回形针符号（URLS式链接、可直接打开文件，过去是字母）。注：MacOS上不适用。"
 
 #: new_features-4.0.phtml:26
 msgid ""
 "Associations may now be added to bills, credit notes, invoices, and "
 "vouchers. The actual association when present is added as a link button "
 "which is shown below the notes."
-msgstr "现在，可以关联账单、信用票据、发票和凭证。实际上如果有关联，票据下面就会有链接标示。"
+msgstr "现在账单、信用票据、发票和凭证都可以链接文件，实际上如果有链接，说明下面就会标示。"
 
 #: new_features-4.0.phtml:34
 msgid "[Video showing two ways to filter accounts]"
-msgstr "[在交易事项表筛选账户的两种方法]"
+msgstr "[在交易事项表筛选科目的两种方法]"
 
 #: new_features-4.0.phtml:38
 msgid ""
@@ -1844,7 +1845,7 @@ msgid ""
 "any part of a full account name and the drop-list will be filtered to "
 "contain only matching accounts. Once you have a small enough list you can "
 "use the arrow keys to select the account that you want."
-msgstr "在交易事项表选择科目时，会添加新的搜索；输入科目全称的任意字符，下拉列表将会匹配筛选。当范围足够小，一切就简单了。"
+msgstr "交易事项的转账栏、有搜索功能，输入科目全称的任意文字，下拉列表将匹配筛选。范围足够小时，一切就简单了。"
 
 #: new_features-4.0.phtml:43
 msgid ""
@@ -1856,13 +1857,13 @@ msgid ""
 "output the report to stdout."
 msgstr ""
 "新程序<kbd>gnucash-cli</kbd> (<kbd>gnucash-cli."
-"exe</kbd>)用来处理指令，如更新账簿中的价格；通过名称或GUID生成<kbd>报表</kbd>；还支持格式化输出，若没有指定文件，将输出到屏幕。"
+"exe</kbd>)用来处理指令：如更新价格，通过名称或GUID生成<kbd>报表</kbd>，格式化输出，若没有指定导出文件，将显示到屏幕。"
 
 #: new_features-4.0.phtml:49
 msgid ""
 "will display a screen listing all of the available commands and their "
 "options."
-msgstr "显示所有可用命令及其选项。"
+msgstr "显示所有命令及其选项。"
 
 #: new_features-4.0.phtml:50
 msgid ""
@@ -1881,7 +1882,7 @@ msgstr "用户界面"
 msgid ""
 "When creating a new account hierarchy it's now possible to load account "
 "templates from locales other than the one set for the user interface."
-msgstr "语言。"
+msgstr "语种。"
 
 #: new_features-4.0.phtml:60
 msgid ""
@@ -1889,16 +1890,15 @@ msgid ""
 "the <b>Account Types</b> selector, one for language and one for country, the "
 "choices in the latter depending on the former. The default is the current "
 "locale but they may be used to select account templates from any locale."
-msgstr "新建账簿、<b>选择要创建的科目</b>环节，<b>科目类型</b>上方有两个菜单，左国家，右语言；正常是默认系统，当然你也可以自由定义。"
+msgstr "新建账簿、<b>选择要创建的科目</b>，<b>科目类型</b>上方有国家和语言选项；正常和系统一致，当然也可自定义。"
 
 #: new_features-4.0.phtml:62
-#, fuzzy
 msgid ""
 "When deleting accounts the destination accounts of moved splits will be "
 "checked to ensure that they have the same commodity as the source account. "
 "If they don't you'll get a warning and the opportunity to pick another "
 "account or to carry on regardless."
-msgstr "删除科目时时，将检查被分割的科目，以确保它们与源科目的币种相同。如果不一样，你会得到一个警告，并有机会选择另一个账户或继续进行。"
+msgstr "删除科目时，可以将交易事项并入其他科目；若币种不同，会有警告提示。"
 
 #: new_features-4.0.phtml:63
 msgid ""
@@ -1907,37 +1907,37 @@ msgstr "设置红冲日期。"
 
 #: new_features-4.0.phtml:70
 msgid "Business Functions"
-msgstr "商业"
+msgstr "商业文件"
 
 #: new_features-4.0.phtml:73
 msgid "Business Document Column Widths"
-msgstr ""
+msgstr "商业文件列宽"
 
 #: new_features-4.0.phtml:74
 msgid ""
 "Entry column widths in Invoices, Bills, and Employee Vouchers may now be "
 "saved as defaults for each type of document."
-msgstr ""
+msgstr "发票、账单和员工凭证中的列宽现在可以保存为各自的默认格式，双击分隔线自适应宽度。"
 
 #: new_features-4.0.phtml:75
 msgid ""
 "Two menu items are added to the View menu when a Bill, Invoice, or Voucher "
 "tab has focus:"
-msgstr ""
+msgstr "当打开账单、发票或员工凭证时，查看菜单多了两个选项："
 
 #: new_features-4.0.phtml:77
 msgid "Use as Default Layout for Vendor Documents"
-msgstr ""
+msgstr "保存为默认布局"
 
 #: new_features-4.0.phtml:78
 msgid "Reset Default Layout for Vendor Documents"
-msgstr ""
+msgstr "重置默认布局"
 
 #: new_features-4.0.phtml:79
 msgid ""
 "Vendor Documents is for Bills and is replaced by Customer or Employee "
 "Documents for Invoices or Vouchers respectively."
-msgstr ""
+msgstr "此选项会为发票、账单、凭证设置各自布局，互不冲突。"
 
 #: new_features-4.0.phtml:81
 msgid ""
@@ -1945,17 +1945,17 @@ msgid ""
 "default for all documents in the same type. The second menu item removes the "
 "customization and documents of that type will therafter use the computed "
 "default widths."
-msgstr ""
+msgstr "第一个选项保存默认布局，并适应其同类文件；第二个选项重置默认布局，其所有同类文件布局将恢复到最初状态。"
 
 #: new_features-4.0.phtml:87
 msgid "Importing Transactions"
-msgstr "交易事项"
+msgstr "交易导入"
 
 #: new_features-4.0.phtml:90
 msgid ""
 "Support for AQBanking Version 6. This is required to support new FinTS "
 "protocols for the European Payment Services Directive (PSD2)."
-msgstr ""
+msgstr "支持AQBanking第6版，这是支持欧洲支付服务指令(PSD2)的新FinTS协议所必需的。"
 
 #: new_features-4.0.phtml:91
 msgid ""
@@ -1964,33 +1964,35 @@ msgid ""
 "remove any that are found. It also adds a button at the bottom of the Import "
 "Map Editor to delete them if one chooses not to use the dialog."
 msgstr ""
+"<b>地图导入编辑器</b>(工具->地图导入编辑)将扫描与不存在账户的贝叶斯关联，并显示一个对话框，可以删除任何被发现的账户。 \"导入地图编辑器 "
+"\"的底部有删除按钮，如果选择不使用该对话框，则可以删除。"
 
 #: new_features-4.0.phtml:92
 msgid "The OFX file importer can now import more than one file at a time."
-msgstr ""
+msgstr "同时导入多个OFX文件。"
 
 #: new_features-4.0.phtml:93
 msgid ""
 "OFX imports having balance information will now offer to immediately "
 "reconcile, passing the balance information in the file to the reconcile info."
-msgstr ""
+msgstr "导入有余额OFX文件时将立即对账，文件中的余额信息会传递到对账。"
 
 #: new_features-4.0.phtml:94
 msgid ""
 "The import transaction matcher window column headings are changed from R to "
 "C and from U+R to U+C, reflecting that the matcher marks transactions "
 "cleared but doesn't reconcile them."
-msgstr ""
+msgstr "交易匹配导入窗口列标题由R改为C，由U+R改为U+C，反映匹配标记交易已结清，但未对账。"
 
 #: new_features-4.0.phtml:95
 msgid ""
 "Account matcher will decline to match accounts with a different commodity "
 "from the imported split if the import information includes the commodity."
-msgstr ""
+msgstr "交易匹配拒绝导入币种不同的科目。"
 
 #: new_features-4.0.phtml:96
 msgid "Ellipsize the Description and Memo fields in the account matcher."
-msgstr ""
+msgstr "省略科目匹配器中的描述和备注字段。"
 
 #: new_features-4.0.phtml:101
 msgid "Reports"
@@ -2019,15 +2021,15 @@ msgstr "预算"
 
 #: new_features-4.0.phtml:113
 msgid "Optionally include the account code option in budget view."
-msgstr ""
+msgstr "预算界面添加科目编号选项。"
 
 #: new_features-4.0.phtml:114
 msgid "Enable adding notes to budgets."
-msgstr ""
+msgstr "给预算添加注释。"
 
 #: new_features-4.0.phtml:115
 msgid "Account codes may now optionally be displayed in the Budget Tree View."
-msgstr ""
+msgstr "预算纵览添加科目编号选项。"
 
 #: new_features-4.0.phtml:120
 msgid "Compatibility"
@@ -2037,7 +2039,7 @@ msgstr "兼容性"
 msgid ""
 "GnuCash 4.x and later will no longer migrate old gconf settings from GnuCash "
 "2.4.x."
-msgstr ""
+msgstr "GnuCash 4.x及以后不再支持2.4.x的gconf设置。"
 
 #: new_features-4.0.phtml:129
 msgid "Customization and Scripting"
@@ -2048,7 +2050,7 @@ msgid ""
 "The GnuCash widget hierarchy for CSS has been revised to be more consistent "
 "with Gtk practice. You may need to spend some time with the GtkInspector to "
 "get your custom CSS back the way you like it."
-msgstr ""
+msgstr "已修改GnuCash的CSS控件架构、来兼容Gtk，为此，你可能需要多了解下Gtklnspector，才能让CSS正常工作。"
 
 #: new_features-4.0.phtml:133
 msgid ""
@@ -2059,15 +2061,15 @@ msgstr ""
 #: new_features-4.0.phtml:136
 #, php-format
 msgid "For a complete list of new features and API changes see the %s."
-msgstr ""
+msgstr "新功能和API变化的完整列表，请参阅%s。"
 
 #: new_features-4.0.phtml:137
 msgid "Release Notes"
-msgstr ""
+msgstr "发行说明"
 
 #: news.phtml:5
 msgid "Announcement of New Releases, Server Maintenance …"
-msgstr ""
+msgstr "新版本公告、服务器维护…"
 
 #: news.phtml:13
 msgid "GnuCash News"
@@ -2079,7 +2081,7 @@ msgstr "旧公告"
 
 #: news.phtml:32
 msgid "Click <a href=\"oldnews.phtml\">here</a> for older announcements."
-msgstr ""
+msgstr "我叫你一声、你敢答应吗？<a href=\"oldnews.phtml\">旧公告</a>。"
 
 #: oldnews.phtml:5
 msgid ""
