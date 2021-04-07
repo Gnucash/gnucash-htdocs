@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2021-04-04 04:40+0200\n"
-"PO-Revision-Date: 2021-04-06 17:26+0000\n"
+"PO-Revision-Date: 2021-04-07 17:26+0000\n"
 "Last-Translator: TianXing_Yi <duguqiubailee@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "gnucash/website/zh_Hans/>\n"
@@ -80,7 +80,7 @@ msgstr "报表和发票可以直接导出为PDF，无需通过“打印”界面
 
 #: 2.6-release-tour.phtml:51
 msgid "Associate a local file or remote location with any transaction"
-msgstr "链接交易事项和文件（本地或远程），比如链接发票、收据、凭证，方便查看、验证交易真伪"
+msgstr "链接文件（本地或远程），比如发票、收据、凭证，方便查看、验证交易真伪"
 
 #: 2.6-release-tour.phtml:53
 msgid ""
@@ -88,7 +88,7 @@ msgid ""
 "with a transaction. This long-requested feature is available through both "
 "the Transaction menu and the transaction's context menu. The files are "
 "displayed in the default viewer for that file type."
-msgstr "交易事项菜单（或右键）->管理文件链接，添加文件链接或地址（URL），该文件会在商业->已链接文件中显示。"
+msgstr "交易事项菜单（或右键）->管理文件链接，该文件会在商业->已链接文件中显示。"
 
 #: 2.6-release-tour.phtml:61
 msgid ""
@@ -1160,9 +1160,8 @@ msgid ""
 "www.gnu.org/\">GNU</a> GPL and available for GNU/Linux, BSD, Solaris, Mac OS "
 "X and Microsoft Windows."
 msgstr ""
-"<span class=\"gnucash\">GnuCash</span> 个人和小规模企业财务软件，遵循<a href="
-"\"https://www.gnu.org/\">GNU</a>GPL开源协议，适用于GNU/Linux、BSD、Solaris、"
-"Mac OS X和Microsoft Windows。"
+"<span class=\"gnucash\">GnuCash</span> 个人和小规模企业财务软件，遵循<a href=\"https://www."
+"gnu.org/\">GNU</a>GPL协议，适用于GNU/Linux、BSD、Solaris、Mac OS X和Microsoft Windows。"
 
 #: externals/header.phtml:3
 msgid "Subscribe to RSS feed"
@@ -1295,9 +1294,8 @@ msgid ""
 "of all, the publisher has committed to allocate some percentage of the book "
 "sales back to the GnuCash project. Have fun with this book!"
 msgstr ""
-"开发者 Christian Stimming 参与了本书的编写，亦是审稿人。我们诚心地推荐这份意"
-"义满满的资料，欢迎在%s网站阅读，最主要，出版商已承诺将部分利润回赠给 "
-"GnuCash。加油！"
+"开发者 Christian Stimming 参与了本书的编写，亦是审稿人。我们诚心地推荐这份意义满满的资料，欢迎在%s阅读，最主要，"
+"出版商已承诺将部分利润回赠给 GnuCash。加油！"
 
 #: features.phtml:4 new_features-4.0.phtml:4
 msgid "Features"
@@ -1815,7 +1813,7 @@ msgid ""
 "Association for Transaction</b> menu item that has replaced the two "
 "association items in 3.x, allows setting, changing, and deleting "
 "associations."
-msgstr "新<b>链接</b>在交易事项菜单（或右键）<b>管理文件链接</b>，它取代了3.x版本中的两个关联项，可以设置、更改或删除。"
+msgstr "<b>交易事项菜单（或右键）</b><b>管理文件链接</b>，替代了3.x版本的选项，可以直接设置、更改或删除。"
 
 #: new_features-4.0.phtml:25
 msgid ""
@@ -1830,7 +1828,7 @@ msgid ""
 "Associations may now be added to bills, credit notes, invoices, and "
 "vouchers. The actual association when present is added as a link button "
 "which is shown below the notes."
-msgstr "现在账单、信用票据、发票和凭证都可以链接文件，实际上如果有链接，说明下面就会标示。"
+msgstr "账单、信用票据、发票和凭证都可以链接文件，实际上如果有链接，说明下面就会标示。"
 
 #: new_features-4.0.phtml:34
 msgid "[Video showing two ways to filter accounts]"
@@ -2004,7 +2002,7 @@ msgid ""
 "multicolumn report and a new <b>Dashboard</b> report containing Account "
 "reports for expenses and income, an income-expense chart, and an account "
 "summary."
-msgstr ""
+msgstr "新<b>超级报表</b>，包含旧多列报表和新<b>报表盘</b>：收入图、支出图、收支图和科目摘要。"
 
 #: new_features-4.0.phtml:105
 msgid ""
@@ -2014,6 +2012,8 @@ msgid ""
 "<b>N.B.</b> This is incompatible with previous versions of the report and "
 "will require regenerating saved configurations."
 msgstr ""
+"收入-税务报表，选项->格式新增了英国增值税和澳大利亚消费税；选项->科目，科目源分为销售和支出，以正确显示资金动向。<b>N."
+"B.</b>报表格式与以前版本不兼容，需要重新配置。"
 
 #: new_features-4.0.phtml:110
 msgid "Budgets"
@@ -2021,11 +2021,11 @@ msgstr "预算"
 
 #: new_features-4.0.phtml:113
 msgid "Optionally include the account code option in budget view."
-msgstr "预算界面添加科目编号选项。"
+msgstr "预算->选项添加科目编号显示。"
 
 #: new_features-4.0.phtml:114
 msgid "Enable adding notes to budgets."
-msgstr "给预算添加注释。"
+msgstr "预算界面，给选定科目添加注释。"
 
 #: new_features-4.0.phtml:115
 msgid "Account codes may now optionally be displayed in the Budget Tree View."
@@ -2056,7 +2056,7 @@ msgstr "已修改GnuCash的CSS控件架构、来兼容Gtk，为此，你可能�
 msgid ""
 "Python bindings are now localized and their strings available for "
 "translation."
-msgstr ""
+msgstr "现在，Python 绑定已经本地化，它们的字符串可供翻译。"
 
 #: new_features-4.0.phtml:136
 #, php-format
@@ -2087,11 +2087,11 @@ msgstr "我叫你一声、你敢答应吗？<a href=\"oldnews.phtml\">旧公告<
 msgid ""
 "This is an archive of announcements that once appeared on the GnuCash home "
 "page."
-msgstr "这是一个公告的存档，曾经出现在 GnuCash 的首页上。"
+msgstr "这是曾经出现在GnuCash主页上的公告档案。"
 
 #: sizing.phtml:5
 msgid "This is an ancient page about Gnucash's code size."
-msgstr ""
+msgstr "关于Gnucash代码规模的老旧页面。"
 
 #: sizing.phtml:16
 msgid ""
