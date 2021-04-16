@@ -4,6 +4,7 @@
 # jsled <jsled@asynchronous.org>, 2006.
 # henri laudani <laudani.henri@gmail.com>, 2021.
 # Christopher Lam <christopher.lck@gmail.com>, 2021.
+# Thomas Jungers <thomasjungers@gmail.com>, 2021.
 #
 # Quelques propositions de traductions :
 # - checkbook: livre de compte
@@ -14,11 +15,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
-"component=Translations&product=Website&resolution=---\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
+"cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2021-04-04 04:40+0200\n"
-"PO-Revision-Date: 2021-02-09 05:50+0000\n"
-"Last-Translator: Christopher Lam <christopher.lck@gmail.com>\n"
+"PO-Revision-Date: 2021-04-13 15:26+0000\n"
+"Last-Translator: Thomas Jungers <thomasjungers@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnucash/website/"
 "fr/>\n"
 "Language: fr\n"
@@ -26,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.5-dev\n"
+"X-Generator: Weblate 4.6-dev\n"
 
 #: 2.6-release-tour.phtml:3
 #, fuzzy
@@ -51,10 +52,14 @@ msgid ""
 "reports. This gives a more professional look to all graphical reports "
 "(piechart, barchart, scatterplot)."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> utilise maintenant la bibliothèque "
+"javascript jqplot pour générer les rapports. Cela donne une apparence plus "
+"professionnelle à tous les rapports graphiques (diagrammes circulaires, "
+"histogrammes, nuages de points)."
 
 #: 2.6-release-tour.phtml:27
 msgid "A barchart rendered in GnuCash with jqplot."
-msgstr ""
+msgstr "Un histogramme généré par GnuCash avec jqplot."
 
 #: 2.6-release-tour.phtml:32
 msgid "New preconfigured reports management system"
@@ -67,6 +72,10 @@ msgid ""
 "in the File menu and rerun it later by selecting it from the menu Reports-"
 ">Preconfigured Reports."
 msgstr ""
+"L'ancien système de gestion de rapports personnalisés de <span class="
+"\"gnucash\">GnuCash</span> a été revu. Vous pouvez enregistrer un rapport en "
+"utilisant les options dédiées dans le menu Fichier et le regénérer plus tard "
+"en le sélectionnant dans le menu Rapports -> Rapports préconfigurés."
 
 #: 2.6-release-tour.phtml:41
 msgid ""
@@ -261,30 +270,40 @@ msgstr ""
 "plusieurs éléments directement à partir d’une liste de résultats de recherche"
 
 #: 2.6-release-tour.phtml:129
+#, fuzzy
 msgid ""
 "Better invoice printing setup: Choose a default invoice report as a "
 "preference"
 msgstr ""
+"Un meilleur système d'impression de factures : choisissez le rapport de "
+"facturation à utiliser par défaut"
 
 #: 2.6-release-tour.phtml:130
+#, fuzzy
 msgid "Reorder invoice entries in the invoice window"
-msgstr ""
+msgstr "Réorganisez les entrées de facturation dans la fenêtre Factures"
 
 #: 2.6-release-tour.phtml:138
+#, fuzzy
 msgid "Customer report with an invoice and a credit note."
-msgstr ""
+msgstr "Rapports clients avec une facture et une note de crédit."
 
 #: 2.6-release-tour.phtml:148
+#, fuzzy
 msgid ""
 "Updated search window with buttons to process payment, duplicate, post and "
 "print multiple search results."
 msgstr ""
+"Fenêtre de recherche mise à jour avec des boutons pour traiter le paiement, "
+"dupliquer, publier et imprimer plusieurs résultats de recherche."
 
 #: 2.6-release-tour.phtml:153
+#, fuzzy
 msgid "New preference system"
-msgstr ""
+msgstr "Nouveau système de préférences"
 
 #: 2.6-release-tour.phtml:155
+#, fuzzy
 msgid ""
 "The preferences system has been rewritten to use GSettings from GIO (GLib) "
 "instead of GConf. This is a simpler and more robust backend which writes to "
@@ -292,25 +311,39 @@ msgid ""
 "allows us to remove several troublesome dependencies including GConf, ORBit, "
 "and DBus."
 msgstr ""
+"Le système de préférences a été réécrit pour utiliser GSettings de la "
+"bibliothèque GIO (GLib), au lieu de GConf. Il s'agit d'un backend plus "
+"simple et plus robuste qui utilise les préférences natives de l'OS (defaults "
+"pour OS X et le Registre pour MSWindows) et nous permet de retirer plusieurs "
+"dépendances problématiques telles que GConf, ORBit et DBus."
 
 #: 2.6-release-tour.phtml:157
+#, fuzzy
 msgid ""
 "Note that window position, column sizes, and sort orders will not be "
 "migrated from GConf. Those settings will revert to the default the first "
 "time you use Gnucash 2.6 or later, but they will be saved once you've reset "
 "them."
 msgstr ""
+"Notez que la position de la fenêtre, les largeurs de colonnes et les tris ne "
+"seront pas migrées depuis GConf. Ces paramètres seront réinitialisés la "
+"première fois que vous utiliserez Gnucash, version 2.6 ou ultérieure, mais "
+"ils seront enregistrés une fois que vous les aurez reréglés."
 
 #: 2.6-release-tour.phtml:160
 msgid "Relicensing"
-msgstr ""
+msgstr "Changement de licence"
 
 #: 2.6-release-tour.phtml:162
+#, fuzzy
 msgid ""
 "By agreement of all authors we have relicensed <span class=\"gnucash"
 "\">GnuCash</span> to the GNU General Public License Version 2 or later from "
 "just Version 2."
 msgstr ""
+"Avec l'accord de tous les auteurs, nous avons changé la licence de <span "
+"class=\"gnucash\">GnuCash</span> depuis GNU General Public License Version 2 "
+"à simplement Version 2."
 
 #: 2.6-release-tour.phtml:164 docs.phtml:63 docs.phtml:197 docs.phtml:329
 #: download.phtml:5
@@ -323,10 +356,13 @@ msgid ""
 "span> from the <a href=\"https://www.gnucash.org\">GnuCash website main "
 "page</a>."
 msgstr ""
+"Vous pouvez télécharger la nouvelle version 2.6 de <span class=\"gnucash\""
+">GnuCash</span> à partir de la <a href=\"https://www.gnucash.org\">page "
+"d'accueil du site web de GnuCash</a>."
 
 #: 2.6-release-tour.phtml:168
 msgid "Help"
-msgstr ""
+msgstr "Aide"
 
 #: 2.6-release-tour.phtml:170
 msgid ""
