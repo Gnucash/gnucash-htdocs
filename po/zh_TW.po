@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the GnuCash package.
 # Kuang-che Wu <kcwu@csie.org>, 2011-2012.
 # 峡州仙士 <c@cjh0613.com>, 2021.
+# Jeff Huang <s8321414@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs r22051\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2021-04-04 04:40+0200\n"
-"PO-Revision-Date: 2021-05-30 13:33+0000\n"
-"Last-Translator: 峡州仙士 <c@cjh0613.com>\n"
+"PO-Revision-Date: 2021-06-01 04:33+0000\n"
+"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "gnucash/website/zh_Hant/>\n"
 "Language: zh_TW\n"
@@ -112,7 +113,7 @@ msgstr "顏色有助於從主窗格和標籤中查找科目。"
 
 #: 2.6-release-tour.phtml:81
 msgid "Timout on \"Save changes on closing\""
-msgstr "\"關閉時保存 \"操作超時了"
+msgstr "「關閉時儲存」逾時"
 
 #: 2.6-release-tour.phtml:83
 msgid ""
@@ -785,7 +786,6 @@ msgid "future feature branch"
 msgstr "開發版"
 
 #: docs.phtml:464
-#, fuzzy
 msgid ""
 "Every night a server builds the documentation from the current contents of "
 "the <span class=\"gnucash\">GnuCash</span> source repository. This includes "
@@ -793,9 +793,9 @@ msgid ""
 "Documentation</b> for the current <em>stable</em> version of <span class="
 "\"gnucash\">GnuCash</span>."
 msgstr ""
-"每天晚上，服务器会根据<span class=\"gnucash\""
-">GnuCash</span>源码库的当前内容建立文档。这包括来自<b>Doxygen</b>的<b>开发者文档</b>以及<span class="
-"\"gnucash\">GnuCash</span>当前<em>稳定</em>版本的<b>用户文档</b>。"
+"每天晚上，伺服器會從 <span class=\"gnucash\">GnuCash</span> 原始碼倉庫目前的內容建構文件。這包含了從 "
+"<b>Doxygen</b> 而來的<b>開發者文件</b>與目前<em>穩定</em>版本 <span class=\"gnucash\""
+">GnuCash</span> 的<b>使用者文件</b>。"
 
 #: docs.phtml:468
 msgid ""
@@ -1601,8 +1601,8 @@ msgid ""
 "as it gets reported. There is however no full test coverage so there may "
 "still be scenarios left that result in data loss."
 msgstr ""
-"請注意，此功能是實驗性的；多數情況很穩定，但極個別會造成數據丟失。 <span class=\"gnucash\""
-">開發團隊</span>收到報告後會盡可能修復，但目前還沒有完全測試過，所以仍可能存在丟失數據的情況。"
+"請注意，此功能為實驗性功能。多數時候很穩定，但某些極端狀況可能導致資料遺失。<span class=\"gnucash\">GnuCash</span> "
+"開發者會在收到回報時修復每個問題。但並未經過完整的測試，因此可能仍有部份狀況會導致資料遺失。"
 
 #: features.phtml:180
 msgid "QIF and OFX Import"
@@ -1899,8 +1899,8 @@ msgid ""
 "has, though <kbd>--get-price-quotes</kbd> is deprecated in  favor of "
 "<kbd>gnucash-cli --quotes get</kbd>."
 msgstr ""
-"<kbd>GUI 程序</kbd> 會照常運行，只是 <kbd>---get-price-quotes</kbd> 會被替換為 <kbd>gnucash-"
-"cli--quotes get</kbd>。"
+"GUI 程式，<kbd>gnucash</kbd>，仍會回應其擁有的選項，雖然 <kbd>--get-price-quotes</kbd> 已被棄用，"
+"轉而支援 <kbd>gnucash-cli --quotes get</kbd>。"
 
 #: new_features-4.0.phtml:55
 msgid "Graphic User Interface"
@@ -2131,8 +2131,8 @@ msgid ""
 "from a small handy electronic checkbook to a rather large and multi-featured "
 "desktop app."
 msgstr ""
-"研究軟件的源代碼指標往往是相當有趣的，但財務軟件的感覺一般般。經過多年發展，<span class=\"gnucash\">GnuCash</span> "
-"已從一個小的、方便的電子支票簿發展成一個相當大的多功能桌面程序。"
+"研究軟體開發專案背後的原始碼通常相當有趣。但財務軟體就很難說。這也不奇怪，經過這麼多年的開發，<span class=\"gnucash\""
+">GnuCash</span> 已從當年方便的電子支票簿發展成一套相當大的多功能桌面應用程式。"
 
 #: sizing.phtml:19
 msgid ""
@@ -2140,7 +2140,9 @@ msgid ""
 "a million lines of code spread over more than a thousand files.  It has been "
 "translated into twenty-three languages and credits over 139 authors and "
 "contributors."
-msgstr "<span class=\"gnucash\">超過</span>30萬行代碼，1000多個文件；被翻譯成23種語言，有139名作者和貢獻者。"
+msgstr ""
+"<span class=\"gnucash\">GnuCash</span> "
+"目前包含了大約三十萬行程式碼，這些程式碼散佈在超過一千個檔案中。其被翻譯成二十三種語言，並有超過 139 名作者與貢獻者的貢獻。"
 
 #: sizing.phtml:25
 msgid ""
@@ -2158,8 +2160,8 @@ msgid ""
 "Every last line counted here was typed in, edited, indented, tweaked, "
 "multiple times, by human hands."
 msgstr ""
-"請注意，這是由開發者精心編寫和調試的源代碼（和文檔），不是自動生成的。工具（如 glade 或 "
-"swig）自動生成的大量代碼，並不不計算在內。這裡所計算的每一行都是由人工輸入、編輯、縮進、調整過多次的。"
+"提醒您，這是由真人製作與除錯的原始碼（與文件），而<strong>非</strong>自動產生的程式碼。工具（例如 glade 或 "
+"swig）可以自動產生無數行程式碼；但我並不想要這些東西。這裡的所有程式碼都是人工多次輸入、編輯、縮排、調整過的。"
 
 #: sizing.phtml:31
 msgid ""
