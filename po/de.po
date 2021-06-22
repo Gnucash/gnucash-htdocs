@@ -10,14 +10,15 @@
 # Milo Ivir <mail@milotype.de>, 2020.
 # Christian Wehling <christian.wehling@web.de>, 2020, 2021.
 # Marco Zietzling <marco.zietzling@gmail.com>, 2020, 2021.
+# Thomas <warrel040@gmx.de>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
-"component=Translations&product=Website&resolution=---\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
+"cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2021-04-04 04:40+0200\n"
-"PO-Revision-Date: 2021-03-21 13:55+0000\n"
-"Last-Translator: Frank H. Ellenberger <frank.h.ellenberger@gmail.com>\n"
+"PO-Revision-Date: 2021-06-22 18:35+0000\n"
+"Last-Translator: Thomas <warrel040@gmx.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnucash/website/"
 "de/>\n"
 "Language: de\n"
@@ -25,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.1-dev\n"
+"X-Generator: Weblate 4.7.1-dev\n"
 
 #: 2.6-release-tour.phtml:3
 msgid "GnuCash 2.6 release tour"
@@ -628,7 +629,7 @@ msgstr "Nicht länger verfügbar"
 
 #: develdocs.phtml:55
 msgid "Where to get the documentation source"
-msgstr "Wo bekommt man die Quelltexte der Dokumentation?"
+msgstr "Wo bekommt man die Quelltexte der Dokumentation"
 
 #: develdocs.phtml:57
 #, fuzzy
@@ -649,13 +650,6 @@ msgstr ""
 "gnucash-docs/'>aktuellen docs tarball</a> herunterladen."
 
 #: develdocs.phtml:58
-#, fuzzy
-#| msgid ""
-#| "For those not familiar with git, the <span class=\"gnucash\">GnuCash</"
-#| "span> wiki has a <a href='https://wiki.gnucash.org/wiki/Git'>description</"
-#| "a> tailored to the <span class=\"gnucash\">GnuCash</span> code. To get "
-#| "the documentation source instead of the program source, replace 'gnucash' "
-#| "with 'gnucash-docs' in the mentioned git commands, like this:"
 msgid ""
 "For those not familiar with git, the <span class=\"gnucash\">GnuCash</span> "
 "wiki has a <a href='https://wiki.gnucash.org/wiki/Git'>description</a> "
@@ -666,9 +660,8 @@ msgstr ""
 "Für diejenigen, die nicht mit git vertraut sind, hat das <span class="
 "\"gnucash\">GnuCash</span>-Wiki eine maßgeschneiderte englischsprachige <a "
 "href='https://wiki.gnucash.org/wiki/Git'>Anleitung</a> für den Quelltext des "
-"Programms. \n"
-"Um die Dokumentation zu bekommen, muß man der Anleitung folgen und dabei "
-"<i>checkout gnucash</i> ersetzen durch <i>checkout gnucash-docs</i> wie hier:"
+"Programms. Um die Dokumentation zu bekommen, muß man der Anleitung folgen "
+"und dabei 'checkout gnucash' ersetzen durch 'checkout gnucash-docs' wie hier:"
 
 #: develdocs.phtml:61
 msgid ""
@@ -873,13 +866,13 @@ msgid ""
 "Concepts Guide</b>. We <b>want</b> feedback from you, it is also through "
 "your comments that we know how to improve the documentation."
 msgstr ""
-"Bitte senden Sie eine E-Mail an die <a href='mailto:gnucash-user@gnucash."
-"org'>gnucash-user</a> Mailingliste [englisch, oder auf deutsch an <a "
+"Bitte senden Sie eine E-Mail an die <a href='mailto:gnucash-user@gnucash.org"
+"'>gnucash-user</a> Mailingliste [englisch, oder auf deutsch an <a "
 "href='mailto:gnucash-de@gnucash.org'>gnucash-de</a>], falls Sie keine "
-"zufriedenstellende Antwort auf Ihre Fragen in der Online-Hilfe oder in "
-"\"Kurs und Konzepte\" finden. Wir wünschen uns Feedback von Ihnen, da wir "
-"lediglich aufgrund Ihrer Kommentare wissen, wie wir die Dokumentation "
-"verbessern können."
+"zufriedenstellende Antwort auf Ihre Fragen in der <b>Online-Hilfe</b> oder "
+"in <b>Kurs und Konzepte</b> finden. Wir <b>wünschen</b> uns Feedback von "
+"Ihnen, da wir lediglich aufgrund Ihrer Kommentare wissen, wie wir die "
+"Dokumentation verbessern können."
 
 #. Translators: %s is a link
 #: docs.phtml:46
@@ -917,7 +910,7 @@ msgstr "GnuCash Version %s"
 
 #: docs.phtml:60
 msgid "Current <em>stable</em> user documentation"
-msgstr "Letzte veröffentlichte Dokumentation für Benutzer"
+msgstr "Letzte <em>stabile</em> Dokumentation für Benutzer"
 
 #: docs.phtml:63 docs.phtml:197
 msgid "Stable"
@@ -969,9 +962,8 @@ msgid ""
 msgstr ""
 "Dies ist die letzte stabile Ausgabe der <span class=\"gnucash\">GnuCash</"
 "span> Dokumentation. <em>Stabil</em> sagt in diesem Zusammenhang nicht, dass "
-"dies eine Dokumentation ist, die den allerneuesten Stand von <span class="
-"\"gnucash\">GnuCash</span> wiedergibt, aber so neu, dass sie ohne Probleme "
-"benutzbar sein sollte."
+"dies eine Dokumentation ist, die den allerneuesten Stand wiedergibt, aber so "
+"neu, dass sie ohne Probleme benutzbar sein sollte."
 
 #: docs.phtml:192
 msgid "(old stable release)"
@@ -999,7 +991,7 @@ msgstr "Täglich automatisch erstellte Dokumentation"
 msgid ""
 "Current <em>unstable</em> user documentation and developer documentation"
 msgstr ""
-"Aktuell in Bearbeitung befindliche Dokumentationen für Benutzer und "
+"Aktuell <em>in Bearbeitung</em> befindliche Dokumentationen für Benutzer und "
 "Entwickler"
 
 #: docs.phtml:329
@@ -1030,8 +1022,8 @@ msgstr ""
 "des <span class=\"gnucash\">GnuCash</span> Quelltext-Repositorium. Dies "
 "schließt die <b>Entwicklerdokumentationn</b> ein, welche durch <b>Doxygen</"
 "b> aus den Kommentaren des Quelltextes erzeugt wird, sowie die "
-"Benutzerdokumentation für die aktuelle stabile Version von <span class="
-"\"gnucash\">GnuCash</span>."
+"<b>Benutzerdokumentation</b> für die aktuelle <em>stabile</em> Version von "
+"<span class=\"gnucash\">GnuCash</span>."
 
 #: docs.phtml:468
 msgid ""
@@ -1243,7 +1235,8 @@ msgstr ""
 "\"gnucash\">GnuCash</span>. Allerdings handelt es sich nicht immer um die "
 "aktuellste Version und es kann sein, daß sie nicht automatisch installiert "
 "wird. Trotzdem empfiehlt es sich für \"normale\" Anwender, die in der "
-"Distribution enthaltene Version zu verwenden."
+"Distribution enthaltene Version von <span class=\"gnucash\">GnuCash</span>  "
+"zu verwenden."
 
 #: download.phtml:31
 msgid ""
@@ -1506,7 +1499,7 @@ msgstr "Neuigkeiten"
 
 #: externals/menu.phtml:11
 msgid "Screenshots, Features"
-msgstr "Screenshots, Features"
+msgstr "Bildschirmfoto, Funktionen"
 
 #: externals/menu.phtml:12
 msgid "Installation"
@@ -1578,7 +1571,7 @@ msgstr "Programmgröße"
 
 #: externals/menu.phtml:62
 msgid "GnuCash 2.4 Small Business Accounting"
-msgstr "GnuCash 2.4 Small Business Accounting"
+msgstr "GnuCash 2.4 Buchhaltung für kleine Unternehmen"
 
 #: externals/menu.phtml:66
 msgid ""
@@ -1695,7 +1688,7 @@ msgstr ""
 
 #: features.phtml:59
 msgid "The ability to enter <b>split transactions</b>"
-msgstr "Die Möglichkeit, mehrteilige Buchungen einzugeben"
+msgstr "Die Möglichkeit, <b>mehrteilige Buchungen</b> einzugeben"
 
 #: features.phtml:60
 msgid ""
@@ -1712,7 +1705,8 @@ msgstr "<b>Automatisches Ausfüllen</b> ähnlicher Vorgänge"
 msgid ""
 "The ability to display <b>multiple accounts</b> in a single register window"
 msgstr ""
-"Die Fähigkeit, mehrere Konten gleichzeitig in einem Fenster darzustellen"
+"Die Fähigkeit, <b>mehrere Konten</b> gleichzeitig in einem Fenster "
+"darzustellen"
 
 #: features.phtml:63
 msgid ""
@@ -1722,7 +1716,7 @@ msgstr "Eine <b>Summenzeile</b>, die alle relevanten Kontenstände auflistet"
 
 #: features.phtml:64
 msgid "Many options to <b>customize</b> the appearance and the display style"
-msgstr "Viele Optionen um Aussehen und Inhalte anzupassen"
+msgstr "Viele Optionen um Aussehen und Inhalte <b>anzupassen</b>"
 
 #: features.phtml:70 index.phtml:72
 msgid "Scheduled Transactions"
@@ -1782,7 +1776,7 @@ msgstr ""
 
 #: features.phtml:96
 msgid "Balance Sheet"
-msgstr "Bilanzaufstellung"
+msgstr "Bilanz"
 
 #: features.phtml:97
 msgid "Profit &amp; Loss"
@@ -1794,7 +1788,7 @@ msgstr "Portfolio-Bewertung"
 
 #: features.phtml:99
 msgid "and many others."
-msgstr "und vieles mehr"
+msgstr "und vieles mehr."
 
 #: features.phtml:102
 msgid ""
@@ -1868,8 +1862,8 @@ msgid ""
 "Using A/Receivable and A/Payable accounts you can even manage <b>payrolls</"
 "b> for your employees."
 msgstr ""
-"Durch die Nutzung der offene-Posten-Konten ist es auch möglich Lohnkonten "
-"für Ihre Beschäftigten zu führen."
+"Durch die Nutzung der offene-Posten-Konten ist es auch möglich "
+"<b>Lohnkonten</b> für Ihre Beschäftigten zu führen."
 
 #: features.phtml:138
 msgid ""
@@ -1877,8 +1871,8 @@ msgid ""
 "business' <b>budget</b> so that you can easily plan your financial strategy."
 msgstr ""
 "<span class=\"gnucash\">GnuCash</span> gibt Ihnen auch ein Werkzeug zur "
-"Budgetplanung an die Hand, so daß sie leicht Ihre finanzielle Strategie "
-"planen können."
+"<b>Budgetplanung</b> an die Hand, so dass Sie leicht Ihre finanzielle "
+"Strategie planen können."
 
 #: features.phtml:144
 msgid "Multiple Currencies"
@@ -2152,8 +2146,8 @@ msgid ""
 "Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? "
 "Try the"
 msgstr ""
-"Suchen Sie jemanden zum Austausch über <span class=\"gnucash\">GnuCash</"
-"span>? "
+"Suchen Sie jemanden zum Austausch über <span class=\"gnucash\""
+">GnuCash</span>?"
 
 #: index.phtml:56
 msgid ""
