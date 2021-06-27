@@ -1,0 +1,207 @@
+<b>Announcement:</b> GnuCash 4.6 Released
+2021-06-27
+
+<h2>GnuCash 4.6 Released</h2>
+
+<p>The GnuCash development team announces GnuCash 4.6, the seventh release in the stable 4.x series</p>
+
+<h4>Between 4.5 and 4.6, the following bugfixes were accomplished:</h4>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=648335">Bug 648335 - Display Created Transactions setting</a><p>Add a preference for the &#39;Review Created Transactions&#39; setting in the &#39;Since Last Run&#39; dialog so that the default can be specified. </p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=743999">Bug 743753 - Nearest in time security price selection is incorrect in reports</a><p>Add new price source - &#39;nearest before report date&#39; will ignore prices *after* report date.</p></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=743999">Bug 743999 - Deleting a digit from an existing number greater than four digits in length generates an error message.</a><p> Because the grouping is off. Checking grouping on input is pointless so just ignore the grouping separator when parsing number input. </p></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=753283">Bug 753283 - Current Selection Highlight Lost After Transaction Edit in Scheduled Transaction Window</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=787813">Bug 787813 - Price change from editing a transaction not reflected in pricedb.</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=794877">Bug 794877 - Intro text of &quot;Online Banking Setup&quot; is outdated</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795804">Bug 795804 - Extremely slow save</a><p>Only update the status bar when the percentage changes by at least 1% because running the mainloop is expensive on macOS and Microsoft Windows. This speeds up all operations that run the progress bar with overly-fine resolution. </p></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796761">Bug 796761 - Newline (char(10)) is inserted into the end of the string if copy & paste text from excel into the description field of transaction</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797787">Bug 797787 - Feature request: preference setting to open new tabs adjacent to currently active tab</a><p>tests preference; if enabled then new tab inserted after current. if disabled then new tab is at the end. </p></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797928">Bug 797928 - Since last run asks for security price when no shares traded</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798093">Bug 798093 - Changing the symbol/abbreviation of a security after the trading account was created breaks GnuCash.</a>(Reopened)</li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798133">Bug 798133 - Gnucash crash when any custom action is entered</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798144">Bug 798144 - Reconciliation uses different number than entered</a><p>If a number was pasted into the balance end value with a currency symbol the number would silently fail on evaluate and cause the wrong value to be used. With previous changes to the GNCAmountEdit widget a warning symbol will indicate a validation error and prevents going forward. </p></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798148">Bug 798148 - "Accounts" page Present (USD) column uses future prices</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798151">Bug 798151 - Value entry box not tied to associated transaction in Since Last Run assistant</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798156">Bug 798156 - glib 2.68.0 breaks gnucash</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798159">Bug 798159 - Keyboard shortcut bug in 'manage document link'</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798162">Bug 798162 - Type Ahead Initialization Problem</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798170">Bug 798170 - Unbound variable: gnc-budget-lookup when running saved report Budget Report via gnucash-cli</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798177">Bug 798177 - Price of new stock transactions not saved in price database</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798186">Bug 798186 - Incorrect result editting account in register when overtyping a part selection.</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798188">Bug 798188 - The Invoice Editor -&gt; Printable Invoice toolbar button crashes on Windows</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798196">Bug 798196 - not building with Boost 1.76</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798199">Bug 798199 - Pasting invalid value in date column crashes GnuCash</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798202">Bug 798202 - Register input ignores theme on KDE rendering black text on black background</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798203">Bug 798203 - g_assert fault while reversing transaction</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798204">Bug 798204 - Creation of Imbalance Accounts</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798212">Bug 798212 - right-click the down-arrow in the date register changes focus to first split</a></li>
+</ul>
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>Improve transaction sorting on effective num field so that alpha charachters and numbers larger than 1 billion will be ordered. Ordering is now numeric for leading numbers (so that 9 sorts before 10) and lexical beginning with the first non-numeric character. Note that if one of the values begins with an alpha character ordering will be entirely lexical. Lexical sorting is localized; as in the rest of GnuCash only standard ASCII numbers (codepoints U+0030 - U+0039) are treated as numbers.</li>
+    <li>Add import preferences for the difference in time considered when matching an existing transaction to an imported one. A difference less than the matching-date-threshold raises the score of the match; a difference greater than match-date-not-threshold lowers the score.</li>
+    <li>Add experimental report "IFRS weighted-average cost basis report". This is a work-in-progress to help calculate the cost basis of securities priced in a foreign currency.</li>
+    <li>[income-gst-statement] amend headers post Brexit. UK left EU, therefore VAT headers have now changed. </li>
+    <li>Plug a bunch of memory leaks.</li>
+    <li>Change how the print_info is obtained for the register: Currently the register sets up some &#39;print_info&#39; values using the default account but if the register is a stock register they should be obtained from a parent account with a currency. </li>
+    <li>Change monetary value for gnc_default_share_print_info: Share values are not currencies so set the monetary value to 0 for the GNCPrintAmountInfo </li>
+    <li>Parse the register monetary cells for a currency symbol: Add the ability to strip the currency symbol from a registry monetary cell if it is pasted with one so it can be validated. </li>
+    <li>SKR-49 Account Template: Add codes 4500-4504, drop a duplicate, correct code 0674.</li>
+    <li>[gnc-plugin-page-register] Disable reverse on blank split</li>
+    <li>Make balancing transactions with trading accounts easier by removing and recalculating all trading splits. This ensures that there will be only one trading split pair per exchange and relieves the user of having to adjust the trading splits to match the accounting splits.</li>
+    <li>Don&#39;t bother scrubbing for orphans if there&#39;s no transaction currency. If it found one it would try to create an orphan account with no currency which will crash later. </li>
+    <li>[chartjs] upgrade chartjs to 2.9.4. Fixes CVE-2020-7746 </li>
+    <li>[report-core] disallow define-report with incomplete export info. If exporting is allowed, &#39;export-types and &#39;export-thunk must both be defined. </li>
+    <li>[test-engine-extras] augment book data generators</li>
+    <li>ignore .vscode folder</li>
+    <li>Reorder and relabel price source list for better coherence</li>
+    <li>Python Bindings: Provide a deprecated GncPriceDB.lookup_latest_before_t64 to avoid breaking user scripts. </li>
+    <li>Update gnucash_core.py with gnc-pricedb function name change</li>
+    <li>Change some functions to use const gnc_commodity for gnc_pricedb</li>
+    <li>Reformat schedule transaction source files for white space</li>
+    <li>Add depreciation warnings for the removal of individual option tool tips</li>
+    <li>Remove individual tool tips from radio button options
+        <p>Removes the function gnc_option_permissible_value_description</p>
+    </li>
+    <li>ESC key was not working on load of Scheduled Transaction Editor</li>
+    <li>[budget.scm] show correct tooltip for report option</li>
+    <li>[html-acct-table] Remove unused &#39;pre-adjusting balances option</li>
+    <li>Bugfix: export-code for category-barchart reports would fail.<p>This stems from trying to handle file-name when calling export code.  Export code no longer require file-name, The export-code returns a string in the html-document object instead. Remove all file-name handling in reports. No backward compatibility issues because most users would not copy a GnuCash &gt;=4.6 report code onto a &lt;4.5 installation. </p></li>
+    <li>[gnucash-cli] improve discoverability of export-type. Formerly, selecting --export-type EXT would dump the cryptic &quot;Report REPORTNAME has no export code&quot;. Modify to hint the user on acceptable reports with export-code. </li>
+
+</ul>
+<h4>New API</h4>
+<ul>
+    <li>[report-utilities] Functions to dump splits in whole book:
+        <ul>
+            <li>gnc:dump-book - splits grouped by account</li>
+            <li> gnc:dump-all-transactions - splits grouped by transaction</li>
+            <li>gnc:dump-split - dumps single split</li>
+        </ul></li>
+    <li>Rename a couple of gnc-pricedb functions that have not been used:
+        <ul>
+            <li>gnc_pricedb_lookup_latest_before_t64 to gnc_pricedb_lookup_nearest_before_t64</li>
+            <li>gnc_pricedb_lookup_latest_before_any_currency_t64 to gnc_pricedb_lookup_nearest_before_any_currency_t64</li>
+        </ul></li>
+    <li>Add retrieval functions for price before the date given:
+        <ul>
+            <li>gnc_pricedb_convert_balance_nearest_before_price_t64 that retrieves the balance using the last price dated before a specified date like today for the preset value.</li>
+            <li>gnc_pricedb_get_nearest_before_price does the retrieval.</li>
+        </ul></li>
+</ul>
+<h4>Deprecations</h4>
+<ul>
+    <li>gnc:get-start-next-year</li>
+    <li>gnc:get-end-next-year</li>
+    <li>gnc:get-start-next-month</li>
+    <li>gnc:get-end-next-month</li>
+    <li>gnc:get-start-next-quarter</li>
+    <li>nc:get-end-next-quarter</li>
+    <li>gnc:get-one-month-ago</li>
+    <li>gnc:get-one-month-ahead</li>
+    <li>gnc:account-code-less-p</li>
+    <li>gnc:account-name-less-p</li>
+</ul>
+<p>Chinese (Simplified) translation moved from the Gnu Translation Project to weblate</p>
+<p>New and Updated Translations: Catalan, Chinese (Simplified), Chinese (Traditional), Croatian, Dutch, French, German, Greek, Hebrew, Indonesian, Italian, Japanese, Norwegian Bokmål, Polish, Portuguese, Portuguese (Brazil), Spanish, Turkish, Ukrainian</p>
+
+<h4>Known Problems</h4>
+<p><a href="https://bugs.gnucash.org/buglist.cgi?bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;limit=0&amp;list_id=8149&amp;order=priority%2Cbug_severity&amp;query_format=advanced">Complete list of all open bugs.</a></p>.
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of GnuCash 4.6 we're pleased to also release a new version of the companion Help and Tutorial and Concepts Guide</p>
+<h4>Between 4.5 and 4.6, the following bugfixes were accomplished:</h4>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798178">Bug 798178 - : Wrong Color in Scheduled Transactions Window text</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798217">Bug 798217 - minor mistakes in Tutorial and Concepts guide</a></li>
+</ul>
+<h6>The following fixes and improvements were not associated with bug reports:</h6>
+<ul>
+    <li>Update ch_invest.xml</li>
+    <li>Help/C: New screenshots, remove unused images, and image optimization</li>
+    <li>New help/de/figures/Main-window-callouts + helper files</li>
+    <li>Add ENTITY vers-last-2 for reference of major changes</li>
+    <li>Make calibre optional in cmake</li>
+    <li>Create Github actions to replace TravisCI</li>
+    <li>Fixes reference to Help Manual</li>
+    <li>Help: link Setup for Online Transactions in C, de</li>
+    <li>Help: Replace most &lt;literallayout&gt; by &lt;screen&gt;</li>
+    <li>Help pt: Add missing xmlns:xi parameters</li>
+    <li>Replace most &lt;literallayout&gt; by &lt;screen&gt;; &lt;screen&gt; uses Monospace while &lt;literallayout&gt; keeps the default (proportional) font</li>
+    <li>Backport of improvements from de/Help_ch_GUIMenus.xml
+        <ul>
+            <li> Added new menu items</li>
+            <li> Corrected the order of menu items</li>
+            <li>Removed duplicate descriptions</li>
+            <li>insert &lt;accel&gt;-Tags</li>
+        </ul></li>
+    <li>Update PACKAGE_URL of configure.ac</li>
+    <li>xmlformat all docs</li>
+    <li>EEC became EU decades ago, but we had still references</li>
+    <li>Several fixes of shortcuts in C and pt</li>
+    <li>Check for &quot; &gt;&quot; to avoid unwanted wraps</li>
+    <li>Add xmlformat incl. configuration</li>
+    <li>Improve the wiki link in the note for translators</li>
+</ul>
+<p>New and Updated Translations: German</p>
+
+<h3>Getting GnuCash for Windows and MacOS</h3>
+<p>GnuCash is provided for both Microsoft Windows 8.1&reg; and later
+    and MacOS 10.13 (High Sierra)&reg; and later in pre-built, all-in-one
+    packages. An installer is provided for Microsoft Windows&reg; while
+    the MacOS&reg; package is a disk image containing a drag-and-drop
+    application bundle.</p>
+<p>The SHA256 Hashes for the downloadable files are:</p>
+<ul>
+    <li><code>251b01dfb9f9c679db26926f934ca4d13c7092a485be04f60e2031d85a445733</code>&nbsp;&nbsp;gnucash-4.6.tar.bz2</li>
+    <li><code>ad3a6ec1f5fdf15fd167808cf351bc1aa7c012ea03a16c73a3d1c29bbd59a03d</code>&nbsp;&nbsp;gnucash-4.6.tar.gz</li>
+    <li><code>1d641691a5c6c4e6cfb32438175c242bdcfb2f1c497db35fc66b4fecd9f084b2</code>&nbsp;&nbsp;gnucash-4.6.setup.exe</li>
+    <li><code>1d641691a5c6c4e6cfb32438175c242bdcfb2f1c497db35fc66b4fecd9f084b2</code>&nbsp;&nbsp;Gnucash-Intel-4.6-1.dmg</li>
+    <li><code>1d641691a5c6c4e6cfb32438175c242bdcfb2f1c497db35fc66b4fecd9f084b2</code>&nbsp;&nbsp;gnucash-docs-4.6.tar.gz</li>
+</ul>
+
+<ul>
+    <li>SourceForge:
+        <ul>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.6/gnucash-4.6.setup.exe">Win32</a></li>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.6/Gnucash-Intel-4.6-1.dmg">Mac-Intel</a></li>
+        </ul></li>
+    <li>Github
+        <ul>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/4.6/gnucash-4.6.setup.exe">Win32</a></li>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/4.6/Gnucash-Intel-4.6-1.dmg">Mac-Intel</a></li>
+        </ul></li></ul>
+
+<p>GnuCash is now available as a flatpak from Flathub.org. <a href="https://wiki.gnucash.org/wiki/Flatpak">Instructions for installing and running.</a></p>
+<p><b>Note:</b> The flathub.org build is broken because of a problem with Finance::Quote installation. We will get a release up there as soon as we can resolve the issue.</p>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 4.6 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+    <li>Sourceforge: <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.6/gnucash-4.6.tar.bz2">bzip2</a>, <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.6/gnucash-4.6.tar.gz">gzip</a>.</li>
+
+    <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/4.6/gnucash-4.6.tar.bz2">bzip</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/4.6/gnucash-4.6.tar.gz">gzip</a></li>
+
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https://www.gtk.org">Gtk+</a> 3.22.29, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0, <a href="https://www.boost.org/">Boost</a> 1.67, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, <a href="https://github.com/google/googletest">GoogleTest</a> 1.8.0, <a href="https://cmake.org/">cmake 3.10</a> and <a href="http://www.swig.org/">SWIG</a> 2.0.12. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 4.6 documentation can be found under "GnuCash v4 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats. The documentation is also included in the MacOS and Windows application bundles.</p>
+
+<p>If you want to compile the GnuCash Documentation 4.6 for yourself, the source code can be downloaded from:</p>
+<ul>
+  <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.6/gnucash-docs-4.6-1.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/4.6/gnucash-docs-4.6.tar.gz">GitHub</a></li>
+  <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+the GNU General Public License (GPL) and available for GNU/Linux,
+*BSD, Solaris, MacOS, and Microsoft Windows.  Programming on GnuCash
+began in 1997, and its first stable release was in 1998.</p>
