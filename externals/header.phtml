@@ -63,7 +63,7 @@
     ?>
     <meta property="og:title" content="<?=$full_title?>"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="<?=\DEFAULT_URL.$page?>"/>
+    <meta property="og:url" content="<?=\DEFAULT_URL.filter_var($page, FILTER_SANITIZE_URL)?>"/>
     <meta property="og:image" content="<?=\DEFAULT_URL."externals/logo_w120.png"?>"/>
     <meta property="og:site_name" content="GnuCash"/>
     <meta property="og:description" content="<?=strip_tags($description)?>"/>
