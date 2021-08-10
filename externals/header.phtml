@@ -8,30 +8,26 @@
   include("$top_dir/externals/global_params.php");
   if (!isset($title)) {
       $title = $GLOBALS["default_title"];
-  }
-  $full_title = filter_var($title, FILTER_SANITIZE_FULL_SPECIAL_CHARS)." | GnuCash";
+  };
+  $full_title = $title." | GnuCash";
   if (!isset($description)) {
       $description = $default_description;
-  } else {
-      $description = filter_var($description, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-  }
-  $page = filter_var($page, FILTER_SANITIZE_URL | FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+  };
 
   # This function will create a link to the given page
   # reusing the get parameters that were specified
   # with the option to override the language
   function make_lang_href($page, $get_parms, $lang)
   {
-      $query_lang = filter_input(INPUT_GET, $lang, FILTER_SANITIZE_STRING);
-      if ($query_lang)
-          $get_parms["lang"] = $query_lang;
+      if (isset($lang) && $lang != "") {
+          $get_parms["lang"] = $lang;
       }
       $url_get_query = http_build_query($get_parms);
       $lang_href = "$page"."?"."$url_get_query";
       return $lang_href;
   }
-
-  $get_parms = filter_var($_GET, FILTER_SANITIZE_STRING);
+  
+  $get_parms = $_GET;
 
   if (isset($locale)) {
       if (substr($locale, 0, 2) != 'zh') {
@@ -54,7 +50,7 @@
 <?php } //if ($can_utf)?>
 
     <title><?=$full_title?></title>
-    <meta name="description" content="<?=$description?>"/>
+    <meta name="description" content="<?=strip_tags($description)?>"/>
 
     <!--meta properties for facebook Open Graph-->
     <meta property="og:locale" content="<?=$locale_str?>"/>
@@ -67,10 +63,10 @@
     ?>
     <meta property="og:title" content="<?=$full_title?>"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="<?=\DEFAULT_URL.$page?>"/>
+    <meta property="og:url" content="<?=\DEFAULT_URL.filter_var($page, FILTER_SANITIZE_URL)?>"/>
     <meta property="og:image" content="<?=\DEFAULT_URL."externals/logo_w120.png"?>"/>
     <meta property="og:site_name" content="GnuCash"/>
-    <meta property="og:description" content="<?=$description?>"/>
+    <meta property="og:description" content="<?=strip_tags($description)?>"/>
 <?php // end of Open Graph properties?>
 
     <link rel="stylesheet" href="<?=$home?>/externals/gnucash.css" type="text/css" />
