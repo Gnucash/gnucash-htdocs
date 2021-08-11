@@ -8,7 +8,7 @@ include("emulate_globals_on.php");
 include("lang.php");
 // Fixme: It is not trivial to reorder the components to get proper metatags
 $title = T_("View document");
-$page = $_SERVER['PHP_SELF'];
+$page = basename($_SERVER['SCRIPT_NAME']);
 include("externals/header.phtml");
 include("externals/menu.phtml");
 

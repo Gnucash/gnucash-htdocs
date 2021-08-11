@@ -3,7 +3,7 @@ include("emulate_globals_on.php");
 include("lang.php");
 $title = T_("Older Announcements");
 $description = T_("This is an archive of announcements that once appeared on the GnuCash home page.");
-$page = $_SERVER['PHP_SELF'];
+$page = basename($_SERVER['SCRIPT_NAME']);
 include("externals/header.phtml");
 include("externals/menu.phtml");
 ?>
