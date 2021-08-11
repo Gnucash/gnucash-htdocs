@@ -21,7 +21,9 @@ if (array_key_exists('lang_cookie', $_COOKIE)) {
 }
 
 # allow user override.
-if (array_key_exists('lang', $_GET)) { $locale = $_GET["lang"]; }
+$get_lang = filter_input(INPUT_GET, 'lang', FILTER_SANITIZE_STRING);
+
+if ($get_lang) { $locale = $get_lang; }
 
 # choose a default language based on the client browser's preferred
 # language list

@@ -12,22 +12,28 @@
   $full_title = $title." | GnuCash";
   if (!isset($description)) {
       $description = $default_description;
-  };
+   }
 
   # This function will create a link to the given page
   # reusing the get parameters that were specified
   # with the option to override the language
-  function make_lang_href($page, $get_parms, $lang)
+  function make_lang_href($page, $get_parms, $lang="")
   {
       if (isset($lang) && $lang != "") {
           $get_parms["lang"] = $lang;
       }
-      $url_get_query = http_build_query($get_parms);
-      $lang_href = "$page"."?"."$url_get_query";
+      if (in_array($get_parms["lang"], array_values($GLOBALS["supported_languages"]), TRUE) ||
+           array_key_exists($get_parms["lang"], $GLOBALS["supported_languages"])) {
+          $url_get_query = http_build_query($get_parms);
+          $lang_href = "$page"."?"."$url_get_query";
+      } else {
+          $lang_href = "$page";
+      }
       return $lang_href;
   }
-  
-  $get_parms = $_GET;
+
+   $input_filter_args = array('lang' => FILTER_SANITIZE_STRING);
+  $get_parms = filter_input_array(INPUT_GET, $input_filter_args);
 
   if (isset($locale)) {
       if (substr($locale, 0, 2) != 'zh') {
@@ -63,7 +69,7 @@
     ?>
     <meta property="og:title" content="<?=$full_title?>"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="<?=\DEFAULT_URL.filter_var($page, FILTER_SANITIZE_URL)?>"/>
+    <meta property="og:url" content="<?=\DEFAULT_URL.make_lang_href($page, $get_parms)?>"/>
     <meta property="og:image" content="<?=\DEFAULT_URL."externals/logo_w120.png"?>"/>
     <meta property="og:site_name" content="GnuCash"/>
     <meta property="og:description" content="<?=strip_tags($description)?>"/>
