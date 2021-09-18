@@ -22,39 +22,37 @@ $showdoc     = $tcdoc;
 $req_doc_ok  = true;
 $showrev     = $current_stable;
 $req_rev_ok  = true;
+$showlang    = 'C';
 
-if (isset ($_GET["lang"])) {
-    $showlang  = $_GET["lang"];
-} else {
-    # Fallback: Requested language is set in $locale by included lang.php
-    if ($locale == "en_US") {
-      $showlang  = "C"; # Fixme: causes a PHP Notice:
-      # Undefined offset: 1 in /home/frank/git/gnucash-htdocs/viewdoc.phtml on line 98
-      # list($shortlang,$rest) = explode ("_", $showlang);
-    } else {
-        $showlang  = $locale;
-    }
+$doc_languages = array('de', 'it', 'ja', 'pt');
+$get_lang = filter_input(INPUT_GET, 'lang', FILTER_SANITIZE_STRING);
+if (in_array($get_lang, $doc_languages, true)) {
+    $showlang = $get_lang;
+} elseif ($locale) {
+    $showlang = $locale;
 }
 
 
 # Parse requested document
-if (isset ($_GET["doc"])) {
-    switch ($_GET["doc"]) {
+$doc_to_show = filter_input(INPUT_GET, 'doc', FILTER_SANITIZE_STRING);
+if ($doc_to_show) {
+    switch ($doc_to_show) {
         case "help":
             $showdoc = $helpdoc;
             break;
         case "guide":
             $showdoc = $tcdoc;
             break;
-        default:  /* unknown document requested, will present help by default */
+        default:  /* unknown document requested, will present guide by default */
             $req_doc_ok = false;
             break;
     }
 }
 
 # Parse requested version
-if (isset ($_GET["rev"])) {
-    switch ($_GET["rev"]) {
+$rev_to_show = filter_input(INPUT_GET, 'rev', FILTER_SANITIZE_STRING);
+if ($rev_to_show) {
+    switch ($rev_to_show) {
         case "1.8":
             $showrev = "1.8";
             break;
@@ -90,7 +88,6 @@ if (isset ($_GET["rev"])) {
             break;
     }
 }
-
 # Now check if the requested combination of doc, revision and language actually exists
 # If not, try the default C locale instead.
 
@@ -106,7 +103,7 @@ if ($showrev == "maint") {
     $req_lang_ok = false;
     $basepath = "https://lists.gnucash.org/docs";
     $trunk_langs = array ( $helpdoc => array( "C", "de", "it", "pt"),
-                           $tcdoc   => array( "C", "de", "it", "ja", "pt", "ru"));
+                           $tcdoc   => array( "C", "de", "it", "ja", "pt"));
 
     if (in_array ($showlang, $trunk_langs[$showdoc])) {
         $req_lang_ok = true;
@@ -118,7 +115,7 @@ if ($showrev == "maint") {
     } else {
         $showlang = "C";
     }
-    
+
     $showurl=$basepath."/".$showlang."/".$showdoc;
 } else {
     # For the stable versions, we can simply check file availability because we're
@@ -147,10 +144,9 @@ if ($showrev == "maint") {
     <?php if (! $req_doc_ok ) { ?>
         <p style="color: red;"><?= T_("The document requested is not available. The tutorial and concepts guide will be displayed instead.")?></p>
     <?php } ?>
-    <?php if (! $req_rev_ok ) {
-        $reqrev=$_GET["rev"]; ?>
+    <?php if (! $req_rev_ok ) {?>
         <p style="color: red;"><?php printf (T_("The document requested is not available for version %s. Version %s will be displayed instead."),
-                                             $reqrev, $showrev); ?></p>
+                                             $rev_to_show, $showrev); ?></p>
     <?php } ?>
     <?php if (! $req_lang_ok ) { ?>
         <p style="color: red;"><?php printf (T_("The document requested is not available in the requested language (tried [%s]). The English version will be displayed instead."),
