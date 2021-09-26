@@ -1,0 +1,175 @@
+<b>Announcement:</b> GnuCash 4.7 Released
+2021-09-26
+
+<h2>GnuCash 4.7 Released</h2>
+
+<p>The GnuCash development team announces GnuCash 4.7, the eighth release in the stable 4.x series</p>
+
+<h4>Compatibility Notice</h4>
+<p>In order to allow flatpak users to share preferences with installations
+    outside of the sandbox we need to change the preference path from
+    <tt>/org/gnucash</tt> to <tt>/org/gnucash/GnuCash</tt>. This release of
+    GnuCash does that and it will automatically migrate existing preferences.
+    It does not, however, continue to write preferences to the old path and it
+    runs the migration only once. If you go back and forth between GnuCash 4.7
+    and an older versions you'll have two sets of preferences, one for GnuCash
+    4.7 and later and another for GnuCash 4.6 and earlier. This includes the
+    file history list and last-opened file.</p>
+
+<h4>Between 4.6 and 4.7, the following bugfixes were accomplished:</h4>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=87847">Bug 87847 - RFE: Create a 'checkbox' cell type</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=766052">Bug 766052 - Job report payments wrong when payment contains splits</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797596">Bug 797596 - New-owner - improved representation of payments with multiple non-APAR splits</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798142">Bug 798142 - Tax rate appears as a fraction</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798180">Bug 798180 - Update to macOS Big Sur 11.3 breaks Finance Quote</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798205">Bug 798205 - Some transactions dropped with no apparent cause or warnings for credit card ofx import</a>
+        <p>Do not exclude from import a transaction that has an FITID which matches an already existing split. This is because it (1) may be a coincidence and therefore the transaction needs to be added or (2) could be on a transfer from the account being imported to another bank account which has already been imported, and so needs to be matched, not added.</p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798208">Bug 798208 - management fee transactions are ignored on OFX import</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798211">Bug 798211 - Equity statement double calculates unrealized gain</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798219">Bug 798219 - apply/OK truncates exchange rates from 4 to 2 decimal places; enter doesn't</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798221">Bug 798221 - Transfer funds between accounts with different currencies crashes Gnucash on macOS</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798224">Bug 798224 - Scheduled transactions are created with date-entered copied from the template transaction. </a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798229">Bug 798229 - GncDate::c_formats is being created and destroyed twice resulting in a double free crash on every exit.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798234">Bug 798234 - Cut Transaction discards the reference to the description/memo strings so that Paste Transaction will paste uninitialised data (or other strings)</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798235">Bug 798235 - Reconciliation Ending Balance not recalculated the 2nd and subsequent times Statement Date is updated.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798237">Bug 798237 - Logging during XML file loading degrades performance significantly</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798238">Bug 798238 - &quot;New security&quot; dialog doesn&#39;t save the &quot;Display symbol&quot;</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798250">Bug 798250 - Gnucash permanent hang on save while loading report</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798256">Bug 798256 - Crash in recnFinishCB</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798298">Bug 798298 - Re-imported transactions no longer ignored</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798303">Bug 798303 - account list is sorted wrong by amount</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798312">Bug 798312 - Opening the help for dialogues in the wrong language.</a></li>
+</ul>
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>Lots of memory-leaks plugged</li>
+    <li>Change the preferences path to org.gnucash.GnuCash to comply with flatpak requirements and migrate existing preferences to the new paths. This won't provide for automatic sync between a system-installed GnuCash and a flatpak one unless the system-installed one is GnuCash 4.7 or later. Please see <a href="https://wiki.gnucash.org/wiki/Flatpak#Known_Issues">the Wiki</a> for more information and a procedure to convert your existing preferences.</li>
+    <li>Cleanup - minimal glib=2.56.1 - drop all conditionals on older versions</li>
+    <li>Add code to handle ofx files that include transfers between accounts</li>
+    <li>During transaction import, ignore splits whose account is not the destination account</li>
+    <li>Do not drop a potential match just because it has an online_id.<p>Now that we don&#39;t exclude from import a transaction with an FITID that matches an already existing transaction, if one accidentally re-imports a transaction, this allows it to be automatically matched against the previously imported transaction.</p></li>
+    <li>Add test for Transaction GetDate() in python bindings, pursuant to Bug 798284.</li>
+    <li>In find customer dialog, add a column for &quot;Shipping Contact&quot; parameter</li>
+    <li>Prep early splash screen messages for translation</li>
+    <li>Change text for SX preference option &#39;Review created transactions&#39; to better align with existing SX text.</li>
+    <li>Fixed an XML backend problem where trying to open a locked file would clear the lock even if one didn't ask to, so the next attempt would find the file unlocked even if still open in another instance.</li>
+    <li>Fix 2 crashes in Generic Transaction Matcher</li>
+    <li>Handle very large denominators from Finance::Quote's OpenExchange source</li>
+    <li>Update file extension in man pages per <a href="" https://lists.gnucash.org/pipermail/gnucash-user/2021-August/097472.html">mailing list post.</a></li>
+    <li>Changed some option names:<ul>
+        <li>From &quot;Show Accounts until level&quot; to  &quot;Levels of Subaccounts&quot;</li>
+        <li>From &quot;Extra notes&quot; to &quot;Extra Notes&quot;</li>
+        <li>from &quot;Report title&quot; to &quot;Report Title&quot;</li>
+        <li>From &quot;Invoice number&quot; to &quot;Invoice Number&quot; to ensure it matches all other invoice reports.</li>
+    </ul></li>
+    <li>Fix missing mnemonic keys after changes to GNCAmountEdit<p>With the changes to GNCAmountEdit, the way the mnemonic keys are associated to the entry widget of the GNCAmountEdit needs to change so have created a function gnc_amount_edit_make_mnemeonic_target which does the same as GNCDateEdit. </p></li>
+    <li>Fix rounding in Stock Split Assistant to correct earlier commit that rounded the share price to that of the currency.</li>
+    <li>[Portfolio Reports] Allow share digits to 9 decimal places to match the maximum commodity fraction.</li>
+
+</ul>
+<h4>New API</h4>
+<ul>
+    <li>None</li>
+</ul>
+<h4>Deprecations</h4>
+<ul>
+    <li>Date options with a time of day setting.<p>Removing the only use, an example in hello-world.scm. GnuCash doesn&#39;t use this value in any of its own report options and the feature will be removed in GnuCash 5.  Related to bug 798297 Pref &quot;Use 24-hour clock&quot; obsolete?. </p></li>
+    <li>gnc:owner-report-create</li>
+</ul>
+<p>New and Updated Translations: Chinese (Simplified), Croatian, Finnish, French, German, Hebrew, Italian, Japanese, Portuguese, Portuguese (Brazil), Swedish, Ukrainian
+</p>
+
+<h4>Known Problems</h4>
+<p><a href="https://bugs.gnucash.org/buglist.cgi?bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;limit=0&amp;list_id=8149&amp;order=priority%2Cbug_severity&amp;query_format=advanced">Complete list of all open bugs.</a></p>.
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of GnuCash 4.7 we're pleased to also release a new version of the companion Help and Tutorial and Concepts Guide</p>
+<h4>Between 4.6 and 4.7, the following bugfixes were accomplished:</h4>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798226">Bug 798226 - minor mistakes in Tutorial and Concepts guide 2</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798226">Bug 798226 - postprocessing: xmlformat</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798236">Bug 798236 - Remove comment about swapped A/P &amp; A/R terminology</a></li>
+</ul>
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>Replace COPYING file from GPL 3 to GPL 2.</li>
+    <li>Substantial editing of the C documentation to make the meanings more understandable to translators.</li>
+    <li>Apply dtd-locale to help/de/Help_para-assist-intro.xml.</li>
+    <li>Add ENTITY(s) prefix guisubmenu, guimenuitem, and guilabel as gsm, gmi, and gl, respectively.</li>
+    <li>Move untranslated entity messages from gnc-docbookx.dtd to each locale file.</li>
+    <li>Make DTD ENTITY(s) translatable. See docbook/README. Bug 798273 - Consider a entity import system like in docbook-xsl</li>
+    <li>Guide:C:Currency: update images Part 1</li>
+    <li>Fix license file to use actual file instead of softlink. </li>
+    <li>Unify words and account names. Fix minor typos and tags. Add commas to the numbers. Add some tags. Fix according to the review comments.</li>
+    <li>Add license file to git tracking<p>It is an autogenerated file from autotools but it was ignored by our current git config. A previous commit chose to install the file, but that&#39;s difficult if it&#39;s missing. </p></li>
+    <li>Install license files COPYING and COPYING-DOCS</li>
+    <li>Help/de: Crop Export screenshots</li>
+    <li>Drop travis-ci in favour of github worflows</li>
+    <li>Remove obsolete appendix B about FAQ from guide.</li>
+    <li>Remove obsolete appendix C about VAT from guide.</li>
+    <li>Guide/C: Note on fieldnames in CSV import</li>
+    <li>Mark Guide's import chapter as outdated</li>
+    <li>Minor improvements in C and de Help Tips on alphavantage</li>
+</ul>
+<p>New and Updated Translations: German</p>
+
+<h3>Getting GnuCash for Windows and MacOS</h3>
+<p>GnuCash is provided for both Microsoft Windows 8.1&reg; and later
+    and MacOS 10.13 (High Sierra)&reg; and later in pre-built, all-in-one
+    packages. An installer is provided for Microsoft Windows&reg; while
+    the MacOS&reg; package is a disk image containing a drag-and-drop
+    application bundle.</p>
+<p>The SHA256 Hashes for the downloadable files are:</p>
+<ul>
+    <li><code>fc9ff34020cca560e5753d2b3bca2aab39d2adcf40836e18d0c935a7f7db2062</code>&nbsp;&nbsp;gnucash-4.7.tar.bz2</li>
+    <li><code>9c8e6595df4a2c0ec1d2120b953adbba0356370c4c3b50289a2c2a270810dabe</code>&nbsp;&nbsp;gnucash-4.7.tar.gz</li>
+    <li><code>8be9e11f77e1cb56b48d59fa007a2c11e3865231f16df6f27de50eb6035bb64a</code>&nbsp;&nbsp;gnucash-4.7.setup.exe</li>
+    <li><code>3409c86a0e57ac4983f1f532fb9de04f3cf8be63aa694da1ef120c8016d4df46</code>&nbsp;&nbsp;Gnucash-Intel-4.7-1.dmg</li>
+    <li><code>33fc05c9220247636c22bcd12227b95420a4991b9fdd9027e2fc29b16f58b03b</code>&nbsp;&nbsp;gnucash-docs-4.7.tar.gz</li>
+</ul>
+
+<ul>
+    <li>SourceForge:
+        <ul>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.7/gnucash-4.7.setup.exe">Win32</a></li>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.7/Gnucash-Intel-4.7-1.dmg">Mac-Intel</a></li>
+        </ul></li>
+    <li>Github
+        <ul>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/4.7/gnucash-4.7.setup.exe">Win32</a></li>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/4.7/Gnucash-Intel-4.7-1.dmg">Mac-Intel</a></li>
+        </ul></li></ul>
+
+<p>GnuCash is now available as a flatpak from Flathub.org. <a href="https://wiki.gnucash.org/wiki/Flatpak">Instructions for installing and running.</a></p>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 4.7 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+    <li>Sourceforge: <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.7/gnucash-4.7.tar.bz2">bzip2</a>, <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.7/gnucash-4.7.tar.gz">gzip</a>.</li>
+
+    <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/4.7/gnucash-4.7.tar.bz2">bzip</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/4.7/gnucash-4.7.tar.gz">gzip</a></li>
+
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https://www.gtk.org">Gtk+</a> 3.22.29, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0, <a href="https://www.boost.org/">Boost</a> 1.67, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, <a href="https://github.com/google/googletest">GoogleTest</a> 1.8.0, <a href="https://cmake.org/">cmake 3.10</a> and <a href="http://www.swig.org/">SWIG</a> 2.0.12. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 4.7 documentation can be found under "GnuCash v4 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats. The documentation is also included in the MacOS and Windows application bundles. Note that we are preparing to remove autotools support from the documentation build and that it is no longer included in the tarball.</p>
+
+<p>If you want to compile the GnuCash Documentation 4.7 for yourself, the source code can be downloaded from:</p>
+<ul>
+    <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.7/gnucash-docs-4.7-1.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/4.7/gnucash-docs-4.7.tar.gz">GitHub</a></li>
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+    the GNU General Public License (GPL) and available for GNU/Linux,
+    *BSD, Solaris, MacOS, and Microsoft Windows.  Programming on GnuCash
+    began in 1997, and its first stable release was in 1998.</p>
