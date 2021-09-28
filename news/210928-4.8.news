@@ -1,0 +1,99 @@
+<b>Announcement:</b> GnuCash 4.8 Released
+2021-09-29
+
+<h2>GnuCash 4.8 Released</h2>
+
+<p>The GnuCash development team announces GnuCash 4.8, the ninth release in the stable 4.x series</p>
+
+<p>This is a snap release to fix crashes during migration. The macOS and Win32 GnuCash bundles were not affected; if you use either of those you do not need this release.
+
+<h4>Between 4.7 and 4.8, the following bugfixes were accomplished:</h4>
+<p>None</p>
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>[gsettings] Avoid crash from settings schema not being registered.</li>
+    <li>Rethink how gsettings migration file is constructed</li>
+    <li>GSettings hotfix - resolve crash due to bad schema reference</li>
+        <li>[gnc-plugin-page-register] call invoice editor with parent window</li>
+        <li>[assistant-stock-split] set parent window properly</li>
+</ul>
+<h4>New API</h4>
+<p>None</p>
+<h4>Deprecations</h4>
+<p>None</p>
+<p>New and Updated Translations: None.
+</p>
+
+<h4>Known Problems</h4>
+<p><a href="https://bugs.gnucash.org/buglist.cgi?bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;limit=0&amp;list_id=8149&amp;order=priority%2Cbug_severity&amp;query_format=advanced">Complete list of all open bugs.</a></p>.
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of GnuCash 4.8 we're pleased to also release a new version of the companion Help and Tutorial and Concepts Guide</p>
+<h4>Between 4.7 and 4.8, the following bugfixes were accomplished:</h4>
+<p>None</p>
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>Remove obsolete files.</li>
+    <li>Remove autotools.</li>
+</ul>
+<p>New and Updated Translations: None</p>
+
+<h3>Getting GnuCash for Windows and MacOS</h3>
+<p>GnuCash is provided for both Microsoft Windows 8.1&reg; and later
+    and MacOS 10.13 (High Sierra)&reg; and later in pre-built, all-in-one
+    packages. An installer is provided for Microsoft Windows&reg; while
+    the MacOS&reg; package is a disk image containing a drag-and-drop
+    application bundle.</p>
+<p>The SHA256 Hashes for the downloadable files are:</p>
+<ul>
+    <li><code>15b8e4ff8336168eba88ef2faade377e5c5ff08e48b4660da1a33a8a407feb12</code>&nbsp;&nbsp;gnucash-4.8.tar.bz2</li>
+    <li><code>37e6fbdee7e2ac41299cdb4ffef189c160b03f992ab30e823369df90ebb0d61f</code>&nbsp;&nbsp;gnucash-4.8.tar.gz</li>
+    <li><code>b8c4a4bad5a073f53ea07ad46d4c13096a5d26d906ceda8c049842a8362d0a86</code>&nbsp;&nbsp;gnucash-4.8.setup.exe</li>
+    <li><code>abb6a0bc433207c1f31fee33aa7f0c63774217b2675e5fab78062c4cd862f975</code>&nbsp;&nbsp;Gnucash-Intel-4.8-2.dmg</li>
+    <li><code>988011168a3ab2c3601a5af75f5caad89fb18a4e880311f3538b8fc7c9a068d3</code>&nbsp;&nbsp;gnucash-docs-4.8.tar.gz</li>
+</ul>
+
+<ul>
+    <li>SourceForge:
+        <ul>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.8/gnucash-4.8.setup.exe">Win32</a></li>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.8/Gnucash-Intel-4.8-2.dmg">Mac-Intel</a></li>
+        </ul></li>
+    <li>Github
+        <ul>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/4.8/gnucash-4.8.setup.exe">Win32</a></li>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/4.8/Gnucash-Intel-4.8-2.dmg">Mac-Intel</a></li>
+        </ul></li></ul>
+
+<p>GnuCash is now available as a flatpak from Flathub.org. <a href="https://wiki.gnucash.org/wiki/Flatpak">Instructions for installing and running.</a></p>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 4.8 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+    <li>Sourceforge: <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.8/gnucash-4.8.tar.bz2">bzip2</a>, <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.8/gnucash-4.8.tar.gz">gzip</a>.</li>
+
+    <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/4.8/gnucash-4.8.tar.bz2">bzip</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/4.8/gnucash-4.8.tar.gz">gzip</a></li>
+
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https://www.gtk.org">Gtk+</a> 3.22.29, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0, <a href="https://www.boost.org/">Boost</a> 1.67, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, <a href="https://github.com/google/googletest">GoogleTest</a> 1.8.0, <a href="https://cmake.org/">cmake 3.10</a> and <a href="http://www.swig.org/">SWIG</a> 2.0.12. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 4.8 documentation can be found under "GnuCash v4 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats. The documentation is also included in the MacOS and Windows application bundles. Note that we are preparing to remove autotools support from the documentation build and that it is no longer included in the tarball.</p>
+
+<p>If you want to compile the GnuCash Documentation 4.8 for yourself, the source code can be downloaded from:</p>
+<ul>
+    <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.8/gnucash-docs-4.8-1.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/4.8/gnucash-docs-4.8.tar.gz">GitHub</a></li>
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+    the GNU General Public License (GPL) and available for GNU/Linux,
+    *BSD, Solaris, MacOS, and Microsoft Windows.  Programming on GnuCash
+    began in 1997, and its first stable release was in 1998.</p>
