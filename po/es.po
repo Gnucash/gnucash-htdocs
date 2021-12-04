@@ -5,14 +5,15 @@
 # Guille <willelopz+weblate@gmail.com>, 2021.
 # Guille Lopez <willelopz@gmail.com>, 2021.
 # Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2021.
+# Francisco Serrador <fserrador@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2021-04-04 04:40+0200\n"
-"PO-Revision-Date: 2021-05-25 15:33+0000\n"
-"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
+"PO-Revision-Date: 2021-12-04 22:44+0000\n"
+"Last-Translator: Francisco Serrador <fserrador@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnucash/website/"
 "es/>\n"
 "Language: es\n"
@@ -20,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.7-dev\n"
+"X-Generator: Weblate 4.10-dev\n"
 
 #: 2.6-release-tour.phtml:3
 msgid "GnuCash 2.6 release tour"
@@ -147,6 +148,13 @@ msgid ""
 "that time, the changes will be saved automatically and the question window "
 "closed."
 msgstr ""
+"En la pestaña General de las Preferencias de <span class = \"gnucash\"> "
+"GnuCash </span> ahora es posible establecer un tiempo de espera para la "
+"ventana \"Guardar cambios al cerrar\". Si está habilitada, la pregunta "
+"\"Guardar cambios al cerrar\" solo esperará una cantidad limitada de "
+"segundos para recibir una respuesta. Si el usuario no respondió dentro de "
+"ese tiempo, los cambios se guardarán automáticamente y la ventana de "
+"preguntas se cerrará."
 
 #: 2.6-release-tour.phtml:86
 msgid "Open datafile read-only"
@@ -157,12 +165,17 @@ msgid ""
 "When opening a locked \"book\" one now has the option of opening it read-"
 "only."
 msgstr ""
+"Al abrir un «libro» bloqueado, ahora se tiene la opción de abrirlo en modo "
+"de solo lectura."
 
 #: 2.6-release-tour.phtml:91
 msgid ""
 "Note that <span class=\"gnucash\">GnuCash</span> is still a single-user "
 "program and that the database backends are still used only as a data store."
 msgstr ""
+"Note que <span class=\"gnucash\">GnuCash</span> aún es un programa de "
+"usuario único y que los backends de la BdD aún es utilizado únicamente como "
+"un almacenaje de datos."
 
 #: 2.6-release-tour.phtml:99
 msgid ""
@@ -174,18 +187,21 @@ msgstr ""
 
 #: 2.6-release-tour.phtml:104
 msgid "Save \"Filter By\" settings"
-msgstr ""
+msgstr "Guarda parámetros «Filtrar por»"
 
 #: 2.6-release-tour.phtml:106
 msgid ""
 "It is now possible to save the \"Filter By…\" settings for an account "
 "register."
 msgstr ""
+"Ahora es posible guardar las opciones de «Filtrar por…» para un registro de "
+"cuenta."
 
 #: 2.6-release-tour.phtml:114
 msgid ""
 "Save the \"Filter By…\" settings by enabling the \"Save Filter\" checkbox."
 msgstr ""
+"Guarda las opciones «Filtrar por…» habilitando la casilla «Guardar Filtro»."
 
 #: 2.6-release-tour.phtml:119
 msgid "Improved business module"
@@ -195,6 +211,8 @@ msgstr "Módulo de empresas mejorado"
 msgid ""
 "The business module has been revamped and we introduced some new features:"
 msgstr ""
+"El módulo de negocio ha sido renovado e introdujimos algunas características "
+"nuevas:"
 
 #: 2.6-release-tour.phtml:123
 msgid "Credit Notes"
@@ -210,19 +228,19 @@ msgstr "Informes generales de cliente"
 
 #: 2.6-release-tour.phtml:126
 msgid "Existing Transactions may be reassigned as invoice payments"
-msgstr ""
+msgstr "Asientos Existentes pueden ser reasignados como facturas abonadas"
 
 #: 2.6-release-tour.phtml:127
 msgid "One click duplication of invoices"
-msgstr "Duplicación de facturas con un click"
+msgstr "Duplicación de facturas con una pulsación"
 
 #: 2.6-release-tour.phtml:128
 msgid ""
 "Improved invoice and bill handling: Post, print, or duplicate multiple items "
 "directly from a search results list"
 msgstr ""
-"Gestión de facturas y recibos mejorada: Anote, imprima o duplique varios "
-"elementos directamente desde la lista de resultados de búsqueda"
+"Gestión de facturas y vales mejorada: contabiliza, declara o duplica "
+"múltiples elementos directamente desde un listado de resultados de búsqueda"
 
 #: 2.6-release-tour.phtml:129
 msgid ""
@@ -280,7 +298,7 @@ msgstr ""
 
 #: 2.6-release-tour.phtml:160
 msgid "Relicensing"
-msgstr ""
+msgstr "Relicenciar"
 
 #: 2.6-release-tour.phtml:162
 msgid ""
@@ -680,6 +698,10 @@ msgid ""
 "stable branch</strong> documentation. See further down the page for other "
 "<span class=\"gnucash\">GnuCash</span> versions, languages, and formats."
 msgstr ""
+"Los siguientes enlaces están para la documentación <strong>Ediciones HTML "
+"Inglés de la actual rama estable</strong>. Vea más debajo de la página para "
+"otras versiones de <span class=\"gnucash\">GnuCash</span>, idiomas y "
+"formatos."
 
 #: docs.phtml:13
 msgid "Browse documentation online"
@@ -862,6 +884,9 @@ msgid ""
 "documentation, corresponding to the %s release of <span class=\"gnucash"
 "\">GnuCash</span> itself."
 msgstr ""
+"Esta es la publicación antigua estable de la documentación de <span class="
+"\"gnucash\">GnuCash</span>, correspondiente a la publicación %s del mismo "
+"<span class=\"gnucash\">GnuCash</span>."
 
 #: docs.phtml:324
 msgid "Nightly Documentation Builds"
@@ -925,6 +950,10 @@ msgid ""
 "\"gnucash\">GnuCash</span>, it is highly recommended that you upgrade to the "
 "latest stable version."
 msgstr ""
+"Esta sección contiene toda la documentación anterior de <span class=\"gnucash"
+"\">GnuCash</span>. Si está utilizando una de estas versiones anteriores de "
+"<span class=\"gnucash\">GnuCash</span>, está altamente recomendado que "
+"modernice a la última versión estable."
 
 #: docs.phtml:697
 msgid "Spanish"
@@ -949,6 +978,8 @@ msgid ""
 "When this collection grew and became polyglot, it moved to %s. There you can "
 "also add more links."
 msgstr ""
+"Cuando crezca esta colección y se vuelva políglota, muévala a %s. Allí puede "
+"también agregas más enlaces."
 
 #: docs.phtml:711
 msgid "wiki:Documentation"
@@ -990,6 +1021,9 @@ msgid ""
 "Consulting, owned by Derek Atkins. So don't be surprised when your payment "
 "goes there."
 msgstr ""
+"El consejo de jar es ejecutado a través de Paypal dentro de una cuenta "
+"gestionada por IHTFP Consulting, propiedad por Derek Atkins. Por lo tanto no "
+"se sorprenda cuando su abonación vaya allí."
 
 #: donate.phtml:34
 msgid "You can transfer a donation to our bank account"
@@ -1499,7 +1533,7 @@ msgstr "Partida doble"
 #. See also https://wiki.gnucash.org/wiki/Documentation_Update_Instructions
 #: features.phtml:38
 msgid "basics_AccountRelationships.C.png"
-msgstr ""
+msgstr "basics_AccountRelationships.C.png"
 
 #: features.phtml:42
 msgid ""
@@ -1563,7 +1597,7 @@ msgstr ""
 
 #: features.phtml:70 index.phtml:72
 msgid "Scheduled Transactions"
-msgstr "Transacciones programadas"
+msgstr "Transacciones planificadas"
 
 #: features.phtml:74
 msgid ""
@@ -1719,7 +1753,7 @@ msgstr "Características de almacenamiento e intercambio de datos"
 
 #: features.phtml:172
 msgid "Experimental database support"
-msgstr "Uso experimental de bases de datos"
+msgstr "Mantenimiento experimental de bases de datos"
 
 #: features.phtml:174
 msgid ""
@@ -1728,6 +1762,11 @@ msgid ""
 "financial data can be stored in a <b>SQL database</b> using <b>SQLite3</b>, "
 "<b>MySQL</b> or <b>PostgreSQL</b>."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> por defecto almacena datos dentro de "
+"un formato <b>xml</b>. Iniciando con la versión 2.4, los datos financieros "
+"de <span class=\"gnucash\">GnuCash</span> pueden ser almacenados dentro de "
+"una <b>BdD SQL</b> utilizando <b>SQLite3</b>, <b>MySQL</b> o "
+"<b>PostgreSQL</b>."
 
 #: features.phtml:175
 msgid ""
@@ -1737,6 +1776,13 @@ msgid ""
 "as it gets reported. There is however no full test coverage so there may "
 "still be scenarios left that result in data loss."
 msgstr ""
+"Note esta característica está considerador experimental  Funciona para "
+"muchos de las casos comunes utilizados pero algunos casos esquivos han sido "
+"comunicados a resultado de datos perdidos. Los desarrolladores de <span "
+"class=\"gnucash\">GnuCash</span> resuelven cada problema como lo obtengan "
+"del boletín.  Sin embargo no hay pruebas completas cubriendo todos los casos "
+"por lo que tal vez aún hay escenarios restantes que resultan con pérdidas de "
+"datos."
 
 #: features.phtml:180
 msgid "QIF and OFX Import"
@@ -1748,6 +1794,9 @@ msgid ""
 "\">GnuCash</span>  can import Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> "
 "<b>QIF</b> files using a practical assistant."
 msgstr ""
+"Si está emigrando desde otro software financiero, <span class=\"gnucash\""
+">GnuCash</span>  puede importar ficheros Intuit<sup>&reg;</sup> "
+"Quicken<sup>&reg;</sup> <b>QIF</b> utilizando un asistente."
 
 #: features.phtml:186
 msgid ""
@@ -1755,12 +1804,19 @@ msgid ""
 "application to support the <b>OFX</b> (Open Financial Exchange) protocol "
 "that many banks and financial services are starting to use."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> también es la primera aplicación de "
+"software libre para mantener el protocolo <b>OFX</b> (Open Financial "
+"Exchange) que muchos bancos y servicios financieros están comenzando a "
+"emplearlo."
 
 #: features.phtml:189
 msgid ""
 "A transaction matching system ensures that duplicate transactions are "
 "accurately recognized and automatically deleted during file import."
 msgstr ""
+"Un sistema de cotejo de asiento asegura que los asientos duplicados son "
+"reconocidos eficazmente y borrado automáticamente durante la importación del "
+"fichero."
 
 #: features.phtml:195
 msgid "HBCI Support"
@@ -1773,6 +1829,10 @@ msgid ""
 "protocol, allowing German users to perform statement download and initiate "
 "bank transfers and direct debits."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> es la primera aplicación de software "
+"libre que admite el protocolo <b>Home Banking Computer Information</b> "
+"alemán, permitiendo a los usuarios alemanes realizar descargas de "
+"declaraciones e iniciar transferencias bancarias y débitos directos."
 
 #: features.phtml:206
 msgid "Multiplatform"
@@ -1784,7 +1844,8 @@ msgid ""
 "systems including <b>Windows</b>, <b>MacOSX</b> and <b>Linux</b>."
 msgstr ""
 "<span class=\"gnucash\">GnuCash</span> funciona en muchos sistemas "
-"operativos, incluidos <b>Windows</b>, <b>macOS</b> y <b>Linux</b>."
+"operativos diferentes, incluyendo <b>Windows</b>, <b>macOS</b> y "
+"<b>Linux</b>."
 
 #: features.phtml:214
 msgid "Localization"
@@ -1800,16 +1861,24 @@ msgid ""
 "Ukrainian, and British English. Documentation is available in English, "
 "French, Portuguese and Spanish."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> utiliza fechas y monedas "
+"internationales. Los menús de la aplicación y los popups han sido traducidos "
+"a %u idiomas, incluyendo chino, danés, francés, alemán, húngaro, italiano, "
+"japonés, noruego, polaco, portugués, ruso, español, sueco, turco, ucraniano "
+"e inglés británico. La documentación está disponible en inglés, francés, "
+"portugués y español."
 
 #: features.phtml:222
 msgid "Transaction Finder"
-msgstr "Buscador de transacciones"
+msgstr "Buscador de asientos"
 
 #: features.phtml:225
 msgid ""
 "A powerful transaction query dialogue can help you quickly locate a needle "
 "in a haystack."
 msgstr ""
+"Un potente diálogo de solicitud de asiento puede ayudarle rápidamente para "
+"localizar una aguja en un pajar."
 
 #: features.phtml:230
 msgid "Check Printing"
@@ -1820,21 +1889,24 @@ msgid ""
 "Checks may be printed in standard formats on common check stocks. A "
 "customization GUI allows custom check layouts to be developed."
 msgstr ""
+"Los cheques pueden ser impresos en formatos comunes en comprobaciones "
+"comunes de existencias. Un IGU de adaptación permite diseños de cheques "
+"personalizados para ser diseñados."
 
 #: features.phtml:238
 msgid "Mortgage &amp; Loan Repayment Assistant"
-msgstr "Asistente de pago de hipotecas y préstamos"
+msgstr "Asistente de Devoluciónes Hipotecarias y Préstamos"
 
 #: features.phtml:241
 msgid ""
 "A guided dialogue for setting up loan payments as scheduled transactions."
 msgstr ""
-"Un diálogo guiado para definir pagos de préstamo como transacciones "
-"programadas."
+"Un diálogo guiado para definir devoluciones de préstamo como asientos "
+"planificados."
 
 #: features.phtml:247
 msgid "User Manual and Help"
-msgstr "Manual de usuario y ayuda"
+msgstr "Manual del Usuario y Ayuda"
 
 #: features.phtml:250
 msgid ""
@@ -1845,6 +1917,12 @@ msgid ""
 "class=\"gnucash\">GnuCash</span> with many practical examples described step "
 "by step."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> está muy bien documentado: a lo largo "
+"del <b>Manual</b> de la aplicación, los usuarios nuevos pueden tomar "
+"ventajas completas de la guía <b>Tutorial y Conceptos</b>. Este documento "
+"proporciona información interna sobre principios de cuenta y cómo son "
+"reflejados en <span class=\"gnucash\">GnuCash</span> con múltiples ejemplos "
+"prácticos descritos paso a paso."
 
 #: index.phtml:11
 msgid "Welcome to GnuCash.org"
@@ -1887,10 +1965,10 @@ msgid ""
 "reports."
 msgstr ""
 "Diseñado para ser fácil de utilizar, a la vez que flexible y potente, <span "
-"class=\"gnucash\">GnuCash</span> te permite trazar cuentas bancarias, "
+"class=\"gnucash\">GnuCash</span> le permite trazar cuentas bancarias, "
 "acciones, ingresos y gastos. Rápido e intuitivo en su uso como un registro "
 "de cheques, está basado en principios profesionales de contabilidad para "
-"asegurar libros balanceados y reportes precisos."
+"asegurar libros balanceados e informes precisos."
 
 #: index.phtml:51
 msgid "Need Help?"
@@ -1966,7 +2044,7 @@ msgstr "Novedades de GnuCash %s"
 
 #: new_features-4.0.phtml:16
 msgid "Major Highlights"
-msgstr "Características principales"
+msgstr "Características Principales"
 
 #: new_features-4.0.phtml:24
 msgid ""
@@ -1975,6 +2053,10 @@ msgid ""
 "association items in 3.x, allows setting, changing, and deleting "
 "associations."
 msgstr ""
+"Un diálogo nuevo de <b>Asociación de Asiento</b>, disponible desde el mismo "
+"ítem de menú <b>Actualizar Asociación para Asiento</b> que ha sustituido los "
+"dos elementos de asociación en 3.x, permite parámetros, cambio, y borrado de "
+"asociaciones."
 
 #: new_features-4.0.phtml:25
 msgid ""
@@ -1983,6 +2065,10 @@ msgid ""
 "of the letters when a transaction has an association. This doesn't work on "
 "MacOS."
 msgstr ""
+"Un símbolo (clip para ficheros, enlaces encadenados para las URL) ahora son "
+"desplegados dentro de la columna Asociaciones (visible en modo línea-doble) "
+"dentro del registro en lugar de las letras cuando un asiento tiene una "
+"asociación. Esto no funciona en MacOS."
 
 #: new_features-4.0.phtml:26
 msgid ""
@@ -1990,6 +2076,10 @@ msgid ""
 "vouchers. The actual association when present is added as a link button "
 "which is shown below the notes."
 msgstr ""
+"Las asociaciones ahora tal vez son añadidos a vales, anotaciones "
+"crediticias, facturas y comprobantes. La asociación actual cuando presente "
+"es agregada como un botón enlazado el cual es mostrados debajo de las "
+"anotaciones."
 
 #: new_features-4.0.phtml:34
 msgid "[Video showing two ways to filter accounts]"
@@ -2005,6 +2095,15 @@ msgid ""
 "contain only matching accounts. Once you have a small enough list you can "
 "use the arrow keys to select the account that you want."
 msgstr ""
+"Se han añadido unas búsquedas nuevas de tipo-cabecera cuando seleccione una "
+"cuenta o una Operación dentro del registro: en vez de teclear los pocos "
+"primeros caracteres de un nivel superior de cuenta, el separador, los "
+"primeros caracteres escasos de la cuenta del nivel siguiente y así puede en "
+"su lugar teclear unos pocos caracteres de cualquier parte de un nombre de "
+"cuenta completo y el listado desplegado será filtrado para contener "
+"solamente las cuentas coincidentes. Una vez que tenga un listado "
+"suficientemente pequeño puede utilizar la flecha para seleccionar la cuenta "
+"que quiere."
 
 #: new_features-4.0.phtml:43
 msgid ""
@@ -2015,12 +2114,20 @@ msgid ""
 "provides an export format and an output file name without which it will "
 "output the report to stdout."
 msgstr ""
+"Un ejecutable separado, <kbd>gnucash-cli</kbd> (<kbd>gnucash-cli.exe</kbd> "
+"en Microsoft Windows) para hacer cosas de línea de ordenes como actualizar "
+"los precios en su libro. <kbd>gnucash-cli</kbd> obtiene la habilidad para "
+"ejecutar informes desde la línea de órdenes. Especifique informes para "
+"ejecutar por nombre o guid. Además proporciona un formato de exportación y "
+"un fichero de salida sin el cual sacará el informe por la salida estándar."
 
 #: new_features-4.0.phtml:49
 msgid ""
 "will display a screen listing all of the available commands and their "
 "options."
 msgstr ""
+"representará una pantalla enumerando todas las ordenes disponibles y sus "
+"opciones."
 
 #: new_features-4.0.phtml:50
 msgid ""
@@ -2028,16 +2135,22 @@ msgid ""
 "has, though <kbd>--get-price-quotes</kbd> is deprecated in  favor of "
 "<kbd>gnucash-cli --quotes get</kbd>."
 msgstr ""
+"El programa IGU, <kbd>gnucash</kbd>, aún responde a las opciones que siempre "
+"tiene, aunque <kbd>--get-price-quotes</kbd> está obsoleto en favor de <kbd"
+">gnucash-cli --quotes get</kbd>."
 
 #: new_features-4.0.phtml:55
 msgid "Graphic User Interface"
-msgstr "Interfáz Gráfica de Usuario"
+msgstr "Interfaz Gráfica de Usuario"
 
 #: new_features-4.0.phtml:59
 msgid ""
 "When creating a new account hierarchy it's now possible to load account "
 "templates from locales other than the one set for the user interface."
 msgstr ""
+"Cuando cree una jerarquía de cuenta nueva ahora es posible cargar las "
+"plantillas de cuentas desde locales distintos del fijo por el interfaz del "
+"usuario."
 
 #: new_features-4.0.phtml:60
 msgid ""
@@ -2046,6 +2159,11 @@ msgid ""
 "choices in the latter depending on the former. The default is the current "
 "locale but they may be used to select account templates from any locale."
 msgstr ""
+"En la página<b>Elegir Cuentas a Crear</b> hay dos ramas desplegadas arriba "
+"del selector <b>Tipos de Cuentas</b>, una para idioma y una para el país, "
+"las opciones en la última depende en el formato. El predeterminado es la "
+"local actual pero tal vez es utilizado para seleccionar plantillas de "
+"cuentas desde cualquier local."
 
 #: new_features-4.0.phtml:62
 msgid ""
@@ -2054,45 +2172,57 @@ msgid ""
 "If they don't you'll get a warning and the opportunity to pick another "
 "account or to carry on regardless."
 msgstr ""
+"Cuando borre cuentas las cuentas del destino de desgloses trasladados serán "
+"comprobados para asegurar que tienen la misma materia prima que la cuenta "
+"origen. Si no, obtendrá un aviso y la oportunidad de tomar otra cuenta o "
+"acarrearla a pesar de todo."
 
 #: new_features-4.0.phtml:63
 msgid ""
 "Reversing transactions will now pop a dialog box to request a posting date."
 msgstr ""
+"Revertir asientos ahora surgirá un diálogo para solicitar una fecha de "
+"consolidación."
 
 #: new_features-4.0.phtml:70
 msgid "Business Functions"
-msgstr "Funciones para empresas"
+msgstr "Funciones para negocios"
 
 #: new_features-4.0.phtml:73
 msgid "Business Document Column Widths"
-msgstr ""
+msgstr "Anchura de Columna de Documentación de Negocios"
 
 #: new_features-4.0.phtml:74
 msgid ""
 "Entry column widths in Invoices, Bills, and Employee Vouchers may now be "
 "saved as defaults for each type of document."
 msgstr ""
+"Anchura de columna de apunte en Factuas, Vales, y Comprobantes de Empleados "
+"ahora pueden ser guardadas como predeterminados para cada tipo documental."
 
 #: new_features-4.0.phtml:75
 msgid ""
 "Two menu items are added to the View menu when a Bill, Invoice, or Voucher "
 "tab has focus:"
 msgstr ""
+"Dos elementos del menú son añadidos al menú vista cuando un pestaña de Vale, "
+"Factura, o Comprobante tiene el foco:"
 
 #: new_features-4.0.phtml:77
 msgid "Use as Default Layout for Vendor Documents"
-msgstr "Usar como diseño predeterminado para documentos de proveedor"
+msgstr "Emplear como Diseño Predeterminado para Documentos de Proveedor"
 
 #: new_features-4.0.phtml:78
 msgid "Reset Default Layout for Vendor Documents"
-msgstr "Restaurar el diseño para los documentos de proveedor"
+msgstr "Restaurar el Diseño para los Documentos de Proveedor"
 
 #: new_features-4.0.phtml:79
 msgid ""
 "Vendor Documents is for Bills and is replaced by Customer or Employee "
 "Documents for Invoices or Vouchers respectively."
 msgstr ""
+"Documentos de Proveedor es para Vales y es remplazado por Documentos "
+"Clientes o Empleados para Facturas o Comprobantes respectivamente."
 
 #: new_features-4.0.phtml:81
 msgid ""
@@ -2101,6 +2231,10 @@ msgid ""
 "customization and documents of that type will therafter use the computed "
 "default widths."
 msgstr ""
+"El primer guardado de la anchura de columna del documento y los crea el "
+"predeterminado para todos los documentos del mismo tipo. El segundo menú "
+"quita la personalización y documentos de ese tipo y después de eso utilizará "
+"la anchura predeterminada calculada."
 
 #: new_features-4.0.phtml:87
 msgid "Importing Transactions"
@@ -2111,6 +2245,8 @@ msgid ""
 "Support for AQBanking Version 6. This is required to support new FinTS "
 "protocols for the European Payment Services Directive (PSD2)."
 msgstr ""
+"Admite AQBanking Version 6. Esto se requiere para mantener protocolos nuevos "
+"FinTS para la Directiva de Servicios de Pagos Europeos (PSD2)."
 
 #: new_features-4.0.phtml:91
 msgid ""
@@ -2119,6 +2255,11 @@ msgid ""
 "remove any that are found. It also adds a button at the bottom of the Import "
 "Map Editor to delete them if one chooses not to use the dialog."
 msgstr ""
+"El <b>Importación del Editor Asociado</b> (Herramientas → Editar Importación "
+"de Asociaciones) analizarán asociaciones bayesianas con cuentas no "
+"existentes y representa un diálogo ofreciendo retirar cualquiera que sea "
+"encontrada. Además agrega un botón al final del Editor de Asociación de "
+"Importación para borrarlas si una elije no utilizar el diálogo."
 
 #: new_features-4.0.phtml:92
 msgid "The OFX file importer can now import more than one file at a time."
@@ -2158,6 +2299,10 @@ msgid ""
 "reports for expenses and income, an income-expense chart, and an account "
 "summary."
 msgstr ""
+"Un submenú de menú de comunicado nuevo <b>Multicolumna</b> contiene el "
+"informe multicolumna personal antiguo y una <b>Pizarra</b> conteniendo "
+"informes de Cuenta para gastos y ingresos un gráfico de ingresos-gastos, y "
+"un resumen de cuenta."
 
 #: new_features-4.0.phtml:105
 msgid ""
@@ -2195,6 +2340,8 @@ msgid ""
 "GnuCash 4.x and later will no longer migrate old gconf settings from GnuCash "
 "2.4.x."
 msgstr ""
+"GnuCash 4.x y posteriores no emigrarán más a los parámetros de gconf desde "
+"GnuCash 2.4.x."
 
 #: new_features-4.0.phtml:129
 msgid "Customization and Scripting"
@@ -2208,18 +2355,19 @@ msgid ""
 msgstr ""
 
 #: new_features-4.0.phtml:133
-#, fuzzy
 msgid ""
 "Python bindings are now localized and their strings available for "
 "translation."
 msgstr ""
-"Los «bindings» de Python está ahora regionalizado y sus cadenas de texto "
+"Las vinculaciones Python ahora están regionalizado y sus cadenas de texto "
 "disponibles para traducir."
 
 #: new_features-4.0.phtml:136
 #, php-format
 msgid "For a complete list of new features and API changes see the %s."
 msgstr ""
+"Para un listado completo de características nevas y modificaciones API vea "
+"%s."
 
 #: new_features-4.0.phtml:137
 msgid "Release Notes"
@@ -2227,7 +2375,7 @@ msgstr "Notas de publicación"
 
 #: news.phtml:5
 msgid "Announcement of New Releases, Server Maintenance …"
-msgstr "Anuncios de nuevas versiones, mantenimiento de servidor…"
+msgstr "Anuncios de nuevas publicaciones, mantenimiento de servidor…"
 
 #: news.phtml:13
 msgid "GnuCash News"
@@ -2235,18 +2383,19 @@ msgstr "Noticias de GnuCash"
 
 #: news.phtml:29 oldnews.phtml:4
 msgid "Older Announcements"
-msgstr "Anuncios anteriores"
+msgstr "Anuncios Anteriores"
 
 #: news.phtml:32
 msgid "Click <a href=\"oldnews.phtml\">here</a> for older announcements."
-msgstr ""
-"Haga Click <a href=\"oldnews.phtml\">aquí</a> para anuncios más antiguos."
+msgstr "Pulse <a href=\"oldnews.phtml\">aquí</a> para anuncios más antiguos."
 
 #: oldnews.phtml:5
 msgid ""
 "This is an archive of announcements that once appeared on the GnuCash home "
 "page."
 msgstr ""
+"Este es un archivador de anuncios que una vez aparecieron en la página web "
+"de GnuCash."
 
 #: sizing.phtml:5
 msgid "This is an ancient page about Gnucash's code size."
@@ -2324,7 +2473,7 @@ msgstr ""
 
 #: sizing.phtml:40
 msgid "Table 1.  Historical Development Stats"
-msgstr ""
+msgstr "Tabla 1.  Estadísticas de Desarrollo Histórico"
 
 #: sizing.phtml:44
 msgid "Version"
@@ -2332,11 +2481,11 @@ msgstr "Versión"
 
 #: sizing.phtml:51 sizing.phtml:359
 msgid "misc app"
-msgstr ""
+msgstr "app miscelánea"
 
 #: sizing.phtml:58 sizing.phtml:394
 msgid "internal txt"
-msgstr ""
+msgstr "txt interno"
 
 #: sizing.phtml:59
 msgid "Total"
@@ -2348,11 +2497,11 @@ msgstr "Idiomas"
 
 #: sizing.phtml:61 sizing.phtml:404
 msgid "Author Credits"
-msgstr "Créditos de autor"
+msgstr "Reconocimiento de Autor"
 
 #: sizing.phtml:320
 msgid "Each cell displays the following:"
-msgstr "Cada celda muestra lo siguiente:"
+msgstr "Cada celda representa lo siguiente:"
 
 #: sizing.phtml:324
 msgid ""
@@ -2361,16 +2510,23 @@ msgid ""
 "c + KLOCS in *.h) are displayed.  If there is only one number in the "
 "parenthesis, it is the approriate KLOC count for that statistic."
 msgstr ""
+"número de ficheros *c y *.h y *.scm (KLOCS en *.c + KLOCS en *.h + KLOCS in *"
+".scm).   Si no hay ficheros *.scm en el directorio, entonces solamente ("
+"KLOCS en *.c + KLOCS en *.h) son desplegados.  Si solamente hay un número "
+"dentro de paréntesis, es el conteo apropiado de KLOC para esa estadística."
 
 #: sizing.phtml:328
 msgid ""
 "where KLOC == kilo-lines-of-code, as reported by <code>wc</code>. As noted "
 "above, wc is not a terribly good code metric, but its what we have handy."
 msgstr ""
+"donde KLOC == líneas-kilo-de-código, como informaron por <code>wc</code>. "
+"Como anotó encima, wc no es una métrica de código terriblemente bueno, pero "
+"es lo que tenemos a mano."
 
 #: sizing.phtml:331
 msgid "Table Column Legend"
-msgstr ""
+msgstr "Leyenda de Columna de Tabla"
 
 #: sizing.phtml:335
 msgid ""
@@ -2400,6 +2556,8 @@ msgid ""
 "*.c, *.h files in the src directory only (version 1.6 and earlier) or src/"
 "register/ledger-core (version 1.7 and later)"
 msgstr ""
+"Ficheros *.c, *.h dentro del directorio src únicamente (versión 1.6 "
+"anteriores) o src/register/ledger-core (versión 1.7 y posteriores)"
 
 #: sizing.phtml:351
 msgid ""
@@ -2407,6 +2565,10 @@ msgid ""
 "version of the code was discontinued after version 1.2, after most of the "
 "non-gui code was moved to either the engine, the register or the ledger."
 msgstr ""
+"contenido del directorio src/motif (versión 1.2 y anterior).  La versión "
+"motif del código fue abandonado tras la versión 1.2, después muchos del "
+"código no IGU fue trasladado a cualquiera de motor, el registrador o el "
+"libro mayor."
 
 #: sizing.phtml:355
 msgid ""
@@ -2414,6 +2576,9 @@ msgid ""
 "version 1.7 and later, this consists of src/gnome, src/gnome-search and src/"
 "gnome-util"
 msgstr ""
+"El contenido de src/gnome junto con src/register/gnome (versión 1.6 y "
+"anterior). Para la versión 1.7 y posterior, esto consiste src/gnome, src/"
+"gnome-search y src/gnome-util"
 
 #: sizing.phtml:360
 msgid ""
@@ -2442,11 +2607,17 @@ msgid ""
 "import/export, and into indiovidual modules; thus only miscellaneous code "
 "remains."
 msgstr ""
+"código scheme y guile en directorios src/scm más src/guile (versión 1.6 y "
+"anteriores). En versión 1.7 y posterior, mucho de este código se envió "
+"dentro de informes, importar/exportar, y dentro de módulos individuales; "
+"como solamente código misceláneo remanente."
 
 #: sizing.phtml:380
 msgid ""
 "Code to add small-business features: contents of the src/business directory."
 msgstr ""
+"Código para agregar características de pequeños negocios: contenidos del "
+"directorio src/business."
 
 #: sizing.phtml:385
 msgid ""
