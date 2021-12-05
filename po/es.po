@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2021-04-04 04:40+0200\n"
-"PO-Revision-Date: 2021-12-04 22:44+0000\n"
+"PO-Revision-Date: 2021-12-05 16:50+0000\n"
 "Last-Translator: Francisco Serrador <fserrador@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnucash/website/"
 "es/>\n"
@@ -137,7 +137,7 @@ msgstr ""
 
 #: 2.6-release-tour.phtml:81
 msgid "Timout on \"Save changes on closing\""
-msgstr "Tiempo máximo en \"Guardar cambios al cerrar\""
+msgstr "Tiempo agotado en «Guardar cambios al cerrar»"
 
 #: 2.6-release-tour.phtml:83
 msgid ""
@@ -339,6 +339,14 @@ msgid ""
 "lists</a>: the <span class=\"gnucash\">GnuCash</span> community is very "
 "friendly and experienced and someone will surely assist you."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> 2.6 viene con Ayuda y Guía "
+"actualizadas. Si no puede encontrar la respuesta a su preguntas en esos "
+"documentos, intente con el <a href=\"https://wiki.gnucash.org/wiki/GnuCash\""
+">wiki GnuCash</a>. Si ambas opciones son insatisfactorias, puede enviar sus "
+"cuestiones a la <a href=\"https://wiki.gnucash.org/wiki/Mailing_Lists\""
+">lista de correo de GnuCash</a>: la comunidad de <span class=\"gnucash\""
+">GnuCash</span> es muy amigable y expertos y alguno seguramente le ayudará a "
+"usted."
 
 #: 2.6-release-tour.phtml:172
 msgid "Want to Help?"
@@ -627,6 +635,12 @@ msgid ""
 "gnucash.org/wiki/Bugzilla'>GnuCash' wiki page on bugzilla</a> for more "
 "details about patch submission."
 msgstr ""
+"Después adjunte su parche a un informe de gazapo frente el componente "
+"preciso para el producto de la Documentación en la base de datos de gazapos "
+"de <a href='https://bugs.gnucash.org/'><span class=\"gnucash\""
+">GnuCash</span></a>. Vea además la <a href='https://wiki.gnucash.org/wiki/"
+"Bugzilla'>página wiki de GnuCash en bugzilla</a> para más detalles acerca "
+"del envío del parche."
 
 #: develdocs.phtml:73
 msgid ""
@@ -1299,7 +1313,7 @@ msgid ""
 "%s.  Choose the download for your operating system below."
 msgstr ""
 "La última versión estable antigua de <span class=\"gnucash\">GnuCash</span> "
-"es %s. Seleccione debajo la descarga para su sistema operativo."
+"es %s.   Seleccione debajo la descarga para su sistema operativo."
 
 #: download.phtml:95
 msgid "Latest versions for historical operating systems"
@@ -1533,7 +1547,7 @@ msgstr "Partida doble"
 #. See also https://wiki.gnucash.org/wiki/Documentation_Update_Instructions
 #: features.phtml:38
 msgid "basics_AccountRelationships.C.png"
-msgstr "basics_AccountRelationships.C.png"
+msgstr ""
 
 #: features.phtml:42
 msgid ""
@@ -1541,10 +1555,13 @@ msgid ""
 "amount. This ensures the books balance: the difference between income and "
 "expenses exactly equals the sum of assets and liabilities."
 msgstr ""
+"Cada transacción debe tener una cuenta de débito y otras de crédito por una "
+"cantidad igual. Esto asegura el balance de los libros: la diferencia de "
+"ingresos y gastos exactamente iguales a la suma de activos y pasivos."
 
 #: features.phtml:48
 msgid "Checkbook-Style Register"
-msgstr ""
+msgstr "Registro de Estilo-Casilla"
 
 #: features.phtml:54
 msgid ""
@@ -1552,6 +1569,9 @@ msgid ""
 "a custom, convenient and familiar interface to entering financial "
 "transactions."
 msgstr ""
+"El registro con estilo de casilla de <span class=\"gnucash\">GnuCash</span> "
+"proporciona un interfaz personal, conveniente y familiar para introducir "
+"transacciones financieras."
 
 #: features.phtml:56
 msgid ""
@@ -1559,6 +1579,9 @@ msgid ""
 "as income, stock and currency transactions. The following features are also "
 "provided:"
 msgstr ""
+"El registro admite casillas comunes y transacciones con tarjetas "
+"crediticias, así como transacciones de ingresos, mercancías y monedas. Las "
+"características seguidas además se proporcionan:"
 
 #: features.phtml:59
 msgid "The ability to enter <b>split transactions</b>"
@@ -1605,6 +1628,9 @@ msgid ""
 "amounts and timeline. You can also set an automatic reminder when a "
 "transaction is due."
 msgstr ""
+"Puede crear transacciones recurrentes con un nivel alto de adaptación de "
+"cantidades y línea temporal. Además puede fijar un recordatoria automático "
+"cuando un asiento está vencido."
 
 #: features.phtml:77
 msgid ""
@@ -1612,6 +1638,9 @@ msgid ""
 "started allows scheduled transactions to be postponed without canceling or "
 "entering them before the due date."
 msgstr ""
+"Un asistente que ejecuta cuando <span class=\"gnucash\">GnuCash</span> es "
+"arrancado permite que los asientos planificados sean pospuestos sin cancelar "
+"o introducirlos antes de la fecha del vencimiento."
 
 #: features.phtml:83 index.phtml:70
 msgid "Reports, Graphs"
@@ -1622,6 +1651,8 @@ msgid ""
 "<span class=\"gnucash\">GnuCash</span> has an integrated module to display "
 "graphs of your financial data in the form of:"
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> tiene un módulo integrado para "
+"representar gráficas de sus datos financiaros dentro del formulario de:"
 
 #: features.phtml:90
 msgid "Barcharts"
@@ -1640,32 +1671,36 @@ msgid ""
 "<span class=\"gnucash\">GnuCash</span> also comes complete with a full suite "
 "of standard and customizeable reports, such as:"
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> también viene completo con una suite "
+"completa de boletines estandarizados y personalizables, tales como:"
 
 #: features.phtml:96
 msgid "Balance Sheet"
-msgstr "Hoja de balance"
+msgstr "Hoja de Balance"
 
 #: features.phtml:97
 msgid "Profit &amp; Loss"
-msgstr "Ganancias &amp; pérdidas"
+msgstr "Ganancias y Pérdidas"
 
 #: features.phtml:98
 msgid "Portfolio Valuation"
-msgstr "Valuación de cartera"
+msgstr "Valoración de Cartera"
 
 #: features.phtml:99
 msgid "and many others."
-msgstr "y muchos mas."
+msgstr "y muchos otros."
 
 #: features.phtml:102
 msgid ""
 "Graphs and reports can be highly and easily customized in appearance and "
 "contents, in order to fullfill every user's need."
 msgstr ""
+"Gráficas e informes pueden ser personalizados detalladamente y fácilmente en "
+"apariencia y contenidos, con el fin de rellenar cada necesidad del usuario."
 
 #: features.phtml:108
 msgid "Statement Reconciliation"
-msgstr ""
+msgstr "Declaración de Conciliación"
 
 #: features.phtml:113
 msgid ""
@@ -1674,6 +1709,10 @@ msgid ""
 "useful to spot untracked transactions or data entry errors and ensure that "
 "your books match the bank's."
 msgstr ""
+"<b>Conciliación de cuenta</b> permite al usuario comparar los asientos "
+"introducidos dentro de una cuenta contra una declaración bancaria. Esta "
+"operación es muy útil para destacar asientos no seguidos o errores de apunte "
+"de datos y asegurar que sus libros se cotejen con el del banco."
 
 #: features.phtml:114
 msgid ""
@@ -1681,10 +1720,13 @@ msgid ""
 "reconciled and cleared balances makes reconciling against bank statements an "
 "easy task."
 msgstr ""
+"La herramienta de conciliación de <span class=\"gnucash\">GnuCash</span> "
+"ejecutando balances conciliados y purgados hace que conciliar frente "
+"declaraciones bancarias se convierte en una tarea fácil."
 
 #: features.phtml:119
 msgid "Income/Expense Account Types"
-msgstr "Tipos de cuenta de ingresos/gastos"
+msgstr "Tipos de Cuenta de Ingresos/Gastos"
 
 #: features.phtml:121
 msgid ""
@@ -1693,10 +1735,14 @@ msgid ""
 "these enable you to generate reports, such as Profit &amp; Loss, that plain-"
 "vanilla systems cannot handle."
 msgstr ""
+"Tipos de Cuenta Ingresos/Gastos (Categorías) permiten categorizar su flujo "
+"de efectivo.  Cuando utilizó apropiadamente con la característica de doble-"
+"apunte y cuentas patrimoniales, estas le habilitan para generar informes, "
+"como Beneficios y Pérdifas, que los sistemas simples no pueden gestionar."
 
 #: features.phtml:129
 msgid "Small Business Accounting Features"
-msgstr "Características para contabilidad de pequeñas empresas"
+msgstr "Características Contables de Pequeñas Empresas"
 
 #: features.phtml:132
 msgid ""
@@ -1704,48 +1750,65 @@ msgid ""
 "tracking, <b>Jobs</b>, <b>Invoicing</b> and <b>Bill</b> Payment, and <b>Tax</"
 "b> and <b>Billing Terms</b>."
 msgstr ""
+"Simplifica gestionar un negocio pequeño con seguimiento de <b>Cliente</b> y "
+"<b>Proveedor</b>, <b>Tareas</b>, <b>Facturas</b> y Remuneraciones del "
+"<b>Vale</b>, e <b>Imposiciones</b> y <b>Términos de Vales</b>."
 
 #: features.phtml:135
 msgid ""
 "Using A/Receivable and A/Payable accounts you can even manage <b>payrolls</"
 "b> for your employees."
 msgstr ""
+"Utilizando cuentas C/Revivo Futuro y C/Liquidación Futura incluso puede "
+"gestionar <b>nóminas</b> para sus empleados."
 
 #: features.phtml:138
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> gives you also a tool to manage your "
 "business' <b>budget</b> so that you can easily plan your financial strategy."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> le proporciona una herramienta para "
+"gestionar su <b>presupuesto</b> del negocio por lo que puede planear "
+"fácilmente su estrategia financiera."
 
 #: features.phtml:144
 msgid "Multiple Currencies"
-msgstr "Diferentes monedas"
+msgstr "Múltiples Monedas"
 
 #: features.phtml:148
 msgid ""
 "Different accounts can be denominated in different currencies. Currency "
 "movements between accounts are fully balanced when double-entry is enabled."
 msgstr ""
+"Pueden ser denominadas diferentes cuentas en monedas distintas. Los "
+"movimientos de monedas entre cuentas son completamente balanceados cuando "
+"están habilitados el doble-apunte."
 
 #: features.phtml:154
 msgid "Stock/Mutual Fund Portfolios"
-msgstr "Cartera de acciones/fondos de inversión"
+msgstr "Cartera de Acciones/Fondos de Inversión"
 
 #: features.phtml:157
 msgid ""
 "Track stocks individually (one per account) or in portfolio of accounts (a "
 "group of accounts that can be displayed together)."
 msgstr ""
+"Seguimiento de mercancías individualmente (uno por cuenta o dentro del "
+"porfolio de cuentas (un grupo de cuentas que pueden ser desplegadas a la "
+"vez)."
 
 #: features.phtml:162
 msgid "Online Stock &amp; Mutual Fund Quotes"
-msgstr "Precios de cotización online para acciones y fondos de inversión"
+msgstr "Provisión por Conexión y Cuotas de Fondos de Inversión"
 
 #: features.phtml:165
 msgid ""
 "Get Stock &amp; Mutual Fund quotes from various web sites, update portfolio "
 "automatically. Additional pricing sources are added regularly."
 msgstr ""
+"Obtenga Acciones y cuotas de Fondos de Inversión desde varios sitios web, "
+"actualiza automáticamente porfolio. Precio origen adicional son agregados "
+"regularmente."
 
 #: features.phtml:168
 msgid "Data storage and exchange features"
@@ -1776,11 +1839,11 @@ msgid ""
 "as it gets reported. There is however no full test coverage so there may "
 "still be scenarios left that result in data loss."
 msgstr ""
-"Note esta característica está considerador experimental  Funciona para "
+"Note esta característica está considerador experimental.   Funciona para "
 "muchos de las casos comunes utilizados pero algunos casos esquivos han sido "
 "comunicados a resultado de datos perdidos. Los desarrolladores de <span "
 "class=\"gnucash\">GnuCash</span> resuelven cada problema como lo obtengan "
-"del boletín.  Sin embargo no hay pruebas completas cubriendo todos los casos "
+"del boletín. Sin embargo no hay pruebas completas cubriendo todos los casos "
 "por lo que tal vez aún hay escenarios restantes que resultan con pérdidas de "
 "datos."
 
@@ -2264,6 +2327,7 @@ msgstr ""
 #: new_features-4.0.phtml:92
 msgid "The OFX file importer can now import more than one file at a time."
 msgstr ""
+"El importador de fichero OFX ahora puede importar más de un fichero a la vez."
 
 #: new_features-4.0.phtml:93
 msgid ""
@@ -2319,7 +2383,7 @@ msgstr "Presupuestos"
 
 #: new_features-4.0.phtml:113
 msgid "Optionally include the account code option in budget view."
-msgstr ""
+msgstr "Incluir opcionalmente el código de cuenta en la vista de presupuestos."
 
 #: new_features-4.0.phtml:114
 msgid "Enable adding notes to budgets."
@@ -2534,12 +2598,17 @@ msgid ""
 "out from the motif code in version 1.1. The data storage backend (file-io, "
 "sql) was split out in the course of version 1.5"
 msgstr ""
+"El contenido de src/engine y los directorios incluidos. El motor fue "
+"desdoblado desde el código motif en la versión 1.1. El backend de almacenaje "
+"de datos (file-io, sql) fue dividido en el trascurso de la versión 1.5"
 
 #: sizing.phtml:339
 msgid ""
 "Contents of the src/backend directory (version 1.7 and later) or of src/"
 "engine/file, src/engine/sql (version 1.6 and earlier)"
 msgstr ""
+"Contenido del directorio src/backend (versión 1.7 y posterior) o de src/"
+"engine/file, sec/engine/sql (versión 1.6 y anterior)"
 
 #: sizing.phtml:343
 msgid ""
@@ -2592,6 +2661,8 @@ msgid ""
 "Code to import and export various file formats: contents of the src/import-"
 "export directory."
 msgstr ""
+"Código para importar y exportar varios formatos de fichero: contenido del "
+"directorio src/import-export."
 
 #: sizing.phtml:370
 msgid ""
@@ -2649,6 +2720,10 @@ msgid ""
 "messages in the message files (<tt>grep msgstr po/*.po |wc</tt>), in "
 "thousands."
 msgstr ""
+"El número de idiomas que los mensajes de la aplicación han sido traducidos a "
+"(el nombre de ficheros <tt>po/*.po</tt>). En paréntesis, el número de "
+"mensajes dentro de los ficheros de mensaje (<tt>grep msgstr po/*.po |wc</"
+"tt>, en miles."
 
 #: sizing.phtml:405
 msgid ""
@@ -2658,6 +2733,11 @@ msgid ""
 "credits listed in the gnucash-docs/AUTHORS file that are not listed in the "
 "main gnucash/AUTHORS file."
 msgstr ""
+"El número de gente acreditada en el fichero AUTORES (versión 1.6 y posterior)"
+" o el fichero README (versiones anteriores).  Estos incluyen desarrolladores "
+"en cabecera, envíos de parches y traductores al idioma nativo.  Esto incluye "
+"créditos adicionales alistados dentro del fichero gnucash-docs/AUTHORS que "
+"no están alistados dentro del fichero principal de gnucash/AUTHORS."
 
 #: viewdoc.phtml:10
 msgid "View document"
