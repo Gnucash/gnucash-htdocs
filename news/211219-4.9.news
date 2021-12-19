@@ -1,0 +1,146 @@
+<b>Announcement:</b> GnuCash 4.9 Released
+2021-12-19
+
+<h2>GnuCash 4.9 Released</h2>
+
+<p>The GnuCash development team announces GnuCash 4.9, the tenth release in the stable 4.x series</p>
+
+<h4>Between 4.8 and 4.9, the following bugfixes were accomplished:</h4>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797502">Bug 797502 - (RTL) - Right edge of the reports are locked while scrolling down</a><p>Running gnucash in Hebrew, the right edge of the reports are locked while scrolling down and do not scroll with the rest of the report.</p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797618">Bug 797618 - Spanish translation of Shares and Stock</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797678">Bug 797678 - OFX importer should supplement, not replace, existing Notes (and Description and Memo) fields</a><p>Add an &quot;Append&quot; checkbox to the bottom of the &quot;Generic import transaction matcher&quot; window to the left of the &quot;Reconcile after match&quot; checkbox. When ticked, this causes the imported Description/Notes to be appended to the matched transaction Description/Notes respectively. The selected ticked/unticked state of the &quot;Append&quot; checkbox is saved in a key value pair for the import account, so the next import for that account will automatically default it to the saved state. As these mods are limited to the code for the matcher window, this should work for all the imports that use it - ie ofx &amp; csv file imports (both tested) &amp; aqbanking (cannot test).</p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797772">Bug 797772 - Allow reconciliation report to double filter by both posting and reconciliation date</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798222">Bug 798222 - Account search dialog: Pushing enter does nothing</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798266">Bug 798266 - Dropdown picker menu for category does not appear</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798313">Bug 798313 - &quot;File/Import/Import Transactions From CSV&quot; crashes Gnucash.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798320">Bug 798320 - Error message indicating a crash of GNUcash when closing application - MacOS 10.15.7 (19H1419)</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798325">Bug 798325 - New Currency for Venezuela (VED)</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798327">Bug 798327 - Ofx import stops too early for multi-account OFX and one account has no new transactions</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798335">Bug 798335 - No longer possible to change trading account</a><p>Strip trading splits only if &quot;Use Trading Accounts&quot; is enabled for the book so that users who want to manage trading accounts by hand may do so. </p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798341">Bug 798341 - Right align in Hebrew - Account screen</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798346">Bug 798346 - crashes when running check &amp; repair</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798352">Bug 798352 - Decimal Precision when Entering Mutual Fund Transaction</a><p>Let xaccParseAmount parse up to 12 decimal places instead of 8. </p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798382">Bug 798382 - Typo corrections in comments</a></li>
+</ul>
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>More memory leak plugging and GList efficiency improvements.</li>
+    <li>Fix build with cmake older than 3.18<p>3.18 introduced &#39;cmake -E cat&#39;, but we still have to support versions starting from 3.14. </p></li>
+    <li>[account-piecharts] don&#39;t use gnc:make-internal-option</li>
+    <li>Several improvements to the experimental IFRS cost-basis report.</li>
+    <li>Fix two minor issues with displaying links in the Document Link dialog.</li>
+    <li>Fix obsolete links to bugzilla.gnome.org in translations.</li>
+    <li>L18N: Fix glossary/es.po:906: duplicate message definition...<p>901: ...this is the location of the first definition</p></li>
+    <li>[budget-flow] delay creating exchange-fn until a valid budget exists<p>because it needs budget period end-date. </p></li>
+    <li>[options.scm] Addon previous commit... need to initialize with guid</li>
+    <li>[options.scm] gnc:make-budget-option stores guid instead of object<p>because object may become stale if UI is used to delete it, leading to stale pointer and segfault. storing guid is safer, and will return null if budget is deleted. </p></li>
+    <li>support SEPA internal transfer</li>
+    <li>Fix issue with failure to run reconciliation with all accounts present in a multi-account OFX file. Do that by saving a GList of statements, rather than a pointer to a single one. Also freeing of info happens during the call to process_next_file.</li>
+    <li>Import of OFX files with many securities opens too many matching dialogs Because ofx import is currently split per target account, and since each security has its own accounts, importing such OFX is a tedious process. The fix is to only split the transactions if we identify a potential transfer, currently based on amount, date and accounts. To do that, we insert transactions one by one into a list, making sure we have not already inserted one that has the same date, and the same absolute amount. If we have, we keep this potential transfer for a second phase. A naive approach would loop through added transactions for each new transaction by that ends up being O(N^2), which matters if we have many transactions. Instead, I&#39;m using a hash to make this O(N log N).</li>
+    <li>[date-utilities.scm] remove unused date selectors code &amp; string</li>
+    <li>Adjust GNC_DEFINE_TYPE_EXTENDED_END<p>To match new signature of g_once_init_enter and g_once_init_leave. </p></li>
+    <li>Fix build with glib2 2.67.x.<p>glib headers should not be included with &#39;extern &quot;C&quot;&#39;. </p></li>
+    <li>Add explanatory note for gnc_add_scheme_deprecated_module test code<p>The immediate parent commit removes old deprecated scheme modules. Link to the old modules for example code. </p></li>
+    <li>[test-engine-extras] don&#39;t create splits of opposing amt/value signs<p>Splits&#39; value and amount should never be of opposite signs. Fix test book which had created this incorrect value/amount pair. Strengthen env-create-multisplit-transaction to disallow test book errors. </p></li>
+    <li>[dialog-search] another QofQuery &quot;q&quot; must be destroyed<p>because qof_query_merge creates a newly allocated QofQuery, its 2 QofQuery must be freed separately. </p></li>
+    <li>[trep-engine] new option &quot;Date Filter&quot; to specify dates to filter by</li>
+    <li>[dialog-sx-since-last-run] don&#39;t allocate repeatedly to combine strings</li>
+    <li>[test-transaction] &quot;Report Currency&quot; renamed to &quot;Report&#39;s currency&quot;</li>
+    <li>Separate the warnings for &quot;cut split/transaction&quot; and &quot;delete split/transaction&quot;</li>
+    <li>[gnc-autoclear] Move autoclear algorithm into gnome-utils</li>
+    <li>GSettings - fix GObject warning when old prefs-version is unset<p>This will happen when current master (future 5.0) has been run at least once. </p></li>
+    <li>[utest-gnc-pricedb] add tests for gnc_price_list_equal<p>Also need to change PWARN which causes test failure, to PINFO </p></li>
+    <li>[reconcile-view][bug] dr/cr query tests amount instead of value<p>Because split-&gt;amount and split-&gt;value are generally of equal sign, EXCEPT in stock transactions whereby split-&gt;value can be zero and split-&gt;amount is non-zero. e.g. a stock split transaction.  Querying the split amount instead will allow stock accounts with stock splits to be reconciled. </p></li>
+    <li>[split-register-model.c] Hide price==1 for zero-amount splits<p>mainly of interest in zero-amount zero-value splits in the stock register eg dividend splits. </p></li>
+    <li>[core-utils] introduce gnc:format<p>(gnc:format str [binding value]...)  str will contain $&#123;binding&#125; which will be replaced to value. </p></li>
+    <li>[import-main-matcher] show destination acct for auto-match</li>
+    <li>GSettings - add &#39;deprecate&#39; and &#39;obsolete&#39; conversions for user preferences<p>&#39;deprecate&#39; is technically a noop. It serves to remind maintainers the &#39;deprecated&#39; preference is to be obsoleted in the next major release. &#39;obsolete&#39; goes one step further in that it will cause gnucash to reset the preference, effectively clearing the value stored in the preferences backend. This is the final phase of a preference. Following this it will be completely removed from the GSettings schema in the next major release.  Notes * &#39;deprecate&#39; and &#39;migrate&#39; are related. Both are a reminder the preference is to be obsoleted in the next major release. &#39;deprecate&#39; does only that though while &#39;migrate&#39; will also trigger a copy of the old value to a new location in the databse.  * This commit readds a couple of preferences that had been removed in the past to be able to properly obsolete them (and to test the obsoleting code) </p></li>
+</ul>
+<h4>New API</h4>
+<p>None</p>
+<h4>Deprecations</h4>
+<p>None</p>
+<p>New and Updated Translations: Chinese (Simplified), Chinese (Traditional), Croatian, French, German, Hebrew, Italian, Norwegian Bokmål, Portuguese, Portuguese (Brazil), Spanish, Ukranian.
+</p>
+<a href="https://hosted.weblate.org/engage/gnucash/">Help translate GnuCash on Weblate</a>
+
+<h4>Known Problems</h4>
+<p><a href="https://bugs.gnucash.org/buglist.cgi?bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;limit=0&amp;list_id=8149&amp;order=priority%2Cbug_severity&amp;query_format=advanced">Complete list of all open bugs.</a></p>.
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of GnuCash 4.9 we're pleased to also release a new version of the companion Help and Tutorial and Concepts Guide</p>
+<h6>Between 4.8 and 4.9, the following bugfixes were accomplished:</h6>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797950">Bug 797950 - Reconcilation docs don&#39;t mention automatic credit card payment feature.</a></li>
+</ul>
+<h6>The following fixes and improvements were not associated with bug reports:</h6>
+<ul>
+    <li>Guide:C: Add a directory with datafiles for faster regeneration of images</li>
+    <li>Chapter &quot;Online-Quotes&quot; created.<p>Description of the installation and configuration of F::Q (moved from Help_ch_Account-Actions-xml).</p></li>
+    <li>Remove several Autotools remains</li>
+    <li>Drop TravisCI as we are using Github Workflows now.</li>
+    <li>Removed the information of HACKING file from README.</li>
+    <li>Add ghelp to the default target<p>At some point in the past ghelp didn&#39;t have to be built, as one could develop and test simply from the source directory. That is no longer the case so perform a build by default if ghelp is enabled. </p></li>
+</ul>
+<p>New and Updated Translations: German</p>
+
+<h3>Getting GnuCash for Windows and MacOS</h3>
+<p>GnuCash is provided for both Microsoft Windows 8.1&reg; and later
+    and MacOS 10.13 (High Sierra)&reg; and later in pre-built, all-in-one
+    packages. An installer is provided for Microsoft Windows&reg; while
+    the MacOS&reg; package is a disk image containing a drag-and-drop
+    application bundle.</p>
+<p>The SHA256 Hashes for the downloadable files are:</p>
+<ul>
+    <li><code>9a551c30c1b712199fc2227a109afb984d7bef18e138170bbc7225c6c1fab72d</code>&nbsp;&nbsp;gnucash-4.9.tar.bz2</li>
+    <li><code>01d6381d5c876a6210f037c922c59c79799bf663f2a71f46fe14dbaca5db7f74</code>&nbsp;&nbsp;gnucash-4.9.tar.gz</li>
+    <li><code>c50fac9755958c3b5310c1f605149a88bb365eac32c5c361c4174ffa5e314921</code>&nbsp;&nbsp;gnucash-4.9.setup.exe</li>
+    <li><code>ac288ffa06a759d6104b74f9c91449ce218de392ac8ca4739bce217e2f9817b1</code>&nbsp;&nbsp;Gnucash-Intel-4.9-1.dmg</li>
+    <li><code>d901a08eb67310aac28ae9924a4c6d0f2ed423a6a2cf2adb10c5574dabba9b12</code>&nbsp;&nbsp;gnucash-docs-4.9.tar.gz</li>
+</ul>
+
+<ul>
+    <li>SourceForge:
+        <ul>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.9/gnucash-4.9.setup.exe">Win32</a></li>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.9/Gnucash-Intel-4.9-1.dmg">Mac-Intel</a></li>
+        </ul></li>
+    <li>Github
+        <ul>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/4.9/gnucash-4.9.setup.exe">Win32</a></li>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/4.9/Gnucash-Intel-4.9-1.dmg">Mac-Intel</a></li>
+        </ul></li></ul>
+
+<p>GnuCash is also available as a flatpak from Flathub.org. <a href="https://wiki.gnucash.org/wiki/Flatpak">Instructions for installing and running.</a></p>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 4.9 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+    <li>Sourceforge: <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.9/gnucash-4.9.tar.bz2">bzip2</a>, <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.9/gnucash-4.9.tar.gz">gzip</a>.</li>
+
+    <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/4.9/gnucash-4.9.tar.bz2">bzip</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/4.9/gnucash-4.9.tar.gz">gzip</a></li>
+
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https://www.gtk.org">Gtk+</a> 3.22.29, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0, <a href="https://www.boost.org/">Boost</a> 1.67, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, <a href="https://github.com/google/googletest">GoogleTest</a> 1.8.0, <a href="https://cmake.org/">cmake 3.10</a> and <a href="http://www.swig.org/">SWIG</a> 2.0.12. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 4.9 documentation can be found under "GnuCash v4 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats. The documentation is also included in the MacOS and Windows application bundles. Note that we are preparing to remove autotools support from the documentation build and that it is no longer included in the tarball.</p>
+
+<p>If you want to compile the GnuCash Documentation 4.9 for yourself, the source code can be downloaded from:</p>
+<ul>
+    <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.9/gnucash-docs-4.9-1.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/4.9/gnucash-docs-4.9.tar.gz">GitHub</a></li>
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+    the GNU General Public License (GPL) and available for GNU/Linux,
+    *BSD, Solaris, MacOS, and Microsoft Windows.  Programming on GnuCash
+    began in 1997, and its first stable release was in 1998.</p>
