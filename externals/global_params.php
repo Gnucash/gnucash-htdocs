@@ -33,8 +33,10 @@
      $old_stable_mac_intel  = $old_stable."-1";
 
      // Supported targets:
-     define("SUPPORTED_WIN", "Microsoft Windows 8/10/11");
-     define("SUPPORTED_MAC", "Apple macOS  &ge; 10.13—\"High Sierra\"");
+     define("LABEL_WIN", "Microsoft Windows");
+     define("LABEL_MAC", "Apple macOS");
+     define("SUPPORTED_WIN", "8/10/11");
+     define("SUPPORTED_MAC", "&ge; 10.13—\"High Sierra\"");
      // Frozen versions:
      $show_historical = True;
      $last_win7_version = "3.11"; //Still used in download block on index.phtml
