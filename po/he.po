@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: gnucash-htdocs\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2021-12-19 04:04+0100\n"
+"POT-Creation-Date: 2021-12-21 00:25+0100\n"
 "PO-Revision-Date: 2021-12-11 19:51+0000\n"
 "Last-Translator: Avi Markovitz <avi.markovitz@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnucash/website/"
@@ -1059,8 +1059,8 @@ msgstr ""
 msgid "Installers"
 msgstr "תכניות התקנה"
 
-#: download.phtml:24 download.phtml:25 download.phtml:68 download.phtml:69
-#: download.phtml:84 download.phtml:85 download.phtml:98 download.phtml:104
+#: download.phtml:24 download.phtml:25 download.phtml:71 download.phtml:72
+#: download.phtml:87 download.phtml:88 download.phtml:101 download.phtml:107
 #, php-format
 msgid "GnuCash %s for"
 msgstr "גנוקאש %s עבור"
@@ -1076,7 +1076,13 @@ msgstr ""
 "span>, אם כי לא תמיד עם הגרסה העדכנית ביותר כברירת מחדל. למרות זאת, מומלץ "
 "להשתמש בגרסת <span class=\"gnucash\">גנוקאש</span> שמגיעה יחד עם ההפצה שלכם."
 
-#: download.phtml:30
+#. Translators: %s is the link to repology.org
+#: download.phtml:31
+#, php-format
+msgid "At %s you can compare which distribution which version ships."
+msgstr ""
+
+#: download.phtml:33
 msgid ""
 "Below are ways to install <span class=\"gnucash\">GnuCash</span> on some of "
 "the more popular distributions:"
@@ -1084,7 +1090,7 @@ msgstr ""
 "להלן דרכים להתקנת <span class=\"gnucash\">גנוקאש</span> בכמה מההפצות הנפוצות "
 "יותר:"
 
-#: download.phtml:33
+#: download.phtml:36
 msgid ""
 "Fedora users can install <span class=\"gnucash\">GnuCash</span> through "
 "System->Administration->Add/Remove Software (Gnome) or Applications->System-"
@@ -1094,7 +1100,7 @@ msgstr ""
 "מערכת &larr; ניהול &larr; הוספת / הסרת תכנה (גנום), או יישומים &larr; מערכת "
 "&larr; ניהול תכנה (KDE)."
 
-#: download.phtml:34
+#: download.phtml:37
 msgid ""
 "Mandriva users can install <span class=\"gnucash\">GnuCash</span> through "
 "the Software Management in the Mandriva Linux Control Center."
@@ -1102,11 +1108,11 @@ msgstr ""
 "משתמשי מנדריבה יכולים להתקין את <span class=\"gnucash\">גנוקאש</span> "
 "באמצעות ניהול התכנה במרכז הבקרה של לינוקס מנדריבה."
 
-#: download.phtml:35
+#: download.phtml:38
 msgid "Epel's wiki page"
 msgstr "עמוד הוויקי של Epel"
 
-#: download.phtml:35
+#: download.phtml:38
 msgid ""
 "Redhat and CentOS don't have <span class=\"gnucash\">GnuCash</span> in their "
 "repositories by default. It can be installed however from the third-party "
@@ -1117,7 +1123,7 @@ msgstr ""
 "מחדל. אך ניתן להתקין אותה ממאגר Epel של צד שלישי. לקבלת פרטים נוספים על תצור "
 "מאגר תוכנה נוסף זה במנהל ההתקנה, ניתן לבקר בכתובת"
 
-#: download.phtml:36
+#: download.phtml:39
 msgid ""
 "Solus users can install <span class=\"gnucash\">GnuCash</span> through the "
 "Software Center (Office Software -> Financial Software -> gnucash)."
@@ -1125,7 +1131,7 @@ msgstr ""
 "משתמשי סולוס יכולים להתקין את <span class=\"gnucash\">גנוקאש</span> ממרכז "
 "התכנה (כלים משרדיים -> תוכנות פיננסית -> גנוקאש)."
 
-#: download.phtml:37
+#: download.phtml:40
 msgid ""
 "Ubuntu users can install <span class=\"gnucash\">GnuCash</span> through the "
 "Software Center. This will install <span class=\"gnucash\">GnuCash</span> "
@@ -1135,11 +1141,11 @@ msgstr ""
 "התכנה. פעולה זו תתקין את <span class=\"gnucash\">גנוקאש</span> בסוג־אב 'כלי "
 "משרד', בתפריט היישומים."
 
-#: download.phtml:40
+#: download.phtml:43
 msgid "Sandbox"
 msgstr "ארגז חול"
 
-#: download.phtml:43
+#: download.phtml:46
 #, php-format
 msgid ""
 "Flatpaks are bundles, which contain beneath the program also all required "
@@ -1154,20 +1160,20 @@ msgstr ""
 
 #. Translators: %s is the base url of the gnucash wiki, adjust this,
 #. if a localized instance of the Flatpak page exists like "%sDe/Flatpak"
-#: download.phtml:48
+#: download.phtml:51
 #, php-format
 msgid "%sFlatpak"
 msgstr "%s Flatpak"
 
-#: download.phtml:48
+#: download.phtml:51
 msgid "Known Issues and other details …"
 msgstr "סוגיות מוכרות ופרטים אחרים …"
 
-#: download.phtml:52 index.phtml:17
+#: download.phtml:55 index.phtml:17
 msgid "Source code"
 msgstr "קוד מקור"
 
-#: download.phtml:53
+#: download.phtml:56
 msgid ""
 "If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> or "
 "you wish to install a different version than it ships with, you could try to "
@@ -1181,17 +1187,17 @@ msgstr ""
 "\"gnucash\">גנוקאש</span> ב־<a href='https://wiki.gnucash.org/wiki/"
 "Building'> ישנן הנחיות בניה למספר הפצות</a>."
 
-#: download.phtml:55 download.phtml:70 download.phtml:86
+#: download.phtml:58 download.phtml:73 download.phtml:89
 #, php-format
 msgid "for GnuCash %s"
 msgstr "עבור גנוקאש %s"
 
-#: download.phtml:62
+#: download.phtml:65
 #, php-format
 msgid "Unstable/Development release (%s)"
 msgstr "שחרור לא יציב/פיתוח (%s)"
 
-#: download.phtml:64
+#: download.phtml:67
 msgid ""
 "Unstable (development) releases are for testing purposes only. They contain "
 "the newest features and improvements, but may also contain serious bugs "
@@ -1201,21 +1207,21 @@ msgstr ""
 "והשיפורים החדשים ביותר, אך עדיין עשויות גם להכיל תקלים רציניים . אל תתקינו "
 "מהדורות אלה לשימוש יומיומי."
 
-#: download.phtml:65
+#: download.phtml:68
 #, php-format
 msgid ""
-"The latest unstable release of <span class=\"gnucash\">GnuCash</span> is "
-"%s. Choose the download for your operating system below."
+"The latest unstable release of <span class=\"gnucash\">GnuCash</span> is %s. "
+"Choose the download for your operating system below."
 msgstr ""
 "הגרסה הלא־יציבה האחרונה של <span class=\"gnucash\">גנוקאש</span> היא %s. נא "
 "לבחור מטה את גרסת ההורדה המתאימה למערכת ההפעלה."
 
-#: download.phtml:78
+#: download.phtml:81
 #, php-format
 msgid "Old Stable release (%s)"
 msgstr "שחרור יציב ישן (%s)"
 
-#: download.phtml:80
+#: download.phtml:83
 msgid ""
 "This old stable release is the final version of the previous stable series. "
 "It's available for users who aren't ready for a major upgrade but want to "
@@ -1225,38 +1231,38 @@ msgstr ""
 "למשתמשים שאינם מוכנים לשדרוג משמעותי אך רוצים לוודא שיש להם את כל תיקוני "
 "התקלים לסדרה הישנה."
 
-#: download.phtml:81
+#: download.phtml:84
 #, php-format
 msgid ""
-"The last old stable release of <span class=\"gnucash\">GnuCash</span> is "
-"%s. Choose the download for your operating system below."
+"The last old stable release of <span class=\"gnucash\">GnuCash</span> is %s. "
+"Choose the download for your operating system below."
 msgstr ""
 "הגרסה היציבה הישנה האחרונה של <span class=\"gnucash\">גנוקאש</span> היא %s. "
 "נא לבחור מטה את ההורדה המתאימה למערכת ההפעלה."
 
-#: download.phtml:94
+#: download.phtml:97
 msgid "Latest versions for historical operating systems"
 msgstr "הגרסאות האחרונות עבור מערכות הפעלה היסטוריות"
 
-#: download.phtml:96
+#: download.phtml:99
 msgid "This versions are really old. Do not expect any support."
 msgstr "הגרסאות הללו ממש ישנות. אל תצפו לתמיכה כלשהי."
 
-#: download.phtml:109
+#: download.phtml:112
 msgid "Other"
 msgstr "אחר"
 
-#: download.phtml:113
+#: download.phtml:116
 #, php-format
 msgid "View all GnuCash %s downloads (stable)"
 msgstr "הצגת כל הורדות גנוקאש %s (יציב)"
 
-#: download.phtml:118
+#: download.phtml:121
 #, php-format
 msgid "View all GnuCash %s downloads (unstable)"
 msgstr "הצגת כל הורדות גנוקאש %s (לא יציב)"
 
-#: download.phtml:121
+#: download.phtml:124
 msgid "View all GnuCash downloads"
 msgstr "הצגת כל הורדות גנוקאש"
 
@@ -1268,11 +1274,11 @@ msgstr "ניתוקי שרת ודוא״ל ידווחו אל:"
 msgid "Translation problems? Contact:"
 msgstr "בעיות תרגום? נא ליצור קשר עם:"
 
-#: externals/global_params.php:85 externals/header.phtml:144
+#: externals/global_params.php:90 externals/header.phtml:144
 msgid "Free Accounting Software"
 msgstr "תכנת חשבונאות חינמית"
 
-#: externals/global_params.php:86
+#: externals/global_params.php:91
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is personal and small-business "
 "financial-accounting software, freely licensed under the <a href=\"https://"
@@ -1348,7 +1354,7 @@ msgstr "שאלות נפוצות"
 msgid "Wiki"
 msgstr "ויקי"
 
-#: externals/menu.phtml:33 index.phtml:54
+#: externals/menu.phtml:33 index.phtml:59
 msgid "Mailing Lists"
 msgstr "רשימות דיוור"
 
@@ -1526,7 +1532,7 @@ msgstr "<b> סרגל סיכום </b> המציג את כל פרטי היתרה ש
 msgid "Many options to <b>customize</b> the appearance and the display style"
 msgstr "אפשרויות <b> התאמה אישית </b> רבות, למראה ולסגנון התצוגה"
 
-#: features.phtml:69 index.phtml:71
+#: features.phtml:69 index.phtml:76
 msgid "Scheduled Transactions"
 msgstr "תנועות מחזוריות"
 
@@ -1548,7 +1554,7 @@ msgstr ""
 "סייען המפעל בעת אתחול <span class=\"gnucash\">גנוקאש</span> מאפשר דחיית "
 "תנועות מחזוריות מבלי לבטל או להזין אותן לפני תאריך היעד."
 
-#: features.phtml:82 index.phtml:69
+#: features.phtml:82 index.phtml:74
 msgid "Reports, Graphs"
 msgstr "דוחות, תרשימים"
 
@@ -1885,16 +1891,16 @@ msgstr "הורדת גנוקאש %s"
 msgid "Via distribution"
 msgstr "באמצעות הפצה"
 
-#: index.phtml:26
+#: index.phtml:25
 msgid "More downloads (Source code, Development …)"
 msgstr "הורדות נוספות (קוד מקור, פיתוח ...)"
 
-#: index.phtml:33
+#: index.phtml:32
 #, php-format
 msgid "Version %s is the last version for %s and %s and earlier."
 msgstr "גרסה %s היא הגרסה האחרונה ל־%s ו־%s וקודמותיה."
 
-#: index.phtml:36
+#: index.phtml:35
 #, php-format
 msgid ""
 "Version %s is the last version for Windows XP/Vista and MacOS X 10.8 and "
@@ -1903,7 +1909,7 @@ msgstr ""
 "גרסה %s היא הגרסה האחרונה לחלונות XP / ויסטה ו־MacOS X 10.8 ומעלה, לכן היא "
 "הגרסה האחרונה שתרוץ על מחשבי מאק PowerPC."
 
-#: index.phtml:45
+#: index.phtml:44
 msgid ""
 "Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash"
 "\">GnuCash</span> allows you to track bank accounts, stocks, income and "
@@ -1917,11 +1923,30 @@ msgstr ""
 "חשבונאיים מקצועיים ומערכת חשבונאות כפולה, מה שמבטיח ספרים מאוזנים ודוחות "
 "מדויקים."
 
+#. Translators: %s is the link to https://wiki.gnucash.org/wiki/Contributing_to_GnuCash
+#: index.phtml:46
+#, php-format
+msgid ""
+"GnuCash is developed, maintained, documented, and translated entirely by "
+"volunteers. Want to help out? We have %s."
+msgstr ""
+
+#. Translators: This is the label of the Contributing… wiki link
+#: index.phtml:48
+msgid "some suggestions"
+msgstr ""
+
+#. Translators: %s is the link to weblate
 #: index.phtml:50
+#, php-format
+msgid "Please help translate GnuCash into your language at %s."
+msgstr ""
+
+#: index.phtml:55
 msgid "Need Help?"
 msgstr "זקוקים לעזרה?"
 
-#: index.phtml:53
+#: index.phtml:58
 msgid ""
 "Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? "
 "Try the"
@@ -1929,7 +1954,7 @@ msgstr ""
 "מחפשים מישהו ליצור איתו קשר לגבי <span class=\"gnucash\">גנוקאש</span>? נסו "
 "את"
 
-#: index.phtml:55
+#: index.phtml:60
 msgid ""
 ", which are public, email-based discussion groups where you can ask and "
 "answer <span class=\"gnucash\">GnuCash</span> questions to other users."
@@ -1938,47 +1963,47 @@ msgstr ""
 "ולענות למשתמשים אחרים, על שאלות בנוגע ל־<span class=\"gnucash\">גנוקאש</"
 "span> ."
 
-#: index.phtml:61
+#: index.phtml:66
 msgid "Feature Highlights"
 msgstr "תכונות עיקריות"
 
-#: index.phtml:66
+#: index.phtml:71
 msgid "Double-Entry Accounting"
 msgstr "הנהלת חשבונות כפולה"
 
-#: index.phtml:67
+#: index.phtml:72
 msgid "Stock/Bond/Mutual Fund Accounts"
 msgstr "חשבונות מניות/אג\"ח/קרנות נאמנות"
 
-#: index.phtml:68
+#: index.phtml:73
 msgid "Small-Business Accounting"
 msgstr "חשבונאות לעסקים קטנים"
 
-#: index.phtml:70
+#: index.phtml:75
 msgid "QIF/OFX/HBCI Import, Transaction Matching"
 msgstr "ייבוא QIF/OFX/HBCI, התאמת תנועות"
 
-#: index.phtml:72
+#: index.phtml:77
 msgid "Financial Calculations"
 msgstr "חישובים פיננסיים"
 
-#: index.phtml:74
+#: index.phtml:79
 msgid "<b>Discover more …</b>"
 msgstr "<b> גלו עוד ... </b>"
 
-#: index.phtml:78
+#: index.phtml:83
 #, php-format
 msgid "GnuCash %s Released"
 msgstr "גנוקאש %s שוחרר"
 
-#: index.phtml:79
+#: index.phtml:84
 #, php-format
 msgid ""
 "We've released GnuCash %s with many bugfixes and improvements including some "
 "%s!"
 msgstr "שחררנו את גנוקאש %s עם תיקוני תקלים ושיפורים רבים כולל כמה %s!"
 
-#: index.phtml:80
+#: index.phtml:85
 msgid "great new features"
 msgstr "תכונות חדשות נהדרות"
 
@@ -2383,8 +2408,8 @@ msgstr ""
 msgid ""
 "Given that we have about 400 outstanding bugs in bugzilla, that works out to "
 "about one bug per thousand lines of code, or one bug per 50 pages of "
-"printout. This bug count is actually not atypical for software projects; "
-"it is near the norm."
+"printout. This bug count is actually not atypical for software projects; it "
+"is near the norm."
 msgstr ""
 "בהתחשב בכך שיש לנו כ־400 תקלים פתוחים בבוגזילה, זה שיוצא בערך תקל אחד לאלף "
 "שורות קוד, או תקל אחד לכל 50 עמודים של תדפיסים. כמות תקלים זו למעשה אינה "
@@ -2416,11 +2441,11 @@ msgid ""
 "even that <code>wc</code> is a good way of counting KLOC's. Much better "
 "measures are complexity metrics, which, for example, count the number and "
 "size of if-then-else blocks, or the number and size of all blocks, or the "
-"number of math operators per statement. Maybe someday we'll run one of "
-"those tools on this code. For now, this is what we have. On the other hand, "
-"we've attempted to count only those files that contain human-edited code, "
-"that is, files that are directly edited by humans. The point of doing this "
-"is to avoid artificially inflating the KLOC counts by counting automatically "
+"number of math operators per statement. Maybe someday we'll run one of those "
+"tools on this code. For now, this is what we have. On the other hand, we've "
+"attempted to count only those files that contain human-edited code, that is, "
+"files that are directly edited by humans. The point of doing this is to "
+"avoid artificially inflating the KLOC counts by counting automatically "
 "generated code (which is why the glade files are not counted: they are large "
 "and automatically generated)."
 msgstr ""
@@ -2489,10 +2514,15 @@ msgid "Table Column Legend"
 msgstr "מקרא עמודות טבלה"
 
 #: sizing.phtml:334
+#, fuzzy
+#| msgid ""
+#| "Contents of the src/engine and the include directories. The engine was "
+#| "split out from the motif code in version 1.1. The data storage backend "
+#| "(file-io, sql) was split out in the course of version 1.5"
 msgid ""
 "Contents of the src/engine and the include directories. The engine was split "
 "out from the motif code in version 1.1. The data storage backend (file-io, "
-"sql) was split out in the course of version 1.5"
+"sql) was split out in the course of version 1.5."
 msgstr ""
 "תוכן SRC/engine והספריות הכלולת. המנוע פוצל מקוד motif בגרסה 1.1. שרת אחסון "
 "הנתונים (file-io, sql) פוצל במהלך יצירת גרסה 1.5"
@@ -2506,13 +2536,21 @@ msgstr ""
 "(גרסה 1.6 ומעלה)"
 
 #: sizing.phtml:342
+#, fuzzy
+#| msgid ""
+#| "Contents of the src/register directory (version 1.6 and earlier) or src/"
+#| "register/register-core (version 1.7 and later). The register was split "
+#| "out as a separate component from the motif code in version 1.1. As can be "
+#| "seen from the stats, the register code has been fairly stable. At version "
+#| "1.7 and later, this cell shows a second count: the number of lines of "
+#| "code in src/register/register-gnome (previously counted as part of gnome)"
 msgid ""
 "Contents of the src/register directory (version 1.6 and earlier) or src/"
 "register/register-core (version 1.7 and later). The register was split out "
 "as a separate component from the motif code in version 1.1. As can be seen "
 "from the stats, the register code has been fairly stable. At version 1.7 and "
 "later, this cell shows a second count: the number of lines of code in src/"
-"register/register-gnome (previously counted as part of gnome)"
+"register/register-gnome (previously counted as part of gnome)."
 msgstr ""
 "תוכן ספריית src/register (גרסה 1.6 ומעלה) או src/register/register-core "
 "(גרסה 1.7 ואילך). היומן פוצל כמרכיב נפרד מקוד הנושא בגרסה 1.1. כפי שניתן "
@@ -2669,44 +2707,3 @@ msgid ""
 msgstr ""
 "נראה שהדפדפן אינו תומךב־iframes. לצפייה בעמוד המבוקש בחלון נפרד, נא <a href="
 "\"%s\" target=\"_blank\">להקיש כאן</a>."
-
-#, fuzzy, php-format
-#~ msgid "%s | GnuCash"
-#~ msgstr "עבור גנוקאש %s"
-
-#~ msgid "Dave Gilbert's User Guide (Pdf)"
-#~ msgstr "מדריך למשתמש של דייב גילברט (Pdf)"
-
-#, fuzzy
-#~ msgid "GnuCash mailing lists"
-#~ msgstr "רשימות דיוור"
-
-#, fuzzy
-#~ msgid "GnuCash wiki"
-#~ msgstr "חדשות גנוקאש"
-
-#, fuzzy
-#~ msgid "IRC channel"
-#~ msgstr "ערוץ"
-
-#~ msgid "Joe Mack's Tutorial"
-#~ msgstr "ערכת הלימוד של ג'ו מאק"
-
-#, fuzzy
-#~ msgid "Mailing lists"
-#~ msgstr "רשימות דיוור"
-
-#~ msgid "Source"
-#~ msgstr "מקור"
-
-#, fuzzy
-#~ msgid "donation"
-#~ msgstr "תרומות"
-
-#, fuzzy
-#~ msgid "localizing"
-#~ msgstr "הַמְקָמָה"
-
-#, fuzzy
-#~ msgid "released documentation"
-#~ msgstr "עיין בתיעוד באופן מקוון"

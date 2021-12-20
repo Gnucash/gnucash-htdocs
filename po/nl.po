@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: nl\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2021-12-19 04:04+0100\n"
+"POT-Creation-Date: 2021-12-21 00:25+0100\n"
 "PO-Revision-Date: 2021-03-25 15:29+0000\n"
 "Last-Translator: Geert Janssens <info@kobaltwit.be>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/gnucash/website/nl/"
@@ -1054,8 +1054,8 @@ msgstr ""
 msgid "Installers"
 msgstr "Installatieprogramma's"
 
-#: download.phtml:24 download.phtml:25 download.phtml:68 download.phtml:69
-#: download.phtml:84 download.phtml:85 download.phtml:98 download.phtml:104
+#: download.phtml:24 download.phtml:25 download.phtml:71 download.phtml:72
+#: download.phtml:87 download.phtml:88 download.phtml:101 download.phtml:107
 #, php-format
 msgid "GnuCash %s for"
 msgstr "GnuCash %s voor"
@@ -1073,7 +1073,13 @@ msgstr ""
 "om de <span class=\"gnucash\">GnuCash</span>-versie te gebruiken die met uw "
 "distributie wordt meegeleverd."
 
-#: download.phtml:30
+#. Translators: %s is the link to repology.org
+#: download.phtml:31
+#, php-format
+msgid "At %s you can compare which distribution which version ships."
+msgstr ""
+
+#: download.phtml:33
 msgid ""
 "Below are ways to install <span class=\"gnucash\">GnuCash</span> on some of "
 "the more popular distributions:"
@@ -1081,7 +1087,7 @@ msgstr ""
 "Hieronder wordt beschreven hoe <span class=\"gnucash\">GnuCash</span> kan "
 "worden geïnstalleerd op enkele van de populairste distributies:"
 
-#: download.phtml:33
+#: download.phtml:36
 msgid ""
 "Fedora users can install <span class=\"gnucash\">GnuCash</span> through "
 "System->Administration->Add/Remove Software (Gnome) or Applications->System-"
@@ -1091,7 +1097,7 @@ msgstr ""
 "installeren via menukeuze Systeem‣Beheer‣Software toevoegen/verwijderen "
 "(Gnome) of Programma's‣Systeem‣Softwarebeheer (KDE)."
 
-#: download.phtml:34
+#: download.phtml:37
 msgid ""
 "Mandriva users can install <span class=\"gnucash\">GnuCash</span> through "
 "the Software Management in the Mandriva Linux Control Center."
@@ -1099,11 +1105,11 @@ msgstr ""
 "Gebruikers van Mandriva kunnen <span class=\"gnucash\">GnuCash</span> "
 "installeren via Softwarebeheer in het Mandriva Controlecentrum."
 
-#: download.phtml:35
+#: download.phtml:38
 msgid "Epel's wiki page"
 msgstr "Epel wiki-pagina"
 
-#: download.phtml:35
+#: download.phtml:38
 msgid ""
 "Redhat and CentOS don't have <span class=\"gnucash\">GnuCash</span> in their "
 "repositories by default. It can be installed however from the third-party "
@@ -1115,7 +1121,7 @@ msgstr ""
 "vanuit de externe Epel-pakketbron. Meer informatie over het inschakelen van "
 "deze aanvullende pakketbron treft u aan op de"
 
-#: download.phtml:36
+#: download.phtml:39
 msgid ""
 "Solus users can install <span class=\"gnucash\">GnuCash</span> through the "
 "Software Center (Office Software -> Financial Software -> gnucash)."
@@ -1124,7 +1130,7 @@ msgstr ""
 "installeren via het SoftwareCenter (Kantoor Software -> Financiële software -"
 "> gnucash)."
 
-#: download.phtml:37
+#: download.phtml:40
 msgid ""
 "Ubuntu users can install <span class=\"gnucash\">GnuCash</span> through the "
 "Software Center. This will install <span class=\"gnucash\">GnuCash</span> "
@@ -1135,11 +1141,11 @@ msgstr ""
 "\"gnucash\">Gnucash</span> worden geïnstalleerd in het Toepassingen-menu "
 "onder de categorie Kantoor."
 
-#: download.phtml:40
+#: download.phtml:43
 msgid "Sandbox"
 msgstr ""
 
-#: download.phtml:43
+#: download.phtml:46
 #, php-format
 msgid ""
 "Flatpaks are bundles, which contain beneath the program also all required "
@@ -1150,20 +1156,20 @@ msgstr ""
 
 #. Translators: %s is the base url of the gnucash wiki, adjust this,
 #. if a localized instance of the Flatpak page exists like "%sDe/Flatpak"
-#: download.phtml:48
+#: download.phtml:51
 #, php-format
 msgid "%sFlatpak"
 msgstr ""
 
-#: download.phtml:48
+#: download.phtml:51
 msgid "Known Issues and other details …"
 msgstr ""
 
-#: download.phtml:52 index.phtml:17
+#: download.phtml:55 index.phtml:17
 msgid "Source code"
 msgstr "Broncode"
 
-#: download.phtml:53
+#: download.phtml:56
 #, fuzzy
 #| msgid ""
 #| "If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> "
@@ -1186,17 +1192,17 @@ msgstr ""
 "span> wiki geeft <a href='https://wiki.gnucash.org/wiki/"
 "Building'>richtlijnen voor verschillende distributies</a>."
 
-#: download.phtml:55 download.phtml:70 download.phtml:86
+#: download.phtml:58 download.phtml:73 download.phtml:89
 #, php-format
 msgid "for GnuCash %s"
 msgstr "voor GnuCash %s"
 
-#: download.phtml:62
+#: download.phtml:65
 #, php-format
 msgid "Unstable/Development release (%s)"
 msgstr "Instabiele (ontwikkel-)versie (%s)"
 
-#: download.phtml:64
+#: download.phtml:67
 msgid ""
 "Unstable (development) releases are for testing purposes only. They contain "
 "the newest features and improvements, but may also contain serious bugs "
@@ -1207,21 +1213,21 @@ msgstr ""
 "nog ernstige programmeerfouten die uw gegevens onherstelbaar kunnen "
 "beschadigen. Installeer deze versies niet voor dagelijks gebruik."
 
-#: download.phtml:65
+#: download.phtml:68
 #, php-format
 msgid ""
-"The latest unstable release of <span class=\"gnucash\">GnuCash</span> is "
-"%s. Choose the download for your operating system below."
+"The latest unstable release of <span class=\"gnucash\">GnuCash</span> is %s. "
+"Choose the download for your operating system below."
 msgstr ""
 "De meest actuele instabiele <span class=\"gnucash\">GnuCash</span>-versie is "
 "%s. Kies de download voor uw besturingssysteem hieronder."
 
-#: download.phtml:78
+#: download.phtml:81
 #, php-format
 msgid "Old Stable release (%s)"
 msgstr "Oude stabiele uitgave (%s)"
 
-#: download.phtml:80
+#: download.phtml:83
 msgid ""
 "This old stable release is the final version of the previous stable series. "
 "It's available for users who aren't ready for a major upgrade but want to "
@@ -1232,38 +1238,38 @@ msgstr ""
 "belangrijke upgrade, maar die wel graag de laatste bugfixes in de oude reeks "
 "willen hebben."
 
-#: download.phtml:81
+#: download.phtml:84
 #, php-format
 msgid ""
-"The last old stable release of <span class=\"gnucash\">GnuCash</span> is "
-"%s. Choose the download for your operating system below."
+"The last old stable release of <span class=\"gnucash\">GnuCash</span> is %s. "
+"Choose the download for your operating system below."
 msgstr ""
 "De laatste oude stabiele <span class=\"gnucash\">GnuCash</span>-uitgave is "
 "versie %s. Kies de download voor uw besturingssysteem hieronder."
 
-#: download.phtml:94
+#: download.phtml:97
 msgid "Latest versions for historical operating systems"
 msgstr "Recentste versies voor historische besturingssystemen"
 
-#: download.phtml:96
+#: download.phtml:99
 msgid "This versions are really old. Do not expect any support."
 msgstr "Deze versies zijn heel oud. Verwacht geen verdere ondersteuning."
 
-#: download.phtml:109
+#: download.phtml:112
 msgid "Other"
 msgstr "Overige"
 
-#: download.phtml:113
+#: download.phtml:116
 #, php-format
 msgid "View all GnuCash %s downloads (stable)"
 msgstr "Alle GnuCash %s downloads bekijken (stabiel)"
 
-#: download.phtml:118
+#: download.phtml:121
 #, php-format
 msgid "View all GnuCash %s downloads (unstable)"
 msgstr "Alle GnuCash %s downloads bekijken (instabiel)"
 
-#: download.phtml:121
+#: download.phtml:124
 msgid "View all GnuCash downloads"
 msgstr "Alle GnuCash downloads bekijken"
 
@@ -1275,11 +1281,11 @@ msgstr "Storingsmeldingen server &amp; e-mail naar:"
 msgid "Translation problems? Contact:"
 msgstr "Vertaalproblemen? Meld het op:"
 
-#: externals/global_params.php:85 externals/header.phtml:144
+#: externals/global_params.php:90 externals/header.phtml:144
 msgid "Free Accounting Software"
 msgstr "Vrije boekhoudsoftware"
 
-#: externals/global_params.php:86
+#: externals/global_params.php:91
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is personal and small-business "
 "financial-accounting software, freely licensed under the <a href=\"https://"
@@ -1357,7 +1363,7 @@ msgstr "Veelgestelde vragen"
 msgid "Wiki"
 msgstr "Wiki"
 
-#: externals/menu.phtml:33 index.phtml:54
+#: externals/menu.phtml:33 index.phtml:59
 msgid "Mailing Lists"
 msgstr "Mailinglijsten"
 
@@ -1550,7 +1556,7 @@ msgid "Many options to <b>customize</b> the appearance and the display style"
 msgstr ""
 "Veel opties om het uiterlijk en de weergavestijl <b>zelf aan te passen</b>"
 
-#: features.phtml:69 index.phtml:71
+#: features.phtml:69 index.phtml:76
 msgid "Scheduled Transactions"
 msgstr "Vaste journaalposten"
 
@@ -1575,7 +1581,7 @@ msgstr ""
 "stellen (zonder deze te annuleren) of juist vóór de eerder ingeplande datum "
 "uit te voeren."
 
-#: features.phtml:82 index.phtml:69
+#: features.phtml:82 index.phtml:74
 msgid "Reports, Graphs"
 msgstr "Rapporten en grafieken"
 
@@ -1937,18 +1943,18 @@ msgstr "GnuCash %s downloaden"
 msgid "Via distribution"
 msgstr "Via distributie"
 
-#: index.phtml:26
+#: index.phtml:25
 #, fuzzy
 #| msgid "More downloads (Source, Development …)"
 msgid "More downloads (Source code, Development …)"
 msgstr "Overige downloads (broncode, ontwikkelversies …)"
 
-#: index.phtml:33
+#: index.phtml:32
 #, php-format
 msgid "Version %s is the last version for %s and %s and earlier."
 msgstr ""
 
-#: index.phtml:36
+#: index.phtml:35
 #, php-format
 msgid ""
 "Version %s is the last version for Windows XP/Vista and MacOS X 10.8 and "
@@ -1957,7 +1963,7 @@ msgstr ""
 "Versie %s is de laatste versie voor Windows XP/Vista en MacOS X 10.8 en "
 "ouder, dus de laatste versie die op PowerPC Macs werkt."
 
-#: index.phtml:45
+#: index.phtml:44
 msgid ""
 "Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash"
 "\">GnuCash</span> allows you to track bank accounts, stocks, income and "
@@ -1971,11 +1977,30 @@ msgstr ""
 "als een dagboek, maar gestoeld op boekhoudkundige principes om te zorgen "
 "voor een sluitende boekhouding en accurate rapporten."
 
+#. Translators: %s is the link to https://wiki.gnucash.org/wiki/Contributing_to_GnuCash
+#: index.phtml:46
+#, php-format
+msgid ""
+"GnuCash is developed, maintained, documented, and translated entirely by "
+"volunteers. Want to help out? We have %s."
+msgstr ""
+
+#. Translators: This is the label of the Contributing… wiki link
+#: index.phtml:48
+msgid "some suggestions"
+msgstr ""
+
+#. Translators: %s is the link to weblate
 #: index.phtml:50
+#, php-format
+msgid "Please help translate GnuCash into your language at %s."
+msgstr ""
+
+#: index.phtml:55
 msgid "Need Help?"
 msgstr "Hulp Nodig ?"
 
-#: index.phtml:53
+#: index.phtml:58
 msgid ""
 "Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? "
 "Try the"
@@ -1983,7 +2008,7 @@ msgstr ""
 "Op zoek naar iemand om te contacteren over <span class=\"gnucash\">GnuCash</"
 "span> ? Probeer de"
 
-#: index.phtml:55
+#: index.phtml:60
 msgid ""
 ", which are public, email-based discussion groups where you can ask and "
 "answer <span class=\"gnucash\">GnuCash</span> questions to other users."
@@ -1992,49 +2017,49 @@ msgstr ""
 "class=\"gnucash\">GnuCash</span> vragen kan stellen aan en beantwoorden van "
 "andere gebruikers."
 
-#: index.phtml:61
+#: index.phtml:66
 msgid "Feature Highlights"
 msgstr "Belangrijkste functies"
 
-#: index.phtml:66
+#: index.phtml:71
 msgid "Double-Entry Accounting"
 msgstr "Dubbel boekhouden"
 
-#: index.phtml:67
+#: index.phtml:72
 msgid "Stock/Bond/Mutual Fund Accounts"
 msgstr "Ondersteunt aandelen, obligaties en beleggingsfondsen"
 
-#: index.phtml:68
+#: index.phtml:73
 msgid "Small-Business Accounting"
 msgstr "Functies voor kleine ondernemingen"
 
-#: index.phtml:70
+#: index.phtml:75
 msgid "QIF/OFX/HBCI Import, Transaction Matching"
 msgstr ""
 "Import vanuit QIF-bestanden of Online bankieren (OFX/HCBI), herkenning van "
 "bestaande boekingen"
 
-#: index.phtml:72
+#: index.phtml:77
 msgid "Financial Calculations"
 msgstr "Financiële berekeningen"
 
-#: index.phtml:74
+#: index.phtml:79
 msgid "<b>Discover more …</b>"
 msgstr "<b>Ontdek meer …</b>"
 
-#: index.phtml:78
+#: index.phtml:83
 #, php-format
 msgid "GnuCash %s Released"
 msgstr "GnuCash %s uitgegeven"
 
-#: index.phtml:79
+#: index.phtml:84
 #, php-format
 msgid ""
 "We've released GnuCash %s with many bugfixes and improvements including some "
 "%s!"
 msgstr ""
 
-#: index.phtml:80
+#: index.phtml:85
 msgid "great new features"
 msgstr "geweldige, nieuwe functies"
 
@@ -2386,8 +2411,8 @@ msgstr ""
 msgid ""
 "Given that we have about 400 outstanding bugs in bugzilla, that works out to "
 "about one bug per thousand lines of code, or one bug per 50 pages of "
-"printout. This bug count is actually not atypical for software projects; "
-"it is near the norm."
+"printout. This bug count is actually not atypical for software projects; it "
+"is near the norm."
 msgstr ""
 "Gezien dat we ongeveer 400 open bugs hebben in bugzilla, komt dit uit op "
 "ongeveer één bug per duizend regels code, of één bug per 50 afgedrukte "
@@ -2423,11 +2448,11 @@ msgid ""
 "even that <code>wc</code> is a good way of counting KLOC's. Much better "
 "measures are complexity metrics, which, for example, count the number and "
 "size of if-then-else blocks, or the number and size of all blocks, or the "
-"number of math operators per statement. Maybe someday we'll run one of "
-"those tools on this code. For now, this is what we have. On the other hand, "
-"we've attempted to count only those files that contain human-edited code, "
-"that is, files that are directly edited by humans. The point of doing this "
-"is to avoid artificially inflating the KLOC counts by counting automatically "
+"number of math operators per statement. Maybe someday we'll run one of those "
+"tools on this code. For now, this is what we have. On the other hand, we've "
+"attempted to count only those files that contain human-edited code, that is, "
+"files that are directly edited by humans. The point of doing this is to "
+"avoid artificially inflating the KLOC counts by counting automatically "
 "generated code (which is why the glade files are not counted: they are large "
 "and automatically generated)."
 msgstr ""
@@ -2707,689 +2732,3 @@ msgstr ""
 "Jouw browser lijkt geen iframes te ondersteunen. Om de gevraagde pagina in "
 "een apart venster te bekijken, kan je <a href=\"%s\" target=\"_new\">hier "
 "klikken</a>."
-
-#, fuzzy, php-format
-#~| msgid "for GnuCash %s"
-#~ msgid "%s | GnuCash"
-#~ msgstr "voor GnuCash %s"
-
-#~ msgid "(${size} bytes)"
-#~ msgstr "(${size} bytes)"
-
-#~ msgid ""
-#~ "(Retrieves a certain document which contains specified\n"
-#~ "<code>Message-Id:</code>)"
-#~ msgstr ""
-#~ "(Vraagt een bepaald bericht op dat de opgegeven\n"
-#~ "<code>Message-Id:</code> bevat)"
-
-#~ msgid ""
-#~ "(Retrieves all documents which contain <code>GNU Emacs</code>\n"
-#~ "in a <code>Subject:</code> field)"
-#~ msgstr ""
-#~ "(Vraagt alle berichten op die <code>GNU Emacs</code>\n"
-#~ "bevatten in een <code>Subject:</code>-veld)"
-
-#~ msgid ""
-#~ "(Retrieves all documents which contain <code>Linux</code>\n"
-#~ "in a <code>Subject:</code> field)"
-#~ msgstr ""
-#~ "(Vraagt alle berichten op die <code>Linux</code>\n"
-#~ "bevatten in een <code>Subject:</code>-veld)"
-
-#~ msgid ""
-#~ "(Retrieves all documents which contain <code>foo@bar.jp</code>\n"
-#~ "in a <code>From:</code> field)"
-#~ msgstr ""
-#~ "(Vraagt alle berichten op die <code>foo@bar.jp</code>\n"
-#~ "bevatten in een <code>From:</code>-veld)"
-
-#~ msgid "(terms which begin with <code>inter</code>)"
-#~ msgstr "(termen die met <code>inter</code> beginnen)"
-
-#~ msgid "(terms which contain <code>text</code>)"
-#~ msgstr "(termen die <code>text</code> bevatten)"
-
-#~ msgid "(terms which terminated with <code>net</code>)"
-#~ msgstr "(termen die op <code>net</code> eindigen)"
-
-#~ msgid ""
-#~ "<b>NOTE:</b> the information presented in these sources may or may not be "
-#~ "updated to the most recent version of <span class=\"gnucash\">GnuCash</"
-#~ "span>. If you are interested in doing development work on these "
-#~ "documents, you should contact the original authors."
-#~ msgstr ""
-#~ "<b>OPMERKING:</b> deze informatiebronnen zijn niet noodzakelijkerwijs "
-#~ "aangepast aan de actuele versie van <span class=\"gnucash\">GnuCash</"
-#~ "span>. Als je geïnteresseerd bent om aan deze documenten te werken, neem "
-#~ "dan contact op met de oorspronkelijke auteurs."
-
-#~ msgid ""
-#~ "A new help subsystem that focuses on how to do tasks is now available, in "
-#~ "addition to a Tutorial and Concepts guide that gives the user background "
-#~ "information on accounting principles and how they are reflected in "
-#~ "GnuCash."
-#~ msgstr ""
-#~ "Er is nu een nieuw, taakgericht hulp systeem beschikbaar. Daarnaast is er "
-#~ "een Conceptengids die de gebruiker achtergrond informatie biedt over "
-#~ "boekhoudkundige principes en hoe die in GnuCash zijn toegepast."
-
-#~ msgid "AND query"
-#~ msgstr "EN-zoekopdracht"
-
-#~ msgid "About / News"
-#~ msgstr "Algemeen/Nieuws"
-
-#~ msgid "Add keywords"
-#~ msgstr "Voeg termen toe"
-
-#~ msgid "Author"
-#~ msgstr "Auteur"
-
-#~ msgid ""
-#~ "Check a spelling of your keyword<br>\n"
-#~ "Namazu can't find anything with wrong spelling."
-#~ msgstr ""
-#~ "Controleer de spelling van je term.<br>\n"
-#~ "Namazu kan niets vinden met verkeerde spelling."
-
-#~ msgid "Continent"
-#~ msgstr "Continent"
-
-#~ msgid "Customers, Vendors, Jobs, <br>Invoices, A/P, A/R"
-#~ msgstr "Klanten, verkopers, opdrachten, <br>Facturen, Lopende rekening"
-
-#~ msgid "Date"
-#~ msgstr "Datum"
-
-#~ msgid "Dave Gilbert's User Guide (Pdf)"
-#~ msgstr ""
-#~ "Gebruikershandleiding (Engelstalige PDF, geschreven door Dave Gilbert)"
-
-#~ msgid "Description"
-#~ msgstr "Omschrijving"
-
-#~ msgid "Deutsch"
-#~ msgstr "Duits"
-
-#~ msgid "Display"
-#~ msgstr "Weergeven"
-
-#~ msgid "Documentation Development"
-#~ msgstr "Documentatie-ontwikkeling"
-
-#~ msgid "Documentation Project"
-#~ msgstr "Documentatieproject"
-
-#~ msgid "Doxygen Developer Documentation"
-#~ msgstr "Doxigen ontwikkelaarsdocumentatie"
-
-#~ msgid "Espagnol"
-#~ msgstr "Spaans"
-
-#~ msgid "European Mirror"
-#~ msgstr "Alternatieve bron Europa"
-
-#~ msgid ""
-#~ "Everything you need concerning GnuCash documentation should be here, if "
-#~ "you notice something missing, email <a href='mailto:gnucash-devel@gnucash."
-#~ "org'>gnucash-devel</a> and we will add it."
-#~ msgstr ""
-#~ "Alles wat je nodig hebt betreffende de GnuCash documentatie zou hier "
-#~ "moeten zijn. Als er volgens jou iets ontbreekt, stuur een mail naar <a "
-#~ "href='mailto:gnucash-devel@gnucash.org'>gnucash-devel</a> en we zullen "
-#~ "het toevoegen."
-
-#~ msgid "Field-specified searching"
-#~ msgstr "Zoeken op de inhoud van specifieke velden"
-
-#, fuzzy
-#~ msgid "Free Acconting Software"
-#~ msgstr "Vrije boekhouding software"
-
-#~ msgid "General Ledger"
-#~ msgstr "Algemeen grootboek"
-
-#~ msgid "GnuCash Documentation"
-#~ msgstr "GnuCash-documentatie"
-
-#~ msgid "GnuCash Documentation Project"
-#~ msgstr "GnuCash documentatieproject"
-
-#~ msgid "GnuCash for Business Users"
-#~ msgstr "GnuCash voor kleine-ondernemingsgebruikers (Engelstalig)"
-
-#~ msgid ""
-#~ "GnuCash has an integrated reporting and graphing module, and comes "
-#~ "complete with a full suite of standard and customizeable reports, such as "
-#~ "Balance Sheet, Profit &amp; Loss, Portfolio Valuation, and many others."
-#~ msgstr ""
-#~ "GnuCash heeft een geïntegreerde module voor rapporten en grafieken en "
-#~ "bevat een volledige set standaard en configureerbare rapporten zoals "
-#~ "Balans, Winst &amp; Verlies, Portfolio rapporten en vele andere."
-
-#, fuzzy
-#~| msgid "Mailing Lists"
-#~ msgid "GnuCash mailing lists"
-#~ msgstr "Mailinglijsten"
-
-#, fuzzy
-#~ msgid "GnuCash v%s (old stable release)"
-#~ msgstr "Alle GnuCash %s downloads bekijken (stabiel)"
-
-#, fuzzy
-#~| msgid "GnuCash News"
-#~ msgid "GnuCash wiki"
-#~ msgstr "GnuCash Nieuws"
-
-#~ msgid "Grouping"
-#~ msgstr "Groeperen van zoekopdrachten"
-
-#~ msgid ""
-#~ "If you gained no results or too few results, you can add one\n"
-#~ "or more related keywords with <code\n"
-#~ "class=\"operator\">or</code> operator. You should get more results.\n"
-#~ "e.g.,"
-#~ msgstr ""
-#~ "Als je geen (of te weinig) resultaten krijgt, kan je proberen om één\n"
-#~ "of meer gerelateerde termen toe te voegen, gescheiden door \n"
-#~ "de <code class=\"operator\">or</code> operator. Vaak krijg je dan meer "
-#~ "resultaten.\n"
-#~ "Voorbeeld: "
-
-#~ msgid ""
-#~ "If you gained no results or too few results, you can try\n"
-#~ "substring matching."
-#~ msgstr ""
-#~ "Als je geen of te weinig resultaten hebt, kun je proberen\n"
-#~ "te zoeken op een woordgedeelte."
-
-#~ msgid ""
-#~ "If you gained too many results, you can add one or more\n"
-#~ "related keywords with <code class=\"operator\">and</code>\n"
-#~ "operator. It makes your search more limited. e.g.,"
-#~ msgstr ""
-#~ "Als je te veel resultaten krijgt, kan je één of meer gerelateerde\n"
-#~ "termen toevoegen met de <code class=\"operator\">and</code> operator.\n"
-#~ "Hierdoor zoek je nóg gerichter.\n"
-#~ "Voorbeeld: "
-
-#~ msgid ""
-#~ "If you have trouble with searching, you can check the following tips."
-#~ msgstr ""
-#~ "Als je bij het zoeken tegen problemen aanloopt, helpen de volgende tips "
-#~ "je mogelijk verder."
-
-#~ msgid ""
-#~ "If you want to use <code class=\"operator\">and</code>,\n"
-#~ "<code class=\"operator\">or</code> or <code\n"
-#~ "class=\"operator\">not</code> as ordinary keywords<br>\n"
-#~ "You can surround them respectively with double quotes like <code\n"
-#~ "class=\"operator\">\"...\"</code> or braces like <code\n"
-#~ "class=\"operator\">{...}</code>."
-#~ msgstr ""
-#~ "Om de woorden <code class=\"operator\">and</code>, <code class=\"operator"
-#~ "\">or</code> of <code class=\"operator\">not</code>\n"
-#~ "als gewone zoekterm te gebruiken<br>\n"
-#~ "moeten ze tussen dubbele aanhalingstekens (<code class=\"operator\">\"..."
-#~ "\"</code>) of\n"
-#~ "accolades (<code class=\"operator\">{...}</code>) geplaatst worden."
-
-#~ msgid "Improved Import Transaction Matching"
-#~ msgstr "Verbeterde transactie vergelijking bij import"
-
-#~ msgid ""
-#~ "In any queries, Namazu ignores case distinctions of\n"
-#~ "alphabet characters; i.e. Namazu does\n"
-#~ "case-insensitive pattern matching."
-#~ msgstr ""
-#~ "In zoekopdrachten let Namazu niet op het onderscheid tussen\n"
-#~ "hoofdletters en kleine letters. Anders gezegd: Namazu werkt\n"
-#~ "op basis van hoofdletter-ongevoelige patroonherkenning."
-
-#~ msgid "Info and development"
-#~ msgstr "Informatie en ontwikkeling"
-
-#~ msgid "Inside matching"
-#~ msgstr "Zoeken binnen een woord"
-
-#~ msgid ""
-#~ "Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> QIF files can be imported, "
-#~ "and are automatically merged to eliminate duplicate transactions."
-#~ msgstr ""
-#~ "Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> QIF bestanden kunnen "
-#~ "worden geïmporteerd waarbij bestaande transacties automatisch worden "
-#~ "samengevoegd om dubbele transacties te elimineren."
-
-#~ msgid ""
-#~ "It's a defect of Namazu. Precision of phrase searching is\n"
-#~ "not 100%, so it cause wrong results occasionally."
-#~ msgstr ""
-#~ "Dit is een probleem in Namazu. Zoeken op exacte tekst is\n"
-#~ "niet 100% accuraat en leidt soms tot verkeerde resultaten."
-
-#~ msgid ""
-#~ "Japanese phrases are automatically segmented into\n"
-#~ "morphemes and are handled as <a\n"
-#~ "href=\"#query-phrase\">phrase searching</a>. This process occasionally\n"
-#~ "causes invalid segmentation."
-#~ msgstr ""
-#~ "Japanse zinnen worden automatisch opgesplitst in morfemen\n"
-#~ "die als <a href=\"#query-phrase\">exacte tekst</a> wordt opgezocht.\n"
-#~ "Soms leidt dit proces tot segmentatiefouten."
-
-#~ msgid "Joe Mack's Tutorial"
-#~ msgstr "Zelfstudie-gids (Engelstalig, geschreven door Joe Mack)"
-
-#~ msgid ""
-#~ "Letters, numbers or parts of symbols (duplicated in\n"
-#~ "ASCII) which are defined in JIS X 0208 (Japanese\n"
-#~ "Industrial Standards) are handled as ASCII characters."
-#~ msgstr ""
-#~ "Letters, getallen of delen van symbolen (ook te vinden in\n"
-#~ "ASCII) die in JIS X 0208 (Japanse Industriële Standaarden)\n"
-#~ "zijn gedefinieerd, worden als ASCII karakters behandeld."
-
-#~ msgid "Lists to Search"
-#~ msgstr "Te doorzoeken lijsten"
-
-#~ msgid "Mailing List Search"
-#~ msgstr "Zoeken in mailinglijsten"
-
-#, fuzzy
-#~| msgid "Mailing Lists"
-#~ msgid "Mailing lists"
-#~ msgstr "Mailinglijsten"
-
-#~ msgid ""
-#~ "Multiple accounts can be displayed in one register window at the same "
-#~ "time. This can ease the trouble of tracking down typing/entry errors. It "
-#~ "also provides a convenient way of viewing a portfolio of many stocks, by "
-#~ "showing all transactions in that portfolio."
-#~ msgstr ""
-#~ "Meerdere grootboekrekeningen kunnen samen weergegeven worden in één "
-#~ "dagboek venster. Dit kan helpen bij het omslachtige opsporen van tik- of "
-#~ "ingavefouten. Het biedt ook een handige manier om een portfolio van "
-#~ "meerdere aandelen te bekijken door alle transacties in die portfolio te "
-#~ "tonen."
-
-#~ msgid "NOT query"
-#~ msgstr "NIET-zoekopdracht"
-
-#~ msgid ""
-#~ "Namazu can handle a term which contains symbols like\n"
-#~ "<code>TCP/IP</code>. Since this method of handling isn't complete,\n"
-#~ "you can also describe the term as <code>TCP and IP</code> instead of\n"
-#~ "<code>TCP/IP</code>, but it may cause noisy results."
-#~ msgstr ""
-#~ "Namazu kan overweg met een term die symbolen bevat zoals\n"
-#~ "<code>TCP/IP</code>. Omdat dit niet altijd alle resultaten oplevert\n"
-#~ "is het tevens mogelijk om te zoeken op <code>TCP and IP</code>, maar\n"
-#~ "dit kan ook veel ruis opleveren."
-
-#~ msgid "Neil Williams GnuCash documentation"
-#~ msgstr "GnuCash documentatie door Neil Williams (Engelstalig)"
-
-#~ msgid "News Feed"
-#~ msgstr "Nieuwsfeed"
-
-#~ msgid ""
-#~ "Note that GnuCash for Android is not a port of the GnuCash program to "
-#~ "Android."
-#~ msgstr ""
-#~ "Merk op dat GnuCash voor Android geen port nar Android is van het GnuCash "
-#~ "programma."
-
-#~ msgid "Notes"
-#~ msgstr "Toelichting"
-
-#~ msgid "OR query"
-#~ msgstr "OF-zoekopdracht"
-
-#~ msgid "Online"
-#~ msgstr "Online"
-
-#~ msgid "Phrase searching"
-#~ msgstr "Zoeken naar exacte tekst"
-
-#~ msgid "Prefix matching"
-#~ msgstr "Zoeken naar woordbegin"
-
-#~ msgid "QIF Import"
-#~ msgstr "QIF import"
-
-#~ msgid "Query"
-#~ msgstr "Zoekopdracht"
-
-#~ msgid "Regular expressions"
-#~ msgstr "Reguliere expressies"
-
-#~ msgid "Russian"
-#~ msgstr "Russisch"
-
-#~ msgid "Search"
-#~ msgstr "Zoeken"
-
-#~ msgid "Search!"
-#~ msgstr "Zoek!"
-
-#~ msgid "Server &amp; email outage reports to: "
-#~ msgstr "Storingsmeldingen server &amp; e-mail naar: "
-
-#~ msgid "Single term query"
-#~ msgstr "Zoekopdracht met één woord"
-
-#~ msgid "Sort"
-#~ msgstr "Sorteren"
-
-#~ msgid "Source"
-#~ msgstr "Broncode"
-
-#~ msgid "Substring matching"
-#~ msgstr "Zoeken naar woordgedeelte"
-
-#~ msgid ""
-#~ "Substring matching and field-specified searching takes\n"
-#~ "more time than other methods."
-#~ msgstr ""
-#~ "Het zoeken op woordgedeeltes en op de inhoud van\n"
-#~ "specifieke velden duurt langer dan de andere methodes."
-
-#~ msgid "Subversion Access"
-#~ msgstr "Toegang tot Subversion"
-
-#~ msgid "Suffix matching"
-#~ msgstr "Zoeken naar woordeinde"
-
-#~ msgid ""
-#~ "The GnuCash team recommends the GnuCash for Android app. This app allows "
-#~ "you to keep track of your financial transactions on the go for later "
-#~ "import into the desktop version of GnuCash."
-#~ msgstr ""
-#~ "GnuCash beveelt de GnuCash voor Android app aan. Deze app helpt je om je "
-#~ "financiële transacties onderweg bij te houden om ze later in de desktop "
-#~ "versie van GnuCash te importeren."
-
-#~ msgid ""
-#~ "The checkbook-style register provides a custom, convenient and familiar "
-#~ "interface to entering financial transactions. The register supports "
-#~ "common checking and credit-card transactions, as well as income, stock "
-#~ "and currency transactions."
-#~ msgstr ""
-#~ "Het dagboek biedt een aangepaste, comfortabele en vertrouwde interface om "
-#~ "financiële transacties in te voeren. Het dagboek ondersteunt zowel gewone "
-#~ "geld- en kredietkaarttransacties als inkomsten-, aandelen- en "
-#~ "wisselkoerstransacties."
-
-#~ msgid ""
-#~ "The development of OFX and HBCI support has also resulted in an improved "
-#~ "transaction matching system that more accurately recognizes duplicate "
-#~ "transactions during file import."
-#~ msgstr ""
-#~ "De ontwikkeling van de OFX en HBCI ondersteuning heeft ook geleid tot een "
-#~ "verbeterd transactievergelijkingssysteem. Dit systeem is beter in het "
-#~ "juist herkennen van dubbele transacties tijdens het importeren van "
-#~ "bestanden."
-
-#, fuzzy
-#~ msgid ""
-#~ "The document requested is not available in the requested language (tried ["
-#~ msgstr ""
-#~ "Het gevraagde document is niet beschikbaar in de gekozen taal. In plaats "
-#~ "hiervan zal de Engelse versie getoond worden."
-
-#~ msgid ""
-#~ "The usual procedure for contributors to GnuCash is to initially submit "
-#~ "patches to the <a href='mailto:gnucash-devel@gnucash.org'>gnucash-devel</"
-#~ "a> mailing list. We will handle getting the patches added into svn until "
-#~ "you are given an account. You can also add the patch to a bug report in "
-#~ "<a href='https://bugzilla.gnome.org/'>bugzilla.gnome.org</a> if you wish."
-#~ msgstr ""
-#~ "De gebruikelijke procedure om te beginnen met bijdragen aan GnuCash te "
-#~ "leveren, is om patches te verzenden naar de <a href='mailto:gnucash-"
-#~ "devel@gnucash.org'>gnucash-devel</a> mailing list. We zullen zorgen dat "
-#~ "de patches in svn worden toegevoegd totdat je een account krijgt. Je kan "
-#~ "de patch ook aan een bug rapport in bugzilla toevoegen als je wil."
-
-#~ msgid "There are three types of searching by substring matching."
-#~ msgstr "Er bestaan drie manieren om toe zoeken op een woordgedeelte."
-
-#~ msgid ""
-#~ "This query specifies only one term for retrieving all of the\n"
-#~ "documents which contain that term, for example:"
-#~ msgstr ""
-#~ "Deze zoekopdracht gebruikt slechts één enkele term om alle\n"
-#~ "berichten op te vragen die deze term bevatten.\n"
-#~ "Voorbeeld:"
-
-#~ msgid ""
-#~ "This query specifies two or more terms for retrieving all\n"
-#~ "documents which contain any one term. Insert the\n"
-#~ "<code class=\"operator\">or</code> operator between the terms,\n"
-#~ "e.g."
-#~ msgstr ""
-#~ "Deze zoekopdracht gebruikt twee of meer termen om alle berichten\n"
-#~ "op te vragen die een van deze termen bevatten.\n"
-#~ "Plaats de <code class=\"operator\">or</code> operator tussen de termen.\n"
-#~ "Voorbeeld: "
-
-#~ msgid ""
-#~ "This query specifies two or more terms for retrieving all of the\n"
-#~ "documents which contain a first term but do not contain the\n"
-#~ "following terms. Insert the <code class=\"operator\">not</code>\n"
-#~ "operator between the terms, for example:"
-#~ msgstr ""
-#~ "Deze zoekopdracht gebruikt twee of meer termen om alle berichten\n"
-#~ "op te vragen die wel de eerste, maar niet de tweede term bevatten.\n"
-#~ "Plaats de <code class=\"operator\">not</code>-operator tussen de termen.\n"
-#~ "Voorbeeld:"
-
-#~ msgid ""
-#~ "This query specifies two or more terms for retrieving all of the\n"
-#~ "documents which contain both terms. Insert the\n"
-#~ "<code class=\"operator\">and</code> operator between the terms, e.g."
-#~ msgstr ""
-#~ "Deze zoekopdracht gebruikt twee of meer termen om alle berichten\n"
-#~ "op te vragen die al deze termen bevatten.\n"
-#~ "Plaats de <code class=\"operator\">and</code> operator tussen de termen.\n"
-#~ "Voorbeeld: "
-
-#~ msgid "This search system is powered by:"
-#~ msgstr "Dit zoeksysteem draait op:"
-
-#~ msgid "Tips on searching"
-#~ msgstr "Zoektips"
-
-#~ msgid ""
-#~ "Translation problems? Contact: <a href=\"mailto:gnucash-devel@gnucash.org"
-#~ "\"><b>gnucash-devel@gnucash.org</b></a>"
-#~ msgstr ""
-#~ "Vertaalproblemen? Meld het op: <a href=\"mailto:gnucash-devel@gnucash.org"
-#~ "\"><b>gnucash-devel@gnucash.org</b></a>"
-
-#~ msgid "Try substring matching"
-#~ msgstr "Probeer te zoeken op woordgedeelte"
-
-#~ msgid "USA Mirror"
-#~ msgstr "Alternatieve bron Amerika"
-
-#~ msgid ""
-#~ "You can group queries by surrounding them by\n"
-#~ "parentheses. The parentheses should be separated by one or\n"
-#~ "more spaces. e.g."
-#~ msgstr ""
-#~ "Het is mogelijk om zoekopdrachten te groeperen door ze tussen haken\n"
-#~ "te plaatsen. De haken moeten gescheiden zijn door één of meer spaties.\n"
-#~ "Voorbeeld: "
-
-#~ msgid ""
-#~ "You can limit your search to specific fields such as\n"
-#~ "<code>Subject:</code>, <code>From:</code>,\n"
-#~ "<code>Message-Id:</code>. This feature is especially convenient for\n"
-#~ "Mail/News documents, for example:"
-#~ msgstr ""
-#~ "Het is mogelijk de zoekopdracht te beperken tot specifieke velden,\n"
-#~ "zoals <code>Subject:</code>, <code>From:</code> of <code>Message-Id:</"
-#~ "code>.\n"
-#~ "Deze functie is vooral handig voor mail- en nieuwsberichten.\n"
-#~ "Voorbeeld:"
-
-#~ msgid ""
-#~ "You can now create recurring transactions, including automatic reminders "
-#~ "when a transaction is due, the ability to postpone a scheduled "
-#~ "transaction without canceling it, and the ability to specify only a "
-#~ "limited number of transactions."
-#~ msgstr ""
-#~ "Je kan nu repetitieve transacties creëren, met automatische "
-#~ "verwittigingen kort voor de volgende transactie wordt aangemaakt, de "
-#~ "mogelijkheid om geplande transacties uit te stellen zonder ze te "
-#~ "annuleren, en de mogelijkheid om het aantal herhalingen te beperken."
-
-#~ msgid ""
-#~ "You can omit the <code class=\"operator\">and</code> operator. Terms "
-#~ "which are\n"
-#~ "separated by one or more spaces are assumed to be an AND query."
-#~ msgstr ""
-#~ "De <code class=\"operator\">and</code>-operator mag ook weggelaten\n"
-#~ "worden; termen met één of meerdere spaties ertussen worden geacht\n"
-#~ "een EN-zoekopdracht te vormen."
-
-#~ msgid ""
-#~ "You can search for a phrase that consists of two or more terms\n"
-#~ "by surrounding them with double quotation marks or braces such as\n"
-#~ "<code class=\"operator\">\"...\"</code> and <code class=\"operator\">{...}"
-#~ "</code>.\n"
-#~ "In Namazu, the precision of phrase searching is not 100%,\n"
-#~ "so wrong results may occasionally occur. Example:"
-#~ msgstr ""
-#~ "Het is mogelijk om naar een exacte tekst van twee of meer termen\n"
-#~ "te zoeken door ze te tussen dubbele aanhalingstekens of accolades\n"
-#~ "te plaatsen, zoals <code class=\"operator\">\"...\"</code> en <code class="
-#~ "\"operator\">{...}</code>.\n"
-#~ "NB: In Namazu is het zoeken naar tekstfragmenten niet 100% accuraat,\n"
-#~ "dus er kunnen soms verkeerde resultaten gevonden worden.\n"
-#~ "Voorbeeld:"
-
-#~ msgid ""
-#~ "You can specify <code class=\"example\">*tex*</code> to\n"
-#~ "search for terms which contain <code>tex</code> (many)."
-#~ msgstr ""
-#~ "Gebruik <code class=\"example\">*tex*</code> om termen te vinden\n"
-#~ "die <code>tex</code> bevatten (veel)."
-
-#~ msgid ""
-#~ "You can specify <code class=\"example\">*tex</code> to\n"
-#~ "search for terms which terminated with <code>tex</code> (e.g.,\n"
-#~ "<code>bibtex</code>,\n"
-#~ "<code>jlatex</code>, <code>latex</code>,\n"
-#~ "<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
-#~ msgstr ""
-#~ "Gebruik <code class=\"example\">*tex</code> om termen te vinden\n"
-#~ "die eindigen op <code>tex</code> (bijvoorbeeld <code>bibtex</code>,\n"
-#~ "<code>jlatex</code>, <code>latex</code>, <code>platex</code>, <code>ptex</"
-#~ "code> of <code>vertex</code>)."
-
-#~ msgid ""
-#~ "You can specify <code class=\"example\">tex*</code> to\n"
-#~ "search for terms which begin with\n"
-#~ "<code>tex</code> (e.g., <code>tex</code>,\n"
-#~ "<code>texi2html</code>,\n"
-#~ "<code>texindex</code>, <code>text</code>)."
-#~ msgstr ""
-#~ "Gebruik <code class=\"example\">tex*</code> om termen te vinden\n"
-#~ "die beginnen met <code>tex</code> (bijvoorbeeld <code>tex</code>,\n"
-#~ "<code>texi2html</code>, <code>texindex</code> of <code>text</code>)."
-
-#~ msgid ""
-#~ "You can use regular expressions for pattern matching. The\n"
-#~ "regular expressions must be surrounded by slashes like <code\n"
-#~ "class=\"operator\">/.../</code>. Namazu uses <a\n"
-#~ "href=\"http://www.ruby-lang.org/\">Ruby</a>'s regular\n"
-#~ "regular expressions engine. It generally offers a <a\n"
-#~ "href=\"http://www.perl.com/\">Perl</a> compatible flavor.\n"
-#~ "e.g.,"
-#~ msgstr ""
-#~ "Je kan reguliere expressies gebruiken om patronen te vinden. De\n"
-#~ "reguliere expressie moet tussen schuine strepen staan, zoals <code\n"
-#~ "class=\"operator\">/.../</code>. Namazu gebruikt de reguliere expressie\n"
-#~ "motor van<a href=\"https://www.ruby-lang.org/\">. Meestal biedt dit een "
-#~ "<a\n"
-#~ "href=\"https://www.perl.com/\">Perl</a> compatible variant.\n"
-#~ "Bv.,\n"
-#~ "\n"
-#~ "Het is mogelijk om naar een reguliere expressie van zoektermen\n"
-#~ "te zoeken door de expressie tussen schuine strepen te plaatsen,\n"
-#~ "zoals <code class=\"operator\">/.../</code>.\n"
-#~ "NB: Namazu gebruikt het reguliere expressieprogramma van \n"
-#~ "<a href=\"https://www.ruby-lang.org/\">Ruby</a>, dat meestal met <a href="
-#~ "\"https://www.perl.com/\">Perl</a> compatibel is.\n"
-#~ "Voorbeeld: "
-
-#~ msgid ""
-#~ "You tried phrase searching but it hit documents which\n"
-#~ "didn't contain your phrase."
-#~ msgstr ""
-#~ "Je hebt gezocht op exacte tekst, maar er zijn resultaten\n"
-#~ "gevonden die deze tekst niet bevatten."
-
-#~ msgid "[How to search]"
-#~ msgstr "[Hulp bij zoeken]"
-
-#~ msgid "by URI in ascending order"
-#~ msgstr "up URI (oplopend)"
-
-#~ msgid "by URI in descending order"
-#~ msgstr "op URI (aflopend)"
-
-#~ msgid "by author in ascending order"
-#~ msgstr "op auteur (oplopend)"
-
-#~ msgid "by author in descending order"
-#~ msgstr "op auteur (aflopend)"
-
-#~ msgid "by date in early order"
-#~ msgstr "op datum (oplopend)"
-
-#~ msgid "by date in late order"
-#~ msgstr "op datum (aflopend)"
-
-#~ msgid "by score"
-#~ msgstr "op score"
-
-#~ msgid "by size in ascending order"
-#~ msgstr "op grootte (oplopend)"
-
-#~ msgid "by size in descending order"
-#~ msgstr "op grootte (aflopend)"
-
-#~ msgid "by title in ascending order"
-#~ msgstr "op titel (oplopend)"
-
-#~ msgid "by title in descending order"
-#~ msgstr "op titel (aflopend)"
-
-#, fuzzy
-#~| msgid "Donations"
-#~ msgid "donation"
-#~ msgstr "Donaties"
-
-#, fuzzy
-#~| msgid "Localization"
-#~ msgid "localizing"
-#~ msgstr "Lokalisatie"
-
-#~ msgid "mirror"
-#~ msgstr "alternatieve bron"
-
-#~ msgid "normal"
-#~ msgstr "normaal"
-
-#, fuzzy
-#~ msgid "released documentation"
-#~ msgstr "Officieuze documentatie"
-
-#~ msgid "score"
-#~ msgstr "score"
-
-#~ msgid "short"
-#~ msgstr "kort"

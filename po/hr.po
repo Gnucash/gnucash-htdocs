@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: GnuCash ht-docs\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2021-12-19 04:04+0100\n"
+"POT-Creation-Date: 2021-12-21 00:25+0100\n"
 "PO-Revision-Date: 2021-03-25 15:29+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/gnucash/website/"
@@ -1110,8 +1110,8 @@ msgstr ""
 msgid "Installers"
 msgstr "Instalacije"
 
-#: download.phtml:24 download.phtml:25 download.phtml:68 download.phtml:69
-#: download.phtml:84 download.phtml:85 download.phtml:98 download.phtml:104
+#: download.phtml:24 download.phtml:25 download.phtml:71 download.phtml:72
+#: download.phtml:87 download.phtml:88 download.phtml:101 download.phtml:107
 #, php-format
 msgid "GnuCash %s for"
 msgstr "GnuCash %s za"
@@ -1128,7 +1128,13 @@ msgstr ""
 "instaliran. Preporučujemo koristiti <span class=\"gnucash\">GnuCash</span> "
 "verziju koja se nalazi u tvojoj distribuciji."
 
-#: download.phtml:30
+#. Translators: %s is the link to repology.org
+#: download.phtml:31
+#, php-format
+msgid "At %s you can compare which distribution which version ships."
+msgstr ""
+
+#: download.phtml:33
 msgid ""
 "Below are ways to install <span class=\"gnucash\">GnuCash</span> on some of "
 "the more popular distributions:"
@@ -1136,7 +1142,7 @@ msgstr ""
 "Način instaliranja <span class=\"gnucash\">GnuCash</span> programa na nekim "
 "popularnijim distribucijama:"
 
-#: download.phtml:33
+#: download.phtml:36
 msgid ""
 "Fedora users can install <span class=\"gnucash\">GnuCash</span> through "
 "System->Administration->Add/Remove Software (Gnome) or Applications->System-"
@@ -1146,7 +1152,7 @@ msgstr ""
 "putem „Sustav → Administracija → Dodaj/Ukloni softver” (Gnome) ili "
 "„Aplikacije → Sustav → Upravljanje softverom” (KDE)."
 
-#: download.phtml:34
+#: download.phtml:37
 msgid ""
 "Mandriva users can install <span class=\"gnucash\">GnuCash</span> through "
 "the Software Management in the Mandriva Linux Control Center."
@@ -1154,11 +1160,11 @@ msgstr ""
 "Mandriva korisnici mogu instalirati <span class=\"gnucash\">GnuCash</span> "
 "putem upravljača softvera u Mandriva Linux kontrolnom centru."
 
-#: download.phtml:35
+#: download.phtml:38
 msgid "Epel's wiki page"
 msgstr "Epel wiki stranica"
 
-#: download.phtml:35
+#: download.phtml:38
 msgid ""
 "Redhat and CentOS don't have <span class=\"gnucash\">GnuCash</span> in their "
 "repositories by default. It can be installed however from the third-party "
@@ -1170,7 +1176,7 @@ msgstr ""
 "spremišta. Za pojedinosti o konfiguriranju ovog spremišta dodatnog softvera "
 "za tvoju postavu, vidi"
 
-#: download.phtml:36
+#: download.phtml:39
 msgid ""
 "Solus users can install <span class=\"gnucash\">GnuCash</span> through the "
 "Software Center (Office Software -> Financial Software -> gnucash)."
@@ -1178,7 +1184,7 @@ msgstr ""
 "Solusa korisnici mogu instalirati <span class=\"gnucash\">GnuCash</span> "
 "putem centra za softver („Uredski softver → Financijski softver → gnucash”)."
 
-#: download.phtml:37
+#: download.phtml:40
 msgid ""
 "Ubuntu users can install <span class=\"gnucash\">GnuCash</span> through the "
 "Software Center. This will install <span class=\"gnucash\">GnuCash</span> "
@@ -1188,11 +1194,11 @@ msgstr ""
 "putem centra za softver. <span class=\"gnucash\">GnuCash</span> će se "
 "instalirati pod kategorijom Office u izborniku Aplikacije."
 
-#: download.phtml:40
+#: download.phtml:43
 msgid "Sandbox"
 msgstr "Sandbox"
 
-#: download.phtml:43
+#: download.phtml:46
 #, php-format
 msgid ""
 "Flatpaks are bundles, which contain beneath the program also all required "
@@ -1207,20 +1213,20 @@ msgstr ""
 
 #. Translators: %s is the base url of the gnucash wiki, adjust this,
 #. if a localized instance of the Flatpak page exists like "%sDe/Flatpak"
-#: download.phtml:48
+#: download.phtml:51
 #, php-format
 msgid "%sFlatpak"
 msgstr "%sFlatpak"
 
-#: download.phtml:48
+#: download.phtml:51
 msgid "Known Issues and other details …"
 msgstr "Poznati problemi i ostali detalji …"
 
-#: download.phtml:52 index.phtml:17
+#: download.phtml:55 index.phtml:17
 msgid "Source code"
 msgstr "Izvorni kod"
 
-#: download.phtml:53
+#: download.phtml:56
 msgid ""
 "If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> or "
 "you wish to install a different version than it ships with, you could try to "
@@ -1235,17 +1241,17 @@ msgstr ""
 "sadržava <a href='https://wiki.gnucash.org/wiki/Building'>smjernice za razne "
 "distribucije</a>."
 
-#: download.phtml:55 download.phtml:70 download.phtml:86
+#: download.phtml:58 download.phtml:73 download.phtml:89
 #, php-format
 msgid "for GnuCash %s"
 msgstr "za GnuCash %s"
 
-#: download.phtml:62
+#: download.phtml:65
 #, php-format
 msgid "Unstable/Development release (%s)"
 msgstr "Nestabilno/razvojno izdanje (%s)"
 
-#: download.phtml:64
+#: download.phtml:67
 msgid ""
 "Unstable (development) releases are for testing purposes only. They contain "
 "the newest features and improvements, but may also contain serious bugs "
@@ -1255,21 +1261,21 @@ msgstr ""
 "najnovije funkcije i poboljšanja, ali možda i ozbiljne greške. Ove verzije "
 "nemoj instalirati za svakodnevni rad."
 
-#: download.phtml:65
+#: download.phtml:68
 #, php-format
 msgid ""
-"The latest unstable release of <span class=\"gnucash\">GnuCash</span> is "
-"%s. Choose the download for your operating system below."
+"The latest unstable release of <span class=\"gnucash\">GnuCash</span> is %s. "
+"Choose the download for your operating system below."
 msgstr ""
 "Aktualno nestabilno izdanje za <span class=\"gnucash\">GnuCash</span> je %s. "
 "Ispod odaberi preuzimanje za tvoj operativni sustav."
 
-#: download.phtml:78
+#: download.phtml:81
 #, php-format
 msgid "Old Stable release (%s)"
 msgstr "Staro stabilno izdanje (%s)"
 
-#: download.phtml:80
+#: download.phtml:83
 msgid ""
 "This old stable release is the final version of the previous stable series. "
 "It's available for users who aren't ready for a major upgrade but want to "
@@ -1279,38 +1285,38 @@ msgstr ""
 "Preporučuje se korisnicima koji ne žele prijeći na novu verziju, ali "
 "svejedno žele biti sigurni, da su greške tog izdanja ispravljene."
 
-#: download.phtml:81
+#: download.phtml:84
 #, php-format
 msgid ""
-"The last old stable release of <span class=\"gnucash\">GnuCash</span> is "
-"%s. Choose the download for your operating system below."
+"The last old stable release of <span class=\"gnucash\">GnuCash</span> is %s. "
+"Choose the download for your operating system below."
 msgstr ""
 "Zadnje staro stabilno izdanje za <span class=\"gnucash\">GnuCash</span> je "
 "%s. Odaberi preuzimanje za tvoj operacijski sustav."
 
-#: download.phtml:94
+#: download.phtml:97
 msgid "Latest versions for historical operating systems"
 msgstr "Aktualne verzije za stare operativne sustave"
 
-#: download.phtml:96
+#: download.phtml:99
 msgid "This versions are really old. Do not expect any support."
 msgstr "Ovo su prastare verzije. Ne očekuj podršku."
 
-#: download.phtml:109
+#: download.phtml:112
 msgid "Other"
 msgstr "Ostalo"
 
-#: download.phtml:113
+#: download.phtml:116
 #, php-format
 msgid "View all GnuCash %s downloads (stable)"
 msgstr "Pogledaj sva preuzimanja za GnuCash %s (stabilna)"
 
-#: download.phtml:118
+#: download.phtml:121
 #, php-format
 msgid "View all GnuCash %s downloads (unstable)"
 msgstr "Pogledaj sva preuzimanja za GnuCash %s (nestabilna)"
 
-#: download.phtml:121
+#: download.phtml:124
 msgid "View all GnuCash downloads"
 msgstr "Pogledaj sva preuzimanja za GnuCash"
 
@@ -1322,11 +1328,11 @@ msgstr "Prijavi probleme sa serverom na:"
 msgid "Translation problems? Contact:"
 msgstr "Problemi s prijevodom? Kontaktiraj:"
 
-#: externals/global_params.php:85 externals/header.phtml:144
+#: externals/global_params.php:90 externals/header.phtml:144
 msgid "Free Accounting Software"
 msgstr "Slobodan softver za računovodstvo"
 
-#: externals/global_params.php:86
+#: externals/global_params.php:91
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is personal and small-business "
 "financial-accounting software, freely licensed under the <a href=\"https://"
@@ -1402,7 +1408,7 @@ msgstr "ČPP"
 msgid "Wiki"
 msgstr "Wiki"
 
-#: externals/menu.phtml:33 index.phtml:54
+#: externals/menu.phtml:33 index.phtml:59
 msgid "Mailing Lists"
 msgstr "Pretplatničke liste"
 
@@ -1583,7 +1589,7 @@ msgstr "<b>Traka sažetka</b> s prikazom svih važnih informacija o stanju konta
 msgid "Many options to <b>customize</b> the appearance and the display style"
 msgstr "Mnoge opcije za <b>prilagođavanje</b> izgleda i stila prikaza"
 
-#: features.phtml:69 index.phtml:71
+#: features.phtml:69 index.phtml:76
 msgid "Scheduled Transactions"
 msgstr "Terminirane transakcije"
 
@@ -1607,7 +1613,7 @@ msgstr ""
 "omogućava odgađanje terminiranih transakcija ili njihovo izvršavanje prije "
 "dospijeća."
 
-#: features.phtml:82 index.phtml:69
+#: features.phtml:82 index.phtml:74
 msgid "Reports, Graphs"
 msgstr "Izvještaji i dijagrami"
 
@@ -1953,16 +1959,16 @@ msgstr "Preuzmi GnuCash %s"
 msgid "Via distribution"
 msgstr "Distribucije"
 
-#: index.phtml:26
+#: index.phtml:25
 msgid "More downloads (Source code, Development …)"
 msgstr "Ostala preuzimanja (izvorni kod, razvojna izdanja …)"
 
-#: index.phtml:33
+#: index.phtml:32
 #, php-format
 msgid "Version %s is the last version for %s and %s and earlier."
 msgstr "Verzija %s je zadnja verzija za %s i %s te ranije verzije."
 
-#: index.phtml:36
+#: index.phtml:35
 #, php-format
 msgid ""
 "Version %s is the last version for Windows XP/Vista and MacOS X 10.8 and "
@@ -1971,7 +1977,7 @@ msgstr ""
 "Verzija %s je zadnja verzija za Windows XP/Vista i MacOS X 10.8 i ranije "
 "verzije. To je zadnja verzija koja se može koristiti na PowerPC Mac računalu."
 
-#: index.phtml:45
+#: index.phtml:44
 msgid ""
 "Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash"
 "\">GnuCash</span> allows you to track bank accounts, stocks, income and "
@@ -1985,11 +1991,30 @@ msgstr ""
 "računovodstvenim načelima kao što je dvojno knjigovodstvo, te osigurava "
 "bilancirane knjige i točne izvještaje."
 
+#. Translators: %s is the link to https://wiki.gnucash.org/wiki/Contributing_to_GnuCash
+#: index.phtml:46
+#, php-format
+msgid ""
+"GnuCash is developed, maintained, documented, and translated entirely by "
+"volunteers. Want to help out? We have %s."
+msgstr ""
+
+#. Translators: This is the label of the Contributing… wiki link
+#: index.phtml:48
+msgid "some suggestions"
+msgstr ""
+
+#. Translators: %s is the link to weblate
 #: index.phtml:50
+#, php-format
+msgid "Please help translate GnuCash into your language at %s."
+msgstr ""
+
+#: index.phtml:55
 msgid "Need Help?"
 msgstr "Trebaš pomoć?"
 
-#: index.phtml:53
+#: index.phtml:58
 msgid ""
 "Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? "
 "Try the"
@@ -1997,7 +2022,7 @@ msgstr ""
 "Tražiš nekoga za razmjenu ideja o <span class=\"gnucash\">GnuCashu</span>? "
 "Baci pogled u"
 
-#: index.phtml:55
+#: index.phtml:60
 msgid ""
 ", which are public, email-based discussion groups where you can ask and "
 "answer <span class=\"gnucash\">GnuCash</span> questions to other users."
@@ -2006,40 +2031,40 @@ msgstr ""
 "postavljati pitanja, kao i odgovarati na postavljena pitanja o <span class="
 "\"gnucash\">GnuCashu</span>."
 
-#: index.phtml:61
+#: index.phtml:66
 msgid "Feature Highlights"
 msgstr "Istaknute karakteristike"
 
-#: index.phtml:66
+#: index.phtml:71
 msgid "Double-Entry Accounting"
 msgstr "Dvojno knjigovodstvo"
 
-#: index.phtml:67
+#: index.phtml:72
 msgid "Stock/Bond/Mutual Fund Accounts"
 msgstr "Konta dionica/obveznica/investicijskih fondova"
 
-#: index.phtml:68
+#: index.phtml:73
 msgid "Small-Business Accounting"
 msgstr "Računovodstvo za mala poduzeća"
 
-#: index.phtml:70
+#: index.phtml:75
 msgid "QIF/OFX/HBCI Import, Transaction Matching"
 msgstr "QIF/OFX/HBCI uvoz, uspoređivanje transakcija"
 
-#: index.phtml:72
+#: index.phtml:77
 msgid "Financial Calculations"
 msgstr "Financijske kalkulacije"
 
-#: index.phtml:74
+#: index.phtml:79
 msgid "<b>Discover more …</b>"
 msgstr "<b>Saznaj više …</b>"
 
-#: index.phtml:78
+#: index.phtml:83
 #, php-format
 msgid "GnuCash %s Released"
 msgstr "GnuCash %s objavljen"
 
-#: index.phtml:79
+#: index.phtml:84
 #, php-format
 msgid ""
 "We've released GnuCash %s with many bugfixes and improvements including some "
@@ -2048,7 +2073,7 @@ msgstr ""
 "Izdali smo GnuCash %s s mnogim ispravcima grešaka i poboljšanjima, "
 "uključujući neke %s!"
 
-#: index.phtml:80
+#: index.phtml:85
 msgid "great new features"
 msgstr "sjajne nove funkcije"
 
@@ -2477,8 +2502,8 @@ msgstr ""
 msgid ""
 "Given that we have about 400 outstanding bugs in bugzilla, that works out to "
 "about one bug per thousand lines of code, or one bug per 50 pages of "
-"printout. This bug count is actually not atypical for software projects; "
-"it is near the norm."
+"printout. This bug count is actually not atypical for software projects; it "
+"is near the norm."
 msgstr ""
 "S obzirom na to da imamo oko 400 izvanrednih grešaka u bugzilli, radi se o "
 "otprilike jednoj grešci na 1.000 redaka koda ili jednoj grešci na 50 "
@@ -2513,11 +2538,11 @@ msgid ""
 "even that <code>wc</code> is a good way of counting KLOC's. Much better "
 "measures are complexity metrics, which, for example, count the number and "
 "size of if-then-else blocks, or the number and size of all blocks, or the "
-"number of math operators per statement. Maybe someday we'll run one of "
-"those tools on this code. For now, this is what we have. On the other hand, "
-"we've attempted to count only those files that contain human-edited code, "
-"that is, files that are directly edited by humans. The point of doing this "
-"is to avoid artificially inflating the KLOC counts by counting automatically "
+"number of math operators per statement. Maybe someday we'll run one of those "
+"tools on this code. For now, this is what we have. On the other hand, we've "
+"attempted to count only those files that contain human-edited code, that is, "
+"files that are directly edited by humans. The point of doing this is to "
+"avoid artificially inflating the KLOC counts by counting automatically "
 "generated code (which is why the glade files are not counted: they are large "
 "and automatically generated)."
 msgstr ""
@@ -2787,484 +2812,3 @@ msgstr ""
 "Čini se da tvoj web preglednik ne podržava iframes. Za prikaz tražene "
 "stranice u odvojenom prozoru <a href=\"%s\" target=\"_blank\">klikni ovdje</"
 "a>."
-
-#, fuzzy, php-format
-#~| msgid "for GnuCash %s"
-#~ msgid "%s | GnuCash"
-#~ msgstr "za GnuCash %s"
-
-#~ msgid "(${size} bytes)"
-#~ msgstr "(${size} bajtova)"
-
-#~ msgid ""
-#~ "(Retrieves a certain document which contains specified\n"
-#~ "<code>Message-Id:</code>)"
-#~ msgstr ""
-#~ "(Nalazi određeni dokument koji sadrži određeni\n"
-#~ "<code>ID poruke:</code>)"
-
-#~ msgid ""
-#~ "(Retrieves all documents which contain <code>GNU Emacs</code>\n"
-#~ "in a <code>Subject:</code> field)"
-#~ msgstr ""
-#~ "(Nalazi sve dokumente koji sadrže <code>GNU Emacs</code>\n"
-#~ "u polju <code>Predmet:</code>)"
-
-#~ msgid ""
-#~ "(Retrieves all documents which contain <code>Linux</code>\n"
-#~ "in a <code>Subject:</code> field)"
-#~ msgstr ""
-#~ "(Nalazi sve dokumente koji sadrže <code>Linux</code>\n"
-#~ "u polju <code>Predmet:</code>)"
-
-#~ msgid ""
-#~ "(Retrieves all documents which contain <code>foo@bar.jp</code>\n"
-#~ "in a <code>From:</code> field)"
-#~ msgstr ""
-#~ "(Nalazi sve dokumente koji sadrže <code>foo@bar.jp</code>\n"
-#~ "u polju <code>Od:</code>)"
-
-#~ msgid "(terms which begin with <code>inter</code>)"
-#~ msgstr "(izrazi koji započinju s <code>inter</code>)"
-
-#~ msgid "(terms which contain <code>text</code>)"
-#~ msgstr "(izrazi koji sadrže <code>text</code>)"
-
-#~ msgid "(terms which terminated with <code>net</code>)"
-#~ msgstr "(izrazi koji završavaju s <code>net</code>)"
-
-#~ msgid ""
-#~ "<b>NOTE:</b> the information presented in these sources may or may not be "
-#~ "updated to the most recent version of <span class=\"gnucash\">GnuCash</"
-#~ "span>. If you are interested in doing development work on these "
-#~ "documents, you should contact the original authors."
-#~ msgstr ""
-#~ "<b>NAPOMENA:</b> informacije u ovim publikacijama možda nisu u skladu s "
-#~ "najnovijom verzijom <span class=\"gnucash\">GnuCasha</span>. Ako želiš "
-#~ "obraditi te dokumente, obrati se njihovim autorima."
-
-#~ msgid "AND query"
-#~ msgstr "AND upit (logički I)"
-
-#~ msgid "Add keywords"
-#~ msgstr "Dodaj ključne riječi"
-
-#~ msgid "Author"
-#~ msgstr "Autor"
-
-#~ msgid ""
-#~ "Check a spelling of your keyword<br>\n"
-#~ "Namazu can't find anything with wrong spelling."
-#~ msgstr ""
-#~ "Provjeri pravopis ključne riječi<br>\n"
-#~ "Namazu ne može pronaći riječi s neispravnim pravopisom."
-
-#~ msgid "Date"
-#~ msgstr "Datum"
-
-#~ msgid "Dave Gilbert's User Guide (Pdf)"
-#~ msgstr "Dave Gilbert – korisnički priručnik (PDF)"
-
-#~ msgid "Description"
-#~ msgstr "Opis"
-
-#~ msgid "Display"
-#~ msgstr "Prikaz"
-
-#~ msgid "Field-specified searching"
-#~ msgstr "Pretraživanje određenih polja"
-
-#, fuzzy
-#~| msgid "Mailing Lists"
-#~ msgid "GnuCash mailing lists"
-#~ msgstr "Pretplatničke liste"
-
-#, fuzzy
-#~| msgid "GnuCash News"
-#~ msgid "GnuCash wiki"
-#~ msgstr "GnuCash novosti"
-
-#~ msgid "Grouping"
-#~ msgstr "Grupiranje"
-
-#, fuzzy
-#~| msgid "channel"
-#~ msgid "IRC channel"
-#~ msgstr "kanal"
-
-#~ msgid ""
-#~ "If you gained no results or too few results, you can add one\n"
-#~ "or more related keywords with <code\n"
-#~ "class=\"operator\">or</code> operator. You should get more results.\n"
-#~ "e.g.,"
-#~ msgstr ""
-#~ "Ako ne dobiješ rezultate ili ako dobiješ premalo rezultata,\n"
-#~ "možeš dodati jednu ili više srodnih ključnih riječi pomoću\n"
-#~ "operatora <code class=\"operator\">or</code>. Vjerojatno ćeš dobiti više "
-#~ "rezultata.\n"
-#~ "Npr.,"
-
-#~ msgid ""
-#~ "If you gained no results or too few results, you can try\n"
-#~ "substring matching."
-#~ msgstr ""
-#~ "Ako ne dobiješ nikakve rezultate ili premalo rezultata, \n"
-#~ "možeš pokušati uspoređivati podnizove."
-
-#~ msgid ""
-#~ "If you gained too many results, you can add one or more\n"
-#~ "related keywords with <code class=\"operator\">and</code>\n"
-#~ "operator. It makes your search more limited. e.g.,"
-#~ msgstr ""
-#~ "Ako dobiješ previše rezultata, možeš dodati jednu ili više\n"
-#~ "srodnih ključnih riječi pomoću operatora <code class=\n"
-#~ "\"operator\">i</code>. To će ograničiti tvoju pretragu. Npr.,"
-
-#~ msgid ""
-#~ "If you have trouble with searching, you can check the following tips."
-#~ msgstr "Ako imaš poteškoća s pretraživanjem, probaj sljedeće savjete."
-
-#~ msgid ""
-#~ "If you want to use <code class=\"operator\">and</code>,\n"
-#~ "<code class=\"operator\">or</code> or <code\n"
-#~ "class=\"operator\">not</code> as ordinary keywords<br>\n"
-#~ "You can surround them respectively with double quotes like <code\n"
-#~ "class=\"operator\">\"...\"</code> or braces like <code\n"
-#~ "class=\"operator\">{...}</code>."
-#~ msgstr ""
-#~ "Ako želiš koristiti operator <code class=\"operator\">and</code>,\n"
-#~ "<code class=\"operator\">or</code> ili <code class=\"operator\">not</"
-#~ "code>\n"
-#~ "kao obične ključne riječi, možeš ih staviti pod dvostruke navodnike\n"
-#~ "<code class=\"operator\">\"…\"</code> ili vitičaste zagrade <code class="
-#~ "\"operator\">{…}</code>."
-
-#~ msgid ""
-#~ "In any queries, Namazu ignores case distinctions of\n"
-#~ "alphabet characters; i.e. Namazu does\n"
-#~ "case-insensitive pattern matching."
-#~ msgstr ""
-#~ "U bilo kojem upitu, Namazu zanemaruje pisanje\n"
-#~ "velikih/malih slova, tj. Namazu uspoređuje uzorke \n"
-#~ "neovisno o veličini slova."
-
-#~ msgid "Inside matching"
-#~ msgstr "Uspoređivanje sredine"
-
-#~ msgid ""
-#~ "It's a defect of Namazu. Precision of phrase searching is\n"
-#~ "not 100%, so it cause wrong results occasionally."
-#~ msgstr ""
-#~ "To je greška u Namazu. Točnost pretraživanja izraza\n"
-#~ "nije 100 %, pa povremeno dolazi do pogrešnih rezultata."
-
-#~ msgid ""
-#~ "Japanese phrases are automatically segmented into\n"
-#~ "morphemes and are handled as <a\n"
-#~ "href=\"#query-phrase\">phrase searching</a>. This process occasionally\n"
-#~ "causes invalid segmentation."
-#~ msgstr ""
-#~ "Japanski se izrazi automatski segmentiraju na\n"
-#~ "morfeme i obrađuju se kao <a href=\"# query-phrase\">\n"
-#~ "pretraživanje izraza</a>. Ovaj proces ponekad\n"
-#~ "uzrokuje nevažeću segmentaciju."
-
-#~ msgid "Joe Mack's Tutorial"
-#~ msgstr "Joe Mack – vježbe"
-
-#~ msgid ""
-#~ "Letters, numbers or parts of symbols (duplicated in\n"
-#~ "ASCII) which are defined in JIS X 0208 (Japanese\n"
-#~ "Industrial Standards) are handled as ASCII characters."
-#~ msgstr ""
-#~ "Slova, brojevi ili dijelovi simbola (duplikati u\n"
-#~ "ASCII kodu) koji su definirani u JIS X 0208 (japanski\n"
-#~ "Industrijski standardi) obrađuju se kao ASCII znakovi."
-
-#~ msgid "Lists to Search"
-#~ msgstr "Traži u popisima"
-
-#~ msgid "Mailing List Search"
-#~ msgstr "Pretraži pretplatničku listu"
-
-#, fuzzy
-#~| msgid "Mailing Lists"
-#~ msgid "Mailing lists"
-#~ msgstr "Pretplatničke liste"
-
-#~ msgid "NOT query"
-#~ msgstr "NOT upit (negacija)"
-
-#~ msgid ""
-#~ "Namazu can handle a term which contains symbols like\n"
-#~ "<code>TCP/IP</code>. Since this method of handling isn't complete,\n"
-#~ "you can also describe the term as <code>TCP and IP</code> instead of\n"
-#~ "<code>TCP/IP</code>, but it may cause noisy results."
-#~ msgstr ""
-#~ "Namazu može obraditi pojam koji sadrži simbole, kao što je\n"
-#~ "<code>TCP/IP</code>. Budući da ovaj način rukovanja nije dovršen,\n"
-#~ "pojam možeš opisati i kao <code>TCP i IP</code> umjesto\n"
-#~ "<code>TCP/IP</code>, ali to može stvoriti previše rezultata."
-
-#~ msgid "Notes"
-#~ msgstr "Napomene"
-
-#~ msgid "OR query"
-#~ msgstr "OR upit (logički ILI)"
-
-#~ msgid "Phrase searching"
-#~ msgstr "Traženje izraza"
-
-#~ msgid "Prefix matching"
-#~ msgstr "Uspoređivanje početka"
-
-#~ msgid "Query"
-#~ msgstr "Upit"
-
-#~ msgid "Regular expressions"
-#~ msgstr "Regularni izrazi"
-
-#~ msgid "Search!"
-#~ msgstr "Traži!"
-
-#~ msgid "Server &amp; email outage reports to: "
-#~ msgstr "Izvještaje o prekidu rada servera i e‑pošte na: "
-
-#~ msgid "Single term query"
-#~ msgstr "Upit jednog pojma"
-
-#~ msgid "Sort"
-#~ msgstr "Razvrstaj"
-
-#~ msgid "Source"
-#~ msgstr "Izvor"
-
-#~ msgid "Substring matching"
-#~ msgstr "Uspoređivanje podnizova"
-
-#~ msgid ""
-#~ "Substring matching and field-specified searching takes\n"
-#~ "more time than other methods."
-#~ msgstr ""
-#~ "Uspoređivanje podnizova i pretraživanje određenih polja\n"
-#~ "traje duže od drugih metoda."
-
-#~ msgid "Suffix matching"
-#~ msgstr "Uspoređivanje završetka"
-
-#~ msgid "There are three types of searching by substring matching."
-#~ msgstr "Postoje tri vrste pretraživanja pomoću uspoređivanja podnizova."
-
-#~ msgid ""
-#~ "This query specifies only one term for retrieving all of the\n"
-#~ "documents which contain that term, for example:"
-#~ msgstr ""
-#~ "Ovaj upit određuje samo jedan pojam za traženje u svim\n"
-#~ "dokumentima koji sadrže taj pojam, npr.:"
-
-#~ msgid ""
-#~ "This query specifies two or more terms for retrieving all\n"
-#~ "documents which contain any one term. Insert the\n"
-#~ "<code class=\"operator\">or</code> operator between the terms,\n"
-#~ "e.g."
-#~ msgstr ""
-#~ "Ovaj upit određuje dva ili više pojmova za pronalaženje svih\n"
-#~ "dokumenata koji sadrže te pojmove. Umetni operator <code class=\"operator"
-#~ "\">or</code>\n"
-#~ "između pojmova, npr."
-
-#~ msgid ""
-#~ "This query specifies two or more terms for retrieving all of the\n"
-#~ "documents which contain a first term but do not contain the\n"
-#~ "following terms. Insert the <code class=\"operator\">not</code>\n"
-#~ "operator between the terms, for example:"
-#~ msgstr ""
-#~ "Ovaj upit određuje dva ili više pojmova za pronalaženje svih\n"
-#~ "dokumenata koji sadrže prvi pojam, ali ne slijedeće pojmove.\n"
-#~ "Umetni operator <code class=\"operator\">NOT</code> između pojmova, npr.:"
-
-#~ msgid ""
-#~ "This query specifies two or more terms for retrieving all of the\n"
-#~ "documents which contain both terms. Insert the\n"
-#~ "<code class=\"operator\">and</code> operator between the terms, e.g."
-#~ msgstr ""
-#~ "Ovaj upit određuje dva ili više pojmova za pronalaženje svih\n"
-#~ "dokumenata koji sadrže te pojmove. Umetni\n"
-#~ "operator <code class=\"operator\">and</code> između pojmova, npr."
-
-#~ msgid "This search system is powered by:"
-#~ msgstr "Ovaj se sustav pretraživanja pokreće pomoću:"
-
-#~ msgid "Tips on searching"
-#~ msgstr "Savjeti za pretragu"
-
-#~ msgid ""
-#~ "Translation problems? Contact: <a href=\"mailto:gnucash-devel@gnucash.org"
-#~ "\"><b>gnucash-devel@gnucash.org</b></a>"
-#~ msgstr ""
-#~ "Problemi s prijevodom? Kontaktiraj: <a href=\"mailto:gnucash-"
-#~ "devel@gnucash.org\"><b>gnucash-devel@gnucash.org</b></a>"
-
-#~ msgid "Try substring matching"
-#~ msgstr "Pokušaj usporediti podnizove"
-
-#~ msgid ""
-#~ "You can group queries by surrounding them by\n"
-#~ "parentheses. The parentheses should be separated by one or\n"
-#~ "more spaces. e.g."
-#~ msgstr ""
-#~ "Upite možeš grupirati tako da ih staviš u zagrade. \n"
-#~ "Zagrade moraju biti odvojene jednim ili više razmacima, npr."
-
-#~ msgid ""
-#~ "You can limit your search to specific fields such as\n"
-#~ "<code>Subject:</code>, <code>From:</code>,\n"
-#~ "<code>Message-Id:</code>. This feature is especially convenient for\n"
-#~ "Mail/News documents, for example:"
-#~ msgstr ""
-#~ "Možeš ograničiti pretraživanje na određena polja, npr.\n"
-#~ "<code>Tema:</code>, <code>Od:</code>,\n"
-#~ "<code>ID poruke:</code>. Ova je funkcija posebno prikladna za\n"
-#~ "dokumente e‑pošte/novosti, na primjer:"
-
-#~ msgid ""
-#~ "You can omit the <code class=\"operator\">and</code> operator. Terms "
-#~ "which are\n"
-#~ "separated by one or more spaces are assumed to be an AND query."
-#~ msgstr ""
-#~ "Operator <code class=\"operator\">and</code> možeš izostaviti. Uvjeti "
-#~ "koji su\n"
-#~ "odvojeni jednim ili više razmacima uzimaju se kao AND upit."
-
-#~ msgid ""
-#~ "You can search for a phrase that consists of two or more terms\n"
-#~ "by surrounding them with double quotation marks or braces such as\n"
-#~ "<code class=\"operator\">\"...\"</code> and <code class=\"operator\">{...}"
-#~ "</code>.\n"
-#~ "In Namazu, the precision of phrase searching is not 100%,\n"
-#~ "so wrong results may occasionally occur. Example:"
-#~ msgstr ""
-#~ "Možeš tražiti izraz koji se sastoji od dva ili više pojmova\n"
-#~ "stavljajući ih pod dvostruke navodnike ili vitičaste zagrade, npr.\n"
-#~ "<code class=\"operator\">\"…\"</code> i <code class=\"operator\">{...}</"
-#~ "code>.\n"
-#~ "U Namazu, preciznost pretraživanja izraza nije sto postotna,\n"
-#~ "tako da povremeno može doći do grešaka u rezultatima. Primjer:"
-
-#~ msgid ""
-#~ "You can specify <code class=\"example\">*tex*</code> to\n"
-#~ "search for terms which contain <code>tex</code> (many)."
-#~ msgstr ""
-#~ "Možeš zadati <code class=\"example\">*tex*</code> za\n"
-#~ "traženje pojmova koji sadržavaju <code>tex</code> (višestruko)."
-
-#~ msgid ""
-#~ "You can specify <code class=\"example\">*tex</code> to\n"
-#~ "search for terms which terminated with <code>tex</code> (e.g.,\n"
-#~ "<code>bibtex</code>,\n"
-#~ "<code>jlatex</code>, <code>latex</code>,\n"
-#~ "<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
-#~ msgstr ""
-#~ "Možeš zadati <code class=\"example\">*tex</code> za\n"
-#~ "traženje pojmova koji završavaju s<code>tex</code> (e.g.,\n"
-#~ "<code>bibtex</code>,\n"
-#~ "<code>jlatex</code>, <code>latex</code>,\n"
-#~ "<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
-
-#~ msgid ""
-#~ "You can specify <code class=\"example\">tex*</code> to\n"
-#~ "search for terms which begin with\n"
-#~ "<code>tex</code> (e.g., <code>tex</code>,\n"
-#~ "<code>texi2html</code>,\n"
-#~ "<code>texindex</code>, <code>text</code>)."
-#~ msgstr ""
-#~ "Možeš zadati <code class=\"example\">tex*</code> za\n"
-#~ "traženje pojmova koji počinju s\n"
-#~ "<code>tex</code> (npr., <code>tex</code>,\n"
-#~ "<code>texi2html</code>,\n"
-#~ "<code>texindex</code>, <code>text</code>)."
-
-#~ msgid ""
-#~ "You can use regular expressions for pattern matching. The\n"
-#~ "regular expressions must be surrounded by slashes like <code\n"
-#~ "class=\"operator\">/.../</code>. Namazu uses <a\n"
-#~ "href=\"http://www.ruby-lang.org/\">Ruby</a>'s regular\n"
-#~ "regular expressions engine. It generally offers a <a\n"
-#~ "href=\"http://www.perl.com/\">Perl</a> compatible flavor.\n"
-#~ "e.g.,"
-#~ msgstr ""
-#~ "Možeš koristiti regularne izraze za uspoređivanje uzoraka.\n"
-#~ "Regularni izrazi moraju biti okruženi kosim crtama poput \n"
-#~ "<code class=\"operator\">/…/</code>. Namazu koristi \n"
-#~ "<a href=\"http://www.ruby-lang.org/\">Ruby</a>-ev mehanizam regularnih "
-#~ "izraza.\n"
-#~ "Općenito nudi kompatibilan <a href=\"http://www.perl.com/\">Perl</a> "
-#~ "način.\n"
-#~ "npr.,"
-
-#~ msgid ""
-#~ "You tried phrase searching but it hit documents which\n"
-#~ "didn't contain your phrase."
-#~ msgstr ""
-#~ "Pokušavaš tražiti pojam, ali tražiš u dokumentima, koji\n"
-#~ "ne sadržavaju tvoj pojam."
-
-#~ msgid "[How to search]"
-#~ msgstr "[Kako tražiti]"
-
-#~ msgid "by URI in ascending order"
-#~ msgstr "po URI uzlazno"
-
-#~ msgid "by URI in descending order"
-#~ msgstr "po URI silazno"
-
-#~ msgid "by author in ascending order"
-#~ msgstr "po autoru uzlazno"
-
-#~ msgid "by author in descending order"
-#~ msgstr "po autoru silazno"
-
-#~ msgid "by date in early order"
-#~ msgstr "po datumu uzlazno"
-
-#~ msgid "by date in late order"
-#~ msgstr "po datumu silazno"
-
-#~ msgid "by score"
-#~ msgstr "po rezultatu"
-
-#~ msgid "by size in ascending order"
-#~ msgstr "po veličini uzlazno"
-
-#~ msgid "by size in descending order"
-#~ msgstr "po veličini silazno"
-
-#~ msgid "by title in ascending order"
-#~ msgstr "po naslovu uzlazno"
-
-#~ msgid "by title in descending order"
-#~ msgstr "po naslovu silazno"
-
-#, fuzzy
-#~| msgid "Donations"
-#~ msgid "donation"
-#~ msgstr "Donacije"
-
-#, fuzzy
-#~| msgid "Localization"
-#~ msgid "localizing"
-#~ msgstr "Lokalizacije"
-
-#~ msgid "normal"
-#~ msgstr "normalno"
-
-#, fuzzy
-#~| msgid "Browse documentation online"
-#~ msgid "released documentation"
-#~ msgstr "Pregledaj dokumentaciju na internetu"
-
-#~ msgid "score"
-#~ msgstr "rezultat"
-
-#~ msgid "short"
-#~ msgstr "kratko"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: gnucash-htdocs\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2021-12-19 04:04+0100\n"
+"POT-Creation-Date: 2021-12-21 00:25+0100\n"
 "PO-Revision-Date: 2017-10-01 11:09+0200\n"
 "Last-Translator: Josep-Maria Prat i Filella <jpftgn@gmail.com>\n"
 "Language-Team: \n"
@@ -1197,8 +1197,8 @@ msgstr ""
 msgid "Installers"
 msgstr "Instal·ladors"
 
-#: download.phtml:24 download.phtml:25 download.phtml:68 download.phtml:69
-#: download.phtml:84 download.phtml:85 download.phtml:98 download.phtml:104
+#: download.phtml:24 download.phtml:25 download.phtml:71 download.phtml:72
+#: download.phtml:87 download.phtml:88 download.phtml:101 download.phtml:107
 #, php-format
 msgid "GnuCash %s for"
 msgstr "GnuCash %s per a"
@@ -1216,7 +1216,13 @@ msgstr ""
 "utilitzar la versió <span class=\"gnucash\">GnuCash</span> que ve amb la "
 "vostra distribució."
 
-#: download.phtml:30
+#. Translators: %s is the link to repology.org
+#: download.phtml:31
+#, php-format
+msgid "At %s you can compare which distribution which version ships."
+msgstr ""
+
+#: download.phtml:33
 msgid ""
 "Below are ways to install <span class=\"gnucash\">GnuCash</span> on some of "
 "the more popular distributions:"
@@ -1224,7 +1230,7 @@ msgstr ""
 "A continuació hi ha les maneres d'instal·lar <span class=\"gnucash"
 "\">GnuCash</span> en algunes de les distribucions més populars:"
 
-#: download.phtml:33
+#: download.phtml:36
 msgid ""
 "Fedora users can install <span class=\"gnucash\">GnuCash</span> through "
 "System->Administration->Add/Remove Software (Gnome) or Applications->System-"
@@ -1234,7 +1240,7 @@ msgstr ""
 "span> a través de Sistema->Administració->afegir/treure programari (Gnome) o "
 "Aplicacions->Sistema->Gestió de programari (KDE)."
 
-#: download.phtml:34
+#: download.phtml:37
 msgid ""
 "Mandriva users can install <span class=\"gnucash\">GnuCash</span> through "
 "the Software Management in the Mandriva Linux Control Center."
@@ -1243,11 +1249,11 @@ msgstr ""
 "span> mitjançant la gestió de programari al centre de Control de Mandriva "
 "Linux."
 
-#: download.phtml:35
+#: download.phtml:38
 msgid "Epel's wiki page"
 msgstr "Pàgina wiki d'Epel"
 
-#: download.phtml:35
+#: download.phtml:38
 msgid ""
 "Redhat and CentOS don't have <span class=\"gnucash\">GnuCash</span> in their "
 "repositories by default. It can be installed however from the third-party "
@@ -1259,7 +1265,7 @@ msgstr ""
 "tercers. Per a més detalls sobre la configuració d'aquest repositori de "
 "programari addicional per a la vostra configuració, vegeu"
 
-#: download.phtml:36
+#: download.phtml:39
 #, fuzzy
 msgid ""
 "Solus users can install <span class=\"gnucash\">GnuCash</span> through the "
@@ -1269,7 +1275,7 @@ msgstr ""
 "span> mitjançant la gestió de programari al centre de Control de Mandriva "
 "Linux."
 
-#: download.phtml:37
+#: download.phtml:40
 msgid ""
 "Ubuntu users can install <span class=\"gnucash\">GnuCash</span> through the "
 "Software Center. This will install <span class=\"gnucash\">GnuCash</span> "
@@ -1279,11 +1285,11 @@ msgstr ""
 "a través del centre de programari. Això instal·larà <span class=\"gnucash"
 "\">Gnucash</span> sota la categoria d'oficina al menú d'aplicacions."
 
-#: download.phtml:40
+#: download.phtml:43
 msgid "Sandbox"
 msgstr ""
 
-#: download.phtml:43
+#: download.phtml:46
 #, php-format
 msgid ""
 "Flatpaks are bundles, which contain beneath the program also all required "
@@ -1294,20 +1300,20 @@ msgstr ""
 
 #. Translators: %s is the base url of the gnucash wiki, adjust this,
 #. if a localized instance of the Flatpak page exists like "%sDe/Flatpak"
-#: download.phtml:48
+#: download.phtml:51
 #, php-format
 msgid "%sFlatpak"
 msgstr ""
 
-#: download.phtml:48
+#: download.phtml:51
 msgid "Known Issues and other details …"
 msgstr ""
 
-#: download.phtml:52 index.phtml:17
+#: download.phtml:55 index.phtml:17
 msgid "Source code"
 msgstr "Codi font"
 
-#: download.phtml:53
+#: download.phtml:56
 #, fuzzy
 #| msgid ""
 #| "If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> "
@@ -1330,17 +1336,17 @@ msgstr ""
 "href='https://wiki.gnucash.org/wiki/Building'> directrius per a diverses "
 "distribucions </a>."
 
-#: download.phtml:55 download.phtml:70 download.phtml:86
+#: download.phtml:58 download.phtml:73 download.phtml:89
 #, php-format
 msgid "for GnuCash %s"
 msgstr "per a Gnucash %s"
 
-#: download.phtml:62
+#: download.phtml:65
 #, php-format
 msgid "Unstable/Development release (%s)"
 msgstr "Llançament (%s) inestable/desenvolupament"
 
-#: download.phtml:64
+#: download.phtml:67
 msgid ""
 "Unstable (development) releases are for testing purposes only. They contain "
 "the newest features and improvements, but may also contain serious bugs "
@@ -1350,21 +1356,21 @@ msgstr ""
 "Contenen els trets nous i les millores, però també poden contenir errors "
 "seriosos encara. No instal·li aquests llançaments per a ús diari."
 
-#: download.phtml:65
+#: download.phtml:68
 #, php-format
 msgid ""
-"The latest unstable release of <span class=\"gnucash\">GnuCash</span> is "
-"%s. Choose the download for your operating system below."
+"The latest unstable release of <span class=\"gnucash\">GnuCash</span> is %s. "
+"Choose the download for your operating system below."
 msgstr ""
 "L'últim llançament inestable de <span class=\"gnucash\">GnuCash</span> és "
 "%s. Seleccioneu la descàrrega per al vostre sistema a continuació."
 
-#: download.phtml:78
+#: download.phtml:81
 #, php-format
 msgid "Old Stable release (%s)"
 msgstr "Llançament (%s) estable antic"
 
-#: download.phtml:80
+#: download.phtml:83
 msgid ""
 "This old stable release is the final version of the previous stable series. "
 "It's available for users who aren't ready for a major upgrade but want to "
@@ -1375,39 +1381,39 @@ msgstr ""
 "major actualització però volen assegurar-se que tenen totes les correccions "
 "d'errors de la sèrie antiga ."
 
-#: download.phtml:81
+#: download.phtml:84
 #, php-format
 msgid ""
-"The last old stable release of <span class=\"gnucash\">GnuCash</span> is "
-"%s. Choose the download for your operating system below."
+"The last old stable release of <span class=\"gnucash\">GnuCash</span> is %s. "
+"Choose the download for your operating system below."
 msgstr ""
 "L'últim llançament estable antic de <span class=\"gnucash\">GnuCash</span> "
 "és %s. Seleccioneu la descàrrega per al vostre sistema operatiu a "
 "continuació."
 
-#: download.phtml:94
+#: download.phtml:97
 msgid "Latest versions for historical operating systems"
 msgstr ""
 
-#: download.phtml:96
+#: download.phtml:99
 msgid "This versions are really old. Do not expect any support."
 msgstr ""
 
-#: download.phtml:109
+#: download.phtml:112
 msgid "Other"
 msgstr "Altres"
 
-#: download.phtml:113
+#: download.phtml:116
 #, php-format
 msgid "View all GnuCash %s downloads (stable)"
 msgstr "Veure totes les descàrregues de Gnucash %s (estable)"
 
-#: download.phtml:118
+#: download.phtml:121
 #, php-format
 msgid "View all GnuCash %s downloads (unstable)"
 msgstr "Veure totes les descàrregues de Gnucash %s (inestable)"
 
-#: download.phtml:121
+#: download.phtml:124
 msgid "View all GnuCash downloads"
 msgstr "Veure totes les descàrregues de GnuCash"
 
@@ -1419,11 +1425,11 @@ msgstr "Informes d'interrupció del servidor i del correu electrònic a:"
 msgid "Translation problems? Contact:"
 msgstr "Problemes de traducció? Contacteu:"
 
-#: externals/global_params.php:85 externals/header.phtml:144
+#: externals/global_params.php:90 externals/header.phtml:144
 msgid "Free Accounting Software"
 msgstr "Programari de comptabilitat lliure"
 
-#: externals/global_params.php:86
+#: externals/global_params.php:91
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is personal and small-business "
 "financial-accounting software, freely licensed under the <a href=\"https://"
@@ -1499,7 +1505,7 @@ msgstr "Preguntes freqüents"
 msgid "Wiki"
 msgstr "Wiki"
 
-#: externals/menu.phtml:33 index.phtml:54
+#: externals/menu.phtml:33 index.phtml:59
 msgid "Mailing Lists"
 msgstr "Llistes de correu"
 
@@ -1689,7 +1695,7 @@ msgid "Many options to <b>customize</b> the appearance and the display style"
 msgstr ""
 "Moltes opcions per <b>personalitzar</b> l'aparença i l'estil de visualització"
 
-#: features.phtml:69 index.phtml:71
+#: features.phtml:69 index.phtml:76
 msgid "Scheduled Transactions"
 msgstr "Assentaments programats"
 
@@ -1713,7 +1719,7 @@ msgstr ""
 "span> permet posposar sense cancel·lar o introduir abans de la data de "
 "venciment les operacions planificades."
 
-#: features.phtml:82 index.phtml:69
+#: features.phtml:82 index.phtml:74
 msgid "Reports, Graphs"
 msgstr "Informes, gràfics"
 
@@ -2067,25 +2073,25 @@ msgstr "Descarregueu GnuCash %s"
 msgid "Via distribution"
 msgstr "Via distribució"
 
-#: index.phtml:26
+#: index.phtml:25
 #, fuzzy
 #| msgid "More downloads (Source, Development …)"
 msgid "More downloads (Source code, Development …)"
 msgstr "Més descàrregues (Codi font, Desenvolupament …)"
 
-#: index.phtml:33
+#: index.phtml:32
 #, php-format
 msgid "Version %s is the last version for %s and %s and earlier."
 msgstr ""
 
-#: index.phtml:36
+#: index.phtml:35
 #, php-format
 msgid ""
 "Version %s is the last version for Windows XP/Vista and MacOS X 10.8 and "
 "earlier, and so the last version that will run on PowerPC Macs."
 msgstr ""
 
-#: index.phtml:45
+#: index.phtml:44
 msgid ""
 "Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash"
 "\">GnuCash</span> allows you to track bank accounts, stocks, income and "
@@ -2099,11 +2105,30 @@ msgstr ""
 "talonari de xecs, es basa en els principis fonamentals de la comptabilitat "
 "per garantir l'equilibri dels comptes i l'exactitud dels informes."
 
+#. Translators: %s is the link to https://wiki.gnucash.org/wiki/Contributing_to_GnuCash
+#: index.phtml:46
+#, php-format
+msgid ""
+"GnuCash is developed, maintained, documented, and translated entirely by "
+"volunteers. Want to help out? We have %s."
+msgstr ""
+
+#. Translators: This is the label of the Contributing… wiki link
+#: index.phtml:48
+msgid "some suggestions"
+msgstr ""
+
+#. Translators: %s is the link to weblate
 #: index.phtml:50
+#, php-format
+msgid "Please help translate GnuCash into your language at %s."
+msgstr ""
+
+#: index.phtml:55
 msgid "Need Help?"
 msgstr "Necessiteu ajuda?"
 
-#: index.phtml:53
+#: index.phtml:58
 msgid ""
 "Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? "
 "Try the"
@@ -2111,7 +2136,7 @@ msgstr ""
 "Per posar-vos en contacte amb algú i demanar ajuda en l'ús de <span class="
 "\"gnucash\">GnuCash</span>, empreu les"
 
-#: index.phtml:55
+#: index.phtml:60
 #, fuzzy
 #| msgid ""
 #| ", which are public, email-based discussion groups where you can ask and "
@@ -2124,47 +2149,47 @@ msgstr ""
 "podeu adreçar les vostres preguntes i respostes de <span class=\"gnucash"
 "\">GnuCash</span> a d'altres usuaris."
 
-#: index.phtml:61
+#: index.phtml:66
 msgid "Feature Highlights"
 msgstr "Característiques principals"
 
-#: index.phtml:66
+#: index.phtml:71
 msgid "Double-Entry Accounting"
 msgstr "Comptabilitat per mètode de partida doble"
 
-#: index.phtml:67
+#: index.phtml:72
 msgid "Stock/Bond/Mutual Fund Accounts"
 msgstr "Comptes d'accions/bons/fons"
 
-#: index.phtml:68
+#: index.phtml:73
 msgid "Small-Business Accounting"
 msgstr "Comptabilitat per a petita empresa"
 
-#: index.phtml:70
+#: index.phtml:75
 msgid "QIF/OFX/HBCI Import, Transaction Matching"
 msgstr "Importació de QIF/OFX/HBCI, Concordança de transaccions"
 
-#: index.phtml:72
+#: index.phtml:77
 msgid "Financial Calculations"
 msgstr "Càlculs financers"
 
-#: index.phtml:74
+#: index.phtml:79
 msgid "<b>Discover more …</b>"
 msgstr "<b>Descobriu més …</b>"
 
-#: index.phtml:78
+#: index.phtml:83
 #, fuzzy, php-format
 msgid "GnuCash %s Released"
 msgstr "Recorregut pel llançament de Gnucash 2.6"
 
-#: index.phtml:79
+#: index.phtml:84
 #, php-format
 msgid ""
 "We've released GnuCash %s with many bugfixes and improvements including some "
 "%s!"
 msgstr ""
 
-#: index.phtml:80
+#: index.phtml:85
 #, fuzzy
 msgid "great new features"
 msgstr "Característiques principals"
@@ -2518,8 +2543,8 @@ msgstr ""
 msgid ""
 "Given that we have about 400 outstanding bugs in bugzilla, that works out to "
 "about one bug per thousand lines of code, or one bug per 50 pages of "
-"printout. This bug count is actually not atypical for software projects; "
-"it is near the norm."
+"printout. This bug count is actually not atypical for software projects; it "
+"is near the norm."
 msgstr ""
 "Donat que tenim uns 400 errors destacats a bugzilla, que funciona sobre un "
 "error per cada mil línies de codi, o un error per 50 pàgines de la còpia "
@@ -2554,11 +2579,11 @@ msgid ""
 "even that <code>wc</code> is a good way of counting KLOC's. Much better "
 "measures are complexity metrics, which, for example, count the number and "
 "size of if-then-else blocks, or the number and size of all blocks, or the "
-"number of math operators per statement. Maybe someday we'll run one of "
-"those tools on this code. For now, this is what we have. On the other hand, "
-"we've attempted to count only those files that contain human-edited code, "
-"that is, files that are directly edited by humans. The point of doing this "
-"is to avoid artificially inflating the KLOC counts by counting automatically "
+"number of math operators per statement. Maybe someday we'll run one of those "
+"tools on this code. For now, this is what we have. On the other hand, we've "
+"attempted to count only those files that contain human-edited code, that is, "
+"files that are directly edited by humans. The point of doing this is to "
+"avoid artificially inflating the KLOC counts by counting automatically "
 "generated code (which is why the glade files are not counted: they are large "
 "and automatically generated)."
 msgstr ""
@@ -2843,513 +2868,3 @@ msgstr ""
 "Sembla que el vostre navegador no suporta iframes. Per veure la pàgina "
 "sol·licitada en una finestra independent, <a href=\"%s\" target=\"_new\">feu "
 "clic aquí</a>."
-
-#, fuzzy, php-format
-#~| msgid "for GnuCash %s"
-#~ msgid "%s | GnuCash"
-#~ msgstr "per a Gnucash %s"
-
-#~ msgid "(${size} bytes)"
-#~ msgstr "(${size} bytes)"
-
-#~ msgid ""
-#~ "(Retrieves a certain document which contains specified\n"
-#~ "<code>Message-Id:</code>)"
-#~ msgstr ""
-#~ "(Retorna alguns documents que contenen el\n"
-#~ "<code>Message-Id:</code> especificat)"
-
-#~ msgid ""
-#~ "(Retrieves all documents which contain <code>GNU Emacs</code>\n"
-#~ "in a <code>Subject:</code> field)"
-#~ msgstr ""
-#~ "(Retorna tots els documents que contenen <code>GNU Emacs</code>\n"
-#~ "al camp <code>Subject:</code>)"
-
-#~ msgid ""
-#~ "(Retrieves all documents which contain <code>Linux</code>\n"
-#~ "in a <code>Subject:</code> field)"
-#~ msgstr ""
-#~ "(Retorna tots els documents que contenen <code>Linux</code>\n"
-#~ "al camp <code>Subject:</code>)"
-
-#~ msgid ""
-#~ "(Retrieves all documents which contain <code>foo@bar.jp</code>\n"
-#~ "in a <code>From:</code> field)"
-#~ msgstr ""
-#~ "(Retorna tots els documents que contenen <code>foo@bar.jp</code>\n"
-#~ "al camp <code>From:</code>)"
-
-#~ msgid "(terms which begin with <code>inter</code>)"
-#~ msgstr "(termes que comencen per <code>inter</code>)"
-
-#~ msgid "(terms which contain <code>text</code>)"
-#~ msgstr "(termes que contenen <code>text</code>)"
-
-#~ msgid "(terms which terminated with <code>net</code>)"
-#~ msgstr "(termes que acaben per <code>net</code>)"
-
-#~ msgid ""
-#~ "<b>NOTE:</b> the information presented in these sources may or may not be "
-#~ "updated to the most recent version of <span class=\"gnucash\">GnuCash</"
-#~ "span>. If you are interested in doing development work on these "
-#~ "documents, you should contact the original authors."
-#~ msgstr ""
-#~ "<b>NOTA:</b> la informació continguda en aquestes fonts potser no està "
-#~ "actualitzada a la versió més recent de <span class=\"gnucash\">GnuCash</"
-#~ "span>. Si esteu interessats en fer el treball de desenvolupament "
-#~ "d'aquests documents, us heu de posar en contacte amb els autors originals."
-
-#~ msgid "AND query"
-#~ msgstr "Consulta I (AND)"
-
-#~ msgid "Add keywords"
-#~ msgstr "Afegir paraules clau"
-
-#~ msgid "Author"
-#~ msgstr "Autor"
-
-#~ msgid ""
-#~ "Check a spelling of your keyword<br>\n"
-#~ "Namazu can't find anything with wrong spelling."
-#~ msgstr ""
-#~ "Consulteu l'ortografia de la vostra paraula clau<br>\n"
-#~ "Namazu no pot trobar res amb ortografia equivocada."
-
-#~ msgid "Continent"
-#~ msgstr "Continent"
-
-#~ msgid "Date"
-#~ msgstr "Data"
-
-#~ msgid "Dave Gilbert's User Guide (Pdf)"
-#~ msgstr "Guia d'usuari de Dave Gilbert (Pdf)"
-
-#~ msgid "Description"
-#~ msgstr "Descripció"
-
-#~ msgid "Display"
-#~ msgstr "Mostra"
-
-#~ msgid "Field-specified searching"
-#~ msgstr "Cerca per camp especificat"
-
-#, fuzzy
-#~| msgid "Mailing Lists"
-#~ msgid "GnuCash mailing lists"
-#~ msgstr "Llistes de correu"
-
-#, fuzzy
-#~| msgid "GnuCash News"
-#~ msgid "GnuCash wiki"
-#~ msgstr "Notícies del Gnucash"
-
-#~ msgid "Grouping"
-#~ msgstr "Agrupació"
-
-#~ msgid ""
-#~ "If you gained no results or too few results, you can add one\n"
-#~ "or more related keywords with <code\n"
-#~ "class=\"operator\">or</code> operator. You should get more results.\n"
-#~ "e.g.,"
-#~ msgstr ""
-#~ "Si no heu obtingut cap resultat o n'heu obtingut molt pocs, podeu afegir "
-#~ "una o més paraules clau relacionades amb l'operador <code class=\"operator"
-#~ "\">or</code>. Hauríeu d'obtenir més resultats. p. ex.,"
-
-#~ msgid ""
-#~ "If you gained no results or too few results, you can try\n"
-#~ "substring matching."
-#~ msgstr ""
-#~ "Si no heu obtingut resultats o massa pocs, podeu provar la\n"
-#~ "coincidència de subcadenes."
-
-#~ msgid ""
-#~ "If you gained too many results, you can add one or more\n"
-#~ "related keywords with <code class=\"operator\">and</code>\n"
-#~ "operator. It makes your search more limited. e.g.,"
-#~ msgstr ""
-#~ "Si heu obtingut massa resultats, podeu afegir una o més\n"
-#~ "paraules clau relacionades amb l'operador <code class=\"operator\">and</"
-#~ "code>. \n"
-#~ "Fa que la cerca sigui més limitada. p. ex.,"
-
-#~ msgid ""
-#~ "If you have trouble with searching, you can check the following tips."
-#~ msgstr ""
-#~ "Si teniu problemes amb la cerca, podeu consultar els següents consells."
-
-#~ msgid ""
-#~ "If you want to use <code class=\"operator\">and</code>,\n"
-#~ "<code class=\"operator\">or</code> or <code\n"
-#~ "class=\"operator\">not</code> as ordinary keywords<br>\n"
-#~ "You can surround them respectively with double quotes like <code\n"
-#~ "class=\"operator\">\"...\"</code> or braces like <code\n"
-#~ "class=\"operator\">{...}</code>."
-#~ msgstr ""
-#~ "Si voleu utilitzar <code class=\"operator\">and</code>, <code class="
-#~ "\"operator\">or</code> o <code class=\"operator\">not</code> com a "
-#~ "paraules clau normals podeu envoltar-les respectivament amb cometes "
-#~ "dobles com <code class=\"operator\">\"...\"</code> o s'adapta com <code "
-#~ "class=\"operator\">{...}</code>."
-
-#~ msgid ""
-#~ "In any queries, Namazu ignores case distinctions of\n"
-#~ "alphabet characters; i.e. Namazu does\n"
-#~ "case-insensitive pattern matching."
-#~ msgstr ""
-#~ "En qualsevol consulta, Namazu ignora la diferència entre majúscules i "
-#~ "minúscules dels caràcters alfabètics; p. ex.\n"
-#~ "Namazu fa coincidència de patrons insensible a majúscules i minúscules."
-
-#~ msgid "Info and development"
-#~ msgstr "Informació i desenvolupament"
-
-#~ msgid "Inside matching"
-#~ msgstr "Coincidència interior"
-
-#~ msgid ""
-#~ "It's a defect of Namazu. Precision of phrase searching is\n"
-#~ "not 100%, so it cause wrong results occasionally."
-#~ msgstr ""
-#~ "És un defecte de Namazu. La precisió de la cerca per frase no és del "
-#~ "100%, així que pot ocasionar resultat erronis."
-
-#~ msgid ""
-#~ "Japanese phrases are automatically segmented into\n"
-#~ "morphemes and are handled as <a\n"
-#~ "href=\"#query-phrase\">phrase searching</a>. This process occasionally\n"
-#~ "causes invalid segmentation."
-#~ msgstr ""
-#~ "Les frases japoneses es segmenten automàticament en morfemes i es tracten "
-#~ "com <a href=\"#query-phrase\">cerca de frases</a>. Aquest procés de tant "
-#~ "en tant causa segmentació no vàlida."
-
-#~ msgid "Joe Mack's Tutorial"
-#~ msgstr "Tutorial de Joe Mack"
-
-#~ msgid ""
-#~ "Letters, numbers or parts of symbols (duplicated in\n"
-#~ "ASCII) which are defined in JIS X 0208 (Japanese\n"
-#~ "Industrial Standards) are handled as ASCII characters."
-#~ msgstr ""
-#~ "Lletres, números o parts de símbols (duplicats a ASCII) que es defineixen "
-#~ "a JIS X 0208 (Normes industrials japoneses) es gestionen com a caràcters "
-#~ "ASCII."
-
-#~ msgid "Lists to Search"
-#~ msgstr "Llistes a cercar"
-
-#~ msgid "Mailing List Search"
-#~ msgstr "Cerca a la llista de correu"
-
-#, fuzzy
-#~| msgid "Mailing Lists"
-#~ msgid "Mailing lists"
-#~ msgstr "Llistes de correu"
-
-#~ msgid "NOT query"
-#~ msgstr "Consulta NO (NOT)"
-
-#~ msgid ""
-#~ "Namazu can handle a term which contains symbols like\n"
-#~ "<code>TCP/IP</code>. Since this method of handling isn't complete,\n"
-#~ "you can also describe the term as <code>TCP and IP</code> instead of\n"
-#~ "<code>TCP/IP</code>, but it may cause noisy results."
-#~ msgstr ""
-#~ "Namazu pot gestionar un terme que conté símbols com\n"
-#~ "<code>TCP/IP</code>. Atès que aquest mètode de tractament no està "
-#~ "complet,\n"
-#~ "també podeu descriure el terme com a <code>TCP and IP </code> en comptes "
-#~ "de\n"
-#~ "<code>TCP/IP</code>, però pot provocar resultats sense sentit."
-
-#~ msgid "News Feed"
-#~ msgstr "Servei de notícies"
-
-#~ msgid ""
-#~ "Note that GnuCash for Android is not a port of the GnuCash program to "
-#~ "Android."
-#~ msgstr ""
-#~ "Observeu que GnuCash per Android no és una migració del programa GnuCash "
-#~ "a Android."
-
-#~ msgid "Notes"
-#~ msgstr "Notes"
-
-#~ msgid "OR query"
-#~ msgstr "Consulta O (OR)"
-
-#~ msgid "Phrase searching"
-#~ msgstr "Cerca per frase"
-
-#~ msgid "Prefix matching"
-#~ msgstr "Prefix coincident"
-
-#~ msgid "Query"
-#~ msgstr "Consulta"
-
-#~ msgid "Regular expressions"
-#~ msgstr "Expressions regulars"
-
-#~ msgid "Search"
-#~ msgstr "Cerca"
-
-#~ msgid "Search!"
-#~ msgstr "Cerca!"
-
-#~ msgid "Server &amp; email outage reports to: "
-#~ msgstr "Informes d'interrupció del servidor i del correu electrònic a: "
-
-#~ msgid "Single term query"
-#~ msgstr "Consulta per un sol terme"
-
-#~ msgid "Sort"
-#~ msgstr "Ordena"
-
-#~ msgid "Source"
-#~ msgstr "Font"
-
-#~ msgid "Substring matching"
-#~ msgstr "Coincidència de subcadenes"
-
-#~ msgid ""
-#~ "Substring matching and field-specified searching takes\n"
-#~ "more time than other methods."
-#~ msgstr ""
-#~ "La coincidència de subcadenes i la cerca per camp\n"
-#~ "consumeixen més temps que altres mètodes."
-
-#~ msgid "Suffix matching"
-#~ msgstr "Sufix coincident"
-
-#~ msgid ""
-#~ "The GnuCash team recommends the GnuCash for Android app. This app allows "
-#~ "you to keep track of your financial transactions on the go for later "
-#~ "import into the desktop version of GnuCash."
-#~ msgstr ""
-#~ "L'equip de GnuCash recomana l'app GnuCash per Android. Aquesta aplicació "
-#~ "permet fer un seguiment de les vostres transaccions financeres sobre la "
-#~ "marxa per a la posterior importació a la versió d'escriptori de GnuCash."
-
-#, fuzzy
-#~ msgid ""
-#~ "The document requested is not available in the requested language (tried ["
-#~ msgstr ""
-#~ "El document sol·licitat no està disponible en la llengua sol·licitada. La "
-#~ "versió en anglès es mostrarà en el seu lloc."
-
-#~ msgid "There are three types of searching by substring matching."
-#~ msgstr "Hi ha tres tipus de cerca per coincidència de subcadena."
-
-#~ msgid ""
-#~ "This query specifies only one term for retrieving all of the\n"
-#~ "documents which contain that term, for example:"
-#~ msgstr ""
-#~ "Aquesta consulta especifica només un terme per recuperar tots els "
-#~ "documents que contenen aquest terme, per exemple:"
-
-#~ msgid ""
-#~ "This query specifies two or more terms for retrieving all\n"
-#~ "documents which contain any one term. Insert the\n"
-#~ "<code class=\"operator\">or</code> operator between the terms,\n"
-#~ "e.g."
-#~ msgstr ""
-#~ "Aquesta consulta especifica dos o més termes per recuperar tots els "
-#~ "documents que contenen un dels termes. Insereix l'operador <code class="
-#~ "\"operator\">or</code> entre els termes, p. ex."
-
-#~ msgid ""
-#~ "This query specifies two or more terms for retrieving all of the\n"
-#~ "documents which contain a first term but do not contain the\n"
-#~ "following terms. Insert the <code class=\"operator\">not</code>\n"
-#~ "operator between the terms, for example:"
-#~ msgstr ""
-#~ "Aquesta consulta especifica dos o més termes per recuperar tots els "
-#~ "documents que contenen un dels termes però que no contenen la resta de "
-#~ "termes. Introduïu l'operador <code class=\"operator\">not</code> entre "
-#~ "els termes, per exemple:"
-
-#~ msgid ""
-#~ "This query specifies two or more terms for retrieving all of the\n"
-#~ "documents which contain both terms. Insert the\n"
-#~ "<code class=\"operator\">and</code> operator between the terms, e.g."
-#~ msgstr ""
-#~ "Aquesta consulta especifica dos o més termes per recuperar tots els "
-#~ "documents que contenen tots dos termes. Inseriu l'operador <code class="
-#~ "\"operator\">and</code> entre els termes, p. ex."
-
-#~ msgid "This search system is powered by:"
-#~ msgstr "Aquest sistema de cerca funciona amb:"
-
-#~ msgid "Tips on searching"
-#~ msgstr "Consells sobre la cerca"
-
-#~ msgid ""
-#~ "Translation problems? Contact: <a href=\"mailto:gnucash-devel@gnucash.org"
-#~ "\"><b>gnucash-devel@gnucash.org</b></a>"
-#~ msgstr ""
-#~ "Problemes de traducció? Contacte: <a href=\"mailto:gnucash-devel@gnucash."
-#~ "org\"><b>gnucash-devel@gnucash.org</b></a>"
-
-#~ msgid "Try substring matching"
-#~ msgstr "Provar subcadena coincident"
-
-#~ msgid ""
-#~ "You can group queries by surrounding them by\n"
-#~ "parentheses. The parentheses should be separated by one or\n"
-#~ "more spaces. e.g."
-#~ msgstr ""
-#~ "Podeu agrupar consultes envoltant-les amb parèntesis Els parèntesis s'han "
-#~ "de separar per un o més espais. p. ex."
-
-#~ msgid ""
-#~ "You can limit your search to specific fields such as\n"
-#~ "<code>Subject:</code>, <code>From:</code>,\n"
-#~ "<code>Message-Id:</code>. This feature is especially convenient for\n"
-#~ "Mail/News documents, for example:"
-#~ msgstr ""
-#~ "Podeu delimitar la vostra cerca a camps específics com ara\n"
-#~ "<code>Subject:</code>, <code>From:</code>,\n"
-#~ "<code>Message-Id:</code>. Aquesta característica és especialment "
-#~ "convenient per a\n"
-#~ "Correu/Notícies, per exemple:"
-
-#~ msgid ""
-#~ "You can omit the <code class=\"operator\">and</code> operator. Terms "
-#~ "which are\n"
-#~ "separated by one or more spaces are assumed to be an AND query."
-#~ msgstr ""
-#~ "Podeu ometre l'operador <code class=\"operator\">and</code>. Termes "
-#~ "separats per un o més espais s'assumeix que són una consulta AND."
-
-#~ msgid ""
-#~ "You can search for a phrase that consists of two or more terms\n"
-#~ "by surrounding them with double quotation marks or braces such as\n"
-#~ "<code class=\"operator\">\"...\"</code> and <code class=\"operator\">{...}"
-#~ "</code>.\n"
-#~ "In Namazu, the precision of phrase searching is not 100%,\n"
-#~ "so wrong results may occasionally occur. Example:"
-#~ msgstr ""
-#~ "Podeu cercar una frase que consta de dos o més termes envoltant-los amb "
-#~ "cometes dobles o claudàtors com\n"
-#~ "<code class=\"operator\">\"...\"</code> and <code class=\"operator\">{...}"
-#~ "</code>.\n"
-#~ "A Namazu, la precisió de la cerca de frases no és del 100%,\n"
-#~ "de manera que ocasionalment es poden produir resultats incorrectes. "
-#~ "Exemple:"
-
-#~ msgid ""
-#~ "You can specify <code class=\"example\">*tex*</code> to\n"
-#~ "search for terms which contain <code>tex</code> (many)."
-#~ msgstr ""
-#~ "Podeu especificar <code class=\"example\">*tex*</code> per\n"
-#~ "cercar termes que continguin <code>tex</code> (una colla)."
-
-#~ msgid ""
-#~ "You can specify <code class=\"example\">*tex</code> to\n"
-#~ "search for terms which terminated with <code>tex</code> (e.g.,\n"
-#~ "<code>bibtex</code>,\n"
-#~ "<code>jlatex</code>, <code>latex</code>,\n"
-#~ "<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
-#~ msgstr ""
-#~ "Podeu especificar <code class=\"example\">*tex</code> per\n"
-#~ "cercar els termes que acabin en <code>tex</code> (p. ex.,\n"
-#~ "<code>bibtex</code>,\n"
-#~ "<code>jlatex</code>, <code>latex</code>,\n"
-#~ "<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
-
-#~ msgid ""
-#~ "You can specify <code class=\"example\">tex*</code> to\n"
-#~ "search for terms which begin with\n"
-#~ "<code>tex</code> (e.g., <code>tex</code>,\n"
-#~ "<code>texi2html</code>,\n"
-#~ "<code>texindex</code>, <code>text</code>)."
-#~ msgstr ""
-#~ "Podeu especificar <code class=\"example\">tex*</code> per\n"
-#~ "cercar els termes que comencin en\n"
-#~ "<code>tex</code> (e.g., <code>tex</code>,\n"
-#~ "<code>texi2html</code>,\n"
-#~ "<code>texindex</code>, <code>text</code>)."
-
-#, fuzzy
-#~ msgid ""
-#~ "You can use regular expressions for pattern matching. The\n"
-#~ "regular expressions must be surrounded by slashes like <code\n"
-#~ "class=\"operator\">/.../</code>. Namazu uses <a\n"
-#~ "href=\"http://www.ruby-lang.org/\">Ruby</a>'s regular\n"
-#~ "regular expressions engine. It generally offers a <a\n"
-#~ "href=\"http://www.perl.com/\">Perl</a> compatible flavor.\n"
-#~ "e.g.,"
-#~ msgstr ""
-#~ "Podeu utilitzar expressions regulars per a la coincidència de patrons. "
-#~ "Les expressions regulars han d'estar envoltades de barres com <code class="
-#~ "\"operator\">/.../</code>. Namazu utilitza el motor d'expressions "
-#~ "regulars de <a href=\"https://www.ruby-lang.org/\">Ruby</a>.\n"
-#~ "Generalment ofereix una variant compatible amb <a href=\"https://www.perl."
-#~ "com/\">Perl</a>. p.ex.,"
-
-#~ msgid ""
-#~ "You tried phrase searching but it hit documents which\n"
-#~ "didn't contain your phrase."
-#~ msgstr "La teva cerca per frase no ha trobat cap document que la contingui."
-
-#~ msgid "[How to search]"
-#~ msgstr "[Com cercar]"
-
-#~ msgid "by URI in ascending order"
-#~ msgstr "per URI en ordre ascendent"
-
-#~ msgid "by URI in descending order"
-#~ msgstr "per URI en ordre descendent"
-
-#~ msgid "by author in ascending order"
-#~ msgstr "per autor en ordre ascendent"
-
-#~ msgid "by author in descending order"
-#~ msgstr "per autor en ordre descendent"
-
-#~ msgid "by date in early order"
-#~ msgstr "per data més antiga"
-
-#~ msgid "by date in late order"
-#~ msgstr "per data més recent"
-
-#~ msgid "by score"
-#~ msgstr "per puntuació"
-
-#~ msgid "by size in ascending order"
-#~ msgstr "per tamany en ordre ascendent"
-
-#~ msgid "by size in descending order"
-#~ msgstr "per tamany en ordre descendent"
-
-#~ msgid "by title in ascending order"
-#~ msgstr "per títol en ordre ascendent"
-
-#~ msgid "by title in descending order"
-#~ msgstr "per títol en ordre descendent"
-
-#, fuzzy
-#~| msgid "Donations"
-#~ msgid "donation"
-#~ msgstr "Donacions"
-
-#, fuzzy
-#~| msgid "Localization"
-#~ msgid "localizing"
-#~ msgstr "Localització"
-
-#~ msgid "normal"
-#~ msgstr "normal"
-
-#, fuzzy
-#~| msgid "GnuCash Documentation"
-#~ msgid "released documentation"
-#~ msgstr "Documentació del GnuCash"
-
-#~ msgid "score"
-#~ msgstr "puntuació"
-
-#~ msgid "short"
-#~ msgstr "curt"

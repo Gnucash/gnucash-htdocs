@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gnucash-htdocs\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2021-12-19 04:04+0100\n"
+"POT-Creation-Date: 2021-12-21 00:25+0100\n"
 "PO-Revision-Date: 2021-06-02 22:34+0000\n"
 "Last-Translator: Henio Szewczyk <henryk.szewczyk09@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/gnucash/website/"
@@ -890,8 +890,8 @@ msgstr ""
 msgid "Installers"
 msgstr ""
 
-#: download.phtml:24 download.phtml:25 download.phtml:68 download.phtml:69
-#: download.phtml:84 download.phtml:85 download.phtml:98 download.phtml:104
+#: download.phtml:24 download.phtml:25 download.phtml:71 download.phtml:72
+#: download.phtml:87 download.phtml:88 download.phtml:101 download.phtml:107
 #, php-format
 msgid "GnuCash %s for"
 msgstr ""
@@ -904,30 +904,36 @@ msgid ""
 "class=\"gnucash\">GnuCash</span> version that comes with your distribution."
 msgstr ""
 
-#: download.phtml:30
+#. Translators: %s is the link to repology.org
+#: download.phtml:31
+#, php-format
+msgid "At %s you can compare which distribution which version ships."
+msgstr ""
+
+#: download.phtml:33
 msgid ""
 "Below are ways to install <span class=\"gnucash\">GnuCash</span> on some of "
 "the more popular distributions:"
 msgstr ""
 
-#: download.phtml:33
+#: download.phtml:36
 msgid ""
 "Fedora users can install <span class=\"gnucash\">GnuCash</span> through "
 "System->Administration->Add/Remove Software (Gnome) or Applications->System-"
 ">Software Management (KDE)."
 msgstr ""
 
-#: download.phtml:34
+#: download.phtml:37
 msgid ""
 "Mandriva users can install <span class=\"gnucash\">GnuCash</span> through "
 "the Software Management in the Mandriva Linux Control Center."
 msgstr ""
 
-#: download.phtml:35
+#: download.phtml:38
 msgid "Epel's wiki page"
 msgstr ""
 
-#: download.phtml:35
+#: download.phtml:38
 msgid ""
 "Redhat and CentOS don't have <span class=\"gnucash\">GnuCash</span> in their "
 "repositories by default. It can be installed however from the third-party "
@@ -935,24 +941,24 @@ msgid ""
 "repository for your setup, see"
 msgstr ""
 
-#: download.phtml:36
+#: download.phtml:39
 msgid ""
 "Solus users can install <span class=\"gnucash\">GnuCash</span> through the "
 "Software Center (Office Software -> Financial Software -> gnucash)."
 msgstr ""
 
-#: download.phtml:37
+#: download.phtml:40
 msgid ""
 "Ubuntu users can install <span class=\"gnucash\">GnuCash</span> through the "
 "Software Center. This will install <span class=\"gnucash\">GnuCash</span> "
 "under the Office category in the Applications menu."
 msgstr ""
 
-#: download.phtml:40
+#: download.phtml:43
 msgid "Sandbox"
 msgstr ""
 
-#: download.phtml:43
+#: download.phtml:46
 #, php-format
 msgid ""
 "Flatpaks are bundles, which contain beneath the program also all required "
@@ -963,20 +969,20 @@ msgstr ""
 
 #. Translators: %s is the base url of the gnucash wiki, adjust this,
 #. if a localized instance of the Flatpak page exists like "%sDe/Flatpak"
-#: download.phtml:48
+#: download.phtml:51
 #, php-format
 msgid "%sFlatpak"
 msgstr ""
 
-#: download.phtml:48
+#: download.phtml:51
 msgid "Known Issues and other details …"
 msgstr ""
 
-#: download.phtml:52 index.phtml:17
+#: download.phtml:55 index.phtml:17
 msgid "Source code"
 msgstr "Kod źródłowy"
 
-#: download.phtml:53
+#: download.phtml:56
 msgid ""
 "If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> or "
 "you wish to install a different version than it ships with, you could try to "
@@ -990,72 +996,72 @@ msgstr ""
 "href='https://wiki.gnucash.org/wiki/Building'>poradniki dla kilkunastu "
 "dystrybucji</a> na <span class=\"gnucash\">GnuCash</span> wiki."
 
-#: download.phtml:55 download.phtml:70 download.phtml:86
+#: download.phtml:58 download.phtml:73 download.phtml:89
 #, php-format
 msgid "for GnuCash %s"
 msgstr ""
 
-#: download.phtml:62
+#: download.phtml:65
 #, php-format
 msgid "Unstable/Development release (%s)"
 msgstr ""
 
-#: download.phtml:64
+#: download.phtml:67
 msgid ""
 "Unstable (development) releases are for testing purposes only. They contain "
 "the newest features and improvements, but may also contain serious bugs "
 "still. Don't install these releases for everyday use."
 msgstr ""
 
-#: download.phtml:65
+#: download.phtml:68
 #, php-format
 msgid ""
-"The latest unstable release of <span class=\"gnucash\">GnuCash</span> is "
-"%s. Choose the download for your operating system below."
+"The latest unstable release of <span class=\"gnucash\">GnuCash</span> is %s. "
+"Choose the download for your operating system below."
 msgstr ""
 
-#: download.phtml:78
+#: download.phtml:81
 #, php-format
 msgid "Old Stable release (%s)"
 msgstr ""
 
-#: download.phtml:80
+#: download.phtml:83
 msgid ""
 "This old stable release is the final version of the previous stable series. "
 "It's available for users who aren't ready for a major upgrade but want to "
 "make sure that they have all of the bugfixes from the old series."
 msgstr ""
 
-#: download.phtml:81
+#: download.phtml:84
 #, php-format
 msgid ""
-"The last old stable release of <span class=\"gnucash\">GnuCash</span> is "
-"%s. Choose the download for your operating system below."
+"The last old stable release of <span class=\"gnucash\">GnuCash</span> is %s. "
+"Choose the download for your operating system below."
 msgstr ""
 
-#: download.phtml:94
+#: download.phtml:97
 msgid "Latest versions for historical operating systems"
 msgstr ""
 
-#: download.phtml:96
+#: download.phtml:99
 msgid "This versions are really old. Do not expect any support."
 msgstr ""
 
-#: download.phtml:109
+#: download.phtml:112
 msgid "Other"
 msgstr "Inne"
 
-#: download.phtml:113
+#: download.phtml:116
 #, php-format
 msgid "View all GnuCash %s downloads (stable)"
 msgstr ""
 
-#: download.phtml:118
+#: download.phtml:121
 #, php-format
 msgid "View all GnuCash %s downloads (unstable)"
 msgstr ""
 
-#: download.phtml:121
+#: download.phtml:124
 msgid "View all GnuCash downloads"
 msgstr ""
 
@@ -1067,11 +1073,11 @@ msgstr ""
 msgid "Translation problems? Contact:"
 msgstr ""
 
-#: externals/global_params.php:85 externals/header.phtml:144
+#: externals/global_params.php:90 externals/header.phtml:144
 msgid "Free Accounting Software"
 msgstr ""
 
-#: externals/global_params.php:86
+#: externals/global_params.php:91
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is personal and small-business "
 "financial-accounting software, freely licensed under the <a href=\"https://"
@@ -1143,7 +1149,7 @@ msgstr ""
 msgid "Wiki"
 msgstr ""
 
-#: externals/menu.phtml:33 index.phtml:54
+#: externals/menu.phtml:33 index.phtml:59
 msgid "Mailing Lists"
 msgstr ""
 
@@ -1305,7 +1311,7 @@ msgstr ""
 msgid "Many options to <b>customize</b> the appearance and the display style"
 msgstr ""
 
-#: features.phtml:69 index.phtml:71
+#: features.phtml:69 index.phtml:76
 msgid "Scheduled Transactions"
 msgstr "Zaplanowane transakcje"
 
@@ -1323,7 +1329,7 @@ msgid ""
 "entering them before the due date."
 msgstr ""
 
-#: features.phtml:82 index.phtml:69
+#: features.phtml:82 index.phtml:74
 msgid "Reports, Graphs"
 msgstr ""
 
@@ -1599,23 +1605,23 @@ msgstr ""
 msgid "Via distribution"
 msgstr ""
 
-#: index.phtml:26
+#: index.phtml:25
 msgid "More downloads (Source code, Development …)"
 msgstr ""
 
-#: index.phtml:33
+#: index.phtml:32
 #, php-format
 msgid "Version %s is the last version for %s and %s and earlier."
 msgstr ""
 
-#: index.phtml:36
+#: index.phtml:35
 #, php-format
 msgid ""
 "Version %s is the last version for Windows XP/Vista and MacOS X 10.8 and "
 "earlier, and so the last version that will run on PowerPC Macs."
 msgstr ""
 
-#: index.phtml:45
+#: index.phtml:44
 msgid ""
 "Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash"
 "\">GnuCash</span> allows you to track bank accounts, stocks, income and "
@@ -1624,63 +1630,82 @@ msgid ""
 "reports."
 msgstr ""
 
+#. Translators: %s is the link to https://wiki.gnucash.org/wiki/Contributing_to_GnuCash
+#: index.phtml:46
+#, php-format
+msgid ""
+"GnuCash is developed, maintained, documented, and translated entirely by "
+"volunteers. Want to help out? We have %s."
+msgstr ""
+
+#. Translators: This is the label of the Contributing… wiki link
+#: index.phtml:48
+msgid "some suggestions"
+msgstr ""
+
+#. Translators: %s is the link to weblate
 #: index.phtml:50
+#, php-format
+msgid "Please help translate GnuCash into your language at %s."
+msgstr ""
+
+#: index.phtml:55
 msgid "Need Help?"
 msgstr ""
 
-#: index.phtml:53
+#: index.phtml:58
 msgid ""
 "Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? "
 "Try the"
 msgstr ""
 
-#: index.phtml:55
+#: index.phtml:60
 msgid ""
 ", which are public, email-based discussion groups where you can ask and "
 "answer <span class=\"gnucash\">GnuCash</span> questions to other users."
 msgstr ""
 
-#: index.phtml:61
+#: index.phtml:66
 msgid "Feature Highlights"
 msgstr ""
 
-#: index.phtml:66
+#: index.phtml:71
 msgid "Double-Entry Accounting"
 msgstr ""
 
-#: index.phtml:67
+#: index.phtml:72
 msgid "Stock/Bond/Mutual Fund Accounts"
 msgstr ""
 
-#: index.phtml:68
+#: index.phtml:73
 msgid "Small-Business Accounting"
 msgstr ""
 
-#: index.phtml:70
+#: index.phtml:75
 msgid "QIF/OFX/HBCI Import, Transaction Matching"
 msgstr ""
 
-#: index.phtml:72
+#: index.phtml:77
 msgid "Financial Calculations"
 msgstr ""
 
-#: index.phtml:74
+#: index.phtml:79
 msgid "<b>Discover more …</b>"
 msgstr ""
 
-#: index.phtml:78
+#: index.phtml:83
 #, php-format
 msgid "GnuCash %s Released"
 msgstr ""
 
-#: index.phtml:79
+#: index.phtml:84
 #, php-format
 msgid ""
 "We've released GnuCash %s with many bugfixes and improvements including some "
 "%s!"
 msgstr ""
 
-#: index.phtml:80
+#: index.phtml:85
 msgid "great new features"
 msgstr ""
 
@@ -2009,8 +2034,8 @@ msgstr ""
 msgid ""
 "Given that we have about 400 outstanding bugs in bugzilla, that works out to "
 "about one bug per thousand lines of code, or one bug per 50 pages of "
-"printout. This bug count is actually not atypical for software projects; "
-"it is near the norm."
+"printout. This bug count is actually not atypical for software projects; it "
+"is near the norm."
 msgstr ""
 
 #: sizing.phtml:33
@@ -2032,11 +2057,11 @@ msgid ""
 "even that <code>wc</code> is a good way of counting KLOC's. Much better "
 "measures are complexity metrics, which, for example, count the number and "
 "size of if-then-else blocks, or the number and size of all blocks, or the "
-"number of math operators per statement. Maybe someday we'll run one of "
-"those tools on this code. For now, this is what we have. On the other hand, "
-"we've attempted to count only those files that contain human-edited code, "
-"that is, files that are directly edited by humans. The point of doing this "
-"is to avoid artificially inflating the KLOC counts by counting automatically "
+"number of math operators per statement. Maybe someday we'll run one of those "
+"tools on this code. For now, this is what we have. On the other hand, we've "
+"attempted to count only those files that contain human-edited code, that is, "
+"files that are directly edited by humans. The point of doing this is to "
+"avoid artificially inflating the KLOC counts by counting automatically "
 "generated code (which is why the glade files are not counted: they are large "
 "and automatically generated)."
 msgstr ""
@@ -2235,439 +2260,3 @@ msgid ""
 "It seems your browser doesn't support iframes. To view the requested page in "
 "a separate window, please <a href=\"%s\" target=\"_blank\">click here</a>."
 msgstr ""
-
-#~ msgid "(${size} bytes)"
-#~ msgstr "(${size} bajtów)"
-
-#~ msgid ""
-#~ "(Retrieves a certain document which contains specified\n"
-#~ "<code>Message-Id:</code>)"
-#~ msgstr ""
-#~ "(Zwraca pewien dokument zawierający wyszczególnione\n"
-#~ "<code>Message-Id:</code>)"
-
-#~ msgid ""
-#~ "(Retrieves all documents which contain <code>GNU Emacs</code>\n"
-#~ "in a <code>Subject:</code> field)"
-#~ msgstr ""
-#~ "(Zwraca wszystkie dokumenty zawierające pola <code>GNU Emacs</code>\n"
-#~ "w <code>Subject:</code> )"
-
-#~ msgid ""
-#~ "(Retrieves all documents which contain <code>Linux</code>\n"
-#~ "in a <code>Subject:</code> field)"
-#~ msgstr ""
-#~ "(Zwraca wszystkie dokument zawierające pola <code>Linux</code>\n"
-#~ "w <code>Subject:</code> )"
-
-#~ msgid ""
-#~ "(Retrieves all documents which contain <code>foo@bar.jp</code>\n"
-#~ "in a <code>From:</code> field)"
-#~ msgstr ""
-#~ "(Zwraca wszystkie dokument zawierające pola <code>foo@bar.jp</code>\n"
-#~ "w <code>From:</code> )"
-
-#~ msgid "(terms which begin with <code>inter</code>)"
-#~ msgstr "(określenia rozpoczynające się na <code>inter</code>)"
-
-#~ msgid "(terms which contain <code>text</code>)"
-#~ msgstr "(określenia zawierające się wewnątrz <code>text</code>)"
-
-#~ msgid "(terms which terminated with <code>net</code>)"
-#~ msgstr "(określenia kończące się na <code>net</code>)"
-
-#~ msgid "AND query"
-#~ msgstr "Zapytanie typu AND(logiczne i)"
-
-#~ msgid "Add keywords"
-#~ msgstr "Dodaj słów-kluczy"
-
-#~ msgid "Author"
-#~ msgstr "Autor"
-
-#~ msgid ""
-#~ "Check a spelling of your keyword<br>\n"
-#~ "Namazu can't find anything with wrong spelling."
-#~ msgstr ""
-#~ "Sprawdź pisownię podanych słów kluczowych<br>\n"
-#~ "Namazu nic nie znajdzie z błędami w pisowni."
-
-#~ msgid "Date"
-#~ msgstr "Data"
-
-#~ msgid "Description"
-#~ msgstr "Opis"
-
-#~ msgid "Display"
-#~ msgstr "Pokazuj"
-
-#~ msgid "Field-specified searching"
-#~ msgstr "Wyszukiwanie po wyspecyfikowanych polach"
-
-#~ msgid "Grouping"
-#~ msgstr "Grupowanie"
-
-#~ msgid ""
-#~ "If you gained no results or too few results, you can add one\n"
-#~ "or more related keywords with <code\n"
-#~ "class=\"operator\">or</code> operator. You should get more results.\n"
-#~ "e.g.,"
-#~ msgstr ""
-#~ "Jeżeli nie otrzymujesz wyników, lub otrzymujesz ich za mało, możesz dodać "
-#~ "jedno\n"
-#~ "lub więcej pokrewnych słów z operatorem\n"
-#~ "<code\n"
-#~ "class=\"operator\">or</code> . Powinieneś otrzymać więcej rezultatów np.:"
-
-#~ msgid ""
-#~ "If you gained no results or too few results, you can try\n"
-#~ "substring matching."
-#~ msgstr ""
-#~ "Jeżeli nie otrzymujesz wyników, lub otrzymujesz ich za mało, możesz "
-#~ "spróbować\n"
-#~ "dopasowywania okrojonych słów."
-
-#~ msgid ""
-#~ "If you gained too many results, you can add one or more\n"
-#~ "related keywords with <code class=\"operator\">and</code>\n"
-#~ "operator. It makes your search more limited. e.g.,"
-#~ msgstr ""
-#~ "Jezeli otrzymujesz za dużo wynikow, możesz dodać jedno lub więcej\n"
-#~ "pokrewnych słów z operatorem\n"
-#~ "<code class=\"operator\">and</code>\n"
-#~ ". To ograniczy bardziej zakres przeszukiwania np.:"
-
-#~ msgid ""
-#~ "If you have trouble with searching, you can check the following tips."
-#~ msgstr ""
-#~ "Jeżeli masz problem ze znalezieniem podanej przez Ciebie informacji, "
-#~ "spróbuj zastosować poniższe rady"
-
-#~ msgid ""
-#~ "If you want to use <code class=\"operator\">and</code>,\n"
-#~ "<code class=\"operator\">or</code> or <code\n"
-#~ "class=\"operator\">not</code> as ordinary keywords<br>\n"
-#~ "You can surround them respectively with double quotes like <code\n"
-#~ "class=\"operator\">\"...\"</code> or braces like <code\n"
-#~ "class=\"operator\">{...}</code>."
-#~ msgstr ""
-#~ "Jeżeli chcesz użyć <code class=\"operator\">and</code>,\n"
-#~ "<code class=\"operator\">or</code> lub <code\n"
-#~ "class=\"operator\">not</code> jako zwykłych słów kluczowych <br>\n"
-#~ "możesz otoczyć je odpowiednio podwójnymi cudzysłowami tak, jak\n"
-#~ "<code\n"
-#~ "class=\"operator\">\"...\"</code> lub takimi nawiasami <code\n"
-#~ "class=\"operator\">{...}</code>."
-
-#~ msgid ""
-#~ "In any queries, Namazu ignores case distinctions of\n"
-#~ "alphabet characters; i.e. Namazu does\n"
-#~ "case-insensitive pattern matching."
-#~ msgstr ""
-#~ "We wszystkich zapytaniach, Namazu ignoruje wielkość znaków alfabetu."
-
-#~ msgid "Inside matching"
-#~ msgstr "Wewnętrzne dopasowanie"
-
-#~ msgid ""
-#~ "It's a defect of Namazu. Precision of phrase searching is\n"
-#~ "not 100%, so it cause wrong results occasionally."
-#~ msgstr ""
-#~ "To jest usterka Namazu. Precyzja wyszukiwania fraz nie jest\n"
-#~ "100%, ale złe wyniki są rzadkie."
-
-#~ msgid ""
-#~ "Japanese phrases are automatically segmented into\n"
-#~ "morphemes and are handled as <a\n"
-#~ "href=\"#query-phrase\">phrase searching</a>. This process occasionally\n"
-#~ "causes invalid segmentation."
-#~ msgstr ""
-#~ "Japanese phrases are forced to be segmented into\n"
-#~ "morphemes automatically and are handled them as <a\n"
-#~ "href=\"#query-phrase\">phrase searching</a>. This processing\n"
-#~ "causes invalid segmentation occasionally.\n"
-#~ "<br>Po cholere to tłumaczyli na angielski? Ja. w każdym bądź razie nie "
-#~ "będę, bo nie zamierzam posługiwać\n"
-#~ "się jęz. japońskim."
-
-#~ msgid ""
-#~ "Letters, numbers or parts of symbols (duplicated in\n"
-#~ "ASCII) which are defined in JIS X 0208 (Japanese\n"
-#~ "Industrial Standards) are handled as ASCII characters."
-#~ msgstr ""
-#~ "Letters, numbers or a part of symbols (duplicated in\n"
-#~ "ASCII) characters which defined in JIS X 0208 (Japanese\n"
-#~ "Industrial Standards) are handled as ASCII characters.\n"
-#~ "<br>Już mam skośne oczy według normy przemysłowej JIS X 0208."
-
-#~ msgid "NOT query"
-#~ msgstr "Zapytanie typu NOT(przeczenie)"
-
-#~ msgid ""
-#~ "Namazu can handle a term which contains symbols like\n"
-#~ "<code>TCP/IP</code>. Since this method of handling isn't complete,\n"
-#~ "you can also describe the term as <code>TCP and IP</code> instead of\n"
-#~ "<code>TCP/IP</code>, but it may cause noisy results."
-#~ msgstr ""
-#~ "Namazu radzi sobie z określeniami zawierającymi znaki takie jak\n"
-#~ "<code>TCP/IP</code>, ale to radzenie sobie nie jest kompletne\n"
-#~ "możesz opisać\n"
-#~ "<code>TCP and IP</code> zamiast\n"
-#~ "<code>TCP/IP</code>, ale może to być powodem zbyt wielu dopasowań (szumu "
-#~ "informacyjnego)"
-
-#~ msgid "Notes"
-#~ msgstr "Uwagi"
-
-#~ msgid "OR query"
-#~ msgstr "Zapytanie typu OR(logiczne lub)"
-
-#~ msgid "Phrase searching"
-#~ msgstr "Wyszukiwanie fraz"
-
-#~ msgid "Prefix matching"
-#~ msgstr "Przedrostkowe dopasowanie"
-
-#~ msgid "Query"
-#~ msgstr "Zapytania"
-
-#~ msgid "Regular expressions"
-#~ msgstr "Wyrażenia regularne (man grep)"
-
-#~ msgid "Search!"
-#~ msgstr "Szukaj!"
-
-#~ msgid "Single term query"
-#~ msgstr "Zapytanie pojedyńcze"
-
-#~ msgid "Sort"
-#~ msgstr "Kryterium sortowania"
-
-#, fuzzy
-#~ msgid "Source"
-#~ msgstr "Kryterium sortowania"
-
-#~ msgid "Substring matching"
-#~ msgstr "Wyszukiwanie okrojonych słów"
-
-#~ msgid ""
-#~ "Substring matching and field-specified searching takes\n"
-#~ "more time than other methods."
-#~ msgstr ""
-#~ "Dopasowania okrojonych słów i szukania po wybranych polach zabierają\n"
-#~ "więcej czasu, niż inne metody."
-
-#~ msgid "Suffix matching"
-#~ msgstr "Przyrostkowe dopasowanie"
-
-#~ msgid "There are three types of searching by substring matching."
-#~ msgstr "Są trzy typy wyszukiwania okrojonych słów."
-
-#~ msgid ""
-#~ "This query specifies only one term for retrieving all of the\n"
-#~ "documents which contain that term, for example:"
-#~ msgstr ""
-#~ "To zapytanie wyszczególnia tylko jedno określenie dla wyszukiwania "
-#~ "wszystkich\n"
-#~ "dokumentów, które zawierają to określenie, np.:"
-
-#~ msgid ""
-#~ "This query specifies two or more terms for retrieving all\n"
-#~ "documents which contain any one term. Insert the\n"
-#~ "<code class=\"operator\">or</code> operator between the terms,\n"
-#~ "e.g."
-#~ msgstr ""
-#~ "To zapytanie wyszczególnia 2 lub więcej określeń dla wyszukiwania "
-#~ "wszystkich\n"
-#~ "dokumentów, które zawierają jakiekolwiek z podanych określeń. Możesz "
-#~ "wpisać operator\n"
-#~ "<code class=\"operator\">or</code> pomiędzy dwoma lub więcej "
-#~ "określeniami, np.:"
-
-#~ msgid ""
-#~ "This query specifies two or more terms for retrieving all of the\n"
-#~ "documents which contain a first term but do not contain the\n"
-#~ "following terms. Insert the <code class=\"operator\">not</code>\n"
-#~ "operator between the terms, for example:"
-#~ msgstr ""
-#~ "To zapytanie wyszczególnia 2 lub więcej określeń dla wyszukiwania "
-#~ "wszystkich\n"
-#~ "dokumentów, które zawierają pierwsze określenie, ale nie zawierają\n"
-#~ "następnych określeń. Możesz wpisać operator <code class=\"operator\">not</"
-#~ "code>\n"
-#~ " pomiędzy dwoma lub więcej określeniami, np.:"
-
-#~ msgid ""
-#~ "This query specifies two or more terms for retrieving all of the\n"
-#~ "documents which contain both terms. Insert the\n"
-#~ "<code class=\"operator\">and</code> operator between the terms, e.g."
-#~ msgstr ""
-#~ "To zapytanie wyszczególnia 2 lub więcej określeń dla wyszukiwania "
-#~ "wszystkich\n"
-#~ "dokumentów, które zawierają wszystkie podane określenia. Możesz wpisać "
-#~ "operator\n"
-#~ "<code class=\"operator\">and</code> pomiędzy dwoma lub więcej "
-#~ "określeniami, np.:"
-
-#~ msgid "This search system is powered by:"
-#~ msgstr "Ten system wyszukiwania jest oparty na:"
-
-#~ msgid "Tips on searching"
-#~ msgstr "Porady dotyczące wyszukiwania"
-
-#~ msgid "Try substring matching"
-#~ msgstr "Spróbuj wyszukiwania okrojonych słów"
-
-#~ msgid ""
-#~ "You can group queries by surrounding them by\n"
-#~ "parentheses. The parentheses should be separated by one or\n"
-#~ "more spaces. e.g."
-#~ msgstr ""
-#~ "Możesz grupować zapytania przez zawarcie ich\n"
-#~ "w nawiasach okragłych. Nawiasy powinny być oddzielone przez jedną lub\n"
-#~ "więcej spacji, np.:"
-
-#~ msgid ""
-#~ "You can limit your search to specific fields such as\n"
-#~ "<code>Subject:</code>, <code>From:</code>,\n"
-#~ "<code>Message-Id:</code>. This feature is especially convenient for\n"
-#~ "Mail/News documents, for example:"
-#~ msgstr ""
-#~ "Możesz ograniczyć przeszukiwanie do określonych pól jak\n"
-#~ "<code>Subject:</code>, <code>From:</code>,\n"
-#~ "<code>Message-Id:</code>. Jest to zwłaszcza dogodne dla dokumentów typu\n"
-#~ "Mail/News, np.:"
-
-#~ msgid ""
-#~ "You can omit the <code class=\"operator\">and</code> operator. Terms "
-#~ "which are\n"
-#~ "separated by one or more spaces are assumed to be an AND query."
-#~ msgstr ""
-#~ "Możesz pominąć operator\n"
-#~ "<code class=\"operator\">and</code> .\n"
-#~ "Określenia, które są oddzielone jedną lub więcej spacją są uważane za "
-#~ "zapytanie typu AND."
-
-#~ msgid ""
-#~ "You can search for a phrase that consists of two or more terms\n"
-#~ "by surrounding them with double quotation marks or braces such as\n"
-#~ "<code class=\"operator\">\"...\"</code> and <code class=\"operator\">{...}"
-#~ "</code>.\n"
-#~ "In Namazu, the precision of phrase searching is not 100%,\n"
-#~ "so wrong results may occasionally occur. Example:"
-#~ msgstr ""
-#~ "Możesz szukać wyrażenia, które składa się z dwóch lub więcej określeń\n"
-#~ "otaczając je podwójnym cudzysłowem jak\n"
-#~ "<code class=\"operator\">\"...\"</code> lub klamrami jak <code class="
-#~ "\"operator\">{...}</code>.\n"
-#~ "Precyzja Namazu  w wyszukiwaniu fraz nie jest 100%,\n"
-#~ "lecz błędne wyniki trafiają się bardzo rzadko, np.:"
-
-#~ msgid ""
-#~ "You can specify <code class=\"example\">*tex*</code> to\n"
-#~ "search for terms which contain <code>tex</code> (many)."
-#~ msgstr ""
-#~ "Możesz wyszczególnić\n"
-#~ "<code class=\"example\">*tex*</code> to\n"
-#~ "wyszukiwanie dla określeń zawierających\n"
-#~ "<code>tex</code> (wiele)."
-
-#~ msgid ""
-#~ "You can specify <code class=\"example\">*tex</code> to\n"
-#~ "search for terms which terminated with <code>tex</code> (e.g.,\n"
-#~ "<code>bibtex</code>,\n"
-#~ "<code>jlatex</code>, <code>latex</code>,\n"
-#~ "<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
-#~ msgstr ""
-#~ "Możesz wyszczególnić<code class=\"example\">*tex</code> to\n"
-#~ "wyszukiwanie dla określeń kończących się na\n"
-#~ "<code>tex</code> (np.:\n"
-#~ "<code>bibtex</code>,\n"
-#~ "<code>jlatex</code>, <code>latex</code>,\n"
-#~ "<code>platex</code>, <code>ptex</code>, <code>vertex</code>)."
-
-#~ msgid ""
-#~ "You can specify <code class=\"example\">tex*</code> to\n"
-#~ "search for terms which begin with\n"
-#~ "<code>tex</code> (e.g., <code>tex</code>,\n"
-#~ "<code>texi2html</code>,\n"
-#~ "<code>texindex</code>, <code>text</code>)."
-#~ msgstr ""
-#~ "Możesz wyszczególnić<code class=\"example\">tex*</code> dla wyszukania "
-#~ "określeń zaczynających się na\n"
-#~ "<code>tex</code> (e.g., <code>tex</code>,\n"
-#~ "<code>texi2html</code>,\n"
-#~ "<code>texindex</code>, <code>text</code>)."
-
-#, fuzzy
-#~ msgid ""
-#~ "You can use regular expressions for pattern matching. The\n"
-#~ "regular expressions must be surrounded by slashes like <code\n"
-#~ "class=\"operator\">/.../</code>. Namazu uses <a\n"
-#~ "href=\"http://www.ruby-lang.org/\">Ruby</a>'s regular\n"
-#~ "regular expressions engine. It generally offers a <a\n"
-#~ "href=\"http://www.perl.com/\">Perl</a> compatible flavor.\n"
-#~ "e.g.,"
-#~ msgstr ""
-#~ "Możesz używać wyrażeń regularnych jako wzór do dopasowywania.\n"
-#~ "Wyrażenia regularne muszą być otoczone przez ukośniki tak, jak\n"
-#~ "<code\n"
-#~ "class=\"operator\">/.../</code>. Namazu wykorzystuje silnik wyrażeń "
-#~ "regularnych\n"
-#~ "<ahref=\"https://www.ruby-lang.org/\">Ruby</a>. Ogólnie jest on "
-#~ "kompatybilny z <a\n"
-#~ "href=\"https://www.perl.com/\">Perl</a> ,\n"
-#~ "np.:"
-
-#~ msgid ""
-#~ "You tried phrase searching but it hit documents which\n"
-#~ "didn't contain your phrase."
-#~ msgstr ""
-#~ "You tried phrase searching but it hit documents which\n"
-#~ "Spróbowałeś wyszukiwania fraz, ale to nie zwróciło żadnych wyników "
-#~ "zawierających twoją frazę?"
-
-#~ msgid "[How to search]"
-#~ msgstr "[Jak szukać, żeby znaleźć a nie zabłądzić]"
-
-#~ msgid "by URI in ascending order"
-#~ msgstr "URI, w porządku rosnącym"
-
-#~ msgid "by URI in descending order"
-#~ msgstr "URI, w porządku malejącym"
-
-#~ msgid "by author in ascending order"
-#~ msgstr "autor, w porządku rosnącym"
-
-#~ msgid "by author in descending order"
-#~ msgstr "autor, w porządku malejącym"
-
-#~ msgid "by date in early order"
-#~ msgstr "data, od najstarszych"
-
-#~ msgid "by date in late order"
-#~ msgstr "data, od najnowszych"
-
-#~ msgid "by score"
-#~ msgstr "wynik"
-
-#~ msgid "by size in ascending order"
-#~ msgstr "rozmiar, w porządku rosnącym"
-
-#~ msgid "by size in descending order"
-#~ msgstr "rozmiar, w porządku malejącym"
-
-#~ msgid "by title in ascending order"
-#~ msgstr "tytuł, w porządku rosnącym"
-
-#~ msgid "by title in descending order"
-#~ msgstr "tytuł, w porządku malejącym"
-
-#~ msgid "normal"
-#~ msgstr "normalny"
-
-#~ msgid "score"
-#~ msgstr "wynik"
-
-#~ msgid "short"
-#~ msgstr "skrócony"

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: gnucash-htdocs\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2021-12-19 04:04+0100\n"
+"POT-Creation-Date: 2021-12-21 00:25+0100\n"
 "PO-Revision-Date: 2021-12-16 21:53+0000\n"
 "Last-Translator: Francisco Serrador <fserrador@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnucash/website/"
@@ -1133,8 +1133,8 @@ msgstr ""
 msgid "Installers"
 msgstr "Instaladores"
 
-#: download.phtml:24 download.phtml:25 download.phtml:68 download.phtml:69
-#: download.phtml:84 download.phtml:85 download.phtml:98 download.phtml:104
+#: download.phtml:24 download.phtml:25 download.phtml:71 download.phtml:72
+#: download.phtml:87 download.phtml:88 download.phtml:101 download.phtml:107
 #, php-format
 msgid "GnuCash %s for"
 msgstr "GnuCash %s para"
@@ -1152,7 +1152,13 @@ msgstr ""
 "usar la versión de <span class=\"gnucash\">GnuCash</span> incluida en tu "
 "distribución."
 
-#: download.phtml:30
+#. Translators: %s is the link to repology.org
+#: download.phtml:31
+#, php-format
+msgid "At %s you can compare which distribution which version ships."
+msgstr ""
+
+#: download.phtml:33
 msgid ""
 "Below are ways to install <span class=\"gnucash\">GnuCash</span> on some of "
 "the more popular distributions:"
@@ -1160,7 +1166,7 @@ msgstr ""
 "Debajo hay formas de instalar <span class=\"gnucash\">GnuCash</span> en "
 "algunas de las distribuciones más populares:"
 
-#: download.phtml:33
+#: download.phtml:36
 msgid ""
 "Fedora users can install <span class=\"gnucash\">GnuCash</span> through "
 "System->Administration->Add/Remove Software (Gnome) or Applications->System-"
@@ -1170,7 +1176,7 @@ msgstr ""
 "a través de Sistema->Administración->Añadir/Quitar Software (Gnome) o "
 "Aplicaciones->Sistema->Gestión de Software (KDE)."
 
-#: download.phtml:34
+#: download.phtml:37
 msgid ""
 "Mandriva users can install <span class=\"gnucash\">GnuCash</span> through "
 "the Software Management in the Mandriva Linux Control Center."
@@ -1178,11 +1184,11 @@ msgstr ""
 "Los usuarios de Mandriva puede instalar <span class=\"gnucash\">GnuCash</"
 "span> mediante Gestión de Software en el Centro de control de Mandriva Linux."
 
-#: download.phtml:35
+#: download.phtml:38
 msgid "Epel's wiki page"
 msgstr "Página wiki de Epel"
 
-#: download.phtml:35
+#: download.phtml:38
 msgid ""
 "Redhat and CentOS don't have <span class=\"gnucash\">GnuCash</span> in their "
 "repositories by default. It can be installed however from the third-party "
@@ -1194,7 +1200,7 @@ msgstr ""
 "del repositorio de terceros de Epel. Para obtener información sobre cómo "
 "configurar repositorios de programas adicionales en su instalación, vea"
 
-#: download.phtml:36
+#: download.phtml:39
 msgid ""
 "Solus users can install <span class=\"gnucash\">GnuCash</span> through the "
 "Software Center (Office Software -> Financial Software -> gnucash)."
@@ -1203,7 +1209,7 @@ msgstr ""
 "a través del Centro de software (Software de oficina ▸ Software financiero ▸ "
 "gnucash)."
 
-#: download.phtml:37
+#: download.phtml:40
 msgid ""
 "Ubuntu users can install <span class=\"gnucash\">GnuCash</span> through the "
 "Software Center. This will install <span class=\"gnucash\">GnuCash</span> "
@@ -1213,11 +1219,11 @@ msgstr ""
 "span> a través del Centro de software. Esto instalará <span class=\"gnucash"
 "\">GnuCash</span> bajo la categoría Oficina en el menú Aplicaciones."
 
-#: download.phtml:40
+#: download.phtml:43
 msgid "Sandbox"
 msgstr "Espacio aislado"
 
-#: download.phtml:43
+#: download.phtml:46
 #, php-format
 msgid ""
 "Flatpaks are bundles, which contain beneath the program also all required "
@@ -1233,20 +1239,20 @@ msgstr ""
 
 #. Translators: %s is the base url of the gnucash wiki, adjust this,
 #. if a localized instance of the Flatpak page exists like "%sDe/Flatpak"
-#: download.phtml:48
+#: download.phtml:51
 #, php-format
 msgid "%sFlatpak"
 msgstr "%sFlatpak"
 
-#: download.phtml:48
+#: download.phtml:51
 msgid "Known Issues and other details …"
 msgstr "Problemas conocidos y otros detalles…"
 
-#: download.phtml:52 index.phtml:17
+#: download.phtml:55 index.phtml:17
 msgid "Source code"
 msgstr "Código fuente"
 
-#: download.phtml:53
+#: download.phtml:56
 msgid ""
 "If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> or "
 "you wish to install a different version than it ships with, you could try to "
@@ -1261,17 +1267,17 @@ msgstr ""
 "href='https://wiki.gnucash.org/wiki/Building'>indicaciones para varias "
 "distribuciones</a>."
 
-#: download.phtml:55 download.phtml:70 download.phtml:86
+#: download.phtml:58 download.phtml:73 download.phtml:89
 #, php-format
 msgid "for GnuCash %s"
 msgstr "para GnuCash %s"
 
-#: download.phtml:62
+#: download.phtml:65
 #, php-format
 msgid "Unstable/Development release (%s)"
 msgstr "Inestable/Desarrollo (%s)"
 
-#: download.phtml:64
+#: download.phtml:67
 msgid ""
 "Unstable (development) releases are for testing purposes only. They contain "
 "the newest features and improvements, but may also contain serious bugs "
@@ -1281,21 +1287,21 @@ msgstr ""
 "las últimas funcionalidades y mejoras, pero pueden también contener errores "
 "importantes. No instales estas versiones para usarlas en el día a día."
 
-#: download.phtml:65
+#: download.phtml:68
 #, php-format
 msgid ""
-"The latest unstable release of <span class=\"gnucash\">GnuCash</span> is "
-"%s. Choose the download for your operating system below."
+"The latest unstable release of <span class=\"gnucash\">GnuCash</span> is %s. "
+"Choose the download for your operating system below."
 msgstr ""
 "La última versión inestable de <span class=\"gnucash\">GnuCash</span> es %s. "
 "Seleccione debajo la descarga para su sistema operativo."
 
-#: download.phtml:78
+#: download.phtml:81
 #, php-format
 msgid "Old Stable release (%s)"
 msgstr "Versión estable anterior (%s)"
 
-#: download.phtml:80
+#: download.phtml:83
 msgid ""
 "This old stable release is the final version of the previous stable series. "
 "It's available for users who aren't ready for a major upgrade but want to "
@@ -1306,38 +1312,38 @@ msgstr ""
 "preparados para una actualización importante pero que quieren asegurarse de "
 "que tienen las correcciones de fallos de la serie anterior."
 
-#: download.phtml:81
+#: download.phtml:84
 #, php-format
 msgid ""
-"The last old stable release of <span class=\"gnucash\">GnuCash</span> is "
-"%s. Choose the download for your operating system below."
+"The last old stable release of <span class=\"gnucash\">GnuCash</span> is %s. "
+"Choose the download for your operating system below."
 msgstr ""
 "La última versión estable antigua de <span class=\"gnucash\">GnuCash</span> "
 "es %s. Seleccione debajo la descarga para su sistema operativo."
 
-#: download.phtml:94
+#: download.phtml:97
 msgid "Latest versions for historical operating systems"
 msgstr "Últimas versiones para sistemas operativos históricos"
 
-#: download.phtml:96
+#: download.phtml:99
 msgid "This versions are really old. Do not expect any support."
 msgstr "Estas versiones son muy antiguas. No espere ningún servicio técnico."
 
-#: download.phtml:109
+#: download.phtml:112
 msgid "Other"
 msgstr "Otros"
 
-#: download.phtml:113
+#: download.phtml:116
 #, php-format
 msgid "View all GnuCash %s downloads (stable)"
 msgstr "Ver todas las descargas de GnuCash %s (estable)"
 
-#: download.phtml:118
+#: download.phtml:121
 #, php-format
 msgid "View all GnuCash %s downloads (unstable)"
 msgstr "Ver todas las descargas de GnuCash %s (inestable)"
 
-#: download.phtml:121
+#: download.phtml:124
 msgid "View all GnuCash downloads"
 msgstr "Ver todas las descargas de GnuCash"
 
@@ -1349,11 +1355,11 @@ msgstr "Notificaciones de interrupción del servidor &amp; email a:"
 msgid "Translation problems? Contact:"
 msgstr "¿Problemas de traducción? Contacto:"
 
-#: externals/global_params.php:85 externals/header.phtml:144
+#: externals/global_params.php:90 externals/header.phtml:144
 msgid "Free Accounting Software"
 msgstr "Software de contabilidad libre"
 
-#: externals/global_params.php:86
+#: externals/global_params.php:91
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> is personal and small-business "
 "financial-accounting software, freely licensed under the <a href=\"https://"
@@ -1429,7 +1435,7 @@ msgstr "Preguntas frecuentes"
 msgid "Wiki"
 msgstr "Wiki"
 
-#: externals/menu.phtml:33 index.phtml:54
+#: externals/menu.phtml:33 index.phtml:59
 msgid "Mailing Lists"
 msgstr "Listas de correo"
 
@@ -1618,7 +1624,7 @@ msgid "Many options to <b>customize</b> the appearance and the display style"
 msgstr ""
 "Diversas opciones para <b>personalizar</b> la apariencia del estilo visual"
 
-#: features.phtml:69 index.phtml:71
+#: features.phtml:69 index.phtml:76
 msgid "Scheduled Transactions"
 msgstr "Transacciones planificadas"
 
@@ -1642,7 +1648,7 @@ msgstr ""
 "arrancado permite que los asientos planificados sean pospuestos sin cancelar "
 "o introducirlos antes de la fecha del vencimiento."
 
-#: features.phtml:82 index.phtml:69
+#: features.phtml:82 index.phtml:74
 msgid "Reports, Graphs"
 msgstr "Informes, gráficos"
 
@@ -2000,16 +2006,16 @@ msgstr "Descarga GnuCash %s"
 msgid "Via distribution"
 msgstr "Desde distribuciones"
 
-#: index.phtml:26
+#: index.phtml:25
 msgid "More downloads (Source code, Development …)"
 msgstr "Más descargas (código fuente, desarrollo…)"
 
-#: index.phtml:33
+#: index.phtml:32
 #, php-format
 msgid "Version %s is the last version for %s and %s and earlier."
 msgstr "La versión %s es la última versión para %s, %s y anteriores."
 
-#: index.phtml:36
+#: index.phtml:35
 #, php-format
 msgid ""
 "Version %s is the last version for Windows XP/Vista and MacOS X 10.8 and "
@@ -2019,7 +2025,7 @@ msgstr ""
 "anteriores, además es la última versión que se puede ejecutaren Macs con "
 "arquitectura PowerPC."
 
-#: index.phtml:45
+#: index.phtml:44
 msgid ""
 "Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash"
 "\">GnuCash</span> allows you to track bank accounts, stocks, income and "
@@ -2033,11 +2039,30 @@ msgstr ""
 "de cheques, está basado en principios profesionales de contabilidad para "
 "asegurar libros balanceados e informes precisos."
 
+#. Translators: %s is the link to https://wiki.gnucash.org/wiki/Contributing_to_GnuCash
+#: index.phtml:46
+#, php-format
+msgid ""
+"GnuCash is developed, maintained, documented, and translated entirely by "
+"volunteers. Want to help out? We have %s."
+msgstr ""
+
+#. Translators: This is the label of the Contributing… wiki link
+#: index.phtml:48
+msgid "some suggestions"
+msgstr ""
+
+#. Translators: %s is the link to weblate
 #: index.phtml:50
+#, php-format
+msgid "Please help translate GnuCash into your language at %s."
+msgstr ""
+
+#: index.phtml:55
 msgid "Need Help?"
 msgstr "¿Necesita ayuda?"
 
-#: index.phtml:53
+#: index.phtml:58
 msgid ""
 "Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? "
 "Try the"
@@ -2045,7 +2070,7 @@ msgstr ""
 "¿Buscas contactar con alguien sobre <span class=\"gnucash\">GnuCash</span>? "
 "Prueba el"
 
-#: index.phtml:55
+#: index.phtml:60
 msgid ""
 ", which are public, email-based discussion groups where you can ask and "
 "answer <span class=\"gnucash\">GnuCash</span> questions to other users."
@@ -2054,40 +2079,40 @@ msgstr ""
 "preguntar y responder preguntas acerca de <span class=\"gnucash\">GnuCash</"
 "span> con otros usuarios."
 
-#: index.phtml:61
+#: index.phtml:66
 msgid "Feature Highlights"
 msgstr "Funcionalidades destacadas"
 
-#: index.phtml:66
+#: index.phtml:71
 msgid "Double-Entry Accounting"
 msgstr "Contabilidad de partida doble"
 
-#: index.phtml:67
+#: index.phtml:72
 msgid "Stock/Bond/Mutual Fund Accounts"
 msgstr "Cuentas de acciones/bonos/fondos de inversión"
 
-#: index.phtml:68
+#: index.phtml:73
 msgid "Small-Business Accounting"
 msgstr "Contabilidad de pequeños negocios"
 
-#: index.phtml:70
+#: index.phtml:75
 msgid "QIF/OFX/HBCI Import, Transaction Matching"
 msgstr "Importación QIF/OFX/HBCI , emparejamiento de transacciones"
 
-#: index.phtml:72
+#: index.phtml:77
 msgid "Financial Calculations"
 msgstr "Cálculos financieros"
 
-#: index.phtml:74
+#: index.phtml:79
 msgid "<b>Discover more …</b>"
 msgstr "<b>Descubra más…</b>"
 
-#: index.phtml:78
+#: index.phtml:83
 #, php-format
 msgid "GnuCash %s Released"
 msgstr "GnuCash %s publicado"
 
-#: index.phtml:79
+#: index.phtml:84
 #, php-format
 msgid ""
 "We've released GnuCash %s with many bugfixes and improvements including some "
@@ -2096,7 +2121,7 @@ msgstr ""
 "Hemos lanzado GnuCash %s, que incluye numerosas correcciones de errores y "
 "mejoras, incluyendo algunas %s!"
 
-#: index.phtml:80
+#: index.phtml:85
 msgid "great new features"
 msgstr "estupendas características nuevas"
 
@@ -2503,8 +2528,8 @@ msgstr ""
 msgid ""
 "Given that we have about 400 outstanding bugs in bugzilla, that works out to "
 "about one bug per thousand lines of code, or one bug per 50 pages of "
-"printout. This bug count is actually not atypical for software projects; "
-"it is near the norm."
+"printout. This bug count is actually not atypical for software projects; it "
+"is near the norm."
 msgstr ""
 
 #: sizing.phtml:33
@@ -2526,11 +2551,11 @@ msgid ""
 "even that <code>wc</code> is a good way of counting KLOC's. Much better "
 "measures are complexity metrics, which, for example, count the number and "
 "size of if-then-else blocks, or the number and size of all blocks, or the "
-"number of math operators per statement. Maybe someday we'll run one of "
-"those tools on this code. For now, this is what we have. On the other hand, "
-"we've attempted to count only those files that contain human-edited code, "
-"that is, files that are directly edited by humans. The point of doing this "
-"is to avoid artificially inflating the KLOC counts by counting automatically "
+"number of math operators per statement. Maybe someday we'll run one of those "
+"tools on this code. For now, this is what we have. On the other hand, we've "
+"attempted to count only those files that contain human-edited code, that is, "
+"files that are directly edited by humans. The point of doing this is to "
+"avoid artificially inflating the KLOC counts by counting automatically "
 "generated code (which is why the glade files are not counted: they are large "
 "and automatically generated)."
 msgstr ""
@@ -2575,9 +2600,9 @@ msgid ""
 "parenthesis, it is the approriate KLOC count for that statistic."
 msgstr ""
 "número de ficheros *c y *.h y *.scm (KLOCS en *.c + KLOCS en *.h + KLOCS in "
-"*.scm). Si no hay ficheros *.scm en el directorio, entonces solamente "
-"(KLOCS en *.c + KLOCS en *.h) son desplegados. Si solamente hay un número "
-"dentro de paréntesis, es el conteo apropiado de KLOC para esa estadística."
+"*.scm). Si no hay ficheros *.scm en el directorio, entonces solamente (KLOCS "
+"en *.c + KLOCS en *.h) son desplegados. Si solamente hay un número dentro de "
+"paréntesis, es el conteo apropiado de KLOC para esa estadística."
 
 #: sizing.phtml:327
 msgid ""
@@ -2779,168 +2804,3 @@ msgstr ""
 "Parece que el navegador no admite los «iframes». Para ver la página "
 "solicitada en una ventana aparte, <a href=\"%s\" target=\"_blank\">pulse "
 "aquí</a>."
-
-#~ msgid "AND query"
-#~ msgstr "Consulta AND"
-
-#~ msgid "Author"
-#~ msgstr "Autor"
-
-#~ msgid "Date"
-#~ msgstr "Fecha"
-
-#~ msgid "Description"
-#~ msgstr "Descripción"
-
-#~ msgid "Display"
-#~ msgstr "Visualizar"
-
-#~ msgid "Grouping"
-#~ msgstr "Agrupando"
-
-#~ msgid "NOT query"
-#~ msgstr "Consulta NOT"
-
-#~ msgid "OR query"
-#~ msgstr "Consulta OR"
-
-#~ msgid "Phrase searching"
-#~ msgstr "Buscandos frases"
-
-#~ msgid "Query"
-#~ msgstr "Consulta"
-
-#~ msgid "Search!"
-#~ msgstr "Buscar!"
-
-#~ msgid "Single term query"
-#~ msgstr "Consulta de un sólo término"
-
-#~ msgid "Sort"
-#~ msgstr "Orden"
-
-#, fuzzy
-#~ msgid "Source"
-#~ msgstr "Orden"
-
-#~ msgid "Substring matching"
-#~ msgstr "Substring matching"
-
-#~ msgid ""
-#~ "This query specifies only one term for retrieving all of the\n"
-#~ "documents which contain that term, for example:"
-#~ msgstr ""
-#~ "La consulta especifica sólo un término para recibir todos los documentos "
-#~ "que contienen el término. Ej:"
-
-#~ msgid ""
-#~ "This query specifies two or more terms for retrieving all\n"
-#~ "documents which contain any one term. Insert the\n"
-#~ "<code class=\"operator\">or</code> operator between the terms,\n"
-#~ "e.g."
-#~ msgstr ""
-#~ "La consulta especifica dos o más términos para recibir todos los "
-#~ "documentos que contienen alguno de los términos. Tu puedes insertar el "
-#~ "operador\n"
-#~ "<code class=\"operator\">or</code> entre los términos. Ej:"
-
-#~ msgid ""
-#~ "This query specifies two or more terms for retrieving all of the\n"
-#~ "documents which contain a first term but do not contain the\n"
-#~ "following terms. Insert the <code class=\"operator\">not</code>\n"
-#~ "operator between the terms, for example:"
-#~ msgstr ""
-#~ "La consulta especifica dos o más terminos para recibir todos los "
-#~ "documentos\n"
-#~ "que contienen el primer término pero no contienen los términos "
-#~ "siguientes. \n"
-#~ "Tu puedes insertar el operador <code class=\"operator\">not</code>\n"
-#~ "entre los términos para hacer una consulta NOT. Ej:"
-
-#~ msgid ""
-#~ "This query specifies two or more terms for retrieving all of the\n"
-#~ "documents which contain both terms. Insert the\n"
-#~ "<code class=\"operator\">and</code> operator between the terms, e.g."
-#~ msgstr ""
-#~ "La consulta especifica dos o más términos para recibir todos los\n"
-#~ "documentos que contienen ambos términos. Tu puedes insertar el\n"
-#~ "operador <code class=\"operator\">and</code> entre los términos. Ej:"
-
-#~ msgid "This search system is powered by:"
-#~ msgstr "El sistema de búsqueda está soportado por:"
-
-#~ msgid ""
-#~ "You can group queries by surrounding them by\n"
-#~ "parentheses. The parentheses should be separated by one or\n"
-#~ "more spaces. e.g."
-#~ msgstr ""
-#~ "Tu puedes agrupar consultas encerrándolas entre paréntesis. Los "
-#~ "paréntesis \n"
-#~ "deben estar separados por uno o más espacios. Ej:"
-
-#~ msgid ""
-#~ "You can omit the <code class=\"operator\">and</code> operator. Terms "
-#~ "which are\n"
-#~ "separated by one or more spaces are assumed to be an AND query."
-#~ msgstr ""
-#~ "Tu puedes omitir el operador <code class=\"operator\">and</code>. Los\n"
-#~ "términos los cuales están separados por uno o más espacios se asume\n"
-#~ "que son una consulta AND. "
-
-#~ msgid ""
-#~ "You can search for a phrase that consists of two or more terms\n"
-#~ "by surrounding them with double quotation marks or braces such as\n"
-#~ "<code class=\"operator\">\"...\"</code> and <code class=\"operator\">{...}"
-#~ "</code>.\n"
-#~ "In Namazu, the precision of phrase searching is not 100%,\n"
-#~ "so wrong results may occasionally occur. Example:"
-#~ msgstr ""
-#~ "Tu puedes buscar una frase la cuál consiste de dos o más términos "
-#~ "encerrados\n"
-#~ "entre comillas como\n"
-#~ "<code class=\"operator\">\"...\"</code> o con llaves como\n"
-#~ "<code class=\"operator\">{...}</code>.\n"
-#~ "La precisión de la búsqueda por frase no es el 100%, y puede causar "
-#~ "ocasionalmente algún resultado erróneo. Ej:"
-
-#~ msgid "[How to search]"
-#~ msgstr "[Cómo buscar]"
-
-#~ msgid "by URI in ascending order"
-#~ msgstr "por URI ascendente"
-
-#~ msgid "by URI in descending order"
-#~ msgstr "por URI descendente"
-
-#~ msgid "by author in ascending order"
-#~ msgstr "por autor ascendente"
-
-#~ msgid "by author in descending order"
-#~ msgstr "por autor descendente"
-
-#~ msgid "by date in early order"
-#~ msgstr "por fecha descendente"
-
-#~ msgid "by date in late order"
-#~ msgstr "por fecha ascendente"
-
-#~ msgid "by score"
-#~ msgstr "por puntuación"
-
-#~ msgid "by size in ascending order"
-#~ msgstr "por tamaño ascendente"
-
-#~ msgid "by size in descending order"
-#~ msgstr "por tamaño descendente"
-
-#~ msgid "by title in ascending order"
-#~ msgstr "por título ascendente"
-
-#~ msgid "by title in descending order"
-#~ msgstr "por título descendente"
-
-#~ msgid "score"
-#~ msgstr "puntuación"
-
-#~ msgid "short"
-#~ msgstr "corta"
