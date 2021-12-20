@@ -42,7 +42,12 @@ include ("externals/menu.phtml");
 
 <?php // FIXME: I18N markup: ?>
     <p class="justify"><?=T_("Designed to be easy to use, yet powerful and flexible, <span class=\"gnucash\">GnuCash</span> allows you to track bank accounts, stocks, income and expenses. As quick and intuitive to use as a checkbook register, it is based on professional accounting principles to ensure balanced books and accurate reports."); ?></p>
-    <p class="justify" ><?=T_("GnuCash is developed, maintained, documented, and translated entirely by volunteers. Want to help out? We have ")?> <a href="https://wiki.gnucash.org/wiki/Contributing_to_GnuCash"><?=T_("some suggestions.")?></a><?=T_(" Please help translate GnuCash into your language at ")?><a href="https://hosted.weblate.org/engage/gnucash/">Weblate.</a>
+    <p class="justify" ><?php /* Translators: %s is the link to https://wiki.gnucash.org/wiki/Contributing_to_GnuCash */
+    printf(T_("GnuCash is developed, maintained, documented, and translated entirely by volunteers. Want to help out? We have %s."),
+             /* Translators: This is the label of the Contributing… wiki link */
+      '<a href="https://wiki.gnucash.org/wiki/Contributing_to_GnuCash">'.T_("some suggestions")."</a>");
+    /* Translators: %s is the link to weblate */
+    printf(" ".T_("Please help translate GnuCash into your language at %s."), '<a href="https://hosted.weblate.org/engage/gnucash/">Weblate</a>')?>
   </div>
 
   <div style="float: right"> <!--Need help section -->
