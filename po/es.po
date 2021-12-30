@@ -9,10 +9,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
-"component=Translations&product=Website&resolution=---\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
+"cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2021-12-21 00:25+0100\n"
-"PO-Revision-Date: 2021-12-16 21:53+0000\n"
+"PO-Revision-Date: 2021-12-30 11:50+0000\n"
 "Last-Translator: Francisco Serrador <fserrador@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnucash/website/"
 "es/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10\n"
+"X-Generator: Weblate 4.10.1\n"
 
 #: 2.6-release-tour.phtml:3
 msgid "GnuCash 2.6 release tour"
@@ -1156,7 +1156,7 @@ msgstr ""
 #: download.phtml:31
 #, php-format
 msgid "At %s you can compare which distribution which version ships."
-msgstr ""
+msgstr "En %s puede comparar cual distribución con cuya versión se utiliza."
 
 #: download.phtml:33
 msgid ""
@@ -2046,17 +2046,19 @@ msgid ""
 "GnuCash is developed, maintained, documented, and translated entirely by "
 "volunteers. Want to help out? We have %s."
 msgstr ""
+"GnuCash es desarrollado, mantenido, documentado y traducido completamente "
+"por voluntarios. ¿Desea ayudar? Tenemos %s."
 
 #. Translators: This is the label of the Contributing… wiki link
 #: index.phtml:48
 msgid "some suggestions"
-msgstr ""
+msgstr "algunas sugerencias"
 
 #. Translators: %s is the link to weblate
 #: index.phtml:50
 #, php-format
 msgid "Please help translate GnuCash into your language at %s."
-msgstr ""
+msgstr "Por favor ayude a traducir GnuCash a su idioma en %s."
 
 #: index.phtml:55
 msgid "Need Help?"
@@ -2359,6 +2361,9 @@ msgid ""
 "OFX imports having balance information will now offer to immediately "
 "reconcile, passing the balance information in the file to the reconcile info."
 msgstr ""
+"Importaciones OFX teniendo información de balance ahora ofrecerán "
+"inmediatamente conciliación, aprobando información de balance dentro del "
+"fichero para informe de a conciliar."
 
 #: new_features-4.0.phtml:93
 msgid ""
@@ -2366,12 +2371,18 @@ msgid ""
 "C and from U+R to U+C, reflecting that the matcher marks transactions "
 "cleared but doesn't reconcile them."
 msgstr ""
+"El encabezado de columna de la venta para cotejo de transacción a importar "
+"ha cambiado desde R a C y desde U+R a U+C, reflejando que las marcas del "
+"cotejo de transacciones purgadas pero estas no conciliadas."
 
 #: new_features-4.0.phtml:94
 msgid ""
 "Account matcher will decline to match accounts with a different commodity "
 "from the imported split if the import information includes the commodity."
 msgstr ""
+"Cotejo de cuenta declinará a cotejar cuentas con una mercancía distinta "
+"desde el desglose importado si la información de importación incluye la "
+"mercancía."
 
 #: new_features-4.0.phtml:95
 msgid "Ellipsize the Description and Memo fields in the account matcher."
