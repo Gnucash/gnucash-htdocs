@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2021-12-21 00:25+0100\n"
-"PO-Revision-Date: 2022-01-09 14:36+0000\n"
+"PO-Revision-Date: 2022-01-10 20:52+0000\n"
 "Last-Translator: Francisco Serrador <fserrador@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnucash/website/"
 "es/>\n"
@@ -1359,7 +1359,7 @@ msgstr "¿Problemas de traducción? Contacto:"
 
 #: externals/global_params.php:90 externals/header.phtml:144
 msgid "Free Accounting Software"
-msgstr "Software de Contabilidad Libre"
+msgstr "Software Libre de Contabilidad"
 
 #: externals/global_params.php:91
 msgid ""
@@ -2389,7 +2389,7 @@ msgstr ""
 
 #: new_features-4.0.phtml:95
 msgid "Ellipsize the Description and Memo fields in the account matcher."
-msgstr ""
+msgstr "Dirija los campos Descripción y Memo en el comparador de cuentas."
 
 #: new_features-4.0.phtml:100
 msgid "Reports"
@@ -2415,6 +2415,12 @@ msgid ""
 "<b>N.B.</b> This is incompatible with previous versions of the report and "
 "will require regenerating saved configurations."
 msgstr ""
+"Se ha agregado soporte para el IVA del Reino Unido y el GST australiano al "
+"informe de ingresos-GST. Las opciones del informe se cambian de cuentas de "
+"origen a cuentas de compras y ventas de origen para permitir un informe "
+"adecuado de las compras de capital. <b>N.B.</b> Esto es incompatible con las "
+"versiones anteriores del informe y requerirá volver a generar las "
+"configuraciones guardadas."
 
 #: new_features-4.0.phtml:109
 msgid "Budgets"
@@ -2456,6 +2462,10 @@ msgid ""
 "with Gtk practice. You may need to spend some time with the GtkInspector to "
 "get your custom CSS back the way you like it."
 msgstr ""
+"La jerarquía del widget GnuCash para CSS ha sido revisado para ser más "
+"consistente con el Gtk usual. Quizá necesita emplear algo de tiempo con el "
+"GtkInspector para obtener su CSS personalizado devuelto a la manera que "
+"prefiera."
 
 #: new_features-4.0.phtml:132
 msgid ""
@@ -2512,6 +2522,11 @@ msgid ""
 "from a small handy electronic checkbook to a rather large and multi-featured "
 "desktop app."
 msgstr ""
+"A menudo puede ser muy interesante estudiar las métricas del código fuente "
+"tras un proyecto de desarrollo de software. No un interés sorprendente: es "
+"contabilidad a pesar de todo. <span class=\"gnucash\">GnuCash</span> ha "
+"crecido, a lo largo de años, desde un pequeñas casillas de manipulación "
+"electrónica a una aplicación de escritorio multi-características grande."
 
 #: sizing.phtml:18
 msgid ""
@@ -2520,6 +2535,10 @@ msgid ""
 "translated into twenty-three languages and credits over 139 authors and "
 "contributors."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> actualmente consta de más de un "
+"tercio de un millón de líneas de código repartido en más de mil ficheros. Ha "
+"sido traducido a veintitrés idiomas y acredita a más de 139 autores y "
+"colaboradores."
 
 #: sizing.phtml:24
 msgid ""
@@ -2542,6 +2561,11 @@ msgid ""
 "Every last line counted here was typed in, edited, indented, tweaked, "
 "multiple times, by human hands."
 msgstr ""
+"Eso sí, este es el código fuente (y los documentos) creados y depurados por "
+"humanos reales, este *no* es un código auto-generado. Las herramientas (como "
+"glade o swing) pueden generar miles de millones de líneas de código "
+"automáticamente; no estoy contando esos. Cada última línea contada aquí fue "
+"escrita, editada, sangrada, retocada, varias veces, por manos humanas."
 
 #: sizing.phtml:30
 msgid ""
@@ -2567,6 +2591,16 @@ msgid ""
 "Finally, <tt>glade</tt> files are not counted, although large parts of the "
 "overall GUI are described in <tt>glade</tt> files."
 msgstr ""
+"La tabla siguiente muestra algunas líneas-de-código históricas y número-de-"
+"filas métricas para el proyecto de desarrollo de <span class=\"gnucash\""
+">GnuCash</span>. Note que no todo lo del código está enumerados: por "
+"instante los Makefile y configure.in y autogen.sh no están enumerados. "
+"Además, los ficheros que son generados automáticamente no están enumerados, "
+"ni hay ficheros que han sido “prestados” desde otros proyectos. También no "
+"contados son ficheros experimentales, script de perl adicionales, varios "
+"conversores, agregados y utilidades. Finalmente, los ficheros <tt>glade</tt> "
+"no están enumerados además de partes grandes del IGU completo son descritos "
+"en ficheros <tt>glade</tt>."
 
 #: sizing.phtml:36
 msgid ""
