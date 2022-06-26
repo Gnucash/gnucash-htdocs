@@ -1,0 +1,159 @@
+<b>Announcement:</b> GnuCash 4.11 Released
+2022-06-26
+
+<h2>GnuCash 4.11 Released</h2>
+
+<p>The GnuCash development team announces GnuCash 4.11, the twelfth release in the stable 4.x series</p>
+
+<h4>Between 4.10 and 4.11, the following bugfixes were accomplished:</h4>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797163">Bug 797163 - qof_book_get_option segfaults when retrieving a non-leaf frame</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798053">Bug 798053 - Accounts renumeration (renumbering)</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798471">Bug 798471 - Can't see or select Income or Expense accounts in Income Tax Information GUI</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798483">Bug 798483 - GnuCash Crashing With SIGSEGV During QFX Import Transaction Matching</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798491">Bug 798491 - MT940 of day 28.02.2022 ends in transactiondate 01.01.1970</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798493">Bug 798493 - Invoice Report Quantity &amp; Unit Price fields have limited decimal precision on printed invoices</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798496">Bug 798496 - gncEntry Quantity and Discount are misusing commodity scu</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798499">Bug 798499 - Expense Chart data tables include extra columns of data</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798500">Bug 798500 - FTBFS (tests failure) on armhf</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798501">Bug 798501 - Balance wrong date end of period</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798531">Bug 798531 - Selecting &quot;Print&quot; from the file menu on a report crashes gnucash</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798533">Bug 798533 - Crash when importing quicken @ currency</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798535">Bug 798535 - Crash when increasing the number of periods in a budget</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798547">Bug 798547 - Calculated Due Date is short 1 day when posting on day of fall change from Daylight Time to Standard Time. </a></li>
+</ul>
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>Partially fix Bug 771095 by inserting a help button in the Since-Last-Run dialog.</a></li>
+    <li>Lock down GITHUB_TOKEN permissions on workflows.</li>
+<li>[g_option_context_get_help() returns a char* which must be freed. </li>
+<li>[assistant-stock-transaction] dividends must include stock account.</li>
+<li>Fix arch linux CI build failures.</li>
+<li>Add a help button to the financial calculator dialog.
+<li>[assistant-stock-transaction] avoid resetting txn_types unnecessarily.</li>
+<li>[assistant-stock-transaction] reorder of Pages - date before type.</li>
+<li>[import matcher] Only append description if there&#39;s something to append to, Otherwise just set the new string.</li>
+<li>[balsheet-pnl] test &quot;lvl &lt;= depth-limit&quot; outside add-indented-row as a first step trying to fix bug 798502. the bug likely resides in the (if) conditional in (add-account-row).</li>
+<li>[gnc-main-window] page-&gt;window is not main_window, skip warning.</li>
+<li>[gnc-plugin-page-register] if account==NULL, skip AccountIsPriced because gnc_plugin_page_register_ui_initial_state may be called for non-account registers (eg the sx editor) and account may be null.</li>
+<li>[gnc-account-sel.c] prepend &amp; reverse while building acct list<p>and don&#39;t use confusing double pointer </p></li>
+<li>Fix use-after-free in unable to save database dialog.</li>
+<li>[account.cpp] restore breadth-first search for 2 functions<p>gnc_account_lookup_by_name and gnc_account_lookup_by_code were searching breadth-first and accidentally changed to depth-first in 4.7.
+<li>[account.cpp] gnc_accounts_and_all_descendants converted from scm
+<li>[CI]Work around new git security measure.</li>
+<li>[balsheet-pnl] faster definition of balance lists</li>
+<li>[gnc-numeric.cpp] Reduce logging level of gnc_numeric exception message because exceptions are expected in some use cases.</li>
+<li>Redo icon handling in cmake<p>Using globs for file copying prevents cmake from discovering newly added icons. Writing rules that explicitly use lists of icons will fix this as a new icon in the sources will have to be added to the list and will force reparsing by cmake. We have to maintain the lists anyway for our dist target so there&#39;s actually no extra work involved for the devs. </p></li>
+<li>[assistant-stock-transaction] better Dr/Cr imbalance error message</li>
+</ul>
+<p>New API:
+    <ul>
+        <li>gnc:accounts-and-all-descendants-sorted</li>
+        <li>gnc-accounts-and-all-descendantsNone</li>
+    </ul>
+</p>
+<p>Deprecations:
+    <ul>
+    <li>gnc:account-path-less-p</li>
+    <li>gnc:accounts-and-all-descendants</li>
+    </ul>
+</p>
+<p>New and Updated Translations: Arabic, Chinese (Simplified), Croatian,
+    English (United Kingdom), French, German, Hebrew, Hindi, Hungarian,
+    Italian, Korean, Nepali, Norwegian Bokmål, Polish, Portuguese (Brazil),
+    Russian, Spanish, Swedish, Ukrainian
+</p>
+<a href="https://hosted.weblate.org/engage/gnucash/">Help translate GnuCash on Weblate</a>
+
+<h4>Known Problems</h4>
+<p><a href="https://bugs.gnucash.org/buglist.cgi?bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;limit=0&amp;list_id=8149&amp;order=priority%2Cbug_severity&amp;query_format=advanced">Complete list of all open bugs.</a></p>.
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of GnuCash 4.11 we're pleased to also release a new version of the companion Help and Tutorial and Concepts Guide</p>
+<h4>Between 4.10.1 and XXX, the following bugfixes were accomplished:</h4>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798414">Bug 798414 -No way to get whole of account column displayed</a></li>
+</ul>
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+<li>Fix crosslinking between Help and the Guide so that nightlies link to nightly builds and releases link to release documents on https://www.gnucash.org/</li>
+<li>Add Description of installing Perl for Finance::Quote</li>
+<li>Change gnc-local-$LANG into gnc-gui-$LANG in all files.</li>
+<li>dtd-docbook: Separation of the declaration of entities of the GUI from their translatable part.</li>
+<li>Add tests related to images and figures
+    <ul>
+        <li>Warn if document references images that don&#39;t exist</li>
+        <li>inform if images exist that are not referenced </li>
+    </ul>
+</li>
+<li>Require same cmake version as gnucash program</li>
+<li>FO formatting, Added parameter to PdfTarget to improve the presentation of &#39;glosslist&#39; elements.</p></li>
+<li>[SQL Backends] Clarify footnote about required additional packages.</li>
+<li>Fix path to find svg files</li>
+<li>dtd-docbook: Added an explanation of the syntax and corrected some previous entries.</li>
+<li>dtd-docbook: further work to simplify the translation of menu items</li>
+<li>dtd-docbook: add more translatable GUI elements (menuitems)</li>
+<li>gnc-docbookx.dtd, Optimize links to Selinger&#39;s docs</li>
+</ul>
+<p>New and Updated Translations: German, Portuguese</p>
+
+<h3>Getting GnuCash for Windows and MacOS</h3>
+<p>GnuCash is provided for both Microsoft Windows 8.1&reg; and later
+    and MacOS 10.13 (High Sierra)&reg; and later in pre-built, all-in-one
+    packages. An installer is provided for Microsoft Windows&reg; while
+    the MacOS&reg; package is a disk image containing a drag-and-drop
+    application bundle.</p>
+<p><b>Note:</b> A build problem with the documentation and some packaging bugs in the macOS bundle caused us to rebuild the macOS and Windows bundles and to re-release the documentation. The SHA256 hashes and downloads below are the new versions.</p>
+<p>The SHA256 Hashes for the downloadable files are:</p>
+<ul>
+    <li><code>f814ede30d7be0dec0afb2ae8d03628b9ae34c848b68312e4c5aded94c102b19</code>&nbsp;&nbsp;gnucash-4.11.tar.bz2</li>
+    <li><code>6ff4f408ff05c85c8dcdac43d0ac16672bf2059a21928de08e0f860d437c8f83</code>&nbsp;&nbsp;gnucash-4.11.tar.gz</li>
+    <li><code>4bb6b616285ae4ddb286595b4270dc1c3e26045bc56d53227d4f6280535c6770</code>&nbsp;&nbsp;gnucash-4.11.setup.exe</li>
+    <li><code>cd51a9c0cf1edb378c6252853969ea4f9ecc95c5d8547fd7f76b322407b0ca72</code>&nbsp;&nbsp;Gnucash-Intel-4.11-1.dmg</li>
+    <li><code>a83b8ef39111961d805100a860053557a1166cbf0b93a66dfb2c3f732ec25898</code>&nbsp;&nbsp;gnucash-docs-4.11.tar.gz</li>
+</ul>
+
+<ul>
+    <li>SourceForge:
+        <ul>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.11/gnucash-4.11.setup.exe">Win32</a></li>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.11/Gnucash-Intel-4.11-1.dmg">Mac-Intel</a></li>
+        </ul></li>
+    <li>Github
+        <ul>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/4.11/gnucash-4.11.setup.exe">Win32</a></li>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/4.11/Gnucash-Intel-4.11-1.dmg">Mac-Intel</a></li>
+        </ul></li></ul>
+
+<p>GnuCash is also available as a flatpak from Flathub.org. <a href="https://wiki.gnucash.org/wiki/Flatpak">Instructions for installing and running.</a></p>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 4.11 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+    <li>Sourceforge: <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.11/gnucash-4.11.tar.bz2">bzip2</a>, <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.11/gnucash-4.11.tar.gz">gzip</a>.</li>
+
+    <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/4.11/gnucash-4.11.tar.bz2">bzip</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/4.11/gnucash-4.11.tar.gz">gzip</a></li>
+
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https://www.gtk.org">Gtk+</a> 3.22.29, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0, <a href="https://www.boost.org/">Boost</a> 1.67, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, <a href="https://github.com/google/googletest">GoogleTest</a> 1.8.0, <a href="https://cmake.org/">cmake 3.10</a> and <a href="http://www.swig.org/">SWIG</a> 2.0.12. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 4.11 documentation can be found under "GnuCash v4 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats. The documentation is also included in the MacOS and Windows application bundles. Note that we are preparing to remove autotools support from the documentation build and that it is no longer included in the tarball.</p>
+
+<p>If you want to compile the GnuCash Documentation 4.11 for yourself, the source code can be downloaded from:</p>
+<ul>
+    <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.11/gnucash-docs-4.11-1.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/4.11/gnucash-docs-4.11.tar.gz">GitHub</a></li>
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+    the GNU General Public License (GPL) and available for GNU/Linux,
+    *BSD, Solaris, MacOS, and Microsoft Windows.  Programming on GnuCash
+    began in 1997, and its first stable release was in 1998.</p>
