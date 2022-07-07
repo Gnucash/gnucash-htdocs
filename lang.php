@@ -95,7 +95,8 @@ if ($locale == "") {
         if ($locale == "") { $locale = "en_US"; }
 }
 
-$lang_dir = $supported_languages[$locale];
+$lang_dir = array_key_exists($locale, $supported_languages) ?
+            $supported_languages[$locale] : "en";
 setcookie("lang_cookie", $locale);
 
 # We should have a locale now, let's set up the required bits and pieces to show
