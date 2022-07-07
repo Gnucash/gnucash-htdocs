@@ -2,34 +2,6 @@
 $top_dir = ".";
 $locale_dir = "locale";
 
-if (!array_key_exists('HTTP_HOST', $_SERVER) || ($_SERVER["HTTP_HOST"] == "lists.gnucash.org"))
-{
-    $home = "https://www.gnucash.org";
-}else{
-    $home = $top_dir;
-}
-
-if ( !isset($locale) ) { $locale = ""; }
-if ( !isset($lang_dir) ) { $lang_dir = $locale; }
-
-# get the cookie setting
-if (array_key_exists('lang_cookie', $_COOKIE)) {
-    $locale = filter_input(INPUT_COOKIE, 'lang_cookie', FILTER_SANITIZE_STRING);
-    $lang_cookie = $locale;
-}else{
-    $lang_cookie = "";
-}
-
-# allow user override.
-$get_lang = filter_input(INPUT_GET, 'lang', FILTER_SANITIZE_STRING);
-
-if ($get_lang) { $locale = $get_lang; }
-
-# choose a default language based on the client browser's preferred
-# language list
-#echo ("<!-- top_dir: $top_dir, me: ".__FILE__."-->\n");
-
-
 # key: locale, value: lang_dir
 $supported_languages = array(
     'ca_ES' => 'ca',
@@ -51,46 +23,72 @@ $supported_languages = array(
     'zh_TW' => 'zh_TW'
 );
 
-# Find the full locale name for short language name.
-if (strlen($locale) == 2) {
-    foreach($supported_languages as $loc_lang => $loc_dir)
-    {
-        if ( (strtolower($locale) == strtolower($loc_dir))
-          || (strtolower($locale) == substr($loc_lang, 0, 2 )) )
-        {
-            $locale = $loc_lang;
-            break;
-        }
-    }
+if (!array_key_exists('HTTP_HOST', $_SERVER) || ($_SERVER["HTTP_HOST"] == "lists.gnucash.org"))
+{
+    $home = "https://www.gnucash.org";
+}else{
+    $home = $top_dir;
 }
 
+if ( !isset($locale) ) { $locale = ""; }
+if ( !isset($lang_dir) ) { $lang_dir = $locale; }
+
+# get the cookie setting
+if (array_key_exists('lang_cookie', $_COOKIE)) {
+    $locale = filter_input(INPUT_COOKIE, 'lang_cookie', FILTER_SANITIZE_STRING);
+    $lang_cookie = $locale;
+}else{
+    $lang_cookie = "";
+}
+
+# allow user override.
+$languages = filter_input(INPUT_GET, 'lang', FILTER_SANITIZE_STRING);
+
+# choose a default language based on the client browser's preferred
+# language list
+#echo ("<!-- top_dir: $top_dir, me: ".__FILE__."-->\n");
+
 # Find the locale from Client Accept language
-if ($locale == "") {
-    # Get user preferred languages, and match against supported language
-    if ( isset( $_SERVER["HTTP_ACCEPT_LANGUAGE"] ) )
+# Get user preferred languages, and match against supported language
+if ($languages == "" and isset( $_SERVER["HTTP_ACCEPT_LANGUAGE"] ) )
+{
+    # tolower() => remove space => '-' -> '_'
+    $accept_language = filter_input(INPUT_SERVER, 'HTTP_ACCEPT_LANGUAGE', FILTER_SANITIZE_STRING);
+    $languages = str_replace('-','_', str_replace(' ', '', strtolower($accept_language)));
+}
+
+$ranked_langs = [];
+$languages = explode(",", $languages);
+if (count($languages) > 1) {
+    foreach ($languages as $item)
     {
-        # tolower() => remove space => '-' -> '_'
-        # "fr-ch;q=0.3, en, zh-cn;q=0.7" => "fr_ch;q=0.3,en,zh_cn;q=0.7"
-        $accept_language = filter_input(INPUT_SERVER, 'HTTP_ACCEPT_LANGUAGE', FILTER_SANITZE_STRING);
-        $languages = str_replace('-','_', str_replace(' ', '', strtolower($accept_language)));
-        $languages = explode(",", $languages);
-        foreach ($languages as $item)
-        {
-            # "zh_cn;q=0.7" => "zh_cn"
-            $lang = substr($item, 0, strcspn($item, ';'));
-            $lang_short = substr($lang, 0, 2);
-            # full match is prefer, but short match is acceptable.
-            foreach ($supported_languages as $loc_lang => $loc_dir)
-            {
-                if ($lang == strtolower($loc_lang)) { $locale = $loc_lang; break; }
-                if ($lang_short == substr($loc_lang, 0, 2 )) { $locale = $loc_lang; }
-            }
-            if ($locale != "") { break; }
+        $parts = explode(";", $item);
+        if (!$parts[1]) {
+            $ranked_langs[$parts[0]] = 1.0;
+        } else {
+            $ranked_langs[$parts[0]] = (float)substr($parts[1], 2);
         }
     }
-    # nothing matched, use default language
-    if ($locale == "") { $locale = "en_US"; }
+    arsort($ranked_langs, SORT_NUMERIC);
+} else if ($languages[0] != "") {
+    $ranked_langs[$languages[0]] = 1.0;
 }
+
+foreach (array_keys($ranked_langs) as $lang) {
+    if ($ranked_langs[$lang] == 0) {
+        break;
+    }
+    $lang_short = substr($lang, 0, 2);
+    # full match is prefer, but short match is acceptable.
+    foreach ($supported_languages as $loc_lang => $loc_dir)
+    {
+        if ($lang == strtolower($loc_lang)) { $locale = $loc_lang; break; }
+        if ($lang_short == substr($loc_lang, 0, 2 )) { $locale = $loc_lang; }
+    }
+    if ($locale != "") { break; }
+}
+# nothing matched, use default language
+if ($locale == "") { $locale = "en_US"; }
 
 $lang_dir = array_key_exists($locale, $supported_languages) ?
             $supported_languages[$locale] : "en";
