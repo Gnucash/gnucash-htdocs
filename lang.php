@@ -14,7 +14,7 @@ if ( !isset($lang_dir) ) { $lang_dir = $locale; }
 
 # get the cookie setting
 if (array_key_exists('lang_cookie', $_COOKIE)) {
-    $locale = $_COOKIE['lang_cookie'];
+    $locale = filter_input(INPUT_COOKIE, 'lang_cookie', FILTER_SANITIZE_STRING);
     $lang_cookie = $locale;
 }else{
     $lang_cookie = "";
@@ -32,31 +32,31 @@ if ($get_lang) { $locale = $get_lang; }
 
 # key: locale, value: lang_dir
 $supported_languages = array(
-        'ca_ES' => 'ca',
-        'de_DE' => 'de',
-        'en_US' => 'en',
-        'es_ES' => 'es',
-        'fr_FR' => 'fr',
-        'he_IL' => 'he',
-        'hr_HR' => 'hr',
-        'hu_HU' => 'hu',
-        'id_ID' => 'id',
-        'it_IT' => 'it',
-        'ja_JP' => 'ja',
-        'nb_NO' => 'nb',
-        'nl_NL' => 'nl',
-        'pl_PL' => 'pl',
-        'pt_PT' => 'pt',
-        'zh_CN' => 'zh_CN', 
-        'zh_TW' => 'zh_TW'
-        );
+    'ca_ES' => 'ca',
+    'de_DE' => 'de',
+    'en_US' => 'en',
+    'es_ES' => 'es',
+    'fr_FR' => 'fr',
+    'he_IL' => 'he',
+    'hr_HR' => 'hr',
+    'hu_HU' => 'hu',
+    'id_ID' => 'id',
+    'it_IT' => 'it',
+    'ja_JP' => 'ja',
+    'nb_NO' => 'nb',
+    'nl_NL' => 'nl',
+    'pl_PL' => 'pl',
+    'pt_PT' => 'pt',
+    'zh_CN' => 'zh_CN',
+    'zh_TW' => 'zh_TW'
+);
 
 # Find the full locale name for short language name.
 if (strlen($locale) == 2) {
     foreach($supported_languages as $loc_lang => $loc_dir)
     {
         if ( (strtolower($locale) == strtolower($loc_dir))
-            || (strtolower($locale) == substr($loc_lang, 0, 2 )) )
+          || (strtolower($locale) == substr($loc_lang, 0, 2 )) )
         {
             $locale = $loc_lang;
             break;
@@ -66,33 +66,30 @@ if (strlen($locale) == 2) {
 
 # Find the locale from Client Accept language
 if ($locale == "") {
-        # Get user preferred languages, and match against supported language
-        if ( isset( $_SERVER["HTTP_ACCEPT_LANGUAGE"] ) )
+    # Get user preferred languages, and match against supported language
+    if ( isset( $_SERVER["HTTP_ACCEPT_LANGUAGE"] ) )
+    {
+        # tolower() => remove space => '-' -> '_'
+        # "fr-ch;q=0.3, en, zh-cn;q=0.7" => "fr_ch;q=0.3,en,zh_cn;q=0.7"
+        $accept_language = filter_input(INPUT_SERVER, 'HTTP_ACCEPT_LANGUAGE', FILTER_SANITZE_STRING);
+        $languages = str_replace('-','_', str_replace(' ', '', strtolower($accept_language)));
+        $languages = explode(",", $languages);
+        foreach ($languages as $item)
         {
-                # tolower() => remove space => '-' -> '_'
-                # "fr-ch;q=0.3, en, zh-cn;q=0.7" => "fr_ch;q=0.3,en,zh_cn;q=0.7"
-                /* Todo: use Locale::canonicalize ( string $locale ) : string instead
-                 * See https://www.php.net/manual/en/locale.canonicalize.php
-                 * Full description: https://unicode-org.github.io/icu/userguide/locale/#canonicalization
-                 * if ICU is installed on the server */
-                $languages = str_replace('-','_', str_replace(' ', '', strtolower($_SERVER['HTTP_ACCEPT_LANGUAGE'])));
-                $languages = explode(",", $languages);
-                foreach ($languages as $item)
-                {
-                        # "zh_cn;q=0.7" => "zh_cn"
-                        $lang = substr($item, 0, strcspn($item, ';'));
-                        $lang_short = substr($lang, 0, 2);
-                        # full match is prefer, but short match is acceptable.
-                        foreach ($supported_languages as $loc_lang => $loc_dir)
-                        {
-                                if ($lang == strtolower($loc_lang)) { $locale = $loc_lang; break; }
-                                if ($lang_short == substr($loc_lang, 0, 2 )) { $locale = $loc_lang; }
-                        }
-                        if ($locale != "") { break; }
-                }
+            # "zh_cn;q=0.7" => "zh_cn"
+            $lang = substr($item, 0, strcspn($item, ';'));
+            $lang_short = substr($lang, 0, 2);
+            # full match is prefer, but short match is acceptable.
+            foreach ($supported_languages as $loc_lang => $loc_dir)
+            {
+                if ($lang == strtolower($loc_lang)) { $locale = $loc_lang; break; }
+                if ($lang_short == substr($loc_lang, 0, 2 )) { $locale = $loc_lang; }
+            }
+            if ($locale != "") { break; }
         }
-        # nothing matched, use default language
-        if ($locale == "") { $locale = "en_US"; }
+    }
+    # nothing matched, use default language
+    if ($locale == "") { $locale = "en_US"; }
 }
 
 $lang_dir = array_key_exists($locale, $supported_languages) ?
