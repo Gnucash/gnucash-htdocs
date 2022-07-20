@@ -551,25 +551,37 @@ h2.download-title {
 }
 
 #mainfeature {
-   margin-left:5px;
-   margin-right:5px;
-   background:url(../images/gnucash-perspective.png) #f3f3f3 95% no-repeat;
-   color:black;
-   border:1px dotted #7F7FAA;
-   padding:1%;
+  color: black;
+  border: 1px dotted #7f7faa;
 }
 
 #mainfeature ul {
-   font-style:italic;
-   list-style-image: url(../images/checkmark.png);
-   padding: 30px 10px 30px 30px;
-   line-height:25px;
-   margin: 0 53% 0 0;
-   background-color: #F3F3F3;
+  font-style: italic;
+  line-height: 25px;
+  background-color: #f3f3f3;
    border-right: thin solid silver;
    font-style: italic;
+  padding: 10px 10px 20px 20px;
+  margin: 0 0 20px;
 }
 
+#mainfeature li {
+  background: url(../images/checkmark.png) no-repeat left center;
+  padding-left: 25px;
+  list-style: none;
+  margin: 0;
+  vertical-align: middle;
+}
+#mainfeature img {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  padding-left: 10px;
+}
+#mainfeature a {
+  margin: 10px;
+  display: inline-block;
+}
 #validator {
    position:relative;
    height:0px;
