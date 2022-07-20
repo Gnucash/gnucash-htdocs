@@ -125,21 +125,18 @@
         </div> <!-- facebook like button-->
       </div> <!-- socialbuttons -->
 */ ?>
-<?php // the icons on the top right:?>
-      <div style="float:right;">
-        <ul id="navlist">
-          <li id="fb-icon"><a href="https://www.facebook.com/Gnucash" title="<?php echo T_($titlefb);?>"></a></li>
-          <li id="uservoice-icon"><a href="https://gnucash.uservoice.com/" title="<?php echo T_($titleuservoice);?>"></a></li>
-          <li id="donation-icon"><a href="https://gnucash.org/donate.phtml" title="<?php echo T_($titledonation);?>"></a></li>
-          <li id="rss-icon"><a href="<?=$home?>/atom.php" title="<?php echo T_($titleRSS);?>"></a></li>
-        </ul>
-      </div>
-
       <div style="margin: 0px 0px 0 0;">
         <a href="<?=$home?>/"><!--img src="<?=$home?>/externals/gnucash_logo1.png" alt="[GnuCash Logo]" id="gnclogo" width="179" height="45" border="0"/ -->
         <img alt="banner" src="<?=$home?>/images/banner5.png" /></a>
         <p style="font-style:italic; font-size:1.1em; margin: 0 0 0 10px; color: #08006d; text-shadow:0px 0px 9px white;"><?php echo T_("Free Accounting Software");?></p>
       </div>
+
+      <ul id="navlist">
+          <li id="fb-icon"><a href="https://www.facebook.com/Gnucash" title="<?php echo T_($titlefb);?>"></a></li>
+          <li id="uservoice-icon"><a href="https://gnucash.uservoice.com/" title="<?php echo T_($titleuservoice);?>"></a></li>
+          <li id="donation-icon"><a href="https://gnucash.org/donate.phtml" title="<?php echo T_($titledonation);?>"></a></li>
+          <li id="rss-icon"><a href="<?=$home?>/atom.php" title="<?php echo T_($titleRSS);?>"></a></li>
+        </ul>
 
       <span id="language">
         <?= T_("Language"); ?>:
