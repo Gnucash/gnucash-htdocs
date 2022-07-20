@@ -1,16 +1,9 @@
-BODY {
-   background:url(../images/backg.png) fixed repeat;
-   border:0;
-   margin:0;
-   font-size:80%;
-   font-family:"Verdana", Geneva, sans-serif;
-   height:100%;
-}
-
-#maincol {
-   position:relative;
-   margin:0;
-   padding:0;
+body {
+  background: url(../images/backg.png) fixed repeat;
+  border: 0;
+  margin: 0;
+  font-size: 80%;
+  font-family: "Verdana", Geneva, sans-serif;
 }
 
 .newsborder {
@@ -135,12 +128,17 @@ a[href], a[href]:visited
    color: rgb(8, 0, 109);
 }
 
-#head
-{
-   background: url("../images/shadowhead.png") repeat-x scroll center bottom #7F7FAA;
+#head {
+  background: url("../images/shadowhead.png") repeat-x scroll center bottom
+    #7f7faa;
    color: white;
    padding: 0.5em;
    border-bottom: solid thin silver;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #tail {
