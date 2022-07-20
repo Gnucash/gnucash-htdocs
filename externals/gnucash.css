@@ -595,55 +595,31 @@ h2.download-title {
 }
 
 #branding {
-   position:fixed;
-   height:0;
-   right:0;
-   top:255px;
-   z-index:-1;
+  position: fixed;
+  height: 0;
+  right: 0;
+  top: 255px;
+  z-index: -1;
 }
 
-#socialbuttons {
-   position:fixed;
-   background-color:#7F7FAA;
-   border-bottom:1px solid #CACAF7;
-   border-left:1px solid #CACAF7;
-   border-top:1px solid #CACAF7;
-   border-radius:10px 0 0 10px;
-   box-shadow: 0px 0px 8px silver;
-   padding:5px;
-   right:0;
-   top:120px;
-   width:55px;
+#navlist {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
 }
 
-#socialbuttons:hover {
-   position:fixed;
-   background-color:#CACAF7;
-   border-bottom:1px solid #7F7FAA;
-   border-left:1px solid #7F7FAA;
-   border-top:1px solid #7F7FAA;
-   border-radius:10px 0 0 10px;
-   box-shadow: 0px 0px 8px black;
-   padding:5px;
-   right:0;
-   top:120px;
+#navlist li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-#navlist{
-   position:relative;
-   width:120px
-}
-
-#navlist li{
-   margin:0;
-   padding:0;
-   list-style:none;
-   position:absolute;
-   top:0;
-}
-#navlist li, #navlist a{
-   height:42px;
-   display:block;
+#navlist li,
+#navlist a {
+  height: 42px;
+  display: block;
 }
 
 #fb-icon{
