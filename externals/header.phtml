@@ -93,16 +93,13 @@
 
 <?php
   $current_page = array_key_exists('HTTP_HOST', $_SERVER) ? ($top_dir . "/" . basename($_SERVER["SCRIPT_NAME"])) : "";
-  
+
   if (isset($homepage)) { ?>
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="<?=$home?>/atom.php" />
 <?php } ?>
   </head>
   <body>
     <div id="head">
-      <div id="branding">
-        <p><img src="<?=$top_dir?>/images/gnucash-vert.png" alt="GnuCash" /></p>
-      </div>
 <?php /* FIXME: It does not conform to
          https://curia.europa.eu/jcms/upload/docs/application/pdf/2019-07/cp190099en.pdf
          potential fix: an improved version of
@@ -171,3 +168,7 @@
          (<a class="nav" href="http://www.au.gnucash.org/">AU</a>)  */ ?>
       </span> <!-- Continent -->
     </div> <!-- head -->
+
+    <div id="branding">
+      <p><img src="<?=$top_dir?>/images/gnucash-vert.png" alt="GnuCash" /></p>
+    </div>
