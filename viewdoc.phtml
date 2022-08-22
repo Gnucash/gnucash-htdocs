@@ -13,7 +13,7 @@ include("externals/menu.phtml");
 
 # Some base parameters used later on
 $basepath       = \DEFAULT_URL."docs";
-$helpdoc        = "gnucash-help/index.html";
+$helpdoc        = "gnucash-manual/index.html";
 $tcdoc          = "gnucash-guide/index.html";
 $current_stable = $major_stable;
 
@@ -71,7 +71,7 @@ if ($rev_to_show) {
             break;
     }
 
-    # Adjust name of gnucash-help start page for older versions
+    # Adjust name of gnucash-manual start page for older versions
     switch ($rev_to_show) {
         case "1.8":
         case "2.0":
