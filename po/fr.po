@@ -7,6 +7,7 @@
 # Thomas Jungers <thomasjungers@gmail.com>, 2021.
 # Pascal HUE <pascal.hue35@gmail.com>, 2021.
 # Axel Blanchardon <axel.blanchardon@gmail.com>, 2022.
+# Philippe Lamare <ph.lamare@free.fr>, 2022.
 #
 # Quelques propositions de traductions :
 # - checkbook: livre de compte
@@ -20,8 +21,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2021-12-21 00:25+0100\n"
-"PO-Revision-Date: 2022-02-10 04:55+0000\n"
-"Last-Translator: Axel Blanchardon <axel.blanchardon@gmail.com>\n"
+"PO-Revision-Date: 2022-10-02 15:51+0000\n"
+"Last-Translator: Philippe Lamare <ph.lamare@free.fr>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnucash/website/"
 "fr/>\n"
 "Language: fr\n"
@@ -29,12 +30,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.11-dev\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #: 2.6-release-tour.phtml:3
-#, fuzzy
 msgid "GnuCash 2.6 release tour"
-msgstr "GnuCash %s pour"
+msgstr "GnuCash %s tour d'horizon"
 
 #: 2.6-release-tour.phtml:4
 msgid ""
@@ -84,12 +84,12 @@ msgid ""
 "The Preconfigured Reports window. You can select and run a preconfigured "
 "report, edit its name and delete it."
 msgstr ""
-"Le rapports préconfigurés de windows. Vous pouvez sélectionner et exécuter "
+"La fenêtre de rapports préconfigurés. Vous pouvez sélectionner et exécuter "
 "un rapport préconfiguré, modifier son nom et le supprimer"
 
 #: 2.6-release-tour.phtml:45
 msgid "Export any report directly to PDF"
-msgstr "Exporter tout rapport directement vers PDF"
+msgstr "Exporter tout rapport directement en PDF"
 
 #: 2.6-release-tour.phtml:47
 msgid ""
@@ -97,7 +97,7 @@ msgid ""
 "thru the Print window."
 msgstr ""
 "Les rapports et les factures peuvent être exportés directement dans un "
-"fichier PDF sans passer par l'impression windows."
+"fichier PDF sans passer par la fenêtre d'impression."
 
 #: 2.6-release-tour.phtml:50
 msgid "Associate a local file or remote location with any transaction"
@@ -113,8 +113,8 @@ msgid ""
 msgstr ""
 "Il est désormais possible de lier un fichier local externe ou un emplacement "
 "distant (URL) à une transaction. Cette fonctionnalité demandée de longue "
-"durée est disponible à la fois dans le menu Transaction et dans le menu "
-"context de la transaction. Les fichiers sont affichés dans la visionneuse "
+"date est disponible à la fois dans le menu Transaction et dans le menu de "
+"contexte de la transaction. Les fichiers sont affichés dans la visionneuse "
 "par défaut pour ce type de fichier."
 
 #: 2.6-release-tour.phtml:60
@@ -189,27 +189,21 @@ msgstr ""
 "l'ouvrir en lecture seule."
 
 #: 2.6-release-tour.phtml:90
-#, fuzzy
-#| msgid ""
-#| "Note that <span class=\"gnucash\">GnuCash</span> is still a single-user "
-#| "program and that the database backends are still used only as a data "
-#| "store."
 msgid ""
 "Note that <span class=\"gnucash\">GnuCash</span> is still a single-user "
 "program and that the database backends are still used only as a data store."
 msgstr ""
 "Notez que <span class=\"gnucash\">GnuCash</span> est toujours un programme "
-"mono-utilisateur et que les backends de la base de données sont toujours "
+"mono-utilisateur et que les dorsaux de la base de données sont toujours "
 "utilisés uniquement comme magasin de données."
 
 #: 2.6-release-tour.phtml:98
-#, fuzzy
 msgid ""
 "The new button to open a <span class=\"gnucash\">GnuCash</span> datafile in "
 "read-only mode."
 msgstr ""
-"Voici quelques liens pour installer <span class=\"gnucash\">GnuCash</span> "
-"sur quelques distributions les plus populaires :"
+"Le nouveau bouton pour ouvrir un fichier <span class=\"gnucash\">GnuCash</"
+"span> en mode lecture seule :"
 
 #: 2.6-release-tour.phtml:103
 msgid "Save \"Filter By\" settings"
@@ -227,8 +221,8 @@ msgstr ""
 msgid ""
 "Save the \"Filter By…\" settings by enabling the \"Save Filter\" checkbox."
 msgstr ""
-"Enregistrer le « Filtre par ... » paramètres en activant la case à cocher "
-"« Enregistrer le filtre »"
+"Enregistrer le « Filtre par ... » paramètres en activant la case à cocher « "
+"Enregistrer le filtre »."
 
 #: 2.6-release-tour.phtml:118
 msgid "Improved business module"
@@ -277,7 +271,7 @@ msgid ""
 "Better invoice printing setup: Choose a default invoice report as a "
 "preference"
 msgstr ""
-"Un meilleur système d'impression de factures : choisissez le rapport de "
+"Un meilleur système d'impression de factures : Choisissez le rapport de "
 "facturation à utiliser par défaut"
 
 #: 2.6-release-tour.phtml:129
@@ -337,15 +331,14 @@ msgid "Relicensing"
 msgstr "Changement de licence"
 
 #: 2.6-release-tour.phtml:161
-#, fuzzy
 msgid ""
 "By agreement of all authors we have relicensed <span class=\"gnucash"
 "\">GnuCash</span> to the GNU General Public License Version 2 or later from "
 "just Version 2."
 msgstr ""
 "Avec l'accord de tous les auteurs, nous avons changé la licence de <span "
-"class=\"gnucash\">GnuCash</span> depuis GNU General Public License Version 2 "
-"à simplement Version 2."
+"class=\"gnucash\">GnuCash</span> à GNU General Public License Version 2 ou "
+"plus tard au lieu de juste Version 2."
 
 #: 2.6-release-tour.phtml:163 docs.phtml:62 docs.phtml:196 docs.phtml:328
 #: download.phtml:4
@@ -376,6 +369,14 @@ msgid ""
 "lists</a>: the <span class=\"gnucash\">GnuCash</span> community is very "
 "friendly and experienced and someone will surely assist you."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> 2.6 arrive avec une mise à jour de "
+"l'aide et du guide. Si vous ne pouvez pas trouver la réponse dans ces "
+"documents, essayez avec le <a href=\"https ://wiki.gnucash.org/wiki/GnuCash\""
+">wiki GnuCash</a>. Si toutes ces options ne vous donnent pas satisfaction, "
+"vous pouvez envoyer vos questions à la <a href=\"https ://wiki.gnucash.org/"
+"wiki/Mailing_Lists\">liste de distribution GnuCash</a> : la communauté <span "
+"class=\"gnucash\">GnuCash</span> est très amicale et expérimentée et "
+"quelqu'un pourra certainement vous assister."
 
 #: 2.6-release-tour.phtml:171
 msgid "Want to Help?"
@@ -405,10 +406,12 @@ msgid ""
 "\">facebook</a> and <a href=\"https://plus.google.com/u/0/+gnucash\">Google"
 "+</a>"
 msgstr ""
+"En liant notre page projet sur <a href=\"https://www.facebook.com/Gnucash\""
+">facebook</a> et<a href=\"https://plus.google.com/u/0/+gnucash\">Google+</a>"
 
 #: 2.6-release-tour.phtml:177
 msgid "By spreading the word"
-msgstr ""
+msgstr "En passant le mot"
 
 #: 2.6-release-tour.phtml:178
 #, fuzzy
@@ -425,12 +428,17 @@ msgid ""
 "\">GnuCash mailing lists</a> and <a href=\"https://wiki.gnucash.org/wiki/IRC"
 "\">IRC channel</a>"
 msgstr ""
+"En participant à la <a href=\"https://wiki.gnucash.org/wiki/Mailing_Lists\""
+">liste de distribution GnuCash</a> et au <a href=\"https://wiki.gnucash.org/"
+"wiki/IRC\">canal IRC</a>"
 
 #: 2.6-release-tour.phtml:180
 msgid ""
 "By reviewing and adding hints to the <a href=\"https://wiki.gnucash.org/wiki/"
 "\">wiki</a>"
 msgstr ""
+"En relisant et en ajoutant des articles au <a href=\"https://wiki.gnucash."
+"org/wiki/\">wiki</a>"
 
 #: 2.6-release-tour.phtml:181
 msgid ""
@@ -445,16 +453,20 @@ msgid ""
 "By <a href=\"https://wiki.gnucash.org/wiki/Translation\">translating the "
 "program and documentation to your language</a>"
 msgstr ""
+"En <a href=\"https://wiki.gnucash.org/wiki/Translation\">traduisant le "
+"programme et la documentation dans votre langue</a>"
 
 #: 2.6-release-tour.phtml:183
 msgid ""
 "By <a href=\"https://wiki.gnucash.org/wiki/Development\">developing the "
 "source code</a>"
 msgstr ""
+"En <a href=\"https://wiki.gnucash.org/wiki/Development\">développant le code "
+"source</a>"
 
 #: 2.6-release-tour.phtml:186
 msgid "The GnuCash developers team"
-msgstr ""
+msgstr "L'équipe de développement GnuCash"
 
 #: develdocs.phtml:3 externals/menu.phtml:54
 msgid "Writing Documentation"
@@ -508,10 +520,10 @@ msgid ""
 "a relatively flexible system that takes xml files as input and can generate "
 "documentation in several different output formats (html, pdf …)."
 msgstr ""
-"La documentation <span class=\"gnucash\">GnuCash</span> est stockées dans "
+"La documentation <span class=\"gnucash\">GnuCash</span> est enregistrée dans "
 "des fichiers <b>xml</b>. Plus précisément, elle utilise le <b>système "
 "docbook</b>. C'est un système relativement flexible qui utilise les fichiers "
-"xml files comme une entrée et peut générer une documentation dans plusieurs "
+"xml files comme entrée et peut générer une documentation dans plusieurs "
 "formats de sortie (html, pdf …)."
 
 #: develdocs.phtml:29
@@ -1415,7 +1427,7 @@ msgstr "Docs Source"
 
 #: externals/menu.phtml:51
 msgid "Browse Source Code"
-msgstr "Visualiser le code source"
+msgstr "Parcourir le code source"
 
 #: externals/menu.phtml:52
 msgid "Git Access"
@@ -1973,7 +1985,7 @@ msgstr "Plus de téléchargements (source, développement …)"
 #: index.phtml:32
 #, php-format
 msgid "Version %s is the last version for %s and %s and earlier."
-msgstr ""
+msgstr "Version %s est la dernière version pour %s et %s et plus tôt."
 
 #: index.phtml:35
 #, php-format
@@ -1981,6 +1993,8 @@ msgid ""
 "Version %s is the last version for Windows XP/Vista and MacOS X 10.8 and "
 "earlier, and so the last version that will run on PowerPC Macs."
 msgstr ""
+"Version %s est la dernière version pour Windows XP/Vista et MacOS X 10.8 et "
+"plus tôt, et donc la dernière version qui fonctionnera sur Macs PowerPC."
 
 #: index.phtml:44
 msgid ""
@@ -2018,19 +2032,15 @@ msgstr ""
 
 #: index.phtml:55
 msgid "Need Help?"
-msgstr ""
+msgstr "Besoin d'aide ?"
 
 #: index.phtml:58
-#, fuzzy
-#| msgid ""
-#| "This tour will introduce you to new major features in <span class="
-#| "\"gnucash\">GnuCash</span> 2.6."
 msgid ""
 "Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? "
 "Try the"
 msgstr ""
-"Cette visite vous présentera les nouvelles fonctionnalités majeures de <span "
-"class=\"gnucash\">GnuCash</span> 2.6."
+"Vous cherchez quelqu'un à contacter sur <span class=\"gnucash\">GnuCash</"
+"span>? Essayez la"
 
 #: index.phtml:60
 #, fuzzy
@@ -2074,9 +2084,9 @@ msgid "<b>Discover more …</b>"
 msgstr "<b>Découvrir plus …</b>"
 
 #: index.phtml:83
-#, fuzzy, php-format
+#, php-format
 msgid "GnuCash %s Released"
-msgstr "GnuCash %s pour"
+msgstr "GnuCash %s publié"
 
 #: index.phtml:84
 #, php-format
@@ -2084,11 +2094,12 @@ msgid ""
 "We've released GnuCash %s with many bugfixes and improvements including some "
 "%s!"
 msgstr ""
+"Nous avons publiés GnuCash %s avec beaucoup de corrections et "
+"d'améliorations en incluant des %s !"
 
 #: index.phtml:85
-#, fuzzy
 msgid "great new features"
-msgstr "Fonctionnalités principales"
+msgstr "des nouvelles fonctionnalités"
 
 #: new_features-4.0.phtml:4
 #, fuzzy, php-format
