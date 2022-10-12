@@ -21,7 +21,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2021-12-21 00:25+0100\n"
-"PO-Revision-Date: 2022-10-02 15:51+0000\n"
+"PO-Revision-Date: 2022-10-12 11:24+0000\n"
 "Last-Translator: Philippe Lamare <ph.lamare@free.fr>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnucash/website/"
 "fr/>\n"
@@ -30,7 +30,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 #: 2.6-release-tour.phtml:3
 msgid "GnuCash 2.6 release tour"
@@ -152,14 +152,6 @@ msgid "Timeout on \"Save changes on closing\""
 msgstr "Délai pour « Enregistrer les changements à la fermeture »"
 
 #: 2.6-release-tour.phtml:82
-#, fuzzy
-#| msgid ""
-#| "In the General tab of the <span class=\"gnucash\">GnuCash</span> "
-#| "Preferences is now possible to set a timeout for the \"Save changes on "
-#| "closing\" window. If enabled, the \"Save changes on closing\" question "
-#| "will only wait a limited number of seconds for an answer. If the user "
-#| "didn't answer within that time, the changes will be saved automatically "
-#| "and the question window closed."
 msgid ""
 "In the General tab of the <span class=\"gnucash\">GnuCash</span> Preferences "
 "is now possible to set a timeout for the \"Save changes on closing\" window. "
@@ -266,7 +258,6 @@ msgstr ""
 "plusieurs éléments directement à partir d’une liste de résultats de recherche"
 
 #: 2.6-release-tour.phtml:128
-#, fuzzy
 msgid ""
 "Better invoice printing setup: Choose a default invoice report as a "
 "preference"
@@ -275,17 +266,14 @@ msgstr ""
 "facturation à utiliser par défaut"
 
 #: 2.6-release-tour.phtml:129
-#, fuzzy
 msgid "Reorder invoice entries in the invoice window"
 msgstr "Réorganisez les entrées de facturation dans la fenêtre Factures"
 
 #: 2.6-release-tour.phtml:137
-#, fuzzy
 msgid "Customer report with an invoice and a credit note."
 msgstr "Rapports clients avec une facture et une note de crédit."
 
 #: 2.6-release-tour.phtml:147
-#, fuzzy
 msgid ""
 "Updated search window with buttons to process payment, duplicate, post and "
 "print multiple search results."
@@ -294,12 +282,10 @@ msgstr ""
 "dupliquer, publier et imprimer plusieurs résultats de recherche."
 
 #: 2.6-release-tour.phtml:152
-#, fuzzy
 msgid "New preference system"
 msgstr "Nouveau système de préférences"
 
 #: 2.6-release-tour.phtml:154
-#, fuzzy
 msgid ""
 "The preferences system has been rewritten to use GSettings from GIO (GLib) "
 "instead of GConf. This is a simpler and more robust backend which writes to "
@@ -314,7 +300,6 @@ msgstr ""
 "dépendances problématiques telles que GConf, ORBit et DBus."
 
 #: 2.6-release-tour.phtml:156
-#, fuzzy
 msgid ""
 "Note that window position, column sizes, and sort orders will not be "
 "migrated from GConf. Those settings will revert to the default the first "
@@ -324,7 +309,7 @@ msgstr ""
 "Notez que la position de la fenêtre, les largeurs de colonnes et les tris ne "
 "seront pas migrées depuis GConf. Ces paramètres seront réinitialisés la "
 "première fois que vous utiliserez Gnucash, version 2.6 ou ultérieure, mais "
-"ils seront enregistrés une fois que vous les aurez reréglés."
+"ils seront enregistrés une fois que vous les aurez réinitialisés."
 
 #: 2.6-release-tour.phtml:159
 msgid "Relicensing"
@@ -414,7 +399,6 @@ msgid "By spreading the word"
 msgstr "En passant le mot"
 
 #: 2.6-release-tour.phtml:178
-#, fuzzy
 msgid ""
 "<a href=\"https://sourceforge.net/donate/index.php?group_id=192\">By making "
 "a donation</a>"
@@ -473,18 +457,23 @@ msgid "Writing Documentation"
 msgstr "Rédaction de la documentation"
 
 #: develdocs.phtml:4
+#, fuzzy
 msgid ""
 "If you are interested in improving the <span class=\"gnucash\">GnuCash</"
 "span> documentation, you have come to the right place. This page will "
 "provide you with the necessary information to get started."
 msgstr ""
+"Si vous êtes intéressés à améliorer la documentation <span class=\"gnucash\""
+">GnuCash</span>, vous êtes au bon endroit. Cette page vous donnera "
+"l'information nécessaire pour débuter."
 
 #: develdocs.phtml:12
 #, fuzzy
 msgid "Writing GnuCash Documentation"
-msgstr "Ancienne documentation GnuCash"
+msgstr "Écrire la documentation GnuCash"
 
 #: develdocs.phtml:16
+#, fuzzy
 msgid ""
 "Just as the <span class=\"gnucash\">GnuCash</span> application has been "
 "developed over time by volunteers, so too has the documentation been written "
@@ -493,8 +482,16 @@ msgid ""
 "the creation of two major documents, the <b>Help Manual</b> and the "
 "<b>Tutorial and Concepts Guide</b>."
 msgstr ""
+"Tout comme l'application <span class=\"gnucash\">GnuCash</span> a été "
+"développée au fil du temps par des bénévoles, la documentation a également "
+"été rédigée par des développeurs et des utilisateurs bénévoles pour aider "
+"les autres à apprendre comment <span class=\"gnucash\"> GnuCash</span> "
+"fonctionne. Cet effort de collaboration a abouti à la création de deux "
+"documents majeurs, le <b>Manuel d'aide</b> et le <b>Tutoriel et guide des "
+"concepts</b>."
 
 #: develdocs.phtml:18
+#, fuzzy
 msgid ""
 "The <span class=\"gnucash\">GnuCash</span> community welcomes assistance in "
 "maintaining and improving both the program and its documentation. If you are "
@@ -502,12 +499,21 @@ msgid ""
 "\">GnuCash</span>'s documentation, this page gives guidance on how to get "
 "set up to join the effort."
 msgstr ""
+"La communauté <span class=\"gnucash\">GnuCash</span> est heureuse d'avoir de "
+"l'aide pour maintenir et améliorer à la fois le programme et sa "
+"documentation. Si vous êtes intéressé à aider à écrire, éditer ou traduire "
+"la documentation de <span class=\"gnucash\">GnuCash</span>, cette page donne "
+"des conseils sur la façon de se préparer pour se joindre à l'effort."
 
 #: develdocs.phtml:21
+#, fuzzy
 msgid ""
 "The <span class=\"gnucash\">GnuCash</span> documentation can be viewed and "
 "downloaded from the <a href=\"docs.phtml\">Documentation page</a>."
 msgstr ""
+"La documentation <span class=\"gnucash\">GnuCash</span> peut être visualisée "
+"et téléchargée à partir de la <a href=\"docs.phtml\">page de "
+"documentation</a>."
 
 #: develdocs.phtml:26
 msgid "Introduction"
@@ -579,7 +585,7 @@ msgstr ""
 
 #: develdocs.phtml:47
 msgid "No longer available"
-msgstr ""
+msgstr "Plus disponible"
 
 #: develdocs.phtml:54
 msgid "Where to get the documentation source"
@@ -2043,10 +2049,6 @@ msgstr ""
 "span>? Essayez la"
 
 #: index.phtml:60
-#, fuzzy
-#| msgid ""
-#| ", which are public, email-based discussion groups where you can ask and "
-#| "answer <span class=\"gnucash\">GnuCash</span> questions to other users."
 msgid ""
 ", which are public, email-based discussion groups where you can ask and "
 "answer <span class=\"gnucash\">GnuCash</span> questions to other users."
