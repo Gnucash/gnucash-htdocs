@@ -34,23 +34,6 @@ if (in_array($get_lang, $doc_languages, true)) {
     $showlang = $locale;
 }
 
-
-# Parse requested document
-$doc_to_show = filter_input(INPUT_GET, 'doc', FILTER_SANITIZE_STRING);
-if ($doc_to_show) {
-    switch ($doc_to_show) {
-        case "help":
-            $showdoc = $helpdoc;
-            break;
-        case "guide":
-            $showdoc = $tcdoc;
-            break;
-        default:  /* unknown document requested, will present guide by default */
-            $req_doc_ok = false;
-            break;
-    }
-}
-
 # Parse requested version
 $rev_to_show = filter_input(INPUT_GET, 'rev', FILTER_SANITIZE_STRING);
 if ($rev_to_show) {
