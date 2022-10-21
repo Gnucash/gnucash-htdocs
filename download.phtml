@@ -43,17 +43,17 @@
   <h3><?php echo T_("Sandbox")?></h3>
   <ul class="imagelist">
     <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/flatpak.png);">
-      <p class="justify"><?php printf (T_("Flatpaks are bundles, which contain beneath the program also all required libraries. If your distribution is too old, to offer all required libraries, but has the package <a href=\"%s\">Flatpak</a>, you can install a recent version of <span class=\"gnucash\">GnuCash</span> from"), $URL_FLATPAK)?></p>
+      <p class="justify"><?php printf (T_("An alternative to using your distribution's software manager is to use the Flatpak management system, which bundles all the necessary libraries for you. This can ease the installation of newer versions of GnuCash on older Linux machines. If you have <a href=\"%s\">Flatpak</a> installed, you can download any recent version of <span class=\"gnucash\">GnuCash</span> from"), $URL_FLATPAK)?></p>
       <p class="justify"><a href="<?php echo $URL_FLATHUB;?>"><img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/></a></p>
       <p class="justify"><a href="<?php 
       /* Translators: %s is the base url of the gnucash wiki, adjust this,
          if a localized instance of the Flatpak page exists like "%sDe/Flatpak" */
-        printf (T_("%sFlatpak"), $URL_WIKI);?>"><?php printf (T_("Known Issues and other details …"));?></a></p>
+        printf (T_("%sFlatpak"), $URL_WIKI);?>"><?php printf (T_("Known Issues and other details"));?></a></p>
     </li>
   </ul>
 
   <h3><?php echo T_("Source code")?></h3>
-  <p class="justify"><?php echo T_("If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> or you wish to install a different version than it ships with, you could try to build <span class=\"gnucash\">GnuCash</span> directly from the source code. The <span class=\"gnucash\">GnuCash</span> wiki has <a href='https://wiki.gnucash.org/wiki/Building'>guidelines for several distributions</a>.")?></p>
+  <p class="justify"><?php echo T_("If you can't easily install <span class=\"gnucash\">GnuCash</span> in your distribution, or wish to install a different version than it ships with, you can build <span class=\"gnucash\">GnuCash</span> from source code as described in <a href='https://wiki.gnucash.org/wiki/Building'>the wiki</a>.")?></p>
   <ul class="imagelist">
     <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/package.png);"><a href="<?php echo $latest_stable_path.$latest_stable_source;?>">bzip2 compressed tarball</a> <?php printf (T_("for GnuCash %s"), $latest_stable)?></li>
   </ul>
@@ -64,8 +64,8 @@
       <div class="featureborder">
       <h2 class="featuretitle"><?php printf (T_("Unstable/Development release (%s)"), $latest_unstable)?></h2>
       </div>
-      <p class="justify"><?php echo T_("Unstable (development) releases are for testing purposes only. They contain the newest features and improvements, but may also contain serious bugs still. Don't install these releases for everyday use.")?></p>
-      <p class="justify"><?php printf (T_("The latest unstable release of <span class=\"gnucash\">GnuCash</span> is %s. Choose the download for your operating system below."), $latest_unstable)?></p>
+      <p class="justify"><?php echo T_("Unstable (development) releases are for testing purposes only. They contain the newest features and improvements, but possibly also bugs. Don't install these releases for everyday use.")?></p>
+      <p class="justify"><?php printf (T_("The latest unstable release of <span class=\"gnucash\">GnuCash</span> (available below) is %s."), $latest_unstable)?></p>
       
       <ul>
         <li><?php printf (T_("GnuCash %s for"), $latest_unstable)?> <a href="<?php echo $latest_unstable_path.$latest_unstable_win;?>"><?=\LABEL_WIN." ".\SUPPORTED_WIN?></a></li>
@@ -80,8 +80,8 @@
       <div id="previous" class="featureborder">
         <h2 class="featuretitle"><?php printf (T_("Old Stable release (%s)"), $old_stable)?></h2>
       </div>
-      <p class="justify"><?php echo T_("This old stable release is the final version of the previous stable series. It's available for users who aren't ready for a major upgrade but want to make sure that they have all of the bugfixes from the old series.")?></p>
-      <p class="justify"><?php printf (T_("The last old stable release of <span class=\"gnucash\">GnuCash</span> is %s. Choose the download for your operating system below."), $old_stable)?></p>
+      <p class="justify"><?php echo T_("This old stable release is the final version of all bugfixes from the previous stable series without being a major upgrade.")?></p>
+      <p class="justify"><?php printf (T_("The last old stable release of <span class=\"gnucash\">GnuCash</span> (available below) is %s."), $old_stable)?></p>
       
       <ul>
         <li><?php printf (T_("GnuCash %s for"), $old_stable)?> <a href="<?php echo $old_stable_path.$old_stable_win;?>">Microsoft Windows 7/8/10</a></li>
@@ -96,7 +96,7 @@
       <div id="historical" class="featureborder">
         <h2 class="featuretitle"><?php echo T_("Latest versions for historical operating systems") ?></h2>
       </div>
-      <p class="justify"><?php echo T_("This versions are really old. Do not expect any support.")?></p>
+      <p class="justify"><?php echo T_("These versions are really old. No support is offered.")?></p>
       <ul>
         <li><?php printf (T_("GnuCash %s for"), $last_xp_vista_version)?>
           <ul>
