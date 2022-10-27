@@ -8,9 +8,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GnuCash ht-docs\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
-"cgi?component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2021-12-21 00:25+0100\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
+"component=Translations&product=Website&resolution=---\n"
+"POT-Creation-Date: 2022-10-27 19:35+0200\n"
 "PO-Revision-Date: 2022-06-22 10:56+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/gnucash/website/"
@@ -570,8 +570,8 @@ msgid ""
 msgstr ""
 "Trebat ćeš noviju kopiju izvornog koda dokumentacije. Pregledaj modul "
 "dokumentacije u gnucash‑docs git repozitoriju. Recenzenti mogu početi raditi "
-"i s <a href='https://sourceforge.net/projects/gnucash/files/gnucash-docs/"
-"'>aktualnim tar-arhiviranim dokumentima</a>."
+"i s <a href='https://sourceforge.net/projects/gnucash/files/gnucash-"
+"docs/'>aktualnim tar-arhiviranim dokumentima</a>."
 
 #: develdocs.phtml:57
 msgid ""
@@ -920,8 +920,8 @@ msgstr ""
 "Svake noći server izgrađuje dokumentaciju iz aktualnog sadržaja izvornog "
 "<span class=\"gnucash\">GnuCash</span> repozitorija. To uključuje "
 "<b>Programersku dokumentaciju</b> od <b>Doxygena</b> kao i <b>Korisničku "
-"dokumentaciju</b> za aktualnu <em>stabilnu</em> <span class=\"gnucash\""
-">GnuCash</span> verziju."
+"dokumentaciju</b> za aktualnu <em>stabilnu</em> <span class=\"gnucash"
+"\">GnuCash</span> verziju."
 
 #: docs.phtml:467
 msgid ""
@@ -1201,15 +1201,12 @@ msgstr "Sandbox"
 #: download.phtml:46
 #, php-format
 msgid ""
-"Flatpaks are bundles, which contain beneath the program also all required "
-"libraries. If your distribution is too old, to offer all required libraries, "
-"but has the package <a href=\"%s\">Flatpak</a>, you can install a recent "
-"version of <span class=\"gnucash\">GnuCash</span> from"
+"An alternative to using your distribution's software manager is to use the "
+"Flatpak management system, which bundles all the necessary libraries for "
+"you. This can ease the installation of newer versions of GnuCash on older "
+"Linux machines. If you have <a href=\"%s\">Flatpak</a> installed, you can "
+"download any recent version of <span class=\"gnucash\">GnuCash</span> from"
 msgstr ""
-"Flatpaks su paketi koji pored samog programa sadrže i sve potrebne "
-"biblioteke. Ako je vlastita distribucija prestara da bi nudila sve potrebne "
-"biblioteke, ali sadžava <a href=\"%s\">Flatpak</a> paket, najnovija <span "
-"class=\"gnucash\">GnuCash</span> verzija može se instalirati sa stranice"
 
 #. Translators: %s is the base url of the gnucash wiki, adjust this,
 #. if a localized instance of the Flatpak page exists like "%sDe/Flatpak"
@@ -1219,7 +1216,9 @@ msgid "%sFlatpak"
 msgstr "%sFlatpak"
 
 #: download.phtml:51
-msgid "Known Issues and other details …"
+#, fuzzy
+#| msgid "Known Issues and other details …"
+msgid "Known Issues and other details"
 msgstr "Poznati problemi i ostali detalji …"
 
 #: download.phtml:55 index.phtml:17
@@ -1227,12 +1226,19 @@ msgid "Source code"
 msgstr "Izvorni kod"
 
 #: download.phtml:56
+#, fuzzy
+#| msgid ""
+#| "If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> "
+#| "or you wish to install a different version than it ships with, you could "
+#| "try to build <span class=\"gnucash\">GnuCash</span> directly from the "
+#| "source code. The <span class=\"gnucash\">GnuCash</span> wiki has <a "
+#| "href='https://wiki.gnucash.org/wiki/Building'>guidelines for several "
+#| "distributions</a>."
 msgid ""
-"If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> or "
-"you wish to install a different version than it ships with, you could try to "
-"build <span class=\"gnucash\">GnuCash</span> directly from the source code. "
-"The <span class=\"gnucash\">GnuCash</span> wiki has <a href='https://wiki."
-"gnucash.org/wiki/Building'>guidelines for several distributions</a>."
+"If you can't easily install <span class=\"gnucash\">GnuCash</span> in your "
+"distribution, or wish to install a different version than it ships with, you "
+"can build <span class=\"gnucash\">GnuCash</span> from source code as "
+"described in <a href='https://wiki.gnucash.org/wiki/Building'>the wiki</a>."
 msgstr ""
 "Ako se tvoja distribucija ne isporučuje s <span class=\"gnucash\">GnuCash</"
 "span> programom ili ako želiš instalirati drugačiju verziju nego što je "
@@ -1252,20 +1258,28 @@ msgid "Unstable/Development release (%s)"
 msgstr "Nestabilno/razvojno izdanje (%s)"
 
 #: download.phtml:67
+#, fuzzy
+#| msgid ""
+#| "Unstable (development) releases are for testing purposes only. They "
+#| "contain the newest features and improvements, but may also contain "
+#| "serious bugs still. Don't install these releases for everyday use."
 msgid ""
 "Unstable (development) releases are for testing purposes only. They contain "
-"the newest features and improvements, but may also contain serious bugs "
-"still. Don't install these releases for everyday use."
+"the newest features and improvements, but possibly also bugs. Don't install "
+"these releases for everyday use."
 msgstr ""
 "Nestabilna (razvojna) izdanja su mišljena samo za testiranje. Sadržavaju "
 "najnovije funkcije i poboljšanja, ali možda i ozbiljne greške. Ove verzije "
 "nemoj instalirati za svakodnevni rad."
 
 #: download.phtml:68
-#, php-format
+#, fuzzy, php-format
+#| msgid ""
+#| "The latest unstable release of <span class=\"gnucash\">GnuCash</span> is "
+#| "%s. Choose the download for your operating system below."
 msgid ""
-"The latest unstable release of <span class=\"gnucash\">GnuCash</span> is %s. "
-"Choose the download for your operating system below."
+"The latest unstable release of <span class=\"gnucash\">GnuCash</span> "
+"(available below) is %s."
 msgstr ""
 "Aktualno nestabilno izdanje za <span class=\"gnucash\">GnuCash</span> je %s. "
 "Odaberi preuzimanje za tvoj operacijski sustav."
@@ -1277,19 +1291,18 @@ msgstr "Staro stabilno izdanje (%s)"
 
 #: download.phtml:83
 msgid ""
-"This old stable release is the final version of the previous stable series. "
-"It's available for users who aren't ready for a major upgrade but want to "
-"make sure that they have all of the bugfixes from the old series."
+"This old stable release is the final version of all bugfixes from the "
+"previous stable series without being a major upgrade."
 msgstr ""
-"Staro stabilno izdanje je finalna verzija prethodne stabilne serije. "
-"Preporučuje se korisnicima koji ne žele prijeći na novu verziju, ali "
-"svejedno žele biti sigurni, da su greške tog izdanja ispravljene."
 
 #: download.phtml:84
-#, php-format
+#, fuzzy, php-format
+#| msgid ""
+#| "The last old stable release of <span class=\"gnucash\">GnuCash</span> is "
+#| "%s. Choose the download for your operating system below."
 msgid ""
-"The last old stable release of <span class=\"gnucash\">GnuCash</span> is %s. "
-"Choose the download for your operating system below."
+"The last old stable release of <span class=\"gnucash\">GnuCash</span> "
+"(available below) is %s."
 msgstr ""
 "Zadnje staro stabilno izdanje za <span class=\"gnucash\">GnuCash</span> je "
 "%s. Odaberi preuzimanje za tvoj operacijski sustav."
@@ -1299,7 +1312,9 @@ msgid "Latest versions for historical operating systems"
 msgstr "Aktualne verzije za stare operativne sustave"
 
 #: download.phtml:99
-msgid "This versions are really old. Do not expect any support."
+#, fuzzy
+#| msgid "This versions are really old. Do not expect any support."
+msgid "These versions are really old. No support is offered."
 msgstr "Ovo su prastare verzije. Ne očekuj podršku."
 
 #: download.phtml:112
@@ -1493,8 +1508,8 @@ msgid ""
 "\">GnuCash</span> has to offer to its users."
 msgstr ""
 "<span class=\"gnucash\">GnuCash</span> je moćan računovodstveni program. "
-"Ovdje su navedene neke od bezbrojnih funkcija koje <span class=\"gnucash\""
-">GnuCash</span> nudi svojim korisnicima."
+"Ovdje su navedene neke od bezbrojnih funkcija koje <span class=\"gnucash"
+"\">GnuCash</span> nudi svojim korisnicima."
 
 #: features.phtml:16 features.phtml:23
 msgid "Main features"
@@ -2598,9 +2613,9 @@ msgid ""
 "parenthesis, it is the approriate KLOC count for that statistic."
 msgstr ""
 "broj *c, *.h i *.scm datoteka (KLOCS u *.c + KLOCS u *.h + KLOCS u *.scm). "
-"Ako u mapi nema datoteka *.scm, prikazuje se samo (KLOCS u *.c + KLOCS u *.h)"
-". Ako postoji samo jedan broj u zagradi, to je odgovarajući KLOC zbroj za tu "
-"statistiku."
+"Ako u mapi nema datoteka *.scm, prikazuje se samo (KLOCS u *.c + KLOCS u *."
+"h). Ako postoji samo jedan broj u zagradi, to je odgovarajući KLOC zbroj za "
+"tu statistiku."
 
 #: sizing.phtml:327
 msgid ""
@@ -2668,10 +2683,15 @@ msgstr ""
 "engine (mehanizam), u register (registar) ili u ledger (knjigu)."
 
 #: sizing.phtml:354
+#, fuzzy
+#| msgid ""
+#| "Contents of src/gnome plus src/register/gnome (version 1.6 and earlier). "
+#| "For version 1.7 and later, this consists of src/gnome, src/gnome-search "
+#| "and src/gnome-util."
 msgid ""
 "Contents of src/gnome plus src/register/gnome (version 1.6 and earlier). For "
 "version 1.7 and later, this consists of src/gnome, src/gnome-search and src/"
-"gnome-util."
+"gnome-util"
 msgstr ""
 "Sadržaj src/gnome plus src/register/gnome (verzija 1.6 i ranija). Za verziju "
 "1.7 i novije, ovo se sastoji od src/gnome, src/gnome‑search i src/gnome‑util."
@@ -2683,8 +2703,8 @@ msgid ""
 "gnc-module, src/network-utils, src/tax/us."
 msgstr ""
 "Sadržaj raznih programskih direktorija (verzija 1.7 i novija): src/app‑file, "
-"src/app‑utils, src/calculation, src/core‑utils, src/gnc‑modul, src/network‑"
-"utils, src/tax/us."
+"src/app‑utils, src/calculation, src/core‑utils, src/gnc‑modul, src/"
+"network‑utils, src/tax/us."
 
 #: sizing.phtml:364
 msgid ""
@@ -2733,9 +2753,9 @@ msgid ""
 msgstr ""
 "Korisnička dokumentacija samo na engleskom jeziku, uključujući online pomoć "
 "i priručnik (html, sgml ili xml). Za verziju 1.8.4 i novije, broj ispod "
-"stupca broji prevedene, ne‑engleske dokumente (trenutačno de, es, fr, pt_PT)"
-". Njihove zbrojeve je nešto teže dobiti, jer se u računicu miješaju prilično "
-"veliki formati i konkurirajuće verzije."
+"stupca broji prevedene, ne‑engleske dokumente (trenutačno de, es, fr, "
+"pt_PT). Njihove zbrojeve je nešto teže dobiti, jer se u računicu miješaju "
+"prilično veliki formati i konkurirajuće verzije."
 
 #: sizing.phtml:394
 msgid ""
@@ -2778,7 +2798,7 @@ msgstr ""
 msgid "View document"
 msgstr "Prikaži dokument"
 
-#: viewdoc.phtml:145
+#: viewdoc.phtml:166
 msgid ""
 "The document requested is not available. The tutorial and concepts guide "
 "will be displayed instead."
@@ -2786,7 +2806,7 @@ msgstr ""
 "Zatraženi dokument nije dostupan. Umjesto toga će se prikazati dokument "
 "„Vježbe i koncepti”."
 
-#: viewdoc.phtml:148
+#: viewdoc.phtml:169
 #, php-format
 msgid ""
 "The document requested is not available for version %s. Version %s will be "
@@ -2795,7 +2815,7 @@ msgstr ""
 "Zatraženi dokument nije dostupan za verziju %s. Umjesto toga će se prikazati "
 "verzija %s."
 
-#: viewdoc.phtml:152
+#: viewdoc.phtml:173
 #, php-format
 msgid ""
 "The document requested is not available in the requested language (tried "
@@ -2804,7 +2824,7 @@ msgstr ""
 "Zatraženi dokument nije dostupan na zatraženom jeziku (pokušan je [%s]). "
 "Umjesto toga će se prikazati engleska verzija."
 
-#: viewdoc.phtml:157
+#: viewdoc.phtml:178
 #, php-format
 msgid ""
 "It seems your browser doesn't support iframes. To view the requested page in "
@@ -2813,3 +2833,25 @@ msgstr ""
 "Čini se da tvoj web preglednik ne podržava iframes. Za prikaz tražene "
 "stranice u zasebnom prozoru <a href=\"%s\" target=\"_blank\">pritisni mišem "
 "ovdje</a>."
+
+#, php-format
+#~ msgid ""
+#~ "Flatpaks are bundles, which contain beneath the program also all required "
+#~ "libraries. If your distribution is too old, to offer all required "
+#~ "libraries, but has the package <a href=\"%s\">Flatpak</a>, you can "
+#~ "install a recent version of <span class=\"gnucash\">GnuCash</span> from"
+#~ msgstr ""
+#~ "Flatpaks su paketi koji pored samog programa sadrže i sve potrebne "
+#~ "biblioteke. Ako je vlastita distribucija prestara da bi nudila sve "
+#~ "potrebne biblioteke, ali sadžava <a href=\"%s\">Flatpak</a> paket, "
+#~ "najnovija <span class=\"gnucash\">GnuCash</span> verzija može se "
+#~ "instalirati sa stranice"
+
+#~ msgid ""
+#~ "This old stable release is the final version of the previous stable "
+#~ "series. It's available for users who aren't ready for a major upgrade but "
+#~ "want to make sure that they have all of the bugfixes from the old series."
+#~ msgstr ""
+#~ "Staro stabilno izdanje je finalna verzija prethodne stabilne serije. "
+#~ "Preporučuje se korisnicima koji ne žele prijeći na novu verziju, ali "
+#~ "svejedno žele biti sigurni, da su greške tog izdanja ispravljene."

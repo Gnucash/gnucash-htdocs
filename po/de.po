@@ -15,9 +15,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
-"cgi?component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2021-12-21 00:25+0100\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
+"component=Translations&product=Website&resolution=---\n"
+"POT-Creation-Date: 2022-10-27 19:35+0200\n"
 "PO-Revision-Date: 2022-09-28 19:16+0000\n"
 "Last-Translator: Frank H. Ellenberger <frank.h.ellenberger@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnucash/website/"
@@ -158,13 +158,13 @@ msgid ""
 "that time, the changes will be saved automatically and the question window "
 "closed."
 msgstr ""
-"Auf der Registerkarte \"Allgemein\" der <span class=\"gnucash\""
-">GnuCash</span>-Einstellungen kann jetzt eine Zeitüberschreitung für das "
-"Fenster \"Änderungen beim Schließen speichern\" festgelegt werden. Wenn "
-"diese Option aktiviert ist, wartet das Fenster \"Änderungen beim Schließen "
-"speichern\" nur eine begrenzte Anzahl von Sekunden auf eine Antwort. Wenn "
-"der Benutzer innerhalb dieser Zeit nicht geantwortet hat, werden die "
-"Änderungen automatisch gespeichert und das Fragefenster geschlossen."
+"Auf der Registerkarte \"Allgemein\" der <span class=\"gnucash\">GnuCash</"
+"span>-Einstellungen kann jetzt eine Zeitüberschreitung für das Fenster "
+"\"Änderungen beim Schließen speichern\" festgelegt werden. Wenn diese Option "
+"aktiviert ist, wartet das Fenster \"Änderungen beim Schließen speichern\" "
+"nur eine begrenzte Anzahl von Sekunden auf eine Antwort. Wenn der Benutzer "
+"innerhalb dieser Zeit nicht geantwortet hat, werden die Änderungen "
+"automatisch gespeichert und das Fragefenster geschlossen."
 
 #: 2.6-release-tour.phtml:85
 msgid "Open datafile read-only"
@@ -351,11 +351,11 @@ msgid ""
 msgstr ""
 "<span class=\"gnucash\">GnuCash</span> 2.6 wird mit aktualisierter Hilfe und "
 "Anleitung geliefert. Wenn Sie die Antwort auf Ihre Fragen in diesen "
-"Dokumenten nicht finden können, versuchen Sie es mit dem <a href=\"https"
-"://wiki.gnucash.org/wiki/GnuCash\">GnuCash-Wiki</a>. Wenn beide Optionen "
-"nicht zufriedenstellend sind, können Sie Ihre Fragen an die <a href=\"https"
-"://wiki.gnucash.org/wiki/Mailing_Lists\">GnuCash-Mailinglisten</a> schicken: "
-"die <span class=\"gnucash\">GnuCash</span>-Community ist sehr freundlich und "
+"Dokumenten nicht finden können, versuchen Sie es mit dem <a href=\"https://"
+"wiki.gnucash.org/wiki/GnuCash\">GnuCash-Wiki</a>. Wenn beide Optionen nicht "
+"zufriedenstellend sind, können Sie Ihre Fragen an die <a href=\"https://wiki."
+"gnucash.org/wiki/Mailing_Lists\">GnuCash-Mailinglisten</a> schicken: die "
+"<span class=\"gnucash\">GnuCash</span>-Community ist sehr freundlich und "
 "erfahren und jemand wird Ihnen sicher helfen."
 
 #: 2.6-release-tour.phtml:171
@@ -785,9 +785,9 @@ msgid ""
 "a> or <a href=\"https://wiki.gnucash.org/wiki/De/\">Deutsch</a> <span class="
 "\"gnucash\">GnuCash</span> wikis."
 msgstr ""
-"Weitere Informationsquellen sind die <span class=\"gnucash\">GnuCash</span"
-">-Wiki-Seiten auf <a href=\"https://wiki.gnucash.org/wiki/\">Englisch</a> "
-"oder <a href=\"https://wiki.gnucash.org/wiki/De/\">Deutsch</a>."
+"Weitere Informationsquellen sind die <span class=\"gnucash\">GnuCash</span>-"
+"Wiki-Seiten auf <a href=\"https://wiki.gnucash.org/wiki/\">Englisch</a> oder "
+"<a href=\"https://wiki.gnucash.org/wiki/De/\">Deutsch</a>."
 
 #: docs.phtml:43
 msgid ""
@@ -1244,16 +1244,12 @@ msgstr "Sandkasten"
 #: download.phtml:46
 #, php-format
 msgid ""
-"Flatpaks are bundles, which contain beneath the program also all required "
-"libraries. If your distribution is too old, to offer all required libraries, "
-"but has the package <a href=\"%s\">Flatpak</a>, you can install a recent "
-"version of <span class=\"gnucash\">GnuCash</span> from"
+"An alternative to using your distribution's software manager is to use the "
+"Flatpak management system, which bundles all the necessary libraries for "
+"you. This can ease the installation of newer versions of GnuCash on older "
+"Linux machines. If you have <a href=\"%s\">Flatpak</a> installed, you can "
+"download any recent version of <span class=\"gnucash\">GnuCash</span> from"
 msgstr ""
-"Flatpaks sind Bündel, welche neben dem Programm auch alle erforderlichen "
-"Bibliotheken enthalten. Falls Ihre Distribution zu alt ist, um alle "
-"erforderlichen Bibliotheken mitzubringen, aber das Paket <a href=\"%s"
-"\">Flatpak</a> hat, installieren Sie doch eine aktuelle <span class=\"gnucash"
-"\">GnuCash</span>-Version von"
 
 #. Translators: %s is the base url of the gnucash wiki, adjust this,
 #. if a localized instance of the Flatpak page exists like "%sDe/Flatpak"
@@ -1263,7 +1259,9 @@ msgid "%sFlatpak"
 msgstr "%sDe/Flatpak"
 
 #: download.phtml:51
-msgid "Known Issues and other details …"
+#, fuzzy
+#| msgid "Known Issues and other details …"
+msgid "Known Issues and other details"
 msgstr "Bekannte Probleme und andere Details …"
 
 #: download.phtml:55 index.phtml:17
@@ -1271,12 +1269,19 @@ msgid "Source code"
 msgstr "Quelltext"
 
 #: download.phtml:56
+#, fuzzy
+#| msgid ""
+#| "If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> "
+#| "or you wish to install a different version than it ships with, you could "
+#| "try to build <span class=\"gnucash\">GnuCash</span> directly from the "
+#| "source code. The <span class=\"gnucash\">GnuCash</span> wiki has <a "
+#| "href='https://wiki.gnucash.org/wiki/Building'>guidelines for several "
+#| "distributions</a>."
 msgid ""
-"If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> or "
-"you wish to install a different version than it ships with, you could try to "
-"build <span class=\"gnucash\">GnuCash</span> directly from the source code. "
-"The <span class=\"gnucash\">GnuCash</span> wiki has <a href='https://wiki."
-"gnucash.org/wiki/Building'>guidelines for several distributions</a>."
+"If you can't easily install <span class=\"gnucash\">GnuCash</span> in your "
+"distribution, or wish to install a different version than it ships with, you "
+"can build <span class=\"gnucash\">GnuCash</span> from source code as "
+"described in <a href='https://wiki.gnucash.org/wiki/Building'>the wiki</a>."
 msgstr ""
 "Wenn Ihre Distribution <span class=\"gnucash\">GnuCash</span> nicht enthält "
 "oder sie eine andere Version von <span class=\"gnucash\">GnuCash</span> "
@@ -1297,10 +1302,15 @@ msgid "Unstable/Development release (%s)"
 msgstr "Instabil/Testversion (%s)"
 
 #: download.phtml:67
+#, fuzzy
+#| msgid ""
+#| "Unstable (development) releases are for testing purposes only. They "
+#| "contain the newest features and improvements, but may also contain "
+#| "serious bugs still. Don't install these releases for everyday use."
 msgid ""
 "Unstable (development) releases are for testing purposes only. They contain "
-"the newest features and improvements, but may also contain serious bugs "
-"still. Don't install these releases for everyday use."
+"the newest features and improvements, but possibly also bugs. Don't install "
+"these releases for everyday use."
 msgstr ""
 "Die instabilen Entwicklungsversionen dienen ausschließlich Testzwecken. Sie "
 "enthalten zwar die neuesten Merkmale und Verbesserungen, können aber auch "
@@ -1308,10 +1318,13 @@ msgstr ""
 "Arbeit mit Ihren wertvollen Daten verwenden."
 
 #: download.phtml:68
-#, php-format
+#, fuzzy, php-format
+#| msgid ""
+#| "The latest unstable release of <span class=\"gnucash\">GnuCash</span> is "
+#| "%s. Choose the download for your operating system below."
 msgid ""
-"The latest unstable release of <span class=\"gnucash\">GnuCash</span> is %s. "
-"Choose the download for your operating system below."
+"The latest unstable release of <span class=\"gnucash\">GnuCash</span> "
+"(available below) is %s."
 msgstr ""
 "Die aktuellste instabile Ausgabe von <span class=\"gnucash\">GnuCash</span> "
 "ist %s. Wählen Sie die zu ihrem Betriebssystem passende Ausgabe zum "
@@ -1324,20 +1337,18 @@ msgstr "Frühere Ausgabe (%s)"
 
 #: download.phtml:83
 msgid ""
-"This old stable release is the final version of the previous stable series. "
-"It's available for users who aren't ready for a major upgrade but want to "
-"make sure that they have all of the bugfixes from the old series."
+"This old stable release is the final version of all bugfixes from the "
+"previous stable series without being a major upgrade."
 msgstr ""
-"Diese alte stabile Ausgabe ist die finale Version der vorherigen stabilen "
-"Serie. Sie ist für Benutzer verfügbar, welche (noch) nicht bereit für ein "
-"größeres Upgrade sind, aber sicherstellen wollen, daß sie über alle Bugfixes "
-"aus der alten Serie verfügen."
 
 #: download.phtml:84
-#, php-format
+#, fuzzy, php-format
+#| msgid ""
+#| "The last old stable release of <span class=\"gnucash\">GnuCash</span> is "
+#| "%s. Choose the download for your operating system below."
 msgid ""
-"The last old stable release of <span class=\"gnucash\">GnuCash</span> is %s. "
-"Choose the download for your operating system below."
+"The last old stable release of <span class=\"gnucash\">GnuCash</span> "
+"(available below) is %s."
 msgstr ""
 "Die letzte alte stabile Ausgabe von <span class=\"gnucash\">GnuCash</span> "
 "ist %s. Wählen Sie die passende Version für Ihr Betriebssystem unten aus."
@@ -1347,7 +1358,9 @@ msgid "Latest versions for historical operating systems"
 msgstr "Letzte Versionen für historische Betriebssysteme"
 
 #: download.phtml:99
-msgid "This versions are really old. Do not expect any support."
+#, fuzzy
+#| msgid "This versions are really old. Do not expect any support."
+msgid "These versions are really old. No support is offered."
 msgstr ""
 "Diese Versionen sind wirklich sehr alt. Erwarten sie keinerlei Unterstützung "
 "mehr."
@@ -2765,10 +2778,15 @@ msgstr ""
 "Engine, das Register oder nach Ledger."
 
 #: sizing.phtml:354
+#, fuzzy
+#| msgid ""
+#| "Contents of src/gnome plus src/register/gnome (version 1.6 and earlier). "
+#| "For version 1.7 and later, this consists of src/gnome, src/gnome-search "
+#| "and src/gnome-util."
 msgid ""
 "Contents of src/gnome plus src/register/gnome (version 1.6 and earlier). For "
 "version 1.7 and later, this consists of src/gnome, src/gnome-search and src/"
-"gnome-util."
+"gnome-util"
 msgstr ""
 "Inhalt von src/gnome plus src/register/gnome (Version 1.6 und früher). Für "
 "Version 1.7 und später, besteht dies aus src/gnome, src/gnome-search und src/"
@@ -2881,7 +2899,7 @@ msgstr ""
 msgid "View document"
 msgstr "Dokument ansehen"
 
-#: viewdoc.phtml:145
+#: viewdoc.phtml:166
 msgid ""
 "The document requested is not available. The tutorial and concepts guide "
 "will be displayed instead."
@@ -2889,7 +2907,7 @@ msgstr ""
 "Das angeforderte Dokument ist nicht verfügbar. Stattdessen wird Kurs und "
 "Konzept angezeigt."
 
-#: viewdoc.phtml:148
+#: viewdoc.phtml:169
 #, php-format
 msgid ""
 "The document requested is not available for version %s. Version %s will be "
@@ -2898,7 +2916,7 @@ msgstr ""
 "Das angeforderte Dokument ist nicht in Version %s verfügbar. Stattdessen "
 "wird Version %s angezeigt."
 
-#: viewdoc.phtml:152
+#: viewdoc.phtml:173
 #, php-format
 msgid ""
 "The document requested is not available in the requested language (tried "
@@ -2907,7 +2925,7 @@ msgstr ""
 "Das angeforderte Dokument ist nicht in der gewünschten Sprache (versucht "
 "wurden [%s]) verfügbar. Stattdessen wird die englische Version angezeigt."
 
-#: viewdoc.phtml:157
+#: viewdoc.phtml:178
 #, php-format
 msgid ""
 "It seems your browser doesn't support iframes. To view the requested page in "
@@ -2916,3 +2934,26 @@ msgstr ""
 "Es scheint, Ihr Browser unterstützt keine iframes. Um die angeforderte Seite "
 "in einem eigenen Fenster anzuzeigen, klicken Sie bitte <a href=\"%s\" target="
 "\"_blank\">hier</a>."
+
+#, php-format
+#~ msgid ""
+#~ "Flatpaks are bundles, which contain beneath the program also all required "
+#~ "libraries. If your distribution is too old, to offer all required "
+#~ "libraries, but has the package <a href=\"%s\">Flatpak</a>, you can "
+#~ "install a recent version of <span class=\"gnucash\">GnuCash</span> from"
+#~ msgstr ""
+#~ "Flatpaks sind Bündel, welche neben dem Programm auch alle erforderlichen "
+#~ "Bibliotheken enthalten. Falls Ihre Distribution zu alt ist, um alle "
+#~ "erforderlichen Bibliotheken mitzubringen, aber das Paket <a href=\"%s"
+#~ "\">Flatpak</a> hat, installieren Sie doch eine aktuelle <span class="
+#~ "\"gnucash\">GnuCash</span>-Version von"
+
+#~ msgid ""
+#~ "This old stable release is the final version of the previous stable "
+#~ "series. It's available for users who aren't ready for a major upgrade but "
+#~ "want to make sure that they have all of the bugfixes from the old series."
+#~ msgstr ""
+#~ "Diese alte stabile Ausgabe ist die finale Version der vorherigen stabilen "
+#~ "Serie. Sie ist für Benutzer verfügbar, welche (noch) nicht bereit für ein "
+#~ "größeres Upgrade sind, aber sicherstellen wollen, daß sie über alle "
+#~ "Bugfixes aus der alten Serie verfügen."

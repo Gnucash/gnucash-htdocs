@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: gnucash-htdocs\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
 "component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2021-12-21 00:25+0100\n"
+"POT-Creation-Date: 2022-10-27 19:35+0200\n"
 "PO-Revision-Date: 2017-10-01 11:09+0200\n"
 "Last-Translator: Josep-Maria Prat i Filella <jpftgn@gmail.com>\n"
 "Language-Team: \n"
@@ -1292,10 +1292,11 @@ msgstr ""
 #: download.phtml:46
 #, php-format
 msgid ""
-"Flatpaks are bundles, which contain beneath the program also all required "
-"libraries. If your distribution is too old, to offer all required libraries, "
-"but has the package <a href=\"%s\">Flatpak</a>, you can install a recent "
-"version of <span class=\"gnucash\">GnuCash</span> from"
+"An alternative to using your distribution's software manager is to use the "
+"Flatpak management system, which bundles all the necessary libraries for "
+"you. This can ease the installation of newer versions of GnuCash on older "
+"Linux machines. If you have <a href=\"%s\">Flatpak</a> installed, you can "
+"download any recent version of <span class=\"gnucash\">GnuCash</span> from"
 msgstr ""
 
 #. Translators: %s is the base url of the gnucash wiki, adjust this,
@@ -1306,7 +1307,7 @@ msgid "%sFlatpak"
 msgstr ""
 
 #: download.phtml:51
-msgid "Known Issues and other details …"
+msgid "Known Issues and other details"
 msgstr ""
 
 #: download.phtml:55 index.phtml:17
@@ -1323,11 +1324,10 @@ msgstr "Codi font"
 #| "href='https://wiki.gnucash.org/wiki/Building'>guidelines for several "
 #| "distributions</a>."
 msgid ""
-"If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> or "
-"you wish to install a different version than it ships with, you could try to "
-"build <span class=\"gnucash\">GnuCash</span> directly from the source code. "
-"The <span class=\"gnucash\">GnuCash</span> wiki has <a href='https://wiki."
-"gnucash.org/wiki/Building'>guidelines for several distributions</a>."
+"If you can't easily install <span class=\"gnucash\">GnuCash</span> in your "
+"distribution, or wish to install a different version than it ships with, you "
+"can build <span class=\"gnucash\">GnuCash</span> from source code as "
+"described in <a href='https://wiki.gnucash.org/wiki/Building'>the wiki</a>."
 msgstr ""
 "Si la vostra distribució no inclou <span class=\"gnucash\">GnuCash</span> o "
 "desitgeu instal·lar una versió diferent de la que ve inclosa, podeu intentar "
@@ -1347,20 +1347,28 @@ msgid "Unstable/Development release (%s)"
 msgstr "Llançament (%s) inestable/desenvolupament"
 
 #: download.phtml:67
+#, fuzzy
+#| msgid ""
+#| "Unstable (development) releases are for testing purposes only. They "
+#| "contain the newest features and improvements, but may also contain "
+#| "serious bugs still. Don't install these releases for everyday use."
 msgid ""
 "Unstable (development) releases are for testing purposes only. They contain "
-"the newest features and improvements, but may also contain serious bugs "
-"still. Don't install these releases for everyday use."
+"the newest features and improvements, but possibly also bugs. Don't install "
+"these releases for everyday use."
 msgstr ""
 "Llançaments inestables (desenvolupament) són per a propòsits de prova només. "
 "Contenen els trets nous i les millores, però també poden contenir errors "
 "seriosos encara. No instal·li aquests llançaments per a ús diari."
 
 #: download.phtml:68
-#, php-format
+#, fuzzy, php-format
+#| msgid ""
+#| "The latest unstable release of <span class=\"gnucash\">GnuCash</span> is "
+#| "%s. Choose the download for your operating system below."
 msgid ""
-"The latest unstable release of <span class=\"gnucash\">GnuCash</span> is %s. "
-"Choose the download for your operating system below."
+"The latest unstable release of <span class=\"gnucash\">GnuCash</span> "
+"(available below) is %s."
 msgstr ""
 "L'últim llançament inestable de <span class=\"gnucash\">GnuCash</span> és "
 "%s. Seleccioneu la descàrrega per al vostre sistema a continuació."
@@ -1372,20 +1380,18 @@ msgstr "Llançament (%s) estable antic"
 
 #: download.phtml:83
 msgid ""
-"This old stable release is the final version of the previous stable series. "
-"It's available for users who aren't ready for a major upgrade but want to "
-"make sure that they have all of the bugfixes from the old series."
+"This old stable release is the final version of all bugfixes from the "
+"previous stable series without being a major upgrade."
 msgstr ""
-"Aquest llançament estable antic és la versió final de la sèrie estable "
-"anterior. Està disponible per a usuaris que no estan preparats per a una "
-"major actualització però volen assegurar-se que tenen totes les correccions "
-"d'errors de la sèrie antiga ."
 
 #: download.phtml:84
-#, php-format
+#, fuzzy, php-format
+#| msgid ""
+#| "The last old stable release of <span class=\"gnucash\">GnuCash</span> is "
+#| "%s. Choose the download for your operating system below."
 msgid ""
-"The last old stable release of <span class=\"gnucash\">GnuCash</span> is %s. "
-"Choose the download for your operating system below."
+"The last old stable release of <span class=\"gnucash\">GnuCash</span> "
+"(available below) is %s."
 msgstr ""
 "L'últim llançament estable antic de <span class=\"gnucash\">GnuCash</span> "
 "és %s. Seleccioneu la descàrrega per al vostre sistema operatiu a "
@@ -1396,7 +1402,7 @@ msgid "Latest versions for historical operating systems"
 msgstr ""
 
 #: download.phtml:99
-msgid "This versions are really old. Do not expect any support."
+msgid "These versions are really old. No support is offered."
 msgstr ""
 
 #: download.phtml:112
@@ -2711,10 +2717,15 @@ msgstr ""
 "del codi no-gui es va traslladar al motor, al registre o al llibre major."
 
 #: sizing.phtml:354
+#, fuzzy
+#| msgid ""
+#| "Contents of src/gnome plus src/register/gnome (version 1.6 and earlier). "
+#| "For version 1.7 and later, this consists of src/gnome, src/gnome-search "
+#| "and src/gnome-util."
 msgid ""
 "Contents of src/gnome plus src/register/gnome (version 1.6 and earlier). For "
 "version 1.7 and later, this consists of src/gnome, src/gnome-search and src/"
-"gnome-util."
+"gnome-util"
 msgstr ""
 "Continguts de src/gnome més src/register/gnome (versió 1.6 i anteriors). Per "
 "a la versió 1.7 i posteriors, consisteix en src/gnome, src/gnome-search i "
@@ -2829,7 +2840,7 @@ msgstr ""
 msgid "View document"
 msgstr "Veure document"
 
-#: viewdoc.phtml:145
+#: viewdoc.phtml:166
 msgid ""
 "The document requested is not available. The tutorial and concepts guide "
 "will be displayed instead."
@@ -2837,7 +2848,7 @@ msgstr ""
 "El document sol·licitat no està disponible. El tutorial i guia de conceptes "
 "es mostrarà en el seu lloc."
 
-#: viewdoc.phtml:148
+#: viewdoc.phtml:169
 #, php-format
 msgid ""
 "The document requested is not available for version %s. Version %s will be "
@@ -2846,7 +2857,7 @@ msgstr ""
 "El document sol·licitat no està disponible per a la versió %s. La versió %s "
 "es mostrarà en el seu lloc."
 
-#: viewdoc.phtml:152
+#: viewdoc.phtml:173
 #, fuzzy, php-format
 msgid ""
 "The document requested is not available in the requested language (tried "
@@ -2855,7 +2866,7 @@ msgstr ""
 "El document sol·licitat no està disponible per a la versió %s. La versió %s "
 "es mostrarà en el seu lloc."
 
-#: viewdoc.phtml:157
+#: viewdoc.phtml:178
 #, fuzzy, php-format
 #| msgid ""
 #| "It seems your browser doesn't support iframes. To view the requested page "
@@ -2868,3 +2879,13 @@ msgstr ""
 "Sembla que el vostre navegador no suporta iframes. Per veure la pàgina "
 "sol·licitada en una finestra independent, <a href=\"%s\" target=\"_new\">feu "
 "clic aquí</a>."
+
+#~ msgid ""
+#~ "This old stable release is the final version of the previous stable "
+#~ "series. It's available for users who aren't ready for a major upgrade but "
+#~ "want to make sure that they have all of the bugfixes from the old series."
+#~ msgstr ""
+#~ "Aquest llançament estable antic és la versió final de la sèrie estable "
+#~ "anterior. Està disponible per a usuaris que no estan preparats per a una "
+#~ "major actualització però volen assegurar-se que tenen totes les "
+#~ "correccions d'errors de la sèrie antiga ."
