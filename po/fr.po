@@ -22,7 +22,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2022-10-27 19:35+0200\n"
-"PO-Revision-Date: 2022-12-19 23:56+0000\n"
+"PO-Revision-Date: 2022-12-23 12:51+0000\n"
 "Last-Translator: aleksej0R <omolice@hotmail.fr>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnucash/website/"
 "fr/>\n"
@@ -591,7 +591,6 @@ msgid "Where to get the documentation source"
 msgstr "Où obtenir la source de documentation"
 
 #: develdocs.phtml:56
-#, fuzzy
 msgid ""
 "You will need a recent copy of the documentation source. For this you can "
 "check out the documentation module from the gnucash-docs git repository. "
@@ -605,7 +604,6 @@ msgstr ""
 "actuel tarball</a>."
 
 #: develdocs.phtml:57
-#, fuzzy
 msgid ""
 "For those not familiar with git, the <span class=\"gnucash\">GnuCash</span> "
 "wiki has a <a href='https://wiki.gnucash.org/wiki/Git'>description</a> "
@@ -613,25 +611,24 @@ msgid ""
 "documentation source instead of the program source, replace 'gnucash' with "
 "'gnucash-docs' in the mentioned git commands, like this:"
 msgstr ""
-"Pour celles et ceux qui ne sont pas familier(ère)s avec svn, le wiki de "
+"Pour celles et ceux qui ne sont pas familier(ère)s avec git, le wiki de "
 "<span class=\"gnucash\">GnuCash</span> fournit une <a href='https://wiki."
-"gnucash.org/wiki/Subversion'>description</a> sur mesure du code de <span "
-"class=\"gnucash\">GnuCash</span>. Pour obtenir cette source de documentation "
-"à la place de la source du programme, remplacez 'gnucash' par 'gnucash-docs' "
-"dans les commandes svn mentionnées, par exemple :"
+"gnucash.org/wiki/Git'>description</a> sur mesure du code de <span class="
+"\"gnucash\">GnuCash</span>. Pour obtenir cette source de documentation à la "
+"place de la source du programme, remplacez 'gnucash' par 'gnucash-docs' dans "
+"les commandes git mentionnées, par exemple :"
 
 #: develdocs.phtml:60
-#, fuzzy
 msgid ""
 "There are two major <span class=\"gnucash\">GnuCash</span> documentation "
 "packages to help users: the <b>Help Manual</b> and the <b>Tutorial and "
 "Concepts Guide</b>. With the above command, the source code of both will be "
 "downloaded."
 msgstr ""
-"Si vous avez des questions sur l'utilisation de <span class=\"gnucash"
-"\">GnuCash</span>, vous êtes au bon endroit.Vous devriez d'abord lire le "
-"<b>Manuel d'Aide</b> et le <b>Guide de Concepts</b>. La majorité de vos "
-"questions y-sont probablement répondue."
+"Il y a deux sources majeures de packs de documentation <span class=\"gnucash"
+"\">GnuCash</span> pour aider les utilisateurs : le <b>Manuel d'Aide</b> et "
+"le <b>Tutoriel et Guide des Concepts</b>. Avec la commande du dessus, les "
+"deux codes sources seront téléchargés."
 
 #: develdocs.phtml:66
 msgid "Writers"
@@ -674,6 +671,10 @@ msgid ""
 "forward this to <a href='mailto:gnucash-devel@gnucash.org'>gnucash-devel</a> "
 "so that people can say 'hey I'm doing that already' or 'go ahead and do it'."
 msgstr ""
+"S'il vous plaît faites savoir aux autres auteurs à quelle section vous "
+"souhaitez vous occuper. Transférez cela s'il vous plaît à <a href='mailto"
+":gnucash-devel@gnucash.org'>gnucash-devel</a> pour que les gens puissent "
+"dire \"hey je suis déjà en train de faire ça\" ou \"vas-y et fais-le\"."
 
 #: develdocs.phtml:74
 msgid ""
@@ -681,6 +682,10 @@ msgid ""
 "to when writing. This still has a lot of useful information in it which "
 "hasn't been transferred to the new docs."
 msgstr ""
+"Vous pouvez aussi vouloir garder une copie en locale de l'ancienne "
+"documentation pour vous y référer lors de l'écriture. Cela contient toujours "
+"beaucoup d'informations utiles qui n'a pas été transférées dans les nouveaux "
+"documents."
 
 #: develdocs.phtml:80
 msgid "Reviewers"
@@ -716,6 +721,10 @@ msgid ""
 "stable branch</strong> documentation. See further down the page for other "
 "<span class=\"gnucash\">GnuCash</span> versions, languages, and formats."
 msgstr ""
+"Les liens suivants sont la documentation des <strong>éditions HTML anglaises "
+"de la branche actuelle stable</strong>. Allez plus bas dans la page pour "
+"d'autres versions <span class=\"gnucash\">GnuCash</span>, langues, et "
+"formats."
 
 #: docs.phtml:13
 msgid "Browse documentation online"
@@ -734,23 +743,20 @@ msgid "Download documentation as mobipocket"
 msgstr "Télécharger la documentation en mobipocket"
 
 #: docs.phtml:28
-#, fuzzy
 msgid ""
 "There are two major <span class=\"gnucash\">GnuCash</span> documentation "
 "packages to help users:"
 msgstr ""
-"Voici quelques liens pour installer <span class=\"gnucash\">GnuCash</span> "
-"sur quelques distributions les plus populaires :"
+"Il y a deux packs majeurs de documentation <span class=\"gnucash\">GnuCash</"
+"span> pour aider les utilisateurs :"
 
 #: docs.phtml:30
-#, fuzzy
 msgid "The Help Manual"
-msgstr "Manuel d'Aide"
+msgstr "Le Manuel d'Aide"
 
 #: docs.phtml:31
-#, fuzzy
 msgid "The Tutorial and Concepts Guide"
-msgstr "Guide des concepts"
+msgstr "Le Tutoriel et le Guide des concepts"
 
 #: docs.phtml:34
 msgid ""
@@ -768,17 +774,14 @@ msgstr ""
 
 #. Translators: If wiki pages in your laguage exists, consider to replace "De"/"Deutsch" by your language.
 #: docs.phtml:39
-#, fuzzy
 msgid ""
 "Other resources are the <a href=\"https://wiki.gnucash.org/wiki/\">English</"
 "a> or <a href=\"https://wiki.gnucash.org/wiki/De/\">Deutsch</a> <span class="
 "\"gnucash\">GnuCash</span> wikis."
 msgstr ""
-"Il existe aussi des flux de discussions IRC via irc.gnome.org \"#gnucash\". "
-"Une autre ressource étant les wikis dédiés pour les <a href='https://wiki."
-"gnucash.org/wiki/'>anglophones</a> ou <a href='https://linuxwiki.de/"
-"GnuCash'>germanophones</a>. Un wiki est un site internet interactif où les "
-"utilisateurs enregistrés peuvent poser et répondre à des questions."
+"D'autres ressources sont les wikis <a href=\"https://wiki.gnucash.org/wiki/\""
+">anglais</a> ou <a href=\"https://wiki.gnucash.org/wiki/Fr/GnuCash\""
+">français</a> de <span class=\"gnucash\">GnuCash</span>."
 
 #: docs.phtml:43
 msgid ""
@@ -800,11 +803,13 @@ msgstr ""
 msgid ""
 "Additionally, you can talk to someone via IRC at %s about your question."
 msgstr ""
+"De plus, vous pouvez parler à quelqu'un via l'IRC à %s à propos de votre "
+"question."
 
 #. Translators: IRC channel
 #: docs.phtml:48
 msgid "channel"
-msgstr ""
+msgstr "canal"
 
 #: docs.phtml:52
 msgid ""
@@ -812,22 +817,23 @@ msgid ""
 "its community. See the <a href=\"develdocs.phtml\">Writing Documentation "
 "page</a> if you are interested in contributing to this effort."
 msgstr ""
+"La documentation de <span class=\"gnucash\">GnuCash</span>a été créée par sa "
+"communauté. Regarder la <a href=\"develdocs.phtml\">page Ecrire la "
+"Documentation</a> si vous êtes intéressé pour à contribuer à cet effort."
 
 #: docs.phtml:57
-#, fuzzy
 msgid "(current stable release)"
-msgstr "(dernière version stable)"
+msgstr "(version stable actuelle)"
 
 #: docs.phtml:57 docs.phtml:191 docs.phtml:488 docs.phtml:605 docs.phtml:631
 #: docs.phtml:653 docs.phtml:671 docs.phtml:693
-#, fuzzy, php-format
+#, php-format
 msgid "GnuCash v%s"
-msgstr "GnuCash %s pour"
+msgstr "GnuCash v%s"
 
 #: docs.phtml:59
-#, fuzzy
 msgid "Current <em>stable</em> user documentation"
-msgstr "Documentation <em>stable</em> de l'utilisateur et du développeur"
+msgstr "Documentation <em>stable</em> actuelle pour l'utilisateur"
 
 #: docs.phtml:62 docs.phtml:196
 msgid "Stable"
@@ -859,9 +865,8 @@ msgstr "Italien"
 
 #: docs.phtml:101 docs.phtml:162 docs.phtml:235 docs.phtml:296 docs.phtml:367
 #: docs.phtml:428 docs.phtml:528 docs.phtml:590
-#, fuzzy
 msgid "Portuguese"
-msgstr "Portuguais"
+msgstr "Portugais"
 
 #: docs.phtml:114 docs.phtml:248 docs.phtml:380 docs.phtml:542 docs.phtml:619
 #: docs.phtml:645 docs.phtml:665 docs.phtml:685
@@ -883,26 +888,23 @@ msgstr ""
 "nécessairement la plus à jour mais elle fonctionne sans problème."
 
 #: docs.phtml:191
-#, fuzzy
 msgid "(old stable release)"
-msgstr "Version stable (%s)"
+msgstr "(Ancienne version stable diffusée)"
 
 #: docs.phtml:193
-#, fuzzy
 msgid "Old <em>stable</em> user documentation"
-msgstr "Documentation <em>stable</em> de l'utilisateur et du développeur"
+msgstr "Ancienne documentation <em>stable</em> pour l'utilisateur"
 
 #: docs.phtml:317
-#, fuzzy, php-format
+#, php-format
 msgid ""
 "This is the old stable release of the <span class=\"gnucash\">GnuCash</span> "
 "documentation, corresponding to the %s release of <span class=\"gnucash"
 "\">GnuCash</span> itself."
 msgstr ""
-"Cette page est consacrée au projet de documentation de <span class=\"gnucash"
-"\">GnuCash</span>. Notre objectif est de maintenir une communauté dédiée à "
-"la création d'une documentation de qualité sur <span class=\"gnucash"
-"\">GnuCash</span>."
+"Il s'agit de l'ancienne version stable diffusée de la documentation de <span "
+"class=\"gnucash\">GnuCash</span>, correspondant à la version de diffusion %s "
+"de <span class=\"gnucash\">GnuCash</span>."
 
 #: docs.phtml:323
 msgid "Nightly Documentation Builds"
@@ -919,7 +921,7 @@ msgstr "Instable"
 
 #: docs.phtml:441
 msgid "API"
-msgstr ""
+msgstr "API"
 
 #: docs.phtml:446 externals/menu.phtml:47
 msgid "current bugfix branch"
@@ -930,7 +932,6 @@ msgid "future feature branch"
 msgstr "future branche de fonctionnalités"
 
 #: docs.phtml:463
-#, fuzzy
 msgid ""
 "Every night a server builds the documentation from the current contents of "
 "the <span class=\"gnucash\">GnuCash</span> source repository. This includes "
@@ -938,11 +939,11 @@ msgid ""
 "Documentation</b> for the current <em>stable</em> version of <span class="
 "\"gnucash\">GnuCash</span>."
 msgstr ""
-"Quotidiennement un serveur reconstruit la documentation <span class=\"gnucash"
-"\">GnuCash</span> à partir des données à jour dans le dépôt subversion. Ceci "
-"comprend la <b>documentation développeur</b> depuis <b>Doxygen</b> et la "
-"<b>documentation utilisateur</b> pour la version <em>instable</em> de <span "
-"class=\"gnucash\">GnuCash</span>."
+"Chaque nuit, un serveur construit la documentation depuis le contenu actuel "
+"du référentiel source de <span class=\"gnucash\">GnuCash</span>. Ceci "
+"comprend la <b>Documentation Développeur</b> depuis <b>Doxygen</b> et la "
+"<b>Documentation Utilisateur</b> pour la version actuelle <em>stable</em> de "
+"<span class=\"gnucash\">GnuCash</span>."
 
 #: docs.phtml:467
 msgid ""
@@ -950,6 +951,10 @@ msgid ""
 "because developers might be working on improvements. However they are the "
 "most up to date reference for <span class=\"gnucash\">GnuCash</span> users."
 msgstr ""
+"<b>NOTE:</b> ces documents peuvent parfois ne pas être accessibles car les "
+"développeurs peuvent être en train de travailler à des améliorations. "
+"Cependant, ils sont les références les plus à jour pour les utilisateurs de "
+"<span class=\"gnucash\">GnuCash</span>."
 
 #: docs.phtml:484
 msgid "Older GnuCash Documentation"
@@ -973,18 +978,15 @@ msgstr "Espagnol"
 
 #: docs.phtml:697
 msgid "Portugese"
-msgstr "Portuguais"
+msgstr "Portugais"
 
 #: docs.phtml:703
 msgid "Unofficial documentation"
 msgstr "Documentation non-officielle"
 
 #: docs.phtml:705
-#, fuzzy
-#| msgid "Some people have written HOWTO guides or tutorials."
 msgid "Some people have written and published their own documentation."
-msgstr ""
-"Certaines personnes ont écrit des guides COMMENT FAIRE ou des tutoriels."
+msgstr "Certaines personnes ont écrit et publié leur propre documentation."
 
 #. Translators: %s is a wiki link
 #: docs.phtml:708
@@ -993,12 +995,12 @@ msgid ""
 "When this collection grew and became polyglot, it moved to %s. There you can "
 "also add more links."
 msgstr ""
+"Quand ce recueil s'est agrandi et est devenu polyglotte, il a été déplacé "
+"sur %s. Vous pouvez y ajouter plus de liens là-bas."
 
 #: docs.phtml:710
-#, fuzzy
-#| msgid "Documentation"
 msgid "wiki:Documentation"
-msgstr "Documentation"
+msgstr "wiki : Documentation"
 
 #: donate.phtml:3 externals/menu.phtml:14
 msgid "Donations"
@@ -1012,19 +1014,24 @@ msgid ""
 "donation. We are only a handfull of developers and other volunteers serving "
 "countless users worldwide."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> est un logiciel gratuit et mis à "
+"disposition sans frais. Votre donation, qui est purement optionnel, supporte "
+"notre communauté mondiale. Si vous aimez ce logiciel, pensez s'il vous plaît "
+"à faire une donation. Nous sommes seulement une poignée de développeurs et "
+"d'autres volontaires servant un nombre incalculable d'utilisateurs dans le "
+"monde entier."
 
 #: donate.phtml:19
 msgid "Various ways to donate"
-msgstr ""
+msgstr "Différents moyens de faire un don"
 
 #: donate.phtml:23
 msgid "You can donate via the Sourceforge tip jar"
-msgstr ""
+msgstr "Vous pouvez faire un don à travers la boite à dons sur Sourceforge"
 
 #: donate.phtml:28
-#, fuzzy
 msgid "Sourceforge tip jar"
-msgstr "Code source"
+msgstr "Boite à dons Sourceforge"
 
 #: donate.phtml:30
 msgid ""
@@ -1032,57 +1039,62 @@ msgid ""
 "Consulting, owned by Derek Atkins. So don't be surprised when your payment "
 "goes there."
 msgstr ""
+"La boite à don fonctionne à travers un compte Paypal géré par IHFTP "
+"Consulting, détenu par Derek Atkins. Ne soyez donc pas surpris que vos "
+"paiements se dirigent là-bas."
 
 #: donate.phtml:33
 msgid "You can transfer a donation to our bank account"
-msgstr ""
+msgstr "Vous pouvez faire une donation par virement à notre compte bancaire"
 
 #: donate.phtml:34
 msgid "Owner:"
-msgstr ""
+msgstr "Propriétaire :"
 
 #: donate.phtml:35
-#, fuzzy
 msgid "Purpose: Donation"
-msgstr "Dons"
+msgstr "Libellé : Don"
 
 #: donate.phtml:36
 msgid "Account:"
-msgstr ""
+msgstr "Compte :"
 
 #: donate.phtml:37
 msgid "Bank Identifier Code (BIC):"
-msgstr ""
+msgstr "Code d'Identification de la Banque (CIB) :"
 
 #: donate.phtml:37
 msgid "Bank:"
-msgstr ""
+msgstr "Banque :"
 
 #: donate.phtml:38
 msgid "IBAN:"
-msgstr ""
+msgstr "IBAN :"
 
 #: donate.phtml:39
 msgid "Address of bank:"
-msgstr ""
+msgstr "Adresse de la banque :"
 
 #: donate.phtml:45
 msgid "Why we appreciate your support"
-msgstr ""
+msgstr "Pourquoi nous apprécions votre support"
 
 #: donate.phtml:48
 msgid ""
 "GnuCash is a volunteer effort. While we manage to keep our operational costs "
 "low there are inevitably expenses involved in keeping the servers running."
 msgstr ""
+"GnuCash est un travail bénévole. Bien que nous réussissons à garder nos "
+"coûts opérationnels bas, il y a inévitablement des dépenses impliquant le "
+"fait de continuer à faire tourner les serveurs."
 
 #: donate.phtml:49
 msgid "Your contribution will be used to cover these expenses."
-msgstr ""
+msgstr "Votre contribution sera utilisée pour couvrir ces dépenses."
 
 #: donate.phtml:50
 msgid "Thank you for your support!"
-msgstr ""
+msgstr "Merci pour votre aide !"
 
 #: download.phtml:5
 msgid ""
@@ -1146,6 +1158,7 @@ msgstr ""
 #, php-format
 msgid "At %s you can compare which distribution which version ships."
 msgstr ""
+"Sur %s vous pouvez comparer quelle distribution convient à quelle version."
 
 #: download.phtml:33
 msgid ""
@@ -1191,14 +1204,13 @@ msgstr ""
 "ce dépôt logiciel supplémentaire, voir"
 
 #: download.phtml:39
-#, fuzzy
 msgid ""
 "Solus users can install <span class=\"gnucash\">GnuCash</span> through the "
 "Software Center (Office Software -> Financial Software -> gnucash)."
 msgstr ""
-"Les utilisateurs de Mandriva peuvent installer <span class=\"gnucash"
-"\">GnuCash</span> via le gestionnaire de logiciel du centre de contôle "
-"Mandriva Linux."
+"Les utilisateurs de Solus peuvent installer <span class=\"gnucash\">GnuCash</"
+"span> via le gestionnaire de logiciels (Gestionnaire de logiciels -> "
+"Logiciels Financiers -> gnucash)."
 
 #: download.phtml:40
 msgid ""
@@ -1212,7 +1224,7 @@ msgstr ""
 
 #: download.phtml:43
 msgid "Sandbox"
-msgstr ""
+msgstr "Bac à sable"
 
 #: download.phtml:46
 #, php-format
@@ -1229,11 +1241,11 @@ msgstr ""
 #: download.phtml:51
 #, php-format
 msgid "%sFlatpak"
-msgstr ""
+msgstr "%sFlatpak"
 
 #: download.phtml:51
 msgid "Known Issues and other details"
-msgstr ""
+msgstr "Problèmes connus et autres détails"
 
 #: download.phtml:55 index.phtml:17
 msgid "Source code"
@@ -1307,11 +1319,11 @@ msgstr ""
 
 #: download.phtml:97
 msgid "Latest versions for historical operating systems"
-msgstr ""
+msgstr "Dernières versions pour les systèmes d'exploitation historiques"
 
 #: download.phtml:99
 msgid "These versions are really old. No support is offered."
-msgstr ""
+msgstr "Ces versions sont vraiment vieilles. Aucune assistance n'est proposée."
 
 #: download.phtml:112
 msgid "Other"
@@ -2197,12 +2209,19 @@ msgid ""
 msgstr ""
 
 #: new_features-4.0.phtml:59
+#, fuzzy
 msgid ""
 "On the <b>Choose Accounts to Create</b> page there are two drop-downs above "
 "the <b>Account Types</b> selector, one for language and one for country, the "
 "choices in the latter depending on the former. The default is the current "
 "locale but they may be used to select account templates from any locale."
 msgstr ""
+"Sur la page <b>Choisir des comptes à créer</b> il y a deux listes "
+"déroulantes au-dessus du sélecteur de <b>Types de Comptes</b>, l'une pour la "
+"langue et l'autre pour le pays, les choix dans le dernier dépendront du "
+"premier. Par défaut seront utilisés les paramètres locaux actuels, mais ces "
+"paramètres locaux peuvent être utilisés pour sélectionner des modèles de "
+"comptes de n'importe laquelle des localisations."
 
 #: new_features-4.0.phtml:61
 msgid ""
@@ -2211,11 +2230,18 @@ msgid ""
 "If they don't you'll get a warning and the opportunity to pick another "
 "account or to carry on regardless."
 msgstr ""
+"Lors de la suppression de comptes, la destination des comptes des comptes "
+"non soldés sera vérifiée pour s'assurer qu'il s'agisse de la même catégorie "
+"que celle du compte source. Si ce n'est pas le cas, vous recevrez un "
+"avertissement et l'opportunité de choisir un autre compte ou de continuer "
+"quand même."
 
 #: new_features-4.0.phtml:62
 msgid ""
 "Reversing transactions will now pop a dialog box to request a posting date."
 msgstr ""
+"Annuler des transaction fera désormais apparaître une boîte de dialogue "
+"demandant une date d'inscription."
 
 #: new_features-4.0.phtml:69
 #, fuzzy
@@ -2687,13 +2713,15 @@ msgstr ""
 
 #: viewdoc.phtml:9
 msgid "View document"
-msgstr ""
+msgstr "Voir le document"
 
 #: viewdoc.phtml:166
 msgid ""
 "The document requested is not available. The tutorial and concepts guide "
 "will be displayed instead."
 msgstr ""
+"Le document demandé n'est pas disponible. Le tutoriel et le guide des "
+"concepts sera affiché à la place."
 
 #: viewdoc.phtml:169
 #, php-format
@@ -2701,6 +2729,8 @@ msgid ""
 "The document requested is not available for version %s. Version %s will be "
 "displayed instead."
 msgstr ""
+"Le document demandé n'est pas disponible pour la version %s. La version %s "
+"sera affichée à la place."
 
 #: viewdoc.phtml:173
 #, php-format
@@ -2708,6 +2738,8 @@ msgid ""
 "The document requested is not available in the requested language (tried "
 "[%s]). The English version will be displayed instead."
 msgstr ""
+"Le document demandé n'est pas disponible dans la langue demandée (langue "
+"demandée [%s]). La version anglaise sera montrée à la place."
 
 #: viewdoc.phtml:178
 #, php-format
@@ -2715,3 +2747,6 @@ msgid ""
 "It seems your browser doesn't support iframes. To view the requested page in "
 "a separate window, please <a href=\"%s\" target=\"_blank\">click here</a>."
 msgstr ""
+"Il semble que votre navigateur web ne supporte pas iframe. Pour voir la page "
+"demandée dans une fenêtre séparée, <a href=\"%s\" target=\"_blank\">cliquez "
+"ici</a> s'il vous plaît."
