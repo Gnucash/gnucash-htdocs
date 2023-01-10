@@ -18,8 +18,8 @@
 // e.g. if one retagged 2.6.13 to 2.6.13a, make $tarball = $latest_stable."a".
      $tarball                   = $latest_stable."";
 
-     $major_unstable            ="3";
-     $minor_latest_unstable     ="906";
+     $major_unstable            ="4";
+     $minor_latest_unstable     ="900";
      $latest_unstable           = $major_unstable.".".$minor_latest_unstable;
 // To publicize an unstable release:
      $show_unstable             = $major_unstable >= $major_stable;
