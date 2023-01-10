@@ -12,6 +12,8 @@ include("externals/header.phtml");
 include("externals/menu.phtml");
 
 # Some base parameters used later on
+# The helpdoc path applies to the 4.900/5.0 branch and is adjusted for
+# earlier versions below.
 $basepath       = \DEFAULT_URL."docs";
 $helpdoc        = "gnucash-manual/index.html";
 $tcdoc          = "gnucash-guide/index.html";
@@ -79,12 +81,14 @@ if ($rev_to_show) {
         case "2.4":
         case "2.6":
         case "3":
+            $helpdoc = "gnucash-help/help.html";
+            break;
         case "4":
-        # Once gnucash 5 is out, the three cases below should be removed from the switch statement
+            # Once gnucash 5 is out, the three cases below should be removed from the switch statement
         case "current":
         case "maint":
         case "nightly":
-            $helpdoc = "gnucash-help/help.html";
+            $helpdoc = "gnucash-help/index.html";
             break;
     }
 }

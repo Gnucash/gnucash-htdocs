@@ -1,0 +1,148 @@
+<b>Announcement:</b> GnuCash 4.900 Released
+2023-01-08
+
+<h2>GnuCash 4.900 Released</h2>
+
+<p>The GnuCash development team announces GnuCash 4.900, the first unstable release leading to GnuCash 5.0.</p>
+
+<h3>This is an unstable release for testing purposes. Do not use it with production data! Make a copy of your book to test this release. </h3>
+<h4>New Features</h4>
+<ul>
+    <li> A new Stock Transaction Assistant to guide you through entering most investment transactions for stocks, bonds, and mutual funds. You can access it from <em>Actions>Stock Assistant</em> when you have the Accounts page ora Stock or Fund account register open.</li>
+    <li> A new Investment Lots report showing a graph of capital gains and losses in a period by investment lot. Note that if you don't use the View Lots dialog to manage capital gains and losses this report won't have anything to show you. Use <em>Reports>Assets & Liabilities>Investment Lots</em> to see the report.</li>
+    <li>A new tab on the New/Edit Account dialog called <em>More Properties</em> includes entries to set a high and low limit on an account. That's coupled to a new column that's available on the Accounts Page, <em>Balance Limit</em>. If you set a high or low limit and the account balance falls above or below the respective limit an indicator will be shown in the Balance Limit column.</li>
+    <li>The description field quickfill in the register now displays a drop-down list of possible completions instead of just one inline completion.</li>
+    <li>File import menu items for the MT940, MT942, and DTAUS formats is replaced with a single <em>Import from AQBanking</em> that supports importing any file format supported by AQBanking, including the frequently requested CAMT.</li>
+</ul>
+<h4>Between 4.13 and 4.900, the following bugfixes were accomplished:</h4>
+<h5>The following fixes will also appear in GnuCash 4.14:
+    <ul>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798588">Bug 798588 - sx scrubbing was using incorrect free function</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798625">Bug 798625 - &quot;Last up through report date&quot; changed in 4.12</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798679">Bug 798679 - Unicode normalization should be used for comparison but not stored.</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798702">Bug 798702 - Crash in gnc_plugin_page_focus_idle_destroy() closing a report before it completes. </li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798705">Bug 798705 - New: UI string mismatch: OK vs. Next</a></li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798717">Bug 798717 - Reports &gt; Business &gt; Fancy Invoice duplicates company details</a></li>
+    </ul>
+<h5>The following additional bug fixes are in unstable only:</h5>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=403979">Bug 403979 - Balance column shows only low order digits when too narrow</a><p>If the column is too narrow to display the whole number it will display the leading digits with an ellipsis (…).</p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=769256">Bug 769256 - Change New Account Dialog</a><p>Rearrange the New and Edit Account dialog to move the parent selector under the description field followed by the account type as a combo (i.e. drop down) list.</li>
+</ul>
+
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>Unicode normalization for string matches is changed from NFKC to NFC. This means that font and positional variants will no longer match and is unlikely to affect most users. See <a href="https://unicode.org/reports/tr15/#Canon_Compat_Equivalence">Unicode Normalization Forms:Canonical and Compatibility Equivalence</a> for the technical details.</li>
+    <li>The Gtk menu structure has been rewritten to use the newer GMenu/GMenuModel system. This change is mostly invisible to users, except that to keep menu accelerators (like &lt;cmd&gt;Q to quit) working on macOS we had to let macOS handle the events. That will affect using cut, copy, and paste in dialog boxes because the menu will intercept them. That's temporary, we hope to have it fixed for GnuCash 4.901.</li>
+    <li>The Finance::Quote interface is rewritten in C++. This new design will allow much better capture of diagnostics from Finance::Quote making troubleshooting problems much easier.</li>
+    <li>The perl Finance::Quote utilities <em>gnc-fq-check</em>, <em>gnc-fq-dump</em>, and <em>gnc-fq-helper</em> are removed and new commands added to <tt>gnucash-cli</tt>: <tt>--quotes info</tt> replaces <em>gnc-fq-check</em> and <tt>--quotes dump</tt> replaces <em>gnc-fq-dump</em>.</li>
+</ul>
+<p>New API:
+    The options system has been rewritten in C++ with Scheme wrappers for report options. While this is invisible to most users, those who have written custom reports should look for deprecation warnings when the custom reports are reconciled. The main difference is that option creation and registration is now done in a single function call. Nearly all standard code defined a local convenience function that wrapped the two steps, for example
+    <pre>
+        (let* ((options (gnc:new-options))
+               (add-option
+                 (lambda (new-option)
+                  (gnc:register-option options new-option)))))
+    </pre>
+    called as
+    <pre>
+        (add-option
+        (gnc:make-string-optionpagename title key docstring default-value))
+    </pre>
+    The convenience function is no longer needed, call
+    <pre>
+        (let* ((options (gnc-new-optiondb)))
+        ...
+        (gnc-register-string-option options pagename title key docstring default-value)
+    </pre>
+    intead. Note that <tt>gnc:new-options</tt> is now <tt>gnc-new-options</tt>. There are several similar changes. All of these are wrapped in <tt>bindings/guile/options.scm</tt> with the old names, but are marked to raise deprecation warnings to encourage you to change. The wrappers will be removed in GnuCash 6.0.</p>
+</p>
+<p>Deprecations: See the deprecation warnings in options.scm as noted above.
+
+</p>
+
+<p>New and Updated Translations: Chinese (Simplified), Croatian, Hungarian, Polish, Portuguese (Brazil)</p>
+
+<p><a href="https://hosted.weblate.org/engage/gnucash/">Help translate GnuCash on Weblate</a>. </p>
+<p>Translators note that there is a new project <em>Program-beta</em> on <a href="https://hosted.weblate.org/projects/gnucash/">weblate</a> for this unstable branch. Having twice the strings causes us to exceed the free account limit, but Weblate has so far just warned us about it. If we need to change the branch we'll announce it on <em>gnucash-devel</em>.</p>
+
+<h4>Known Problems</h4>
+<p><a href="https://bugs.gnucash.org/buglist.cgi?bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;limit=0&amp;list_id=8149&amp;order=priority%2Cbug_severity&amp;query_format=advanced">Complete list of all open bugs.</a></p>
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of GnuCash 4.900 we're pleased to also release a new version of the companion Manual and Tutorial and Concepts Guide</p>
+<p>We've made some structural changes and one addition:
+    <ul>
+        <li> The former Help Manual is renamed The Manual and is now in a
+            directory so named. The redundant 'gnucash' prefix is removed.</li>
+        <li>The source directorystructure is rearranged to reflect the
+            installation, with the languages being the top level with each
+            having guide and manual subdirectories.</li>
+        <li>Added a Quotes Info example with a sorted and formatted source list.</li>
+        <li> Replaced the obsolete ghelp installation file layout with one based
+            on the XDG help specification.</li>
+    </ul></p>
+
+
+<h3>Getting GnuCash for Windows and MacOS</h3>
+<p>GnuCash is provided for both Microsoft Windows 8.1&reg; and later
+    and MacOS 10.13 (High Sierra)&reg; and later in pre-built, all-in-one
+    packages. An installer is provided for Microsoft Windows&reg; while
+    the MacOS&reg; package is a disk image containing a drag-and-drop
+    application bundle.</p>
+
+<p>GnuCash is also available as a flatpak from Flathub.org. <a href="https://wiki.gnucash.org/wiki/Flatpak">Instructions for installing and running.</a></p>
+
+<p>The SHA256 Hashes for the downloadable files are:</p>
+<ul>
+    <li><code>e33c020b50bca22cb432583be3aef85e1eec067f6d0b9098f8b5a8fb18590362</code>&nbsp;&nbsp;gnucash-4.900.tar.bz2</li>
+    <li><code>2b2c35738d73a4d55091814f4a4c80880779defbb5561a2e725ada9ffe1bad2c</code>&nbsp;&nbsp;gnucash-4.900.tar.gz</li>
+    <li><code>5750c350b63b09c39957c32958aca52785a75153878b2fdef4d020d11e9db600</code>&nbsp;&nbsp;gnucash-4.900.setup.exe</li>
+    <li><code>b8d1a1442d42f5818a04ef57e68fe9e20c4b6f82d762511934a62981715a6b0c</code>&nbsp;&nbsp;Gnucash-Intel-4.900-1.dmg</li>
+    <li><code>c81a99d8e9ae287abad1a38f93fdac1a66e27f4f24aed85b25259df30bd1db83</code>&nbsp;&nbsp;gnucash-docs-4.900.tar.gz</li>
+</ul>
+
+<ul>
+    <li>SourceForge:
+        <ul>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.900/gnucash-4.900.setup.exe">Win32</a></li>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.900/Gnucash-Intel-4.900-1.dmg">Mac-Intel</a></li>
+        </ul></li>
+    <li>Github
+        <ul>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/4.900/gnucash-4.900.setup.exe">Win32</a></li>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/4.900/Gnucash-Intel-4.900-1.dmg">Mac-Intel</a></li>
+        </ul></li></ul>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 4.900 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+    <li>Sourceforge: <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.900/gnucash-4.900.tar.bz2">bzip2</a>, <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.900/gnucash-4.900.tar.gz">gzip</a>.</li>
+
+    <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/4.900/gnucash-4.900.tar.bz2">bzip</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/4.900/gnucash-4.900.tar.gz">gzip</a></li>
+
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https://www.gtk.org">Gtk+</a> 3.22.29, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0, <a href="https://www.boost.org/">Boost</a> 1.67, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, <a href="https://github.com/google/googletest">GoogleTest</a> 1.8.0, <a href="https://cmake.org/">cmake 3.10</a> and <a href="http://www.swig.org/">SWIG</a> 2.0.12. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p><b>Note that the documentation for unstable releases is not on <a href="https://www.gnucash.org">the GnuCash website</a>.</b> It is built daily and may be found on the <a href="https://code.gnucash.org/docs">development server</a> under the locale directory; "C" is English, "de" is German, and so on.</p>
+<p>The documentation is included in the MacOS and Windows application bundles.</p>
+
+<p>If you want to compile the GnuCash Documentation 4.900 for yourself, the source code can be downloaded from:</p>
+<ul>
+    <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/4.900/gnucash-docs-4.900.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/4.900/gnucash-docs-4.900.tar.gz">GitHub</a></li>
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+    the GNU General Public License (GPL) and available for GNU/Linux,
+    *BSD, Solaris, MacOS, and Microsoft Windows.  Programming on GnuCash
+    began in 1997, and its first stable release was in 1998.</p>

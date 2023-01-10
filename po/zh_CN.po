@@ -7,14 +7,16 @@
 # 峡州仙士 <c@cjh0613.com>, 2021.
 # TianXing_Yi <ytx.cash@gmail.com>, 2021.
 # Eric <spice2wolf@gmail.com>, 2021.
+# Eric <hamburger1024@mailbox.org>, 2022.
+# 帅是我2 <a1173522112@163.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs r18948\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2021-12-21 00:25+0100\n"
-"PO-Revision-Date: 2021-12-21 03:52+0000\n"
-"Last-Translator: Eric <spice2wolf@gmail.com>\n"
+"POT-Creation-Date: 2022-10-27 19:35+0200\n"
+"PO-Revision-Date: 2022-12-17 12:50+0000\n"
+"Last-Translator: 帅是我2 <a1173522112@163.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "gnucash/website/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -22,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.10\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 #: 2.6-release-tour.phtml:3
 msgid "GnuCash 2.6 release tour"
@@ -1075,24 +1077,27 @@ msgstr "沙盒"
 #: download.phtml:46
 #, php-format
 msgid ""
-"Flatpaks are bundles, which contain beneath the program also all required "
-"libraries. If your distribution is too old, to offer all required libraries, "
-"but has the package <a href=\"%s\">Flatpak</a>, you can install a recent "
-"version of <span class=\"gnucash\">GnuCash</span> from"
+"An alternative to using your distribution's software manager is to use the "
+"Flatpak management system, which bundles all the necessary libraries for "
+"you. This can ease the installation of newer versions of GnuCash on older "
+"Linux machines. If you have <a href=\"%s\">Flatpak</a> installed, you can "
+"download any recent version of <span class=\"gnucash\">GnuCash</span> from"
 msgstr ""
-"Flatpaks 聚合库，包含程序所有必需的依赖；如果您的 Linux 太旧，借助 <a href="
-"\"%s\">Flatpak</a>，就可以安装最新版 <span class=\"gnucash\">GnuCash</span>"
+"使用发行版软件管理器的替代方案是使用Flatpak管理系统，该系统为您捆绑了所有必要"
+"的库。这可以简化在旧Linux机器上安装较新版本的GnuCash。如果您安装了<a href=\"%"
+"s\">Flatpak</a>，您可以从以下网址下载任何最新版本的<span class=\"gnucash\""
+">GnuCash</span>"
 
 #. Translators: %s is the base url of the gnucash wiki, adjust this,
 #. if a localized instance of the Flatpak page exists like "%sDe/Flatpak"
 #: download.phtml:51
 #, php-format
 msgid "%sFlatpak"
-msgstr "%s Flatpak"
+msgstr "%sFlatpak"
 
 #: download.phtml:51
-msgid "Known Issues and other details …"
-msgstr "已知问题和其他详细信息…"
+msgid "Known Issues and other details"
+msgstr "已知问题和其他详细信息"
 
 #: download.phtml:55 index.phtml:17
 msgid "Source code"
@@ -1100,16 +1105,16 @@ msgstr "源码"
 
 #: download.phtml:56
 msgid ""
-"If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> or "
-"you wish to install a different version than it ships with, you could try to "
-"build <span class=\"gnucash\">GnuCash</span> directly from the source code. "
-"The <span class=\"gnucash\">GnuCash</span> wiki has <a href='https://wiki."
-"gnucash.org/wiki/Building'>guidelines for several distributions</a>."
+"If you can't easily install <span class=\"gnucash\">GnuCash</span> in your "
+"distribution, or wish to install a different version than it ships with, you "
+"can build <span class=\"gnucash\">GnuCash</span> from source code as "
+"described in <a href='https://wiki.gnucash.org/wiki/Building'>the wiki</a>."
 msgstr ""
-"如果你的 Linux 不含 <span class=\"gnucash\">GnuCash</span> 源，又或想安装其他"
-"版本，可以尝试<span class=\"gnucash\">使用源码构建</span>。<span class="
-"\"gnucash\">GnuCash Wiki</span> 有<a href='https://wiki.gnucash.org/wiki/"
-"Building'>构建指南</a>。"
+"如果在你的 Linux 发行版上你无法轻松安装 <span class=\"gnucash\""
+">GnuCash</span>，或者你希望安装不同于系统内置的 GnuCash 版本，"
+"你可以自行从源代码构建 <span class=\"gnucash\">GnuCash</span>，"
+"所需步骤请参考 <a href='https://wiki.gnucash.org/wiki/"
+"Building'>维基内容</a>。"
 
 #: download.phtml:58 download.phtml:73 download.phtml:89
 #, php-format
@@ -1124,18 +1129,16 @@ msgstr "开发版 (%s)"
 #: download.phtml:67
 msgid ""
 "Unstable (development) releases are for testing purposes only. They contain "
-"the newest features and improvements, but may also contain serious bugs "
-"still. Don't install these releases for everyday use."
-msgstr ""
-"开发版仅用于测试，它包含最新的功能和修复，但也可能有严重的错误，不建议日常使"
-"用。"
+"the newest features and improvements, but possibly also bugs. Don't install "
+"these releases for everyday use."
+msgstr "开发版仅用于测试，它包含最新的功能和修复，但也可能存在故障，不建议日常使用。"
 
 #: download.phtml:68
 #, php-format
 msgid ""
-"The latest unstable release of <span class=\"gnucash\">GnuCash</span> is %s. "
-"Choose the download for your operating system below."
-msgstr "<span class=\"gnucash\">GnuCash</span>最新的开发版%s，地址请见下方。"
+"The latest unstable release of <span class=\"gnucash\">GnuCash</span> "
+"(available below) is %s."
+msgstr "<span class=\"gnucash\">GnuCash</span> 最新不稳定版本 (在下方) 是 %s。"
 
 #: download.phtml:81
 #, php-format
@@ -1144,28 +1147,24 @@ msgstr "旧版本 (%s)"
 
 #: download.phtml:83
 msgid ""
-"This old stable release is the final version of the previous stable series. "
-"It's available for users who aren't ready for a major upgrade but want to "
-"make sure that they have all of the bugfixes from the old series."
-msgstr ""
-"这里所说的“旧版本”是指上一版本的最终稳定版，它适用于那些不愿升级至下一个大版"
-"本、同时要稳定的用户。"
+"This old stable release is the final version of all bugfixes from the "
+"previous stable series without being a major upgrade."
+msgstr "这个旧的稳定版本是之前稳定系列中所有错误修复的最终版本，而不是重大升级。"
 
 #: download.phtml:84
 #, php-format
 msgid ""
-"The last old stable release of <span class=\"gnucash\">GnuCash</span> is %s. "
-"Choose the download for your operating system below."
-msgstr ""
-"<span class=\"gnucash\">GnuCash</span> 的最后一个稳定旧版是%s，地址如下。"
+"The last old stable release of <span class=\"gnucash\">GnuCash</span> "
+"(available below) is %s."
+msgstr "<span class=\"gnucash\">GnuCash</span> 最后一个旧的稳定版本 (在下方) 是 %s。"
 
 #: download.phtml:97
 msgid "Latest versions for historical operating systems"
 msgstr "适用于老旧操作系统的最新版本"
 
 #: download.phtml:99
-msgid "This versions are really old. Do not expect any support."
-msgstr "这些适用于过时的操作系统的版本真的很老，不要期待任何支持，建议放弃。"
+msgid "These versions are really old. No support is offered."
+msgstr "这些版本真的很旧了。不提供任何支持。"
 
 #: download.phtml:112
 msgid "Other"
@@ -1242,7 +1241,7 @@ msgstr "新闻"
 
 #: externals/menu.phtml:11
 msgid "Screenshots, Features"
-msgstr "功能"
+msgstr "截图及功能预览"
 
 #: externals/menu.phtml:12
 msgid "Installation"
@@ -1274,7 +1273,7 @@ msgstr "Wiki"
 
 #: externals/menu.phtml:33 index.phtml:59
 msgid "Mailing Lists"
-msgstr "邮件"
+msgstr "邮件列表"
 
 #: externals/menu.phtml:34
 msgid "Bug Reports"
@@ -1320,7 +1319,7 @@ msgstr "GnuCash 2.4 小规模企业财务"
 msgid ""
 "The GnuCash development team received notice about a new book published by "
 "PacktPub, UK:"
-msgstr "开发团队收到通知，英国 PacktPub 公司出版了一本新书："
+msgstr "Gnucash 开发团队收到通知，英国 PacktPub 公司出版了一本新书："
 
 #: externals/menu.phtml:67
 msgid "GnuCash 2.4 Small Business Accounting, by Ashok Ramachandran"
@@ -1339,9 +1338,9 @@ msgid ""
 "of all, the publisher has committed to allocate some percentage of the book "
 "sales back to the GnuCash project. Have fun with this book!"
 msgstr ""
-"开发者 Christian Stimming 参与了本书的编写，亦是审稿人。我们诚心地推荐这份意"
-"义满满的资料，欢迎在%s阅读，最主要，出版商已承诺将部分利润回赠给 GnuCash。加"
-"油！"
+"开发者 Christian Stimming 参与了本书的编写，亦是审稿人。我们诚挚推荐这一内容"
+"丰富的合作成果，欢迎在%s阅读。更重要的是，出版商已承诺将部分利润回赠给 "
+"GnuCash。读得开心！"
 
 #: features.phtml:3 new_features-4.0.phtml:3
 msgid "Features"
@@ -2352,7 +2351,8 @@ msgid ""
 "out from the motif code in version 1.1. The data storage backend (file-io, "
 "sql) was split out in the course of version 1.5."
 msgstr ""
-"src/engine 和 include 目录的内容，1.1版从 motif 代码分离出来；数据存储后端（file-io，sql）在1.5版本中分离。"
+"src/engine 和 include 目录的内容，1.1版从 motif 代码分离出来；数据存储后端"
+"（file-io，sql）在1.5版本中分离。"
 
 #: sizing.phtml:338
 msgid ""
@@ -2381,7 +2381,8 @@ msgid ""
 "*.c, *.h files in the src directory only (version 1.6 and earlier) or src/"
 "register/ledger-core (version 1.7 and later)."
 msgstr ""
-"仅在src目录下的.c、.h文件（1.6及以前）或src/register/ledger-core（1.7及以后）。"
+"仅在src目录下的.c、.h文件（1.6及以前）或src/register/ledger-core（1.7及以"
+"后）。"
 
 #: sizing.phtml:350
 msgid ""
@@ -2396,10 +2397,10 @@ msgstr ""
 msgid ""
 "Contents of src/gnome plus src/register/gnome (version 1.6 and earlier). For "
 "version 1.7 and later, this consists of src/gnome, src/gnome-search and src/"
-"gnome-util."
+"gnome-util"
 msgstr ""
-"src/gnome 和src/register/gnome 的内容（1.6 及以前）。1.7及以后的版本，它由"
-"src/gnome、src/gnome-search和src/gnome-util组成。"
+"src/gnome 和 src/register/gnome 的内容（1.6 及以前）。1.7及以后的版本，它由 "
+"src/gnome、src/gnome-search 和 src/gnome-util 组成。"
 
 #: sizing.phtml:359
 msgid ""
@@ -2407,8 +2408,8 @@ msgid ""
 "later): src/app-file, src/app-utils, src/calculation, src/core-utils, src/"
 "gnc-module, src/network-utils, src/tax/us."
 msgstr ""
-"与程序相关的杂项目录（1.7及以后）：src/app-file、src/app-utils、src/calculation、"
-"src/core-utils、src/gnc-module、src/network-utils、src/tax/us。"
+"与程序相关的杂项目录（1.7及以后）：src/app-file、src/app-utils、src/"
+"calculation、src/core-utils、src/gnc-module、src/network-utils、src/tax/us。"
 
 #: sizing.phtml:364
 msgid ""
@@ -2491,27 +2492,27 @@ msgstr ""
 msgid "View document"
 msgstr "查看文件"
 
-#: viewdoc.phtml:145
+#: viewdoc.phtml:166
 msgid ""
 "The document requested is not available. The tutorial and concepts guide "
 "will be displayed instead."
 msgstr "文件已不可用，现在是教程概念。"
 
-#: viewdoc.phtml:148
+#: viewdoc.phtml:169
 #, php-format
 msgid ""
 "The document requested is not available for version %s. Version %s will be "
 "displayed instead."
 msgstr "%s版文件已不可用，现在是%s版。"
 
-#: viewdoc.phtml:152
+#: viewdoc.phtml:173
 #, php-format
 msgid ""
 "The document requested is not available in the requested language (tried "
 "[%s]). The English version will be displayed instead."
 msgstr "%s版文件尚未翻译，已替换为英文版。"
 
-#: viewdoc.phtml:157
+#: viewdoc.phtml:178
 #, php-format
 msgid ""
 "It seems your browser doesn't support iframes. To view the requested page in "
@@ -2519,3 +2520,22 @@ msgid ""
 msgstr ""
 "浏览器似乎不支持iframe，在单独的窗口打开页面，请点<a href=\"%s\" target="
 "\"_blank\">这里</a>。"
+
+#, php-format
+#~ msgid ""
+#~ "Flatpaks are bundles, which contain beneath the program also all required "
+#~ "libraries. If your distribution is too old, to offer all required "
+#~ "libraries, but has the package <a href=\"%s\">Flatpak</a>, you can "
+#~ "install a recent version of <span class=\"gnucash\">GnuCash</span> from"
+#~ msgstr ""
+#~ "Flatpaks 聚合库，包含程序所有必需的依赖；如果您的 Linux 太旧，借助 <a "
+#~ "href=\"%s\">Flatpak</a>，就可以安装最新版 <span class=\"gnucash"
+#~ "\">GnuCash</span>"
+
+#~ msgid ""
+#~ "This old stable release is the final version of the previous stable "
+#~ "series. It's available for users who aren't ready for a major upgrade but "
+#~ "want to make sure that they have all of the bugfixes from the old series."
+#~ msgstr ""
+#~ "这里所说的“旧版本”是指上一版本的最终稳定版，它适用于那些不愿升级至下一个大"
+#~ "版本、同时要稳定的用户。"

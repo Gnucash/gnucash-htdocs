@@ -42,8 +42,8 @@
   <p class="justify"><?php
   echo T_("You can also send an email to the <a href=\"mailto:gnucash-user@gnucash.org\">gnucash-user</a> mailing list if you cannot find a satisfactory answer to your question within either the <b>Help Manual</b> or the <b>Tutorial and Concepts Guide</b>. We <b>want</b> feedback from you, it is also through your comments that we know how to improve the documentation.");
   /* Translators: %s is a link */
-  printf (T_("Additionally, you can talk to someone via IRC at %s about your question."),
-      sprintf ("<a href='%s'><i>irc.gnome.org</i> %s <b>#gnucash</b></a>", \URL_IRC,
+  printf (" ".T_("Additionally, you can talk to someone via IRC at %s about your question."),
+  sprintf ("<a href='%s'><i>%s</i> %s <b>#gnucash</b></a>", \URL_IRC, \SERVER_IRC, 
           /* Translators: IRC channel */
           T_("channel")));
   ?></p>

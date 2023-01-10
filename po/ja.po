@@ -2,17 +2,17 @@
 # Copyright (C) 2010, 2014 The GnuCash Project
 # This file is distributed under the same license as the gnucash-htdocs package.
 # Yasuaki Taniguchi <yasuakit@gmail.com>, 2010, 2014.
-# YOSHINO Yoshihito <yy.y.ja.jp@gmail.com>, 2020, 2021.
+# YOSHINO Yoshihito <yy.y.ja.jp@gmail.com>, 2020, 2021, 2022.
 # Takuro Onoue <kusanaginoturugi@gmail.com>, 2020.
 # TANIGUCHI Yasuaki <yasuakit+weblate@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs r18581\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
-"component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2021-12-21 00:25+0100\n"
-"PO-Revision-Date: 2021-06-29 00:47+0000\n"
-"Last-Translator: TANIGUCHI Yasuaki <yasuakit+weblate@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
+"cgi?component=Translations&product=Website&resolution=---\n"
+"POT-Creation-Date: 2022-10-27 19:35+0200\n"
+"PO-Revision-Date: 2022-12-22 16:51+0000\n"
+"Last-Translator: YOSHINO Yoshihito <yy.y.ja.jp@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnucash/website/"
 "ja/>\n"
 "Language: ja\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.7.1-dev\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 #: 2.6-release-tour.phtml:3
 msgid "GnuCash 2.6 release tour"
@@ -1125,10 +1125,11 @@ msgstr ""
 #: download.phtml:46
 #, php-format
 msgid ""
-"Flatpaks are bundles, which contain beneath the program also all required "
-"libraries. If your distribution is too old, to offer all required libraries, "
-"but has the package <a href=\"%s\">Flatpak</a>, you can install a recent "
-"version of <span class=\"gnucash\">GnuCash</span> from"
+"An alternative to using your distribution's software manager is to use the "
+"Flatpak management system, which bundles all the necessary libraries for "
+"you. This can ease the installation of newer versions of GnuCash on older "
+"Linux machines. If you have <a href=\"%s\">Flatpak</a> installed, you can "
+"download any recent version of <span class=\"gnucash\">GnuCash</span> from"
 msgstr ""
 
 #. Translators: %s is the base url of the gnucash wiki, adjust this,
@@ -1139,7 +1140,7 @@ msgid "%sFlatpak"
 msgstr ""
 
 #: download.phtml:51
-msgid "Known Issues and other details …"
+msgid "Known Issues and other details"
 msgstr ""
 
 #: download.phtml:55 index.phtml:17
@@ -1147,12 +1148,19 @@ msgid "Source code"
 msgstr "ソースコード"
 
 #: download.phtml:56
+#, fuzzy
+#| msgid ""
+#| "If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> "
+#| "or you wish to install a different version than it ships with, you could "
+#| "try to build <span class=\"gnucash\">GnuCash</span> directly from the "
+#| "source code. The <span class=\"gnucash\">GnuCash</span> wiki has <a "
+#| "href='https://wiki.gnucash.org/wiki/Building'>guidelines for several "
+#| "distributions</a>."
 msgid ""
-"If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> or "
-"you wish to install a different version than it ships with, you could try to "
-"build <span class=\"gnucash\">GnuCash</span> directly from the source code. "
-"The <span class=\"gnucash\">GnuCash</span> wiki has <a href='https://wiki."
-"gnucash.org/wiki/Building'>guidelines for several distributions</a>."
+"If you can't easily install <span class=\"gnucash\">GnuCash</span> in your "
+"distribution, or wish to install a different version than it ships with, you "
+"can build <span class=\"gnucash\">GnuCash</span> from source code as "
+"described in <a href='https://wiki.gnucash.org/wiki/Building'>the wiki</a>."
 msgstr ""
 "もしあなたのディストリビューションが <span class=\"gnucash\">GnuCash</span> "
 "を出荷していないか、あるいは、出荷しているものと異なったバージョンをインス"
@@ -1175,18 +1183,20 @@ msgstr "開発版 (%s)"
 #: download.phtml:67
 msgid ""
 "Unstable (development) releases are for testing purposes only. They contain "
-"the newest features and improvements, but may also contain serious bugs "
-"still. Don't install these releases for everyday use."
+"the newest features and improvements, but possibly also bugs. Don't install "
+"these releases for everyday use."
 msgstr ""
-"開発版はテストのみを目的としたリリースです。最新の機能や強化点がありますが重"
-"大なバグが含まれているかもしれません。通常の利用のためにはインストールしない"
-"でください。"
+"開発版はテストのみを目的としたリリースです。最新の機能や強化点がありますがバ"
+"グもあるかもしれません。通常の利用のためにはインストールしないでください。"
 
 #: download.phtml:68
-#, php-format
+#, fuzzy, php-format
+#| msgid ""
+#| "The latest unstable release of <span class=\"gnucash\">GnuCash</span> is "
+#| "%s. Choose the download for your operating system below."
 msgid ""
-"The latest unstable release of <span class=\"gnucash\">GnuCash</span> is %s. "
-"Choose the download for your operating system below."
+"The latest unstable release of <span class=\"gnucash\">GnuCash</span> "
+"(available below) is %s."
 msgstr ""
 "最新の <span class=\"gnucash\">GnuCash</span> 不安定版リリースは %s です。オ"
 "ペレーティングシステムにあったダウンロードファイルを下記から選択してくださ"
@@ -1199,20 +1209,18 @@ msgstr "旧安定版リリース (%s)"
 
 #: download.phtml:83
 msgid ""
-"This old stable release is the final version of the previous stable series. "
-"It's available for users who aren't ready for a major upgrade but want to "
-"make sure that they have all of the bugfixes from the old series."
+"This old stable release is the final version of all bugfixes from the "
+"previous stable series without being a major upgrade."
 msgstr ""
-"この旧安定版リリースは以前の安定版シリーズの最終のバージョンです。それはメ"
-"ジャーアップグレードのための準備ができていないが、旧安定版のバグ修正のすべて"
-"が含まれていることが確実になされていることを望む利用者のために利用可能にして"
-"あります。"
 
 #: download.phtml:84
-#, php-format
+#, fuzzy, php-format
+#| msgid ""
+#| "The last old stable release of <span class=\"gnucash\">GnuCash</span> is "
+#| "%s. Choose the download for your operating system below."
 msgid ""
-"The last old stable release of <span class=\"gnucash\">GnuCash</span> is %s. "
-"Choose the download for your operating system below."
+"The last old stable release of <span class=\"gnucash\">GnuCash</span> "
+"(available below) is %s."
 msgstr ""
 "最新の <span class=\"gnucash\">GnuCash</span> 旧安定版リリースは %s です。オ"
 "ペレーティングシステムにあったダウンロードファイルを下記から選択してくださ"
@@ -1223,8 +1231,8 @@ msgid "Latest versions for historical operating systems"
 msgstr "過去のOS向け最終バージョン"
 
 #: download.phtml:99
-msgid "This versions are really old. Do not expect any support."
-msgstr "このバージョンは本当に古いです。サポートは全く期待しないでください。"
+msgid "These versions are really old. No support is offered."
+msgstr "これらのバージョンは本当に古いです。サポートはありません。"
 
 #: download.phtml:112
 msgid "Other"
@@ -2439,7 +2447,7 @@ msgstr ""
 msgid ""
 "Contents of src/gnome plus src/register/gnome (version 1.6 and earlier). For "
 "version 1.7 and later, this consists of src/gnome, src/gnome-search and src/"
-"gnome-util."
+"gnome-util"
 msgstr ""
 
 #: sizing.phtml:359
@@ -2517,7 +2525,7 @@ msgstr ""
 msgid "View document"
 msgstr "文書の参照"
 
-#: viewdoc.phtml:145
+#: viewdoc.phtml:166
 msgid ""
 "The document requested is not available. The tutorial and concepts guide "
 "will be displayed instead."
@@ -2525,7 +2533,7 @@ msgstr ""
 "要求された文書は利用できません。代わりにチュートリアル・コンセプトガイドが表"
 "示されます。"
 
-#: viewdoc.phtml:148
+#: viewdoc.phtml:169
 #, php-format
 msgid ""
 "The document requested is not available for version %s. Version %s will be "
@@ -2534,7 +2542,7 @@ msgstr ""
 "バージョン %s 向けの要求された文書は利用できません。代わりにバージョン %s 向"
 "けが表示されます。"
 
-#: viewdoc.phtml:152
+#: viewdoc.phtml:173
 #, php-format
 msgid ""
 "The document requested is not available in the requested language (tried "
@@ -2543,7 +2551,7 @@ msgstr ""
 "要求された文書は要求された言語では利用できません([%s]で要求されました)。代わ"
 "りに英語版が表示されます。"
 
-#: viewdoc.phtml:157
+#: viewdoc.phtml:178
 #, php-format
 msgid ""
 "It seems your browser doesn't support iframes. To view the requested page in "
@@ -2552,3 +2560,13 @@ msgstr ""
 "ブラウザーが iframe をサポートしていないようです。要求されたページを別のウイ"
 "ンドウで表示するには、<a href=\"%s\" target=\"_blank\">ここをクリック</a>して"
 "ください。"
+
+#~ msgid ""
+#~ "This old stable release is the final version of the previous stable "
+#~ "series. It's available for users who aren't ready for a major upgrade but "
+#~ "want to make sure that they have all of the bugfixes from the old series."
+#~ msgstr ""
+#~ "この旧安定版リリースは以前の安定版シリーズの最終のバージョンです。それはメ"
+#~ "ジャーアップグレードのための準備ができていないが、旧安定版のバグ修正のすべ"
+#~ "てが含まれていることが確実になされていることを望む利用者のために利用可能に"
+#~ "してあります。"
