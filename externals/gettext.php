@@ -139,16 +139,18 @@ class gettext_reader {
    */
   function load_tables() {
     if (is_array($this->cache_translations) &&
-      is_array($this->table_originals) &&
-      is_array($this->table_translations))
+        is_array($this->table_originals) &&
+        is_array($this->table_translations))
       return;
 
     /* get original and translations tables */
-    if (!is_array($this->table_originals)) {
+      if ($this->table_originals &&
+          !is_array($this->table_originals)) {
       $this->STREAM->seekto($this->originals);
       $this->table_originals = $this->readintarray($this->total * 2);
     }
-    if (!is_array($this->table_translations)) {
+      if ($this->table_translations &&
+          !is_array($this->table_translations)) {
       $this->STREAM->seekto($this->translations);
       $this->table_translations = $this->readintarray($this->total * 2);
     }
