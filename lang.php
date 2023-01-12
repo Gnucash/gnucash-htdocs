@@ -63,10 +63,12 @@ if (count($languages) > 1) {
     foreach ($languages as $item)
     {
         $parts = explode(";", $item);
-        if (!$parts[1]) {
-            $ranked_langs[$parts[0]] = 1.0;
-        } else {
-            $ranked_langs[$parts[0]] = (float)substr($parts[1], 2);
+        if ($parts) {
+            if (!$parts[1]) {
+                $ranked_langs[$parts[0]] = 1.0;
+            } else {
+                $ranked_langs[$parts[0]] = (float)substr($parts[1], 2);
+            }
         }
     }
     arsort($ranked_langs, SORT_NUMERIC);

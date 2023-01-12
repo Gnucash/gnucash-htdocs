@@ -21,15 +21,17 @@
   {
       if (isset($lang) && $lang != "") {
           $get_parms["lang"] = $lang;
+          if (in_array($get_parms["lang"],
+                       array_values($GLOBALS["supported_languages"]), TRUE) ||
+                       array_key_exists($get_parms["lang"],
+                                        $GLOBALS["supported_languages"])) {
+              $url_get_query = http_build_query($get_parms);
+              $lang_href = "$page"."?"."$url_get_query";
+          } else {
+              $lang_href = "$page";
+          }
+          return $lang_href;
       }
-      if (in_array($get_parms["lang"], array_values($GLOBALS["supported_languages"]), TRUE) ||
-           array_key_exists($get_parms["lang"], $GLOBALS["supported_languages"])) {
-          $url_get_query = http_build_query($get_parms);
-          $lang_href = "$page"."?"."$url_get_query";
-      } else {
-          $lang_href = "$page";
-      }
-      return $lang_href;
   }
 
    $input_filter_args = array('lang' => FILTER_SANITIZE_STRING);
