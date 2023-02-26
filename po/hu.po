@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2022-10-27 19:35+0200\n"
-"PO-Revision-Date: 2023-02-18 04:35+0000\n"
+"PO-Revision-Date: 2023-02-26 22:39+0000\n"
 "Last-Translator: Szia Tomi <sziatomi01@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnucash/"
 "website/hu/>\n"
@@ -209,7 +209,7 @@ msgstr "Továbbfejlesztett üzleti modul"
 #: 2.6-release-tour.phtml:120
 msgid ""
 "The business module has been revamped and we introduced some new features:"
-msgstr "Az üzleti modul megújult, és néhány új funkciót is bevezettünk:"
+msgstr "Az üzleti modul megújult és néhány új funkciót is bevezettünk:"
 
 #: 2.6-release-tour.phtml:122
 msgid "Credit Notes"
@@ -260,10 +260,12 @@ msgid ""
 "Updated search window with buttons to process payment, duplicate, post and "
 "print multiple search results."
 msgstr ""
+"Frissített keresőablak gombokkal, amelyekkel fizetéseket hajthat végre, "
+"másolatot készíthet, elküldhet és nyomtathat több keresési eredményt."
 
 #: 2.6-release-tour.phtml:152
 msgid "New preference system"
-msgstr ""
+msgstr "Új beállítási rendszer"
 
 #: 2.6-release-tour.phtml:154
 msgid ""
@@ -273,6 +275,12 @@ msgid ""
 "allows us to remove several troublesome dependencies including GConf, ORBit, "
 "and DBus."
 msgstr ""
+"A beállítási rendszert átírták a GIO (GLib) GSettings rendszer használatára "
+"a GConf helyett. Ez egy egyszerűbb és robusztusabb háttérprogram, amely az "
+"operációs rendszer eredeti beállításaira ír – az OS X rendszeren az "
+"alapbeállítások, az MSWindows rendszeren a rendszerleíró adatbázisa – és "
+"lehetővé teszi számos problémás függőség, köztük a GConf, az ORBit és a DBus "
+"rendszerek eltávolítását."
 
 #: 2.6-release-tour.phtml:156
 msgid ""
@@ -281,10 +289,14 @@ msgid ""
 "time you use Gnucash 2.6 or later, but they will be saved once you've reset "
 "them."
 msgstr ""
+"Vegye figyelembe, hogy az ablakpozíció, az oszlopméretek és a rendezési "
+"sorrendek nem lesznek áttelepítve a GConf-ról. Ezek a beállítások a Gnucash 2"
+".6-os vagy újabb verziójának első használatakor visszaállnak az "
+"alapértelmezettre, de megismételt beállítás után mentésre kerülnek."
 
 #: 2.6-release-tour.phtml:159
 msgid "Relicensing"
-msgstr ""
+msgstr "Átlicencelés"
 
 #: 2.6-release-tour.phtml:161
 msgid ""
@@ -292,6 +304,9 @@ msgid ""
 "\">GnuCash</span> to the GNU General Public License Version 2 or later from "
 "just Version 2."
 msgstr ""
+"Valamennyi szerző beleegyezésével a <span class=\"gnucash\">GnuCash</span> "
+"licencét a GNU General Public License csak a 2-es verziójáról a 2-es vagy "
+"újabb verziójára licenceltük át."
 
 #: 2.6-release-tour.phtml:163 docs.phtml:62 docs.phtml:196 docs.phtml:328
 #: download.phtml:4
@@ -304,10 +319,12 @@ msgid ""
 "span> from the <a href=\"https://www.gnucash.org\">GnuCash website main "
 "page</a>."
 msgstr ""
+"A <span class=\"gnucash\">GnuCash</span> új 2.6-os verzióját letöltheti a <a "
+"href=\"https://www.gnucash.org\">GnuCash webhely főoldaláról</a>."
 
 #: 2.6-release-tour.phtml:167
 msgid "Help"
-msgstr ""
+msgstr "Segítség"
 
 #: 2.6-release-tour.phtml:169
 msgid ""
