@@ -19,7 +19,7 @@
      $tarball                   = $latest_stable."";
 
      $major_unstable            ="4";
-     $minor_latest_unstable     ="902";
+     $minor_latest_unstable     ="903";
      $latest_unstable           = $major_unstable.".".$minor_latest_unstable;
 // To publicize an unstable release:
      $show_unstable             = $major_unstable >= $major_stable;
