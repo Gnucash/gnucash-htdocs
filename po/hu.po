@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2022-10-27 19:35+0200\n"
-"PO-Revision-Date: 2023-02-26 22:39+0000\n"
+"PO-Revision-Date: 2023-03-06 02:44+0000\n"
 "Last-Translator: Szia Tomi <sziatomi01@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnucash/"
 "website/hu/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 4.16.2-dev\n"
 
 #: 2.6-release-tour.phtml:3
 msgid "GnuCash 2.6 release tour"
@@ -136,7 +136,7 @@ msgstr "A színek megkönnyítik az egyes számlák keresését a fában és a l
 
 #: 2.6-release-tour.phtml:80
 msgid "Timeout on \"Save changes on closing\""
-msgstr ""
+msgstr "Időtúllépés a „Változtatások mentése bezáráskor” végrehajtásakor"
 
 #: 2.6-release-tour.phtml:82
 msgid ""
@@ -147,12 +147,12 @@ msgid ""
 "that time, the changes will be saved automatically and the question window "
 "closed."
 msgstr ""
-"A <span class=\"gnucash\">GnuCash</span> Beállítások Általános lapján "
-"mostantól egy időhatárt is beállíthat a „Módosítások mentése bezáráskor” "
-"ablakhoz. Ha engedélyezve van, a „Módosítások mentése bezáráskor” kérdés "
+"A <span class=\"gnucash\">GnuCash</span> Beállítások -> Általános lapján "
+"mostantól egy időhatárt is beállíthat a „Változtatások mentése bezáráskor” "
+"ablakhoz. Ha engedélyezve van, a „Változtatások mentése bezáráskor” kérdés "
 "csak az itt beállított másodpercet vár a válaszra. Ha a felhasználó nem "
-"válaszol ezen időn belül, a változtatások automatikusan mentésre kerülnek, "
-"és az ablak bezárul."
+"válaszol a megadott időn belül, a változtatások automatikusan mentésre "
+"kerülnek és az ablak bezárul."
 
 #: 2.6-release-tour.phtml:85
 msgid "Open datafile read-only"
@@ -163,7 +163,7 @@ msgid ""
 "When opening a locked \"book\" one now has the option of opening it read-"
 "only."
 msgstr ""
-"Zárolt \"könyvelés\" megnyitásakor most már lehetőség van csak olvashatóként "
+"Lezárt könyvelés megnyitásakor most már lehetőség van csak olvashatóként "
 "megnyitni."
 
 #: 2.6-release-tour.phtml:90
@@ -221,11 +221,11 @@ msgstr "Ügyfél és szállító áttekintő oldalak"
 
 #: 2.6-release-tour.phtml:124
 msgid "Customer Overview Reports"
-msgstr "Vevőáttekintő jelentések"
+msgstr "Vevő áttekintő jelentések"
 
 #: 2.6-release-tour.phtml:125
 msgid "Existing Transactions may be reassigned as invoice payments"
-msgstr "A meglévő Tranzakciók átsorolhatók számlafizetésként"
+msgstr "A létező tranzakciók átsorolhatók számlafizetésként"
 
 #: 2.6-release-tour.phtml:126
 msgid "One click duplication of invoices"
@@ -236,8 +236,8 @@ msgid ""
 "Improved invoice and bill handling: Post, print, or duplicate multiple items "
 "directly from a search results list"
 msgstr ""
-"Továbbfejlesztett számla- és számlakezelés: több tétel feladása, nyomtatása "
-"vagy másolása közvetlenül a keresés eredménylistájából"
+"Továbbfejlesztett kimenő és bejövő számlakezelés: több tétel feladása, "
+"nyomtatása vagy másolása közvetlenül a keresési eredmények listájából"
 
 #: 2.6-release-tour.phtml:128
 msgid ""
@@ -336,11 +336,17 @@ msgid ""
 "lists</a>: the <span class=\"gnucash\">GnuCash</span> community is very "
 "friendly and experienced and someone will surely assist you."
 msgstr ""
+"A <span class=\"gnucash\">GnuCash</span> 2.6 frissített súgóval és "
+"útmutatóval érkezik. Ha ezekben a dokumentumokban nem találja a választ a "
+"kérdéseire, próbálkozzon a <a href=\"https://wiki.gnucash.org/wiki/GnuCash\""
+">GnuCash wikivel</a>. Ha egyik lehetőség sem kielégítő, elküldheti a "
+"kérdéseit a <a href=\"https://wiki.gnucash.org/wiki/Mailing_Lists\">GnuCash "
+"levelezőlistákra</a>: a <span class=\"gnucash\">GnuCash</span> közösség "
+"nagyon barátságos és tapasztalt, valaki biztosan segíteni fog."
 
 #: 2.6-release-tour.phtml:171
-#, fuzzy
 msgid "Want to Help?"
-msgstr "How can you help?"
+msgstr "Segíteni akar?"
 
 #: 2.6-release-tour.phtml:173
 msgid ""
@@ -348,12 +354,16 @@ msgid ""
 "volunteers. If you want to be part of the effort, you can contribute in many "
 "ways:"
 msgstr ""
+"A <span class=\"gnucash\">GnuCash</span> egy önkéntesek által fenntartott "
+"program. Ha részese akar lenni az erőfeszítésnek, számos módon hozzájárulhat:"
 
 #: 2.6-release-tour.phtml:175
 msgid ""
 "By testing the program and <a href=\"https://wiki.gnucash.org/wiki/Bugzilla"
 "\">reporting bugs</a>"
 msgstr ""
+"A program tesztelésével és <a href=\"https://wiki.gnucash.org/wiki/Bugzilla\""
+">a hibák bejelentésével</a>"
 
 #: 2.6-release-tour.phtml:176
 msgid ""
@@ -361,10 +371,13 @@ msgid ""
 "\">facebook</a> and <a href=\"https://plus.google.com/u/0/+gnucash\">Google"
 "+</a>"
 msgstr ""
+"A projekt oldalunk lájkolásával, <a href=\"https://www.facebook.com/Gnucash\""
+">Facebook</a> és a <a href=\"https://plus.google.com/u/ 0/+ gnucash\""
+">Google+</a>"
 
 #: 2.6-release-tour.phtml:177
 msgid "By spreading the word"
-msgstr ""
+msgstr "Hírek terjesztésével"
 
 #: 2.6-release-tour.phtml:178
 msgid ""
@@ -372,25 +385,24 @@ msgid ""
 "a donation</a>"
 msgstr ""
 "<a href=\"https://sourceforge.net/donate/index.php?group_id=192\""
-">adományozással</a>"
+">Adományozással</a>"
 
 #: 2.6-release-tour.phtml:179
-#, fuzzy
 msgid ""
 "By partecipating in the <a href=\"https://wiki.gnucash.org/wiki/Mailing_Lists"
 "\">GnuCash mailing lists</a> and <a href=\"https://wiki.gnucash.org/wiki/IRC"
 "\">IRC channel</a>"
 msgstr ""
 "Azáltal, hogy részt vesz a <a href=\"https://wiki.gnucash.org/wiki/"
-"Mailing_Lists\">GnuCash levelezési listáiban</a> és <a href=\"https://wiki."
-"gnucash.org/wiki/IRC\">IRC csatornáján</a>"
+"Mailing_Lists\">GnuCash levelezési listáiban</a> és az <a href=\"https://wiki"
+".gnucash.org/wiki/IRC\">IRC csatornáján</a>"
 
 #: 2.6-release-tour.phtml:180
 msgid ""
 "By reviewing and adding hints to the <a href=\"https://wiki.gnucash.org/wiki/"
 "\">wiki</a>"
 msgstr ""
-"Az <a href=\"https://wiki.gnucash.org/wiki/\">wiki</a> áttekintésével és "
+"A <a href=\"https://wiki.gnucash.org/wiki/\">wiki</a> áttekintésével és "
 "tippek hozzáadásával"
 
 #: 2.6-release-tour.phtml:181
@@ -415,7 +427,7 @@ msgid ""
 "source code</a>"
 msgstr ""
 "<a href=\"https://wiki.gnucash.org/wiki/Development\">A forráskód "
-"fejlesztése</a>"
+"fejlesztésével</a>"
 
 #: 2.6-release-tour.phtml:186
 msgid "The GnuCash developers team"
@@ -431,11 +443,13 @@ msgid ""
 "span> documentation, you have come to the right place. This page will "
 "provide you with the necessary information to get started."
 msgstr ""
+"Ha a <span class=\"gnucash\">GnuCash</span> dokumentáció fejlesztése iránt "
+"érdeklődik, akkor jó helyen jár. Ez az oldal a kezdéshez szükséges "
+"információkat tartalmazza."
 
 #: develdocs.phtml:12
-#, fuzzy
 msgid "Writing GnuCash Documentation"
-msgstr "Régebbi GnuCash dokumentáció"
+msgstr "GnuCash dokumentáció írása"
 
 #: develdocs.phtml:16
 msgid ""
@@ -446,6 +460,12 @@ msgid ""
 "the creation of two major documents, the <b>Help Manual</b> and the "
 "<b>Tutorial and Concepts Guide</b>."
 msgstr ""
+"Ahogy a <span class=\"gnucash\">GnuCash</span> alkalmazást is önkéntesek "
+"fejlesztették az idők során, úgy a dokumentációt is önkéntes fejlesztők és "
+"felhasználók írták, hogy segítsenek másoknak megtanulni, hogyan működik a "
+"<span class=\"gnucash\">GnuCash</span>. Ez a közös munka két fontos "
+"dokumentumot eredményezett, a <b>Súgó kézikönyv</b>et és az <b>Oktatóanyag "
+"és irányelv-útmutató</b>t."
 
 #: develdocs.phtml:18
 msgid ""
@@ -1888,13 +1908,13 @@ msgid "GnuCash %s Released"
 msgstr "A GnuCash %s megjelent"
 
 #: index.phtml:84
-#, fuzzy, php-format
+#, php-format
 msgid ""
 "We've released GnuCash %s with many bugfixes and improvements including some "
 "%s!"
 msgstr ""
-"Megjelent a GnuCash %s számos hibajavítással és fejlesztéssel, beleértve "
-"néhány %s-et is!"
+"Megjelent a GnuCash %s számos hibajavítással és fejlesztéssel, köztük néhány "
+"%s is!"
 
 #: index.phtml:85
 msgid "great new features"
