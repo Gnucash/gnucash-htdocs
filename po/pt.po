@@ -2,7 +2,7 @@
 # Copyright (C) 2015-2020
 # This file is distributed under the same license as the GnuCash package.
 # Pedro Albuquerque <pmra@protonmail.com>, 2015, 2016, 2018, 2020.
-# Pedro Albuquerque <pmra@gmx.com>, 2021, 2022.
+# Pedro Albuquerque <pmra@gmx.com>, 2021, 2022, 2023.
 # ssantos <ssantos@web.de>, 2021, 2022.
 msgid ""
 msgstr ""
@@ -10,8 +10,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2022-10-27 19:35+0200\n"
-"PO-Revision-Date: 2022-12-13 22:47+0000\n"
-"Last-Translator: ssantos <ssantos@web.de>\n"
+"PO-Revision-Date: 2023-02-08 08:37+0000\n"
+"Last-Translator: Pedro Albuquerque <pmra@gmx.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/gnucash/"
 "website/pt/>\n"
 "Language: pt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15-dev\n"
+"X-Generator: Weblate 4.16-dev\n"
 
 #: 2.6-release-tour.phtml:3
 msgid "GnuCash 2.6 release tour"
@@ -1232,35 +1232,25 @@ msgid "%sFlatpak"
 msgstr "%sFlatpak"
 
 #: download.phtml:51
-#, fuzzy
-#| msgid "Known Issues and other details …"
 msgid "Known Issues and other details"
-msgstr "Problemas conhecidos e outros detalhes…"
+msgstr "Problemas conhecidos e outros detalhes"
 
 #: download.phtml:55 index.phtml:17
 msgid "Source code"
 msgstr "Código fonte"
 
 #: download.phtml:56
-#, fuzzy
-#| msgid ""
-#| "If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> "
-#| "or you wish to install a different version than it ships with, you could "
-#| "try to build <span class=\"gnucash\">GnuCash</span> directly from the "
-#| "source code. The <span class=\"gnucash\">GnuCash</span> wiki has <a "
-#| "href='https://wiki.gnucash.org/wiki/Building'>guidelines for several "
-#| "distributions</a>."
 msgid ""
 "If you can't easily install <span class=\"gnucash\">GnuCash</span> in your "
 "distribution, or wish to install a different version than it ships with, you "
 "can build <span class=\"gnucash\">GnuCash</span> from source code as "
 "described in <a href='https://wiki.gnucash.org/wiki/Building'>the wiki</a>."
 msgstr ""
-"Se a sua distro não inclui o <span class=\"gnucash\">GnuCash</span> ou quer "
-"instalar uma versão diferente da predefinida, pode tentar compilar o <span "
-"class=\"gnucash\">GnuCash</span> directamente a partir do código fonte. A "
-"wiki do <span class=\"gnucash\">GnuCash</span> tem <a href='https://wiki."
-"gnucash.org/wiki/Building'>guias para várias distribuições</a>."
+"Se a sua distribuição não inclui o <span class=\"gnucash\">GnuCash</span> ou "
+"quer instalar uma versão diferente da predefinida, pode tentar compilar o "
+"<span class=\"gnucash\">GnuCash</span> directamente a partir do código "
+"fonte, como descrito na <a href='https://wiki.gnucash.org/wiki/Building'>the "
+"wiki</a>."
 
 #: download.phtml:58 download.phtml:73 download.phtml:89
 #, php-format
@@ -1273,31 +1263,23 @@ msgid "Unstable/Development release (%s)"
 msgstr "Versão instável/em desenvolvimento (%s)"
 
 #: download.phtml:67
-#, fuzzy
-#| msgid ""
-#| "Unstable (development) releases are for testing purposes only. They "
-#| "contain the newest features and improvements, but may also contain "
-#| "serious bugs still. Don't install these releases for everyday use."
 msgid ""
 "Unstable (development) releases are for testing purposes only. They contain "
 "the newest features and improvements, but possibly also bugs. Don't install "
 "these releases for everyday use."
 msgstr ""
 "Versões instáveis (em desenvolvimento) servem só para teste. Contêm as mais "
-"recentes melhorias e funcionalidades, mas também podem ainda conter erros "
-"graves. Não instale estas versões para uso no dia a dia."
+"recentes melhorias e funcionalidades, mas também podem ainda conter erros. "
+"Não instale estas versões para uso no dia a dia."
 
 #: download.phtml:68
-#, fuzzy, php-format
-#| msgid ""
-#| "The latest unstable release of <span class=\"gnucash\">GnuCash</span> is "
-#| "%s. Choose the download for your operating system below."
+#, php-format
 msgid ""
 "The latest unstable release of <span class=\"gnucash\">GnuCash</span> "
 "(available below) is %s."
 msgstr ""
-"A última versão instável do <span class=\"gnucash\">GnuCash</span> é a %s. "
-"Escolha abaixo a transferência para o seu sistema operativo."
+"A última versão instável do <span class=\"gnucash\">GnuCash</span> ("
+"disponível abaixo) é a %s."
 
 #: download.phtml:81
 #, php-format
@@ -1313,24 +1295,19 @@ msgstr ""
 "série estável anterior sem ser uma grande atualização."
 
 #: download.phtml:84
-#, fuzzy, php-format
-#| msgid ""
-#| "The last old stable release of <span class=\"gnucash\">GnuCash</span> is "
-#| "%s. Choose the download for your operating system below."
+#, php-format
 msgid ""
 "The last old stable release of <span class=\"gnucash\">GnuCash</span> "
 "(available below) is %s."
 msgstr ""
-"A última versão estável antiga do <span class=\"gnucash\">GnuCash</span> é a "
-"%s. Escolha abaixo a transferência para o seu sistema operativo."
+"A última versão estável antiga do <span class=\"gnucash\">GnuCash</span> ("
+"disponível abaixo) é a %s."
 
 #: download.phtml:97
 msgid "Latest versions for historical operating systems"
 msgstr "Últimas versões para sistemas operativos históricos"
 
 #: download.phtml:99
-#, fuzzy
-#| msgid "This versions are really old. Do not expect any support."
 msgid "These versions are really old. No support is offered."
 msgstr "Estas versões são muito antigas. Não espere nenhuma assistência."
 
@@ -2729,11 +2706,6 @@ msgstr ""
 "o livro razão."
 
 #: sizing.phtml:354
-#, fuzzy
-#| msgid ""
-#| "Contents of src/gnome plus src/register/gnome (version 1.6 and earlier). "
-#| "For version 1.7 and later, this consists of src/gnome, src/gnome-search "
-#| "and src/gnome-util."
 msgid ""
 "Contents of src/gnome plus src/register/gnome (version 1.6 and earlier). For "
 "version 1.7 and later, this consists of src/gnome, src/gnome-search and src/"
@@ -2741,7 +2713,7 @@ msgid ""
 msgstr ""
 "Conteúdo de src/gnome mais src/register/gnome (versão 1.6 e anteriores). "
 "Para a versão 1.7 e posteriores, isto consiste em src/gnome, src/gnome-"
-"search e src/gnome-util."
+"search e src/gnome-util"
 
 #: sizing.phtml:359
 msgid ""
