@@ -79,7 +79,6 @@
      $latest_unstable_source="gnucash-".$latest_unstable.".tar.bz2";
 
      // The URLs, we use:
-     // Todo: incorporate a "local_params" file
      define("DEFAULT_URL", "https://www.gnucash.org/"); // The main webserver
      define("SERVER_IRC", "irc.gimp.net"); // alias The GIMPNet
      define("URL_IRC", "irc://".\SERVER_IRC."/gnucash");
