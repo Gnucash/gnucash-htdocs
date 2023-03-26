@@ -3,17 +3,17 @@
      // This section defines the most recent version numbers for all platforms.
      // Each platform can define its own latest version or follow the default.
      // Both a latest stable version and a latest unstable version are defined.
-     $major_stable              ="4";
+     $major_stable              ="5";
      // TODO: on major_stable 5 in download.phtml copy from $old_stable into the historical
      // section: last_win7 and $last_mac_sierra
-     $minor_stable              ="13";
+     $minor_stable              ="0";
      // Number of Translations: Did we add or dropped some?
-     define("PROG_TRANSLATIONS", 58);
+     define("PROG_TRANSLATIONS", 61);
 
      $latest_stable             = $major_stable.".".$minor_stable;
      //$latest_stable_win         = $latest_stable;
      $latest_stable_win         = $latest_stable."";
-     $latest_stable_mac_intel   = $latest_stable."-2";
+     $latest_stable_mac_intel   = $latest_stable."-1";
 // Change this when there has been a re-tag to add the re-tag letter,
 // e.g. if one retagged 2.6.13 to 2.6.13a, make $tarball = $latest_stable."a".
      $tarball                   = $latest_stable."";
@@ -26,8 +26,8 @@
      $latest_unstable_win       = $latest_unstable;
      $latest_unstable_mac_intel = $latest_unstable."-1";
 
-     $major_old_stable          ="3";
-     $minor_old_stable          ="11";
+     $major_old_stable          ="4";
+     $minor_old_stable          ="14";
      $old_stable            = $major_old_stable.".".$minor_old_stable;
      $old_stable_win        = $old_stable;
      $old_stable_mac_intel  = $old_stable."-1";
