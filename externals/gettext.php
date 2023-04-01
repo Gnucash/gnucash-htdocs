@@ -160,7 +160,7 @@ class gettext_reader {
       /* read all strings in the cache */
       for ($i = 0; $i < $this->total; $i++) {
           $offset = $i * 2 + 2;
-          if (!($this && $this->table_oritinals &&
+          if (!($this && $this->table_originals &&
                 $this->table_originals[$offset])) {
               continue;
           }
