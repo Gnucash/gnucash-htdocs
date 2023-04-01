@@ -66,7 +66,7 @@ if ($locale == "") {
     {
         # tolower() => remove space => '-' -> '_'
         # "fr-ch;q=0.3, en, zh-cn;q=0.7" => "fr_ch;q=0.3,en,zh_cn;q=0.7"
-        $accept_language = filter_input(INPUT_SERVER, 'HTTP_ACCEPT_LANGUAGE', FILTER_SANITIZE_STRING);
+        $accept_language = filter_input(INPUT_SERVER, 'HTTP_ACCEPT_LANGUAGE', FILTER_SANITZE_STRING);
         $languages = str_replace('-','_', str_replace(' ', '', strtolower($accept_language)));
         $languages = explode(",", $languages);
         foreach ($languages as $item)
