@@ -159,11 +159,15 @@ class gettext_reader {
       $this->cache_translations = array ();
       /* read all strings in the cache */
       for ($i = 0; $i < $this->total; $i++) {
-        $this->STREAM->seekto($this->table_originals[$i * 2 + 2]);
-        $original = $this->STREAM->read($this->table_originals[$i * 2 + 1]);
-        $this->STREAM->seekto($this->table_translations[$i * 2 + 2]);
-        $translation = $this->STREAM->read($this->table_translations[$i * 2 + 1]);
-        $this->cache_translations[$original] = $translation;
+          $offset = $i * 2 + 2;
+          if (!($this && $this->table_originals[$offset])) {
+              continue;
+          }
+          $this->STREAM->seekto($this->table_originals[$offset]);
+          $original = $this->STREAM->read($this->table_originals[$offset - 1]);
+          $this->STREAM->seekto($this->table_translations[$offset]);
+          $translation = $this->STREAM->read($this->table_translations[$offset - 1]);
+          $this->cache_translations[$original] = $translation;
       }
     }
   }
