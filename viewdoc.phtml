@@ -113,7 +113,11 @@ if ($doc_to_show) {
 
 # Web locales may have a country code but the documentation doesn't at the moment
 # So test both the full locale and the version stripped down to language code only.
-list($shortlang,$rest) = explode ("_", $showlang);
+if (strpos($showlang, "_")) {
+    list($shortlang,$rest) = explode ("_", $showlang);
+} else {
+    $shortlang = $showlang;
+}
 $reqlangs = array ($showlang);
 
 # First evaluate the nightly builds, they are located on a different server
