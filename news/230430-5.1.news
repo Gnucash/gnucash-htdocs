@@ -1,0 +1,139 @@
+<b>Announcement:</b> GnuCash 5.1 Released
+2023-04-30
+
+<h2>GnuCash 5.1 Released</h2>
+
+<p>The GnuCash development team announces GnuCash 5.1, the second release in the stable 5.x series</p>
+
+<h4>Between 5.0 and 5.1, the following bugfixes were accomplished:</h4>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=765920">Bug 765920 - Running balance not accurate when sorted different ways</a><p><ul><li>Renamed option to &quot;Account Balance&quot; to avoid confusion with running total.</li><li>Added helper function to ensure running balance and balance forward are only shown when transaction are grouped by account and sorted as in register. In that case column heading remains &quot;Running Balance&quot; and balance forward is shown. Otherwwise column heading is renamed &quot;Account Balance&quot; and balance forward is not shown.</li><li>Also added missing code for Common Currency conversion.</li></ul> </p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797879">Bug 797879 - [Transaction Report] running balance column not consistent with amount column for SAME transaction date</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798461">Bug 798461 - balance sheet shows positions with zero balances despite report options</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798775">Bug 798775 - Why is General Journal called &quot;Register&quot; in the tabs?</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798802">Bug 798802 - Online Price quote - Stocks not working GNU 5.0 Windows Bis</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798802">Bug 798802 - Online Price quote - Stocks not working GNU 5.0 Windows</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798807">Bug 798807 - Keyboard shortcuts not working</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798808">Bug 798808 - Saved reports shown on main menu</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798810">Bug 798810 - Income Statement (multicolumn) - account sorting is &#39;reversed&#39; each time you restart.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798812">Bug 798812 - crashes after I open a customer report and select…</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798813">Bug 798813 - Under File-&gt;Import, Missing OFX/QFX menu item</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798815">Bug 798815 - flatpak run --command=gnucash-cli cannot download quotes since 5.0.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798821">Bug 798821 - Crash when running report in window</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798834">Bug 798834 - CSS-based Stylesheet Help Button not working</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798839">Bug 798839 - Edit -&gt; Preferences string not translatable</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798844">Bug 798844 - &quot;Assign as Payment&quot; does nothing in 4.14 &amp; 5.0</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798845">Bug 798845 - User Config and User Data link broken</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798851">Bug 798851 - Account Balance &#39;include subaccounts&#39; not saved</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798854">Bug 798854 - Softkey &#39;Save Config&#39; remains dark</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798862">Bug 798862 - Merge identical strings</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798863">Bug 798863 - Crash on clicking Settings button second time</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798864">Bug 798864 - Budget Reporting on select reports are wrong</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798869">Bug 798869 - Transaction Import MAP</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798872">Bug 798872 - Reload inoperative for reports</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798877">Bug 798877 - Program crashes upon selection of CSV profile</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798885">Bug 798885 - Accented character in folder name on Account Export</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798886">Bug 798886 - [Transaction Report] Subtotal upper headings do not follow font style of lower headings</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798893">Bug 798893 - several menu tip messages in reports are marked translatable but unused.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798894">Bug 798894 - TOTD with ellipsis broken.</a></li>
+</ul>
+
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>Add filters to the File>Open dialog in File mode to show only files with GnuCash extensions, only those matching GnuCash's backup file pattern, or any extension.</li>
+    <li>Select the first result in the Customer/Vendor search box. This allows faster keyboard navigation -- Find Customer, input search string, press ENTER, use up/down to select desired object, press ENTER to open object. </li>
+    <li>Improve foreign currency handling in budget report</li>
+    <li>Improve handling of the blank transaction when the register is sorted in reverse:
+        <ul>
+            <li>Change the preference option &#39;Future transactions after blank transaction&#39;</li>
+            <li>Change tooltip for &#39;Blank Transaction&#39; in register to mention moving to the blank transaction. </li>
+            <li>Show the blank transaction at top of register</li>
+        </ul></li>
+    <li>Prevent infinite recursion from gnucash_item_edit_focus_out when using an input method.</li>
+    <li>Create obsolete features list with first member book_currency.Obsolete features set in the book will be removed from the book&#39;s KVP and ignored. </li>
+    <li>Restore existence, but not implementation, of GNC_FEATURE_BOOK_CURRENCY.<p>At least one user has managed to get it set on their book so even though it was supposed to be unimplemented it got through somehow. Restoring it allows books with it set to load. </p></li>
+    <li>Offer to force edit non-identical fields when multiple matches are selected in the import matcher window. Previously only identical Desc/Notes/Memo were unlocked for editing.</li>
+    <li>Guard against there being no namespaces in the new security dialog</li>
+    <li>Fix Finance::Quote use on Win32 by dealing with Win32 \r\n newlines on return from finance-quote-wrapper.</li>
+    <li>Fix some menu labels that were not marked for translation</li>
+    <li>Fix category in CSV export with simple layout.<p>If Trading accounts is enabled, and the transaction is a transfer between two accounts of differing commodities, the CSV simple-layout export would incorrectly show &quot;--Split Transaction--&quot; as the category. </p></li>
+    <li>When configuring Guile use pkg-config before searching for binaries.</li>
+</ul>
+
+<p>New and Updated Translations: Chinese (Simplified), Croatian, English (Australia), English (New Zealand), English (United Kingdom), Estonian, French, German, Hindi, Hungarian, Japanese, Portuguese, Slovak, Spanish, Swedish, Turkish, Ukrainian</p>
+
+<a href="https://hosted.weblate.org/engage/gnucash/">Help translate GnuCash on Weblate</a>
+
+<h4>Known Problems</h4>
+<p><a href="https://bugs.gnucash.org/buglist.cgi?bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;limit=0&amp;list_id=8149&amp;order=priority%2Cbug_severity&amp;query_format=advanced">Complete list of all open bugs.</a></p>
+
+<h2>Documentation</h2>
+<p>Concurrent with the release of GnuCash 5.1 we're pleased to also release a new version of the companion Manual and the Tutorial and Concepts Guide:</p>
+
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>Add details for some CSV import options. </li>
+</ul>
+
+<p>New and Updated Translations: None</p>
+
+<h3>Getting GnuCash for Windows and MacOS</h3>
+<p>GnuCash is provided for both Microsoft Windows 8.1&reg; and later
+    and MacOS 10.13 (High Sierra)&reg; and later in pre-built, all-in-one
+    packages. An installer is provided for Microsoft Windows&reg; while
+    the MacOS&reg; package is a disk image containing a drag-and-drop
+    application bundle.</p>
+
+<p>GnuCash is also available as a flatpak from Flathub.org. <a href="https://wiki.gnucash.org/wiki/Flatpak">Instructions for installing and running.</a></p>
+
+<p>The SHA256 Hashes for the downloadable files are:</p>
+<ul>
+    <li><code>8a6581ddf7c7409db636510601351af724eda363ab59b1d5da8d981033f26f72</code>&nbsp;&nbsp;gnucash-5.1.tar.bz2</li>
+    <li>bd73204896d71cb19c2071bca9cc6faaf19d1499be66124f4fe66c8e15f876cb<code></code>&nbsp;&nbsp;gnucash-5.1.tar.gz</li>
+    <li><code>3ddc5547b5694a11a33e21e4110d1adb908f04995637a54bfa930df68c7df014</code>&nbsp;&nbsp;gnucash-5.1.setup.exe</li>
+    <li><code>48c38097fe744a7da7bbd454d0e58e3619194d8f41e6542137c0bebac440e386</code>&nbsp;&nbsp;Gnucash-Intel-5.1-1.dmg</li>
+    <li><code>59bd2b5ccc1efa7a034b38663e28f855b4ad16ee28b2248d61af8145097152f6</code>&nbsp;&nbsp;gnucash-docs-5.1.tar.gz</li>
+</ul>
+
+<ul>
+    <li>SourceForge:
+        <ul>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.1/gnucash-5.1.setup.exe">Win32</a></li>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.1/Gnucash-Intel-5.1-2.dmg">Mac-Intel</a></li>
+        </ul></li>
+    <li>Github
+        <ul>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/5.1/gnucash-5.1.setup.exe">Win32</a></li>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/5.1/Gnucash-Intel-5.1-2.dmg">Mac-Intel</a></li>
+        </ul></li></ul>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 5.1 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+    <li>Sourceforge: <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.1/gnucash-5.1.tar.bz2">bzip2</a>, <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.1/gnucash-5.1.tar.gz">gzip</a>.</li>
+
+    <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/5.1/gnucash-5.1.tar.bz2">bzip</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/5.1/gnucash-5.1.tar.gz">gzip</a></li>
+
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https://www.gtk.org">Gtk+</a> 3.22.29, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0, <a href="https://www.boost.org/">Boost</a> 1.67, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, <a href="https://github.com/google/googletest">GoogleTest</a> 1.8.0, <a href="https://cmake.org/">cmake 3.10</a> and <a href="http://www.swig.org/">SWIG</a> 2.0.12. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 5.1 documentation can be found under "GnuCash v4 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats. The documentation is also included in the MacOS and Windows application bundles. Note that we are preparing to remove autotools support from the documentation build and that it is no longer included in the tarball.</p>
+
+<p>If you want to compile the GnuCash Documentation 5.1 for yourself, the source code can be downloaded from:</p>
+<ul>
+    <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.1/gnucash-docs-5.1.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/5.1/gnucash-docs-5.1.tar.gz">GitHub</a></li>
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+    the GNU General Public License (GPL) and available for GNU/Linux,
+    *BSD, Solaris, MacOS, and Microsoft Windows.  Programming on GnuCash
+    began in 1997, and its first stable release was in 1998.</p>
