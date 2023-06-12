@@ -79,7 +79,12 @@
      $latest_unstable_source="gnucash-".$latest_unstable.".tar.bz2";
 
      // The URLs, we use:
-     define("DEFAULT_URL", "https://www.gnucash.org/"); // The main webserver
+     if (gethostname()=="code") {
+       define("DEFAULT_URL", "https://code.gnucash.org/website/"); // Current fallback
+     }
+     else {
+       define("DEFAULT_URL", "https://www.gnucash.org/"); // The regular webserver
+     }
      define("SERVER_IRC", "irc.gimp.net"); // alias The GIMPNet
      define("URL_IRC", "irc://".\SERVER_IRC."/gnucash");
      $URL_FLATHUB="https://flathub.org/apps/details/org.gnucash.GnuCash";
