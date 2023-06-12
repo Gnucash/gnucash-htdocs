@@ -50,9 +50,9 @@ include ("externals/menu.phtml");
     printf(" ".T_("Please help translate GnuCash into your language at %s."), '<a href="https://hosted.weblate.org/engage/gnucash/">Weblate</a>')?>
   </div>
 
-  <div style="float: right"> <!--Need help section -->
+  <div style="float: left; width: 100%;"> <!--Need help section -->
     <div class="dialog note">
-      <h1><?=T_("Need Help?")?></h1>
+      <h3><?=T_("Need Help?")?></h3>
       <p class="justify">
 <?php // FIXME: I18N printf, markup: ?>
         <?=T_("Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? Try the")?>
@@ -62,8 +62,8 @@ include ("externals/menu.phtml");
     </div>
   </div> <!-- Need Help section -->
 
-  <div style="width: 100%">
-    <h2 style="margin-bottom: 1px; margin-top: 0px"><?=T_("Feature Highlights"); ?></h2>
+  <div style="width: 100%;">
+    <h2 style="margin-bottom: 6px;"><?=T_("Feature Highlights"); ?></h2>
   </div>
 
   <div id="mainfeature">
@@ -76,6 +76,7 @@ include ("externals/menu.phtml");
       <li><?=T_("Scheduled Transactions")?></li>
       <li><?=T_("Financial Calculations"); ?></li>
     </ul>
+    <img alt="<?=T_("Feature Highlights"); ?>" src="<?=$top_dir?>/images/gnucash-perspective.png" />
     <a href="<?=$home?>/features.phtml"><?=T_("<b>Discover more …</b>")?></a>
   </div>
   <!-- mainfeature -->
