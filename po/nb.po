@@ -4,14 +4,15 @@
 # Frank H. Ellenberger <frank.h.ellenberger@gmail.com>, 2020.
 # Allan Nordhøy <epost@anotheragency.no>, 2021.
 # Petter Reinholdtsen <pere-weblate@hungry.com>, 2022.
+# Rune Osnes <osnes.rune@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
-"component=Translations&product=Website&resolution=---\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
+"cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2022-10-27 19:35+0200\n"
-"PO-Revision-Date: 2022-06-21 23:16+0000\n"
-"Last-Translator: Petter Reinholdtsen <pere-weblate@hungry.com>\n"
+"PO-Revision-Date: 2023-06-08 10:47+0000\n"
+"Last-Translator: Rune Osnes <osnes.rune@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/gnucash/"
 "website/nb_NO/>\n"
 "Language: nb\n"
@@ -19,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1-dev\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #: 2.6-release-tour.phtml:3
 msgid "GnuCash 2.6 release tour"
@@ -35,7 +36,7 @@ msgstr ""
 
 #: 2.6-release-tour.phtml:17
 msgid "Jqplot Reports"
-msgstr "Jqplot-Rapporter"
+msgstr "Jqplot rapporter"
 
 #: 2.6-release-tour.phtml:19
 msgid ""
@@ -43,9 +44,9 @@ msgid ""
 "reports. This gives a more professional look to all graphical reports "
 "(piechart, barchart, scatterplot)."
 msgstr ""
-"<span class=\"gnucash\">GnuCash</span> bruker nå jqplot-javascript for å "
-"tegne opp rapporter. Dette gir et mer profesjonelt utseende for alle "
-"grafiske rapporter (kakediagram, søylediagram, linjediagram)."
+"<span class=\"gnucash\">GnuCash</span> bruker nå javascript for å gjengi "
+"rapporter. Dette gir et mer profesjonelt utseende for alle grafiske "
+"rapporter (kakediagram, søylediagram, linjediagram)."
 
 #: 2.6-release-tour.phtml:26
 msgid "A barchart rendered in GnuCash with jqplot."
@@ -53,7 +54,7 @@ msgstr "Et søylediagram gjengitt i GnuCash med jqplot."
 
 #: 2.6-release-tour.phtml:31
 msgid "New preconfigured reports management system"
-msgstr "Nytt forhåndsoppsatt rapportbehandlingssystem"
+msgstr "Nytt forhåndskonfigurert rapportbehandlingssystem"
 
 #: 2.6-release-tour.phtml:33
 msgid ""
@@ -62,26 +63,34 @@ msgid ""
 "in the File menu and rerun it later by selecting it from the menu Reports-"
 ">Preconfigured Reports."
 msgstr ""
+"Det gamle <span class=\"gnucash\">GnuCash</span> egendefinerte "
+"rapportbehandlingssystemet er revidert. Du kan lagre en rapport ved å bruke "
+"det dedikerte alternativet i Fil menyen og kjøre den på ny senere ved å "
+"velge den fra menyen Rapporter->Forhåndsdefinerte Rapporter."
 
 #: 2.6-release-tour.phtml:40
 msgid ""
 "The Preconfigured Reports window. You can select and run a preconfigured "
 "report, edit its name and delete it."
 msgstr ""
+"Vindu for forhåndsdefinerte rapporter. Du kan velge og kjøre en "
+"forhåndsdefinert rapport, redigere navnet og slette den."
 
 #: 2.6-release-tour.phtml:45
 msgid "Export any report directly to PDF"
-msgstr "Eksporter alle rapporter direkte til PDF"
+msgstr "Eksporter rapporter direkte til PDF"
 
 #: 2.6-release-tour.phtml:47
 msgid ""
 "Reports and invoices can be exported directly in a PDF file without going "
 "thru the Print window."
 msgstr ""
+"Rapporter og fakturaer kan eksporteres direkte til en PDF fil uten å gå via "
+"utskriftsdialogen."
 
 #: 2.6-release-tour.phtml:50
 msgid "Associate a local file or remote location with any transaction"
-msgstr ""
+msgstr "Tilknytt en lokal fil eller fjernlokasjon til en transaksjon"
 
 #: 2.6-release-tour.phtml:52
 msgid ""
@@ -90,11 +99,17 @@ msgid ""
 "the Transaction menu and the transaction's context menu. The files are "
 "displayed in the default viewer for that file type."
 msgstr ""
+"Det er nå mulig å tilknytte en ekstern lokal fil eller en fjernlokasjon (URL)"
+" til en transaksjon. Denne etterlengtede funksjonen er tilgjengelig gjennom "
+"både Transaksjonsmenyen eller transaksjonens høyreklikk meny. Filene åpnes i "
+"det programmet som er standard for filtypen."
 
 #: 2.6-release-tour.phtml:60
 msgid ""
 "You can now associate a local file or a remote location with any transaction."
 msgstr ""
+"Du kan nå tilknytte en lokal fil eller fjernlokasjon til hvilken som helst "
+"transaksjon."
 
 #: 2.6-release-tour.phtml:65
 msgid "Account colors"
@@ -106,16 +121,19 @@ msgid ""
 "account window. This color can then be displayed as account name and account "
 "register tab background easing the lookup of a specific account."
 msgstr ""
+"Det er nå mulig å assosiere en unik farge med en konto fra rediger konto "
+"dialogen. Denne fargen kan vises som kontonavn og som bakgrunn for "
+"kontoregistrerings fanen for å lettere søke opp en spesifikk konto."
 
 #: 2.6-release-tour.phtml:75
 msgid ""
 "The colors ease the lookup of specific accounts in the account tree and in "
 "tabs."
-msgstr ""
+msgstr "Fargene forenkler søk etter spesifikke kontoer i kontotreet og i faner."
 
 #: 2.6-release-tour.phtml:80
 msgid "Timeout on \"Save changes on closing\""
-msgstr ""
+msgstr "Utsettelse på \"Lagre endringer ved lukking\""
 
 #: 2.6-release-tour.phtml:82
 msgid ""
@@ -126,6 +144,11 @@ msgid ""
 "that time, the changes will be saved automatically and the question window "
 "closed."
 msgstr ""
+"I fanen Generelt i <span class=\"gnucash\">GnuCash</span> Instillinger er "
+"det nå mulig å sette en utsettelse for \"Lagre endringer ved lukking\" "
+"vinduet. Dersom aktivert, vil spørsmålet \"Lagre endringer ved lukking\" kun "
+"vente noen få sekunder for et svar. Dersom brukeren ikke har svart innen "
+"denne tiden, vil endringene bli lagret automatisk og spørsmålsvinduet lukket."
 
 #: 2.6-release-tour.phtml:85
 msgid "Open datafile read-only"
@@ -144,6 +167,9 @@ msgid ""
 "Note that <span class=\"gnucash\">GnuCash</span> is still a single-user "
 "program and that the database backends are still used only as a data store."
 msgstr ""
+"Legg merke til at <span class=\"gnucash\">GnuCash</span> fremdeles er et "
+"enkeltbruker program og at database is still a single-user program and that "
+"the databasens backend er fremdeles kun brukt som datalagring."
 
 #: 2.6-release-tour.phtml:98
 msgid ""
@@ -155,77 +181,88 @@ msgstr ""
 
 #: 2.6-release-tour.phtml:103
 msgid "Save \"Filter By\" settings"
-msgstr "Lagre «Filtrer etter»-innstillinger"
+msgstr "Lagre «Filtrer etter» innstillinger"
 
 #: 2.6-release-tour.phtml:105
 msgid ""
 "It is now possible to save the \"Filter By…\" settings for an account "
 "register."
 msgstr ""
+"Det er nå mulig å lagre \"Filtrer etter...\" instillnger for et "
+"kontoregister."
 
 #: 2.6-release-tour.phtml:113
 msgid ""
 "Save the \"Filter By…\" settings by enabling the \"Save Filter\" checkbox."
 msgstr ""
+"Lagre \"Filtrer etter...\" instillinger ved å huke av \"Lagre filter\" i "
+"avmerkingsboksen."
 
 #: 2.6-release-tour.phtml:118
 msgid "Improved business module"
-msgstr ""
+msgstr "Fobedret forretningsmodul"
 
 #: 2.6-release-tour.phtml:120
 msgid ""
 "The business module has been revamped and we introduced some new features:"
 msgstr ""
+"Forretningsmodulen har blitt overhalt og vi introduserer noen nye egenskaper:"
 
 #: 2.6-release-tour.phtml:122
 msgid "Credit Notes"
-msgstr ""
+msgstr "Kredittnoter"
 
 #: 2.6-release-tour.phtml:123
 msgid "Customer and Vendor Overview Pages"
-msgstr ""
+msgstr "Kunde og Leverandør Oversiktssider"
 
 #: 2.6-release-tour.phtml:124
 msgid "Customer Overview Reports"
-msgstr ""
+msgstr "Kundeoversikt rapporter"
 
 #: 2.6-release-tour.phtml:125
 msgid "Existing Transactions may be reassigned as invoice payments"
-msgstr ""
+msgstr "Eksisterende transaksjoner kan tilordnes på nytt som faktura betalinger"
 
 #: 2.6-release-tour.phtml:126
 msgid "One click duplication of invoices"
-msgstr ""
+msgstr "Enkeltklikk duplisering av fakturaer"
 
 #: 2.6-release-tour.phtml:127
 msgid ""
 "Improved invoice and bill handling: Post, print, or duplicate multiple items "
 "directly from a search results list"
 msgstr ""
+"Forbedret faktura- og regningsbehandling: Poster, skriv ut og dupliser flere "
+"punkter direkte fra en søkeliste"
 
 #: 2.6-release-tour.phtml:128
 msgid ""
 "Better invoice printing setup: Choose a default invoice report as a "
 "preference"
 msgstr ""
+"Bedre faktura utskriftsinstillinger: Velg en standard fakturarapport som "
+"preferanse"
 
 #: 2.6-release-tour.phtml:129
 msgid "Reorder invoice entries in the invoice window"
-msgstr ""
+msgstr "Omorganiser fakturaføringer i faktura vinduet"
 
 #: 2.6-release-tour.phtml:137
 msgid "Customer report with an invoice and a credit note."
-msgstr ""
+msgstr "Kunderapport med en faktura og kreditnota."
 
 #: 2.6-release-tour.phtml:147
 msgid ""
 "Updated search window with buttons to process payment, duplicate, post and "
 "print multiple search results."
 msgstr ""
+"Oppdatert søkevindu med knapper for å utføre betaling, duplisere, postere og "
+"skrive ut flere søkeresultater."
 
 #: 2.6-release-tour.phtml:152
 msgid "New preference system"
-msgstr ""
+msgstr "Nytt innstillingssystem"
 
 #: 2.6-release-tour.phtml:154
 msgid ""
@@ -235,6 +272,11 @@ msgid ""
 "allows us to remove several troublesome dependencies including GConf, ORBit, "
 "and DBus."
 msgstr ""
+"Systemet for innstillinger har blitt omskrevet til å bruke GSettings fra GIO "
+"(GLib istedet for GConf. Dette er en enklere og mer robust backend som "
+"skriver til operativsystemets innebygde prefs - defaults på OS X og til "
+"Registry på MSWindows - og tillater oss å fjerne flere trøblete "
+"avhengigheter som inkluderer GConf, ORBit og DBus."
 
 #: 2.6-release-tour.phtml:156
 msgid ""
@@ -243,10 +285,14 @@ msgid ""
 "time you use Gnucash 2.6 or later, but they will be saved once you've reset "
 "them."
 msgstr ""
+"Legg merke til at vindusposisjon, kolonnebredder og sorteringrekkefølge ikke "
+"vil følge over fra GConf. Disse innstillingene vil bli tilbakestilt til "
+"standard første gang du bruker Gnucash 2.6 og senere, men de vil bli lagret "
+"når du har nullstilt dem."
 
 #: 2.6-release-tour.phtml:159
 msgid "Relicensing"
-msgstr ""
+msgstr "Omlisensiering"
 
 #: 2.6-release-tour.phtml:161
 msgid ""
@@ -254,6 +300,9 @@ msgid ""
 "\">GnuCash</span> to the GNU General Public License Version 2 or later from "
 "just Version 2."
 msgstr ""
+"Etter enighet mellom alle forfatterene har vi omlisensiert <span class="
+"\"gnucash\">GnuCash</span> til GNU General Public License Version 2 eller "
+"senere fra Version 2."
 
 #: 2.6-release-tour.phtml:163 docs.phtml:62 docs.phtml:196 docs.phtml:328
 #: download.phtml:4
@@ -266,6 +315,9 @@ msgid ""
 "span> from the <a href=\"https://www.gnucash.org\">GnuCash website main "
 "page</a>."
 msgstr ""
+"Du kan laste ned den nye 2.6 versjonen av <span class=\"gnucash\">GnuCash</"
+"span> fra <a href=\"https://www.gnucash.org\">GnuCash nettsidens "
+"hjemmeside</a>."
 
 #: 2.6-release-tour.phtml:167
 msgid "Help"
@@ -281,6 +333,13 @@ msgid ""
 "lists</a>: the <span class=\"gnucash\">GnuCash</span> community is very "
 "friendly and experienced and someone will surely assist you."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> 2.6 kommer med oppdatert Hjelp og "
+"Guide. Dersom du ikke kan finne svar på dine spørsmål i disse dokumentene, "
+"prøv <a href=\"https://wiki.gnucash.org/wiki/GnuCash\">GnuCash wiki</a>. "
+"Dersom begge valgene er utlifredsstillende, kan du sende spørsmålene dine "
+"til <a href=\"https://wiki.gnucash.org/wiki/Mailing_Lists\">GnuCash "
+"e-postliste</a>: <span class=\"gnucash\">GnuCash</span> samfunnet er veldig "
+"vennlige og erfarne og noen vil helt sikkert hjelpe deg."
 
 #: 2.6-release-tour.phtml:171
 msgid "Want to Help?"
@@ -292,12 +351,17 @@ msgid ""
 "volunteers. If you want to be part of the effort, you can contribute in many "
 "ways:"
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> er et program som er vedlikeholdt av "
+"frivillige. Dersom du vil ta del i arbeidet, kan du hjelpe til på mange "
+"måter:"
 
 #: 2.6-release-tour.phtml:175
 msgid ""
 "By testing the program and <a href=\"https://wiki.gnucash.org/wiki/Bugzilla"
 "\">reporting bugs</a>"
 msgstr ""
+"Ved å teste programmet og <a href=\"https://wiki.gnucash.org/wiki/Bugzilla\""
+">rapportere feil</a>"
 
 #: 2.6-release-tour.phtml:176
 msgid ""
@@ -305,10 +369,12 @@ msgid ""
 "\">facebook</a> and <a href=\"https://plus.google.com/u/0/+gnucash\">Google"
 "+</a>"
 msgstr ""
+"Ved å like prosjektet vårt på <a href=\"https://www.facebook.com/Gnucash\""
+">Facebook</a> og <a href=\"https://plus.google.com/u/0/+gnucash\">Google+</a>"
 
 #: 2.6-release-tour.phtml:177
 msgid "By spreading the word"
-msgstr ""
+msgstr "Ved å spre ordet"
 
 #: 2.6-release-tour.phtml:178
 msgid ""
@@ -324,30 +390,41 @@ msgid ""
 "\">GnuCash mailing lists</a> and <a href=\"https://wiki.gnucash.org/wiki/IRC"
 "\">IRC channel</a>"
 msgstr ""
+"Ved å delta i <a href=\"https://wiki.gnucash.org/wiki/Mailing_Lists\""
+">GnuCash e-post liste</a> and <a href=\"https://wiki.gnucash.org/wiki/IRC\""
+">IRC kanal</a>"
 
 #: 2.6-release-tour.phtml:180
 msgid ""
 "By reviewing and adding hints to the <a href=\"https://wiki.gnucash.org/wiki/"
 "\">wiki</a>"
 msgstr ""
+"Ved å gjennomgå og legge til hint til <a href=\"https://wiki.gnucash.org/"
+"wiki/\">wiki siden</a>"
 
 #: 2.6-release-tour.phtml:181
 msgid ""
 "By improving the <a href=\"https://gnucash.org/docs.phtml\">released "
 "documentation</a>"
 msgstr ""
+"Ved å forbedre den<a href=\"https://gnucash.org/docs.phtml\">utgitte "
+"dokumentasjonen</a>"
 
 #: 2.6-release-tour.phtml:182
 msgid ""
 "By <a href=\"https://wiki.gnucash.org/wiki/Translation\">translating the "
 "program and documentation to your language</a>"
 msgstr ""
+"Ved å <a href=\"https://wiki.gnucash.org/wiki/Translation\">oversette "
+"programmet og dokumentasjonen til ditt språk</a>"
 
 #: 2.6-release-tour.phtml:183
 msgid ""
 "By <a href=\"https://wiki.gnucash.org/wiki/Development\">developing the "
 "source code</a>"
 msgstr ""
+"Ved å <a href=\"https://wiki.gnucash.org/wiki/Development\">utvikle "
+"kildekoden</a>"
 
 #: 2.6-release-tour.phtml:186
 msgid "The GnuCash developers team"
@@ -363,10 +440,13 @@ msgid ""
 "span> documentation, you have come to the right place. This page will "
 "provide you with the necessary information to get started."
 msgstr ""
+"Dersom du er interessert i å forbedre <span class=\"gnucash\">GnuCash</span> "
+"dokumentasjonen, så har du kommet til rett plass. Denne siden vil gi deg den "
+"nødvendige informasjonen for å komme i gang."
 
 #: develdocs.phtml:12
 msgid "Writing GnuCash Documentation"
-msgstr ""
+msgstr "Skrive GnuCash dokumentasjon"
 
 #: develdocs.phtml:16
 msgid ""
@@ -377,6 +457,12 @@ msgid ""
 "the creation of two major documents, the <b>Help Manual</b> and the "
 "<b>Tutorial and Concepts Guide</b>."
 msgstr ""
+"Akkurat som <span class=\"gnucash\">GnuCash</span> programmet har blitt "
+"utviklet over tid av frivillige, slik har også dokumentasjonen blitt skrevet "
+"av frivillige utviklere og brukere for å hjelpe andre til å lære hvordan "
+"<span class=\"gnucash\">GnuCash</span> virker. Denne felles innsatsen har "
+"resultert i opprettelsen av to hoveddokument, <b>Brukerhåndkoken</b> og "
+"<b>Veilednings- og konseptguiden</b>."
 
 #: develdocs.phtml:18
 msgid ""
@@ -386,12 +472,20 @@ msgid ""
 "\">GnuCash</span>'s documentation, this page gives guidance on how to get "
 "set up to join the effort."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> samfunnet ønsker velkommen assistanse "
+"til vedlikehold og forbedringer av både programmet og den tilhørende "
+"dokumentasjonen. Dersom du er interessert i å hjelpe med å skrIve, redigere "
+"eller oversette <span class=\"gnucash\">GnuCash</span> sin dokumentasjon, "
+"vil denne siden forklare hvordan du kan komme i gang med å bli med på "
+"innsatsen."
 
 #: develdocs.phtml:21
 msgid ""
 "The <span class=\"gnucash\">GnuCash</span> documentation can be viewed and "
 "downloaded from the <a href=\"docs.phtml\">Documentation page</a>."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> dokumentasjonen kan leses og lastes "
+"ned fra <a href=\"docs.phtml\">Dokumentasjonssiden</a>."
 
 #: develdocs.phtml:26
 msgid "Introduction"
@@ -404,6 +498,10 @@ msgid ""
 "a relatively flexible system that takes xml files as input and can generate "
 "documentation in several different output formats (html, pdf …)."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> dokumentasjon er lagret i <b>xml</b> "
+"filer. Mer presist brukes <b>docbook systemet</b>. Dette er et relativt "
+"fleksibelt system som tar inn xml filer og genererer ut dokumentasjon i "
+"flere forskjellige format (html, pdf …)."
 
 #: develdocs.phtml:29
 msgid ""
@@ -411,12 +509,17 @@ msgid ""
 "documentation, you will need to know xml. Some basic knowledge of the "
 "docbook system may be useful as well."
 msgstr ""
+"Dersom du ønsker å korrekturlese eller skrive <span class=\"gnucash\""
+">GnuCash</span> dokumentasjon, trenger du å kjenne til xml. Noe "
+"grunnleggende kunnskap om docbook systemet kan være nyttig i tillegg."
 
 #: develdocs.phtml:30
 msgid ""
 "The following links are for further sites that can help with the "
 "documentation and review process."
 msgstr ""
+"De følgende linkene er til andre sider som kan hjelpe med dokumentasjonen og "
+"korrekturlesingsprosessen."
 
 #: develdocs.phtml:35
 msgid ""
@@ -424,15 +527,20 @@ msgid ""
 "translating the documentation, it holds some useful information on working "
 "with docbook files."
 msgstr ""
+"Selv om <span class=\"gnucash\">GnuCash</span> wiki siden egentlig handler "
+"om oversetting av dokumentasjonen, inneholder den noe nyttig informasjon om "
+"å jobbe med docbook filer."
 
 #: develdocs.phtml:36
 msgid ""
 "A detailed guide on how to work with documentation (update and maintenance)."
 msgstr ""
+"En detaljert guide for hvordan jobbe med dokumentasjon (oppdatering og "
+"vedlikehold)."
 
 #: develdocs.phtml:38
 msgid "We suggest also subscribing to"
-msgstr ""
+msgstr "Vi foreslår også å abonnerere på"
 
 #: develdocs.phtml:43
 msgid "Gnome Documentation guidelines"
@@ -444,14 +552,17 @@ msgid ""
 "wishing to help please follow these guides where possible when reviewing and/"
 "or writing docs."
 msgstr ""
+"Som sagt, de nye dokumentene er basert på docbook systemet. Alle som ønsker "
+"å hjelpe oppfordres til å følge disse retningslinjene hvor mulig når man "
+"korrekturleser eller skriver dokumenter."
 
 #: develdocs.phtml:47
 msgid "No longer available"
-msgstr ""
+msgstr "Ikke lenger tilgjengelig"
 
 #: develdocs.phtml:54
 msgid "Where to get the documentation source"
-msgstr ""
+msgstr "Hvor få tak i dokumentasjonskilden"
 
 #: develdocs.phtml:56
 msgid ""
@@ -460,6 +571,10 @@ msgid ""
 "Reviewers could also start from the <a href='https://sourceforge.net/"
 "projects/gnucash/files/gnucash-docs/'>current docs tarball</a>."
 msgstr ""
+"Du vil trenge en nylig kopi av dokumentasjonskilden. For dette kan du sjekke "
+"ut dokumentasjonsmodulen fra gnucash-docs git repository. Korrekturlesere "
+"kan også starte fra <a href='https://sourceforge.net/projects/gnucash/files/"
+"gnucash-docs/'>gjeldene tarball for dokumentene</a>."
 
 #: develdocs.phtml:57
 msgid ""
@@ -469,6 +584,11 @@ msgid ""
 "documentation source instead of the program source, replace 'gnucash' with "
 "'gnucash-docs' in the mentioned git commands, like this:"
 msgstr ""
+"For de som er kjente med git, har <span class=\"gnucash\">GnuCash</span> "
+"wiki-siden en <a href='https://wiki.gnucash.org/wiki/Git'>beskrivelse</a> "
+"skreddersydd til <span class=\"gnucash\">GnuCash</span> koden. For å få tak "
+"i dokumentasjonskilden i stedet for programkilden, erstatt 'gnucash' med "
+"'gnucash-docs' i nevnte git kommandoer, som dette:"
 
 #: develdocs.phtml:60
 msgid ""
@@ -477,10 +597,14 @@ msgid ""
 "Concepts Guide</b>. With the above command, the source code of both will be "
 "downloaded."
 msgstr ""
+"Det er to hoved <span class=\"gnucash\">GnuCash</span> dokumentasjonspakker "
+"for å hjelpe brukere: <b>Brukerhåndboken</b> og <b>Veilednings- og Konsept "
+"guiden</b>. Med de overnevnte kommandoene vil kildekoden til begge bli "
+"lastet ned."
 
 #: develdocs.phtml:66
 msgid "Writers"
-msgstr ""
+msgstr "Forfattere"
 
 #: develdocs.phtml:68
 msgid ""
@@ -489,6 +613,10 @@ msgid ""
 "running the following command in the base directory of the documentation "
 "(usually gnucash-docs, unless you renamed it):"
 msgstr ""
+"Få tak i en kopi av dokumentasjonskildekoden som beskrevet overfor og begynn "
+"å lage endringer. Når du er tilfreds med endringene kan du lage en patch ved "
+"å kjøre følgende kommando i hovedfolderen for dokumentasjonen (vanligvis "
+"gnucash-docs, dersom du ikke endret navn):"
 
 #: develdocs.phtml:70
 msgid ""
@@ -498,6 +626,11 @@ msgid ""
 "gnucash.org/wiki/Bugzilla'>GnuCash' wiki page on bugzilla</a> for more "
 "details about patch submission."
 msgstr ""
+"Tilknytt så patchen til en bug report mot den riktige komponenten for "
+"Dokumentasjon i <a href='https://bugs.gnucash.org/'><span class=\"gnucash\""
+">GnuCash</span>' bug databasen</a>. Se også <a href='https://wiki.gnucash."
+"org/wiki/Bugzilla'>GnuCash' wiki-siden på bugzilla</a> for flere detaljer "
+"rundt patch innleveringer."
 
 #: develdocs.phtml:72
 msgid ""
@@ -507,6 +640,11 @@ msgid ""
 "instead (either an existing bug or a new one). If you insist on sending a "
 "patch to gnucash-devel, it should be attached, not inlined."
 msgstr ""
+"<b>MERK:</b> Det pleide også å være ok å sende patchen din direkte til "
+"gnucash-devel-listen. Dette frarådes nå, da en patch lett glemmes mellom de "
+"mange listediskusjonene. Fest patcher til feil i Bugzilla i stedet (enten en "
+"eksisterende eller ny). Hvis du insisterer på å sende en patch til gnucash-"
+"devel, bør den festes, ikke linjeføres."
 
 #: develdocs.phtml:73
 msgid ""
@@ -514,6 +652,10 @@ msgid ""
 "forward this to <a href='mailto:gnucash-devel@gnucash.org'>gnucash-devel</a> "
 "so that people can say 'hey I'm doing that already' or 'go ahead and do it'."
 msgstr ""
+"Vennligst la andre forfattere få vite hvilken seksjon du ønsker å takle. "
+"Vennligst videresend dette til <a href='mailto:gnucash-devel@gnucash.org"
+"'>gnucash-devel</a> slik at folk kan si \"hei, jeg gjør det allerede\" eller "
+"\"fortsett og gjør det\"."
 
 #: develdocs.phtml:74
 msgid ""
@@ -521,16 +663,21 @@ msgid ""
 "to when writing. This still has a lot of useful information in it which "
 "hasn't been transferred to the new docs."
 msgstr ""
+"Det kan også være lurt å beholde en lokal kopi av den gamle dokumentasjonen "
+"for å referere til når du skriver. Dette har fortsatt mye nyttig informasjon "
+"som ikke er overført til de nye dokumentene."
 
 #: develdocs.phtml:80
 msgid "Reviewers"
-msgstr ""
+msgstr "Anmeldere"
 
 #: develdocs.phtml:82
 msgid ""
 "Get a copy of the documentation source as described above and start "
 "commenting on it."
 msgstr ""
+"Få en kopi av dokumentasjonskildekoden som beskrevet ovenfor og begynn å "
+"kommentere den."
 
 #: develdocs.phtml:83
 msgid ""
@@ -539,6 +686,10 @@ msgid ""
 "org</a> to file the bugs under documentation. This can also be done using "
 "bug-buddy."
 msgstr ""
+"Den beste måten å beholde kommentarer om dokumenter på en måte som er lett å "
+"finne for alle, er å bruke <a href='https://bugs.gnucash.org/'>bugs.gnucash."
+"org</a> til å arkivere feilene under dokumentasjon. Dette kan også gjøres "
+"ved å bruke bug-buddy."
 
 #: docs.phtml:10 externals/menu.phtml:23 externals/menu.phtml:30
 msgid "Documentation"
@@ -550,36 +701,41 @@ msgid ""
 "stable branch</strong> documentation. See further down the page for other "
 "<span class=\"gnucash\">GnuCash</span> versions, languages, and formats."
 msgstr ""
+"Følgende lenker er til <strong>engelske HTML-utgaver av gjeldende stabile "
+"gren</strong>-dokumentasjon. Se lenger ned på siden for andre <span class="
+"\"gnucash\">GnuCash</span>-versjoner, språk og formater."
 
 #: docs.phtml:13
 msgid "Browse documentation online"
-msgstr ""
+msgstr "Bla gjennom dokumentasjon på nettet"
 
 #: docs.phtml:14
 msgid "Download documentation as PDF"
-msgstr ""
+msgstr "Last ned dokumentasjon som PDF"
 
 #: docs.phtml:15
 msgid "Download documentation as epub"
-msgstr ""
+msgstr "Last ned dokumentasjon som epub"
 
 #: docs.phtml:16
 msgid "Download documentation as mobipocket"
-msgstr ""
+msgstr "Last ned dokumentasjon som mobipocket"
 
 #: docs.phtml:28
 msgid ""
 "There are two major <span class=\"gnucash\">GnuCash</span> documentation "
 "packages to help users:"
 msgstr ""
+"Det er to store <span class=\"gnucash\">GnuCash</span> dokumentasjonspakker "
+"for å hjelpe brukere:"
 
 #: docs.phtml:30
 msgid "The Help Manual"
-msgstr ""
+msgstr "Brukerhåndboken"
 
 #: docs.phtml:31
 msgid "The Tutorial and Concepts Guide"
-msgstr ""
+msgstr "Veilednings- og konseptguide"
 
 #: docs.phtml:34
 msgid ""
@@ -589,6 +745,12 @@ msgid ""
 "in depth guide to the concepts behind using <span class=\"gnucash\">GnuCash</"
 "span> with a tutorial to show how to put those concepts into practice."
 msgstr ""
+"<b>Brukerhåndboken</b> er laget for å være en rask referanse for hvordan du "
+"utfører spesifikke oppgaver og hvordan du bruker funksjonene i <span class="
+"\"gnucash\">GnuCash</span>. <b>Konseptveiledningen</b> er utformet for å "
+"være en grundig veiledning til konseptene bak bruk av <span class=\"gnucash\""
+">GnuCash</span> med en veiledning for å vise hvordan disse konseptene "
+"implementeres i praksis."
 
 #. Translators: If wiki pages in your laguage exists, consider to replace "De"/"Deutsch" by your language.
 #: docs.phtml:39
@@ -597,6 +759,9 @@ msgid ""
 "a> or <a href=\"https://wiki.gnucash.org/wiki/De/\">Deutsch</a> <span class="
 "\"gnucash\">GnuCash</span> wikis."
 msgstr ""
+"Andre ressurser er <a href=\"https://wiki.gnucash.org/wiki/\">engelsk</a> "
+"eller <a href=\"https://wiki.gnucash.org/wiki/De/\"> tysk</a> <span class="
+"\"gnucash\">GnuCash</span> wikier."
 
 #: docs.phtml:43
 msgid ""
@@ -606,18 +771,23 @@ msgid ""
 "Concepts Guide</b>. We <b>want</b> feedback from you, it is also through "
 "your comments that we know how to improve the documentation."
 msgstr ""
+"Du kan også sende en e-post til e-postlisten <a href=\"mailto:gnucash-"
+"user@gnucash.org\">gnucash-user</a> hvis du ikke finner et tilfredsstillende "
+"svar på spørsmålet ditt enten i <b>Brukerhåndboken</b> eller <b>Veilednings- "
+"og konseptguiden</b>. Vi <b>ønsker</b> tilbakemeldinger fra deg, det er også "
+"gjennom kommentarene dine vi vet hvordan vi kan forbedre dokumentasjonen."
 
 #. Translators: %s is a link
 #: docs.phtml:45
 #, php-format
 msgid ""
 "Additionally, you can talk to someone via IRC at %s about your question."
-msgstr ""
+msgstr "I tillegg kan du snakke med noen via IRC på %s om spørsmålet ditt."
 
 #. Translators: IRC channel
 #: docs.phtml:48
 msgid "channel"
-msgstr ""
+msgstr "kanal"
 
 #: docs.phtml:52
 msgid ""
@@ -625,58 +795,61 @@ msgid ""
 "its community. See the <a href=\"develdocs.phtml\">Writing Documentation "
 "page</a> if you are interested in contributing to this effort."
 msgstr ""
+"Dokumentasjonen til <span class=\"gnucash\">GnuCash</span> er laget av "
+"fellesskapet. Se <a href=\"develdocs.phtml\">Skrive dokumentasjon siden</a> "
+"hvis du er interessert i å bidra til dette arbeidet."
 
 #: docs.phtml:57
 msgid "(current stable release)"
-msgstr ""
+msgstr "(nåværende stabil utgivelse)"
 
 #: docs.phtml:57 docs.phtml:191 docs.phtml:488 docs.phtml:605 docs.phtml:631
 #: docs.phtml:653 docs.phtml:671 docs.phtml:693
 #, php-format
 msgid "GnuCash v%s"
-msgstr ""
+msgstr "GnuCash v%s"
 
 #: docs.phtml:59
 msgid "Current <em>stable</em> user documentation"
-msgstr ""
+msgstr "Gjeldende <em>stabile</em> brukerdokumentasjon"
 
 #: docs.phtml:62 docs.phtml:196
 msgid "Stable"
-msgstr ""
+msgstr "Stabil"
 
 #: docs.phtml:64 docs.phtml:198 docs.phtml:330 docs.phtml:491 docs.phtml:608
 #: docs.phtml:634 docs.phtml:656 docs.phtml:674
 msgid "Help Manual"
-msgstr ""
+msgstr "Brukerhåndboken"
 
 #: docs.phtml:68 docs.phtml:118 docs.phtml:202 docs.phtml:252 docs.phtml:334
 #: docs.phtml:384 docs.phtml:492 docs.phtml:543 docs.phtml:609 docs.phtml:620
 #: docs.phtml:635 docs.phtml:646 docs.phtml:657 docs.phtml:666 docs.phtml:675
 #: docs.phtml:686 docs.phtml:694
 msgid "English"
-msgstr ""
+msgstr "Engelsk"
 
 #: docs.phtml:79 docs.phtml:129 docs.phtml:213 docs.phtml:263 docs.phtml:345
 #: docs.phtml:395 docs.phtml:504 docs.phtml:554 docs.phtml:611 docs.phtml:622
 #: docs.phtml:637 docs.phtml:659 docs.phtml:679 docs.phtml:695
 msgid "German"
-msgstr ""
+msgstr "Tysk"
 
 #: docs.phtml:90 docs.phtml:140 docs.phtml:224 docs.phtml:274 docs.phtml:356
 #: docs.phtml:406 docs.phtml:516 docs.phtml:566 docs.phtml:613 docs.phtml:624
 #: docs.phtml:639 docs.phtml:648
 msgid "Italian"
-msgstr ""
+msgstr "Italiensk"
 
 #: docs.phtml:101 docs.phtml:162 docs.phtml:235 docs.phtml:296 docs.phtml:367
 #: docs.phtml:428 docs.phtml:528 docs.phtml:590
 msgid "Portuguese"
-msgstr ""
+msgstr "Portugisisk"
 
 #: docs.phtml:114 docs.phtml:248 docs.phtml:380 docs.phtml:542 docs.phtml:619
 #: docs.phtml:645 docs.phtml:665 docs.phtml:685
 msgid "Concepts Guide"
-msgstr ""
+msgstr "Konseptguide"
 
 #: docs.phtml:151 docs.phtml:285 docs.phtml:417 docs.phtml:578 docs.phtml:626
 msgid "Japanese"
@@ -688,14 +861,18 @@ msgid ""
 "span> documentation. <em>Stable</em> means that this documentation is not "
 "necessarily the most up to date but it works without any problem."
 msgstr ""
+"Dette er den seneste stabile utgivelsen av <span class=\"gnucash\""
+">GnuCash</span>-dokumentasjonen. <em>Stabil</em> betyr at denne "
+"dokumentasjonen ikke nødvendigvis er den mest oppdaterte, men den fungerer "
+"uten problemer."
 
 #: docs.phtml:191
 msgid "(old stable release)"
-msgstr ""
+msgstr "(gammel stabil utgivelse)"
 
 #: docs.phtml:193
 msgid "Old <em>stable</em> user documentation"
-msgstr ""
+msgstr "Gammel <em>stabil</em> brukerdokumentasjon"
 
 #: docs.phtml:317
 #, php-format
@@ -704,23 +881,26 @@ msgid ""
 "documentation, corresponding to the %s release of <span class=\"gnucash"
 "\">GnuCash</span> itself."
 msgstr ""
+"Dette er den gamle stabile utgivelsen av <span class=\"gnucash\""
+">GnuCash</span>-dokumentasjonen, som tilsvarer %s-utgivelsen av selve <span "
+"class=\"gnucash\">GnuCash</span>."
 
 #: docs.phtml:323
 msgid "Nightly Documentation Builds"
-msgstr ""
+msgstr "Nattlig dokumentasjonsbygg"
 
 #: docs.phtml:325
 msgid ""
 "Current <em>unstable</em> user documentation and developer documentation"
-msgstr ""
+msgstr "Gjeldende <em>ustabil</em> brukerdokumentasjon og utviklerdokumentasjon"
 
 #: docs.phtml:328
 msgid "Unstable"
-msgstr ""
+msgstr "Ustabil"
 
 #: docs.phtml:441
 msgid "API"
-msgstr ""
+msgstr "API"
 
 #: docs.phtml:446 externals/menu.phtml:47
 msgid "current bugfix branch"
@@ -738,6 +918,11 @@ msgid ""
 "Documentation</b> for the current <em>stable</em> version of <span class="
 "\"gnucash\">GnuCash</span>."
 msgstr ""
+"Hver natt bygger en server dokumentasjonen fra det gjeldende innholdet i "
+"<span class=\"gnucash\">GnuCash</span>-kildelageret. Dette inkluderer "
+"<b>utviklerdokumentasjonen</b> fra <b>Doxygen</b> og "
+"<b>brukerdokumentasjonen</b> for den gjeldende <em>stabile</em> versjonen av "
+"<span class=\"gnucash \">GnuCash</span>."
 
 #: docs.phtml:467
 msgid ""
@@ -745,10 +930,13 @@ msgid ""
 "because developers might be working on improvements. However they are the "
 "most up to date reference for <span class=\"gnucash\">GnuCash</span> users."
 msgstr ""
+"<b>MERK:</b> Disse dokumentene er kanskje ikke tilgjengelige fra tid til "
+"annen fordi utviklere kan jobbe med forbedringer. Imidlertid er de den mest "
+"oppdaterte referansen for <span class=\"gnucash\">GnuCash</span>-brukere."
 
 #: docs.phtml:484
 msgid "Older GnuCash Documentation"
-msgstr ""
+msgstr "Eldre GnuCash-dokumentasjon"
 
 #: docs.phtml:486
 msgid ""
@@ -757,22 +945,26 @@ msgid ""
 "\"gnucash\">GnuCash</span>, it is highly recommended that you upgrade to the "
 "latest stable version."
 msgstr ""
+"Denne delen inneholder all den eldre <span class=\"gnucash\">GnuCash</span>-"
+"dokumentasjonen. Hvis du bruker en av disse gamle versjonene av <span class="
+"\"gnucash\">GnuCash</span>, anbefales det sterkt at du oppgraderer til den "
+"siste stabile versjonen."
 
 #: docs.phtml:696
 msgid "Spanish"
-msgstr ""
+msgstr "Spansk"
 
 #: docs.phtml:697
 msgid "Portugese"
-msgstr ""
+msgstr "Portugisisk"
 
 #: docs.phtml:703
 msgid "Unofficial documentation"
-msgstr ""
+msgstr "Uoffisiell dokumentasjon"
 
 #: docs.phtml:705
 msgid "Some people have written and published their own documentation."
-msgstr ""
+msgstr "Noen har skrevet og publisert sin egen dokumentasjon."
 
 #. Translators: %s is a wiki link
 #: docs.phtml:708
@@ -781,6 +973,8 @@ msgid ""
 "When this collection grew and became polyglot, it moved to %s. There you can "
 "also add more links."
 msgstr ""
+"Da denne samlingen vokste og ble polyglot, flyttet den til %s. Der kan du "
+"også legge til flere lenker."
 
 #: docs.phtml:710
 msgid "wiki:Documentation"
@@ -798,18 +992,23 @@ msgid ""
 "donation. We are only a handfull of developers and other volunteers serving "
 "countless users worldwide."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> er fri programvare og gjøres "
+"tilgjengelig gratis. Din donasjon, som er helt valgfri, støtter vårt "
+"verdensomspennende fellesskap. Hvis du liker programvaren, bør du vurdere en "
+"donasjon. Vi er bare en håndfull utviklere og andre frivillige som betjener "
+"utallige brukere over hele verden."
 
 #: donate.phtml:19
 msgid "Various ways to donate"
-msgstr ""
+msgstr "Ulike måter å donere på"
 
 #: donate.phtml:23
 msgid "You can donate via the Sourceforge tip jar"
-msgstr ""
+msgstr "Du kan donere via Sourceforge tipskrukken"
 
 #: donate.phtml:28
 msgid "Sourceforge tip jar"
-msgstr ""
+msgstr "Sourceforge tipskrukke"
 
 #: donate.phtml:30
 msgid ""
@@ -817,10 +1016,13 @@ msgid ""
 "Consulting, owned by Derek Atkins. So don't be surprised when your payment "
 "goes there."
 msgstr ""
+"Tipskrukken kjøres gjennom Paypal til en konto administrert av IHTFP "
+"Consulting, eid av Derek Atkins. Så ikke bli overrasket når betalingen din "
+"går der."
 
 #: donate.phtml:33
 msgid "You can transfer a donation to our bank account"
-msgstr ""
+msgstr "Du kan overføre en donasjon til vår bankkonto"
 
 #: donate.phtml:34
 msgid "Owner:"
@@ -828,7 +1030,7 @@ msgstr "Eier:"
 
 #: donate.phtml:35
 msgid "Purpose: Donation"
-msgstr ""
+msgstr "Formål: Donasjon"
 
 #: donate.phtml:36
 msgid "Account:"
@@ -836,7 +1038,7 @@ msgstr "Konto:"
 
 #: donate.phtml:37
 msgid "Bank Identifier Code (BIC):"
-msgstr ""
+msgstr "Bank Identifier Code (BIC):"
 
 #: donate.phtml:37
 msgid "Bank:"
@@ -852,21 +1054,23 @@ msgstr "Bankadresse:"
 
 #: donate.phtml:45
 msgid "Why we appreciate your support"
-msgstr ""
+msgstr "Hvorfor vi setter pris på din støtte"
 
 #: donate.phtml:48
 msgid ""
 "GnuCash is a volunteer effort. While we manage to keep our operational costs "
 "low there are inevitably expenses involved in keeping the servers running."
 msgstr ""
+"GnuCash er en frivillig innsats. Selv om vi klarer å holde driftskostnadene "
+"lave, er det uunngåelig utgifter forbundet med å holde serverne i gang."
 
 #: donate.phtml:49
 msgid "Your contribution will be used to cover these expenses."
-msgstr ""
+msgstr "Ditt bidrag vil bli brukt til å dekke disse utgiftene."
 
 #: donate.phtml:50
 msgid "Thank you for your support!"
-msgstr ""
+msgstr "Takk for støtten!"
 
 #: download.phtml:5
 msgid ""
@@ -874,6 +1078,9 @@ msgid ""
 "program inclusive documentation or the source files here. Several versions "
 "are available for recent and older operating systems."
 msgstr ""
+"Last ned kjørbare pakker av <span class=\"gnucash\">GnuCash</span>-"
+"dokumentasjonen eller kildefilene her. Flere versjoner er tilgjengelige for "
+"nyere og eldre operativsystemer."
 
 #: download.phtml:13
 msgid "Download GnuCash"
@@ -882,13 +1089,15 @@ msgstr "Last ned GnuCash"
 #: download.phtml:17
 #, php-format
 msgid "Stable release (%s)"
-msgstr ""
+msgstr "Stabil utgivelse (%s)"
 
 #: download.phtml:19
 msgid ""
 "A stable release is a version of <span class=\"gnucash\">GnuCash</span> that "
 "is well tested and considered appropriate for every day use."
 msgstr ""
+"En stabil utgivelse er en versjon av <span class=\"gnucash\">GnuCash</span> "
+"som er godt testet og anses som passende for daglig bruk."
 
 #: download.phtml:20
 #, php-format
@@ -896,10 +1105,12 @@ msgid ""
 "The latest stable release of <span class=\"gnucash\">GnuCash</span> is %s. "
 "Choose the download for your operating system below."
 msgstr ""
+"Den siste stabile utgivelsen av <span class=\"gnucash\">GnuCash</span> er "
+"%s. Velg nedlastingen for ditt operativsystem nedenfor."
 
 #: download.phtml:22
 msgid "Installers"
-msgstr ""
+msgstr "Installasjonsfiler"
 
 #: download.phtml:24 download.phtml:25 download.phtml:71 download.phtml:72
 #: download.phtml:87 download.phtml:88 download.phtml:101 download.phtml:107
@@ -914,18 +1125,25 @@ msgid ""
 "not have been installed by default. Still it is recommended to use the <span "
 "class=\"gnucash\">GnuCash</span> version that comes with your distribution."
 msgstr ""
+"De fleste Linux-distribusjoner leveres sammen med en versjon av <span class="
+"\"gnucash\">GnuCash</span>, selv om det ikke alltid er den nyeste versjonen, "
+"og den er kanskje ikke installert som standard. Det anbefales likevel å "
+"bruke <span class=\"gnucash\">GnuCash</span>-versjonen som følger med "
+"distribusjonen din."
 
 #. Translators: %s is the link to repology.org
 #: download.phtml:31
 #, php-format
 msgid "At %s you can compare which distribution which version ships."
-msgstr ""
+msgstr "På %s kan du sammenligne hvilken distribusjon leverer hvilken versjon."
 
 #: download.phtml:33
 msgid ""
 "Below are ways to install <span class=\"gnucash\">GnuCash</span> on some of "
 "the more popular distributions:"
 msgstr ""
+"Nedenfor er måter å installere <span class=\"gnucash\">GnuCash</span> på "
+"noen av de mer populære distribusjonene:"
 
 #: download.phtml:36
 msgid ""
@@ -933,16 +1151,21 @@ msgid ""
 "System->Administration->Add/Remove Software (Gnome) or Applications->System-"
 ">Software Management (KDE)."
 msgstr ""
+"Fedora-brukere kan installere <span class=\"gnucash\">GnuCash</span> gjennom "
+"System->Administrasjon->Legg til/fjern programvare (Gnome) eller "
+"Programvare->System->Programvare Administrasjon (KDE)."
 
 #: download.phtml:37
 msgid ""
 "Mandriva users can install <span class=\"gnucash\">GnuCash</span> through "
 "the Software Management in the Mandriva Linux Control Center."
 msgstr ""
+"Mandriva-brukere kan installere <span class=\"gnucash\">GnuCash</span> "
+"gjennom programvareadministrasjonen i Mandriva Linux kontrollsenter."
 
 #: download.phtml:38
 msgid "Epel's wiki page"
-msgstr ""
+msgstr "Epel sin wiki-side"
 
 #: download.phtml:38
 msgid ""
@@ -951,12 +1174,18 @@ msgid ""
 "Epel repository. For more details on configuring this additional software "
 "repository for your setup, see"
 msgstr ""
+"Redhat og CentOS har ikke <span class=\"gnucash\">GnuCash</span> i depotene "
+"sine som standard. Det kan imidlertid installeres fra tredjeparts Epel-"
+"repository. For mer informasjon om konfigurering av dette ekstra "
+"programvarelageret for oppsettet ditt, se"
 
 #: download.phtml:39
 msgid ""
 "Solus users can install <span class=\"gnucash\">GnuCash</span> through the "
 "Software Center (Office Software -> Financial Software -> gnucash)."
 msgstr ""
+"Solus-brukere kan installere <span class=\"gnucash\">GnuCash</span> gjennom "
+"programvaresenteret (Office Software -> Financial Software -> gnucash)."
 
 #: download.phtml:40
 msgid ""
@@ -964,10 +1193,13 @@ msgid ""
 "Software Center. This will install <span class=\"gnucash\">GnuCash</span> "
 "under the Office category in the Applications menu."
 msgstr ""
+"Ubuntu-brukere kan installere <span class=\"gnucash\">GnuCash</span> gjennom "
+"programvaresenteret. Dette vil installere <span class=\"gnucash\">GnuCash</"
+"span> under Office-kategorien i applikasjonsmenyen."
 
 #: download.phtml:43
 msgid "Sandbox"
-msgstr ""
+msgstr "Sandboks"
 
 #: download.phtml:46
 #, php-format
@@ -978,21 +1210,27 @@ msgid ""
 "Linux machines. If you have <a href=\"%s\">Flatpak</a> installed, you can "
 "download any recent version of <span class=\"gnucash\">GnuCash</span> from"
 msgstr ""
+"Et alternativ til å bruke distribusjonens programvarebehandler er å bruke "
+"Flatpak-administrasjonssystemet, som samler alle nødvendige biblioteker for "
+"deg. Dette kan lette installasjonen av nyere versjoner av GnuCash på eldre "
+"Linux-maskiner. Hvis du har <a href=\"%s\">Flatpak</a> installert, kan du "
+"laste ned en hvilken som helst nyere versjon av <span class=\"gnucash\""
+">GnuCash</span> fra"
 
 #. Translators: %s is the base url of the gnucash wiki, adjust this,
 #. if a localized instance of the Flatpak page exists like "%sDe/Flatpak"
 #: download.phtml:51
 #, php-format
 msgid "%sFlatpak"
-msgstr ""
+msgstr "%sFlatpak"
 
 #: download.phtml:51
 msgid "Known Issues and other details"
-msgstr ""
+msgstr "Kjente problemer og andre detaljer"
 
 #: download.phtml:55 index.phtml:17
 msgid "Source code"
-msgstr ""
+msgstr "Kildekode"
 
 #: download.phtml:56
 msgid ""
@@ -1001,16 +1239,21 @@ msgid ""
 "can build <span class=\"gnucash\">GnuCash</span> from source code as "
 "described in <a href='https://wiki.gnucash.org/wiki/Building'>the wiki</a>."
 msgstr ""
+"Hvis du ikke enkelt kan installere <span class=\"gnucash\">GnuCash</span> i "
+"distribusjonen din, eller ønsker å installere en annen versjon enn den "
+"leveres med, kan du bygge <span class=\"gnucash\">GnuCash</span> fra "
+"kildekoden som beskrevet i <a href='https://wiki.gnucash.org/wiki/"
+"Building'>wikien</a>."
 
 #: download.phtml:58 download.phtml:73 download.phtml:89
 #, php-format
 msgid "for GnuCash %s"
-msgstr ""
+msgstr "for GnuCash %s"
 
 #: download.phtml:65
 #, php-format
 msgid "Unstable/Development release (%s)"
-msgstr ""
+msgstr "Ustabil/Utviklerutgivelse (%s)"
 
 #: download.phtml:67
 msgid ""
@@ -1018,49 +1261,49 @@ msgid ""
 "the newest features and improvements, but possibly also bugs. Don't install "
 "these releases for everyday use."
 msgstr ""
+"Ustabile (utviklings) utgivelser er kun for testformål. De inneholder de "
+"nyeste funksjonene og forbedringene, men muligens også feil. Ikke installer "
+"disse utgivelsene for daglig bruk."
 
 #: download.phtml:68
-#, fuzzy, php-format
-#| msgid ""
-#| "The new button to open a <span class=\"gnucash\">GnuCash</span> datafile "
-#| "in read-only mode."
+#, php-format
 msgid ""
 "The latest unstable release of <span class=\"gnucash\">GnuCash</span> "
 "(available below) is %s."
 msgstr ""
-"Den nye knappen for skrivebeskyttet åpning av en <span class=\"gnucash"
-"\">GnuCash</span>-datafil."
+"Den siste ustabile utgivelsen av <span class=\"gnucash\">GnuCash</span> ("
+"tilgjengelig nedenfor) er %s."
 
 #: download.phtml:81
 #, php-format
 msgid "Old Stable release (%s)"
-msgstr ""
+msgstr "Gammel stabil utgivelse (%s)"
 
 #: download.phtml:83
 msgid ""
 "This old stable release is the final version of all bugfixes from the "
 "previous stable series without being a major upgrade."
 msgstr ""
+"Denne gamle stabile utgivelsen er den endelige versjonen av alle "
+"feilrettinger fra den forrige stabile serien uten å være en stor "
+"oppgradering."
 
 #: download.phtml:84
-#, fuzzy, php-format
-#| msgid ""
-#| "The new button to open a <span class=\"gnucash\">GnuCash</span> datafile "
-#| "in read-only mode."
+#, php-format
 msgid ""
 "The last old stable release of <span class=\"gnucash\">GnuCash</span> "
 "(available below) is %s."
 msgstr ""
-"Den nye knappen for skrivebeskyttet åpning av en <span class=\"gnucash"
-"\">GnuCash</span>-datafil."
+"Den seneste gamle stabile utgivelsen av <span class=\"gnucash\">GnuCash</"
+"span> (tilgjengelig nedenfor) er %s."
 
 #: download.phtml:97
 msgid "Latest versions for historical operating systems"
-msgstr ""
+msgstr "Siste versjoner for historiske operativsystemer"
 
 #: download.phtml:99
 msgid "These versions are really old. No support is offered."
-msgstr ""
+msgstr "Disse versjonene er veldig gamle. Ingen støtte tilbys."
 
 #: download.phtml:112
 msgid "Other"
@@ -1069,16 +1312,16 @@ msgstr "Annet"
 #: download.phtml:116
 #, php-format
 msgid "View all GnuCash %s downloads (stable)"
-msgstr ""
+msgstr "Se alle GnuCash %s nedlastinger (stabil)"
 
 #: download.phtml:121
 #, php-format
 msgid "View all GnuCash %s downloads (unstable)"
-msgstr ""
+msgstr "Se alle GnuCash %s nedlastinger (ustabil)"
 
 #: download.phtml:124
 msgid "View all GnuCash downloads"
-msgstr ""
+msgstr "Se alle GnuCash-nedlastinger"
 
 #: externals/footer.phtml:12
 msgid "Server &amp; email outage reports to:"
@@ -1090,7 +1333,7 @@ msgstr "Oversettelsesproblemer? Kontakt:"
 
 #: externals/global_params.php:90 externals/header.phtml:144
 msgid "Free Accounting Software"
-msgstr "Fri regnskapsprogramvare"
+msgstr "Gratis regnskapsprogramvare"
 
 #: externals/global_params.php:91
 msgid ""
@@ -1099,9 +1342,10 @@ msgid ""
 "www.gnu.org/\">GNU</a> GPL and available for GNU/Linux, BSD, Solaris, Mac OS "
 "X and Microsoft Windows."
 msgstr ""
-"<span class=\"gnucash\">GnuCash</span> er regnskapsprogramvare for personlig "
-"og småbedriftsbruk, fritt lisensiert som <a href=\"https://www.gnu.org/"
-"\">GPLv2+</a> og tilgjengelig for Linux|GNU, BSD, Solaris, macOS, og Windows."
+"<span class=\"gnucash\">GnuCash</span> er programvare for finansregnskap for "
+"personlig og småbedrifter, fritt lisensiert under <a href=\"https://www.gnu."
+"org/\">GNU</a> GPL og tilgjengelig for GNU/Linux, BSD, Solaris, Mac OS X og "
+"Microsoft Windows."
 
 #: externals/header.phtml:3
 msgid "Subscribe to RSS feed"
@@ -1113,7 +1357,7 @@ msgstr "Støtt GnuCash-prosjektet med en donasjon"
 
 #: externals/header.phtml:5
 msgid "Request or vote enhancements for GnuCash"
-msgstr "Forespør eller stem på forbedringer i GnuCash"
+msgstr "Etterspør eller stem på forbedringer i GnuCash"
 
 #: externals/header.phtml:6
 msgid "GnuCash on facebook"
@@ -1125,7 +1369,7 @@ msgstr "Språk"
 
 #: externals/menu.phtml:6
 msgid "Information"
-msgstr "Info"
+msgstr "Informasjon"
 
 #: externals/menu.phtml:9
 msgid "Home"
@@ -1137,7 +1381,7 @@ msgstr "Nyheter"
 
 #: externals/menu.phtml:11
 msgid "Screenshots, Features"
-msgstr "Skjermavbildninger, funksjoner"
+msgstr "Skjermbilder, funksjoner"
 
 #: externals/menu.phtml:12
 msgid "Installation"
@@ -1161,7 +1405,7 @@ msgstr "Støtte"
 
 #: externals/menu.phtml:31
 msgid "FAQ"
-msgstr "O-S-S"
+msgstr "FAQ"
 
 #: externals/menu.phtml:32
 msgid "Wiki"
@@ -1177,7 +1421,7 @@ msgstr "Feilrapporter"
 
 #: externals/menu.phtml:35
 msgid "IRC (Chat)"
-msgstr "IRC (sludring)"
+msgstr "IRC (chat)"
 
 #: externals/menu.phtml:41
 msgid "Development"
@@ -1244,7 +1488,7 @@ msgstr ""
 
 #: features.phtml:3 new_features-4.0.phtml:3
 msgid "Features"
-msgstr ""
+msgstr "Funksjoner"
 
 #: features.phtml:4
 msgid ""
@@ -1252,26 +1496,29 @@ msgid ""
 "Below are details of some of the numerous features that <span class=\"gnucash"
 "\">GnuCash</span> has to offer to its users."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> er kraftig regnskapsprogramvare. "
+"Nedenfor er detaljer om noen av de mange funksjonene som <span class="
+"\"gnucash\">GnuCash</span> har å tilby sine brukere."
 
 #: features.phtml:16 features.phtml:23
 msgid "Main features"
-msgstr ""
+msgstr "Hovedfunksjoner"
 
 #: features.phtml:17 features.phtml:124
 msgid "Advanced features"
-msgstr ""
+msgstr "Avanserte funksjoner"
 
 #: features.phtml:18
 msgid "Data storing and exchange features"
-msgstr ""
+msgstr "Datalagring og utvekslingsfunksjoner"
 
 #: features.phtml:19 features.phtml:201
 msgid "Other goodies"
-msgstr ""
+msgstr "Andre godsaker"
 
 #: features.phtml:27
 msgid "Double Entry"
-msgstr ""
+msgstr "Dobbel bokføring"
 
 #. Translators: This is an image name. Do not translate it!
 #. Instead you can submit a translated image, like https://github.com/Gnucash/gnucash-htdocs/tree/master/images/features
@@ -1281,7 +1528,7 @@ msgstr ""
 #. See also https://wiki.gnucash.org/wiki/Documentation_Update_Instructions
 #: features.phtml:37
 msgid "basics_AccountRelationships.C.png"
-msgstr ""
+msgstr "basics_AccountRelationships.nb.png"
 
 #: features.phtml:41
 msgid ""
@@ -1289,10 +1536,13 @@ msgid ""
 "amount. This ensures the books balance: the difference between income and "
 "expenses exactly equals the sum of assets and liabilities."
 msgstr ""
+"Hver transaksjon må debitere én konto og kreditere andre med et likt beløp. "
+"Dette sikrer balansen i regnskapet: forskjellen mellom inntekter og utgifter "
+"er nøyaktig lik summen av eiendeler og gjeld."
 
 #: features.phtml:47
 msgid "Checkbook-Style Register"
-msgstr ""
+msgstr "Brukskonto register"
 
 #: features.phtml:53
 msgid ""
@@ -1300,6 +1550,9 @@ msgid ""
 "a custom, convenient and familiar interface to entering financial "
 "transactions."
 msgstr ""
+"Registeret i <span class=\"gnucash\">GnuCash</span> brukskonto gir et "
+"tilpasset, praktisk og kjent grensesnitt for å legge inn økonomiske "
+"transaksjoner."
 
 #: features.phtml:55
 msgid ""
@@ -1307,34 +1560,40 @@ msgid ""
 "as income, stock and currency transactions. The following features are also "
 "provided:"
 msgstr ""
+"Registeret støtter vanlige brukskonto- og kredittkorttransaksjoner, samt "
+"inntekts-, aksje- og valutatransaksjoner. Følgende funksjoner er også "
+"tilgjengelig:"
 
 #: features.phtml:58
 msgid "The ability to enter <b>split transactions</b>"
-msgstr ""
+msgstr "Muligheten til å legge inn <b>delte transaksjoner</b>"
 
 #: features.phtml:59
 msgid ""
 "The ability to mark a transaction as <b>cleared</b> or <b>reconciled</b>"
 msgstr ""
+"Muligheten til å merke en transaksjon som <b>ryddet</b> eller <b>avstemt</b>"
 
 #: features.phtml:60
 msgid "<b>Autofill</b> of entered transactions"
-msgstr ""
+msgstr "<b>Autofyll</b> av angitte transaksjoner"
 
 #: features.phtml:61
 msgid ""
 "The ability to display <b>multiple accounts</b> in a single register window"
-msgstr ""
+msgstr "Muligheten til å vise <b>flere kontoer</b> i et enkelt registervindu"
 
 #: features.phtml:62
 msgid ""
 "A <b>summary bar</b> that displays all of the relevant account's balance "
 "information"
 msgstr ""
+"En <b>sammendragslinje</b> som viser all den relevante kontoens "
+"saldoinformasjon"
 
 #: features.phtml:63
 msgid "Many options to <b>customize</b> the appearance and the display style"
-msgstr ""
+msgstr "Mange alternativer for å <b>tilpasse</b> utseendet og visningsstilen"
 
 #: features.phtml:69 index.phtml:76
 msgid "Scheduled Transactions"
@@ -1346,6 +1605,9 @@ msgid ""
 "amounts and timeline. You can also set an automatic reminder when a "
 "transaction is due."
 msgstr ""
+"Du kan opprette gjentakende transaksjoner med høy grad av tilpasning av "
+"beløp og tidslinje. Du kan også angi en automatisk påminnelse når en "
+"transaksjon forfaller."
 
 #: features.phtml:76
 msgid ""
@@ -1353,34 +1615,41 @@ msgid ""
 "started allows scheduled transactions to be postponed without canceling or "
 "entering them before the due date."
 msgstr ""
+"En assistent som kjører når <span class=\"gnucash\">GnuCash</span> startes, "
+"lar planlagte transaksjoner utsettes uten å kansellere eller legge dem inn "
+"før forfallsdatoen."
 
 #: features.phtml:82 index.phtml:74
 msgid "Reports, Graphs"
-msgstr ""
+msgstr "Rapporter, Grafer"
 
 #: features.phtml:86
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> has an integrated module to display "
 "graphs of your financial data in the form of:"
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> har en integrert modul for å vise "
+"grafer over dine økonomiske data i form av:"
 
 #: features.phtml:89
 msgid "Barcharts"
-msgstr ""
+msgstr "Søylediagrammer"
 
 #: features.phtml:90
 msgid "Piecharts"
-msgstr ""
+msgstr "Kakediagrammer"
 
 #: features.phtml:91
 msgid "Scatter plots"
-msgstr ""
+msgstr "Spredningsplott"
 
 #: features.phtml:93
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> also comes complete with a full suite "
 "of standard and customizeable reports, such as:"
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> leveres også komplett med en komplett "
+"pakke med standardrapporter som kan tilpasses, for eksempel:"
 
 #: features.phtml:95
 msgid "Balance Sheet"
@@ -1388,25 +1657,27 @@ msgstr "Balanse"
 
 #: features.phtml:96
 msgid "Profit &amp; Loss"
-msgstr ""
+msgstr "Fortjeneste &amp; Tap"
 
 #: features.phtml:97
 msgid "Portfolio Valuation"
-msgstr ""
+msgstr "Porteføljevurdering"
 
 #: features.phtml:98
 msgid "and many others."
-msgstr ""
+msgstr "og mange andre."
 
 #: features.phtml:101
 msgid ""
 "Graphs and reports can be highly and easily customized in appearance and "
 "contents, in order to fullfill every user's need."
 msgstr ""
+"Grafer og rapporter kan enkelt tilpasses i utseende og innhold, for å "
+"oppfylle enhver brukers behov."
 
 #: features.phtml:107
 msgid "Statement Reconciliation"
-msgstr ""
+msgstr "Oppgaveavstemming"
 
 #: features.phtml:112
 msgid ""
@@ -1415,6 +1686,10 @@ msgid ""
 "useful to spot untracked transactions or data entry errors and ensure that "
 "your books match the bank's."
 msgstr ""
+"<b>Kontoavstemming</b> lar brukeren sammenligne transaksjonene som er lagt "
+"inn på en konto med en kontoutskrift. Denne operasjonen er veldig nyttig for "
+"å oppdage usporede transaksjoner eller datainntastingsfeil og sikre at "
+"bøkene dine samsvarer med bankens."
 
 #: features.phtml:113
 msgid ""
@@ -1422,10 +1697,13 @@ msgid ""
 "reconciled and cleared balances makes reconciling against bank statements an "
 "easy task."
 msgstr ""
+"Avstemmingsverktøyet i <span class=\"gnucash\">GnuCash</span> med oppdaterte "
+"avstemte og klarerte saldoer gjør avstemming mot kontoutskrifter til en "
+"enkel oppgave."
 
 #: features.phtml:118
 msgid "Income/Expense Account Types"
-msgstr ""
+msgstr "Inntekts-/utgiftskontotyper"
 
 #: features.phtml:120
 msgid ""
@@ -1434,10 +1712,14 @@ msgid ""
 "these enable you to generate reports, such as Profit &amp; Loss, that plain-"
 "vanilla systems cannot handle."
 msgstr ""
+"Inntekts-/utgiftskontotyper (kategorier) lar deg kategorisere "
+"kontantstrømmen din. Når de brukes på riktig måte med funksjonen med dobbel "
+"oppføring og egenkapitalkontoer, lar disse deg generere rapporter, for "
+"eksempel Fortjeneste&amp; Tap, som vanlige systemer ikke kan håndtere."
 
 #: features.phtml:128
 msgid "Small Business Accounting Features"
-msgstr ""
+msgstr "Regnskapsfunksjoner for små bedrifter"
 
 #: features.phtml:131
 msgid ""
@@ -1445,56 +1727,70 @@ msgid ""
 "tracking, <b>Jobs</b>, <b>Invoicing</b> and <b>Bill</b> Payment, and <b>Tax</"
 "b> and <b>Billing Terms</b>."
 msgstr ""
+"Forenkle administrasjonen av en liten bedrift med <b>Kunde</b> og "
+"<b>Leverandør</b>-Sporing, <b>Jobber</b>, <b>Fakturering</b> og <b>Regning</"
+"b> Betaling og <b>Skatt</b> og <b>Faktureringsvilkår</b>."
 
 #: features.phtml:134
 msgid ""
 "Using A/Receivable and A/Payable accounts you can even manage <b>payrolls</"
 "b> for your employees."
 msgstr ""
+"Ved å bruke a kontoer kan du til og med administrere <b>lønnslister</b> for "
+"dine ansatte."
 
 #: features.phtml:137
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> gives you also a tool to manage your "
 "business' <b>budget</b> so that you can easily plan your financial strategy."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> gir deg også et verktøy for å "
+"administrere virksomhetens <b>budsjett</b> slik at du enkelt kan planlegge "
+"din økonomiske strategi."
 
 #: features.phtml:143
 msgid "Multiple Currencies"
-msgstr ""
+msgstr "Flere valutaer"
 
 #: features.phtml:147
 msgid ""
 "Different accounts can be denominated in different currencies. Currency "
 "movements between accounts are fully balanced when double-entry is enabled."
 msgstr ""
+"Ulike kontoer kan være denominert i forskjellige valutaer. Valutabevegelser "
+"mellom kontoer er fullstendig balansert når dobbeltregistrering er aktivert."
 
 #: features.phtml:153
 msgid "Stock/Mutual Fund Portfolios"
-msgstr ""
+msgstr "Aksje-/aksjefondsporteføljer"
 
 #: features.phtml:156
 msgid ""
 "Track stocks individually (one per account) or in portfolio of accounts (a "
 "group of accounts that can be displayed together)."
 msgstr ""
+"Spor aksjer individuelt (en per konto) eller i portefølje av kontoer (en "
+"gruppe kontoer som kan vises sammen)."
 
 #: features.phtml:161
 msgid "Online Stock &amp; Mutual Fund Quotes"
-msgstr ""
+msgstr "Online Aksje &amp; Aksjefond sitater"
 
 #: features.phtml:164
 msgid ""
 "Get Stock &amp; Mutual Fund quotes from various web sites, update portfolio "
 "automatically. Additional pricing sources are added regularly."
 msgstr ""
+"Få Aksjer &amp; Aksjefond sitater fra ulike nettsteder, oppdaterer "
+"porteføljen automatisk. Ytterligere priskilder legges til regelmessig."
 
 #: features.phtml:167
 msgid "Data storage and exchange features"
-msgstr ""
+msgstr "Datalagring og utvekslingsfunksjoner"
 
 #: features.phtml:171
 msgid "Experimental database support"
-msgstr ""
+msgstr "Eksperimentell databasestøtte"
 
 #: features.phtml:173
 msgid ""
@@ -1503,6 +1799,10 @@ msgid ""
 "financial data can be stored in a <b>SQL database</b> using <b>SQLite3</b>, "
 "<b>MySQL</b> or <b>PostgreSQL</b>."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> lagrer som standard data i et "
+"<b>xml</b>-format. Fra og med versjon 2.4 kan <span class=\"gnucash\""
+">GnuCash</span> finansielle data lagres i en <b>SQL-database</b> ved hjelp "
+"av <b>SQLite3</b>, <b>MySQL</b> eller <b>PostgreSQL</b>."
 
 #: features.phtml:174
 msgid ""
@@ -1512,10 +1812,16 @@ msgid ""
 "as it gets reported. There is however no full test coverage so there may "
 "still be scenarios left that result in data loss."
 msgstr ""
+"Merk at denne funksjonen anses som eksperimentell. Det fungerer for de "
+"fleste vanlige brukstilfellene, men noen hjørnetilfeller har blitt "
+"rapportert å resultere i tap av data. <span class=\"gnucash\">GnuCash</span>-"
+"utviklerne fikser hvert problem etter hvert som det blir rapportert. Det er "
+"imidlertid ingen full testdekning, så det kan fortsatt være scenarier igjen "
+"som resulterer i tap av data."
 
 #: features.phtml:179
 msgid "QIF and OFX Import"
-msgstr ""
+msgstr "QIF og OFX import"
 
 #: features.phtml:182
 msgid ""
@@ -1523,6 +1829,9 @@ msgid ""
 "\">GnuCash</span>  can import Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> "
 "<b>QIF</b> files using a practical assistant."
 msgstr ""
+"Hvis du migrerer fra annen finansiell programvare, kan <span class=\"gnucash"
+"\">GnuCash</span> importere Intuit<sup>&reg;</sup> Quicken<sup>&reg;</sup> "
+"<b>QIF</b> filer ved hjelp av en praktisk assistent."
 
 #: features.phtml:185
 msgid ""
@@ -1530,16 +1839,21 @@ msgid ""
 "application to support the <b>OFX</b> (Open Financial Exchange) protocol "
 "that many banks and financial services are starting to use."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> er også den første gratis "
+"programvareapplikasjonen som støtter <b>OFX</b> (Open Financial Exchange)-"
+"protokollen som mange banker og finansielle tjenester begynner å bruke."
 
 #: features.phtml:188
 msgid ""
 "A transaction matching system ensures that duplicate transactions are "
 "accurately recognized and automatically deleted during file import."
 msgstr ""
+"Et transaksjonssamsvarssystem sikrer at dupliserte transaksjoner gjenkjennes "
+"nøyaktig og automatisk slettes under filimport."
 
 #: features.phtml:194
 msgid "HBCI Support"
-msgstr ""
+msgstr "HBCI-støtte"
 
 #: features.phtml:197
 msgid ""
@@ -1548,20 +1862,26 @@ msgid ""
 "protocol, allowing German users to perform statement download and initiate "
 "bank transfers and direct debits."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> er den første gratis "
+"programvareapplikasjonen som støtter den tyske protokollen for <b>Home "
+"Banking Computer Information</b>, som lar tyske brukere laste ned "
+"kontoutskrifter og starte bankoverføringer og direkte belastninger ."
 
 #: features.phtml:205
 msgid "Multiplatform"
-msgstr ""
+msgstr "Multiplattform"
 
 #: features.phtml:208
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> runs on many different operating "
 "systems including <b>Windows</b>, <b>MacOSX</b> and <b>Linux</b>."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> kjører på mange forskjellige "
+"operativsystemer, inkludert <b>Windows</b>, <b>MacOSX</b> og <b>Linux</b>."
 
 #: features.phtml:213
 msgid "Localization"
-msgstr ""
+msgstr "Lokalisering"
 
 #: features.phtml:216
 #, php-format
@@ -1573,39 +1893,50 @@ msgid ""
 "Ukrainian, and British English. Documentation is available in English, "
 "French, Portuguese and Spanish."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> håndterer internasjonaliserte datoer "
+"og valutaer. Programmets menyer og popup-vinduer er oversatt til %u språk, "
+"inkludert kinesisk, dansk, fransk, tysk, ungarsk, italiensk, japansk, norsk, "
+"polsk, portugisisk, russisk, spansk, svensk, tyrkisk, ukrainsk og britisk "
+"engelsk. Dokumentasjonen er tilgjengelig på engelsk, fransk, portugisisk og "
+"spansk."
 
 #: features.phtml:221
 msgid "Transaction Finder"
-msgstr ""
+msgstr "Transaksjonsfinner"
 
 #: features.phtml:224
 msgid ""
 "A powerful transaction query dialogue can help you quickly locate a needle "
 "in a haystack."
 msgstr ""
+"En kraftig transaksjonsspørringsdialog kan hjelpe deg raskt å finne en nål i "
+"en høystakk."
 
 #: features.phtml:229
 msgid "Check Printing"
-msgstr ""
+msgstr "Sjekk utskrift"
 
 #: features.phtml:232
 msgid ""
 "Checks may be printed in standard formats on common check stocks. A "
 "customization GUI allows custom check layouts to be developed."
 msgstr ""
+"Sjekker kan skrives ut i standardformater på vanlige sjekkaksjer. Et "
+"tilpasningsgrensesnitt lar tilpassede sjekkoppsett utvikles."
 
 #: features.phtml:237
 msgid "Mortgage &amp; Loan Repayment Assistant"
-msgstr ""
+msgstr "Assistent for tilbakebetaling av boliglån &amp; andre lån"
 
 #: features.phtml:240
 msgid ""
 "A guided dialogue for setting up loan payments as scheduled transactions."
 msgstr ""
+"En guidet dialog for å sette opp lånebetalinger som planlagte transaksjoner."
 
 #: features.phtml:246
 msgid "User Manual and Help"
-msgstr ""
+msgstr "Brukerhåndbok og hjelp"
 
 #: features.phtml:249
 msgid ""
@@ -1616,6 +1947,12 @@ msgid ""
 "class=\"gnucash\">GnuCash</span> with many practical examples described step "
 "by step."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> er veldig godt dokumentert: sammen "
+"med applikasjonens <b>Brukerhåndbok</b> kan nye brukere dra full nytte av "
+"<b>Veilednings- og konseptguiden</b> . Dette dokumentet gir "
+"bakgrunnsinformasjon om regnskapsprinsipper og hvordan de gjenspeiles i "
+"<span class=\"gnucash\">GnuCash</span> med mange praktiske eksempler "
+"beskrevet trinn for trinn."
 
 #: index.phtml:10
 msgid "Welcome to GnuCash.org"
@@ -1628,16 +1965,16 @@ msgstr "Last ned GnuCash %s"
 
 #: index.phtml:18
 msgid "Via distribution"
-msgstr ""
+msgstr "Via distribusjon"
 
 #: index.phtml:25
 msgid "More downloads (Source code, Development …)"
-msgstr ""
+msgstr "Flere nedlastinger (kildekode, utvikling ...)"
 
 #: index.phtml:32
 #, php-format
 msgid "Version %s is the last version for %s and %s and earlier."
-msgstr ""
+msgstr "Versjon %s er siste versjon for %s og %s og tidligere."
 
 #: index.phtml:35
 #, php-format
@@ -1645,6 +1982,8 @@ msgid ""
 "Version %s is the last version for Windows XP/Vista and MacOS X 10.8 and "
 "earlier, and so the last version that will run on PowerPC Macs."
 msgstr ""
+"Versjon %s er siste versjon for Windows XP/Vista og MacOS X 10.8 og "
+"tidligere, og dermed den siste versjonen som vil fungere på PowerPC Macs."
 
 #: index.phtml:44
 msgid ""
@@ -1654,6 +1993,11 @@ msgid ""
 "on professional accounting principles to ensure balanced books and accurate "
 "reports."
 msgstr ""
+"Designet for å være enkel å bruke, men likevel kraftig og fleksibel, <span "
+"class=\"gnucash\">GnuCash</span> lar deg spore bankkontoer, aksjer, "
+"inntekter og utgifter. Like raskt og intuitivt å bruke som et "
+"sjekkhefteregister, er det basert på profesjonelle regnskapsprinsipper for å "
+"sikre balanserte bøker og nøyaktige rapporter."
 
 #. Translators: %s is the link to https://wiki.gnucash.org/wiki/Contributing_to_GnuCash
 #: index.phtml:46
@@ -1662,17 +2006,19 @@ msgid ""
 "GnuCash is developed, maintained, documented, and translated entirely by "
 "volunteers. Want to help out? We have %s."
 msgstr ""
+"GnuCash er utviklet, vedlikeholdt, dokumentert og oversatt utelukkende av "
+"frivillige. Vil du hjelpe til? Vi har %s."
 
 #. Translators: This is the label of the Contributing… wiki link
 #: index.phtml:48
 msgid "some suggestions"
-msgstr ""
+msgstr "noen forslag"
 
 #. Translators: %s is the link to weblate
 #: index.phtml:50
 #, php-format
 msgid "Please help translate GnuCash into your language at %s."
-msgstr ""
+msgstr "Vennligst hjelp med å oversette GnuCash til ditt språk på %s."
 
 #: index.phtml:55
 msgid "Need Help?"
@@ -1683,45 +2029,49 @@ msgid ""
 "Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? "
 "Try the"
 msgstr ""
+"På utkikk etter noen å kontakte angående <span class=\"gnucash\">GnuCash</"
+"span>? Prøv"
 
 #: index.phtml:60
 msgid ""
 ", which are public, email-based discussion groups where you can ask and "
 "answer <span class=\"gnucash\">GnuCash</span> questions to other users."
 msgstr ""
+", som er offentlige, e-post baserte diskusjonsgrupper hvor du spørre og "
+"svare på <span class=\"gnucash\">GnuCash</span> spørsmål til andre brukere."
 
 #: index.phtml:66
 msgid "Feature Highlights"
-msgstr ""
+msgstr "Funksjonshøydepunkter"
 
 #: index.phtml:71
 msgid "Double-Entry Accounting"
-msgstr ""
+msgstr "Dobbel bokføring"
 
 #: index.phtml:72
 msgid "Stock/Bond/Mutual Fund Accounts"
-msgstr ""
+msgstr "Aksje/Obligasjon/Kombinasjonsfond kontoer"
 
 #: index.phtml:73
 msgid "Small-Business Accounting"
-msgstr ""
+msgstr "Regnskap for små bedrifter"
 
 #: index.phtml:75
 msgid "QIF/OFX/HBCI Import, Transaction Matching"
-msgstr ""
+msgstr "QIF/OFX/HBCI Import, Transaksjonstilpassing"
 
 #: index.phtml:77
 msgid "Financial Calculations"
-msgstr ""
+msgstr "Økonomiske beregninger"
 
 #: index.phtml:79
 msgid "<b>Discover more …</b>"
-msgstr ""
+msgstr "<b>Oppdag mer …</b>"
 
 #: index.phtml:83
 #, php-format
 msgid "GnuCash %s Released"
-msgstr ""
+msgstr "GnuCash %s utgitt"
 
 #: index.phtml:84
 #, php-format
@@ -1729,19 +2079,21 @@ msgid ""
 "We've released GnuCash %s with many bugfixes and improvements including some "
 "%s!"
 msgstr ""
+"Vi har utgitt GnuCash %s med mange feilrettinger og forbedringer inkludert "
+"noen %s!"
 
 #: index.phtml:85
 msgid "great new features"
-msgstr ""
+msgstr "flotte nye funksjoner"
 
 #: new_features-4.0.phtml:4
 #, php-format
 msgid "What's New in GnuCash %s"
-msgstr ""
+msgstr "Hva er nytt i GnuCash %s"
 
 #: new_features-4.0.phtml:15
 msgid "Major Highlights"
-msgstr ""
+msgstr "Viktige høydepunkter"
 
 #: new_features-4.0.phtml:23
 msgid ""
@@ -1750,6 +2102,10 @@ msgid ""
 "association items in 3.x, allows setting, changing, and deleting "
 "associations."
 msgstr ""
+"En ny <b>Transaksjonstilknytning</b>-dialog, tilgjengelig fra <b>Oppdater "
+"tilknytning for transaksjon</b>-menyelementet som har erstattet de to "
+"tilknytningselementene i 3.x, tillater innstilling, endring og sletting av "
+"tilknytninger."
 
 #: new_features-4.0.phtml:24
 msgid ""
@@ -1758,6 +2114,10 @@ msgid ""
 "of the letters when a transaction has an association. This doesn't work on "
 "MacOS."
 msgstr ""
+"Et symbol (binders for filer, kjedelenker for URL-er) vises nå i kolonnen "
+"Assosiasjoner (synlig i dobbeltlinjemodus) i registeret i stedet for "
+"bokstavene når en transaksjon har en assosiasjon. Dette fungerer ikke på "
+"MacOS."
 
 #: new_features-4.0.phtml:25
 msgid ""
@@ -1765,10 +2125,13 @@ msgid ""
 "vouchers. The actual association when present is added as a link button "
 "which is shown below the notes."
 msgstr ""
+"Assosiasjoner kan nå legges til regninger, kreditnotaer, fakturaer og bilag. "
+"Selve assosiasjonen når den er tilstede legges til som en lenkeknapp som "
+"vises under notatene."
 
 #: new_features-4.0.phtml:33
 msgid "[Video showing two ways to filter accounts]"
-msgstr ""
+msgstr "[Video som viser to måter å filtrere kontoer på]"
 
 #: new_features-4.0.phtml:37
 msgid ""
@@ -1780,6 +2143,13 @@ msgid ""
 "contain only matching accounts. Once you have a small enough list you can "
 "use the arrow keys to select the account that you want."
 msgstr ""
+"Ny type forhåndsøk legges til sekvensielt søk når du velger en konto eller "
+"en handling i registeret: I stedet for å skrive inn de første tegnene i en "
+"konto på toppnivå, skilletegn, de første tegnene i konto på neste nivå og så "
+"videre kan i stedet skrive noen få tegn av en hvilken som helst del av et "
+"fullstendig kontonavn, og rullelisten vil bli filtrert til kun å inneholde "
+"samsvarende kontoer. Når du har en liten nok liste, kan du bruke piltastene "
+"til å velge kontoen du ønsker."
 
 #: new_features-4.0.phtml:42
 msgid ""
@@ -1790,12 +2160,20 @@ msgid ""
 "provides an export format and an output file name without which it will "
 "output the report to stdout."
 msgstr ""
+"En ny separat kjørbar, <kbd>gnucash-cli</kbd> (<kbd>gnucash-cli.exe</kbd> på "
+"Microsoft Windows) for å gjøre kommandolinjeting som å oppdatere prisene i "
+"boken din. <kbd>gnucash-cli</kbd> får muligheten til å kjøre rapporter fra "
+"kommandolinjen. Spesifiser rapporter som skal kjøres etter navn eller "
+"veiledning. Den gir også et eksportformat og et utdatafilnavn uten hvilket "
+"den vil sende ut rapporten til stdout."
 
 #: new_features-4.0.phtml:48
 msgid ""
 "will display a screen listing all of the available commands and their "
 "options."
 msgstr ""
+"vil vise en side som viser alle tilgjengelige kommandoer og deres "
+"alternativer."
 
 #: new_features-4.0.phtml:49
 msgid ""
@@ -1803,16 +2181,21 @@ msgid ""
 "has, though <kbd>--get-price-quotes</kbd> is deprecated in  favor of "
 "<kbd>gnucash-cli --quotes get</kbd>."
 msgstr ""
+"GUI-programmet, <kbd>gnucash</kbd>, reagerer fortsatt på alternativene det "
+"alltid har hatt, selv om <kbd>--get-price-quotes</kbd> er avviklet til "
+"fordel for <kbd>gnucash-cli -- sitater får</kbd>."
 
 #: new_features-4.0.phtml:54
 msgid "Graphic User Interface"
-msgstr ""
+msgstr "Grafisk brukergrensesnitt"
 
 #: new_features-4.0.phtml:58
 msgid ""
 "When creating a new account hierarchy it's now possible to load account "
 "templates from locales other than the one set for the user interface."
 msgstr ""
+"Når du oppretter et nytt kontohierarki, er det nå mulig å laste inn "
+"kontomaler fra andre steder enn den som er satt for brukergrensesnittet."
 
 #: new_features-4.0.phtml:59
 msgid ""
@@ -1821,6 +2204,10 @@ msgid ""
 "choices in the latter depending on the former. The default is the current "
 "locale but they may be used to select account templates from any locale."
 msgstr ""
+"På siden <b>Velg kontoer som skal opprettes</b> er det to rullegardinmenyer "
+"over <b>Kontotyper</b>-velgeren, én for språk og én for land, valgene i "
+"sistnevnte avhengig av førstnevnte . Standard er gjeldende lokasjon, men de "
+"kan brukes til å velge kontomaler fra alle språk."
 
 #: new_features-4.0.phtml:61
 msgid ""
@@ -1829,45 +2216,57 @@ msgid ""
 "If they don't you'll get a warning and the opportunity to pick another "
 "account or to carry on regardless."
 msgstr ""
+"Når du sletter kontoer, vil destinasjonskontoene til flyttede splitter bli "
+"sjekket for å sikre at de har samme vare som kildekontoen. Hvis de ikke gjør "
+"det, får du en advarsel og muligheten til å velge en annen konto eller "
+"fortsette uansett."
 
 #: new_features-4.0.phtml:62
 msgid ""
 "Reversing transactions will now pop a dialog box to request a posting date."
 msgstr ""
+"Reversering av transaksjoner vil nå åpne en dialogboks for å be om en "
+"bokføringsdato."
 
 #: new_features-4.0.phtml:69
 msgid "Business Functions"
-msgstr ""
+msgstr "Forretningsfunksjoner"
 
 #: new_features-4.0.phtml:72
 msgid "Business Document Column Widths"
-msgstr ""
+msgstr "Forretningsdokument kolonnebredder"
 
 #: new_features-4.0.phtml:73
 msgid ""
 "Entry column widths in Invoices, Bills, and Employee Vouchers may now be "
 "saved as defaults for each type of document."
 msgstr ""
+"Oppføringskolonnebredder i fakturaer, regninger og ansattbilag kan nå lagres "
+"som standard for hver type dokument."
 
 #: new_features-4.0.phtml:74
 msgid ""
 "Two menu items are added to the View menu when a Bill, Invoice, or Voucher "
 "tab has focus:"
 msgstr ""
+"To menyelementer legges til i Vis-menyen når en Regning-, Faktura- eller "
+"Bilagsfane har fokus:"
 
 #: new_features-4.0.phtml:76
 msgid "Use as Default Layout for Vendor Documents"
-msgstr ""
+msgstr "Bruk som standardoppsett for leverandørdokumenter"
 
 #: new_features-4.0.phtml:77
 msgid "Reset Default Layout for Vendor Documents"
-msgstr ""
+msgstr "Tilbakestill standardoppsett for leverandørdokumenter"
 
 #: new_features-4.0.phtml:78
 msgid ""
 "Vendor Documents is for Bills and is replaced by Customer or Employee "
 "Documents for Invoices or Vouchers respectively."
 msgstr ""
+"Leverandørdokumenter er for regninger og erstattes av kunde- eller "
+"ansattdokumenter for henholdsvis fakturaer eller bilag."
 
 #: new_features-4.0.phtml:80
 msgid ""
@@ -1876,16 +2275,22 @@ msgid ""
 "customization and documents of that type will therafter use the computed "
 "default widths."
 msgstr ""
+"Den første lagrer gjeldende dokuments kolonnebredder og gjør dem til "
+"standard for alle dokumenter i samme type. Det andre menyelementet fjerner "
+"tilpasningen, og dokumenter av den typen vil deretter bruke de beregnede "
+"standardbreddene."
 
 #: new_features-4.0.phtml:86
 msgid "Importing Transactions"
-msgstr ""
+msgstr "Importerer transaksjoner"
 
 #: new_features-4.0.phtml:89
 msgid ""
 "Support for AQBanking Version 6. This is required to support new FinTS "
 "protocols for the European Payment Services Directive (PSD2)."
 msgstr ""
+"Støtte for AQBanking versjon 6. Dette er nødvendig for å støtte nye FinTS-"
+"protokoller for det europeiske betalingstjenestedirektivet (PSD2)."
 
 #: new_features-4.0.phtml:90
 msgid ""
@@ -1894,16 +2299,23 @@ msgid ""
 "remove any that are found. It also adds a button at the bottom of the Import "
 "Map Editor to delete them if one chooses not to use the dialog."
 msgstr ""
+"<b>Importer kartredigerer</b> (Verktøy>Rediger importer kart) vil skanne "
+"etter Bayesianske assosiasjoner med ikke-eksisterende kontoer og vise en "
+"dialogboks som tilbyr å fjerne alle som blir funnet. Den legger også til en "
+"knapp nederst i Importer kart-redigereren for å slette dem hvis man velger å "
+"ikke bruke dialogen."
 
 #: new_features-4.0.phtml:91
 msgid "The OFX file importer can now import more than one file at a time."
-msgstr ""
+msgstr "OFX-filimportøren kan nå importere mer enn én fil om gangen."
 
 #: new_features-4.0.phtml:92
 msgid ""
 "OFX imports having balance information will now offer to immediately "
 "reconcile, passing the balance information in the file to the reconcile info."
 msgstr ""
+"OFX-importer med saldoinformasjon vil nå tilby å avstemme umiddelbart, og "
+"overføre saldoinformasjonen i filen til avstemmingsinformasjonen."
 
 #: new_features-4.0.phtml:93
 msgid ""
@@ -1911,16 +2323,21 @@ msgid ""
 "C and from U+R to U+C, reflecting that the matcher marks transactions "
 "cleared but doesn't reconcile them."
 msgstr ""
+"Kolonneoverskriftene for importtransaksjonsmatchingvinduet endres fra R til "
+"C og fra U+R til U+C, noe som gjenspeiler at matcheren merker transaksjoner "
+"som slettet, men ikke avstemmer dem."
 
 #: new_features-4.0.phtml:94
 msgid ""
 "Account matcher will decline to match accounts with a different commodity "
 "from the imported split if the import information includes the commodity."
 msgstr ""
+"Account Matcher vil avslå å matche kontoer med en annen vare enn den "
+"importerte splitten hvis importinformasjonen inkluderer varen."
 
 #: new_features-4.0.phtml:95
 msgid "Ellipsize the Description and Memo fields in the account matcher."
-msgstr ""
+msgstr "Ellipsiser feltene Beskrivelse og Notat i kontosamsvaret."
 
 #: new_features-4.0.phtml:100
 msgid "Reports"
@@ -1933,6 +2350,10 @@ msgid ""
 "reports for expenses and income, an income-expense chart, and an account "
 "summary."
 msgstr ""
+"En ny rapportmeny undermeny <b>Flerkolonne</b> inneholder den gamle "
+"egendefinerte rapporten med flere kolonner og en ny <b>Dashbord</b>-rapport "
+"som inneholder kontorapporter for utgifter og inntekter, et inntekts-"
+"utgiftsdiagram og et kontosammendrag ."
 
 #: new_features-4.0.phtml:104
 msgid ""
@@ -1942,36 +2363,43 @@ msgid ""
 "<b>N.B.</b> This is incompatible with previous versions of the report and "
 "will require regenerating saved configurations."
 msgstr ""
+"Støtte for UK MVA og australsk GST er lagt til i inntekts-GST-rapporten. "
+"Rapportens alternativer endres fra kildekontoer til kildesalgs- og "
+"kjøpskontoer for å tillate korrekt rapportering av kapitalkjøp. <b>NB</b> "
+"Dette er inkompatibelt med tidligere versjoner av rapporten og vil kreve "
+"gjenoppretting av lagrede konfigurasjoner."
 
 #: new_features-4.0.phtml:109
 msgid "Budgets"
-msgstr ""
+msgstr "Budsjetter"
 
 #: new_features-4.0.phtml:112
 msgid "Optionally include the account code option in budget view."
-msgstr ""
+msgstr "Du kan eventuelt inkludere kontokodealternativet i budsjettvisningen."
 
 #: new_features-4.0.phtml:113
 msgid "Enable adding notes to budgets."
-msgstr ""
+msgstr "Aktiver å legge til merknader i budsjetter."
 
 #: new_features-4.0.phtml:114
 msgid "Account codes may now optionally be displayed in the Budget Tree View."
-msgstr ""
+msgstr "Kontokoder kan nå valgfritt vises i budsjett trevisningen."
 
 #: new_features-4.0.phtml:119
 msgid "Compatibility"
-msgstr ""
+msgstr "Kompatibilitet"
 
 #: new_features-4.0.phtml:122
 msgid ""
 "GnuCash 4.x and later will no longer migrate old gconf settings from GnuCash "
 "2.4.x."
 msgstr ""
+"GnuCash 4.x og nyere vil ikke lenger migrere gamle gconf-innstillinger fra "
+"GnuCash 2.4.x."
 
 #: new_features-4.0.phtml:128
 msgid "Customization and Scripting"
-msgstr ""
+msgstr "Tilpasning og skripting"
 
 #: new_features-4.0.phtml:131
 msgid ""
@@ -1979,47 +2407,54 @@ msgid ""
 "with Gtk practice. You may need to spend some time with the GtkInspector to "
 "get your custom CSS back the way you like it."
 msgstr ""
+"GnuCash-widgethierarkiet for CSS har blitt revidert for å være mer "
+"konsistent med Gtk-praksis. Det kan hende du må bruke litt tid med "
+"GtkInspector for å få din egendefinerte CSS tilbake slik du liker den."
 
 #: new_features-4.0.phtml:132
 msgid ""
 "Python bindings are now localized and their strings available for "
 "translation."
 msgstr ""
+"Python-bindinger er nå lokalisert og tekstene deres er tilgjengelige for "
+"oversettelse."
 
 #: new_features-4.0.phtml:135
 #, php-format
 msgid "For a complete list of new features and API changes see the %s."
-msgstr ""
+msgstr "For en fullstendig liste over nye funksjoner og API-endringer, se %s."
 
 #: new_features-4.0.phtml:136
 msgid "Release Notes"
-msgstr ""
+msgstr "Utgivelsesnotater"
 
 #: news.phtml:4
 msgid "Announcement of New Releases, Server Maintenance …"
-msgstr ""
+msgstr "Kunngjøring av nye utgivelser, servervedlikehold …"
 
 #: news.phtml:12
 msgid "GnuCash News"
-msgstr ""
+msgstr "GnuCash nyheter"
 
 #: news.phtml:28 oldnews.phtml:3
 msgid "Older Announcements"
-msgstr ""
+msgstr "Eldre kunngjøringer"
 
 #: news.phtml:31
 msgid "Click <a href=\"oldnews.phtml\">here</a> for older announcements."
-msgstr ""
+msgstr "Klikk <a href=\"oldnews.phtml\">her</a> for eldre kunngjøringer."
 
 #: oldnews.phtml:4
 msgid ""
 "This is an archive of announcements that once appeared on the GnuCash home "
 "page."
 msgstr ""
+"Dette er et arkiv med kunngjøringer som en gang dukket opp på GnuCash-"
+"hjemmesiden."
 
 #: sizing.phtml:4
 msgid "This is an ancient page about Gnucash's code size."
-msgstr ""
+msgstr "Dette er en eldgammel side om Gnucashs kodestørrelse."
 
 #: sizing.phtml:15
 msgid ""
@@ -2029,6 +2464,11 @@ msgid ""
 "from a small handy electronic checkbook to a rather large and multi-featured "
 "desktop app."
 msgstr ""
+"Det kan ofte være ganske interessant å studere kildekodeberegningene bak et "
+"programvareutviklingsprosjekt. Ikke en overraskende interesse: det er tross "
+"alt regnskap. <span class=\"gnucash\">GnuCash</span> har vokst, gjennom "
+"årene, fra en liten hendig elektronisk sjekkhefte til en ganske stor "
+"skrivebordsapp med mange funksjoner."
 
 #: sizing.phtml:18
 msgid ""
@@ -2037,6 +2477,9 @@ msgid ""
 "translated into twenty-three languages and credits over 139 authors and "
 "contributors."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> består for tiden av over en tredjedel "
+"av en million kodelinjer fordelt på mer enn tusen filer. Den er oversatt til "
+"tjuetre språk og kreditterer over 139 forfattere og bidragsytere."
 
 #: sizing.phtml:24
 msgid ""
@@ -2045,6 +2488,10 @@ msgid ""
 "several dozen copies of Tolstoy's \"War and Peace\", roughly a bookshelf-"
 "width's worth of source code."
 msgstr ""
+"Hvis du har hatt problemer med å svømme gjennom den massen av kildekode, "
+"tenk på det slik: skrevet ut på papir og bundet inn i bind, vil det utgjøre "
+"flere dusin eksemplarer av Tolstojs \"Krig og fred\", omtrent en "
+"bokhyllebredde av kildekode."
 
 #: sizing.phtml:27
 msgid ""
@@ -2054,6 +2501,11 @@ msgid ""
 "Every last line counted here was typed in, edited, indented, tweaked, "
 "multiple times, by human hands."
 msgstr ""
+"Merk deg, dette er kildekode (og dokumenter) laget og feilsøkt av faktiske "
+"mennesker, dette er *ikke* autogenerert kode. Verktøy (slik som glade eller "
+"swig) kan generere gazillioner av kodelinjer automatisk; Jeg teller ikke de. "
+"Hver siste linje som ble talt her ble skrevet inn, redigert, rykket inn, "
+"justert, flere ganger, av menneskehender."
 
 #: sizing.phtml:30
 msgid ""
@@ -2062,6 +2514,10 @@ msgid ""
 "printout. This bug count is actually not atypical for software projects; it "
 "is near the norm."
 msgstr ""
+"Gitt at vi har omtrent 400 utestående feil i bugzilla, vil det fungere til "
+"omtrent én feil per tusen linjer med kode, eller én feil per 50 sider med "
+"utskrift. Dette feilantallet er faktisk ikke atypisk for "
+"programvareprosjekter; det er nær normen."
 
 #: sizing.phtml:33
 msgid ""
@@ -2075,6 +2531,14 @@ msgid ""
 "Finally, <tt>glade</tt> files are not counted, although large parts of the "
 "overall GUI are described in <tt>glade</tt> files."
 msgstr ""
+"Tabellen nedenfor viser noen historiske linjer med kode og antall filer for "
+"<span class=\"gnucash\">GnuCash</span> utviklingsprosjektet. Merk at ikke "
+"all koden telles: for eksempel telles ikke Makefiles og configure.in og "
+"autogen.sh. Dessuten telles ikke filer som genereres automatisk, og heller "
+"ikke filer som er \"lånt\" fra andre prosjekter. Eksperimentelle filer, "
+"diverse perl-skript, ulike konvertere, tillegg og verktøy telles heller ikke "
+"med. Til slutt telles ikke <tt>glade</tt>-filer, selv om store deler av den "
+"generelle GUI-en er beskrevet i <tt>glade</tt>-filer."
 
 #: sizing.phtml:36
 msgid ""
@@ -2090,10 +2554,21 @@ msgid ""
 "generated code (which is why the glade files are not counted: they are large "
 "and automatically generated)."
 msgstr ""
+"Legg også merke til at KLOC-er ikke er en god metrikk for programmerers "
+"produktivitet, og heller ikke at <code>wc</code> er en god måte å telle KLOC-"
+"er på. Mye bedre mål er kompleksitetsmålinger, som for eksempel teller "
+"antall og størrelse på if-then-else-blokker, eller antall og størrelse på "
+"alle blokker, eller antall matematiske operatorer per setning. Kanskje vi en "
+"dag kjører et av disse verktøyene på denne koden. Foreløpig er det dette vi "
+"har. På den annen side har vi forsøkt å telle bare de filene som inneholder "
+"menneskeredigert kode, det vil si filer som er direkte redigert av "
+"mennesker. Poenget med å gjøre dette er å unngå kunstig oppblåsing av KLOC-"
+"tellingene ved å telle automatisk generert kode (det er grunnen til at "
+"gladefilene ikke telles: de er store og automatisk generert)."
 
 #: sizing.phtml:39
 msgid "Table 1. Historical Development Stats"
-msgstr ""
+msgstr "Tabell 1. Historisk utviklingsstatistikk"
 
 #: sizing.phtml:43
 msgid "Version"
@@ -2101,11 +2576,11 @@ msgstr "Versjon"
 
 #: sizing.phtml:50 sizing.phtml:358
 msgid "misc app"
-msgstr ""
+msgstr "diverse app"
 
 #: sizing.phtml:57 sizing.phtml:393
 msgid "internal txt"
-msgstr ""
+msgstr "intern txt"
 
 #: sizing.phtml:58
 msgid "Total"
@@ -2113,15 +2588,15 @@ msgstr "Totalt"
 
 #: sizing.phtml:59 sizing.phtml:398
 msgid "Languages"
-msgstr ""
+msgstr "Språk"
 
 #: sizing.phtml:60 sizing.phtml:403
 msgid "Author Credits"
-msgstr ""
+msgstr "Forfatterkreditter"
 
 #: sizing.phtml:319
 msgid "Each cell displays the following:"
-msgstr ""
+msgstr "Hver celle viser følgende:"
 
 #: sizing.phtml:323
 msgid ""
@@ -2130,16 +2605,23 @@ msgid ""
 "c + KLOCS in *.h) are displayed. If there is only one number in the "
 "parenthesis, it is the approriate KLOC count for that statistic."
 msgstr ""
+"antall *c og *.h og *.scm filer (KLOCS i *.c + KLOCS i *.h + KLOCS i *.scm). "
+"Hvis det ikke er noen *.scm-filer i katalogen, vises kun (KLOCS i *.c + "
+"KLOCS i *.h). Hvis det bare er ett tall i parentesen, er det passende KLOC-"
+"tallet for den statistikken."
 
 #: sizing.phtml:327
 msgid ""
 "where KLOC == kilo-lines-of-code, as reported by <code>wc</code>. As noted "
 "above, wc is not a terribly good code metric, but it is what we have handy."
 msgstr ""
+"hvor KLOC == kilo-linjer-av-kode, som rapportert av <code>wc</code>. Som "
+"nevnt ovenfor er ikke wc en veldig god kodeverdi, men det er det vi har "
+"nyttig."
 
 #: sizing.phtml:330
 msgid "Table Column Legend"
-msgstr ""
+msgstr "Tabellkolonneforklaring"
 
 #: sizing.phtml:334
 msgid ""
@@ -2147,12 +2629,17 @@ msgid ""
 "out from the motif code in version 1.1. The data storage backend (file-io, "
 "sql) was split out in the course of version 1.5."
 msgstr ""
+"Innholdet i src/motoren og inkluderingskatalogene. Motoren ble delt ut fra "
+"motivkoden i versjon 1.1. Datalagringsbackend (fil-io, sql) ble delt ut i "
+"løpet av versjon 1.5."
 
 #: sizing.phtml:338
 msgid ""
 "Contents of the src/backend directory (version 1.7 and later) or of src/"
 "engine/file, src/engine/sql (version 1.6 and earlier)."
 msgstr ""
+"Innhold i src/backend-katalogen (versjon 1.7 og nyere) eller av src/engine/"
+"file, src/engine/sql (versjon 1.6 og tidligere)."
 
 #: sizing.phtml:342
 msgid ""
@@ -2163,12 +2650,20 @@ msgid ""
 "later, this cell shows a second count: the number of lines of code in src/"
 "register/register-gnome (previously counted as part of gnome)."
 msgstr ""
+"Innholdet i src/register-katalogen (versjon 1.6 og tidligere) eller src/"
+"register/register-core (versjon 1.7 og nyere). Registeret ble delt ut som en "
+"egen komponent fra motivkoden i versjon 1.1. Som det fremgår av "
+"statistikken, har registerkoden vært ganske stabil. Ved versjon 1.7 og nyere "
+"viser denne cellen et annet tall: antall kodelinjer i src/register/register-"
+"gnome (tidligere regnet som en del av gnome)."
 
 #: sizing.phtml:346
 msgid ""
 "*.c, *.h files in the src directory only (version 1.6 and earlier) or src/"
 "register/ledger-core (version 1.7 and later)."
 msgstr ""
+"*.c, *.h-filer kun i src-katalogen (versjon 1.6 og tidligere) eller src/"
+"register/ledger-core (versjon 1.7 og nyere)."
 
 #: sizing.phtml:350
 msgid ""
@@ -2176,6 +2671,9 @@ msgid ""
 "version of the code was discontinued after version 1.2, after most of the "
 "non-gui code was moved to either the engine, the register or the ledger."
 msgstr ""
+"Innhold i src/motiv-katalogen (versjon 1.2 og tidligere). Motivversjonen av "
+"koden ble avviklet etter versjon 1.2, etter at det meste av ikke-gui-koden "
+"ble flyttet til enten motoren, registeret eller hovedboken."
 
 #: sizing.phtml:354
 msgid ""
@@ -2183,6 +2681,9 @@ msgid ""
 "version 1.7 and later, this consists of src/gnome, src/gnome-search and src/"
 "gnome-util"
 msgstr ""
+"Innhold av src/gnome pluss src/register/gnome (versjon 1.6 og tidligere). "
+"For versjon 1.7 og nyere består denne av src/gnome, src/gnome-search og src/"
+"gnome-util"
 
 #: sizing.phtml:359
 msgid ""
@@ -2190,17 +2691,23 @@ msgid ""
 "later): src/app-file, src/app-utils, src/calculation, src/core-utils, src/"
 "gnc-module, src/network-utils, src/tax/us."
 msgstr ""
+"Innhold i diverse applikasjonsrelaterte kataloger (versjon 1.7 og nyere): "
+"src/app-file, src/app-utils, src/calculation, src/core-utils, src/gnc-"
+"module, src/network-utils, src/ skatt/oss."
 
 #: sizing.phtml:364
 msgid ""
 "Code to import and export various file formats: contents of the src/import-"
 "export directory."
 msgstr ""
+"Kode for å importere og eksportere ulike filformater: innholdet i src/import-"
+"export-katalogen."
 
 #: sizing.phtml:369
 msgid ""
 "Code to generate reports and graphs: contents of the src/reports directory."
 msgstr ""
+"Kode for å generere rapporter og grafer: innholdet i src/reports-katalogen."
 
 #: sizing.phtml:374
 msgid ""
@@ -2209,17 +2716,25 @@ msgid ""
 "import/export, and into indiovidual modules; thus only miscellaneous code "
 "remains."
 msgstr ""
+"skjema og guile-kode i kataloger src/scm pluss src/guile (versjon 1.6 og "
+"tidligere). I versjon 1.7 og senere gikk mye av denne koden inn i rapporter, "
+"import/eksport og til individuelle moduler; dermed gjenstår bare diverse "
+"kode."
 
 #: sizing.phtml:379
 msgid ""
 "Code to add small-business features: contents of the src/business directory."
 msgstr ""
+"Kode for å legge til småbedriftsfunksjoner: innholdet i src/"
+"bedriftskatalogen."
 
 #: sizing.phtml:384
 msgid ""
 "Code to peform automated regression tests: contents of the src/*/test "
 "directories."
 msgstr ""
+"Kode for å utføre automatiserte regresjonstester: innholdet i src/*/test-"
+"katalogene."
 
 #: sizing.phtml:389
 msgid ""
@@ -2229,6 +2744,11 @@ msgid ""
 "of these numbers are somewhat hard to count, because of fairly large format "
 "churns, and multiple competing versions."
 msgstr ""
+"Kun engelskspråklig brukerdokumentasjon, inkludert online hjelp og "
+"brukerhåndbok(html, sgml eller xml). For versjon 1.8.4 og senere, teller "
+"tallet under linjen de oversatte, ikke-engelske dokumentene (for øyeblikket "
+"de, es, fr, pt_PT). Begge disse tallene er litt vanskelige å telle på grunn "
+"av ganske store formater og flere konkurrerende versjoner."
 
 #: sizing.phtml:394
 msgid ""
@@ -2237,6 +2757,10 @@ msgid ""
 "subdirectories. For version 1.7 and later, only those in the src "
 "subdirectory are counted (leaving out some half-dozen scattered elsewhere)."
 msgstr ""
+"Antall designdokumenter og README-filer rettet mot utviklere. Dette "
+"inkluderer *.txt-filer, *.texinfo-filer og README.*-filer i alle "
+"underkataloger. For versjon 1.7 og nyere telles bare de i src-underkatalogen "
+"(bortsett fra et halvt dusin spredt andre steder)."
 
 #: sizing.phtml:399
 msgid ""
@@ -2245,6 +2769,9 @@ msgid ""
 "messages in the message files (<tt>grep msgstr po/*.po |wc</tt>), in "
 "thousands."
 msgstr ""
+"Antall språk som applikasjonsmeldingene er oversatt til (antall <tt>po/*."
+"po</tt>-filer). I parentes, antall meldinger i meldingsfilene (<tt>grep "
+"msgstr po/*.po |wc</tt>), i tusener."
 
 #: sizing.phtml:404
 msgid ""
@@ -2254,16 +2781,23 @@ msgid ""
 "credits listed in the gnucash-docs/AUTHORS file that are not listed in the "
 "main gnucash/AUTHORS file."
 msgstr ""
+"Antall personer som er kreditert i AUTHORS-filen (versjon 1.6 og nyere) "
+"eller README-filen (tidligere versjoner). Disse inkluderer ledende "
+"utviklere, patch-innsendere og nasjonalspråklige oversettere. Dette "
+"inkluderer tilleggskreditter oppført i gnucash-docs/AUTHORS-filen som ikke "
+"er oppført i hoved-gnucash/AUTHORS-filen."
 
 #: viewdoc.phtml:9
 msgid "View document"
-msgstr ""
+msgstr "Vis dokumentet"
 
 #: viewdoc.phtml:166
 msgid ""
 "The document requested is not available. The tutorial and concepts guide "
 "will be displayed instead."
 msgstr ""
+"Det forespurte dokumentet er ikke tilgjengelig. Veilednings- og "
+"konseptguiden vises i stedet."
 
 #: viewdoc.phtml:169
 #, php-format
@@ -2271,6 +2805,8 @@ msgid ""
 "The document requested is not available for version %s. Version %s will be "
 "displayed instead."
 msgstr ""
+"Det forespurte dokumentet er ikke tilgjengelig for versjon %s. Versjon %s "
+"vil vises i stedet."
 
 #: viewdoc.phtml:173
 #, php-format
@@ -2278,6 +2814,8 @@ msgid ""
 "The document requested is not available in the requested language (tried "
 "[%s]). The English version will be displayed instead."
 msgstr ""
+"Det forespurte dokumentet er ikke tilgjengelig på det forespurte språket ("
+"prøvde [%s]). Den engelske versjonen vises i stedet."
 
 #: viewdoc.phtml:178
 #, php-format
@@ -2285,3 +2823,6 @@ msgid ""
 "It seems your browser doesn't support iframes. To view the requested page in "
 "a separate window, please <a href=\"%s\" target=\"_blank\">click here</a>."
 msgstr ""
+"Det ser ut til at nettleseren din ikke støtter iframes. For å se den "
+"forespurte siden i et eget vindu, vennligst <a href=\"%s\" target=\"_blank\""
+">klikk her</a>."
