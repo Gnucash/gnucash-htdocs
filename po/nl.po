@@ -7,14 +7,15 @@
 # Geert Janssens <geert@kobaltwit.be>, 2021.
 # Geert Janssens <info@kobaltwit.be>, 2021.
 # Jaimie85 <alsemgeest@gmail.com>, 2022.
+# Stephan Paternotte <stephan@paternottes.net>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: nl\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
-"component=Translations&product=Website&resolution=---\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
+"cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2022-10-27 19:35+0200\n"
-"PO-Revision-Date: 2022-01-17 14:53+0000\n"
-"Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
+"PO-Revision-Date: 2023-06-29 15:52+0000\n"
+"Last-Translator: Stephan Paternotte <stephan@paternottes.net>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/gnucash/website/nl/"
 ">\n"
 "Language: nl\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Weblate 4.10.1\n"
+"X-Generator: Weblate 4.18.1\n"
 
 #: 2.6-release-tour.phtml:3
 msgid "GnuCash 2.6 release tour"
@@ -124,16 +125,22 @@ msgid ""
 "account window. This color can then be displayed as account name and account "
 "register tab background easing the lookup of a specific account."
 msgstr ""
+"Het is nu mogelijk om vanuit het venster rekening bewerken een unieke kleur "
+"aan een rekening te koppelen. Deze kleur wordt vervolgens weergegeven als "
+"achtergrond bij de rekeningnaam en dagboek-tabblad, waardoor het opzoeken "
+"van een specifieke rekening wordt vergemakkelijkt."
 
 #: 2.6-release-tour.phtml:75
 msgid ""
 "The colors ease the lookup of specific accounts in the account tree and in "
 "tabs."
 msgstr ""
+"De kleuren vergemakkelijken het opzoeken van specifieke rekeningen in het "
+"overzicht en in tabbladen."
 
 #: 2.6-release-tour.phtml:80
 msgid "Timeout on \"Save changes on closing\""
-msgstr ""
+msgstr "Wachttijd bij \"Wijzigingen opslaan bij afsluiten\""
 
 #: 2.6-release-tour.phtml:82
 msgid ""
@@ -144,6 +151,13 @@ msgid ""
 "that time, the changes will be saved automatically and the question window "
 "closed."
 msgstr ""
+"Op het tabblad Algemeen van de <span class=\"gnucash\"> GnuCash </span> "
+"Voorkeuren is het nu mogelijk om een wachttijd in te stellen voor het "
+"venster \"Wijzigingen opslaan bij sluiten\". Indien ingeschakeld, wacht de "
+"vraag \"Wijzigingen opslaan bij sluiten\" slechts een beperkt aantal "
+"seconden op een antwoord. Als de gebruiker niet binnen die tijd heeft "
+"geantwoord, worden de wijzigingen automatisch opgeslagen en wordt het "
+"vragenvenster gesloten."
 
 #: 2.6-release-tour.phtml:85
 msgid "Open datafile read-only"
@@ -154,12 +168,17 @@ msgid ""
 "When opening a locked \"book\" one now has the option of opening it read-"
 "only."
 msgstr ""
+"Bij het openen van een vergrendelde \"boekhouding\" heeft men nu de "
+"mogelijkheid om het alleen-lezen te openen."
 
 #: 2.6-release-tour.phtml:90
 msgid ""
 "Note that <span class=\"gnucash\">GnuCash</span> is still a single-user "
 "program and that the database backends are still used only as a data store."
 msgstr ""
+"Merk op dat <span class=\"gnucash\">GnuCash</span> nog steeds een programma "
+"voor één gebruiker is en dat de database-backends nog steeds alleen worden "
+"gebruikt als gegevensopslag."
 
 #: 2.6-release-tour.phtml:98
 msgid ""
@@ -171,77 +190,90 @@ msgstr ""
 
 #: 2.6-release-tour.phtml:103
 msgid "Save \"Filter By\" settings"
-msgstr ""
+msgstr "Instellingen \"Filteren op\" opslaan"
 
 #: 2.6-release-tour.phtml:105
 msgid ""
 "It is now possible to save the \"Filter By…\" settings for an account "
 "register."
 msgstr ""
+"Het is nu mogelijk om de instellingen \"Filteren op...\" voor een "
+"rekeningdagboek op te slaan."
 
 #: 2.6-release-tour.phtml:113
 msgid ""
 "Save the \"Filter By…\" settings by enabling the \"Save Filter\" checkbox."
 msgstr ""
+"Sla de instellingen \"Filteren op...\" op door het selectievakje \"Filter "
+"opslaan\" in te schakelen."
 
 #: 2.6-release-tour.phtml:118
 msgid "Improved business module"
-msgstr ""
+msgstr "Verbeterde bedrijfsmodule"
 
 #: 2.6-release-tour.phtml:120
 msgid ""
 "The business module has been revamped and we introduced some new features:"
 msgstr ""
+"De bedrijfsmodule is vernieuwd en er zijn enkele nieuwe functies "
+"geïntroduceerd:"
 
 #: 2.6-release-tour.phtml:122
 msgid "Credit Notes"
-msgstr ""
+msgstr "Creditnota's"
 
 #: 2.6-release-tour.phtml:123
 msgid "Customer and Vendor Overview Pages"
-msgstr ""
+msgstr "Overzichtspagina's voor klanten en leveranciers"
 
 #: 2.6-release-tour.phtml:124
 msgid "Customer Overview Reports"
-msgstr ""
+msgstr "Klantoverzichtsrapporten"
 
 #: 2.6-release-tour.phtml:125
 msgid "Existing Transactions may be reassigned as invoice payments"
 msgstr ""
+"Bestaande transacties kunnen opnieuw worden toegewezen als factuurbetalingen"
 
 #: 2.6-release-tour.phtml:126
 msgid "One click duplication of invoices"
-msgstr ""
+msgstr "Facturen dupliceren met één klik"
 
 #: 2.6-release-tour.phtml:127
 msgid ""
 "Improved invoice and bill handling: Post, print, or duplicate multiple items "
 "directly from a search results list"
 msgstr ""
+"Verbeterde verwerking van facturen en rekeningen: Boek, print of dupliceer "
+"meerdere items rechtstreeks vanuit een lijst met zoekresultaten"
 
 #: 2.6-release-tour.phtml:128
 msgid ""
 "Better invoice printing setup: Choose a default invoice report as a "
 "preference"
 msgstr ""
+"Betere opmaak van gedrukte facturen: Selecteer een standaardfactuurrapport "
+"als voorkeur"
 
 #: 2.6-release-tour.phtml:129
 msgid "Reorder invoice entries in the invoice window"
-msgstr ""
+msgstr "Factuurvermeldingen opnieuw ordenen in het factuurvenster"
 
 #: 2.6-release-tour.phtml:137
 msgid "Customer report with an invoice and a credit note."
-msgstr ""
+msgstr "Klantrapport met factuur en creditnota."
 
 #: 2.6-release-tour.phtml:147
 msgid ""
 "Updated search window with buttons to process payment, duplicate, post and "
 "print multiple search results."
 msgstr ""
+"Bijgewerkt zoekvenster met knoppen om betaling te verwerken, dupliceren, "
+"boeken en afdrukken van meerdere zoekresultaten."
 
 #: 2.6-release-tour.phtml:152
 msgid "New preference system"
-msgstr ""
+msgstr "Nieuw systeem met voorinstellingen"
 
 #: 2.6-release-tour.phtml:154
 msgid ""
@@ -251,6 +283,12 @@ msgid ""
 "allows us to remove several troublesome dependencies including GConf, ORBit, "
 "and DBus."
 msgstr ""
+"Het voorkeurensysteem is herschreven om GSettings van GIO (GLib) te "
+"gebruiken in plaats van GConf. Dit backend is eenvoudiger en meer robuust "
+"dat schrijft naar de lokale voorkeuren van het besturingssysteem - "
+"standaardinstellingen op OS X en het register op MSWindows - en waarmee "
+"verschillende lastige afhankelijkheden worden vermeden, waaronder GConf, "
+"ORBit en DBus."
 
 #: 2.6-release-tour.phtml:156
 msgid ""
@@ -259,10 +297,14 @@ msgid ""
 "time you use Gnucash 2.6 or later, but they will be saved once you've reset "
 "them."
 msgstr ""
+"Merk op dat vensterpositie, kolomgroottes en sorteervolgorde niet worden "
+"gemigreerd vanuit GConf. Deze instellingen worden de eerste keer dat u "
+"Gnucash 2.6 of hoger gebruikt, teruggezet naar de standaard, en worden "
+"opgeslagen zodra u ze opnieuw hebt ingesteld."
 
 #: 2.6-release-tour.phtml:159
 msgid "Relicensing"
-msgstr ""
+msgstr "Nieuwe licentieverlening"
 
 #: 2.6-release-tour.phtml:161
 msgid ""
@@ -270,6 +312,9 @@ msgid ""
 "\">GnuCash</span> to the GNU General Public License Version 2 or later from "
 "just Version 2."
 msgstr ""
+"Met instemming van alle auteurs is <span class=\"gnucash\">GnuCash</span> "
+"opnieuw in licentie gegeven volgens de GNU General Public License \"versie 2 "
+"of hoger\" in plaats van alleen \"versie 2\"."
 
 #: 2.6-release-tour.phtml:163 docs.phtml:62 docs.phtml:196 docs.phtml:328
 #: download.phtml:4
@@ -282,10 +327,13 @@ msgid ""
 "span> from the <a href=\"https://www.gnucash.org\">GnuCash website main "
 "page</a>."
 msgstr ""
+"U kunt de nieuwe 2.6-versie van <span class=\"gnucash\">GnuCash</span> "
+"downloaden van de <a href=\"https://www.gnucash.org\">GnuCash-website "
+"hoofdpagina</a>."
 
 #: 2.6-release-tour.phtml:167
 msgid "Help"
-msgstr ""
+msgstr "Help"
 
 #: 2.6-release-tour.phtml:169
 msgid ""
@@ -297,10 +345,18 @@ msgid ""
 "lists</a>: the <span class=\"gnucash\">GnuCash</span> community is very "
 "friendly and experienced and someone will surely assist you."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> 2.6 wordt geleverd met bijgewerkte "
+"Help en Inleiding. Als u het antwoord op uw vragen in deze documenten niet "
+"kunt vinden, probeer dan met de <a href=\"https://wiki.gnucash.org/wiki/"
+"GnuCash\">GnuCash wiki</a>. Als dit nog geen bevredigend resultaat oplevert, "
+"kunt u uw vragen sturen naar de <a href=\"https://wiki.gnucash.org/wiki/"
+"Mailing_Lists\">GnuCash mailinglijsten</a>: de <span class=\"gnucash\"> "
+"GnuCash </span> community is erg vriendelijk en ervaren en iemand zal u "
+"zeker helpen."
 
 #: 2.6-release-tour.phtml:171
 msgid "Want to Help?"
-msgstr ""
+msgstr "Wil je helpen?"
 
 #: 2.6-release-tour.phtml:173
 msgid ""
@@ -308,12 +364,17 @@ msgid ""
 "volunteers. If you want to be part of the effort, you can contribute in many "
 "ways:"
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> is een programma dat wordt "
+"onderhouden door vrijwilligers. Als u deel wilt uitmaken van deze "
+"inspanning, kunt u je op veel manieren bijdragen :"
 
 #: 2.6-release-tour.phtml:175
 msgid ""
 "By testing the program and <a href=\"https://wiki.gnucash.org/wiki/Bugzilla"
 "\">reporting bugs</a>"
 msgstr ""
+"Door het programma te testen en <a href=\"https://wiki.gnucash.org/wiki/"
+"Bugzilla\">fouten te melden</a>"
 
 #: 2.6-release-tour.phtml:176
 msgid ""
@@ -321,16 +382,21 @@ msgid ""
 "\">facebook</a> and <a href=\"https://plus.google.com/u/0/+gnucash\">Google"
 "+</a>"
 msgstr ""
+"Door onze projectpagina leuk te vinden op <a href=\"https://www.facebook.com/"
+"Gnucash\">facebook</a> en <a href=\"https://plus.google.com/u/0/+ gnucash\""
+">Google+</a>"
 
 #: 2.6-release-tour.phtml:177
 msgid "By spreading the word"
-msgstr ""
+msgstr "Door het verder te vertellen"
 
 #: 2.6-release-tour.phtml:178
 msgid ""
 "<a href=\"https://sourceforge.net/donate/index.php?group_id=192\">By making "
 "a donation</a>"
 msgstr ""
+"<a href=\"https://sourceforge.net/donate/index.php?group_id=192\">Door te "
+"doneren</a>"
 
 #: 2.6-release-tour.phtml:179
 msgid ""
@@ -338,30 +404,41 @@ msgid ""
 "\">GnuCash mailing lists</a> and <a href=\"https://wiki.gnucash.org/wiki/IRC"
 "\">IRC channel</a>"
 msgstr ""
+"Door deel te nemen in de <a href=\"https://wiki.gnucash.org/wiki/"
+"Mailing_Lists\">GnuCash mailinglijsten</a> en het <a href=\"https://wiki."
+"gnucash.org/wiki/IRC\">IRC-kanaal</a>"
 
 #: 2.6-release-tour.phtml:180
 msgid ""
 "By reviewing and adding hints to the <a href=\"https://wiki.gnucash.org/wiki/"
 "\">wiki</a>"
 msgstr ""
+"Door hints te recenseren en toe te voegen aan de <a href=\"https://wiki."
+"gnucash.org/wiki/\">wiki</a>"
 
 #: 2.6-release-tour.phtml:181
 msgid ""
 "By improving the <a href=\"https://gnucash.org/docs.phtml\">released "
 "documentation</a>"
 msgstr ""
+"Door de <a href=\"https://gnucash.org/docs.phtml\">vrijgegeven documentatie</"
+"a> te verbeteren"
 
 #: 2.6-release-tour.phtml:182
 msgid ""
 "By <a href=\"https://wiki.gnucash.org/wiki/Translation\">translating the "
 "program and documentation to your language</a>"
 msgstr ""
+"Door <a href=\"https://wiki.gnucash.org/wiki/Translation\"> het programma en "
+"de documentatie vertalen naar uw taal </a>"
 
 #: 2.6-release-tour.phtml:183
 msgid ""
 "By <a href=\"https://wiki.gnucash.org/wiki/Development\">developing the "
 "source code</a>"
 msgstr ""
+"Door <a href=\"https://wiki.gnucash.org/wiki/Development\">het ontwikkelen "
+"van de broncode</a>"
 
 #: 2.6-release-tour.phtml:186
 msgid "The GnuCash developers team"
@@ -444,8 +521,8 @@ msgid ""
 "documentation, you will need to know xml. Some basic knowledge of the "
 "docbook system may be useful as well."
 msgstr ""
-"Als je wil helpen met het schrijven of recenseren van <span class=\"gnucash"
-"\">GnuCash</span> documentatie, zal je eerst met XML overweg moeten kunnen. "
+"Als u wilt helpen met het schrijven of recenseren van <span class=\"gnucash\""
+">GnuCash</span>-documentatie, zult u eerst met XML overweg moeten kunnen. "
 "Elementaire kennis van het docbook-systeem kan ook handig zijn."
 
 #: develdocs.phtml:30
@@ -493,7 +570,7 @@ msgstr ""
 
 #: develdocs.phtml:47
 msgid "No longer available"
-msgstr ""
+msgstr "Niet meer beschikbaar"
 
 #: develdocs.phtml:54
 msgid "Where to get the documentation source"
@@ -506,19 +583,12 @@ msgid ""
 "Reviewers could also start from the <a href='https://sourceforge.net/"
 "projects/gnucash/files/gnucash-docs/'>current docs tarball</a>."
 msgstr ""
-"Je hebt een recente kopie van de documentatiebestanden nodig. Hiervoor kun "
-"je de documentatie-module uitchecken uit de gnucash-docs git repository. "
+"U hebt een recente kopie van de documentatiebestanden nodig. Hiervoor kunt u "
+"de documentatie-module uitchecken uit de gnucash-docs git repository. "
 "Recensenten kunnen ook vertrekken van de <a href='https://sourceforge.net/"
 "projects/gnucash/files/gnucash-docs/'>huidige documentatie-tarball</a>."
 
 #: develdocs.phtml:57
-#, fuzzy
-#| msgid ""
-#| "For those not familiar with git, the <span class=\"gnucash\">GnuCash</"
-#| "span> wiki has a <a href='https://wiki.gnucash.org/wiki/Git'>description</"
-#| "a> tailored to the <span class=\"gnucash\">GnuCash</span> code. To get "
-#| "the documentation source instead of the program source, replace 'gnucash' "
-#| "with 'gnucash-docs' in the mentioned git commands, like this:"
 msgid ""
 "For those not familiar with git, the <span class=\"gnucash\">GnuCash</span> "
 "wiki has a <a href='https://wiki.gnucash.org/wiki/Git'>description</a> "
@@ -530,8 +600,8 @@ msgstr ""
 "wiki heeft een <a href='https://wiki.gnucash.org/wiki/Git'>toelichting</a>, "
 "helemaal toegespitst op de <span class=\"gnucash\">GnuCash</span>-code. Om "
 "de documentatiebestanden te krijgen in plaats van de broncode van het "
-"programma moet je 'gnucash' in de genoemde commando's vervangen door "
-"'gnucash-docs', zoals dit:"
+"programma moet in de genoemde commando's 'gnucash' vervangen worden door "
+"'gnucash-docs', bijv.:"
 
 #: develdocs.phtml:60
 msgid ""
@@ -556,19 +626,12 @@ msgid ""
 "(usually gnucash-docs, unless you renamed it):"
 msgstr ""
 "Maak een eigen kopie van de documentatiebestanden zoals hierboven beschreven "
-"en pas deze aan. Als je tevreden bent over de wijzigingen maak je een "
-"patchbestand door het volgende commando uit te voeren in de basismap van de "
-"documentatie (normaal gesproken gnucash-docs, tenzij je de naam hebt "
+"en pas deze aan. Als de wijzigingen naar tevredenheid zijn, maakt u een "
+"patchbestand aan door het volgende commando uit te voeren in de basismap van "
+"de documentatie (normaal gesproken gnucash-docs, tenzij de naam is "
 "gewijzigd):"
 
 #: develdocs.phtml:70
-#, fuzzy
-#| msgid ""
-#| "Next attach your patch to a bug report against the proper component for "
-#| "the Documentation product in <a href='https://bugs.gnucash.org/'><span "
-#| "class=\"gnucash\">GnuCash</span>' bug database</a>. See also <a "
-#| "href='https://wiki.gnucash.org/wiki/Bugzilla'>GnuCash' wiki page on "
-#| "bugzilla</a> for more details about patch submission."
 msgid ""
 "Next attach your patch to a bug report against the proper component for the "
 "Documentation product in <a href='https://bugs.gnucash.org/'><span class="
@@ -576,10 +639,10 @@ msgid ""
 "gnucash.org/wiki/Bugzilla'>GnuCash' wiki page on bugzilla</a> for more "
 "details about patch submission."
 msgstr ""
-"Vervolgens hang je de patch als bijlage aan een bugrapport voor de geschikte "
+"Vervolgens voegt u de patch als bijlage aan een bugrapport voor de geschikte "
 "component van het \"Documentation\" produkt in de <a href='https://bugs."
 "gnucash.org/'>Bugzilla-databank</a> van <span class=\"gnucash\">GnuCash</"
-"span>. Voor meer details over het inzenden van patches kan je ook de <a "
+"span>. Voor meer details over het inzenden van patches kunt u ook de <a "
 "href='https://wiki.gnucash.org/wiki/Bugzilla'>GnuCash wiki pagina over "
 "Bugzilla</a> doorlezen."
 
@@ -592,10 +655,10 @@ msgid ""
 "patch to gnucash-devel, it should be attached, not inlined."
 msgstr ""
 "<b>Opmerking:</b> Hoewel dit vroeger gebruikelijk was, wordt het "
-"tegenwoordig afgeraden om je patch rechtstreeks naar de gnucash-devel "
+"tegenwoordig afgeraden om de patch rechtstreeks naar de gnucash-devel "
 "mailinglijst te sturen. Door de patch aan een (nieuw of bestaand) bugrapport "
 "in Bugzilla te hangen wordt voorkomen dat de patch zoekraakt tussen alle "
-"discussies op de lijst. Als je er echt op staat om de patch naar de "
+"discussies op de lijst. Als u er echt op staat om de patch naar de "
 "mailinglijst te sturen, doe het dan als bijlage, niet in de tekst van de e-"
 "mail zelf."
 
@@ -605,9 +668,9 @@ msgid ""
 "forward this to <a href='mailto:gnucash-devel@gnucash.org'>gnucash-devel</a> "
 "so that people can say 'hey I'm doing that already' or 'go ahead and do it'."
 msgstr ""
-"Laat ook aan andere schrijvers weten met welke sectie je aan de slag gaat "
-"door een e-mail te sturen naar <a href='mailto:gnucash-devel@gnucash."
-"org'>gnucash-devel</a>. Op die manier kunnen we dubbel werk zoveel mogelijk "
+"Laat ook aan andere schrijvers weten met welke sectie u aan de slag gaat "
+"door een e-mail te sturen naar <a href='mailto:gnucash-devel@gnucash.org"
+"'>gnucash-devel</a>. Op die manier kunnen we dubbel werk zoveel mogelijk "
 "voorkomen."
 
 #: develdocs.phtml:74
@@ -633,12 +696,6 @@ msgstr ""
 "en begin met het leveren van opmerkingen."
 
 #: develdocs.phtml:83
-#, fuzzy
-#| msgid ""
-#| "The best way of retaining comments about docs in an easy to find way for "
-#| "everyone would be to use <a href='https://bugs.gnucash.org/'>bugs.gnucash."
-#| "org</a> to file the bugs under documentation. This can also be done using "
-#| "bug-buddy."
 msgid ""
 "The best way of retaining comments about docs in an easy to find way for "
 "everyone would be to use <a href='https://bugs.gnucash.org/'>bugs.gnucash."
@@ -647,8 +704,8 @@ msgid ""
 msgstr ""
 "Deze opmerkingen moeten natuurlijk zodanig bewaard worden dat ze voor "
 "iedereen makkelijk terug te vinden zijn. De beste manier om dit te doen is "
-"om deze als bugreports in te dienen op <a href='https://bugs.gnucash."
-"org/'>bugs.gnucash.org</a> (categorie: 'documentation'). Dit kan ook via het "
+"om deze als bugreports in te dienen op <a href='https://bugs.gnucash.org/"
+"'>bugs.gnucash.org</a> (categorie: 'documentation'). Dit kan ook via het "
 "programma Bug-buddy."
 
 #: docs.phtml:10 externals/menu.phtml:23 externals/menu.phtml:30
@@ -661,6 +718,10 @@ msgid ""
 "stable branch</strong> documentation. See further down the page for other "
 "<span class=\"gnucash\">GnuCash</span> versions, languages, and formats."
 msgstr ""
+"De volgende koppelingen zijn naar de <strong>Engelse HTML-edities van de "
+"documentatie van huidige stabiele tak</strong>. Zie verderop op de pagina "
+"voor andere <span class=\"gnucash\">GnuCash</span>-versies, talen en "
+"bestandsformaten."
 
 #: docs.phtml:13
 msgid "Browse documentation online"
@@ -729,22 +790,22 @@ msgid ""
 "your comments that we know how to improve the documentation."
 msgstr ""
 "Stuur een e-mail naar de <a href=\"mailto:gnucash-user@gnucash.org\">gnucash-"
-"user</a>-mailinglijst als jouw vraag niet toereikend beantwoord wordt door "
-"de <b>Handleiding</b> of de <b>Conceptengids</b>. We ontvangen <b>graag</b> "
-"uw feedback, want alleen zo ontdekken wij hoe wij de documentatie kunnen "
-"verbeteren."
+"user</a>-mailinglijst als uw vraag vanuit de <b>Handleiding</b> of de "
+"<b>Conceptengids</b> niet toereikend beantwoord wordt. We ontvangen "
+"<b>graag</b> uw feedback, want alleen zo ontdekken wij hoe wij de "
+"documentatie kunnen verbeteren."
 
 #. Translators: %s is a link
 #: docs.phtml:45
 #, php-format
 msgid ""
 "Additionally, you can talk to someone via IRC at %s about your question."
-msgstr ""
+msgstr "Bovendien kunt u via IRC bij %s met iemand over uw vraag praten."
 
 #. Translators: IRC channel
 #: docs.phtml:48
 msgid "channel"
-msgstr ""
+msgstr "kanaal"
 
 #: docs.phtml:52
 msgid ""
@@ -753,8 +814,8 @@ msgid ""
 "page</a> if you are interested in contributing to this effort."
 msgstr ""
 "<span class=\"gnucash\">Gnucash</span>-documentatie is samengesteld door "
-"haar gemeenschap. Raadpleeg de pagina over <a href=\"develdocs.phtml"
-"\">documentatie schrijven</a> als je interesse hebt om hieraan bij te dragen."
+"haar gemeenschap. Raadpleeg de pagina over <a href=\"develdocs.phtml\""
+">documentatie schrijven</a> als u interesse hebt om hieraan bij te dragen."
 
 #: docs.phtml:57
 msgid "(current stable release)"
@@ -903,8 +964,8 @@ msgid ""
 "latest stable version."
 msgstr ""
 "Deze sectie bevat alle oudere <span class=\"gnucash\">GnuCash</span>-"
-"documentatie. Als je nog een van deze oude versies van <span class=\"gnucash"
-"\">GnuCash</span> gebruikt, raden wij je met klem aan om te upgraden naar de "
+"documentatie. Als u nog een van deze oude versies van <span class=\"gnucash\""
+">GnuCash</span> gebruikt, raden wij u met klem aan om te upgraden naar de "
 "huidige stabiele versie."
 
 #: docs.phtml:696
@@ -920,11 +981,9 @@ msgid "Unofficial documentation"
 msgstr "Officieuze documentatie"
 
 #: docs.phtml:705
-#, fuzzy
-#| msgid "Some people have written HOWTO guides or tutorials."
 msgid "Some people have written and published their own documentation."
 msgstr ""
-"Sommige mensen hebben zelf handleidingen of zelfstudie-gidsen geschreven."
+"Sommige mensen hebben hun eigen documentatie geschreven en gepubliceerd."
 
 #. Translators: %s is a wiki link
 #: docs.phtml:708
@@ -933,12 +992,12 @@ msgid ""
 "When this collection grew and became polyglot, it moved to %s. There you can "
 "also add more links."
 msgstr ""
+"Toen deze collectie groeide en meertalig werd, verhuisde het naar %s. Daar "
+"kunt u ook meer links toevoegen."
 
 #: docs.phtml:710
-#, fuzzy
-#| msgid "Documentation"
 msgid "wiki:Documentation"
-msgstr "Documentatie"
+msgstr "wiki:Documentatie"
 
 #: donate.phtml:3 externals/menu.phtml:14
 msgid "Donations"
@@ -954,7 +1013,7 @@ msgid ""
 msgstr ""
 "<span class=\"gnucash\">GnuCash</span> is vrije sofware en wordt gratis ter "
 "beschikking gesteld. Uw bijdrage, welke geheel vrijblijvend is, steunt onze "
-"wereldwijde gemeenschap. Overweeg een donatie als de software je bevalt. Wij "
+"wereldwijde gemeenschap. Overweeg een donatie als de software bevalt. Wij "
 "zijn een handvol ontwikkelaars en andere vrijwilligers die gebruikers "
 "wereldwijd bedienen."
 
@@ -964,7 +1023,7 @@ msgstr "Diverse manieren om te doneren"
 
 #: donate.phtml:23
 msgid "You can donate via the Sourceforge tip jar"
-msgstr "Je kan een donatie doen via de Sourceforge tip jar"
+msgstr "U kunt een donatie doen via de Sourceforge fooienpot"
 
 #: donate.phtml:28
 msgid "Sourceforge tip jar"
@@ -976,13 +1035,13 @@ msgid ""
 "Consulting, owned by Derek Atkins. So don't be surprised when your payment "
 "goes there."
 msgstr ""
-"De tip jar werkt via een Paypal account beheerd door IHTFP Consulting, "
-"eigendom van Derek Atkins. Wees dus niet verrast als je betaling naar deze "
+"De fooienpot werkt via een Paypal-account beheerd door IHTFP Consulting, "
+"eigendom van Derek Atkins. Wees dus niet verrast als de betaling naar deze "
 "firma gaat."
 
 #: donate.phtml:33
 msgid "You can transfer a donation to our bank account"
-msgstr "Je kan een donatie overschrijven naar onze bank rekening"
+msgstr "U kunt een donatie overschrijven naar onze bankrekening"
 
 #: donate.phtml:34
 msgid "Owner:"
@@ -1014,7 +1073,7 @@ msgstr "Bankadres:"
 
 #: donate.phtml:45
 msgid "Why we appreciate your support"
-msgstr "Waarom we jouw ondersteuning waarderen"
+msgstr "Waarom we uw ondersteuning waarderen"
 
 #: donate.phtml:48
 msgid ""
@@ -1027,11 +1086,11 @@ msgstr ""
 
 #: donate.phtml:49
 msgid "Your contribution will be used to cover these expenses."
-msgstr "Jouw bijdrage zal gebruikt worden om deze kosten te dekken."
+msgstr "Uw bijdrage wordt gebruikt om deze kosten te dekken."
 
 #: donate.phtml:50
 msgid "Thank you for your support!"
-msgstr "Dank voor je steun!"
+msgstr "Dank voor uw steun!"
 
 #: download.phtml:5
 msgid ""
@@ -1039,6 +1098,10 @@ msgid ""
 "program inclusive documentation or the source files here. Several versions "
 "are available for recent and older operating systems."
 msgstr ""
+"Download hier uitvoerbare bundels van het <span class=\"gnucash\""
+">GnuCash</span>-programma inclusief documentatie of de bronbestanden. Er "
+"zijn verschillende versies beschikbaar voor recente en oudere "
+"besturingssystemen."
 
 #: download.phtml:13
 msgid "Download GnuCash"
@@ -1094,6 +1157,7 @@ msgstr ""
 #, php-format
 msgid "At %s you can compare which distribution which version ships."
 msgstr ""
+"Bij %s kunt u vergelijken welke versie bij welke distributie wordt verzonden."
 
 #: download.phtml:33
 msgid ""
@@ -1159,7 +1223,7 @@ msgstr ""
 
 #: download.phtml:43
 msgid "Sandbox"
-msgstr ""
+msgstr "Zandbak"
 
 #: download.phtml:46
 #, php-format
@@ -1170,43 +1234,40 @@ msgid ""
 "Linux machines. If you have <a href=\"%s\">Flatpak</a> installed, you can "
 "download any recent version of <span class=\"gnucash\">GnuCash</span> from"
 msgstr ""
+"Een alternatief voor het gebruik van de softwaremanager van uw distributie "
+"is om het Flatpak-beheersysteem te gebruiken, dat alle benodigde "
+"bibliotheken voor u bundelt. Dit kan de installatie van nieuwere versies van "
+"GnuCash op oudere Linux-machines vereenvoudigen. Als u <a href=\"%s\""
+">Flatpak</a> hebt geïnstalleerd, kunt u elke recente versie van <span class="
+"\"gnucash\">GnuCash</span> downloaden van"
 
 #. Translators: %s is the base url of the gnucash wiki, adjust this,
 #. if a localized instance of the Flatpak page exists like "%sDe/Flatpak"
 #: download.phtml:51
 #, php-format
 msgid "%sFlatpak"
-msgstr ""
+msgstr "%sFlatpak"
 
 #: download.phtml:51
 msgid "Known Issues and other details"
-msgstr ""
+msgstr "Bekende problemen en andere details"
 
 #: download.phtml:55 index.phtml:17
 msgid "Source code"
 msgstr "Broncode"
 
 #: download.phtml:56
-#, fuzzy
-#| msgid ""
-#| "If your distro doesn't ship with <span class=\"gnucash\">GnuCash</span> "
-#| "or you wish to install a different version than it ships with, you could "
-#| "try to build <span class=\"gnucash\">GnuCash</span> directly from the "
-#| "source code. The <span class=\"gnucash\">GnuCash</span> wiki has <a "
-#| "href='https://wiki.gnucash.org/wiki/Building'>guidelines for several "
-#| "distributions</a>."
 msgid ""
 "If you can't easily install <span class=\"gnucash\">GnuCash</span> in your "
 "distribution, or wish to install a different version than it ships with, you "
 "can build <span class=\"gnucash\">GnuCash</span> from source code as "
 "described in <a href='https://wiki.gnucash.org/wiki/Building'>the wiki</a>."
 msgstr ""
-"Indien bij uw distributie geen <span class=\"gnucash\">GnuCash</span> wordt "
-"meegeleverd of indien u een andere versie wilt installeren dan de "
-"meegeleverde versie, kunt u proberen om <span class=\"gnucash\">GnuCash</"
-"span> vanuit de broncode te compileren. De <span class=\"gnucash\">GnuCash</"
-"span> wiki geeft <a href='https://wiki.gnucash.org/wiki/"
-"Building'>richtlijnen voor verschillende distributies</a>."
+"Als u <span class=\"gnucash\">GnuCash</span> niet gemakkelijk in uw "
+"distributie kunt installeren of een andere versie wilt installeren dan "
+"waarmee het wordt geleverd, kunt u <span class=\"gnucash\">GnuCash</span> "
+"bouwen van broncode zoals beschreven in <a href='https://wiki.gnucash.org/"
+"wiki/Building'>de wiki</a>."
 
 #: download.phtml:58 download.phtml:73 download.phtml:89
 #, php-format
@@ -1219,32 +1280,23 @@ msgid "Unstable/Development release (%s)"
 msgstr "Instabiele (ontwikkel-)versie (%s)"
 
 #: download.phtml:67
-#, fuzzy
-#| msgid ""
-#| "Unstable (development) releases are for testing purposes only. They "
-#| "contain the newest features and improvements, but may also contain "
-#| "serious bugs still. Don't install these releases for everyday use."
 msgid ""
 "Unstable (development) releases are for testing purposes only. They contain "
 "the newest features and improvements, but possibly also bugs. Don't install "
 "these releases for everyday use."
 msgstr ""
-"Instabiele (ontwikkel-)versies dienen enkel voor testdoeleinden. Ze bieden "
+"Instabiele (ontwikkel-)versies dienen enkel voor testdoeleinden. Deze bieden "
 "de nieuwste functionaliteiten en verbeteringen, maar bevatten mogelijk ook "
-"nog ernstige programmeerfouten die uw gegevens onherstelbaar kunnen "
-"beschadigen. Installeer deze versies niet voor dagelijks gebruik."
+"fouten. Installeer deze versies niet voor dagelijks gebruik."
 
 #: download.phtml:68
-#, fuzzy, php-format
-#| msgid ""
-#| "The latest unstable release of <span class=\"gnucash\">GnuCash</span> is "
-#| "%s. Choose the download for your operating system below."
+#, php-format
 msgid ""
 "The latest unstable release of <span class=\"gnucash\">GnuCash</span> "
 "(available below) is %s."
 msgstr ""
-"De meest actuele instabiele <span class=\"gnucash\">GnuCash</span>-versie is "
-"%s. Kies de download voor uw besturingssysteem hieronder."
+"De meest actuele instabiele versie van <span class=\"gnucash\">GnuCash</"
+"span> (hieronder beschikbaar) is %s."
 
 #: download.phtml:81
 #, php-format
@@ -1256,28 +1308,25 @@ msgid ""
 "This old stable release is the final version of all bugfixes from the "
 "previous stable series without being a major upgrade."
 msgstr ""
+"Deze oude stabiele release is de definitieve versie van alle bugfixes uit de "
+"vorige stabiele serie zonder een grote upgrade te zijn."
 
 #: download.phtml:84
-#, fuzzy, php-format
-#| msgid ""
-#| "The last old stable release of <span class=\"gnucash\">GnuCash</span> is "
-#| "%s. Choose the download for your operating system below."
+#, php-format
 msgid ""
 "The last old stable release of <span class=\"gnucash\">GnuCash</span> "
 "(available below) is %s."
 msgstr ""
-"De laatste oude stabiele <span class=\"gnucash\">GnuCash</span>-uitgave is "
-"versie %s. Kies de download voor uw besturingssysteem hieronder."
+"De laatste oude stabiele versie van <span class=\"gnucash\">GnuCash</span> ("
+"hieronder beschikbaar) is %s."
 
 #: download.phtml:97
 msgid "Latest versions for historical operating systems"
 msgstr "Recentste versies voor historische besturingssystemen"
 
 #: download.phtml:99
-#, fuzzy
-#| msgid "This versions are really old. Do not expect any support."
 msgid "These versions are really old. No support is offered."
-msgstr "Deze versies zijn heel oud. Verwacht geen verdere ondersteuning."
+msgstr "Deze versies zijn heel oud. Er wordt geen ondersteuning verleend."
 
 #: download.phtml:112
 msgid "Other"
@@ -1507,7 +1556,7 @@ msgstr "Dubbel boekhouden"
 #. See also https://wiki.gnucash.org/wiki/Documentation_Update_Instructions
 #: features.phtml:37
 msgid "basics_AccountRelationships.C.png"
-msgstr ""
+msgstr "basics_AccountRelationships.C.png"
 
 #: features.phtml:41
 msgid ""
@@ -1541,8 +1590,8 @@ msgid ""
 "provided:"
 msgstr ""
 "Deze dagboeken ondersteunen verschillende betaalvormen (pinnen, creditcard), "
-"de ontvangst van inkomsten en de aankoop van effecten en/of vreemde valuta. "
-"De volgende functionaliteiten zijn ook beschikbaar:"
+"de ontvangst van inkomsten en de transacties van beleggingen en/of vreemde "
+"valuta. De volgende functionaliteiten zijn ook beschikbaar:"
 
 #: features.phtml:58
 msgid "The ability to enter <b>split transactions</b>"
@@ -1724,8 +1773,8 @@ msgid ""
 "Using A/Receivable and A/Payable accounts you can even manage <b>payrolls</"
 "b> for your employees."
 msgstr ""
-"In theorie kan met creatief gebruik van debiteuren- en crediteurenrekeningen "
-"zelfs een <b>salarisadministratie</b> voor uw medewerkers worden opgezet."
+"Met gebruik van open-postrekeningen kan zelfs een <b>salarisadministratie</"
+"b> voor uw medewerkers worden opgezet."
 
 #: features.phtml:137
 msgid ""
@@ -1752,20 +1801,19 @@ msgstr ""
 
 #: features.phtml:153
 msgid "Stock/Mutual Fund Portfolios"
-msgstr "Portefeuilles voor aandelen en beleggingsfondsen"
+msgstr "Portefeuilles voor beleggingen en fondsen"
 
 #: features.phtml:156
 msgid ""
 "Track stocks individually (one per account) or in portfolio of accounts (a "
 "group of accounts that can be displayed together)."
 msgstr ""
-"Het is mogelijk om de performance van uw effecten individueel (een per "
-"rekening) of als portefeuille (een groep rekeningen die samen kan worden "
-"weergegeven) te volgen."
+"Volg de prestaties van uw beleggingen individueel (een per rekening) of als "
+"portefeuille (een groep rekeningen gezamenlijk)."
 
 #: features.phtml:161
 msgid "Online Stock &amp; Mutual Fund Quotes"
-msgstr "Online koersen voor aandelen en beleggingsfondsen"
+msgstr "Online koersen voor beleggingen en fondsen"
 
 #: features.phtml:164
 msgid ""
@@ -1773,9 +1821,9 @@ msgid ""
 "automatically. Additional pricing sources are added regularly."
 msgstr ""
 "Door de ondersteuning voor het online ophalen van koersinformatie voor "
-"aandelen en beleggingsfondsen wordt de waarde van uw effectenportefeuille "
-"automatisch bijgewerkt. Regelmatig worden nieuwe bronnen voor "
-"koersinformatie toegevoegd."
+"beleggingen en fondsen wordt de waarde van uw effectenportefeuille "
+"automatisch bijgewerkt. Nieuwe bronnen voor koersinformatie worden "
+"regelmatig toegevoegd."
 
 #: features.phtml:167
 msgid "Data storage and exchange features"
@@ -1906,9 +1954,8 @@ msgid ""
 "A powerful transaction query dialogue can help you quickly locate a needle "
 "in a haystack."
 msgstr ""
-"Ben je op zoek naar een bepaalde boeking? De krachtige zoekfunctie van <span "
-"class=\"gnucash\">GnuCash</span> kan je helpen om snel de spreekwoordelijke "
-"naald in de hooiberg te vinden."
+"Een krachtig dialoogvenster voor transactie-zoekopdrachten kan u helpen snel "
+"de naald in de hooiberg te vinden."
 
 #: features.phtml:229
 msgid "Check Printing"
@@ -1968,15 +2015,13 @@ msgid "Via distribution"
 msgstr "Via distributie"
 
 #: index.phtml:25
-#, fuzzy
-#| msgid "More downloads (Source, Development …)"
 msgid "More downloads (Source code, Development …)"
 msgstr "Overige downloads (broncode, ontwikkelversies …)"
 
 #: index.phtml:32
 #, php-format
 msgid "Version %s is the last version for %s and %s and earlier."
-msgstr ""
+msgstr "Versie %s is de laatste versie voor %s en %s en ouder."
 
 #: index.phtml:35
 #, php-format
@@ -2008,17 +2053,19 @@ msgid ""
 "GnuCash is developed, maintained, documented, and translated entirely by "
 "volunteers. Want to help out? We have %s."
 msgstr ""
+"GnuCash is volledig ontwikkeld, onderhouden, gedocumenteerd en vertaald door "
+"vrijwilligers. Wilt u helpen? We hebben %s."
 
 #. Translators: This is the label of the Contributing… wiki link
 #: index.phtml:48
 msgid "some suggestions"
-msgstr ""
+msgstr "enkele suggesties"
 
 #. Translators: %s is the link to weblate
 #: index.phtml:50
 #, php-format
 msgid "Please help translate GnuCash into your language at %s."
-msgstr ""
+msgstr "Help alstublieft om GnuCash op %s in uw taal te vertalen."
 
 #: index.phtml:55
 msgid "Need Help?"
@@ -2037,9 +2084,8 @@ msgid ""
 ", which are public, email-based discussion groups where you can ask and "
 "answer <span class=\"gnucash\">GnuCash</span> questions to other users."
 msgstr ""
-", welke publieke, e-mail gebaseerde discussiegroepen zijn waar je <span "
-"class=\"gnucash\">GnuCash</span> vragen kan stellen aan en beantwoorden van "
-"andere gebruikers."
+", welke publieke, e-mail gebaseerde discussiegroepen zijn waar u vragen over "
+"<span class=\"gnucash\">GnuCash</span> kunt stellen en beantwoorden."
 
 #: index.phtml:66
 msgid "Feature Highlights"
@@ -2051,7 +2097,7 @@ msgstr "Dubbel boekhouden"
 
 #: index.phtml:72
 msgid "Stock/Bond/Mutual Fund Accounts"
-msgstr "Ondersteunt aandelen, obligaties en beleggingsfondsen"
+msgstr "Rekeningen voor beleggingen, obligaties en fondsen"
 
 #: index.phtml:73
 msgid "Small-Business Accounting"
@@ -2082,20 +2128,21 @@ msgid ""
 "We've released GnuCash %s with many bugfixes and improvements including some "
 "%s!"
 msgstr ""
+"We hebben GnuCash %s uitgebracht met veel bugfixes en verbeteringen, "
+"waaronder enkele %s!"
 
 #: index.phtml:85
 msgid "great new features"
 msgstr "geweldige, nieuwe functies"
 
 #: new_features-4.0.phtml:4
-#, fuzzy, php-format
+#, php-format
 msgid "What's New in GnuCash %s"
-msgstr "GnuCash %s downloaden"
+msgstr "Nieuw in GnuCash %s"
 
 #: new_features-4.0.phtml:15
-#, fuzzy
 msgid "Major Highlights"
-msgstr "Belangrijkste functies"
+msgstr "Belangrijke verbeteringen"
 
 #: new_features-4.0.phtml:23
 msgid ""
@@ -2112,6 +2159,10 @@ msgid ""
 "of the letters when a transaction has an association. This doesn't work on "
 "MacOS."
 msgstr ""
+"In de kolom Toewijzingen (zichtbaar in tweeregelige modus) op het tabblad "
+"wordt nu een pictogram (paperclip voor bestanden, kettingschakel voor URL's) "
+"weergegeven in plaats van de letters als een transactie een toewijzing "
+"heeft. Dit werkt niet op MacOS ."
 
 #: new_features-4.0.phtml:25
 msgid ""
@@ -2119,10 +2170,14 @@ msgid ""
 "vouchers. The actual association when present is added as a link button "
 "which is shown below the notes."
 msgstr ""
+"Het is nu mogelijk koppelingen toe te voegen aan rekeningen, creditnota's, "
+"facturen en tegoeden. De daadwerkelijke koppeling wordt, indien van "
+"toepassing, toegevoegd als een knop die onder de opmerkingen wordt "
+"weergegeven."
 
 #: new_features-4.0.phtml:33
 msgid "[Video showing two ways to filter accounts]"
-msgstr ""
+msgstr "[Video met twee manieren om rekeningen te filteren]"
 
 #: new_features-4.0.phtml:37
 msgid ""
@@ -2134,6 +2189,15 @@ msgid ""
 "contain only matching accounts. Once you have a small enough list you can "
 "use the arrow keys to select the account that you want."
 msgstr ""
+"Nieuwe directe zoekopdracht zijn toegevoegd aan sequentieel zoeken bij het "
+"selecteren van een account of een actie in het register: in plaats van de "
+"eerste paar tekens van een rekening op het hoogste niveau te typen, het "
+"scheidingsteken, de eerste paar tekens van het account op het volgende "
+"niveau, enzovoort, kunt u in plaats daarvan een paar tekens typen van een "
+"deel van een volledige rekeningnaam en de vervolgkeuzelijst wordt gefilterd "
+"om alleen overeenkomende rekeningen te bevatten. Zodra u een lijst hebt die "
+"klein genoeg is, kunt u de pijltoetsen gebruiken om de gewenste rekening te "
+"selecteren."
 
 #: new_features-4.0.phtml:42
 msgid ""
@@ -2144,12 +2208,19 @@ msgid ""
 "provides an export format and an output file name without which it will "
 "output the report to stdout."
 msgstr ""
+"Een nieuw specifiek uitvoerbaar bestand, <kbd>gnucash-cli</kbd> (<kbd"
+">gnucash-cli.exe</kbd> op Microsoft Windows) voor het uitvoeren van "
+"opdrachtregeltaken zoals het bijwerken van de prijzen in uw boek. <kbd"
+">gnucash-cli</kbd> krijgt de mogelijkheid om rapporten uit te voeren vanaf "
+"de opdrachtregel. Geef rapporten op die moeten worden uitgevoerd op naam of "
+"guid. Het biedt ook een exportformaat en een uitvoerbestandsnaam, zonder "
+"welke het rapport naar stdout zal uitvoeren."
 
 #: new_features-4.0.phtml:48
 msgid ""
 "will display a screen listing all of the available commands and their "
 "options."
-msgstr ""
+msgstr "geeft een scherm weer met alle beschikbare opdrachten en hun opties."
 
 #: new_features-4.0.phtml:49
 msgid ""
@@ -2157,16 +2228,22 @@ msgid ""
 "has, though <kbd>--get-price-quotes</kbd> is deprecated in  favor of "
 "<kbd>gnucash-cli --quotes get</kbd>."
 msgstr ""
+"Het GUI-programma, <kbd>gnucash</kbd>, reageert nog steeds op de opties die "
+"het altijd heeft, hoewel <kbd>--get-price-quotes</kbd> wordt afgeschaft ten "
+"gunste van <kbd>gnucash-cli--quotes get</kbd>."
 
 #: new_features-4.0.phtml:54
 msgid "Graphic User Interface"
-msgstr ""
+msgstr "Grafische gebruikersinterface"
 
 #: new_features-4.0.phtml:58
 msgid ""
 "When creating a new account hierarchy it's now possible to load account "
 "templates from locales other than the one set for the user interface."
 msgstr ""
+"Bij het aanmaken van een nieuw rekeningoverzicht is het nu mogelijk om "
+"rekeningsjablonen te laden van andere locaties dan die welke zijn ingesteld "
+"voor de gebruikersinterface."
 
 #: new_features-4.0.phtml:59
 msgid ""
@@ -2175,6 +2252,11 @@ msgid ""
 "choices in the latter depending on the former. The default is the current "
 "locale but they may be used to select account templates from any locale."
 msgstr ""
+"Op de pagina <b>Rekeningen kiezen om aan te maken</b>, staan er twee "
+"vervolgkeuzelijsten boven de selectie van het <b>rekeningtype</b>, één voor "
+"taal en één voor land, waarbij de opties voor de laatste afhankelijk zijn "
+"van de eerste. De standaard is de huidige landinstelling, maar ze kunnen "
+"worden gebruikt om rekeningsjablonen te selecteren uit elke landinstelling."
 
 #: new_features-4.0.phtml:61
 msgid ""
@@ -2183,46 +2265,59 @@ msgid ""
 "If they don't you'll get a warning and the opportunity to pick another "
 "account or to carry on regardless."
 msgstr ""
+"Bij het verwijderen van rekeningen worden de bestemmingsrekening van "
+"verplaatste splitsingen gecontroleerd om er zeker van te zijn dat ze "
+"dezelfde goederen hebben als de bronrekening. Als ze dat niet doen, krijgt u "
+"een waarschuwing en de mogelijkheid om een ander account te kiezen of door "
+"te gaan."
 
 #: new_features-4.0.phtml:62
 msgid ""
 "Reversing transactions will now pop a dialog box to request a posting date."
 msgstr ""
+"Bij het annuleren van transacties verschijnt nu een dialoogvenster voor het "
+"opvragen van een boekingsdatum."
 
 #: new_features-4.0.phtml:69
-#, fuzzy
 msgid "Business Functions"
-msgstr "Functies voor kleine ondernemingen"
+msgstr "Functies voor ondernemingen"
 
 #: new_features-4.0.phtml:72
 msgid "Business Document Column Widths"
-msgstr ""
+msgstr "Kolombreedtes voor zakelijke documenten"
 
 #: new_features-4.0.phtml:73
 msgid ""
 "Entry column widths in Invoices, Bills, and Employee Vouchers may now be "
 "saved as defaults for each type of document."
 msgstr ""
+"De invoer van kolombreedtes in facturen, rekeningen en werknemersvouchers "
+"kunnen nu als standaard worden opgeslagen voor elk type document."
 
 #: new_features-4.0.phtml:74
 msgid ""
 "Two menu items are added to the View menu when a Bill, Invoice, or Voucher "
 "tab has focus:"
 msgstr ""
+"Er zijn twee menu-items toegevoegd aan het menu Beeld wanneer een tabblad "
+"factuur, rekening of voucher de focus heeft:"
 
 #: new_features-4.0.phtml:76
 msgid "Use as Default Layout for Vendor Documents"
-msgstr ""
+msgstr "Gebruik als standaardlay-out voor leveranciersdocumenten"
 
 #: new_features-4.0.phtml:77
 msgid "Reset Default Layout for Vendor Documents"
-msgstr ""
+msgstr "Standaardindeling voor leveranciersdocumenten herstellen"
 
 #: new_features-4.0.phtml:78
 msgid ""
 "Vendor Documents is for Bills and is replaced by Customer or Employee "
 "Documents for Invoices or Vouchers respectively."
 msgstr ""
+"Leverancierdocumenten hebben betrekking tot inkooprekeningen en worden "
+"vervangen door respectievelijk klant- of werknemersdocumenten voor facturen "
+"of declaraties."
 
 #: new_features-4.0.phtml:80
 msgid ""
@@ -2231,17 +2326,22 @@ msgid ""
 "customization and documents of that type will therafter use the computed "
 "default widths."
 msgstr ""
+"De eerste slaat de kolombreedtes van het huidige document op en maakt ze de "
+"standaard voor alle documenten van hetzelfde type. Het tweede menu-item "
+"verwijdert de aanpassing en documenten van dat type zullen vervolgens de "
+"berekende standaardbreedtes gebruiken."
 
 #: new_features-4.0.phtml:86
-#, fuzzy
 msgid "Importing Transactions"
-msgstr "Vertalingen"
+msgstr "Transacties importeren"
 
 #: new_features-4.0.phtml:89
 msgid ""
 "Support for AQBanking Version 6. This is required to support new FinTS "
 "protocols for the European Payment Services Directive (PSD2)."
 msgstr ""
+"Ondersteuning voor AQBanking versie 6. Dit is vereist voor de nieuwe FinTS-"
+"protocollen volgens de Europese richtlijn betalingsdiensten (PSD2)."
 
 #: new_features-4.0.phtml:90
 msgid ""
@@ -2253,13 +2353,16 @@ msgstr ""
 
 #: new_features-4.0.phtml:91
 msgid "The OFX file importer can now import more than one file at a time."
-msgstr ""
+msgstr "De OFX-bestandsimport kan nu meer dan één bestand tegelijk importeren."
 
 #: new_features-4.0.phtml:92
 msgid ""
 "OFX imports having balance information will now offer to immediately "
 "reconcile, passing the balance information in the file to the reconcile info."
 msgstr ""
+"OFX-import met balansinformatie zal nu aanbieden om onmiddellijk met elkaar "
+"te vereffenen, waarbij de balansinformatie in het bestand wordt doorgegeven "
+"aan de te vereffenen informatie."
 
 #: new_features-4.0.phtml:93
 msgid ""
@@ -2298,36 +2401,45 @@ msgid ""
 "<b>N.B.</b> This is incompatible with previous versions of the report and "
 "will require regenerating saved configurations."
 msgstr ""
+"Ondersteuning voor UK VAT en Australische GST zijn toegevoegd aan het Income-"
+"GST-rapport. De opties van het rapport worden gewijzigd van bronaccounts in "
+"bronverkoop- en aankoopaccounts om een goede rapportage van kapitaalaankopen "
+"mogelijk te maken. <b>N.B.</b> Dit is niet compatibel met eerdere versies "
+"van het rapport en vereist het dat configuraties opnieuw worden aangemaakt "
+"en opgeslagen."
 
 #: new_features-4.0.phtml:109
 msgid "Budgets"
-msgstr ""
+msgstr "Budgetten"
 
 #: new_features-4.0.phtml:112
 msgid "Optionally include the account code option in budget view."
-msgstr ""
+msgstr "Neem optioneel de optie rekeningcode op in budgetweergave."
 
 #: new_features-4.0.phtml:113
 msgid "Enable adding notes to budgets."
-msgstr ""
+msgstr "Mogelijkheid om notities aan budgetten toe te voegen."
 
 #: new_features-4.0.phtml:114
 msgid "Account codes may now optionally be displayed in the Budget Tree View."
 msgstr ""
+"Rekeningcodes kunnen nu optioneel worden weergegeven in de Budgetstructuur."
 
 #: new_features-4.0.phtml:119
 msgid "Compatibility"
-msgstr ""
+msgstr "Compatibiliteit"
 
 #: new_features-4.0.phtml:122
 msgid ""
 "GnuCash 4.x and later will no longer migrate old gconf settings from GnuCash "
 "2.4.x."
 msgstr ""
+"GnuCash 4.x en hoger migreren niet langer oude gconf-instellingen van "
+"GnuCash 2.4.x."
 
 #: new_features-4.0.phtml:128
 msgid "Customization and Scripting"
-msgstr ""
+msgstr "Aanpassing en scripting"
 
 #: new_features-4.0.phtml:131
 msgid ""
@@ -2335,25 +2447,30 @@ msgid ""
 "with Gtk practice. You may need to spend some time with the GtkInspector to "
 "get your custom CSS back the way you like it."
 msgstr ""
+"De hiërarchie van GnuCash CSS-widget is herzien om meer consistent te zijn "
+"met de Gtk-praktijk. Mogelijk moet u wat tijd doorbrengen met de "
+"GtkInspector om uw aangepaste CSS terug te krijgen zoals u dat wilt."
 
 #: new_features-4.0.phtml:132
 msgid ""
 "Python bindings are now localized and their strings available for "
 "translation."
 msgstr ""
+"Python-bindingen zijn nu gelokaliseerd en hun strings zijn beschikbaar voor "
+"vertaling."
 
 #: new_features-4.0.phtml:135
 #, php-format
 msgid "For a complete list of new features and API changes see the %s."
-msgstr ""
+msgstr "Zie %s voor een volledige lijst met nieuwe functies en API-wijzigingen."
 
 #: new_features-4.0.phtml:136
 msgid "Release Notes"
-msgstr ""
+msgstr "Versie-opmerkingen"
 
 #: news.phtml:4
 msgid "Announcement of New Releases, Server Maintenance …"
-msgstr ""
+msgstr "Aankondiging van nieuwe releases, serveronderhoud…"
 
 #: news.phtml:12
 msgid "GnuCash News"
@@ -2376,7 +2493,7 @@ msgstr ""
 
 #: sizing.phtml:4
 msgid "This is an ancient page about Gnucash's code size."
-msgstr ""
+msgstr "Dit is een oude pagina over de codegrootte van Gnucash."
 
 #: sizing.phtml:15
 msgid ""
@@ -2412,10 +2529,10 @@ msgid ""
 "several dozen copies of Tolstoy's \"War and Peace\", roughly a bookshelf-"
 "width's worth of source code."
 msgstr ""
-"Als jij je die massa broncode moeilijk kan voorstellen, beschouw het dan als "
-"volgt: afgedrukt op papier en in boeken ingebonden, zou dit overeenkomen met "
-"een paar dozijn exemplaren van Tolstoj's \"Oorlog en Vrede\", ongeveer een "
-"volledige boekenplank gevuld met broncode."
+"Als u zich die massa broncode moeilijk kunt voorstellen, beschouw het dan "
+"als volgt: afgedrukt op papier en in boeken ingebonden, zou dit overeenkomen "
+"met een paar dozijn exemplaren van Tolstoj's \"Oorlog en Vrede\", ongeveer "
+"een volledige boekenplank gevuld met broncode."
 
 #: sizing.phtml:27
 msgid ""
@@ -2428,7 +2545,7 @@ msgstr ""
 "Voor alle duidelijkheid, dit is broncode (en documentatie) gecreëerd en "
 "getest door mensen. Het gaat hier *niet* om automatisch gegenereerde code. "
 "Hulpmiddelen (zoals glade of swig) kunnen automatisch miljoenen coderegels "
-"genereren; deze tel ik niet mee. Elke getelde regel is ingetikt, bewerkt en "
+"genereren; dit zit er niet bij. Elke getelde regel is ingetikt, bewerkt en "
 "bijgewerkt, vaak meer dan eens, door mensenhanden."
 
 #: sizing.phtml:30
@@ -2603,11 +2720,6 @@ msgstr ""
 "naar engine, register of ledger."
 
 #: sizing.phtml:354
-#, fuzzy
-#| msgid ""
-#| "Contents of src/gnome plus src/register/gnome (version 1.6 and earlier). "
-#| "For version 1.7 and later, this consists of src/gnome, src/gnome-search "
-#| "and src/gnome-util."
 msgid ""
 "Contents of src/gnome plus src/register/gnome (version 1.6 and earlier). For "
 "version 1.7 and later, this consists of src/gnome, src/gnome-search and src/"
@@ -2615,7 +2727,7 @@ msgid ""
 msgstr ""
 "Inhoud van src/gnome en src/register/gnome (versie 1.6 en eerder). Voor "
 "versie 1.7 en later bestaat dit uit src/gnome, src/gnome-search en src/gnome-"
-"util."
+"util"
 
 #: sizing.phtml:359
 msgid ""
@@ -2749,17 +2861,13 @@ msgstr ""
 "plaats hiervan zal de Engelstalige versie getoond worden."
 
 #: viewdoc.phtml:178
-#, fuzzy, php-format
-#| msgid ""
-#| "It seems your browser doesn't support iframes. To view the requested page "
-#| "in a separate window, please <a href=\"%s\" target=\"_new\">click here</"
-#| "a>."
+#, php-format
 msgid ""
 "It seems your browser doesn't support iframes. To view the requested page in "
 "a separate window, please <a href=\"%s\" target=\"_blank\">click here</a>."
 msgstr ""
-"Jouw browser lijkt geen iframes te ondersteunen. Om de gevraagde pagina in "
-"een apart venster te bekijken, kan je <a href=\"%s\" target=\"_new\">hier "
+"Uw browser lijkt geen iframes te ondersteunen. Om de gevraagde pagina in een "
+"apart venster te bekijken, kunt u <a href=\"%s\" target=\"_new\">hier "
 "klikken</a>."
 
 #~ msgid ""
