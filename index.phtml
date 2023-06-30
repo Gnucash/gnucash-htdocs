@@ -19,7 +19,7 @@ include ("externals/menu.phtml");
           <li><img alt="windows" src="<?=$top_dir?>/images/icons/windows.png" /> <?=\LABEL_WIN?>
             <a
             href="<?=$latest_stable_path.$latest_stable_win?>"><?=\SUPPORTED_WIN?></a></li>
-          <li><img alt="macosx" src="<?=$top_dir?>/images/icons/macosx.png" /> <?=\LABEL_MAC?>
+          <li><img alt="Apple Logo" src="<?=$top_dir?>/images/icons/apple_logo.png" /> <?=\LABEL_MAC?>
             <a
             href="<?=$latest_stable_path.$latest_stable_mac_intel?>"><?=\SUPPORTED_MAC?></a></li>
           <li><a href="<?=$home?>/download.phtml" style="font-size: 80%;"><?=T_("More downloads (Source code, Development …)")?></a></li>
@@ -35,6 +35,9 @@ include ("externals/menu.phtml");
         <p><?php printf(T_("Version %s is the last version for Windows XP/Vista and MacOS X 10.8 and earlier, and so the last version that will run on PowerPC Macs."),
             "<a href=\"download.phtml#historical\">".$last_xp_vista_version."</a>" )?>
         </p>
+        <p><img alt="flatpak logo" src="<?=$top_dir?>/images/icons/Flatpak_logo.png" /> <?php printf(T_("GnuCash is also available as a flatpak from flathub.org. %s"),
+            /*Translators: This labels a link to flatpak installation instructions. */
+                                                                                           '<a href="https://wiki.gnucash.org/wiki/Flatpak">' . T_("Instructions") . "</a>"); ?></p>
       </div>
     </div><?php // Download ?>
 
