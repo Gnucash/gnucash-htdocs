@@ -9,10 +9,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs 0.0.1\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
-"component=Translations&product=Website&resolution=---\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
+"cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2023-06-30 16:21-0700\n"
-"PO-Revision-Date: 2023-06-24 23:52+0000\n"
+"PO-Revision-Date: 2023-07-01 18:50+0000\n"
 "Last-Translator: Szia Tomi <sziatomi01@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnucash/"
 "website/hu/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.18.1\n"
+"X-Generator: Weblate 5.0-dev\n"
 
 #: 2.6-release-tour.phtml:3
 msgid "GnuCash 2.6 release tour"
@@ -512,9 +512,9 @@ msgid ""
 "documentation, you will need to know xml. Some basic knowledge of the "
 "docbook system may be useful as well."
 msgstr ""
-"Ha a <span class=\"gnucash\">GnuCash</span> dokumentációját szeretnéd "
-"átnézni vagy megírni, ismerned kell az xml nyelvet. A <b>docbook</b> "
-"rendszer némi alapismerete is hasznos lehet."
+"Ha a <span class=\"gnucash\">GnuCash</span> dokumentációját szeretné átnézni "
+"vagy megírni, ismernie kell az xml nyelvet. A docbook rendszer némi "
+"alapismerete is hasznos lehet."
 
 #: develdocs.phtml:30
 msgid ""
@@ -531,8 +531,8 @@ msgid ""
 "with docbook files."
 msgstr ""
 "Bár ez a <span class=\"gnucash\">GnuCash</span> wiki oldal valójában a "
-"dokumentáció fordításáról szól, hasznos információkat tartalmaz a "
-"<b>docbook</b> fájlokkal való munkáról is."
+"dokumentáció fordításáról szól, hasznos információkat tartalmaz a docbook "
+"fájlokkal való munkáról is."
 
 #: develdocs.phtml:36
 msgid ""
@@ -588,10 +588,10 @@ msgid ""
 "'gnucash-docs' in the mentioned git commands, like this:"
 msgstr ""
 "Azoknak akik nem ismerik a git-et, a <span class=\"gnucash\">GnuCash</span> "
-"wikin van egy <span class=\"gnucash\">GnuCash</span> kódra szabott <a "
-"href='https://wiki.gnucash.org/wiki/Git'>leírás</a>. A programforrás helyett "
-"a dokumentációs forrás lekéréséhez cseréld ki a „gnucash” szót a „gnucash-"
-"docs” szóra az említett git parancsokban, így:"
+"wikin van egy <span class=\"gnucash\">GnuCash</span> programkódra szabott <a "
+"href='https://wiki.gnucash.org/wiki/Git'>leírás</a>. A dokumentációs forrás "
+"lekéréséhez cseréld ki a „gnucash” szót a „gnucash-docs” szóra az említett "
+"git parancsokban, így:"
 
 #: develdocs.phtml:60
 msgid ""
@@ -1221,17 +1221,23 @@ msgid ""
 "Linux machines. If you have <a href=\"%s\">Flatpak</a> installed, you can "
 "download any recent version of <span class=\"gnucash\">GnuCash</span> from"
 msgstr ""
+"A disztribúció szoftverkezelőjének alternatívája a Flatpak szoftverkezelő "
+"rendszer használata, amely az összes szükséges könyvtárat összecsomagolja az "
+"Ön számára. Ez megkönnyítheti a GnuCash újabb verzióinak telepítését a "
+"régebbi Linux gépeken. Ha a <a href=\"%s\">Flatpak</a> telepítve van, a "
+"<span class=\"gnucash\">GnuCash</span> bármelyik újabb verzióját letöltheti "
+"innen"
 
 #. Translators: %s is the base url of the gnucash wiki, adjust this,
 #. if a localized instance of the Flatpak page exists like "%sDe/Flatpak"
 #: download.phtml:51
 #, php-format
 msgid "%sFlatpak"
-msgstr ""
+msgstr "%sFlatpak"
 
 #: download.phtml:51
 msgid "Known Issues and other details"
-msgstr ""
+msgstr "Ismert problémák és egyéb részletek"
 
 #: download.phtml:55 index.phtml:17
 msgid "Source code"
@@ -1244,11 +1250,16 @@ msgid ""
 "can build <span class=\"gnucash\">GnuCash</span> from source code as "
 "described in <a href='https://wiki.gnucash.org/wiki/Building'>the wiki</a>."
 msgstr ""
+"Ha nem tudja könnyen telepíteni a <span class=\"gnucash\">GnuCash</span> "
+"programot a disztribúciójába, vagy egy másik verziót szeretne telepíteni "
+"mint amivel szállítják, akkor a <span class=\"gnucash\">GnuCash</span> "
+"forráskódjából is elkészítheti, a <a href='https://wiki.gnucash.org/wiki/"
+"Building'>wiki</a> oldalon leírtak szerint."
 
 #: download.phtml:58 download.phtml:73 download.phtml:89
 #, php-format
 msgid "for GnuCash %s"
-msgstr "for GnuCash %s"
+msgstr "A GnuCash %s verzióhoz"
 
 #: download.phtml:65
 #, php-format
@@ -1261,6 +1272,9 @@ msgid ""
 "the newest features and improvements, but possibly also bugs. Don't install "
 "these releases for everyday use."
 msgstr ""
+"A nem stabil (fejlesztői) kiadások csak tesztelési célokat szolgálnak. Ezek "
+"tartalmazzák a legújabb fejlesztéseket és képességeket, de esetleg hibákat "
+"is. Ezeket a kiadásokat ne telepítse mindennapi használatra."
 
 #: download.phtml:68
 #, php-format
@@ -1268,6 +1282,8 @@ msgid ""
 "The latest unstable release of <span class=\"gnucash\">GnuCash</span> "
 "(available below) is %s."
 msgstr ""
+"A <span class=\"gnucash\">GnuCash</span> (alább elérhető) legújabb instabil "
+"kiadása a %s."
 
 #: download.phtml:81
 #, php-format
@@ -1288,14 +1304,16 @@ msgid ""
 "The last old stable release of <span class=\"gnucash\">GnuCash</span> "
 "(available below) is %s."
 msgstr ""
+"A <span class=\"gnucash\">GnuCash</span> (alább elérhető) utolsó régi stabil "
+"kiadása a %s."
 
 #: download.phtml:97
 msgid "Latest versions for historical operating systems"
-msgstr ""
+msgstr "Legújabb verziók a régebbi operációs rendszerekhez"
 
 #: download.phtml:99
 msgid "These versions are really old. No support is offered."
-msgstr ""
+msgstr "Ezek a verziók nagyon régiek. Nem kínálnak támogatást."
 
 #: download.phtml:112
 msgid "Other"
@@ -1304,16 +1322,16 @@ msgstr "Más"
 #: download.phtml:116
 #, php-format
 msgid "View all GnuCash %s downloads (stable)"
-msgstr "Összes GnuCash %s letöltés (stabil)"
+msgstr "Az összes GnuCash %s(stabil) letöltés megtekintése"
 
 #: download.phtml:121
 #, php-format
 msgid "View all GnuCash %s downloads (unstable)"
-msgstr "Összes GnuCash %s letöltés (instabil)"
+msgstr "Az összes GnuCash %s(nem stabil) letöltés megtekintése"
 
 #: download.phtml:124
 msgid "View all GnuCash downloads"
-msgstr "Összes GnuCash letöltés"
+msgstr "Az összes GnuCash letöltés megtekintése"
 
 #: externals/footer.phtml:12
 msgid "Server &amp; email outage reports to:"
@@ -1480,7 +1498,7 @@ msgstr ""
 
 #: features.phtml:3 new_features-4.0.phtml:3
 msgid "Features"
-msgstr "Jellemzők"
+msgstr "Jellemzői"
 
 #: features.phtml:4
 msgid ""
@@ -1488,26 +1506,29 @@ msgid ""
 "Below are details of some of the numerous features that <span class=\"gnucash"
 "\">GnuCash</span> has to offer to its users."
 msgstr ""
+"A <span class=\"gnucash\">GnuCash</span> egy hatékony számviteli szoftver. "
+"Az alábbiakban a <span class=\"gnucash\">GnuCash</span> által a felhasználók "
+"számára kínált képességek néhány részlete található."
 
 #: features.phtml:16 features.phtml:23
 msgid "Main features"
-msgstr "Main features"
+msgstr "Főbb jellemzői"
 
 #: features.phtml:17 features.phtml:124
 msgid "Advanced features"
-msgstr "Advanced features"
+msgstr "Fejlett képességek"
 
 #: features.phtml:18
 msgid "Data storing and exchange features"
-msgstr ""
+msgstr "Adattárolási és adatcsere képességek"
 
 #: features.phtml:19 features.phtml:201
 msgid "Other goodies"
-msgstr ""
+msgstr "Egyéb finomságok"
 
 #: features.phtml:27
 msgid "Double Entry"
-msgstr "Double Entry"
+msgstr "Kettős könyvelés"
 
 #. Translators: This is an image name. Do not translate it!
 #. Instead you can submit a translated image, like https://github.com/Gnucash/gnucash-htdocs/tree/master/images/features
@@ -1517,7 +1538,7 @@ msgstr "Double Entry"
 #. See also https://wiki.gnucash.org/wiki/Documentation_Update_Instructions
 #: features.phtml:37
 msgid "basics_AccountRelationships.C.png"
-msgstr ""
+msgstr "basics_AccountRelationships.C.png"
 
 #: features.phtml:41
 #, fuzzy
@@ -1647,7 +1668,7 @@ msgstr ""
 
 #: features.phtml:107
 msgid "Statement Reconciliation"
-msgstr "Statement Reconciliation"
+msgstr "Kimutatás egyeztetés"
 
 #: features.phtml:112
 msgid ""
@@ -1669,7 +1690,7 @@ msgstr ""
 
 #: features.phtml:118
 msgid "Income/Expense Account Types"
-msgstr "Income/Expense Account Types"
+msgstr "Bevétel/Kiadás számlatípusok"
 
 #: features.phtml:120
 msgid ""
@@ -1685,7 +1706,7 @@ msgstr ""
 
 #: features.phtml:128
 msgid "Small Business Accounting Features"
-msgstr "Small Business Accounting Features"
+msgstr "Kisvállalati számviteli képességek"
 
 #: features.phtml:131
 msgid ""
@@ -1724,7 +1745,7 @@ msgstr ""
 
 #: features.phtml:153
 msgid "Stock/Mutual Fund Portfolios"
-msgstr "Stock/Mutual Fund Portfolios"
+msgstr "Részvény/Befektetési alap portfóliók"
 
 #: features.phtml:156
 msgid ""
