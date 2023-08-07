@@ -80,6 +80,11 @@
 
      // The URLs, we use:
      define("DEFAULT_URL", "https://www.gnucash.org/"); // The main webserver
+     define("SERVER_BUILD", "code.gnucash.org"); // alias The GIMPNet
+     define("URL_BUILD", "https://".\SERVER_BUILD."/");
+     define("URL_DOCS", \URL_BUILD."docs/");
+     define("URL_API_STABLE", \URL_DOCS."STABLE/");
+     define("URL_API_FUTURE", \URL_DOCS."FUTURE/");
      define("SERVER_IRC", "irc.gimp.net"); // alias The GIMPNet
      define("URL_IRC", "irc://".\SERVER_IRC."/gnucash");
      $URL_FLATHUB="https://flathub.org/apps/details/org.gnucash.GnuCash";
