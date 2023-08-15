@@ -4,7 +4,7 @@
 # jsled <jsled@asynchronous.org>, 2006.
 # henri laudani <laudani.henri@gmail.com>, 2021.
 # Christopher Lam <christopher.lck@gmail.com>, 2021.
-# Thomas Jungers <thomasjungers@gmail.com>, 2021.
+# Thomas Jungers <thomasjungers@gmail.com>, 2021, 2023.
 # Pascal HUE <pascal.hue35@gmail.com>, 2021.
 # Axel Blanchardon <axel.blanchardon@gmail.com>, 2022.
 # Philippe Lamare <ph.lamare@free.fr>, 2022.
@@ -23,8 +23,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2023-06-30 16:21-0700\n"
-"PO-Revision-Date: 2023-08-15 07:56+0000\n"
-"Last-Translator: aleksej0R <omolice@hotmail.fr>\n"
+"PO-Revision-Date: 2023-08-15 09:08+0000\n"
+"Last-Translator: Thomas Jungers <thomasjungers@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnucash/website/"
 "fr/>\n"
 "Language: fr\n"
@@ -661,6 +661,7 @@ msgstr ""
 "GnuCash sur bugzilla</a> pour plus de détail sur la soumission d'un patch."
 
 #: develdocs.phtml:72
+#, fuzzy
 msgid ""
 "<b>NOTE:</b> It used to be ok also to send your patch directly to the "
 "gnucash-devel list. This is discouraged now, as a patch is easily forgotten "
@@ -668,6 +669,12 @@ msgid ""
 "instead (either an existing bug or a new one). If you insist on sending a "
 "patch to gnucash-devel, it should be attached, not inlined."
 msgstr ""
+"<b>NOTE:</b> Il était aussi accepté d'envoyer votre correctif directement à "
+"la liste gnucash-devel. C'est maintenant déconseillé, car un correctif est "
+"facilement oublié parmi les nombreuses discussions de la liste. Au lieu de "
+"cela, attachez les correctifs aux bugs dans Bugzilla (que ce soit un bug "
+"existant ou un nouveau). Si vous voulez tout de même envoyer un correctif à "
+"gnucash-devel, il devrait être joint, pas dans le texte."
 
 #: develdocs.phtml:73
 msgid ""
@@ -1101,11 +1108,15 @@ msgid "Thank you for your support!"
 msgstr "Merci pour votre aide !"
 
 #: download.phtml:5
+#, fuzzy
 msgid ""
 "Download executable bundles of the <span class=\"gnucash\">GnuCash</span> "
 "program inclusive documentation or the source files here. Several versions "
 "are available for recent and older operating systems."
 msgstr ""
+"Téléchargez les paquets exécutables du programme GnuCash, y compris la "
+"documentation, où les fichiers source ici. Plusieurs versions sont "
+"disponibles pour des systèmes d'exploitation récents ou anciens."
 
 #: download.phtml:13
 msgid "Download GnuCash"
@@ -1231,7 +1242,7 @@ msgid "Sandbox"
 msgstr "Bac à sable"
 
 #: download.phtml:46
-#, php-format
+#, fuzzy, php-format
 msgid ""
 "An alternative to using your distribution's software manager is to use the "
 "Flatpak management system, which bundles all the necessary libraries for "
@@ -1239,6 +1250,12 @@ msgid ""
 "Linux machines. If you have <a href=\"%s\">Flatpak</a> installed, you can "
 "download any recent version of <span class=\"gnucash\">GnuCash</span> from"
 msgstr ""
+"Comme alternative au gestionnaire logiciel de votre distribution, vous "
+"pouvez utiliser les système de gestion Flatpak, qui empaquète pour vous "
+"toutes les bibliothèques nécessaires. Cela peut faciliter l'installation de "
+"nouvelles versions de GnuCash sur des machines Linux plus anciennes. Si vous "
+"avez <a href=\"%s\">Flatpak</a> installé, vous pouvez télécharger n'importe "
+"quelle version récente de span class=\"gnucash\">GnuCash</span> depuis"
 
 #. Translators: %s is the base url of the gnucash wiki, adjust this,
 #. if a localized instance of the Flatpak page exists like "%sDe/Flatpak"
@@ -1281,11 +1298,16 @@ msgid "Unstable/Development release (%s)"
 msgstr "Version instable/en développement (%s)"
 
 #: download.phtml:67
+#, fuzzy
 msgid ""
 "Unstable (development) releases are for testing purposes only. They contain "
 "the newest features and improvements, but possibly also bugs. Don't install "
 "these releases for everyday use."
 msgstr ""
+"Les versions instables (de développement) sont dans un but de test "
+"uniquement. Elles contiennent les fonctionnalités et améliorations les plus "
+"récentes, mais potentiellement aussi des bugs. N'installez pas ces versions "
+"pour un usage quotidien."
 
 #: download.phtml:68
 #, fuzzy, php-format
@@ -1306,10 +1328,13 @@ msgid "Old Stable release (%s)"
 msgstr "Version stable (%s)"
 
 #: download.phtml:83
+#, fuzzy
 msgid ""
 "This old stable release is the final version of all bugfixes from the "
 "previous stable series without being a major upgrade."
 msgstr ""
+"Cette ancienne version stable est la version finale de tous les correctifs "
+"de bugs de la série stable précédente, sans aucune mise à jour majeure."
 
 #: download.phtml:84
 #, fuzzy, php-format
