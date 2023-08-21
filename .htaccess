@@ -42,9 +42,10 @@ RedirectMatch permanent /.*/favicon.ico        /favicon.ico
 RedirectMatch permanent /.*/lists.phtml        https://wiki.gnucash.org/wiki/Mailing_Lists
 RedirectMatch permanent /(.*)/promote.phtml    /index.phtml?lang=$1
 RedirectMatch permanent /(.*)/required.phtml   /index.phtml?lang=$1
+RedirectMatch permanent /(.*)/sizing.phtml     /index.phtml?lang=$1
+RedirectMatch permanent /(.*)/state_of_the_gnucash_project.phtml   /index.phtml?lang=$1
 RedirectMatch permanent /.*/roadmap.phtml      https://wiki.gnucash.org/wiki/Roadmap
 RedirectMatch permanent /(.*)/rss-feed.phtml   /atom.php?lang=$1
-RedirectMatch permanent /(.*)/state_of_the_gnucash_project.phtml   /sizing.phtml?lang=$1
 RedirectMatch permanent /.*/sql.phtml          https://wiki.gnucash.org/wiki/SQL
 RedirectMatch permanent /(.*)/t-shirt          /index.phtml?lang=$1
 RedirectMatch permanent /pipermail/(.*)        https://lists.gnucash.org/pipermail/$1
