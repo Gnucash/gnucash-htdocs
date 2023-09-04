@@ -9,10 +9,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs 0.0.1\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
-"component=Translations&product=Website&resolution=---\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
+"cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2023-08-21 09:48+0200\n"
-"PO-Revision-Date: 2023-08-05 05:07+0000\n"
+"PO-Revision-Date: 2023-09-04 00:59+0000\n"
 "Last-Translator: Szia Tomi <sziatomi01@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnucash/"
 "website/hu/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.0.1-dev\n"
 
 #: 2.6-release-tour.phtml:3
 msgid "GnuCash 2.6 release tour"
@@ -535,21 +535,15 @@ msgid "channel"
 msgstr "csatorna"
 
 #: docs.phtml:52
-#, fuzzy
-#| msgid ""
-#| "<span class=\"gnucash\">GnuCash</span>'s documentation has been created "
-#| "by its community. See the <a href=\"develdocs.phtml\">Writing "
-#| "Documentation page</a> if you are interested in contributing to this "
-#| "effort."
 msgid ""
 "<span class=\"gnucash\">GnuCash</span>'s documentation has been created by "
 "its community. See the <a href=\"https://wiki.gnucash.org/wiki/"
 "Documentation_Improvement\">Documentation Improvement wiki page</a> if you "
 "are interested in contributing to this effort."
 msgstr ""
-"A <span class=\"gnucash\">GnuCash</span> dokumentációját a közössége "
-"készítette. Ha szeretne hozzájárulni ehhez az erőfeszítéshez, tekintse meg a "
-"<a href=\"develdocs.phtml\">Dokumentáció írása</a> oldalt."
+"A <span class=\"gnucash\">GnuCash</span> dokumentációját a közösség hozta "
+"létre. Ha szeretne hozzájárulni ehhez az erőfeszítéshez, tekintse meg a <a "
+"href=\"develdocs.phtml\">Dokumentáció javítása wiki oldalt</a>."
 
 #: docs.phtml:57
 msgid "(current stable release)"
@@ -1220,11 +1214,11 @@ msgstr ""
 
 #: externals/menu.phtml:66
 msgid "GnuCash 2.4 Small Business Accounting, by Ashok Ramachandran"
-msgstr "GnuCash 2.4 kisvállalati számvitel, szerző: Ashok Ramachandran"
+msgstr "GnuCash 2.4 kisvállalati számvitel, írta Ashok Ramachandran"
 
 #: externals/menu.phtml:67
 msgid "This is a Beginner's Guide for managing your accounts."
-msgstr "Ez egy kezdőknek szóló útmutató a folyószámlái kezeléséhez."
+msgstr "Ez egy kezdőknek szóló útmutató a számlái kezeléséhez."
 
 #: externals/menu.phtml:69
 #, php-format
@@ -1316,9 +1310,9 @@ msgid ""
 "as income, stock and currency transactions. The following features are also "
 "provided:"
 msgstr ""
-"A nyilvántartás támogatja a közös ellenőrzési és hitelkártya tranzakciókat, "
-"valamint a jövedelem, a tőzsdei és a valuta tranzakciókat. A következő "
-"funkciók is rendelkezésre állnak:"
+"A nyilvántartás támogatja az általános csekk- és hitelkártya-tranzakciókat, "
+"valamint a jövedelem, a részvény- és deviza-tranzakciókat. A következő "
+"szolgáltatások is rendelkezésre állnak:"
 
 #: features.phtml:58
 msgid "The ability to enter <b>split transactions</b>"
@@ -1328,25 +1322,32 @@ msgstr "<b>Felosztott tranzakciók</b> bevitelének lehetősége"
 msgid ""
 "The ability to mark a transaction as <b>cleared</b> or <b>reconciled</b>"
 msgstr ""
+"Lehetőség egy tranzakció megjelölésére <b>elszámoltként</b> vagy "
+"<b>egyeztetettként</b>"
 
 #: features.phtml:60
 msgid "<b>Autofill</b> of entered transactions"
-msgstr ""
+msgstr "A megadott tranzakciók <b>automatikus kitöltése</b>"
 
 #: features.phtml:61
 msgid ""
 "The ability to display <b>multiple accounts</b> in a single register window"
 msgstr ""
+"Lehetőség <b>több számla</b> megjelenítésére egyetlen nyilvántartásablakban"
 
 #: features.phtml:62
 msgid ""
 "A <b>summary bar</b> that displays all of the relevant account's balance "
 "information"
 msgstr ""
+"Egy <b>összefoglaló sáv</b>, amely megjeleníti a fontos számlaegyenleg-"
+"információkat"
 
 #: features.phtml:63
 msgid "Many options to <b>customize</b> the appearance and the display style"
 msgstr ""
+"Számos lehetőség a megjelenés és a megjelenítési stílus "
+"<b>testreszabására</b>"
 
 #: features.phtml:69 index.phtml:78
 msgid "Scheduled Transactions"
@@ -1358,6 +1359,9 @@ msgid ""
 "amounts and timeline. You can also set an automatic reminder when a "
 "transaction is due."
 msgstr ""
+"Létrehozhat ismétlődő tranzakciókat az összegek és az időszakok magas szintű "
+"testreszabásával. Beállíthat egy automatikus emlékeztetőt is, a tranzakció "
+"esedékessé válásának időpontjára."
 
 #: features.phtml:76
 msgid ""
@@ -1365,6 +1369,9 @@ msgid ""
 "started allows scheduled transactions to be postponed without canceling or "
 "entering them before the due date."
 msgstr ""
+"Egy segéd amely a <span class=\"gnucash\">GnuCash</span> indításakor fut, "
+"lehetővé teszi az ütemezett tranzakciók elhalasztását anélkül, hogy törölné "
+"vagy megadná azokat a határidő előtt."
 
 #: features.phtml:82 index.phtml:76
 msgid "Reports, Graphs"
@@ -1375,28 +1382,32 @@ msgid ""
 "<span class=\"gnucash\">GnuCash</span> has an integrated module to display "
 "graphs of your financial data in the form of:"
 msgstr ""
+"A <span class=\"gnucash\">GnuCash</span> beépített modullal rendelkezik a "
+"pénzügyi adatok grafikonjainak megjelenítéséhez a következő formában:"
 
 #: features.phtml:89
 msgid "Barcharts"
-msgstr ""
+msgstr "Oszlopdiagramok"
 
 #: features.phtml:90
 msgid "Piecharts"
-msgstr ""
+msgstr "Kördiagramok"
 
 #: features.phtml:91
 msgid "Scatter plots"
-msgstr ""
+msgstr "Szórási diagramok"
 
 #: features.phtml:93
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> also comes complete with a full suite "
 "of standard and customizeable reports, such as:"
 msgstr ""
+"A <span class=\"gnucash\">GnuCash</span> szabványos és testreszabható "
+"jelentések teljes készletét is tartalmazza, például:"
 
 #: features.phtml:95
 msgid "Balance Sheet"
-msgstr ""
+msgstr "Mérleg"
 
 #: features.phtml:96
 msgid "Profit &amp; Loss"
@@ -1404,17 +1415,19 @@ msgstr "Nyereség &amp; Veszteség"
 
 #: features.phtml:97
 msgid "Portfolio Valuation"
-msgstr ""
+msgstr "Portfólió értékelése"
 
 #: features.phtml:98
 msgid "and many others."
-msgstr "és még sok minden más."
+msgstr "és még sok más."
 
 #: features.phtml:101
 msgid ""
 "Graphs and reports can be highly and easily customized in appearance and "
 "contents, in order to fullfill every user's need."
 msgstr ""
+"A grafikonok és jelentések, megjelenésükben és tartalmukban nagymértékben és "
+"egyszerűen testreszabhatók, hogy minden felhasználó igényét kielégítsék."
 
 #: features.phtml:107
 msgid "Statement Reconciliation"
@@ -1427,6 +1440,11 @@ msgid ""
 "useful to spot untracked transactions or data entry errors and ensure that "
 "your books match the bank's."
 msgstr ""
+"A <b>Számlaegyeztetés</b> lehetővé teszi a felhasználó számára, hogy "
+"összehasonlítsa a számlán szereplő tranzakciókat a banki kivonattal. Ez a "
+"művelet nagyon hasznos a nyomon nem követett tranzakciók, vagy az "
+"adatbeviteli hibák észleléséhez, és annak biztosításához, hogy a könyvelése "
+"megegyezzen a bank könyvelésével."
 
 #: features.phtml:113
 msgid ""
@@ -1589,7 +1607,7 @@ msgstr ""
 
 #: features.phtml:205
 msgid "Multiplatform"
-msgstr "Multiplatform"
+msgstr "Többplatformos"
 
 #: features.phtml:208
 msgid ""
@@ -1654,9 +1672,8 @@ msgstr ""
 "A guided dialogue for setting up loan payments as scheduled transactions."
 
 #: features.phtml:246
-#, fuzzy
 msgid "User Manual and Help"
-msgstr "New User Manual and Help"
+msgstr "Felhasználói kézikönyv és súgó"
 
 #: features.phtml:249
 msgid ""
@@ -1688,14 +1705,12 @@ msgstr "További letöltések (forráskód, fejlesztés …)"
 #: index.phtml:26
 #, php-format
 msgid "GnuCash is also available as a flatpak from flathub.org. %s"
-msgstr ""
+msgstr "A GnuCash flatpak csomagként is elérhető a flathub.org oldalán. %s"
 
 #. Translators: This labels a link to flatpak installation instructions.
 #: index.phtml:27
-#, fuzzy
-#| msgid "Introduction"
 msgid "Instructions"
-msgstr "Bevezető"
+msgstr "Útmutató"
 
 #: index.phtml:34
 #, php-format
@@ -1744,7 +1759,7 @@ msgstr "néhány ötletünk"
 #: index.phtml:52
 #, php-format
 msgid "Please help translate GnuCash into your language at %s."
-msgstr "Segítsen lefordítani a GnuCash-t a saját nyelvére a %s oldalán."
+msgstr "Segítsen lefordítani a GnuCasht a saját nyelvére a %s oldalán."
 
 #: index.phtml:57
 msgid "Need Help?"
@@ -1755,8 +1770,8 @@ msgid ""
 "Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? "
 "Try the"
 msgstr ""
-"Szeretne kapcsolatba lépni a <span class=\"gnucash\">GnuCash</span> többi "
-"felhasználójával? Erre valók a"
+"Szeretne kapcsolatba lépni egy <span class=\"gnucash\">GnuCash</span> "
+"felhasználóval? Próbálja ki a"
 
 #: index.phtml:62
 msgid ""
@@ -1819,9 +1834,8 @@ msgid "What's New in GnuCash %s"
 msgstr "A GnuCash %s újdonságai"
 
 #: new_features-4.0.phtml:15
-#, fuzzy
 msgid "Major Highlights"
-msgstr "Features"
+msgstr "Főbb jellemzők"
 
 #: new_features-4.0.phtml:23
 msgid ""
@@ -1830,6 +1844,10 @@ msgid ""
 "association items in 3.x, allows setting, changing, and deleting "
 "associations."
 msgstr ""
+"Egy új <b>Tranzakciótársítás</b> párbeszédpanel, amely a <b>Tranzakcióhoz "
+"tartozó társítás frissítése</b> menüpontból érhető el, amely felváltotta a "
+"3.x két társítási elemét, lehetővé teszi a társítások beállítását, "
+"módosítását és törlését."
 
 #: new_features-4.0.phtml:24
 msgid ""
