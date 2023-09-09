@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2023-08-21 09:48+0200\n"
-"PO-Revision-Date: 2023-09-07 03:03+0000\n"
+"PO-Revision-Date: 2023-09-09 02:16+0000\n"
 "Last-Translator: Szia Tomi <sziatomi01@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnucash/"
 "website/hu/>\n"
@@ -1061,12 +1061,12 @@ msgstr "Más"
 #: download.phtml:116
 #, php-format
 msgid "View all GnuCash %s downloads (stable)"
-msgstr "Az összes GnuCash %s(stabil) letöltés megtekintése"
+msgstr "Az összes (stabil) GnuCash %s letöltés megtekintése"
 
 #: download.phtml:121
 #, php-format
 msgid "View all GnuCash %s downloads (unstable)"
-msgstr "Az összes GnuCash %s(nem stabil) letöltés megtekintése"
+msgstr "Az összes (nem stabil) GnuCash %s letöltés megtekintése"
 
 #: download.phtml:124
 msgid "View all GnuCash downloads"
@@ -1369,9 +1369,9 @@ msgid ""
 "started allows scheduled transactions to be postponed without canceling or "
 "entering them before the due date."
 msgstr ""
-"Egy segéd amely a <span class=\"gnucash\">GnuCash</span> indításakor fut, "
-"lehetővé teszi az ütemezett tranzakciók elhalasztását anélkül, hogy törölné "
-"vagy megadná azokat a határidő előtt."
+"Egy asszisztens, amely a <span class=\"gnucash\">GnuCash</span> indításakor "
+"fut, lehetővé teszi az ütemezett tranzakciók elhalasztását anélkül, hogy "
+"törölné vagy megadná azokat a határidő előtt."
 
 #: features.phtml:82 index.phtml:76
 msgid "Reports, Graphs"
@@ -1494,25 +1494,29 @@ msgid ""
 "b> for your employees."
 msgstr ""
 "A Követelések és Kifizetendő számlák használatával még az alkalmazottak "
-"<b>bérszámfejtései</b> is kezelhető."
+"<b>bérszámfejtése</b> is kezelhető."
 
 #: features.phtml:137
 msgid ""
 "<span class=\"gnucash\">GnuCash</span> gives you also a tool to manage your "
 "business' <b>budget</b> so that you can easily plan your financial strategy."
 msgstr ""
+"A <span class=\"gnucash\">GnuCash</span> egy olyan eszközt is biztosít, "
+"amellyel kezelheti vállalkozása <b>költségkeretét</b>, így könnyedén "
+"megtervezheti a pénzügyi stratégiáját."
 
 #: features.phtml:143
 msgid "Multiple Currencies"
-msgstr "Devizák"
+msgstr "Több pénznem (valuta) használatának lehetősége"
 
 #: features.phtml:147
 msgid ""
 "Different accounts can be denominated in different currencies. Currency "
 "movements between accounts are fully balanced when double-entry is enabled."
 msgstr ""
-"Different accounts can be denominated in different currencies. Currency "
-"movements between accounts are fully balanced when double-entry is enabled."
+"A különböző számlák különböző pénznemekben nevesítettek. A számlák közötti "
+"valutamozgások teljesen kiegyensúlyozottak, ha a kettős könyvelés "
+"engedélyezve van."
 
 #: features.phtml:153
 msgid "Stock/Mutual Fund Portfolios"
@@ -1523,24 +1527,25 @@ msgid ""
 "Track stocks individually (one per account) or in portfolio of accounts (a "
 "group of accounts that can be displayed together)."
 msgstr ""
-"Track stocks individually (one per account) or in portfolio of accounts (a "
-"group of accounts that can be displayed together)."
+"Részvények nyomon követése egyenként (számlánként egy), vagy "
+"számlaportfólióban (együtt megjeleníthető számlacsoport)."
 
 #: features.phtml:161
 msgid "Online Stock &amp; Mutual Fund Quotes"
-msgstr "Online Stock &amp; Mutual Fund Quotes"
+msgstr "Részvény és Befektetési alap jegyzések online lekérdezése"
 
 #: features.phtml:164
 msgid ""
 "Get Stock &amp; Mutual Fund quotes from various web sites, update portfolio "
 "automatically. Additional pricing sources are added regularly."
 msgstr ""
-"Get Stock &amp; Mutual Fund quotes from various web sites, update portfolio "
-"automatically. Additional pricing sources are added regularly."
+"Kérje le a részvény és befektetési alap jegyzéseket különböző webhelyekről, "
+"frissítse a portfóliót automatikusan. Rendszeresen hozzáadunk további "
+"lekérdezési forrásokat."
 
 #: features.phtml:167
 msgid "Data storage and exchange features"
-msgstr ""
+msgstr "Adattárolási és adatcsere képesség"
 
 #: features.phtml:171
 msgid "Experimental database support"
@@ -1553,6 +1558,11 @@ msgid ""
 "financial data can be stored in a <b>SQL database</b> using <b>SQLite3</b>, "
 "<b>MySQL</b> or <b>PostgreSQL</b>."
 msgstr ""
+"A <span class=\"gnucash\">GnuCash</span> alapértelmezés szerint <b>xml</b> "
+"formátumban tárolja az adatokat. A 2.4-es verziótól kezdődően a <span class="
+"\"gnucash\">GnuCash</span> pénzügyi adatok <b>SQL adatbázisban</b> "
+"tárolhatók, az <b>SQLite3</b>, a <b>MySQL</b> vagy a <b>PostgreSQL</b> "
+"használatával."
 
 #: features.phtml:174
 msgid ""
@@ -1562,6 +1572,11 @@ msgid ""
 "as it gets reported. There is however no full test coverage so there may "
 "still be scenarios left that result in data loss."
 msgstr ""
+"Vegye figyelembe, hogy ez a funkció kísérleti jellegű. A legtöbb "
+"felhasználási esetnél működik, de néhány esetben adatvesztést eredményezett. "
+"A <span class=\"gnucash\">GnuCash</span> fejlesztők minden problémát a "
+"bejelentéskor javítanak. Azonban nincs teljes tesztlefedettség, így továbbra "
+"is lehetnek olyan esetek, amelyek adatvesztést eredményeznek."
 
 #: features.phtml:179
 msgid "QIF and OFX Import"
@@ -1573,6 +1588,9 @@ msgid ""
 "class=\"gnucash\">GnuCash</span>  can import Intuit<sup>&reg;</sup> "
 "Quicken<sup>&reg;</sup> <b>QIF</b> files using a practical assistant."
 msgstr ""
+"Ha más pénzügyi szoftverről költözik át, a <span class=\"gnucash\">GnuCash</"
+"span> képes importálni az Intuit<sup>&reg;</sup>, a Quicken<sup>&reg;</sup> "
+"<b>QIF</b> fájlokat az asszisztens segítségével."
 
 #: features.phtml:185
 msgid ""
@@ -1589,6 +1607,8 @@ msgid ""
 "A transaction matching system ensures that duplicate transactions are "
 "accurately recognized and automatically deleted during file import."
 msgstr ""
+"A tranzakcióegyeztető rendszer biztosítja, hogy a duplikált tranzakciók "
+"pontosan felismerhetők és automatikusan törlődnek a fájlimportálás során."
 
 #: features.phtml:194
 msgid "HBCI Support"
@@ -1616,6 +1636,9 @@ msgid ""
 "<span class=\"gnucash\">GnuCash</span> runs on many different operating "
 "systems including <b>Windows</b>, <b>MacOSX</b> and <b>Linux</b>."
 msgstr ""
+"A <span class=\"gnucash\">GnuCash</span> számos különböző operációs "
+"rendszeren fut, beleértve a <b>Windows</b>, a <b>MacOSX</b> és a <b>Linux</"
+"b> rendszereket."
 
 #: features.phtml:213
 msgid "Localization"
@@ -1647,8 +1670,8 @@ msgid ""
 "A powerful transaction query dialogue can help you quickly locate a needle "
 "in a haystack."
 msgstr ""
-"A powerful transaction query dialogue can help you quickly locate a needle "
-"in a haystack."
+"A hatékony tranzakciólekérdezési párbeszédpanel segítségével gyorsan "
+"megtalálhatja a tűt a szénakazalban."
 
 #: features.phtml:229
 msgid "Check Printing"
@@ -1659,8 +1682,9 @@ msgid ""
 "Checks may be printed in standard formats on common check stocks. A "
 "customization GUI allows custom check layouts to be developed."
 msgstr ""
-"Cheques may be printed in standard formats on common cheque stocks. A "
-"customisation GUI allows custom cheque layouts to be developed."
+"A csekkek szabványos formátumban nyomtathatók a közönséges csekkkészletekre. "
+"A testreszabható grafikus felhasználói felület lehetővé teszi egyéni csekk "
+"elrendezések kidolgozását."
 
 #: features.phtml:237
 msgid "Mortgage &amp; Loan Repayment Assistant"
