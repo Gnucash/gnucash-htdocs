@@ -26,7 +26,7 @@ $showrev     = $current_stable;
 $req_rev_ok  = true;
 $showlang    = 'C';
 
-$doc_languages = array('de', 'it', 'ja', 'pt');
+$doc_languages = array('de', 'it', 'ja', 'pt', 'zh');
 $get_lang = filter_input(INPUT_GET, 'lang', FILTER_SANITIZE_STRING);
 if (in_array($get_lang, $doc_languages, true)) {
     $showlang = $get_lang;
@@ -127,7 +127,7 @@ if ($showrev == "maint") {
     $req_lang_ok = false;
     $basepath = "https://lists.gnucash.org/docs";
     $trunk_langs = array ( $helpdoc => array( "C", "de", "it", "pt"),
-                           $tcdoc   => array( "C", "de", "it", "ja", "pt"));
+                           $tcdoc   => array( "C", "de", "it", "ja", "pt", "zh"));
 
     if (in_array ($showlang, $trunk_langs[$showdoc])) {
         $req_lang_ok = true;
