@@ -115,6 +115,17 @@
           <table class="doctable">
           <tbody>
             <tr class="doctr">
+            <td><?php echo T_("Chinese (simplified)");?> :</td><td>
+              <a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$major_stable;?>&amp;lang=zh&amp;doc=guide">
+                <img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
+              <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/zh/gnucash-guide.pdf">
+                <img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a> |
+              <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/zh/gnucash-guide.epub">
+                <img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> |
+              <a href="<?=$top_dir;?>/docs/v<?=$major_stable;?>/zh/gnucash-guide.mobi">
+                <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>
+            </td></tr>
+            <tr class="doctr">
             <td><?php echo T_("English");?> :</td><td>
               <a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$major_stable;?>&amp;lang=C&amp;doc=guide">
                 <img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
@@ -381,6 +392,17 @@
     <table class="doctable">
     <tbody>
       <tr class="doctr">
+      <td><?php echo T_("Chinese (simplified)");?> :</td><td>
+        <a href="<?=$top_dir;?>/viewdoc.phtml?rev=nightly&amp;lang=zh&amp;doc=guide">
+          <img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
+        <a href="https://code.gnucash.org/docs/zh/gnucash-guide.pdf">
+          <img class="docicon" alt="pdf" title="<?php echo T_($pdf);?>" src="<?=$top_dir;?>/images/icons/pdf_logo.png" /></a> |
+        <a href="https://code.gnucash.org/docs/zh/gnucash-guide.epub">
+          <img class="docicon" alt="epub" title="<?php echo T_($epub);?>" src="<?=$top_dir;?>/images/icons/epub_logo.png" /></a> |
+        <a href="https://code.gnucash.org/docs/zh/gnucash-guide.mobi">
+          <img class="docicon" alt="mobi" title="<?php echo T_($mobi);?>" src="<?=$top_dir;?>/images/icons/mobipocket_logo.png" /></a>
+      </td></tr>
+      <tr class="doctr">
       <td><?php echo T_("English");?> :</td><td>
         <a href="<?=$top_dir;?>/viewdoc.phtml?rev=nightly&amp;lang=C&amp;doc=guide">
           <img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a> |
@@ -471,13 +493,13 @@
 <!--Define variable for older documentation: add them here if needed-->
 <?php
 $older1		="1.6";
-$older2		="1.8";
+$older2		="1.8"; // en: also pdf
 $older3		="2.0";
-$older4		="2.2"; // until here region code in LANG required
-$older5		="2.4"; // region code no longer required
+$older4		="2.2"; // until here region code in LANG required, html only
+$older5		="2.4"; // region code no longer required, all formats available
 $older6		="2.6";
 $older7		="3";
-$older7		="4";
+$older8		="4";
 ?>
 
 <div class="featurecontainer">
