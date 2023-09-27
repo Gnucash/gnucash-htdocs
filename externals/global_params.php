@@ -12,11 +12,11 @@
 
      $latest_stable             = $major_stable.".".$minor_stable;
      //$latest_stable_win         = $latest_stable;
-     $latest_stable_win         = $latest_stable."";
-     $latest_stable_mac_intel   = $latest_stable."-1";
+     $latest_stable_win         = $latest_stable."-1";
+     $latest_stable_mac_intel   = $latest_stable."-2";
 // Change this when there has been a re-tag to add the re-tag letter,
 // e.g. if one retagged 2.6.13 to 2.6.13a, make $tarball = $latest_stable."a".
-     $tarball                   = $latest_stable."";
+     $tarball                   = $latest_stable."-1";
 
      $major_unstable            ="4";
      $minor_latest_unstable     ="904";
