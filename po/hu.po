@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2023-09-26 05:30+0200\n"
-"PO-Revision-Date: 2023-10-09 22:04+0000\n"
+"PO-Revision-Date: 2023-10-14 22:21+0000\n"
 "Last-Translator: Szia Tomi <sziatomi01@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnucash/"
 "website/hu/>\n"
@@ -87,12 +87,12 @@ msgid ""
 "Reports and invoices can be exported directly in a PDF file without going "
 "thru the Print window."
 msgstr ""
-"A jelentések és a számlák közvetlenül exportálhatók PDF fájlba anélkül, hogy "
-"a „Nyomtatás” ablakba lépne."
+"A jelentések és a kimenőszámlák közvetlenül exportálhatók PDF fájlba "
+"anélkül, hogy a Nyomtatás ablakba lépnének."
 
 #: 2.6-release-tour.phtml:50
 msgid "Associate a local file or remote location with any transaction"
-msgstr "Helyi fájl vagy távoli hely társítása bármely tranzakcióval"
+msgstr "Helyi fájl vagy távoli hely társítása bármilyen tranzakcióval"
 
 #: 2.6-release-tour.phtml:52
 msgid ""
@@ -214,11 +214,11 @@ msgstr "Az üzleti modul megújult és néhány új funkciót is bevezettünk:"
 
 #: 2.6-release-tour.phtml:122
 msgid "Credit Notes"
-msgstr "Hiteljegyzetek"
+msgstr "Jóváírások"
 
 #: 2.6-release-tour.phtml:123
 msgid "Customer and Vendor Overview Pages"
-msgstr "Ügyfél és szállító áttekintő oldalak"
+msgstr "Ügyfél- és szállítóáttekintő oldalak"
 
 #: 2.6-release-tour.phtml:124
 msgid "Customer Overview Reports"
@@ -226,18 +226,18 @@ msgstr "Ügyféláttekintő jelentések"
 
 #: 2.6-release-tour.phtml:125
 msgid "Existing Transactions may be reassigned as invoice payments"
-msgstr "A létező tranzakciók átsorolhatók számlafizetésként"
+msgstr "A létező tranzakciók átsorolhatók kimenőszámla-fizetésként"
 
 #: 2.6-release-tour.phtml:126
 msgid "One click duplication of invoices"
-msgstr "Számlamásolás egy kattintással"
+msgstr "Kimenőszámla másodpéldány egy kattintással"
 
 #: 2.6-release-tour.phtml:127
 msgid ""
 "Improved invoice and bill handling: Post, print, or duplicate multiple items "
 "directly from a search results list"
 msgstr ""
-"Továbbfejlesztett kimenő és bejövő számlakezelés: több tétel feladása, "
+"Továbbfejlesztett kimenő- és bejövő-számlakezelés: több tétel feladása, "
 "nyomtatása vagy másolása közvetlenül a keresési eredmények listájából"
 
 #: 2.6-release-tour.phtml:128
@@ -245,16 +245,16 @@ msgid ""
 "Better invoice printing setup: Choose a default invoice report as a "
 "preference"
 msgstr ""
-"Jobb számlanyomtatási beállítás: Válasszon egy alapértelmezett "
-"számlajelentést preferenciaként"
+"Jobb kimenőszámla nyomtatási beállítás: Válasszon egy alapértelmezett "
+"kimenőszámla-jelentést preferenciaként"
 
 #: 2.6-release-tour.phtml:129
 msgid "Reorder invoice entries in the invoice window"
-msgstr "A számlabejegyzések átrendezése a számlaablakban"
+msgstr "A kimenőszámla-bejegyzések átrendezése a kimenőszámla-ablakban"
 
 #: 2.6-release-tour.phtml:137
 msgid "Customer report with an invoice and a credit note."
-msgstr "Ügyféljelentés számlával és jóváírással."
+msgstr "Ügyféljelentés kimenőszámlával és jóváírással."
 
 #: 2.6-release-tour.phtml:147
 msgid ""
@@ -636,13 +636,13 @@ msgstr ""
 
 #: docs.phtml:334
 msgid "Nightly Documentation Builds"
-msgstr "Dokumentáció"
+msgstr "Éjszakai automatikus dokumentáció készítés"
 
 #: docs.phtml:336
 msgid ""
 "Current <em>unstable</em> user documentation and developer documentation"
 msgstr ""
-"A jelenlegi <em>instabil</em> felhasználói dokumentáció és fejlesztői "
+"A jelenlegi <em>nem stabil</em> felhasználói dokumentáció és fejlesztői "
 "dokumentáció"
 
 #: docs.phtml:339
@@ -1025,8 +1025,8 @@ msgid ""
 "The latest unstable release of <span class=\"gnucash\">GnuCash</span> "
 "(available below) is %s."
 msgstr ""
-"A <span class=\"gnucash\">GnuCash</span> (alább elérhető) legújabb instabil "
-"kiadása a %s."
+"A <span class=\"gnucash\">GnuCash</span> (alább elérhető) legújabb nem "
+"stabil kiadása a %s."
 
 #: download.phtml:81
 #, php-format
@@ -1646,7 +1646,7 @@ msgstr ""
 
 #: features.phtml:213
 msgid "Localization"
-msgstr "Többnyelvűsítés"
+msgstr "Honosítás"
 
 #: features.phtml:216
 #, php-format
@@ -1893,9 +1893,9 @@ msgid ""
 "MacOS."
 msgstr ""
 "Ha egy tranzakcióhoz társítás tartozik, a Társítások oszlopban (kétsoros "
-"módban látható), a számlaregiszterben a betűk helyett, egy szimbólum (fájlok "
-"esetén gémkapocs, URL-hez láncszem) jelenik meg. Ez nem működik MacOS "
-"rendszeren."
+"módban látható), a számlaregiszterben a betűk helyett egy szimbólum (fájlok "
+"esetén gémkapocs, URL-hez láncszem) jelenik meg. Ez MacOS rendszeren nem "
+"működik."
 
 #: new_features-4.0.phtml:25
 msgid ""
@@ -1937,6 +1937,8 @@ msgid ""
 "will display a screen listing all of the available commands and their "
 "options."
 msgstr ""
+"megjelenít egy képernyőt, amely felsorolja az összes elérhető parancsot és "
+"azok választási lehetőségeit."
 
 #: new_features-4.0.phtml:49
 msgid ""
@@ -1944,6 +1946,10 @@ msgid ""
 "has, though <kbd>--get-price-quotes</kbd> is deprecated in  favor of "
 "<kbd>gnucash-cli --quotes get</kbd>."
 msgstr ""
+"A grafikus felhasználói felület, a <kbd>gnucash</kbd> továbbra is reagál a "
+"mindig rendelkezésre álló választási lehetőségekre, bár a <kbd>--get-price-"
+"quotes</kbd> alavult, előnyben részesíti a <kbd>gnucash-cli --quotes "
+"get</kbd>-et."
 
 #: new_features-4.0.phtml:54
 msgid "Graphic User Interface"
@@ -1954,6 +1960,8 @@ msgid ""
 "When creating a new account hierarchy it's now possible to load account "
 "templates from locales other than the one set for the user interface."
 msgstr ""
+"Egy új számlahierarchia létrehozásakor most lehetséges, hogy a felhasználói "
+"felülethez beállítotttól eltérő helyről származó számlasablonokat töltsön be."
 
 #: new_features-4.0.phtml:59
 msgid ""
@@ -2134,11 +2142,11 @@ msgstr ""
 
 #: new_features-4.0.phtml:136
 msgid "Release Notes"
-msgstr ""
+msgstr "Kiadási megjegyzések"
 
 #: news.phtml:4
 msgid "Announcement of New Releases, Server Maintenance …"
-msgstr ""
+msgstr "Az új kiadások közleményei, szerver fenntartás…"
 
 #: news.phtml:12
 msgid "GnuCash News"
@@ -2146,28 +2154,29 @@ msgstr "GnuCash hírek"
 
 #: news.phtml:28 oldnews.phtml:3
 msgid "Older Announcements"
-msgstr "Régebbi bejegyzések"
+msgstr "Régebbi közlemények"
 
 #: news.phtml:31
 msgid "Click <a href=\"oldnews.phtml\">here</a> for older announcements."
-msgstr ""
+msgstr "Kattintson <a href=\"oldnews.phtml\">ide</a> a régebbi közleményekhez."
 
 #: oldnews.phtml:4
 msgid ""
 "This is an archive of announcements that once appeared on the GnuCash home "
 "page."
-msgstr ""
-"Ez a közlemények archívuma, amelyek egykor megjelentek a GnuCash honlapján."
+msgstr "Ez a GnuCash honlapján egykor megjelent közlemények archívuma."
 
 #: viewdoc.phtml:9
 msgid "View document"
-msgstr ""
+msgstr "Dokumentum megtekintése"
 
 #: viewdoc.phtml:169
 msgid ""
 "The document requested is not available. The tutorial and concepts guide "
 "will be displayed instead."
 msgstr ""
+"A kért dokumentum nem érhető el. Helyette az Oktatóanyag és fogalmai "
+"útmutató jelenik meg."
 
 #: viewdoc.phtml:172
 #, php-format
@@ -2189,3 +2198,6 @@ msgid ""
 "It seems your browser doesn't support iframes. To view the requested page in "
 "a separate window, please <a href=\"%s\" target=\"_blank\">click here</a>."
 msgstr ""
+"Úgy tűnik, hogy a böngészője nem támogatja az iframe elemeket. Ha a kért "
+"oldalt külön ablakban szeretné megtekinteni, kérjük <a href=\"%s\" target="
+"\"_blank\">kattintson ide</a>."
