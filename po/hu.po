@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2023-09-26 05:30+0200\n"
-"PO-Revision-Date: 2023-11-06 00:48+0000\n"
+"PO-Revision-Date: 2023-11-19 02:04+0000\n"
 "Last-Translator: Szia Tomi <sziatomi01@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnucash/"
 "website/hu/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.2-dev\n"
+"X-Generator: Weblate 5.2\n"
 
 #: 2.6-release-tour.phtml:3
 msgid "GnuCash 2.6 release tour"
@@ -1419,7 +1419,7 @@ msgstr "Nyereség &amp; Veszteség"
 
 #: features.phtml:97
 msgid "Portfolio Valuation"
-msgstr "Portfólió értékelése"
+msgstr "Portfólió-értékelés"
 
 #: features.phtml:98
 msgid "and many others."
@@ -1435,7 +1435,7 @@ msgstr ""
 
 #: features.phtml:107
 msgid "Statement Reconciliation"
-msgstr "Kimutatás egyeztetés"
+msgstr "Kimutatásegyeztetés"
 
 #: features.phtml:112
 msgid ""
@@ -1446,7 +1446,7 @@ msgid ""
 msgstr ""
 "A <b>Számlaegyeztetés</b> lehetővé teszi a felhasználó számára, hogy "
 "összehasonlítsa a számlán szereplő tranzakciókat a banki kivonattal. Ez a "
-"művelet nagyon hasznos a nyomon nem követett tranzakciók, vagy az "
+"művelet nagyon hasznos, a nyomon nem követett tranzakciók vagy az "
 "adatbeviteli hibák észleléséhez, és annak biztosításához, hogy a könyvelése "
 "megegyezzen a bank könyvelésével."
 
@@ -1456,8 +1456,8 @@ msgid ""
 "reconciled and cleared balances makes reconciling against bank statements an "
 "easy task."
 msgstr ""
-"Az <span class=\"gnucash\">GnuCash</span> egyeztető eszköz, az egyeztetett "
-"és tisztázott egyenlegek futtatásával egyszerű feladattá teszi a banki "
+"Az <span class=\"gnucash\">GnuCash</span> egyeztetőeszköz, az egyeztetett és "
+"tisztázott egyenlegek futtatásával egyszerű feladattá teszi a banki "
 "kivonatokkal való egyeztetést."
 
 #: features.phtml:118
@@ -1511,7 +1511,7 @@ msgstr ""
 
 #: features.phtml:143
 msgid "Multiple Currencies"
-msgstr "Több pénznem (valuta) használatának lehetősége"
+msgstr "Több pénznem"
 
 #: features.phtml:147
 msgid ""
@@ -1524,36 +1524,36 @@ msgstr ""
 
 #: features.phtml:153
 msgid "Stock/Mutual Fund Portfolios"
-msgstr "Részvény/Befektetési alap portfóliók"
+msgstr "Részvény-/Befektetésialap-portfóliók"
 
 #: features.phtml:156
 msgid ""
 "Track stocks individually (one per account) or in portfolio of accounts (a "
 "group of accounts that can be displayed together)."
 msgstr ""
-"Részvények nyomon követése egyenként (számlánként egy), vagy "
+"Részvények nyomon követése egyenként (számlánként egy) vagy "
 "számlaportfólióban (együtt megjeleníthető számlacsoport)."
 
 #: features.phtml:161
 msgid "Online Stock &amp; Mutual Fund Quotes"
-msgstr "Részvény és Befektetési alap jegyzések online lekérdezése"
+msgstr "Részvény- és Befektetésialap-jegyzések online lekérdezése"
 
 #: features.phtml:164
 msgid ""
 "Get Stock &amp; Mutual Fund quotes from various web sites, update portfolio "
 "automatically. Additional pricing sources are added regularly."
 msgstr ""
-"Kérje le a részvény és befektetési alap jegyzéseket különböző webhelyekről, "
+"Kérje le a részvény- és befektetésialap-jegyzéseket különböző webhelyekről, "
 "frissítse a portfóliót automatikusan. Rendszeresen hozzáadunk további "
 "lekérdezési forrásokat."
 
 #: features.phtml:167
 msgid "Data storage and exchange features"
-msgstr "Adattárolási és adatcsere képesség"
+msgstr "Adattárolás és adatcsere"
 
 #: features.phtml:171
 msgid "Experimental database support"
-msgstr "Adatbázis támogatás (kísérleti)"
+msgstr "Kísérleti adatbázis-támogatás"
 
 #: features.phtml:173
 msgid ""
@@ -1667,7 +1667,7 @@ msgstr ""
 
 #: features.phtml:221
 msgid "Transaction Finder"
-msgstr "Tranzakció kereső"
+msgstr "Tranzakciókereső"
 
 #: features.phtml:224
 msgid ""
@@ -1679,7 +1679,7 @@ msgstr ""
 
 #: features.phtml:229
 msgid "Check Printing"
-msgstr "Csekk nyomtatás"
+msgstr "Csekknyomtatás"
 
 #: features.phtml:232
 msgid ""
@@ -1692,7 +1692,7 @@ msgstr ""
 
 #: features.phtml:237
 msgid "Mortgage &amp; Loan Repayment Assistant"
-msgstr "Jelzálog- és hiteltörlesztési segéd"
+msgstr "Jelzálog- és Hiteltörlesztés-segéd"
 
 #: features.phtml:240
 msgid ""
@@ -1921,6 +1921,14 @@ msgid ""
 "contain only matching accounts. Once you have a small enough list you can "
 "use the arrow keys to select the account that you want."
 msgstr ""
+"Amikor kiválaszt egy számlát vagy egy műveletet a nyilvántartásban, az új "
+"gépelés közbeni előrekeresés hozzáadódik a szekvenciális (karaktersorozat) "
+"kereséshez: A legfelső szintű számla első néhány karakterének begépelése ("
+"helyettesíti az elválasztójel), a következő szintű számla első néhány "
+"karaktere és így tovább, vagy beírhat néhány karaktert a teljes számlanév "
+"bármely részéből, és a legördülő lista csak az ezzel egyező számlákat "
+"tartalmazza. Ha a lista nem túl nagy, a nyílbillentyűkkel könnyen "
+"kiválaszthatja a kívánt számlát."
 
 #: new_features-4.0.phtml:42
 msgid ""
@@ -1931,6 +1939,13 @@ msgid ""
 "provides an export format and an output file name without which it will "
 "output the report to stdout."
 msgstr ""
+"Új, külön végrehajtható <kbd>gnucash-cli</kbd> (<kbd>gnucash-cli.exe</kbd> "
+"Microsoft Windows platformon), a parancssoros ügyek elvégzésére mint a "
+"könyvelésben szereplő árak frissítése. A <kbd>gnucash-cli</kbd> képes a "
+"jelentések parancssorból történő futtatására. Adja meg a futtatandó "
+"jelentéseket név szerint vagy guid alapján. Exportálási formátumot és "
+"kimeneti fájlnevet is biztosít, amelyek nélkül az stdout-nak adja ki a "
+"jelentést."
 
 #: new_features-4.0.phtml:48
 msgid ""
@@ -2175,8 +2190,8 @@ msgid ""
 "The document requested is not available. The tutorial and concepts guide "
 "will be displayed instead."
 msgstr ""
-"A kért dokumentum nem érhető el. Helyette az Oktatóanyag és fogalmai "
-"útmutató jelenik meg."
+"A kért dokumentum nem érhető el. Helyette az oktatóanyag és fogalmai "
+"útmutató lesz megjelenítve."
 
 #: viewdoc.phtml:172
 #, php-format
@@ -2184,6 +2199,8 @@ msgid ""
 "The document requested is not available for version %s. Version %s will be "
 "displayed instead."
 msgstr ""
+"A kért dokumentum nem érhető el a %s verzióhoz. Helyette a %s verzió lesz "
+"megjelenítve."
 
 #: viewdoc.phtml:176
 #, php-format
@@ -2191,6 +2208,8 @@ msgid ""
 "The document requested is not available in the requested language (tried "
 "[%s]). The English version will be displayed instead."
 msgstr ""
+"A kért dokumentum nem érhető el a kért nyelven (a próbálkozások száma [%s]). "
+"Helyette az angol változat lesz megjelenítve."
 
 #: viewdoc.phtml:181
 #, php-format
