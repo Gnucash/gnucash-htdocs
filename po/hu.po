@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2023-09-26 05:30+0200\n"
-"PO-Revision-Date: 2023-12-10 08:06+0000\n"
+"PO-Revision-Date: 2023-12-16 03:12+0000\n"
 "Last-Translator: Szia Tomi <sziatomi01@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnucash/"
 "website/hu/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.3-dev\n"
+"X-Generator: Weblate 5.3\n"
 
 #: 2.6-release-tour.phtml:3
 msgid "GnuCash 2.6 release tour"
@@ -2097,6 +2097,9 @@ msgid ""
 "OFX imports having balance information will now offer to immediately "
 "reconcile, passing the balance information in the file to the reconcile info."
 msgstr ""
+"Az egyenleginformációval rendelkező OFX importálások most felajánlják az "
+"azonnali egyeztetést, átadva a fájlban lévő egyenleginformációkat az "
+"egyeztetőadatoknak."
 
 #: new_features-4.0.phtml:93
 msgid ""
@@ -2104,16 +2107,22 @@ msgid ""
 "C and from U+R to U+C, reflecting that the matcher marks transactions "
 "cleared but doesn't reconcile them."
 msgstr ""
+"Az importtranzakció-egyeztető ablak oszlopfejlécei R-ről C-re, U+R-ről U+C-"
+"re módosultak, tükrözve, hogy az egyeztető a tranzakciókat elszámoltnak "
+"jelöli meg, de nem egyezteti őket."
 
 #: new_features-4.0.phtml:94
 msgid ""
 "Account matcher will decline to match accounts with a different commodity "
 "from the imported split if the import information includes the commodity."
 msgstr ""
+"Ha az importálási információ tartalmazza az árucikket, a számlaegyeztető "
+"elutasítja az importált felosztástól eltérő árucikkel rendelkező számlák "
+"egyeztetését."
 
 #: new_features-4.0.phtml:95
 msgid "Ellipsize the Description and Memo fields in the account matcher."
-msgstr ""
+msgstr "Nagyítsa ki a „Leírás” és a „Feljegyzés” mezőket a számlaegyeztetőben."
 
 #: new_features-4.0.phtml:100
 msgid "Reports"
