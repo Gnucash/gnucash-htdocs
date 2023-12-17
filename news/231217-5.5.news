@@ -1,0 +1,133 @@
+<b>Announcement:</b> GnuCash 5.5 Released
+2023-12-17
+
+<h2>GnuCash 5.5 Released</h2>
+
+<p>The GnuCash development team announces GnuCash 5.5, the sixth release in the stable 5.x series.</p>
+
+<h4>Between 5.4 and 5.5, the following bugfixes were accomplished:</h4>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=607000">Bug 607000 - SLR visible transactions</a><p>Change the Since Last Run dialog to show only transactions with a non-empty Status. </p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=792241">Bug 792241 - Allow sorting scheduled transactions</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798025">Bug 798025 - SLR Value entry not tied to location</a><p>Disable scrolling and the horizontal scroll bar while an entry has focus. </p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798760">Bug 798760 - SLR OK button to complete value entry</a><p>With this change the Since Last Run dialog's OK button will commit an in-progress edit and advance to the next edit requiring input. It will close the dialog only if there are no more edits.</p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798760">Bug 798760 - SLR change reminder with value entry</a><p>Change transaction state from Reminder to ToCreate when the user has provided the needed value and clicked OK.</li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798890">Bug 798890 - Printing Problem</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799087">Bug 799087 - Import - Unbalanced (need acct) transactions now show in red (previously orange). </li>
+        <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799090">Bug 799090 - Right Clicking scheduled transaction</a><p>Ensure that the selection highlight changes to the item under the pointer when right-clicking in the SX Editor.</p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799092">Bug 799092 - GnuCash 5.4 leaves background process running on exit</a><p>Clear the schema_hash at app shutdown via gnc_prefs_remove_registered and make that function available to the Python bindings so that python programs can do so too. </p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799099">Bug 799099 - Crash when trying to get quotes</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799104">Bug 799104 - &quot;Asset Chart&quot; broken</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799108">Bug 799108 - &quot;Since Last Run&quot; crashes if there are any errors creating a scheduled transaction</a><p>Capture errors and display them in a dialog box instead.</p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799113">Bug 799113 - &quot;Start Import&quot; button reports &quot;Failed&quot;</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799121">Bug 799121 - Parse error on CSV import on MacOS</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799130">Bug 799130 - split-register.c:1847:gnc_split_register_save: assertion failed: (xaccTransIsOpen (blank_trans))</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799134">Bug 799134 - Fails to build with GCC 14 (‘find_if’ is not a member of ‘std’; did you mean ‘find’)</a> </li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799138">Bug 799138 - Port to new Python C config API</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799143">Bug 799143 - FTBFS on 32bit architectures</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799144">Bug 799144 - Date Completion is broken after 5.4 upgrade</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799148">Bug 799148 - Reliable crash when saving a modified saved report configuration</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799150">Bug 799150 - Can&#39;t paste text (with Ctrl+V) in Notes field in Account Tree View</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799151">Bug 799151 - gnc_date_get_last_mday () does not account for leap years correctly. </a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799152">Bug 799152 - normalize_reldate_tm() does not handle dates with months greater than 11 or less than -11 correctly. </a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799156">Bug 799156 - normalize_struct_tm() does not normalize seconds,minutes, and hours correctly.</a></li>
+</ul>
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>Cancel the QIF import instead of inserting the default directory if the user cancels the file-selection dialog.</li>
+
+    <li>Memory leak fixes</li>
+    <li>Rename the scheduled transaction edit/new/delete menus to resolve a shortcut conflict.</li>
+    <li>Allow saving the sort column in the Since Last Run dialog</li>
+    <li>Ensure that Print Checks obtains for the check amount the sum of all splits in the current register account and subaccounts.</li>
+    <li>Ensure that report page actions are re-enabled after editing options. Some actions (Print, PDFExport, and Report Options) had been left disabled.</li>
+    <li> Ensure GncDateEntry always reverts to today if the user enters an invalid date string.</li>
+    <li>Direct cmake to find the base installed Python3 instead of the latest version installed. Reference <a href="https://gitlab.kitware.com/cmake/cmake/-/issues/24126">Cmake Issue 24126</a>, <a href=" https://gitlab.kitware.com/cmake/cmake/-/issues/24878">Cmake Issue 24878</a>, and <a href="https://gitlab.kitware.com/cmake/cmake/-/merge_requests/8287">CMake merge request 8287</a>. Note that this requires CMake 3.20 or later; users of older versions will still get the newest installed Python version.</li>
+    <li>CI: Run distcheck on one workflow to catch quickly instances where someone adds a file but forgets to update the distribution. </li>
+    <li>Primarily of interest to developers: We've added a new CMAKE_BUILD_TYPE, Asan, with two options -DLEAKS and -DODR, both of which default to OFF. This creates a non-optimized, with-symbols build with the Address Sanitizer hooks compiled in. While the primary motivation is a CI run to ensure that there aren't any memory allocation errors revealed in the test suite, this is also a useful build to use when debugging a segfault crash, many of which are caused by use-after-free errors. When building on non-Apple platforms -DLEAKS=ON will add leak detection, dumping a stack trace for the allocation of any leaked heap or free-store allocations. Similarly and on non-Apple platforms only -DODR=ON will log violations of the C++ one definition rule.</li>
+    <li>Also of interest to developers: A new cmake option -DCOVERAGE. When on and in a non-optimized build this will instrument the program and libraries to count usage for every source line. The option also adds three targets, lcov-initialize, lcov-collect, and lcov-generate-html. The primary motivation is to assess the completeness of tests in CI, see <a href="https://gnucash.github.io/Coverage-HTML">Coverage-HTML</a> for the latest results.</li>
+</ul>
+
+<p>New and Updated Translations: Chinese (Simplified), Croatian, Dutch, English
+    (Australia), English (New Zealand), English (United Kingdom), Finnish,
+    German, Gujarati, Hungarian, Italian, Norwegian Bokmål, Polish, Portuguese,
+    Portuguese (Brazil), Romanian, Russian, Slovak, Spanish, Swedish</p>
+
+<a href="https://hosted.weblate.org/engage/gnucash/">Help translate GnuCash on Weblate</a>
+
+<h4>Known Problems</h4>
+<p><a href="https://bugs.gnucash.org/buglist.cgi?bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;limit=0&amp;list_id=8149&amp;order=priority%2Cbug_severity&amp;query_format=advanced">Complete list of all open bugs.</a></p>
+
+<h2>Documentation</h2>
+<h4>No changes were associated with bug reports between releases 5.4 and 5.5</h4>
+
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>EBICS: for business customers (of the bank) rather than business users.</li>
+    <li>docbook: additional entities for business GUI-elements</li>
+    <li>docbook: gnc-gui-*: Rename the scheduled edit/new/delete menus to match a change in the program.</li>
+</ul>
+
+<p>New and Updated Translations: German</p>
+
+
+<h3>Getting GnuCash for Windows and MacOS</h3>
+<p>GnuCash is provided for both Microsoft Windows 8.1&reg; and later
+    and MacOS 10.13 (High Sierra)&reg; and later in pre-built, all-in-one
+    packages. An installer is provided for Microsoft Windows&reg; while
+    the MacOS&reg; package is a disk image containing a drag-and-drop
+    application bundle.</p>
+
+<p>GnuCash is also available as a flatpak from Flathub.org. <a href="https://wiki.gnucash.org/wiki/Flatpak">Instructions for installing and running.</a></p>
+
+<p>The SHA256 Hashes for the downloadable files are:</p>
+<ul>
+    <li><code>b4daf67bb892b706323f62e9fa97242039d7dd0a2e1e10771e0c25817dd0ed3b</code>&nbsp;&nbsp;gnucash-5.5.tar.bz2</li>
+    <li><code>73d2c367f7f1c2da045ce08cb7dfc619e43002ac1e17bb708e3287edff96ae47</code>&nbsp;&nbsp;gnucash-5.5.tar.gz</li>
+    <li><code>720a60dca57e4199f28b5449158ddc89e62012f042a62c43b16c569fa0890275</code>&nbsp;&nbsp;gnucash-5.5.setup.exe</li>
+    <li><code>a27ab3dd3ada69456cb8033473f7bab5ae5874a4880416672d9b4fd2e1c26408</code>&nbsp;&nbsp;Gnucash-Intel-5.5-1.dmg</li>
+    <li><code>93560f55d9305aef45525cf7e7143b72503365c353840dfaaa382d9dfb97c8ab</code>&nbsp;&nbsp;gnucash-docs-5.5.tar.gz</li>
+</ul>
+
+<ul>
+    <li>SourceForge:
+        <ul>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.5/gnucash-5.5.setup.exe">Win32</a></li>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.5/Gnucash-Intel-5.5-1.dmg">Mac-Intel</a></li>
+        </ul></li>
+    <li>Github
+        <ul>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/5.5/gnucash-5.5.setup.exe">Win32</a></li>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/5.5/Gnucash-Intel-5.5-1.dmg">Mac-Intel</a></li>
+        </ul></li></ul>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 5.5 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+    <li>Sourceforge: <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.5/gnucash-5.5.tar.bz2">bzip2</a>, <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.5/gnucash-5.5.tar.gz">gzip</a>.</li>
+
+    <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/5.5/gnucash-5.5.tar.bz2">bzip</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/5.5/gnucash-5.5.tar.gz">gzip</a></li>
+
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https://www.gtk.org">Gtk+</a> 3.22.29, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0, <a href="https://www.boost.org/">Boost</a> 1.67, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, <a href="https://github.com/google/googletest">GoogleTest</a> 1.8.0, <a href="https://cmake.org/">cmake 3.10</a> and <a href="http://www.swig.org/">SWIG</a> 2.0.12. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 5.5 documentation can be found under "GnuCash v4 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats. The documentation is also included in the MacOS and Windows application bundles. Note that we are preparing to remove autotools support from the documentation build and that it is no longer included in the tarball.</p>
+
+<p>If you want to compile the GnuCash Documentation 5.5 for yourself, the source code can be downloaded from:</p>
+<ul>
+    <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.5/gnucash-docs-5.5.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/5.5/gnucash-docs-5.5.tar.gz">GitHub</a></li>
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+    the GNU General Public License (GPL) and available for GNU/Linux,
+    *BSD, Solaris, MacOS, and Microsoft Windows.  Programming on GnuCash
+    began in 1997, and its first stable release was in 1998.</p>
