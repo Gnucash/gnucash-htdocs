@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2023-09-26 05:30+0200\n"
-"PO-Revision-Date: 2023-12-16 03:12+0000\n"
+"PO-Revision-Date: 2023-12-18 02:10+0000\n"
 "Last-Translator: Szia Tomi <sziatomi01@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnucash/"
 "website/hu/>\n"
@@ -1448,7 +1448,7 @@ msgstr ""
 "összehasonlítsa a számlán szereplő tranzakciókat a banki kimutatással. Ez a "
 "művelet nagyon hasznos a nyomon nem követett tranzakciók vagy az "
 "adatbeviteli hibák észleléséhez, és annak biztosításához, hogy a könyvelése "
-"megegyezzen a bank könyvelésével."
+"egyezzen a bank könyvelésével."
 
 #: features.phtml:113
 msgid ""
@@ -1456,8 +1456,8 @@ msgid ""
 "reconciled and cleared balances makes reconciling against bank statements an "
 "easy task."
 msgstr ""
-"A <span class=\"gnucash\">GnuCash</span> egyeztetőeszköz az egyeztetett és "
-"tisztázott egyenlegek futtatásával egyszerű feladattá teszi a banki "
+"A <span class=\"gnucash\">GnuCash</span> egyeztetőeszköz futtatása, az "
+"egyeztetett és az elszámolt egyenlegekkel egyszerű feladattá teszi a banki "
 "kimutatásokkal való egyeztetést."
 
 #: features.phtml:118
@@ -1611,7 +1611,7 @@ msgid ""
 "A transaction matching system ensures that duplicate transactions are "
 "accurately recognized and automatically deleted during file import."
 msgstr ""
-"A tranzakcióegyeztető rendszer biztosítja, hogy a duplikált tranzakciók "
+"A tranzakcióillesztő rendszer biztosítja, hogy a duplikált tranzakciók "
 "pontosan felismerhetők, és automatikusan törlődnek a fájlimportálás során."
 
 #: features.phtml:194
@@ -1679,16 +1679,16 @@ msgstr ""
 
 #: features.phtml:229
 msgid "Check Printing"
-msgstr "Ellenőrzés-nyomtatás"
+msgstr "Csekknyomtatás"
 
 #: features.phtml:232
 msgid ""
 "Checks may be printed in standard formats on common check stocks. A "
 "customization GUI allows custom check layouts to be developed."
 msgstr ""
-"Az ellenőrzések szabványos formátumban nyomtathatók a közös ellenőrző "
-"készlettel. A testreszabható grafikus felhasználói felület lehetővé teszi "
-"egyéni ellenőrzési elrendezések kidolgozását."
+"A csekkek szabványos formátumban nyomtathatók a közös csekk készlettel. A "
+"testreszabható grafikus felhasználói felület lehetővé teszi egyéni csekk "
+"elrendezések kidolgozását."
 
 #: features.phtml:237
 msgid "Mortgage &amp; Loan Repayment Assistant"
@@ -1837,7 +1837,7 @@ msgstr "Kisvállalati számvitel"
 
 #: index.phtml:81
 msgid "QIF/OFX/HBCI Import, Transaction Matching"
-msgstr "QIF/OFX/HBCI importálása a tranzakciók egyeztetésével"
+msgstr "QIF/OFX/HBCI importálás, tranzakció egyezés"
 
 #: index.phtml:83
 msgid "Financial Calculations"
@@ -2086,6 +2086,11 @@ msgid ""
 "remove any that are found. It also adds a button at the bottom of the Import "
 "Map Editor to delete them if one chooses not to use the dialog."
 msgstr ""
+"Az <b>Importálástérkép-szerkesztő</b> (Eszközök->Importálástérképek "
+"szerkesztése) elemzi a Bayes-féle asszociációkat a nem létező számlákkal, és "
+"a találatok eltávolításához megjelenít egy párbeszédpanelt. Megjelenít egy "
+"gombot is az Importálástérkép-szerkesztő alján, amellyel a párbeszéd "
+"használata nélkül törölheti ezeket."
 
 #: new_features-4.0.phtml:91
 msgid "The OFX file importer can now import more than one file at a time."
@@ -2107,22 +2112,22 @@ msgid ""
 "C and from U+R to U+C, reflecting that the matcher marks transactions "
 "cleared but doesn't reconcile them."
 msgstr ""
-"Az importtranzakció-egyeztető ablak oszlopfejlécei R-ről C-re, U+R-ről U+C-"
-"re módosultak, tükrözve, hogy az egyeztető a tranzakciókat elszámoltnak "
-"jelöli meg, de nem egyezteti őket."
+"A tranzakcióimportálás-illesztő ablak oszlopfejlécei Ö-ről E-re, F+Ö-ről F+E-"
+"re módosultak, tükrözve, hogy az illesztő a tranzakciókat elszámoltnak "
+"jelöli meg, de nem egyezteti azokat."
 
 #: new_features-4.0.phtml:94
 msgid ""
 "Account matcher will decline to match accounts with a different commodity "
 "from the imported split if the import information includes the commodity."
 msgstr ""
-"Ha az importálási információ tartalmazza az árucikket, a számlaegyeztető "
-"elutasítja az importált felosztástól eltérő árucikkel rendelkező számlák "
-"egyeztetését."
+"Ha az importálási információ tartalmazza az árucikket, a számlaillesztő "
+"visszautasítja az importált felosztástól eltérő árucikkel rendelkező számlák "
+"illesztését."
 
 #: new_features-4.0.phtml:95
 msgid "Ellipsize the Description and Memo fields in the account matcher."
-msgstr "Nagyítsa ki a „Leírás” és a „Feljegyzés” mezőket a számlaegyeztetőben."
+msgstr "Nagyítsa ki a „Leírás” és a „Feljegyzés” mezőket a számlaillesztőben."
 
 #: new_features-4.0.phtml:100
 msgid "Reports"
@@ -2135,6 +2140,10 @@ msgid ""
 "reports for expenses and income, an income-expense chart, and an account "
 "summary."
 msgstr ""
+"A jelentésmenü új <b>Többoszlopos</b> almenüje tartalmazza a régi "
+"egyeditöbboszlopos-jelentést és egy új <b>Üzletmenet</b>-jelentést, amely "
+"tartalmazza a költségek és jövedelmek számlajelentéseit, egy jövedelem-"
+"költségdiagramot és egy számlaösszefoglalót."
 
 #: new_features-4.0.phtml:104
 msgid ""
