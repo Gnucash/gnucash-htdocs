@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2023-09-26 05:30+0200\n"
-"PO-Revision-Date: 2023-12-23 22:45+0000\n"
+"PO-Revision-Date: 2023-12-27 22:45+0000\n"
 "Last-Translator: Szia Tomi <sziatomi01@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnucash/"
 "website/hu/>\n"
@@ -1166,7 +1166,7 @@ msgstr "Wiki"
 
 #: externals/menu.phtml:33 index.phtml:65
 msgid "Mailing Lists"
-msgstr "Levelezőlisták"
+msgstr "levelezőlisták"
 
 #: externals/menu.phtml:34
 msgid "Bug Reports"
@@ -1687,7 +1687,7 @@ msgid ""
 "customization GUI allows custom check layouts to be developed."
 msgstr ""
 "A csekkek szabványos formátumban nyomtathatók a közös csekk-készlettel. A "
-"testreszabható grafikus felhasználói felület lehetővé teszi egyéni "
+"testreszabható grafikus felhasználói felület lehetővé teszi saját "
 "csekkelrendezések kidolgozását."
 
 #: features.phtml:237
@@ -1807,17 +1807,17 @@ msgid ""
 "Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? "
 "Try the"
 msgstr ""
-"Szeretne kapcsolatba lépni egy <span class=\"gnucash\">GnuCash</span> "
-"felhasználóval? Próbálja ki a"
+"Szeretne kapcsolatba lépni a <span class=\"gnucash\">GnuCash</span> többi "
+"felhasználójával? Erre valók a"
 
 #: index.phtml:66
 msgid ""
 ", which are public, email-based discussion groups where you can ask and "
 "answer <span class=\"gnucash\">GnuCash</span> questions to other users."
 msgstr ""
-"lehetőségeit, amelyek nyilvános, e-mail alapú fórumok, ahol felteheti a "
-"<span class=\"gnucash\">GnuCash</span> használatával kapcsolatos kérdéseit, "
-"vagy válaszaival segíthet másoknak."
+", amelyek nyilvános, e-mail alapú fórumok, ahol felteheti a <span class="
+"\"gnucash\">GnuCash</span> használatával kapcsolatos kérdéseit, vagy "
+"válaszaival segíthet másoknak."
 
 #: index.phtml:72
 msgid "Feature Highlights"
@@ -1905,8 +1905,8 @@ msgid ""
 "which is shown below the notes."
 msgstr ""
 "A társításokat most hozzáadhatja a kimenő- és bejövőszámlákhoz, a "
-"jóváírásokhoz és az utalványokhoz. A hozzáadott társítás a jegyzetek alatti "
-"linkgombként kerül megjelenítésre."
+"jóváírásokhoz és az utalványokhoz. A hozzáadott társítás a megjegyzések "
+"alatti linkgombként kerül megjelenítésre."
 
 #: new_features-4.0.phtml:33
 msgid "[Video showing two ways to filter accounts]"
@@ -1987,9 +1987,9 @@ msgid ""
 "locale but they may be used to select account templates from any locale."
 msgstr ""
 "A <b>Létrehozandó számlák kiválasztása</b> oldalon két legördülő menü "
-"található, a <b>Számlatípusok</b> kiválasztó felett, egy a nyelvhez, egy "
-"pedig az országhoz, az utóbbiban a választási lehetőség az előbbitől függ. "
-"Az alapértelmezés az aktuális területi beállítás (nyelv- és országkód), de "
+"található a <b>Számlatípusok</b>-kiválasztó felett, egy a nyelvhez, egy "
+"pedig az országhoz. Az utóbbiban a választási lehetőség az előbbitől függ, "
+"az alapértelmezés az aktuális területi beállítás (nyelv- és országkód), de "
 "bármelyik területi beállításból választhat ki számlasablonokat."
 
 #: new_features-4.0.phtml:61
@@ -2142,7 +2142,7 @@ msgid ""
 msgstr ""
 "A jelentésmenü új <b>Többoszlopos</b> almenüje tartalmazza a régi "
 "egyeditöbboszlopos-jelentést és egy új <b>Üzletmenet</b>-jelentést, amely "
-"tartalmazza a költségek és jövedelmek számlajelentéseit, egy jövedelem-"
+"tartalmazza a bevételek és a költségek számlajelentéseit, egy bevétel- és "
 "költségdiagramot és egy számlaösszefoglalót."
 
 #: new_features-4.0.phtml:104
@@ -2153,22 +2153,29 @@ msgid ""
 "<b>N.B.</b> This is incompatible with previous versions of the report and "
 "will require regenerating saved configurations."
 msgstr ""
+"Az Egyesült Királyság VAT és az Ausztrál GST támogatása átkerült a Bevétel-"
+"GST jelentéshez. A jelentéskészítés beállításai a forrásszámlákról "
+"értékesítési és beszerzési forrásszámlákra módosultak, hogy lehetővé tegyék "
+"a megfelelő tőkevásárlások jelentést. <b>Vegye figyelembe:</b> Ez a jelentés "
+"nem kompatibilis a korábbi verziókkal, és a mentett konfigurációkat újra el "
+"kell készíteni."
 
 #: new_features-4.0.phtml:109
 msgid "Budgets"
-msgstr "Költségvetés"
+msgstr "Költségvetések"
 
 #: new_features-4.0.phtml:112
 msgid "Optionally include the account code option in budget view."
 msgstr ""
+"Opcionálisan tartalmazza a számlakód lehetőséget a költségvetés nézetben."
 
 #: new_features-4.0.phtml:113
 msgid "Enable adding notes to budgets."
-msgstr ""
+msgstr "Megjegyzéseket lehet hozzáadni a költségvetésekhez."
 
 #: new_features-4.0.phtml:114
 msgid "Account codes may now optionally be displayed in the Budget Tree View."
-msgstr ""
+msgstr "A számlakódok mostantól megjeleníthetők a költségvetésfa nézetben."
 
 #: new_features-4.0.phtml:119
 msgid "Compatibility"
@@ -2184,7 +2191,7 @@ msgstr ""
 
 #: new_features-4.0.phtml:128
 msgid "Customization and Scripting"
-msgstr ""
+msgstr "Testreszabás és szkriptkörnyezet"
 
 #: new_features-4.0.phtml:131
 msgid ""
@@ -2192,12 +2199,18 @@ msgid ""
 "with Gtk practice. You may need to spend some time with the GtkInspector to "
 "get your custom CSS back the way you like it."
 msgstr ""
+"A Gnucash Widget hierarchiáját a CSS-hez felülvizsgálták, hogy mégjobban "
+"összhangban legyen a GTK gyakorlatával. Előfordulhat, hogy egy kis időt kell "
+"töltenie a GtkInspectorral, hogy úgy kapja meg az egyéni CSS-t, ahogy "
+"szeretné."
 
 #: new_features-4.0.phtml:132
 msgid ""
 "Python bindings are now localized and their strings available for "
 "translation."
 msgstr ""
+"A Python-kötések lokalizálva vannak, és a karakterláncok rendelkezésre "
+"állnak a fordításokhoz."
 
 #: new_features-4.0.phtml:135
 #, php-format
