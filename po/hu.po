@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the gnucash package.
 # Neil Williams <linux@codehelp.co.uk>, 2006
 # Frank H. Ellenberger <frank.h.ellenberger@gmail.com>, 2020.
-# Szia Tomi <sziatomi01@gmail.com>, 2022, 2023.
+# Szia Tomi <sziatomi01@gmail.com>, 2022, 2023, 2024.
 # Kárász Attila <cult.edie@gmail.com>, 2023.
 # mocsa <csaba@feltoltve.hu>, 2023.
 msgid ""
@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
 "cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2023-09-26 05:30+0200\n"
-"PO-Revision-Date: 2023-12-31 05:10+0000\n"
+"PO-Revision-Date: 2024-01-02 03:15+0000\n"
 "Last-Translator: Szia Tomi <sziatomi01@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnucash/"
 "website/hu/>\n"
@@ -490,10 +490,10 @@ msgid ""
 "class=\"gnucash\">GnuCash</span> with a tutorial to show how to put those "
 "concepts into practice."
 msgstr ""
-"A <b>Súgó kézikönyv</b> célja, hogy gyors hivatalos forrásként szolgáljon "
-"bizonyos feladatok elvégzéséhez és a <span class=\"gnucash\">GnuCash</span> "
-"lehetőségeinek a használatához. Az <b>Oktatóanyag és fogalmi útmutató</b> "
-"célja, hogy részletes útmutatót nyújtson a <span class=\"gnucash\">GnuCash</"
+"A <b>Súgó kézikönyv</b> célja, hogy gyors útmutatóként szolgáljon a "
+"feladatok elvégzéséhez és a <span class=\"gnucash\">GnuCash</span> "
+"lehetőségeinek kihasználásához. Az <b>Oktatóanyag és fogalmi útmutató</b> "
+"célja, hogy mélyebb ismereteket nyújtson a <span class=\"gnucash\">GnuCash</"
 "span> használata mögött meghúzódó fogalmakról egy oktatóanyaggal, amely "
 "bemutatja hogyan lehet ezeket a fogalmakat a gyakorlatba átültetni."
 
@@ -1241,7 +1241,7 @@ msgstr ""
 
 #: features.phtml:3 new_features-4.0.phtml:3
 msgid "Features"
-msgstr "Jellemzői"
+msgstr "Jellemzők"
 
 #: features.phtml:4
 msgid ""
@@ -1374,8 +1374,8 @@ msgid ""
 "entering them before the due date."
 msgstr ""
 "Egy segéd, amely a <span class=\"gnucash\">GnuCash</span> indításakor fut, "
-"lehetővé teszi az ütemezett tranzakciók elhalasztását anélkül, hogy törölné "
-"vagy megadná azokat a határidő előtt."
+"lehetővé teszi az esedékességük előtt az ütemezett tranzakciók elhalasztását "
+"a törlésük vagy bevitelük nélkül."
 
 #: features.phtml:82 index.phtml:80
 msgid "Reports, Graphs"
@@ -1462,7 +1462,7 @@ msgstr ""
 
 #: features.phtml:118
 msgid "Income/Expense Account Types"
-msgstr "Bevétel/Kiadás Számlatípusok"
+msgstr "Bevétel/Kiadás számlatípusok"
 
 #: features.phtml:120
 msgid ""
@@ -1536,16 +1536,16 @@ msgstr ""
 
 #: features.phtml:161
 msgid "Online Stock &amp; Mutual Fund Quotes"
-msgstr "Részvényjegyzések és Befektetésialap-jegyzések internetes lekérdezése"
+msgstr "Részvény és Befektetésialap árajánlatok internetes forrásokból"
 
 #: features.phtml:164
 msgid ""
 "Get Stock &amp; Mutual Fund quotes from various web sites, update portfolio "
 "automatically. Additional pricing sources are added regularly."
 msgstr ""
-"Kérje le a részvény- és befektetésialap-jegyzéseket különböző webhelyekről, "
-"frissítse a portfóliót automatikusan. Rendszeresen hozzáadunk további "
-"lekérdezési forrásokat."
+"Kérje le a részvények és befektetésialapok árajánlatait különböző "
+"webhelyekről, frissítse a portfóliót automatikusan. Rendszeresen hozzáadunk "
+"további lekérdezési forrásokat."
 
 #: features.phtml:167
 msgid "Data storage and exchange features"
@@ -1628,7 +1628,7 @@ msgstr ""
 "A <span class=\"gnucash\">GnuCash</span> az első ingyenes "
 "szoftveralkalmazás, amely támogatja a német <b>Home Banking Computer "
 "Information (HBCI)</b> protokollt, amely lehetővé teszi a német felhasználók "
-"számára, hogy kivonatokat töltsenek le, valamint banki átutalásokat és "
+"számára, hogy kimutatásokat töltsenek le, valamint banki átutalásokat és "
 "közvetlen terheléseket kezdeményezzenek."
 
 #: features.phtml:205
@@ -1692,14 +1692,14 @@ msgstr ""
 
 #: features.phtml:237
 msgid "Mortgage &amp; Loan Repayment Assistant"
-msgstr "Jelzálog- és Hiteltörlesztés-segéd"
+msgstr "Kölcsönvisszafizetési /Jelzálogkölcsön-visszafizetési segéd"
 
 #: features.phtml:240
 msgid ""
 "A guided dialogue for setting up loan payments as scheduled transactions."
 msgstr ""
-"Irányított párbeszéd a hiteltörlesztések ütemezett tranzakcióként történő "
-"beállításához."
+"Irányított párbeszéd segíti az ütemezett tranzakciók beállítását a "
+"kölcsönviszafizetésekhez."
 
 #: features.phtml:246
 msgid "User Manual and Help"
@@ -1893,10 +1893,10 @@ msgid ""
 "of the letters when a transaction has an association. This doesn't work on "
 "MacOS."
 msgstr ""
-"Ha egy tranzakcióhoz társítás tartozik, a Társítások oszlopban (kétsoros "
-"módban látható), a számlaregiszterben a betűk helyett egy szimbólum (fájlok "
-"esetén gémkapocs, URL-hez láncszem) jelenik meg. Ez MacOS rendszeren nem "
-"működik."
+"Ha egy tranzakcióhoz társítás tartozik, a társításokoszlopban (kétsoros "
+"módban látható), a számlanyilvántartásban a betűk helyett, egy szimbólum ("
+"fájlok esetén gémkapocs, URL-hez láncszem) jelenik meg. Ez MacOS rendszeren "
+"nem működik."
 
 #: new_features-4.0.phtml:25
 msgid ""
@@ -2089,7 +2089,7 @@ msgstr ""
 "Az <b>Importálásimegfeleltetés-szerkesztő</b> (Eszközök -> Importálási "
 "megfeleltetések szerkesztése) elemzi a Bayes-féle asszociációkat a nem "
 "létező számlákkal, és a találatok eltávolításához megjelenít egy "
-"párbeszédpanelt. Megjelenít egy gombot is az Importálásimegfeleltetés-"
+"párbeszédpanelt. Megjelenít egy gombot is az importálásimegfeleltetés-"
 "szerkesztő alján, amellyel a párbeszéd használata nélkül törölheti ezeket."
 
 #: new_features-4.0.phtml:91
@@ -2167,7 +2167,7 @@ msgstr "Költségvetések"
 #: new_features-4.0.phtml:112
 msgid "Optionally include the account code option in budget view."
 msgstr ""
-"Opcionálisan tartalmazza a számlakód lehetőséget a költségvetés nézetben."
+"Választhatóan tartalmazza a számlakód lehetőséget a költségvetésnézetben."
 
 #: new_features-4.0.phtml:113
 msgid "Enable adding notes to budgets."
@@ -2175,7 +2175,7 @@ msgstr "Megjegyzéseket lehet hozzáadni a költségvetésekhez."
 
 #: new_features-4.0.phtml:114
 msgid "Account codes may now optionally be displayed in the Budget Tree View."
-msgstr "A számlakódok mostantól megjeleníthetők a költségvetésfa nézetben."
+msgstr "A számlakódok mostantól megjeleníthetők a költségvetésfa-nézetben."
 
 #: new_features-4.0.phtml:119
 msgid "Compatibility"
@@ -2199,9 +2199,9 @@ msgid ""
 "with Gtk practice. You may need to spend some time with the GtkInspector to "
 "get your custom CSS back the way you like it."
 msgstr ""
-"A Gnucash Widget hierarchiáját a CSS-hez felülvizsgálták, hogy mégjobban "
-"összhangban legyen a GTK gyakorlatával. Előfordulhat, hogy egy kis időt kell "
-"töltenie a GtkInspectorral, hogy úgy kapja meg az egyéni CSS-t, ahogy "
+"A Gnucash Widget hierarchiáját a CSS-hez, felülvizsgálták, hogy mégjobban "
+"összhangban legyen a GTK gyakorlatával. Előfordulhat, hogy egy kis időt el "
+"kell töltenie a GtkInspectorral, hogy úgy kapja meg az egyéni CSS-t, ahogy "
 "szeretné."
 
 #: new_features-4.0.phtml:132
