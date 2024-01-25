@@ -7,7 +7,12 @@
 
 <h4>Between 5.0 and 5.1, the following bugfixes were accomplished:</h4>
 <ul>
-    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=765920">Bug 765920 - Running balance not accurate when sorted different ways</a><p><ul><li>Renamed option to &quot;Account Balance&quot; to avoid confusion with running total.</li><li>Added helper function to ensure running balance and balance forward are only shown when transaction are grouped by account and sorted as in register. In that case column heading remains &quot;Running Balance&quot; and balance forward is shown. Otherwwise column heading is renamed &quot;Account Balance&quot; and balance forward is not shown.</li><li>Also added missing code for Common Currency conversion.</li></ul> </p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=765920">Bug 765920 - Running balance not accurate when sorted different ways</a>
+      <ul><li>Renamed option to &quot;Account Balance&quot; to avoid confusion with running total.</li>
+        <li>Added helper function to ensure running balance and balance forward are only shown when transaction are grouped by account and sorted as in register. In that case column heading remains &quot;Running Balance&quot; and balance forward is shown. Otherwwise column heading is renamed &quot;Account Balance&quot; and balance forward is not shown.</li>
+        <li>Also added missing code for Common Currency conversion.</li>
+      </ul>
+    </li>
     <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797879">Bug 797879 - [Transaction Report] running balance column not consistent with amount column for SAME transaction date</a></li>
     <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798461">Bug 798461 - balance sheet shows positions with zero balances despite report options</a></li>
     <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798775">Bug 798775 - Why is General Journal called &quot;Register&quot; in the tabs?</a></li>
@@ -89,7 +94,7 @@
 <p>The SHA256 Hashes for the downloadable files are:</p>
 <ul>
     <li><code>8a6581ddf7c7409db636510601351af724eda363ab59b1d5da8d981033f26f72</code>&nbsp;&nbsp;gnucash-5.1.tar.bz2</li>
-    <li>bd73204896d71cb19c2071bca9cc6faaf19d1499be66124f4fe66c8e15f876cb<code></code>&nbsp;&nbsp;gnucash-5.1.tar.gz</li>
+    <li><code>bd73204896d71cb19c2071bca9cc6faaf19d1499be66124f4fe66c8e15f876cb</code>&nbsp;&nbsp;gnucash-5.1.tar.gz</li>
     <li><code>3ddc5547b5694a11a33e21e4110d1adb908f04995637a54bfa930df68c7df014</code>&nbsp;&nbsp;gnucash-5.1.setup.exe</li>
     <li><code>65a67bdffbe2d50e5dbe69b7193acfde6d8964a0fbd631edfd0d064fbaea03d3</code>&nbsp;&nbsp;Gnucash-Intel-5.1-2.dmg</li>
     <li><code>59bd2b5ccc1efa7a034b38663e28f855b4ad16ee28b2248d61af8145097152f6</code>&nbsp;&nbsp;gnucash-docs-5.1.tar.gz</li>

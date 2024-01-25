@@ -59,7 +59,7 @@
   <li>[report-utilities] bugfix: overpayment works for AP accounts.</li>
   <li>Swap the buttons around on the Budget Open dialogue<br/> Swap the OK and Cancel buttons so they conform to the normal layout.</li>
   <li>[report-utilities] bugfix: fix overpayment detection<br/> For 1 payment to &gt;1 invoices, previously would miscalculate overpayment.</li>
-  <li>[budgets.scm] Budget reports handle both natural & reversed budgets.<br/>This change is protected by a Feature: Using it will prevent the file from being opened by earlier versions of GnuCash.</li>
+  <li>[budgets.scm] Budget reports handle both natural &amp; reversed budgets.<br/>This change is protected by a Feature: Using it will prevent the file from being opened by earlier versions of GnuCash.</li>
   <li>[gnc-budget-view.c] totals - 5 fundamental types<br/>previous showed income/expense/transfers/totals budget totals, of uncertain meaning. now shows income/expense/asset/liability/equity budget totals. The 5 lines also become sensitive to the global sign-reverse property.</li>
   <li>bindings-python - drop references to gnucash-env<br/> We no longer ship a gnucash-env script, directly use python(3) instead</li>
   <li>[balsheet-pnl] fix: single-date balsheet missed printing date

@@ -35,10 +35,10 @@
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796989"> Bug 796989 - some date/time does not honor user locale.</a></li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797002"> Bug 797002 - Program crashes when exporting tax data in txf format.</a></li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797011"> Bug 797011 - GnuCash 3.4 Crashes When Printing Checks with Custom Format.</a></li>
-<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797013"> Bug 797013 - Import Customers & Vendors: error in CMakeLists.txt - causes incomplete project in Xcode.</a></li>
-<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797029"> Bug 797029 - Import Customer & Vendors: blank name and company in import data row crashes GnuCash</a></li>
-<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797030"> Bug 797030 - Import Customer & Vendors: several issues with the matching of data rows.</a></li>
-<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797031"> Bug 797031 - Import customer & Vendors: import can create customer and vendors without address data</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797013"> Bug 797013 - Import Customers &amp; Vendors: error in CMakeLists.txt - causes incomplete project in Xcode.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797029"> Bug 797029 - Import Customer &amp; Vendors: blank name and company in import data row crashes GnuCash</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797030"> Bug 797030 - Import Customer &amp; Vendors: several issues with the matching of data rows.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797031"> Bug 797031 - Import customer &amp; Vendors: import can create customer and vendors without address data</a></li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797041"> Bug 797041 - enum confusion in qoflog.</a></li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797046"> Bug 797046 - Tools / Price Database / Currencies UI not working since 3.4.</a></li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797067"> Bug 797067 - Date displayed incorrectly in register.</a></li>
@@ -61,10 +61,10 @@
   <li><b>GUI</b>: Replace ambiguous mnemonic for File>Export>Export Active Register...</li>
   <li><b>GUI</b>: Rearrange menu accelerators for Actions>Online Actions menu items</li>
   <li><b>GUI</b>: Add mnemonic for File>Import>Import Bills...</li>
-  <li><b>GUI</b>: Move Balance-Forecast report to Reports>Assets & Liabilities</li>
+  <li><b>GUI</b>: Move Balance-Forecast report to Reports>Assets &amp; Liabilities</li>
   <li><b>GUI</b>: Move Void Transactions item in Report Options from the Accounts tab to the Filter tab.</li>
   <li><b>I18N</b>: Fix erratic localization of dates on Windows.
-      <br />Date format selection on Windows relies on Windows National Language functions and those are unaffected by the POSIX setlocale(). We have in the past relied upon gtk initialization to handle this but it has not been reliable since the move to Gtk3. Note that this applies only when the locale is set via a Unix-style environment variable (typically LANG) or in the environment file; it's unnecessary and ignored when using the localization settings in Region & Language.</li>
+      <br />Date format selection on Windows relies on Windows National Language functions and those are unaffected by the POSIX setlocale(). We have in the past relied upon gtk initialization to handle this but it has not been reliable since the move to Gtk3. Note that this applies only when the locale is set via a Unix-style environment variable (typically LANG) or in the environment file; it's unnecessary and ignored when using the localization settings in Region &amp; Language.</li>
   <li><b>I18N</b>: Unify phrases to remove untranslated msgids.</li>
   <li><b>I18N</b>: Restore the global locale after Guile munges it.
       <br />There's no way to change the environment locale on Windows so calling setlocale(LC_ALL, ""), as guile does in its init routine, reads the user's Language and Region settings instead of the environment variables. We save the discovered environment locale and call setlocale with it again after Guile has initialized.</li>
@@ -155,7 +155,7 @@
   <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796492"> Bug 796492 - Wrong calculation of the first occurrence</a></li>
   <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796496"> Bug 796496 - CSV Importer: Column Selectors invisible on Windows.</a></li>
   <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796500"> Bug 796500 - Scalability issue - importing large CSV to large book won't finish</a></li>
-  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796520"> Bug 796520 - Layout overlapping in Income & Expense Chart</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796520"> Bug 796520 - Layout overlapping in Income &amp; Expense Chart</a></li>
   <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796688"> Bug 796688 - "Next" Button Moves Repeatedly During New File Wizard</a></li>
   <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796728"> Bug 796728 - GnuCash 3.0-3.2 crashes when starting up under Windows</a></li>
   <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796736"> Bug 796736 - Column Widths calculator need to allow more padding</a></li>
@@ -164,7 +164,7 @@
   <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796750"> Bug 796750 - qof_query_search_for stores pointer of type string argument</a></li>
   <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796754"> Bug 796754 - Guile encoding certain strings not as UTF-8</a></li>
   <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796758"> Bug 796758 - Improve error messages, why one can not remove a tax table</a></li>
-  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796761"> Bug 796761 - Newline (char(10) is inserted into the end of the string if copy & paste text from excel into the description field of transaction</a></li>
+  <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796761"> Bug 796761 - Newline (char(10) is inserted into the end of the string if copy &amp; paste text from excel into the description field of transaction</a></li>
   <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796767"> Bug 796767 - The importer shows read-only and placeholder accounts</a></li>
   <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796773"> Bug 796773 - Display of Negative numbers</a></li>
   <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796774"> Bug 796774 - Investment account QIF Import does not import transaction</a></li>
@@ -210,10 +210,10 @@
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797009"> Bug 797009 - Database error on split transaction</a></li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797010"> Bug 797010 - Install v3.4 failure</a></li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797016"> Bug 797016 - modifying existing entry don't allow to input zero price or zero stocks</a></li>
-<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797022"> Bug 797022 - Import Bills & Invoices: expense/income account is not validated - leads to one-sided posting if account is invalid</a></li>
-<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797023"> Bug 797023 - Import Bills & Invoices: no user confirmation requested for update of invoices, if new invoices is created first.</a></li>
-<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797024"> Bug 797024 - Import Bills & Invoices: import matches csv data rows with too few separators, messing up the import data</a></li>
-<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797025"> Bug 797025 - Import Bills & Invoices: the type of the post to account is not validated - enabling A/P and A/R postings on regular accounts</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797022"> Bug 797022 - Import Bills &amp; Invoices: expense/income account is not validated - leads to one-sided posting if account is invalid</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797023"> Bug 797023 - Import Bills &amp; Invoices: no user confirmation requested for update of invoices, if new invoices is created first.</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797024"> Bug 797024 - Import Bills &amp; Invoices: import matches csv data rows with too few separators, messing up the import data</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797025"> Bug 797025 - Import Bills &amp; Invoices: the type of the post to account is not validated - enabling A/P and A/R postings on regular accounts</a></li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797026"> Bug 797026 - Reimport of account structure not working</a></li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797027"> Bug 797027 - After Upgrade to 3.4, File is Always Unsaved</a></li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797033"> Bug 797033 - The CSV Importer should not obey with the "automatic digital point" setting</a></li>

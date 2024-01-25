@@ -9,7 +9,7 @@
 <h4>New Features</h4>
 <ul>
     <li> A new Stock Transaction Assistant to guide you through entering most investment transactions for stocks, bonds, and mutual funds. You can access it from <em>Actions>Stock Assistant</em> when you have the Accounts page ora Stock or Fund account register open.</li>
-    <li> A new Investment Lots report showing a graph of capital gains and losses in a period by investment lot. Note that if you don't use the View Lots dialog to manage capital gains and losses this report won't have anything to show you. Use <em>Reports>Assets & Liabilities>Investment Lots</em> to see the report.</li>
+    <li> A new Investment Lots report showing a graph of capital gains and losses in a period by investment lot. Note that if you don't use the View Lots dialog to manage capital gains and losses this report won't have anything to show you. Use <em>Reports>Assets &amp; Liabilities>Investment Lots</em> to see the report.</li>
     <li>A new tab on the New/Edit Account dialog called <em>More Properties</em> includes entries to set a high and low limit on an account. That's coupled to a new column that's available on the Accounts Page, <em>Balance Limit</em>. If you set a high or low limit and the account balance falls above or below the respective limit an indicator will be shown in the Balance Limit column.</li>
     <li>The description field quickfill in the register now displays a drop-down list of possible completions instead of just one inline completion.</li>
     <li>File import menu items for the MT940, MT942, and DTAUS formats is replaced with a single <em>Import from AQBanking</em> that supports importing any file format supported by AQBanking, including the frequently requested CAMT.</li>
@@ -26,7 +26,7 @@
    </ul>
 <h5>The following additional bug fixes are in unstable only:</h5>
 <ul>
-    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=782141">Bug 782141 - Import CSV - Multi-currency support can cause rounding errors</a><p>Replace the column types &#39;Deposit&#39; and &#39;Withdrawal&#39 with  &#39;Amount&#39; and &#39;Amount (Negated)&#39; that are conceptually applicable more widely. Also introduce column types &#39;Value&#39; and &#39;Value (Negated)&#39; to allow construction of splits in commodities different from the transaction currency. While Value is the number in the transaction currency, always use &#39;Amount&#39; in single-currency transactions.</p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=782141">Bug 782141 - Import CSV - Multi-currency support can cause rounding errors</a><p>Replace the column types &#39;Deposit&#39; and &#39;Withdrawal&#39; with  &#39;Amount&#39; and &#39;Amount (Negated)&#39; that are conceptually applicable more widely. Also introduce column types &#39;Value&#39; and &#39;Value (Negated)&#39; to allow construction of splits in commodities different from the transaction currency. While Value is the number in the transaction currency, always use &#39;Amount&#39; in single-currency transactions.</p></li>
     <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=793306">Bug 793306 - Price is not imported from CSV</a></li>
     <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796955">Bug 796955 - Import CSV - Single-line two-currency transactions can&#39;t be imported</a></li>
     <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797033">Bug 797033 - The CSV Importer should not obey with the &quot;automatic digital point&quot; setting</a></li>

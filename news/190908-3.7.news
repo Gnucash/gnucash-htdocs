@@ -13,14 +13,14 @@
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=746937">Bug 746937 - Template transaction splits are loaded in reverse order and then not sorted before saving.</a><br/>Actually not sorted after loading because the template accounts weren't being committed.</li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=752395">Bug 752395 - Start Day of weekly report doesn't respond to change in locale</a><br/>Redefines some functions to ensure weekly grouping in transaction report obeys locale's start-of-week.</li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=784623">Bug 784623 - GNUCash does not work with sql backend, I can open in read only mode</a><br/> Upgrade the splits table as well, an oversight from the original fix. </li>
-<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=793018">Bug 793018 - Balance (with >>eguile<<) - Report Title can't be changed</a></li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=793018">Bug 793018 - Balance (with &gt;&gt;eguile&lt;&lt;) - Report Title can't be changed</a></li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=795251">Bug 795251 - googletest detection cannot be overridden</a></li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796819">Bug 796819 - bad icon with Spanish localization</a><br/>Temporary fix for Farsi, which was afffected, too. As it is maintained by TP, the final fix has to come from them.</li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=796952">Bug 796952 - Report formatting (justify) is broken</a><br/>Preveious patch reverted and replaced with a more correct one.</li>
-<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797085">Bug 797085 - Import Bills & Invoices – headers not translated.</a><br/>Make strings translatable.  Translators: This adds 22 new translatable strings.</li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797085">Bug 797085 - Import Bills &amp; Invoices – headers not translated.</a><br/>Make strings translatable.  Translators: This adds 22 new translatable strings.</li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797158">Bug 797158 - gnc:make-account-sel-limited-option is not working</a><br/>Option was being deliberately reset to default_value every time. </li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797279">Bug 797279 - Reports RTL do not support RTL</a><br/>Fix guile-2.0 string handling to prevent munging unicode in report-titles etc. while loading/saving reports.</li>
-<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797295">Bug 797295 - problems with entering swedish åäö in company address</a</li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797295">Bug 797295 - problems with entering swedish åäö in company address</a></li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797297">Bug 797297 - GNUCash is in English even though MacOS is set-up to French.</a></li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797301">Bug 797301 - Register Menu View > Refresh doesn't work in 'with subaccounts' window.</a></li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797306">Bug 797306 - "URL cannot be shown" when one clicks an account line link in report.</a></li>
@@ -30,7 +30,7 @@
     <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797349">Bug 797349 - "A"ssociate header badly translated.</a>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797353">Bug 797353 - Add copyright and release info in appdata file</a></li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797355">Bug 797355 - General Journal report seems to be off balance</a><br/>Previously, for general-journal, each split was being analyzed, and only the source split was counted for totals. This change will means the source split *and* its peers were accounted for. </li>
-<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797377">Bug 797377 - cmake fails on debian-8 and ubuntu-14.04 with gnucash.appdata.xml.in does not exist</li>
+<li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797377">Bug 797377 - cmake fails on debian-8 and ubuntu-14.04 with gnucash.appdata.xml.in does not exist</a></li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797378">Bug 797378 - QIF file import fails: Loading gives wrong type argument in position 2</a></li>
 <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797389">Bug 797389 - Random Crashes while attaching a document.</a></li>
 
@@ -148,8 +148,8 @@ application bundle.</p>
   <li><code>3664f3f0a2725ba1b771400ecf1478db164006e97832ea19883657c3d3f41ec3</code>&nbsp;&nbsp;gnucash-3.7.setup.exe</li>
   <li><code>b687fb0a17b15e735a29be83354409fb8059aebf0bd97079b74eac3dfc4cbeac</code>&nbsp;&nbsp;Gnucash-Intel-3.7-1.dmg</li>
   <li><code>393919c12e7a0711b113cca3af83c2dcd195eabfa83ed2e985cbb91951a990c0</code>&nbsp;&nbsp;gnucash-docs-3.7-1.tar.gz</li>
-</ul></p>
-
+</ul>
+<p></p>
 <ul>
   <li>SourceForge:
   <ul>
