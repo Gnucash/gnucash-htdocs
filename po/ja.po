@@ -6,14 +6,15 @@
 # Takuro Onoue <kusanaginoturugi@gmail.com>, 2020.
 # TANIGUCHI Yasuaki <yasuakit+weblate@gmail.com>, 2021.
 # "Shuuji TAKAHASHI (shuuji3)" <shuuji3@gmail.com>, 2023.
+# soramikan <sora_yana@icloud.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs r18581\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
-"component=Translations&product=Website&resolution=---\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
+"cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2023-09-26 05:30+0200\n"
-"PO-Revision-Date: 2023-05-22 01:50+0000\n"
-"Last-Translator: \"Shuuji TAKAHASHI (shuuji3)\" <shuuji3@gmail.com>\n"
+"PO-Revision-Date: 2024-03-24 02:01+0000\n"
+"Last-Translator: soramikan <sora_yana@icloud.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnucash/website/"
 "ja/>\n"
 "Language: ja\n"
@@ -21,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.18-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: 2.6-release-tour.phtml:3
 msgid "GnuCash 2.6 release tour"
@@ -64,12 +65,16 @@ msgid ""
 "in the File menu and rerun it later by selecting it from the menu Reports-"
 ">Preconfigured Reports."
 msgstr ""
+"従来の<span class=\"gnucash\">GnuCash</span>カスタム帳票管理システムが改訂さ"
+"れました。[ファイル]メニューの専用オプションを使用してレポートを保存し、[帳簿"
+"]->[設定済み帳簿]メニューから選択して後で再実行することができます。"
 
 #: 2.6-release-tour.phtml:40
 msgid ""
 "The Preconfigured Reports window. You can select and run a preconfigured "
 "report, edit its name and delete it."
-msgstr ""
+msgstr "設定済み帳票ウィンドウ。設定済みの帳票を選択して実行したり、名前を編集したり"
+"、削除したりすることができます。"
 
 #: 2.6-release-tour.phtml:45
 msgid "Export any report directly to PDF"
@@ -94,11 +99,16 @@ msgid ""
 "the Transaction menu and the transaction's context menu. The files are "
 "displayed in the default viewer for that file type."
 msgstr ""
+"外部ローカルファイルやリモートロケーション（URL）を取引にリンクできるようにな"
+"りました。この機能は、取引メニューと取引のコンテキストメニューの両方から利用"
+"できます。ファイルは、そのファイルタイプのデフォルトのビューアで表示されます"
+"。"
 
 #: 2.6-release-tour.phtml:60
 msgid ""
 "You can now associate a local file or a remote location with any transaction."
-msgstr ""
+msgstr "ローカルファイルやリモートロケーションを取引に関連付けることができるようにな"
+"りました。"
 
 #: 2.6-release-tour.phtml:65
 msgid "Account colors"
@@ -110,12 +120,15 @@ msgid ""
 "account window. This color can then be displayed as account name and account "
 "register tab background easing the lookup of a specific account."
 msgstr ""
+"勘定科目編集ウインドウから、任意のアカウントに固有の色を関連付けることができ"
+"るようになりました。この色は、勘定科目名と勘定科目記録簿タブの背景として表示"
+"され、特定の勘定科目の検索を容易にします。"
 
 #: 2.6-release-tour.phtml:75
 msgid ""
 "The colors ease the lookup of specific accounts in the account tree and in "
 "tabs."
-msgstr ""
+msgstr "この色は、勘定科目ツリーやタブでの特定の勘定科目の検索を容易にします。"
 
 #: 2.6-release-tour.phtml:80
 msgid "Timeout on \"Save changes on closing\""
@@ -130,6 +143,11 @@ msgid ""
 "that time, the changes will be saved automatically and the question window "
 "closed."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> 環境設定の [全般] "
+"タブで、[閉じるときに変更を保存] ウィンドウのタイムアウトを設定できるようにな"
+"りました。有効にすると、「閉じるときに変更を保存」 のダイアログは、限られた秒"
+"数だけ選択を待ちます。ユーザーがその時間内に選択しなかった場合、変更は自動的"
+"に保存され、ダイアログは閉じられます。"
 
 #: 2.6-release-tour.phtml:85
 msgid "Open datafile read-only"
@@ -139,19 +157,24 @@ msgstr "データファイルを読み取り専用で開く"
 msgid ""
 "When opening a locked \"book\" one now has the option of opening it read-"
 "only."
-msgstr ""
+msgstr "ロックされた「帳簿」を開く際に、読み取り専用で開くことができるようになりまし"
+"た。"
 
 #: 2.6-release-tour.phtml:90
 msgid ""
 "Note that <span class=\"gnucash\">GnuCash</span> is still a single-user "
 "program and that the database backends are still used only as a data store."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span>は依然としてシングルユーザー・プログラ"
+"ムであり、データベースのバックエンドは依然としてデータストアとしてのみ使用さ"
+"れていることに注意してください。"
 
 #: 2.6-release-tour.phtml:98
 msgid ""
 "The new button to open a <span class=\"gnucash\">GnuCash</span> datafile in "
 "read-only mode."
-msgstr ""
+msgstr "<span class=\"gnucash\">GnuCash</span>データファイルを読み取り専用モードで開"
+"くための新しいボタンです。"
 
 #: 2.6-release-tour.phtml:103
 msgid "Save \"Filter By\" settings"
@@ -161,7 +184,7 @@ msgstr "フィルター設定の保存"
 msgid ""
 "It is now possible to save the \"Filter By…\" settings for an account "
 "register."
-msgstr ""
+msgstr "勘定科目記録簿の \"Filter By... \"設定を保存できるようになりました。"
 
 #: 2.6-release-tour.phtml:113
 msgid ""
@@ -1995,7 +2018,7 @@ msgstr ""
 
 #: new_features-4.0.phtml:114
 msgid "Account codes may now optionally be displayed in the Budget Tree View."
-msgstr ""
+msgstr "勘定科目コードを予算ツリービューに表示できるようになりました。"
 
 #: new_features-4.0.phtml:119
 msgid "Compatibility"
@@ -2005,7 +2028,7 @@ msgstr "互換性"
 msgid ""
 "GnuCash 4.x and later will no longer migrate old gconf settings from GnuCash "
 "2.4.x."
-msgstr ""
+msgstr "GnuCash 4.x以降では、GnuCash 2.4.xから古いgconf設定を移行しなくなりました。"
 
 #: new_features-4.0.phtml:128
 msgid "Customization and Scripting"
@@ -2017,12 +2040,17 @@ msgid ""
 "with Gtk practice. You may need to spend some time with the GtkInspector to "
 "get your custom CSS back the way you like it."
 msgstr ""
+"CSS の GnuCash ウィジェット階層は、Gtk "
+"の慣行により一致するように改訂されました。カスタム CSS "
+"をあなたのお好みに戻すには、GtkInspector "
+"で時間をかける必要があるかもしれません。"
 
 #: new_features-4.0.phtml:132
 msgid ""
 "Python bindings are now localized and their strings available for "
 "translation."
-msgstr ""
+msgstr "Pythonのバインディングがローカライズされ、その文字列を翻訳できるようになりま"
+"した。"
 
 #: new_features-4.0.phtml:135
 #, php-format
