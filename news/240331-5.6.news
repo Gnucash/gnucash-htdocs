@@ -1,0 +1,136 @@
+<b>Announcement:</b> GnuCash 5.6 Released
+2023-03-31
+
+<h2>GnuCash 5.6 Released</h2>
+
+<p>The GnuCash development team announces GnuCash 5.6, the seventh release in the stable 5.x series.</p>
+
+<h4>Between 5.5 and 5.6, the following bugfixes were accomplished:</h4>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798946">Bug 798946 - start/end of current/last quarter have off-by-one error</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799093">Bug 799093 - Cannot reconcile since v5.4</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799179">Bug 799179 - SLR won&#39;t allow change from &quot;Reminder&quot; to any other state</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799210">Bug 799210 - Bad encoding of accented chars in account names in &quot;Import CSV&quot; wizard</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799213">Bug 799213 - SIGSEGV caused by revising an auto completed transaction</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799222">Bug 799222 - Crash when changing the parent of an account that has had two or more levels of sub-accounts auto-created using the register in the current session.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799224">Bug 799224 - Import of QIF gets Bug detected during duplicates (partial fix</a>: If the new-splits object is null, it means the new account tree from the current import has no splits. Therefore the (apply min|max dates) will fail. Omitting the date query is a simple fix to prevent crashing.  This is a partial fix because the crash is likely a symptom of another bug which causes the new account-tree to be empty. </li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799225">Bug 799225 - QIF Importer Crashes Silently after &quot;Start Import&quot; Button</a>: Don&#39;t allow a QIF investment transaction without an action (buy/sell/etc) </li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799246">Bug 799246 - import matcher will rename incorrect splits</a></li>
+</ul>
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>Numeric parsing and string handling improvements in the Engine and XML backend.</li>
+    <li>[gnc-dense-cal.c] sx popup: show date in preference (cf.locale) format because the date format preference is user-facing and customisable. it&#39;s jarring if the preference is dd/mm/yyyy and the display shows mm/dd/yyyy in accordance to the locale. </li>
+    <li>Correct misleading description about creating Scheduled Transaction.</li>
+    <li>Date parsing efficiency improvements.</li>
+    <li>Update minumum Python version to 3.8, made necessary by updating the C API in the Python bindings.</li>
+    <li>Replace deprecated distutils.sysconfig with sysconfig. distutils is not present in Python 3.12.2. </li>
+    <li>Query user via dialog for date when creating a reverse transaction.</li>
+    <li>More C++ conversions</li>
+    <li>Avoid deprecation warning for -py3 in swig &gt;= 4.1</li>
+    <li>[gnc-commodities.cpp] gnc_new_iso_codes is a std::unordered_map</li>
+    <li>Replace some naked for loops with C++ algorithms</li>
+    <li>Convert gnc-commodity to C++ and make GncQuoteSources a C++ class.</li>
+    <li>[test-commodities.cpp] add some tests for gnc_quote_sources</li>
+    <li>Remove the SLR status sort as it is too confusing</li>
+    <li>Allow sorting of the transaction column in the Since Last Run dialog by schedule name or occurrence date.  To sort by schedule name, a schedule name is first selected and then the column header is pressed to change order.  To sort by occurrence date, a date is selected and then the column header is pressed to change order based on the date of the first occurrence.  A tool tip has been added to indicate the sort order being used. </li>
+    <li>[gtest-gnc-numeric] add operator comparisons with example int64 numbers </li>
+    <li>[assistant-stock-transaction] store &amp; retrieve associated account as metadata</li>
+    <li>Update Form/Schedule line references for 2023 for the US Income Tax Report</li>
+    <li>Update another gnucash-help to gnucash-manual</li>
+    <li>[invoice.scm] centralize layout components into layout-key-list instead of maintaining 2 assoc lists. </li>
+    <li>[invoice.scm] normalize header section generators, changing the functions to require 1 options argument only </li>
+    <li>Update invoice.scm: Add spacing for long Invoice ID&#39;s (Displayed as &quot;Reference&quot; on the Invoice)</li>
+</ul>
+
+<p>New and Updated Translations: Croatian, Dutch, English (Australia), English (New Zealand), English (United Kingdom), French, German, Hebrew, Hungarian, Indonesian, Japanese, Norwegian Bokmål, Polish, Portuguese, Slovak, Spanish, Swedish</p>
+
+<a href="https://hosted.weblate.org/engage/gnucash/">Help translate GnuCash on Weblate</a>
+
+<h4>Known Problems</h4>
+<p><a href="https://bugs.gnucash.org/buglist.cgi?bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;limit=0&amp;list_id=8149&amp;order=priority%2Cbug_severity&amp;query_format=advanced">Complete list of all open bugs.</a></p>
+
+<h2>Documentation</h2>
+<h6>Between 5.5 and 5.6, the following bugfixes were accomplished:</h6>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799237">Bug 799237 - Dead Link</a></li>
+</ul>
+
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>C, de:Manual:Finance-Quote: Note about Expected Time Commitment</li>
+    <li>C, de:Manual:Finance-Quote: Tip about &#39;gnc-fq-update: Command not found&#39;</li>
+    <li>docbook: gnc-gui-de: Improve accelerator of menuitems</li>
+    <li>Link https://wiki.gnucash.org/wiki/Documentation_Translation#The_Procedure in recent gnc-gui-*.dtd files</li>
+    <li>Replace *dquote entities by &lt;quote&gt; tags</li>
+    <li>C:Manual:Tools:Unify main section titles and other minor improvements</li>
+    <li>Unify filename extension</li>
+    <li>C:Manual:CSV Import: show icons</li>
+    <li>xmlformat: Apply changes at the element &#39;screeninfo&#39;</li>
+    <li>xmlformat.conf: new element &#39;screeninfo&#39; with no entry- and no exit-break</li>
+</ul>
+
+
+<p>New and Updated Translations: German</p>
+
+
+<h3>Getting GnuCash for Windows and MacOS</h3>
+<p>GnuCash is provided for both Microsoft Windows 8.1&reg; and later
+    and MacOS 10.13 (High Sierra)&reg; and later in pre-built, all-in-one
+    packages. An installer is provided for Microsoft Windows&reg; while
+    the MacOS&reg; package is a disk image containing a drag-and-drop
+    application bundle.</p>
+
+<p>GnuCash is also available as a flatpak from Flathub.org. <a href="https://wiki.gnucash.org/wiki/Flatpak">Instructions for installing and running.</a></p>
+
+<p>The SHA256 Hashes for the downloadable files are:</p>
+<ul>
+    <li><code>b4b42c626350f3e79f7ca1f2173545cc63ddee1addf2460b1a1f22221bf21bd1</code>&nbsp;&nbsp;gnucash-5.6.tar.bz2</li>
+    <li><code>50aebe914da600003c3b668c6a0b86df3d583a200c378f0f16658bec299bbbd3</code>&nbsp;&nbsp;gnucash-5.6.tar.gz</li>
+    <li><code>dc6139469696168ddd13ad617a8fbd31c2389b0960a82bc2da1c0c5606b37f46</code>&nbsp;&nbsp;gnucash-5.6.setup.exe</li>
+    <li><code>2cc91f36d9939065dac366058aae1a6a8c41cfe84850b6b549ee87ba075d50d4</code>&nbsp;&nbsp;Gnucash-Intel-5.6-1.dmg</li>
+    <li><code>8ad9da28199074fc5ef604d4489a82413031290a06e5f6418fe85cceb5fa3f02</code>&nbsp;&nbsp;gnucash-docs-5.6.tar.gz</li>
+</ul>
+
+<ul>
+    <li>SourceForge:
+        <ul>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.6/gnucash-5.6.setup.exe">Win32</a></li>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.6/Gnucash-Intel-5.6-1.dmg">Mac-Intel</a></li>
+        </ul></li>
+    <li>Github
+        <ul>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/5.6/gnucash-5.6.setup.exe">Win32</a></li>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/5.6/Gnucash-Intel-5.6-1.dmg">Mac-Intel</a></li>
+        </ul></li></ul>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 5.6 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+    <li>Sourceforge: <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.6/gnucash-5.6.tar.bz2">bzip2</a>, <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.6/gnucash-5.6.tar.gz">gzip</a>.</li>
+
+    <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/5.6/gnucash-5.6.tar.bz2">bzip</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/5.6/gnucash-5.6.tar.gz">gzip</a></li>
+
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https://www.gtk.org">Gtk+</a> 3.22.29, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0, <a href="https://www.boost.org/">Boost</a> 1.67, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, <a href="https://github.com/google/googletest">GoogleTest</a> 1.8.0, <a href="https://cmake.org/">cmake 3.10</a> and <a href="http://www.swig.org/">SWIG</a> 2.0.12. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 5.6 documentation can be found under "GnuCash v5 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats. The documentation is also included in the MacOS and Windows application bundles.</p>
+
+<p>If you want to compile the GnuCash Documentation 5.6 for yourself, the source code can be downloaded from:</p>
+<ul>
+    <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.6/gnucash-docs-5.6.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/5.6/gnucash-docs-5.6.tar.gz">GitHub</a></li>
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+    the GNU General Public License (GPL) and available for GNU/Linux,
+    *BSD, Solaris, MacOS, and Microsoft Windows.  Programming on GnuCash
+    began in 1997, and its first stable release was in 1998.</p>

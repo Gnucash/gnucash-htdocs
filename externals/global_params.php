@@ -6,13 +6,13 @@
      $major_stable              ="5";
      // TODO: on major_stable 5 in download.phtml copy from $old_stable into the historical
      // section: last_win7 and $last_mac_sierra
-     $minor_stable              ="5";
+     $minor_stable              ="6";
      // Number of Translations: Did we add or dropped some?
      define("PROG_TRANSLATIONS", 61);
 
      $latest_stable             = $major_stable.".".$minor_stable;
-     //$latest_stable_win         = $latest_stable;
-     $latest_stable_win         = $latest_stable."-1";
+     $latest_stable_win         = $latest_stable;
+     //$latest_stable_win         = $latest_stable."-1";
      $latest_stable_mac_intel   = $latest_stable."-1";
 // Change this when there has been a re-tag to add the re-tag letter,
 // e.g. if one retagged 2.6.13 to 2.6.13a, make $tarball = $latest_stable."a".
