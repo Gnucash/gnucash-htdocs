@@ -10,9 +10,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs r18581\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
-"cgi?component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2023-09-26 05:30+0200\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
+"component=Translations&product=Website&resolution=---\n"
+"POT-Creation-Date: 2024-04-02 13:19+0200\n"
 "PO-Revision-Date: 2024-03-24 02:01+0000\n"
 "Last-Translator: soramikan <sora_yana@icloud.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnucash/website/"
@@ -66,15 +66,16 @@ msgid ""
 ">Preconfigured Reports."
 msgstr ""
 "従来の<span class=\"gnucash\">GnuCash</span>カスタム帳票管理システムが改訂さ"
-"れました。[ファイル]メニューの専用オプションを使用してレポートを保存し、[帳簿"
-"]->[設定済み帳簿]メニューから選択して後で再実行することができます。"
+"れました。[ファイル]メニューの専用オプションを使用してレポートを保存し、[帳"
+"簿]->[設定済み帳簿]メニューから選択して後で再実行することができます。"
 
 #: 2.6-release-tour.phtml:40
 msgid ""
 "The Preconfigured Reports window. You can select and run a preconfigured "
 "report, edit its name and delete it."
-msgstr "設定済み帳票ウィンドウ。設定済みの帳票を選択して実行したり、名前を編集したり"
-"、削除したりすることができます。"
+msgstr ""
+"設定済み帳票ウィンドウ。設定済みの帳票を選択して実行したり、名前を編集した"
+"り、削除したりすることができます。"
 
 #: 2.6-release-tour.phtml:45
 msgid "Export any report directly to PDF"
@@ -101,13 +102,14 @@ msgid ""
 msgstr ""
 "外部ローカルファイルやリモートロケーション（URL）を取引にリンクできるようにな"
 "りました。この機能は、取引メニューと取引のコンテキストメニューの両方から利用"
-"できます。ファイルは、そのファイルタイプのデフォルトのビューアで表示されます"
-"。"
+"できます。ファイルは、そのファイルタイプのデフォルトのビューアで表示されま"
+"す。"
 
 #: 2.6-release-tour.phtml:60
 msgid ""
 "You can now associate a local file or a remote location with any transaction."
-msgstr "ローカルファイルやリモートロケーションを取引に関連付けることができるようにな"
+msgstr ""
+"ローカルファイルやリモートロケーションを取引に関連付けることができるようにな"
 "りました。"
 
 #: 2.6-release-tour.phtml:65
@@ -143,11 +145,11 @@ msgid ""
 "that time, the changes will be saved automatically and the question window "
 "closed."
 msgstr ""
-"<span class=\"gnucash\">GnuCash</span> 環境設定の [全般] "
-"タブで、[閉じるときに変更を保存] ウィンドウのタイムアウトを設定できるようにな"
-"りました。有効にすると、「閉じるときに変更を保存」 のダイアログは、限られた秒"
-"数だけ選択を待ちます。ユーザーがその時間内に選択しなかった場合、変更は自動的"
-"に保存され、ダイアログは閉じられます。"
+"<span class=\"gnucash\">GnuCash</span> 環境設定の [全般] タブで、[閉じるとき"
+"に変更を保存] ウィンドウのタイムアウトを設定できるようになりました。有効にす"
+"ると、「閉じるときに変更を保存」 のダイアログは、限られた秒数だけ選択を待ちま"
+"す。ユーザーがその時間内に選択しなかった場合、変更は自動的に保存され、ダイア"
+"ログは閉じられます。"
 
 #: 2.6-release-tour.phtml:85
 msgid "Open datafile read-only"
@@ -157,7 +159,8 @@ msgstr "データファイルを読み取り専用で開く"
 msgid ""
 "When opening a locked \"book\" one now has the option of opening it read-"
 "only."
-msgstr "ロックされた「帳簿」を開く際に、読み取り専用で開くことができるようになりまし"
+msgstr ""
+"ロックされた「帳簿」を開く際に、読み取り専用で開くことができるようになりまし"
 "た。"
 
 #: 2.6-release-tour.phtml:90
@@ -173,7 +176,8 @@ msgstr ""
 msgid ""
 "The new button to open a <span class=\"gnucash\">GnuCash</span> datafile in "
 "read-only mode."
-msgstr "<span class=\"gnucash\">GnuCash</span>データファイルを読み取り専用モードで開"
+msgstr ""
+"<span class=\"gnucash\">GnuCash</span>データファイルを読み取り専用モードで開"
 "くための新しいボタンです。"
 
 #: 2.6-release-tour.phtml:103
@@ -439,7 +443,9 @@ msgstr ""
 "文書パッケージがあります。"
 
 #: docs.phtml:30
-msgid "The Help Manual"
+#, fuzzy
+#| msgid "The Help Manual"
+msgid "The GnuCash Manual"
 msgstr "ヘルプマニュアル"
 
 #: docs.phtml:31
@@ -447,8 +453,16 @@ msgid "The Tutorial and Concepts Guide"
 msgstr "チュートリアル・コンセプトガイド"
 
 #: docs.phtml:34
+#, fuzzy
+#| msgid ""
+#| "The <b>Help Manual</b> is designed to be a quick reference of how to "
+#| "accomplish specific tasks and how to use the features in <span "
+#| "class=\"gnucash\">GnuCash</span>. The <b>Concepts Guide</b> is designed "
+#| "to be an in depth guide to the concepts behind using <span "
+#| "class=\"gnucash\">GnuCash</span> with a tutorial to show how to put those "
+#| "concepts into practice."
 msgid ""
-"The <b>Help Manual</b> is designed to be a quick reference of how to "
+"The <b>GnuCash Manual</b> is designed to be a quick reference of how to "
 "accomplish specific tasks and how to use the features in <span "
 "class=\"gnucash\">GnuCash</span>. The <b>Concepts Guide</b> is designed to "
 "be an in depth guide to the concepts behind using <span "
@@ -474,11 +488,19 @@ msgstr ""
 "class=\"gnucash\">GnuCash</span> wiki があります。"
 
 #: docs.phtml:43
+#, fuzzy
+#| msgid ""
+#| "You can also send an email to the <a href=\"mailto:gnucash-user@gnucash."
+#| "org\">gnucash-user</a> mailing list if you cannot find a satisfactory "
+#| "answer to your question within either the <b>Help Manual</b> or the "
+#| "<b>Tutorial and Concepts Guide</b>. We <b>want</b> feedback from you, it "
+#| "is also through your comments that we know how to improve the "
+#| "documentation."
 msgid ""
 "You can also send an email to the <a href=\"mailto:gnucash-user@gnucash."
 "org\">gnucash-user</a> mailing list if you cannot find a satisfactory answer "
-"to your question within either the <b>Help Manual</b> or the <b>Tutorial and "
-"Concepts Guide</b>. We <b>want</b> feedback from you, it is also through "
+"to your question within either the <b>GnuCash Manual</b> or the <b>Tutorial "
+"and Concepts Guide</b>. We <b>want</b> feedback from you, it is also through "
 "your comments that we know how to improve the documentation."
 msgstr ""
 "もし<b>ヘルプマニュアル</b>や<b>チュートリアル・コンセプトガイド</b>で疑問に"
@@ -538,8 +560,10 @@ msgstr "安定版"
 
 #: docs.phtml:64 docs.phtml:209 docs.phtml:341 docs.phtml:514 docs.phtml:631
 #: docs.phtml:657 docs.phtml:679 docs.phtml:697
-msgid "Help Manual"
-msgstr "ヘルプマニュアル"
+#, fuzzy
+#| msgid "GnuCash v%s"
+msgid "GnuCash Manual"
+msgstr "GnuCash バージョン %s"
 
 #: docs.phtml:68 docs.phtml:129 docs.phtml:213 docs.phtml:263 docs.phtml:345
 #: docs.phtml:406 docs.phtml:515 docs.phtml:566 docs.phtml:632 docs.phtml:643
@@ -1162,41 +1186,7 @@ msgstr "言語の翻訳"
 msgid "Writing Documentation"
 msgstr "文書作成"
 
-#: externals/menu.phtml:61
-msgid "GnuCash 2.4 Small Business Accounting"
-msgstr "GnuCash 2.4 Small Business Accounting"
-
-#: externals/menu.phtml:65
-msgid ""
-"The GnuCash development team received notice about a new book published by "
-"PacktPub, UK:"
-msgstr ""
-"GnuCash 開発チームは PacktPub, UK から出版された新しい本に関する通知を受け取"
-"りました。"
-
-#: externals/menu.phtml:66
-msgid "GnuCash 2.4 Small Business Accounting, by Ashok Ramachandran"
-msgstr "GnuCash 2.4 Small Business Accounting, Ashok Ramachandran著"
-
-#: externals/menu.phtml:67
-msgid "This is a Beginner's Guide for managing your accounts."
-msgstr "これは会計管理に関する初心者向けのガイドです。"
-
-#: externals/menu.phtml:69
-#, php-format
-msgid ""
-"Our own developer Christian Stimming has been contributing to this book as a "
-"reviewer, and we can wholeheartly recommend the outcome of this fruitful "
-"collaboration. Feel free to have a look at this book over at %s, and, best "
-"of all, the publisher has committed to allocate some percentage of the book "
-"sales back to the GnuCash project. Have fun with this book!"
-msgstr ""
-"我々自身の開発者である Christian Stimming 氏が査読者としてこの本に貢献してお"
-"り、私たちは心からこの実りの多い協力の結果を推薦することができます。%sでこの"
-"本を自由に試し読みできます。そして、更に出版社は本の売り上げの数パーセントを"
-"GnuCashプロジェクトに割り当てることを約束しました。この本で楽しんでください!"
-
-#: features.phtml:3 new_features-4.0.phtml:3
+#: features.phtml:3
 msgid "Features"
 msgstr "特徴"
 
@@ -1779,288 +1769,6 @@ msgstr "財務計算"
 msgid "<b>Discover more …</b>"
 msgstr "<b>さらに詳しく知るには …</b>"
 
-#: index.phtml:89
-#, php-format
-msgid "GnuCash %s Released"
-msgstr "GnuCash %s リリース"
-
-#: index.phtml:90
-#, php-format
-msgid ""
-"We've released GnuCash %s with many bugfixes and improvements including some "
-"%s!"
-msgstr "リリースした GnuCash %s には多くのバグ修正と%sを含む改良点があります!"
-
-#: index.phtml:91
-msgid "great new features"
-msgstr "素晴らしい新機能"
-
-#: new_features-4.0.phtml:4
-#, php-format
-msgid "What's New in GnuCash %s"
-msgstr "GnuCash %s の最新情報"
-
-#: new_features-4.0.phtml:15
-msgid "Major Highlights"
-msgstr "主なハイライト"
-
-#: new_features-4.0.phtml:23
-msgid ""
-"A new <b>Transaction Association</b> dialog, available from the <b>Update "
-"Association for Transaction</b> menu item that has replaced the two "
-"association items in 3.x, allows setting, changing, and deleting "
-"associations."
-msgstr ""
-
-#: new_features-4.0.phtml:24
-msgid ""
-"A symbol (paperclip for files, chain links for URLS) is now displayed in the "
-"Associations column (visible in double-line mode) in the register in place "
-"of the letters when a transaction has an association. This doesn't work on "
-"MacOS."
-msgstr ""
-
-#: new_features-4.0.phtml:25
-msgid ""
-"Associations may now be added to bills, credit notes, invoices, and "
-"vouchers. The actual association when present is added as a link button "
-"which is shown below the notes."
-msgstr ""
-
-#: new_features-4.0.phtml:33
-msgid "[Video showing two ways to filter accounts]"
-msgstr ""
-
-#: new_features-4.0.phtml:37
-msgid ""
-"New type-ahead search is added to sequential search when selecting an "
-"account or an Action in the register: Instead of typing the first few "
-"characters of a top level account, the separator, the first few characters "
-"of the next level account and so on you may instead type a few characters of "
-"any part of a full account name and the drop-list will be filtered to "
-"contain only matching accounts. Once you have a small enough list you can "
-"use the arrow keys to select the account that you want."
-msgstr ""
-
-#: new_features-4.0.phtml:42
-msgid ""
-"A new separate executable, <kbd>gnucash-cli</kbd> (<kbd>gnucash-cli.exe</"
-"kbd> on Microsoft Windows) for doing command-line things like updating the "
-"prices in your book. <kbd>gnucash-cli</kbd> gains the ability to run reports "
-"from the command line. Specify reports to run by name or guid. It also "
-"provides an export format and an output file name without which it will "
-"output the report to stdout."
-msgstr ""
-
-#: new_features-4.0.phtml:48
-msgid ""
-"will display a screen listing all of the available commands and their "
-"options."
-msgstr ""
-
-#: new_features-4.0.phtml:49
-msgid ""
-"The GUI program, <kbd>gnucash</kbd>, still responds to the options it always "
-"has, though <kbd>--get-price-quotes</kbd> is deprecated in  favor of "
-"<kbd>gnucash-cli --quotes get</kbd>."
-msgstr ""
-
-#: new_features-4.0.phtml:54
-msgid "Graphic User Interface"
-msgstr "グラフィカルユーザーインターフェース"
-
-#: new_features-4.0.phtml:58
-msgid ""
-"When creating a new account hierarchy it's now possible to load account "
-"templates from locales other than the one set for the user interface."
-msgstr ""
-
-#: new_features-4.0.phtml:59
-msgid ""
-"On the <b>Choose Accounts to Create</b> page there are two drop-downs above "
-"the <b>Account Types</b> selector, one for language and one for country, the "
-"choices in the latter depending on the former. The default is the current "
-"locale but they may be used to select account templates from any locale."
-msgstr ""
-
-#: new_features-4.0.phtml:61
-msgid ""
-"When deleting accounts the destination accounts of moved splits will be "
-"checked to ensure that they have the same commodity as the source account. "
-"If they don't you'll get a warning and the opportunity to pick another "
-"account or to carry on regardless."
-msgstr ""
-
-#: new_features-4.0.phtml:62
-msgid ""
-"Reversing transactions will now pop a dialog box to request a posting date."
-msgstr ""
-
-#: new_features-4.0.phtml:69
-msgid "Business Functions"
-msgstr "ビジネス機能"
-
-#: new_features-4.0.phtml:72
-msgid "Business Document Column Widths"
-msgstr ""
-
-#: new_features-4.0.phtml:73
-msgid ""
-"Entry column widths in Invoices, Bills, and Employee Vouchers may now be "
-"saved as defaults for each type of document."
-msgstr ""
-
-#: new_features-4.0.phtml:74
-msgid ""
-"Two menu items are added to the View menu when a Bill, Invoice, or Voucher "
-"tab has focus:"
-msgstr ""
-
-#: new_features-4.0.phtml:76
-msgid "Use as Default Layout for Vendor Documents"
-msgstr ""
-
-#: new_features-4.0.phtml:77
-msgid "Reset Default Layout for Vendor Documents"
-msgstr ""
-
-#: new_features-4.0.phtml:78
-msgid ""
-"Vendor Documents is for Bills and is replaced by Customer or Employee "
-"Documents for Invoices or Vouchers respectively."
-msgstr ""
-
-#: new_features-4.0.phtml:80
-msgid ""
-"The first saves the current document's column widths and makes them the "
-"default for all documents in the same type. The second menu item removes the "
-"customization and documents of that type will therafter use the computed "
-"default widths."
-msgstr ""
-
-#: new_features-4.0.phtml:86
-msgid "Importing Transactions"
-msgstr "取引のインポート"
-
-#: new_features-4.0.phtml:89
-msgid ""
-"Support for AQBanking Version 6. This is required to support new FinTS "
-"protocols for the European Payment Services Directive (PSD2)."
-msgstr ""
-
-#: new_features-4.0.phtml:90
-msgid ""
-"The <b>Import Map Editor</b> (Tools>Edit Import Maps) will scan for Bayesian "
-"associations with non-existent accounts and display a dialog offering to "
-"remove any that are found. It also adds a button at the bottom of the Import "
-"Map Editor to delete them if one chooses not to use the dialog."
-msgstr ""
-
-#: new_features-4.0.phtml:91
-msgid "The OFX file importer can now import more than one file at a time."
-msgstr ""
-
-#: new_features-4.0.phtml:92
-msgid ""
-"OFX imports having balance information will now offer to immediately "
-"reconcile, passing the balance information in the file to the reconcile info."
-msgstr ""
-
-#: new_features-4.0.phtml:93
-msgid ""
-"The import transaction matcher window column headings are changed from R to "
-"C and from U+R to U+C, reflecting that the matcher marks transactions "
-"cleared but doesn't reconcile them."
-msgstr ""
-
-#: new_features-4.0.phtml:94
-msgid ""
-"Account matcher will decline to match accounts with a different commodity "
-"from the imported split if the import information includes the commodity."
-msgstr ""
-
-#: new_features-4.0.phtml:95
-msgid "Ellipsize the Description and Memo fields in the account matcher."
-msgstr ""
-
-#: new_features-4.0.phtml:100
-msgid "Reports"
-msgstr "帳票"
-
-#: new_features-4.0.phtml:103
-msgid ""
-"A new report menu submenu <b>Multicolumn</b> contains the old custom-"
-"multicolumn report and a new <b>Dashboard</b> report containing Account "
-"reports for expenses and income, an income-expense chart, and an account "
-"summary."
-msgstr ""
-
-#: new_features-4.0.phtml:104
-msgid ""
-"Support for UK VAT and Australian GST have been added to the Income-GST "
-"report. The report's options are changed from source accounts to source "
-"sales and purchase accounts to permit proper reporting of capital purchases. "
-"<b>N.B.</b> This is incompatible with previous versions of the report and "
-"will require regenerating saved configurations."
-msgstr ""
-
-#: new_features-4.0.phtml:109
-msgid "Budgets"
-msgstr "予算"
-
-#: new_features-4.0.phtml:112
-msgid "Optionally include the account code option in budget view."
-msgstr ""
-
-#: new_features-4.0.phtml:113
-msgid "Enable adding notes to budgets."
-msgstr ""
-
-#: new_features-4.0.phtml:114
-msgid "Account codes may now optionally be displayed in the Budget Tree View."
-msgstr "勘定科目コードを予算ツリービューに表示できるようになりました。"
-
-#: new_features-4.0.phtml:119
-msgid "Compatibility"
-msgstr "互換性"
-
-#: new_features-4.0.phtml:122
-msgid ""
-"GnuCash 4.x and later will no longer migrate old gconf settings from GnuCash "
-"2.4.x."
-msgstr "GnuCash 4.x以降では、GnuCash 2.4.xから古いgconf設定を移行しなくなりました。"
-
-#: new_features-4.0.phtml:128
-msgid "Customization and Scripting"
-msgstr "カスタマイズおよびスクリプティング"
-
-#: new_features-4.0.phtml:131
-msgid ""
-"The GnuCash widget hierarchy for CSS has been revised to be more consistent "
-"with Gtk practice. You may need to spend some time with the GtkInspector to "
-"get your custom CSS back the way you like it."
-msgstr ""
-"CSS の GnuCash ウィジェット階層は、Gtk "
-"の慣行により一致するように改訂されました。カスタム CSS "
-"をあなたのお好みに戻すには、GtkInspector "
-"で時間をかける必要があるかもしれません。"
-
-#: new_features-4.0.phtml:132
-msgid ""
-"Python bindings are now localized and their strings available for "
-"translation."
-msgstr "Pythonのバインディングがローカライズされ、その文字列を翻訳できるようになりま"
-"した。"
-
-#: new_features-4.0.phtml:135
-#, php-format
-msgid "For a complete list of new features and API changes see the %s."
-msgstr "新機能および API の変更点の完全なリストは%sをご覧ください。"
-
-#: new_features-4.0.phtml:136
-msgid "Release Notes"
-msgstr "リリースノート"
-
 #: news.phtml:4
 msgid "Announcement of New Releases, Server Maintenance …"
 msgstr "新リリースのアナウンス、サーバメンテナンス …"
@@ -2124,3 +1832,112 @@ msgstr ""
 "ブラウザーが iframe をサポートしていないようです。要求されたページを別のウイ"
 "ンドウで表示するには、<a href=\"%s\" target=\"_blank\">ここをクリック</a>して"
 "ください。"
+
+#~ msgid ""
+#~ "Account codes may now optionally be displayed in the Budget Tree View."
+#~ msgstr "勘定科目コードを予算ツリービューに表示できるようになりました。"
+
+#~ msgid "Budgets"
+#~ msgstr "予算"
+
+#~ msgid "Business Functions"
+#~ msgstr "ビジネス機能"
+
+#~ msgid "Compatibility"
+#~ msgstr "互換性"
+
+#~ msgid "Customization and Scripting"
+#~ msgstr "カスタマイズおよびスクリプティング"
+
+#, php-format
+#~ msgid "For a complete list of new features and API changes see the %s."
+#~ msgstr "新機能および API の変更点の完全なリストは%sをご覧ください。"
+
+#, php-format
+#~ msgid "GnuCash %s Released"
+#~ msgstr "GnuCash %s リリース"
+
+#~ msgid "GnuCash 2.4 Small Business Accounting"
+#~ msgstr "GnuCash 2.4 Small Business Accounting"
+
+#~ msgid "GnuCash 2.4 Small Business Accounting, by Ashok Ramachandran"
+#~ msgstr "GnuCash 2.4 Small Business Accounting, Ashok Ramachandran著"
+
+#~ msgid ""
+#~ "GnuCash 4.x and later will no longer migrate old gconf settings from "
+#~ "GnuCash 2.4.x."
+#~ msgstr ""
+#~ "GnuCash 4.x以降では、GnuCash 2.4.xから古いgconf設定を移行しなくなりまし"
+#~ "た。"
+
+#~ msgid "Graphic User Interface"
+#~ msgstr "グラフィカルユーザーインターフェース"
+
+#~ msgid "Help Manual"
+#~ msgstr "ヘルプマニュアル"
+
+#~ msgid "Importing Transactions"
+#~ msgstr "取引のインポート"
+
+#~ msgid "Major Highlights"
+#~ msgstr "主なハイライト"
+
+#, php-format
+#~ msgid ""
+#~ "Our own developer Christian Stimming has been contributing to this book "
+#~ "as a reviewer, and we can wholeheartly recommend the outcome of this "
+#~ "fruitful collaboration. Feel free to have a look at this book over at %s, "
+#~ "and, best of all, the publisher has committed to allocate some percentage "
+#~ "of the book sales back to the GnuCash project. Have fun with this book!"
+#~ msgstr ""
+#~ "我々自身の開発者である Christian Stimming 氏が査読者としてこの本に貢献して"
+#~ "おり、私たちは心からこの実りの多い協力の結果を推薦することができます。%sで"
+#~ "この本を自由に試し読みできます。そして、更に出版社は本の売り上げの数パーセ"
+#~ "ントをGnuCashプロジェクトに割り当てることを約束しました。この本で楽しんで"
+#~ "ください!"
+
+#~ msgid ""
+#~ "Python bindings are now localized and their strings available for "
+#~ "translation."
+#~ msgstr ""
+#~ "Pythonのバインディングがローカライズされ、その文字列を翻訳できるようになり"
+#~ "ました。"
+
+#~ msgid "Release Notes"
+#~ msgstr "リリースノート"
+
+#~ msgid "Reports"
+#~ msgstr "帳票"
+
+#~ msgid ""
+#~ "The GnuCash development team received notice about a new book published "
+#~ "by PacktPub, UK:"
+#~ msgstr ""
+#~ "GnuCash 開発チームは PacktPub, UK から出版された新しい本に関する通知を受け"
+#~ "取りました。"
+
+#~ msgid ""
+#~ "The GnuCash widget hierarchy for CSS has been revised to be more "
+#~ "consistent with Gtk practice. You may need to spend some time with the "
+#~ "GtkInspector to get your custom CSS back the way you like it."
+#~ msgstr ""
+#~ "CSS の GnuCash ウィジェット階層は、Gtk の慣行により一致するように改訂され"
+#~ "ました。カスタム CSS をあなたのお好みに戻すには、GtkInspector で時間をかけ"
+#~ "る必要があるかもしれません。"
+
+#~ msgid "This is a Beginner's Guide for managing your accounts."
+#~ msgstr "これは会計管理に関する初心者向けのガイドです。"
+
+#, php-format
+#~ msgid ""
+#~ "We've released GnuCash %s with many bugfixes and improvements including "
+#~ "some %s!"
+#~ msgstr ""
+#~ "リリースした GnuCash %s には多くのバグ修正と%sを含む改良点があります!"
+
+#, php-format
+#~ msgid "What's New in GnuCash %s"
+#~ msgstr "GnuCash %s の最新情報"
+
+#~ msgid "great new features"
+#~ msgstr "素晴らしい新機能"

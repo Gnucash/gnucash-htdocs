@@ -8,9 +8,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs r22051\n"
-"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist."
-"cgi?component=Translations&product=Website&resolution=---\n"
-"POT-Creation-Date: 2023-09-26 05:30+0200\n"
+"Report-Msgid-Bugs-To: https://bugs.gnucash.org/buglist.cgi?"
+"component=Translations&product=Website&resolution=---\n"
+"POT-Creation-Date: 2024-04-02 13:19+0200\n"
 "PO-Revision-Date: 2024-03-04 04:01+0000\n"
 "Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
@@ -421,7 +421,9 @@ msgid ""
 msgstr "<span class=\"gnucash\">GnuCash</span> 主要有兩份文件能幫助使用者："
 
 #: docs.phtml:30
-msgid "The Help Manual"
+#, fuzzy
+#| msgid "The Help Manual"
+msgid "The GnuCash Manual"
 msgstr "說明手冊"
 
 #: docs.phtml:31
@@ -429,8 +431,16 @@ msgid "The Tutorial and Concepts Guide"
 msgstr "教學與觀念指南"
 
 #: docs.phtml:34
+#, fuzzy
+#| msgid ""
+#| "The <b>Help Manual</b> is designed to be a quick reference of how to "
+#| "accomplish specific tasks and how to use the features in <span "
+#| "class=\"gnucash\">GnuCash</span>. The <b>Concepts Guide</b> is designed "
+#| "to be an in depth guide to the concepts behind using <span "
+#| "class=\"gnucash\">GnuCash</span> with a tutorial to show how to put those "
+#| "concepts into practice."
 msgid ""
-"The <b>Help Manual</b> is designed to be a quick reference of how to "
+"The <b>GnuCash Manual</b> is designed to be a quick reference of how to "
 "accomplish specific tasks and how to use the features in <span "
 "class=\"gnucash\">GnuCash</span>. The <b>Concepts Guide</b> is designed to "
 "be an in depth guide to the concepts behind using <span "
@@ -455,11 +465,19 @@ msgstr ""
 "class=\"gnucash\">GnuCash 維基</span>。"
 
 #: docs.phtml:43
+#, fuzzy
+#| msgid ""
+#| "You can also send an email to the <a href=\"mailto:gnucash-user@gnucash."
+#| "org\">gnucash-user</a> mailing list if you cannot find a satisfactory "
+#| "answer to your question within either the <b>Help Manual</b> or the "
+#| "<b>Tutorial and Concepts Guide</b>. We <b>want</b> feedback from you, it "
+#| "is also through your comments that we know how to improve the "
+#| "documentation."
 msgid ""
 "You can also send an email to the <a href=\"mailto:gnucash-user@gnucash."
 "org\">gnucash-user</a> mailing list if you cannot find a satisfactory answer "
-"to your question within either the <b>Help Manual</b> or the <b>Tutorial and "
-"Concepts Guide</b>. We <b>want</b> feedback from you, it is also through "
+"to your question within either the <b>GnuCash Manual</b> or the <b>Tutorial "
+"and Concepts Guide</b>. We <b>want</b> feedback from you, it is also through "
 "your comments that we know how to improve the documentation."
 msgstr ""
 "如果您在<b>說明手冊</b>和<b>教學與觀念指南</b>中無法找到所需要的答案，您也可"
@@ -486,9 +504,9 @@ msgid ""
 "Documentation_Improvement\">Documentation Improvement wiki page</a> if you "
 "are interested in contributing to this effort."
 msgstr ""
-"<span class=\"gnucash\">GnuCash</span> "
-"的文件是由社群所撰寫。若您有興趣參與的話，請參照<a href=\"https://wiki."
-"gnucash.org/wiki/Documentation_Improvement\">改善文件 wiki 頁面</a>。"
+"<span class=\"gnucash\">GnuCash</span> 的文件是由社群所撰寫。若您有興趣參與的"
+"話，請參照<a href=\"https://wiki.gnucash.org/wiki/"
+"Documentation_Improvement\">改善文件 wiki 頁面</a>。"
 
 #: docs.phtml:57
 msgid "(current stable release)"
@@ -510,8 +528,10 @@ msgstr "穩定版"
 
 #: docs.phtml:64 docs.phtml:209 docs.phtml:341 docs.phtml:514 docs.phtml:631
 #: docs.phtml:657 docs.phtml:679 docs.phtml:697
-msgid "Help Manual"
-msgstr "說明手冊"
+#, fuzzy
+#| msgid "GnuCash v%s"
+msgid "GnuCash Manual"
+msgstr "GnuCash V%s"
 
 #: docs.phtml:68 docs.phtml:129 docs.phtml:213 docs.phtml:263 docs.phtml:345
 #: docs.phtml:406 docs.phtml:515 docs.phtml:566 docs.phtml:632 docs.phtml:643
@@ -1121,38 +1141,7 @@ msgstr "翻譯"
 msgid "Writing Documentation"
 msgstr "撰寫文件"
 
-#: externals/menu.phtml:61
-msgid "GnuCash 2.4 Small Business Accounting"
-msgstr "GnuCash 2.4 Small Business Accounting"
-
-#: externals/menu.phtml:65
-msgid ""
-"The GnuCash development team received notice about a new book published by "
-"PacktPub, UK:"
-msgstr "GnuCash 開發團隊收到了英國 PacktPub 出版社的新書通知："
-
-#: externals/menu.phtml:66
-msgid "GnuCash 2.4 Small Business Accounting, by Ashok Ramachandran"
-msgstr "《GnuCash 2.4 Small Business Accounting》, Ashok Ramachandran 著"
-
-#: externals/menu.phtml:67
-msgid "This is a Beginner's Guide for managing your accounts."
-msgstr "這是一本教您財務管理的初學者指南。"
-
-#: externals/menu.phtml:69
-#, php-format
-msgid ""
-"Our own developer Christian Stimming has been contributing to this book as a "
-"reviewer, and we can wholeheartly recommend the outcome of this fruitful "
-"collaboration. Feel free to have a look at this book over at %s, and, best "
-"of all, the publisher has committed to allocate some percentage of the book "
-"sales back to the GnuCash project. Have fun with this book!"
-msgstr ""
-"開發者 Christian Stimming 參與了本書的編寫，亦是審稿人。我們誠摯推薦此一內容"
-"豐富的合作成果，歡迎在您在 %s 閱讀。更重要的是，出版商已承諾將部分利潤回贈給 "
-"GnuCash。祝您閱讀愉快！"
-
-#: features.phtml:3 new_features-4.0.phtml:3
+#: features.phtml:3
 msgid "Features"
 msgstr "功能特色"
 
@@ -1701,329 +1690,6 @@ msgstr "財務計算"
 msgid "<b>Discover more …</b>"
 msgstr "<b>了解更多…</b>"
 
-#: index.phtml:89
-#, php-format
-msgid "GnuCash %s Released"
-msgstr "GnuCash %s 已發佈"
-
-#: index.phtml:90
-#, php-format
-msgid ""
-"We've released GnuCash %s with many bugfixes and improvements including some "
-"%s!"
-msgstr "%s 版已發布，包含了許多改進與 BUG 修復，當然還包括一些%s！"
-
-#: index.phtml:91
-msgid "great new features"
-msgstr "很棒的新功能"
-
-#: new_features-4.0.phtml:4
-#, php-format
-msgid "What's New in GnuCash %s"
-msgstr "GnuCash %s 的新功能"
-
-#: new_features-4.0.phtml:15
-msgid "Major Highlights"
-msgstr "主要亮點"
-
-#: new_features-4.0.phtml:23
-msgid ""
-"A new <b>Transaction Association</b> dialog, available from the <b>Update "
-"Association for Transaction</b> menu item that has replaced the two "
-"association items in 3.x, allows setting, changing, and deleting "
-"associations."
-msgstr ""
-"新的<b>交易連結</b>對話視窗，可以透過「<b>管理文件連結</b>」的選單選項中叫"
-"出。此新功能替代了 3.x 版本中的相似功能，支援設定、修改、刪除連結。"
-
-#: new_features-4.0.phtml:24
-msgid ""
-"A symbol (paperclip for files, chain links for URLS) is now displayed in the "
-"Associations column (visible in double-line mode) in the register in place "
-"of the letters when a transaction has an association. This doesn't work on "
-"MacOS."
-msgstr ""
-"在雙行檢視下，登記簿中擁有連結的交易，將會在標題為 L 的欄位內顯示小圖示（檔案"
-"是迴紋針 📎、網址是鎖鍊 🔗 ）。此功能在 MacOS 上不支援。"
-
-#: new_features-4.0.phtml:25
-msgid ""
-"Associations may now be added to bills, credit notes, invoices, and "
-"vouchers. The actual association when present is added as a link button "
-"which is shown below the notes."
-msgstr ""
-"帳單、貸項通知單、發票與憑證都可以連結文件。若有結連的文件，將會在筆記欄位下"
-"以連結按鈕的型式出現。"
-
-#: new_features-4.0.phtml:33
-msgid "[Video showing two ways to filter accounts]"
-msgstr "[兩種過濾科目方式的影片]"
-
-#: new_features-4.0.phtml:37
-msgid ""
-"New type-ahead search is added to sequential search when selecting an "
-"account or an Action in the register: Instead of typing the first few "
-"characters of a top level account, the separator, the first few characters "
-"of the next level account and so on you may instead type a few characters of "
-"any part of a full account name and the drop-list will be filtered to "
-"contain only matching accounts. Once you have a small enough list you can "
-"use the arrow keys to select the account that you want."
-msgstr ""
-"在登記簿中選擇科目或動作時有新的隨打即找功能：除了從最上層科目名稱的開頭開始"
-"輸入外，您也可以輸入任一層階的科目的名稱的前幾個字元，這將會在下拉式選單中只"
-"顯示出符合的過您輸入的字元的科目。當下拉式選單中的項目夠少時，您可以使用方向"
-"鍵選擇您想要的科目。"
-
-#: new_features-4.0.phtml:42
-msgid ""
-"A new separate executable, <kbd>gnucash-cli</kbd> (<kbd>gnucash-cli.exe</"
-"kbd> on Microsoft Windows) for doing command-line things like updating the "
-"prices in your book. <kbd>gnucash-cli</kbd> gains the ability to run reports "
-"from the command line. Specify reports to run by name or guid. It also "
-"provides an export format and an output file name without which it will "
-"output the report to stdout."
-msgstr ""
-"新增獨立的 <kbd>gnucash-cli</kbd>（在 Microsoft Windows 下則是 <kbd>gnucash-"
-"cli.exe</kbd>）程式，讓您可以透過命令列執行諸如更新帳簿中報價等等的事情。"
-"<kbd>gnucash-cli</kbd> 也可以在讓您在命令列下指定報名稱或 UUID 來產生報表，並"
-"指定匯出的報表檔名與檔案格式，若未提供檔名與格式，則會輸出到標準輸出（通常是"
-"螢幕）上。"
-
-#: new_features-4.0.phtml:48
-msgid ""
-"will display a screen listing all of the available commands and their "
-"options."
-msgstr "會顯示所有命令及其選項。"
-
-#: new_features-4.0.phtml:49
-msgid ""
-"The GUI program, <kbd>gnucash</kbd>, still responds to the options it always "
-"has, though <kbd>--get-price-quotes</kbd> is deprecated in  favor of "
-"<kbd>gnucash-cli --quotes get</kbd>."
-msgstr ""
-"GUI 程式 (<kbd>gnucash</kbd>) 仍然支援原先的選項，但 <kbd>--get-price-"
-"quotes</kbd> 已被標成棄用，請優先使用 <kbd>gnucash-cli --quotes get</kbd>。"
-
-#: new_features-4.0.phtml:54
-msgid "Graphic User Interface"
-msgstr "圖形使用者介面"
-
-#: new_features-4.0.phtml:58
-msgid ""
-"When creating a new account hierarchy it's now possible to load account "
-"templates from locales other than the one set for the user interface."
-msgstr ""
-"現在當您建立新的科目樹的時候，您可以載入與您的使用者介面不同語言的科目樹範"
-"本。"
-
-#: new_features-4.0.phtml:59
-msgid ""
-"On the <b>Choose Accounts to Create</b> page there are two drop-downs above "
-"the <b>Account Types</b> selector, one for language and one for country, the "
-"choices in the latter depending on the former. The default is the current "
-"locale but they may be used to select account templates from any locale."
-msgstr ""
-"在「<b>選擇要建立的科目</b>」頁面中，<b>科目類型</b>上方有兩個下拉式選單，其"
-"中一個是語言，另一個是國家；後者會因前者而改動。預設的情況下，會是您目前使用"
-"的語系，但您也可以從任何其他語系中選擇科目模板。"
-
-#: new_features-4.0.phtml:61
-msgid ""
-"When deleting accounts the destination accounts of moved splits will be "
-"checked to ensure that they have the same commodity as the source account. "
-"If they don't you'll get a warning and the opportunity to pick another "
-"account or to carry on regardless."
-msgstr ""
-"當刪除科目時，將會檢查目的地科目的幣別，與要轉移的交易分割相符。如果不符，您"
-"將會收到警告，讓您可以選擇其他科目，或是不論如何都進行轉移。"
-
-#: new_features-4.0.phtml:62
-msgid ""
-"Reversing transactions will now pop a dialog box to request a posting date."
-msgstr "反向交易將會出現彈出式對話視窗，要求提供過帳日期。"
-
-#: new_features-4.0.phtml:69
-msgid "Business Functions"
-msgstr "小型企業會計"
-
-#: new_features-4.0.phtml:72
-msgid "Business Document Column Widths"
-msgstr "商務文件欄寬"
-
-#: new_features-4.0.phtml:73
-msgid ""
-"Entry column widths in Invoices, Bills, and Employee Vouchers may now be "
-"saved as defaults for each type of document."
-msgstr "您現在可以將發票、帳單和員工消費憑證內項目的欄寬儲存為預設值。"
-
-#: new_features-4.0.phtml:74
-msgid ""
-"Two menu items are added to the View menu when a Bill, Invoice, or Voucher "
-"tab has focus:"
-msgstr "新增了以下兩個項目到帳單、發票或員工消費憑證頁籤的「檢視」選單："
-
-#: new_features-4.0.phtml:76
-msgid "Use as Default Layout for Vendor Documents"
-msgstr "供應商文件使用預設版面"
-
-#: new_features-4.0.phtml:77
-msgid "Reset Default Layout for Vendor Documents"
-msgstr "重置供應商文件預設版面"
-
-#: new_features-4.0.phtml:78
-msgid ""
-"Vendor Documents is for Bills and is replaced by Customer or Employee "
-"Documents for Invoices or Vouchers respectively."
-msgstr ""
-"上述的「供應商文件」是在「帳單」頁籤的情況下所顯示的文字，若是在「發票」或"
-"「消費憑證」頁籤的情況下，將會以「客戶文件」與「員工文件」的字樣顯示。"
-
-#: new_features-4.0.phtml:80
-msgid ""
-"The first saves the current document's column widths and makes them the "
-"default for all documents in the same type. The second menu item removes the "
-"customization and documents of that type will therafter use the computed "
-"default widths."
-msgstr ""
-"第一個選項將會儲存目前文件的欄位寬度，並做為該種類文件所有文件的預設值；第二"
-"個選項將會移除所有的客製化設定，並使用程式計算出的預設欄位寬度。"
-
-#: new_features-4.0.phtml:86
-msgid "Importing Transactions"
-msgstr "匯入交易"
-
-#: new_features-4.0.phtml:89
-msgid ""
-"Support for AQBanking Version 6. This is required to support new FinTS "
-"protocols for the European Payment Services Directive (PSD2)."
-msgstr ""
-"支援 AQBanking 第 6 版。這是要支援 European Payment Services Directive "
-"(PSD2) 新的 FinTS 通訊息定所必需的。"
-
-#: new_features-4.0.phtml:90
-msgid ""
-"The <b>Import Map Editor</b> (Tools>Edit Import Maps) will scan for Bayesian "
-"associations with non-existent accounts and display a dialog offering to "
-"remove any that are found. It also adds a button at the bottom of the Import "
-"Map Editor to delete them if one chooses not to use the dialog."
-msgstr ""
-"<b>匯入對應編輯器</b>（工具 -> 匯入對應編輯器）將會掃描不存在的科目的貝氏關"
-"聯，並顯示對話視窗讓您可以移除他們。若您不想使用對話視窗，在匯入對應編輯器的"
-"下方，也有刪除按鈕可供使用。"
-
-#: new_features-4.0.phtml:91
-msgid "The OFX file importer can now import more than one file at a time."
-msgstr "OFX 匯入器現在可以同時匯入多個 OFX 檔案。"
-
-#: new_features-4.0.phtml:92
-msgid ""
-"OFX imports having balance information will now offer to immediately "
-"reconcile, passing the balance information in the file to the reconcile info."
-msgstr ""
-"若匯入的 QFX 檔案中有結餘資訊，將會立刻做為對帳之用，會將檔案中的結餘資訊做為"
-"對帳資料。"
-
-#: new_features-4.0.phtml:93
-msgid ""
-"The import transaction matcher window column headings are changed from R to "
-"C and from U+R to U+C, reflecting that the matcher marks transactions "
-"cleared but doesn't reconcile them."
-msgstr ""
-"匯入交易配對視窗的欄位標題，由 R 改成 C，以及由 U+R 改成 U+C，代表交易已結清"
-"但尚未對帳。"
-
-#: new_features-4.0.phtml:94
-msgid ""
-"Account matcher will decline to match accounts with a different commodity "
-"from the imported split if the import information includes the commodity."
-msgstr ""
-"若匯入的分割中含有貨幣別的資訊，則科目配對器會拒絕將其配對到幣別不同的科目。"
-
-#: new_features-4.0.phtml:95
-msgid "Ellipsize the Description and Memo fields in the account matcher."
-msgstr "科目配對器中的描述和備註欄位，將會以省略符顯示過長的字串。"
-
-#: new_features-4.0.phtml:100
-msgid "Reports"
-msgstr "報表"
-
-#: new_features-4.0.phtml:103
-msgid ""
-"A new report menu submenu <b>Multicolumn</b> contains the old custom-"
-"multicolumn report and a new <b>Dashboard</b> report containing Account "
-"reports for expenses and income, an income-expense chart, and an account "
-"summary."
-msgstr ""
-"報表選單中的<b>多欄報表</b>除了有原先舊版的多欄報表外，新增了<b>儀表板</b>報"
-"表。其中包括了支出與收入的科目報表、收支圖以及科目摘要。"
-
-#: new_features-4.0.phtml:104
-msgid ""
-"Support for UK VAT and Australian GST have been added to the Income-GST "
-"report. The report's options are changed from source accounts to source "
-"sales and purchase accounts to permit proper reporting of capital purchases. "
-"<b>N.B.</b> This is incompatible with previous versions of the report and "
-"will require regenerating saved configurations."
-msgstr ""
-"損益與商品及服務稅報表新增了英國加值稅與澳州商品及服務稅。報表選項由銷售科目"
-"更改成銷售科目與採購科目，以計算正確的資本支出。<b>請注意</b>：這和之前的報表"
-"設定不相容，需要重新設已儲存的報表。"
-
-#: new_features-4.0.phtml:109
-msgid "Budgets"
-msgstr "預算"
-
-#: new_features-4.0.phtml:112
-msgid "Optionally include the account code option in budget view."
-msgstr "預算視窗中可以選擇是否要顯示科目代碼。"
-
-#: new_features-4.0.phtml:113
-msgid "Enable adding notes to budgets."
-msgstr "預算可以添加筆記。"
-
-#: new_features-4.0.phtml:114
-msgid "Account codes may now optionally be displayed in the Budget Tree View."
-msgstr "預算樹狀圖可以選擇是否要顯示科目代碼。"
-
-#: new_features-4.0.phtml:119
-msgid "Compatibility"
-msgstr "相容性"
-
-#: new_features-4.0.phtml:122
-msgid ""
-"GnuCash 4.x and later will no longer migrate old gconf settings from GnuCash "
-"2.4.x."
-msgstr ""
-"GnuCash 4.x 及之後的版本，將不會再自動轉移 GnuCash 2.4.x 的 gconf 設定。"
-
-#: new_features-4.0.phtml:128
-msgid "Customization and Scripting"
-msgstr "客製化與腳本程式"
-
-#: new_features-4.0.phtml:131
-msgid ""
-"The GnuCash widget hierarchy for CSS has been revised to be more consistent "
-"with Gtk practice. You may need to spend some time with the GtkInspector to "
-"get your custom CSS back the way you like it."
-msgstr ""
-"為了與 Gtk 的習慣更一致，GnuCash 的 CSS 元件階層架構經過修正。您可能需要花一"
-"些時間使用 GtkInspector，才能讓您的 CSS 呈現出您想要的模樣。"
-
-#: new_features-4.0.phtml:132
-msgid ""
-"Python bindings are now localized and their strings available for "
-"translation."
-msgstr "Python 的 binding 已經過本地化，其中的字串可以被翻譯。"
-
-#: new_features-4.0.phtml:135
-#, php-format
-msgid "For a complete list of new features and API changes see the %s."
-msgstr "新更能和 API 更動的完成列表，請參照%s。"
-
-#: new_features-4.0.phtml:136
-msgid "Release Notes"
-msgstr "發佈說明"
-
 #: news.phtml:4
 msgid "Announcement of New Releases, Server Maintenance …"
 msgstr "本版本發佈、伺服器維護公告…"
@@ -2078,3 +1744,314 @@ msgid ""
 msgstr ""
 "您的瀏覽器似乎不支持 iframe，請點選<a href=\"%s\" target=\"_blank\">這裡</a>"
 "以便在新的視窗打開頁面。"
+
+#~ msgid ""
+#~ "A new <b>Transaction Association</b> dialog, available from the <b>Update "
+#~ "Association for Transaction</b> menu item that has replaced the two "
+#~ "association items in 3.x, allows setting, changing, and deleting "
+#~ "associations."
+#~ msgstr ""
+#~ "新的<b>交易連結</b>對話視窗，可以透過「<b>管理文件連結</b>」的選單選項中叫"
+#~ "出。此新功能替代了 3.x 版本中的相似功能，支援設定、修改、刪除連結。"
+
+#~ msgid ""
+#~ "A new report menu submenu <b>Multicolumn</b> contains the old custom-"
+#~ "multicolumn report and a new <b>Dashboard</b> report containing Account "
+#~ "reports for expenses and income, an income-expense chart, and an account "
+#~ "summary."
+#~ msgstr ""
+#~ "報表選單中的<b>多欄報表</b>除了有原先舊版的多欄報表外，新增了<b>儀表板</b>"
+#~ "報表。其中包括了支出與收入的科目報表、收支圖以及科目摘要。"
+
+#~ msgid ""
+#~ "A new separate executable, <kbd>gnucash-cli</kbd> (<kbd>gnucash-cli.exe</"
+#~ "kbd> on Microsoft Windows) for doing command-line things like updating "
+#~ "the prices in your book. <kbd>gnucash-cli</kbd> gains the ability to run "
+#~ "reports from the command line. Specify reports to run by name or guid. It "
+#~ "also provides an export format and an output file name without which it "
+#~ "will output the report to stdout."
+#~ msgstr ""
+#~ "新增獨立的 <kbd>gnucash-cli</kbd>（在 Microsoft Windows 下則是 "
+#~ "<kbd>gnucash-cli.exe</kbd>）程式，讓您可以透過命令列執行諸如更新帳簿中報價"
+#~ "等等的事情。<kbd>gnucash-cli</kbd> 也可以在讓您在命令列下指定報名稱或 "
+#~ "UUID 來產生報表，並指定匯出的報表檔名與檔案格式，若未提供檔名與格式，則會"
+#~ "輸出到標準輸出（通常是螢幕）上。"
+
+#~ msgid ""
+#~ "A symbol (paperclip for files, chain links for URLS) is now displayed in "
+#~ "the Associations column (visible in double-line mode) in the register in "
+#~ "place of the letters when a transaction has an association. This doesn't "
+#~ "work on MacOS."
+#~ msgstr ""
+#~ "在雙行檢視下，登記簿中擁有連結的交易，將會在標題為 L 的欄位內顯示小圖示"
+#~ "（檔案是迴紋針 📎、網址是鎖鍊 🔗 ）。此功能在 MacOS 上不支援。"
+
+#~ msgid ""
+#~ "Account codes may now optionally be displayed in the Budget Tree View."
+#~ msgstr "預算樹狀圖可以選擇是否要顯示科目代碼。"
+
+#~ msgid ""
+#~ "Account matcher will decline to match accounts with a different commodity "
+#~ "from the imported split if the import information includes the commodity."
+#~ msgstr ""
+#~ "若匯入的分割中含有貨幣別的資訊，則科目配對器會拒絕將其配對到幣別不同的科"
+#~ "目。"
+
+#~ msgid ""
+#~ "Associations may now be added to bills, credit notes, invoices, and "
+#~ "vouchers. The actual association when present is added as a link button "
+#~ "which is shown below the notes."
+#~ msgstr ""
+#~ "帳單、貸項通知單、發票與憑證都可以連結文件。若有結連的文件，將會在筆記欄位"
+#~ "下以連結按鈕的型式出現。"
+
+#~ msgid "Budgets"
+#~ msgstr "預算"
+
+#~ msgid "Business Document Column Widths"
+#~ msgstr "商務文件欄寬"
+
+#~ msgid "Business Functions"
+#~ msgstr "小型企業會計"
+
+#~ msgid "Compatibility"
+#~ msgstr "相容性"
+
+#~ msgid "Customization and Scripting"
+#~ msgstr "客製化與腳本程式"
+
+#~ msgid "Ellipsize the Description and Memo fields in the account matcher."
+#~ msgstr "科目配對器中的描述和備註欄位，將會以省略符顯示過長的字串。"
+
+#~ msgid "Enable adding notes to budgets."
+#~ msgstr "預算可以添加筆記。"
+
+#~ msgid ""
+#~ "Entry column widths in Invoices, Bills, and Employee Vouchers may now be "
+#~ "saved as defaults for each type of document."
+#~ msgstr "您現在可以將發票、帳單和員工消費憑證內項目的欄寬儲存為預設值。"
+
+#, php-format
+#~ msgid "For a complete list of new features and API changes see the %s."
+#~ msgstr "新更能和 API 更動的完成列表，請參照%s。"
+
+#, php-format
+#~ msgid "GnuCash %s Released"
+#~ msgstr "GnuCash %s 已發佈"
+
+#~ msgid "GnuCash 2.4 Small Business Accounting"
+#~ msgstr "GnuCash 2.4 Small Business Accounting"
+
+#~ msgid "GnuCash 2.4 Small Business Accounting, by Ashok Ramachandran"
+#~ msgstr "《GnuCash 2.4 Small Business Accounting》, Ashok Ramachandran 著"
+
+#~ msgid ""
+#~ "GnuCash 4.x and later will no longer migrate old gconf settings from "
+#~ "GnuCash 2.4.x."
+#~ msgstr ""
+#~ "GnuCash 4.x 及之後的版本，將不會再自動轉移 GnuCash 2.4.x 的 gconf 設定。"
+
+#~ msgid "Graphic User Interface"
+#~ msgstr "圖形使用者介面"
+
+#~ msgid "Help Manual"
+#~ msgstr "說明手冊"
+
+#~ msgid "Importing Transactions"
+#~ msgstr "匯入交易"
+
+#~ msgid "Major Highlights"
+#~ msgstr "主要亮點"
+
+#~ msgid ""
+#~ "New type-ahead search is added to sequential search when selecting an "
+#~ "account or an Action in the register: Instead of typing the first few "
+#~ "characters of a top level account, the separator, the first few "
+#~ "characters of the next level account and so on you may instead type a few "
+#~ "characters of any part of a full account name and the drop-list will be "
+#~ "filtered to contain only matching accounts. Once you have a small enough "
+#~ "list you can use the arrow keys to select the account that you want."
+#~ msgstr ""
+#~ "在登記簿中選擇科目或動作時有新的隨打即找功能：除了從最上層科目名稱的開頭開"
+#~ "始輸入外，您也可以輸入任一層階的科目的名稱的前幾個字元，這將會在下拉式選單"
+#~ "中只顯示出符合的過您輸入的字元的科目。當下拉式選單中的項目夠少時，您可以使"
+#~ "用方向鍵選擇您想要的科目。"
+
+#~ msgid ""
+#~ "OFX imports having balance information will now offer to immediately "
+#~ "reconcile, passing the balance information in the file to the reconcile "
+#~ "info."
+#~ msgstr ""
+#~ "若匯入的 QFX 檔案中有結餘資訊，將會立刻做為對帳之用，會將檔案中的結餘資訊"
+#~ "做為對帳資料。"
+
+#~ msgid ""
+#~ "On the <b>Choose Accounts to Create</b> page there are two drop-downs "
+#~ "above the <b>Account Types</b> selector, one for language and one for "
+#~ "country, the choices in the latter depending on the former. The default "
+#~ "is the current locale but they may be used to select account templates "
+#~ "from any locale."
+#~ msgstr ""
+#~ "在「<b>選擇要建立的科目</b>」頁面中，<b>科目類型</b>上方有兩個下拉式選單，"
+#~ "其中一個是語言，另一個是國家；後者會因前者而改動。預設的情況下，會是您目前"
+#~ "使用的語系，但您也可以從任何其他語系中選擇科目模板。"
+
+#~ msgid "Optionally include the account code option in budget view."
+#~ msgstr "預算視窗中可以選擇是否要顯示科目代碼。"
+
+#, php-format
+#~ msgid ""
+#~ "Our own developer Christian Stimming has been contributing to this book "
+#~ "as a reviewer, and we can wholeheartly recommend the outcome of this "
+#~ "fruitful collaboration. Feel free to have a look at this book over at %s, "
+#~ "and, best of all, the publisher has committed to allocate some percentage "
+#~ "of the book sales back to the GnuCash project. Have fun with this book!"
+#~ msgstr ""
+#~ "開發者 Christian Stimming 參與了本書的編寫，亦是審稿人。我們誠摯推薦此一內"
+#~ "容豐富的合作成果，歡迎在您在 %s 閱讀。更重要的是，出版商已承諾將部分利潤回"
+#~ "贈給 GnuCash。祝您閱讀愉快！"
+
+#~ msgid ""
+#~ "Python bindings are now localized and their strings available for "
+#~ "translation."
+#~ msgstr "Python 的 binding 已經過本地化，其中的字串可以被翻譯。"
+
+#~ msgid "Release Notes"
+#~ msgstr "發佈說明"
+
+#~ msgid "Reports"
+#~ msgstr "報表"
+
+#~ msgid "Reset Default Layout for Vendor Documents"
+#~ msgstr "重置供應商文件預設版面"
+
+#~ msgid ""
+#~ "Reversing transactions will now pop a dialog box to request a posting "
+#~ "date."
+#~ msgstr "反向交易將會出現彈出式對話視窗，要求提供過帳日期。"
+
+#~ msgid ""
+#~ "Support for AQBanking Version 6. This is required to support new FinTS "
+#~ "protocols for the European Payment Services Directive (PSD2)."
+#~ msgstr ""
+#~ "支援 AQBanking 第 6 版。這是要支援 European Payment Services Directive "
+#~ "(PSD2) 新的 FinTS 通訊息定所必需的。"
+
+#~ msgid ""
+#~ "Support for UK VAT and Australian GST have been added to the Income-GST "
+#~ "report. The report's options are changed from source accounts to source "
+#~ "sales and purchase accounts to permit proper reporting of capital "
+#~ "purchases. <b>N.B.</b> This is incompatible with previous versions of the "
+#~ "report and will require regenerating saved configurations."
+#~ msgstr ""
+#~ "損益與商品及服務稅報表新增了英國加值稅與澳州商品及服務稅。報表選項由銷售科"
+#~ "目更改成銷售科目與採購科目，以計算正確的資本支出。<b>請注意</b>：這和之前"
+#~ "的報表設定不相容，需要重新設已儲存的報表。"
+
+#~ msgid ""
+#~ "The <b>Import Map Editor</b> (Tools>Edit Import Maps) will scan for "
+#~ "Bayesian associations with non-existent accounts and display a dialog "
+#~ "offering to remove any that are found. It also adds a button at the "
+#~ "bottom of the Import Map Editor to delete them if one chooses not to use "
+#~ "the dialog."
+#~ msgstr ""
+#~ "<b>匯入對應編輯器</b>（工具 -> 匯入對應編輯器）將會掃描不存在的科目的貝氏"
+#~ "關聯，並顯示對話視窗讓您可以移除他們。若您不想使用對話視窗，在匯入對應編輯"
+#~ "器的下方，也有刪除按鈕可供使用。"
+
+#~ msgid ""
+#~ "The GUI program, <kbd>gnucash</kbd>, still responds to the options it "
+#~ "always has, though <kbd>--get-price-quotes</kbd> is deprecated in  favor "
+#~ "of <kbd>gnucash-cli --quotes get</kbd>."
+#~ msgstr ""
+#~ "GUI 程式 (<kbd>gnucash</kbd>) 仍然支援原先的選項，但 <kbd>--get-price-"
+#~ "quotes</kbd> 已被標成棄用，請優先使用 <kbd>gnucash-cli --quotes get</"
+#~ "kbd>。"
+
+#~ msgid ""
+#~ "The GnuCash development team received notice about a new book published "
+#~ "by PacktPub, UK:"
+#~ msgstr "GnuCash 開發團隊收到了英國 PacktPub 出版社的新書通知："
+
+#~ msgid ""
+#~ "The GnuCash widget hierarchy for CSS has been revised to be more "
+#~ "consistent with Gtk practice. You may need to spend some time with the "
+#~ "GtkInspector to get your custom CSS back the way you like it."
+#~ msgstr ""
+#~ "為了與 Gtk 的習慣更一致，GnuCash 的 CSS 元件階層架構經過修正。您可能需要花"
+#~ "一些時間使用 GtkInspector，才能讓您的 CSS 呈現出您想要的模樣。"
+
+#~ msgid "The OFX file importer can now import more than one file at a time."
+#~ msgstr "OFX 匯入器現在可以同時匯入多個 OFX 檔案。"
+
+#~ msgid ""
+#~ "The first saves the current document's column widths and makes them the "
+#~ "default for all documents in the same type. The second menu item removes "
+#~ "the customization and documents of that type will therafter use the "
+#~ "computed default widths."
+#~ msgstr ""
+#~ "第一個選項將會儲存目前文件的欄位寬度，並做為該種類文件所有文件的預設值；第"
+#~ "二個選項將會移除所有的客製化設定，並使用程式計算出的預設欄位寬度。"
+
+#~ msgid ""
+#~ "The import transaction matcher window column headings are changed from R "
+#~ "to C and from U+R to U+C, reflecting that the matcher marks transactions "
+#~ "cleared but doesn't reconcile them."
+#~ msgstr ""
+#~ "匯入交易配對視窗的欄位標題，由 R 改成 C，以及由 U+R 改成 U+C，代表交易已結"
+#~ "清但尚未對帳。"
+
+#~ msgid "This is a Beginner's Guide for managing your accounts."
+#~ msgstr "這是一本教您財務管理的初學者指南。"
+
+#~ msgid ""
+#~ "Two menu items are added to the View menu when a Bill, Invoice, or "
+#~ "Voucher tab has focus:"
+#~ msgstr "新增了以下兩個項目到帳單、發票或員工消費憑證頁籤的「檢視」選單："
+
+#~ msgid "Use as Default Layout for Vendor Documents"
+#~ msgstr "供應商文件使用預設版面"
+
+#~ msgid ""
+#~ "Vendor Documents is for Bills and is replaced by Customer or Employee "
+#~ "Documents for Invoices or Vouchers respectively."
+#~ msgstr ""
+#~ "上述的「供應商文件」是在「帳單」頁籤的情況下所顯示的文字，若是在「發票」或"
+#~ "「消費憑證」頁籤的情況下，將會以「客戶文件」與「員工文件」的字樣顯示。"
+
+#, php-format
+#~ msgid ""
+#~ "We've released GnuCash %s with many bugfixes and improvements including "
+#~ "some %s!"
+#~ msgstr "%s 版已發布，包含了許多改進與 BUG 修復，當然還包括一些%s！"
+
+#, php-format
+#~ msgid "What's New in GnuCash %s"
+#~ msgstr "GnuCash %s 的新功能"
+
+#~ msgid ""
+#~ "When creating a new account hierarchy it's now possible to load account "
+#~ "templates from locales other than the one set for the user interface."
+#~ msgstr ""
+#~ "現在當您建立新的科目樹的時候，您可以載入與您的使用者介面不同語言的科目樹範"
+#~ "本。"
+
+#~ msgid ""
+#~ "When deleting accounts the destination accounts of moved splits will be "
+#~ "checked to ensure that they have the same commodity as the source "
+#~ "account. If they don't you'll get a warning and the opportunity to pick "
+#~ "another account or to carry on regardless."
+#~ msgstr ""
+#~ "當刪除科目時，將會檢查目的地科目的幣別，與要轉移的交易分割相符。如果不符，"
+#~ "您將會收到警告，讓您可以選擇其他科目，或是不論如何都進行轉移。"
+
+#~ msgid "[Video showing two ways to filter accounts]"
+#~ msgstr "[兩種過濾科目方式的影片]"
+
+#~ msgid "great new features"
+#~ msgstr "很棒的新功能"
+
+#~ msgid ""
+#~ "will display a screen listing all of the available commands and their "
+#~ "options."
+#~ msgstr "會顯示所有命令及其選項。"
