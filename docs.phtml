@@ -27,11 +27,11 @@
   echo $description;
   echo T_("There are two major <span class=\"gnucash\">GnuCash</span> documentation packages to help users:");?></p>
   <ul>
-    <li><a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$major_stable;?>&amp;lang=C&amp;doc=help"><b><?php echo T_("The Help Manual");?></b></a></li>
+    <li><a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$major_stable;?>&amp;lang=C&amp;doc=help"><b><?php echo T_("The GnuCash Manual");?></b></a></li>
     <li><a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$major_stable;?>&amp;lang=C&amp;doc=guide"><b><?php echo T_("The Tutorial and Concepts Guide");?></b></a></li>
   </ul>
 
-  <p class="justify"><?php echo T_("The <b>Help Manual</b> is designed to be a quick reference of how to accomplish specific tasks and how to use the features in <span class=\"gnucash\">GnuCash</span>. The <b>Concepts Guide</b> is designed to be an in depth guide to the concepts behind using <span class=\"gnucash\">GnuCash</span> with a tutorial to show how to put those concepts into practice.");?></p>
+  <p class="justify"><?php echo T_("The <b>GnuCash Manual</b> is designed to be a quick reference of how to accomplish specific tasks and how to use the features in <span class=\"gnucash\">GnuCash</span>. The <b>Concepts Guide</b> is designed to be an in depth guide to the concepts behind using <span class=\"gnucash\">GnuCash</span> with a tutorial to show how to put those concepts into practice.");?></p>
 
   <p class="justify"><?php
     /* Todo: menu.phtml has a similar link. They should be unified with the other language stuff.*/
@@ -40,7 +40,7 @@
     ?></p>
 
   <p class="justify"><?php
-  echo T_("You can also send an email to the <a href=\"mailto:gnucash-user@gnucash.org\">gnucash-user</a> mailing list if you cannot find a satisfactory answer to your question within either the <b>Help Manual</b> or the <b>Tutorial and Concepts Guide</b>. We <b>want</b> feedback from you, it is also through your comments that we know how to improve the documentation.");
+  echo T_("You can also send an email to the <a href=\"mailto:gnucash-user@gnucash.org\">gnucash-user</a> mailing list if you cannot find a satisfactory answer to your question within either the <b>GnuCash Manual</b> or the <b>Tutorial and Concepts Guide</b>. We <b>want</b> feedback from you, it is also through your comments that we know how to improve the documentation.");
   /* Translators: %s is a link */
   printf (" ".T_("Additionally, you can talk to someone via IRC at %s about your question."),
   sprintf ("<a href='%s'><i>%s</i> %s <b>#gnucash</b></a>", \URL_IRC, \SERVER_IRC, 
@@ -61,7 +61,7 @@
       <div style="float:left;">
         <h2 class="download-title"><?php echo T_("Download");?> (<em><?php echo T_("Stable");?></em>)</h2>
         <ul>
-        <li><b><?php echo T_("Help Manual");?></b>
+        <li><b><?php echo T_("GnuCash Manual");?></b>
           <table class="doctable">
           <tbody>
             <tr class="doctr">
@@ -206,7 +206,7 @@
   <div style="float:left;">
     <h2 class="download-title"><?php echo T_("Download");?> (<em><?php echo T_("Stable");?></em>)</h2>
     <ul>
-    <li><b><?php echo T_("Help Manual");?></b>
+    <li><b><?php echo T_("GnuCash Manual");?></b>
       <table class="doctable">
       <tbody>
         <tr class="doctr">
@@ -338,7 +338,7 @@
 <div style="float:left;">
 <h2 class="download-title"><?php echo T_("Download");?> (<em><?php echo T_("Unstable");?></em>)</h2>
 <ul>
-  <li><b><?php echo T_("Help Manual");?></b>
+  <li><b><?php echo T_("GnuCash Manual");?></b>
     <table class="doctable">
     <tbody>
       <tr class="doctr">
@@ -511,7 +511,7 @@ $older8		="4";
     <li><b><?php printf (T_("GnuCash v%s"), $older6)?></b>:
         <ul>
             <li>
-                <b><?php echo T_("Help Manual");?></b>:
+                <b><?php echo T_("GnuCash Manual");?></b>:
                 <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older6;?>&amp;lang=C&amp;doc=help">
                     <img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" />
                 </a>
@@ -628,7 +628,7 @@ $older8		="4";
     <li><b><?php printf (T_("GnuCash v%s"), $older5)?></b>:
             <ul>
                 <li>
-                    <b><?php echo T_("Help Manual");?></b>:
+                    <b><?php echo T_("GnuCash Manual");?></b>:
                     <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older5;?>&amp;lang=C&amp;doc=help"
                                                  ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>) |
                     <?php echo T_("German");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older5;?>&amp;lang=de&amp;doc=help"
@@ -654,7 +654,7 @@ $older8		="4";
   <li><b><?php printf (T_("GnuCash v%s"), $older4)?></b>:
     <ul>
       <li>
-        <b><?php echo T_("Help Manual");?></b>:
+        <b><?php echo T_("GnuCash Manual");?></b>:
         <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older4;?>&amp;lang=C&amp;doc=help"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>) |
         <?php echo T_("German");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older4;?>&amp;lang=de_DE&amp;doc=help"
@@ -676,7 +676,7 @@ $older8		="4";
   <li><b><?php printf (T_("GnuCash v%s"), $older3)?></b>:
     <ul>
       <li>
-        <b><?php echo T_("Help Manual");?></b>:
+        <b><?php echo T_("GnuCash Manual");?></b>:
         <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older3;?>&amp;lang=C&amp;doc=help"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>) |
         <?php echo T_("German");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older3;?>&amp;lang=de_DE&amp;doc=help"
@@ -694,7 +694,7 @@ $older8		="4";
   <li><b><?php printf (T_("GnuCash v%s"), $older2)?></b>:
     <ul>
       <li>
-        <b><?php echo T_("Help Manual");?></b>:
+        <b><?php echo T_("GnuCash Manual");?></b>:
         <?php echo T_("English");?> (<a href="<?=$top_dir;?>/viewdoc.phtml?rev=<?=$older2;?>&amp;lang=C&amp;doc=help"
           ><img class="docicon" alt="online" title="<?php echo T_($online);?>" src="<?=$top_dir;?>/images/icons/online_logo.png" /></a>,
         <a href="<?=$top_dir;?>/docs/v<?=$older2;?>/C/gnucash-help.pdf"
