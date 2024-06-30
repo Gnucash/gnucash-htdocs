@@ -1,0 +1,165 @@
+<b>Announcement:</b> GnuCash 5.7 Released
+2024-06-30
+
+<h2>GnuCash 5.7 Released</h2>
+
+<p>The GnuCash development team announces GnuCash 5.7, the eighth release in the stable 5.x series.</p>
+
+<h4>Between 5.6 and 5.7, the following bugfixes were accomplished:</h4>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=669031">Bug 669031 - Save the Scheduled Transactions number of months</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=669035">Bug 669035 - Save the Scheduled Transaction divider position</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798822">Bug 798822 - Move to blank transaction</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799047">Bug 799047 - AutoComplete Only Considers Visible Transactions</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799258">Bug 799258 - Reports calculating net worth incorrectly after stock split</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799262">Bug 799262 - Failed import QIF investment</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799264">Bug 799264 - option account selector fails to include appropriate hidden accounts.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799268">Bug 799268 - Cannot write a check over $1000</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799272">Bug 799272 - Crashes when pasting a copied transaction</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799279">Bug 799279 - Import Matcher (CSV) does not compute correctly the share amount based on security price</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799281">Bug 799281 - Deleting a transaction may trigger a crash</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799290">Bug 799290 - Invoice register context menu issue</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799298">Bug 799298 - Shortcut Ctrl-G does not work in the General Journal register for the default date value</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799300">Bug 799300 - Nullpointer exception in gnc_quote_source_s</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799305">Bug 799305 - Crash when there is more than one unknown quote source for commodities</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799309">Bug 799309 - Import Multi-split CSV can duplicate &#39;Notes&#39; field from one transaction to next</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799320">Bug 799320 - GNUCash Immediately Exits on Startup</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799324">Bug 799324 - Invalid free in gvalue_from_kvp_value()</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799334">Bug 799334 - GnuCash re-opens to incorrect account window if there are transient tabs present when closed.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799336">Bug 799336 - Stock Assistant closes with its New Account dialog</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799339">Bug 799339 - RFE: Add Document Link for Payments to Owner Report</a></li>
+</ul>
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>New Report: Exprimental>Transaction Breakdown Report<p>Retrieves transactions from an account, distributes the splits into accounts - note if a transaction has 2 or more splits into 1 account, the transaction account cell will show the sum of the 2 splits - note if a transaction&#39;s currency is different from the account&#39;s currency, both amounts will be shown into the appropriate currency.  [txn-columns] multilevel sorting - type then name. </p></li>
+    <li>Add ability for the dense calendar to start from any week day.</li>
+    <li>In the dense calendar, add a default number of months per column entry to the view model to get a better layout when the function gnc_dense_cal_set_num_months is solely used.</li>
+    <li>Add today indication on the dense calendar</li>
+    <li>Updated the Quote Sources list in the Security Editor to match F::Q v1.59</li>
+    <li>Import Matcher - select row if none is selected yet when right-clicking the list of matches</li>
+    <li>Change the default visible period for General Ledger from 1 calendar month to 30 days.</li>
+    <li>Fix Failing SRFI-64 tests being reported as pass by ctest with guile-3.</li>
+    <li>Ensure that filters are re-applied to multi-account registers when the number of included sub-accounts changes.</li>
+    <li>Copy the latest price when creating a new entry in the Price Editor from a commodity selection</li>
+    <li>New function <code>gnc_account_foreach_until_date</code> uses binary search to find first split after date, then for_each from earliest split to (but excluding) that split. </li>
+    <li>New function <code>gnc_reports_foreach</code> to abstract GHashTable-base implementation.</li>
+    <li>Cleanup - remove deprecated function (re-)defines that were deprected 11 years ago.</li>
+    <li>[engine.i] move gnc_accounts_and_all_descendants to engine.i</li>
+    <li>[Account.cpp] Convert children from GList to std::vector. </li>
+    <li>[html-utilities.scm] show acct full names in gnc:html-render-options-changed</li>
+    <li>[ifrs-cost-basis.scm] amend truth table as per bug 797796 comment 241 further amendments to match updated truth table.</li>
+    <li>Clean up some obsolete tools and references to non-git VCS&#39;s</li>
+    <li>Rework version-info rules to allow building from github downloaded zip archives</li>
+    <li>Remove account splits in reverse crono order, speeds up book shutdown.</li>
+    <li>Move libgnucash/doc/xml to libgnucash/backend/xml/DTD</li>
+    <li>Remove libgnucash/docs, ensuring all of the content is available either in Doxygen comments or in the Wiki.</li>
+    <li>Remove XCode info from HACKING, obsolete. Move valgrind/callgrind instructions to the Wiki.</li>
+    <li>Move doxygen target and related files to toplevel. Note: this also means the target directory changes from libgnucash/docs/html to [toplevel]/doxygen/html and the main page is specified directly in doxygen.cfg.</li>
+    <li>Drop old migration script to split qof from engine</li>
+    <li>Update doxygen.cfg file to more recent release</li>
+    <li>Doxygen - Clean up obsolete files and comments.</li>
+    <li>[gnc-ofx-import.cpp] show message while deduplicating download</li>
+    <li>Replace more GLib containers with C++ containers.</li>
+    <li>Change python install path to be compatible with distro installations.</li>
+    <li>Update some C++ template override signatures to be C++20 compliant.</li>
+    <li>[gnc-log-replay.cpp] don&#39;t set import to DEBUG because it&#39;ll spew too many debug messages when gnc-log-replay completes.</li>
+    <li>Fix transaction report sorting/show-account-description and display.</li>
+    <li>[test-commodity-utils.scm] don&#39;t test TZ-sensitive datetimes</li>
+    <li>[engine.i] gnc_get_match_commodity_splits from scheme to c++ for better efficiency.</li>
+    <li>[utest-Account] add more balance limit tests</li>
+    <li>Convert more C files to C++</li>
+    <li>Fix more memory leaks and use-after-frees.</li>
+    <li>[Transaction|Split.cpp] Remove Reg2 unused functions</li>
+</ul>
+
+<h4>German AQBanking Users:</h4>
+<p>The AQBanking author is still working to get his updated PIN/TAN code finalized so the Flatpak, macOS, and Windows bundles of this release contain the last stable version, 6.5.4. The <a href="https://code.gnucash.org/builds/">GnuCash nightly builds</a> have beta releases with the new implementation, so consider using one of those if the stable AQBanking doesn't work for you.</p>
+
+<p><b>New and Updated Translations:</b> Arabic, Croatian, Dutch, English (Australia), English (New Zealand), English (United Kingdom), French, German, Hebrew, Hungarian, Italian, Japanese, Macedonian, Norwegian Bokmål, Polish, Portuguese (Brazil), Slovak, Tamil, Turkish, Urdu</p>
+
+<a href="https://hosted.weblate.org/engage/gnucash/">Help translate GnuCash on Weblate</a>
+
+<h4>Known Problems</h4>
+<p><a href="https://bugs.gnucash.org/buglist.cgi?bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;limit=0&amp;list_id=8149&amp;order=priority%2Cbug_severity&amp;query_format=advanced">Complete list of all open bugs.</a></p>
+
+<h2>Documentation</h2>
+<h4>Between 5.6 and 5.7, no bugfixes were accomplished:</h4>
+
+
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+<li>gnc-struct: change entity and section id&#39;s for &#39;employee-voucher&#39;</li>
+<li>All: manual, ch_Business: Harmonize section IDs: Numbers for the nesting depth of the sections are not required.</li>
+<li>All: manual, ch_Business, Change id=“busnss-emplyedit” to “busnss-emplyfind”, as the Find dialog is described here.</li>
+<li>docbook: Improve entity untranslated</li>
+<li>docbook: use entitiy for url-wiki</li>
+<li>de, pt: Update &amp;untranslated-*; to &amp;untranslated;</li>
+<li>C: Manual: Getting Help: resolve ambiguities</li>
+<li>de: Handbuch: ergänze Leerzeichen, löse Mehrdeutigkeiten auf</li>
+<li>docbook: additional entities for business menuitems</li>
+<li>Guide(zh): fix xml validity error</li>
+</ul>
+
+<p>New and Updated Translations: Chinese, German</p>
+
+
+<h3>Getting GnuCash for Windows and MacOS</h3>
+<p>GnuCash is provided for both Microsoft Windows 10&reg; and later
+    and MacOS 10.13 (High Sierra)&reg; and later in pre-built, all-in-one
+    packages. An installer is provided for Microsoft Windows&reg; while
+    the MacOS&reg; package is a disk image containing a drag-and-drop
+    application bundle.</p>
+
+<p>GnuCash is also available as a flatpak from Flathub.org. <a href="https://wiki.gnucash.org/wiki/Flatpak">Instructions for installing and running.</a></p>
+
+<p>The SHA256 Hashes for the downloadable files are:</p>
+<ul>
+    <li><code>bdd09df26e0863b3b1b09d6e5ea469ad0224b04691380c6c794c76e51fbae702</code>&nbsp;&nbsp;gnucash-5.7.tar.bz2</li>
+    <li><code>f6af2a455e7b8a5e95f3f71041f1eeec43fc92ec3bff37c3fdb4e364b2bb2239</code>&nbsp;&nbsp;gnucash-5.7.tar.gz</li>
+    <li><code>8c000a84246f08a193e9da22d3ae760499f00fbe4fb77d310488c596715c1487</code>&nbsp;&nbsp;gnucash-5.7-1.setup.exe</li>
+    <li><code>1f55eb6eadd1ff18c41947601d57d43e280732dff577621e0441b47d9d688b0a</code>&nbsp;&nbsp;Gnucash-Intel-5.7-1.dmg</li>
+    <li><code>1cb5dc4a7a84f12ce1d7f1f072456c8a5cbc14486b2ccf6918bf88c8dd98647a</code>&nbsp;&nbsp;gnucash-docs-5.7.tar.gz</li>
+</ul>
+
+<ul>
+    <li>SourceForge:
+        <ul>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.7/gnucash-5.7-1.setup.exe">Win32</a></li>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.7/Gnucash-Intel-5.7-1.dmg">Mac-Intel</a></li>
+        </ul></li>
+    <li>Github
+        <ul>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/5.7/gnucash-5.7-1.setup.exe">Win32</a></li>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/5.7/Gnucash-Intel-5.7-1.dmg">Mac-Intel</a></li>
+        </ul></li></ul>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 5.7 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+    <li>Sourceforge: <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.7/gnucash-5.7.tar.bz2">bzip2</a>, <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.7/gnucash-5.7.tar.gz">gzip</a>.</li>
+
+    <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/5.7/gnucash-5.7.tar.bz2">bzip</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/5.7/gnucash-5.7.tar.gz">gzip</a></li>
+
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https://www.gtk.org">Gtk+</a> 3.22.29, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0, <a href="https://www.boost.org/">Boost</a> 1.67, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, <a href="https://github.com/google/googletest">GoogleTest</a> 1.8.0, <a href="https://cmake.org/">cmake 3.10</a> and <a href="http://www.swig.org/">SWIG</a> 2.0.12. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 5.7 documentation can be found under "GnuCash v5 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats. The documentation is also included in the MacOS and Windows application bundles.</p>
+
+<p>If you want to compile the GnuCash Documentation 5.7 for yourself, the source code can be downloaded from:</p>
+<ul>
+    <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.7/gnucash-docs-5.7.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/5.7/gnucash-docs-5.7.tar.gz">GitHub</a></li>
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+    the GNU General Public License (GPL) and available for GNU/Linux,
+    *BSD, Solaris, MacOS, and Microsoft Windows.  Programming on GnuCash
+    began in 1997, and its first stable release was in 1998.</p>
