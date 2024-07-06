@@ -6,7 +6,7 @@
      $major_stable              ="5";
      // TODO: on major_stable 5 in download.phtml copy from $old_stable into the historical
      // section: last_win7 and $last_mac_sierra
-     $minor_stable              ="7";
+     $minor_stable              ="8";
      // Number of Translations: Did we add or dropped some?
      define("PROG_TRANSLATIONS", 61);
 
