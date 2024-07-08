@@ -59,11 +59,14 @@ include("$newsdir/news-script.php");
         $n = count($fa);
         $title = strip_tags(chop($fa[0]));
         $update_date = chop($fa[1]);
+        $summary = strip_tags(chop($fa[5]));
     ?>
         <entry>
             <id>urn:x-gnucash:news:<?= urlencode($key) ?></id>
             <title><?= $title ?></title>
-            <link rel="alternate" href="<?=\DEFAULT_URL?>news.phtml#n-<?=generate_anchor($key);?>" />
+            <summary><?= $summary ?></summary>
+            <content type="application/xhtml+html" src="<?=\DEFAULT_URL?>news.phtml#n-<?=generate_anchor($key);?>"/>
+                <link rel="alternate" href="<?=\DEFAULT_URL?>news.phtml#n-<?=generate_anchor($key);?>" />
             <author>
                 <name>GnuCash Developers</name>
                 <email>gnucash-devel@gnucash.org</email>
