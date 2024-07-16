@@ -22,7 +22,8 @@
   <h3><?php echo T_("Installers")?></h3>
   <ul class="imagelist"><!-- ToDo: merge concat into format on next patch-po session -->
     <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/windows.png);"><?php printf (T_("GnuCash %s for"), $latest_stable)?> <a href="<?php echo $latest_stable_path.$latest_stable_win;?>"><?=\LABEL_WIN." ".\SUPPORTED_WIN?></a></li>
-    <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/macosx.png);"><?php printf (T_("GnuCash %s for"), $latest_stable)?> <a href="<?php echo $latest_stable_path.$latest_stable_mac_intel;?>"><?=\LABEL_MAC." ".\SUPPORTED_MAC?></a></li>
+    <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/apple-silver-32.png);"><?php printf (T_("GnuCash %s for"), $latest_stable)?> <a href="<?php echo $latest_stable_path.$latest_stable_mac_arm;?>"><?=\LABEL_MAC." ".\ARCH_MAC_ARM." ".\SUPPORTED_MAC_ARM?></a></li>
+    <li class="imagelistitem" style="background-image: url(<?=$top_dir?>/images/icons/apple_logo.png);"><?php printf (T_("GnuCash %s for"), $latest_stable)?> <a href="<?php echo $latest_stable_path.$latest_stable_mac_x86;?>"><?=\LABEL_MAC." ".\ARCH_MAC_X86." ".\SUPPORTED_MAC_X86?></a></li>
   </ul>
 
   <a id="distribution"></a><h3>Linux</h3>

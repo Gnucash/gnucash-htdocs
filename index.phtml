@@ -25,9 +25,10 @@ include ("externals/menu.phtml");
           <li><img alt="windows" src="<?=$top_dir?>/images/icons/windows.png"  style="vertical-align: middle;"/> <?=\LABEL_WIN?>
             <a
             href="<?=$latest_stable_path.$latest_stable_win?>"><?=\SUPPORTED_WIN?></a></li>
-          <li><img alt="Apple Logo" src="<?=$top_dir?>/images/icons/apple_logo.png"  style="vertical-align: middle;"/> <?=\LABEL_MAC?>
-            <a
-            href="<?=$latest_stable_path.$latest_stable_mac_intel?>"><?=\SUPPORTED_MAC?></a></li>
+          <li><img alt="Apple Logo" src="<?=$top_dir?>/images/icons/apple-silver-32.png"  style="vertical-align: middle;"/> <?=\LABEL_MAC." ".\ARCH_MAC_ARM?>
+              <a href="<?=$latest_stable_path.$latest_stable_mac_arm?>"><?=\SUPPORTED_MAC_ARM?></a></li>
+          <li><img alt="Apple Logo" src="<?=$top_dir?>/images/icons/apple_logo.png"  style="vertical-align: middle;"/> <?=\LABEL_MAC." ".\ARCH_MAC_X86?>
+              <a href="<?=$latest_stable_path.$latest_stable_mac_x86?>"><?=\SUPPORTED_MAC_X86?></a></li>
           <li><a href="<?=$home?>/download.phtml" style="font-size: 80%;"><?=T_("More downloads (Source code, Development …)")?></a></li>
         </ul>
       </div>

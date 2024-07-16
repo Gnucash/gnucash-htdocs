@@ -13,7 +13,8 @@
      $latest_stable             = $major_stable.".".$minor_stable;
      $latest_stable_win         = $latest_stable;
      //$latest_stable_win         = $latest_stable."-1";
-     $latest_stable_mac_intel   = $latest_stable."-2";
+     $latest_stable_mac_arm   = $latest_stable."-1";
+     $latest_stable_mac_x86   = $latest_stable."-2";
 // Change this when there has been a re-tag to add the re-tag letter,
 // e.g. if one retagged 2.6.13 to 2.6.13a, make $tarball = $latest_stable."a".
      $tarball                   = $latest_stable."";
@@ -33,10 +34,13 @@
      $old_stable_mac_intel  = $old_stable."-1";
 
      // Supported targets:
+     define("ARCH_MAC_ARM", "Apple Silicon");
+     define("ARCH_MAC_X86", "Intel");
      define("LABEL_WIN", "Microsoft Windows");
      define("LABEL_MAC", "Apple macOS");
      define("SUPPORTED_WIN", "8/10/11");
-     define("SUPPORTED_MAC", "&ge; 10.13—\"High Sierra\"");
+     define("SUPPORTED_MAC_ARM", "&ge; 11—\"Big Sur\"");
+     define("SUPPORTED_MAC_X86", "&ge; 10.13—\"High Sierra\"");
      // Frozen versions:
      $show_historical = True;
      $last_win7_version = "3.11"; //Still used in download block on index.phtml
@@ -60,7 +64,8 @@
      $last_win7="gnucash-".$last_win7_version.".setup.exe";
      $last_xp_vista="gnucash-".$last_xp_vista_version."-setup.exe";
      $last_win2k="gnucash-".$last_win2k_version."-setup.exe";
-     $latest_stable_mac_intel="Gnucash-Intel-".$latest_stable_mac_intel.".dmg";
+     $latest_stable_mac_arm="Gnucash-Arm-".$latest_stable_mac_arm.".dmg";
+     $latest_stable_mac_x86="Gnucash-Intel-".$latest_stable_mac_x86.".dmg";
      $last_mac_sierra="Gnucash-Intel-".$last_mac_sierra.".dmg";
      $last_mac_ppc="Gnucash-PPC-".$last_mac_ppc.".dmg";
      $latest_stable_source="gnucash-".$tarball.".tar.bz2";
