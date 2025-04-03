@@ -97,6 +97,6 @@
      $URL_WIKI="https://wiki.gnucash.org/wiki/";
 
      // some defaults for metatags in case the page does not set them
-     $default_title= T_("Free Accounting Software");
-     $default_description= T_("<span class=\"gnucash\">GnuCash</span> is personal and small-business financial-accounting software, freely licensed under the <a href=\"https://www.gnu.org/\">GNU</a> GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.");
+     $default_title= T_("Copylefted Libre Accounting Software");
+     $default_description= T_("<span class=\"gnucash\">GnuCash</span> is (GPLv2+ licensed) double-entry accounting software, for people and small-businesses using Linux|GNU, BSD, macOS and Windows.");
      ?>
