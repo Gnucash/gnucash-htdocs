@@ -1,0 +1,127 @@
+<b>Announcement:</b> GnuCash 5.12 Released
+2025-06-29
+
+<h2>GnuCash 5.12 Released</h2>
+
+<p>The GnuCash development team announces GnuCash 5.12, the thirteenth release in the stable 5.x series.</p>
+
+<h4>Between 5.11 and 5.12, the following bugfixes were accomplished:</h4>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=648768">Bug 648768 - Warning &quot;Change Reconciled Split&quot; has wrong cursor focus</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=797766">Bug 797766 - Automatic decimal point doesn&#39;t work properly with zeros when entering stocks.</a><p> Preserve the decimal point when printing numbers with no decimal places to stop the auto-decimal code from triggering when exiting the field. </p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799490">Bug 799490 - Error on start or opening a gnucash file: Can&#39;t parse the URL</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799506">Bug 799506 - reconcile bad date pops to 1969</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799521">Bug 799521 - Segmentation fault on Autocomplete of Description with ß</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799572">Bug 799572 - Return proper status code when Finance::Quote errors during price quote retrieval via CLI. </li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799580">Bug 799580 - Swiss currency symbol is displayed as SFr. instead of CHF</a><p>Replace SFr. with Fr. as SFr. is obsolete but Fr. is still widely used. This is the local symbol so users who want CHF can set it in the security editor. </p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799582">Bug 799582 - Mortgage and Loan Assistant - Compounding Formula</a><p>Adds a semi-annual compounding period for Canadians and implements the more correct simple-rate formula provided by a Canadian licensed accountant. Also adds support for day-interval loan payments, ensures that the formula on the repayment page reflects changes on that page, ensures that the number and amounts of payments are correct when payments are more frequent than monthly, use the correct intest rate for compunding calculations, and fixes some memory issues.</p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799590">Bug 799590 - Pressing enter after changing date on initial reconcile information window does not change ending balance.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799592">Bug 799592 - &quot;No transactions found&quot; when importing CSV transactions</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799593">Bug 799593 - macOS: mariadb hardcodes plugin paths to original install directory.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799594">Bug 799594 - GnuCash 5.11 fails to build with boost 1.88</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799597">Bug 799597 - Crash when deleting all splits in General Journal</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799602">Bug 799602 - Unit Price on Invoice will NOT display as decimals</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799603">Bug 799603 - Does not save to mysql on localhost.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799623">Bug 799623 - test-backend-dbi fails after 2038</a></li>
+</ul>
+
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>[reports]Lazily generate sub-reports. Reports with links to detail sub-reports like the budget reports would take a long time to generate because they built both the main report and all of the sub-reports. Now the sub-reports generate when the user clicks the link in the main report.</li>
+    <li>Security editor quote sources: Add new source, China Merchants Bank. Remove no longer supported F::Q Modules Bloomberg.pm, DWSFunds, Investor's Exchange (U.S.), Morningstar Australia, Skanddinaviska Enskilda Banken, Tiaacref.pm, Troweprice.pm and many of the multi-source sources from the Security Editor.</li>
+    <li>[import-main-matcher.cpp] Add tooltips to transaction A, U+C, and C action columns in the generic transaction import matcher. </li>
+    <li>[reports] Use ICU for Unicode string comparison and substring search because it knows how to correctly localize comparisons of accented and unaccented characters.</li>
+    <li>[reports] more robust error handling if target report doesn&#39;t exist.</li>
+    <li>Register: Ensure splits belong to transaction when doing bulk operations on a transaction's splits.</li>
+    <li>Drop the definition of __EXTENSIONS__ from three files and instead move it to compiler options if on a platform that needs it.</li>
+    <li>Avoid non-POSIX &quot;echo -n&quot; behavior in util/gnc-vcs-info.</li>
+    <li>Add testbuild target which builds tests without running them to accommodate packaging processes that run ctest separately.</li>
+    <li>[engine.i] convert gnc_account_accumulate_at_dates to c++.</li>
+    <li>[gnc-engine-guile.cpp] helper gnc_split_to_scm function.</li>
+    <li>[gnc-engine-guile] reduce overhead of gnc_foo_to_scm by caching the result of SWIG_TypeQuery(typestr) </li>
+    <li>[balance-forecast] optimise some loops: fewer temporary lists and gc </li>
+    <li>Let cmake probe for the existence of HAVE_STRUCT_TM_GMTOFF, fix build of test-gnc-date on systems without HAVE_STRUCT_TM_GMTOFF, and avoid unused variable warnings on systems without HAVE_STRUCT_TM_GMTOFF</li>
+    <li>Wrap include of gtest.h and gmock.h with a warning-silencing pragma. See https://github.com/google/googletest/issues/4701 The warnings cause the Arch Linux CI to fail because of -Werror. </li>
+    <li>Fixed GetInvoiceFromTxn to convert to the right type of Python object for a GncInvoice.</li>
+    <li>[test-report-utilities] more tests for gnc:account-accumulate-at-dates testing balances at date boundaries </li>
+</ul>
+<p>New and Updated Translations: Arabic, Bulgarian, Chinese (Simplified Han script), Danish, Dutch, Finnish, French, German, Hungarian, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish</p>
+
+
+<a href="https://hosted.weblate.org/engage/gnucash/">Help translate GnuCash on Weblate</a>
+
+<h4>Known Problems</h4>
+<p><a href="https://bugs.gnucash.org/buglist.cgi?bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;limit=0&amp;list_id=8149&amp;order=priority%2Cbug_severity&amp;query_format=advanced">Complete list of all open bugs.</a></p>
+
+<h2>Documentation</h2>
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>German translation: Fix some typos</li>
+    <li>German translation: Remove the Finance::Quote appendix. The content has been moved to the wiki.</li>
+</ul>
+
+<p>Updated Translations: German.</p>
+
+<h3>Getting GnuCash for Windows and MacOS</h3>
+<p>GnuCash is provided for both Microsoft Windows 10&reg; and later
+    and MacOS 10.13 (High Sierra)&reg; and later in pre-built, all-in-one
+    packages. An installer is provided for Microsoft Windows&reg; while
+    the MacOS&reg; package is a disk image containing a drag-and-drop
+    application bundle.</p>
+
+<p>GnuCash is also available as a flatpak from Flathub.org. <a href="https://wiki.gnucash.org/wiki/Flatpak">Instructions for installing and running.</a></p>
+
+<p>The SHA256 Hashes for the downloadable files are:</p>
+<ul>
+    <li><code>b35b4756be12bcfdbed54468f30443fa53f238520a9cead5bde2e6c4773fbf39</code>&nbsp;&nbsp;gnucash-5.12.tar.bz2</li>
+    <li><code>fa279ac0378b1860ede15a8b6645628e17e7e94df496d69be8fd5d20a570ccc7</code>&nbsp;&nbsp;gnucash-5.12.tar.gz</li>
+    <li><code>55e03a7161d9dc34309a453b85d0e16f1e58f4b7f7b4b2b17aa8be03d538f863</code>&nbsp;&nbsp;gnucash-5.12.setup.exe</li>
+    <li><code>a1f7454d07bfb536e641ccf9423b51f00dbd2374d8097d5ac5b918159832cc37</code>&nbsp;&nbsp;Gnucash-Arm-5.12-1.dmg</li>
+    <li><code>090d197df67926823360ee8bfaacffa60c10f467036080fd2a83f9f96bdebc40</code>&nbsp;&nbsp;Gnucash-Intel-5.12-1.dmg</li>
+    <li><code>c2a67aef439f25b8e3d43cf5cc29756fae0e82e252f0abf059b35663594ea994</code>&nbsp;&nbsp;gnucash-docs-5.12.tar.gz</li>
+</ul>
+
+<ul>
+    <li>SourceForge:
+        <ul>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.12/gnucash-5.12.setup.exe">Win32</a></li>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.12/Gnucash-Arm-5.12-1.dmg">Mac-Apple Silicon</a></li>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.12/Gnucash-Intel-5.12-1.dmg">Mac-Intel</a></li>
+        </ul></li>
+    <li>Github
+        <ul>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/5.12/gnucash-5..setup.exe">Win32</a></li>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/5.12/Gnucash-Arm-5.12-1.dmg">Mac-Apple Silicon</a></li>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/5.12/Gnucash-Intel-5.12-1.dmg">Mac-Intel</a></li>
+        </ul></li></ul>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 5.12 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+    <li>Sourceforge: <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.12/gnucash-5.12.tar.bz2">bzip2</a>, <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.12/gnucash-5.12.tar.gz">gzip</a>.</li>
+
+    <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/5.12/gnucash-5.12.tar.bz2">bzip</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/5.12/gnucash-5.12.tar.gz">gzip</a></li>
+
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https://www.gtk.org">Gtk+</a> 3.22.30, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0.9, <a href="https://www.boost.org/">Boost</a> 1.67, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, <a href="https://github.com/google/googletest">GoogleTest</a> 1.8.0, <a href="https://cmake.org/">cmake 3.14.5</a> and <a href="http://www.swig.org/">SWIG</a> 3.0.12. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 5.12 documentation can be found under "GnuCash v5 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats. The documentation is also included in the MacOS and Windows application bundles.</p>
+
+<p>If you want to compile the GnuCash Documentation 5.12 for yourself, the source code can be downloaded from:</p>
+<ul>
+    <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.12/gnucash-docs-5.12.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/5.12/gnucash-docs-5.11.tar.gz">GitHub</a></li>
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+    the GNU General Public License (GPL) and available for GNU/Linux,
+    *BSD, Solaris, MacOS, and Microsoft Windows.  Programming on GnuCash
+    began in 1997, and its first stable release was in 1998.</p>
