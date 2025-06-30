@@ -21,6 +21,8 @@
 
 */
 
+require('plurals.php');
+
 /**
  * Provides a simple gettext replacement that works independently from
  * the system's gettext abilities.
@@ -98,7 +100,7 @@ class gettext_reader {
    * @param object Reader the StreamReader object
    * @param boolean enable_cache Enable or disable caching of strings (default on)
    */
-  function gettext_reader($Reader, $enable_cache = true) {
+  function __construct($Reader, $enable_cache = true) {
     // If there isn't a StreamReader, turn on short circuit mode.
     if (! $Reader || isset($Reader->error) ) {
       $this->short_circuit = true;
@@ -157,15 +159,11 @@ class gettext_reader {
       $this->cache_translations = array ();
       /* read all strings in the cache */
       for ($i = 0; $i < $this->total; $i++) {
-          $offset = $i * 2 + 2;
-          if (!($this && $this->table_originals[$offset])) {
-              continue;
-          }
-          $this->STREAM->seekto($this->table_originals[$offset]);
-          $original = $this->STREAM->read($this->table_originals[$offset - 1]);
-          $this->STREAM->seekto($this->table_translations[$offset]);
-          $translation = $this->STREAM->read($this->table_translations[$offset - 1]);
-          $this->cache_translations[$original] = $translation;
+        $this->STREAM->seekto($this->table_originals[$i * 2 + 2]);
+        $original = $this->STREAM->read($this->table_originals[$i * 2 + 1]);
+        $this->STREAM->seekto($this->table_translations[$i * 2 + 2]);
+        $translation = $this->STREAM->read($this->table_translations[$i * 2 + 1]);
+        $this->cache_translations[$original] = $translation;
       }
     }
   }
@@ -274,41 +272,6 @@ class gettext_reader {
   }
 
   /**
-   * Sanitize plural form expression for use in PHP eval call.
-   *
-   * @access private
-   * @return string sanitized plural form expression
-   */
-  function sanitize_plural_expression($expr) {
-    // Get rid of disallowed characters.
-    $expr = preg_replace('@[^a-zA-Z0-9_:;\(\)\?\|\&=!<>+*/\%-]@', '', $expr);
-
-    // Add parenthesis for tertiary '?' operator.
-    $expr .= ';';
-    $res = '';
-    $p = 0;
-    for ($i = 0; $i < strlen($expr); $i++) {
-      $ch = $expr[$i];
-      switch ($ch) {
-      case '?':
-        $res .= ' ? (';
-        $p++;
-        break;
-      case ':':
-        $res .= ') : (';
-        break;
-      case ';':
-        $res .= str_repeat( ')', $p) . ';';
-        $p = 0;
-        break;
-      default:
-        $res .= $ch;
-      }
-    }
-    return $res;
-  }
-
-  /**
    * Parse full PO header and extract only plural forms line.
    *
    * @access private
@@ -334,14 +297,14 @@ class gettext_reader {
     $this->load_tables();
 
     // cache header field for plural forms
-    if (! is_string($this->pluralheader)) {
+    if ($this->pluralheader === NULL) {
       if ($this->enable_cache) {
         $header = $this->cache_translations[""];
       } else {
         $header = $this->get_translation_string(0);
       }
       $expr = $this->extract_plural_forms_header_from_po_header($header);
-      $this->pluralheader = $this->sanitize_plural_expression($expr);
+      $this->pluralheader = new PluralHeader($expr);
     }
     return $this->pluralheader;
   }
@@ -354,16 +317,16 @@ class gettext_reader {
    * @return int array index of the right plural form
    */
   function select_string($n) {
-    $string = $this->get_plural_forms();
-    $string = str_replace('nplurals',"\$total",$string);
-    $string = str_replace("n",$n,$string);
-    $string = str_replace('plural',"\$plural",$string);
+    if (!is_int($n)) {
+      throw new InvalidArgumentException(
+        "Select_string only accepts integers: " . $n);
+    }
+    $plural_header = $this->get_plural_forms();
+    $plural = $plural_header->expression->evaluate($n);
 
-    $total = 0;
-    $plural = 0;
+    if ($plural < 0) $plural = 0;
+    if ($plural >= $plural_header->total) $plural = $plural_header->total - 1;
 
-    eval("$string");
-    if ($plural >= $total) $plural = $total - 1;
     return $plural;
   }
 
@@ -413,12 +376,23 @@ class gettext_reader {
 
   function pgettext($context, $msgid) {
     $key = $context . chr(4) . $msgid;
-    return $this->translate($key);
+    $ret = $this->translate($key);
+    if (strpos($ret, "\004") !== FALSE) {
+      return $msgid;
+    } else {
+      return $ret;
+    }
   }
 
   function npgettext($context, $singular, $plural, $number) {
-    $singular = $context . chr(4) . $singular;
-    return $this->ngettext($singular, $plural, $number);
+    $key = $context . chr(4) . $singular;
+    $ret = $this->ngettext($key, $plural, $number);
+    if (strpos($ret, "\004") !== FALSE) {
+      return $singular;
+    } else {
+      return $ret;
+    }
+
   }
 }
 
