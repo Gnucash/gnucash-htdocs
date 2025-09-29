@@ -1,0 +1,131 @@
+<b>Announcement:</b> GnuCash 5.13 Released
+2025-09-28
+
+<h2>GnuCash 5.13 Released</h2>
+
+<p>The GnuCash development team announces GnuCash 5.13, the fourteenth release in the stable 5.x series.</p>
+
+<h4>Between 5.12 and 5.13, the following bugfixes were accomplished:</h4>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=343711">Bug 343711 - Splits to Imbalance-USD do not disappear when zero-valued.</a><p>To mitigate potential impact, the Imbalance split is only removed when the split transitions to zero value during the commit of the transaction and the split&#39;s memo and action have no value. </p></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799249">Bug 799249 - Crash while switch to recently opened file</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799638">Bug 799638 - error: call to non-&#39;constexpr&#39; function</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799649">Bug 799649 - Ensure that GnuCash does not crash when it converts a foreign-currency transaction into a trading account transaction.</li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799650">Bug 799650 - Reconcile Ending Balance Ignored When Statement Date Set</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799652">Bug 799652 - Invoice price decimal places</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799654">Bug 799654 - Zombie entries in the recently accessed file list.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799656">Bug 799656 - Invoice and bills still display prices as fractional amounts with &quot;Force Prices to display as decimals&quot;</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799657">Bug 799657 - Incorrect trial Balance report with stocks and multiple currencies</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799661">Bug 799661 - Exchange Rate entries displayed in reports in an unstable order</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799662">Bug 799662 - Importing accounts from UTF8 csv file does not work correctly</a></li>
+</ul>
+
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>Provide a new dialog, gnc_action_dialog, for confirming actions that labels buttons with a active verb (e.g. "Delete") instead of a confirmation (e.g. "Yes" or "OK"). This is hypothetically less ambiguous in some cases.</li>
+    <li>Transaction Report: Add links to bills and invoices.
+    <li>[gnc-plugin-page-report] confirm before overwriting saved report</li>
+    <li>Added Swiss Fund Data AG to single_quote_sources. New F::Q source will be available in v1.67. The selection will be disabled until F::Q 1.67 is released and installed.</li>
+    <li>Replace deprecated gdk_pixbuf_new_from_xpm_data</li>
+    <li>Fix tests so that they run on Win32 builds.</li>
+    <li>Fix inadvertant insertion in test-trial-balance.scm.</li>
+    <li>extract-translators: Use &#39;open :encoding&#39; instead of utf::encode/decode.</li>
+    <li>Fix newline disparity in translator-credits</li>
+    <li>Translator credits: Separate translators with a newline Instead of a semicolon. Presents them as a list, one name per line, as with the other credits. </li>
+    <li>[fin.c] fix encoding to utf8</li>
+    <li>[new-owner-report.scm] insert job-ID if available</li>
+    <li>[balsheet-pnl] use gnc:accounts-get-commodities-sorted</li>
+    <li>Set policy CMP0177 and follow the documented recommendations regarding DESTINATION paths.</li>
+    <li>[balsheet-pnl] ensure the account name cell doesn&#39;t wrap</li>
+    <li>Specialize get_row_value_from_object for int64_t so that it doesn&#39;t try to pass the value in a pointer. That comes out badly on 32-bit systems. </li>
+    <li>[charts] Add chartjs  v4 to borrowed so it can be used when available (meaning not on Windows because Windows's JS support via webkit is too old).</li>
+    <li>[charts] use gnc:html-chart-set-xaxis-type!</li>
+    <li>[html-chart] expose gnc:html-chart-set-x-axis-type!; Centralise to ease chartjs upgrade. The option path changes as follows:  &#39;(options scales xAxes (0) type) in chartjs-2 &#39;(options scales x type) in chartjs-3 </li>
+    <li>[gnc-pricedb.cpp] plug leak from gnc_g_date_new_today</li>
+    <li>[gtest-xml-contents] test xaccTransGetDatePostedGDate from xml</li>
+    <li>Engine: Replace indirect qof_object_set/get calls with direct qof_instance_kvp ones.</li>
+    <li>[gtest-load-and-test-datafile.cpp] add example .gnucash to test contents</li>
+</ul>
+<p>New and Updated Translations: Catalan, Chinese (Simplified Han script), Chinese (Traditional Han script), Croatian, Danish, English (Australia), English (New Zealand), English (United Kingdom), French, German, Hebrew, Hungarian, Marathi, Portuguese, Portuguese (Brazil), Russian, Slovak, Swedish, Tamil, Ukrainian</p>
+<a href="https://hosted.weblate.org/engage/gnucash/">Help translate GnuCash on Weblate</a>
+
+<h4>Known Problems</h4>
+<p><a href="https://bugs.gnucash.org/buglist.cgi?bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;limit=0&amp;list_id=8149&amp;order=priority%2Cbug_severity&amp;query_format=advanced">Complete list of all open bugs.</a></p>
+
+<h2>Documentation</h2>
+<h4>Between 5.12 and 5.13 no bug fixes were accomplished.</h4>
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    <li>de:manual:ch_Transactions: new description of import format</li>
+    <li>de:manual:ch_Transactions: Rewrite section &#39;Import with AqB&#39;</li>
+    <li>docbook: gnc-gui-*: Cleanup entities and improve accel</li>
+    <li>DOCDIR_BUILD: We want PROJECT_NAME, not PACKAGE_NAME</li>
+    <li>Fix cmake variable name for build doc directory.</li>
+    <li>manual/ch_Reports: add Transaction Report Display/Invoice manual entry</li>
+</ul>
+
+<p>Updated Translations: German.</p>
+
+<h3>Getting GnuCash for Windows and MacOS</h3>
+<p>GnuCash is provided for both Microsoft Windows 10&reg; and later
+    and MacOS 10.13 (High Sierra)&reg; and later in pre-built, all-in-one
+    packages. An installer is provided for Microsoft Windows&reg; while
+    the MacOS&reg; package is a disk image containing a drag-and-drop
+    application bundle.</p>
+
+<p>GnuCash is also available as a flatpak from Flathub.org. <a href="https://wiki.gnucash.org/wiki/Flatpak">Instructions for installing and running.</a></p>
+
+<p>The SHA256 Hashes for the downloadable files are:</p>
+<ul>
+    <li><code>082eecc332b722f223d3f2512626ebe5ef63f94aaf5c409e87526c654464aef5</code>&nbsp;&nbsp;gnucash-5.13.tar.bz2</li>
+    <li><code>f853c11b1a4c6022903f5f8c07cdeb75441bade2403a48bfc65a63cfc6ffee5b</code>&nbsp;&nbsp;gnucash-5.13.tar.gz</li>
+    <li><code>3422374e1d3ee112946595d88797be8046d1569b9215b51b208bf007392610cd</code>&nbsp;&nbsp;gnucash-5.13.setup.exe</li>
+    <li><code>bafe4a5595ff5a17bbf8b5be6a03dc56a5098652f1be03b249bc0d83bfaf0740</code>&nbsp;&nbsp;Gnucash-Arm-5.13-1.dmg</li>
+    <li><code>d24fad097f1abf237975bf04cceec6b65a6afeb75e24263fa337eae779681ebf</code>&nbsp;&nbsp;Gnucash-Intel-5.13-1.dmg</li>
+    <li><code>6796d70005169f04e49d1393e8198469c331d07f2e7782b6935e6676087c6353</code>&nbsp;&nbsp;gnucash-docs-5.13.tar.gz</li>
+</ul>
+
+<ul>
+    <li>SourceForge:
+        <ul>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.13/gnucash-5.13.setup.exe">Win32</a></li>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.13/Gnucash-Arm-5.13-1.dmg">Mac-Apple Silicon</a></li>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.13/Gnucash-Intel-5.13-1.dmg">Mac-Intel</a></li>
+        </ul></li>
+    <li>Github
+        <ul>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/5.13/gnucash-5..setup.exe">Win32</a></li>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/5.13/Gnucash-Arm-5.13-1.dmg">Mac-Apple Silicon</a></li>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/5.13/Gnucash-Intel-5.13-1.dmg">Mac-Intel</a></li>
+        </ul></li></ul>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 5.13 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+    <li>Sourceforge: <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.13/gnucash-5.13.tar.bz2">bzip2</a>, <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.13/gnucash-5.13.tar.gz">gzip</a>.</li>
+
+    <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/5.13/gnucash-5.13.tar.bz2">bzip</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/5.13/gnucash-5.13.tar.gz">gzip</a></li>
+
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https://www.gtk.org">Gtk+</a> 3.22.30, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0.9, <a href="https://www.boost.org/">Boost</a> 1.67, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, <a href="https://github.com/google/googletest">GoogleTest</a> 1.8.0, <a href="https://cmake.org/">cmake 3.14.5</a> and <a href="http://www.swig.org/">SWIG</a> 3.0.12. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 5.13 documentation can be found under "GnuCash v5 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats. The documentation is also included in the MacOS and Windows application bundles.</p>
+
+<p>If you want to compile the GnuCash Documentation 5.13 for yourself, the source code can be downloaded from:</p>
+<ul>
+    <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.13/gnucash-docs-5.13.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/5.13/gnucash-docs-5.11.tar.gz">GitHub</a></li>
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+    the GNU General Public License (GPL) and available for GNU/Linux,
+    *BSD, Solaris, MacOS, and Microsoft Windows.  Programming on GnuCash
+    began in 1997, and its first stable release was in 1998.</p>
