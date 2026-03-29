@@ -1,0 +1,138 @@
+<b>Announcement:</b> GnuCash 5.15 Released
+2026-03-29
+
+<h2>GnuCash 5.15 Released</h2>
+
+<p>The GnuCash development team announces GnuCash 5.15, the sixteenth release in the stable 5.x series.</p>
+
+<h4>Between 5.14 and 5.15, the following bugfixes were accomplished:</h4>
+<ul>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=666536">Bug 666536 - smallest fraction of KRW is invalid</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798122">Bug 798122 - Message about unable to balance transaction</a>: Implement better can't-balance messages for scheduled transactions with more than one template transaction.</li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=798873">Bug 798873 - Crash when scrubbing after &quot;undoing&quot; changes</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799705">Bug 799705 - Remove Old Prices by Namespace</a>: Display namespaces and allow selecting particular namespaces in the Remove Old Prices dialog.</li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799706">Bug 799706 - Rename Namespace</a>: Add a rename namespace button to the Security editor that is enabled by the selection of a namespace row in the tree view. </li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799713">Bug 799713 - Account Editor changes account color to gray when default selected.</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799722">Bug 799722 - Inconsistent wording: Bill and Invoice</a>: Use &quot;Business Item&quot; in messages that could apply to any of Bill, Credit Note, or Invoice, including where we reuse the same message in different cases.</li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799734">Bug 799734 - mapped OFX income account not listed</a></li>
+    <li><a href="https://bugs.gnucash.org/show_bug.cgi?id=799745">Bug 799745 - Import matcher doesn&#39;t handle zero length memo and description properly</a></li>
+</ul>
+
+<h4>The following fixes and improvements were not associated with bug reports:</h4>
+<ul>
+    
+    <li>Major improvement in Python bindings to enable engine methods to return Python objects instead of SWIG pointers. Covers Account, Split, Transaction, GNCLot, gnc_commodity, gnc_commodity_namespace, gnc_commodity_table, GNCPrice, GNCPriceDB, QofBook, QofSession, GncGUID, GncCustomer, GncEmployee, GncVendor, GncJob, GncAddress, GncBillTerm, GncTaxTable, GncInvoice, and GncEntry. GncOwner, the superclass of many of the business classes, is already covered. This allows more pythonic usage:
+        <ul>
+            <li>Call member functions directly, e.g. <code>price.get_commodity()</code> instead of using the C-function style <code>gc.gnc_price_get_commodity(price)</code></li>
+            <li>The C-function call now raises a DeprecationWarning if called with a Python object but <em>not</em> if called with the instance, e.g. <code>gc.gnc_price_get_commodity(price.instance)</code></li>
+            <li>It is no longer necessary to test and convert return values for being <code>SwigPyObjects</code> or not Python objects: Code like
+                <pre>
+if type(desc).__name__ == 'SwigPyObject':
+     desc = gnucash.Account(instance=desc)
+                </pre> or
+                <pre>
+if type(split) != Split:
+    split=Split(instance=split)
+                </pre> is no longer required. </li>
+        </ul>
+    </li>
+    <li>Enable copy-and-paste in Scheduled Transaction template transactions.</li>
+    <li>Disable the <code>Transaction Paste</code> or <code>Split Paste</code> menu items in the register's <code>Transaction</code> menu  when there is no transaction or split in the clipboard.</li>
+    <li>Check all template transactions in a Scheduled Transaction for balance instead of only the first.</li>
+    <li>Fix the last reconcile date sort in the Accounts page so that unreconciled accounts sort after reconciled ones instead of before.</li>
+    <li>Ensure that custom report sub-menus can receive custom report entries.</li>
+    <li>Import Matcher: Add trace messages to make it easier to track why some transactions aren&#39;t considered possible matches and uncomment the debug statements so that they can be emitted with <code>--log</code> arguments on the command line.</li>
+    <li>Fix segfault in gnc_gsettings_get_settings_obj when GSettings schemas are not installed.</li>
+    <li>Add tooltip explaining date-format selection to the CSV Import Assistant.</li>
+    <li>CSV Importer: Reparse all import lines when changing date or currency formats or when setting base_account. </li>
+    <li>[new-owner-report.scm] fix display/due-date tooltip</li>
+    <li>Transaction report efficiency improvements.</li>
+    <li>Ensure that <code>gnc_commodity_compare</code> produces a stable sort.</li>
+    <li>Implement full test coverage of libgnucash/engine/qofid except for some unreachable code.</li>
+    <li>Remove unused qof_collection_from_glist function.</li>
+    <li>New function <code>gnc_account_get_earliest_date</code> returns the account&#39;s earliest split date. This usually reflects the account opening date.</li>
+    <li>Provide an earliest-date sort option in the Accounts page and the balance-forecast report.</li>
+    <li>Support 64-bit compilation on Windows.</li>
+    <li>gnc_account_child_index: return -1 for non-child.</li>
+    <li>Turn off deprecation warning for wstring_convert. It's deprecated in C++17 with no replacement until C++26. </li>
+    <li>Update GncDateTime to handle new exceptions from Boost::DateTime</li>
+    <li>Use std::chrono to create a GncDateTime. Boost::DateTime uses <code>time_t</code> and in some cases that's still 32-bit, leading to a potential 2038 bug.</li>
+    <li>Fix GUI leaks in register completion cell, GncPluginPageRegister, and GNCPluginPageReport.</li>
+    <li>[gnc-datetime.cpp] Fix potential bug in fast_iso8601_utc_parse</li>
+</ul>
+<p>New and Updated Translations: Chinese (Simplified Han script), Croatian, Czech, Danish, Dutch, English (Australia), English (New Zealand), English (United Kingdom), French, German, Hungarian, Italian, Portuguese, Portuguese (Brazil), Russian, Spanish, Tamil, Turkish</p>
+
+
+<a href="https://hosted.weblate.org/engage/gnucash/">Help translate GnuCash on Weblate</a>
+
+<h4>Known Problems</h4>
+<p><a href="https://bugs.gnucash.org/buglist.cgi?bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;bug_severity=normal&amp;bug_severity=minor&amp;bug_severity=trivial&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=NEEDINFO&amp;bug_status=REOPENED&amp;limit=0&amp;list_id=8149&amp;order=priority%2Cbug_severity&amp;query_format=advanced">Complete list of all open bugs.</a></p>
+
+<h2>Documentation</h2>
+<p>There are no changes in the documentation for this release.</p>
+
+<p>Updated Translations: None.</p>
+
+<h3>Getting GnuCash for Windows and MacOS</h3>
+<p>GnuCash is provided for both Microsoft Windows 10&reg; and later
+    and MacOS 10.13 (High Sierra)&reg; and later in pre-built, all-in-one
+    packages. An installer is provided for Microsoft Windows&reg; while
+    the MacOS&reg; package is a disk image containing a drag-and-drop
+    application bundle.</p>
+
+<p>GnuCash is also available as a flatpak from Flathub.org. <a href="https://wiki.gnucash.org/wiki/Flatpak">Instructions for installing and running.</a></p>
+
+<p>The SHA256 Hashes for the downloadable files are:</p>
+<ul>
+    <li><code>b0bd4af43b6bde3454227d4b398e9ec7a0dbd5143469c1373fc824c3caab0909</code>&nbsp;&nbsp;gnucash-5.15.tar.bz2</li>
+    <li><code>66e77d585bac9fb53c935fa448ac6305bdb28f8f366a3ecddacb8310121bb028</code>&nbsp;&nbsp;gnucash-5.15.tar.gz</li>
+    <li><code>6e10f34f92a1464b45436372a70cdbd16636b14b2842431b72251ded780858bd</code>&nbsp;&nbsp;gnucash-5.15.setup.exe</li>
+    <li><code>ef0c2c0fac275d4f2822223f3c908e9c28c559395159017eac14c4bf39b8499a</code>&nbsp;&nbsp;Gnucash-Arm-5.15.dmg</li>
+    <li><code>59456ec48c973f6ac96d9fcd1d34174645f28954d9adf0b14998cadd420d3a51</code>&nbsp;&nbsp;Gnucash-Intel-5.15.dmg</li>
+    <li><code>c48b153c20bc7552e682e46b41e320aee7b5d413486ab64f3c5ad1e8e00fdaaa</code>&nbsp;&nbsp;gnucash-docs-5.15.tar.gz</li>
+</ul>
+
+<ul>
+    <li>SourceForge:
+        <ul>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.15/gnucash-5.15.setup.exe">Win32</a></li>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.15/Gnucash-Arm-5.15.dmg">Mac-Apple Silicon</a></li>
+            <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.15/Gnucash-Intel-5.15.dmg">Mac-Intel</a></li>
+        </ul></li>
+    <li>Github
+        <ul>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/5.15/gnucash-5.15.setup.exe">Win32</a></li>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/5.15/Gnucash-Arm-5.15.dmg">Mac-Apple Silicon</a></li>
+            <li><a href="https://github.com/Gnucash/gnucash/releases/download/5.15/Gnucash-Intel-5.15.dmg">Mac-Intel</a></li>
+        </ul></li></ul>
+
+<h3>Getting GnuCash as source code</h3>
+<p>If you want to compile GnuCash 5.15 for yourself, the source code can be downloaded from:</p>
+<ul>
+
+    <li>Sourceforge: <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.15/gnucash-5.15.tar.bz2">bzip2</a>, <a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.15/gnucash-5.15.tar.gz">gzip</a>.</li>
+
+    <li>Github: <a href="https://github.com/Gnucash/gnucash/releases/download/5.15/gnucash-5.15.tar.bz2">bzip</a>, <a href="https://github.com/Gnucash/gnucash/releases/download/5.15/gnucash-5.15.tar.gz">gzip</a></li>
+
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+<p>To compile GnuCash from the source code by yourself, you will need at least <a href="https://www.gtk.org">Gtk+</a> 3.22.30, <a href="https://www.gnu.org/software/guile/">Guile</a> 2.0.9, <a href="https://www.boost.org/">Boost</a> 1.67, <a href="https://webkitgtk.org/">WebKitGtk</a> 2.4, <a href="https://github.com/google/googletest">GoogleTest</a> 1.8.0, <a href="https://cmake.org/">cmake 3.14.5</a> and <a href="http://www.swig.org/">SWIG</a> 3.0.12. Please consult the README.dependencies file in the sources for the exact list of dependencies and versions.</p>
+
+<h3>Getting the documentation</h3>
+
+<p>The documentation is available at <a href="https://www.gnucash.org/docs.phtml">Documentation page</a> of the <a href="https://www.gnucash.org/">GnuCash website</a>. The 5.15 documentation can be found under "GnuCash v5 (current stable release)" in multiple languages both for reading online and for download in pdf, epub, and mobi formats. The documentation is also included in the MacOS and Windows application bundles.</p>
+
+<p>If you want to compile the GnuCash Documentation 5.15 for yourself, the source code can be downloaded from:</p>
+<ul>
+    <li><a href="https://downloads.sourceforge.net/gnucash/gnucash%20%28stable%29/5.15/gnucash-docs-5.15.tar.gz">Sourceforge</a> or <a href="https://github.com/Gnucash/gnucash/releases/download/5.15/gnucash-docs-5.11.tar.gz">GitHub</a></li>
+    <li>You can also checkout the sources directly from the git repository as <a href="https://wiki.gnucash.org/wiki/Git">described here.</a></li>
+</ul>
+
+
+<h3>About the Program</h3>
+
+<p>GnuCash is a free, open source accounting program released under
+    the GNU General Public License (GPL) and available for GNU/Linux,
+    *BSD, Solaris, MacOS, and Microsoft Windows.  Programming on GnuCash
+    began in 1997, and its first stable release was in 1998.</p>
