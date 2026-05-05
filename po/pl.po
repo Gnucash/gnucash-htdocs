@@ -7,23 +7,24 @@
 # Kaligula <kaligula.dev@gmail.com>, 2022, 2023.
 # Tomek Jabłoński <dziabaducha@outlook.com>, 2025.
 # Kuba <tassman@gmail.com>, 2025.
+# Łukasz Preihs <lukasz@preihs.pl>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnucash-htdocs\n"
 "Report-Msgid-Bugs-To: https://bugs.gnucash.org/"
 "buglist.cgi?component=Translations&product=Website&resolution=---\n"
 "POT-Creation-Date: 2024-04-02 13:19+0200\n"
-"PO-Revision-Date: 2025-11-14 09:45+0000\n"
-"Last-Translator: Kuba <tassman@gmail.com>\n"
+"PO-Revision-Date: 2026-04-04 22:09+0000\n"
+"Last-Translator: Łukasz Preihs <lukasz@preihs.pl>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/gnucash/website/"
 "pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural="
-"(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.15-dev\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #: 2.6-release-tour.phtml:3
 msgid "GnuCash 2.6 release tour"
@@ -50,7 +51,7 @@ msgstr ""
 
 #: 2.6-release-tour.phtml:26
 msgid "A barchart rendered in GnuCash with jqplot."
-msgstr ""
+msgstr "Wykres słupkowy wygenerowany w GnuCash przy użyciu jqplot."
 
 #: 2.6-release-tour.phtml:31
 msgid "New preconfigured reports management system"
@@ -63,12 +64,18 @@ msgid ""
 "in the File menu and rerun it later by selecting it from the menu Reports-"
 ">Preconfigured Reports."
 msgstr ""
+"Stary system zarządzania raportami niestandardowymi w GnuCash został "
+"zaktualizowany. Możesz zapisać raport, korzystając z dedykowanych opcji w "
+"menu Plik, a następnie uruchomić go ponownie, wybierając go z menu Raporty->"
+"Wstępnie skonfigurowane raporty."
 
 #: 2.6-release-tour.phtml:40
 msgid ""
 "The Preconfigured Reports window. You can select and run a preconfigured "
 "report, edit its name and delete it."
 msgstr ""
+"Okno Wstępnie skonfigurowane raporty. Możesz wybrać i uruchomić wstępnie "
+"skonfigurowany raport, edytować jego nazwę oraz go usunąć."
 
 #: 2.6-release-tour.phtml:45
 msgid "Export any report directly to PDF"
@@ -84,7 +91,7 @@ msgstr ""
 
 #: 2.6-release-tour.phtml:50
 msgid "Associate a local file or remote location with any transaction"
-msgstr ""
+msgstr "Powiąż lokalny plik lub zdalną lokalizację z dowolną transakcją"
 
 #: 2.6-release-tour.phtml:52
 msgid ""
@@ -93,11 +100,17 @@ msgid ""
 "the Transaction menu and the transaction's context menu. The files are "
 "displayed in the default viewer for that file type."
 msgstr ""
+"Można teraz powiązać z transakcją zewnętrzny plik lokalny lub zdalną "
+"lokalizację (URL). Ta długo oczekiwana funkcja jest dostępna zarówno w menu "
+"Transakcja, jak i w menu kontekstowym transakcji. Pliki są wyświetlane w "
+"domyślnej przeglądarce dla danego typu pliku."
 
 #: 2.6-release-tour.phtml:60
 msgid ""
 "You can now associate a local file or a remote location with any transaction."
 msgstr ""
+"Możesz teraz powiązać lokalny plik lub zdalną lokalizację z dowolną "
+"transakcją."
 
 #: 2.6-release-tour.phtml:65
 msgid "Account colors"
@@ -109,16 +122,20 @@ msgid ""
 "account window. This color can then be displayed as account name and account "
 "register tab background easing the lookup of a specific account."
 msgstr ""
+"Można teraz przypisać dowolnemu kontu unikalny kolor w oknie edycji konta. "
+"Kolor ten może być następnie wyświetlany jako kolor nazwy konta oraz tła "
+"karty rejestru konta, co ułatwia odnalezienie konkretnego konta."
 
 #: 2.6-release-tour.phtml:75
 msgid ""
 "The colors ease the lookup of specific accounts in the account tree and in "
 "tabs."
 msgstr ""
+"Kolory ułatwiają odnalezienie konkretnych kont w drzewie kont oraz w kartach."
 
 #: 2.6-release-tour.phtml:80
 msgid "Timeout on \"Save changes on closing\""
-msgstr ""
+msgstr "Limit czasu dla „Zapisz zmiany przy zamykaniu”"
 
 #: 2.6-release-tour.phtml:82
 msgid ""
@@ -129,6 +146,11 @@ msgid ""
 "that time, the changes will be saved automatically and the question window "
 "closed."
 msgstr ""
+"W zakładce Ogólne w Preferencjach GnuCash można teraz ustawić limit czasu "
+"dla okna „Zapisz zmiany przy zamykaniu”. Jeśli opcja jest włączona, pytanie „"
+"Zapisz zmiany przy zamykaniu” będzie oczekiwać na odpowiedź tylko przez "
+"określoną liczbę sekund. Jeśli użytkownik nie odpowie w tym czasie, zmiany "
+"zostaną zapisane automatycznie, a okno pytania zostanie zamknięte."
 
 #: 2.6-release-tour.phtml:85
 msgid "Open datafile read-only"
@@ -139,92 +161,107 @@ msgid ""
 "When opening a locked \"book\" one now has the option of opening it read-"
 "only."
 msgstr ""
+"Podczas otwierania zablokowanej „księgi” dostępna jest teraz opcja otwarcia "
+"jej w trybie tylko do odczytu."
 
 #: 2.6-release-tour.phtml:90
 msgid ""
 "Note that <span class=\"gnucash\">GnuCash</span> is still a single-user "
 "program and that the database backends are still used only as a data store."
 msgstr ""
+"Należy pamiętać, że <span class=\"gnucash\">GnuCash</span> nadal jest "
+"programem jednoosobowym, a backendy baz danych są wciąż używane jedynie jako "
+"magazyn danych."
 
 #: 2.6-release-tour.phtml:98
 msgid ""
 "The new button to open a <span class=\"gnucash\">GnuCash</span> datafile in "
 "read-only mode."
 msgstr ""
+"Nowy przycisk do otwierania pliku danych <span class=\"gnucash\">GnuCash</"
+"span> w trybie tylko do odczytu."
 
 #: 2.6-release-tour.phtml:103
 msgid "Save \"Filter By\" settings"
-msgstr ""
+msgstr "Zapisz ustawienia „Filtruj według”"
 
 #: 2.6-release-tour.phtml:105
 msgid ""
 "It is now possible to save the \"Filter By…\" settings for an account "
 "register."
-msgstr ""
+msgstr "Można teraz zapisać ustawienia „Filtruj według…” dla rejestru konta."
 
 #: 2.6-release-tour.phtml:113
 msgid ""
 "Save the \"Filter By…\" settings by enabling the \"Save Filter\" checkbox."
 msgstr ""
+"Zapisz ustawienia „Filtruj według…”, zaznaczając pole wyboru „Zapisz filtr”."
 
 #: 2.6-release-tour.phtml:118
 msgid "Improved business module"
-msgstr ""
+msgstr "Ulepszony moduł biznesowy"
 
 #: 2.6-release-tour.phtml:120
 msgid ""
 "The business module has been revamped and we introduced some new features:"
-msgstr ""
+msgstr "Moduł biznesowy został przebudowany i wprowadzono kilka nowych funkcji:"
 
 #: 2.6-release-tour.phtml:122
 msgid "Credit Notes"
-msgstr ""
+msgstr "Noty kredytowe"
 
 #: 2.6-release-tour.phtml:123
 msgid "Customer and Vendor Overview Pages"
-msgstr ""
+msgstr "Strony przeglądu klientów i dostawców"
 
 #: 2.6-release-tour.phtml:124
 msgid "Customer Overview Reports"
-msgstr ""
+msgstr "Raporty przeglądu klientów"
 
 #: 2.6-release-tour.phtml:125
 msgid "Existing Transactions may be reassigned as invoice payments"
 msgstr ""
+"Istniejące transakcje mogą zostać ponownie przypisane jako płatności faktur"
 
 #: 2.6-release-tour.phtml:126
 msgid "One click duplication of invoices"
-msgstr ""
+msgstr "Duplikowanie faktur jednym kliknięciem"
 
 #: 2.6-release-tour.phtml:127
 msgid ""
 "Improved invoice and bill handling: Post, print, or duplicate multiple items "
 "directly from a search results list"
 msgstr ""
+"Ulepszona obsługa faktur i rachunków: księgowanie, drukowanie lub "
+"duplikowanie wielu pozycji bezpośrednio z listy wyników wyszukiwania"
 
 #: 2.6-release-tour.phtml:128
 msgid ""
 "Better invoice printing setup: Choose a default invoice report as a "
 "preference"
 msgstr ""
+"Lepsza konfiguracja drukowania faktur: wybierz domyślny raport faktury jako "
+"ustawienie w preferencjach"
 
 #: 2.6-release-tour.phtml:129
 msgid "Reorder invoice entries in the invoice window"
-msgstr ""
+msgstr "Zmieniaj kolejność pozycji faktury w oknie faktury"
 
 #: 2.6-release-tour.phtml:137
 msgid "Customer report with an invoice and a credit note."
-msgstr ""
+msgstr "Raport klienta z fakturą i notą kredytową"
 
 #: 2.6-release-tour.phtml:147
 msgid ""
 "Updated search window with buttons to process payment, duplicate, post and "
 "print multiple search results."
 msgstr ""
+"Zaktualizowane okno wyszukiwania z przyciskami do realizacji płatności, "
+"duplikowania, księgowania i drukowania wielu wyników wyszukiwania"
 
 #: 2.6-release-tour.phtml:152
 msgid "New preference system"
-msgstr ""
+msgstr "Nowy system preferencji"
 
 #: 2.6-release-tour.phtml:154
 msgid ""
@@ -234,6 +271,11 @@ msgid ""
 "allows us to remove several troublesome dependencies including GConf, ORBit, "
 "and DBus."
 msgstr ""
+"System preferencji został przepisany tak, aby używał GSettings z GIO (GLib) "
+"zamiast GConf. Jest to prostszy i bardziej niezawodny backend, który "
+"zapisuje ustawienia w natywnym systemie preferencji systemu operacyjnego — "
+"defaults w OS X oraz Rejestrze w MS Windows — i pozwala usunąć kilka "
+"problematycznych zależności, w tym GConf, ORBit oraz DBus."
 
 #: 2.6-release-tour.phtml:156
 msgid ""
@@ -242,10 +284,14 @@ msgid ""
 "time you use Gnucash 2.6 or later, but they will be saved once you've reset "
 "them."
 msgstr ""
+"Należy pamiętać, że pozycja okna, rozmiary kolumn oraz kolejność sortowania "
+"nie zostaną przeniesione z GConf. Ustawienia te zostaną przywrócone do "
+"wartości domyślnych przy pierwszym użyciu Gnucash 2.6 lub nowszego, ale "
+"zostaną zapisane po ich ponownym ustawieniu."
 
 #: 2.6-release-tour.phtml:159
 msgid "Relicensing"
-msgstr ""
+msgstr "Zmiana licencji"
 
 #: 2.6-release-tour.phtml:161
 msgid ""
@@ -253,11 +299,14 @@ msgid ""
 "class=\"gnucash\">GnuCash</span> to the GNU General Public License Version 2 "
 "or later from just Version 2."
 msgstr ""
+"Za zgodą wszystkich autorów zmieniliśmy licencję <span class=\"gnucash\">"
+"GnuCash</span> na GNU General Public License w wersji 2 lub nowszej, zamiast "
+"wyłącznie wersji 2."
 
 #: 2.6-release-tour.phtml:163 docs.phtml:62 docs.phtml:207 docs.phtml:339
 #: download.phtml:4
 msgid "Download"
-msgstr ""
+msgstr "Pobierz"
 
 #: 2.6-release-tour.phtml:165
 msgid ""
@@ -265,10 +314,12 @@ msgid ""
 "span> from the <a href=\"https://www.gnucash.org\">GnuCash website main "
 "page</a>."
 msgstr ""
+"Możesz pobrać nową wersję 2.6 <span class=\"gnucash\">GnuCash</span> ze "
+"strony <a href=\"https://www.gnucash.org\">strona główna witryny Gnucash</a>."
 
 #: 2.6-release-tour.phtml:167
 msgid "Help"
-msgstr ""
+msgstr "Pomoc"
 
 #: 2.6-release-tour.phtml:169
 msgid ""
@@ -280,10 +331,17 @@ msgid ""
 "lists</a>: the <span class=\"gnucash\">GnuCash</span> community is very "
 "friendly and experienced and someone will surely assist you."
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span> GnuCash 2.6 zawiera zaktualizowaną "
+"Pomoc i Przewodnik. Jeśli nie znajdziesz odpowiedzi na swoje pytania w tych "
+"dokumentach, spróbuj skorzystać z wiki GnuCash. Jeśli obie opcje okażą się "
+"niewystarczające, możesz wysłać swoje pytania na <a href=\"https://"
+"wiki.gnucash.org/wiki/Mailing_Lists\">listy mailingowe Gnucash</a>: the "
+"<span class=\"gnucash\">GnuCash</span>społeczność GnuCash jest bardzo "
+"przyjazna i  z pewnością ktoś Ci pomoże."
 
 #: 2.6-release-tour.phtml:171
 msgid "Want to Help?"
-msgstr ""
+msgstr "Potrzebujesz pomocy?"
 
 #: 2.6-release-tour.phtml:173
 msgid ""
@@ -291,12 +349,17 @@ msgid ""
 "volunteers. If you want to be part of the effort, you can contribute in many "
 "ways:"
 msgstr ""
+"<span class=\"gnucash\">GnuCash</span>jest programem utrzymywanym przez "
+"wolontariuszy. Jeśli chcesz włączyć się w rozwój, możesz pomóc na wiele "
+"sposobów:"
 
 #: 2.6-release-tour.phtml:175
 msgid ""
 "By testing the program and <a href=\"https://wiki.gnucash.org/wiki/"
 "Bugzilla\">reporting bugs</a>"
 msgstr ""
+"Poprzez testowanie programu i <a href=\"https://wiki.gnucash.org/wiki/"
+"Bugzilla\">zgłaszanie błędów</a>"
 
 #: 2.6-release-tour.phtml:176
 msgid ""
@@ -304,16 +367,21 @@ msgid ""
 "Gnucash\">facebook</a> and <a href=\"https://plus.google.com/u/0/"
 "+gnucash\">Google+</a>"
 msgstr ""
+"Polubienie naszej strony projektu na <a href=\"https://www.facebook.com/"
+"Gnucash\">facebook</a> i <a href=\"https://plus.google.com/u/0/+gnucash\">"
+"Google+</a>"
 
 #: 2.6-release-tour.phtml:177
 msgid "By spreading the word"
-msgstr ""
+msgstr "Poprzez rozpowszechnianie informacji"
 
 #: 2.6-release-tour.phtml:178
 msgid ""
 "<a href=\"https://sourceforge.net/donate/index.php?group_id=192\">By making "
 "a donation</a>"
 msgstr ""
+"<a href=\"https://sourceforge.net/donate/index.php?group_id=192\">Poprzez "
+"dokonanie darowizny</a>"
 
 #: 2.6-release-tour.phtml:179
 msgid ""
@@ -321,34 +389,45 @@ msgid ""
 "Mailing_Lists\">GnuCash mailing lists</a> and <a href=\"https://wiki.gnucash."
 "org/wiki/IRC\">IRC channel</a>"
 msgstr ""
+"Poprzez uczestnictwo w <a href=\"https://wiki.gnucash.org/wiki/"
+"Mailing_Lists\">listach mailignowych Gnucash</a> i <a href=\"https://"
+"wiki.gnucash.org/wiki/IRC\">kanale IRCl</a>"
 
 #: 2.6-release-tour.phtml:180
 msgid ""
 "By reviewing and adding hints to the <a href=\"https://wiki.gnucash.org/wiki/"
 "\">wiki</a>"
 msgstr ""
+"Poprzez przeglądanie i dodawanie wskazówek do <a href=\"https://"
+"wiki.gnucash.org/wiki/\">wiki</a>"
 
 #: 2.6-release-tour.phtml:181
 msgid ""
 "By improving the <a href=\"https://gnucash.org/docs.phtml\">released "
 "documentation</a>"
 msgstr ""
+"Poprzez ulepszanie <a href=\"https://gnucash.org/docs.phtml\">opublikowanej "
+"dokumentacji</a>"
 
 #: 2.6-release-tour.phtml:182
 msgid ""
 "By <a href=\"https://wiki.gnucash.org/wiki/Translation\">translating the "
 "program and documentation to your language</a>"
 msgstr ""
+"Poprzez <a href=\"https://wiki.gnucash.org/wiki/Translation\">tłumaczenie "
+"programu i dokumentacji na swój język</a>"
 
 #: 2.6-release-tour.phtml:183
 msgid ""
 "By <a href=\"https://wiki.gnucash.org/wiki/Development\">developing the "
 "source code</a>"
 msgstr ""
+"Poprzez <a href=\"https://wiki.gnucash.org/wiki/Development\">rozwijanie "
+"kodu źródłowego</a>"
 
 #: 2.6-release-tour.phtml:186
 msgid "The GnuCash developers team"
-msgstr ""
+msgstr "Zespół deweloperów GnuCash"
 
 #: docs.phtml:10 externals/menu.phtml:23 externals/menu.phtml:30
 msgid "Documentation"
@@ -360,32 +439,38 @@ msgid ""
 "stable branch</strong> documentation. See further down the page for other "
 "<span class=\"gnucash\">GnuCash</span> versions, languages, and formats."
 msgstr ""
+"Poniższe linki prowadzą do <strong>angielskich wersji HTML </strong> "
+"dokumentacji aktualnej stabilnej gałęzi. Przewiń niżej na stronie, aby "
+"zobaczyć inne wersje <span class=\"gnucash\">GnuCash</span>, języki i "
+"formaty."
 
 #: docs.phtml:13
 msgid "Browse documentation online"
-msgstr ""
+msgstr "Przeglądaj dokumentację online"
 
 #: docs.phtml:14
 msgid "Download documentation as PDF"
-msgstr ""
+msgstr "Pobierz dokumentację jako PDF"
 
 #: docs.phtml:15
 msgid "Download documentation as epub"
-msgstr ""
+msgstr "Pobierz dokumentację jako epub"
 
 #: docs.phtml:16
 msgid "Download documentation as mobipocket"
-msgstr ""
+msgstr "Pobierz dokumentację jako mobipocket"
 
 #: docs.phtml:28
 msgid ""
 "There are two major <span class=\"gnucash\">GnuCash</span> documentation "
 "packages to help users:"
 msgstr ""
+"Istnieją dwa główne pakiety dokumentacji <span class=\"gnucash\">GnuCash</"
+"span>, które pomagają użytkownikom:"
 
 #: docs.phtml:30
 msgid "The GnuCash Manual"
-msgstr ""
+msgstr "Podręcznik GnuCash"
 
 #: docs.phtml:31
 msgid "The Tutorial and Concepts Guide"
@@ -839,6 +924,9 @@ msgid ""
 "the newest features and improvements, but possibly also bugs. Don't install "
 "these releases for everyday use."
 msgstr ""
+"Wydania niestabilne (rozwojowe) są przeznaczone wyłącznie do testów. "
+"Zawierają najnowsze funkcje i ulepszenia, ale mogą również zawierać błędy. "
+"Nie instaluj tych wersji do codziennego użytku."
 
 #: download.phtml:68
 #, php-format
@@ -893,7 +981,7 @@ msgstr ""
 
 #: externals/footer.phtml:12
 msgid "Server &amp; email outage reports to:"
-msgstr ""
+msgstr "Zgłoszenia awarii serwera i poczty email do:"
 
 #: externals/footer.phtml:14
 msgid "Translation problems? Contact:"
@@ -1133,7 +1221,7 @@ msgstr ""
 
 #: features.phtml:82 index.phtml:80
 msgid "Reports, Graphs"
-msgstr ""
+msgstr "Raporty, Wykresy"
 
 #: features.phtml:86
 msgid ""
@@ -1396,7 +1484,7 @@ msgstr ""
 
 #: index.phtml:10
 msgid "Welcome to GnuCash.org"
-msgstr ""
+msgstr "Witaj na GnuCash.org"
 
 #: index.phtml:14
 #, php-format
@@ -1405,7 +1493,7 @@ msgstr "Pobierz GnuCash %s"
 
 #: index.phtml:19
 msgid "Via distribution"
-msgstr ""
+msgstr "Poprzez dystrybucję"
 
 #: index.phtml:21
 #, php-format
@@ -1426,7 +1514,7 @@ msgstr ""
 #: index.phtml:38
 #, php-format
 msgid "Version %s is the last version for %s and %s and earlier."
-msgstr ""
+msgstr "Wersja %s jest ostatnią wersją dla %s oraz %s i wcześniejszych."
 
 #: index.phtml:41
 #, php-format
@@ -1434,6 +1522,9 @@ msgid ""
 "Version %s is the last version for Windows XP/Vista and MacOS X 10.8 and "
 "earlier, and so the last version that will run on PowerPC Macs."
 msgstr ""
+"Wersja %s jest ostatnią wersją dla Windows XP/Vista oraz MacOS X 10.8 i "
+"wcześniejszych, a tym samym ostatnią wersją działającą na komputerach Mac z "
+"procesorem PowerPC."
 
 #: index.phtml:50
 msgid ""
@@ -1465,47 +1556,52 @@ msgstr ""
 
 #: index.phtml:61
 msgid "Need Help?"
-msgstr ""
+msgstr "Potrzebna pomoc?"
 
 #: index.phtml:64
 msgid ""
 "Looking for someone to contact about <span class=\"gnucash\">GnuCash</span>? "
 "Try the"
 msgstr ""
+"Szukasz osoby do kontaktu w sprawie <span class=\"gnucash\">GnuCash</span>? "
+"Spróbuj"
 
 #: index.phtml:66
 msgid ""
 ", which are public, email-based discussion groups where you can ask and "
 "answer <span class=\"gnucash\">GnuCash</span> questions to other users."
 msgstr ""
+", które są publicznymi, opartymi na e-mailu grupami dyskusyjnymi, w których "
+"możesz zadawać pytania dotyczące <span class=\"gnucash\">GnuCash</span> "
+"innym użytkownikom i na nie odpowiadać."
 
 #: index.phtml:72
 msgid "Feature Highlights"
-msgstr ""
+msgstr "Najważniejsze funkcje"
 
 #: index.phtml:77
 msgid "Double-Entry Accounting"
-msgstr ""
+msgstr "Księgowość podwójnego zapisu"
 
 #: index.phtml:78
 msgid "Stock/Bond/Mutual Fund Accounts"
-msgstr ""
+msgstr "Konta akcji/obligacji/funduszy inwestycyjnych"
 
 #: index.phtml:79
 msgid "Small-Business Accounting"
-msgstr ""
+msgstr "Księgowość dla małych firm"
 
 #: index.phtml:81
 msgid "QIF/OFX/HBCI Import, Transaction Matching"
-msgstr ""
+msgstr "Import QIF/OFX/HBCI, dopasowywanie transakcji"
 
 #: index.phtml:83
 msgid "Financial Calculations"
-msgstr ""
+msgstr "Obliczenia finansowe"
 
 #: index.phtml:85
 msgid "<b>Discover more …</b>"
-msgstr ""
+msgstr "<b>Odkryj więcej …</b>"
 
 #: news.phtml:4
 msgid "Announcement of New Releases, Server Maintenance …"
