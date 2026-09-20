@@ -19,9 +19,19 @@ Requirements
 - gettext
 - PHP (7 recommended)
 
--------------------------------------------------
-Notes about multi-lingual gnucash website content
--------------------------------------------------
+## Running
+
+- Clone the project and run with php 7 and apache
+
+  or
+
+- `docker compose up`
+
+and access http://localhost:8000/index.phtml
+
+Optional: if you are working with css and html is faster to develop using some
+hot reolading like https://github.com/blaise-io/live-reload#readme
+
 
 - all pages must call lang.php to bring in gettext support.
 - It would be nice to use the same containing structure for all translations.
