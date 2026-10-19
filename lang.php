@@ -19,6 +19,7 @@ $supported_languages = array(
     'nl_NL' => 'nl',
     'pl_PL' => 'pl',
     'pt_PT' => 'pt',
+    'sv_SE' => 'sv',
     'zh_CN' => 'zh_CN',
     'zh_TW' => 'zh_TW'
 );
